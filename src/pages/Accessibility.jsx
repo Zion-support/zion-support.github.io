@@ -83,29 +83,6 @@ export default function Accessibility() {
     }
   ];
 
-  const assistiveTechnologies = [
-    {
-      name: 'Screen Readers',
-      description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Voice Control',
-      description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Switch Devices',
-      description: 'Single switch, multiple switch, and scanning software support',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Magnification',
-      description: 'ZoomText, Windows Magnifier, and other magnification software',
-      compatibility: 'Full'
-    }
-  ];
-
   const accessibilityTools = [
     {
       title: 'Accessibility Checker',

@@ -56,7 +56,15 @@ export default function ListingDetail() {
                 </div>
                 
                 {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent")}>
+                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {
+  cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+  index === selectedImageIndex ? "border-zion-purple" : "border-transparent")
+
+
+
+
+
+}>
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
                       </div>))}
                   </div>)}
@@ -120,7 +128,15 @@ export default function ListingDetail() {
                 
                 {listing.rating && (<div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={cn("h-5 w-5", i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")}/>))}
+                      {[...Array(5)].map((_, i) => (<Star key={i} className = {
+  cn("h-5 w-5",
+  i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")
+
+
+
+
+
+}/>))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
@@ -138,11 +154,24 @@ export default function ListingDetail() {
                 
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated={() => {
+                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {
+  () => {
                 toast({
                     title: "Payment Processing",
+  <<<<<<< HEAD
                     description: "Redirecting to secure checkout..."
-                })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
+                
+})}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
+=======
+  description: "Redirecting to secure checkout..."
+                
+
+
+
+
+});
+            }}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}
                   
@@ -192,7 +221,7 @@ export default function ListingDetail() {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined
+          <ProfileContact email={listing.author.email} // TypeScript now knows this might be null
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;

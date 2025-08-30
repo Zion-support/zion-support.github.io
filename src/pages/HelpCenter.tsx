@@ -210,7 +210,8 @@ export default function HelpCenter(...args[]):  {
   const [expandedFAQ, setExpandedFAQ] = useState<any>(null);
   const [filteredFAQs, setFilteredFAQs] = useState<any>(faqData);
 
-  const handleSearch = (query: string)  => {
+<<<<<<< HEAD
+  const handleSearch = (query: string)  => {;
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -219,15 +220,15 @@ export default function HelpCenter(...args[]):  {
     const filtered = faqData.filter(faq => 
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
       faq.answer.toLowerCase().includes(query.toLowerCase()) ||
-      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
     );
     setFilteredFAQs(filtered)};
 
-  const toggleFAQ = (id: string)  => {
+  const toggleFAQ = (id: string)  => {;
     setExpandedFAQ(expandedFAQ === id ? null : id)};
 
   const getCategoryIcon = (category: string)  => {
-    switch (category) {
+    switch (category) {;
       case 'getting-started': return BookOpen;
       case 'services': return Code;
       case 'marketplace': return Building;
@@ -236,9 +237,161 @@ export default function HelpCenter(...args[]):  {
       case 'troubleshooting': return AlertCircle;
       default: return HelpCircle}
   };
+=======
+  const helpCategories = [
+    {
+      id: 'getting-started',
+      name: 'Getting Started',
+      icon: Play,
+      description: 'Quick start guides and onboarding resources',
+      color: 'from-blue-500 to-cyan-500',
+      articles: [
+        { title: 'Welcome to Zion Tech Group', type: 'guide', readTime: '5 min' },
+        { title: 'Setting Up Your Account', type: 'tutorial', readTime: '10 min' },
+        { title: 'First Project Setup', type: 'guide', readTime: '15 min' },
+        { title: 'Platform Overview', type: 'guide', readTime: '8 min' }
+      ]
+    },
+    {
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: Brain,
+      description: 'Documentation for AI and machine learning services',
+      color: 'from-purple-500 to-pink-500',
+      articles: [
+        { title: 'AI Workflow Orchestrator Guide', type: 'guide', readTime: '20 min' },
+        { title: 'Setting Up AI Models', type: 'tutorial', readTime: '25 min' },
+        { title: 'AI Service Integration', type: 'guide', readTime: '15 min' },
+        { title: 'AI Performance Optimization', type: 'guide', readTime: '18 min' }
+      ]
+    },
+    {
+      id: 'cloud-services',
+      name: 'Cloud Services',
+      icon: Cloud,
+      description: 'Cloud infrastructure and DevOps resources',
+      color: 'from-green-500 to-emerald-500',
+      articles: [
+        { title: 'Cloud Migration Guide', type: 'guide', readTime: '30 min' },
+        { title: 'DevOps Best Practices', type: 'guide', readTime: '25 min' },
+        { title: 'Cost Optimization Strategies', type: 'guide', readTime: '20 min' },
+        { title: 'Security Configuration', type: 'guide', readTime: '22 min' }
+      ]
+    },
+    {
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security features and compliance documentation',
+      color: 'from-red-500 to-orange-500',
+      articles: [
+        { title: 'Security Best Practices', type: 'guide', readTime: '20 min' },
+        { title: 'Compliance Requirements', type: 'guide', readTime: '25 min' },
+        { title: 'Access Control Setup', type: 'tutorial', readTime: '15 min' },
+        { title: 'Audit Trail Management', type: 'guide', readTime: '18 min' }
+      ]
+    },
+    {
+      id: 'integrations',
+      name: 'Integrations',
+      icon: Network,
+      description: 'Third-party integrations and API documentation',
+      color: 'from-indigo-500 to-purple-500',
+      articles: [
+        { title: 'API Reference Guide', type: 'reference', readTime: '40 min' },
+        { title: 'Webhook Setup', type: 'tutorial', readTime: '20 min' },
+        { title: 'Third-party Integrations', type: 'guide', readTime: '25 min' },
+        { title: 'Custom Connectors', type: 'guide', readTime: '30 min' }
+      ]
+    },
+    {
+      id: 'troubleshooting',
+      name: 'Troubleshooting',
+      icon: HelpCircle,
+      description: 'Common issues and solutions',
+      color: 'from-yellow-500 to-orange-500',
+      articles: [
+        { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },;
+        { title: 'Performance Issues', type: 'guide', readTime: '20 min' },;
+        { title: 'Connection Problems', type: 'guide', readTime: '18 min' },;
+        { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' };
+      ];
+    };
+  ];
+
+  const videoTutorials = [
+    {
+      title: 'Getting Started with Zion Tech Platform',
+      duration: '15:30',
+      thumbnail: '/api/placeholder/300/200',
+      views: '2.4k',
+      rating: 4.8
+    },
+    {
+      title: 'AI Service Configuration Walkthrough',
+      duration: '22:15',
+      thumbnail: '/api/placeholder/300/200',
+      views: '1.8k',
+      rating: 4.9
+    },
+    {
+      title: 'Advanced Security Setup',
+      duration: '18:45',
+      thumbnail: '/api/placeholder/300/200',
+      views: '1.2k',
+      rating: 4.7
+    },
+    {
+      title: 'Cloud Migration Best Practices',;
+      duration: '28:20',;
+      thumbnail: '/api/placeholder/300/200',;
+      views: '3.1k',;
+      rating: 4.8;
+    };
+  ];
+
+  const supportOptions = [
+    {
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      availability: '24/7',
+      responseTime: 'Immediate',
+      action: 'Start Chat'
+    },
+    {
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Send us a detailed message',
+      availability: '24/7',
+      responseTime: 'Within 4 hours',
+      action: 'Send Email'
+    },
+    {
+      icon: Phone,
+      title: 'Phone Support',
+      description: 'Speak directly with our experts',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Immediate',
+      action: 'Call Now'
+    },
+    {
+      icon: Users,
+      title: 'Community Forum',;
+      description: 'Connect with other users',;
+      availability: '24/7',;
+      responseTime: 'Varies',;
+      action: 'Visit Forum';
+    };
+  ];
+
+  const filteredCategories = selectedCategory === 'all' ;
+    ? helpCategories ;
+    : helpCategories.filter(cat => cat.id === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const getCategoryColor = (category: string)  => {
-    switch (category) {
+    switch (category) {;
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';
       case 'marketplace': return 'text-green-500';
@@ -252,7 +405,7 @@ export default function HelpCenter(...args[]):  {
     <>
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />
+        <meta name = "description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />
         <meta name="keywords" content="help center, support, documentation, tutorials, Zion Tech Group, user guide" />
       </Helmet>
 
@@ -261,8 +414,24 @@ export default function HelpCenter(...args[]):  {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -293,21 +462,40 @@ export default function HelpCenter(...args[]):  {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Help Categories */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {helpCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.4,
+  delay: 0.3 + index * 0.1 
+}}
               >
                 <Link
                   to={category.path}
@@ -331,18 +519,36 @@ export default function HelpCenter(...args[]):  {
         {/* Support Options */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+}}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option, index)  => (
               <motion.div
                 key={option.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.4,
+  delay: 0.5 + index * 0.1 
+}}
               >
                 <Link
                   to={option.path}
@@ -365,9 +571,18 @@ export default function HelpCenter(...args[]):  {
         {/* FAQ Section */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+}}
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
@@ -404,11 +619,75 @@ export default function HelpCenter(...args[]):  {
               {filteredFAQs
                 .filter(faq => selectedCategory === 'all' || faq.category === selectedCategory)
                 .map((faq, index) => (
+=======
+        {/* Quick Support Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Need Help Right Now?
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {supportOptions.map((option, index) => (
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <motion.div
                     key={option.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -427,9 +706,18 @@ export default function HelpCenter(...args[]):  {
                     <AnimatePresence>
                       {expandedFAQ === faq.id && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          initial = {
+  { height: 0,
+  opacity: 0 
+}}
+                          animate = {
+  { height: 'auto',
+  opacity: 1 
+}}
+                          exit = {
+  { height: 0,
+  opacity: 0 
+}}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
@@ -462,17 +750,41 @@ export default function HelpCenter(...args[]):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
             >
               <div className="flex flex-wrap justify-center gap-3 mb-12">
                 <button
-                  onClick={() => {
+                  onClick={() => {;
                     setSearchQuery('');
                     setSelectedCategory('all');
                     setFilteredFAQs(faqData)}}
-                  className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
+                  className = "px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
                 >
                   All Categories
                 </button>
@@ -495,9 +807,33 @@ export default function HelpCenter(...args[]):  {
                 {filteredCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
                     className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
                   >
                     <div className={`h-2 bg-gradient-to-r ${category.color}`}></div>
@@ -544,9 +880,33 @@ export default function HelpCenter(...args[]):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Video Tutorials
@@ -556,9 +916,33 @@ export default function HelpCenter(...args[]):  {
                 {videoTutorials.map((tutorial, index) => (
                   <motion.div
                     key={tutorial.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
                     className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
                   >
                     <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative">
@@ -596,9 +980,33 @@ export default function HelpCenter(...args[]):  {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Can't Find What You're Looking For?
@@ -615,9 +1023,21 @@ export default function HelpCenter(...args[]):  {
                   Schedule a Call
                 </button>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
       </div>
     </div>
   )}
+=======;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+};
+
+export default HelpCenter;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

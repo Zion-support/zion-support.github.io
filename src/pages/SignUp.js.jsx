@@ -8,7 +8,7 @@ export default function SignUp() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await axios.post('/auth/register', { email, password });
-        navigate('/marketplace')};
+        router('/marketplace')};
     return (<form onSubmit={handleSubmit} className="p-4 space-y-2">
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="border px-2 py-1 w-full"/>
       <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="border px-2 py-1 w-full"/>

@@ -35,18 +35,18 @@ import {
   ChevronUp
 } from 'lucide-react';
 
-const ComprehensivePricing2028 = () => {
+const ComprehensivePricing2028 = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="w-5 h-5" /> },
-    { id: 'ai-research', name: 'AI & Research', icon: <Brain className="w-5 h-5" /> },
-    { id: 'ai-operations', name: 'AI & Operations', icon: <Network className="w-5 h-5" /> },
-    { id: 'ai-marketing', name: 'AI & Marketing', icon: <PenTool className="w-5 h-5" /> },
-    { id: 'ai-development', name: 'AI & Development', icon: <Code className="w-5 h-5" /> },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },
-    { id: 'quantum', name: 'Quantum Technology', icon: <Cpu className="w-5 h-5" /> }
+    { id: 'ai-research', name: 'AI & Research', icon: <Brain className="w-5 h-5" /> },;
+    { id: 'ai-operations', name: 'AI & Operations', icon: <Network className="w-5 h-5" /> },;
+    { id: 'ai-marketing', name: 'AI & Marketing', icon: <PenTool className="w-5 h-5" /> },;
+    { id: 'ai-development', name: 'AI & Development', icon: <Code className="w-5 h-5" /> },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },;
+    { id: 'quantum', name: 'Quantum Technology', icon: <Cpu className="w-5 h-5" /> };
   ];
 
   const services = [
@@ -114,50 +114,66 @@ const ComprehensivePricing2028 = () => {
       pricing: {
         starter: { price: 299, period: 'month', features: ['Basic Threat Protection', 'AI Monitoring', 'Email Support', 'Basic Reports'] },
         professional: { price: 799, period: 'month', features: ['Advanced Threat Protection', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },
-        enterprise: { price: 1999, period: 'month', features: ['Complete Security Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] }
-      },
-      benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],
-      useCases: ['Enterprise Security', 'Remote Work Security', 'Cloud Security', 'Compliance Requirements'],
-      color: 'red'
-    }
+        enterprise: { price: 1999, period: 'month', features: ['Complete Security Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] };
+      },;
+      benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],;
+      useCases: ['Enterprise Security', 'Remote Work Security', 'Cloud Security', 'Compliance Requirements'],;
+      color: 'red';
+    };
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
+  const filteredServices = selectedCategory === 'all' ;
+    ? services ;
     : services.filter(service => service.category === selectedCategory);
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
-      blue: 'from-blue-500 to-cyan-500',
-      green: 'from-green-500 to-emerald-500',
-      purple: 'from-purple-500 to-pink-500',
-      cyan: 'from-cyan-500 to-blue-500',
-      red: 'from-red-500 to-pink-500',
-      indigo: 'from-indigo-500 to-purple-500'
+      blue: 'from-blue-500 to-cyan-500',;
+      green: 'from-green-500 to-emerald-500',;
+      purple: 'from-purple-500 to-pink-500',;
+      cyan: 'from-cyan-500 to-blue-500',;
+      red: 'from-red-500 to-pink-500',;
+      indigo: 'from-indigo-500 to-purple-500';
     };
     return colorMap[color] || 'from-gray-500 to-gray-600';
   };
 
   const getBorderColor = (color: string) => {
     const colorMap: { [key: string]: string } = {
-      blue: 'border-blue-500/30',
-      green: 'border-green-500/30',
-      purple: 'border-purple-500/30',
-      cyan: 'border-cyan-500/30',
-      red: 'border-red-500/30',
-      indigo: 'border-indigo-500/30'
+      blue: 'border-blue-500/30',;
+      green: 'border-green-500/30',;
+      purple: 'border-purple-500/30',;
+      cyan: 'border-cyan-500/30',;
+      red: 'border-red-500/30',;
+      indigo: 'border-indigo-500/30';
     };
     return colorMap[color] || 'border-gray-500/30';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -210,9 +226,33 @@ const ComprehensivePricing2028 = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${getBorderColor(service.color)} transition-all duration-300`}
               >
                 <div className="flex items-start justify-between mb-6">
@@ -272,9 +312,33 @@ const ComprehensivePricing2028 = () => {
                   
                   {expandedService === service.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                       transition={{ duration: 0.3 }}
                       className="mt-4 space-y-4"
                     >
@@ -333,8 +397,24 @@ const ComprehensivePricing2028 = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12"
           >
@@ -358,12 +438,12 @@ const ComprehensivePricing2028 = () => {
                 className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
               >
                 Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </motion.button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

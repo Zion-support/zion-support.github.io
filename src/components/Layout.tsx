@@ -29,12 +29,19 @@ export default function Layout(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
+<<<<<<< HEAD
   const isActive = (href: string)  => location.pathname === href;
-  const toggleSidebarDropdown = (label: string)  => {
+  const toggleSidebarDropdown = (label: string)  => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
+=======
+  const isActive = (href: string) => location.pathname === href;
+  const toggleSidebarDropdown = (label: string) => {;
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
       <header className="bg-white/10 backdrop-blur-sm border-b border-white/20">
         <div className="container mx-auto px-4 py-4">
@@ -125,9 +132,19 @@ export default function Layout(...args[]):  {
           </div>
         </aside>
         {/* Main Content Area */}
+<<<<<<< HEAD
         <main className="flex-1 md:ml-64">
           {children}
         </main>
       </div>
     </div>
   )}
+=======;
+        <main className="flex-1 md:ml-64">;
+          {children};
+        </main>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

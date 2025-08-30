@@ -5,12 +5,12 @@ const sampleTitles = [
   'Cybersecurity Assessment Tool',
   'Cloud Migration Service',
   'IoT Edge Computing Solution',
-  'Quantum Computing Hardware',
-  'Data Science Consulting',
-  'Blockchain Development Service',
-  'Machine Learning Platform',
-  'DevOps Automation Tool',
-  'Network Security Solution'
+  'Quantum Computing Hardware',;
+  'Data Science Consulting',;
+  'Blockchain Development Service',;
+  'Machine Learning Platform',;
+  'DevOps Automation Tool',;
+  'Network Security Solution';
 ];
 
 const sampleDescriptions = [
@@ -18,12 +18,12 @@ const sampleDescriptions = [
   'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
   'Professional cloud migration service including planning, execution, and optimization.',
   'IoT platform with edge computing capabilities for real-time data processing.',
-  'State-of-the-art quantum computing components for research and development.',
-  'Expert data science consulting services for machine learning and analytics projects.',
-  'Blockchain development and implementation services for decentralized applications.',
-  'Machine learning platform with pre-trained models and custom training capabilities.',
-  'DevOps automation tools for continuous integration and deployment pipelines.',
-  'Network security solution with advanced threat detection and prevention.'
+  'State-of-the-art quantum computing components for research and development.',;
+  'Expert data science consulting services for machine learning and analytics projects.',;
+  'Blockchain development and implementation services for decentralized applications.',;
+  'Machine learning platform with pre-trained models and custom training capabilities.',;
+  'DevOps automation tools for continuous integration and deployment pipelines.',;
+  'Network security solution with advanced threat detection and prevention.';
 ];
 
 const sampleTags = [
@@ -31,44 +31,44 @@ const sampleTags = [
   ['Security', 'Cybersecurity', 'Monitoring'],
   ['Cloud', 'Migration', 'Enterprise'],
   ['IoT', 'Edge Computing', 'Real-time'],
-  ['Quantum', 'Research', 'Hardware'],
-  ['Data Science', 'Machine Learning', 'Consulting'],
-  ['Blockchain', 'Development', 'DApps'],
-  ['Machine Learning', 'AI', 'Platform'],
-  ['DevOps', 'Automation', 'CI/CD'],
-  ['Network', 'Security', 'Threat Detection']
+  ['Quantum', 'Research', 'Hardware'],;
+  ['Data Science', 'Machine Learning', 'Consulting'],;
+  ['Blockchain', 'Development', 'DApps'],;
+  ['Machine Learning', 'AI', 'Platform'],;
+  ['DevOps', 'Automation', 'CI/CD'],;
+  ['Network', 'Security', 'Threat Detection'];
 ];
 
 const sampleImages = [
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
+  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
+  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
+  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
+  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
 ];
 
 const categories: Array<any> = [
   'products', 'talent', 'equipment', 'services'
 ];
 
-const priceRanges = [
-  '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000'
+const priceRanges = [;
+  '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000';
 ];
 
-const locations = [
-  'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote'
+const locations = [;
+  'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote';
 ];
 
 const sellerNames = [
   'TechCorp Solutions',
   'SecureNet Professionals',
-  'QuantumTech Labs',
-  'CloudMasters Inc',
-  'IoT Solutions Pro',
-  'DataGenius Consulting',
-  'Innovation Labs',
-  'FutureTech Systems'
+  'QuantumTech Labs',;
+  'CloudMasters Inc',;
+  'IoT Solutions Pro',;
+  'DataGenius Consulting',;
+  'Innovation Labs',;
+  'FutureTech Systems';
 ];
 
 export function generateRandomListing(): MarketplaceItem {
@@ -95,18 +95,18 @@ export function generateRandomListing(): MarketplaceItem {
     reviews: Math.floor(Math.random() * 200) + 10,
     views: Math.floor(Math.random() * 5000) + 100,
     likes: Math.floor(Math.random() * 300) + 20,
-    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
     featured: Math.random() > 0.7,
     seller: {
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,
-      verified: Math.random() > 0.3
-    },
-    location: location || 'Remote',
-    availability: Math.random() > 0.8 ? 'limited' : 'available',
-    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
-    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
+      verified: Math.random() > 0.3;
+    },;
+    location: location || 'Remote',;
+    availability: Math.random() > 0.8 ? 'limited' : 'available',;
+    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;
+    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`;
   };
 }
 

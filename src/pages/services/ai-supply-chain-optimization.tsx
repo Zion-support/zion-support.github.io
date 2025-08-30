@@ -8,7 +8,7 @@ export default function AISupplyChainOptimization(...args: []):  {
     <>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
-        <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
+        <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
       </Helmet>
 
@@ -371,11 +371,11 @@ export default function AISupplyChainOptimization(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

@@ -4,12 +4,12 @@ export default function AIBlockchain() {
   const features = [
     'AI-powered blockchain optimization',
     'Intelligent smart contract management',
-    'Automated blockchain monitoring and alerting',
-    'Predictive analytics for blockchain scaling',
-    'Smart blockchain security and compliance',
-    'AI-driven blockchain automation and orchestration',
-    'Real-time blockchain analytics and insights',
-    'Custom AI models for blockchain applications'
+    'Automated blockchain monitoring and alerting',;
+    'Predictive analytics for blockchain scaling',;
+    'Smart blockchain security and compliance',;
+    'AI-driven blockchain automation and orchestration',;
+    'Real-time blockchain analytics and insights',;
+    'Custom AI models for blockchain applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIBlockchain() {
       name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full blockchain suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full blockchain suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Blockchain optimization',
-    'Smart contract management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Blockchain scaling and management'
+    'Blockchain optimization',;
+    'Smart contract management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Blockchain scaling and management';
   ];
 
   const benefits = [
-    'Improve blockchain performance by 50-80%',
-    'Reduce transaction processing time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance blockchain reliability and scalability',
-    'Optimize resource utilization',
-    'Scale blockchain operations efficiently'
+    'Improve blockchain performance by 50-80%',;
+    'Reduce transaction processing time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance blockchain reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale blockchain operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIBlockchain() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

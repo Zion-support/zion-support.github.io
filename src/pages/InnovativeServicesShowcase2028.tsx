@@ -30,6 +30,7 @@ import { Brain,
   ExternalLink,
   Search,
   Clock,
+<<<<<<< HEAD
   BarChart3,
   Target,
   Users,
@@ -52,20 +53,46 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
     ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
     ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
     ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
+=======
+  Wifi,
+  Chip,
+  Database as DatabaseIcon,
+  ShieldCheck,
+  Bot,
+  GitFork,
+  Eye as EyeIcon,
+  Sparkles as SparklesIcon,
+  Zap as ZapIcon;
+} from 'lucide-react';
+import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028";
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInfrastructure2028";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
+import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028";
+
+const InnovativeServicesShowcase2028: React.FC = () => {;
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const allServices = [;
+    ...ADVANCED_AI_SERVICES_2028,;
+    ...COMPREHENSIVE_IT_INFRASTRUCTURE_2028,;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: Brain, count: ADVANCED_AI_SERVICES_2028.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Server, count: COMPREHENSIVE_IT_INFRASTRUCTURE_2028.length },
-    { id: 'saas', name: 'Micro SAAS', icon: Cloud, count: INNOVATIVE_MICRO_SAAS_SERVICES_2028.length }
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: ADVANCED_AI_SERVICES_2028.length },;
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: Server, count: COMPREHENSIVE_IT_INFRASTRUCTURE_2028.length },;
+    { id: 'saas', name: 'Micro SAAS', icon: Cloud, count: INNOVATIVE_MICRO_SAAS_SERVICES_2028.length };
   ];
 
-  const filteredServices = selectedCategory === 'all' 
+<<<<<<< HEAD
+  const filteredServices = selectedCategory === 'all' ;
     ? allServices: allServices.filter(s  => s.type === selectedCategory);
 
   const getCategoryIcon = (category: string)  => {
-    switch (category) {
+    switch (category) {;
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
       case 'Marketing Tech': return Target;
@@ -89,18 +116,76 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
       'from-indigo-600 to-purple-600',
       'from-yellow-600 to-orange-600',
       'from-teal-600 to-blue-600',
-      'from-pink-600 to-red-600'
+      'from-pink-600 to-red-600';
     ];
     return colors[Math.abs(category.length) % colors.length]};
+=======
+  const filteredServices = allServices.filter(service => {;
+    const matchesCategory = activeCategory === 'all' || ;
+      (activeCategory === 'ai' && ADVANCED_AI_SERVICES_2028.includes(service)) ||;
+      (activeCategory === 'infrastructure' && COMPREHENSIVE_IT_INFRASTRUCTURE_2028.includes(service)) ||;
+      (activeCategory === 'saas' && INNOVATIVE_MICRO_SAAS_SERVICES_2028.includes(service));
+    
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+},
+    visible: {
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -278,8 +363,24 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -296,9 +397,33 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
             {comprehensivePricingGuide2028.slice(0, 3).map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
@@ -353,8 +478,24 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -462,9 +603,21 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
           <div className="border-t border-white/10 mt-8 pt-8 text-center">
             <p className="text-gray-400">
               © 2028 Zion Tech Group. All rights reserved. Transforming businesses through innovative technology solutions.
+<<<<<<< HEAD
             </p>
           </div>
         </div>
       </footer>
     </div>
   )}
+=======;
+            </p>;
+          </div>;
+        </div>;
+      </footer>;
+    </div>;
+  );
+};
+
+export default InnovativeServicesShowcase2028;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

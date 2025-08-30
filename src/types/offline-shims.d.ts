@@ -7,11 +7,10 @@ declare module 'react' {
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {}
-  export interface RefObject<T> { current: T }
+  export interface RefObject<T> { current: T };
   export type RefCallback<T> = (value: T) => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
-  export function useState<S = any>(initial?: S): [S, (value: S) => void];
   export function useEffect(fn: () => any, deps?: any[]): void;
   export function useRef<T = any>(initial: T): { current: T };
   const react: any;
@@ -30,16 +29,13 @@ declare namespace JSX {
 }
 
 declare module 'react-dom' {
-  export function render(...args: any[]): any;
-  const reactDom: any;
+  export function reactDom: any;
   export default reactDom;
 }
 
 declare module 'react-router-dom' {
-  export function useParams<T = any>(): T;
   export function useNavigate(): any;
   export const Link: any;
-  export const Route: any;
   export const Routes: any;
   export const Navigate: any;
   const rr: any;
@@ -57,7 +53,6 @@ declare module '@hookform/resolvers/zod' {
 }
 
 declare module '@tanstack/react-query' {
-  export function useQuery<T = any>(...args: any[]): any;
   export function useMutation<T = any>(...args: any[]): any;
   const rq: any;
   export default rq;
@@ -87,3 +82,5 @@ declare module 'zod' {
   export default z;
 }
 
+
+export default useEffect;

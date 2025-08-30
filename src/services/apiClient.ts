@@ -4,26 +4,26 @@ import { supabase } from '@/integrations/supabase/client';
 
 const apiClient = axios.create({
   baseURL: '/api',
-  withCredentials: true,
+  withCredentials: true,;
 });
 
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
-    if (error.response?.status === 401) {
-      try {
+    if (error.response?.status = == 401) {
+      try {;
         await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {
         console.error('Failed to logout after 401', e);
       }
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'null') {
         window.location.assign('/login');
       }
     } else {
       const message = error.response?.data?.message || 'Something went wrong';
       toast.error(message);
     }
-    return Promise.reject(error);
+    return Promise.throw new Error(error);
   }
 );
 

@@ -31,24 +31,35 @@ export default function RequestsPanel(...args[]):  {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest)  => {
+<<<<<<< HEAD
+  const handleViewDetails = (quote: QuoteRequest) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true);
     
     // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id)}
+<<<<<<< HEAD
+    if (quote.status = == 'new') {
+      markAsViewed(quote.id)};
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest)  => !q.is_archived);
   const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
+=======
+    if (quote.status = == 'new') {;
+      markAsViewed(quote.id);
+    }
+  };
+
+  // Filter quotes by archive status
+  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <ProtectedRoute>
       <div>
         
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+        <div className = "min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
               unreadCount={unreadCount}
@@ -89,12 +100,12 @@ export default function RequestsPanel(...args[]):  {
             </Tabs>
           </div>
         </div>
-        
-        {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
+        ;
+        {/* Quote Details Modal */};
+        <QuoteDetails;
+          quote={selectedQuote};
+          isOpen={showDetails};
+          onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null)}}
         />

@@ -91,34 +91,53 @@ export default function EnhancedStatsSection(...args[]):  {
       controls.start('visible')}
   }, [controls, inView]);
 
-  const animateCount = (target: string, duration: number = 2000) => {
+  const animateCount = (target: string, duration: number = 2000) => {;
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
     const start = 0;
     const increment = numericValue / (duration / 16); // 60fps
 
     let current = start;
-    const timer = setInterval(() => {
+    const timer = setInterval(() => {;
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
+<<<<<<< HEAD
         clearInterval(timer)}
-      setCountedValues(prev => ({
+      setCountedValues(prev = > ({
         ...prev,
-        [target]: Math.floor(current)
+        [target]: Math.floor(current);
       }))}, 16);
+=======
+        clearInterval(timer);
+      }
+      setCountedValues(prev = > ({;
+        ...prev,;
+        [target]: Math.floor(current);
+      }));
+    }, 16);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
-        const timer = setTimeout(() => {
+<<<<<<< HEAD
+        const timer = setTimeout(() => {;
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
+=======
+        const timer = setTimeout(() => {;
+          animateCount(stat.value);
+        }, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer);
+      });
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, [inView]);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
@@ -130,15 +149,30 @@ export default function EnhancedStatsSection(...args[]):  {
         {/* Section Header */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
           animate={controls}
-          variants={{
+          variants = {
+  {
             visible: {
               opacity: 1,
               y: 0,
-              transition: {
+  transition: {
                 duration: 0.6
-              }
+              
+
+
+
+
+
+}
             }
           }}
           className="text-center mb-16"
@@ -156,27 +190,50 @@ export default function EnhancedStatsSection(...args[]):  {
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
               animate={controls}
-              variants={{
+              variants = {
+  {
                 visible: {
                   opacity: 1,
                   y: 0,
                   transition: {
                     duration: 0.6,
-                    delay: index * 0.1
-                  }
+  delay: index * 0.1
+                  
+
+
+
+
+
+}
                 }
               }}
               className="group relative"
             >
               <motion.div
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
-                whileHover={{ 
+                whileHover = {
+  { 
                   y: -10,
                   scale: 1.02,
-                  borderColor: `rgba(34, 221, 210, 0.5)`
-                }}
+                  borderColor: `rgba(34, 221, 210,
+  0.5)`
+                
+
+
+
+
+
+}}
                 transition={{ duration: 0.3 }}
               >
                 {/* Background gradient overlay */}
@@ -185,10 +242,17 @@ export default function EnhancedStatsSection(...args[]):  {
                 {/* Icon */}
                 <motion.div
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
-                  whileHover={{ 
+                  whileHover = {
+  { 
                     rotate: 360,
-                    scale: 1.1
-                  }}
+  scale: 1.1
+                  
+
+
+
+
+
+}}
                   transition={{ duration: 0.6 }}
                 >
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
@@ -199,7 +263,15 @@ export default function EnhancedStatsSection(...args[]):  {
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 >
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
@@ -230,16 +302,31 @@ export default function EnhancedStatsSection(...args[]):  {
 
         {/* Bottom Achievement Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
           animate={controls}
-          variants={{
+          variants = {
+  {
             visible: {
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.6,
-                delay: 0.6
-              }
+  delay: 0.6
+              
+
+
+
+
+
+}
             }
           }}
           className="mt-16"
@@ -273,9 +360,19 @@ export default function EnhancedStatsSection(...args[]):  {
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
                 <div className="text-gray-300">Client Retention</div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
     </section>
   )}
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

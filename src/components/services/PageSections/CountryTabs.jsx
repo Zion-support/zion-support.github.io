@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react';
 export const CountryTabs = () => {
   const [activeCountry, setActiveCountry] = useState('us');
 
+<<<<<<< HEAD
   const countries = [
     {
       id: 'us',
@@ -125,6 +126,8 @@ export const CountryTabs = () => {
     }
   ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const currentCountry = countries.find(c => c.id === activeCountry);
 
   return (

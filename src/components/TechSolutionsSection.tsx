@@ -15,6 +15,7 @@ import { Brain,
   Server
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export const TechSolutionsSection: React.FC = (): JSX.Element => {
   const solutions = [
     {
@@ -58,17 +59,79 @@ export const TechSolutionsSection: React.FC = (): JSX.Element => {
       description: 'Research and development of next-generation technologies and solutions.',
       features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
   ];
+=======
+const techSolutions = [
+  {
+    icon: "🤖",
+    title: "AI & Machine Learning",
+    description: "Intelligent automation, predictive analytics, and cognitive computing solutions",
+    benefits: ["Increase efficiency by 300%", "Reduce costs by 40%", "24/7 operation"],
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    icon: "☁️",
+    title: "Cloud Infrastructure",
+    description: "Scalable, secure, and high-performance cloud solutions for modern businesses",
+    benefits: ["99.9% uptime guarantee", "Global scalability", "Advanced security"],
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    icon: "🔒",
+    title: "Cybersecurity",
+    description: "Comprehensive security solutions protecting your digital assets and data",
+    benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
+    color: "from-red-500 to-orange-500"
+  },
+  {
+    icon: "📱",
+    title: "Mobile Solutions",
+    description: "Cross-platform mobile applications and responsive web solutions",
+    benefits: ["Native performance", "Cross-platform", "Offline capability"],
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    icon: "🌐",
+    title: "Web Development",
+    description: "Modern, responsive web applications and e-commerce solutions",
+    benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],
+    color: "from-indigo-500 to-purple-500"
+  },
+  {
+    icon: "📊",;
+    title: "Data Analytics",;
+    description: "Business intelligence and data-driven insights for strategic decision making",;
+    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;
+    color: "from-yellow-500 to-orange-500";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function TechSolutionsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -80,15 +143,25 @@ export function TechSolutionsSection() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {solutions.map((solution, index)  => {
+          {solutions.map((solution, index)  => {;
             const IconComponent = solution.icon;
             return (
               <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key = {solution.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
               >
                 <div className="flex items-center mb-6">
@@ -98,6 +171,66 @@ export function TechSolutionsSection() {
                   <h3 className="text-xl font-bold text-gray-900">
                     {solution.title}
                   </h3>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {techSolutions.map((solution, index) => (
+            <motion.div
+              key={solution.title}
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+            >
+              <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <span className="text-3xl">{solution.icon}</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                {solution.title}
+              </h3>
+              
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                {solution.description}
+              </p>
+              
+              <ul className="space-y-2">
+                {solution.benefits.map((benefit, benefitIndex) => (
+                  <li key={benefitIndex} className="flex items-center gap-2 text-sm">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    <span className="text-gray-300">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mt-6 pt-4 border-t border-slate-700">
+                <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
+                  Learn More →
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
 
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -126,18 +259,54 @@ export function TechSolutionsSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to transform your business?</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default TechSolutionsSection;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TechSolutionsSection;

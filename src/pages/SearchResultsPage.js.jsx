@@ -18,7 +18,7 @@ export default function SearchResultsPage() {
             return (await res.json())},
         enabled: !!query,
         initialPageParam: 1,
-        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? undefined : pages.length + 1
+        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1
     });
     // Refetch when the URL param changes
     useEffect(() => {

@@ -11,7 +11,7 @@ const ServiceCategory = ({ category, services }) => {
         return null;
     const getCategoryIcon = (categoryName) => {
         const iconMap = {
-            'AI & Machine Learning': <Brain className="w-6 h-6"/>,
+  'AI & Machine Learning': <Brain className="w-6 h-6"/>,
             'Cybersecurity & Compliance': <Shield className="w-6 h-6"/>,
             'Data & Analytics': <Database className="w-6 h-6"/>,
             'Business Process': <Briefcase className="w-6 h-6"/>,
@@ -22,11 +22,20 @@ const ServiceCategory = ({ category, services }) => {
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
             'Real Estate & Property': <Home className="w-6 h-6"/>,
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
-        };
+  <<<<<<< HEAD
+        
+};
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>};
+=======
+  
+
+};
+        return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getCategoryColor = (categoryName) => {
         const colorMap = {
-            'AI & Machine Learning': 'from-purple-500 to-indigo-600',
+  'AI & Machine Learning': 'from-purple-500 to-indigo-600',
             'Cybersecurity & Compliance': 'from-red-500 to-pink-600',
             'Data & Analytics': 'from-blue-500 to-cyan-600',
             'Business Process': 'from-green-500 to-emerald-600',
@@ -37,8 +46,17 @@ const ServiceCategory = ({ category, services }) => {
             'Supply Chain & Logistics': 'from-teal-500 to-green-600',
             'Real Estate & Property': 'from-amber-500 to-yellow-600',
             'Legal & Compliance': 'from-slate-500 to-gray-600',
-        };
+  <<<<<<< HEAD
+        
+};
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
+=======
+  
+
+};
+        return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<div className="space-y-6">
       <div className="flex items-center space-x-3 mb-6">
         <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`}>
@@ -106,7 +124,15 @@ const ServiceCategory = ({ category, services }) => {
                       Starting from
                     </div>
                   </div>
-                  <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.open('https://ziontechgroup.com', '_blank')}>
+                  <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
+  () => window.open('https://ziontechgroup.com',
+  '_blank')
+
+
+
+
+
+}>
                     Get Started
                   </Button>
                 </div>
@@ -241,10 +267,26 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
-        <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.open('mailto:kleber@ziontechgroup.com', '_blank')}>
+        <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com',
+  '_blank')
+
+
+
+
+
+}>
           Contact Sales Team
         </Button>
-        <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" onClick={() => window.open('https://ziontechgroup.com', '_blank')}>
+        <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" onClick = {
+  () => window.open('https://ziontechgroup.com',
+  '_blank')
+
+
+
+
+
+}>
           Visit Our Website
         </Button>
         <Link to="/services-comparison">
@@ -267,7 +309,15 @@ export default function EnhancedServicesOverview() {
           and cutting-edge IT solutions. From startups to enterprises, we have the tools you need to succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.open('https://ziontechgroup.com', '_blank')}>
+          <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
+  () => window.open('https://ziontechgroup.com',
+  '_blank')
+
+
+
+
+
+}>
             Get Started Today
           </Button>
           <Link to="/services-comparison">

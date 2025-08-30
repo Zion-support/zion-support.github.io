@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from "../../components/SEO";
+import { 
+  Brain, 
+  BarChart3, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   TrendingUp, 
   BarChart3, 
   Target, 
@@ -33,11 +42,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       title: "Intelligent Forecasting",
       description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
     },
+<<<<<<< HEAD
     {
       icon: Zap,
       title: "Automated Insights",
       description: "Automatically discover patterns, anomalies, and actionable insights from your data."
-    }
+    };
   ];
 
   const benefits = [
@@ -46,6 +56,22 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     "Improve decision-making speed by 60%",
     "Enhance customer satisfaction through personalized insights",
     "Identify new market opportunities faster than competitors"
+=======;
+    {;
+      icon: Zap,;
+      title: "Automated Insights",;
+      description: "AI-generated recommendations and actionable insights delivered in real-time.";
+    };
+  ];
+
+  const benefits = [
+    "Increase revenue by 15-25% through data-driven decision making",;
+    "Reduce operational costs by 20-30% with optimized processes",;
+    "Improve customer satisfaction by 35% with personalized insights",;
+    "Accelerate time-to-market by 40% with predictive analytics",;
+    "Enhance team productivity by 25% with automated reporting",;
+    "Reduce risk by 30% with early warning systems";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
@@ -58,17 +84,36 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
+<<<<<<< HEAD
       industry: "Healthcare",
       description: "Patient outcome prediction, resource allocation, and treatment optimization"
     },
     {
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization";
+    },;
+    {;
+      industry: "Marketing",;
+      description: "Campaign performance analysis, audience targeting, and ROI optimization";
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Business Intelligence - Zion Tech Group"
+        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
+      />
+      
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0">
@@ -78,8 +123,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
         
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
@@ -120,8 +181,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -138,11 +215,51 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -159,8 +276,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -172,14 +305,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               Join thousands of businesses that have transformed their operations with AI-powered insights
             </p>
           </motion.div>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
@@ -187,6 +330,77 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 <p className="text-zion-slate-light text-lg">{benefit}</p>
               </motion.div>
             ))}
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-8 rounded-xl border border-cyan-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Industry-leading AI algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Enterprise-grade security</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Cloud className="w-5 h-5 text-blue-400" />
+                  <span className="text-gray-300">Scalable cloud infrastructure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-300">24/7 expert support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Proven track record</span>
+                </div>
+              </div>
+            </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -195,8 +409,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -213,11 +443,51 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">{useCase.industry}</h3>
                 <p className="text-zion-slate-light">{useCase.description}</p>
@@ -231,8 +501,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -258,11 +544,21 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               >
                 Contact Sales
               </motion.button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIBusinessIntelligence;
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

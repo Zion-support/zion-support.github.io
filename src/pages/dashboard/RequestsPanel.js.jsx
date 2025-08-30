@@ -19,7 +19,6 @@ export default function RequestsPanel() {
             markAsViewed(quote.id)}
     };
     // Filter quotes by archive status
-    const activeQuotes = quotes.filter(q => !q.is_archived);
     const archivedQuotes = quotes.filter(q => q.is_archived);
     return (<ProtectedRoute>
       <div>

@@ -42,31 +42,55 @@ export default function QuoteManager(...args[]):  {
 
   // Count quotes by status
   const statusCounts = {
+  <<<<<<< HEAD
     new: quotes.filter((q: QuoteRequest)  => q.status === 'new').length,
     in_review: quotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
     accepted: quotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
     responded: quotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
-    closed: quotes.filter((q: QuoteRequest)  => q.status === 'closed').length
-  };
+  closed: quotes.filter((q: QuoteRequest)  => q.status === 'closed').length
+  ;
+};
 
   const handleViewDetails = (quote: QuoteRequest)  => {
+=======
+  new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
+    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
+    accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,;
+    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
+  ;
+  ;
+  closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length;
+  ;
+
+
+
+
+};
+
+  const handleViewDetails = (quote: QuoteRequest) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true)};
 
-  const handleResetFilters = () => {
+  const handleResetFilters = () => {;
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined })};
+<<<<<<< HEAD
+    setDateRange({ from: null, to: null })};
+=======
+    setDateRange({ from: null, to: null });
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />}
+    return <Navigate to = "/unauthorized" replace />}
 
   return (
     <ProtectedRoute adminOnly>
       <div>
         
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+        <div className = "min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
               <div>
@@ -129,12 +153,12 @@ export default function QuoteManager(...args[]):  {
             </Tabs>
           </div>
         </div>
-        
-        {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
+        ;
+        {/* Quote Details Modal */};
+        <QuoteDetails;
+          quote={selectedQuote};
+          isOpen={showDetails};
+          onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null)}}
         />

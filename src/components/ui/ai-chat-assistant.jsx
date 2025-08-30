@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -47,6 +47,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         // Simulate API call delay
         const timer = setTimeout(() => {
             // Mock AI responses based on user input
+<<<<<<< HEAD
             const responses = [
                 {
                     content: "That's a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
@@ -65,17 +66,25 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     suggestions['Schedule consultation', 'View case studies', 'Meet the team']
                 }
             ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 type: 'assistant',
                 content: randomResponse.content,
                 timestamp: new Date(),
                 status: 'sent',
                 metadata: {
                     confidence: 0.85 + Math.random() * 0.1,
-                    suggestions: randomResponse.suggestions
-                }
+  suggestions: randomResponse.suggestions
+                
+
+
+
+
+
+}
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -86,12 +95,18 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         if (!inputValue.trim() || isTyping)
             return;
         const userMessage = {
-            id: Date.now().toString(),
+  id: Date.now().toString(),
             type: 'user',
             content: inputValue.trim(),
             timestamp: new Date(),
-            status: 'sending'
-        };
+  status: 'sending'
+        
+
+
+
+
+
+};
         setMessages(prev => [...prev, userMessage]);
         onMessageSend?.(userMessage.content);
         // Generate AI response
@@ -130,7 +145,39 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
             
             {/* Chat Panel */}
-            <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial={{ opacity: 0, y: 20, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.95 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+            <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+}} exit = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+}} transition = {
+  { duration: 0.3,
+  ease: "easeOut" 
+
+
+
+
+
+}}>
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
@@ -163,7 +210,31 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
               {/* Settings Panel */}
               <AnimatePresence>
-                {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
+                {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+}} animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+
+
+
+}} exit = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+}} transition={{ duration: 0.2 }}>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-zinc-300 text-sm">Voice Input</span>
@@ -183,7 +254,23 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
               {/* Messages */}
               {!isMinimized && (<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
-                  {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                  {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} transition={{ duration: 0.3 }}>
                       {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
                           <Bot className="w-5 h-5 text-white"/>
                         </div>)}
@@ -223,7 +310,23 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </motion.div>))}
                   
                   {/* Typing indicator */}
-                  {isTyping && (<motion.div className="flex gap-3" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                  {isTyping && (<motion.div className="flex gap-3" initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} transition={{ duration: 0.3 }}>
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
                         <Bot className="w-5 h-5 text-white"/>
                       </div>

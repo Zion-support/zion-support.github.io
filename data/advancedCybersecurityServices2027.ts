@@ -104,7 +104,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/ai-threat-intelligence",
     badge: "Advanced",
     icon: "🛡️",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto = format&fit=crop&w=800&h=500",
     innovationLevel: "Advanced",
     marketSize: "$15.8B by 2027",
     competitors["CrowdStrike", "Palo Alto Networks", "FireEye"],
@@ -462,10 +462,10 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     roi: "400-800%",
     estimatedDelivery: "16-20 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+      phone: "+1 302 464 0950",;
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    };
+  };
 ];

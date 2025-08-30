@@ -29,13 +29,12 @@ const projectBriefSchema = z.object({
   talentFilters: z.object({ // New
     verifiedOnly: z.boolean().optional(),
     regions: z.string().optional(), // Comma-separated string for now
-  }).optional(),
+  }).optional(),;
 });
 
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
-// const TeamBuilderPage: NextPage = () => { // Old
-const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference
+// const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
@@ -62,10 +61,10 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
   const steps = [
     { name: 'Project Basics', fields: ['projectName', 'goals'] },
     { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },
-    { name: 'Review & Submit', fields: [] }, // No fields, just review
+    { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
-  const handleNextStep = async () => {
+  const handleNextStep = async () => {;
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const isValid = await trigger(currentStepFields);
     if (isValid) {
@@ -73,7 +72,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     }
   };
 
-  const handlePreviousStep = () => {
+  const handlePreviousStep = () => {;
     setCurrentStep((prev) => prev - 1);
   };
 
@@ -82,14 +81,15 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-      userId: 'current-user-id',
+  userId: 'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s  => s.trim()).filter(s => s) || [],
       talentFilters: { // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
         regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
-      }
+   
+};
     };
     setProjectBriefSubmitted(projectBriefData);
 
@@ -97,7 +97,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       const response = await fetch('/api/team-builder/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(projectBriefData),
+        body: JSON.stringify(projectBriefData),;
       });
 
       if (!response.ok) {
@@ -118,28 +118,30 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
   };
 
   const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
-    if (!projectBriefSubmitted) {
+    if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return;
     }
 
     // Assuming projectBriefSubmitted has an 'id' if it's saved, or we generate one
-    // For now, let's assume projectBriefSubmitted.id might be undefined if not saved.
+    // For now, let's assume projectBriefSubmitted.id might be null if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
 
     const invitePayload = {
-      talentId: talentId,
+  talentId: talentId,
       roleTitle: roleTitle,
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved
                                                 // If not saving briefs, this might be null or another identifier.
-      // teamRecommendationId: teamRecommendation?.id, // If recommendations are saved and have an ID
-    };
+      // teamRecommendationId: teamRecommendation?.id,
+  // If recommendations are saved and have an ID
+    ;
+};
 
     try {
       const response = await fetch('/api/team-builder/invite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(invitePayload),
+        body: JSON.stringify(invitePayload),;
       });
 
       if (!response.ok) {
@@ -156,14 +158,14 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     }
   };
 
-  const renderRecommendation = () => {
+  const renderRecommendation = () => {;
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return (
       <TeamRecommendationDisplay
-        recommendation={teamRecommendation}
+        recommendation = {teamRecommendation}
         projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}
-      />
+      />;
     );
   };
 
@@ -173,7 +175,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
 
   return (
     <AppLayout>
-      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}
+      <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl">Team Builder</CardTitle>
@@ -363,7 +365,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
           </Card>
         )}
       </div>
-    </AppLayout>
+    </AppLayout>;
   );
 };
 

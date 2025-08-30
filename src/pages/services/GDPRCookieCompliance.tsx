@@ -33,12 +33,12 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
           <li>Business: $149/mo up to 5 domains</li>
           <li>Enterprise: custom, DPA + SSO</li>
         </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to compliance</a>
-    </section>
-  </div>
+      </div>;
+    </section>;
+    <section className="container mx-auto px-4 pb-16">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to compliance</a>;
+    </section>;
+  </div>;
 );
 
 export default GDPRCookieCompliance;

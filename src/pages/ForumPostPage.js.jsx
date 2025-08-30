@@ -14,15 +14,16 @@ import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/components/ui/use-toast";
 // Mock data for a forum post
 const mockPost = {
-    id: "1",
+  id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
     author: {
         id: "user1",
         name: "Alex Johnson",
         avatar: "https://i.pravatar.cc/150?img=3",
-        role: "Verified Talent"
-    },
+  role: "Verified Talent"
+    
+},
     authorId: "user1",
     category: "ai-tools",
     categoryId: "ai-tools",
@@ -234,7 +235,13 @@ export default function ForumPostPage() {
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
     return (<>
-      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
+      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {
+  post.content.substring(0,
+  160)
+} keywords = {
+  `community, forum, discussion, ${post.tags.join(',
+  ')
+}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">

@@ -5,7 +5,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // // // console.log('🔗 Starting continuous link checker automation...');
@@ -76,14 +75,18 @@ async function checkLinks() {
       // // // console.log('✅ No broken references found');
 
     // Generate report
+<<<<<<< HEAD
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       hasIssues,
       htmlFiles: htmlFiles.length,
       brokenReferences: brokenReferences.length,
-      summary: 'Link check completed'
-    };
+  summary: 'Link check completed'
+    
+};
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const reportPath = path.join(process.cwd(), 'link-checker-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
@@ -93,8 +96,7 @@ async function checkLinks() {
     // Don't exit, just log the error and continue
 
 
-function findHtmlFiles(dir) {
-  const files = [];
+function files = [];
   const items = fs.readdirSync(dir);
 
   for (const item of items) {

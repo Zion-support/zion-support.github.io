@@ -58,5 +58,11 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
       <motion.img ref={imageRef} src={currentSrc} alt={alt} sizes={sizes} className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onLoad={handleLoad} onError={handleError} loading={priority ? 'eager' : 'lazy'} decoding="async"/>
 
       {/* Progressive Loading Effect */}
-      {isLoaded && !hasError && (<motion.div initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
+      {isLoaded && !hasError && (<motion.div initial = {
+  { opacity: 0,
+  scale: 1.1 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>)};

@@ -8,7 +8,7 @@ export default function HealthcareTech(...args: []):  {
     <>
       <Helmet>
         <title>Healthcare Technology Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />
+        <meta name = "description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />
         <meta name="keywords" content="healthcare technology, medical AI, digital health, patient monitoring, telemedicine, healthcare analytics, medical devices" />
       </Helmet>
 
@@ -372,11 +372,11 @@ export default function HealthcareTech(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

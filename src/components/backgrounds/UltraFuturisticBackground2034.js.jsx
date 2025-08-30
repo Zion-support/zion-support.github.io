@@ -13,10 +13,12 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {
-            quantum['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
+  quantum['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
             neon['#ff0080', '#8000ff', '#00ffff', '#ffff00'],
-            holographic['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4']
-        };
+            holographic['#ff6b6b', '#4ecdc4', '#45b7d1',
+  '#96ceb4']
+        
+};
         const selectedColors = colors[theme];
         // Create particles
         for (let i = 0; i < 100; i++) {
@@ -122,8 +124,10 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current)}
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {
+  {
             opacity: intensity,
-            filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
-        }}/>)};
+  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
+        
+}}/>)};
 export default UltraFuturisticBackground2034;

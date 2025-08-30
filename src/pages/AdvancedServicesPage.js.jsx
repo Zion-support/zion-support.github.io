@@ -12,9 +12,6 @@ export default function AdvancedServicesPage() {
     const [sortBy, setSortBy] = useState('featured');
     // Filter services based on search and category
     const filteredServices = ADVANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         return matchesSearch && matchesCategory});
     // Sort services

@@ -55,8 +55,6 @@ export default function SavedTalentsPage() {
                 setIsLoading(false)}
         };
         fetchSavedTalents()}, [user]);
-    const handleViewProfile = (talentId) => {
-        navigate(`/talent/${talentId}`)};
     const handleRequestHire = (talent) => {
         console.log("Request to hire:", talent);
         toast({

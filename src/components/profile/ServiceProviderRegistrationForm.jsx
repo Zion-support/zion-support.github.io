@@ -142,7 +142,6 @@ export function ServiceProviderRegistrationForm() {
             if (!user?.id) {
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
-            let finalSummary = values.bio;
             let finalServices = serviceTags;
             if (values.enhancedProfile && !generatedContent) {
                 try {

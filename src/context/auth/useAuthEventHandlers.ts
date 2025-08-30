@@ -15,12 +15,12 @@ export const useAuthEventHandlers = (
   setUser: (user: User | null)  => void,
   setOnboardingStep: (step: number)  => void
 ) => {
-  const handleSignedIn = useCallback((user: User)  => {
+  const handleSignedIn = useCallback((user: User)  => {;
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);
 
-  const handleSignedOut = useCallback(() => {
+  const handleSignedOut = useCallback(() => {;
     setUser(null);
     setOnboardingStep(0); // Reset onboarding
   }, [setUser, setOnboardingStep]);

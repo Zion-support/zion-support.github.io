@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
-const DialogContext = createContext(undefined);
-export function Dialog({ children, open, onOpenChange }) {
+const Dialog({ children, open, onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
     const isOpen = isControlled ? open : internalOpen;
     const setIsOpen = (newOpen) => {
         if (!isControlled) {
@@ -10,7 +8,10 @@ export function Dialog({ children, open, onOpenChange }) {
         if (onOpenChange) {
             onOpenChange(newOpen)}
     };
-    return (<DialogContext.Provider value={{ isOpen, setIsOpen }}>
+    return (<DialogContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+}}>
       <div className="relative">
         {children}
       </div>
@@ -38,11 +39,5 @@ export function DialogContent({ children, className = '' }) {
         {children}
       </div>
     </div>)}
-export function DialogHeader({ children, className = '' }) {
-    return <div className={`mb-4 ${className}`}>{children}</div>}
-export function DialogTitle({ children, className = '' }) {
-    return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>}
-export function DialogDescription({ children, className = '' }) {
-    return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>}
 export function DialogFooter({ children, className = '' }) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}

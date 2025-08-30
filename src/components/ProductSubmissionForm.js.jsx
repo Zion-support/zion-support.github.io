@@ -44,8 +44,8 @@ export function ProductSubmissionForm() {
             description: "",
             price: "",
             category: "",
-            video: undefined,
-            model: undefined,
+            video: null,
+            model: null,
             tags: "",
         },
     });
@@ -91,7 +91,7 @@ export function ProductSubmissionForm() {
         try {
             // Create the product listing
             const productData = {
-                title: values.title,
+  title: values.title,
                 description: values.description,
                 price: parseFloat(values.price),
                 category: values.category,
@@ -100,7 +100,8 @@ export function ProductSubmissionForm() {
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
-                },
+   
+},
                 createdAt: new Date().toISOString(),
             };
             const { data: productRecord, error: productError } = await supabase
@@ -174,7 +175,7 @@ export function ProductSubmissionForm() {
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
-            navigate(`/marketplace/listing/${productRecord.id}`)}
+            router(`/marketplace/listing/${productRecord.id}`)}
         catch (error) {
             toast({
                 title: "Publication Failed",
@@ -288,10 +289,13 @@ export function ProductSubmissionForm() {
                   <FormMessage />
                 </FormItem>)}/>
 
-            <FormField control={form.control} name="model" render={() => (<FormItem>
+            <FormField control={form.control} name="model" render = {
+  () => (<FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
-                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer"/>
+                    <Input type="file" accept="model/gltf-binary,
+  .glb" onChange={handleModelChange
+} className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
                     Upload a 3D model for interactive viewing
@@ -309,9 +313,11 @@ export function ProductSubmissionForm() {
       </TabsContent>
       
       <TabsContent value="ai">
-        <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues={{
+        <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
+  {
             title: form.getValues("title"),
-            category: form.getValues("category")
-        }}/>
+  category: form.getValues("category")
+        
+}}/>
       </TabsContent>
     </Tabs>)}

@@ -27,6 +27,7 @@ import { SEO  } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: "Predictive Diagnostics",
@@ -50,7 +51,7 @@ const AIHealthcareAnalytics = () => {
       title: "Population Health Analytics",
       description: "Large-scale analysis of population health data to identify trends, risk factors, and public health opportunities.",
       benefits["Public health insights", "Epidemic prediction", "Resource allocation", "Preventive programs"]
-    }
+    };
   ];
 
   const healthcareModules = [
@@ -89,7 +90,7 @@ const AIHealthcareAnalytics = () => {
       description: "AI optimization of healthcare operations and resource management",
       icon: TrendingUp,
       features["Resource optimization", "Staff scheduling", "Inventory management", "Cost analysis"]
-    }
+    };
   ];
 
   const pricingTiers = [
@@ -142,7 +143,7 @@ const AIHealthcareAnalytics = () => {
         "On-site deployment"
       ],
       popular: false
-    }
+    };
   ];
 
   const testimonials = [
@@ -166,7 +167,7 @@ const AIHealthcareAnalytics = () => {
       comp: "Community Health Network",
       content: "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
       rating: 5
-    }
+    };
   ];
 
   const complianceFeatures = [
@@ -178,15 +179,36 @@ const AIHealthcareAnalytics = () => {
     "FDA Guidelines",
     "Clinical Validation",
     "Data Encryption"
+=======
+    'AI-powered patient outcome prediction',
+    'Real-time health monitoring and alerts',
+    'Predictive analytics for disease prevention',
+    'Automated medical image analysis',
+    'Clinical decision support systems',;
+    'Population health management',;
+    'Drug interaction and safety monitoring',;
+    'Healthcare fraud detection',;
+    'Patient engagement optimization',;
+    'Regulatory compliance automation';
+  ];
+
+  const benefits = [
+    'Improve patient outcomes by 35%',;
+    'Reduce healthcare costs by 25%',;
+    'Increase diagnostic accuracy by 40%',;
+    'Reduce readmission rates by 30%',;
+    'Optimize resource allocation by 45%',;
+    'Enhance patient satisfaction by 50%';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
-    'Hospital management and operations',
-    'Clinical research and trials',
-    'Telemedicine and remote care',
-    'Pharmaceutical development',
-    'Insurance and claims processing',
-    'Public health monitoring'
+    'Hospital management and operations',;
+    'Clinical research and trials',;
+    'Telemedicine and remote care',;
+    'Pharmaceutical development',;
+    'Insurance and claims processing',;
+    'Public health monitoring';
   ];
 
   const tiers = [
@@ -199,17 +221,18 @@ const AIHealthcareAnalytics = () => {
       examples["Personalized medicine", "Drug response prediction", "Treatment outcome forecasting", "Side effect minimization"]
     },
     {
+<<<<<<< HEAD
       category: "Operations",
       examples["Resource optimization", "Staff scheduling", "Inventory management", "Cost reduction"]
     },
     {
       category: "Research",
       examples["Clinical trial optimization", "Drug discovery", "Epidemiological studies", "Public health research"]
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Healthcare Analytics — Zion Tech Group | AI-Powered Healthcare Solutions"
         description="Revolutionary AI-powered healthcare analytics platform for predictive diagnostics, treatment optimization, and population health insights. Improve patient outcomes by 30%."
@@ -283,6 +306,60 @@ const AIHealthcareAnalytics = () => {
               <h3 className="text-xl font-bold text-white mb-2">HIPAA Compliant</h3>
               <p className="text-gray-300">Secure & compliant</p>
             </div>
+=======
+      name: 'Enterprise',
+      price: '$3,999/mo',
+      details: [
+        'Unlimited patients',
+        'Full AI healthcare suite',
+        'Custom algorithms',;
+        'Dedicated support',;
+        'White-label solutions',;
+        'Multi-facility support';
+      ];
+    };
+  ];
+
+  const technicalSpecs = {
+  technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
+    integrations: ['Epic', 'Cerner', 'Allscripts', 'Meditech', 'Practice Fusion', 'Athenahealth'],
+    security: ['HIPAA', 'SOC 2 Type II', 'HITECH', 'End-to-end encryption', 'Multi-factor authentication'],
+    uptime: '99.99%',
+    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR',;
+  ;
+  ;
+  ;
+  'CCPA'];
+  ;
+
+
+
+
+
+};
+
+  const healthcareSolutions = [
+    {
+      specialty: 'Cardiology',
+      solutions: ['Heart disease prediction', 'ECG analysis', 'Risk assessment', 'Treatment optimization']
+    },
+    {
+      specialty: 'Oncology',
+      solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching'];
+    },;
+    {;
+      specialty: 'Neurology',;
+      solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring'];
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Heart className="w-4 h-4 mr-2" /> AI-Powered Healthcare Analytics
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -480,13 +557,26 @@ const AIHealthcareAnalytics = () => {
               ✉️ Email Us
             </a>
           </div>
+<<<<<<< HEAD
           <div className="mt-8 text-sm text-gray-400">
             <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
             <p>🌐 <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">ziontechgroup.com</a></p>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIHealthcareAnalytics;
+=======
+          <div className = "mt-4">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
+              Learn More <ExternalLink className="w-4 h-4 ml-2" />;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

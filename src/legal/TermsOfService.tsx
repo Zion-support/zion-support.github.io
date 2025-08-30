@@ -119,10 +119,18 @@ const TermsOfService = () => {
 
       <div className="mt-12 text-center">
         <a href="/" className="text-indigo-400 hover:text-indigo-300 font-medium">
+<<<<<<< HEAD
           ← Back to Home
         </a>
       </div>
     </div>
+=======;
+          ← Back to Home;
+        </a>;
+      </div>;
+      </div>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

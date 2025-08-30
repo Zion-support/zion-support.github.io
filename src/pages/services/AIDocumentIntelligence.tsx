@@ -4,12 +4,12 @@ export default function AIDocumentIntelligence() {
   const features = [
     'Advanced OCR with 99.5% accuracy across 50+ languages',
     'Intelligent document classification and routing',
-    'AI-powered data extraction from complex forms',
-    'Automated compliance checking and validation',
-    'Real-time document processing and indexing',
-    'Secure cloud storage with enterprise-grade encryption',
-    'Custom workflow automation for document approval',
-    'Integration with major business applications'
+    'AI-powered data extraction from complex forms',;
+    'Automated compliance checking and validation',;
+    'Real-time document processing and indexing',;
+    'Secure cloud storage with enterprise-grade encryption',;
+    'Custom workflow automation for document approval',;
+    'Integration with major business applications';
   ];
 
   const tiers = [
@@ -22,34 +22,34 @@ export default function AIDocumentIntelligence() {
       name: 'Professional', 
       price: '$399/mo', 
       details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$999/mo', 
-      details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$999/mo', ;
+      details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Invoice processing and expense management',
-    'Contract analysis and legal document review',
-    'Insurance claims processing and validation',
-    'Healthcare records and medical documentation',
-    'Financial statements and compliance reports',
-    'HR documents and employee onboarding'
+    'Invoice processing and expense management',;
+    'Contract analysis and legal document review',;
+    'Insurance claims processing and validation',;
+    'Healthcare records and medical documentation',;
+    'Financial statements and compliance reports',;
+    'HR documents and employee onboarding';
   ];
 
   const benefits = [
-    'Reduce manual data entry by 80-90%',
-    'Improve processing accuracy by 95%',
-    'Cut document processing costs by 60%',
-    'Accelerate approval workflows by 5x',
-    'Ensure 100% compliance with regulations',
-    'Scale operations without additional headcount'
+    'Reduce manual data entry by 80-90%',;
+    'Improve processing accuracy by 95%',;
+    'Cut document processing costs by 60%',;
+    'Accelerate approval workflows by 5x',;
+    'Ensure 100% compliance with regulations',;
+    'Scale operations without additional headcount';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -143,11 +143,11 @@ export default function AIDocumentIntelligence() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

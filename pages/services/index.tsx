@@ -3,7 +3,7 @@ import Link from 'next/link.ts';
 
 export default function ServicesIndex(...args[]):  {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>Services — Zion</title>
         <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
@@ -72,9 +72,19 @@ export default function ServicesIndex(...args[]):  {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </main>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

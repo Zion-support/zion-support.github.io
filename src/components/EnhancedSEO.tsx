@@ -21,9 +21,28 @@ export function EnhancedSEO({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
+<<<<<<< HEAD
 }) => {
+=======
+}: SEOProps) {
+  const defaultKeywords = [
+    'AI services',
+    'IT consulting',
+    'technology solutions',
+    'digital transformation',;
+    'cloud computing',;
+    'cybersecurity',;
+    'machine learning',;
+    'quantum computing',;
+    'Zion Tech Group';
+  ];
+
+  const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
+
+  // Default structured data for Zion Tech Group
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -31,18 +50,40 @@ export function EnhancedSEO({
     "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud services, and digital transformation.",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
+  "addressCountry": "US"
+    
+
+
+
+
+
+},
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
       "availableLanguage": "English"
     },
+<<<<<<< HEAD
     "sameAs"[
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://facebook.com/ziontechgroup"
     ]
+=======
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "serviceType": [
+      "AI Services",;
+      "IT Consulting",;
+      "Digital Transformation",;
+      "Cloud Computing",;
+      "Cybersecurity";
+    ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -50,10 +91,25 @@ export function EnhancedSEO({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
+<<<<<<< HEAD
       <title>{title} | Zion Tech Group</title>
-      <meta name="description" content={description} />
+      <meta name = "description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content="Zion Tech Group" />
+=======
+      <title>{title}</title>
+      <meta name = "description" content={description} />
+      <meta name="keywords" content = {
+  allKeywords.join(',
+  ')
+
+
+
+
+
+} />
+      <meta name="author" content={author} />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <meta name="robots" content="index, follow" />
       
       {/* Canonical URL */}
@@ -89,5 +145,64 @@ export function EnhancedSEO({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
+<<<<<<< HEAD
+    </Helmet>;
   )};
+=======
+      
+      {/* Additional structured data for articles */}
+      {type = == 'article' && publishedTime && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title,
+            "description": description,
+            "image": image,
+            "author": {
+              "@type": "Organization",
+              "name": author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+              }
+            },
+            "datePublished": publishedTime,
+            "dateModified": modifiedTime || publishedTime,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": url
+            }
+          })}
+        </script>
+      )}
+      
+      {/* Additional structured data for services */}
+      {type === 'service' && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": title,
+            "description": description,
+            "provider": {
+              "@type": "Organization",
+              "name": "Zion Tech Group"
+            },
+            "serviceType": section,
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Zion Tech Group Services";
+            };
+          })};
+        </script>;
+      )};
+    </Helmet>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

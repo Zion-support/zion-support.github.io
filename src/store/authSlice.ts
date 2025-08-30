@@ -19,17 +19,35 @@ const initialState: AuthState = {
   user: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,
+  error: null,;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
 };
 
+<<<<<<< HEAD
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>)  => {
+    setLoggedIn: (state, action: PayloadAction<boolean>)  => {;
       state.isLoggedIn = action.payload;
     },
     setUser: (state, action: PayloadAction<any>)  => {
+=======
+const authSlice = createSlice({;
+  name: 'auth',;
+  initialState,;
+  reducers: {;
+    setUser: (state, action: PayloadAction<User>) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;

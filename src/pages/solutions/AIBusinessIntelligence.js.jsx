@@ -1,32 +1,6 @@
 import React from 'react';
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
 const AIBusinessIntelligence = () => {
-    const biFeatures = [
-        {
-            icon: Brain,
-            title: "AI Analytics",
-            description: "Intelligent data analysis and pattern recognition",
-            features: ["Predictive analytics", "Machine learning insights", "Natural language queries", "Automated reporting"]
-        },
-        {
-            icon: BarChart3,
-            title: "Advanced Visualization",
-            description: "Interactive charts and dashboards for data insights",
-            features: ["Real-time dashboards", "Custom visualizations", "Interactive charts", "Mobile-responsive views"]
-        },
-        {
-            icon: Search,
-            title: "Data Discovery",
-            description: "Intelligent data exploration and insights discovery",
-            features: ["Data mining", "Trend analysis", "Anomaly detection", "Correlation discovery"]
-        },
-        {
-            icon: Activity,
-            title: "Real-time Monitoring",
-            description: "Live monitoring and alerting for business metrics",
-            features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
-        }
-    ];
     const biSolutions = [
         {
             title: "Sales Analytics",

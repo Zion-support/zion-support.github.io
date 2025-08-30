@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 const GreenIT = () => {
@@ -37,6 +38,19 @@ const GreenIT = () => {
           </div>
         </div>
       </div>
-    </>
+    </>;
   )};
+=======
+import React from 'react';
+
+const GreenIT: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">Green IT</h1>;
+			<p className="text-xl text-gray-300">Sustainable technology practices.</p>;
+		</div>;
+	</div>;
+);
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default GreenIT;

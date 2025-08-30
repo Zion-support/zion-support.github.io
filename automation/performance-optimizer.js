@@ -26,12 +26,18 @@ class PerformanceOptimizer {
       
       // Generate optimization report
       const report = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         bundleSize: bundleAnalysis,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
-        recommendations: this.generateRecommendations()
-      };
+  recommendations: this.generateRecommendations()
+      
+
+
+
+
+
+};
       
       this.saveReport(report);
       this.log('Performance optimization completed');
@@ -62,7 +68,6 @@ class PerformanceOptimizer {
   analyzeDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
       return {

@@ -12,7 +12,14 @@ const config: HardhatUserConfig = {
   solidity: {
     version: '0.8.24',
     settings: {
-      optimizer: { enabled: true, runs: 200 },
+      optimizer: { enabled: true,
+  runs: 200 
+
+
+
+
+
+},
     },
   },
   networks: {
@@ -34,11 +41,11 @@ const config: HardhatUserConfig = {
   //     polygonAmoy: POLYGONSCAN_API_KEY,
   //     polygonMumbai: POLYGONSCAN_API_KEY,
   //   } as , // },
-  paths: {
-    sources: './contracts',
-    tests: './test',
-    cache: './cache',
-    artifacts: './artifacts',
-  },
+  paths: {;
+    sources: './contracts',;
+    tests: './test',;
+    cache: './cache',;
+    artifacts: './artifacts',;
+  },;
 };
 export default config;

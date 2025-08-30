@@ -409,11 +409,25 @@ export const services: Service[] = [
   }
 ];
 
-export const getServicesByCategory = (category: Service['category']) => {
+<<<<<<< HEAD
+export const getServicesByCategory = (category: Service['category']) => {;
   return services.filter(service => service.category === category)};
 
-export const getPopularServices = () => {
+export const getPopularServices = () => {;
   return services.filter(service => service.isPopular)};
 
-export const getNewServices = () => {
+export const getNewServices = () => {;
   return services.filter(service => service.isNew)};
+=======
+export const getServicesByCategory = (category: Service['category']) => {;
+  return services.filter(service => service.category === category);
+};
+
+export const getPopularServices = () => {;
+  return services.filter(service => service.isPopular);
+};
+
+export const getNewServices = () => {;
+  return services.filter(service => service.isNew);
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

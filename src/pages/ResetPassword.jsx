@@ -19,8 +19,6 @@ export default function ResetPasswordPage() {
             // Consider redirecting to an error page or login page
         }
     }, [token]);
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value)};
     const handleConfirmPasswordChange = (e) => {
         setConfirmPassword(e.target.value)};
     const handleSubmit = async (e) => {
@@ -37,7 +35,7 @@ export default function ResetPasswordPage() {
         try {
             await resetPassword(token, password);
             toast.success('Password has been reset successfully!');
-            navigate('/login'); // Redirect to login page on success
+            router('/login'); // Redirect to login page on success
         }
         catch (err) {
             // Ensure err.message is a string.

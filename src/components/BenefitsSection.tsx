@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle  } from 'lucide-react';
-import { GradientHeading  } from './GradientHeading';
+import { GradientHeading  } from "./GradientHeading";
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import { GradientHeading } from "./ui/GradientHeading";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Benefit {
 
@@ -17,7 +24,7 @@ const benefits: Benefit[] = [
   {
     title: "AI-Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
+    icon: <Bot className = "w-8 h-8" />,
     color: "from-zion-cyan to-zion-cyan-dark",
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
     stats: "95% Match Rate",
@@ -65,11 +72,19 @@ const benefits: Benefit[] = [
     stats: "40% Cost Savings",
     features[
       "Direct provider connections",
+<<<<<<< HEAD
       "Competitive pricing",
       "Bulk discount options",
       "Transparent cost structure"
     ]
   },
+=======;
+      "Competitive pricing",;
+      "Bulk discount options",;
+      "Transparent cost structure";
+    ];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 
@@ -80,49 +95,76 @@ export function BenefitsSection(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.2,;
+        delayChildren: 0.1;
+      };
+    };
   };
 
+<<<<<<< HEAD
   const statsVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+  hidden: { opacity: 0,
+  y: 20 
+},
+    visible: { opacity: 1, y: 0 };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 }
+  hidden: { opacity: 0,
+  x: -20 
+},
+    visible: { opacity: 1, x: 0 };
   };
 
-  const stats = [
-    { value: "500+", label: "Projects Delivered", icon: Rocket },
-    { value: "50+", label: "Expert Team Members", icon: Users },
-    { value: "99.9%", label: "Client Satisfaction", icon: Star },
-    { value: "24/7", label: "Support Availability", icon: Clock }
+  const stats = [;
+    { value: "500+", label: "Projects Delivered", icon: Rocket },;
+    { value: "50+", label: "Expert Team Members", icon: Users },;
+    { value: "99.9%", label: "Client Satisfaction", icon: Star },;
+    { value: "24/7", label: "Support Availability", icon: Clock };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const statsVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+  hidden: { opacity: 0,;
+  y: 20 ;
+;
+;
+
+
+
+},;
+    visible: { opacity: 1, y: 0 };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+  hidden: { opacity: 0,;
+  y: 20 ;
+;
+;
+
+
+
+},;
+    visible: { opacity: 1, y: 0 };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+    <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style = {
+  {
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
+  backgroundSize: '40px 40px'
+        
+
+
+
+
+
+}} />
       </div>
 
       {/* Floating decorative elements */}
@@ -130,25 +172,84 @@ export function BenefitsSection(...args[]):  {
         <motion.div 
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition = {
+  { duration: 20, repeat: Infinity,
+  ease: "linear" 
+
+
+
+
+
+}}
         />
         <motion.div 
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          transition = {
+  { duration: 25, repeat: Infinity,
+  ease: "linear" 
+
+
+
+
+
+}}
         />
         <motion.div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-          animate={{ scale[1, 1.2, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+<<<<<<< HEAD
+          animate = {
+  { scale[1, 1.2,
+  1] 
+}}
+          transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+}}
+=======
+          animate = {
+  { scale: [1, 1.2,
+  1] 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -204,7 +305,15 @@ export function BenefitsSection(...args[]):  {
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
                 whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition = {
+  { type: "spring",
+  stiffness: 300 
+
+
+
+
+
+}}
               >
                 <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                   {/* Icon with enhanced background */}
@@ -232,17 +341,57 @@ export function BenefitsSection(...args[]):  {
                     {hoveredIndex === index && (
                       <motion.div 
                         className="space-y-2"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: "auto" 
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                         transition={{ duration: 0.3 }}
                       >
                         {benefit.features.map((feature, idx)  => (
                           <motion.div 
                             key={idx} 
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial = {
+  { opacity: 0,
+  x: -10 
+
+
+
+
+
+}}
+                            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                             transition={{ delay: idx * 0.1 }}
                           >
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -265,9 +414,33 @@ export function BenefitsSection(...args[]):  {
 
         {/* Stats Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
           className="bg-gradient-to-r from-slate-700 to-slate-600 rounded-3xl p-12 border border-slate-500"
         >
           <div className="text-center mb-12">
@@ -279,9 +452,33 @@ export function BenefitsSection(...args[]):  {
             {stats.map((stat, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -296,9 +493,33 @@ export function BenefitsSection(...args[]):  {
 
         {/* CTA Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -313,11 +534,27 @@ export function BenefitsSection(...args[]):  {
               <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Schedule a Demo
               </button>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default BenefitsSection
+export default BenefitsSection;
+export default BenefitsSection;
+export default BenefitsSection;
+export default BenefitsSection;
+export default BenefitsSection;
+export default BenefitsSection;

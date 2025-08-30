@@ -16,7 +16,6 @@ export const useAccessibility = () => {
     });
     // Load preferences from localStorage
     useEffect(() => {
-        const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedPreferences) {
             try {
@@ -33,11 +32,17 @@ export const useAccessibility = () => {
     }, []);
     // Save preferences to localStorage
     const savePreferences = useCallback((newPreferences) => {
-        const updatedPreferences = { ...preferences, ...newPreferences };
+        const updatedPreferences = {
+  ...preferences,
+  ...newPreferences 
+};
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences))}, [preferences]);
     const saveSettings = useCallback((newSettings) => {
-        const updatedSettings = { ...settings, ...newSettings };
+        const updatedSettings = {
+  ...settings,
+  ...newSettings 
+};
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings))}, [settings]);
     // Apply accessibility features
@@ -94,9 +99,7 @@ export const useAccessibility = () => {
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [preferences.keyboardNavigation]);
     // Screen reader announcements
-    const announceToScreenReader = useCallback((message) => {
-        if (preferences.screenReader) {
-            const announcement = document.createElement('div');
+    const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';
@@ -106,8 +109,7 @@ export const useAccessibility = () => {
                 document.body.removeChild(announcement)}, 1000)}
     }, [preferences.screenReader]);
     // Focus management
-    const focusFirstInteractive = useCallback((container) => {
-        const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length > 0) {
             focusableElements[0].focus()}
     }, []);

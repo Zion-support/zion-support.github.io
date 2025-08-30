@@ -13,7 +13,7 @@ export const BundleAnalyzer = () => {
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
             const mockAnalysis = {
-                totalSize: 1200000, // ~1.2MB
+  totalSize: 1200000, // ~1.2MB
                 totalGzipSize: 400000, // ~400KB gzipped
                 chunkCount: 45,
                 chunks[
@@ -22,8 +22,14 @@ export const BundleAnalyzer = () => {
                         size: 170000,
                         gzipSize: 55000,
                         type: 'vendor',
-                        optimization: 'good'
-                    },
+  optimization: 'good'
+                    
+
+
+
+
+
+},
                     {
                         name: 'animation-vendor',
                         size: 114000,
@@ -135,7 +141,39 @@ export const BundleAnalyzer = () => {
 
       {/* Bundle Analysis Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, y: 20, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.9 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0, y: 20,
+  scale: 0.9 
+
+
+
+
+
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+}} exit = {
+  { opacity: 0, y: 20,
+  scale: 0.9 
+
+
+
+
+
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
+
+
+
+
+
+}} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
               <div className="flex items-center justify-between">

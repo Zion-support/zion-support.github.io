@@ -14,8 +14,7 @@ export const useVirtualScroll = (items, options) => {
         isScrolling: false
     });
     // Calculate virtual scroll parameters
-    const virtualScrollParams = useMemo(() => {
-        const visibleCount = Math.ceil(containerHeight / itemHeight);
+    const visibleCount = Math.ceil(containerHeight / itemHeight);
         const startIndex = Math.max(0, Math.floor(state.scrollTop / itemHeight) - overscan);
         const endIndex = Math.min(items.length - 1, Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan);
         return {
@@ -54,10 +53,7 @@ export const useVirtualScroll = (items, options) => {
             scrollTimeoutRef.current = setTimeout(() => {
                 setState(prev => ({ ...prev, isScrolling: false }))}, 150)})}, []);
     // Scroll to specific index
-    const scrollToIndex = useCallback((index, align = 'start') => {
-        if (!containerRef.current || index < 0 || index >= items.length)
-            return;
-        let scrollTop;
+    const scrollTop;
         switch (align) {
             case 'start':
                 scrollTop = index * itemHeight;
@@ -124,21 +120,33 @@ export const useVirtualScroll = (items, options) => {
         }}, []);
     // Container props
     const containerProps = {
-        ref: containerRef,
+  ref: containerRef,
         style: {
             height: containerHeight,
             overflow: 'auto',
             position: 'relative',
-            willChange: state.isScrolling ? 'scroll-position' : 'auto'
-        },
+  willChange: state.isScrolling ? 'scroll-position' : 'auto'
+        
+
+
+
+
+
+},
         onScroll: handleScroll
     };
     // List props
     const listProps = {
-        style: {
+  style: {
             height: state.totalHeight,
             position: 'relative',
-            transform: `translateY(${virtualScrollParams.offsetY}px)`
+  transform: `translateY(${virtualScrollParams.offsetY
+
+
+
+
+
+}px)`
         }
     };
     return {
@@ -168,8 +176,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
         const indices = [];
         const highlights = new Map();
         items.forEach((item, index) => {
-            let isMatch = false;
-            const itemHighlights = [];
+            let itemHighlights = [];
             searchFields.forEach(field => {
                 const value = String(item[field]).toLowerCase();
                 if (value.includes(query)) {

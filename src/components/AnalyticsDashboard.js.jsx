@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useAnalytics } from "../hooks/useAnalytics";
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
@@ -29,7 +29,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata)};
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
     // Track conversion goal
     const handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
@@ -90,9 +90,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             
             {/* Time Range Selector */}
-            <select value={selectedTimeRange} onChange={(e) => {
+            <select value={selectedTimeRange} onChange = {
+  (e) => {
             setSelectedTimeRange(e.target.value);
-            handleDashboardInteraction('time_range_changed', { timeRange: e.target.value })}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
+            handleDashboardInteraction('time_range_changed',
+  { timeRange: e.target.value 
+})}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
               <option value="1h">1 Hour</option>
               <option value="24h">24 Hours</option>
               <option value="7d">7 Days</option>

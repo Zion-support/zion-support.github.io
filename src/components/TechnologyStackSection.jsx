@@ -262,13 +262,6 @@ const technologyStats = [
 export function TechnologyStackSection() {
     const [selectedTech, setSelectedTech] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState("frontend");
-    const categories = [
-        { id: "frontend", name: "Frontend", icon: <Monitor className="w-5 h-5"/>, tech: frontendTechnologies },
-        { id: "backend", name: "Backend", icon: <Server className="w-5 h-5"/>, tech: backendTechnologies },
-        { id: "cloud", name: "Cloud & DevOps", icon: <Cloud className="w-5 h-5"/>, tech: cloudTechnologies },
-        { id: "ai", name: "AI & Machine Learning", icon: <Brain className="w-5 h-5"/>, tech: aiTechnologies },
-        { id: "tools", name: "Development Tools", icon: <Terminal className="w-5 h-5"/>, tech: developmentTools }
-    ];
     const currentTechnologies = categories.find(cat => cat.id === selectedCategory)?.tech || [];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -281,7 +274,9 @@ export function TechnologyStackSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -301,7 +296,13 @@ export function TechnologyStackSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stack</span>
           </h2>
@@ -312,7 +313,16 @@ export function TechnologyStackSection() {
 
           {/* Technology stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {technologyStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            {technologyStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
                 </div>
@@ -323,7 +333,16 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div className="mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}>
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedCategory === category.id
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -335,9 +354,27 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Technology Grid */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {currentTechnologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {currentTechnologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedTech(selectedTech === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
@@ -397,7 +434,16 @@ export function TechnologyStackSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedTech === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedTech === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} transition={{ duration: 0.3 }}>
                         {/* All Features */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">All Features:</h5>
@@ -429,7 +475,16 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+}}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">

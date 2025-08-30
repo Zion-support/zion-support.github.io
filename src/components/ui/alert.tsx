@@ -5,21 +5,25 @@ interface AlertProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
   className?: string}
 
-export function Alert(...args[]):  {
-  return (
-    <div className={`relative w-full rounded-lg border p-4 ${className}`}>
-      {children}
-    </div>
-  )}
-
-interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
+export function Alert({ children, className = '' }: AlertProps) {;
+  return (;
+    <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
+      {children};
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   children: React.ReactNode;
   className?: string}
 
-export function AlertDescription(...args[]):  {
-  return (
-    <div className={`text-sm ${className}`}>
-      {children}
-    </div>
-  )}
+<<<<<<< HEAD
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {;
+  return (;
+    <div className={`text-sm ${className}`}>;
+      {children};
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

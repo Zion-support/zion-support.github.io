@@ -8,7 +8,7 @@ export default function DigitalTwin(...args: []):  {
     <>
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
-        <meta name="description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
+        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
         <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics" />
       </Helmet>
 
@@ -308,11 +308,11 @@ export default function DigitalTwin(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

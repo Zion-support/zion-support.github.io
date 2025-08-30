@@ -20,11 +20,20 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
+  hasError: false,
       error: null,
-      errorInfo: null,
-      errorId: null
-    };
+      errorInfo: null,;
+  ;
+  ;
+  ;
+  errorId: null;
+    ;
+
+
+
+
+
+};
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -54,35 +63,44 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Example: Sentry.captureException(error, { extra: errorInfo });
   }
 
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null
+  handleRetry = () => {;
+    this.setState({;
+      hasError: false,;
+      error: null,;
+      errorInfo: null,;
+      errorId: null;
     });
   };
 
-  handleGoHome = () => {
+  handleGoHome = () => {;
     window.location.href = '/';
   };
 
-  handleGoBack = () => {
+  handleGoBack = () => {;
     window.history.back();
   };
 
-  handleReportError = () => {
+  handleReportError = () => {;
     const { error, errorInfo, errorId } = this.state;
     if (error && errorInfo) {
       const errorReport = {
-        errorId,
+  errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent
-      };
+        url: window.location.href,;
+  ;
+  ;
+  ;
+  userAgent: navigator.userAgent;
+      ;
+
+
+
+
+
+};
 
       // In production, send this to your error reporting service
       console.log('Error Report:', errorReport);
@@ -103,25 +121,56 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 flex items-center justify-center p-4">
+        <div className = "min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 flex items-center justify-center p-4">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
             transition={{ duration: 0.5 }}
             className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-red-200 dark:border-red-700 overflow-hidden"
           >
             {/* Error Header */}
             <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 text-white text-center">
               <motion.div
-                animate={{ 
+                animate = {
+  { 
                   rotate: [0, -10, 10, -10, 0],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ 
+                  scale: [1, 1.1,
+  1]
+                
+
+
+
+
+
+}}
+                transition = {
+  { 
                   duration: 2,
                   repeat: Infinity,
-                  repeatDelay: 3
-                }}
+  repeatDelay: 3
+                
+
+
+
+
+
+}}
                 className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
               >
                 <AlertTriangle className="w-8 h-8" />
@@ -215,12 +264,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
               {/* Help Text */}
               <div className="text-center text-sm text-gray-500 dark:text-gray-400">
                 <p>
-                  If this problem persists, please contact our support team with the Error ID above.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+                  If this problem persists, please contact our support team with the Error ID above.;
+                </p>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
       );
     }
 

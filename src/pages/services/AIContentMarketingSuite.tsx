@@ -50,7 +50,7 @@ import {
   Building,
   DollarSign
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AIContentMarketingSuite() {
   const features = [
@@ -68,12 +68,12 @@ export default function AIContentMarketingSuite() {
       icon: Zap,
       title: 'Automated Content Distribution',
       description: 'Intelligent scheduling and multi-channel distribution that reaches your audience at the optimal time across all platforms.'
-    },
-    {
-      icon: Eye,
-      title: 'Performance Analytics',
-      description: 'Real-time content performance tracking with AI insights that help you optimize your content strategy and ROI.'
-    }
+    },;
+    {;
+      icon: Eye,;
+      title: 'Performance Analytics',;
+      description: 'Real-time content performance tracking with AI insights that help you optimize your content strategy and ROI.';
+    };
   ];
 
   const capabilities = [
@@ -95,12 +95,12 @@ export default function AIContentMarketingSuite() {
       icon: FileText,
       benefits: ['Text generation', 'Image creation', 'Video editing', 'Audio transcription']
     },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive performance tracking and AI-powered recommendations',
-      icon: BarChart3,
-      benefits: ['Performance metrics', 'Audience insights', 'ROI tracking', 'Optimization tips']
-    }
+    {;
+      title: 'Analytics & Insights',;
+      description: 'Comprehensive performance tracking and AI-powered recommendations',;
+      icon: BarChart3,;
+      benefits: ['Performance metrics', 'Audience insights', 'ROI tracking', 'Optimization tips'];
+    };
   ];
 
   const useCases = [
@@ -122,12 +122,12 @@ export default function AIContentMarketingSuite() {
       icon: Users,
       metrics: ['Production Speed', 'Client Satisfaction', 'Content Quality', 'Project Delivery']
     },
-    {
-      industry: 'Publishing & Media',
-      description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',
-      icon: BookOpen,
-      metrics: ['Reader Engagement', 'Content Quality', 'Publishing Speed', 'Audience Growth']
-    }
+    {;
+      industry: 'Publishing & Media',;
+      description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',;
+      icon: BookOpen,;
+      metrics: ['Reader Engagement', 'Content Quality', 'Publishing Speed', 'Audience Growth'];
+    };
   ];
 
   const benefits = [
@@ -145,12 +145,12 @@ export default function AIContentMarketingSuite() {
       icon: Users,
       title: 'Higher Engagement',
       description: 'Increase audience engagement by 35-50% with personalized, optimized content that resonates.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Improved ROI',
-      description: 'Boost marketing ROI by 25-40% through better content performance and conversion optimization.'
-    }
+    },;
+    {;
+      icon: DollarSign,;
+      title: 'Improved ROI',;
+      description: 'Boost marketing ROI by 25-40% through better content performance and conversion optimization.';
+    };
   ];
 
   const pricing = [
@@ -195,16 +195,16 @@ export default function AIContentMarketingSuite() {
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
-        'Custom development',
-        'Advanced analytics'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+        'Custom development',;
+        'Advanced analytics';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="AI Content Marketing Suite | Zion Tech Group"
         description="Create 10x more content with AI-powered generation, optimization, and distribution. Improve SEO rankings by 40-60% and boost engagement by 35-50%."
@@ -216,8 +216,24 @@ export default function AIContentMarketingSuite() {
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-6">
@@ -243,8 +259,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -261,9 +293,33 @@ export default function AIContentMarketingSuite() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -281,8 +337,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -299,9 +371,33 @@ export default function AIContentMarketingSuite() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -329,8 +425,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -347,9 +459,33 @@ export default function AIContentMarketingSuite() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -377,8 +513,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -395,9 +547,33 @@ export default function AIContentMarketingSuite() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -415,8 +591,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -433,9 +625,33 @@ export default function AIContentMarketingSuite() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
                     ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10' 
@@ -485,8 +701,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -524,9 +756,33 @@ export default function AIContentMarketingSuite() {
             ].map((phase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -544,8 +800,24 @@ export default function AIContentMarketingSuite() {
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -600,11 +872,11 @@ export default function AIContentMarketingSuite() {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-              <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <p className="text-sm text-slate-400 mt-2">Global remote support available</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

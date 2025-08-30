@@ -27,7 +27,7 @@ import { Shield,
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-const CybersecurityServicesPage: React.FC = (): JSX.Element => {
+const CybersecurityServicesPage: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const securityServices = [
@@ -66,7 +66,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
       features['24/7 response team', 'Forensic analysis', 'Recovery planning', 'Post-incident review'],
       icon: AlertTriangle,
       category: 'incident-response'
-    }
+    };
   ];
 
   const categories = [
@@ -74,16 +74,16 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
     { id: 'threat-detection', name: 'Threat Detection', icon: Eye },
     { id: 'zero-trust', name: 'Zero Trust', icon: Lock },
     { id: 'compliance', name: 'Compliance', icon: Shield },
-    { id: 'incident-response', name: 'Incident Response', icon: AlertTriangle }
+    { id: 'incident-response', name: 'Incident Response', icon: AlertTriangle };
   ];
 
-  const filteredServices = selectedCategory === 'all' 
+  const filteredServices = selectedCategory === 'all' ;
     ? securityServices: securityServices.filter(service  => service.category === selectedCategory);
 
   return (
     <>
       <SEO 
-        title="Cybersecurity Services | Zion Tech Group"
+        title = "Cybersecurity Services | Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords="cybersecurity, security services, threat detection, compliance, zero trust, incident response"
       />
@@ -152,9 +152,18 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
               {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50 hover:border-red-400/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -291,7 +300,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default CybersecurityServicesPage;

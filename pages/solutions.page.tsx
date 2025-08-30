@@ -119,12 +119,12 @@ const solutionCategories = [
     solutions[
       'Process Automation',
       'Customer Experience',
-      'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
-      'Technology Consulting'
-    ]
-  }
+      'Legacy Modernization',;
+      'Digital Strategy',;
+      'Change Management',;
+      'Technology Consulting';
+    ];
+  };
 ];
 
 const industrySolutions = [
@@ -200,12 +200,12 @@ const industrySolutions = [
       'Digital Services',
       'Data Security',
       'Process Automation',
-      'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
-    ],
-    color: 'from-gray-500 to-slate-600'
-  }
+      'Citizen Engagement',;
+      'Regulatory Compliance',;
+      'Infrastructure Management';
+    ],;
+    color: 'from-gray-500 to-slate-600';
+  };
 ];
 
 const featuredSolutions = [
@@ -275,12 +275,12 @@ const featuredSolutions = [
       '99.9% uptime guarantee',
       'Faster deployment cycles',
       'Improved scalability'
-    ],
-    price: 'Starting at $1,800/month',
-    implementation: '8-16 weeks',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600'
-  }
+    ],;
+    price: 'Starting at $1,800/month',;
+    implementation: '8-16 weeks',;
+    icon: Cloud,;
+    color: 'from-blue-500 to-cyan-600';
+  };
 ];
 
 export default function Solutions(...args[]):  {
@@ -291,21 +291,36 @@ export default function Solutions(...args[]):  {
   const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
 
-  const filteredSolutions = featuredSolutions.filter(solution => {
-    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredSolutions = featuredSolutions.filter(solution => {;
+    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesCategory && matchesSearch});
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -377,25 +392,73 @@ export default function Solutions(...args[]):  {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index)  => {
+=======;
+            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {solutionCategories.map((category, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = category.icon;
               return (
                 <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {category.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
@@ -416,39 +479,97 @@ export default function Solutions(...args[]):  {
                       </div>
                       <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
+<<<<<<< HEAD
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
                   </Link>
                 </motion.div>
               )})}
+=======;
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </div>;
+                    </div>;
+                  </Link>;
+                </motion.div>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index)  => {
+=======;
+            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {industrySolutions.map((industry, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = industry.icon;
               return (
                 <motion.div
-                  key={industry.industry}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {industry.industry}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -469,39 +590,97 @@ export default function Solutions(...args[]):  {
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
+<<<<<<< HEAD
                       View {industry.industry} Solutions
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </motion.div>
               )})}
+=======;
+                      View {industry.industry} Solutions;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
+                    </Link>;
+                  </div>;
+                </motion.div>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* Featured Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index)  => {
+=======;
+            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {filteredSolutions.map((solution, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = solution.icon;
               return (
                 <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {solution.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -563,22 +742,48 @@ export default function Solutions(...args[]):  {
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
+<<<<<<< HEAD
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </motion.div>
               )})}
+=======;
+                      Learn More;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
+                    </Link>;
+                  </div>;
+                </motion.div>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -604,9 +809,19 @@ export default function Solutions(...args[]):  {
               >
                 View Case Studies
               </Link>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

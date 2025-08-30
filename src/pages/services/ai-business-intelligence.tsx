@@ -8,7 +8,7 @@ export default function AIBusinessIntelligence(...args: []):  {
     <>
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
+        <meta name = "description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
         <meta name="keywords" content="AI business intelligence, predictive analytics, data insights, business analytics, AI reporting, data visualization" />
       </Helmet>
 
@@ -254,11 +254,11 @@ export default function AIBusinessIntelligence(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

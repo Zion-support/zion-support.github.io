@@ -11,31 +11,10 @@ export const PageHero = ({
   backgroundImage = null,
   stats = []
 }) => {
-  const defaultFeatures = [
-    {
-      icon: Star,
-      text: 'Professional Service',
-      color: 'text-yellow-500'
-    },
-    {
-      icon: Users,
-      text: 'Expert Team',
-      color: 'text-blue-500'
-    },
-    {
-      icon: Clock,
-      text: '24/7 Support',
-      color: 'text-green-500'
-    },
-    {
-      icon: Shield,
-      text: 'Secure & Reliable',
-      color: 'text-purple-500'
-    }
-  ];
-
+<<<<<<< HEAD
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
-  const displayStats = stats.length > 0 ? stats [
+  const displayStats = stats.length > 0 ? stats : [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     { value: '500+', label: 'Happy Clients' },
     { value: '99.9%', label: 'Uptime' },
     { value: '24/7', label: 'Support' },

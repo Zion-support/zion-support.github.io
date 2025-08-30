@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle  } from 'lucide-react';
+=======
+import React from 'react';
+import { SEO } from "../../components/SEO";
+import { motion } from 'framer-motion';
+import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
@@ -35,12 +42,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       description: 'Built-in regulatory compliance and governance frameworks',
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      icon: TrendingUp,
-      title: 'Cost Efficiency',
-      description: 'Reduce intermediaries and streamline business processes',
-      color: 'from-indigo-500 to-purple-500'
-    }
+    {;
+      icon: TrendingUp,;
+      title: 'Cost Efficiency',;
+      description: 'Reduce intermediaries and streamline business processes',;
+      color: 'from-indigo-500 to-purple-500';
+    };
   ];
 
   const services = [
@@ -63,24 +70,32 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
     },
     {
+<<<<<<< HEAD
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
     }
+=======;
+      title: 'DeFi Solutions',;
+      description: 'Decentralized finance applications and protocols',;
+      price: 'From $20,000',;
+      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
-    { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
-    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },
-    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },
-    { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },
-    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },
-    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
+    { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },;
+    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;
+    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;
+    { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },;
+    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;
+    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Blockchain Enterprise Solutions - Zion Tech Group"
         description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
@@ -91,8 +106,24 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -135,8 +166,24 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -153,9 +200,33 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -173,8 +244,24 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -190,9 +277,33 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -223,8 +334,24 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -241,9 +368,33 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
@@ -261,8 +412,24 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -287,9 +454,19 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               >
                 View Case Studies
               </motion.button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

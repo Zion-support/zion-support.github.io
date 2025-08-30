@@ -4,12 +4,12 @@ export default function AIEntertainment() {
   const features = [
     'AI-powered content recommendation and personalization',
     'Intelligent content creation and generation',
-    'Automated content moderation and filtering',
-    'Predictive analytics for audience engagement',
-    'Real-time content performance optimization',
-    'Smart content scheduling and distribution',
-    'Integration with major entertainment platforms',
-    'Custom AI models for entertainment-specific insights'
+    'Automated content moderation and filtering',;
+    'Predictive analytics for audience engagement',;
+    'Real-time content performance optimization',;
+    'Smart content scheduling and distribution',;
+    'Integration with major entertainment platforms',;
+    'Custom AI models for entertainment-specific insights';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIEntertainment() {
       name: 'Medium Creator', 
       price: '$599/mo', 
       details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support'] 
-    },
-    { 
-      name: 'Large Creator', 
-      price: '$1,499/mo', 
-      details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Large Creator', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Video content optimization and recommendation',
-    'Music and audio content personalization',
-    'Gaming content and player engagement',
-    'Social media content optimization',
-    'Streaming platform content curation',
-    'Content monetization and advertising'
+    'Video content optimization and recommendation',;
+    'Music and audio content personalization',;
+    'Gaming content and player engagement',;
+    'Social media content optimization',;
+    'Streaming platform content curation',;
+    'Content monetization and advertising';
   ];
 
   const benefits = [
-    'Increase audience engagement by 30-50%',
-    'Improve content discovery by 40-60%',
-    'Cut content creation costs by 25-40%',
-    'Optimize content for maximum reach',
-    'Enhance user experience and satisfaction',
-    'Scale entertainment operations efficiently'
+    'Increase audience engagement by 30-50%',;
+    'Improve content discovery by 40-60%',;
+    'Cut content creation costs by 25-40%',;
+    'Optimize content for maximum reach',;
+    'Enhance user experience and satisfaction',;
+    'Scale entertainment operations efficiently';
   ];
 
   const industries = [
-    'Video Streaming & YouTube',
-    'Music & Audio Platforms',
-    'Gaming & Esports',
-    'Social Media & Influencers',
-    'Podcasting & Audio Content',
-    'Live Streaming & Events'
+    'Video Streaming & YouTube',;
+    'Music & Audio Platforms',;
+    'Gaming & Esports',;
+    'Social Media & Influencers',;
+    'Podcasting & Audio Content',;
+    'Live Streaming & Events';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIEntertainment() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

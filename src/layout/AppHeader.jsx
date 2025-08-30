@@ -87,7 +87,15 @@ export function AppHeader() {
             <motion.div 
               className="relative"
               whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+
+
+
+
+}}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
@@ -123,9 +131,33 @@ export function AppHeader() {
                       {activeDropdown === item.name && (
                         <motion.div
                           className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           onMouseEnter={() => setActiveDropdown(item.name)}
                           onMouseLeave={() => setActiveDropdown(null)}
@@ -202,9 +234,33 @@ export function AppHeader() {
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 py-4">

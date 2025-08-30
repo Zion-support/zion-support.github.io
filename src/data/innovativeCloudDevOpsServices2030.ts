@@ -53,8 +53,17 @@ pricing: {
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  website: "https://ziontechgroup.com",;
+  ;
+  ;
+  ;
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+;
+
+
+
+
+
 };
 
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
@@ -144,8 +153,13 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
+<<<<<<< HEAD
     tags["Multi-Cloud", "Cloud Orchestration", "DevOps", "Cost Optimization", "Compliance"],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = format&fit=crop&w=800&h=500",
+=======
+    tags: ["Multi-Cloud", "Cloud Orchestration", "DevOps", "Cost Optimization", "Compliance"],
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = format&fit=crop&w=800&h=500",
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
@@ -516,12 +530,21 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
+<<<<<<< HEAD
     tags["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
   }
+=======
+    tags: ["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],;
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;
+    createdAt: "2030-01-15T10:00:00.000Z",;
+    featured: true,;
+    trending: true;
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 export default innovativeCloudDevOpsServices2030;

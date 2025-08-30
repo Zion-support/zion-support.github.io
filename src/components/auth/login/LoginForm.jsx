@@ -36,7 +36,12 @@ function LoginForm() {
             if (error) {
                 form.setError("root", { message: error })}
             else {
-                navigate("/")}
+<<<<<<< HEAD
+                router("/")}
+=======
+                router("/");
+            }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         finally {
             setIsSubmitting(false)}
@@ -92,4 +97,11 @@ function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>)}
 
+export default LoginForm;
+
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
 export default LoginForm;

@@ -8,7 +8,7 @@ export default function AICybersecuritySuite(...args: []):  {
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-        <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
+        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
         <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence" />
       </Helmet>
 
@@ -304,11 +304,11 @@ export default function AICybersecuritySuite(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

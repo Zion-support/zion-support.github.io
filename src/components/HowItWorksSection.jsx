@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
 
+<<<<<<< HEAD
 const steps = [
   {
     icon: <Search className="w-8 h-8"/>,
@@ -80,6 +81,8 @@ const steps = [
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const stats = [
   { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
   { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
@@ -102,8 +105,11 @@ export function HowItWorksSection() {
     }
   };
 
+<<<<<<< HEAD
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -115,7 +121,9 @@ export function HowItWorksSection() {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+},
     visible: {
       scale: 1,
       opacity: 1,
@@ -125,6 +133,45 @@ export function HowItWorksSection() {
       }
     }
   };
+=======
+    const itemVariants = {
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+},
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        }
+    };
+
+    const statsVariants = {
+  hidden: { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+},
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -132,19 +179,29 @@ export function HowItWorksSection() {
       <div className="absolute inset-0 opacity-5">
         <div 
           className="absolute inset-0" 
-          style={{
+          style = {
+  {
             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                              radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
-          }}
+                              radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%,
+  transparent 50%)`
+          
+}}
         />
       </div>
 
+<<<<<<< HEAD
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -155,6 +212,137 @@ export function HowItWorksSection() {
             Our streamlined process ensures your project success from discovery to delivery
           </p>
         </motion.div>
+=======
+            <div className="container mx-auto px-4 relative z-10">
+                {/* Section Header */}
+                <motion.div 
+                    className="text-center mb-16" 
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
+                    viewport={{ once: true }} 
+                    transition={{ duration: 0.6 }}
+                >
+                    <motion.div 
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 backdrop-blur-sm rounded-full border border-zion-cyan/30 mb-6"
+                        initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+                        whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                        viewport={{ once: true }}
+                        transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+                    >
+                        <Rocket className="h-5 w-5 text-zion-cyan" />
+                        <span className="text-zion-cyan text-sm font-medium">How It Works</span>
+                    </motion.div>
+                    
+                    <motion.h2 
+                        className="text-4xl md:text-5xl font-bold text-white mb-6"
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                        whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                        viewport={{ once: true }}
+                        transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
+                    >
+                        Simple 5-Step Process
+                    </motion.h2>
+                    
+                    <motion.p 
+                        className="text-xl text-zion-slate-light max-w-3xl mx-auto"
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                        whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                        viewport={{ once: true }}
+                        transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
+                    >
+                        From discovery to delivery, our streamlined process ensures you get the right 
+                        micro SAAS solution quickly and efficiently.
+                    </motion.p>
+                </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
         {/* Steps */}
         <motion.div
@@ -181,11 +369,17 @@ export function HowItWorksSection() {
                     : 'border-zion-slate/30 bg-gradient-to-br from-zion-slate/10 to-zion-slate/20 hover:border-zion-cyan/50'
                 }`}
                 variants={cardVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
-                style={{
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+}}
+                style = {
+  {
                   background: hoveredStep === index 
-                    ? `linear-gradient(135deg, ${step.bgColor})` 
-                    : undefined
+                    ? `linear-gradient(135deg,
+  ${step.bgColor
+})` 
+                    : null
                 }}
               >
                 {/* Step Number */}
@@ -208,12 +402,19 @@ export function HowItWorksSection() {
                   <div className="text-zion-purple text-sm font-medium">{step.success}</div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Hover Details */}
                 {hoveredStep === index && (
                   <motion.div
                     className="absolute top-full left-0 right-0 mt-4 p-4 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg shadow-2xl z-20"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial = {
+  { opacity: 0,
+  y: 10 
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+}}
                     transition={{ duration: 0.2 }}
                   >
                     <h4 className="text-white font-semibold mb-3">Key Features:</h4>
@@ -235,18 +436,36 @@ export function HowItWorksSection() {
         {/* Stats Section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           viewport={{ once: true }}
         >
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               className="text-center p-6 bg-gradient-to-br from-zion-slate/20 to-zion-slate/10 rounded-2xl border border-zion-slate/30"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+              whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
               viewport={{ once: true }}
             >
               <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white mx-auto mb-4">
@@ -261,9 +480,18 @@ export function HowItWorksSection() {
         {/* CTA Section */}
         <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+}}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -284,3 +512,196 @@ export function HowItWorksSection() {
       </div>
     </section>
   )}
+=======
+                                {/* Details on Hover */}
+                                <AnimatePresence>
+                                    {hoveredStep === index && (
+                                        <motion.div
+                                            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                                            animate = {
+  { opacity: 1,
+  height: "auto" 
+
+
+
+
+
+}}
+                                            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="border-t border-white/20 pt-4 mt-4">
+                                                <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
+                                                <ul className="space-y-2 mb-4">
+                                                    {step.details.map((detail, idx) => (
+                                                        <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-xs">
+                                                            <Zap className="h-3 w-3 text-zion-cyan flex-shrink-0" />
+                                                            {detail}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                                
+                                                <div className="grid grid-cols-2 gap-4 text-xs">
+                                                    <div className="text-center">
+                                                        <div className="text-zion-cyan font-semibold">Duration</div>
+                                                        <div className="text-zion-slate-light">{step.duration}</div>
+                                                    </div>
+                                                    <div className="text-center">
+                                                        <div className="text-zion-cyan font-semibold">Success Rate</div>
+                                                        <div className="text-zion-slate-light">{step.success}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                {/* Stats Section */}
+                <motion.div 
+                    className="text-center mb-16"
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    viewport={{ once: true }}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+}}
+                >
+                    <h3 className="text-2xl font-bold text-white mb-8">
+                        Why Choose Zion Tech Group?
+                    </h3>
+                    
+                    <motion.div 
+                        className="grid grid-cols-2 md:grid-cols-4 gap-8"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        {stats.map((stat, index) => (
+                            <motion.div
+                                key={index}
+                                variants={statsVariants}
+                                className="text-center group"
+                                whileHover={{ scale: 1.05 }}
+                                transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+
+
+
+}}
+                            >
+                                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+                                    {stat.icon}
+                                </div>
+                                <div className="text-2xl font-bold text-zion-cyan mb-2">
+                                    {stat.value}
+                                </div>
+                                <div className="text-zion-slate-light text-sm">
+                                    {stat.label}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
+
+                {/* CTA Section */}
+                <motion.div 
+                    className="text-center"
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    viewport={{ once: true }}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
+                >
+                    <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+                        <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
+                            <p className="text-white text-lg mb-4">
+                                Ready to get started with your micro SAAS solution?
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                                    <Shield className="w-5 h-5" />
+                                    Get Started Today
+                                </button>
+                                <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
+                                    <Users className="w-5 h-5" />
+                                    Schedule Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

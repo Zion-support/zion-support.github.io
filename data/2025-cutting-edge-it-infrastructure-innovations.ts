@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -252,10 +252,10 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     marketSize: '$16.4B by 2025',
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
     competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',
-    contact: 'kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-    slug: '/autonomous-data-center-management-platform'
-  }
+    contact: 'kleber@ziontechgroup.com',;
+    mobile: '+1 302 464 0950',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',;
+    slug: '/autonomous-data-center-management-platform';
+  };
 ];

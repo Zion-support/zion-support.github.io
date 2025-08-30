@@ -74,8 +74,13 @@ export default function CartPage() {
         <Button asChild className="mt-4">
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
+<<<<<<< HEAD
       </div>)}
     const tax = subtotal * 0.1;
+=======
+      </div>);
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
@@ -86,7 +91,15 @@ export default function CartPage() {
               <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
             </div>
             <div className="flex items-center gap-2">
-              <input type="number" min={1} value={item.quantity} onChange={e => updateQuantity(item.id, parseInt(e.target.value || '1', 10))} className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
+              <input type="number" min={1} value={item.quantity} onChange = {
+  e => updateQuantity(item.id, parseInt(e.target.value || '1',
+  10))
+
+
+
+
+
+} className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
               </Button>
@@ -103,7 +116,7 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-      <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>
+      <Button className="mt-4 w-full" onClick={() => user ? router('/checkout') : router('/login?next=/checkout')}>
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>)}

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2025AdvancedMicroSaasService {
   id: string;
   name: string;
@@ -40,8 +40,17 @@ export interface Revolutionary2025AdvancedMicroSaasService {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
 };
 export const revolutionary2025AdvancedMicroSaasServices: Revolutionary2025AdvancedMicroSaasService[] = [
   // AI-Powered Autonomous Business Operations Platform

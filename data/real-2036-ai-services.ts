@@ -313,10 +313,10 @@ export const real2036AIServices = [
       'Predictive maintenance'
     ],
     useCases[
-      'Autonomous vehicles',
-      'Fleet management',
-      'Traffic optimization',
-      'Safety systems'
-    ]
-  }
+      'Autonomous vehicles',;
+      'Fleet management',;
+      'Traffic optimization',;
+      'Safety systems';
+    ];
+  };
 ];

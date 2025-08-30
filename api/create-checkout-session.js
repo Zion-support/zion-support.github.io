@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { withErrorLogging } from './withErrorLogging.cjs';
+import { withErrorLogging } from "./withErrorLogging.cjs";
 const PROD_DOMAIN = 'app.ziontechgroup.com';
 function isProdDomain() {
   const url = process.env.URL || '';
@@ -22,10 +22,15 @@ async function handler(req, res) {
     const liveKey = process.env.STRIPE_SECRET_KEY || '';
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
     if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
+<<<<<<< HEAD
       throw new Error('Refusing to use live Stripe key on non-production domain')}
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
       apiVersion: '2023-10-16',
     });
+=======
+      throw new Error('Refusing to use live Stripe key on non-production domain');
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const session = await stripe.checkout.sessions.create({
       line_items[{ price: productId, quantity: 1 }],
       mode: 'payment',
@@ -40,3 +45,10 @@ async function handler(req, res) {
     res.json({ error: err.message })}
 }
 export default withErrorLogging(handler);
+
+export default isProdDomain;
+export default isProdDomain;
+export default isProdDomain;
+export default isProdDomain;
+export default isProdDomain;
+export default isProdDomain;

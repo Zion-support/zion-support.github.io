@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
+import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
 const ServicesMarketingPage = () => {
     const allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
     ];
     const serviceCategories = {
-        'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
+  'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
         'IT Services': allServices.filter(s => s.category === 'IT Services'),
         'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
         'Blockchain & Web3': allServices.filter(s => s.category === 'Blockchain & Web3'),
@@ -16,8 +16,9 @@ const ServicesMarketingPage = () => {
         'Sustainable Technology': allServices.filter(s => s.category === 'Sustainable Technology'),
         'Space Technology': allServices.filter(s => s.category === 'Space Technology'),
         'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),
-        'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
-    };
+  'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
+    
+};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">

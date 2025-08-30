@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { SEOHead } from "../components/SEOHead";
+import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";
+import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');

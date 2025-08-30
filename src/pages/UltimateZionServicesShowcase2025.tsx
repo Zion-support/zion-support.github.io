@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025  } from '../data/ultimateZionServices2025';
+import { SEO  } from "../components/SEO";
+import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025  } from "../data/ultimateZionServices2025";
+=======
+import React from 'react';
+import { SEO } from "../components/SEO";
+import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
   return (
@@ -442,11 +448,21 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               >
                 Visit our website: ziontechgroup.com
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
+=======
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default UltimateZionServicesShowcase2025;

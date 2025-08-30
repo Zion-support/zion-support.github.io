@@ -1,40 +1,6 @@
-import SEO from '../SEO';
+import SEO from "../SEO";
 const Mobile = () => {
-    const mobileFeatures = [
-        {
-            title: "Mobile-First Design",
-            description: "We design with mobile users in mind first, ensuring optimal experience across all devices",
-            icon: "📱",
-            benefits[
-                "Responsive design principles",
-                "Touch-friendly interfaces",
-                "Mobile performance optimization",
-                "Cross-platform compatibility"
-            ]
-        },
-        {
-            title: "Zion Mobile App",
-            description: "Access our services and manage your projects on the go with our mobile application",
-            icon: "🚀",
-            benefits[
-                "Project management",
-                "Real-time updates",
-                "Client communication",
-                "Service booking"
-            ]
-        },
-        {
-            title: "Progressive Web Apps",
-            description: "Web applications that work like native apps with offline functionality",
-            icon: "🌐",
-            benefits[
-                "No app store required",
-                "Offline capabilities",
-                "Push notifications",
-                "App-like experience"
-            ]
-        }
-    ];
+<<<<<<< HEAD
     const mobileServices = [
         {
             title: "iOS Development",
@@ -83,6 +49,8 @@ const Mobile = () => {
             icon: "🏆"
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const mobileStats = [
         {
             stat: "73%",

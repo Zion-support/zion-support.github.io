@@ -8,7 +8,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
     <>
       <Helmet>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
+        <meta name = "description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
         <meta name="keywords" content="blockchain, enterprise blockchain, smart contracts, DeFi, distributed ledger, cryptocurrency, enterprise solutions" />
       </Helmet>
 
@@ -358,11 +358,11 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

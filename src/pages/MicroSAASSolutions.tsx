@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { Code, 
+=======
+import React from 'react';
+import { SEO } from "../components/SEO";
+import { 
+  Code, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Zap, 
   Users, 
   TrendingUp, 
@@ -50,11 +57,19 @@ export default function MicroSAASSolutions(...args[]):  {
       features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
+<<<<<<< HEAD
       title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
       features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     }
+=======;
+      title: "Analytics & Reporting",;
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
+      icon: TrendingUp,;
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -72,12 +87,12 @@ export default function MicroSAASSolutions(...args[]):  {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
       icon: BarChart3
-    },
-    {
-      title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
-    }
+    },;
+    {;
+      title: "Security",;
+      description: "Enterprise-grade security and compliance standards",;
+      icon: Shield;
+    };
   ];
 
   const industries = [
@@ -105,12 +120,12 @@ export default function MicroSAASSolutions(...args[]):  {
       name: "Retail",
       description: "E-commerce and point-of-sale solutions",
       icon: Building
-    },
-    {
-      name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
-    }
+    },;
+    {;
+      name: "Real Estate",;
+      description: "Property management and client portals",;
+      icon: Building;
+    };
   ];
 
   const processSteps = [
@@ -136,18 +151,18 @@ export default function MicroSAASSolutions(...args[]):  {
       duration: "8-16 weeks"
     },
     {
-      step: 4,
-      title: "Testing & Deployment",
-      description: "Comprehensive testing and production deployment",
-      icon: Rocket,
-      duration: "2-4 weeks"
-    }
+      step: 4,;
+      title: "Testing & Deployment",;
+      description: "Comprehensive testing and production deployment",;
+      icon: Rocket,;
+      duration: "2-4 weeks";
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Micro SAAS Solutions - Custom Software Development"
+        title = "Micro SAAS Solutions - Custom Software Development"
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
@@ -345,9 +360,19 @@ export default function MicroSAASSolutions(...args[]):  {
                   Get Consultation
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </div>
     </>
   )}
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

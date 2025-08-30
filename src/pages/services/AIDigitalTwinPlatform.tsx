@@ -6,21 +6,21 @@ export default function AIDigitalTwinPlatform() {
     'Real-time IoT sensor data integration',
     'Predictive maintenance and failure prediction',
     '3D visualization and augmented reality support',
-    'Multi-physics simulation and modeling',
-    'Automated anomaly detection and alerts',
-    'Historical data analysis and trend prediction',
-    'Cross-platform integration and API access',
-    'Custom dashboard and reporting tools',
-    'Scalable cloud-based infrastructure'
+    'Multi-physics simulation and modeling',;
+    'Automated anomaly detection and alerts',;
+    'Historical data analysis and trend prediction',;
+    'Cross-platform integration and API access',;
+    'Custom dashboard and reporting tools',;
+    'Scalable cloud-based infrastructure';
   ];
 
   const benefits = [
-    'Reduce operational costs by 25-40%',
-    'Improve equipment uptime by 30-50%',
-    'Cut maintenance costs by 20-35%',
-    'Real-time performance monitoring',
-    'Predictive maintenance optimization',
-    'Enhanced decision-making with data insights'
+    'Reduce operational costs by 25-40%',;
+    'Improve equipment uptime by 30-50%',;
+    'Cut maintenance costs by 20-35%',;
+    'Real-time performance monitoring',;
+    'Predictive maintenance optimization',;
+    'Enhanced decision-making with data insights';
   ];
 
   const pricing = [
@@ -36,34 +36,34 @@ export default function AIDigitalTwinPlatform() {
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-    }
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
-    'Manufacturing process optimization',
-    'Smart city infrastructure monitoring',
-    'Healthcare facility management',
-    'Energy grid optimization',
-    'Transportation system monitoring',
-    'Building automation and management'
+    'Manufacturing process optimization',;
+    'Smart city infrastructure monitoring',;
+    'Healthcare facility management',;
+    'Energy grid optimization',;
+    'Transportation system monitoring',;
+    'Building automation and management';
   ];
 
   const industries = [
-    'Manufacturing & Industry 4.0',
-    'Smart Cities & Infrastructure',
-    'Healthcare & Medical Devices',
-    'Energy & Utilities',
-    'Transportation & Logistics',
-    'Construction & Real Estate'
+    'Manufacturing & Industry 4.0',;
+    'Smart Cities & Infrastructure',;
+    'Healthcare & Medical Devices',;
+    'Energy & Utilities',;
+    'Transportation & Logistics',;
+    'Construction & Real Estate';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -288,11 +288,11 @@ export default function AIDigitalTwinPlatform() {
             target="_blank" 
             rel="noreferrer" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-          >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </section>
-    </div>
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

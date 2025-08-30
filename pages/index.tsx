@@ -163,9 +163,9 @@ export default function Index(...args[]):  {
 								Learn More About Us
 							</Link>
 						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

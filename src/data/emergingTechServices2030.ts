@@ -143,8 +143,13 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     responseTime: "< 1 millisecond",
     availability: "Global",
     location: "Global",
+<<<<<<< HEAD
     tags["Neuromorphic Computing", "AI", "Edge Computing", "IoT", "Energy Efficiency"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto = format&fit=crop&w=800&h=500",
+=======
+    tags: ["Neuromorphic Computing", "AI", "Edge Computing", "IoT", "Energy Efficiency"],
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto = format&fit=crop&w=800&h=500",
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
@@ -1023,52 +1028,104 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
+<<<<<<< HEAD
     tags["Advanced Entertainment", "AI", "Content Creation", "Personalization", "Interactive Media"],
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+  };
 ];
 
 // Utility functions for service management
-export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[]  => {;
   return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category)};
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[]  => {
   return EMERGING_TECH_SERVICES_2030.filter(service => 
-    service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
+    service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice;
   )};
 
 export const getEmergingTechFeaturedServices = (limit: number = 10): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030
-    .filter(service => service.featured)
+    .filter(service => service.featured);
     .slice(0, limit)};
 
 export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030
-    .filter(service => service.trending)
+    .filter(service => service.trending);
     .slice(0, limit)};
 
-export const searchEmergingTechServices = (query: string): EmergingTechService2030[]  => {
+export const searchEmergingTechServices = (query: string): EmergingTechService2030[]  => {;
   const lowercaseQuery = query.toLowerCase();
-  return EMERGING_TECH_SERVICES_2030.filter(service =>
+  return EMERGING_TECH_SERVICES_2030.filter(service = >
     service.title.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   )};
 
-export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[]  => {;
   return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level)};
 
-export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[]  => {;
   const lowercaseTech = technology.toLowerCase();
-  return EMERGING_TECH_SERVICES_2030.filter(service =>
-    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+  return EMERGING_TECH_SERVICES_2030.filter(service = >
+    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech));
   )};
+=======
+    tags: ["Advanced Entertainment", "AI", "Content Creation", "Personalization", "Interactive Media"],
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",;
+    createdAt: "2030-01-15T10:00:00.000Z",;
+    featured: true,;
+    trending: true;
+  };
+];
 
-export const getEmergingTechServicesStats = () => {
-  const totalServices = EMERGING_TECH_SERVICES_2030.length;
+// Utility functions for service management
+export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[] => {;
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category);
+};
+
+export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[] => {;
+  return EMERGING_TECH_SERVICES_2030.filter(service => ;
+    service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice;
+  );
+};
+
+export const getEmergingTechFeaturedServices = (limit: number = 10): EmergingTechService2030[] => {;
+  return EMERGING_TECH_SERVICES_2030;
+    .filter(service => service.featured);
+    .slice(0, limit);
+};
+
+export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTechService2030[] => {;
+  return EMERGING_TECH_SERVICES_2030;
+    .filter(service => service.trending);
+    .slice(0, limit);
+};
+
+export const searchEmergingTechServices = (query: string): EmergingTechService2030[] => {;
+  const lowercaseQuery = query.toLowerCase();
+  return EMERGING_TECH_SERVICES_2030.filter(service = >;
+    service.title.toLowerCase().includes(lowercaseQuery) ||;
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
+  );
+};
+
+export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[] => {;
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level);
+};
+
+export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[] => {;
+  const lowercaseTech = technology.toLowerCase();
+  return EMERGING_TECH_SERVICES_2030.filter(service = >;
+    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech));
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export const getEmergingTechServicesStats = () => {;
   const totalRevenue = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
   const averageRating = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / totalServices;
   const featuredCount = EMERGING_TECH_SERVICES_2030.filter(service => service.featured).length;
@@ -1080,8 +1137,15 @@ export const getEmergingTechServicesStats = () => {
     averageRating: Math.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
-    categories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.category))],
-    subcategories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))]
+<<<<<<< HEAD
+    categories[...new Set(EMERGING_TECH_SERVICES_2030.map(service = > service.category))],
+    subcategories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))];
   }};
+=======
+    categories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service = > service.category))],;
+    subcategories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service => service.subcategory))];
+  };
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;

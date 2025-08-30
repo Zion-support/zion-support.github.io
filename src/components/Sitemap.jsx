@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Sitemap = () => {
     const sitemapData = {
-        main[
-            { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
+  main[
+            { path: '/', label: 'Home',
+  description: 'Welcome to Zion Tech Group' 
+},
             { path: '/about', label: 'About Us', description: 'Learn about our comp and mission' },
             { path: '/contact', label: 'Contact', description: 'Get in touch with our team' },
             { path: '/careers', label: 'Careers', description: 'Join our innovative team' },

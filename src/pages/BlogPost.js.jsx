@@ -24,17 +24,14 @@ export default function BlogPost() {
             setRelatedPosts(related)}
         else {
             // Post not found
-            navigate("/blog", { replace: true })}
+            router("/blog", { replace: true })}
         // Scroll to top when post changes
         window.scrollTo(0, 0)}, [slug, navigate]);
     if (!post) {
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>)}
-    // Helper function to get share URL
-    const getShareUrl = (platform) => {
-        const url = encodeURIComponent(window.location.href);
-        const title = encodeURIComponent(post.title);
+    // Helper function title = encodeURIComponent(post.title);
         switch (platform) {
             case 'facebook':
                 return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -46,7 +43,10 @@ export default function BlogPost() {
                 return '#'}
     };
     return (<>
-      <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
+      <SEO title={post.title} description={post.excerpt} keywords = {
+  post.tags.join(",
+  ")
+} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}

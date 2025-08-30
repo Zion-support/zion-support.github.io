@@ -5,6 +5,7 @@ import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 import { TrustedBySection } from "../TrustedBySection";
+<<<<<<< HEAD
 const blockchainServices = [
     {
         id: "smart-contracts",
@@ -133,6 +134,8 @@ const blockchainServices = [
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const blockchainBenefits = [
     {
         title: "Transparency",

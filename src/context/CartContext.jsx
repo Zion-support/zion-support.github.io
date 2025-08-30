@@ -22,7 +22,7 @@ function cartReducer(state, action) {
         default:
             return state}
 }
-const CartContext = createContext(undefined);
+const CartContext = createContext(null);
 export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx)
@@ -57,7 +57,16 @@ export function CartProvider({ children }) {
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey]);
     const value = {
-        items: state.items,
+  items: state.items,
         dispatch,
-    };
+  <<<<<<< HEAD
+    
+};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
+=======
+  
+
+};
+    return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -252,9 +252,9 @@ export default function News(...args[]):  {
 						>
 							Learn more <span aria-hidden="true">→</span>
 						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

@@ -19,13 +19,15 @@ export default function Login(...args[]):  {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     })};
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsLoading(true);
     
@@ -38,6 +40,7 @@ export default function Login(...args[]):  {
     setIsLoading(false)};
 
   const features = [
+<<<<<<< HEAD
     {
       icon: <Shield className="h-6 w-6 text-zion-cyan" />,
       title: "Enterprise Security",
@@ -52,18 +55,24 @@ export default function Login(...args[]):  {
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
       title: "Team Collaboration",
       description: "Built-in tools for seamless team communication and project management"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-zion-blue text-white flex">
+    <div className = "min-h-screen bg-zion-blue text-white flex">
       {/* Left Side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
           >
@@ -75,14 +84,74 @@ export default function Login(...args[]):  {
               Sign in to your account to continue
             </p>
           </motion.div>
+=======
+    { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },;
+    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },;
+    { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },;
+    { icon: Atom, title: 'Quantum Computing', description: 'Next-generation computational power' },;
+    { icon: Network, title: 'IoT & Edge Computing', description: 'Smart device networks & processing' },;
+    { icon: Leaf, title: 'Sustainable Technology', description: 'Green IT & eco-friendly solutions' };
+  ];
+
+  const stats = [;
+    { number: '500+', label: 'Enterprise Clients', icon: Building },;
+    { number: '99.9%', label: 'Uptime SLA', icon: Activity },;
+    { number: '24/7', label: 'Support Available', icon: MessageCircle },;
+    { number: '50+', label: 'AI Services', icon: Brain };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex">
+      {/* Left Side - Login Form */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
+        <motion.div
+          initial = {
+  { opacity: 0,
+  x: -50 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-md"
+        >
+          {/* Logo & Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-4">
+              <Zap className="h-8 w-8 text-white" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
+            <p className="text-gray-600">Sign in to your Zion Tech Group account</p>
+          </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
           {/* Login Form */}
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             {/* Email Field */}
             <div>
@@ -219,13 +288,23 @@ export default function Login(...args[]):  {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Right Side - Features & Info */}
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  x: 30 
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Business with AI
@@ -233,17 +312,69 @@ export default function Login(...args[]):  {
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
               Access cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
               Join thousands of businesses already leveraging our technology to drive growth and innovation.
+=======
+      {/* Right Side - Company Info & Features */}
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
+        <motion.div
+          initial = {
+  { opacity: 0,
+  x: 50 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.5,
+  delay: 0.2 
+
+
+
+
+
+}}
+          className="w-full max-w-lg mx-auto"
+        >
+          {/* Company Header */}
+          <div className="mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
+              <Zap className="h-10 w-10 text-white" />
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Zion Tech Group</h2>
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Leading the future of technology with cutting-edge AI, quantum computing, and sustainable solutions for enterprises worldwide.
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </p>
 
+<<<<<<< HEAD
             {/* Features List */}
             <div className="space-y-8">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   className="flex items-start gap-4"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 30 
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: 0.6 + index * 0.1 
+}}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {feature.icon}
@@ -259,9 +390,18 @@ export default function Login(...args[]):  {
             {/* Stats */}
             <motion.div
               className="mt-16 grid grid-cols-3 gap-8 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 1 
+}}
             >
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
@@ -281,3 +421,100 @@ export default function Login(...args[]):  {
       </div>
     </div>
   )}
+=======
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-6 mb-12">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="text-center"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl mb-3">
+                  <stat.icon className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold">{stat.number}</div>
+                <div className="text-sm text-blue-100">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Features */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-4">Our Core Services</h3>
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition={{ delay: 0.6 + index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                  <feature.icon className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-medium text-white">{feature.title}</h4>
+                  <p className="text-sm text-blue-100">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Contact Info */}
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <div className="flex items-center space-x-4 text-sm text-blue-100">
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                +1 (555) 123-4567
+              </div>
+              <div className="flex items-center">
+                <MailIcon className="h-4 w-4 mr-2" />
+                contact@ziontechgroup.com
+              </div>
+            </div>
+            <div className="mt-2 text-sm text-blue-100">
+              <MapPin className="h-4 w-4 inline mr-2" />
+              123 Innovation Drive, Tech Valley, CA 94000;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

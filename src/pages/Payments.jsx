@@ -36,7 +36,15 @@ export default function Payments() {
                     <p className="text-zion-slate-light mb-4">
                       Manage your payment methods and set your default preference.
                     </p>
-                    <Button onClick={() => window.open('https://stripe.com', '_blank')} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+                    <Button onClick = {
+  () => window.open('https://stripe.com',
+  '_blank')
+
+
+
+
+
+} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
                       Manage Payment Methods
                     </Button>
                   </div>

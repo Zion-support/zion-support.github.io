@@ -52,7 +52,7 @@ import {
   Gauge,
   MessageCircle as MessageCircleIcon
 } from 'lucide-react';
-import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025, EnhancedService } from "../data/enhancedServicesCatalog2025";
 
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -69,12 +69,12 @@ export default function EnhancedServicesShowcase2025() {
       .filter(service => 
         (selectedCategory === 'all' || service.category === selectedCategory) &&
         (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-      .sort((a, b) => {
-        switch (sortBy) {
-          case 'featured':
+         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      );
+      .sort((a, b) => {;
+        switch (sortBy) {;
+          case 'featured':;
             return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
           case 'popular':
             return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -93,18 +93,43 @@ export default function EnhancedServicesShowcase2025() {
   }, [searchTerm, selectedCategory, sortBy]);
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+
+
+
+};
 
   const ServiceCard = ({ service }: { service: EnhancedService }) => (
     <motion.div
       key={service.id}
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
       whileHover={{ y: -10 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
     >
       {/* Service Header */}
@@ -220,12 +245,12 @@ export default function EnhancedServicesShowcase2025() {
           <Link
             to="/contact"
             className="flex-1 btn-neon-cyan text-center text-sm py-2"
-          >
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </motion.div>
+          >;
+            Get Started;
+          </Link>;
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   const ServiceList = ({ service }: { service: EnhancedService }) => (
@@ -233,8 +258,24 @@ export default function EnhancedServicesShowcase2025() {
       key={service.id}
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
       whileHover={{ x: 10 }}
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
     >
       <div className="flex items-center space-x-6">
@@ -300,16 +341,16 @@ export default function EnhancedServicesShowcase2025() {
           <Link
             to="/contact"
             className="btn-neon-cyan text-sm py-2 px-4"
-          >
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </motion.div>
+          >;
+            Get Started;
+          </Link>;
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   return (
-    <div className="min-h-screen futuristic-bg">
+    <div className = "min-h-screen futuristic-bg">
       {/* Floating Particles */}
       <div className="floating-particles">
         {[...Array(9)].map((_, i) => (
@@ -321,8 +362,24 @@ export default function EnhancedServicesShowcase2025() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold font-orbitron mb-6">
@@ -347,9 +404,33 @@ export default function EnhancedServicesShowcase2025() {
                 <motion.div
                   key={stat.label}
                   className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 >
                   <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-3`} />
                   <div className="text-3xl font-bold text-white font-orbitron">{stat.value}</div>
@@ -505,8 +586,24 @@ export default function EnhancedServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 border-t border-gray-700/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -544,24 +641,24 @@ export default function EnhancedServicesShowcase2025() {
                 className="btn-neon text-lg px-8 py-4"
               >
                 View Pricing
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
 
 // Icon components for view mode toggle
-const Grid = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-  </svg>
+const Grid = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
+  </svg>;
 );
 
-const List = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-  </svg>
+const List = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
+  </svg>;
 );

@@ -34,12 +34,12 @@ const AISEOOptimizer: React.FC = (): JSX.Element => (
           <li>Agency: $399/mo unlimited sites, API</li>
         </ul>
       </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16 space-x-4">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>
-      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>
-    </section>
-  </div>
+    </section>;
+    <section className="container mx-auto px-4 pb-16 space-x-4">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>;
+      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>;
+    </section>;
+  </div>;
 );
 
 export default AISEOOptimizer;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from '../ui/button';
-const AccessibilityContext = createContext(undefined);
+import { Button } from "../ui/button";
+const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
@@ -27,12 +27,25 @@ export const AccessibilityProvider = ({ children }) => {
     // Save settings to localStorage
     useEffect(() => {
         const settings = {
-            highContrast,
+  highContrast,
             reducedMotion,
             fontSize,
+  <<<<<<< HEAD
             colorBlindMode
-        };
+        
+};
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+=======
+  colorBlindMode
+        
+
+
+
+
+};
+        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
+    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Apply accessibility settings to document
     useEffect(() => {
         const root = document.documentElement;
@@ -52,19 +65,30 @@ export const AccessibilityProvider = ({ children }) => {
         root.style.filter = colorBlindMode === 'none' ? 'none' :
             colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
                 colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
+<<<<<<< HEAD
                     'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     const toggleHighContrast = () => setHighContrast(!highContrast);
+=======
+                    'url(#tritanopia)';
+    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {
-        highContrast,
+  highContrast,
         reducedMotion,
         fontSize,
         colorBlindMode,
         toggleHighContrast,
         toggleReducedMotion,
         setFontSize,
-        setColorBlindMode
-    };
+  setColorBlindMode
+    
+
+
+
+
+
+};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
@@ -99,7 +123,31 @@ export const AccessibilityPanel = () => {
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <motion.div initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}} animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+}} exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white flex items-center gap-2">
@@ -201,7 +249,6 @@ export const useFocusTrap = (isActive) => {
         const container = document.activeElement?.closest('[data-focus-trap]');
         if (!container)
             return;
-        const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
         const handleTabKey = (e) => {

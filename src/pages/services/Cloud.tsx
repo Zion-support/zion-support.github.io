@@ -19,11 +19,19 @@ const CloudServices = () => {
     },
     {
       title: "Cloud Security & Compliance",
+<<<<<<< HEAD
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
       price: "From $6,500/month",
       features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
     }
+=======;
+      description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
+      price: "From $6,500/month",;
+      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],;
+      icon: Shield;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const cloudPlatforms = [
@@ -40,24 +48,32 @@ const CloudServices = () => {
       features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
+<<<<<<< HEAD
       name: "Google Cloud Platform",
       description: "AI-first cloud platform with advanced analytics",
       icon: Globe,
       features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     }
+=======;
+      name: "Google Cloud Platform",;
+      description: "AI-first cloud platform with advanced analytics",;
+      icon: Globe,;
+      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
-    "Scalable infrastructure that grows with your business",
-    "Reduced capital expenditure and operational costs",
-    "Enhanced security and compliance capabilities",
-    "Faster time to market with cloud-native tools",
-    "Global availability and disaster recovery",
-    "Automated scaling and resource management"
+    "Scalable infrastructure that grows with your business",;
+    "Reduced capital expenditure and operational costs",;
+    "Enhanced security and compliance capabilities",;
+    "Faster time to market with cloud-native tools",;
+    "Global availability and disaster recovery",;
+    "Automated scaling and resource management";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -211,11 +227,21 @@ const CloudServices = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default CloudServices;

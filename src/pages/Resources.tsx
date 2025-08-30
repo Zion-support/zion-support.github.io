@@ -36,7 +36,7 @@ import { BookOpen,
   Stop
  } from 'lucide-react';
 
-const Resources: React.FC = (): JSX.Element => {
+const Resources: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -45,7 +45,7 @@ const Resources: React.FC = (): JSX.Element => {
     { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
     { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
     { id: 'webinars', name: 'Webinars', count: 15, icon: Video },
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle }
+    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
   ];
 
   const resources = [
@@ -167,6 +167,7 @@ const Resources: React.FC = (): JSX.Element => {
       ]
     },
     {
+<<<<<<< HEAD
       id: 7,
       title: 'Digital Transformation Workshop: Complete Guide',
       description: 'Step-by-step guide to successful digital transformation implementation.',
@@ -201,20 +202,19 @@ const Resources: React.FC = (): JSX.Element => {
       fileSize: '2.8 MB',
       fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf'
-    }
+    };
   ];
 
-  const filteredResources = resources.filter(resource => {
-    const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
+  const filteredResources = resources.filter(resource => {;
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch});
 
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string)  => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -225,7 +225,7 @@ const Resources: React.FC = (): JSX.Element => {
   const getResourceIcon = (type: string)  => {
     switch (type) {
       case 'White Paper':
-      case 'Research Paper':
+      case 'Research Paper':;
         return FileText;
       case 'Case Study':
         return BarChart3;
@@ -235,15 +235,97 @@ const Resources: React.FC = (): JSX.Element => {
       default:
         return FileText}
   };
+=======
+      id: 'pricing-guide-2025',
+      title: 'Pricing Guide 2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      color: 'from-emerald-500 to-green-500',
+      featured: true,
+      items: [
+        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
+        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
+        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
+        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
+      ];
+    };
+  ];
+
+  const additionalResources = [
+    {
+      id: 'api-docs',
+      title: 'API Reference',
+      icon: GitBranch,
+      description: 'Comprehensive API documentation',
+      color: 'from-purple-500 to-indigo-500',
+      href: '/api-docs'
+    },
+    {
+      id: 'developers',
+      title: 'Developer Portal',
+      icon: GitCommit,
+      description: 'Developer tools and resources',
+      color: 'from-blue-500 to-cyan-500',
+      href: '/developers'
+    },
+    {
+      id: 'training',
+      title: 'Training & Certification',
+      icon: Award,
+      description: 'Professional development programs',
+      color: 'from-green-500 to-emerald-500',
+      href: '/training'
+    },
+    {
+      id: 'community',
+      title: 'Community Forum',;
+      icon: Users,;
+      description: 'Connect with peers and experts',;
+      color: 'from-orange-500 to-red-500',;
+      href: '/community';
+    };
+  ];
+
+  const contactInfo = {
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -283,8 +365,14 @@ const Resources: React.FC = (): JSX.Element => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -293,14 +381,23 @@ const Resources: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {featuredResources.map((resource, index)  => {
+              {featuredResources.map((resource, index)  => {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
-                    key={resource.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key = {resource.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                     className="group"
                   >
                     <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
@@ -377,8 +474,24 @@ const Resources: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -391,15 +504,25 @@ const Resources: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularResources.map((resource, index)  => {
+            {regularResources.map((resource, index)  => {;
               const ResourceIcon = getResourceIcon(resource.type);
               return (
                 <motion.article
-                  key={resource.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  key = {resource.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="group"
                 >
                   <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
@@ -418,6 +541,68 @@ const Resources: React.FC = (): JSX.Element => {
                           <Clock className="w-4 h-4 mr-2" />
                           {resource.readTime || resource.duration}
                         </span>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="group relative"
+              >
+                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {category.description}
+                  </p>
+                  
+                  <div className="space-y-3 mb-6">
+                    {category.items.slice(0, 2).map((item, idx) => (
+                      <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                        <div className="flex-1">
+                          <h4 className="text-sm font-medium text-white">{item.title}</h4>
+                          <p className="text-xs text-gray-400">{item.type}</p>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-xs text-gray-400">
+                            {item.readTime || item.duration}
+                          </span>
+                          {item.featured && (
+                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
+                          )}
+                        </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </div>
 
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
@@ -465,8 +650,24 @@ const Resources: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -484,9 +685,33 @@ const Resources: React.FC = (): JSX.Element => {
               <motion.div
                 key={category.id}
                 id={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
               >
@@ -527,8 +752,24 @@ const Resources: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -546,9 +787,33 @@ const Resources: React.FC = (): JSX.Element => {
               <motion.div
                 key={resource.id}
                 id={resource.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
               >
@@ -581,8 +846,24 @@ const Resources: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
@@ -650,11 +931,21 @@ const Resources: React.FC = (): JSX.Element => {
                   Schedule Demo
                 </Link>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default Resources;
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

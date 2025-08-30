@@ -142,7 +142,14 @@ export function ValuePropositionShowcase() {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -154,7 +161,14 @@ export function ValuePropositionShowcase() {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+
+
+
+
+
+},
     visible: {
       scale: 1,
       opacity: 1,
@@ -171,8 +185,24 @@ export function ValuePropositionShowcase() {
         {/* Header Section */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -214,9 +244,33 @@ export function ValuePropositionShowcase() {
         {/* Competitive Advantages */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
@@ -227,7 +281,15 @@ export function ValuePropositionShowcase() {
                 key={index}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
-                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
+                whileHover = {
+  { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
+  0.3)" 
+
+
+
+
+
+}}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
                   {advantage.icon}
@@ -242,9 +304,33 @@ export function ValuePropositionShowcase() {
         {/* Market Comparison */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Pricing Analysis
@@ -299,9 +385,33 @@ export function ValuePropositionShowcase() {
         {/* Success Stories */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.7 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real Success Stories
@@ -344,9 +454,33 @@ export function ValuePropositionShowcase() {
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.9 
+
+
+
+
+
+}}
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">

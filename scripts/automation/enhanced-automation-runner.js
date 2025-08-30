@@ -15,12 +15,13 @@ const execAsync = util.promisify(exec);
 class EnhancedAutomationRunner {
   constructor() {
     this.config = {
-      maxConcurrentProcesses: 3,
+  maxConcurrentProcesses: 3,
       retryAttempts: 3,
       retryDelay: 5000,
       healthCheckInterval: 30000,
-      logLevel: 'info'
-    };
+  logLevel: 'info'
+    
+};
     
     this.processQueue = [];
     this.runningProcesses = new Map();
@@ -54,8 +55,7 @@ class EnhancedAutomationRunner {
     
     // Create monitoring directories
     const dirs = ['logs', 'reports', 'metrics', 'cache'];
-    for (const dir of dirs) {
-      const dirPath = path.join(__dirname, '../../', dir);
+    for (const dirPath = path.join(__dirname, '../../', dir);
       if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath, { recursive: true });
       }
@@ -63,13 +63,14 @@ class EnhancedAutomationRunner {
     
     // Initialize performance tracking
     this.performanceMetrics = {
-      startTime: Date.now(),
+  startTime: Date.now(),
       totalProcesses: 0,
       successfulProcesses: 0,
       failedProcesses: 0,
       averageExecutionTime: 0,
-      totalExecutionTime: 0
-    };
+  totalExecutionTime: 0
+    
+};
   }
 
   startHealthMonitoring() {
@@ -100,12 +101,13 @@ class EnhancedAutomationRunner {
 
   async checkSystemHealth() {
     const health = {
-      overallHealth: 'healthy',
+  overallHealth: 'healthy',
       cpu: 0,
       memory: 0,
       disk: 0,
-      processes: 0
-    };
+  processes: 0
+    
+};
 
     try {
       // Check CPU usage
@@ -292,7 +294,10 @@ class EnhancedAutomationRunner {
     
     // Sort by priority
     tasks.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      const priorityOrder = {
+  high: 3, medium: 2,
+  low: 1 
+};
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     });
     
@@ -401,11 +406,11 @@ class EnhancedAutomationRunner {
 
   async logHealthStatus(healthStatus) {
     try {
-      const logPath = path.join(__dirname, '../../logs/health.log');
       const logEntry = {
-        timestamp: new Date().toISOString(),
-        ...healthStatus
-      };
+  timestamp: new Date().toISOString(),
+  ...healthStatus
+      
+};
       
       fs.appendFileSync(logPath, JSON.stringify(logEntry) + '\n');
       
@@ -415,13 +420,6 @@ class EnhancedAutomationRunner {
   }
 
   async generatePerformanceReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.performanceMetrics,
-      history: this.processHistory.slice(-100), // Last 100 processes
-      recommendations: this.generateRecommendations()
-    };
-    
     const reportPath = path.join(__dirname, '../../reports/performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     

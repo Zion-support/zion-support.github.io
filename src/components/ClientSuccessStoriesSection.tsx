@@ -10,6 +10,7 @@ import { Star,
   Heart
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
   const testimonials = [
     {
@@ -47,24 +48,95 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       rating: 5,
       quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
       metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
-    }
+    };
   ];
 
   const successMetrics = [
     { label: 'Client Satisfaction', value: '98%', icon: Heart },
     { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
     { label: 'Client Retention', value: '95%', icon: Users },
-    { label: 'Average Rating', value: '4.9/5', icon: Star }
+    { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
+=======
+const successStories = [
+  {
+    id: 1,
+    client: "TechCorp Solutions",
+    industry: "Technology",
+    challenge: "Legacy systems causing 40% productivity loss",
+    solution: "Modernized infrastructure with AI-powered automation",
+    results: [
+      "Increased productivity by 60%",
+      "Reduced operational costs by 35%",
+      "Improved customer satisfaction by 45%"
+    ],
+    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",
+    author: "Sarah Johnson",
+    position: "CTO",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+  },
+  {
+    id: 2,
+    client: "Global Finance Ltd",
+    industry: "Financial Services",
+    challenge: "Security vulnerabilities and compliance issues",
+    solution: "Comprehensive cybersecurity and compliance platform",
+    results: [
+      "100% compliance achievement",
+      "Zero security breaches",
+      "Reduced audit time by 70%"
+    ],
+    testimonial: "Their security solutions are world-class. We feel completely protected now.",
+    author: "Michael Chen",
+    position: "CISO",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
+  },
+  {
+    id: 3,
+    client: "HealthTech Innovations",
+    industry: "Healthcare",
+    challenge: "Patient data management inefficiencies",
+    solution: "AI-powered healthcare analytics platform",
+    results: [
+      "Improved patient outcomes by 30%",
+      "Reduced administrative overhead by 50%",
+      "Enhanced data accuracy by 95%"
+    ],
+    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;
+    author: "Dr. Emily Rodriguez",;
+    position: "Chief Medical Officer",;
+    rating: 5,;
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function ClientSuccessStoriesSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -78,15 +150,24 @@ export function ClientSuccessStoriesSection() {
 
         {/* Success Metrics */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {successMetrics.map((metric, index)  => {
+          {successMetrics.map((metric, index)  => {;
             const IconComponent = metric.icon;
             return (
-              <div key={metric.label} className="text-center">
+              <div key = {metric.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-green-100 rounded-full">
                     <IconComponent className="h-8 w-8 text-green-600" />
@@ -106,10 +187,34 @@ export function ClientSuccessStoriesSection() {
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
             >
               <div className="flex items-center mb-6">
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>
@@ -180,10 +285,34 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -213,18 +342,54 @@ export function ClientSuccessStoriesSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to be our next success story?</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default ClientSuccessStoriesSection;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ClientSuccessStoriesSection;

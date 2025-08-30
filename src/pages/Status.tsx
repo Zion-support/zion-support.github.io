@@ -11,13 +11,15 @@ import { CheckCircle,
   Activity
  } from 'lucide-react';
 
+<<<<<<< HEAD
 const Status: React.FC = (): JSX.Element => {
   const systemStatus = {
-    overall: 'operational',
+  overall: 'operational',
     uptime: '99.9%',
     lastIncident: '2024-01-15',
-    responseTime: '45ms'
-  };
+  responseTime: '45ms'
+  ;
+};
 
   const services = [
     {
@@ -61,7 +63,7 @@ const Status: React.FC = (): JSX.Element => {
       uptime: '99.8%',
       responseTime: '150ms',
       lastCheck: '1 minute ago'
-    }
+    };
   ];
 
   const incidents = [
@@ -85,24 +87,24 @@ const Status: React.FC = (): JSX.Element => {
       description: 'Temporary email delivery delays',
       status: 'resolved',
       duration: '1 hour'
-    }
+    };
   ];
 
   const getStatusIcon = (status: string)  => {
     switch (status) {
-      case 'operational':
+      case 'operational':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
         return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />}
+        return <Clock className = "w-5 h-5 text-gray-500" />};
   };
 
   const getStatusColor = (status: string)  => {
     switch (status) {
-      case 'operational':
+      case 'operational':;
         return 'text-green-500';
       case 'degraded':
         return 'text-yellow-500';
@@ -113,7 +115,7 @@ const Status: React.FC = (): JSX.Element => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -259,7 +261,18 @@ const Status: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+const Status: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">System Status</h1>;
+			<p className="text-xl text-gray-300">All systems are operational.</p>;
+		</div>;
+	</div>;
+);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Status;

@@ -71,9 +71,6 @@ export function SearchModal({ isOpen, onClose }) {
         await new Promise(resolve => setTimeout(resolve, 300));
         // Filter results based on query and active filter
         const filteredResults = mockSearchResults.filter(result => {
-            const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
-                result.description.toLowerCase().includes(query.toLowerCase()) ||
-                result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
             return matchesQuery && matchesFilter});
         setResults(filteredResults);

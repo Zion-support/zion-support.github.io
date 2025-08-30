@@ -10,25 +10,13 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink,
+<<<<<<< HEAD
   Filter,
   Search,
   Grid3X3,
   List
  } from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from '../data/enhancedInnovativeServices2027';
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'Web3 Solutions': Globe,
-  'Metaverse Solutions': Eye,
-  'Sustainable Tech': Leaf,
-  'NeuroTech Solutions': Brain,
-  'Fusion Energy Solutions': Zap,
-  'OceanTech Solutions': Waves,
-  'AgriTech Solutions': Factory,
-  'Smart City Solutions': Building2,
-  'Digital Twin Solutions': Cpu,
-  'Edge AI Solutions': Network,
-  'Federated Learning Solutions': Code
-};
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
 const categoryColors: { [key: string]: string } = {
   'Web3 Solutions': 'from-purple-500 to-pink-500',
   'Metaverse Solutions': 'from-blue-500 to-cyan-500',
@@ -47,18 +35,83 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('name');
-  const filteredServices = enhancedInnovativeServices2027.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+  const filteredServices = enhancedInnovativeServices2027.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
+=======
+  CheckCircle,
+  Clock,
+  Users,
+  Target,
+  BarChart3,
+  Rocket,
+  Cpu,
+  Network,
+  Database,
+  Lock,
+  Leaf,
+  Scale,
+  Stethoscope,
+  Car,
+  Building2,
+  DollarSign,
+  Award,
+  Lightbulb,
+  ArrowRight,
+  ChevronRight,
+  ChevronLeft,
+  Play,
+  Eye,
+  X,
+  Beaker;
+} from 'lucide-react';
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
+
+const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
+  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
+  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];
+
+  const filteredServices = services.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+    
+    return matchesSearch && matchesCategory && matchesInnovation;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return a.price - b.price;
       case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Innovative': 1 };
+        const innovationOrder = {
+  'Breakthrough': 3, 'Advanced': 2,;
+  ;
+  ;
+  ;
+  ;
+  'Innovative': 1 ;
+
+
+
+
+
+};
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
@@ -67,8 +120,8 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
         return 0}
   });
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
       case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
@@ -83,8 +136,8 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
@@ -92,32 +145,48 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
     }
   };
 
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {
+  const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
     setSelectedService(service);
     setCurrentSlide(0);
   };
 
-  const nextSlide = () => {
-    if (selectedService) {
+  const nextSlide = () => {;
+    if (selectedService) {;
       setCurrentSlide((prev) => (prev + 1) % 4);
     }
   };
 
-  const prevSlide = () => {
-    if (selectedService) {
+  const prevSlide = () => {;
+    if (selectedService) {;
       setCurrentSlide((prev) => (prev - 1 + 4) % 4);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -227,6 +296,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         {viewMode === 'grid' ? (
@@ -309,6 +379,49 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                       {service.external && <ExternalLink className="w-4 h-4" />}
                     </a>
                   </div>
+=======
+
+      {/* Services Grid */}
+      <div id="services-grid" className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
+              onClick={() => handleServiceClick(service)}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-2">
+                  {getCategoryIcon(service.category)}
+                  <span className="text-zion-gray-light text-sm">{service.category}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
                   {service.innovationLevel}
@@ -365,9 +478,33 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
             className="bg-zion-slate-dark rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto"
           >
             <div className="p-8">
@@ -410,8 +547,24 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                 {/* Overview Slide */}
                 {currentSlide === 0 && (
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                     className="space-y-6"
                   >
                     <div className="bg-white/5 rounded-xl p-6">
@@ -458,8 +611,24 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                 {/* Features Slide */}
                 {currentSlide === 1 && (
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                     className="space-y-6"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -499,8 +668,24 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                 {/* Technical Specs Slide */}
                 {currentSlide === 2 && selectedService.technicalSpecs && (
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                     className="space-y-6"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -588,8 +773,24 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                 {/* Contact Slide */}
                 {currentSlide === 3 && (
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                     className="space-y-6"
                   >
                     <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-xl p-8 text-center">
@@ -743,12 +944,32 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
-            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+            onClick = {
+  () => window.open('https://ziontechgroup.com',
+  '_blank')
+
+
+
+
+
+}
           >
             <ExternalLink className="w-5 h-5" />
+<<<<<<< HEAD
             <span>Visit Zion Tech Group</span>
           </motion.button>
         </div>
       </div>
     </div>
   )}
+=======;
+            <span>Visit Zion Tech Group</span>;
+          </motion.button>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+
+export default EnhancedInnovativeServicesShowcase2027;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

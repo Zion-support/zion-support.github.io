@@ -21,11 +21,19 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
+<<<<<<< HEAD
  } from 'lucide-react';
-import { servicesCatalog  } from '../data/servicesCatalog';
-import { innovativeServices2027  } from '../data/innovativeServices2027';
+import { servicesCatalog  } from "../data/servicesCatalog";
+import { innovativeServices2027  } from "../data/innovativeServices2027";
 
 export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
+=======;
+} from 'lucide-react';
+import { servicesCatalog } from "../data/servicesCatalog";
+import { innovativeServices2027 } from "../data/innovativeServices2027";
+
+export const ComprehensivePricingGuide2027: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [priceRange, setPriceRange] = useState<any>('All');
@@ -33,10 +41,13 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)}
+<<<<<<< HEAD
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
+          setIsVisible(true);
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
@@ -58,33 +69,31 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     ),
     ...innovativeServices2027.map(service  => ({
       ...service,
-      source: 'innovative',
-      category: service.category,
-      features: service.features || [],
-      ctaLabel: service.ctaLabel || 'Get Started',
-      href: service.href || '/contact'
-    }))
+      source: 'innovative',;
+      category: service.category,;
+      features: service.features || [],;
+      ctaLabel: service.ctaLabel || 'Get Started',;
+      href: service.href || '/contact';
+    }));
   ];
 
   // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
     
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    
-    const matchesPrice = priceRange === 'All' || 
-      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
-      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
+    const matchesPrice = priceRange === 'All' || ;
+      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||;
+      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||;
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
 
     return matchesSearch && matchesCategory && matchesPrice});
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'name':;
         return a.title.localeCompare(b.title);
       case 'price':
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -98,18 +107,33 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
   const priceRanges = ['All', 'Low (<$100)', 'Medium ($100-$999)', 'High ($1000+)'];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
 
+<<<<<<< HEAD
   const getPriceRange = (price: string)  => {
+=======
+
+
+
+;
+};
+
+  const getPriceRange = (price: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High'};
 
-  const getPriceColor = (price: string)  => {
+<<<<<<< HEAD
+  const getPriceColor = (price: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -134,17 +158,17 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       'EdTech Solutions': BookOpen,
       'GreenTech Solutions': Leaf,
       'SpaceTech Solutions': Rocket,
-      'Robotics & Automation': Cpu,
-      'AR/VR Solutions': Eye,
-      'Biotech Solutions': Dna,
-      'LegalTech Solutions': Scale,
-      'Real Estate Tech': Home,
-      'Supply Chain Solutions': Truck
+      'Robotics & Automation': Cpu,;
+      'AR/VR Solutions': Eye,;
+      'Biotech Solutions': Dna,;
+      'LegalTech Solutions': Scale,;
+      'Real Estate Tech': Home,;
+      'Supply Chain Solutions': Truck;
     };
     return iconMap[category] || Target};
 
   return (
-    <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+    <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>
@@ -154,8 +178,24 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -180,9 +220,33 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
           className="mb-12"
         >
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
@@ -253,17 +317,81 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+=======
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
           {sortedServices.map((service, index)  => (
             <motion.div
               key={`${service.source}-${service.id}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+
+
+
+}}
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -351,9 +479,33 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
 
         {/* Contact Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
@@ -397,9 +549,19 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

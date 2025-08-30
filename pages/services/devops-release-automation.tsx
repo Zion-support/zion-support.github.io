@@ -3,7 +3,7 @@ import Link from 'next/link.ts';
 
 export default function DevOpsReleaseAutomation(...args[]):  {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>DevOps Release Automation — Services — Zion</title>
         <meta name="description" content="Intelligent CI/CD with policy-as-code, canary analysis, and rollback automation." />
@@ -26,10 +26,20 @@ export default function DevOpsReleaseAutomation(...args[]):  {
         </ul>
         <div className="mt-6 text-sm text-white/70">Average market pricing: $5,000–$25,000 implementation, $1,500–$6,000/mo managed.</div>
         <div className="mt-8 flex gap-3">
+<<<<<<< HEAD
           <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
         </div>
       </main>
     </div>
   )}
+=======;
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>;
+          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>;
+        </div>;
+      </main>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

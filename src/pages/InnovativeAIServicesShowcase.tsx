@@ -84,16 +84,16 @@ export default function InnovativeAIServicesShowcase() {
         'AI-powered demand forecasting and inventory optimization',
         'Real-time supply chain visibility and tracking',
         'Automated route optimization and logistics planning',
-        'Supplier performance analytics and risk assessment'
-      ],
-      benefits: ['20-30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],
-      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },
-      route: '/services/ai-supply-chain-optimization'
-    }
+        'Supplier performance analytics and risk assessment';
+      ],;
+      benefits: ['20-30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],;
+      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
+      route: '/services/ai-supply-chain-optimization';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Innovative AI Services Showcase - Zion Tech Group"
         description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
@@ -103,8 +103,24 @@ export default function InnovativeAIServicesShowcase() {
       <section className="relative py-20 sm:py-24">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6"
           >
@@ -113,9 +129,33 @@ export default function InnovativeAIServicesShowcase() {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
             className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6"
           >
             AI Services That
@@ -125,9 +165,33 @@ export default function InnovativeAIServicesShowcase() {
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
           >
             Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize 
@@ -143,9 +207,33 @@ export default function InnovativeAIServicesShowcase() {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4`}>
@@ -281,11 +369,11 @@ export default function InnovativeAIServicesShowcase() {
               rel="noreferrer" 
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
             >
-              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

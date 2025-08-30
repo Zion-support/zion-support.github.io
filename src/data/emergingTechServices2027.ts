@@ -76,7 +76,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },
     images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
@@ -399,10 +399,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     },
     images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
+<<<<<<< HEAD
     technologyStack["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],
     useCases["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],
     integrations["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],
     compliance["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
     support["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
   }
+=======
+    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],;
+    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],;
+    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;
+    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],;
+    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];

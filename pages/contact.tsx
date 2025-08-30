@@ -12,19 +12,9 @@ export default function Contact(...args[]):  {
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleSubmit = (e: React.FormEvent)  => {
-		e.preventDefault()
-		// Here you would typically send the form data to your backend
-		console.log('Form submitted: ', formData)
-		setIsSubmitted(true)
-		// Reset form after submission
-		setTimeout(()  => {
-			setIsSubmitted(false)
-			setFormData({ name: '', email: '', comp: '', message: '' })
-		}, 3000)
-	}
-
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+<<<<<<< HEAD
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
@@ -203,9 +193,9 @@ export default function Contact(...args[]):  {
 								Learn More About Us →
 							</Link>
 						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

@@ -36,19 +36,46 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>
-        {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`} initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+        {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`} initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
       </AnimatePresence>)}
     if (variant === 'featured') {
         return (<div className={`fixed ${getPositionClasses()} z-40`}>
         <AnimatePresence>
-          {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 group" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+          {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 group" initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <div className="relative">
                 <Zap className="w-6 h-6"/>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
               </div>
-            </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} transition={{ type: "spring", damping: 25, stiffness: 300 }}>
+            </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
+}}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-gray-900">Quick Actions</h3>
                 <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -99,12 +126,30 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     // Default variant
     return (<div className={`fixed ${getPositionClasses()} z-40`}>
       <AnimatePresence>
-        {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 group" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+        {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 group" initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <div className="relative">
               <MessageCircle className="w-6 h-6"/>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
             </div>
-          </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} transition={{ type: "spring", damping: 25, stiffness: 300 }}>
+          </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
+}}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">How can we help?</h3>
               <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">

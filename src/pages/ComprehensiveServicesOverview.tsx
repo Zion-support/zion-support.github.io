@@ -33,7 +33,7 @@ import { Brain,
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
+const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
@@ -44,7 +44,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
     { id: 'it-services', name: 'IT Services', icon: Server },
     { id: 'micro-saas', name: 'Micro SaaS', icon: Rocket },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'cloud', name: 'Cloud Solutions', icon: Cloud }
+    { id: 'cloud', name: 'Cloud Solutions', icon: Cloud };
   ];
 
   const pricingModels = [
@@ -52,7 +52,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
     { id: 'monthly', name: 'Monthly' },
     { id: 'yearly', name: 'Yearly' },
     { id: 'one-time', name: 'One-time' },
-    { id: 'usage-based', name: 'Usage-based' }
+    { id: 'usage-based', name: 'Usage-based' };
   ];
 
   const services = [
@@ -127,13 +127,12 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       icon: Database,
       rating: 4.5,
       reviewCount: 67
-    }
+    };
   ];
 
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredServices = services.filter(service => {;
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     
     return matchesCategory && matchesPricing && matchesSearch});
@@ -141,7 +140,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO 
-        title="Comprehensive Services Overview | Zion Tech Group"
+        title = "Comprehensive Services Overview | Zion Tech Group"
         description="Explore our complete range of AI services, IT solutions, and micro SaaS platforms designed to transform your business operations."
         keywords="AI services, IT solutions, micro SaaS, cybersecurity, cloud solutions, business automation"
       />
@@ -151,8 +150,14 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
         <section className="py-32 px-4 text-center">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -220,9 +225,18 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
               {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
                 >
                   <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
@@ -272,11 +286,11 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
               <div className="text-center py-16">
                 <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
                 <button
-                  onClick={() => {
+                  onClick={() => {;
                     setSelectedCategory('all');
                     setSelectedPricing('all');
                     setSearchQuery('')}}
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
+                  className = "px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -343,7 +357,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default ComprehensiveServicesOverview;

@@ -8,7 +8,7 @@ export default function FinOpsAdvisor(...args: []):  {
     <>
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
-        <meta name="description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />
+        <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />
         <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations" />
       </Helmet>
 
@@ -413,11 +413,11 @@ export default function FinOpsAdvisor(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

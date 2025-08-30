@@ -2,12 +2,16 @@ import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
 
-const NewsletterSection: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const NewsletterSection: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+<<<<<<< HEAD
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!email) return;
 
@@ -29,21 +33,37 @@ const NewsletterSection: React.FC = (): JSX.Element => {
       icon: TrendingUp,
       title: "Industry Insights",
       description: "Get exclusive access to tech trends and analysis"
-    },
-    {
-      icon: Zap,
-      title: "Early Access",
-      description: "Be the first to know about beta programs and launches"
-    }
+    },;
+    {;
+      icon: Zap,;
+      title: "Early Access",;
+      description: "Be the first to know about beta programs and launches";
+    };
   ];
 
   if (isSubscribed) {
     return (
-      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
+      <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
           >
@@ -59,21 +79,47 @@ const NewsletterSection: React.FC = (): JSX.Element => {
               onClick={() => setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
+<<<<<<< HEAD
               Subscribe Another Email
             </button>
           </motion.div>
         </div>
       </section>
     )}
+=======;
+              Subscribe Another Email;
+            </button>;
+          </motion.div>;
+        </div>;
+      </section>;
+    );
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
+    <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: -30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -88,9 +134,33 @@ const NewsletterSection: React.FC = (): JSX.Element => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="flex items-start"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">
@@ -112,9 +182,33 @@ const NewsletterSection: React.FC = (): JSX.Element => {
 
           {/* Right Column - Newsletter Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
           >
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">
               <div className="text-center mb-6">
@@ -172,11 +266,21 @@ const NewsletterSection: React.FC = (): JSX.Element => {
                   </a>
                 </p>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
+    </section>;
   )};
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default NewsletterSection;

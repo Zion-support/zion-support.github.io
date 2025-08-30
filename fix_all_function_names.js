@@ -1,29 +1,31 @@
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
-function fixFunctionName(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    const fileName = path.basename(filePath, path.extname(filePath));
+function fileName = path.basename(filePath, path.extname(filePath));
     // Find the current function name in the file
     const functionMatch = content.match(
       /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,
     );
     if (!functionMatch) return false;
     const currentFunctionName = functionMatch[1];
-    // Convert filename to valid function name
-    let functionName = fileName
-      .replace(/[^a-zA-Z0-9]/g, "")
-      .replace(/^(\d)/, (match, digit) => {
-        const numberWords = {
-          5: "Five",
+    // Convert filename to valid function numberWords = {
+  5: "Five",
           4: "Four",
           3: "Three",
           2: "Two",
           1: "One",
           0: "Zero",
-        };
+  <<<<<<< HEAD
+        
+};
         return numberWords[digit] || `_${digit}`});
+=======
+  
+
+};
+        return numberWords[digit] || `_${digit}`;
+      });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // If the function name is already valid, skip
     if (currentFunctionName === functionName) return false;
     // Replace the function name throughout the file
@@ -63,14 +65,21 @@ function fixFunctionName(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-async function fixAllFiles() {
-  const files = await glob("pages/**/*.{ts,tsx}", {
-    ignore["node_modules/**", ".next/**"],
-  });
-  let fixedCount = 0;
+<<<<<<< HEAD
+async function fixedCount = 0;
+=======
+async function fixedCount = 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++}
   }
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();
+
+export default fileName;
+export default fileName;
+export default fileName;
+export default fileName;
+export default fileName;
+export default fileName;

@@ -36,7 +36,7 @@ function LoginForm() {
             if (error) {
                 form.setError("root", { message: error })}
             else {
-                navigate("/")}
+                router("/")}
         }
         finally {
             setIsSubmitting(false)}
@@ -88,4 +88,6 @@ function LoginForm() {
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>)}
+export default LoginForm;
+
 export default LoginForm;

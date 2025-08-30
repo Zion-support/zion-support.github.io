@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
 
@@ -19,12 +19,12 @@ export default function IoTEdge(...args: []):  {
       icon: Zap,
       title: 'Real-time Processing',
       description: 'Instant data analysis and decision making'
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Efficient storage and processing of IoT data streams'
-    }
+    },;
+    {;
+      icon: Database,;
+      title: 'Data Management',;
+      description: 'Efficient storage and processing of IoT data streams';
+    };
   ];
 
   const services = [
@@ -42,23 +42,39 @@ export default function IoTEdge(...args: []):  {
       title: '5G Integration',
       description: 'High-speed connectivity for IoT applications',
       icon: Wifi
-    },
-    {
-      title: 'Security & Compliance',
-      description: 'End-to-end security for IoT ecosystems',
-      icon: Shield
-    }
+    },;
+    {;
+      title: 'Security & Compliance',;
+      description: 'End-to-end security for IoT ecosystems',;
+      icon: Shield;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -94,8 +110,24 @@ export default function IoTEdge(...args: []):  {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -112,9 +144,33 @@ export default function IoTEdge(...args: []):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
@@ -133,8 +189,24 @@ export default function IoTEdge(...args: []):  {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -151,9 +223,33 @@ export default function IoTEdge(...args: []):  {
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
@@ -185,8 +281,14 @@ export default function IoTEdge(...args: []):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -203,9 +305,18 @@ export default function IoTEdge(...args: []):  {
             {industries.map((industry, index)  => (
               <motion.div
                 key={industry.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
@@ -221,8 +332,24 @@ export default function IoTEdge(...args: []):  {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center relative overflow-hidden"
@@ -242,11 +369,11 @@ export default function IoTEdge(...args: []):  {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">
                   Contact IoT Team
                 </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

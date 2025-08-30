@@ -1,40 +1,5 @@
-import SEO from '../SEO';
+import SEO from "../SEO";
 const Mobile = () => {
-    const mobileFeatures = [
-        {
-            title: "Mobile-First Design",
-            description: "We design with mobile users in mind first, ensuring optimal experience across all devices",
-            icon: "📱",
-            benefits[
-                "Responsive design principles",
-                "Touch-friendly interfaces",
-                "Mobile performance optimization",
-                "Cross-platform compatibility"
-            ]
-        },
-        {
-            title: "Zion Mobile App",
-            description: "Access our services and manage your projects on the go with our mobile application",
-            icon: "🚀",
-            benefits[
-                "Project management",
-                "Real-time updates",
-                "Client communication",
-                "Service booking"
-            ]
-        },
-        {
-            title: "Progressive Web Apps",
-            description: "Web applications that work like native apps with offline functionality",
-            icon: "🌐",
-            benefits[
-                "No app store required",
-                "Offline capabilities",
-                "Push notifications",
-                "App-like experience"
-            ]
-        }
-    ];
     const mobileServices = [
         {
             title: "iOS Development",
@@ -59,28 +24,6 @@ const Mobile = () => {
             description: "Responsive web applications optimized for mobile devices",
             icon: "🌐",
             features["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
-        }
-    ];
-    const mobileBenefits = [
-        {
-            title: "Increased Engagement",
-            description: "Mobile users are more engaged and likely to interact with your content",
-            icon: "📈"
-        },
-        {
-            title: "Better User Experience",
-            description: "Optimized mobile experiences lead to higher satisfaction and retention",
-            icon: "⭐"
-        },
-        {
-            title: "Wider Reach",
-            description: "Mobile-first approach ensures accessibility across all devices",
-            icon: "🌍"
-        },
-        {
-            title: "Competitive Advantage",
-            description: "Stay ahead with modern mobile solutions and user expectations",
-            icon: "🏆"
         }
     ];
     const mobileStats = [

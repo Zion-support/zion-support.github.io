@@ -16,8 +16,15 @@ export default function WishlistPage() {
     useEffect(() => {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
+<<<<<<< HEAD
             router.push('/login')}
     }, [user, isAuthLoading, router]);
+=======
+            router('/login');
+        }
+    }, [user, isAuthLoading, navigate]);
+    
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
         return null; // Or a loading spinner
     }

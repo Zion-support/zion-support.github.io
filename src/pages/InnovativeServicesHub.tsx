@@ -70,11 +70,19 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
+<<<<<<< HEAD
       color: 'from-emerald-600 to-green-600',
       route: '/green-it',
       features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
     }
+=======;
+      color: 'from-emerald-600 to-green-600',;
+      route: '/green-it',;
+      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
+      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const featuredServices = [
@@ -96,37 +104,44 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
     },
     {
       title: 'Autonomous Space Mining System',
-      description: 'AI-powered space exploration and resource extraction',
-      category: 'Space Tech',
-      price: '$500,000',
-      roi: '2000%',
-      delivery: '18 months'
-    }
+      description: 'AI-powered space exploration and resource extraction',;
+      category: 'Space Tech',;
+      price: '$500,000',;
+      roi: '2000%',;
+      delivery: '18 months';
+    };
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+},
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <motion.div 
         className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20"
@@ -138,25 +153,97 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold text-white mb-6"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { y: -50,
+  opacity: 0 
+
+
+
+
+
+}}
+            animate = {
+  { y: 0,
+  opacity: 1 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
           >
             Innovative Services Hub
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { y: 50,
+  opacity: 0 
+
+
+
+
+
+}}
+            animate = {
+  { y: 0,
+  opacity: 1 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
           >
             Discover the future of technology with our comprehensive portfolio of innovative services
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4 text-sm"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial = {
+  { scale: 0.8,
+  opacity: 0 
+
+
+
+
+
+}}
+            animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+}}
           >
             <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200">
               🚀 40+ Services
@@ -177,9 +264,33 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       {/* Statistics Section */}
       <motion.div 
         className="container mx-auto px-4 py-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
       >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
@@ -214,18 +325,34 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
+<<<<<<< HEAD
           </p>
         </div>
 
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
           {serviceCategories.map((category)  => {
+=======;
+          </p>;
+        </div>;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+          {serviceCategories.map((category) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = category.icon;
             return (
               <motion.div
-                key={category.id}
+                key = {category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+}}
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
@@ -273,21 +400,55 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
+<<<<<<< HEAD
                 >
                   Explore {category.title}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
             )})}
+=======;
+                >;
+                  Explore {category.title};
+                  <ArrowRight className="w-5 h-5" />;
+                </a>;
+              </motion.div>;
+            );
+          })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </motion.div>
 
       {/* Featured Services */}
       <motion.div 
-        className="container mx-auto px-4 py-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
+        className = "container mx-auto px-4 py-16"
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.6,
+  delay: 1.2 
+
+
+
+
+
+}}
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -303,10 +464,42 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.4 + index * 0.1 
+
+
+
+
+
+}}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+}}
             >
               <div className="flex items-center gap-2 mb-3">
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -346,9 +539,33 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       {/* Contact Section */}
       <motion.div 
         className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
+        initial = {
+  { opacity: 0,
+  y: 50 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 1.6 
+
+
+
+
+
+}}
       >
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
@@ -400,11 +617,21 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             >
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </motion.div>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesHub;

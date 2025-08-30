@@ -47,7 +47,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       icon: Shield,
       title: 'Secure Operations',
       description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
-    }
+    };
   ];
 
   const useCases = [
@@ -70,7 +70,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
       icon: Users
-    }
+    };
   ];
 
   const benefits = [
@@ -79,7 +79,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     'Eliminate manual errors and delays',
     '24/7 automated operations',
     'Scalable infrastructure for growth',
-    'Real-time monitoring and analytics'
+    'Real-time monitoring and analytics';
   ];
 
   const industries = [
@@ -90,7 +90,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     'Logistics',
     'Technology',
     'Energy',
-    'Education'
+    'Education';
   ];
 
   const testimonials = [
@@ -111,13 +111,13 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       role: 'CEO, HealthTech Solutions',
       content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
       rating: 5
-    }
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Autonomous Business Operations Platform | Zion Tech Group"
+        title = "AI Autonomous Business Operations Platform | Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
         keywords="AI autonomous operations, business automation, process optimization, intelligent workflows, enterprise automation"
       />
@@ -172,9 +172,18 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
@@ -204,9 +213,18 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
                 >
                   <div className="w-16 h-16 bg-green-600/20 rounded-xl flex items-center justify-center mb-6">
@@ -236,9 +254,18 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -265,9 +292,18 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               {industries.map((industry, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                  whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-400/50 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white">{industry}</h3>
@@ -293,9 +329,18 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
                 >
                   <div className="flex items-center mb-4">
@@ -392,7 +437,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default AutonomousBusinessOperationsPlatform;

@@ -42,7 +42,7 @@ const highlights = [
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
     borderColor: 'border-zion-blue/20'
-  }
+  };
 ];
 
 const features = [
@@ -70,23 +70,23 @@ const features = [
     icon: "🤖",
     title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements"
-  },
-  {
-    icon: "📊",
-    title: "Real-Time Analytics",
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"
-  }
+  },;
+  {;
+    icon: "📊",;
+    title: "Real-Time Analytics",;
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
+  };
 ];
 
 const achievements = [
   { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
   { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
   { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
-  { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
+  { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' };
 ];
 
 const technologies = [
-  'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
+  'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics';
 ];
 
 export function FeatureHighlights(...args[]):  {
@@ -98,11 +98,13 @@ export function FeatureHighlights(...args[]):  {
         staggerChildren: 0.15,
         delayChildren: 0.1
       }
-    }
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
+  hidden: { opacity: 0, y: 30,
+  scale: 0.95 
+},
     visible: {
       opacity: 1,
       y: 0,
@@ -111,34 +113,54 @@ export function FeatureHighlights(...args[]):  {
         duration: 0.6,
         ease: "easeOut"
       }
-    }
+    };
   };
 
   const achievementVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0,
+  scale: 0.8 
+},
     visible: {
       opacity: 1,
       scale: 1,
       transition: { duration: 0.5 }
-    }
+    };
   };
 
   const techVariants = {
-    hidden: { opacity: 0, x: -20 },
+  hidden: { opacity: 0,
+  x: -20 
+},
     visible: {
       opacity: 1,
       x: 0,
       transition: { duration: 0.5 }
-    }
+    };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -162,10 +184,12 @@ export function FeatureHighlights(...args[]):  {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover = {
+  { 
                 y: -10, 
                 scale: 1.02,
-                transition: { duration: 0.3 }
+  transition: { duration: 0.3 
+}
               }}
               className="group"
             >
@@ -215,10 +239,34 @@ export function FeatureHighlights(...args[]):  {
             <motion.div
               key={feature.title}
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{feature.icon}</span>
@@ -235,6 +283,7 @@ export function FeatureHighlights(...args[]):  {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Achievements Section */}
         <motion.div
           variants={containerVariants}
@@ -298,16 +347,62 @@ export function FeatureHighlights(...args[]):  {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+        <motion.div 
+          className="mt-16 text-center"
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
     </section>
   )}
+=======;
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

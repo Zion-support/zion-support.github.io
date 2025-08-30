@@ -2,9 +2,20 @@ import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Products(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+=======
+const Products: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">Marketplace - Products</h1>;
+			<p className="text-xl text-gray-300">Browse available products.</p>;
+		</div>;
+	</div>;
+);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = [
     { id: 'all', name: 'All Products', icon: ShoppingCart },
@@ -12,7 +23,7 @@ export default function Products(...args[]):  {
     { id: 'software', name: 'Software', icon: Database },
     { id: 'services', name: 'Services', icon: Users },
     { id: 'security', name: 'Security', icon: Shield },
-    { id: 'cloud', name: 'Cloud', icon: Cloud }
+    { id: 'cloud', name: 'Cloud', icon: Cloud };
   ];
 
   const products = [
@@ -81,24 +92,29 @@ export default function Products(...args[]):  {
       reviews: 78,
       image: 'https://via.placeholder.com/300x200/0891b2/ffffff?text=IoT+Kit',
       features['Sensors', 'Gateway', 'Cloud API']
-    }
+    };
   ];
 
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredProducts = products.filter(product => {;
+    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch});
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -139,8 +155,14 @@ export default function Products(...args[]):  {
         <div className="container-responsive">
           {/* Categories */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12"
@@ -168,9 +190,18 @@ export default function Products(...args[]):  {
             {filteredProducts.map((product, index)  => (
               <motion.div
                 key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
               >
@@ -244,10 +275,10 @@ export default function Products(...args[]):  {
                 No products found matching your criteria
               </div>
               <button
-                onClick={() => {
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSearchQuery('')}}
-                className="text-zion-cyan hover:text-white transition-colors duration-300"
+                className = "text-zion-cyan hover:text-white transition-colors duration-300"
               >
                 Clear filters and try again
               </button>
@@ -260,8 +291,14 @@ export default function Products(...args[]):  {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center relative overflow-hidden"
@@ -287,4 +324,4 @@ export default function Products(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};

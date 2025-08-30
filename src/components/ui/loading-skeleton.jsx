@@ -1,7 +1,23 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 export function Skeleton({ className, ...props }) {
-    return (<div className={cn("animate-pulse rounded-md bg-zion-slate/20", className)} {...props}/>)}
+<<<<<<< HEAD
+    return (<div className = {
+  cn("animate-pulse rounded-md bg-zion-slate/20",
+  className)
+} {...props}/>)}
+=======
+    return (<div className = {
+  cn("animate-pulse rounded-md bg-zion-slate/20",
+  className)
+
+
+
+
+
+} {...props}/>);
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export function CardSkeleton() {
     return (<div className="rounded-lg border border-zion-slate/20 p-6 space-y-4">
       <Skeleton className="h-4 w-3/4"/>

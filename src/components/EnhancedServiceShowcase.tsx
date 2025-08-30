@@ -147,24 +147,29 @@ const categories = [
   'All Services',
   'AI & Machine Learning',
   'Emerging Tech',
-  'Cybersecurity',
-  'Cloud & DevOps',
-  'Blockchain & Web3',
-  'Digital Transformation',
-  'Micro SAAS',
-  'Healthcare AI'
+  'Cybersecurity',;
+  'Cloud & DevOps',;
+  'Blockchain & Web3',;
+  'Digital Transformation',;
+  'Micro SAAS',;
+  'Healthcare AI';
 ];
 
-export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+export const EnhancedServiceShowcase: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)}
+<<<<<<< HEAD
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
+          setIsVisible(true);
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
@@ -175,28 +180,60 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
 
     return () => observer.disconnect()}, []);
 
-  const filteredServices = selectedCategory === 'All Services' 
+<<<<<<< HEAD
+  const filteredServices = selectedCategory === 'All Services' ;
     ? services: services.filter(service  => service.category === selectedCategory);
+=======
+  const filteredServices = selectedCategory === 'All Services' ;
+    ? services ;
+    : services.filter(service => service.category === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: number)  => {
     return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
+<<<<<<< HEAD
           i < Math.floor(rating) 
             ? 'text-yellow-400 fill-current' 
             : 'text-gray-400'
         }`}
-      />
+      />;
     ))};
+=======
+          i < Math.floor(rating) ;
+            ? 'text-yellow-400 fill-current' ;
+            : 'text-gray-400';
+        }`};
+      />;
+    ));
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -213,9 +250,33 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category, index) => (
@@ -237,22 +298,61 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ 
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+                transition = {
+  { 
                   duration: 0.6, 
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 100
-                }}
+  stiffness: 100
+                
+
+
+
+
+
+}}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
@@ -327,9 +427,33 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
@@ -355,9 +479,19 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

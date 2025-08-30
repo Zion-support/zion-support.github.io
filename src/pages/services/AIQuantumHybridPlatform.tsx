@@ -49,12 +49,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
       icon: Shield,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced ML algorithms for complex optimization problems and predictive analytics",
-      icon: TrendingUp,
-      color: "from-orange-500 to-red-500"
-    }
+    {;
+      title: "Quantum Machine Learning",;
+      description: "Quantum-enhanced ML algorithms for complex optimization problems and predictive analytics",;
+      icon: TrendingUp,;
+      color: "from-orange-500 to-red-500";
+    };
   ];
 
   const useCases = [
@@ -72,12 +72,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
       title: "Climate Modeling",
       description: "Complex environmental simulations and prediction models",
       icon: Globe
-    },
-    {
-      title: "Supply Chain Optimization",
-      description: "Multi-dimensional logistics and inventory optimization",
-      icon: Network
-    }
+    },;
+    {;
+      title: "Supply Chain Optimization",;
+      description: "Multi-dimensional logistics and inventory optimization",;
+      icon: Network;
+    };
   ];
 
   const pricing = [
@@ -122,23 +122,39 @@ const AIQuantumHybridPlatform: React.FC = () => {
         "Unlimited qubits simulation",
         "Custom algorithm development",
         "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom integrations"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "On-premise deployment",;
+        "Custom integrations";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -179,8 +195,24 @@ const AIQuantumHybridPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -196,9 +228,33 @@ const AIQuantumHybridPlatform: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -218,8 +274,24 @@ const AIQuantumHybridPlatform: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -235,9 +307,33 @@ const AIQuantumHybridPlatform: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
@@ -255,8 +351,24 @@ const AIQuantumHybridPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -272,9 +384,33 @@ const AIQuantumHybridPlatform: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative rounded-2xl p-8 ${
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-purple-500' 
@@ -328,8 +464,24 @@ const AIQuantumHybridPlatform: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -385,12 +537,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 >
                   Request Demo
                 </motion.button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

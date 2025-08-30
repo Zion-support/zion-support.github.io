@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import Head from 'next/head.ts';
-import ModernHeader from './ModernHeader';
-import ModernFooter from './ModernFooter';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
@@ -57,7 +64,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML = {
+  {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -71,8 +79,14 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressLocality": "Middletown",
                 "addressRegion": "DE",
                 "postalCode": "19709",
-                "addressCountry": "US"
-              },
+  "addressCountry": "US"
+              
+
+
+
+
+
+},
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
@@ -92,11 +106,21 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
+<<<<<<< HEAD
           {children}
         </main>
         <ModernFooter />
       </div>
-    </>
+    </>;
   )};
+=======
+          {children};
+        </main>;
+        <ModernFooter />;
+      </div>;
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ModernLayout;

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-const AccessibilityContext = createContext(undefined);
+const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
@@ -23,7 +23,6 @@ export const AccessibilityProvider = ({ children }) => {
         // Listen for preference changes
         const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-        const handleMotionChange = (e) => setIsReducedMotion(e.matches);
         const handleContrastChange = (e) => setIsHighContrast(e.matches);
         motionQuery.addEventListener('change', handleMotionChange);
         contrastQuery.addEventListener('change', handleContrastChange);
@@ -47,10 +46,7 @@ export const AccessibilityProvider = ({ children }) => {
             body.classList.remove('large-text')}
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
-    const focusTrap = (element) => {
-        if (!element)
-            return;
-        const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0)
             return;
         const firstElement = focusableElements[0];
@@ -74,8 +70,7 @@ export const AccessibilityProvider = ({ children }) => {
         return () => {
             element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements
-    const announceToScreenReader = (message) => {
-        const announcement = document.createElement('div');
+    const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
         announcement.className = 'sr-only';
@@ -105,11 +100,10 @@ export const AccessibilityProvider = ({ children }) => {
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
-    const toggleHighContrast = () => setIsHighContrast(prev => !prev);
     const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {
-        isHighContrast,
+  isHighContrast,
         isReducedMotion,
         isLargeText,
         toggleHighContrast,
@@ -117,7 +111,8 @@ export const AccessibilityProvider = ({ children }) => {
         toggleLargeText,
         focusTrap,
         announceToScreenReader,
-    };
+   
+};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};

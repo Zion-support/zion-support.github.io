@@ -22,7 +22,14 @@ interface ProductListingCardProps extends React.PropsWithChildren<{}> {
    */
   detailBasePath?: string}
 
-export function ProductListingCard(...args[]):  {
+<<<<<<< HEAD
+export function ProductListingCard({
+  listing,
+  view = 'grid',;
+  onRequestQuote,;
+  detailBasePath = '/marketplace/listing';
+}: ProductListingCardProps) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -33,56 +40,69 @@ export function ProductListingCard(...args[]):  {
   );
   const [imageError, setImageError] = useState(false);
     
-  const formatPrice = () => {
+  const formatPrice = () => {;
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`};
 
-  const handleImageError = () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
+  const handleImageError = () => {;
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
       setImageSrc('/placeholder.svg');
       setImageError(true)}
   };
   
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`)};
+<<<<<<< HEAD
+  const handleViewListing = () => {;
+    router(`${detailBasePath}/${listing.id}`)};
   
-  const handleRequestQuote = (e: React.MouseEvent)  => {
+  const handleViewListing = () => {;
+    router(`${detailBasePath}/${listing.id}`);
+  };
+  
+  const handleRequestQuote = (e: React.MouseEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     e.stopPropagation();
     
     if (onRequestQuote) {
+<<<<<<< HEAD
       onRequestQuote(listing.id)} else {
-      navigate(`/request-quote?listing=${listing.id}`)}
+      router(`/request-quote?listing = ${listing.id}`)}
+=======;
+      onRequestQuote(listing.id);
+    } else {
+      router(`/request-quote?listing=${listing.id}`);
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
     <div
-      data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
-      onClick={handleViewListing}
-      tabIndex={0}
-      role="button"
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      data-testid = "equipment-link"
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
+      onClick={handleViewListing};
+      tabIndex={0};
+      role="button";
+      onKeyDown={(e) => {;
+        if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault();
           handleViewListing()}
       }}
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+        onClick={handleViewListing} // Keep existing onClick for navigation;
+        role="button";
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {;
+          if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault();
             handleViewListing()}
         }}
       >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
             src={imageSrc}
             alt={listing.title}
@@ -150,15 +170,21 @@ export function ProductListingCard(...args[]):  {
               </span>
             )}
           </div>
-          
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+          ;
+          <div className="flex gap-2">;
+            <Button;
+              size="sm";
+              className="bg-primary hover:bg-primary/80 text-primary-foreground";
+              onClick={(e) => {;
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`)}}
-              disabled={loading}
+<<<<<<< HEAD
+                router(`${detailBasePath}/${listing.id}`)}}
+              disabled = {loading}
+=======;
+                router(`${detailBasePath}/${listing.id}`);
+              }}
+              disabled = {loading}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               {loading ? (
                 <>
@@ -181,11 +207,28 @@ export function ProductListingCard(...args[]):  {
               >
                 Request Quote
               </Button>
+<<<<<<< HEAD
             )}
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   )};
+=======
+            )};
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default React.memo(ProductListingCard);
+
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;

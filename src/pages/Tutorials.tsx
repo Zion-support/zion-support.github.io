@@ -22,12 +22,12 @@ const Tutorials = () => {
       color: "from-red-500 to-pink-500",
       count: "8"
     },
-    {
-      title: "Expert",
-      description: "Cutting-edge research and techniques",
-      color: "from-purple-500 to-indigo-500",
-      count: "5"
-    }
+    {;
+      title: "Expert",;
+      description: "Cutting-edge research and techniques",;
+      color: "from-purple-500 to-indigo-500",;
+      count: "5";
+    };
   ];
 
   const featuredTutorials = [
@@ -65,12 +65,12 @@ const Tutorials = () => {
       title: "AI Model Optimization",
       description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
       category: "Expert",
-      duration: "75 min",
-      instructor: "Dr. Emily Watson",
-      rating: 4.6,
-      students: "623",
-      thumbnail: "/images/tutorials/model-optimization.jpg"
-    }
+      duration: "75 min",;
+      instructor: "Dr. Emily Watson",;
+      rating: 4.6,;
+      students: "623",;
+      thumbnail: "/images/tutorials/model-optimization.jpg";
+    };
   ];
 
   const recentTutorials = [
@@ -100,12 +100,12 @@ const Tutorials = () => {
     },
     {
       title: "Machine Learning Model Deployment",
-      category: "Advanced",
-      duration: "65 min",
-      instructor: "Michael Rodriguez",
-      rating: 4.7,
-      students: "345"
-    }
+      category: "Advanced",;
+      duration: "65 min",;
+      instructor: "Michael Rodriguez",;
+      rating: 4.7,;
+      students: "345";
+    };
   ];
 
   const learningPaths = [
@@ -124,16 +124,16 @@ const Tutorials = () => {
       level: "Intermediate to Expert"
     },
     {
-      title: "Quantum Computing Engineer",
-      description: "Learn quantum algorithms and applications",
-      courses: 5,
-      duration: "10 weeks",
-      level: "Advanced to Expert"
-    }
+      title: "Quantum Computing Engineer",;
+      description: "Learn quantum algorithms and applications",;
+      courses: 5,;
+      duration: "10 weeks",;
+      level: "Advanced to Expert";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -312,11 +312,21 @@ const Tutorials = () => {
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Contact Us
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Tutorials;

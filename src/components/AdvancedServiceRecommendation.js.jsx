@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',
@@ -27,10 +27,6 @@ const AdvancedServiceRecommendation = () => {
     ];
     const budgets = [
         'Under $50K', '$50K-$200K', '$200K-$500K', '$500K-$1M', '$1M+'
-    ];
-    const timelines = [
-        'Immediate (0-3 months)', 'Short-term (3-6 months)',
-        'Medium-term (6-12 months)', 'Long-term (12+ months)'
     ];
     const technologyMaturityLevels = [
         'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader'
@@ -202,7 +198,13 @@ const AdvancedServiceRecommendation = () => {
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} className="text-center mb-8">
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
           AI-Powered Service Recommendation Engine
         </h1>
@@ -213,7 +215,13 @@ const AdvancedServiceRecommendation = () => {
       </motion.div>
 
       {/* Client Profile Form */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
           <Brain className="w-6 h-6 text-zion-cyan"/>
           Tell Us About Your Business
@@ -222,7 +230,10 @@ const AdvancedServiceRecommendation = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
-            <select value={clientProfile.industry} onChange={(e) => setClientProfile(prev => ({ ...prev, industry: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+            <select value={clientProfile.industry} onChange = {
+  (e) => setClientProfile(prev => ({ ...prev,
+  industry: e.target.value 
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
             </select>
@@ -230,7 +241,10 @@ const AdvancedServiceRecommendation = () => {
           
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
-            <select value={clientProfile.compSize} onChange={(e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+            <select value={clientProfile.compSize} onChange = {
+  (e) => setClientProfile(prev => ({ ...prev,
+  compSize: e.target.value 
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Comp Size</option>
               {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
             </select>
@@ -238,7 +252,10 @@ const AdvancedServiceRecommendation = () => {
           
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
-            <select value={clientProfile.budget} onChange={(e) => setClientProfile(prev => ({ ...prev, budget: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+            <select value={clientProfile.budget} onChange = {
+  (e) => setClientProfile(prev => ({ ...prev,
+  budget: e.target.value 
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
             </select>
@@ -246,7 +263,10 @@ const AdvancedServiceRecommendation = () => {
           
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
-            <select value={clientProfile.timeline} onChange={(e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+            <select value={clientProfile.timeline} onChange = {
+  (e) => setClientProfile(prev => ({ ...prev,
+  timeline: e.target.value 
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
             </select>
@@ -254,7 +274,10 @@ const AdvancedServiceRecommendation = () => {
           
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
-            <select value={clientProfile.technologyMaturity} onChange={(e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+            <select value={clientProfile.technologyMaturity} onChange = {
+  (e) => setClientProfile(prev => ({ ...prev,
+  technologyMaturity: e.target.value 
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>))}
             </select>
@@ -265,9 +288,12 @@ const AdvancedServiceRecommendation = () => {
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {
+                <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
+  (e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals, goal] }))}
+                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
+  goal] 
+}))}
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
             }} className="rounded text-zion-cyan"/>
@@ -280,9 +306,12 @@ const AdvancedServiceRecommendation = () => {
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {
+                <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
+  (e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges, challenge] }))}
+                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
+  challenge] 
+}))}
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
             }} className="rounded text-zion-cyan"/>
@@ -305,13 +334,25 @@ const AdvancedServiceRecommendation = () => {
       </motion.div>
 
       {/* Recommendations Results */}
-      {showResults && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+      {showResults && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.2 }}>
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
           </h2>
           
           <div className="space-y-6">
-            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
+            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
+  { opacity: 0,
+  x: -20 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} transition={{ delay: 0.1 * index }}>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between">
@@ -385,7 +426,10 @@ const AdvancedServiceRecommendation = () => {
                         </div>
                         
                         <div className="mt-4">
-                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open(rec.service.link, '_blank')}>
+                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
+  () => window.open(rec.service.link,
+  '_blank')
+}>
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2"/>
                           </Button>
@@ -398,7 +442,13 @@ const AdvancedServiceRecommendation = () => {
           </div>
           
           {/* CTA Section */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.4 }} className="mt-12 text-center">
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
               <p className="text-xl mb-6 max-w-2xl mx-auto">
@@ -406,11 +456,17 @@ const AdvancedServiceRecommendation = () => {
                 for your business needs. Contact us today for a personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}>
+                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',
+  '_blank')
+}>
                   <Users className="w-5 h-5 mr-2"/>
                   Get Expert Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+}>
                   <Zap className="w-5 h-5 mr-2"/>
                   Call Now
                 </Button>

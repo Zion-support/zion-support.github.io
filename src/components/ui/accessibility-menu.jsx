@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -46,12 +46,25 @@ export function AccessibilityMenu() {
         setSettings(prev => ({ ...prev, fontSize: size }))};
     const resetSettings = () => {
         const defaultSettings = {
-            fontSize: 'medium',
+  fontSize: 'medium',
             highContrast: false,
             reducedMotion: false,
+  <<<<<<< HEAD
             soundEnabled: true
-        };
+        
+};
         setSettings(defaultSettings)};
+=======
+  soundEnabled: true
+        
+
+
+
+
+};
+        setSettings(defaultSettings);
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
@@ -60,7 +73,39 @@ export function AccessibilityMenu() {
 
       {/* Menu Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
+        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+
+
+
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+
+
+
+}} exit = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+
+
+
+}} transition = {
+  { type: "spring", stiffness: 300,
+  damping: 30 
+
+
+
+
+
+}}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Accessibility</h3>

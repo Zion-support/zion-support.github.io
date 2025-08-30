@@ -5,12 +5,13 @@ class EnhancedErrorBoundary extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hasError: false,
+  hasError: false,
             error: null,
             errorInfo: null,
             errorId: null,
-            showStackTrace: false
-        }}
+  showStackTrace: false
+        
+}}
     static getDerivedStateFromError(error) {
         return {
             hasError: true,
@@ -32,13 +33,14 @@ class EnhancedErrorBoundary extends Component {
         // In a real application, you would send this to your error reporting service
         // For example: Sentry, LogRocket, Bugsnag, etc.
         const errorReport = {
-            id: this.state.errorId,
+  id: this.state.errorId,
             timestamp: new Date().toISOString(),
             error: {
                 name: error.name,
                 message: error.message,
-                stack: error.stack
-            },
+  stack: error.stack
+            
+},
             errorInfo: {
                 componentStack: errorInfo.componentStack
             },
@@ -68,44 +70,8 @@ class EnhancedErrorBoundary extends Component {
     handleGoHome = () => {
         window.location.href = '/'};
     handleReportIssue = () => {
-        const error = this.state.error;
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
-            const issueBody = `
-## Error Report
-
-**Error ID:** ${this.state.errorId}
-
-**Error Message:** ${error.message}
-
-**Error Stack:**
-\`\`\`
-${error.stack}
-\`\`\`
-
-**Component Stack:**
-\`\`\`
-${errorInfo.componentStack}
-\`\`\`
-
-**URL:** ${window.location.href}
-**User Agent:** ${navigator.userAgent}
-**Timestamp:** ${new Date().toISOString()}
-
-## Steps to Reproduce
-1. 
-2. 
-3. 
-
-## Expected Behavior
-
-
-## Actual Behavior
-
-
-## Additional Context
-
-      `.trim();
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl, '_blank')}
     };
@@ -118,7 +84,13 @@ ${errorInfo.componentStack}
                 return this.props.fallback}
             // Default error UI
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">
               <div className="flex items-center space-x-3">

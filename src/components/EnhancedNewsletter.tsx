@@ -10,32 +10,34 @@ interface NewsletterFormData {
   frequency: 'weekly' | 'monthly' | 'quarterly'}
 
 const interests = [
-  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap }
+  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
+  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
+  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
+  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
 
-const frequencies = [
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' }
+const frequencies = [;
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
+  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
 
-export const EnhancedNewsletter: React.FC = (): JSX.Element => {
-  const [formData, setFormData] = useState<any>({
-    email: '',
-    firstName: '',
-    interests[],
-    frequency: 'monthly'
+<<<<<<< HEAD
+export const EnhancedNewsletter: React.FC = () => {;
+  const [formData, setFormData] = useState<NewsletterFormData>({;
+    email: '',;
+    firstName: '',;
+    interests: [],;
+    frequency: 'monthly';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   });
   
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
 
-  const validateForm = (): boolean => {
+  const validateForm = (): boolean => {;
     const newErrors: Partial<NewsletterFormData> = {};
 
     if (!formData.email) {
@@ -45,13 +47,21 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     if (!formData.firstName) {
       newErrors.firstName = 'First name is required'}
 
+<<<<<<< HEAD
     if (formData.interests.length === 0) {
       newErrors.interests = 'Please select at least one interest'}
+=======;
+    if (formData.interests.length = == 0) {;
+      newErrors.interests = 'Please select at least one interest';
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+<<<<<<< HEAD
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     
     if (!validateForm()) {
@@ -81,32 +91,63 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       console.error('Newsletter subscription error:', error)}
   };
 
-  const handleInterestToggle = (interestId: string)  => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interestId)
-        ? prev.interests.filter(id  => id !== interestId)
-        [...prev.interests, interestId]
+<<<<<<< HEAD
+  const handleInterestToggle = (interestId: string) => {;
+    setFormData(prev => ({;
+      ...prev,;
+      interests: prev.interests.includes(interestId);
+        ? prev.interests.filter(id => id !== interestId);
+        : [...prev.interests, interestId];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }));
     
     // Clear error when user selects an interest
     if (errors.interests) {
-      setErrors(prev => ({ ...prev, interests: undefined }))}
+<<<<<<< HEAD
+      setErrors(prev = > ({ ...prev, interests: null }))};
   };
 
   const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {
+=======;
+      setErrors(prev => ({ ...prev, interests: null }));
+    }
+  };
+
+  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }))}
+<<<<<<< HEAD
+      setErrors(prev = > ({ ...prev, [field]: null }))}
+=======;
+      setErrors(prev => ({ ...prev, [field]: null }));
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
-  if (status === 'success') {
+  if (status = == 'success') {
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial = {
+  { opacity: 0,
+  scale: 0.95 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
       >
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
@@ -116,28 +157,62 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>
+<<<<<<< HEAD
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">
           <Mail className="h-4 w-4" />
           <span>Check your email for a confirmation message</span>
         </div>
       </motion.div>
     )}
+=======;
+        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;
+          <Mail className="h-4 w-4" />;
+          <span>Check your email for a confirmation message</span>;
+        </div>;
+      </motion.div>;
+    );
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+    <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
       <div className="text-center mb-8">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ delay: 0.1, type: "spring", bounce: 0.4 }}
+          transition = {
+  { delay: 0.1, type: "spring",
+  bounce: 0.4 
+
+
+
+
+
+}}
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
         >
           <Mail className="h-8 w-8 text-white" />
         </motion.div>
         
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           transition={{ delay: 0.2 }}
           className="text-3xl font-bold text-slate-900 dark:text-white mb-4"
         >
@@ -145,8 +220,24 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         </motion.h2>
         
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           transition={{ delay: 0.3 }}
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
         >
@@ -155,8 +246,24 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       </div>
 
       <motion.form
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
         transition={{ delay: 0.4 }}
         onSubmit={handleSubmit}
         className="max-w-2xl mx-auto space-y-6"
@@ -171,7 +278,15 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
               type="text"
               id="firstName"
               value={formData.firstName}
-              onChange={(e) => handleInputChange('firstName', e.target.value)}
+              onChange = {
+  (e) => handleInputChange('firstName',
+  e.target.value)
+
+
+
+
+
+}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.firstName
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20'
@@ -195,7 +310,15 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
               type="email"
               id="email"
               value={formData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
+              onChange = {
+  (e) => handleInputChange('email',
+  e.target.value)
+
+
+
+
+
+}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.email
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20'
@@ -214,17 +337,25 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
 
         {/* Interests Selection */}
         <div>
+<<<<<<< HEAD
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Areas of Interest * (Select all that apply)
           </label>
           <div className="grid grid-cols-2 md: grid-cols-3 gap-3">
             {interests.map((interest)  => {
+=======;
+          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
+            Areas of Interest * (Select all that apply);
+          </label>;
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
+            {interests.map((interest) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
               
               return (
                 <motion.button
-                  key={interest.id}
+                  key = {interest.id}
                   type="button"
                   onClick={() => handleInterestToggle(interest.id)}
                   className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${
@@ -233,15 +364,25 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'
                   }`}
                   whileHover={{ scale: 1.02 }}
+<<<<<<< HEAD
                   whileTap={{ scale: 0.98 }}
                 >
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />
                   <span className="text-sm font-medium">{interest.label}</span>
                 </motion.button>
               )})}
+=======;
+                  whileTap={{ scale: 0.98 }};
+                >;
+                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />;
+                  <span className="text-sm font-medium">{interest.label}</span>;
+                </motion.button>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
           {errors.interests && (
-            <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
+            <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
               <AlertCircle className="h-4 w-4" />
               {errors.interests}
             </p>
@@ -268,7 +409,15 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                   name="frequency"
                   value={freq.value}
                   checked={formData.frequency === freq.value}
-                  onChange={(e) => handleInputChange('frequency', e.target.value)}
+                  onChange = {
+  (e) => handleInputChange('frequency',
+  e.target.value)
+
+
+
+
+
+}
                   className="sr-only"
                 />
                 <span className={`text-sm font-medium ${
@@ -318,8 +467,24 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         {/* Error Message */}
         {status === 'error' && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
           >
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">
@@ -331,9 +496,19 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
 
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
+<<<<<<< HEAD
           By subscribing, you agree to receive marketing emails from Zion Tech Group. 
           You can unsubscribe at  time. We respect your privacy and will never share your information.
         </p>
       </motion.form>
-    </div>
+    </div>;
   )};
+=======
+          By subscribing, you agree to receive marketing emails from Zion Tech Group. ;
+          You can unsubscribe at any time. We respect your privacy and will never share your information.;
+        </p>;
+      </motion.form>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

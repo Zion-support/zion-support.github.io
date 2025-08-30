@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle  } from './ui/card';
-import { Button  } from './ui/button';
-import { Badge  } from './ui/badge';
-import { Progress  } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from './ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle  } from "./ui/card";
+import { Button  } from "./ui/button";
+import { Badge  } from "./ui/badge";
+import { Progress  } from "./ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from "./ui/tabs";
 import { User, 
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Progress } from "./ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { 
+  User, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Settings, 
   Palette, 
   Eye, 
@@ -47,10 +58,17 @@ interface AccessibilityFeature {
   description: string;
   impact: 'high' | 'medium' | 'low'}
 
-const InteractiveUserExperience: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const [preferences, setPreferences] = useState<any>([]);
   const [userActivities, setUserActivities] = useState<any>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
+=======
+const InteractiveUserExperience: React.FC = () => {;
+  const [preferences, setPreferences] = useState<UserPreference[]>([]);
+  const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
+  const [accessibilityFeatures, setAccessibilityFeatures] = useState<AccessibilityFeature[]>([]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [currentTheme, setCurrentTheme] = useState('light');
   const [fontSize, setFontSize] = useState(16);
   const [contrast, setContrast] = useState('normal');
@@ -194,9 +212,11 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
 
     setUserActivities(activities)}, []);
 
-  const updatePreference = useCallback((id: string, value: string | boolean | number)  => {
-    setPreferences(prev => prev.map(pref => 
-      pref.id === id ? { ...pref, value } : pref
+<<<<<<< HEAD
+  const updatePreference = useCallback((id: string, value: string | boolean | number) => {;
+    setPreferences(prev => prev.map(pref => ;
+      pref.id === id ? { ...pref, value } : pref;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     ));
 
     // Apply preference changes
@@ -222,44 +242,57 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   }, [preferences]);
 
+<<<<<<< HEAD
   const toggleAccessibilityFeature = useCallback((id: string)  => {
     setAccessibilityFeatures(prev => prev.map(feature => 
-      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
     ))}, []);
 
   const getActivityIcon = (category: UserActivity['category'])  => {
     switch (category) {
+=======;
+  const toggleAccessibilityFeature = useCallback((id: string) => {;
+    setAccessibilityFeatures(prev => prev.map(feature => ;
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
+    ));
+  }, []);
+
+  const getActivityIcon = (category: UserActivity['category']) => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
       case 'search': return <Eye className="h-4 w-4" />;
       case 'purchase': return <Heart className="h-4 w-4" />;
-      default: return <User className="h-4 w-4" />}
+      default: return <User className = "h-4 w-4" />};
   };
 
-  const getImpactColor = (impact: AccessibilityFeature['impact'])  => {
-    switch (impact) {
+<<<<<<< HEAD
+  const getImpactColor = (impact: AccessibilityFeature['impact']) => {;
+    switch (impact) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
       default: return 'bg-gray-500'}
   };
 
-  const getSuccessRate = () => {
+  const getSuccessRate = () => {;
     const total = userActivities.length;
     const successful = userActivities.filter(activity => activity.success).length;
     return total > 0 ? (successful / total) * 100 : 0};
 
-  const getAverageDuration = () => {
+  const getAverageDuration = () => {;
     const activitiesWithDuration = userActivities.filter(activity => activity.duration);
     if (activitiesWithDuration.length === 0) return 0;
     
-    const totalDuration = activitiesWithDuration.reduce((sum, activity) => 
-      sum + (activity.duration || 0), 0
+    const totalDuration = activitiesWithDuration.reduce((sum, activity) => ;
+      sum + (activity.duration || 0), 0;
     );
     return totalDuration / activitiesWithDuration.length};
 
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       <Tabs defaultValue="preferences" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="preferences" className="flex items-center gap-2">
@@ -305,7 +338,15 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                         {preference.type === 'boolean' && (
                           <Button
                             variant={preference.value ? 'default' : 'outline'}
-                            onClick={() => updatePreference(preference.id, !preference.value)}
+                            onClick = {
+  () => updatePreference(preference.id,
+  !preference.value)
+
+
+
+
+
+}
                             size="sm"
                           >
                             {preference.value ? 'Enabled' : 'Disabled'}
@@ -314,7 +355,15 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                         {preference.type === 'select' && preference.options && (
                           <select
                             value={preference.value as string}
-                            onChange={(e) => updatePreference(preference.id, e.target.value)}
+                            onChange = {
+  (e) => updatePreference(preference.id,
+  e.target.value)
+
+
+
+
+
+}
                             className="border rounded px-3 py-2 text-sm"
                           >
                             {preference.options.map((option) => (
@@ -330,7 +379,15 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                             min="12"
                             max="24"
                             value={preference.value as number}
-                            onChange={(e) => updatePreference(preference.id, parseInt(e.target.value))}
+                            onChange = {
+  (e) => updatePreference(preference.id,
+  parseInt(e.target.value))
+
+
+
+
+
+}
                             className="w-24"
                           />
                         )}
@@ -534,18 +591,28 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                   </Button>
                 </div>
               </div>
+<<<<<<< HEAD
             </CardContent>
           </Card>
         </TabsContent>
       </Tabs>
-    </div>
+    </div>;
   )};
+=======
+            </CardContent>;
+          </Card>;
+        </TabsContent>;
+      </Tabs>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Add missing Tablet icon component
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-  </svg>
+  <svg className = {className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />;
+  </svg>;
 );
 
 export default InteractiveUserExperience;

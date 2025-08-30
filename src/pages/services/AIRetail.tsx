@@ -4,12 +4,12 @@ export default function AIRetail() {
   const features = [
     'AI-powered customer behavior analysis and personalization',
     'Intelligent inventory management and demand forecasting',
-    'Automated pricing optimization and dynamic pricing',
-    'Real-time customer sentiment and feedback analysis',
-    'Predictive analytics for sales and customer lifetime value',
-    'Smart recommendation engines and cross-selling',
-    'Integration with major e-commerce and POS platforms',
-    'Custom AI models for retail-specific insights'
+    'Automated pricing optimization and dynamic pricing',;
+    'Real-time customer sentiment and feedback analysis',;
+    'Predictive analytics for sales and customer lifetime value',;
+    'Smart recommendation engines and cross-selling',;
+    'Integration with major e-commerce and POS platforms',;
+    'Custom AI models for retail-specific insights';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIRetail() {
       name: 'Medium Retailer', 
       price: '$799/mo', 
       details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] 
-    },
-    { 
-      name: 'Large Retailer', 
-      price: '$1,999/mo', 
-      details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Large Retailer', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'E-commerce optimization and conversion rate improvement',
-    'Brick-and-mortar store analytics and optimization',
-    'Inventory management and supply chain optimization',
-    'Customer segmentation and targeted marketing',
-    'Price optimization and competitive analysis',
-    'Omnichannel retail experience enhancement'
+    'E-commerce optimization and conversion rate improvement',;
+    'Brick-and-mortar store analytics and optimization',;
+    'Inventory management and supply chain optimization',;
+    'Customer segmentation and targeted marketing',;
+    'Price optimization and competitive analysis',;
+    'Omnichannel retail experience enhancement';
   ];
 
   const benefits = [
-    'Increase sales conversion rates by 20-40%',
-    'Improve customer retention by 30-50%',
-    'Reduce inventory costs by 25-40%',
-    'Optimize pricing for maximum profitability',
-    'Enhance customer experience and satisfaction',
-    'Scale retail operations efficiently'
+    'Increase sales conversion rates by 20-40%',;
+    'Improve customer retention by 30-50%',;
+    'Reduce inventory costs by 25-40%',;
+    'Optimize pricing for maximum profitability',;
+    'Enhance customer experience and satisfaction',;
+    'Scale retail operations efficiently';
   ];
 
   const industries = [
-    'E-commerce & Online Retail',
-    'Brick & Mortar Stores',
-    'Fashion & Apparel',
-    'Electronics & Technology',
-    'Home & Garden',
-    'Food & Beverage Retail'
+    'E-commerce & Online Retail',;
+    'Brick & Mortar Stores',;
+    'Fashion & Apparel',;
+    'Electronics & Technology',;
+    'Home & Garden',;
+    'Food & Beverage Retail';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIRetail() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

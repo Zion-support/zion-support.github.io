@@ -29,7 +29,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
           'Content-Type': 'application/json',
           ...headers,
         },
-        body: body ? JSON.stringify(body) : undefined,
+        body: body ? JSON.stringify(body) : null,
       });
 
       if (!response.ok) {
@@ -105,11 +105,17 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   constructor(form, options = {}) {
     this.form = form;
     this.options = {
-      validateOnBlur: true,
+  validateOnBlur: true,
       validateOnSubmit: true,
       showErrors: true,
-      ...options
-    };
+  ...options
+    
+
+
+
+
+
+};
     
     this.rules = new Map();
     this.errors = new Map();
@@ -122,11 +128,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   validateField(field) {
     const value = this.form[field]?.value;
-    const fieldRules = this.rules.get(field) || [];
     const fieldErrors = [];
 
-    for (const rule of fieldRules) {
-      const result = rule(value, this.form);
+    for (const result = rule(value, this.form);
       if (result !== true) {
         fieldErrors.push(result)}
     }
@@ -137,14 +141,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   validateForm() {
     let isValid = true;
-    for (const field of this.rules.keys()) {
-      if (!this.validateField(field)) {
-        isValid = false}
-    }
-    return isValid}
-
-  updateFieldUI(field) {
-    const fieldElement = this.form[field];
+    for (const fieldElement = this.form[field];
     const errors = this.errors.get(field) || [];
     
     if (errors.length > 0) {
@@ -183,6 +180,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         createdAt: '2024-01-08'
     }
 ];
+<<<<<<< HEAD
 const mockCodeAnalysis = [
     {
         id: '1',
@@ -218,6 +216,8 @@ const mockCodeAnalysis = [
         timestamp: '2024-01-10T14:20:00Z'
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockAIGenerations = [
     {
         id: '1',
@@ -288,9 +288,15 @@ export function AdvancedAICodeGenerator() {
         // Simulate AI code generation
         setTimeout(() => {
             const newGeneration = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+  generatedCode: `// Generated code for: ${aiPrompt
+
+
+
+
+
+}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[

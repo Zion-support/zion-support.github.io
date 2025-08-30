@@ -1,4 +1,4 @@
-import { TalentProfile  } from './talent';
+import { TalentProfile  } from "./talent";
 
 export interface ProjectBrief {
 

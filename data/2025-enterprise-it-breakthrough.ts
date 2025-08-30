@@ -259,9 +259,17 @@ export const enterpriseITBreakthroughServices2025 = [
       'High-performance computing',
       'Data center optimization',
       'Quantum computing research',
+<<<<<<< HEAD
       'Enterprise infrastructure management'
     ],
     integrations['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
     compliance['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
   }
+=======;
+      'Enterprise infrastructure management';
+    ],;
+    integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],;
+    compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];

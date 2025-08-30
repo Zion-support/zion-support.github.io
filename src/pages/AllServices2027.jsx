@@ -39,12 +39,18 @@ const SERVICE_CATEGORIES = [
 
 // Contact information
 const CONTACT_INFO = {
-    phone: "+1 302 464 0950",
+  phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
-    responseTime: "< 2 hours"
+  responseTime: "< 2 hours"
+
+
+
+
+
+
 };
 
 // Benefits section
@@ -78,10 +84,6 @@ export default function AllServices2027() {
 
     // Filter services based on category and search
     const filteredServices = ALL_SERVICES.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || 
-            service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
-            service.tags.some(tag => tag.toLowerCase().includes(selectedCategory.replace('-', ' ')));
-        
         const matchesSearch = searchQuery === '' || 
             service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||

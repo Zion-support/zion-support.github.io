@@ -335,21 +335,28 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     }
   }
 ];
-export const getPricingAnalysisByService = (serviceId: string) => {
+<<<<<<< HEAD
+export const getPricingAnalysisByService = (serviceId: string) => {;
   return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)};
-export const getPricingAnalysisByCategory = (category: string) => {
+export const getPricingAnalysisByService = (serviceId: string) => {;
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
+};
+export const getPricingAnalysisByCategory = (category: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   if (!category || category === 'All') return comprehensivePricingAnalysis2025;
   return comprehensivePricingAnalysis2025.filter(s => s.category === category)};
 export const getMarketInsights = () => {
   const insights = {
-    totalMarketSize: '$1.2T+',
+  totalMarketSize: '$1.2T+',
     averageGrowthRate: '250% annual',
     priceRange: '$799 - $6,999/month',
     mostExpensiveCategory: 'Quantum Computing & AI',
     mostAffordableCategory: 'IoT & Edge Computing',
+<<<<<<< HEAD
     highestROI: '1000% (Quantum Neural Network Platform)',
-    fastestPayback: '2-4 months (DeFi Trading Platform)'
-  };
+  fastestPayback: '2-4 months (DeFi Trading Platform)'
+  ;
+};
   return insights};
 export const getCompetitiveLandscape = () => {
   return {
@@ -357,5 +364,28 @@ export const getCompetitiveLandscape = () => {
     quantumComputing['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
     cybersecurity['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
     manufacturing['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],
-    blockchain['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura']
+    blockchain['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
   }};
+=======
+    highestROI: '1000% (Quantum Neural Network Platform)',;
+  ;
+  ;
+  fastestPayback: '2-4 months (DeFi Trading Platform)';
+  ;
+
+
+
+
+};
+  return insights;
+};
+export const getCompetitiveLandscape = () => {
+  return {;
+    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],;
+    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],;
+    cybersecurity: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],;
+    manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
+    blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
+  };
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

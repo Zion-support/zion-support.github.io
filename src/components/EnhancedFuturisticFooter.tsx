@@ -125,7 +125,9 @@ import {
   BookOpen as BookOpenIcon5
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+export const EnhancedFuturisticFooter: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -250,6 +252,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'Request Quote', href: '/request-quote', featured: true },
         { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
         { name: 'Partnerships', href: '/partners', featured: false },
+<<<<<<< HEAD
         { name: 'Investor Relations', href: '/investors', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false },
@@ -257,13 +260,22 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'Privacy Policy', href: '/privacy', featured: false }
       ]
     }
+=======;
+        { name: 'Investor Relations', href: '/investors', featured: false },;
+        { name: 'Press & Media', href: '/press', featured: false },;
+        { name: 'Legal & Privacy', href: '/legal', featured: false };
+      ];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+  <<<<<<< HEAD
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  ;
+};
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
@@ -271,14 +283,14 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' };
   ];
 
   const quickActions = [
     { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
-    { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
+    { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' };
   ];
 
   const supportLinks = [
@@ -287,7 +299,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' };
   ];
 
   const legalLinks = [
@@ -296,7 +308,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
     { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
   ];
 
   // Create missing pages for broken links
@@ -310,12 +322,12 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
       >
         {name}
-      </Link>
+      </Link>;
     );
   };
 
   return (
-          <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+          <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
@@ -327,8 +339,14 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               className="flex items-center justify-center space-x-3 mb-6"
             >
@@ -340,9 +358,18 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
               </h2>
             </motion.div>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
               className="text-xl text-slate-300 max-w-3xl mx-auto"
             >
               Revolutionizing business through cutting-edge AI, quantum computing, and innovative technology solutions.
@@ -351,9 +378,18 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
 
           {/* Quick Actions */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
           >
             {quickActions.map((action, index) => (
@@ -364,6 +400,61 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <action.icon className="w-6 h-6 text-white" />
+=======;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+
+
+};
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },;
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },;
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' };
+  ];
+
+  const quickActions = [
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },;
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },;
+    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },;
+    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },;
+    { name: 'Join Community', href: '/community', icon: Users, featured: false },;
+    { name: 'Partner Program', href: '/partners', icon: Users, featured: false };
+  ];
+
+  const scrollToTop = () => {;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
+      {/* Main Footer Content */}
+      <div className="container-responsive py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
+          {/* Company Info & Contact */}
+          <div className="lg:col-span-1 xl:col-span-1">
+            <div className="mb-8">
+              <Link to="/" className="inline-flex items-center space-x-3 group">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-sm text-gray-400">Revolutionary AI Solutions</p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
                   {action.name}
@@ -377,9 +468,18 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             {footerSections.map((section, index) => (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="space-y-4"
               >
                 <div className="flex items-center space-x-2">
@@ -411,9 +511,18 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
 
           {/* Contact & Social Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.8 
+}}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             {/* Contact Information */}
@@ -490,22 +599,152 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           {/* Bottom Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 1 
+}}
             className="border-t border-slate-700/50 pt-8"
           >
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-4 text-sm text-slate-400">
+              <div className="flex items-center space-x-4 text-sm text-slate-400">;
                 <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
                 <span>•</span>
-                <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+                <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <span>•</span>
                 <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
                 <span>•</span>
                 <Link to="/sitemap" className="hover:text-cyan-400 transition-colors">Sitemap</Link>
+=======
+          {/* Footer Sections */}
+          <div className="lg:col-span-1 xl:col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {footerSections.map((section, index) => (
+                <motion.div
+                  key={section.title}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                  viewport={{ once: true }}
+                  className="space-y-4"
+                >
+                  <h4 className={`text-lg font-semibold text-white flex items-center gap-2 ${
+                    section.featured ? 'text-cyan-400' : ''
+                  }`}>
+                    {section.featured && <Star className="w-4 h-4 text-cyan-400" />}
+                    {section.title}
+                  </h4>
+                  
+                  <ul className="space-y-2">
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          to={link.href}
+                          className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${
+                            link.featured 
+                              ? 'text-cyan-400 hover:text-cyan-300' 
+                              : 'text-gray-400 hover:text-white'
+                          }`}
+                        >
+                          <span>{link.name}</span>
+                          {link.featured && (
+                            <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Actions Section */}
+        <div className="mt-16 pt-12 border-t border-slate-700/50">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Get in touch today to learn how we can help you achieve your goals.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {quickActions.map((action) => (
+              <Link
+                key={action.name}
+                to={action.href}
+                className={`p-4 rounded-xl border transition-all duration-300 transform hover:scale-105 text-center group ${
+                  action.featured
+                    ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30'
+                    : 'border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 hover:bg-slate-700/30'
+                }`}
+              >
+                <div className={`p-2 rounded-lg mx-auto mb-3 w-fit ${
+                  action.featured
+                    ? 'bg-cyan-500/20 text-cyan-400'
+                    : 'bg-slate-700/50 text-gray-400 group-hover:text-cyan-400'
+                }`}>
+                  <action.icon className="w-5 h-5" />
+                </div>
+                <span className={`text-sm font-medium ${
+                  action.featured ? 'text-cyan-400' : 'text-gray-300 group-hover:text-white'
+                }`}>
+                  {action.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Information Footer */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
               <div className="flex items-center space-x-2 text-sm text-slate-400">
                 <span>Made with</span>
@@ -513,9 +752,62 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
                 <span>by Zion Tech Group</span>
               </div>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </div>
     </footer>
+=======
+            
+            {/* Additional Contact Methods */}
+            <div className="mt-12 pt-8 border-t border-slate-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Emergency Support</h4>
+                  <p className="text-sm text-slate-500">Critical issues: +1 302 464 0950</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Business Hours</h4>
+                  <p className="text-sm text-slate-500">Mon-Fri: 9AM-6PM EST</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Response Time</h4>
+                  <p className="text-sm text-slate-500">Urgent: 1 hour, Normal: 4 hours</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Global Support</h4>
+                  <p className="text-sm text-slate-500">24/7 availability worldwide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+;
+      {/* Bottom Footer */};
+      <div className="border-t border-slate-700/50">;
+        <div className="container-responsive py-6">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
+            <div className="flex items-center space-x-6 text-sm text-gray-400">;
+              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+              <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
+              <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={scrollToTop}
+                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
+                aria-label="Scroll to top"
+              >
+                <ArrowUpRight className="w-5 h-5 rotate-45" />
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

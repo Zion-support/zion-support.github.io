@@ -127,10 +127,17 @@ const SEOOptimizer = () => {
         if (page.url === '/' || page.url.includes('-')) {
             score += 15}
         else if (page.url.length > 0) {
+<<<<<<< HEAD
             score += 8}
         return Math.round((score / maxScore) * 100)};
-    const identifySEOIssues = (page) => {
-        const issues = [];
+    const issues = [];
+=======
+            score += 8;
+        }
+        return Math.round((score / maxScore) * 100);
+    };
+    const issues = [];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (!page.title || page.title.length < 30) {
             issues.push('Title is too short (should be 30-60 characters)')}
         else if (page.title.length > 60) {

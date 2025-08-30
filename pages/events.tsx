@@ -259,9 +259,9 @@ export default function Events(...args[]):  {
 						>
 							View Services <span aria-hidden="true">→</span>
 						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

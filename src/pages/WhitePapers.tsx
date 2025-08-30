@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { FileText, 
   Download, 
   Calendar, 
@@ -30,6 +30,7 @@ export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Categories', icon: BookOpen, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 0 },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 0 },
@@ -38,6 +39,22 @@ export default function WhitePapers() {
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 0 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
+=======
+    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 };
+  ];
+
+  const sortOptions = [;
+    { value: 'newest', label: 'Newest First' },;
+    { value: 'popular', label: 'Most Popular' },;
+    { value: 'alphabetical', label: 'Alphabetical' },;
+    { value: 'downloads', label: 'Most Downloaded' };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const whitePapers = [
@@ -118,6 +135,7 @@ export default function WhitePapers() {
     },
     {
       id: 6,
+<<<<<<< HEAD
       title: 'Quantum Computing: The Next Frontier in AI and Cryptography',
       category: 'quantum-computing',
       author: 'Dr. Sarah Chen, Chief AI Scientist',
@@ -160,44 +178,125 @@ export default function WhitePapers() {
       format: 'PDF',
       downloadUrl: '/white-papers/edge-computing-iot-enterprise-2023.pdf',
       readMore: '/white-papers/edge-computing-iot-enterprise-2023'
-    }
+    };
   ];
 
   // Calculate category counts
   React.useEffect(()  => {
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? whitePapers.length: whitePapers.filter(wp  => wp.category === cat.id).length
+      count: cat.id === 'all' ? whitePapers.length: whitePapers.filter(wp  => wp.category === cat.id).length;
     }))}, []);
 
-  const filteredWhitePapers = whitePapers.filter(paper => {
-    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
+  const filteredWhitePapers = whitePapers.filter(paper => {;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+=======
+      title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
+      description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
+      category: 'strategy',
+      author: 'David Thompson, Digital Strategy Director',
+      publishDate: '2025-01-08',
+      readTime: '22 min',
+      downloads: 8930,
+      rating: 4.5,
+      featured: false,;
+      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
+      fileSize: '2.2 MB',;
+      language: 'English';
+    };
+  ];
+
+  const featuredInsights = [
+    {
+      title: 'AI Adoption Trends 2025',
+      description: 'Key insights from our latest research on enterprise AI adoption',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/insights/ai-adoption-2025'
+    },
+    {
+      title: 'Cybersecurity Landscape Report',
+      description: 'Current threats and emerging security challenges',
+      icon: <Shield className="w-6 h-6" />,
+      link: '/insights/cybersecurity-2025'
+    },
+    {;
+      title: 'Cloud Migration Success Stories',;
+      description: 'Real-world examples of successful cloud transformations',;
+      icon: <Cloud className="w-6 h-6" />,;
+      link: '/insights/cloud-success-stories';
+    };
+  ];
+
+  const getCategoryCount = (categoryId: string) => {;
+    if (categoryId === 'all') {;
+      return whitePapers.length;
+    }
+    return whitePapers.filter(paper => paper.category === categoryId).length;
+  };
+
+  // Update counts
+  categories.forEach(cat = > {;
+    cat.count = getCategoryCount(cat.id);
+  });
+
+  const filteredPapers = whitePapers.filter(paper => {;
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     return matchesCategory && matchesSearch});
 
+<<<<<<< HEAD
   const stats = [
     { label: 'White Papers Published', value: '25+', icon: FileText },
     { label: 'Total Downloads', value: '50K+', icon: Download },
     { label: 'Industry Recognition', value: '15+ Awards', icon: Award },
-    { label: 'Research Partners', value: '20+ Universities', icon: Users }
+    { label: 'Research Partners', value: '20+ Universities', icon: Users };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="White Papers - Zion Tech Group"
         description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
       />
       
+=======;
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
+    });
+  };
+
+  const formatDownloads = (downloads: number) => {;
+    if (downloads >= 1000000) {;
+      return (downloads / 1000000).toFixed(1) + 'M';
+    } else if (downloads >= 1000) {
+      return (downloads / 1000).toFixed(1) + 'K';
+    }
+    return downloads.toString();
+  };
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
           >
@@ -205,17 +304,35 @@ export default function WhitePapers() {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
             White Papers & Research
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             Access our latest research, insights, and technical expertise on cutting-edge 
@@ -224,9 +341,18 @@ export default function WhitePapers() {
           
           {/* Stats */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)  => (
@@ -291,9 +417,18 @@ export default function WhitePapers() {
             {filteredWhitePapers.map((paper, index)  => (
               <motion.article
                 key={paper.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Header */}
@@ -376,8 +511,14 @@ export default function WhitePapers() {
 
           {filteredWhitePapers.length === 0 && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
             >
@@ -391,12 +532,19 @@ export default function WhitePapers() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Featured Research */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -407,9 +555,18 @@ export default function WhitePapers() {
             {categories.slice(1).map((category, index)  => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -429,8 +586,14 @@ export default function WhitePapers() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
@@ -458,3 +621,29 @@ export default function WhitePapers() {
       </section>
     </div>
   )}
+=======
+      {/* Subscribe to Updates */}
+      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Subscribe to receive notifications about new white papers, research updates, and industry insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            />
+            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+              Subscribe;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

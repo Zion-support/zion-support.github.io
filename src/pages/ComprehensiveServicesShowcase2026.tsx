@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
   ShieldCheckIcon, 
   CpuChipIcon, 
   CloudIcon, 
@@ -17,11 +18,11 @@ import {
   LightBulbIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-import { COMPREHENSIVE_IT_SERVICES_2026 } from '../data/comprehensiveITServices2026';
-import { COMPREHENSIVE_AI_SERVICES_2026 } from '../data/comprehensiveAIServices2026';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
+import { COMPREHENSIVE_IT_SERVICES_2026 } from "../data/comprehensiveITServices2026";
+import { COMPREHENSIVE_AI_SERVICES_2026 } from "../data/comprehensiveAIServices2026";
 
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
@@ -29,7 +30,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2026,
     ...COMPREHENSIVE_IT_SERVICES_2026,
-    ...COMPREHENSIVE_AI_SERVICES_2026
+    ...COMPREHENSIVE_AI_SERVICES_2026;
   ];
 
   const categories = [
@@ -41,13 +42,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: CloudIcon, count: allServices.filter(s => s.tags.includes('Cloud') || s.tags.includes('DevOps')).length },
     { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: GlobeAltIcon, count: allServices.filter(s => s.tags.includes('Blockchain') || s.tags.includes('Web3')).length },
     { id: 'Healthcare', name: 'Healthcare', icon: BeakerIcon, count: allServices.filter(s => s.tags.includes('Healthcare') || s.tags.includes('Medical')).length },
-    { id: 'Finance', name: 'Finance', icon: CurrencyDollarIcon, count: allServices.filter(s => s.tags.includes('Finance') || s.tags.includes('Trading')).length }
+    { id: 'Finance', name: 'Finance', icon: CurrencyDollarIcon, count: allServices.filter(s => s.tags.includes('Finance') || s.tags.includes('Trading')).length };
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     
@@ -55,7 +55,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   });
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
+    switch (category) {;
       case 'Micro SaaS': return CubeIcon;
       case 'IT Services': return CpuChipIcon;
       case 'AI Solutions': return BrainIcon;
@@ -69,23 +69,98 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   };
 
   const formatPrice = (price: number, model: string) => {
-    if (model === 'monthly') {
+    if (model === 'monthly') {;
       return `$${price.toLocaleString()}/month`;
-    } else if (model === 'project') {
+    } else if (model = == 'project') {;
       return `$${price.toLocaleString()}/project`;
+=======
+  Search, 
+  Filter, 
+  Star, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Network,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
+import { 
+  revolutionaryMicroSaasServices2026,
+  revolutionaryITInfrastructureServices2026,
+  revolutionaryAIServices2026,
+  ALL_REVOLUTIONARY_SERVICES_2026
+} from "../data/comprehensiveServices2026";
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
+  const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+    if (searchTerm) {
+      const lowerQuery = searchTerm.toLowerCase();
+      filtered = filtered.filter(service => ;
+        service.name.toLowerCase().includes(lowerQuery) ||;
+        service.description.toLowerCase().includes(lowerQuery) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery));
+      );
+    }
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+    if (selectedInnovationLevel !== 'all') {
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
+    }
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5" />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
+      default: return <Zap className="w-5 h-5" />;
+    }
+  };
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
+      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      default: return 'bg-gray-600';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
     return `$${price.toLocaleString()}`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -163,6 +238,203 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}
+=======
+    <>
+      <SEO 
+        title = "Revolutionary Services 2026 - Zion Tech Group"
+        description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
+        keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <motion.h1 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6"
+            >
+              Revolutionary Services
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                2026
+              </span>
+            </motion.h1>
+            <motion.p 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
+              className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
+            >
+              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
+              Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
+            </motion.p>
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
+              className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
+            >
+              <span className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                {ALL_REVOLUTIONARY_SERVICES_2026.length} Revolutionary Services
+              </span>
+              <span className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-400" />
+                Up to 1000x Performance Improvement
+              </span>
+              <span className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-400" />
+                Market Leading Innovation
+              </span>
+            </motion.div>
+          </div>
+        </section>
+        {/* Search and Filter Section */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Search */}
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                {/* Category Filter */}
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category} className="bg-zinc-800 text-white">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+                {/* Innovation Level Filter */}
+                <select
+                  value={selectedInnovationLevel}
+                  onChange={(e) => setSelectedInnovationLevel(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {innovationLevels.map(level => (
+                    <option key={level} value={level} className="bg-zinc-800 text-white">
+                      {level === 'all' ? 'All Innovation Levels' : level}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Services Grid */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <category.icon className="h-5 w-5" />
                   {category.name}
@@ -172,6 +444,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 </motion.button>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
 
           {/* Search and Filter */}
@@ -194,7 +467,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 min="0"
                 max="100000"
                 value={priceRange[1]}
-                onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value)])
+}
                 className="w-full"
               />
             </div>
@@ -205,9 +481,18 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -302,12 +587,15 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button
-                onClick={() => {
+                onClick = {
+  () => {;
                   setSelectedCategory('all');
                   setSearchTerm('');
-                  setPriceRange([0, 100000]);
-                }}
-                className="mt-4 text-blue-400 hover:text-blue-300 underline"
+                  setPriceRange([0,
+  100000]);
+                
+}}
+                className = "mt-4 text-blue-400 hover:text-blue-300 underline"
               >
                 Clear filters
               </button>
@@ -320,8 +608,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       <div id="contact-section" className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -379,20 +673,96 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         </div>
       </footer>
     </div>
+=======;
+            {filteredServices.length === 0 && (;
+              <div className="text-center py-12">;
+                <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
+                <button;
+                  onClick={() => {;
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                    setSelectedInnovationLevel('all');
+                  }}
+                  className = "mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+        {/* Contact CTA Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+                Join the future with Zion Tech Group's revolutionary 2026 services. 
+                Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                  Email kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="mt-8 text-zinc-400">
+                <p>364 E Main St STE 1008 Middletown DE 19709</p>
+                <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 
 // Icon components
 const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-  </svg>
+  </svg>;
 );
 
 const EnvelopeIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-  </svg>
+  </svg>;
 );
 
 export default ComprehensiveServicesShowcase2026;

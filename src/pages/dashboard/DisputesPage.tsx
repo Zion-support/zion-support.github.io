@@ -8,14 +8,31 @@ function DisputesPage(...args[]):  {
     <ProtectedRoute>
       <>
         <SEO 
-          title="Dispute Resolution Center | Zion AI Marketplace" 
+          title = "Dispute Resolution Center | Zion AI Marketplace" 
           description="View and manage disputes between clients and talents"
         />
+<<<<<<< HEAD
         
         <DisputeDashboard />
         
       </>
     </ProtectedRoute>
   )}
+=======;
+        ;
+        <DisputeDashboard />;
+        ;
+      </>;
+    </ProtectedRoute>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default DisputesPage;
+
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
 export default DisputesPage;

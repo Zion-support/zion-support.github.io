@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle  } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from "../data/innovativeMicroSaasServices2025";
 
 interface ServiceContact {
 
@@ -10,7 +10,7 @@ interface ServiceContact {
   address: string;
   website: string}
 
-const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
+const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -19,6 +19,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
 
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
+<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: '🤖' },
@@ -29,19 +30,23 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: '🌍' },
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: '✍️' },
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' }
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' };
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+  const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+=======;
+  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-      case 'rating':
+      case 'rating':;
         return b.rating - a.rating;
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
@@ -53,10 +58,11 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
         return 0}
   });
 
-  const handleServiceClick = (service)  => {
+<<<<<<< HEAD
+  const handleServiceClick = (service)  => {;
     setSelectedService(service)};
 
-  const closeModal = () => {
+  const closeModal = () => {;
     setSelectedService(null)};
 
   const containerVariants = {
@@ -66,11 +72,13 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
       transition: {
         staggerChildren: 0.1
       }
-    }
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -79,10 +87,17 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
         ease: "easeOut"
       }
     }
+=======;
+  const getCategoryIcon = (category: string) => {;
+    if (category === 'all') return <Rocket className="w-6 h-6" />;
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
+      <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
+      <Rocket className="w-6 h-6" />;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
@@ -155,9 +170,18 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
           {/* Category Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             {categories.map((category)  => (
               <motion.button
@@ -276,11 +300,21 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
             >
               View Pricing
+<<<<<<< HEAD
             </Link>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default UltimateServicesShowcase2025;
+=======
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

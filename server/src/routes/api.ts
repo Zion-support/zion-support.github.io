@@ -4,7 +4,7 @@ import { body, validationResult } from 'express-validator';
 const router = Router();
 
 // Validation middleware
-const validate = (req: any, res: any, next: any) => {
+const validate = (req: any, res: any, next: any) => {;
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
@@ -16,9 +16,9 @@ const validate = (req: any, res: any, next: any) => {
 router.get('/users', async (_req, res) => {
   try {
     // Example data - replace with actual database query
-    const users = [
-      { id: 1, name: 'John Doe', email: 'john@example.com' },
-      { id: 2, name: 'Jane Smith', email: 'jane@example.com' }
+    const users = [;
+      { id: 1, name: 'John Doe', email: 'john@example.com' },;
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com' };
     ];
     
     res.json({ 
@@ -45,11 +45,20 @@ router.post('/users', [
     
     // Example user creation - replace with actual database operation
     const newUser = {
-      id: Date.now(),
+  id: Date.now(),
       name,
-      email,
-      createdAt: new Date().toISOString()
-    };
+      email,;
+  ;
+  ;
+  ;
+  createdAt: new Date().toISOString();
+    ;
+
+
+
+
+
+};
     
     res.status(201).json({ 
       success: true, 
@@ -71,11 +80,20 @@ router.get('/users/:id', async (req, res) => {
     
     // Example user lookup - replace with actual database query
     const user = {
-      id: parseInt(id),
+  id: parseInt(id),
       name: 'John Doe',
-      email: 'john@example.com',
-      createdAt: new Date().toISOString()
-    };
+      email: 'john@example.com',;
+  ;
+  ;
+  ;
+  createdAt: new Date().toISOString();
+    ;
+
+
+
+
+
+};
     
     if (!user) {
       return res.status(404).json({ 

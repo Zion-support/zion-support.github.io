@@ -5,7 +5,6 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { globSync } from 'glob';
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 class LintErrorFixer {
   constructor() {
@@ -115,14 +114,17 @@ class LintErrorFixer {
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}'
     ];
-    let totalFixed = 0;
     let totalFiles = 0;
     for (const pattern of patterns) {
       const files = this.glob(pattern);
-      for (const file of files) {
-        totalFiles++;
-        const fixed = await this.fixFile(file);
+<<<<<<< HEAD
+      for (const fixed = await this.fixFile(file);
         if (fixed) totalFixed++}
+=======
+      for (const fixed = await this.fixFile(file);
+        if (fixed) totalFixed++;
+      }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
     this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`);
     return { totalFiles, totalFixed }}

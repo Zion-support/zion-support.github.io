@@ -16,12 +16,18 @@ export default function QuoteManager() {
     const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
     // Count quotes by status
     const statusCounts = {
-        new: quotes.filter(q => q.status === 'new').length,
+  new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
         responded: quotes.filter(q => q.status === 'responded').length,
-        closed: quotes.filter(q => q.status === 'closed').length
-    };
+  closed: quotes.filter(q => q.status === 'closed').length
+    
+
+
+
+
+
+};
     const handleViewDetails = (quote) => {
         setSelectedQuote(quote);
         setShowDetails(true)};
@@ -29,7 +35,12 @@ export default function QuoteManager() {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
-        setDateRange({ from: undefined, to: undefined })};
+<<<<<<< HEAD
+        setDateRange({ from: null, to: null })};
+=======
+        setDateRange({ from: null, to: null });
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!isAdmin) {
         return <Navigate to="/unauthorized" replace/>}
     return (<ProtectedRoute adminOnly>

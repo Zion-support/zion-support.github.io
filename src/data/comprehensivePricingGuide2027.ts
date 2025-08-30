@@ -855,22 +855,43 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
     }
   }
 ];
-export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string)  => 
+<<<<<<< HEAD
+export const getComprehensivePricingGuide2027ByCategory = (category: string)  => ;
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string)  => 
+export const getComprehensivePricingGuide2027ByCategory = (category: string) => ;
+  comprehensivePricingGuide2027.filter(item => item.category === category);
+export const getComprehensivePricingGuide2027ById = (id: string) => ;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   comprehensivePricingGuide2027.find(item => item.id === id);
-export const pricingCategories2027 = [
-  'Metaverse Solutions',
-  'Web3 Solutions',
-  'Sustainable Tech',
-  'NeuroTech Solutions',
-  'Fusion Energy Solutions'
+export const pricingCategories2027 = [;
+  'Metaverse Solutions',;
+  'Web3 Solutions',;
+  'Sustainable Tech',;
+  'NeuroTech Solutions',;
+  'Fusion Energy Solutions';
 ];
 export const pricingSubcategories2027 = {
+  <<<<<<< HEAD
   'Metaverse Solutions'['E-commerce', 'Gaming', 'Social', 'Education'],
   'Web3 Solutions'['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
   'Sustainable Tech'['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
   'NeuroTech Solutions'['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
   'Fusion Energy Solutions'['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
+=======
+  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
+  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
+  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
+  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
+  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design',;
+  ;
+  ;
+  ;
+  'Simulation'];
+;
+
+
+
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 };

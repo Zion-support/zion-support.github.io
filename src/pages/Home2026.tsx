@@ -129,9 +129,9 @@ import {
   Omega
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 
-const Home2026: React.FC = () => {
+const Home2026: React.FC = () => {;
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
@@ -176,30 +176,30 @@ const Home2026: React.FC = () => {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
     },
     {
-      title: "Sustainability",
-      icon: Heart,
-      description: "Green technology and ESG compliance solutions",
-      color: "from-teal-500 to-cyan-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
-    }
+      title: "Sustainability",;
+      icon: Heart,;
+      description: "Green technology and ESG compliance solutions",;
+      color: "from-teal-500 to-cyan-600",;
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length;
+    };
   ];
 
-  const stats = [
-    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },
-    { label: "Innovation Level", value: "Revolutionary", icon: Star },
-    { label: "Success Rate", value: "99.9%", icon: CheckCircle },
-    { label: "Client Satisfaction", value: "98%", icon: Heart }
+  const stats = [;
+    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },;
+    { label: "Innovation Level", value: "Revolutionary", icon: Star },;
+    { label: "Success Rate", value: "99.9%", icon: CheckCircle },;
+    { label: "Client Satisfaction", value: "98%", icon: Heart };
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [featuredServices.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Micro SaaS Solutions 2026" 
         description="Transform your business with cutting-edge AI, Quantum Computing, Cybersecurity, IoT, and Micro SaaS solutions. Leading the future of technology innovation." 
@@ -227,16 +227,31 @@ const Home2026: React.FC = () => {
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${3 + Math.random() * 4}s`
               }}
-              animate={{
+              animate = {
+  {
                 y: [0, -20, 0],
                 opacity: [0.2, 0.5, 0.2],
-                rotate: [0, 360]
-              }}
-              transition={{
+                rotate: [0,
+  360]
+              
+
+
+
+
+
+}}
+              transition = {
+  {
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
+  ease: "easeInOut"
+              
+
+
+
+
+
+}}
             >
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] && 
                 React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24 })
@@ -247,8 +262,24 @@ const Home2026: React.FC = () => {
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 1 }}
           >
             {/* Logo and Comp Name */}
@@ -328,14 +359,46 @@ const Home2026: React.FC = () => {
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate = {
+  { y: [0, 10,
+  0] 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+}}
         >
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
             <motion.div
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate = {
+  { y: [0, 12,
+  0] 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+}}
             />
           </div>
         </motion.div>
@@ -348,9 +411,33 @@ const Home2026: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -368,8 +455,24 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -385,9 +488,33 @@ const Home2026: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -425,8 +552,24 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -443,9 +586,33 @@ const Home2026: React.FC = () => {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className={`group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20 ${
                     index === currentServiceIndex ? 'ring-2 ring-cyan-400/50' : ''
                   }`}
@@ -507,8 +674,24 @@ const Home2026: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-900/50 to-slate-800/50 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -561,9 +744,33 @@ const Home2026: React.FC = () => {
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center group"
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -587,8 +794,24 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
@@ -649,12 +872,12 @@ const Home2026: React.FC = () => {
                     ziontechgroup.com
                   </a>
                 </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -14,7 +14,7 @@ export const PerformanceMonitor = () => {
 
   useEffect(() => {
     // Only run in browser environment
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'null') return;
 
     const calculateScore = () => {
       let totalScore = 0;
@@ -67,15 +67,13 @@ export const PerformanceMonitor = () => {
 
   useEffect(() => {
     // Only run in browser environment
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'null') return;
 
     // Performance Observer for Core Web Vitals
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       try {
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
           if (fcpEntry) {
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
@@ -84,9 +82,7 @@ export const PerformanceMonitor = () => {
 
       // Largest Contentful Paint
       try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
@@ -107,8 +103,7 @@ export const PerformanceMonitor = () => {
 
       // Cumulative Layout Shift
       try {
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0;
+        const clsValue = 0;
           list.getEntries().forEach((entry) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value}
@@ -139,8 +134,14 @@ export const PerformanceMonitor = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+}}
       className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50"
     >
       <div className="flex items-center justify-between mb-3">

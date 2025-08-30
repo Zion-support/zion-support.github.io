@@ -59,8 +59,10 @@ export const quantumFlowProPricing: ServicePricing = {
       setupTime: "2-3 weeks",
       support: "Email support (24h response)",
       marketComparison: "30% below market average",
-      volumeDiscounts["10% off annual billing", "20% off 2+ year contracts"]
-    },
+      volumeDiscounts["10% off annual billing",
+  "20% off 2+ year contracts"]
+    
+},
     {
       name: "Professional",
       price: 5999,
@@ -121,7 +123,7 @@ export const quantumFlowProPricing: ServicePricing = {
     enterpriseDiscount: "Up to 40% off for enterprise contracts",
     startupProgram: "50% off for qualified startups (first year)",
     referralProgram: "15% commission for successful referrals"
-  }
+  };
 };
 
 // NeuroSync AI Pricing
@@ -151,8 +153,9 @@ export const neuroSyncAIPricing: ServicePricing = {
       setupTime: "1 week",
       support: "Community support",
       marketComparison: "60% below market average",
-      volumeDiscounts["15% off annual billing"]
-    },
+  volumeDiscounts["15% off annual billing"]
+    
+},
     {
       name: "Professional",
       price: 1499,
@@ -212,7 +215,7 @@ export const neuroSyncAIPricing: ServicePricing = {
     enterpriseDiscount: "Up to 35% off for enterprise contracts",
     startupProgram: "60% off for qualified startups (first year)",
     referralProgram: "20% commission for successful referrals"
-  }
+  };
 };
 
 // BlockchainForge Pricing
@@ -242,8 +245,9 @@ export const blockchainForgePricing: ServicePricing = {
       setupTime: "1 week",
       support: "Community support",
       marketComparison: "50% below market average",
-      volumeDiscounts["20% off annual billing"]
-    },
+  volumeDiscounts["20% off annual billing"]
+    
+},
     {
       name: "Professional",
       price: 2499,
@@ -304,14 +308,14 @@ export const blockchainForgePricing: ServicePricing = {
     enterpriseDiscount: "Up to 45% off for enterprise contracts",
     startupProgram: "70% off for qualified startups (first year)",
     referralProgram: "25% commission for successful referrals"
-  }
+  };
 };
 
 // Export all pricing guides
 export const ALL_PRICING_GUIDES_2026 = [
   quantumFlowProPricing,
   neuroSyncAIPricing,
-  blockchainForgePricing
+  blockchainForgePricing;
 ];
 
 // Market Summary
@@ -324,10 +328,32 @@ export const marketSummary2026 = {
     "Autonomous AI agent proliferation",
     "Blockchain enterprise integration"
   ],
+<<<<<<< HEAD
   competitiveAdvantages[
     "First-to-market quantum solutions",
     "Advanced edge computing capabilities",
     "Ethical AI framework integration",
-    "Comprehensive compliance automation"
+  "Comprehensive compliance automation"
   ]
+;
 };
+=======
+  pricingStrategy: {
+    approach: "Value-based pricing with ROI focus",
+    target: "15-30% below market average",
+    value: "2-3x better ROI than competitors",
+  flexibility: "Custom pricing for enterprise clients"
+  
+
+
+
+
+},
+  contactInfo: {
+    phone: "+1 302 464 0950",;
+    email: "kleber@ziontechgroup.com",;
+    website: "https://ziontechgroup.com",;
+    address: "364 E Main St STE 1008 Middletown DE 19709";
+  };
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -169,7 +169,9 @@ export function TechSolutionsSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -180,7 +182,9 @@ export function TechSolutionsSection() {
         }
     };
     const cardVariants = {
-        hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+},
         visible: {
             scale: 1,
             opacity: 1,
@@ -200,7 +204,13 @@ export function TechSolutionsSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>
           </h2>
@@ -211,7 +221,16 @@ export function TechSolutionsSection() {
 
           {/* Industry stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {industries.map((industry, index) => (<motion.div key={industry.name} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+}} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {industry.icon}
                 </div>
@@ -223,7 +242,10 @@ export function TechSolutionsSection() {
 
         {/* Solutions Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>
+          {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+  { type: "spring",
+  stiffness: 300 
+}} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>
               <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedSolution(selectedSolution === solution.id ? null : solution.id)}>
                 {/* Header */}
                 <div className="text-center mb-6">
@@ -278,10 +300,25 @@ export function TechSolutionsSection() {
 
                 {/* Expanded details */}
                 <AnimatePresence>
-                  {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                  {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} transition={{ duration: 0.3 }}>
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Benefits:</h4>
                       <div className="space-y-2 mb-4">
-                        {solution.benefits.map((benefit, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                        {solution.benefits.map((benefit, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {
+  { opacity: 0,
+  x: -10 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} transition={{ delay: idx * 0.1 }}>
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             <span>{benefit}</span>
                           </motion.div>))}
@@ -289,7 +326,13 @@ export function TechSolutionsSection() {
 
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Use Cases:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {solution.useCases.map((useCase, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: idx * 0.1 }}>
+                        {solution.useCases.map((useCase, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} transition={{ delay: idx * 0.1 }}>
                             {useCase}
                           </motion.span>))}
                       </div>
@@ -300,7 +343,16 @@ export function TechSolutionsSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+}}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">

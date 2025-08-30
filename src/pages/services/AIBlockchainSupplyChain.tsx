@@ -16,7 +16,7 @@ import { Brain,
   BarChart3,
   Network
  } from 'lucide-react';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 
 const AIBlockchainSupplyChain = () => {
   const features = [
@@ -49,7 +49,7 @@ const AIBlockchainSupplyChain = () => {
       icon: Globe,
       title: "Global Integration",
       description: "Seamless integration with existing ERP systems and global trading partners"
-    }
+    };
   ];
 
   const services = [
@@ -93,7 +93,7 @@ const AIBlockchainSupplyChain = () => {
         "Multi-tenant architecture"
       ],
       popular: false
-    }
+    };
   ];
 
   const useCases = [
@@ -116,7 +116,7 @@ const AIBlockchainSupplyChain = () => {
       industry: "Pharmaceuticals",
       description: "Combat counterfeit drugs and ensure regulatory compliance with blockchain verification and AI monitoring",
       benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]
-    }
+    };
   ];
 
   const technologies = [
@@ -127,11 +127,11 @@ const AIBlockchainSupplyChain = () => {
     "Cloud Computing",
     "API Integration",
     "Real-time Analytics",
-    "Predictive Modeling"
+    "Predictive Modeling";
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO 
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
@@ -143,8 +143,14 @@ const AIBlockchainSupplyChain = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -174,8 +180,14 @@ const AIBlockchainSupplyChain = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -192,10 +204,19 @@ const AIBlockchainSupplyChain = () => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -213,8 +234,14 @@ const AIBlockchainSupplyChain = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -231,10 +258,19 @@ const AIBlockchainSupplyChain = () => {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
@@ -287,8 +323,14 @@ const AIBlockchainSupplyChain = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -305,10 +347,19 @@ const AIBlockchainSupplyChain = () => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
@@ -334,8 +385,14 @@ const AIBlockchainSupplyChain = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -352,10 +409,19 @@ const AIBlockchainSupplyChain = () => {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -372,8 +438,14 @@ const AIBlockchainSupplyChain = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -425,7 +497,7 @@ const AIBlockchainSupplyChain = () => {
           </p>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIBlockchainSupplyChain;

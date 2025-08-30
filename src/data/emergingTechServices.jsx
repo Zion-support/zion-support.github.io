@@ -10,8 +10,14 @@ const emergingTechServices = {
     competitors["IBM", "Google", "Microsoft"],
     marketTrend: "Growing",
     innovationLevel: "High",
-    uniqueValue: "Hybrid classical-quantum approach"
-  }
+  uniqueValue: "Hybrid classical-quantum approach"
+  
+
+
+
+
+
+}
 };
 
 export default emergingTechServices;

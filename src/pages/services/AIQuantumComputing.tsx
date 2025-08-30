@@ -4,12 +4,12 @@ export default function AIQuantumComputing() {
   const features = [
     'AI-powered quantum optimization',
     'Intelligent quantum algorithm management',
-    'Automated quantum monitoring and alerting',
-    'Predictive analytics for quantum scaling',
-    'Smart quantum security and compliance',
-    'AI-driven quantum automation and orchestration',
-    'Real-time quantum analytics and insights',
-    'Custom AI models for quantum applications'
+    'Automated quantum monitoring and alerting',;
+    'Predictive analytics for quantum scaling',;
+    'Smart quantum security and compliance',;
+    'AI-driven quantum automation and orchestration',;
+    'Real-time quantum analytics and insights',;
+    'Custom AI models for quantum applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIQuantumComputing() {
       name: 'Business', 
       price: '$1,499/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full quantum suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full quantum suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Quantum optimization',
-    'Quantum algorithm management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Quantum scaling and management'
+    'Quantum optimization',;
+    'Quantum algorithm management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Quantum scaling and management';
   ];
 
   const benefits = [
-    'Improve quantum performance by 50-80%',
-    'Reduce quantum processing time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance quantum reliability and scalability',
-    'Optimize resource utilization',
-    'Scale quantum operations efficiently'
+    'Improve quantum performance by 50-80%',;
+    'Reduce quantum processing time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance quantum reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale quantum operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-violet-500 via-purple-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIQuantumComputing() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { TrendingUp, 
   Users, 
   DollarSign, 
@@ -34,6 +34,7 @@ export default function CaseStudies(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
 
   const industries = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Industries', icon: Building },
     { id: 'healthcare', name: 'Healthcare', icon: Heart },
     { id: 'finance', name: 'Financial Services', icon: DollarSign },
@@ -41,7 +42,7 @@ export default function CaseStudies(...args[]):  {
     { id: 'retail', name: 'Retail & E-commerce', icon: ShoppingCart },
     { id: 'technology', name: 'Technology', icon: Brain },
     { id: 'energy', name: 'Energy & Utilities', icon: Zap },
-    { id: 'government', name: 'Government', icon: Shield }
+    { id: 'government', name: 'Government', icon: Shield };
   ];
 
   const services = [
@@ -53,6 +54,23 @@ export default function CaseStudies(...args[]):  {
     { id: 'iot-edge', name: 'IoT & Edge Computing', icon: Zap },
     { id: 'blockchain', name: 'Blockchain Solutions', icon: Shield },
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart }
+=======
+    { id: 'all', name: 'All Industries', icon: Building, count: 0 },;
+    { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },;
+    { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },;
+    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },;
+    { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },;
+    { id: 'government', name: 'Government', icon: Building, count: 0 };
+  ];
+
+  const services = [
+    { id: 'all', name: 'All Services', icon: Zap, count: 0 },;
+    { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },;
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const caseStudies = [
@@ -130,6 +148,7 @@ export default function CaseStudies(...args[]):  {
     },
     {
       id: 5,
+<<<<<<< HEAD
       title: 'Cloud FinOps Optimization for Enterprise',
       client: 'Global Retail Corporation',
       industry: 'retail',
@@ -163,13 +182,12 @@ export default function CaseStudies(...args[]):  {
       duration: '9 months',
       teamSize: '14',
       readMore: '/case-studies/blockchain-supply-chain'
-    }
+    };
   ];
 
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'all' || study.industry === selectedIndustry;
+  const filteredCaseStudies = caseStudies.filter(study => {;
     const matchesService = selectedService === 'all' || study.services.includes(selectedService);
-    const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          study.client.toLowerCase().includes(searchQuery.toLowerCase());
     
     return matchesIndustry && matchesService && matchesSearch});
@@ -178,11 +196,11 @@ export default function CaseStudies(...args[]):  {
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: Star },
     { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Time to Value', value: '6 months', icon: Clock }
+    { label: 'Time to Value', value: '6 months', icon: Clock };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Case Studies - Zion Tech Group"
         description="Explore real-world success stories and business outcomes from our AI and technology implementations."
@@ -192,8 +210,14 @@ export default function CaseStudies(...args[]):  {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
           >
@@ -201,17 +225,35 @@ export default function CaseStudies(...args[]):  {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
             Success Stories
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             Discover how we've helped organizations across industries achieve remarkable 
@@ -220,9 +262,18 @@ export default function CaseStudies(...args[]):  {
           
           {/* Stats */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)  => (
@@ -232,6 +283,81 @@ export default function CaseStudies(...args[]):  {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-xs text-slate-400">{stat.label}</div>
+=======
+      title: 'IoT Edge Computing for Smart Cities',
+      company: 'CitySmart Solutions',
+      industry: 'government',
+      service: 'iot',
+      challenge: 'CitySmart needed to process data from thousands of IoT sensors in real-time for traffic management and public safety.',
+      solution: 'Deployed edge computing infrastructure that processes sensor data locally, reducing latency and improving response times.',
+      results: [
+        'Real-time traffic optimization',
+        '30% reduction in response times',
+        'Scalable IoT infrastructure',
+        'Improved public safety'
+      ],
+      duration: '14 months',;
+      teamSize: '20 engineers',;
+      technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],;
+      featured: false,;
+      image: '/api/placeholder/600/400';
+    };
+  ];
+
+  // Calculate counts
+  industries.forEach(industry = > {;
+    if (industry.id === 'all') {;
+      industry.count = caseStudies.length;
+    } else {
+      industry.count = caseStudies.filter(cs => cs.industry === industry.id).length;
+    }
+  });
+
+  services.forEach(service = > {;
+    if (service.id === 'all') {;
+      service.count = caseStudies.length;
+    } else {
+      service.count = caseStudies.filter(cs => cs.service === service.id).length;
+    }
+  });
+
+  const filteredCaseStudies = caseStudies.filter(cs => {;
+    const matchesSearch = cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesIndustry && matchesService && matchesSearch;
+  });
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <FileText className="h-10 w-10 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             ))}
           </motion.div>
@@ -292,6 +418,7 @@ export default function CaseStudies(...args[]):  {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Case Studies Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -299,10 +426,115 @@ export default function CaseStudies(...args[]):  {
             {filteredCaseStudies.map((study, index)  => (
               <motion.article
                 key={study.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+=======
+        {/* Featured Case Studies */}
+        {filteredCaseStudies.filter(cs => cs.featured).length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
+                <motion.article
+                  key={cs.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+                        Featured
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        {industries.find(i => i.id === cs.industry)?.name}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{cs.title}</h3>
+                    <p className="text-gray-600 mb-3 font-medium">{cs.company}</p>
+                    <p className="text-gray-600 mb-4">{cs.challenge}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <span className="flex items-center">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {cs.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Users className="h-4 w-4 mr-1" />
+                        {cs.teamSize}
+                      </span>
+                    </div>
+                    <a
+                      href={`/case-studies/${cs.id}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Read Full Case Study
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* All Case Studies */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {filteredCaseStudies.length} Case Studies Found
+          </h2>
+          <div className="space-y-6">
+            {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
+              <motion.article
+                key={cs.id}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 {/* Header */}
                 <div className="mb-6">
@@ -388,8 +620,14 @@ export default function CaseStudies(...args[]):  {
 
           {filteredCaseStudies.length === 0 && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
             >
@@ -403,12 +641,19 @@ export default function CaseStudies(...args[]):  {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
@@ -416,6 +661,35 @@ export default function CaseStudies(...args[]):  {
             <p className="text-slate-300 mb-8">
               Let's discuss how our AI and technology solutions can transform your business 
               and deliver measurable results like the ones you've seen here.
+=======
+        {/* CTA Section */}
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition={{ delay: 0.5 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Success Story?</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Let's discuss how Zion Tech Group can help transform your business with cutting-edge technology solutions.
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
@@ -431,9 +705,19 @@ export default function CaseStudies(...args[]):  {
               >
                 Request a Quote
               </a>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

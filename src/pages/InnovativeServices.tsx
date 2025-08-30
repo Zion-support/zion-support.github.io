@@ -131,29 +131,53 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         'Renewable energy optimization',
         'Carbon footprint tracking',
         'Sustainable infrastructure',
+<<<<<<< HEAD
         'Green data centers'
       ],
       benefits['Environmental impact', 'Cost savings', 'Regulatory compliance'],
       color: 'from-zion-blue to-zion-green'
     }
+=======;
+        'Green data centers';
+      ],;
+      benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
+      color: 'from-zion-blue to-zion-green';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const stats = [
-    { label: 'Innovation Projects', value: '500+', icon: Rocket },
-    { label: 'AI Models Deployed', value: '1000+', icon: Brain },
-    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },
-    { label: 'Client Success Rate', value: '99.8%', icon: Award }
+  const stats = [;
+    { label: 'Innovation Projects', value: '500+', icon: Rocket },;
+    { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
+    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
+    { label: 'Client Success Rate', value: '99.8%', icon: Award };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
@@ -191,9 +215,33 @@ const InnovativeServices: React.FC = (): JSX.Element => {
             {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -211,8 +259,24 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -229,9 +293,33 @@ const InnovativeServices: React.FC = (): JSX.Element => {
             {innovations.map((innovation, index)  => (
               <motion.div
                 key={innovation.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group relative"
               >
                 <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 h-full hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
@@ -289,8 +377,24 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -314,11 +418,21 @@ const InnovativeServices: React.FC = (): JSX.Element => {
               >
                 Contact Our Team
               </motion.button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServices;

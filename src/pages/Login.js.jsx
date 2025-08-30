@@ -17,14 +17,14 @@ export default function Login() {
     if (token) {
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing
-      navigate(location.pathname, { replace: true })}
+      router(location.pathname, { replace: true })}
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      navigate(next, { replace: true })}
+      router(next, { replace: true })}
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
   // Render LoginContent if not authenticated and auth is not loading

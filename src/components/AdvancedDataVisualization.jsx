@@ -14,13 +14,6 @@ const mockChartData = [
     { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
 ];
-const chartTypes = [
-    { id: 'bar', name: 'Bar Chart', icon: '📊', description: 'Compare values across categories' },
-    { id: 'line', name: 'Line Chart', icon: '📈', description: 'Show trends over time' },
-    { id: 'pie', name: 'Pie Chart', icon: '🥧', description: 'Display proportions of a whole' },
-    { id: 'area', name: 'Area Chart', icon: '🏔️', description: 'Show cumulative data over time' },
-    { id: 'scatter', name: 'Scatter Plot', icon: '🎯', description: 'Show correlation between variables' }
-];
 const colorPalettes = [
     ['#06b6d4', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'],
     ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'],
@@ -43,7 +36,6 @@ export function AdvancedDataVisualization() {
     const [data, setData] = useState(mockChartData);
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [autoRefresh, setAutoRefresh] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
     const refreshData = async () => {
@@ -99,7 +91,15 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points={filteredData.map((item, index) => `${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
+          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
+  filteredData.map((item,
+  index) => `${(index / (filteredData.length - 1)) * 800
+
+
+
+
+
+},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
           {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
@@ -117,9 +117,16 @@ export function AdvancedDataVisualization() {
                 const prevAngle = filteredData
                     .slice(0, index)
                     .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);
-                return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style={{
+                return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style = {
+  {
                         borderTopColor: colors[index % colors.length],
-                        transform: `rotate(${prevAngle}deg)`,
+  transform: `rotate(${prevAngle
+
+
+
+
+
+}deg)`,
                         clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)`
                     }} title={`${item.name}: ${percentage.toFixed(1)}%`}/>)})}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -135,7 +142,15 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d={`M 0,${280} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
+          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {
+  `M 0,
+  ${280
+
+
+
+
+
+} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -242,15 +257,39 @@ export function AdvancedDataVisualization() {
               <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>
               <div className="space-y-3">
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" checked={chartConfig.showLegend} onChange={(e) => setChartConfig(prev => ({ ...prev, showLegend: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <input type="checkbox" checked={chartConfig.showLegend} onChange = {
+  (e) => setChartConfig(prev => ({ ...prev,
+  showLegend: e.target.checked 
+
+
+
+
+
+}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
                   <span className="text-sm text-zion-slate">Show Legend</span>
                 </label>
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" checked={chartConfig.showGrid} onChange={(e) => setChartConfig(prev => ({ ...prev, showGrid: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <input type="checkbox" checked={chartConfig.showGrid} onChange = {
+  (e) => setChartConfig(prev => ({ ...prev,
+  showGrid: e.target.checked 
+
+
+
+
+
+}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
                   <span className="text-sm text-zion-slate">Show Grid</span>
                 </label>
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" checked={chartConfig.animate} onChange={(e) => setChartConfig(prev => ({ ...prev, animate: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <input type="checkbox" checked={chartConfig.animate} onChange = {
+  (e) => setChartConfig(prev => ({ ...prev,
+  animate: e.target.checked 
+
+
+
+
+
+}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
                   <span className="text-sm text-zion-slate">Animations</span>
                 </label>
                 <label className="flex items-center gap-2">

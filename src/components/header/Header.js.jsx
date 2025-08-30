@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
+import { Logo } from "./Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
 import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
+import { MobileMenu } from "./MobileMenu";
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -27,7 +27,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         primaryColor,
         backgroundColor: '#000000', // Default dark background
         textColor: '#ffffff', // Default light text
-    } : undefined);
+    } : null);
     const headerStyle = effectiveTheme ? {
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
@@ -42,7 +42,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-            navigate(`/search?q=${encodeURIComponent(query)}`);
+            router(`/search?q=${encodeURIComponent(query)}`);
             setQuery("")}
     };
     const toggleMobileMenu = () => {
@@ -68,7 +68,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Desktop Search */}
         <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
           <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
+            router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions}/>
         </form>
 
@@ -110,7 +110,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
+            router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions}/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
@@ -141,7 +141,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           <form onSubmit={handleSubmit}>
             <div className="relative">
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
+            router(`/search?q=${encodeURIComponent(text)}`);
             setQuery("")}} searchSuggestions={searchSuggestions} placeholder="Search services, talent, equipment..."/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>

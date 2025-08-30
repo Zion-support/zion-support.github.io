@@ -79,6 +79,7 @@ import { Brain,
   Grid,
   List,
   ChevronDown,
+<<<<<<< HEAD
   ChevronUp
  } from 'lucide-react';
 import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
@@ -91,21 +92,87 @@ const categories = [
   { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
   { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
   { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
+=======
+  ShoppingCart,
+  MessageCircle,
+  HelpCircle,
+  FileText,
+  Video,
+  Truck,
+  Briefcase;
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+// Sample data for demonstration
+const MICRO_SAAS_SERVICES = [
+  {
+    id: 'micro-crm',
+    title: 'Micro CRM',
+    description: 'Lightweight customer relationship management for small businesses',
+    category: 'Business Tools',
+    subcategory: 'CRM',
+    pricingModel: 'monthly',
+    price: 29,
+    rating: 4.8,
+    reviewCount: 156,
+    aiScore: 95,
+    featured: true,
+    createdAt: '2024-01-15',
+    href: '/services/micro-crm',
+    tags: ['CRM', 'Business', 'Automation'],
+    images: ['/images/micro-crm.jpg']
+  },
+  {
+    id: 'helpdesk-platform',
+    title: 'Helpdesk Platform',
+    description: 'Streamlined customer support and ticket management system',
+    category: 'Customer Support',
+    subcategory: 'Helpdesk',
+    pricingModel: 'monthly',
+    price: 39,
+    rating: 4.7,
+    reviewCount: 89,
+    aiScore: 92,
+    featured: false,
+    createdAt: '2024-02-01',
+    href: '/services/helpdesk-platform',
+    tags: ['Support', 'Helpdesk', 'Customer Service'],
+    images: ['/images/helpdesk.jpg']
+  },
+  {
+    id: 'website-analytics',
+    title: 'Website Analytics',
+    description: 'Comprehensive website performance and user behavior analytics',
+    category: 'Analytics',
+    subcategory: 'Web Analytics',
+    pricingModel: 'monthly',
+    price: 19,
+    rating: 4.9,
+    reviewCount: 234,
+    aiScore: 98,
+    featured: true,;
+    createdAt: '2024-01-10',;
+    href: '/services/website-analytics',;
+    tags: ['Analytics', 'Web', 'Performance'],;
+    images: ['/images/analytics.jpg'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
-const categories = [
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
+const categories = [;
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
-const pricingModels = [
-  { id: 'all', name: 'All Pricing' },
-  { id: 'monthly', name: 'Monthly' },
-  { id: 'yearly', name: 'Yearly' },
-  { id: 'one-time', name: 'One-time' },
-  { id: 'usage-based', name: 'Usage-based' }
+const pricingModels = [;
+  { id: 'all', name: 'All Pricing' },;
+  { id: 'monthly', name: 'Monthly' },;
+  { id: 'yearly', name: 'Yearly' },;
+  { id: 'one-time', name: 'One-time' },;
+  { id: 'usage-based', name: 'Usage-based' };
 ];
 export default function ComprehensiveServicesOverview2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -121,14 +188,24 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)}
-    if (searchQuery.trim()) {
+    if (searchQuery.trim()) {;
       const query = searchQuery.toLowerCase();
+<<<<<<< HEAD
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
       )}
+=======;
+      filtered = filtered.filter(service =>;
+        service.title.toLowerCase().includes(query) ||;
+        service.description.toLowerCase().includes(query) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
+        service.subcategory?.toLowerCase().includes(query);
+      );
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -145,8 +222,24 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
     setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
   const ServiceCard = ({ service }: { service})  => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
     >
@@ -218,9 +311,18 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
           {expandedService === service.id && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+}}
               className="space-y-2"
             >
               {service.benefits.map((benefit: string, index: number)  => (
@@ -255,22 +357,38 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"
         >
           <Link to={service.href}>
-            Learn More
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-        </Button>
-      </div>
-    </motion.div>
+            Learn More;
+            <ArrowRight className="ml-2 w-4 h-4" />;
+          </Link>;
+        </Button>;
+      </div>;
+    </motion.div>;
   );
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-16">
           <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -280,9 +398,33 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             </span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
@@ -425,11 +567,11 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           <div className="flex flex-wrap gap-4">
             {pricingModels.map((pricing) => (
               <Button
-                onClick={() => {
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPricing('all');
                   setSearchQuery('')}}
-                className="bg-zion-cyan hover:bg-zion-cyan-light"
+                className = "bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 {pricing.name}
               </Button>
@@ -445,17 +587,17 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
-        </div>
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
-            <Button
-              onClick={() => {
+        </div>;
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-16">;
+            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
+            <Button;
+              onClick={() => {;
                 setSelectedCategory('all');
                 setSelectedPricing('all');
                 setSearchQuery('');
               }}
-              className="bg-zion-cyan hover:bg-zion-cyan-light"
+              className = "bg-zion-cyan hover:bg-zion-cyan-light"
             >
               Clear Filters
             </Button>
@@ -483,9 +625,19 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
+<<<<<<< HEAD
             </Button>
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -29,8 +29,9 @@ import { Shield,
   Phone,
   Mail
  } from 'lucide-react';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 
+<<<<<<< HEAD
 export default function Security() {
   const securityFeatures = [
     {
@@ -84,8 +85,18 @@ export default function Security() {
         'Session management and timeout',
         'Biometric authentication support'
       ]
-    }
+    };
   ];
+=======
+const Security: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">Security</h1>;
+			<p className="text-xl text-gray-300">Our commitment to security and compliance.</p>;
+		</div>;
+	</div>;
+);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const certifications = [
     {
@@ -119,7 +130,7 @@ export default function Security() {
       icon: Users,
       color: 'from-orange-500 to-red-600',
       details: 'Healthcare data protection standards'
-    }
+    };
   ];
 
   const securityPractices = [
@@ -154,7 +165,7 @@ export default function Security() {
       color: 'from-orange-500 to-red-600',
       frequency: 'Monthly',
       scope: 'All staff and contractors'
-    }
+    };
   ];
 
   const incidentResponse = [
@@ -189,7 +200,7 @@ export default function Security() {
       color: 'from-orange-500 to-red-600',
       timeframe: '< 2 hours',
       tools: ['Backup systems', 'Redundancy', 'Failover procedures']
-    }
+    };
   ];
 
   const securityTechnologies = [
@@ -220,13 +231,13 @@ export default function Security() {
       icon: Fingerprint,
       color: 'from-orange-500 to-red-600',
       vendor: 'Okta, Microsoft Azure AD'
-    }
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Security - Zion Tech Group"
+        title = "Security - Zion Tech Group"
         description="Learn about Zion Tech Group's comprehensive security practices, certifications, and commitment to protecting your data and systems."
         canonical="/security"
       />
@@ -256,9 +267,9 @@ export default function Security() {
                   <div className="text-3xl font-bold text-cyan-400">24/7</div>
                   <div className="text-slate-400">Monitoring</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center">;
                   <div className="text-3xl font-bold text-cyan-400">&lt; 15min</div>
-                  <div className="text-slate-400">Response Time</div>
+                  <div className = "text-slate-400">Response Time</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">4+</div>
@@ -298,9 +309,18 @@ export default function Security() {
               {securityFeatures.map((category, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center mb-6">
@@ -336,9 +356,18 @@ export default function Security() {
               {certifications.map((cert, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${cert.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -371,9 +400,18 @@ export default function Security() {
               {securityPractices.map((practice, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center mb-6">
@@ -416,9 +454,18 @@ export default function Security() {
               {incidentResponse.map((phase, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${phase.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -454,9 +501,18 @@ export default function Security() {
               {securityTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center mb-6">
@@ -514,7 +570,7 @@ export default function Security() {
                 </p>
                                   <ul className="text-slate-300 text-sm space-y-1">
                     <li>• Emergency: +1 302 464 0950 (24/7)</li>
-                    <li>• Email: security@ziontechgroup.com</li>
+                    <li>• Email: security@ziontechgroup.com</li>;
                     <li>• Response time: &lt; 15 minutes</li>
                     <li>• Confidential handling guaranteed</li>
                   </ul>

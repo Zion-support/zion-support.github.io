@@ -69,9 +69,9 @@ interface AccessibilityFeature {
 }
 
 export default function EnhancedAccessibilityEnhancer({ 
-  enabled = true, 
-  showControls = true 
-}: { 
+  enabled = true, ;
+  showControls = true ;
+}: { ;
   enabled?: boolean; 
   showControls?: boolean; 
 }) {
@@ -186,7 +186,7 @@ export default function EnhancedAccessibilityEnhancer({
   const accessibilityRef = useRef<HTMLDivElement>(null);
 
   // Apply accessibility settings to the document
-  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
     const body = document.body;
 
@@ -226,7 +226,7 @@ export default function EnhancedAccessibilityEnhancer({
     }
 
     // Custom colors
-    if (newSettings.colorScheme === 'custom') {
+    if (newSettings.colorScheme = == 'custom') {;
       root.style.setProperty('--zion-custom-bg', newSettings.customColors.background);
       root.style.setProperty('--zion-custom-text', newSettings.customColors.text);
       root.style.setProperty('--zion-custom-primary', newSettings.customColors.primary);
@@ -264,7 +264,7 @@ export default function EnhancedAccessibilityEnhancer({
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: any) => {;
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
@@ -277,7 +277,7 @@ export default function EnhancedAccessibilityEnhancer({
         }
       };
 
-      recognition.onerror = (event: any) => {
+      recognition.onerror = (event: any) => {;
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -287,9 +287,9 @@ export default function EnhancedAccessibilityEnhancer({
   }, []);
 
   // Handle voice commands
-  const handleVoiceCommand = useCallback((command: string) => {
-    if (command.includes('open') || command.includes('show')) {
-      if (command.includes('accessibility') || command.includes('settings')) {
+  const handleVoiceCommand = useCallback((command: string) => {;
+    if (command.includes('open') || command.includes('show')) {;
+      if (command.includes('accessibility') || command.includes('settings')) {;
         setIsOpen(true);
       }
     } else if (command.includes('close') || command.includes('hide')) {
@@ -304,14 +304,14 @@ export default function EnhancedAccessibilityEnhancer({
   }, []);
 
   // Toggle accessibility features
-  const toggleFeature = useCallback((featureId: string) => {
-    setFeatures(prev => prev.map(f => 
-      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+  const toggleFeature = useCallback((featureId: string) => {;
+    setFeatures(prev => prev.map(f => ;
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f;
     ));
 
     // Update active features
-    setActiveFeatures(prev => {
-      if (prev.includes(featureId)) {
+    setActiveFeatures(prev = > {;
+      if (prev.includes(featureId)) {;
         return prev.filter(id => id !== featureId);
       } else {
         return [...prev, featureId];
@@ -356,11 +356,23 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Calculate WCAG compliance score
   useEffect(() => {
-    const scores = { A: 0, AA: 0, AAA: 0 };
+    const scores = {
+  A: 0, AA: 0,;
+  ;
+  ;
+  ;
+  ;
+  AAA: 0 ;
+
+
+
+
+
+};
     const totalFeatures = features.length;
     
-    features.forEach(feature => {
-      if (feature.enabled) {
+    features.forEach(feature = > {;
+      if (feature.enabled) {;
         scores[feature.wcagLevel]++;
       }
     });
@@ -374,20 +386,20 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + A to open accessibility panel
-      if (event.altKey && event.key === 'a') {
+    const handleKeyDown = (event: KeyboardEvent) => {;
+      // Alt + A to open accessibility panel;
+      if (event.altKey && event.key === 'a') {;
         event.preventDefault();
         setIsOpen(true);
       }
       
       // Escape to close
-      if (event.key === 'Escape') {
+      if (event.key = == 'Escape') {;
         setIsOpen(false);
       }
       
       // Tab navigation enhancement
-      if (event.key === 'Tab') {
+      if (event.key = == 'Tab') {;
         document.body.classList.add('keyboard-navigation');
         setTimeout(() => {
           document.body.classList.remove('keyboard-navigation');
@@ -400,7 +412,7 @@ export default function EnhancedAccessibilityEnhancer({
   }, []);
 
   // Save settings to localStorage
-  const saveSettings = useCallback(async () => {
+  const saveSettings = useCallback(async () => {;
     setIsLoading(true);
     try {
       localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
@@ -413,7 +425,7 @@ export default function EnhancedAccessibilityEnhancer({
   }, [settings]);
 
   // Load settings from localStorage
-  const loadSettings = useCallback(async () => {
+  const loadSettings = useCallback(async () => {;
     setIsLoading(true);
     try {
       const saved = localStorage.getItem('zion-accessibility-settings');
@@ -433,7 +445,7 @@ export default function EnhancedAccessibilityEnhancer({
   // Reset to default settings
   const resetSettings = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
+  highContrast: false,
       largeText: false,
       reducedMotion: false,
       screenReader: false,
@@ -451,9 +463,16 @@ export default function EnhancedAccessibilityEnhancer({
       customColors: {
         background: '#ffffff',
         text: '#000000',
-        primary: '#3b82f6',
-        secondary: '#64748b'
-      }
+        primary: '#3b82f6',;
+  ;
+  secondary: '#64748b';
+      ;
+;
+
+
+
+
+};
     };
     
     setSettings(defaultSettings);
@@ -462,7 +481,7 @@ export default function EnhancedAccessibilityEnhancer({
   }, [applyAccessibilitySettings]);
 
   // Toggle voice recognition
-  const toggleVoiceRecognition = useCallback(() => {
+  const toggleVoiceRecognition = useCallback(() => {;
     if (!voiceRecognition) return;
     
     if (isListening) {
@@ -481,7 +500,7 @@ export default function EnhancedAccessibilityEnhancer({
       {/* Floating Accessibility Button */}
       {showControls && (
         <motion.button
-          onClick={() => setIsOpen(true)}
+          onClick = {() => setIsOpen(true)}
           className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -503,9 +522,33 @@ export default function EnhancedAccessibilityEnhancer({
             ref={accessibilityRef}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
             >
               {/* Header */}
@@ -631,8 +674,24 @@ export default function EnhancedAccessibilityEnhancer({
                     {features.map((feature) => (
                       <motion.div
                         key={feature.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                         className={`p-4 rounded-xl border transition-all cursor-pointer ${
                           feature.enabled
                             ? 'bg-zion-cyan/10 border-zion-cyan'
@@ -689,9 +748,33 @@ export default function EnhancedAccessibilityEnhancer({
                   
                   {showAdvanced && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                       className="mt-4 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
                     >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -704,12 +787,24 @@ export default function EnhancedAccessibilityEnhancer({
                             min="12"
                             max="24"
                             value={settings.fontSize}
-                            onChange={(e) => {
-                              const newSettings = { ...settings, fontSize: parseInt(e.target.value) };
+                            onChange = {
+  (e) => {
+                              const newSettings = { ...settings,;
+  ;
+  ;
+  ;
+  ;
+  fontSize: parseInt(e.target.value) ;
+
+
+
+
+
+};
                               setSettings(newSettings);
                               applyAccessibilitySettings(newSettings);
                             }}
-                            className="w-full"
+                            className = "w-full"
                           />
                         </div>
                         
@@ -723,12 +818,24 @@ export default function EnhancedAccessibilityEnhancer({
                             max="2.0"
                             step="0.1"
                             value={settings.lineHeight}
-                            onChange={(e) => {
-                              const newSettings = { ...settings, lineHeight: parseFloat(e.target.value) };
+                            onChange = {
+  (e) => {
+                              const newSettings = { ...settings,;
+  ;
+  ;
+  ;
+  ;
+  lineHeight: parseFloat(e.target.value) ;
+
+
+
+
+
+};
                               setSettings(newSettings);
                               applyAccessibilitySettings(newSettings);
                             }}
-                            className="w-full"
+                            className = "w-full"
                           />
                         </div>
                       </div>
@@ -790,12 +897,12 @@ export default function EnhancedAccessibilityEnhancer({
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Global Accessibility Styles */}
-      <style jsx global>{`
-        .high-contrast {
+        )};
+      </AnimatePresence>;
+;
+      {/* Global Accessibility Styles */};
+      <style jsx global>{`;
+        .high-contrast {;
           --zion-bg: #000000 !important;
           --zion-text: #ffffff !important;
           --zion-primary: #ffff00 !important;
@@ -817,7 +924,7 @@ export default function EnhancedAccessibilityEnhancer({
           transition-duration: 0.01ms !important;
         }
         
-        [data-voice-control="true"] {
+        [data-voice-control = "true"] {;
           cursor: pointer;
         }
       `}</style>

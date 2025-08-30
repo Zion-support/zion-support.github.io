@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { ReactNode  } from 'react.ts';
-import { FuturisticNavigation  } from './FuturisticNavigation';
-import { FuturisticFooter  } from './FuturisticFooter';
-import { EnhancedSidebar  } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground  } from './FuturisticAnimatedBackground';
+import { FuturisticNavigation  } from "./FuturisticNavigation";
+import { FuturisticFooter  } from "./FuturisticFooter";
+import { EnhancedSidebar  } from "./EnhancedSidebar";
+import { FuturisticAnimatedBackground  } from "./FuturisticAnimatedBackground";
 
 interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
+=======
+import React from 'react';
+import { ReactNode } from 'react';
+import { FuturisticNavigation } from "./FuturisticNavigation";
+import { FuturisticFooter } from "./FuturisticFooter";
+import { EnhancedSidebar } from "./EnhancedSidebar";
+import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   children: ReactNode;
   showSidebar?: boolean}
@@ -31,9 +40,19 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
           {children}
         </main>
+<<<<<<< HEAD
       </div>
       
       {/* Footer */}
       <FuturisticFooter />
-    </div>
+    </div>;
   )};
+=======
+      </div>;
+      ;
+      {/* Footer */};
+      <FuturisticFooter />;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

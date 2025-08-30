@@ -3,36 +3,6 @@ import { Link } from 'react-router-dom';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
 const GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
-    const steps = [
-        {
-            number: 1,
-            title: "Discovery Call",
-            description: "Schedule a free consultation to discuss your needs",
-            icon: Phone,
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            number: 2,
-            title: "Solution Design",
-            description: "We'll design a customized solution for your business",
-            icon: Brain,
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            number: 3,
-            title: "Implementation",
-            description: "Our team implements the solution with your team",
-            icon: Star,
-            color: "from-green-500 to-teal-500"
-        },
-        {
-            number: 4,
-            title: "Launch & Support",
-            description: "Go live with ongoing support and optimization",
-            icon: CheckCircle,
-            color: "from-orange-500 to-red-500"
-        }
-    ];
     const services = [
         {
             title: "AI & Autonomous Systems",

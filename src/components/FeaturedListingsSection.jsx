@@ -116,7 +116,19 @@ export function FeaturedListingsSection() {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  <<<<<<< HEAD
+    hidden: { y: 30,
+  opacity: 0 
+},
+=======
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     visible: {
       y: 0,
       opacity: 1,
@@ -135,6 +147,7 @@ export function FeaturedListingsSection() {
     ))};
 
   return (
+<<<<<<< HEAD
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
@@ -145,8 +158,14 @@ export function FeaturedListingsSection() {
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-16" 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
+          initial = {
+  { opacity: 0,
+  y: 20 
+}} 
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}} 
           viewport={{ once: true }} 
           transition={{ duration: 0.6 }}
         >
@@ -158,6 +177,68 @@ export function FeaturedListingsSection() {
             and commitment to delivering exceptional results.
           </p>
         </motion.div>
+=======
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Featured Solutions
+          </motion.h2>
+          <motion.p 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+          >
+            Discover our most popular and innovative solutions that are transforming businesses worldwide
+          </motion.p>
+        </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" 
@@ -173,7 +254,10 @@ export function FeaturedListingsSection() {
               onHoverStart={() => setHoveredListing(listing.id)} 
               onHoverEnd={() => setHoveredListing(null)} 
               whileHover={{ y: -8 }} 
-              transition={{ type: "spring", stiffness: 300 }}
+              transition = {
+  { type: "spring",
+  stiffness: 300 
+}}
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
@@ -265,9 +349,18 @@ export function FeaturedListingsSection() {
                     {hoveredListing === listing.id && (
                       <motion.div 
                         className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
-                        initial={{ opacity: 0, height: 0, y: 10 }} 
-                        animate={{ opacity: 1, height: "auto", y: 0 }} 
-                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                        initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} 
+                        animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+}} 
+                        exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+}} 
                         transition={{ duration: 0.3 }}
                       >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
@@ -276,8 +369,14 @@ export function FeaturedListingsSection() {
                             <motion.div 
                               key={idx} 
                               className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
-                              initial={{ opacity: 0, x: -10 }} 
-                              animate={{ opacity: 1, x: 0 }} 
+                              initial = {
+  { opacity: 0,
+  x: -10 
+}} 
+                              animate = {
+  { opacity: 1,
+  x: 0 
+}} 
                               transition={{ delay: idx * 0.1 }}
                             >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -292,8 +391,14 @@ export function FeaturedListingsSection() {
                             <motion.span 
                               key={idx} 
                               className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
-                              initial={{ opacity: 0, scale: 0.8 }} 
-                              animate={{ opacity: 1, scale: 1 }} 
+                              initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} 
+                              animate = {
+  { opacity: 1,
+  scale: 1 
+}} 
                               transition={{ delay: idx * 0.1 }}
                             >
                               {tech}
@@ -311,11 +416,51 @@ export function FeaturedListingsSection() {
         
         {/* Enhanced bottom CTA */}
         <motion.div 
+<<<<<<< HEAD
           className="text-center mt-20" 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
+          initial = {
+  { opacity: 0,
+  y: 20 
+}} 
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}} 
           viewport={{ once: true }} 
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+          className="text-center mt-16"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">

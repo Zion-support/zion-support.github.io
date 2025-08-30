@@ -12,7 +12,7 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
 const mockUser = {
-    id: "user1",
+  id: "user1",
     name: "Alex Johnson",
     avatar: "https://i.pravatar.cc/150?img=3",
     role: "Verified Talent",
@@ -25,8 +25,14 @@ const mockUser = {
             name: "Answer Hero",
             description: "Provided 10 accepted answers",
             icon: "Award",
-            color: "#10B981"
-        },
+  color: "#10B981"
+        
+
+
+
+
+
+},
         {
             id: "badge2",
             name: "Top Contributor",
@@ -121,8 +127,25 @@ export default function CommunityProfilePage() {
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
+<<<<<<< HEAD
         </div>)}
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+}`}/>
+=======
+        </div>);
+    }
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+
+
+
+
+
+}`}/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">

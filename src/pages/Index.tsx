@@ -77,11 +77,11 @@ export default function Index(...args[]):  {
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-zion-blue text-white">
+    <div className = "min-h-screen bg-zion-blue text-white">
       <SEO 
         title={t("home.seo_title")} 
         description={t("home.seo_description")} 
@@ -180,9 +180,21 @@ export default function Index(...args[]):  {
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               ✉️ Get Quote
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </div>
     </div>
   )}
+=======;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+
+export default Home;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

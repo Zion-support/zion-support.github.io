@@ -219,7 +219,9 @@ import { Menu,
   Omega
  } from 'lucide-react';
 
-export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+export const EnhancedFuturisticNavigation: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -227,8 +229,14 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+<<<<<<< HEAD
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 20)};
+=======
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 20);
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
@@ -236,14 +244,22 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent)  => {
+<<<<<<< HEAD
+  const handleSearch = (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
 
-  const toggleDropdown = (dropdown: string)  => {
+<<<<<<< HEAD
+  const toggleDropdown = (dropdown: string)  => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
+=======
+  const toggleDropdown = (dropdown: string) => {;
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const navigationItems = [
     {
@@ -345,18 +361,18 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       isMain: true
     },
     {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
-      color: 'from-zion-cyan to-zion-purple',
-      isMain: true
-    }
+      name: 'Contact',;
+      href: '/contact',;
+      icon: Phone,;
+      color: 'from-zion-cyan to-zion-purple',;
+      isMain: true;
+    };
   ];
 
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      <nav className = {`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
           : 'bg-transparent'
@@ -417,9 +433,33 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          initial = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                         >
@@ -519,9 +559,33 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.3 }}
               className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
             >
@@ -565,9 +629,33 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
                           <AnimatePresence>
                             {activeDropdown === item.name && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
                               >
@@ -619,9 +707,19 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
             </motion.div>
           )}
         </AnimatePresence>
+<<<<<<< HEAD
       </nav>
 
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
-    </>
+    </>;
   )};
+=======
+      </nav>;
+;
+      {/* Spacer for fixed navigation */};
+      <div className="h-20"></div>;
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

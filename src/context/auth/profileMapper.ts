@@ -34,9 +34,19 @@ export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): 
     id: supabaseUser.id,
     email: supabaseUser.email || '',
     displayName: profile.display_name || supabaseUser.user_metadata?.full_name,
+<<<<<<< HEAD
     avatar: profile.avatar_url || supabaseUser.user_metadata?.avatar_url,
     role: profile.role,
     isEmailVerified: profile.is_email_verified || false,
     createdAt: profile.created_at || supabaseUser.created_at,
-    updatedAt: profile.updated_at || supabaseUser.updated_at
+    updatedAt: profile.updated_at || supabaseUser.updated_at;
   }};
+=======
+    avatar: profile.avatar_url || supabaseUser.user_metadata?.avatar_url,;
+    role: profile.role,;
+    isEmailVerified: profile.is_email_verified || false,;
+    createdAt: profile.created_at || supabaseUser.created_at,;
+    updatedAt: profile.updated_at || supabaseUser.updated_at;
+  };
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

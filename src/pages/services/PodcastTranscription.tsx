@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 function PodcastTranscription() {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO 
         title="Podcast Transcription & Repurposing"
         description="Accurate AI transcriptions, speaker diarization, show notes, and blog/social repurposing."
@@ -33,14 +33,21 @@ function PodcastTranscription() {
             </ul>
             <a href="/request-quote" className="btn-futuristic mt-4 inline-block">Upload sample</a>
           </div>
-        </div>
-        <p className="mt-10 text-sm text-zion-slate-light">
-          Explore more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
-        </p>
-      </section>
-    </div>
+        </div>;
+        <p className="mt-10 text-sm text-zion-slate-light">;
+          Explore more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
+        </p>;
+      </section>;
+    </div>;
   );
 }
 
 export default PodcastTranscription;
 
+
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;

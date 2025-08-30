@@ -20,7 +20,9 @@ interface UISettings {
   colorThemes: boolean;
   depthLayers: boolean}
 
-export const ModernUIEnhancer: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+export const ModernUIEnhancer: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
     glassmorphism: true,
@@ -60,8 +62,8 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     // Apply settings when they change
     applyUISettings()}, [settings]);
 
-  const initializeUIEnhancements = () => {
-    // Add CSS custom properties
+  const initializeUIEnhancements = () => {;
+    // Add CSS custom properties;
     addCSSVariables();
     
     // Add glassmorphism styles
@@ -76,10 +78,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     // Add color theme styles
     addColorThemeStyles()};
 
-  const addCSSVariables = () => {
+  const addCSSVariables = () => {;
     const style = document.createElement('style');
-    style.textContent = `
-      :root {
+    style.textContent = `;
+      :root {;
         --glass-bg: rgba(255, 255, 255, 0.1);
         --glass-border: rgba(255, 255, 255, 0.2);
         --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -116,10 +118,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style)};
 
-  const addGlassmorphismStyles = () => {
+  const addGlassmorphismStyles = () => {;
     const style = document.createElement('style');
-    style.textContent = `
-      .glass-card {
+    style.textContent = `;
+      .glass-card {;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -154,11 +156,18 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style)};
 
-  const addModernShadowStyles = () => {
+  const addModernShadowStyles = () => {;
     const style = document.createElement('style');
+<<<<<<< HEAD
     style.textContent = `
       .shadow-elevation-1 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)}
+=======;
+    style.textContent = `;
+      .shadow-elevation-1 {;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       
       .shadow-elevation-2 {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)}
@@ -181,10 +190,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style)};
 
-  const addDepthLayerStyles = () => {
+  const addDepthLayerStyles = () => {;
     const style = document.createElement('style');
-    style.textContent = `
-      .depth-1 {
+    style.textContent = `;
+      .depth-1 {;
         transform: translateZ(10px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)}
       
@@ -210,10 +219,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style)};
 
-  const addColorThemeStyles = () => {
+  const addColorThemeStyles = () => {;
     const style = document.createElement('style');
-    style.textContent = `
-      .theme-cyber {
+    style.textContent = `;
+      .theme-cyber {;
         --primary: #00ffff;
         --secondary: #ff00ff;
         --accent: #ffff00;
@@ -250,8 +259,8 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style)};
 
-  const setupParticleSystem = () => {
-    // Create floating particles
+  const setupParticleSystem = () => {;
+    // Create floating particles;
     const particleCount = 50;
     const newParticles = [];
     
@@ -269,25 +278,34 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     // Animate particles
     const animateParticles = () => {
       setParticles(prev => prev.map(particle => ({
+<<<<<<< HEAD
         ...particle,
         x: particle.x + particle.vx,
         y: particle.y + particle.vy,
         vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,
-        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy
+        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy;
       })))};
+=======
+        ...particle,;
+        x: particle.x + particle.vx,;
+        y: particle.y + particle.vy,;
+        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,;
+        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy;
+      })));
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     
     const interval = setInterval(animateParticles, 50);
     
     return () => clearInterval(interval)};
 
-  const setupSmoothScrolling = () => {
-    // Add smooth scrolling to all anchor links
+  const setupSmoothScrolling = () => {;
+    // Add smooth scrolling to all anchor links;
     const links = document.querySelectorAll('a[href^="#"]');
     
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
+    links.forEach(link = > {;
+      link.addEventListener('click', (e) => {;
         e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
         const targetElement = document.getElementById(targetId || '');
         
         if (targetElement) {
@@ -297,7 +315,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
           })}
       })})};
 
-  const applyUISettings = () => {
+  const applyUISettings = () => {;
     const root = document.documentElement;
     
     // Apply glassmorphism
@@ -329,8 +347,8 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     root.className = root.className.replace(/theme-\w+/g, '');
     root.classList.add(`theme-${activeTheme}`)};
 
-  const cleanupUIEnhancements = () => {
-    // Remove added styles
+  const cleanupUIEnhancements = () => {;
+    // Remove added styles;
     const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
     addedStyles.forEach(style => style.remove());
     
@@ -338,17 +356,35 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     const root = document.documentElement;
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '')};
 
-  const toggleSetting = (setting: keyof UISettings)  => {
+<<<<<<< HEAD
+  const toggleSetting = (setting: keyof UISettings)  => {;
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }))};
 
-  const changeTheme = (theme: string)  => {
+  const changeTheme = (theme: string)  => {;
     setActiveTheme(theme)};
+=======
+  const toggleSetting = (setting: keyof UISettings) => {;
+    setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
+  };
+
+  const changeTheme = (theme: string) => {;
+    setActiveTheme(theme);
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
       {/* UI Enhancement Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.05, rotate: 5 }}
+        whileHover = {
+  { scale: 1.05,
+  rotate: 5 
+
+
+
+
+
+}}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
@@ -363,9 +399,33 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            initial = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+}}
             className="fixed bottom-20 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl shadow-2xl p-6 w-80 z-50 border border-white/20 dark:border-gray-700/50 glass-effect"
             role="dialog"
             aria-labelledby="ui-enhancement-title"
@@ -549,19 +609,44 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
             <motion.div
               key={particle.id}
               className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
-              style={{
+              style = {
+  {
                 left: particle.x,
                 top: particle.y,
-              }}
-              animate={{
+  <<<<<<< HEAD
+              
+}}
+              animate = {
+  {
                 scale[1, 1.5, 1],
                 opacity[0.6, 1, 0.6],
-              }}
+   
+}}
               transition={{
+=======
+  
+
+}}
+              animate = {
+  {
+                scale: [1, 1.5, 1],
+                opacity: [0.6, 1, 0.6],
+  
+
+}}
+              transition = {
+  {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
+  ease: "easeInOut"
+              
+
+
+
+
+
+}}
             />
           ))}
         </div>
@@ -572,17 +657,49 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         <div className="fixed top-20 right-20 pointer-events-none z-30">
           <motion.div
             className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
-            animate={{
+<<<<<<< HEAD
+            animate = {
+  {
               scale[1, 1.2, 1],
               rotate[0, 180, 360],
-            }}
-            transition={{
+   
+}}
+            transition = {
+  {
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
-            }}
+  ease: "easeInOut"
+            
+}}
           />
         </div>
       )}
-    </>
+    </>;
   )};
+=======
+            animate = {
+  {
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360],
+  
+
+}}
+            transition = {
+  {
+              duration: 8,
+              repeat: Infinity,
+  ease: "easeInOut"
+            
+
+
+
+
+;
+}};
+          />;
+        </div>;
+      )};
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

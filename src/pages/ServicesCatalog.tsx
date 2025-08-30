@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
-type Service = {
+type Service = {;
   name: string;
   path: string;
   summary: string;
@@ -41,14 +41,18 @@ const services: Service[] = [
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
 
-const groupByCategory = (items: Service[])  => items.reduce<Record<string, any>>((acc, s) => {
+<<<<<<< HEAD
+const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   (acc[s.category] = acc[s.category] || []).push(s);
   return acc}, {});
 
-const ServicesCatalog: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const ServicesCatalog: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const grouped = groupByCategory(services);
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       <SEO title="Services Catalog - Zion Tech Group" description="Explore our micro SaaS, IT, and AI solutions with features, benefits, and pricing." />
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-3">Services Catalog</h1>
@@ -76,12 +80,22 @@ const ServicesCatalog: React.FC = (): JSX.Element => {
       <section className="container mx-auto px-4 pb-20">
         <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
           <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
+<<<<<<< HEAD
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+          <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+          <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ServicesCatalog;
 

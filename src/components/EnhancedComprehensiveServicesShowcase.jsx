@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
+import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025";
+import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from "../data/ultimateInnovativeServices2027";
 
 const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
@@ -25,7 +25,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
     ];
 
     const filteredServices = allServices.filter(service => {
-        const matchesCategory = activeCategory === 'all' || service.type === activeCategory;
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());

@@ -4,12 +4,12 @@ export default function AIElasticsearch() {
   const features = [
     'AI-powered Elasticsearch optimization',
     'Intelligent Elasticsearch management',
-    'Automated Elasticsearch monitoring and alerting',
-    'Predictive analytics for Elasticsearch scaling',
-    'Smart Elasticsearch security and compliance',
-    'AI-driven Elasticsearch automation and orchestration',
-    'Real-time Elasticsearch analytics and insights',
-    'Custom AI models for Elasticsearch applications'
+    'Automated Elasticsearch monitoring and alerting',;
+    'Predictive analytics for Elasticsearch scaling',;
+    'Smart Elasticsearch security and compliance',;
+    'AI-driven Elasticsearch automation and orchestration',;
+    'Real-time Elasticsearch analytics and insights',;
+    'Custom AI models for Elasticsearch applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIElasticsearch() {
       name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Elasticsearch suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Elasticsearch suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Elasticsearch optimization',
-    'Elasticsearch management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Elasticsearch scaling and management'
+    'Elasticsearch optimization',;
+    'Elasticsearch management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Elasticsearch scaling and management';
   ];
 
   const benefits = [
-    'Improve Elasticsearch performance by 50-80%',
-    'Reduce Elasticsearch query time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance Elasticsearch reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Elasticsearch operations efficiently'
+    'Improve Elasticsearch performance by 50-80%',;
+    'Reduce Elasticsearch query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Elasticsearch reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Elasticsearch operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIElasticsearch() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

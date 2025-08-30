@@ -12,7 +12,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         if (onMessage) {
             onMessage(talent)}
         else {
-            navigate(`/messages?talentId=${talent.id}`)}
+            router(`/messages?talentId=${talent.id}`)}
     };
     const handleBook = (e) => {
         e.preventDefault();

@@ -16,7 +16,8 @@ import {
   Eye
 } from 'lucide-react';
 
-const Marketplace: React.FC = () => {
+<<<<<<< HEAD
+const Marketplace: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
@@ -29,7 +30,7 @@ const Marketplace: React.FC = () => {
     { id: 'cloud', name: 'Cloud & DevOps', count: 15 },
     { id: 'iot', name: 'IoT & Edge Computing', count: 10 },
     { id: 'blockchain', name: 'Blockchain', count: 6 },
-    { id: 'healthcare', name: 'Healthcare Tech', count: 9 }
+    { id: 'healthcare', name: 'Healthcare Tech', count: 9 };
   ];
 
   const solutions = [
@@ -110,11 +111,11 @@ const Marketplace: React.FC = () => {
       features: ["Cost optimization", "Resource management", "Budget tracking", "Automated scaling"],
       image: "☁️",
       badge: "Cost Effective"
-    }
+    };
   ];
 
   const filteredSolutions = solutions.filter(solution => {
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
     return matchesSearch && matchesCategory;
@@ -122,7 +123,7 @@ const Marketplace: React.FC = () => {
 
   const sortedSolutions = [...filteredSolutions].sort((a, b) => {
     switch (sortBy) {
-      case 'price-low':
+      case 'price-low':;
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -136,7 +137,7 @@ const Marketplace: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Marketplace - Zion Tech Group"
         description="Explore our marketplace of AI-powered technology solutions and services for enterprise transformation."
@@ -147,8 +148,14 @@ const Marketplace: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
@@ -156,18 +163,36 @@ const Marketplace: React.FC = () => {
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Marketplace</span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
             Discover cutting-edge AI, quantum computing, and emerging technology solutions 
             designed to transform your business operations and drive innovation.
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
             className="flex flex-wrap justify-center gap-4"
           >
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
@@ -246,9 +271,18 @@ const Marketplace: React.FC = () => {
             {sortedSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
               >
@@ -334,11 +368,11 @@ const Marketplace: React.FC = () => {
               <h3 className="text-2xl font-semibold text-white mb-2">No solutions found</h3>
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories.</p>
               <button
-                onClick={() => {
+                onClick={() => {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                className = "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
               >
                 View All Solutions
               </button>
@@ -351,8 +385,14 @@ const Marketplace: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -370,8 +410,23 @@ const Marketplace: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
+=======
+const Marketplace: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
+		<div className="max-w-3xl mx-auto px-4 text-white">
+			<h1 className="text-4xl font-bold mb-6">Marketplace</h1>
+			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>
+				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>;
+				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>;
+				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>;
+			</div>;
+		</div>;
+	</div>;
+);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Marketplace;

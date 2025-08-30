@@ -4,12 +4,12 @@ export default function AIVideoAnalytics() {
   const features = [
     'Real-time video analysis with AI-powered object detection',
     'Advanced facial recognition and person tracking',
-    'Behavioral analysis and anomaly detection',
-    'Automated video summarization and highlights',
-    'Multi-camera synchronization and analytics',
-    'Custom AI models for industry-specific use cases',
-    'Cloud-based processing with edge computing options',
-    'Integration with major security and analytics platforms'
+    'Behavioral analysis and anomaly detection',;
+    'Automated video summarization and highlights',;
+    'Multi-camera synchronization and analytics',;
+    'Custom AI models for industry-specific use cases',;
+    'Cloud-based processing with edge computing options',;
+    'Integration with major security and analytics platforms';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIVideoAnalytics() {
       name: 'Professional', 
       price: '$599/mo', 
       details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,499/mo', 
-      details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Retail analytics and customer behavior tracking',
-    'Security surveillance and threat detection',
-    'Manufacturing quality control and safety monitoring',
-    'Traffic analysis and smart city applications',
-    'Healthcare patient monitoring and safety',
-    'Sports analytics and performance tracking'
+    'Retail analytics and customer behavior tracking',;
+    'Security surveillance and threat detection',;
+    'Manufacturing quality control and safety monitoring',;
+    'Traffic analysis and smart city applications',;
+    'Healthcare patient monitoring and safety',;
+    'Sports analytics and performance tracking';
   ];
 
   const benefits = [
-    'Reduce security incidents by 60-80%',
-    'Improve operational efficiency by 30-50%',
-    'Cut manual monitoring costs by 70-90%',
-    'Enhance safety compliance and reporting',
-    'Gain actionable insights from video data',
-    'Scale security operations without additional staff'
+    'Reduce security incidents by 60-80%',;
+    'Improve operational efficiency by 30-50%',;
+    'Cut manual monitoring costs by 70-90%',;
+    'Enhance safety compliance and reporting',;
+    'Gain actionable insights from video data',;
+    'Scale security operations without additional staff';
   ];
 
   const industries = [
-    'Retail & Shopping Centers',
-    'Manufacturing & Industrial',
-    'Healthcare & Hospitals',
-    'Transportation & Logistics',
-    'Education & Universities',
-    'Government & Public Safety'
+    'Retail & Shopping Centers',;
+    'Manufacturing & Industrial',;
+    'Healthcare & Hospitals',;
+    'Transportation & Logistics',;
+    'Education & Universities',;
+    'Government & Public Safety';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIVideoAnalytics() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

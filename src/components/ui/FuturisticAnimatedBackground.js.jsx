@@ -76,11 +76,13 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         function getParticleColor() {
             const colors = {
-                cyberpunk['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
+  cyberpunk['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
                 quantum['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],
                 neon['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],
-                matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00', '#bfff00']
-            };
+                matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00',
+  '#bfff00']
+            
+};
             return colors[variant][Math.floor(Math.random() * colors[variant].length)]}
         // Initialize particles
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
@@ -114,7 +116,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particlesRef.current.length; i++) {
                 for (let j = i + 1; j < particlesRef.current.length; j++) {
-                    const dx = particlesRef.current[i].x - particlesRef.current[j].x;
                     const dy = particlesRef.current[i].y - particlesRef.current[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
@@ -178,15 +179,18 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 cancelAnimationFrame(animationRef.current)}
         }}, [variant, intensity]);
     return (<div className={`fixed inset-0 -z-10 overflow-hidden ${className}`}>
-      <canvas ref={canvasRef} className="w-full h-full" style={{
+      <canvas ref={canvasRef} className="w-full h-full" style = {
+  {
             background: variant === 'matrix'
                 ? 'linear-gradient(0deg, #000000 0%, #001a00 50%, #000000 100%)'
                 : variant === 'cyberpunk'
                     ? 'linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%)'
                     : variant === 'quantum'
                         ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)'
-                        : 'linear-gradient(180deg, #000000 0%, #1a0033 50%, #000000 100%)'
-        }}/>
+                        : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,
+  #000000 100%)'
+        
+}}/>
       
       {/* Overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -198,31 +202,48 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 pointer-events-none">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate={{
+        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate = {
+  {
             rotate: 360,
             scale[1, 1.2, 1],
-            opacity[0.3, 0.6, 0.3]
-        }} transition={{
+            opacity[0.3, 0.6,
+  0.3]
+        
+}} transition = {
+  {
             duration: 8,
             repeat: Infinity,
-            ease: "linear"
-        }}/>
-        <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate={{
+  ease: "linear"
+        
+}}/>
+        <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {
+  {
             y[0, -20, 0],
-            opacity[0.2, 0.5, 0.2]
-        }} transition={{
+            opacity[0.2, 0.5,
+  0.2]
+        
+}} transition = {
+  {
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
-        }}/>
-        <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate={{
+  ease: "easeInOut"
+        
+}}/>
+        <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {
+  {
             rotate[0, 180, 360],
-            scale[1, 1.1, 1]
-        }} transition={{
+            scale[1, 1.1,
+  1]
+        
+}} transition = {
+  {
             duration: 10,
             repeat: Infinity,
-            ease: "linear"
-        }}/>
+  ease: "linear"
+        
+}}/>
       </div>
     </div>)};
 export default FuturisticAnimatedBackground;
+
+export default getParticleColor;

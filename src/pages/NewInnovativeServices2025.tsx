@@ -146,12 +146,12 @@ export default function NewInnovativeServices2025() {
       description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",
       icon: Brain,
       category: "Customer Experience",
-      price: "From $399/month",
-      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],
-      link: "/services/ai-customer-experience-analytics",
-      color: "from-zion-cyan to-zion-purple",
-      popular: false
-    }
+      price: "From $399/month",;
+      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],;
+      link: "/services/ai-customer-experience-analytics",;
+      color: "from-zion-cyan to-zion-purple",;
+      popular: false;
+    };
   ];
 
   const serviceCategories = [
@@ -201,12 +201,12 @@ export default function NewInnovativeServices2025() {
       services: [
         "AI Workflow Orchestrator",
         "AI Project Management",
-        "Customer Support Automation",
-        "Email Automation",
-        "Process Optimization"
-      ],
-      color: "from-zion-purple to-zion-orange"
-    }
+        "Customer Support Automation",;
+        "Email Automation",;
+        "Process Optimization";
+      ],;
+      color: "from-zion-purple to-zion-orange";
+    };
   ];
 
   const benefits = [
@@ -224,16 +224,16 @@ export default function NewInnovativeServices2025() {
       icon: Users,
       title: "Enhanced Customer Experience",
       description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
-    },
-    {
-      icon: Shield,
-      title: "Improved Security",
-      description: "Advanced security measures and compliance automation protect your business and data"
-    }
+    },;
+    {;
+      icon: Shield,;
+      title: "Improved Security",;
+      description: "Advanced security measures and compliance automation protect your business and data";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
@@ -245,8 +245,24 @@ export default function NewInnovativeServices2025() {
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
@@ -289,8 +305,24 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -307,9 +339,33 @@ export default function NewInnovativeServices2025() {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
                     service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'
@@ -367,8 +423,24 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -385,9 +457,33 @@ export default function NewInnovativeServices2025() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-600/50 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
                 >
@@ -419,8 +515,24 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -437,9 +549,33 @@ export default function NewInnovativeServices2025() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
                 >
@@ -458,8 +594,24 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -509,11 +661,11 @@ export default function NewInnovativeServices2025() {
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
                 <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </div>;
   );
 }

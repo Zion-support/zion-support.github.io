@@ -16,10 +16,12 @@ export function ITServiceRequestHero() {
             // Simulate API call
             setTimeout(() => {
                 setIsSubmitting(false);
-                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
+                router(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
     };
     const containerVariants = {
-        hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+},
         visible: {
             opacity: 1,
             y: 0,
@@ -30,7 +32,9 @@ export function ITServiceRequestHero() {
         }
     };
     const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+},
         visible: {
             opacity: 1,
             y: 0,

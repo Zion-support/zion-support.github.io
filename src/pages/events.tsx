@@ -149,7 +149,7 @@ const events = [
       "Success metrics"
     ],
     image: "/images/digital-transformation-summit.jpg"
-  }
+  };
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
@@ -162,12 +162,10 @@ export default function Events(...args[]):  {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredEvents = events.filter(event => {
-    const matchesType = selectedType === 'All' || event.type === selectedType;
+  const filteredEvents = events.filter(event => {;
     const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesType && matchesCategory && matchesStatus && matchesSearch});
@@ -175,7 +173,7 @@ export default function Events(...args[]):  {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string)  => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -185,7 +183,7 @@ export default function Events(...args[]):  {
     })};
 
   const getCategoryIcon = (category: string)  => {
-    switch (category) {
+    switch (category) {;
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
       case 'Cloud & DevOps': return Cloud;
@@ -198,17 +196,23 @@ export default function Events(...args[]):  {
   const getStatusBadge = (status: string)  => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>} else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>};
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -296,8 +300,14 @@ export default function Events(...args[]):  {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -307,14 +317,23 @@ export default function Events(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {
+              {upcomingEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
-                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    key = {event.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                   >
@@ -412,8 +431,14 @@ export default function Events(...args[]):  {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -423,14 +448,23 @@ export default function Events(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {
+              {pastEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
-                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    key = {event.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
                   >
@@ -490,8 +524,14 @@ export default function Events(...args[]):  {
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -523,3 +563,4 @@ export default function Events(...args[]):  {
       </section>
     </div>
   )}
+;

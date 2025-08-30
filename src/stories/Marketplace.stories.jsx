@@ -1,24 +1,44 @@
-import Marketplace from '../pages/Marketplace';
+import Marketplace from "../pages/Marketplace";
 import { MemoryRouter } from 'react-router-dom';
 const meta = {
-    title: 'Pages/Marketplace',
+  title: 'Pages/Marketplace',
     component: Marketplace,
-    decorators: [
+  decorators: [
         (Story) => (<MemoryRouter>
         <Story />
       </MemoryRouter>)
     ]
+
+
+
+
+
+
 };
 export default meta;
 export const Grid = {
-    render: () => {
-        localStorage.setItem('marketplaceView', 'grid');
+  render: () => {
+        localStorage.setItem('marketplaceView',
+  'grid');
         return <Marketplace />;
-    }
+    
+
+
+
+
+
+}
 };
 export const List = {
-    render: () => {
-        localStorage.setItem('marketplaceView', 'list');
+  render: () => {
+        localStorage.setItem('marketplaceView',
+  'list');
         return <Marketplace />;
-    }
+    
+
+
+
+
+
+}
 };

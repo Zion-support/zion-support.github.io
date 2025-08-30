@@ -36,15 +36,16 @@ export const SERVICE_CATEGORIES = [
   'Quantum Computing',
   'Blockchain & Web3',
   'Cybersecurity',
-  'IoT & Edge Computing',
-  'Metaverse & AR/VR',
-  'Robotics & Automation',
-  'Biotechnology',
-  'Space Technology',
-  'Green Technology'
+  'IoT & Edge Computing',;
+  'Metaverse & AR/VR',;
+  'Robotics & Automation',;
+  'Biotechnology',;
+  'Space Technology',;
+  'Green Technology';
 ];
 
 export const SERVICE_SUBCATEGORIES = {
+  <<<<<<< HEAD
   'AI & Automation'['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
   'Quantum Computing'['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
   'Blockchain & Web3'['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
@@ -55,6 +56,28 @@ export const SERVICE_SUBCATEGORIES = {
   'Biotechnology'['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
   'Space Technology'['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
   'Green Technology'['Renewable Energy', 'Carbon Capture', 'Sustainable Materials', 'Clean Transportation']
+=======
+  'AI & Automation': ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
+  'Quantum Computing': ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
+  'Blockchain & Web3': ['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
+  'Cybersecurity': ['Zero Trust Architecture', 'Threat Intelligence', 'Incident Response', 'Compliance Automation'],
+  'IoT & Edge Computing': ['Edge AI', 'Industrial IoT', 'Smart Cities', 'Connected Devices'],
+  'Metaverse & AR/VR': ['Virtual Worlds', 'Augmented Reality', 'Digital Twins', 'Virtual Events'],
+  'Robotics & Automation': ['Autonomous Systems', 'Collaborative Robots', 'Service Robots', 'Industrial Automation'],
+  'Biotechnology': ['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
+  'Space Technology': ['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
+  'Green Technology': ['Renewable Energy', 'Carbon Capture', 'Sustainable Materials',;
+  ;
+  ;
+  ;
+  'Clean Transportation'];
+;
+
+
+
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 };
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [

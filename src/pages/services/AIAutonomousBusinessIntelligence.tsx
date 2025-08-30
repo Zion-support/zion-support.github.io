@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import {
   Brain,
   TrendingUp,
@@ -64,12 +64,12 @@ export default function AIAutonomousBusinessIntelligence() {
       icon: BarChart3,
       title: "Multi-dimensional Analysis",
       description: "Comprehensive analysis across multiple business dimensions including financial, operational, and market factors."
-    },
-    {
-      icon: Eye,
-      title: "Pattern Recognition",
-      description: "Advanced algorithms that identify hidden patterns and correlations in complex business data."
-    }
+    },;
+    {;
+      icon: Eye,;
+      title: "Pattern Recognition",;
+      description: "Advanced algorithms that identify hidden patterns and correlations in complex business data.";
+    };
   ];
 
   const benefits = [
@@ -97,12 +97,12 @@ export default function AIAutonomousBusinessIntelligence() {
       icon: Cpu,
       title: "Advanced AI Models",
       description: "State-of-the-art machine learning algorithms trained on industry-specific data."
-    },
-    {
-      icon: Database,
-      title: "Real-time Data Processing",
-      description: "Process and analyze massive amounts of data in real-time for instant insights."
-    }
+    },;
+    {;
+      icon: Database,;
+      title: "Real-time Data Processing",;
+      description: "Process and analyze massive amounts of data in real-time for instant insights.";
+    };
   ];
 
   const intelligenceTypes = [
@@ -130,12 +130,12 @@ export default function AIAutonomousBusinessIntelligence() {
       icon: Lightbulb,
       title: "Innovation Intelligence",
       description: "AI-powered identification of new opportunities and innovation pathways."
-    },
-    {
-      icon: Rocket,
-      title: "Growth Intelligence",
-      description: "Strategic growth planning and execution optimization based on market analysis."
-    }
+    },;
+    {;
+      icon: Rocket,;
+      title: "Growth Intelligence",;
+      description: "Strategic growth planning and execution optimization based on market analysis.";
+    };
   ];
 
   const useCases = [
@@ -163,16 +163,16 @@ export default function AIAutonomousBusinessIntelligence() {
       icon: GraduationCap,
       title: "Educational Institutions",
       description: "Autonomous student performance analysis and educational program optimization."
-    },
-    {
-      icon: Home,
-      title: "Real Estate",
-      description: "AI-driven property valuation, market analysis, and investment optimization."
-    }
+    },;
+    {;
+      icon: Home,;
+      title: "Real Estate",;
+      description: "AI-driven property valuation, market analysis, and investment optimization.";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Autonomous Business Intelligence | Zion Tech Group"
         description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
@@ -182,8 +182,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -217,8 +233,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -235,9 +267,33 @@ export default function AIAutonomousBusinessIntelligence() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
               >
@@ -256,8 +312,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -274,9 +346,33 @@ export default function AIAutonomousBusinessIntelligence() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
               >
@@ -295,8 +391,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -313,9 +425,33 @@ export default function AIAutonomousBusinessIntelligence() {
             {intelligenceTypes.map((type, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
@@ -334,8 +470,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -352,9 +504,33 @@ export default function AIAutonomousBusinessIntelligence() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500 transition-all duration-300"
               >
@@ -373,8 +549,24 @@ export default function AIAutonomousBusinessIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -399,11 +591,11 @@ export default function AIAutonomousBusinessIntelligence() {
                 className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Schedule Consultation
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </motion.button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

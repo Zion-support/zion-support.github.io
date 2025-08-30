@@ -22,15 +22,16 @@ export const useAnalytics = (config = {}) => {
         const sessionId = generateSessionId();
         sessionRef.current = sessionId;
         const session = {
-            id: sessionId,
+  id: sessionId,
             startTime: Date.now(),
             lastActivity: Date.now(),
             pageViews: 0,
             interactions: 0,
             referrer: document.referrer,
             userAgent: navigator.userAgent,
-            deviceInfo: getDeviceInfo()
-        };
+  deviceInfo: getDeviceInfo()
+        
+};
         setCurrentSession(session);
         trackEvent('session', 'start', 'session_started')}, []);
     // Start tracking
@@ -64,7 +65,7 @@ export const useAnalytics = (config = {}) => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId(),
+  id: generateEventId(),
             type: 'custom',
             category,
             action,
@@ -72,8 +73,9 @@ export const useAnalytics = (config = {}) => {
             value,
             timestamp: Date.now(),
             sessionId: currentSession.id,
-            metadata
-        };
+  metadata
+        
+};
         setEvents(prev => [...prev, event]);
         updateSessionActivity()}, [isTracking, currentSession]);
     // Track page view
@@ -81,7 +83,7 @@ export const useAnalytics = (config = {}) => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId(),
+  id: generateEventId(),
             type: 'pageview',
             category: 'navigation',
             action: 'page_view',
@@ -91,8 +93,9 @@ export const useAnalytics = (config = {}) => {
             metadata: {
                 url: window.location.href,
                 title: document.title,
-                referrer: document.referrer
-            }
+  referrer: document.referrer
+            
+}
         };
         setEvents(prev => [...prev, event]);
         setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null);
@@ -108,15 +111,16 @@ export const useAnalytics = (config = {}) => {
             const paintEntries = performance.getEntriesByType('paint');
             const layoutShiftEntries = performance.getEntriesByType('layout-shift');
             const metrics = {
-                pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+  pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
                 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0,
                 firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
                 largestContentfulPaint: 0, // Will be updated by LCP observer
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
-                firstInputDelay: 0 // Will be updated by FID observer
-            };
+  firstInputDelay: 0 // Will be updated by FID observer
+            
+};
             setPerformanceMetrics(metrics);
-            trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics })}
+            trackEvent('performance', 'metrics_captured', 'performance_tracking', null, { metrics })}
         catch (error) {
             console.error('Failed to track performance metrics:', error)}
     }, [enablePerformanceTracking]);
@@ -124,12 +128,11 @@ export const useAnalytics = (config = {}) => {
     const setupUserBehaviorTracking = useCallback(() => {
         // Click tracking
         const handleClick = (event) => {
-            const target = event.target;
             const tagName = target.tagName.toLowerCase();
             const className = target.className;
             const id = target.id;
             const text = target.textContent?.slice(0, 50);
-            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
+            trackEvent('interaction', 'click', `${tagName}_clicked`, null, {
                 tagName,
                 className,
                 id,
@@ -147,7 +150,7 @@ export const useAnalytics = (config = {}) => {
         // Form interaction tracking
         const handleFormInteraction = (event) => {
             const target = event.target;
-            trackEvent('interaction', 'form_input', 'form_field_interaction', undefined, {
+            trackEvent('interaction', 'form_input', 'form_field_interaction', null, {
                 fieldType: target.type,
                 fieldName: target.name,
                 fieldValue: target.value?.slice(0, 100)
@@ -171,7 +174,7 @@ export const useAnalytics = (config = {}) => {
         const handleMouseMove = (event) => {
             clearTimeout(moveTimeout);
             moveTimeout = setTimeout(() => {
-                trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
+                trackEvent('heatmap', 'mouse_movement', 'mouse_position', null, {
                     x: event.clientX,
                     y: event.clientY,
                     timestamp: Date.now()
@@ -244,7 +247,7 @@ export const useAnalytics = (config = {}) => {
         trackEvent('conversion', goal, 'goal_achieved', value, metadata)}, [trackEvent]);
     // Track error
     const trackError = useCallback((error, context, metadata) => {
-        trackEvent('error', 'error_occurred', context, undefined, {
+        trackEvent('error', 'error_occurred', context, null, {
             errorMessage: error.message,
             errorStack: error.stack,
             ...metadata
@@ -269,8 +272,6 @@ export const useAnalytics = (config = {}) => {
         stopTracking
     }};
 // Utility functions
-const generateSessionId = () => {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
 const generateEventId = () => {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
 const getDeviceInfo = () => {

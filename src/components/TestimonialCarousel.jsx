@@ -75,25 +75,16 @@ export function TestimonialCarousel() {
     useEffect(() => {
         const timer = setInterval(() => {
             setDirection(1);
+<<<<<<< HEAD
             setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 5000);
         return () => clearInterval(timer)}, []);
-    const slideVariants = {
-        enter: (direction) => ({
-            x: direction > 0 ? 1000 : -1000,
-            opacity: 0
-        }),
-        center: {
-            zIndex: 1,
-            x: 0,
-            opacity: 1
-        },
-        exit: (direction) => ({
-            zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
-            opacity: 0
-        })
-    };
     const swipeConfidenceThreshold = 10000;
+=======
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity};
     const paginate = (newDirection) => {
@@ -112,7 +103,23 @@ export function TestimonialCarousel() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Users Say</span>
           </h2>
@@ -124,10 +131,34 @@ export function TestimonialCarousel() {
         {/* Testimonial Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence initial={false} custom={direction}>
-            <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition = {
+  {
+            x: { type: "spring", stiffness: 300,
+  damping: 30 
+
+
+
+
+
+},
             opacity: { duration: 0.2 }
-        }} drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={1} onDragEnd={(e, { offset, velocity }) => {
+        }} drag="x" dragConstraints = {
+  { left: 0,
+  right: 0 
+
+
+
+
+
+}} dragElastic={1} onDragEnd = {
+  (e, { offset,
+  velocity 
+
+
+
+
+
+}) => {
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
                 paginate(1)}
@@ -201,7 +232,31 @@ export function TestimonialCarousel() {
         </div>
 
         {/* Stats section */}
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
             <div className="text-zion-slate-light text-sm">Satisfaction Rate</div>

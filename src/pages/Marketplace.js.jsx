@@ -77,7 +77,7 @@ export default function Marketplace() {
                     // Quote request functionality would go here
         console.log(`Quote requested for ${listing.title}`);
             // Navigate to the quote request page with the listing information
-            navigate("/request-quote", {
+            router("/request-quote", {
                 state: {
                     serviceType: listing.category,
                     specificItem: {
@@ -119,12 +119,14 @@ export default function Marketplace() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
           <div className="lg:col-span-1">
-            <FilterSidebar filters={{
+            <FilterSidebar filters = {
+  {
             selectedProductTypes,
             selectedLocations,
             selectedAvailability,
-            selectedRating
-        }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
+  selectedRating
+        
+}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
           
           {/* Main content */}

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { Users, 
   Brain, 
   Shield, 
@@ -19,6 +19,7 @@ import { Users,
   Star
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Team(...args[]):  {
   const teamMembers = [
     {
@@ -80,8 +81,18 @@ export default function Team(...args[]):  {
       linkedin: 'https://linkedin.com/in/priya-patel',
       github: 'https://github.com/priya-patel',
       email: 'priya@ziontechgroup.com'
-    }
+    };
   ];
+=======
+const Team: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">Our Team</h1>;
+			<p className="text-xl text-gray-300">Meet the people behind Zion Tech Group.</p>;
+		</div>;
+	</div>;
+);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const expertiseAreas = [
     {
@@ -119,7 +130,7 @@ export default function Team(...args[]):  {
       title: 'Sustainability',
       description: 'Green IT and environmental solutions',
       color: 'from-emerald-600 to-teal-600'
-    }
+    };
   ];
 
   const values = [
@@ -142,11 +153,11 @@ export default function Team(...args[]):  {
       icon: Zap,
       title: 'Excellence',
       description: 'We deliver world-class solutions with attention to detail'
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Our Team - Zion Tech Group"
         description="Meet the expert team behind Zion Tech Group's innovative AI and technology solutions."
@@ -156,17 +167,32 @@ export default function Team(...args[]):  {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
             Meet Our Team
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             We're a team of passionate technologists, innovators, and problem-solvers 
@@ -175,9 +201,18 @@ export default function Team(...args[]):  {
           
           {/* Contact Info */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
             className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-slate-300"
           >
             <a href="tel:+13024640950" className="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
@@ -200,8 +235,14 @@ export default function Team(...args[]):  {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -212,9 +253,18 @@ export default function Team(...args[]):  {
             {teamMembers.map((member, index)  => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="text-center mb-6">
@@ -272,8 +322,14 @@ export default function Team(...args[]):  {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -284,9 +340,18 @@ export default function Team(...args[]):  {
             {expertiseAreas.map((area, index)  => (
               <motion.div
                 key={area.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${area.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -304,8 +369,14 @@ export default function Team(...args[]):  {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -316,9 +387,18 @@ export default function Team(...args[]):  {
             {values.map((value, index)  => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -336,8 +416,14 @@ export default function Team(...args[]):  {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
@@ -365,3 +451,4 @@ export default function Team(...args[]):  {
       </section>
     </div>
   )}
+;

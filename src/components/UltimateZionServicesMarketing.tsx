@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ultimateZionServices2025 } from '../data/ultimate-zion-services-2025';
+import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 
-const UltimateZionServicesMarketing: React.FC = () => {
+const UltimateZionServicesMarketing: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -63,15 +63,15 @@ const UltimateZionServicesMarketing: React.FC = () => {
     { 
       id: 'it-services', 
       name: 'Enterprise IT Services', 
-      icon: '🖥️', 
-      color: 'from-gray-600 to-slate-600',
-      description: 'Advanced infrastructure and DevOps solutions',
-      marketSize: '$25.2 billion by 2027',
-      growthRate: '150% annually'
-    }
+      icon: '🖥️', ;
+      color: 'from-gray-600 to-slate-600',;
+      description: 'Advanced infrastructure and DevOps solutions',;
+      marketSize: '$25.2 billion by 2027',;
+      growthRate: '150% annually';
+    };
   ];
 
-  const getServicesByCategory = (categoryId: string) => {
+  const getServicesByCategory = (categoryId: string) => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };
@@ -79,14 +79,30 @@ const UltimateZionServicesMarketing: React.FC = () => {
   const selectedServices = getServicesByCategory(selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
             transition={{ duration: 0.6 }}
           >
             Zion Technology Group
@@ -98,9 +114,33 @@ const UltimateZionServicesMarketing: React.FC = () => {
           
           <motion.p 
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
           >
             Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations, 
             and cutting-edge technology services that transform industries and create unprecedented value.
@@ -109,9 +149,33 @@ const UltimateZionServicesMarketing: React.FC = () => {
           {/* Comp Highlights */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
               <div className="text-3xl mb-2">🚀</div>
@@ -138,9 +202,33 @@ const UltimateZionServicesMarketing: React.FC = () => {
           {/* Contact Information */}
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-purple-400/30" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
           >
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
@@ -181,8 +269,24 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="flex flex-wrap gap-4 justify-center" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} 
             transition={{ duration: 0.6 }}
           >
             {categories.map((category) => (
@@ -202,20 +306,36 @@ const UltimateZionServicesMarketing: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Category Overview */}
-      {selectedCategory !== 'all' && (
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            {(() => {
+;
+      {/* Category Overview */};
+      {selectedCategory !== 'all' && (;
+        <section className="py-12 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            {(() => {;
               const category = categories.find(c => c.id === selectedCategory);
               if (!category) return null;
               
               return (
                 <motion.div 
-                  className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  className = "bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                   transition={{ duration: 0.6 }}
                 >
                   <div className="text-center mb-8">
@@ -232,12 +352,12 @@ const UltimateZionServicesMarketing: React.FC = () => {
                         <div className="text-white text-lg">{category.marketSize}</div>
                       </div>
                       <div className="bg-white/10 rounded-lg p-4">
-                        <div className="text-purple-400 font-semibold">Growth Rate</div>
-                        <div className="text-white text-lg">{category.growthRate}</div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+                        <div className="text-purple-400 font-semibold">Growth Rate</div>;
+                        <div className="text-white text-lg">{category.growthRate}</div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </motion.div>;
               );
             })()}
           </div>
@@ -245,12 +365,28 @@ const UltimateZionServicesMarketing: React.FC = () => {
       )}
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className = "py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
@@ -275,8 +411,16 @@ const UltimateZionServicesMarketing: React.FC = () => {
             {selectedServices.map((service, index) => (
               <motion.div 
                 key={service.id} 
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
+                variants = {
+  {
+                  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+},
                   visible: {
                     opacity: 1,
                     y: 0,
@@ -416,8 +560,24 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -438,12 +598,12 @@ const UltimateZionServicesMarketing: React.FC = () => {
             <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>
               <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>
-              <p>🌍 Global support • 24/7 availability • Enterprise-grade security</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              <p>🌍 Global support • 24/7 availability • Enterprise-grade security</p>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

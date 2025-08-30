@@ -29,6 +29,7 @@ contactInfo: {
   compliance: string[];
   useCases: string[]}
 
+<<<<<<< HEAD
 export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   // Web3 & Metaverse Solutions
   {
@@ -681,22 +682,27 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export const enhancedInnovativeServices2027Categories = [
   'Web3 Solutions',
   'Metaverse Solutions',
   'Sustainable Tech',
   'NeuroTech Solutions',
   'Fusion Energy Solutions',
-  'OceanTech Solutions',
-  'AgriTech Solutions',
-  'Smart City Solutions',
-  'Digital Twin Solutions',
-  'Edge AI Solutions',
-  'Federated Learning Solutions'
+  'OceanTech Solutions',;
+  'AgriTech Solutions',;
+  'Smart City Solutions',;
+  'Digital Twin Solutions',;
+  'Edge AI Solutions',;
+  'Federated Learning Solutions';
 ];
 
-export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = (category: string)  => 
+<<<<<<< HEAD
+export const getEnhancedInnovativeServices2027ByCategory = (category: string)  => ;
   enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: string)  => 
+export const getEnhancedInnovativeServices2027ByCategory = (category: string) => ;
+  enhancedInnovativeServices2027.filter(service => service.category === category);
+export const getEnhancedInnovativeServices2027ById = (id: string) => ;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   enhancedInnovativeServices2027.find(service => service.id === id);

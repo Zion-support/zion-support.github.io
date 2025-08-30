@@ -25,10 +25,17 @@ import { Brain,
   Mail,
   ExternalLink,
   Search
+<<<<<<< HEAD
  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-import { EXPANDED_INNOVATIVE_SERVICES_2025  } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025  } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025  } from "../data/emergingTechServices2025";
+=======
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface Service {
 
   id: string;
@@ -58,42 +65,55 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
+<<<<<<< HEAD
     security: string[]}}
-const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
+=======
+    security: string[];
+  };
+}
+const ComprehensiveServicesShowcase: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories
-  const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+<<<<<<< HEAD
+  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     return cats}, [allServices]);
+=======
+  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    return cats;
+  }, [allServices]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {
+  const innovationLevels = useMemo(() => {;
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
     return levels}, [allServices]);
   // Filter services
-  const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {;
+    return allServices.filter(service => {;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
-      case 'AI & Customer Experience':
-      case 'AI & Supply Chain':
-      case 'AI & Legal Tech':
-      case 'AI & Healthcare':
-      case 'AI & Financial Services':
-      case 'AI & Content Marketing':
+      case 'AI & Customer Experience':;
+      case 'AI & Supply Chain':;
+      case 'AI & Legal Tech':;
+      case 'AI & Healthcare':;
+      case 'AI & Financial Services':;
+      case 'AI & Content Marketing':;
         return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
@@ -123,11 +143,13 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       case 'Autonomous Vehicles & Fleet Management':
         return <Rocket className="h-6 w-6" />;
       default:
-        return <Star className="h-6 w-6" />}
+        return <Star className = "h-6 w-6" />};
   };
-  const getInnovationLevelColor = (level: string)  => {
-    switch (level) {
-      case 'Cutting-edge':
+<<<<<<< HEAD
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
+      case 'Cutting-edge':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -137,7 +159,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,9 +276,33 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
             {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -370,16 +416,22 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
                 </div>
               </motion.div>
             ))}
-          </div>
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+          </div>;
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-16">;
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
+<<<<<<< HEAD
                   setSearchTerm('')}}
-                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
+=======;
+                  setSearchTerm('');
+                }}
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 Clear all filters
               </button>
@@ -411,10 +463,20 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Now
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default ComprehensiveServicesShowcase;

@@ -18,76 +18,7 @@ export default function Partners(...args[]):  {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
-  const partnerCategories = [
-    {
-      icon: Cloud,
-      title: 'Cloud & Infrastructure',
-      description: 'Strategic partnerships with leading cloud providers and infrastructure companies.',
-      partners[
-        { name: 'AWS', description: 'Amazon Web Services', logo: '☁️', tier: 'Platinum' },
-        { name: 'Microsoft Azure', description: 'Cloud computing platform', logo: '🔷', tier: 'Platinum' },
-        { name: 'Google Cloud', description: 'Cloud infrastructure services', logo: '🔵', tier: 'Gold' },
-        { name: 'DigitalOcean', description: 'Cloud infrastructure provider', logo: '🌊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Partnerships with cutting-edge AI research and development organizations.',
-      partners[
-        { name: 'OpenAI', description: 'Advanced AI research', logo: '🤖', tier: 'Gold' },
-        { name: 'Anthropic', description: 'AI safety and research', logo: '🧠', tier: 'Gold' },
-        { name: 'Hugging Face', description: 'Machine learning platform', logo: '🤗', tier: 'Silver' },
-        { name: 'Databricks', description: 'Data and AI platform', logo: '📊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Collaborations with security experts and compliance organizations.',
-      partners[
-        { name: 'CrowdStrike', description: 'Cybersecurity solutions', logo: '🦅', tier: 'Gold' },
-        { name: 'Palo Alto Networks', description: 'Network security', logo: '🌲', tier: 'Gold' },
-        { name: 'Rapid7', description: 'Security analytics', logo: '⚡', tier: 'Silver' },
-        { name: 'Qualys', description: 'Cloud security platform', logo: '🛡️', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Data & Analytics',
-      description: 'Partnerships with data management and analytics solution providers.',
-      partners[
-        { name: 'Snowflake', description: 'Data cloud platform', logo: '❄️', tier: 'Gold' },
-        { name: 'Tableau', description: 'Data visualization', logo: '📈', tier: 'Silver' },
-        { name: 'MongoDB', description: 'Database platform', logo: '🍃', tier: 'Silver' },
-        { name: 'Elastic', description: 'Search and analytics', logo: '🔍', tier: 'Silver' }
-      ]
-    }
-  ]
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Enhanced Capabilities',
-      description: 'Access to cutting-edge technologies and expertise through our partner network.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security solutions backed by industry-leading partners.'
-    },
-    {
-      icon: Rocket,
-      title: 'Faster Implementation',
-      description: 'Accelerated delivery through proven partner integrations and best practices.'
-    },
-    {
-      icon: Award,
-      title: 'Quality Assurance',
-      description: 'Solutions validated by our trusted partner ecosystem.'
-    }
-  ]
-
+<<<<<<< HEAD
   const partnershipLevels = [
     {
       name: 'Platinum',
@@ -130,17 +61,57 @@ export default function Partners(...args[]):  {
           </div>
           <div className="relative max-w-7xl mx-auto px-6 text-center">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
               <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
               Strategic
@@ -149,9 +120,33 @@ export default function Partners(...args[]):  {
               </span>
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
               className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
             >
               We collaborate with industry leaders to deliver comprehensive, cutting-edge 
@@ -163,8 +158,24 @@ export default function Partners(...args[]):  {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -180,9 +191,33 @@ export default function Partners(...args[]):  {
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
@@ -200,8 +235,24 @@ export default function Partners(...args[]):  {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -217,9 +268,33 @@ export default function Partners(...args[]):  {
               {partnerCategories.map((category, categoryIndex) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: categoryIndex * 0.2 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl p-8 shadow-sm"
                 >
@@ -237,9 +312,33 @@ export default function Partners(...args[]):  {
                     {category.partners.map((partner, partnerIndex)  => (
                       <motion.div
                         key={partner.name}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.4, delay: partnerIndex * 0.1 }}
+                        initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+                        whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                        transition = {
+  { duration: 0.4,
+  delay: partnerIndex * 0.1 
+
+
+
+
+
+}}
                         viewport={{ once: true }}
                         className="text-center p-4 rounded-lg border hover:shadow-md transition-all duration-300"
                       >
@@ -266,8 +365,24 @@ export default function Partners(...args[]):  {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -283,9 +398,33 @@ export default function Partners(...args[]):  {
               {partnershipLevels.map((level, index)  => (
                 <motion.div
                   key={level.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="relative"
                 >
@@ -315,8 +454,24 @@ export default function Partners(...args[]):  {
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-6"
@@ -324,9 +479,33 @@ export default function Partners(...args[]):  {
               Become a Partner
             </motion.h2>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="text-xl text-zion-slate-light mb-8"
             >
@@ -334,9 +513,33 @@ export default function Partners(...args[]):  {
               innovative solutions to businesses worldwide.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
@@ -353,9 +556,9 @@ export default function Partners(...args[]):  {
                 partnerships@ziontechgroup.com
               </a>
             </motion.div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};

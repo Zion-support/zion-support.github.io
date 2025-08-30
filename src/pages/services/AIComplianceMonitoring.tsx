@@ -4,12 +4,12 @@ export default function AIComplianceMonitoring() {
   const features = [
     'AI-powered compliance monitoring optimization',
     'Intelligent regulatory compliance tracking',
-    'Automated compliance reporting and alerting',
-    'Predictive analytics for compliance risks',
-    'Smart governance and policy management',
-    'AI-driven compliance automation and orchestration',
-    'Real-time compliance analytics and insights',
-    'Custom AI models for compliance applications'
+    'Automated compliance reporting and alerting',;
+    'Predictive analytics for compliance risks',;
+    'Smart governance and policy management',;
+    'AI-driven compliance automation and orchestration',;
+    'Real-time compliance analytics and insights',;
+    'Custom AI models for compliance applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIComplianceMonitoring() {
       name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Compliance monitoring optimization',
-    'Regulatory compliance tracking',
-    'Compliance reporting and analytics',
-    'Governance and policy management',
-    'Compliance automation and orchestration',
-    'Compliance scaling and management'
+    'Compliance monitoring optimization',;
+    'Regulatory compliance tracking',;
+    'Compliance reporting and analytics',;
+    'Governance and policy management',;
+    'Compliance automation and orchestration',;
+    'Compliance scaling and management';
   ];
 
   const benefits = [
-    'Improve compliance monitoring performance by 50-80%',
-    'Reduce compliance reporting time by 40-70%',
-    'Cut compliance operational costs by 35-65%',
-    'Enhance compliance reliability and scalability',
-    'Optimize resource utilization',
-    'Scale compliance operations efficiently'
+    'Improve compliance monitoring performance by 50-80%',;
+    'Reduce compliance reporting time by 40-70%',;
+    'Cut compliance operational costs by 35-65%',;
+    'Enhance compliance reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale compliance operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIComplianceMonitoring() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

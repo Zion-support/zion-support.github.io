@@ -21,7 +21,6 @@ import { useSelector } from 'react-redux';
 export function PrimaryNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
-    const isLoggedIn = !!user;
     const isMobile = useIsMobile();
     const { t } = useTranslation();
     const router = useRouter();
@@ -39,8 +38,14 @@ export function PrimaryNav() {
         e.preventDefault();
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
+<<<<<<< HEAD
             router.push(`/search/${slugify(query)}`);
             setQuery('')}
+=======
+            router(`/search/${slugify(query)}`);
+            setQuery('');
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
@@ -55,13 +60,25 @@ export function PrimaryNav() {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
-              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
-            console.log('PrimaryNav search suggestion selected:', sugg);
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
+  { width: 'clamp(12rem, 20vw,
+  16rem)' 
+
+
+
+
+
+}}>
+              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
+  (sugg) => {
+            console.log('PrimaryNav search suggestion selected:',
+  sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                router.push(`/marketplace/listing/${sugg.id}`)}
+<<<<<<< HEAD
+                router.push(`/marketplace/listing/${sugg.id
+}`)}
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
                 router.push(sugg.slug)}
@@ -71,9 +88,30 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
+=======
+                router(`/marketplace/listing/${sugg.id
+
+
+
+
+}`);
+            }
+            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                // Documentation suggestions navigate directly to their path
+                router(sugg.slug);
+            }
+            else if (sugg.type === 'blog' && sugg.slug) {
+                // Blog posts navigate to blog detail page
+                router(`/blog/${sugg.slug}`);
+            }
+            else {
+                // Default: search results page with slug
+                router(`/search/${sugg.slug || slugify(sugg.text)}`);
+            }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             setQuery('');
             // Track analytics event
-            if (typeof window !== 'undefined' && window.gtag) {
+            if (typeof window !== 'null' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
                     search_term: sugg.text,
                     suggestion_type: sugg.type,
@@ -87,7 +125,15 @@ export function PrimaryNav() {
               <PointsBadge />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
-                  <Link href="/cart" className="relative p-1" aria-label={t('nav.cart', 'Cart')}>
+                  <Link href="/cart" className="relative p-1" aria-label = {
+  t('nav.cart',
+  'Cart')
+
+
+
+
+
+}>
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
@@ -116,6 +162,7 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
+<<<<<<< HEAD
             </Link>
             <LanguageSelector />
             <ModeToggle />
@@ -128,6 +175,10 @@ export function PrimaryNav() {
                 </Link>
               </>)}
             {isLoggedIn && <UserMenu />}
+=======
+              {isLoggedIn && <UserMenu />}
+            </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
           
           {/* Mobile menu button */}

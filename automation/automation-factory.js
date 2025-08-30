@@ -28,12 +28,27 @@ class AutomationFactory {
   saveStatus() {
     try {
       const status = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         runningScripts: Object.fromEntries(this.runningScripts),
+  <<<<<<< HEAD
         totalScripts: this.scripts.size
-      };
+      
+};
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {
       this.log(`Error saving status: ${error.message}`)}
+=======
+  totalScripts: this.scripts.size
+      
+
+
+
+
+};
+      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
+    } catch (error) {
+      this.log(`Error saving status: ${error.message}`);
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -42,7 +57,14 @@ class AutomationFactory {
     fs.appendFileSync(this.logFile, logMessage)}
   loadExistingScripts() {
     const scriptTypes = {
-      'lint-monitor': { file: 'lint-monitor.js', description: 'Continuous lint monitoring' },
+  'lint-monitor': { file: 'lint-monitor.js',
+  description: 'Continuous lint monitoring' 
+
+
+
+
+
+},
       'lint-fixer': { file: 'lint-error-fixer.js', description: 'Automated lint error fixing' },
       'lint-manager': { file: 'lint-automation-manager.js', description: 'Lint automation management' }
     };
@@ -67,13 +89,26 @@ const { execSync } = require('child_process');
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
-      complexity: 0,
+  complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
+  <<<<<<< HEAD
       lastUpdated: new Date().toISOString()
-    };
+    
+};
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
+=======
+  lastUpdated: new Date().toISOString()
+    
+
+
+
+
+};
+    this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -198,12 +233,18 @@ class PerformanceOptimizer {
       
       // Generate optimization report
       const report = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         bundleSize: bundleAnalysis,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
-        recommendations: this.generateRecommendations()
-      };
+  recommendations: this.generateRecommendations()
+      
+
+
+
+
+
+};
       
       this.saveReport(report);
       this.log('Performance optimization completed');
@@ -234,7 +275,6 @@ class PerformanceOptimizer {
   analyzeDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
       return {
@@ -281,8 +321,13 @@ optimizer.optimizePerformance().then(report => {
   async runScript(scriptName, options = {}) {
     if (!this.scripts.has(scriptName)) {
       this.log(`Script '${scriptName}' not found`, 'ERROR');
+<<<<<<< HEAD
       return false}
     const script = this.scripts.get(scriptName);
+=======
+      return false;
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const startTime = Date.now();
     try {
       this.log(`Starting script: ${scriptName}`);

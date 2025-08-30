@@ -1,43 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
-const mockSecurityEvents = [
-    {
-        id: '1',
-        type: 'threat',
-        severity: 'critical',
-        title: 'Suspicious Login Attempts Detected',
-        description: 'Multiple failed login attempts from suspicious IP addresses detected across multiple user accounts.',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        source: '192.168.1.100',
-        status: 'investigating',
-        assignedTo: 'Security Team',
-        priority: 'immediate'
-    },
-    {
-        id: '2',
-        type: 'vulnerability',
-        severity: 'high',
-        title: 'Critical Security Patch Required',
-        description: 'High-severity vulnerability detected in production database server. Immediate patching required.',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        source: 'Database Server',
-        status: 'open',
-        assignedTo: 'DevOps Team',
-        priority: 'high'
-    },
-    {
-        id: '3',
-        type: 'compliance',
-        severity: 'medium',
-        title: 'SOC 2 Audit Due',
-        description: 'Annual SOC 2 Type II audit is due in 30 days. Several controls need attention.',
-        timestamp: '2024-01-15T08:00:00.000Z',
-        source: 'Compliance Team',
-        status: 'open',
-        assignedTo: 'Compliance Officer',
-        priority: 'high'
-    }
-];
+<<<<<<< HEAD
 const mockComplianceRequirements = [
     {
         id: '1',
@@ -115,6 +78,8 @@ const mockSecurityMetrics = [
         category: 'Remediation'
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockThreatIntelligence = [
     {
         id: '1',
@@ -153,10 +118,6 @@ export function AdvancedSecurityDashboard() {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const containerRef = useRef(null);
     const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
-    const frameworks = ['all', 'SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'PCI-DSS'];
-    const filteredEvents = selectedSeverity === 'all'
-        ? securityEvents
-        : securityEvents.filter(event => event.severity === selectedSeverity);
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
         : complianceRequirements.filter(req => req.framework === selectedFramework);

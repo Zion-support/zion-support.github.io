@@ -1,3 +1,21 @@
+<<<<<<< HEAD = ======;
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Training() {
+	return (
+		<div className = "min-h-screen bg-slate-900 text-white py-16">
+			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />;
+			<div className="container mx-auto px-4 max-w-4xl">;
+				<h1 className="text-4xl font-bold mb-4">Training</h1>;
+				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>;
+			</div>;
+		</div>;
+	);
+}
+
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
 
 export default function Training() {
@@ -9,28 +27,28 @@ export default function Training() {
   const categories = [
     { id: 'all', name: 'All Categories', icon: <GraduationCap className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },
-    { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 }
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },;
+    { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 };
   ];
 
-  const levels = [
-    { id: 'all', name: 'All Levels', count: 0 },
-    { id: 'beginner', name: 'Beginner', count: 0 },
-    { id: 'intermediate', name: 'Intermediate', count: 0 },
-    { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 }
+  const levels = [;
+    { id: 'all', name: 'All Levels', count: 0 },;
+    { id: 'beginner', name: 'Beginner', count: 0 },;
+    { id: 'intermediate', name: 'Intermediate', count: 0 },;
+    { id: 'advanced', name: 'Advanced', count: 0 },;
+    { id: 'expert', name: 'Expert', count: 0 };
   ];
 
-  const formats = [
-    { id: 'all', name: 'All Formats', count: 0 },
-    { id: 'online', name: 'Online', count: 0 },
-    { id: 'in-person', name: 'In-Person', count: 0 },
-    { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self-paced', name: 'Self-Paced', count: 0 }
+  const formats = [;
+    { id: 'all', name: 'All Formats', count: 0 },;
+    { id: 'online', name: 'Online', count: 0 },;
+    { id: 'in-person', name: 'In-Person', count: 0 },;
+    { id: 'hybrid', name: 'Hybrid', count: 0 },;
+    { id: 'self-paced', name: 'Self-Paced', count: 0 };
   ];
 
   const trainingPrograms = [
@@ -190,40 +208,58 @@ export default function Training() {
       modules: [
         'Digital Strategy Development',
         'Change Management and Culture',
-        'Technology Selection and Implementation',
-        'Stakeholder Management',
-        'Success Measurement'
-      ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
-    }
+        'Technology Selection and Implementation',;
+        'Stakeholder Management',;
+        'Success Measurement';
+      ],;
+      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy'];
+    };
   ];
 
   // Update counts
-  categories.forEach(cat  => {
+<<<<<<< HEAD
+  categories.forEach(cat = > {;
     cat.count = trainingPrograms.filter(p => p.category === cat.id).length});
 
-  levels.forEach(level => {
+  levels.forEach(level = > {;
     level.count = trainingPrograms.filter(p => p.level === level.id).length});
 
-  formats.forEach(format => {
+  formats.forEach(format = > {;
     format.count = trainingPrograms.filter(p => p.format === format.id).length});
+=======
+  categories.forEach(cat = > {;
+    cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
+  });
 
-  const filteredPrograms = trainingPrograms.filter(program => {
-    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  levels.forEach(level = > {;
+    level.count = trainingPrograms.filter(p => p.level === level.id).length;
+  });
+
+  formats.forEach(format = > {;
+    format.count = trainingPrograms.filter(p => p.format === format.id).length;
+  });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const filteredPrograms = trainingPrograms.filter(program => {;
+    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
     
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat});
 
-  const getCategoryIcon = (categoryId: string)  => {
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: string)  => {;
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />};
 
-  const getLevelColor = (level: string)  => {
-    switch (level) {
+  const getCategoryIcon = (categoryId: string) => {;
+    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
+  };
+
+  const getLevelColor = (level: string) => {;
+    switch (level) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
       case 'advanced': return 'text-orange-400';
@@ -231,24 +267,36 @@ export default function Training() {
       default: return 'text-zion-slate-light'}
   };
 
-  const getFormatIcon = (format: string)  => {
-    switch (format) {
+<<<<<<< HEAD
+  const getFormatIcon = (format: string) => {;
+    switch (format) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
       case 'hybrid': return <Users className="w-4 h-4" />;
       case 'self-paced': return <Clock className="w-4 h-5" />;
-      default: return <BookOpen className="w-4 h-4" />}
+      default: return <BookOpen className = "w-4 h-4" />};
   };
 
+<<<<<<< HEAD
   const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric';
     })};
+=======
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
+    });
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -551,9 +599,19 @@ export default function Training() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Advisor
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </div>
   )}
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

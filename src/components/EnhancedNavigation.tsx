@@ -57,9 +57,9 @@ const navigationItems: NavigationItem[] = [
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
-  className = '',
-  onThemeChange 
-}) => {
+  className = '',;
+  onThemeChange ;
+}) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
@@ -67,7 +67,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -80,14 +80,14 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
+  const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
     const root = document.documentElement;
     root.classList.remove('light', 'dark');
     
-    if (newTheme === 'system') {
+    if (newTheme = == 'system') {;
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme);
     } else {
@@ -97,16 +97,16 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = useCallback((label: string) => {
+  const toggleDropdown = useCallback((label: string) => {;
     setActiveDropdown(activeDropdown === label ? null : label);
   }, [activeDropdown]);
 
-  const closeDropdown = useCallback(() => {
+  const closeDropdown = useCallback(() => {;
     setActiveDropdown(null);
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
@@ -143,7 +143,15 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 {item.children ? (
                   <button
                     onClick={() => toggleDropdown(item.label)}
-                    onBlur={() => setTimeout(closeDropdown, 150)}
+                    onBlur = {
+  () => setTimeout(closeDropdown,
+  150)
+
+
+
+
+
+}
                     className="flex items-center space-x-1 text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                     aria-expanded={activeDropdown === item.label}
                     aria-haspopup="true"
@@ -167,9 +175,33 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   <AnimatePresence>
                     {activeDropdown === item.label && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
+                        initial = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50"
                       >
@@ -268,9 +300,33 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
           >
@@ -293,9 +349,33 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       
                       {activeDropdown === item.label && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
                         >
@@ -336,11 +416,11 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   <MapPin className="w-4 h-4" />
                   <span>123 Tech Street, Digital City</span>
                 </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+              </div>;
+            </div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </nav>;
   );
 };

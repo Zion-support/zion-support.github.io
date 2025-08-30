@@ -4,12 +4,12 @@ export default function AIDevOps() {
   const features = [
     'AI-powered DevOps optimization',
     'Intelligent DevOps pipeline management',
-    'Automated DevOps monitoring and alerting',
-    'Predictive analytics for DevOps scaling',
-    'Smart DevOps security and compliance',
-    'AI-driven DevOps automation and orchestration',
-    'Real-time DevOps analytics and insights',
-    'Custom AI models for DevOps applications'
+    'Automated DevOps monitoring and alerting',;
+    'Predictive analytics for DevOps scaling',;
+    'Smart DevOps security and compliance',;
+    'AI-driven DevOps automation and orchestration',;
+    'Real-time DevOps analytics and insights',;
+    'Custom AI models for DevOps applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIDevOps() {
       name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full DevOps suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full DevOps suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'DevOps optimization',
-    'DevOps pipeline management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'DevOps scaling and management'
+    'DevOps optimization',;
+    'DevOps pipeline management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'DevOps scaling and management';
   ];
 
   const benefits = [
-    'Improve DevOps performance by 50-80%',
-    'Reduce DevOps deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance DevOps reliability and scalability',
-    'Optimize resource utilization',
-    'Scale DevOps operations efficiently'
+    'Improve DevOps performance by 50-80%',;
+    'Reduce DevOps deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance DevOps reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale DevOps operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIDevOps() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

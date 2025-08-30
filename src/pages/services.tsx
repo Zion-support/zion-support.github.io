@@ -240,7 +240,7 @@ export default function Services(...args: []):  {
           reviewCount: 234
         }
       ]
-    }
+    };
   ];
 
   const emergingTechnologies = [
@@ -285,7 +285,7 @@ export default function Services(...args: []):  {
       description: 'Advanced space technology and satellite solutions',
       href: '/services/space-tech',
       color: 'from-slate-600 to-gray-600'
-    }
+    };
   ];
 
   const whyChooseUs = [
@@ -318,11 +318,12 @@ export default function Services(...args: []):  {
       icon: Lightbulb,
       title: 'Continuous Innovation',
       description: 'Ongoing R&D investment in emerging technologies'
-    }
+    };
   ];
 
 const Services: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-900">
       <SEO 
         title="Our Services - Zion Tech Group"
@@ -330,6 +331,95 @@ const Services: React.FC = () => {
         keywords="AI services, cloud solutions, cybersecurity, digital transformation, technology consulting, Zion Tech Group services"
         canonical="https://ziontechgroup.com/services"
       />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-24 text-center text-white">
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Our Services
+        </h1>
+        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+          Cutting-edge technology solutions designed to transform your business.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">AI Development</h3>
+            <p className="text-gray-300 mb-6">Custom AI models and machine learning solutions.</p>
+            <p className="text-2xl font-bold text-blue-400 mb-4">$5,000 - $50,000</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Cloud Migration</h3>
+            <p className="text-gray-300 mb-6">Seamless cloud migration and scalable architecture.</p>
+            <p className="text-2xl font-bold text-blue-400 mb-4">$10,000 - $100,000</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+            <p className="text-gray-300 mb-6">Comprehensive security solutions and assessments.</p>
+            <p className="text-2xl font-bold text-blue-400 mb-4">$3,000 - $25,000</p>
+          </div>
+        </div>
+        {/* New: Micro-SaaS Solutions */}
+        <div className="mt-24 text-left">
+          <h2 className="text-4xl font-bold mb-4">Micro-SaaS Solutions</h2>
+          <p className="text-gray-300 mb-10 max-w-4xl">Fast-to-deploy, subscription-based tools that solve specific business problems with clear ROI.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Sales Email Optimizer</h3>
+              <p className="text-gray-300 mb-4">Auto-drafts and A/B tests emails based on CRM context to raise reply rates.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>CRM integration (HubSpot, Salesforce)</li>
+                <li>Sequence testing and analytics</li>
+                <li>Compliance guardrails</li>
+              </ul>;
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>;
+              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>;
+            </div>;
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
+              <h3 className="text-2xl font-bold mb-2">Support Ticket Triage Copilot</h3>;
+              <p className="text-gray-300 mb-4">Classifies, deduplicates, and suggests resolutions; integrates with Zendesk/Jira.</p>
+              <ul className = "text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>Auto-priority and routing</li>
+                <li>Knowledge base suggestions</li>
+                <li>First-response macros</li>
+              </ul>;
+              <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>;
+              <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>;
+            </div>;
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
+              <h3 className="text-2xl font-bold mb-2">Invoice OCR + Reconciliation</h3>;
+              <p className="text-gray-300 mb-4">Extracts line-items and auto-matches to POs; exports to QuickBooks/Xero.</p>
+              <ul className = "text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>Vendor anomaly detection</li>
+                <li>Tax and currency support</li>
+                <li>Audit trails</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$199 - $799/month</p>
+              <a href="https://ziontechgroup.com/services" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">SEO Content Planner</h3>
+              <p className="text-gray-300 mb-4">Keyword clustering, brief generation, and on-page optimization recommendations.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>Competitor gap analysis</li>
+                <li>Automatic internal linking</li>
+                <li>Publish to CMS</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$99 - $399/month</p>
+              <a href="https://ziontechgroup.com/pricing" className="text-cyan-300 hover:text-cyan-200 font-semibold">Pricing →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">HR Screening Assistant</h3>
+              <p className="text-gray-300 mb-4">Summarizes resumes, auto-screens candidates, and schedules interviews.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>ATS integration</li>
+                <li>Bias-mitigation controls</li>
+                <li>Compliance exports</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$149 - $599/month</p>
+              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Talk to sales →</a>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -339,25 +429,49 @@ const Services: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             Our Services
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Comprehensive AI-powered solutions and technology services designed to transform your business and drive innovation
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <Link 
               to="/contact" 
@@ -380,8 +494,14 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -397,10 +517,19 @@ const Services: React.FC = () => {
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: categoryIndex * 0.1 
+}}
               >
                 <div className="text-center mb-12">
                   <div className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
@@ -414,10 +543,19 @@ const Services: React.FC = () => {
                   {category.services.map((service, serviceIndex)  => (
                     <motion.div
                       key={service.name}
-                      initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial = {
+  { opacity: 0,
+  x: serviceIndex % 2 === 0 ? -30 : 30 
+}}
+                      whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                      transition = {
+  { duration: 0.8,
+  delay: serviceIndex * 0.1 
+}}
                       className="group"
                     >
                       <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
@@ -468,8 +606,14 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -485,10 +629,19 @@ const Services: React.FC = () => {
             {emergingTechnologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="group"
               >
                 <Link to={tech.href} className="block h-full">
@@ -515,8 +668,14 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -532,10 +691,19 @@ const Services: React.FC = () => {
             {whyChooseUs.map((reason, index)  => (
               <motion.div
                 key={reason.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -547,6 +715,7 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -554,8 +723,14 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -563,19 +738,37 @@ const Services: React.FC = () => {
           </motion.h2>
           <motion.p 
             className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Let's discuss how our AI-powered solutions can revolutionize your operations and drive growth
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <Link 
               to="/contact" 
@@ -593,6 +786,15 @@ const Services: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+        <div className="mt-16">
+          <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">;
+            📞 Call +1 (302) 464-0950;
+          </a>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }
 

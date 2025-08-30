@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react';
-import { useAccessibility } from '../hooks/useAccessibility';
+import { useAccessibility } from "../hooks/useAccessibility";
 interface AccessibilityControlsProps {
   className?: string;
   position?: 'top-right' | 'bottom-right' | 'floating'}
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
-  className = '',
-  position = 'floating'
-}) => {
+  className = '',;
+  position = 'floating';
+}) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility();
   // Close panel when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) => {;
       const target = event.target as HTMLElement;
       if (!target.closest('.accessibility-controls')) {
         setIsOpen(false);
@@ -23,19 +23,32 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       document.addEventListener('mousedown', handleClickOutside);
       return () => document.removeEventListener('mousedown', handleClickOutside)}
   }, [isOpen]);
-  const togglePanel = () => {
+  const togglePanel = () => {;
     setIsOpen(!isOpen);
     if (!isOpen) {
       announceToScreenReader('Accessibility controls opened')}
   };
-  const toggleExpanded = () => {
+<<<<<<< HEAD
+  const toggleExpanded = () => {;
     setIsExpanded(!isExpanded)};
-  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
+  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {;
     savePreferences({ [key]: value });
     announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`)};
   const getPositionClasses = () => {
     switch (position) {
       case 'top-right':
+=======;
+  const toggleExpanded = () => {;
+    setIsExpanded(!isExpanded);
+  };
+  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {;
+    savePreferences({ [key]: value });
+    announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`);
+  };
+  const getPositionClasses = () => {;
+    switch (position) {;
+      case 'top-right':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'top-4 right-4';
       case 'bottom-right':
         return 'bottom-4 right-4';
@@ -44,7 +57,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         return 'bottom-4 right-4'}
   };
   return (
-    <div className={`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>
+    <div className = {`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>
       {/* Main Toggle Button */}
       <button
         onClick={togglePanel}
@@ -97,7 +110,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.highContrast}
-                    onChange={(e) => handlePreferenceChange('highContrast', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('highContrast',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
@@ -107,7 +128,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.largeText}
-                    onChange={(e) => handlePreferenceChange('largeText', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('largeText',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
@@ -126,7 +155,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.reducedMotion}
-                    onChange={(e) => handlePreferenceChange('reducedMotion', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('reducedMotion',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Reduce Motion</span>
@@ -145,7 +182,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.focusIndicator}
-                    onChange={(e) => handlePreferenceChange('focusIndicator', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('focusIndicator',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
@@ -155,7 +200,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.keyboardNavigation}
-                    onChange={(e) => handlePreferenceChange('keyboardNavigation', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('keyboardNavigation',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
@@ -174,7 +227,15 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   <input
                     type="checkbox"
                     checked={preferences.screenReader}
-                    onChange={(e) => handlePreferenceChange('screenReader', e.target.checked)}
+                    onChange = {
+  (e) => handlePreferenceChange('screenReader',
+  e.target.checked)
+
+
+
+
+
+}
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Enable Announcements</span>
@@ -189,9 +250,19 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <p><kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">Escape</kbd> Close modals</p>
                 <p><kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">Tab</kbd> Navigate elements</p>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       )}
-    </div>
+    </div>;
   )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      )};
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

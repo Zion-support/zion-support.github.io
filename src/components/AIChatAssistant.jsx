@@ -31,11 +31,17 @@ export function AIChatAssistant() {
         if (!inputValue.trim())
             return;
         const userMessage = {
-            id: Date.now().toString(),
+  id: Date.now().toString(),
             type: 'user',
             content: inputValue,
-            timestamp: new Date()
-        };
+  timestamp: new Date()
+        
+
+
+
+
+
+};
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');
         setIsTyping(true);
@@ -43,11 +49,17 @@ export function AIChatAssistant() {
         setTimeout(() => {
             const randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
             const aiMessage = {
-                id: (Date.now() + 1).toString(),
+  id: (Date.now() + 1).toString(),
                 type: 'assistant',
                 content: randomResponse,
-                timestamp: new Date()
-            };
+  timestamp: new Date()
+            
+
+
+
+
+
+};
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = () => {

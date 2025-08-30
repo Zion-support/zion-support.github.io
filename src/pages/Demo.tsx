@@ -3,19 +3,38 @@ import { SEO  } from '@/components/SEO';
 
 export default function Demo(...args[]):  {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Play className="w-10 h-10 text-white" />
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
+      <SEO title="Request a Demo - Zion Tech Group" description="Book a personalized demo of our AI and IT solutions." />
+      <div className="container mx-auto px-4 max-w-3xl">
+        <h1 className="text-4xl font-bold mb-4">Request a Demo</h1>
+        <p className="text-slate-300 mb-8">See our solutions in action. Share a few details and our team will follow up to schedule a personalized walkthrough.</p>
+        <div className="rounded-xl border border-slate-700 bg-slate-800/50 p-6">
+          <form className="space-y-4">
+            <div>
+              <label className="block text-sm mb-1">Full Name</label>
+              <input className="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2" placeholder="Jane Doe" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Interactive Demos
@@ -34,9 +53,18 @@ export default function Demo(...args[]):  {
           {demoServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
               onClick={() => setActiveDemo(service.id)}
             >
@@ -73,8 +101,14 @@ export default function Demo(...args[]):  {
         {/* Interactive Demo Section */}
         {activeDemo && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
           >
@@ -126,6 +160,7 @@ export default function Demo(...args[]):  {
                 rows={3}
               />
             </div>
+<<<<<<< HEAD
 
             {/* Demo Results */}
             {demoResults.length > 0 && (
@@ -248,4 +283,13 @@ export default function Demo(...args[]):  {
       </div>
     </div>
   )}
+=======;
+            <button type="button" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold">Request Demo</button>;
+          </form>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

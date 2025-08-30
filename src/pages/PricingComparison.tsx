@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
-const PricingComparison: React.FC = (): JSX.Element => {
+const PricingComparison: React.FC = (): JSX.Element => {;
   const [selectedPlan, setSelectedPlan] = useState('monthly');
 
   const pricingData = [
@@ -326,20 +326,19 @@ const PricingComparison: React.FC = (): JSX.Element => {
           ]
         }
       ]
-    }
+    };
   ];
 
-  const calculateSavings = (monthlyPrice: number, yearlyPrice: number)  => {
+  const calculateSavings = (monthlyPrice: number, yearlyPrice: number)  => {;
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
-    const savings = monthlyTotal - yearlyTotal;
     const savingsPercent = Math.round((savings / monthlyTotal) * 100);
     return { savings, savingsPercent }};
 
   return (
     <>
       <SEO
-        title="Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
+        title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
         description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs."
         keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing"
         canonical="https://ziontechgroup.com/pricing"
@@ -350,8 +349,14 @@ const PricingComparison: React.FC = (): JSX.Element => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -394,9 +399,18 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {pricingData.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: categoryIndex * 0.2 
+}}
                 viewport={{ once: true }}
               >
                 <div className="text-center mb-16">
@@ -412,9 +426,18 @@ const PricingComparison: React.FC = (): JSX.Element => {
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                      whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                      transition = {
+  { duration: 0.6,
+  delay: serviceIndex * 0.1 
+}}
                       viewport={{ once: true }}
                     >
                       <div className="text-center mb-12">
@@ -427,14 +450,23 @@ const PricingComparison: React.FC = (): JSX.Element => {
                       </div>
 
                       <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-                        {service.plans.map((plan, planIndex)  => {
+                        {service.plans.map((plan, planIndex)  => {;
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (
                             <motion.div
-                              key={plan.name}
-                              initial={{ opacity: 0, scale: 0.9 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.5, delay: planIndex * 0.1 }}
+                              key = {plan.name}
+                              initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                              whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                              transition = {
+  { duration: 0.5,
+  delay: planIndex * 0.1 
+}}
                               viewport={{ once: true }}
                               className={`relative rounded-xl p-8 transition-all duration-300 ${
                                 plan.popular
@@ -486,7 +518,10 @@ const PricingComparison: React.FC = (): JSX.Element => {
                                   Get Started
                                 </Link>
                                 <Link
-                                  to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                  to = {
+  `/services/${service.name.toLowerCase().replace(/\s+/g,
+  '-')
+}`}
                                   className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300"
                                 >
                                   Learn More
@@ -507,8 +542,14 @@ const PricingComparison: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -565,8 +606,14 @@ const PricingComparison: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -602,7 +649,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default PricingComparison;

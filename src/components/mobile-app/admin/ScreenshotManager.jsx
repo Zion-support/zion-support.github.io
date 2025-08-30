@@ -44,8 +44,6 @@ export const ScreenshotManager = ({ platform }) => {
     const handleDragOver = (e) => {
         e.preventDefault();
         setIsDragging(true)};
-    const handleDragLeave = () => {
-        setIsDragging(false)};
     const handleDrop = (e) => {
         e.preventDefault();
         setIsDragging(false);

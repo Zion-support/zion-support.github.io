@@ -4,6 +4,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp }
 export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
+<<<<<<< HEAD
   const defaultServices = [
     {
       id: 1,
@@ -106,6 +107,8 @@ export const ServiceDetailsSection = ({ services = [] }) => {
     }
   ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {

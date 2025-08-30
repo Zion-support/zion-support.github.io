@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
@@ -119,13 +119,13 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
           icon: "📋"
         }
       ]
-    }
+    };
   ];
 
   return (
     <>
       <SEO
-        title="Comprehensive Services | Zion Tech Group"
+        title = "Comprehensive Services | Zion Tech Group"
         description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group."
         keywords="Zion Tech Group services, AI services, cloud infrastructure, data analytics, cybersecurity, micro SAAS, business solutions"
         canonical="https://ziontechgroup.com/services"
@@ -136,8 +136,14 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -169,8 +175,14 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -187,9 +199,18 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
               {serviceCategories.map((category, categoryIndex) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: categoryIndex * 0.1 
+}}
                   viewport={{ once: true }}
                 >
                   <div className="text-center mb-12">
@@ -205,9 +226,18 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                     {category.services.map((service, serviceIndex)  => (
                       <motion.div
                         key={service.title}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                        initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                        whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                        transition = {
+  { duration: 0.5,
+  delay: serviceIndex * 0.1 
+}}
                         viewport={{ once: true }}
                         className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                       >
@@ -240,8 +270,14 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -275,9 +311,18 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
               ].map((service, index)  => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"
                 >
@@ -325,8 +370,14 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -370,7 +421,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default ComprehensiveServicesLanding;

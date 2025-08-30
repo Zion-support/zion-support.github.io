@@ -13,7 +13,9 @@ interface Testimonial {
   avatar: string;
   industry: string}
 
-const Testimonials: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const Testimonials: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
@@ -59,22 +61,52 @@ const Testimonials: React.FC = (): JSX.Element => {
     }
   ];
 
-  const nextTestimonial = () => {
+<<<<<<< HEAD
+  const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: number)  => {
+  const goToTestimonial = (index: number)  => {;
     setCurrentIndex(index)};
+=======
+  const nextTestimonial = () => {;
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {;
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToTestimonial = (index: number) => {;
+    setCurrentIndex(index);
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
+    <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -97,9 +129,33 @@ const Testimonials: React.FC = (): JSX.Element => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial = {
+  { opacity: 0,
+  x: 100 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  x: -100 
+
+
+
+
+
+}}
               transition={{ duration: 0.5 }}
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
             >
@@ -177,9 +233,33 @@ const Testimonials: React.FC = (): JSX.Element => {
         {/* Trust Indicators */}
         <motion.div
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
           viewport={{ once: true }}
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
@@ -199,11 +279,21 @@ const Testimonials: React.FC = (): JSX.Element => {
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Testimonials;

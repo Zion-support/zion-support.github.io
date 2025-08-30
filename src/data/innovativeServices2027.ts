@@ -107,14 +107,23 @@ export const serviceCategories2027 = [
   'Quantum Computing',
   'Quantum Finance',
   'Space Technology',
-  'Quantum Space',
-  'Biotechnology',
-  'Quantum Medicine',
-  'Quantum Security',
-  'Nanotechnology',
-  'Neural Technology'
+  'Quantum Space',;
+  'Biotechnology',;
+  'Quantum Medicine',;
+  'Quantum Security',;
+  'Nanotechnology',;
+  'Neural Technology';
 ];
+<<<<<<< HEAD
 export const getServicesByCategory = (category: string): InnovativeService2027[]  => {
   if (category === 'All') {
-    return innovativeServices2027}
+    return innovativeServices2027};
   return innovativeServices2027.filter(service => service.category === category)};
+=======
+export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
+  if (category === 'All') {;
+    return innovativeServices2027;
+  }
+  return innovativeServices2027.filter(service => service.category === category);
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

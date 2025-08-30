@@ -9,6 +9,12 @@ export const PASSWORD_STRENGTH = {
   MEDIUM: 'medium',
   STRONG: 'strong',
   VERY_STRONG: 'very-strong'
+
+
+
+
+
+
 };
 
 /**
@@ -20,6 +26,12 @@ export const PASSWORD_COLORS = {
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
   [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
   [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'
+
+
+
+
+
+
 };
 
 /**
@@ -31,6 +43,12 @@ export const PASSWORD_LABELS = {
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
   [PASSWORD_STRENGTH.STRONG]: 'Strong',
   [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'
+
+
+
+
+
+
 };
 
 /**
@@ -120,8 +138,6 @@ export const getPatternPenalty = (password) => {
   
   // Check for sequential characters
   for (let i = 0; i < password.length - 2; i++) {
-    const char1 = password.charCodeAt(i);
-    const char2 = password.charCodeAt(i + 1);
     const char3 = password.charCodeAt(i + 2);
     
     if (char2 === char1 + 1 && char3 === char2 + 1) {
@@ -189,7 +205,6 @@ export const getPasswordStrength = (password) => {
  * @returns {Object} Strength details
  */
 export const getPasswordStrengthDetails = (password) => {
-  const strength = getPasswordStrength(password);
   const score = calculatePasswordScore(password);
   
   return {
@@ -458,50 +473,3 @@ export function getPasswordStrengthIndicator(password) {
   };
 }
 
-/**
- * Validate password against requirements
- * @param {string} password - The password to validate
- * @param {object} requirements - Password requirements object
- * @returns {object} Validation result
- */
-export function validatePassword(password, requirements = {}) {
-  const {
-    minLength = 8,
-    requireUppercase = true,
-    requireLowercase = true,
-    requireNumbers = true,
-    requireSpecialChars = true,
-    maxLength = 128
-  } = requirements;
-
-  const errors = [];
-
-  if (password.length < minLength) {
-    errors.push(`Password must be at least ${minLength} characters long`);
-  }
-
-  if (password.length > maxLength) {
-    errors.push(`Password must be no more than ${maxLength} characters long`);
-  }
-
-  if (requireUppercase && !/[A-Z]/.test(password)) {
-    errors.push('Password must contain at least one uppercase letter');
-  }
-
-  if (requireLowercase && !/[a-z]/.test(password)) {
-    errors.push('Password must contain at least one lowercase letter');
-  }
-
-  if (requireNumbers && !/[0-9]/.test(password)) {
-    errors.push('Password must contain at least one number');
-  }
-
-  if (requireSpecialChars && !/[^A-Za-z0-9]/.test(password)) {
-    errors.push('Password must contain at least one special character');
-  }
-
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-}

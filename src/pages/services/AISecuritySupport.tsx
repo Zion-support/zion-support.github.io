@@ -4,12 +4,12 @@ export default function AISecuritySupport() {
   const features = [
     'AI-powered security support optimization',
     'Intelligent support strategy management and execution',
-    'Automated security issue resolution and assistance',
-    'Predictive analytics for support needs',
-    'Smart support framework management',
-    'AI-driven support automation and orchestration',
-    'Real-time support performance tracking',
-    'Custom AI models for support applications'
+    'Automated security issue resolution and assistance',;
+    'Predictive analytics for support needs',;
+    'Smart support framework management',;
+    'AI-driven support automation and orchestration',;
+    'Real-time support performance tracking',;
+    'Custom AI models for support applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AISecuritySupport() {
       name: 'Business', 
       price: '$799/mo', 
       details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited support tickets', 'Custom AI models', 'Full support suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited support tickets', 'Custom AI models', 'Full support suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Security support optimization',
-    'Support strategy management and execution',
-    'Security issue resolution and assistance',
-    'Support framework management and automation',
-    'Support automation and orchestration',
-    'Support scaling and management'
+    'Security support optimization',;
+    'Support strategy management and execution',;
+    'Security issue resolution and assistance',;
+    'Support framework management and automation',;
+    'Support automation and orchestration',;
+    'Support scaling and management';
   ];
 
   const benefits = [
-    'Improve security support performance by 50-80%',
-    'Reduce support resolution time by 40-70%',
-    'Cut security support costs by 35-65%',
-    'Enhance security support reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security support operations efficiently'
+    'Improve security support performance by 50-80%',;
+    'Reduce support resolution time by 40-70%',;
+    'Cut security support costs by 35-65%',;
+    'Enhance security support reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security support operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AISecuritySupport() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 // Mock post data
 const mockPost = {
-    id: "1",
+  id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
     authorId: "user1",
@@ -22,7 +22,13 @@ const mockPost = {
     downvotes: 2,
     replyCount: 12,
     isAnswered: true,
-    isFeatured: true
+  isFeatured: true
+
+
+
+
+
+
 };
 export default function EditPostPage() {
     const { postId } = useParams();
@@ -49,7 +55,6 @@ export default function EditPostPage() {
           </Button>
         </div>)}
     // Check if the user is the author or an admin
-    const isAuthor = user?.id === post.authorId;
     const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
     if (!isAuthor && !isAdmin) {
         return (<div className="container py-8">
@@ -60,11 +65,18 @@ export default function EditPostPage() {
           </Button>
         </div>)}
     const initialValues = {
-        title: post.title,
+  title: post.title,
         content: post.content,
         categoryId: post.categoryId,
-        tags: post.tags.join(", ")
-    };
+        tags: post.tags.join(",
+  ")
+    
+
+
+
+
+
+};
     const handleSubmit = async (values) => {
         try {
             // Here we would normally update the post in the database
@@ -74,7 +86,12 @@ export default function EditPostPage() {
                 description: "Your post has been updated successfully"
             });
             // Redirect back to the post
-            navigate(`/community/post/${postId}`)}
+<<<<<<< HEAD
+            router(`/community/post/${postId}`)}
+=======
+            router(`/community/post/${postId}`);
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
             toast({
                 title: "Error",

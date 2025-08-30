@@ -76,9 +76,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Cache first strategy for static assets
-async function cacheFirst(request, cacheName) {
-  try {
-    const cachedResponse = await caches.match(request);
+async function cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse}
     
@@ -92,9 +90,7 @@ async function cacheFirst(request, cacheName) {
 }
 
 // Network first strategy for dynamic content
-async function networkFirst(request, cacheName) {
-  try {
-    const networkResponse = await fetch(request);
+async function networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone())}
@@ -129,26 +125,16 @@ self.addEventListener('sync', (event) => {
 });
 
 // Background sync implementation
-async function doBackgroundSync() {
-  try {
-    // Implement background sync logic here
-    // For example, sync form submissions, analytics data, etc.
-    console.log('Background sync completed')} catch (error) {
-    console.error('Background sync failed:', error)}
-}
-
-// Push notification handling
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
+async function data = event.data.json();
     const options = {
-      body: data.body,
+  body: data.body,
       icon: '/images/zion-logo.png',
       badge: '/images/badge.png',
       vibrate[100, 50, 100],
-      data: {
+  data: {
         url: data.url
-      }
+      
+}
     };
 
     event.waitUntil(

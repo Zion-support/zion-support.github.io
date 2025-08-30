@@ -87,7 +87,6 @@ export class ContentOptimizer {
         if (!content.includes('<h2>'))
             score -= 5;
         // Check for images with alt text
-        const images = content.match(/<img[^>]*>/gi) || [];
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
@@ -223,7 +222,7 @@ export class ContentOptimizer {
     }
     static generateContentTemplate(page, contentType) {
         const templates = {
-            service: `
+  service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
         
@@ -292,7 +291,7 @@ export class ContentOptimizer {
         <h2>Support</h2>
         <p>Technical support and customer service information.</p>
       `,
-            blog: `
+  blog: `
         <h1>Blog Post Title</h1>
         <p>Engaging introduction that hooks the reader and explains the value.</p>
         
@@ -314,16 +313,11 @@ export class ContentOptimizer {
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
-        };
+        
+};
         return templates[contentType] || templates.service;
     }
     static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
-            service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
-            about: 'Learn about our comp, mission, and values. Discover how we deliver innovative technology solutions.',
-            contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
-            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
-        };
         const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;

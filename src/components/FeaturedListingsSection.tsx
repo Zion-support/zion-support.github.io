@@ -50,6 +50,7 @@ const featuredListings = [
     price: "$599/month",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     rating: 4.7,
+<<<<<<< HEAD
     reviews: 156,
     views: 3241,
     likes: 189,
@@ -63,6 +64,20 @@ const featuredListings = [
     technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
     highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
   }
+=======
+    reviews: 234
+  },
+  {
+    id: 4,
+    title: "IoT Edge Computing Platform",
+    description: "Real-time IoT data processing and analytics at the edge for instant insights.",
+    category: "IoT",;
+    price: "$449/month",;
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",;
+    rating: 4.6,;
+    reviews: 178;
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const featuredServices = [
@@ -98,7 +113,7 @@ const featuredServices = [
     image: '🔒',
     link: '/services/cybersecurity',
     features['Security Audits', 'Threat Detection', 'Incident Response']
-  }
+  };
 ];
 
 export function FeaturedListingsSection(...args[]):  {
@@ -106,7 +121,7 @@ export function FeaturedListingsSection(...args[]):  {
   const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  const filteredListings = selectedCategory === "All" 
+  const filteredListings = selectedCategory === "All" ;
     ? featuredListings: featuredListings.filter(listing  => listing.category === selectedCategory);
 
   const containerVariants = {
@@ -117,23 +132,39 @@ export function FeaturedListingsSection(...args[]):  {
         staggerChildren: 0.15,
         delayChildren: 0.1
       }
-    }
+    };
   };
 
   const renderStars = (rating: number)  => {
     return Array.from({ length: 5 }, (_, i)  => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
-      </span>
+      </span>;
     ))};
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -143,6 +174,7 @@ export function FeaturedListingsSection(...args[]):  {
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             Discover our most popular and innovative technology solutions that are transforming businesses worldwide
           </p>
+<<<<<<< HEAD
         </div>
         
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,6 +184,53 @@ export function FeaturedListingsSection(...args[]):  {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                     {service.category}
+=======
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredListings.map((listing, index) => (
+            <motion.div
+              key={listing.id}
+              className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+            >
+              <div className="relative">
+                <img 
+                  src={listing.image} 
+                  alt={listing.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+                    {listing.category}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </span>
                 </div>
                 <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 px-2 py-1 rounded-full">
@@ -185,19 +264,53 @@ export function FeaturedListingsSection(...args[]):  {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <Link 
             to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
             View All Services
+<<<<<<< HEAD
             <span className="text-xl">→</span>
           </Link>
         </motion.div>
       </div>
     </section>
   )}
+=======;
+            <span className="text-xl">→</span>;
+          </Link>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

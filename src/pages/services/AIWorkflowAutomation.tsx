@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Zap, 
   Brain, 
@@ -23,12 +23,12 @@ export default function AIWorkflowAutomation(...args[]):  {
   const features = [
     'Intelligent process mapping and optimization',
     'AI-powered decision trees and conditional logic',
-    'Multi-platform integration (Slack, Teams, Zapier)',
-    'Real-time workflow analytics and performance metrics',
-    'Automated error handling and fallback procedures',
-    'Custom workflow templates for common business processes',
-    'Role-based access control and approval workflows',
-    'Mobile workflow management and notifications'
+    'Multi-platform integration (Slack, Teams, Zapier)',;
+    'Real-time workflow analytics and performance metrics',;
+    'Automated error handling and fallback procedures',;
+    'Custom workflow templates for common business processes',;
+    'Role-based access control and approval workflows',;
+    'Mobile workflow management and notifications';
   ];
 
   const services = [
@@ -44,6 +44,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       price: 'From $8,000',
       features['Custom workflow design', 'AI model training', 'Integration setup', 'User training']
     },
+<<<<<<< HEAD
     {
       title: 'Workflow Optimization',
       description: 'Continuous improvement and optimization of existing workflows',
@@ -55,7 +56,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       description: 'Complete enterprise workflow management with advanced AI capabilities',
       price: 'From $15,000',
       features['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support']
-    }
+    };
   ];
 
   const useCases = [
@@ -78,7 +79,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       title: 'Financial Process Automation',
       description: 'Automate invoice processing, expense approval, and financial reporting',
       benefits['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance']
-    }
+    };
   ];
 
   const technologies = [
@@ -88,10 +89,26 @@ export default function AIWorkflowAutomation(...args[]):  {
     { name: 'Predictive Analytics', description: 'Forecast process bottlenecks and optimization opportunities' },
     { name: 'API Integration', description: 'Seamless integration with existing business systems' },
     { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based automation' }
+=======;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,299/mo', ;
+      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] ;
+    },;
+  ];
+
+  const useCases = [
+    'Customer onboarding automation',;
+    'Invoice processing and approval',;
+    'Employee onboarding and offboarding',;
+    'Project approval workflows',;
+    'Quality assurance processes',;
+    'Compliance documentation flows';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -190,8 +207,14 @@ export default function AIWorkflowAutomation(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -207,9 +230,18 @@ export default function AIWorkflowAutomation(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -226,8 +258,14 @@ export default function AIWorkflowAutomation(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -243,9 +281,18 @@ export default function AIWorkflowAutomation(...args[]):  {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
@@ -262,6 +309,7 @@ export default function AIWorkflowAutomation(...args[]):  {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -269,8 +317,14 @@ export default function AIWorkflowAutomation(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -286,9 +340,18 @@ export default function AIWorkflowAutomation(...args[]):  {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
@@ -311,8 +374,14 @@ export default function AIWorkflowAutomation(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -328,9 +397,18 @@ export default function AIWorkflowAutomation(...args[]):  {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
@@ -345,8 +423,14 @@ export default function AIWorkflowAutomation(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
           >
@@ -407,3 +491,13 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
     </div>
   )}
+=======
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

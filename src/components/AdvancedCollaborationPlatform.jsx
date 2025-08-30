@@ -1,43 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockParticipants = [
-    {
-        id: '1',
-        name: 'Sarah Johnson',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100',
-        isHost: true,
-        isMuted: false,
-        isVideoOff: false,
-        isScreenSharing: false,
-        hasRaisedHand: false,
-        status: 'online',
-        joinTime: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '2',
-        name: 'Michael Chen',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
-        isHost: false,
-        isMuted: true,
-        isVideoOff: false,
-        isScreenSharing: false,
-        hasRaisedHand: true,
-        status: 'online',
-        joinTime: '2024-01-15T10:02:00.000Z'
-    },
-    {
-        id: '3',
-        name: 'Emily Rodriguez',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100',
-        isHost: false,
-        isMuted: false,
-        isVideoOff: true,
-        isScreenSharing: false,
-        hasRaisedHand: false,
-        status: 'away',
-        joinTime: '2024-01-15T10:05:00.000Z'
-    }
-];
+<<<<<<< HEAD
 const mockChatMessages = [
     {
         id: '1',
@@ -87,6 +50,8 @@ const mockDocuments = [
         permissions: 'view'
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockMeetings = [
     {
         id: '1',
@@ -131,20 +96,36 @@ export function AdvancedCollaborationPlatform() {
     const sendChatMessage = () => {
         if (chatMessage.trim()) {
             const newMessage = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 senderId: '1',
                 senderName: 'Sarah Johnson',
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
                 type: 'text',
+  <<<<<<< HEAD
                 reactions[]
-            };
+            
+};
+=======
+  reactions: []
+            
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             setChatMessages(prev => [...prev, newMessage]);
             setChatMessage('')}
     };
     const raiseHand = () => {
+<<<<<<< HEAD
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
     const filteredParticipants = participants.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
+=======
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p));
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">

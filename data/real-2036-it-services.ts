@@ -313,10 +313,10 @@ export const real2036ITServices = [
       'Reduced recovery time'
     ],
     useCases[
-      'Data center recovery',
-      'Cloud recovery',
-      'Application recovery',
-      'Business continuity'
-    ]
-  }
+      'Data center recovery',;
+      'Cloud recovery',;
+      'Application recovery',;
+      'Business continuity';
+    ];
+  };
 ];

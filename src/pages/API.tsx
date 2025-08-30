@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -24,6 +25,12 @@ import { Code,
   Database,
   Lock
  } from 'lucide-react';
+=======
+import React from 'react';
+import { SEO } from "../components/SEO";
+import { motion } from 'framer-motion';
+import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const API: React.FC = () => {
   const endpoints = [
@@ -45,12 +52,12 @@ const API: React.FC = () => {
       description: 'Get analytics data',
       auth: 'Required'
     },
-    {
-      method: 'PUT',
-      path: '/api/v1/user/profile',
-      description: 'Update user profile',
-      auth: 'Required'
-    }
+    {;
+      method: 'PUT',;
+      path: '/api/v1/user/profile',;
+      description: 'Update user profile',;
+      auth: 'Required';
+    };
   ];
 
   const features = [
@@ -68,20 +75,22 @@ const API: React.FC = () => {
       icon: Globe,
       title: 'Global CDN',
       description: 'Worldwide edge locations for fast access'
-    },
-    {
-      icon: Database,
-      title: 'Real-time Data',
-      description: 'Live data synchronization across all endpoints'
-    }
+    },;
+    {;
+      icon: Database,;
+      title: 'Real-time Data',;
+      description: 'Live data synchronization across all endpoints';
+    };
   ];
 
+<<<<<<< HEAD
 url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
-response = requests.post(url, json={
-    "text": "Your text here",
-    "analysis_type": "sentiment"
+response = requests.post(url, json = {
+  "text": "Your text here",
+  "analysis_type": "sentiment"
+
 })
 
 print(response.json())`,
@@ -90,19 +99,17 @@ print(response.json())`,
   {
     title: 'Cloud Resource Management',
     language: 'JavaScript',
-    description: 'Example of managing cloud resources through our infrastructure API.',
-    code: `const axios = require('axios');
-
-const api = axios.create({
+    description: 'Example of managing cloud resources through our infrastructure API.',;
+    code: `const api = axios.create({
     baseURL: 'https://api.ziontechgroup.com/v1/cloud',
-    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+    headers: {'Authorization': 'Bearer YOUR_API_KEY'};
 });
 
 const createInstance = async () => {
     const response = await api.post('/instances', {
         type: 'compute',
         size: 'medium',
-        region: 'us-east-1'
+        region: 'us-east-1';
     });
     return response.data};`,
     category: 'Cloud & DevOps'
@@ -117,22 +124,33 @@ def check_threat(ip_address):
     url = "https://api.ziontechgroup.com/v1/security/threat-check"
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
     
-    response = requests.post(url, json={
-        "ip": ip_address,
-        "check_type": "comprehensive"
-    })
+    response = requests.post(url, json = {
+  "ip": ip_address,
+  "check_type": "comprehensive"
+    
+})
     
     return response.json()`,
     category: 'Security'
-  }
+  };
 ];
 
 export default function API(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+=======
+  const sdks = [
+    { name: 'JavaScript/Node.js', icon: '🔷' },;
+    { name: 'Python', icon: '🐍' },;
+    { name: 'Java', icon: '☕' },;
+    { name: 'C#', icon: '🔷' },;
+    { name: 'Go', icon: '🐹' },;
+    { name: 'PHP', icon: '🐘' };
+  ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
@@ -142,8 +160,24 @@ export default function API(...args[]):  {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -180,8 +214,24 @@ export default function API(...args[]):  {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -197,9 +247,33 @@ export default function API(...args[]):  {
             {apiCategories.map((category, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -217,8 +291,24 @@ export default function API(...args[]):  {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -234,9 +324,33 @@ export default function API(...args[]):  {
             {quickStartExamples.map((example, index)  => (
               <motion.div
                 key={endpoint.path}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
               >
                 <div className="flex items-center justify-between">
@@ -268,8 +382,24 @@ export default function API(...args[]):  {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -285,9 +415,33 @@ export default function API(...args[]):  {
             {sdks.map((sdk, index) => (
               <motion.div
                 key={sdk.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
               >
                 <div className="text-4xl mb-4">{sdk.icon}</div>
@@ -312,8 +466,24 @@ export default function API(...args[]):  {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -329,9 +499,21 @@ export default function API(...args[]):  {
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+
+export default API;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -20,10 +20,10 @@ import { useTranslation  } from 'react-i18next.ts';
 import { useSelector  } from 'react-redux.ts';
 import type { RootState } from '@/store';
 
+<<<<<<< HEAD
 export function PrimaryNav(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
-  const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const router = useLocation();
@@ -38,24 +38,33 @@ export function PrimaryNav(...args[]):  {
   }
 
   const cartCount = useSelector((s: RootState)  =>
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
+    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
   );
 
-  const handleSubmit = (e: React.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {;
     e.preventDefault();
     if (query.trim()) {
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
+=======
+// Theme toggle component
+const ModeToggle = () => {;
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {;
+    setIsDark(!isDark);
+    // Add theme switching logic here
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (
     <button
-      onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-    >
-      {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-    </button>
+      onClick = {toggleTheme};
+      className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors";
+    >;
+      {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />};
+    </button>;
   );
 };
 
@@ -66,7 +75,7 @@ export function PrimaryNav() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -93,18 +102,18 @@ export function PrimaryNav() {
     },
     {
       category: 'Innovation Hub',
-      items: [
-        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },
-        { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> }
-      ]
-    }
+      items: [;
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },;
+        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },;
+        { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> };
+      ];
+    };
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
         : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
@@ -137,9 +146,33 @@ export function PrimaryNav() {
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+}}
                     transition={{ duration: 0.2 }}
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
@@ -227,33 +260,39 @@ export function PrimaryNav() {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
+  { width: 'clamp(12rem, 20vw,
+  16rem)' 
+}}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
-                onSelectSuggestion={(sugg) => {
-                  // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+                onSelectSuggestion = {
+  (sugg) => {
+                  // // // // console.log('PrimaryNav search suggestion selected:',;
+  sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`)} else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    router.push(`/marketplace/listing/${sugg.id
+}`)} else if (sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
                   setQuery('');
                   
                   // Track analytics event
-                  if (typeof window !== 'undefined' && window.gtag) {
+                  if (typeof window !== 'null' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
                     })}
                 }}
-                searchSuggestions={suggestions}
+                searchSuggestions = {suggestions}
               />
             </form>
             
@@ -265,7 +304,10 @@ export function PrimaryNav() {
                   <Link
                     href="/cart"
                     className="relative p-1"
-                    aria-label={t('nav.cart', 'Cart')}
+                    aria-label = {
+  t('nav.cart',
+  'Cart')
+}
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
@@ -320,6 +362,7 @@ export function PrimaryNav() {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
       </header>
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
@@ -339,3 +382,99 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   )}
+=======
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {services.map((category, index) => (
+                  <div key={index}>
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
+                      {category.category}
+                    </h3>
+                    <div className="space-y-2 ml-4">
+                      {category.items.map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}
+                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link 
+                    to="/solutions" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Solutions
+                  </Link>
+                  <Link 
+                    to="/about" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link 
+                    to="/blog" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>;
+            </motion.div>;
+          )};
+        </AnimatePresence>;
+      </nav>;
+    </header>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

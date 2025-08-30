@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🔧 PM2 Automation Manager');
@@ -236,8 +235,7 @@ class AutomationManager {
 }
 
 // Main execution
-async function main() {
-  const manager = new AutomationManager();
+async function manager = new AutomationManager();
   const command = process.argv[2];
   const processName = process.argv[3];
   

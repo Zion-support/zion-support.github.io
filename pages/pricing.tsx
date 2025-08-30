@@ -53,12 +53,12 @@ export default function PricingPage(...args[]):  {
         'Advanced Compliance',
         'Dedicated Account Manager',
         'SLA Guarantees',
-        'On-Premise Options'
-      ],
-      cta: 'Contact Sales',
-      ctaLink: '/contact',
-      popular: false
-    }
+        'On-Premise Options';
+      ],;
+      cta: 'Contact Sales',;
+      ctaLink: '/contact',;
+      popular: false;
+    };
   ];
   const addOnServices = [
     {
@@ -80,11 +80,19 @@ export default function PricingPage(...args[]):  {
       features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
+<<<<<<< HEAD
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
       features['Architecture Design', 'Data Migration', 'Performance Optimization']
     }
+=======;
+      name: 'Cloud Migration',;
+      description: 'Complete cloud infrastructure migration',;
+      price: 'From $10,000',;
+      features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   const faqs = [
     {
@@ -106,17 +114,25 @@ export default function PricingPage(...args[]):  {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
+<<<<<<< HEAD
     },
     {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     }
+=======;
+    },;
+    {;
+      question: 'Can I cancel my subscription?',;
+      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   return (
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
+        <meta name = "description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
@@ -274,9 +290,19 @@ export default function PricingPage(...args[]):  {
               >
                 View Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </main>
     </>
   )}
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

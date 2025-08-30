@@ -43,7 +43,7 @@ import {
   Tablet,
   Laptop
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AICybersecurityPlatform() {
   const features = [
@@ -61,12 +61,12 @@ export default function AICybersecurityPlatform() {
       icon: Zap,
       title: 'Automated Incident Response',
       description: 'Intelligent automation that responds to security incidents within seconds, containing threats and minimizing potential damage automatically.'
-    },
-    {
-      icon: Eye,
-      title: '360° Security Visibility',
-      description: 'Comprehensive monitoring across all endpoints, networks, and cloud environments with unified threat intelligence and real-time dashboards.'
-    }
+    },;
+    {;
+      icon: Eye,;
+      title: '360° Security Visibility',;
+      description: 'Comprehensive monitoring across all endpoints, networks, and cloud environments with unified threat intelligence and real-time dashboards.';
+    };
   ];
 
   const capabilities = [
@@ -88,12 +88,12 @@ export default function AICybersecurityPlatform() {
       icon: Network,
       benefits: ['Traffic analysis', 'Anomaly detection', 'DDoS protection', 'VPN management']
     },
-    {
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud infrastructure protection and compliance monitoring',
-      icon: Cloud,
-      benefits: ['Multi-cloud support', 'Compliance monitoring', 'Access control', 'Data protection']
-    }
+    {;
+      title: 'Cloud Security',;
+      description: 'Comprehensive cloud infrastructure protection and compliance monitoring',;
+      icon: Cloud,;
+      benefits: ['Multi-cloud support', 'Compliance monitoring', 'Access control', 'Data protection'];
+    };
   ];
 
   const useCases = [
@@ -115,12 +115,12 @@ export default function AICybersecurityPlatform() {
       icon: Cpu,
       metrics: ['OT Security', 'Supply Chain Protection', 'Operational Continuity', 'Threat Prevention']
     },
-    {
-      industry: 'Government',
-      description: 'Secure critical infrastructure, protect classified information, and ensure national security with advanced AI cybersecurity',
-      icon: Globe,
-      metrics: ['Infrastructure Security', 'Data Classification', 'Threat Intelligence', 'National Security']
-    }
+    {;
+      industry: 'Government',;
+      description: 'Secure critical infrastructure, protect classified information, and ensure national security with advanced AI cybersecurity',;
+      icon: Globe,;
+      metrics: ['Infrastructure Security', 'Data Classification', 'Threat Intelligence', 'National Security'];
+    };
   ];
 
   const benefits = [
@@ -138,12 +138,12 @@ export default function AICybersecurityPlatform() {
       icon: DollarSign,
       title: 'Reduced Security Costs',
       description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.'
-    },
-    {
-      icon: Users,
-      title: 'Improved Compliance',
-      description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.'
-    }
+    },;
+    {;
+      icon: Users,;
+      title: 'Improved Compliance',;
+      description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.';
+    };
   ];
 
   const pricing = [
@@ -188,16 +188,16 @@ export default function AICybersecurityPlatform() {
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
-        'Custom development',
-        'Advanced analytics'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+        'Custom development',;
+        'Advanced analytics';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="AI Cybersecurity Platform | Zion Tech Group"
         description="Protect your organization with AI-powered cybersecurity that detects 99.7% of threats, responds in seconds, and reduces security costs by 40-60%. Advanced threat intelligence and automated incident response."
@@ -209,8 +209,24 @@ export default function AICybersecurityPlatform() {
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
@@ -236,8 +252,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -254,9 +286,33 @@ export default function AICybersecurityPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -274,8 +330,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -292,9 +364,33 @@ export default function AICybersecurityPlatform() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -322,8 +418,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -340,9 +452,33 @@ export default function AICybersecurityPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -370,8 +506,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -388,9 +540,33 @@ export default function AICybersecurityPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -408,8 +584,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -426,9 +618,33 @@ export default function AICybersecurityPlatform() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
                     ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-orange-500/10' 
@@ -478,8 +694,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -517,9 +749,33 @@ export default function AICybersecurityPlatform() {
             ].map((phase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -537,8 +793,24 @@ export default function AICybersecurityPlatform() {
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -593,11 +865,11 @@ export default function AICybersecurityPlatform() {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-              <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <p className="text-sm text-slate-400 mt-2">Global remote support available</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

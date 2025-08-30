@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video  } from 'lucide-react';
@@ -89,17 +90,17 @@ const AIServices: React.FC = (): JSX.Element => {
       title: 'Agentic Process Automation',
       desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
       price: '$6,000 - $55,000+'
-    }
+    };
   ];
 
   const ctas = [
     { label: 'Book a Strategy Call', href: '/contact' },
     { label: 'Request a Quote', href: '/request-quote' },
-    { label: 'Email Us', href: 'mailto:kleber@ziontechgroup.com' }
+    { label: 'Email Us', href: 'mailto:kleber@ziontechgroup.com' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
@@ -154,10 +155,10 @@ const AIServices: React.FC = (): JSX.Element => {
             <li>Runbooks, governance, and observability dashboard</li>
           </ul>
           <div className="mt-4 flex items-center gap-2 text-xs">
-            <DollarSign className="h-3 w-3" />
+            <DollarSign className="h-3 w-3" />;
             Typical T&M: $120–$220/hr blended; fixed bids available.
           </div>
-          <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
+          <a className = "mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
             View live services on our site <ExternalLink className="ml-1 h-3 w-3" />
           </a>
           <div className="mt-6 text-xs text-slate-400">
@@ -165,8 +166,11 @@ const AIServices: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIServices;
+=======
+export { default } from "./services/AI";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

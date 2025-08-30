@@ -38,8 +38,14 @@ export function FooterNewsletter() {
       
       {isSubscribed ? (
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+}}
           className="flex items-center gap-3 p-3 bg-green-500/20 border border-green-500/30 rounded-lg"
         >
           <CheckCircle className="w-5 h-5 text-green-400" />
@@ -263,8 +269,14 @@ export function Footer() {
         className="fixed bottom-8 right-8 w-12 h-12 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+}}
         transition={{ delay: 1 }}
       >
         <ArrowUp className="w-6 h-6 mx-auto" />

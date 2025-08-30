@@ -33,13 +33,21 @@ login: (email: string, password: string)  => Promise<any>;
   loginWithTwitter: ()  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const AuthContext = createContext<AuthContextType | null>(null);
 
-export const useAuth = () => {
+export const useAuth = () => {;
   const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider')}
+<<<<<<< HEAD
+  if (context = == null) {
+    throw new Error('useAuth must be used within an AuthProvider')};
   return context};
+=======
+  if (context = == null) {;
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export { AuthContext };
 export type { User, AuthTokens, AuthContextType };

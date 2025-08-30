@@ -3,8 +3,14 @@ import Head from 'next/head.ts';
 import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
- } from '../src/data/innovativeServices2031';
+<<<<<<< HEAD
+ } from "../src/data/innovativeServices2031";
 import { Brain, 
+=======
+} from "../src/data/innovativeServices2031";
+import { 
+  Brain, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
   CheckCircle, 
   TrendingUp, 
@@ -20,15 +26,22 @@ import { Brain,
   Clock
  } from 'lucide-react';
 
+<<<<<<< HEAD
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
-  const scrollToContact = () => {
+  const scrollToContact = () => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
+=======
+const InnovativeServicesShowcase2031: React.FC = () => {;
+  const scrollToContact = () => {;
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
       <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
+        <meta name = "description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
         <meta name="keywords" content="innovative services 2031, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2031" />
       </Helmet>
@@ -440,11 +453,21 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
               >
                 Visit Our Website
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
+=======
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesShowcase2031;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LinkValidator } from '../utils/linkValidator';
+import { LinkValidator } from "../utils/linkValidator";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
@@ -47,11 +47,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`)});
             // Add to fixed links list
             const fix = {
-                originalUrl,
+  originalUrl,
                 newUrl,
                 type: 'redirect',
-                reason: 'Automatically fixed broken internal link'
-            };
+  reason: 'Automatically fixed broken internal link'
+            
+};
             setFixedLinks(prev => [...prev, fix])}
     };
     // Fix all broken links
@@ -72,11 +73,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     // Export broken links report
     const exportReport = () => {
         const report = {
-            scanTime: lastScanTime?.toISOString(),
+  scanTime: lastScanTime?.toISOString(),
             totalBrokenLinks: brokenLinks.length,
             brokenLinks: brokenLinks,
-            fixedLinks: fixedLinks
-        };
+  fixedLinks: fixedLinks
+        
+};
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -157,7 +159,10 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                       {link.suggestedFix}
                     </div>)}
                 </div>
-                <button onClick={() => fixBrokenLink(link.url, link)} className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
+                <button onClick = {
+  () => fixBrokenLink(link.url,
+  link)
+} className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
                   Fix
                 </button>
               </div>))}

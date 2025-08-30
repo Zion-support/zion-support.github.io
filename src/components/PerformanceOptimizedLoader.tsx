@@ -15,17 +15,44 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   showLogo = false
 }: LoaderProps) => {
   const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16'
-  };
+  sm: 'w-6 h-6',
+    md: 'w-12 h-12',;
+  ;
+  ;
+  ;
+  lg: 'w-16 h-16';
+  ;
+
+
+
+
+
+};
   const textSizes = {
+  <<<<<<< HEAD
     sm: 'text-xs',
     md: 'text-sm',
-    lg: 'text-base'
-  };
+  lg: 'text-base'
+  ;
+};
+=======
+  sm: 'text-xs',
+    md: 'text-sm',;
+  ;
+  ;
+  lg: 'text-base';
+  ;
+
+
+
+
+};
+
+  const showLogo = true; // Add this variable
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-zion-cyan/20 rounded-full`}></div>
@@ -33,11 +60,18 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={{ rotate: 360 }}
-          transition={{ 
+          transition = {
+  { 
             duration: 1, 
-            repeat: Infinity, 
-            ease: "linear" 
-          }}
+            repeat: Infinity,
+  ease: "linear" 
+          
+
+
+
+
+
+}}
         />
         {/* Logo text */}
         {showLogo && (
@@ -49,29 +83,45 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
         <div className="mt-4 text-center">
           <motion.div 
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            {text}
-          </motion.div>
-        </div>
-      </div>
-    </div>
+            animate = {
+  { opacity: [0.5, 1,
+  0.5] 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+}}
+          >;
+            {text};
+          </motion.div>;
+        </div>;
+      </div>;
+    </div>;
   );
 });
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader({ 
-  className = "", 
-  lines = 3,
-  height = "h-4"
-}: { 
+  className = "", ;
+  lines = 3,;
+  height = "h-4";
+}: { ;
   className?: string; 
   lines?: number;
   height?: string;
 }) {
   return (
-    <div className={`space-y-3 ${className}`}>
+    <div className = {`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
@@ -79,12 +129,12 @@ export function SkeletonLoader({
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
-          style={{
-            width: `${Math.random() * 40 + 60}%`
-          }}
-        />
-      ))}
-    </div>
+          style={{;
+            width: `${Math.random() * 40 + 60}%`;
+          }};
+        />;
+      ))};
+    </div>;
   );
 }
 // Card skeleton loader
@@ -101,30 +151,30 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
         </div>
         {/* Button skeleton */}
-        <div className="flex gap-3 pt-4">
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />
-        </div>
-      </div>
-    </div>
+        <div className="flex gap-3 pt-4">;
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
+        </div>;
+      </div>;
+    </div>;
   );
 }
 // Grid skeleton loader
 export function GridSkeleton({ 
-  columns = 3, 
-  rows = 2,
-  className = "" 
-}: { 
+  columns = 3, ;
+  rows = 2,;
+  className = "" ;
+}: { ;
   columns?: number; 
   rows?: number;
   className?: string;
 }) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: columns * rows }).map((_, index) => (
-        <CardSkeleton key={index} />
-      ))}
-    </div>
+    <div className = {`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
+      {Array.from({ length: columns * rows }).map((_, index) => (;
+        <CardSkeleton key={index} />;
+      ))};
+    </div>;
   );
 }
 // Page skeleton loader
@@ -138,11 +188,11 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
       {/* Content skeleton */}
       <GridSkeleton columns={3} rows={2} />
-      {/* Footer skeleton */}
-      <div className="space-y-3">
-        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />
-        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
-      </div>
-    </div>
+      {/* Footer skeleton */};
+      <div className="space-y-3">;
+        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;
+        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
+      </div>;
+    </div>;
   );
 }

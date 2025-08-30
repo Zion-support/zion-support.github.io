@@ -341,6 +341,7 @@ export default function MicroSAASServicesPage() {
             rating: 4.9,
             reviewCount: 167
         }
+<<<<<<< HEAD
     ];
     const categories = [
         "All Services",
@@ -366,6 +367,251 @@ export default function MicroSAASServicesPage() {
             setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory))}
     }, [selectedCategory]);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
+=======
+        // Filter by pricing model
+        if (selectedPricing !== 'all') {
+            filtered = filtered.filter(service => service.pricingModel === selectedPricing);
+        }
+        // Filter by search query
+        if (searchQuery.trim()) {
+            const query = searchQuery.toLowerCase();
+            filtered = filtered.filter(service => service.title.toLowerCase().includes(query) ||
+                service.description.toLowerCase().includes(query) ||
+                service.tags.some(tag => tag.toLowerCase().includes(query)) ||
+                service.subcategory.toLowerCase().includes(query));
+        }
+        // Sort services
+        filtered.sort((a, b) => {
+            switch (sortBy) {
+                case 'rating':
+                    return (b.rating || 0) - (a.rating || 0);
+                case 'price':
+                    return a.price - b.price;
+                case 'aiScore':
+                    return b.aiScore - a.aiScore;
+                case 'newest':
+                    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+                default:
+                    return 0;
+            }
+        });
+        setFilteredServices(filtered);
+    }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+    const ServiceCard = ({ service }) => (<div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20">
+      {/* Featured Badge */}
+      {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
+          Featured
+        </div>)}
+
+      {/* Service Image */}
+      <div className="relative mb-6 overflow-hidden rounded-xl">
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
+        <div className="absolute bottom-3 left-3 right-3">
+          <div className="flex items-center justify-between">
+            <Badge variant="secondary" className="bg-zion-purple/80 text-white">
+              {service.category}
+            </Badge>
+            <div className="flex items-center space-x-1 text-white">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"/>
+              <span className="text-sm font-medium">{service.rating}</span>
+              <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+import React, {useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {MICRO_SAAS_SERVICES,
+            SERVICE_CATEGORIES,
+            type} MicroSaasService 
+} from '@/data/microSaasServices';
+import {Star,
+            Clock,
+            Users,
+            Zap,
+            Shield,
+            Globe,
+            TrendingUp,
+            CheckCircle,
+            ExternalLink,
+            Play,
+            FileText,
+            MessageCircle,
+            ArrowRight,
+            Sparkles} from 'lucide-react';
+import {Link} from 'react-router-dom';
+
+export default function MicroSaasServicesPage() {}
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const formatPrice = (price: number, currency: string, model: string) => {}
+    if (model === 'monthly') return `${currency}${price}/month`;
+    if (model === 'yearly') return `${currency}${price}/year`;
+    if (model === 'one-time') return `${currency}${price}`;
+    return `${currency}${price}`;
+  };
+
+  const ServiceCard = ({service}: {service}: MicroSaasService }) => (
+    <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <CardHeader className="relative z-10">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <CardTitle className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+              {service.title}
+            </CardTitle>
+            <CardDescription className="text-zion-slate-light text-sm leading-relaxed">
+              {service.description}
+            </CardDescription>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 mb-3">
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
+            {service.category}
+          </Badge>
+          <Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">
+            {service.subcategory}
+          </Badge>
+        </div>
+      </CardHeader>
+
+      <CardContent className="relative z-10 space-y-4">
+        {/* Pricing */}
+        <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
+          <div>
+            <div className="text-2xl font-bold text-white">
+              {formatPrice(service.zionPrice, service.currency, service.pricingModel)}
+            </div>
+            <div className="text-sm text-zion-slate-light">
+              Market: {service.currency}{service.averageMarketPrice}
+            </div>
+          </div>
+          <div className="text-right">
+            <Badge className="bg-green-600 text-white">
+              Save {service.savings}%
+            </Badge>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div>
+          <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
+          <div className="grid grid-cols-2 gap-1">
+            {service.features.slice(0, 4).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
+                <CheckCircle className="w-3 h-3 text-zion-cyan"/>
+                <span className="truncate">{feature}</span>
+              </div>))}
+      {/* Service Info */}
+      <div className="space-y-4">
+        <div>
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-zion-slate-light text-sm leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+
+        {/* AI Score */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Zap className="w-4 h-4 text-zion-cyan"/>
+            <span className="text-sm text-zion-slate-light">AI Score:</span>
+            <span className="text-zion-cyan font-bold">{service.aiScore}%</span>
+          </div>
+          <Badge variant="outline" className="border-zion-purple/30 text-zion-purple">
+            {service.subcategory}
+          </Badge>
+        </div>
+
+        {/* Pricing */}
+        <div className="flex items-center justify-between">
+          <div>
+            <span className="text-2xl font-bold text-white">{service.currency}{service.price}</span>
+            <span className="text-zion-slate-light text-sm ml-1">/{service.pricingModel === 'monthly' ? 'mo' : service.pricingModel === 'yearly' ? 'year' : 'incident'}</span>
+          </div>
+          <div className="text-right">
+            <p className="text-xs text-zion-slate-light">Market Price:</p>
+            <p className="text-sm text-zion-cyan font-medium">{service.marketPrice}</p>
+          </div>
+        </div>
+
+        {/* Features Preview */}
+        <div className="space-y-2">
+          <p className="text-sm font-medium text-white">Key Features:</p>
+          <div className="flex flex-wrap gap-2">
+            {service.features.slice(0, 3).map((feature, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-blue-light/30 text-zion-slate-light">
+                {feature}
+              </Badge>))}
+            {service.features.length > 3 && (<Badge variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
+                +{service.features.length - 3} more
+              </Badge>)}
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div className="space-y-2">
+          <p className="text-sm font-medium text-white">Benefits:</p>
+          <div className="space-y-1">
+            {service.benefits.slice(0, 2).map((benefit, index) => (<div key={index} className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0"/>
+                <span className="text-xs text-zion-slate-light">{benefit}</span>
+              </div>))}
+          </div>
+        </div>
+
+        {/* Target Audience */}
+        <div>
+          <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
+          <div className="flex flex-wrap gap-2">
+            {service.targetAudience.slice(0, 3).map((audience, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan">
+                {audience}
+              </Badge>))}
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex space-x-3 pt-4">
+          <Button asChild className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+            <Link to={service.website} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4 mr-2"/>
+              Learn More
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">
+            <a href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}>
+              <Mail className="w-4 h-4 mr-2"/>
+              Contact
+            </a>
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/micro-saas-services"/>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>

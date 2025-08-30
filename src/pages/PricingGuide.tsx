@@ -25,17 +25,29 @@ import { Calculator,
   Globe,
   Atom,
   Satellite
+<<<<<<< HEAD
  } from 'lucide-react';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
+=======
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function PricingGuide(...args[]):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
   const currencyRates = {
-    USD: { symbol: '$', rate: 1 },
-    EUR: { symbol: '€', rate: 0.85 },
-    GBP: { symbol: '£', rate: 0.73 }
+  USD: { symbol: '$',
+  rate: 1 
+;
+;
+;
+
+
+},;
+    EUR: { symbol: '€', rate: 0.85 },;
+    GBP: { symbol: '£', rate: 0.73 };
   };
 
   const pricingPlans = [
@@ -99,11 +111,19 @@ export default function PricingGuide(...args[]):  {
         "Monthly Strategy Sessions",
         "Custom Integration",
         "SLA Guarantees"
+<<<<<<< HEAD
       ],
       notIncluded[],
       cta: "Contact Sales",
       popular: false
     }
+=======;
+      ],;
+      notIncluded: [],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const servicePricing = [
@@ -139,15 +159,17 @@ export default function PricingGuide(...args[]):  {
       category: "IT Infrastructure",
       icon: Cpu,
       services[
-        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
-        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },
-        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
-        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
-      ]
-    }
+        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;
+        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;
+        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;
+        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
+      ];
+    };
   ];
 
-  const calculatePrice = (price: number)  => {
+<<<<<<< HEAD
+  const calculatePrice = (price: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
     const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
@@ -156,7 +178,7 @@ export default function PricingGuide(...args[]):  {
   const savings = selectedPeriod === 'yearly' ? 10 : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
@@ -372,9 +394,19 @@ export default function PricingGuide(...args[]):  {
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

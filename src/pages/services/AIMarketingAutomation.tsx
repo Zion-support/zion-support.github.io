@@ -36,20 +36,20 @@ export default function AIMarketingAutomation(...args[]):  {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior analysis',
-    'Automated content personalization and optimization',
-    'Multi-channel campaign orchestration',
-    'Real-time performance optimization',
-    'Advanced A/B testing with AI insights',
-    'Lead scoring and qualification automation',
-    'ROI tracking and predictive analytics'
+    'Automated content personalization and optimization',;
+    'Multi-channel campaign orchestration',;
+    'Real-time performance optimization',;
+    'Advanced A/B testing with AI insights',;
+    'Lead scoring and qualification automation',;
+    'ROI tracking and predictive analytics';
   ];
 
-  const benefits = [
-    'Increase conversion rates by 40-60%',
-    'Reduce customer acquisition costs by 30%',
-    'Improve customer lifetime value by 25%',
-    'Save 15+ hours per week on marketing tasks',
-    'Achieve 3x better campaign performance'
+  const benefits = [;
+    'Increase conversion rates by 40-60%',;
+    'Reduce customer acquisition costs by 30%',;
+    'Improve customer lifetime value by 25%',;
+    'Save 15+ hours per week on marketing tasks',;
+    'Achieve 3x better campaign performance';
   ];
 
   const pricingTiers = [
@@ -87,6 +87,7 @@ export default function AIMarketingAutomation(...args[]):  {
       popular: true
     },
     {
+<<<<<<< HEAD
       name: "Enterprise",
       price: "$1,499",
       period: "/month",
@@ -103,24 +104,32 @@ export default function AIMarketingAutomation(...args[]):  {
       cta: "Contact Sales",
       popular: false
     }
+=======
+      name: 'Enterprise',;
+      price: '$799',;
+      period: '/mo',;
+      contacts: 'Unlimited contacts',;
+      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
-    'E-commerce businesses',
-    'B2B SaaS companies',
-    'Digital agencies',
-    'Real estate companies',
-    'Healthcare providers',
-    'Educational institutions'
+    'E-commerce businesses',;
+    'B2B SaaS companies',;
+    'Digital agencies',;
+    'Real estate companies',;
+    'Healthcare providers',;
+    'Educational institutions';
   ];
 
-  const channels = [
-    'Email Marketing', 'Social Media', 'SMS/Text', 'Push Notifications', 'Web Push',
-    'Display Advertising', 'Search Marketing', 'Content Marketing', 'Influencer Marketing'
+  const channels = [;
+    'Email Marketing', 'Social Media', 'SMS/Text', 'Push Notifications', 'Web Push',;
+    'Display Advertising', 'Search Marketing', 'Content Marketing', 'Influencer Marketing';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Marketing Automation Platform - Zion Tech Group"
         description="Revolutionary AI marketing automation platform that personalizes campaigns, optimizes performance, and maximizes ROI through intelligent automation."
@@ -174,9 +183,18 @@ export default function AIMarketingAutomation(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-rose-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -201,9 +219,18 @@ export default function AIMarketingAutomation(...args[]):  {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -228,9 +255,18 @@ export default function AIMarketingAutomation(...args[]):  {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-rose-500 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -255,9 +291,18 @@ export default function AIMarketingAutomation(...args[]):  {
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-rose-500 ring-2 ring-rose-500/20' 
@@ -303,8 +348,14 @@ export default function AIMarketingAutomation(...args[]):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -441,9 +492,19 @@ export default function AIMarketingAutomation(...args[]):  {
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

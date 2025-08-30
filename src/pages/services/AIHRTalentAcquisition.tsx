@@ -25,30 +25,30 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     'Intelligent resume parsing and skill extraction',
     'Automated candidate screening and assessment',
     'Predictive candidate success modeling',
-    'Advanced interview scheduling and coordination',
-    'Real-time candidate engagement tracking',
-    'Automated reference checking and verification',
-    'Intelligent job posting optimization',
-    'Advanced analytics and reporting dashboard',
-    'Multi-channel recruitment campaign management'
+    'Advanced interview scheduling and coordination',;
+    'Real-time candidate engagement tracking',;
+    'Automated reference checking and verification',;
+    'Intelligent job posting optimization',;
+    'Advanced analytics and reporting dashboard',;
+    'Multi-channel recruitment campaign management';
   ];
 
   const benefits = [
-    'Reduce time-to-hire by 60%',
-    'Improve candidate quality by 45%',
-    'Reduce recruitment costs by 40%',
-    'Increase diversity in hiring by 35%',
-    'Automate 80% of manual recruitment tasks',
-    'Improve candidate experience significantly'
+    'Reduce time-to-hire by 60%',;
+    'Improve candidate quality by 45%',;
+    'Reduce recruitment costs by 40%',;
+    'Increase diversity in hiring by 35%',;
+    'Automate 80% of manual recruitment tasks',;
+    'Improve candidate experience significantly';
   ];
 
   const useCases = [
-    'Enterprise talent acquisition',
-    'Tech recruitment and hiring',
-    'Healthcare staffing solutions',
-    'Financial services recruitment',
-    'Manufacturing and logistics hiring',
-    'Retail and hospitality staffing'
+    'Enterprise talent acquisition',;
+    'Tech recruitment and hiring',;
+    'Healthcare staffing solutions',;
+    'Financial services recruitment',;
+    'Manufacturing and logistics hiring',;
+    'Retail and hospitality staffing';
   ];
 
   const integrations = [
@@ -56,7 +56,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     "Workday, BambooHR, ADP",
     "Greenhouse, Lever, Workable",
     "Slack, Microsoft Teams, Email",
-    "Calendly, Zoom, Google Meet"
+    "Calendly, Zoom, Google Meet";
   ];
 
   const pricing = [
@@ -67,6 +67,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       features["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
       popular: false
     },
+<<<<<<< HEAD
     {
       plan: "Professional",
       price: "$899",
@@ -81,10 +82,22 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       features["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
+=======
+    { 
+      name: 'Talent Professional', 
+      price: '$799/mo', 
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    },;
+    { ;
+      name: 'Enterprise Talent', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -125,10 +138,19 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
@@ -144,8 +166,14 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -162,10 +190,19 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -197,10 +234,19 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -217,8 +263,14 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -235,10 +287,19 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             {integrations.map((integration, index)  => (
               <motion.div
                 key={integration}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
               >
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
@@ -252,8 +313,14 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -270,10 +337,19 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             {pricing.map((plan, index)  => (
               <motion.div
                 key={plan.plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular 
                     ? 'border-blue-500 shadow-lg shadow-blue-500/20' 
@@ -322,8 +398,14 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -380,11 +462,21 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             </div>
           </div>
           <p className="text-zion-slate-light">
+<<<<<<< HEAD
             Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.
           </p>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIHRTalentAcquisition;
+=======
+            Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.;
+          </p>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

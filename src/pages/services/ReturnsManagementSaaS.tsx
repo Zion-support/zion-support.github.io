@@ -75,12 +75,12 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
 
         <div className="mt-8">
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">
-            Book a demo
-            <LinkIcon className="w-4 h-4" />
-          </a>
-        </div>
-      </section>
-    </div>
+            Book a demo;
+            <LinkIcon className="w-4 h-4" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

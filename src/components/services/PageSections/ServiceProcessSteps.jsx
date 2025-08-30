@@ -103,25 +103,50 @@ export const ServiceProcessSteps = () => {
 
   const getColorClasses = (color) => {
     const colorMap = {
-      blue: 'bg-blue-100 text-blue-600 border-blue-200',
+  blue: 'bg-blue-100 text-blue-600 border-blue-200',
       green: 'bg-green-100 text-green-600 border-green-200',
       purple: 'bg-purple-100 text-purple-600 border-purple-200',
       orange: 'bg-orange-100 text-orange-600 border-orange-200',
       red: 'bg-red-100 text-red-600 border-red-200',
+  <<<<<<< HEAD
       indigo: 'bg-indigo-100 text-indigo-600 border-indigo-200'
-    };
+    
+};
     return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200'};
+=======
+  indigo: 'bg-indigo-100 text-indigo-600 border-indigo-200'
+    
 
-  const getGradientClasses = (color) => {
-    const gradientMap = {
-      blue: 'from-blue-500 to-blue-600',
+
+
+
+};
+    return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200';
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const gradientMap = {
+  blue: 'from-blue-500 to-blue-600',
       green: 'from-green-500 to-green-600',
       purple: 'from-purple-500 to-purple-600',
       orange: 'from-orange-500 to-orange-600',
       red: 'from-red-500 to-red-600',
+  <<<<<<< HEAD
       indigo: 'from-indigo-500 to-indigo-600'
-    };
+    
+};
     return gradientMap[color] || 'from-gray-500 to-gray-600'};
+=======
+  indigo: 'from-indigo-500 to-indigo-600'
+    
+
+
+
+
+};
+    return gradientMap[color] || 'from-gray-500 to-gray-600';
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

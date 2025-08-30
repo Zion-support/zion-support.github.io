@@ -14,21 +14,28 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
-    const getCategoryIcon = (categoryName) => {
-        return '💼'};
     const getServiceTypeColor = (type) => {
         const colorMap = {
-            'Micro SAAS': 'bg-blue-100 text-blue-800',
+  'Micro SAAS': 'bg-blue-100 text-blue-800',
             'IT Services': 'bg-green-100 text-green-800',
+  <<<<<<< HEAD
             'AI Services': 'bg-purple-100 text-purple-800'
-        };
+        
+};
         return colorMap[type] || 'bg-gray-100 text-gray-800'};
+=======
+  'AI Services': 'bg-purple-100 text-purple-800'
+        
+
+
+
+
+};
+        return colorMap[type] || 'bg-gray-100 text-gray-800';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<div className="min-h-screen bg-zion-blue-dark">
               <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>
 

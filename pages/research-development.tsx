@@ -28,107 +28,19 @@ export default function ResearchDevelopment(...args[]):  {
 		}
 	]
 
-	const currentProjects = [
-		{
-			title: 'Autonomous Business Operations Platform',
-			status: 'In Development',
-			description: 'A comprehensive platform that automates complex business processes using AI agents.',
-			progress: 75,
-			team: 8,
-			timeline: 'Q2 2025'
-		},
-		{
-			title: 'Quantum-Safe Cybersecurity Framework',
-			status: 'Research Phase',
-			description: 'Developing post-quantum cryptography solutions for future-proof security.',
-			progress: 30,
-			team: 5,
-			timeline: 'Q4 2025'
-		},
-		{
-			title: 'AI-Powered IT Asset Management',
-			status: 'Beta Testing',
-			description: 'Intelligent system for automated discovery, monitoring, and optimization of IT infrastructure.',
-			progress: 90,
-			team: 6,
-			timeline: 'Q1 2025'
-		}
-	]
-
-	const publications = [
-		{
-			title: 'Multi-Agent AI Systems for Enterprise Automation',
-			authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez',
-			journal: 'IEEE Transactions on AI',
-			year: '2024',
-			doi: '10.1109/TAI.2024.001234'
-		},
-		{
-			title: 'Quantum Neural Networks: Architecture and Applications',
-			authors: 'Dr. Emily Watson, Dr. Alex Thompson',
-			journal: 'Nature Quantum Information',
-			year: '2024',
-			doi: '10.1038/s41534-024-00845-2'
-		},
-		{
-			title: 'Edge Computing Security in 5G Networks',
-			authors: 'Dr. David Kim, Dr. Lisa Chen',
-			journal: 'Computer Networks',
-			year: '2024',
-			doi: '10.1016/j.comnet.2024.109876'
-		}
-	]
-
-	return (
-		<>
-			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Research & Development
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							Pushing the boundaries of technology through innovative research and cutting-edge development.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			{/* Mission Statement */}
-			<section className="py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-3xl text-center">
-						<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-8">
-							<Lightbulb className="h-8 w-8 text-blue-600" />
-						</div>
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
-							Our Innovation Mission
-						</h2>
-						<p className="text-lg text-gray-600 leading-relaxed">
-							At Zion Tech Group, we believe that the future belongs to those who dare to imagine it. Our R&D team works tirelessly to transform cutting-edge research into practical solutions that solve real-world problems and drive business transformation.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			{/* Research Areas */}
-			<section className="py-24 sm:py-32 bg-gray-50">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Research Focus Areas</h2>
-						<p className="mt-6 text-lg text-gray-600">
-							We concentrate our efforts on technologies that will shape the future of business
-						</p>
-					</div>
-					<div className="grid gap-8 lg: grid-cols-3">
-						{researchAreas.map((area, index)  => {
-							const IconComponent = area.icon
-							const colorClasses = {
-								blue: 'bg-blue-100 text-blue-600',
+<<<<<<< HEAD
+	const colorClasses = {
+  blue: 'bg-blue-100 text-blue-600',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 								green: 'bg-green-100 text-green-600',
-								purple: 'bg-purple-100 text-purple-600'
-							}
+  purple: 'bg-purple-100 text-purple-600'
+							
+
+
+
+
+
+}
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
 									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${colorClasses[area.color]} mb-6`}>
@@ -309,9 +221,9 @@ export default function ResearchDevelopment(...args[]):  {
 						>
 							Join Our Team <span aria-hidden="true">→</span>
 						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

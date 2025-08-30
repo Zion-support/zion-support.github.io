@@ -17,12 +17,13 @@ interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
   autoDetect?: boolean;
   onSettingsChange?: (settings: MobileSettings)  => void}
 
+<<<<<<< HEAD
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
   enabled = true,
   showControls = true,
   autoDetect = true,
   onSettingsChange,
-}) => {
+}) => {;
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -30,6 +31,34 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [settings, setSettings] = useState<any>({
     touchOptimized: true,
     gestureSupport: true,
+=======
+interface DeviceInfo {
+  type: 'mobile' | 'tablet' | 'desktop';
+  platform: 'ios' | 'android' | 'web' | 'unknown';
+  screenSize: { width: number; height: number };
+  pixelRatio: number;
+  orientation: 'portrait' | 'landscape';
+  touchSupport: boolean;
+  pwaSupport: boolean;
+  networkType: string;
+  batteryLevel: number;
+}
+
+export function MobileExperienceEnhancer({ 
+  enabled = true ;
+}: { ;
+  enabled?: boolean; 
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<MobileSettings>({
+    touchGestures: true,
+    orientationLock: false,
+    mobileOptimizations: true,
+    pwaFeatures: true,
+    touchFeedback: true,
+    hapticFeedback: false,
+    adaptiveLayout: true,
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     mobileNavigation: true,
     responsiveImages: true,
     mobilePerformance: true,
@@ -42,27 +71,91 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Detect mobile device and orientation
   useEffect(() => {
+<<<<<<< HEAD
     if (!enabled) return;
 
-    const detectDevice = () => {
+    const detectDevice = () => {;
       const userAgent = navigator.userAgent.toLowerCase();
-      const isMobileDevice = /mobile|android|iphone|ipad|phone|blackberry|opera mini|iemobile/i.test(userAgent);
       const isTabletDevice = /tablet|ipad|android(?=.*\b(?!mobile\b))|ipad/i.test(userAgent);
       
       setIsMobile(isMobileDevice);
       setIsTablet(isTabletDevice)};
+=======
+    const detectDevice = () => {;
+      const userAgent = navigator.userAgent;
+      const screen = window.screen;
+      
+      let type: 'mobile' | 'tablet' | 'desktop' = 'desktop';
+      let platform: 'ios' | 'android' | 'web' | 'unknown' = 'unknown';
+      
+      // Detect platform
+      if (/iPad|iPhone|iPod/.test(userAgent)) {
+        platform = 'ios';
+        type = /iPad/.test(userAgent) ? 'tablet' : 'mobile';
+      } else if (/Android/.test(userAgent)) {
+        platform = 'android';
+        type = screen.width >= 768 ? 'tablet' : 'mobile';
+      } else if (/Windows|Mac|Linux/.test(userAgent)) {
+        platform = 'web';
+        type = 'desktop';
+      }
+      
+      // Detect mobile by screen size
+      if (screen.width <= 768) {
+        type = screen.width <= 480 ? 'mobile' : 'tablet';
+      }
+      
+      const deviceInfo: DeviceInfo = {
+  type,
+        platform,
+        screenSize: { width: screen.width,
+  height: screen.height 
+
+
+
+
+
+},
+        pixelRatio: window.devicePixelRatio || 1,;
+        orientation: screen.width > screen.height ? 'landscape' : 'portrait',;
+        touchSupport: 'ontouchstart' in window,;
+        pwaSupport: 'serviceWorker' in navigator,;
+        networkType: (navigator as any).connection?.effectiveType || 'unknown',;
+        batteryLevel: 0;
+      };
+      
+      setDeviceInfo(deviceInfo);
+      
+      // Get battery level if available
+      if ('getBattery' in navigator) {
+        (navigator as any).getBattery().then((battery: any) => {
+          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        });
+      }
+    };
+    
+    detectDevice();
+    window.addEventListener('resize', detectDevice);
+    window.addEventListener('orientationchange', detectDevice);
+    
+    return () => {
+      window.removeEventListener('resize', detectDevice);
+      window.removeEventListener('orientationchange', detectDevice);
+    };
+  }, []);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const detectOrientation = () => {
       if (window.innerHeight > window.innerWidth) {
         setOrientation('portrait')} else {
-        setOrientation('landscape')}
+        setOrientation('landscape')};
     };
 
-    const handleResize = () => {
+    const handleResize = () => {;
       detectDevice();
       detectOrientation()};
 
-    const handleOrientationChange = () => {
+    const handleOrientationChange = () => {;
       setTimeout(detectOrientation, 100)};
 
     // Initial detection
@@ -84,16 +177,17 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Check for touch support
     const hasTouchSupport = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
+<<<<<<< HEAD
     // Check for mobile network
     const isSlowConnection = navigator.connection && 
       (navigator.connection.effectiveType === 'slow-2g' || 
-       navigator.connection.effectiveType === '2g' ||
+       navigator.connection.effectiveType === '2g' ||;
        navigator.connection.effectiveType === '3g');
 
-    setSettings(prev => ({
+    setSettings(prev = > ({
       ...prev,
       touchOptimized: hasTouchSupport,
-      mobilePerformance: isSlowConnection || false,
+      mobilePerformance: isSlowConnection || false,;
     }))}, [autoDetect, enabled]);
 
   // Touch optimization
@@ -103,7 +197,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Add touch-action CSS for better touch handling
     const style = document.createElement('style');
     style.textContent = `
-      .touch-optimized {
+      .touch-optimized {;
         touch-action: manipulation;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -142,22 +236,21 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     if (!enabled || !settings.gestureSupport || !isMobile) return;
 
     const handleTouchStart = (event: TouchEvent)  => {
-      if (event.touches.length === 1) {
+      if (event.touches.length === 1) {;
         const touch = event.touches[0];
         touchStartRef.current = {
-          x: touch.clientX,
+  x: touch.clientX,
           y: touch.clientY,
           time: Date.now(),
-        }}
+   
+}};
     };
 
-    const handleTouchEnd = (event: TouchEvent)  => {
+    const handleTouchEnd = (event: TouchEvent)  => {;
       if (!touchStartRef.current || event.changedTouches.length !== 1) return;
 
       const touch = event.changedTouches[0];
-      const deltaX = touch.clientX - touchStartRef.current.x;
       const deltaY = touch.clientY - touchStartRef.current.y;
-      const deltaTime = Date.now() - touchStartRef.current.time;
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       const velocity = distance / deltaTime;
 
@@ -169,7 +262,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           gesture = deltaX > 0 ? 'swipe-right' : 'swipe-left'} else {
           gesture = deltaY > 0 ? 'swipe-down' : 'swipe-up'}
 
-        // Handle gestures
+        // Handle gestures;
         handleGesture(gesture, { deltaX, deltaY, velocity });
         
         // Track gesture history
@@ -206,6 +299,101 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       const nextButton = document.querySelector('[data-next], .next-button, .carousel-next');
       if (nextButton) {
         (nextButton as HTMLElement).click()}
+=======
+    const handleTouchStart = (e: TouchEvent) => {;
+      if (e.touches.length === 1) {;
+        const touch = e.touches[0];
+        touchStartRef.current = {
+  x: touch.clientX,
+          y: touch.clientY,;
+  ;
+  ;
+  ;
+  time: Date.now();
+        ;
+
+
+
+
+
+};
+      }
+    };
+    
+    const handleTouchEnd = (e: TouchEvent) => {;
+      if (!touchStartRef.current || e.touches.length !== 0) return;
+      
+      const touch = e.changedTouches[0];
+      const start = touchStartRef.current;
+      const deltaTime = Date.now() - start.time;
+      
+      // Detect gesture type
+      let gestureType: TouchGesture['type'] = 'tap';
+      let direction: TouchGesture['direction'] | null;
+      
+      if (deltaTime < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+        gestureType = 'tap';
+      } else if (deltaTime > 500) {
+        gestureType = 'longPress';
+      } else if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+        gestureType = 'swipe';
+        direction = deltaX > 0 ? 'right' : 'left';
+      } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
+        gestureType = 'swipe';
+        direction = deltaY > 0 ? 'down' : 'up';
+      }
+      
+      const gesture: TouchGesture = {
+  type: gestureType,
+        direction,
+        timestamp: Date.now(),
+        coordinates: { x: touch.clientX,;
+  y: touch.clientY ;
+;
+;
+
+
+
+},;
+        intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      };
+      
+      setTouchGestures(prev => [...prev.slice(-9), gesture]);
+      handleGesture(gesture);
+      
+      touchStartRef.current = null;
+    };
+    
+    const handleGesture = (gesture: TouchGesture) => {;
+      // Handle different gesture types;
+      switch (gesture.type) {;
+        case 'swipe':;
+          if (gesture.direction === 'left') {;
+            // Navigate forward;
+            console.log('Swipe left - navigate forward');
+          } else if (gesture.direction = == 'right') {;
+            // Navigate back;
+            console.log('Swipe right - navigate back');
+          }
+          break;
+        case 'longPress':
+          // Show context menu
+          console.log('Long press - show context menu');
+          break;
+        case 'tap':
+          // Handle tap
+          console.log('Tap detected');
+          break;
+      }
+      
+      // Add to active gestures
+      setActiveGestures(prev => [...prev, `${gesture.type}${gesture.direction ? `-${gesture.direction}` : ''}`]);
+      
+      // Remove after 3 seconds
+      setTimeout(() => {
+        setActiveGestures(prev => prev.filter(g => g !== `${gesture.type}${gesture.direction ? `-${gesture.direction}` : ''}`));
+      }, 3000);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
 
     const handleSwipeRight = (data: { deltaX: number; deltaY: number; velocity: number })  => {
@@ -240,7 +428,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Add mobile navigation styles
     const style = document.createElement('style');
     style.textContent = `
-      .mobile-nav {
+      .mobile-nav {;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -293,7 +481,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     }}, [enabled, settings.mobileNavigation, isMobile, location.pathname]);
 
   // Create mobile navigation
-  const createMobileNavigation = useCallback(() => {
+  const createMobileNavigation = useCallback(() => {;
     const nav = document.createElement('nav');
     nav.className = 'mobile-nav';
     nav.setAttribute('role', 'navigation');
@@ -303,16 +491,16 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       { href: '/', label: 'Home', icon: '🏠' },
       { href: '/services', label: 'Services', icon: '⚙️' },
       { href: '/about', label: 'About', icon: 'ℹ️' },
-      { href: '/contact', label: 'Contact', icon: '📞' },
+      { href: '/contact', label: 'Contact', icon: '📞' },;
     ];
 
-    navItems.forEach(item  => {
+    navItems.forEach(item = > {;
       const link = document.createElement('a');
       link.href = item.href;
       link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
       link.innerHTML = `
         <span class="nav-icon">${item.icon}</span>
-        <span>${item.label}</span>
+        <span>${item.label}</span>;
       `;
       nav.appendChild(link)});
 
@@ -322,9 +510,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   useEffect(() => {
     if (!enabled || !settings.responsiveImages || !isMobile) return;
 
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
+      images.forEach(img = > {
         // Add responsive image attributes
         if (!img.sizes) {
           img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
@@ -335,7 +523,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         
         // Add decoding attribute
         if (!img.decoding) {
-          img.decoding = 'async'}
+          img.decoding = 'async'};
       })};
 
     optimizeImages();
@@ -353,7 +541,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Reduce animations on mobile
     const style = document.createElement('style');
     style.textContent = `
-      .mobile-performance * {
+      .mobile-performance * {;
         animation-duration: 0.3s !important;
         transition-duration: 0.3s !important}
       
@@ -372,11 +560,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          // Handle scroll optimizations here
+          // Handle scroll optimizations here;
           ticking = false});
-        ticking = true}
+        ticking = true};
     };
 
+<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return ()  => {
@@ -389,25 +578,97 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   useEffect(() => {
     if (!enabled || !settings.offlineSupport) return;
 
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
+    const registration = await navigator.serviceWorker.register('/sw.js');
           serviceWorkerRef.current = registration;
           console.log('Service Worker registered successfully')} catch (error) {
           console.warn('Service Worker registration failed:', error)}
+=======
+  // Apply mobile optimizations
+  const applyMobileOptimizations = useCallback(async () => {;
+    setIsOptimizing(true);
+    
+    try {
+      // Apply touch target optimizations
+      if (settings.touchTargets) {
+        document.body.classList.add('mobile-touch-targets');
+        document.documentElement.style.setProperty('--zion-touch-target-size', '44px');
+      }
+      
+      // Apply mobile navigation
+      if (settings.mobileNavigation) {
+        document.body.classList.add('mobile-navigation');
+      }
+      
+      // Apply adaptive layout
+      if (settings.adaptiveLayout) {
+        document.body.classList.add('mobile-adaptive-layout');
+      }
+      
+      // Apply touch feedback
+      if (settings.touchFeedback) {
+        document.body.classList.add('mobile-touch-feedback');
+      }
+      
+      // Simulate optimization delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Calculate mobile score
+      const enabledFeatures = features.filter(f => f.enabled).length;
+      const totalFeatures = features.length;
+      const score = Math.round((enabledFeatures / totalFeatures) * 100);
+      setMobileScore(score);
+      
+    } catch (error) {
+      console.error('Mobile optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [settings, features]);
+
+  // Toggle mobile features
+  const toggleFeature = useCallback((featureId: string) => {;
+    setFeatures(prev => prev.map(f => ;
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f;
+    ));
+    
+    // Apply optimizations after feature toggle
+    setTimeout(applyMobileOptimizations, 100);
+  }, [applyMobileOptimizations]);
+
+  // Save mobile settings
+  const saveSettings = useCallback(async () => {;
+    setIsOptimizing(true);
+    try {
+      localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } catch (error) {
+      console.error('Failed to save mobile settings:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [settings]);
+
+  // Load mobile settings
+  const loadSettings = useCallback(async () => {;
+    setIsOptimizing(true);
+    try {
+      const saved = localStorage.getItem('zion-mobile-settings');
+      if (saved) {
+        const parsedSettings = JSON.parse(saved);
+        setSettings(parsedSettings);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       }
     };
 
     registerServiceWorker();
 
     // Handle offline/online events
-    const handleOnline = () => {
+    const handleOnline = () => {;
       document.body.classList.remove('offline');
       // Show online notification
       showNotification('You are back online', 'success')};
 
-    const handleOffline = () => {
+    const handleOffline = () => {;
       document.body.classList.add('offline');
       // Show offline notification
       showNotification('You are currently offline', 'warning')};
@@ -420,11 +681,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       window.removeEventListener('offline', handleOffline)}}, [enabled, settings.offlineSupport]);
 
   // Show notification
-  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error')  => {
+  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error')  => {;
     const notification = document.createElement('div');
     notification.className = `mobile-notification mobile-notification-${type}`;
     notification.textContent = message;
-    notification.style.cssText = `
+    notification.style.cssText = `;
       position: fixed;
       top: 20px;
       left: 50%;
@@ -449,32 +710,67 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const toggleSetting = useCallback((key: keyof MobileSettings)  => {
     setSettings(prev => ({
       ...prev,
-      [key]: !prev[key],
+      [key]: !prev[key],;
     }))}, []);
 
   // Reset to default settings
   const resetSettings = useCallback(() => {
+<<<<<<< HEAD
     setSettings({
       touchOptimized: true,
       gestureSupport: true,
+=======
+    const defaultSettings: MobileSettings = {
+  touchGestures: true,
+      orientationLock: false,
+      mobileOptimizations: true,
+      pwaFeatures: true,
+      touchFeedback: true,
+      hapticFeedback: false,
+      adaptiveLayout: true,
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       mobileNavigation: true,
       responsiveImages: true,
       mobilePerformance: true,
+<<<<<<< HEAD
       offlineSupport: false,
-    })}, []);
+   ;
+})}, []);
+=======
+      gestureHistory: true,
+      mobileAnalytics: true,
+      deviceOrientation: 'auto',
+      touchSensitivity: 'medium',;
+  ;
+  ;
+  hapticIntensity: 'medium';
+    ;
+
+
+
+
+};
+    
+    setSettings(defaultSettings);
+    setTouchGestures([]);
+    setActiveGestures([]);
+    setMobileScore(0);
+  }, []);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   // Toggle mobile panel visibility
-  const togglePanel = useCallback(() => {
+  const togglePanel = useCallback(() => {;
     setIsVisible(prev => !prev)}, []);
 
   if (!enabled) return null;
 
   return (
     <>
+<<<<<<< HEAD
       {/* Mobile Experience Controls Button */}
       {showControls && isMobile && (
         <button
-          onClick={togglePanel}
+          onClick = {togglePanel}
           className="fixed bottom-20 right-4 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           aria-label="Mobile experience settings"
           aria-expanded={isVisible}
@@ -503,6 +799,59 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               onClick={togglePanel}
               className="text-gray-400 hover:text-gray-600"
               aria-label="Close mobile settings"
+=======
+      {/* Floating Mobile Button */}
+      <motion.button
+        onClick = {() => setIsOpen(true)}
+        className="fixed bottom-6 left-20 z-50 p-3 bg-gradient-to-r from-zion-green to-zion-blue rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Open Mobile Experience Settings"
+      >
+        <Smartphone className="w-6 h-6 text-white" />
+        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+      </motion.button>
+
+      {/* Mobile Experience Dashboard Modal */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            ref={mobileRef}
+          >
+            <motion.div
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
+              className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -570,6 +919,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <span className="text-sm font-medium text-gray-700">Performance Mode</span>
             </label>
 
+<<<<<<< HEAD
             {/* Offline Support */}
             <label className="flex items-center">
               <input
@@ -581,6 +931,78 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <span className="text-sm font-medium text-gray-700">Offline Support</span>
             </label>
           </div>
+=======
+                {/* Mobile Features */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                    Mobile Features
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {features.map((feature) => (
+                      <motion.div
+                        key={feature.id}
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                        className={`p-4 rounded-xl border transition-all cursor-pointer ${
+                          feature.enabled
+                            ? 'bg-zion-green/10 border-zion-green'
+                            : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700 hover:border-zion-green'
+                        }`}
+                        onClick={() => toggleFeature(feature.id)}
+                      >
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                                feature.priority === 'high' ? 'bg-red-100 text-red-800' :
+                                feature.priority === 'medium' ? 'bg-yellow-100 text-yellow-800' :
+                                'bg-blue-100 text-blue-800'
+                              }`}>
+                                {feature.priority.toUpperCase()}
+                              </span>
+                              <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800">
+                                {feature.category}
+                              </span>
+                            </div>
+                            <h4 className="font-medium text-gray-900 dark:text-white mb-1">
+                              {feature.name}
+                            </h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              {feature.description}
+                            </p>
+                          </div>
+                          
+                          <div className={`w-5 h-5 rounded-full border-2 transition-colors ${
+                            feature.enabled
+                              ? 'bg-zion-green border-zion-green'
+                              : 'border-gray-300 dark:border-gray-600'
+                          }`}>
+                            {feature.enabled && (
+                              <CheckCircle className="w-5 h-5 text-white" />
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
           {/* Device Info */}
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
@@ -610,14 +1032,205 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         </div>
       )}
 
+<<<<<<< HEAD
       {/* Mobile Status Indicator */}
       {isMobile && (
         <div className="fixed top-4 right-4 z-40 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
           📱 Mobile
         </div>
       )}
+=======
+                {/* Advanced Settings */}
+                <div className="mb-8">
+                  <button
+                    onClick={() => setShowAdvanced(!showAdvanced)}
+                    className="flex items-center space-x-2 text-zion-green hover:text-zion-green-dark transition-colors"
+                  >
+                    <Settings className="w-4 h-4" />
+                    <span>{showAdvanced ? 'Hide' : 'Show'} Advanced Settings</span>
+                  </button>
+                  
+                  {showAdvanced && (
+                    <motion.div
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                      className="mt-4 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
+                    >
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Touch Sensitivity
+                          </label>
+                          <select
+                            value={settings.touchSensitivity}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  touchSensitivity: e.target.value as any 
+
+
+
+
+
+}))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Haptic Intensity
+                          </label>
+                          <select
+                            value={settings.hapticIntensity}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  hapticIntensity: e.target.value as any 
+
+
+
+
+
+}))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="light">Light</option>
+                            <option value="medium">Medium</option>
+                            <option value="strong">Strong</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Device Orientation
+                          </label>
+                          <select
+                            value={settings.deviceOrientation}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  deviceOrientation: e.target.value as any 
+
+
+
+
+
+}))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="auto">Auto</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Landscape</option>
+                          </select>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex items-center justify-between pt-6 border-t border-gray-200 dark:border-zion-slate-700">
+                  <div className="flex space-x-3">
+                    <button
+                      onClick={saveSettings}
+                      disabled={isOptimizing}
+                      className="flex items-center space-x-2 px-4 py-2 bg-zion-green text-white rounded-lg hover:bg-zion-green-dark transition-colors disabled:opacity-50"
+                    >
+                      {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+                      <span>Save Settings</span>
+                    </button>
+                    
+                    <button
+                      onClick={loadSettings}
+                      disabled={isOptimizing}
+                      className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-zion-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-zion-slate-600 transition-colors disabled:opacity-50"
+                    >
+                      {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
+                      <span>Load Settings</span>
+                    </button>
+                    
+                    <button
+                      onClick={resetSettings}
+                      className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                      <span>Reset to Default</span>
+                    </button>
+                  </div>
+                  
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    Mobile-first design & touch optimization
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Global Mobile Styles */};
+      <style jsx global>{`;
+        .mobile-touch-targets button,;
+        .mobile-touch-targets a,;
+        .mobile-touch-targets input,;
+        .mobile-touch-targets select {;
+          min-height: 44px !important;
+          min-width: 44px !important;
+        }
+        
+        .mobile-navigation .nav-item {
+          padding: 12px 16px !important;
+          margin: 4px 0 !important;
+        }
+        
+        .mobile-adaptive-layout {
+          --zion-mobile-padding: 16px !important;
+          --zion-mobile-margin: 8px !important;
+        }
+        
+        .mobile-touch-feedback *:active {
+          transform: scale(0.98) !important;
+          transition: transform 0.1s ease !important;
+        }
+        
+        @media (max-width: 768px) {
+          .mobile-adaptive-layout {
+            --zion-container-padding: 16px !important;
+            --zion-section-margin: 24px !important;
+          }
+        }
+      `}</style>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </>
   )};
 
 // Export default component
+export default MobileExperienceEnhancer;
 export default MobileExperienceEnhancer;

@@ -110,6 +110,7 @@ import { Users,
 
 const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: "AI-Powered Customer Insights",
@@ -145,10 +146,46 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       title: "Automated Support Escalation",
       description: "Smart routing and escalation based on customer priority and issue complexity",
       color: "from-yellow-500 to-orange-500"
-    }
+    };
   ];
 
   const pricingPlans = [
+=======
+    "AI-powered customer health scoring and monitoring",
+    "Predictive churn detection and prevention",
+    "Intelligent customer journey mapping",
+    "Automated onboarding and training workflows",
+    "Real-time customer sentiment analysis",
+    "Proactive support and engagement automation",
+    "Customer success metrics and analytics",;
+    "Integration with CRM and support systems",;
+    "Multi-channel communication tools",;
+    "Customer feedback and survey automation",;
+    "Success playbook and best practices",;
+    "Revenue expansion and upsell opportunities";
+  ];
+
+  const benefits = [;
+    "Reduce customer churn by 40%",;
+    "Increase customer lifetime value by 50%",;
+    "Improve customer satisfaction by 35%",;
+    "Reduce support costs by 30%",;
+    "Accelerate time to value for customers";
+  ];
+
+  const useCases = [
+    "SaaS companies",
+    "B2B service providers",
+    "E-commerce businesses",;
+    "Financial services",;
+    "Healthcare organizations",;
+    "Educational institutions",;
+    "Consulting firms",;
+    "Technology companies";
+  ];
+
+  const pricing = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: "Starter",
       price: "$299",
@@ -188,6 +225,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
+<<<<<<< HEAD
       description: "Comprehensive platform for large organizations with complex customer success needs",
       features[
         "Unlimited customers",
@@ -202,6 +240,21 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       cta: "Contact Sales",
       popular: false
     }
+=======
+      description: "For large organizations with complex customer success needs",
+      features: [
+        "Custom AI model training",
+        "White-label solutions",
+        "Advanced integrations",
+        "Custom success playbooks",
+        "Dedicated account manager",
+        "24/7 phone support",;
+        "Unlimited team members";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -228,7 +281,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       title: "3x Team Efficiency",
       description: "Automation and AI insights multiply your team's effectiveness",
       metric: "3x"
-    }
+    };
   ];
 
   const useCases = [
@@ -259,7 +312,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       description: "Improve patient outcomes through proactive communication and monitoring",
       icon: Heart,
       color: "from-orange-500 to-red-500"
-    }
+    };
   ];
 
   const customerSuccessMetrics = [
@@ -298,24 +351,31 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       description: "Track which features drive the most customer success",
       icon: Target,
       color: "from-indigo-500 to-purple-500"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Customer Success Platform - Zion Tech Group"
         description="Transform customer success with AI-powered insights, automation, and proactive engagement. Increase retention, satisfaction, and customer lifetime value."
       />
       
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-sm font-medium mb-8">
@@ -343,15 +403,100 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
               </div>
             </motion.div>
           </div>
+=======
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Customer Success
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Customer
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                {" "}Success Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Revolutionize your customer success with AI that predicts churn, optimizes engagement, and drives customer value. 
+              Increase retention, improve satisfaction, and grow your business through exceptional customer experiences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-200"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Comprehensive Customer Success Features
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Customer Success Intelligence
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to automate and optimize customer success operations
@@ -362,10 +507,50 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="group"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-emerald-500 transition-all duration-300"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
@@ -381,11 +566,40 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Proven Results Across Industries
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Customer Success
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300">
               See how AI Customer Success Platform transforms customer relationships
@@ -396,9 +610,18 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
@@ -429,10 +652,50 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             {customerSuccessMetrics.map((metric, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="group"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="text-center"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${metric.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${metric.color} mb-4`}>
@@ -448,11 +711,40 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       </section>
 
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry-Specific Solutions
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Leading Solutions
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300">
               Tailored customer success strategies for your industry's unique challenges
@@ -463,10 +755,50 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="group"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-emerald-500 transition-all duration-300"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
@@ -487,11 +819,40 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       </section>
 
       {/* Pricing Section */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Flexible Pricing Plans
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Flexible Pricing for Every Business
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300">
               Choose the plan that fits your customer success needs
@@ -502,10 +863,51 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative rounded-xl p-8 ${
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
+                className = {
+  `relative rounded-xl p-8 ${
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-500/50' 
                     : 'bg-slate-800/50 border border-slate-700/50'
@@ -554,8 +956,24 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -575,7 +993,27 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-    </div>
+<<<<<<< HEAD
+    </div>;
   )};
 
 export default AICustomerSuccessPlatform;
+=======
+
+      {/* Contact Info */}
+      <section className = "py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-gray-400 mb-4">
+            Need help choosing the right plan? Contact our sales team
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
+            <span>📞 +1 302 464 0950</span>
+            <span>📧 kleber@ziontechgroup.com</span>;
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

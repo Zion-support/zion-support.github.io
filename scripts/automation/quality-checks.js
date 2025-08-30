@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // // // console.log('🔍 Starting continuous quality checks automation...');
@@ -74,13 +73,18 @@ async function runQualityChecks() {
       // // // console.log('ℹ️  Duplicate code checker not available');
 
     // Generate quality report
+<<<<<<< HEAD
     // // // console.log('📊 Generating quality report...');
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: 'Quality checks completed',
-      status: 'completed'
-    };
+  status: 'completed'
+    
+};
 
+=======
+    console.log('📊 Generating quality report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const reportPath = path.join(process.cwd(), 'quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Quality report saved to ${reportPath}`);

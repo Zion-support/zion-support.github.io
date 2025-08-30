@@ -1,15 +1,15 @@
 import React from 'react';
 import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {
   const features = [
-    'AI-powered 3D world generation and design',
-    'Intelligent avatar creation and customization',
-    'Real-time virtual environment optimization',
-    'Advanced spatial computing and AR/VR integration',
-    'AI-driven social interaction and engagement',
-    'Metaverse economy and NFT marketplace tools'
+    'AI-powered 3D world generation and design',;
+    'Intelligent avatar creation and customization',;
+    'Real-time virtual environment optimization',;
+    'Advanced spatial computing and AR/VR integration',;
+    'AI-driven social interaction and engagement',;
+    'Metaverse economy and NFT marketplace tools';
   ];
 
   const tiers = [
@@ -48,44 +48,44 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Unlimited virtual worlds',
         'Custom AI algorithms',
         '24/7 dedicated support',
-        'On-premise deployment options',
-        'Custom integrations and APIs',
-        'White-label solutions available',
-        'Enterprise security features'
-      ]
-    }
+        'On-premise deployment options',;
+        'Custom integrations and APIs',;
+        'White-label solutions available',;
+        'Enterprise security features';
+      ];
+    };
   ];
 
   const useCases = [
-    'Virtual events and conferences',
-    'Gaming and entertainment platforms',
-    'Virtual real estate and architecture',
-    'Remote work and collaboration spaces',
-    'Education and training environments',
-    'Social networking and communities'
+    'Virtual events and conferences',;
+    'Gaming and entertainment platforms',;
+    'Virtual real estate and architecture',;
+    'Remote work and collaboration spaces',;
+    'Education and training environments',;
+    'Social networking and communities';
   ];
 
-  const benefits = [
-    'Reduce development time by 50-70% with AI automation',
-    'Create immersive experiences that increase user engagement',
-    'Scale virtual worlds efficiently with intelligent optimization',
-    'Enable cross-platform compatibility and accessibility',
-    'Build sustainable metaverse economies and ecosystems'
+  const benefits = [;
+    'Reduce development time by 50-70% with AI automation',;
+    'Create immersive experiences that increase user engagement',;
+    'Scale virtual worlds efficiently with intelligent optimization',;
+    'Enable cross-platform compatibility and accessibility',;
+    'Build sustainable metaverse economies and ecosystems';
   ];
 
   const industries = [
-    'Gaming and Entertainment',
-    'Real Estate and Architecture',
-    'Education and Training',
-    'Healthcare and Telemedicine',
-    'Retail and E-commerce',
-    'Corporate and Enterprise'
+    'Gaming and Entertainment',;
+    'Real Estate and Architecture',;
+    'Education and Training',;
+    'Healthcare and Telemedicine',;
+    'Retail and E-commerce',;
+    'Corporate and Enterprise';
   ];
 
   return (
     <>
       <SEO 
-        title="AI Metaverse Development Platform | Zion Tech Group"
+        title = "AI Metaverse Development Platform | Zion Tech Group"
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
       />
@@ -303,11 +303,11 @@ export default function AIMetaverseDevelopmentPlatform() {
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
             >
               Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </section>
-      </div>
-    </>
+              <ArrowRight className="ml-2 w-5 h-5" />;
+            </a>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

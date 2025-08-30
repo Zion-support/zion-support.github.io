@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages  } from 'lucide-react';
@@ -77,7 +78,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
     },
     {
       icon: ShoppingCart,
-      name: 'Checkout A/B Optimizer',
+      name: 'Checkout A/B Optimizer',;
       desc: 'Low-code experiments for checkout steps, fields, and copy; integrates with Stripe/Shopify.',
       pricing: 'From $99/mo',
       href: 'https://ziontechgroup.com/services'
@@ -106,7 +107,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <h1 className="text-4xl font-bold sm:text-5xl">Micro SaaS products you can launch this week</h1>
         <p className="mt-4 max-w-2xl text-slate-300">Pick a ready-to-run tool or have us tailor it for your workflow. Secure, scalable, and priced for fast ROI.</p>
@@ -153,8 +154,11 @@ const MicroSaaS: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default MicroSaaS;
+=======
+export { default } from "./MicroSAAS";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

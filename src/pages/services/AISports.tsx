@@ -4,12 +4,12 @@ export default function AISports() {
   const features = [
     'AI-powered performance analysis and optimization',
     'Intelligent training program design and monitoring',
-    'Automated injury prevention and risk assessment',
-    'Predictive analytics for player development',
-    'Real-time game strategy and tactical analysis',
-    'Smart scouting and talent identification',
-    'Integration with major sports analytics platforms',
-    'Custom AI models for sports-specific insights'
+    'Automated injury prevention and risk assessment',;
+    'Predictive analytics for player development',;
+    'Real-time game strategy and tactical analysis',;
+    'Smart scouting and talent identification',;
+    'Integration with major sports analytics platforms',;
+    'Custom AI models for sports-specific insights';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AISports() {
       name: 'Professional Team', 
       price: '$599/mo', 
       details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
-    },
-    { 
-      name: 'Major League', 
-      price: '$1,499/mo', 
-      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Major League', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Player performance analysis and optimization',
-    'Training program design and monitoring',
-    'Injury prevention and risk assessment',
-    'Game strategy and tactical analysis',
-    'Scouting and talent identification',
-    'Fan engagement and marketing optimization'
+    'Player performance analysis and optimization',;
+    'Training program design and monitoring',;
+    'Injury prevention and risk assessment',;
+    'Game strategy and tactical analysis',;
+    'Scouting and talent identification',;
+    'Fan engagement and marketing optimization';
   ];
 
   const benefits = [
-    'Improve player performance by 20-40%',
-    'Reduce injury risk by 30-50%',
-    'Cut training costs by 25-40%',
-    'Optimize game strategy and tactics',
-    'Enhance player development and scouting',
-    'Scale sports operations efficiently'
+    'Improve player performance by 20-40%',;
+    'Reduce injury risk by 30-50%',;
+    'Cut training costs by 25-40%',;
+    'Optimize game strategy and tactics',;
+    'Enhance player development and scouting',;
+    'Scale sports operations efficiently';
   ];
 
   const industries = [
-    'Professional Sports Teams',
-    'College & University Athletics',
-    'Youth Sports Organizations',
-    'Sports Training Facilities',
-    'Sports Analytics & Media',
-    'Sports Technology Companies'
+    'Professional Sports Teams',;
+    'College & University Athletics',;
+    'Youth Sports Organizations',;
+    'Sports Training Facilities',;
+    'Sports Analytics & Media',;
+    'Sports Technology Companies';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AISports() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant';
+import { AppHeader } from "./layout/AppHeader";
+import { Footer } from "./components/Footer.jsx";
+import { ChatAssistant } from "./components/ChatAssistant";
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home.tsx'));
@@ -18,21 +18,18 @@ const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
 // Services pages
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
 
 // Marketplace pages
 const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
 
 // Support pages
-const Support = React.lazy(() => import('./pages/Support.tsx'));
 const Security = React.lazy(() => import('./pages/Security.tsx'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
 
 // Documentation pages
 const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers.tsx'));
 const Webinars = React.lazy(() => import('./pages/Webinars.tsx'));
 const Training = React.lazy(() => import('./pages/Training.tsx'));
 const Research = React.lazy(() => import('./pages/Research.tsx'));
@@ -121,5 +118,7 @@ function App() {
       </div>
     </Router>
   )}
+
+export default App;
 
 export default App;

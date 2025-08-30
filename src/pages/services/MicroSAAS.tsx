@@ -39,21 +39,21 @@ const MicroSAAS = () => {
       features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
     },
     {
-      icon: Globe,
-      title: "Cloud Deployment",
-      description: "Scalable cloud infrastructure and deployment solutions",
-      price: "From $15,000/month",
-      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
-    }
+      icon: Globe,;
+      title: "Cloud Deployment",;
+      description: "Scalable cloud infrastructure and deployment solutions",;
+      price: "From $15,000/month",;
+      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"];
+    };
   ];
 
   const benefits = [
-    "Lower development costs and faster time to market",
-    "Scalable architecture that grows with your business",
-    "Reduced infrastructure management overhead",
-    "Access to enterprise-grade security and compliance",
-    "Flexible subscription models and pricing strategies",
-    "Continuous updates and feature improvements"
+    "Lower development costs and faster time to market",;
+    "Scalable architecture that grows with your business",;
+    "Reduced infrastructure management overhead",;
+    "Access to enterprise-grade security and compliance",;
+    "Flexible subscription models and pricing strategies",;
+    "Continuous updates and feature improvements";
   ];
 
   const technologies = [
@@ -69,12 +69,12 @@ const MicroSAAS = () => {
       icon: Database,
       features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
     },
-    {
-      name: "Cloud",
-      description: "AWS, Azure, GCP with containerization and orchestration",
-      icon: Globe,
-      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]
-    }
+    {;
+      name: "Cloud",;
+      description: "AWS, Azure, GCP with containerization and orchestration",;
+      icon: Globe,;
+      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"];
+    };
   ];
 
   const industries = [
@@ -92,16 +92,16 @@ const MicroSAAS = () => {
       title: "Education",
       description: "Learning management systems and educational technology platforms",
       icon: Users
-    },
-    {
-      title: "E-commerce",
-      description: "Online marketplace and retail management solutions",
-      icon: Package
-    }
+    },;
+    {;
+      title: "E-commerce",;
+      description: "Online marketplace and retail management solutions",;
+      icon: Package;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -282,12 +282,12 @@ const MicroSAAS = () => {
               Get Started
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

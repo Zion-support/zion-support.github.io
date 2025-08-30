@@ -1,15 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-function convertToValidVariableName(filename) {
-  return filename
-    .replace(/\.tsx$/, '')
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('')}
-function fixFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+function content = fs.readFileSync(filePath, 'utf8');
     const filename = path.basename(filePath);
+=======
+    .join('');
+}
+function filename = path.basename(filePath);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const validName = convertToValidVariableName(filename);
     
     // Replace the invalid variable name with the valid one
@@ -44,3 +41,10 @@ if (fs.existsSync(servicesDir)) {
   serviceFiles.forEach(file => {
     fixFile(path.join(servicesDir, file))})}
 console.log('Variable name fixing completed!');
+
+export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default content;

@@ -81,7 +81,7 @@ export default function UpdatePassword() {
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
-                navigate("/login")}, 3000)}
+                router("/login")}, 3000)}
         catch (error) {
             console.error("Password update error:", error);
             toast({
@@ -115,7 +115,7 @@ export default function UpdatePassword() {
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-                  <Button className="mt-3 text-xs" variant="outline" onClick={() => navigate('/forgot-password')}>
+                  <Button className="mt-3 text-xs" variant="outline" onClick={() => router('/forgot-password')}>
                     Request new reset link
                   </Button>
                 </div>)}
@@ -132,7 +132,10 @@ export default function UpdatePassword() {
                     Redirecting you to login...
                   </p>
                 </div>) : (<Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
+                  <form onSubmit = {
+  form.handleSubmit(onSubmit,
+  onInvalid)
+} className="space-y-6">
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
@@ -154,7 +157,7 @@ export default function UpdatePassword() {
                     </Button>
 
                     <div className="text-center">
-                      <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => navigate("/login")} type="button">
+                      <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => router("/login")} type="button">
                         Back to login
                       </Button>
                     </div>

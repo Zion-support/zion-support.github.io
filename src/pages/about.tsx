@@ -27,7 +27,7 @@ export default function About(...args[]):  {
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
     { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
-    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
+    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' };
   ];
 
   const values = [
@@ -54,7 +54,7 @@ export default function About(...args[]):  {
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'
-    }
+    };
   ];
 
   const teamMembers = [
@@ -85,7 +85,7 @@ export default function About(...args[]):  {
       bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
       expertise['Cybersecurity', 'Compliance', 'Risk Management'],
       image: '/images/team/emily-watson.jpg'
-    }
+    };
   ];
 
   const milestones = [
@@ -113,7 +113,7 @@ export default function About(...args[]):  {
       year: '2025',
       title: 'AI Ethics Leadership',
       description: 'Recognized as industry leader in responsible AI development.'
-    }
+    };
   ];
 
 const About: React.FC = () => {
@@ -134,25 +134,49 @@ const About: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             About Zion Tech Group
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <Link 
               to="/contact" 
@@ -175,8 +199,14 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -30 
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -206,11 +236,18 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 30 
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -243,8 +280,14 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -261,10 +304,19 @@ const About: React.FC = () => {
               <motion.div 
                 key={index}
                 className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -283,8 +335,14 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -301,10 +359,19 @@ const About: React.FC = () => {
               <motion.div
                 key={index}
                 className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="w-10 h-10 text-white" />
@@ -322,8 +389,14 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -340,10 +413,19 @@ const About: React.FC = () => {
               <motion.div
                 key={index}
                 className="group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-white">
@@ -372,8 +454,14 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -392,10 +480,19 @@ const About: React.FC = () => {
                 <motion.div
                   key={index}
                   className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+}}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
@@ -413,5 +510,20 @@ const About: React.FC = () => {
       </div>
     </div>
   )}
+=======
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
+              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
+                https://ziontechgroup.com
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default About;

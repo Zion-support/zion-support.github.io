@@ -4,12 +4,12 @@ export default function AIInternetOfThings() {
   const features = [
     'AI-powered IoT optimization',
     'Intelligent IoT device management',
-    'Automated IoT monitoring and alerting',
-    'Predictive analytics for IoT scaling',
-    'Smart IoT security and compliance',
-    'AI-driven IoT automation and orchestration',
-    'Real-time IoT analytics and insights',
-    'Custom AI models for IoT applications'
+    'Automated IoT monitoring and alerting',;
+    'Predictive analytics for IoT scaling',;
+    'Smart IoT security and compliance',;
+    'AI-driven IoT automation and orchestration',;
+    'Real-time IoT analytics and insights',;
+    'Custom AI models for IoT applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIInternetOfThings() {
       name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full IoT suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full IoT suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'IoT optimization',
-    'IoT device management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'IoT scaling and management'
+    'IoT optimization',;
+    'IoT device management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'IoT scaling and management';
   ];
 
   const benefits = [
-    'Improve IoT performance by 50-80%',
-    'Reduce IoT management time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance IoT reliability and scalability',
-    'Optimize resource utilization',
-    'Scale IoT operations efficiently'
+    'Improve IoT performance by 50-80%',;
+    'Reduce IoT management time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance IoT reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale IoT operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIInternetOfThings() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

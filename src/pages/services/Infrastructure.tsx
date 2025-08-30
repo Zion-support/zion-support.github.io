@@ -18,12 +18,12 @@ const InfrastructureServices = () => {
       icon: Server
     },
     {
-      title: "Data Center Solutions",
-      description: "Reliable hosting, colocation, and data center management.",
-      price: "From $8,000/month",
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
-      icon: Database
-    }
+      title: "Data Center Solutions",;
+      description: "Reliable hosting, colocation, and data center management.",;
+      price: "From $8,000/month",;
+      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
+      icon: Database;
+    };
   ];
 
   const technologies = [
@@ -39,25 +39,25 @@ const InfrastructureServices = () => {
       icon: HardDrive,
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
     },
-    {
-      name: "Network Security",
-      description: "Advanced network protection and monitoring",
-      icon: Shield,
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
-    }
+    {;
+      name: "Network Security",;
+      description: "Advanced network protection and monitoring",;
+      icon: Shield,;
+      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
+    };
   ];
 
   const benefits = [
-    "Improved system reliability and uptime",
-    "Enhanced security and compliance",
-    "Scalable infrastructure that grows with your business",
-    "Reduced operational costs and complexity",
-    "Expert support and maintenance",
-    "Future-proof technology solutions"
+    "Improved system reliability and uptime",;
+    "Enhanced security and compliance",;
+    "Scalable infrastructure that grows with your business",;
+    "Reduced operational costs and complexity",;
+    "Expert support and maintenance",;
+    "Future-proof technology solutions";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -211,12 +211,12 @@ const InfrastructureServices = () => {
               Get Started
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

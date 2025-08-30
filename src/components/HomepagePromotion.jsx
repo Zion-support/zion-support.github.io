@@ -54,7 +54,14 @@ export function HomepagePromotion() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -74,7 +81,23 @@ export function HomepagePromotion() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="block bg-holographic-gradient bg-clip-text text-transparent">
@@ -152,7 +175,23 @@ export function HomepagePromotion() {
         </motion.div>
 
         {/* Call to Action Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Accelerate Your Digital Transformation?

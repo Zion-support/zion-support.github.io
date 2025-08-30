@@ -30,11 +30,15 @@ import { cn  } from '@/lib/utils';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
+<<<<<<< HEAD
   isOpen: boolean;
   onClose: ()  => void;
   className?: string}
 
-export function Sidebar(...args[]):  {
+export function Sidebar: React.FC = () => {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
@@ -46,7 +50,7 @@ export function Sidebar(...args[]):  {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
-        [...prev, sectionTitle]
+        [...prev, sectionTitle];
     )};
 
   const navigationItems = [
@@ -195,29 +199,29 @@ export function Sidebar(...args[]):  {
         { name: 'Innovation', path: '/innovation', icon: Lightbulb, description: 'Innovation initiatives' },
         { name: 'Talent', path: '/talent', icon: Users, description: 'Talent solutions' }
       ]
-    }
+    };
   ];
 
-  const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
-        ? prev.filter(name => name !== sectionTitle)
-        : [...prev, sectionTitle]
+  const toggleSection = (sectionTitle: string) => {;
+    setExpandedSections(prev => ;
+      prev.includes(sectionTitle) ;
+        ? prev.filter(name => name !== sectionTitle);
+        : [...prev, sectionTitle];
     );
   };
 
-  const isActive = (path: string) => {
-    if (path === '/') {
+  const isActive = (path: string) => {;
+    if (path === '/') {;
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
 
-  const renderNavItem = (item: SidebarItem, level: number = 0) => {
+  const renderNavItem = (item: SidebarItem, level: number = 0) => {;
     const isExpanded = expandedSections.includes(item.title);
 
     return (
-      <div key={item.title} className="mb-4">
+      <div key = {item.title} className="mb-4">
         <button
           onClick={() => toggleSection(item.title)}
           className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -237,9 +241,33 @@ export function Sidebar(...args[]):  {
         
         {isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.2 }}
             className="ml-4 mt-2 space-y-1"
           >
@@ -255,12 +283,12 @@ export function Sidebar(...args[]):  {
                 onClick={() => setIsOpen(false)}
               >
                 <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span>{child.name}</span>
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </div>
+                <span>{child.name}</span>;
+              </Link>;
+            ))};
+          </motion.div>;
+        )};
+      </div>;
     );
   };
 
@@ -268,7 +296,7 @@ export function Sidebar(...args[]):  {
     <>
       {/* Mobile menu button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick = {() => setIsOpen(true)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
       >
         <Menu className="w-6 h-6" />
@@ -294,7 +322,15 @@ export function Sidebar(...args[]):  {
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              transition = {
+  { type: 'spring', damping: 25,
+  stiffness: 200 
+
+
+
+
+
+}}
               className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl"
             >
               {/* Header */}
@@ -327,7 +363,50 @@ export function Sidebar(...args[]):  {
               </div>
             </motion.div>
           </motion.div>
+<<<<<<< HEAD
         </>
       )}
     </AnimatePresence>
   )}
+=======
+        )}
+      </AnimatePresence>
+
+      {/* Desktop Sidebar */}
+      <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
+        {/* Header */}
+        <div className="p-6 border-b border-slate-700/50">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+            </div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+          </Link>
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+          {navigation.map(item => renderNavItem(item))}
+        </nav>
+
+        {/* Footer */}
+        <div className="p-4 border-t border-slate-700/50">
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
+            >
+              Get Started;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -249,9 +249,9 @@ export default function Blog(...args[]):  {
                 Subscribe
               </button>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};

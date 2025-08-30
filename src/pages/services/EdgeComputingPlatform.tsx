@@ -95,12 +95,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       description: "Seamless connectivity with 5G networks and IoT device ecosystems",
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols and encryption for edge computing environments",
-      color: "from-yellow-500 to-orange-500"
-    }
+    {;
+      icon: Shield,;
+      title: "Edge Security",;
+      description: "Advanced security protocols and encryption for edge computing environments",;
+      color: "from-yellow-500 to-orange-500";
+    };
   ];
 
   const pricingPlans = [
@@ -151,12 +151,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
         "Multi-tenant support",
         "Dedicated support team",
         "Custom development",
-        "SLA guarantees",
-        "On-premise option"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "SLA guarantees",;
+        "On-premise option";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -178,12 +178,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       description: "Distributed architecture ensures high availability and reliability",
       metric: "99.9%"
     },
-    {
-      icon: Users,
-      title: "Global Scale",
-      description: "Deploy edge nodes worldwide for optimal user experience",
-      metric: "200+"
-    }
+    {;
+      icon: Users,;
+      title: "Global Scale",;
+      description: "Deploy edge nodes worldwide for optimal user experience",;
+      metric: "200+";
+    };
   ];
 
   const useCases = [
@@ -209,12 +209,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      industry: "Healthcare",
-      title: "Remote Monitoring",
-      description: "Real-time patient monitoring and emergency response systems",
-      icon: Heart,
-      color: "from-orange-500 to-red-500"
-    }
+      industry: "Healthcare",;
+      title: "Remote Monitoring",;
+      description: "Real-time patient monitoring and emergency response systems",;
+      icon: Heart,;
+      color: "from-orange-500 to-red-500";
+    };
   ];
 
   const edgeLocations = [
@@ -236,16 +236,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       icon: Satellite,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      region: "Latin America",
-      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
-      icon: MapPin,
-      color: "from-orange-500 to-red-500"
-    }
+    {;
+      region: "Latin America",;
+      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
+      icon: MapPin,;
+      color: "from-orange-500 to-red-500";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Edge Computing Platform - Zion Tech Group"
         description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
@@ -257,8 +257,24 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
@@ -305,9 +321,33 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -339,9 +379,33 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
@@ -372,9 +436,33 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -411,9 +499,33 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             {edgeLocations.map((location, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -451,9 +563,33 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative rounded-xl p-8 ${
                   plan.popular 
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
@@ -503,8 +639,24 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -519,12 +671,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

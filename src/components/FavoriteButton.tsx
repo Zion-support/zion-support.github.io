@@ -7,10 +7,17 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
 
+<<<<<<< HEAD
 export function FavoriteButton(...args[]):  {
   const [isFavorited, setIsFavorited] = useState(false);
 
   const handleToggleFavorite = (e: React.MouseEvent)  => {
+=======;
+export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleToggleFavorite = (e: React.MouseEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.stopPropagation();
     setIsFavorited(!isFavorited);
     
@@ -24,7 +31,7 @@ export function FavoriteButton(...args[]):  {
 
   return (
     <button
-      onClick={handleToggleFavorite}
+      onClick = {handleToggleFavorite}
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${
         isFavorited 
           ? 'bg-red-500 hover:bg-red-600 text-white' 
@@ -33,9 +40,19 @@ export function FavoriteButton(...args[]):  {
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <Heart 
+<<<<<<< HEAD
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''
         }`} 
       />
     </button>
   )}
+=======;
+        className={`w-4 h-4 transition-all duration-300 ${;
+          isFavorited ? 'fill-current' : '';
+        }`} ;
+      />;
+    </button>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -12,19 +12,40 @@ import { cn } from "@/lib/utils";
 const getNotificationIcon = (type, className = "h-5 w-5") => {
     switch (type) {
         case 'message':
-            return <MessageCircle className={cn(className, "text-blue-500")}/>;
+            return <MessageCircle className = {
+  cn(className,
+  "text-blue-500")
+}/>;
         case 'quote_request':
-            return <Briefcase className={cn(className, "text-purple-500")}/>;
+            return <Briefcase className = {
+  cn(className,
+  "text-purple-500")
+}/>;
         case 'booking_confirmation':
-            return <CheckCircle className={cn(className, "text-green-500")}/>;
+            return <CheckCircle className = {
+  cn(className,
+  "text-green-500")
+}/>;
         case 'hire_request':
-            return <UserCheck className={cn(className, "text-zion-purple")}/>;
+            return <UserCheck className = {
+  cn(className,
+  "text-zion-purple")
+}/>;
         case 'onboarding':
-            return <Settings className={cn(className, "text-zion-cyan")}/>;
+            return <Settings className = {
+  cn(className,
+  "text-zion-cyan")
+}/>;
         case 'system':
-            return <AlertCircle className={cn(className, "text-yellow-500")}/>;
+            return <AlertCircle className = {
+  cn(className,
+  "text-yellow-500")
+}/>;
         default:
-            return <Bell className={cn(className, "text-gray-500")}/>}
+            return <Bell className = {
+  cn(className,
+  "text-gray-500")
+}/>}
 };
 const getNotificationTypeBadge = (type) => {
     switch (type) {
@@ -49,9 +70,12 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
         if (!notification.read) {
             onMarkAsRead(notification.id)}
         if (notification.action_url) {
-            navigate(notification.action_url)}
+            router(notification.action_url)}
     };
-    return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
+    return (<div className = {
+  cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
+  notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")
+}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
           {getNotificationIcon(notification.type, "h-6 w-6")}

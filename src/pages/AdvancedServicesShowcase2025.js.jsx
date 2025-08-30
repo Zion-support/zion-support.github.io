@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
-import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
-import SEOHead from '../components/SEOHead';
+import { advancedRealServices2025 } from "../data/2025-advanced-real-services-expansion";
+import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";
+import SEOHead from "../components/SEOHead";
 const AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -50,7 +50,7 @@ const AdvancedServicesShowcase2025 = () => {
     });
     const getCategoryIcon = (category) => {
         const icons = {
-            'AI & Machine Learning': '🤖',
+  'AI & Machine Learning': '🤖',
             'Cybersecurity': '🔐',
             'Healthcare Technology': '🏥',
             'Blockchain & Supply Chain': '⛓️',
@@ -67,8 +67,9 @@ const AdvancedServicesShowcase2025 = () => {
             'DevOps & Automation': '⚡',
             'Data Quality & Analytics': '📊',
             'API Management': '🔌',
-            'Network Security': '🛡️'
-        };
+  'Network Security': '🛡️'
+        
+};
         return icons[category] || '🚀'};
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -80,7 +81,9 @@ const AdvancedServicesShowcase2025 = () => {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -90,28 +93,55 @@ const AdvancedServicesShowcase2025 = () => {
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <SEOHead config={{
+      <SEOHead config = {
+  {
             title: "Advanced Real Services Showcase 2025 | Zion Tech Group",
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",
-            keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions, Zion Tech Group"
-        }}/>
+            keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,
+  Zion Tech Group"
+        
+}}/>
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+  { opacity: 0,
+  y: 30 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }}>
             Advanced Real Services
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {" "}Showcase 2025
             </span>
           </motion.h1>
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}>
             Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services. 
             Each solution is market-ready with proven ROI, competitive pricing, and enterprise-grade support.
           </motion.p>
           
           {/* Contact Information */}
-          <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.4 }}>
+          <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial = {
+  { opacity: 0,
+  scale: 0.95 
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5 text-blue-400"/>
@@ -129,7 +159,16 @@ const AdvancedServicesShowcase2025 = () => {
           </motion.div>
 
           {/* Navigation Links */}
-          <motion.div className="flex flex-wrap justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
+          <motion.div className="flex flex-wrap justify-center gap-4 mb-8" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: 0.6 
+}}>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2">
               <ExternalLink className="w-5 h-5"/>
               <span>Visit Zion Tech Group</span>
@@ -145,7 +184,16 @@ const AdvancedServicesShowcase2025 = () => {
       {/* Filters and Search */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
-          <motion.div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
+          <motion.div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: 0.8 
+}}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Search */}
               <div>
@@ -283,7 +331,16 @@ const AdvancedServicesShowcase2025 = () => {
       {/* Call to Action */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8 border border-blue-500/30" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1 }}>
+          <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8 border border-blue-500/30" initial = {
+  { opacity: 0,
+  y: 30 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: 1 
+}}>
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>

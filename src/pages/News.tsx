@@ -1,5 +1,39 @@
+<<<<<<< HEAD
 import { Link  } from 'react-router-dom.ts';
 import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Newspaper, 
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight, 
+  Search, 
+  Filter, 
+  Clock,
+  TrendingUp,
+  Star,
+  Eye,
+  Share2,
+  Bookmark,
+  ExternalLink
+} from 'lucide-react';
+
+export default function News() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All News', count: 0 },;
+    { id: 'ai', name: 'AI & Technology', count: 0 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },;
+    { id: 'security', name: 'Security & Compliance', count: 0 },;
+    { id: 'quantum', name: 'Quantum Computing', count: 0 },;
+    { id: 'company', name: 'Company Updates', count: 0 };
+  ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function News(...args[]):  {
   const newsArticles = [
@@ -70,6 +104,7 @@ export default function News(...args[]):  {
     },
     {
       id: 6,
+<<<<<<< HEAD
       title: 'Zion Tech Group\'s Commitment to Sustainable Technology',
       excerpt: 'How we\'re reducing our carbon footprint while advancing technology innovation.',
       content: 'At Zion Tech Group, we believe that technological advancement and environmental responsibility can go hand in hand. Our commitment to sustainable technology includes energy-efficient data centers, green computing practices, and developing AI solutions that help organizations reduce their environmental impact.',
@@ -80,7 +115,7 @@ export default function News(...args[]):  {
       tags['Sustainability', 'Green Tech', 'Environment'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400'
-    }
+    };
   ];
 
   const categories = [
@@ -90,10 +125,10 @@ export default function News(...args[]):  {
     'Research',
     'Awards',
     'Partnerships',
-    'Sustainability'
+    'Sustainability';
   ];
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string)  => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -102,7 +137,7 @@ export default function News(...args[]):  {
     })};
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -112,6 +147,71 @@ export default function News(...args[]):  {
           <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
             Stay informed about our latest innovations, comp updates, and industry insights
           </p>
+=======
+      title: 'Edge Computing Solutions for IoT Deployments',
+      excerpt: 'New edge computing platform enables real-time processing for IoT devices, reducing latency and improving performance in industrial applications.',
+      category: 'cloud',
+      author: 'David Kim',;
+      date: '2024-11-18',;
+      readTime: '5 min read',;
+      featured: false,;
+      tags: ['Edge Computing', 'IoT', 'Real-time', 'Industrial'];
+    };
+  ];
+
+  // Calculate category counts
+  categories.forEach(category = > {;
+    if (category.id === 'all') {;
+      category.count = newsArticles.length;
+    } else {
+      category.count = newsArticles.filter(article => article.category === category.id).length;
+    }
+  });
+
+  const filteredArticles = newsArticles.filter(article => {;
+    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Newspaper className="h-10 w-10 text-white" />
+              </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest News & Updates</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay informed about the latest developments in AI, quantum computing, cloud technology, and company updates from Zion Tech Group.
+              </p>
+            </motion.div>
+          </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </section>
 
@@ -127,6 +227,7 @@ export default function News(...args[]):  {
             </p>
           </div>
 
+<<<<<<< HEAD
           {newsArticles.filter(article => article.featured).map((article) => (
             <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -140,6 +241,163 @@ export default function News(...args[]):  {
                     <span className="bg-zion-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
                       {article.category}
                     </span>
+=======
+        {/* Featured Articles */}
+        {filteredArticles.filter(article => article.featured).length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Stories</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredArticles.filter(article => article.featured).map((article, index) => (
+                <motion.article
+                  key={article.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+                        Featured
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        {article.category.toUpperCase()}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                      <a href={`/news/${article.id}`}>{article.title}</a>
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{article.excerpt}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center space-x-4">
+                        <span className="flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          {article.author}
+                        </span>
+                        <span className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {new Date(article.date).toLocaleDateString()}
+                        </span>
+                        <span className="flex items-center">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {article.readTime}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {article.tags.slice(0, 3).map(tag => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        href={`/news/${article.id}`}
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        Read More
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </a>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* All Articles */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {selectedCategory === 'all' ? 'All News' : `${categories.find(c => c.id === selectedCategory)?.name}`}
+          </h2>
+          <div className="space-y-6">
+            {filteredArticles.filter(article => !article.featured).map((article, index) => (
+              <motion.article
+                key={article.id}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                        {article.category.toUpperCase()}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {new Date(article.date).toLocaleDateString()}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors">
+                      <a href={`/news/${article.id}`}>{article.title}</a>
+                    </h3>
+                    <p className="text-gray-600 mb-3 leading-relaxed">{article.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <span className="flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          {article.author}
+                        </span>
+                        <span className="flex items-center">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {article.readTime}
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                          <Bookmark className="h-4 w-4" />
+                        </button>
+                        <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                          <Share2 className="h-4 w-4" />
+                        </button>
+                        <a
+                          href={`/news/${article.id}`}
+                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                        >
+                          Read More
+                          <ArrowRight className="ml-1 h-4 w-4" />
+                        </a>
+                      </div>
+                    </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
@@ -216,6 +474,7 @@ export default function News(...args[]):  {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* All News Articles */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,6 +484,35 @@ export default function News(...args[]):  {
             </h2>
             <p className="text-xl text-zion-slate-light">
               Stay up to date with everything happening at Zion Tech Group
+=======
+        {/* Newsletter Signup */}
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition={{ delay: 0.5 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Subscribe to our newsletter to receive the latest news, insights, and updates from Zion Tech Group.
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </p>
           </div>
 
@@ -305,6 +593,7 @@ export default function News(...args[]):  {
               <button className="bg-white text-zion-purple px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>
+<<<<<<< HEAD
             </div>
             <p className="text-sm text-white/70 mt-3">
               We respect your privacy. Unsubscribe at  time.
@@ -358,3 +647,12 @@ export default function News(...args[]):  {
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

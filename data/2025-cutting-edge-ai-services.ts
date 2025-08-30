@@ -259,9 +259,17 @@ export const cuttingEdgeAIServices2025 = [
       'Marketing and advertising creative',
       'Product design and innovation',
       'Artistic expression and creation',
+<<<<<<< HEAD
       'Creative problem-solving and ideation'
     ],
     integrations['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],
     compliance['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection']
   }
+=======;
+      'Creative problem-solving and ideation';
+    ],;
+    integrations: ['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],;
+    compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];

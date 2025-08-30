@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
@@ -48,7 +48,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
       icon: '🌐',
       category: 'IoT & Edge Computing',
       benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%', 'Real-time decision making']
-    }
+    };
   ];
 
   const categories = ['All', 'Security & Development', 'Analytics & Customer Success', 'DevOps & Infrastructure', 'IoT & Edge Computing'];
@@ -56,7 +56,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO
-        title="AI-Powered Micro SAAS Services Showcase | Zion Tech Group"
+        title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge AI-powered micro SAAS services. From code security to customer analytics, DevOps automation to IoT edge computing. Transform your business with intelligent solutions."
         keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group"
         canonical="https://ziontechgroup.com/ai-services-showcase"
@@ -67,8 +67,14 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -100,8 +106,14 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -118,9 +130,18 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               {aiServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                 >
@@ -192,8 +213,14 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -241,9 +268,18 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               ].map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   viewport={{ once: true }}
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 >
@@ -260,8 +296,14 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -305,7 +347,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default AIServicesShowcase;

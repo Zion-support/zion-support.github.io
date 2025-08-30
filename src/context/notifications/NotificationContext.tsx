@@ -1,12 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  duration?: number;
-}
-
 interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
@@ -14,9 +7,9 @@ interface NotificationContextType {
   clearNotifications: () => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextType | null>(null);
 
-export const useNotifications = () => {
+export const useNotifications = () => {;
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
@@ -31,9 +24,21 @@ interface NotificationProviderProps {
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
+  const addNotification = (notification: Omit<Notification, 'id'>) => {;
     const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
+    const newNotification = {
+  ...notification,;
+  ;
+  ;
+  ;
+  ;
+  id ;
+
+
+
+
+
+};
     setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {
@@ -43,24 +48,34 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: string) => {
+  const removeNotification = (id: string) => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
-  const clearNotifications = () => {
+  const clearNotifications = () => {;
     setNotifications([]);
   };
 
   const value: NotificationContextType = {
-    notifications,
+  notifications,
     addNotification,
     removeNotification,
-    clearNotifications,
-  };
+    clearNotifications,;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
+};
 
   return (
-    <NotificationContext.Provider value={value}>
-      {children}
-    </NotificationContext.Provider>
+    <NotificationContext.Provider value = {value}>;
+      {children};
+    </NotificationContext.Provider>;
   );
 };

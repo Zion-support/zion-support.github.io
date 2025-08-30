@@ -14,7 +14,15 @@ export const useToast = () => {
 
   const toast = useCallback(({ title, description, variant = 'default' }) => {
     const id = Date.now();
-    const newToast = { id, title, description, variant };
+    const newToast = {
+  id, title, description,
+  variant 
+
+
+
+
+
+};
     
     setToasts(prev => [...prev, newToast]);
     

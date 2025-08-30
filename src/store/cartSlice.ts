@@ -10,14 +10,24 @@ interface CartState {
 const initialState: CartState = {
   items: [],
   total: 0,
-  itemCount: 0,
+  itemCount: 0,;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
 };
 
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-  reducers: {
-    addItem: (state, action: PayloadAction<CartItem>) => {
+const cartSlice = createSlice({;
+  name: 'cart',;
+  initialState,;
+  reducers: {;
+    addItem: (state, action: PayloadAction<CartItem>) => {;
       const existingItem = state.items.find(item => item.id === action.payload.id);
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;

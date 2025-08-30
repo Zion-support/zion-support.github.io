@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Users, 
   Brain, 
@@ -52,12 +52,12 @@ export default function InterviewAssessmentAI() {
       icon: Users,
       title: "Candidate Matching",
       description: "AI-driven candidate-job fit analysis and recommendation engine."
-    },
-    {
-      icon: Clock,
-      title: "Automated Scheduling",
-      description: "Intelligent interview scheduling and coordination across teams."
-    }
+    },;
+    {;
+      icon: Clock,;
+      title: "Automated Scheduling",;
+      description: "Intelligent interview scheduling and coordination across teams.";
+    };
   ];
 
   const benefits = [
@@ -85,12 +85,12 @@ export default function InterviewAssessmentAI() {
       icon: Star,
       title: "Quality Hires",
       description: "Improve hire quality and retention with better candidate-job matching."
-    },
-    {
-      icon: Award,
-      title: "Compliance",
-      description: "Maintain hiring compliance and audit trails for regulatory requirements."
-    }
+    },;
+    {;
+      icon: Award,;
+      title: "Compliance",;
+      description: "Maintain hiring compliance and audit trails for regulatory requirements.";
+    };
   ];
 
   const assessmentTypes = [
@@ -118,12 +118,12 @@ export default function InterviewAssessmentAI() {
       type: "Behavioral Analysis",
       description: "Assess past behavior patterns and situational responses",
       icon: TrendingUp
-    },
-    {
-      type: "Cognitive Ability",
-      description: "Measure problem-solving, reasoning, and learning capabilities",
-      icon: Target
-    }
+    },;
+    {;
+      type: "Cognitive Ability",;
+      description: "Measure problem-solving, reasoning, and learning capabilities",;
+      icon: Target;
+    };
   ];
 
   const useCases = [
@@ -151,16 +151,16 @@ export default function InterviewAssessmentAI() {
       industry: "Education",
       description: "Teaching, administration, and educational leadership assessments",
       icon: GraduationCap
-    },
-    {
-      industry: "Manufacturing",
-      description: "Production, quality control, and operational role assessments",
-      icon: Settings
-    }
+    },;
+    {;
+      industry: "Manufacturing",;
+      description: "Production, quality control, and operational role assessments",;
+      icon: Settings;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Interview Assessment AI - Zion Tech Group"
         description="Transform your hiring process with AI-powered interview assessment. Evaluate candidates intelligently, eliminate bias, and make better hiring decisions."
@@ -172,8 +172,24 @@ export default function InterviewAssessmentAI() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
@@ -208,8 +224,24 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -227,9 +259,33 @@ export default function InterviewAssessmentAI() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -262,8 +318,24 @@ export default function InterviewAssessmentAI() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -281,9 +353,33 @@ export default function InterviewAssessmentAI() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -316,8 +412,24 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -335,9 +447,33 @@ export default function InterviewAssessmentAI() {
             {assessmentTypes.map((type, index) => (
               <motion.div
                 key={type.type}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -370,8 +506,24 @@ export default function InterviewAssessmentAI() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -389,9 +541,33 @@ export default function InterviewAssessmentAI() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -424,8 +600,24 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -444,11 +636,11 @@ export default function InterviewAssessmentAI() {
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

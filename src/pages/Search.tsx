@@ -10,20 +10,20 @@ export default function Search() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const categories = [
-    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },
-    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },
-    { id: 'talent', name: 'Talent', icon: <Users className="w-4 h-4" />, count: 0 },
-    { id: 'equipment', name: 'Equipment', icon: <Building className="w-4 h-4" />, count: 0 },
-    { id: 'companies', name: 'Companies', icon: <Building className="w-4 h-4" />, count: 0 }
+  const categories = [;
+    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },;
+    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },;
+    { id: 'talent', name: 'Talent', icon: <Users className="w-4 h-4" />, count: 0 },;
+    { id: 'equipment', name: 'Equipment', icon: <Building className="w-4 h-4" />, count: 0 },;
+    { id: 'companies', name: 'Companies', icon: <Building className="w-4 h-4" />, count: 0 };
   ];
 
-  const sortOptions = [
-    { value: 'relevance', label: 'Relevance' },
-    { value: 'newest', label: 'Newest' },
-    { value: 'rating', label: 'Highest Rated' },
-    { value: 'price-low', label: 'Price: Low to High' },
-    { value: 'price-high', label: 'Price: High to Low' }
+  const sortOptions = [;
+    { value: 'relevance', label: 'Relevance' },;
+    { value: 'newest', label: 'Newest' },;
+    { value: 'rating', label: 'Highest Rated' },;
+    { value: 'price-low', label: 'Price: Low to High' },;
+    { value: 'price-high', label: 'Price: High to Low' };
   ];
 
   // Mock search results - in a real app, this would come from an API
@@ -79,11 +79,19 @@ export default function Search() {
       rating: 4.6,
       reviews: 203,
       price: '$300/hour',
+<<<<<<< HEAD
       location: 'Remote',
       comp: 'Zion Tech Group',
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
+=======;
+      location: 'Remote',;
+      company: 'Zion Tech Group',;
+      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],;
+      featured: false;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   useEffect(() => {
@@ -91,15 +99,15 @@ export default function Search() {
       performSearch()}
   }, [searchQuery, activeCategory, sortBy]);
 
-  const performSearch = async () => {
+  const performSearch = async () => {;
     setLoading(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Filter results based on search query and category
-    let filteredResults = mockResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    let filteredResults = mockResults.filter(result => {;
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
@@ -124,27 +132,27 @@ export default function Search() {
     setResults(filteredResults);
     setLoading(false)};
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() })}
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'service':
+  const getTypeIcon = (type: string) => {;
+    switch (type) {;
+      case 'service':;
         return <Server className="w-5 h-5 text-zion-cyan" />;
       case 'talent':
         return <Users className="w-5 h-5 text-zion-purple" />;
       case 'equipment':
         return <Building className="w-5 h-5 text-zion-orange" />;
       default:
-        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />}
+        return <SearchIcon className = "w-5 h-5 text-zion-slate-light" />};
   };
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'service':
+  const getTypeLabel = (type: string) => {;
+    switch (type) {;
+      case 'service':;
         return 'Service';
       case 'talent':
         return 'Talent';
@@ -155,7 +163,7 @@ export default function Search() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Search Header */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16">
         <div className="container mx-auto px-4">
@@ -323,9 +331,19 @@ export default function Search() {
               <p className="text-zion-slate-light">
                 Enter a search term above to find services, talent, equipment, and more
               </p>
+<<<<<<< HEAD
             </div>
           )}
         </div>
       </div>
     </div>
   )}
+=======;
+            </div>;
+          )};
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -46,21 +46,21 @@ export default function AICustomerSupport() {
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Identify support trends and proactively address common customer issues'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Streamline support processes with intelligent automation and self-service options'
-    }
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Workflows',;
+      description: 'Streamline support processes with intelligent automation and self-service options';
+    };
   ];
 
   const benefits = [
-    'Reduce response time by 80% with instant AI support',
-    'Increase customer satisfaction scores by 45%',
-    'Cut support costs by 60% through automation',
-    'Handle 5x more support requests with AI assistance',
-    'Provide 24/7 support coverage without additional staff',
-    'Improve first-call resolution rates by 35%'
+    'Reduce response time by 80% with instant AI support',;
+    'Increase customer satisfaction scores by 45%',;
+    'Cut support costs by 60% through automation',;
+    'Handle 5x more support requests with AI assistance',;
+    'Provide 24/7 support coverage without additional staff',;
+    'Improve first-call resolution rates by 35%';
   ];
 
   const pricing = [
@@ -110,18 +110,18 @@ export default function AICustomerSupport() {
         'Dedicated account manager',
         'SLA guarantees',
         'Advanced security features',
-        'Custom workflows',
-        'Multi-language support'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+        'Custom workflows',;
+        'Multi-language support';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Customer Support - 24/7 Intelligent Support Solution"
+        title = "AI Customer Support - 24/7 Intelligent Support Solution"
         description="Transform your customer support with AI-powered chatbots, smart ticket routing, and multi-channel support. Reduce response time by 80% and boost satisfaction scores."
         canonical="/services/ai-customer-support"
       />
@@ -132,8 +132,24 @@ export default function AICustomerSupport() {
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-emerald-600/10 to-teal-600/10"></div>
           <div className="container-responsive relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -160,8 +176,24 @@ export default function AICustomerSupport() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -178,9 +210,33 @@ export default function AICustomerSupport() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -198,8 +254,24 @@ export default function AICustomerSupport() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -216,9 +288,33 @@ export default function AICustomerSupport() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -233,8 +329,24 @@ export default function AICustomerSupport() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -251,9 +363,33 @@ export default function AICustomerSupport() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular 
                       ? 'border-green-500/50 shadow-lg shadow-green-500/20' 
@@ -303,8 +439,24 @@ export default function AICustomerSupport() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -322,11 +474,11 @@ export default function AICustomerSupport() {
                 <button className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useAnalytics } from './useAnalytics';
+import { useAnalytics } from "./useAnalytics";
 export const useMachineLearning = (_initialConfig) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -80,7 +80,6 @@ export const useMachineLearning = (_initialConfig) => {
     // Update metrics when data changes
     const updateMetrics = useCallback(() => {
         const totalModels = models.length;
-        const activeModels = models.filter(m => m.status === 'deployed').length;
         const averageAccuracy = models.length > 0
             ? models.reduce((sum, m) => sum + m.accuracy, 0) / models.length
             : 0;
@@ -89,9 +88,7 @@ export const useMachineLearning = (_initialConfig) => {
         const averageResponseTime = predictions.filter(p => p.processingTime).length > 0
             ? predictions.reduce((sum, p) => sum + (p.processingTime || 0), 0) / predictions.filter(p => p.processingTime).length
             : 0;
-        const trainingJobsTotal = trainingJobs.length;
         const trainingJobsRunning = trainingJobs.filter(j => j.status === 'running').length;
-        const trainingJobsCompleted = trainingJobs.filter(j => j.status === 'completed').length;
         const trainingJobsFailed = trainingJobs.filter(j => j.status === 'failed').length;
         setMetrics({
             totalModels,
@@ -113,8 +110,9 @@ export const useMachineLearning = (_initialConfig) => {
     // Create new model
     const createModel = useCallback((model) => {
         const newModel = {
-            ...model,
-            id: `model-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+  ...model,
+  id: `model-${Date.now()
+}-${Math.random().toString(36).substr(2, 9)}`,
             version: '1.0.0',
             accuracy: 0,
             precision: 0,
@@ -125,11 +123,11 @@ export const useMachineLearning = (_initialConfig) => {
             status: 'ready'
         };
         setModels(prev => [...prev, newModel]);
-        trackEvent('ml', 'model', 'created', undefined, { modelType: model.type, framework: model.framework })}, [trackEvent]);
+        trackEvent('ml', 'model', 'created', null, { modelType: model.type, framework: model.framework })}, [trackEvent]);
     // Update model metrics
     const updateModelMetrics = useCallback((modelId, metrics) => {
         setModels(prev => prev.map(model => model.id === modelId ? { ...model, ...metrics } : model));
-        trackEvent('ml', 'model', 'metrics_updated', undefined, { modelId })}, [trackEvent]);
+        trackEvent('ml', 'model', 'metrics_updated', null, { modelId })}, [trackEvent]);
     // Start training job
     const startTraining = useCallback(async (modelId, hyperparameters) => {
         const model = models.find(m => m.id === modelId);
@@ -151,12 +149,11 @@ export const useMachineLearning = (_initialConfig) => {
         };
         setTrainingJobs(prev => [...prev, trainingJob]);
         setIsTraining(true);
-        trackEvent('ml', 'training', 'started', undefined, { modelId, modelType: model.type });
+        trackEvent('ml', 'training', 'started', null, { modelId, modelType: model.type });
         // Simulate training progress
         const interval = setInterval(() => {
             setTrainingJobs(prev => prev.map(job => {
                 if (job.id === trainingJob.id && job.status === 'running') {
-                    const newProgress = Math.min(job.progress + Math.random() * 10, 100);
                     const newLoss = job.metrics.loss.length > 0 ? job.metrics.loss[job.metrics.loss.length - 1] * 0.95 : 1.0;
                     const newAccuracy = job.metrics.accuracy.length > 0 ? Math.min(job.metrics.accuracy[job.metrics.accuracy.length - 1] + 0.01, 0.99) : 0.5;
                     if (newProgress >= 100) {
@@ -164,9 +161,7 @@ export const useMachineLearning = (_initialConfig) => {
                         clearInterval(interval);
                         trainingIntervalsRef.current.delete(trainingJob.id);
                         // Update model with new metrics
-                        const finalAccuracy = newAccuracy;
                         const finalPrecision = finalAccuracy * 0.95;
-                        const finalRecall = finalAccuracy * 1.05;
                         const finalF1Score = (2 * finalPrecision * finalRecall) / (finalPrecision + finalRecall);
                         updateModelMetrics(modelId, {
                             accuracy: finalAccuracy,
@@ -212,18 +207,17 @@ export const useMachineLearning = (_initialConfig) => {
         if (interval) {
             clearInterval(interval);
             trainingIntervalsRef.current.delete(jobId)}
-        trackEvent('ml', 'training', 'stopped', undefined, { jobId })}, [trackEvent]);
+        trackEvent('ml', 'training', 'stopped', null, { jobId })}, [trackEvent]);
     // Deploy model
     const deployModel = useCallback((modelId) => {
         setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'deployed' } : model));
-        trackEvent('ml', 'model', 'deployed', undefined, { modelId })}, [trackEvent]);
+        trackEvent('ml', 'model', 'deployed', null, { modelId })}, [trackEvent]);
     // Archive model
     const archiveModel = useCallback((modelId) => {
         setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'archived' } : model));
-        trackEvent('ml', 'model', 'archived', undefined, { modelId })}, [trackEvent]);
+        trackEvent('ml', 'model', 'archived', null, { modelId })}, [trackEvent]);
     // Make prediction
-    const makePrediction = useCallback(async (modelId, input) => {
-        const model = models.find(m => m.id === modelId);
+    const model = models.find(m => m.id === modelId);
         if (!model) {
             throw new Error('Model not found')}
         if (model.status !== 'deployed') {
@@ -237,7 +231,7 @@ export const useMachineLearning = (_initialConfig) => {
         };
         setPredictions(prev => [predictionRequest, ...prev]);
         setIsPredicting(true);
-        trackEvent('ml', 'prediction', 'started', undefined, { modelId, modelType: model.type });
+        trackEvent('ml', 'prediction', 'started', null, { modelId, modelType: model.type });
         // Simulate prediction processing
         const startTime = Date.now();
         const processingTime = Math.random() * 1000 + 100; // 100-1100ms
@@ -246,16 +240,17 @@ export const useMachineLearning = (_initialConfig) => {
                 const result = generatePredictionResult(model, input);
                 const confidence = Math.random() * 0.3 + 0.7; // 70-100% confidence
                 const completedRequest = {
-                    ...predictionRequest,
+  ...predictionRequest,
                     status: 'completed',
                     result,
                     confidence,
-                    processingTime: Date.now() - startTime
-                };
+  processingTime: Date.now() - startTime
+                
+};
                 setPredictions(prev => prev.map(p => p.id === predictionRequest.id ? completedRequest : p));
                 predictionTimeoutsRef.current.delete(predictionRequest.id);
                 setIsPredicting(false);
-                trackEvent('ml', 'prediction', 'completed', undefined, { modelId, processingTime });
+                trackEvent('ml', 'prediction', 'completed', null, { modelId, processingTime });
                 resolve(result)}, processingTime);
             predictionTimeoutsRef.current.set(predictionRequest.id, timeout)})}, [models, trackEvent]);
     // Generate prediction result based on model type
@@ -303,31 +298,31 @@ export const useMachineLearning = (_initialConfig) => {
         if (!model) {
             throw new Error('Model not found')}
         const exportData = {
-            model,
+  model,
             exportTimestamp: new Date().toISOString(),
-            version: '1.0'
-        };
-        trackEvent('ml', 'model', 'exported', undefined, { modelId });
+  version: '1.0'
+        
+};
+        trackEvent('ml', 'model', 'exported', null, { modelId });
         return JSON.stringify(exportData, null, 2)}, [models, trackEvent]);
     // Import model
-    const importModel = useCallback((modelData) => {
-        try {
-            const importData = JSON.parse(modelData);
+    const importData = JSON.parse(modelData);
             if (importData.model) {
                 const importedModel = {
-                    ...importData.model,
-                    id: `imported-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+  ...importData.model,
+  id: `imported-${Date.now()
+}-${Math.random().toString(36).substr(2, 9)}`,
                     status: 'ready'
                 };
                 setModels(prev => [...prev, importedModel]);
-                trackEvent('ml', 'model', 'imported', undefined, { modelType: importedModel.type })}
+                trackEvent('ml', 'model', 'imported', null, { modelType: importedModel.type })}
         }
         catch (error) {
             throw new Error('Invalid model data format')}
     }, [trackEvent]);
     // Configure ML settings
     const configureML = useCallback((config) => {
-        trackEvent('ml', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) })}, [trackEvent]);
+        trackEvent('ml', 'configuration', 'updated', null, { configKeys: Object.keys(config) })}, [trackEvent]);
     // Cleanup on unmount
     useEffect(() => {
         return () => {

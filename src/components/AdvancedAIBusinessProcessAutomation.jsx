@@ -188,13 +188,6 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'it': return <Server className="w-4 h-4"/>;
             default: return <FileText className="w-4 h-4"/>}
     };
-    const formatCurrency = (amount) => {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        }).format(amount)};
     const formatPercentage = (value) => {
         return `${value}%`};
     const executeProcess = async (processId) => {
@@ -207,8 +200,6 @@ export function AdvancedAIBusinessProcessAutomation() {
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p))};
     const filteredProcesses = businessProcesses.filter(process => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});

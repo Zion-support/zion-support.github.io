@@ -12,6 +12,7 @@ import { Code,
   Network
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export const TechnologyStackSection: React.FC = (): JSX.Element => {
   const techCategories = [
     {
@@ -67,26 +68,90 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
         'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
       ],
       color: 'from-red-500 to-pink-500'
-    }
+    };
   ];
+=======
+const technologyCategories = [
+  {
+    category: "Frontend Technologies",
+    technologies: [
+      { name: "React", icon: "⚛️", proficiency: 95 },
+      { name: "Vue.js", icon: "💚", proficiency: 90 },
+      { name: "Angular", icon: "🅰️", proficiency: 85 },
+      { name: "TypeScript", icon: "📘", proficiency: 95 },
+      { name: "Tailwind CSS", icon: "🎨", proficiency: 90 }
+    ],
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    category: "Backend Technologies",
+    technologies: [
+      { name: "Node.js", icon: "🟢", proficiency: 95 },
+      { name: "Python", icon: "🐍", proficiency: 90 },
+      { name: "Java", icon: "☕", proficiency: 85 },
+      { name: "Go", icon: "🐹", proficiency: 80 },
+      { name: "Rust", icon: "🦀", proficiency: 75 }
+    ],
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    category: "AI & Machine Learning",
+    technologies: [
+      { name: "TensorFlow", icon: "🧠", proficiency: 90 },
+      { name: "PyTorch", icon: "🔥", proficiency: 85 },
+      { name: "Scikit-learn", icon: "📊", proficiency: 90 },
+      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 },
+      { name: "Hugging Face", icon: "🤗", proficiency: 80 }
+    ],
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    category: "Cloud & DevOps",
+    technologies: [
+      { name: "AWS", icon: "☁️", proficiency: 90 },
+      { name: "Azure", icon: "🔷", proficiency: 85 },
+      { name: "Google Cloud", icon: "🔵", proficiency: 80 },;
+      { name: "Docker", icon: "🐳", proficiency: 90 },;
+      { name: "Kubernetes", icon: "⚓", proficiency: 85 };
+    ],;
+    color: "from-orange-500 to-red-500";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const emergingTech = [
-  { name: "Quantum Computing", icon: "⚛️", status: "Research" },
-  { name: "Blockchain", icon: "🔗", status: "Production" },
-  { name: "Edge Computing", icon: "🌐", status: "Development" },
-  { name: "5G Networks", icon: "📡", status: "Integration" },
-  { name: "IoT Platforms", icon: "📱", status: "Production" },
-  { name: "AR/VR", icon: "🥽", status: "Research" }
+  { name: "Quantum Computing", icon: "⚛️", status: "Research" },;
+  { name: "Blockchain", icon: "🔗", status: "Production" },;
+  { name: "Edge Computing", icon: "🌐", status: "Development" },;
+  { name: "5G Networks", icon: "📡", status: "Integration" },;
+  { name: "IoT Platforms", icon: "📱", status: "Production" },;
+  { name: "AR/VR", icon: "🥽", status: "Research" };
 ];
 
 export function TechnologyStackSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -99,15 +164,25 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Technology Categories */}
+<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {techCategories.map((category, index)  => {
+          {techCategories.map((category, index)  => {;
             const IconComponent = category.icon;
             return (
               <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key = {category.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
@@ -117,6 +192,45 @@ export function TechnologyStackSection() {
                   <h3 className="text-xl font-bold">
                     {category.title}
                   </h3>
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {technologyCategories.map((category, index) => (
+            <motion.div
+              key={category.category}
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+            >
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
+                  <span className="text-sm">⚡</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 {category.category}
               </h3>
@@ -128,28 +242,84 @@ export function TechnologyStackSection() {
                       <span className="text-xl">{tech.icon}</span>
                       <span className="text-gray-300 font-medium">{tech.name}</span>
                     </div>
+<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
             )})}
+=======
+                    
+                    <div className="flex items-center gap-2">
+                      <div className="w-20 bg-slate-700 rounded-full h-2">
+                        <motion.div
+                          className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${tech.proficiency}%` }}
+                          viewport={{ once: true }}
+                          transition = {
+  { duration: 1,
+  delay: 0.8 + techIndex * 0.1 
+
+
+
+
+
+}}
+                        />
+                      </div>
+                      <span className="text-blue-400 text-sm font-semibold w-8 text-right">
+                        {tech.proficiency}%
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
 
         {/* Emerging Technologies */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
           </h3>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {emergingTech.map((tech, index)  => {
+            {emergingTech.map((tech, index)  => {;
               const IconComponent = tech.icon;
               return (
-                <div key={tech.name} className="text-center">
+                <div key = {tech.name} className="text-center">
                   <div className="flex justify-center mb-4">
                     <div className="p-3 bg-blue-600 rounded-full">
                       <IconComponent className="h-8 w-8 text-white" />
@@ -157,6 +327,45 @@ export function TechnologyStackSection() {
                   </div>
                   <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
                   <p className="text-sm text-gray-400">{tech.status}</p>
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingTech.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+
+
+
+}}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{tech.icon}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               )})}
           </div>
@@ -165,10 +374,34 @@ export function TechnologyStackSection() {
         {/* Technology Philosophy */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
@@ -205,18 +438,54 @@ export function TechnologyStackSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to leverage cutting-edge tech?</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default TechnologyStackSection;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TechnologyStackSection;

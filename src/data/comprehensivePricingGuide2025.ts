@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 export interface ComprehensivePricingGuide {
 
+=======
+export type PricingTier = {;
+  name: string;
+  price: string;
+  billing: 'month' | 'year' | 'project' | 'hour';
+  description: string;
+  features: string[];
+  benefits: string[];
+  bestFor: string[];
+  popular?: boolean;
+};
+
+export type ServicePricing = {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   id: string;
   title: string;
   description: string;

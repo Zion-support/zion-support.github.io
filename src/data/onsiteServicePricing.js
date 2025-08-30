@@ -197,9 +197,6 @@ export const additionalServices = [
   }
 ];
 
-export const getServiceById = (id) => {
-  return onsiteServicePricing.find(service => service.id === id)};
-
 export const getServicesByCategory = (category) => {
   return onsiteServicePricing.filter(service => service.category === category)};
 

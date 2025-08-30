@@ -4,12 +4,12 @@ export default function AISecurityOrchestration() {
   const features = [
     'AI-powered security orchestration optimization',
     'Intelligent security workflow management and execution',
-    'Automated security process coordination and automation',
-    'Predictive analytics for orchestration needs',
-    'Smart orchestration framework management',
-    'AI-driven orchestration automation and coordination',
-    'Real-time orchestration performance tracking',
-    'Custom AI models for orchestration applications'
+    'Automated security process coordination and automation',;
+    'Predictive analytics for orchestration needs',;
+    'Smart orchestration framework management',;
+    'AI-driven orchestration automation and coordination',;
+    'Real-time orchestration performance tracking',;
+    'Custom AI models for orchestration applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AISecurityOrchestration() {
       name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,299/mo', 
-      details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,299/mo', ;
+      details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Security orchestration optimization',
-    'Security workflow management and execution',
-    'Security process coordination and automation',
-    'Orchestration framework management and automation',
-    'Orchestration automation and coordination',
-    'Orchestration scaling and management'
+    'Security orchestration optimization',;
+    'Security workflow management and execution',;
+    'Security process coordination and automation',;
+    'Orchestration framework management and automation',;
+    'Orchestration automation and coordination',;
+    'Orchestration scaling and management';
   ];
 
   const benefits = [
-    'Improve security orchestration performance by 50-80%',
-    'Reduce orchestration completion time by 40-70%',
-    'Cut security orchestration costs by 35-65%',
-    'Enhance security orchestration reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security orchestration operations efficiently'
+    'Improve security orchestration performance by 50-80%',;
+    'Reduce orchestration completion time by 40-70%',;
+    'Cut security orchestration costs by 35-65%',;
+    'Enhance security orchestration reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security orchestration operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-500 via-violet-500 to-fuchsia-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AISecurityOrchestration() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

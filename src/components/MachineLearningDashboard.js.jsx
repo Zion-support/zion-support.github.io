@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
-import { useMachineLearning } from '../hooks/useMachineLearning';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useMachineLearning } from "../hooks/useMachineLearning";
+import { useAnalytics } from "../hooks/useAnalytics";
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -32,13 +32,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             setShowCreateModel(false);
             trackEvent('ml', 'dashboard', 'model_created')}
     }, [newModelForm, createModel, trackEvent]);
-    const handleStartTraining = useCallback(async (modelId) => {
-        const hyperparameters = {
-            learningRate: 0.001,
+    const hyperparameters = {
+  learningRate: 0.001,
             batchSize: 32,
             epochs: 100,
-            optimizer: 'adam'
-        };
+  optimizer: 'adam'
+        
+};
         try {
             await startTraining(modelId, hyperparameters);
             trackEvent('ml', 'dashboard', 'training_started')}
@@ -164,7 +164,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
       {/* Content */}
       <div className="p-4">
         <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (<motion.div key="overview" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'overview' && (<motion.div key="overview" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-6">
               {/* Key Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -260,7 +269,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'models' && (<motion.div key="models" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+          {activeTab === 'models' && (<motion.div key="models" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI Models</h3>
                 <div className="flex space-x-2">
@@ -273,11 +291,26 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
               {/* Create Model Form */}
               <AnimatePresence>
-                {showCreateModel && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                {showCreateModel && (<motion.div initial = {
+  { opacity: 0,
+  height: 0 
+}} animate = {
+  { opacity: 1,
+  height: 'auto' 
+}} exit = {
+  { opacity: 0,
+  height: 0 
+}} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Create New Model</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <input type="text" placeholder="Model Name" value={newModelForm.name} onChange={(e) => setNewModelForm(prev => ({ ...prev, name: e.target.value }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
-                      <select value={newModelForm.type} onChange={(e) => setNewModelForm(prev => ({ ...prev, type: e.target.value }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                      <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = {
+  (e) => setNewModelForm(prev => ({ ...prev,
+  name: e.target.value 
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
+                      <select value={newModelForm.type} onChange = {
+  (e) => setNewModelForm(prev => ({ ...prev,
+  type: e.target.value 
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                         <option value="classification">Classification</option>
                         <option value="regression">Regression</option>
                         <option value="clustering">Clustering</option>
@@ -285,7 +318,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <option value="computer_vision">Computer Vision</option>
                         <option value="recommendation">Recommendation</option>
                       </select>
-                      <select value={newModelForm.framework} onChange={(e) => setNewModelForm(prev => ({ ...prev, framework: e.target.value }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                      <select value={newModelForm.framework} onChange = {
+  (e) => setNewModelForm(prev => ({ ...prev,
+  framework: e.target.value 
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                         <option value="tensorflow">TensorFlow</option>
                         <option value="pytorch">PyTorch</option>
                         <option value="scikit-learn">Scikit-learn</option>
@@ -305,7 +341,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
               {/* Import Model */}
               <AnimatePresence>
-                {showImportModel && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                {showImportModel && (<motion.div initial = {
+  { opacity: 0,
+  height: 0 
+}} animate = {
+  { opacity: 1,
+  height: 'auto' 
+}} exit = {
+  { opacity: 0,
+  height: 0 
+}} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Import Model</h4>
                     <input type="file" accept=".json" onChange={handleImportModel} className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100"/>
                     <button onClick={() => setShowImportModel(false)} className="mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">
@@ -380,7 +425,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'training' && (<motion.div key="training" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+          {activeTab === 'training' && (<motion.div key="training" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Training Jobs</h3>
               
               <div className="space-y-4">
@@ -455,13 +509,25 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'predictions' && (<motion.div key="predictions" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+          {activeTab === 'predictions' && (<motion.div key="predictions" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Make Predictions</h3>
               
               {/* Prediction Form */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <select value={predictionForm.modelId} onChange={(e) => setPredictionForm(prev => ({ ...prev, modelId: e.target.value }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                  <select value={predictionForm.modelId} onChange = {
+  (e) => setPredictionForm(prev => ({ ...prev,
+  modelId: e.target.value 
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                     <option value="">Select a deployed model</option>
                     {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>
                         {model.name} ({model.type})
@@ -472,7 +538,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     Make Prediction
                   </button>
                 </div>
-                <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange={(e) => setPredictionForm(prev => ({ ...prev, input: e.target.value }))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
+                <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
+  (e) => setPredictionForm(prev => ({ ...prev,
+  input: e.target.value 
+}))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
               </div>
 
               {/* Recent Predictions */}
@@ -517,7 +586,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'analytics' && (<motion.div key="analytics" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+          {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Analytics</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

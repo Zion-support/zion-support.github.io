@@ -1,13 +1,30 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Logo } from './Logo';
-import { MainNavigation } from './MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { Logo } from "./Logo";
+import { MainNavigation } from "./MainNavigation";
+import { MobileMenu } from "./MobileMenu";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
+import { EnhancedSearchInput } from "./EnhancedSearchInput";
 import { SearchIcon, Sparkles, Menu, X } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+import { Logo } from "./Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from "./MobileMenu";
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function Header({ 
   customLogo, 
@@ -21,8 +38,26 @@ export function Header({
   const [searchSuggestions, setSearchSuggestions] = useState([]);
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   // Mock user state - replace with actual auth context
   const user = null;
+=======
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#000000', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : null);
+
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor,
+    color: effectiveTheme.textColor,
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {};
+
+  // Handle scroll effect
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)};
@@ -36,8 +71,14 @@ export function Header({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+<<<<<<< HEAD
+      router(`/search?q=${encodeURIComponent(query.trim())}`);
       setQuery('')}
+=======
+      router(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   const effectiveTheme = customTheme || {
@@ -75,7 +116,7 @@ export function Header({
                 value={query} 
                 onChange={setQuery} 
                 onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
+                  router(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("")}} 
                 searchSuggestions={searchSuggestions}
               />
@@ -106,6 +147,7 @@ export function Header({
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Search Bar */}
         <div className="lg:hidden px-4 pb-4">
           <form onSubmit={handleSubmit}>
@@ -114,7 +156,7 @@ export function Header({
                 value={query} 
                 onChange={setQuery} 
                 onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
+                  router(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("")}} 
                 searchSuggestions={searchSuggestions} 
                 placeholder="Search services, talent, equipment..."
@@ -122,10 +164,52 @@ export function Header({
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
               </div>
+=======
+        {/* Search Bar */}
+        <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <EnhancedSearchInput 
+              value={query} 
+              onChange={setQuery} 
+              onSelectSuggestion={(text) => {
+                router(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }} 
+              searchSuggestions={searchSuggestions}
+            />
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </form>
         </div>
+<<<<<<< HEAD
       </header>
+=======
+      </div>
+
+      {/* Mobile Search Bar */}
+      <div className="lg:hidden px-4 pb-4">
+        <form onSubmit={handleSubmit}>
+          <div className="relative">
+            <EnhancedSearchInput 
+              value={query} 
+              onChange={setQuery} 
+              onSelectSuggestion={(text) => {
+                router(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }} 
+              searchSuggestions={searchSuggestions} 
+              placeholder="Search services, talent, equipment..."
+            />
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+            </div>
+          </div>
+        </form>
+      </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
@@ -263,5 +347,7 @@ export function Header({
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>
   )};
+
+export default Header;
 
 export default Header;

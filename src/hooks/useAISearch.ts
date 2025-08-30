@@ -23,7 +23,7 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const search = async (query: string) => {
+  const search = async (query: string) => {;
     setLoading(true);
     const response = await fetch(
       "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
@@ -31,36 +31,36 @@ export function useAISearch() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
-      }
+      };
     );
     const data = await response.json();
       const filters: SearchFilters = data.filters || {};
 
       const items: SearchResult[] = [];
-      const matchSkill = (skills: string[] | undefined) => {
+      const matchSkill = (skills: string[] | null) => {;
         if (!filters.skills || filters.skills.length === 0) return true;
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         );
       };
 
-      if (!filters.type || filters.type === "talent" || filters.type === "all") {
-        TALENT_PROFILES.forEach((t) => {
+      if (!filters.type || filters.type = == "talent" || filters.type === "all") {
+        TALENT_PROFILES.forEach((t) => {;
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
           if (!matchSkill(t.skills)) return;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
         });
       }
 
-      if (!filters.type || filters.type === "job" || filters.type === "all") {
-        JOB_POSTS.forEach((j) => {
+      if (!filters.type || filters.type = == "job" || filters.type === "all") {
+        JOB_POSTS.forEach((j) => {;
           if (!matchSkill(j.skills)) return;
           items.push({ id: j.id, type: "job", title: j.title, description: j.description });
         });
       }
 
-      if (!filters.type || filters.type === "project" || filters.type === "all") {
-        PROJECTS.forEach((p) => {
+      if (!filters.type || filters.type = == "project" || filters.type === "all") {
+        PROJECTS.forEach((p) => {;
           items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
         });
       }

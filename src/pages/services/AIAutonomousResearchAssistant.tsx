@@ -49,12 +49,12 @@ const AIAutonomousResearchAssistant = () => {
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Updates",
       description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Data Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
-    }
+    },;
+    {;
+      icon: <Shield className="w-6 h-6" />,;
+      title: "Data Security",;
+      description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards.";
+    };
   ];
 
   const pricingPlans = [
@@ -97,12 +97,12 @@ const AIAutonomousResearchAssistant = () => {
         "Custom AI model training",
         "Full database access",
         "Dedicated support team",
-        "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: false
-    }
+        "Advanced reporting & insights",;
+        "API access",;
+        "Custom integrations";
+      ],;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -120,22 +120,38 @@ const AIAutonomousResearchAssistant = () => {
       title: "Product Development",
       description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
       icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
-    },
-    {
-      title: "Policy Research",
-      description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
-      icon: <Target className="w-8 h-8 text-purple-500" />
-    }
+    },;
+    {;
+      title: "Policy Research",;
+      description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",;
+      icon: <Target className="w-8 h-8 text-purple-500" />;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -177,8 +193,24 @@ const AIAutonomousResearchAssistant = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -194,9 +226,33 @@ const AIAutonomousResearchAssistant = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
@@ -214,8 +270,24 @@ const AIAutonomousResearchAssistant = () => {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -231,9 +303,33 @@ const AIAutonomousResearchAssistant = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
@@ -253,8 +349,24 @@ const AIAutonomousResearchAssistant = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -270,9 +382,33 @@ const AIAutonomousResearchAssistant = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
@@ -326,8 +462,24 @@ const AIAutonomousResearchAssistant = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12"
           >
@@ -351,12 +503,12 @@ const AIAutonomousResearchAssistant = () => {
                 className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
                 Contact Sales
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </motion.button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

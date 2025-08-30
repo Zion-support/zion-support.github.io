@@ -52,7 +52,7 @@ class PM2Dashboard {
   async connectToPM2() {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
-        if (err) reject(err);
+        if (err) throw new Error(err);
         else resolve();
       });
     });
@@ -77,7 +77,6 @@ class PM2Dashboard {
 
   async updateDashboard() {
     try {
-      const status = await this.getPM2Status();
       const systemInfo = this.getSystemInfo();
       
       // Move cursor to top and clear screen
@@ -227,7 +226,7 @@ class PM2Dashboard {
   async getPM2Status() {
     return new Promise((resolve, reject) => {
       pm2.list((err, list) => {
-        if (err) reject(err);
+        if (err) throw new Error(err);
         else resolve(list || []);
       });
     });

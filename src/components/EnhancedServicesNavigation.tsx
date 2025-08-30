@@ -2,7 +2,7 @@ import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
+const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<any>(null);
 
@@ -116,7 +116,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
           pricing: "Custom pricing"
         }
       ]
-    }
+    };
   ];
 
   const quickLinks = [
@@ -143,11 +143,11 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
       url: "/contact",
       description: "Get expert advice",
       icon: "📞"
-    }
+    };
   ];
 
   return (
-    <div className="relative">
+    <div className = "relative">
       {/* Main Services Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -169,9 +169,18 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+}}
+            animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+}}
+            exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+}}
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"
           >
@@ -191,9 +200,18 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
                 {serviceCategories.map((category, categoryIndex)  => (
                   <motion.div
                     key={category.name}
-                    initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: categoryIndex * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: categoryIndex % 2 === 0 ? -20 : 20 
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                    transition = {
+  { duration: 0.3,
+  delay: categoryIndex * 0.1 
+}}
                     className="relative group"
                     onMouseEnter={() => setActiveCategory(category.name)}
                     onMouseLeave={() => setActiveCategory(null)}
@@ -211,9 +229,18 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
                         {category.services.map((service, serviceIndex) => (
                           <motion.div
                             key={service.title}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
+                            initial = {
+  { opacity: 0,
+  x: -10 
+}}
+                            animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                            transition = {
+  { duration: 0.2,
+  delay: serviceIndex * 0.05 
+}}
                             className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200"
                           >
                             <div className="flex-1">
@@ -240,9 +267,18 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
                   {quickLinks.map((link, index)  => (
                     <motion.div
                       key={link.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                      animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                      transition = {
+  { duration: 0.3,
+  delay: index * 0.1 
+}}
                     >
                       <Link
                         to={link.url}
@@ -295,7 +331,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
           onClick={() => setIsOpen(false)}
         />
       )}
-    </div>
+    </div>;
   )};
 
 export default EnhancedServicesNavigation;

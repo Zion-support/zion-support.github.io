@@ -234,12 +234,12 @@ const ComprehensiveServicesShowcase2029 = () => {
           name: "AI Project Management",
           description: "AI-driven project optimization",
           href: "/services/ai-project-management",
-          icon: Target,
-          color: "from-blue-500 to-indigo-500",
-          price: "$399/month"
-        }
-      ]
-    }
+          icon: Target,;
+          color: "from-blue-500 to-indigo-500",;
+          price: "$399/month";
+        };
+      ];
+    };
   ];
 
   const featuredServices = [
@@ -264,23 +264,39 @@ const ComprehensiveServicesShowcase2029 = () => {
     {
       name: "AI Cybersecurity Threat Intelligence",
       description: "Protect your organization with AI-powered security",
-      href: "/services/ai-cybersecurity-threat-intelligence",
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
-      price: "$5,999/month",
-      featured: true
-    }
+      href: "/services/ai-cybersecurity-threat-intelligence",;
+      icon: Shield,;
+      color: "from-red-500 to-orange-500",;
+      price: "$5,999/month",;
+      featured: true;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
@@ -316,8 +332,24 @@ const ComprehensiveServicesShowcase2029 = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -334,9 +366,33 @@ const ComprehensiveServicesShowcase2029 = () => {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 border-cyan-400 shadow-2xl shadow-cyan-500/20 hover:transform hover:scale-105 transition-all duration-300"
               >
@@ -373,8 +429,24 @@ const ComprehensiveServicesShowcase2029 = () => {
       <section id="services" className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -391,9 +463,33 @@ const ComprehensiveServicesShowcase2029 = () => {
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: categoryIndex * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
               >
                 <div className="text-center mb-12">
@@ -405,9 +501,33 @@ const ComprehensiveServicesShowcase2029 = () => {
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={serviceIndex}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                      whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                      transition = {
+  { duration: 0.6,
+  delay: serviceIndex * 0.1 
+
+
+
+
+
+}}
                       viewport={{ once: true }}
                       className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
                     >
@@ -440,8 +560,24 @@ const ComprehensiveServicesShowcase2029 = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -493,12 +629,12 @@ const ComprehensiveServicesShowcase2029 = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
               <p className="text-gray-300">Address</p>
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

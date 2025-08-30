@@ -4,11 +4,12 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 const defaultContent = {
-    products: {
+  products: {
         icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
         title: 'No Products Available',
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!',
-    },
+   
+},
     categories: {
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
         title: 'No Categories Found',
@@ -48,7 +49,6 @@ const defaultContent = {
 export function EmptyState({ type, title, description, action, icon }) {
     const { t } = useTranslation();
     const content = defaultContent[type];
-    const displayTitle = title || content.title;
     const displayDescription = description || content.description;
     const displayIcon = icon || content.icon;
     return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">
@@ -93,20 +93,28 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
         }
         : onRetry
             ? { label: 'Try Again', onClick: onRetry }
-            : undefined;
+            : null;
     const customDescription = isAuthenticated
         ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
         : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
     return (<EmptyState type="products" action={action} description={customDescription}/>)}
 export function CategoriesEmptyState({ onRetry }) {
-    return (<EmptyState type="categories" action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}/>)}
+    return (<EmptyState type="categories" action = {
+  onRetry ? { label: 'Refresh Categories',
+  onClick: onRetry 
+} : null}/>)}
 export function TalentEmptyState({ onRetry }) {
-    return (<EmptyState type="talent" action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}/>)}
+    return (<EmptyState type="talent" action = {
+  onRetry ? { label: 'Reset Filters',
+  onClick: onRetry 
+} : null}/>)}
 export function EquipmentEmptyState({ onRetry }) {
-    return (<EmptyState type="equipment" action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}/>)}
-export function SearchEmptyState({ onRetry }) {
-    return (<EmptyState type="search" action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}/>)}
-export function NetworkErrorState({ onRetry }) {
-    return (<EmptyState type="network" action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}/>)}
+    return (<EmptyState type="equipment" action = {
+  onRetry ? { label: 'Refresh Listings',
+  onClick: onRetry 
+} : null}/>)}
 export function ServerErrorState({ onRetry }) {
-    return (<EmptyState type="error" action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}/>)}
+    return (<EmptyState type="error" action = {
+  onRetry ? { label: 'Retry',
+  onClick: onRetry 
+} : null}/>)}

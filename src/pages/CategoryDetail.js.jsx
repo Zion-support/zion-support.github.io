@@ -55,11 +55,12 @@ export default function CategoryDetail() {
     const innovationCounterRef = useRef(0);
     // Map of category slugs to their display data
     const categoryData = {
-        'services': {
+  'services': {
             title: "Services",
             description: "On-demand IT support, consulting, development, and more",
-            icon: <Briefcase className="w-6 h-6"/>
-        },
+  icon: <Briefcase className="w-6 h-6"/>
+        
+},
         'talents': {
             title: "Talents",
             description: "Connect with AI experts, developers, and tech specialists",
@@ -142,7 +143,7 @@ export default function CategoryDetail() {
                 author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
-                    avatarUrl: undefined
+                    avatarUrl: null
                 },
                 images[`/placeholder.svg`],
                 createdAt: new Date().toISOString(),
@@ -170,7 +171,7 @@ export default function CategoryDetail() {
                 description: `Your quote request for ${listing.title} has been sent.`
             });
             // Navigate to the quote request page with the listing information
-            navigate("/request-quote", {
+            router("/request-quote", {
                 state: {
                     serviceType: listing.category,
                     specificItem: {

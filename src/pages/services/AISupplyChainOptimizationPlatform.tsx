@@ -1,9 +1,9 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { GradientHeading  } from '../../components/ui/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../../components/ui/card';
-import { Badge  } from '../../components/ui/badge';
-import { Button  } from '../../components/ui/button';
+import { SEO  } from "../../components/SEO";
+import { GradientHeading  } from "../../components/ui/GradientHeading";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from "../../components/ui/card";
+import { Badge  } from "../../components/ui/badge";
+import { Button  } from "../../components/ui/button";
 import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3  } from 'lucide-react';
 
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
@@ -37,7 +37,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,
       title: "Performance Analytics",
       description: "Comprehensive reporting and analytics for continuous improvement"
-    }
+    };
   ];
 
   const pricingTiers = [
@@ -90,7 +90,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         "White-label solutions"
       ],
       popular: false
-    }
+    };
   ];
 
   const benefits = [
@@ -109,7 +109,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     {
       metric: "90%",
       description: "Faster response to supply chain disruptions"
-    }
+    };
   ];
 
   const useCases = [
@@ -128,11 +128,11 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     {
       title: "Healthcare Supply Chain",
       description: "Ensure critical medical supplies reach their destination on time"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
         description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
@@ -313,7 +313,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   )};
 
 export default AISupplyChainOptimizationPlatform;

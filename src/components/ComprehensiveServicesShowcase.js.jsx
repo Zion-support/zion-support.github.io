@@ -19,9 +19,9 @@ import {
 import { Link } from 'react-router-dom';
 
 // Import the new service data
-import { revolutionary2027AdvancedMicroSaasServices } from '../../data/revolutionary-2027-advanced-micro-saas';
-import { revolutionary2027ITInfrastructureCybersecurityServices } from '../../data/revolutionary-2027-it-infrastructure-cybersecurity';
-import { revolutionary2027AIInnovationServices } from '../../data/revolutionary-2027-ai-innovation-services';
+import { revolutionary2027AdvancedMicroSaasServices } from "../../data/revolutionary-2027-advanced-micro-saas";
+import { revolutionary2027ITInfrastructureCybersecurityServices } from "../../data/revolutionary-2027-it-infrastructure-cybersecurity";
+import { revolutionary2027AIInnovationServices } from "../../data/revolutionary-2027-ai-innovation-services";
 
 const serviceCategories = [
   {
@@ -51,7 +51,6 @@ export function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
 
-  const currentCategory = serviceCategories.find(cat => cat.id === selectedCategory);
   const currentServices = currentCategory?.services || [];
 
   const containerVariants = {
@@ -66,7 +65,9 @@ export function ComprehensiveServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -78,7 +79,9 @@ export function ComprehensiveServicesShowcase() {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+},
     visible: {
       scale: 1,
       opacity: 1,
@@ -95,8 +98,14 @@ export function ComprehensiveServicesShowcase() {
         {/* Header Section */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -138,9 +147,18 @@ export function ComprehensiveServicesShowcase() {
         {/* Category Navigation */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
         >
           {serviceCategories.map((category) => (
             <button
@@ -175,10 +193,13 @@ export function ComprehensiveServicesShowcase() {
               <motion.div
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full"
                 variants={cardVariants}
-                whileHover={{ 
+                whileHover = {
+  { 
                   y: -8,
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)"
-                }}
+                  boxShadow: "0 20px 40px rgba(0, 0, 0,
+  0.3)"
+                
+}}
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -264,9 +285,18 @@ export function ComprehensiveServicesShowcase() {
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+}}
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -306,9 +336,18 @@ export function ComprehensiveServicesShowcase() {
           >
             <motion.div
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+}}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-start justify-between mb-6">

@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle  } from './ui/card';
-import { Button  } from './ui/button';
-import { Badge  } from './ui/badge';
-import { Alert, AlertDescription  } from './ui/alert';
-import { Progress  } from './ui/progress';
+import { Card, CardContent, CardHeader, CardTitle  } from "./ui/card";
+import { Button  } from "./ui/button";
+import { Badge  } from "./ui/badge";
+import { Alert, AlertDescription  } from "./ui/alert";
+import { Progress  } from "./ui/progress";
 import { Shield, 
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Alert, AlertDescription } from "./ui/alert";
+import { Progress } from "./ui/progress";
+import { 
+  Shield, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Lock, 
   AlertTriangle, 
   CheckCircle, 
@@ -48,12 +59,12 @@ interface SecurityCheck {
 
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
-    overallScore: 85,
-    vulnerabilities: 3,
-    threatsBlocked: 127,
-    lastScan: new Date(),
-    complianceScore: 92,
-    encryptionStrength: 256
+    overallScore: 85,;
+    vulnerabilities: 3,;
+    threatsBlocked: 127,;
+    lastScan: new Date(),;
+    complianceScore: 92,;
+    encryptionStrength: 256;
   });
 
   const [threats, setThreats] = useState<any>([]);
@@ -142,50 +153,73 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
 
     setSecurityChecks(checks)}, []);
 
-  const runSecurityScan = useCallback(async () => {
+  const runSecurityScan = useCallback(async () => {;
     setIsScanning(true);
     
     // Simulate security scan
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     // Update metrics with new scan results
-    setMetrics(prev => ({
-      ...prev,
-      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
-      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),
-      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
-      lastScan: new Date()
+    setMetrics(prev = > ({;
+      ...prev,;
+      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),;
+      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),;
+      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),;
+      lastScan: new Date();
     }));
 
     setIsScanning(false)}, []);
 
+<<<<<<< HEAD
   const mitigateThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const }
-        : threat
+        : threat;
     ))}, []);
 
   const resolveThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const }
-        : threat
+        : threat;
     ))}, []);
 
   const getThreatIcon = (type: SecurityThreat['type'])  => {
     switch (type) {
+=======;
+  const mitigateThreat = useCallback((threatId: string) => {;
+    setThreats(prev => prev.map(threat => ;
+      threat.id === threatId ;
+        ? { ...threat, status: 'mitigated' as const };
+        : threat;
+    ));
+  }, []);
+
+  const resolveThreat = useCallback((threatId: string) => {;
+    setThreats(prev => prev.map(threat => ;
+      threat.id === threatId ;
+        ? { ...threat, status: 'resolved' as const };
+        : threat;
+    ));
+  }, []);
+
+  const getThreatIcon = (type: SecurityThreat['type']) => {;
+    switch (type) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
       case 'injection': return <Database className="h-4 w-4" />;
       case 'authentication': return <Lock className="h-4 w-4" />;
       case 'authorization': return <Shield className="h-4 w-4" />;
       case 'data-leak': return <Eye className="h-4 w-4" />;
-      default: return <AlertTriangle className="h-4 w-4" />}
+      default: return <AlertTriangle className = "h-4 w-4" />};
   };
 
-  const getSeverityColor = (severity: SecurityThreat['severity'])  => {
-    switch (severity) {
+<<<<<<< HEAD
+  const getSeverityColor = (severity: SecurityThreat['severity']) => {;
+    switch (severity) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'critical': return 'bg-red-500';
       case 'high': return 'bg-orange-500';
       case 'medium': return 'bg-yellow-500';
@@ -193,30 +227,36 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       default: return 'bg-gray-500'}
   };
 
-  const getStatusColor = (status: SecurityThreat['status'])  => {
-    switch (status) {
+<<<<<<< HEAD
+  const getStatusColor = (status: SecurityThreat['status']) => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'active': return 'bg-red-100 text-red-800';
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
       case 'resolved': return 'bg-green-100 text-green-800';
       default: return 'bg-gray-100 text-gray-800'}
   };
 
-  const getCheckStatusIcon = (status: SecurityCheck['status'])  => {
-    switch (status) {
+<<<<<<< HEAD
+  const getCheckStatusIcon = (status: SecurityCheck['status']) => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
       case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />}
+      default: return <AlertTriangle className = "h-4 w-4 text-gray-600" />};
   };
 
-  const getSecurityScoreColor = (score: number)  => {
+<<<<<<< HEAD
+  const getSecurityScoreColor = (score: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';
     return 'text-red-600'};
 
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       {/* Security Overview */}
       <Card>
         <CardHeader>
@@ -413,11 +453,21 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
             <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+<<<<<<< HEAD
             Consider running a comprehensive security audit and implementing the suggested improvements.
           </AlertDescription>
         </Alert>
       )}
-    </div>
+    </div>;
   )};
+=======
+            Consider running a comprehensive security audit and implementing the suggested improvements.;
+          </AlertDescription>;
+        </Alert>;
+      )};
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default SecurityEnhancer;

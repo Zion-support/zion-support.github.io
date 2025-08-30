@@ -15,20 +15,25 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     });
     // Find all links on the page
     const findAllLinks = useCallback(() => {
-        const linkElements = document.querySelectorAll('a[href]');
         const links = [];
         linkElements.forEach((element, index) => {
             const href = element.getAttribute('href');
             if (href) {
                 const link = {
-                    url: href,
+  url: href,
                     status: 'unknown',
                     lastChecked: new Date(),
                     parentPage: window.location.pathname,
                     element: element,
                     fixable: false,
-                    suggestedFix: ''
-                };
+  suggestedFix: ''
+                
+
+
+
+
+
+};
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
                     // Internal anchor links
@@ -154,7 +159,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         brokenLinks.forEach(link => {
             if (link.element && link.url.startsWith('#')) {
                 // Fix broken anchor links
-                const targetId = link.url.substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (!targetElement) {
                     // Create a placeholder element
@@ -225,7 +229,31 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
       {/* Broken Link Fixer Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+
+
+
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+
+
+
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+
+
+
+}} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -391,7 +419,8 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                   </button>
 
                   {/* Export Report */}
-                  {links.length > 0 && (<button onClick={() => {
+                  {links.length > 0 && (<button onClick = {
+  () => {
                         const report = {
                             timestamp: new Date().toISOString(),
                             stats,
@@ -400,8 +429,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 status: link.status,
                                 error: link.error,
                                 lastChecked: link.lastChecked.toISOString(),
-                                fixable: link.fixable
-                            }))
+  fixable: link.fixable
+                            
+
+
+
+
+
+}))
                         };
                         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
                         const url = URL.createObjectURL(blob);

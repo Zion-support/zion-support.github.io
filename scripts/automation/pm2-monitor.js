@@ -12,9 +12,10 @@ const path = require('path');
 class PM2Monitor {
   constructor() {
     this.healthReport = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       overallHealth: 'healthy',
-      processes: {},
+  processes: {
+},
       systemMetrics: {},
       recommendations: []
     };
@@ -50,7 +51,7 @@ class PM2Monitor {
   async connectToPM2() {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
-        if (err) reject(err);
+        if (err) throw new Error(err);
         else resolve();
       });
     });
@@ -84,7 +85,7 @@ class PM2Monitor {
   async getPM2Status() {
     return new Promise((resolve, reject) => {
       pm2.list((err, list) => {
-        if (err) reject(err);
+        if (err) throw new Error(err);
         else resolve(list);
       });
     });
@@ -92,10 +93,11 @@ class PM2Monitor {
 
   assessProcessHealth(process) {
     const health = {
-      score: 100,
+  score: 100,
       issues: [],
-      recommendations: []
-    };
+  recommendations: []
+    
+};
 
     // Check memory usage
     if (process.monit.memory > 100 * 1024 * 1024) { // 100MB
@@ -198,15 +200,17 @@ class PM2Monitor {
 
   generateSummary() {
     const summary = {
-      timestamp: this.healthReport.timestamp,
+  timestamp: this.healthReport.timestamp,
       overallHealth: this.healthReport.overallHealth,
       processCount: Object.keys(this.healthReport.processes).length,
       healthyProcesses: Object.values(this.healthReport.processes).filter(p => p.health.status === 'healthy').length,
       warningProcesses: Object.values(this.healthReport.processes).filter(p => p.health.status === 'warning').length,
       criticalProcesses: Object.values(this.healthReport.processes).filter(p => p.health.status === 'critical').length,
       memoryUsage: this.healthReport.systemMetrics.memory?.usagePercent + '%',
-      topRecommendations: this.healthReport.recommendations.slice(0, 3)
-    };
+      topRecommendations: this.healthReport.recommendations.slice(0,
+  3)
+    
+};
     
     console.log('\n📊 PM2 Health Summary:');
     console.log('========================');

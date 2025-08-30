@@ -17,7 +17,7 @@ import { Building,
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-const Solutions: React.FC = (): JSX.Element => {
+const Solutions: React.FC = (): JSX.Element => {;
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
   const industries = [
@@ -26,7 +26,7 @@ const Solutions: React.FC = (): JSX.Element => {
     { id: 'finance', name: 'Financial Services', icon: Lock },
     { id: 'manufacturing', name: 'Manufacturing', icon: Building },
     { id: 'retail', name: 'Retail & E-commerce', icon: Users },
-    { id: 'technology', name: 'Technology', icon: Brain }
+    { id: 'technology', name: 'Technology', icon: Brain };
   ];
 
   const solutions = [
@@ -155,16 +155,16 @@ const Solutions: React.FC = (): JSX.Element => {
       icon: Database,
       demo: true,
       trial: false
-    }
+    };
   ];
 
-  const filteredSolutions = selectedIndustry === 'all' 
+  const filteredSolutions = selectedIndustry === 'all' ;
     ? solutions: solutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
     <>
       <SEO 
-        title="Technology Solutions | Zion Tech Group"
+        title = "Technology Solutions | Zion Tech Group"
         description="Industry-specific technology solutions designed to transform your business operations and drive innovation across healthcare, finance, manufacturing, and more."
         keywords="technology solutions, industry solutions, healthcare analytics, cybersecurity, smart manufacturing, e-commerce, cloud development"
       />
@@ -174,8 +174,14 @@ const Solutions: React.FC = (): JSX.Element => {
         <section className="py-32 px-4 text-center">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -221,9 +227,18 @@ const Solutions: React.FC = (): JSX.Element => {
               {filteredSolutions.map((solution, index)  => (
                 <motion.div
                   key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
                 >
                   <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
@@ -291,8 +306,14 @@ const Solutions: React.FC = (): JSX.Element => {
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-700/30">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -322,7 +343,7 @@ const Solutions: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default Solutions;

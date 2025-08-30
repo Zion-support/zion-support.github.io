@@ -1,6 +1,4 @@
-export function ScrollToTop() {
-    import React, { useState, useEffect } from 'react';
-    const ScrollToTop = () => {
+export function ScrollToTop = () => {
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
             const toggleVisibility = () => {
@@ -65,4 +63,6 @@ transition = {};
     </>;
 ;
 ;
+export default ScrollToTop;
+
 export default ScrollToTop;

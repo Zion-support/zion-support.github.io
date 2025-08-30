@@ -78,10 +78,10 @@ export const additionalRealMicroSaas2026 = [
 			'Quota, rate limits, and usage logs',
 			'Staging and production environments',
 			'Examples for Node/Next.js, Python'
-		],
-		pricing: { starter: '$129/month' },
-		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',
-		rating: 4.6,
-		launchDate: '2025-11-10'
-	}
+		],;
+		pricing: { starter: '$129/month' },;
+		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',;
+		rating: 4.6,;
+		launchDate: '2025-11-10';
+	};
 ];

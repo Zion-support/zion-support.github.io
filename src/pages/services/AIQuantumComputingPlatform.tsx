@@ -16,10 +16,11 @@ import { Brain,
   Network,
   Rocket
  } from 'lucide-react';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 
 const AIQuantumComputingPlatform = () => {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: "AI-Quantum Hybrid Processing",
@@ -49,7 +50,7 @@ const AIQuantumComputingPlatform = () => {
       icon: Rocket,
       title: "Future-Ready Architecture",
       description: "Built for the quantum future with scalable infrastructure and continuous innovation"
-    }
+    };
   ];
 
   const services = [
@@ -64,6 +65,34 @@ const AIQuantumComputingPlatform = () => {
         "Up to 100 qubits",
         "Basic algorithms"
       ],
+=======
+    'AI-powered quantum algorithm optimization',
+    'Hybrid quantum-classical computing solutions',
+    'Quantum machine learning frameworks',
+    'Real-time quantum circuit simulation',
+    'Quantum error correction and optimization',;
+    'Multi-qubit system management',;
+    'Quantum cryptography and security',;
+    'Custom quantum algorithm development',;
+    'Quantum cloud infrastructure access',;
+    'Advanced quantum analytics and visualization';
+  ];
+
+  const benefits = [
+    'Solve complex problems 1000x faster',;
+    'Reduce computational costs by 60-80%',;
+    'Enable breakthrough scientific discoveries',;
+    'Real-time quantum optimization',;
+    'Access to cutting-edge quantum hardware',;
+    'Future-proof your computational capabilities';
+  ];
+
+  const pricing = [
+    { 
+      name: 'Starter', 
+      price: '$1,299/mo', 
+      features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       popular: false
     },
     {
@@ -80,6 +109,7 @@ const AIQuantumComputingPlatform = () => {
       ],
       popular: true
     },
+<<<<<<< HEAD
     {
       name: "Quantum Enterprise",
       price: "$49,999",
@@ -93,7 +123,7 @@ const AIQuantumComputingPlatform = () => {
         "Multi-tenant architecture"
       ],
       popular: false
-    }
+    };
   ];
 
   const useCases = [
@@ -116,7 +146,7 @@ const AIQuantumComputingPlatform = () => {
       industry: "Climate Science",
       description: "Model complex climate systems and predict environmental changes with quantum accuracy",
       benefits["Accurate climate modeling", "Faster predictions", "Better policy decisions"]
-    }
+    };
   ];
 
   const technologies = [
@@ -127,24 +157,60 @@ const AIQuantumComputingPlatform = () => {
     "Quantum-Classical Hybrid",
     "Quantum Networking",
     "Real-time Analytics",
-    "Advanced Optimization"
+    "Advanced Optimization";
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO 
         title="AI-Powered Quantum Computing Platform | Zion Tech Group"
         description="Revolutionary AI-quantum hybrid computing platform. Access quantum supremacy, solve complex problems, and accelerate innovation with unprecedented computational power."
         keywords="Quantum Computing, AI Quantum, Quantum Platform, Quantum Supremacy, Quantum Algorithms, AI Computing"
       />
 
+=======
+    { ;
+      name: 'Enterprise', ;
+      price: '$7,999/mo', ;
+      features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],;
+      popular: false;
+    };
+  ];
+
+  const useCases = [
+    'Drug discovery and molecular modeling',;
+    'Financial portfolio optimization',;
+    'Cryptography and cybersecurity',;
+    'Climate modeling and prediction',;
+    'Machine learning acceleration',;
+    'Supply chain optimization';
+  ];
+
+  const industries = [
+    'Pharmaceuticals & Healthcare',;
+    'Financial Services & Banking',;
+    'Cybersecurity & Defense',;
+    'Climate Science & Energy',;
+    'Artificial Intelligence & ML',;
+    'Logistics & Transportation';
+  ];
+
+  return (
+    <div className = "min-h-screen bg-white">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -174,8 +240,14 @@ const AIQuantumComputingPlatform = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -192,10 +264,19 @@ const AIQuantumComputingPlatform = () => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -213,8 +294,14 @@ const AIQuantumComputingPlatform = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -231,10 +318,19 @@ const AIQuantumComputingPlatform = () => {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
@@ -287,8 +383,14 @@ const AIQuantumComputingPlatform = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -305,10 +407,19 @@ const AIQuantumComputingPlatform = () => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
@@ -334,8 +445,14 @@ const AIQuantumComputingPlatform = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -352,10 +469,19 @@ const AIQuantumComputingPlatform = () => {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -372,8 +498,14 @@ const AIQuantumComputingPlatform = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -423,9 +555,25 @@ const AIQuantumComputingPlatform = () => {
           <p className="text-zion-slate-light mt-4">
             364 E Main St STE 1008 Middletown DE 19709
           </p>
+<<<<<<< HEAD
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIQuantumComputingPlatform;
+=======
+          <a 
+            href = "https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

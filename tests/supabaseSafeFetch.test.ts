@@ -8,10 +8,17 @@ it('checkOnline returns false when navigator is offline', async () => {
   const result = await client.checkOnline();
   expect(result).toBe(false);
 });
-// Test that checkOnline returns false when navigator is undefined
-it('checkOnline returns false when navigator is undefined', async () => {
+<<<<<<< HEAD
+// Test that checkOnline returns false when navigator is null
+it('checkOnline returns false when navigator is null', async () => {
   const original = (global as ).navigator;
-  Object.defineProperty(global, 'navigator', { value: undefined, configurable: true, writable: true });
+  Object.defineProperty(global, 'navigator', { value: null, configurable: true, writable: true });
+=======
+// Test that checkOnline returns false when navigator is null
+it('checkOnline returns false when navigator is null', async () => {
+  const original = (global as any).navigator;
+  Object.defineProperty(global, 'navigator', { value: null, configurable: true, writable: true });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const result = await client.checkOnline();
   expect(result).toBe(false);
   Object.defineProperty(global, 'navigator', { value: original, configurable: true, writable: true });

@@ -225,9 +225,6 @@ export default function Marketplace() {
         }
     ];
     const filteredProducts = marketplaceProducts.filter(product => {
-        const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
         let matchesPrice = true;
         if (selectedPriceRange === 'free') {

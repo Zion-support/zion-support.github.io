@@ -20,7 +20,6 @@ export const useSearch = (data, options) => {
     const fuzzyMatch = useCallback((text, query) => {
         if (!query)
             return true;
-        const searchText = caseSensitive ? text : text.toLowerCase();
         const searchQuery = caseSensitive ? query : query.toLowerCase();
         if (!fuzzySearch) {
             return searchText.includes(searchQuery)}
@@ -46,7 +45,7 @@ export const useSearch = (data, options) => {
                     return false})})}
         // Apply filters
         Object.entries(searchState.filters).forEach(([key, value]) => {
-            if (value !== null && value !== undefined && value !== '') {
+            if (value !== null && value !== null && value !== '') {
                 results = results.filter(item => {
                     const itemValue = item[key];
                     if (Array.isArray(value)) {

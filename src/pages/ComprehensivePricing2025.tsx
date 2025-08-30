@@ -21,7 +21,7 @@ import { Search,
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-const ComprehensivePricing2025: React.FC = (): JSX.Element => {
+const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -163,13 +163,12 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       popular: false,
       roi: '320%',
       delivery: '2-4 weeks'
-    }
+    };
   ];
 
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredServices = services.filter(service => {;
     const matchesIndustry = selectedIndustry === 'all' || service.industry === selectedIndustry;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesCategory && matchesIndustry && matchesSearch}).sort((a, b) => {
@@ -186,16 +185,15 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
         return 0}
   });
 
-  const getDiscountedPrice = (price: number, discount: number)  => {
+  const getDiscountedPrice = (price: number, discount: number)  => {;
     return Math.round(price * (1 - discount / 100))};
 
-  const totalValue = filteredServices.reduce((sum, service) => sum + service.price, 0);
   const totalROI = filteredServices.reduce((sum, service) => sum + parseInt(service.roi), 0);
 
   return (
     <>
       <SEO 
-        title="Comprehensive Pricing 2025 | Zion Tech Group"
+        title = "Comprehensive Pricing 2025 | Zion Tech Group"
         description="Transparent pricing for our comprehensive range of AI services, IT solutions, and technology platforms. Get competitive rates with flexible billing options."
         keywords="pricing, AI services pricing, IT solutions cost, cybersecurity pricing, cloud services pricing, data analytics pricing"
       />
@@ -205,8 +203,14 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
         <section className="py-32 px-4 text-center">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -342,9 +346,18 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
               {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
                     service.popular
                       ? 'border-purple-500/50 bg-gradient-to-br from-purple-600/20 to-pink-600/20'
@@ -472,7 +485,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default ComprehensivePricing2025;

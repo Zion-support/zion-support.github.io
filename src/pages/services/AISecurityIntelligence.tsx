@@ -4,12 +4,12 @@ export default function AISecurityIntelligence() {
   const features = [
     'AI-powered security intelligence optimization',
     'Intelligent threat intelligence gathering and analysis',
-    'Automated security risk assessment and prediction',
-    'Predictive analytics for security threats',
-    'Smart intelligence framework management',
-    'AI-driven intelligence automation and orchestration',
-    'Real-time intelligence performance tracking',
-    'Custom AI models for intelligence applications'
+    'Automated security risk assessment and prediction',;
+    'Predictive analytics for security threats',;
+    'Smart intelligence framework management',;
+    'AI-driven intelligence automation and orchestration',;
+    'Real-time intelligence performance tracking',;
+    'Custom AI models for intelligence applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AISecurityIntelligence() {
       name: 'Business', 
       price: '$1,499/mo', 
       details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Security intelligence optimization',
-    'Threat intelligence gathering and analysis',
-    'Security risk assessment and prediction',
-    'Intelligence framework management and automation',
-    'Intelligence automation and orchestration',
-    'Intelligence scaling and management'
+    'Security intelligence optimization',;
+    'Threat intelligence gathering and analysis',;
+    'Security risk assessment and prediction',;
+    'Intelligence framework management and automation',;
+    'Intelligence automation and orchestration',;
+    'Intelligence scaling and management';
   ];
 
   const benefits = [
-    'Improve security intelligence performance by 50-80%',
-    'Reduce threat detection time by 40-70%',
-    'Cut security intelligence costs by 35-65%',
-    'Enhance security intelligence reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security intelligence operations efficiently'
+    'Improve security intelligence performance by 50-80%',;
+    'Reduce threat detection time by 40-70%',;
+    'Cut security intelligence costs by 35-65%',;
+    'Enhance security intelligence reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security intelligence operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AISecurityIntelligence() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

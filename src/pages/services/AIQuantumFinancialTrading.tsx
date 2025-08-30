@@ -16,7 +16,7 @@ import { Brain,
   DollarSign,
   BarChart
  } from 'lucide-react';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 
 const AIQuantumFinancialTrading = () => {
   const features = [
@@ -46,10 +46,24 @@ const AIQuantumFinancialTrading = () => {
       description: "Execute trades in microseconds with our ultra-low-latency infrastructure and AI-driven decision making"
     },
     {
+<<<<<<< HEAD
       icon: Globe,
       title: "Global Market Access",
       description: "Trade across multiple exchanges and asset classes with unified interface and intelligent routing"
     }
+=======
+      title: "Regulatory Compliance",
+      description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
+      icon: Lock,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {;
+      title: "Portfolio Analytics",;
+      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",;
+      icon: Target,;
+      color: "from-cyan-500 to-blue-500";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const services = [
@@ -84,6 +98,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Enterprise Plan",
       price: "$29,999",
       period: "/month",
+<<<<<<< HEAD
       features[
         "Full quantum AI suite",
         "Unlimited strategies",
@@ -94,6 +109,20 @@ const AIQuantumFinancialTrading = () => {
       ],
       popular: false
     }
+=======
+      description: "For large institutions and hedge funds",
+      features: [
+        "Custom quantum computing integration",
+        "Dedicated support team",
+        "Custom compliance modules",
+        "Multi-tenant architecture",
+        "Advanced analytics dashboard",;
+        "SLA guarantees",;
+        "On-premise deployment";
+      ],;
+      popular: false;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
@@ -112,11 +141,19 @@ const AIQuantumFinancialTrading = () => {
       description: "Optimize portfolio performance and manage risk across multiple asset classes with AI assistance",
       benefits["Better asset allocation", "Reduced volatility", "Enhanced returns"]
     },
+<<<<<<< HEAD
     {
       industry: "Retail Traders",
       description: "Access institutional-grade trading tools and AI insights previously available only to large firms",
       benefits["Professional-grade tools", "AI-powered insights", "Risk management"]
     }
+=======;
+    {;
+      title: "Cost Savings",;
+      description: "Automated trading reduces manual intervention and operational costs",;
+      metric: "60% cost reduction";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const technologies = [
@@ -127,24 +164,55 @@ const AIQuantumFinancialTrading = () => {
     "Real-time Analytics",
     "Cloud Infrastructure",
     "API Integration",
-    "Predictive Modeling"
+    "Predictive Modeling";
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO 
         title="AI-Powered Quantum Financial Trading | Zion Tech Group"
         description="Revolutionize your trading with AI-driven insights and quantum computing power. Get real-time market analysis, predictive signals, and automated risk management."
         keywords="AI Trading, Quantum Financial Trading, Algorithmic Trading, High-Frequency Trading, Portfolio Optimization, Risk Management"
       />
 
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -174,8 +242,36 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -192,10 +288,49 @@ const AIQuantumFinancialTrading = () => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -213,8 +348,36 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -231,14 +394,136 @@ const AIQuantumFinancialTrading = () => {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+                className = {
+  `relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-slate/30'
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Competitive Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that best fits your trading needs and budget.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
+                  plan.popular 
+                    ? 'border-purple-400 shadow-2xl shadow-purple-500/20' 
+                    : 'border-slate-600'
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 }`}
               >
                 {service.popular && (
@@ -287,8 +572,14 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -305,10 +596,19 @@ const AIQuantumFinancialTrading = () => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
@@ -334,8 +634,14 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -352,10 +658,19 @@ const AIQuantumFinancialTrading = () => {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -372,8 +687,36 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -415,6 +758,7 @@ const AIQuantumFinancialTrading = () => {
               <Clock className="w-5 h-5 text-zion-cyan mr-2" />
               <span>+1 302 464 0950</span>
             </div>
+<<<<<<< HEAD
             <div className="flex items-center">
               <BarChart className="w-5 h-5 text-zion-cyan mr-2" />
               <span>kleber@ziontechgroup.com</span>
@@ -425,7 +769,20 @@ const AIQuantumFinancialTrading = () => {
           </p>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            <div className = "flex flex-col items-center">
+              <MapPin className="w-8 h-8 text-purple-400 mb-4" />
+              <p className="text-gray-300">Address</p>
+              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AIQuantumFinancialTrading;

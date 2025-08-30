@@ -119,7 +119,13 @@ export default function NextGenServicesShowcase2025() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Next-Generation
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -145,7 +151,13 @@ export default function NextGenServicesShowcase2025() {
       {/* Featured Enterprise Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Enterprise Solutions
             </h2>
@@ -155,7 +167,16 @@ export default function NextGenServicesShowcase2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
+            {featuredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+}} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 {service.popular && (<div className="absolute -top-3 left-8">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="h-4 w-4 mr-1"/>
@@ -218,7 +239,13 @@ export default function NextGenServicesShowcase2025() {
       {/* Micro SaaS Services */}
       <section className="py-20 bg-gradient-to-br from-gray-900/50 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Innovative Micro-SaaS Solutions
             </h2>
@@ -228,7 +255,16 @@ export default function NextGenServicesShowcase2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServices.map((service, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">
+            {microSaasServices.map((service, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-3">
                     {service.category}
@@ -263,7 +299,13 @@ export default function NextGenServicesShowcase2025() {
       {/* Infrastructure Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced IT Infrastructure
             </h2>
@@ -273,7 +315,16 @@ export default function NextGenServicesShowcase2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {infrastructureServices.map((service, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+            {infrastructureServices.map((service, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold mb-3">
                     {service.category}
@@ -308,7 +359,13 @@ export default function NextGenServicesShowcase2025() {
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>

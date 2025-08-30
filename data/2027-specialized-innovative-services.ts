@@ -559,26 +559,49 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 ];
 
 // Helper functions for service management
-export const getSpecializedServiceById = (id: string) => {
+<<<<<<< HEAD
+export const getSpecializedServiceById = (id: string) => {;
   return specializedInnovativeServices2027.find(service => service.id === id)};
 
-export const getSpecializedServicesByCategory = (category: string) => {
+export const getSpecializedServicesByCategory = (category: string) => {;
   return specializedInnovativeServices2027.filter(service => service.category === category)};
 
-export const getSpecializedPopularServices = () => {
+export const getSpecializedPopularServices = () => {;
   return specializedInnovativeServices2027.filter(service => service.popular)};
+=======
+export const getSpecializedServiceById = (id: string) => {;
+  return specializedInnovativeServices2027.find(service => service.id === id);
+};
 
-export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return specializedInnovativeServices2027.filter(service => {
+export const getSpecializedServicesByCategory = (category: string) => {;
+  return specializedInnovativeServices2027.filter(service => service.category === category);
+};
+
+export const getSpecializedPopularServices = () => {;
+  return specializedInnovativeServices2027.filter(service => service.popular);
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return specializedInnovativeServices2027.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice})};
 
-export const searchSpecializedServices = (query: string) => {
+export const searchSpecializedServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-  return specializedInnovativeServices2027.filter(service => 
+<<<<<<< HEAD
+  return specializedInnovativeServices2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery)
+    service.category.toLowerCase().includes(lowercaseQuery);
   )};
+=======
+  return specializedInnovativeServices2027.filter(service = > ;
+    service.name.toLowerCase().includes(lowercaseQuery) ||;
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
+    service.category.toLowerCase().includes(lowercaseQuery);
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default specializedInnovativeServices2027;

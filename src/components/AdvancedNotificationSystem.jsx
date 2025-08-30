@@ -84,8 +84,6 @@ export function AdvancedNotificationSystem() {
             notification.message.toLowerCase().includes(searchQuery.toLowerCase());
         const readMatch = showRead || !notification.isRead;
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
-    const markAsRead = (id) => {
-        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isRead: true } : n))};
     const markAllAsRead = () => {
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
     const archiveNotification = (id) => {

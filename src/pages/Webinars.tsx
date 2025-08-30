@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { Video, 
   Calendar, 
   Clock, 
@@ -35,6 +35,7 @@ export default function Webinars() {
   const [showPast, setShowPast] = useState(false);
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Categories', icon: BookOpen, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 0 },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 0 },
@@ -42,10 +43,29 @@ export default function Webinars() {
     { id: 'digital-transformation', name: 'Digital Transformation', icon: Rocket, count: 0 },
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 0 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
-    { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
+    { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 };
   ];
 
   const upcomingWebinars = [
+=======
+    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 };
+  ];
+
+  const filterTypes = [;
+    { id: 'all', name: 'All Webinars', count: 0 },;
+    { id: 'upcoming', name: 'Upcoming', count: 0 },;
+    { id: 'on-demand', name: 'On-Demand', count: 0 },;
+    { id: 'live', name: 'Live Now', count: 0 };
+  ];
+
+  const webinars = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       id: 1,
       title: 'AI-Powered Compliance Automation: Best Practices for 2024',
@@ -104,12 +124,13 @@ export default function Webinars() {
       duration: '60 minutes',
       attendees: 195,
       maxAttendees: 300,
+<<<<<<< HEAD
       summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
       tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-applications-roi/register',
       watchUrl: null,
       isLive: false
-    }
+    };
   ];
 
   const pastWebinars = [
@@ -184,7 +205,7 @@ export default function Webinars() {
       isLive: false,
       recordingUrl: '/webinars/edge-computing-iot-enterprise-2024/recording',
       slidesUrl: '/webinars/edge-computing-iot-enterprise-2024/slides'
-    }
+    };
   ];
 
   // Calculate category counts
@@ -192,13 +213,12 @@ export default function Webinars() {
     const allWebinars = [...upcomingWebinars, ...pastWebinars];
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? allWebinars.length: allWebinars.filter(wp  => wp.category === cat.id).length
+      count: cat.id === 'all' ? allWebinars.length: allWebinars.filter(wp  => wp.category === cat.id).length;
     }))}, []);
 
-  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {
-    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     return matchesCategory && matchesSearch});
@@ -207,46 +227,158 @@ export default function Webinars() {
     { label: 'Webinars Delivered', value: '100+', icon: Video },
     { label: 'Attendees Served', value: '25K+', icon: Users },
     { label: 'Expert Speakers', value: '15+', icon: Star },
-    { label: 'Topics Covered', value: '20+', icon: BookOpen }
+    { label: 'Topics Covered', value: '20+', icon: BookOpen };
   ];
 
   const contactInfo = {
-    email: 'webinars@ziontechgroup.com',
+  email: 'webinars@ziontechgroup.com',
     phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
+    address: '364 E Main St STE 1008,
+  Middletown DE 19709'
+  ;
+};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Webinars - Zion Tech Group"
         description="Join our educational webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry experts."
       />
       
+=======
+      currentAttendees: 189,
+      featured: false,;
+      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
+      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false;
+    };
+  ];
+
+  // Update counts
+  React.useEffect(() => {
+    categories.forEach(cat = > {;
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+
+    filterTypes.forEach(type = > {;
+      if (type.id === 'all') {;
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+      }
+    });
+  }, []);
+
+  const filteredWebinars = webinars.filter(webinar => {;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
+
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      weekday: 'long',;
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
+    });
+  };
+
+  const formatTimeUntil = (dateString: string) => {;
+    const now = new Date();
+    const webinarDate = new Date(dateString);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) return 'Past';
+    if (diffDays === 0) return 'Today';
+    if (diffDays < 7) return `${diffDays} days`;
+    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
+    return `${Math.ceil(diffDays / 30)} months`;
+  };
+
+  const getCategoryIcon = (categoryId: string) => {;
+    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
+  };
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
+=======
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <Video className="w-10 h-10 text-white" />
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
             Educational Webinars
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             Join our expert-led webinars to stay ahead of the curve in AI, cybersecurity, 
@@ -255,9 +387,18 @@ export default function Webinars() {
           
           {/* Stats */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)  => (
@@ -339,8 +480,14 @@ export default function Webinars() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -351,9 +498,18 @@ export default function Webinars() {
             {filteredWebinars.map((webinar, index)  => (
               <motion.article
                 key={webinar.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Header */}
@@ -463,8 +619,14 @@ export default function Webinars() {
 
           {filteredWebinars.length === 0 && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
             >
@@ -482,8 +644,14 @@ export default function Webinars() {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
           >
@@ -494,9 +662,18 @@ export default function Webinars() {
             {categories.slice(1).map((category, index)  => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group cursor-pointer"
                 onClick={() => setSelectedCategory(category.id)}
               >
@@ -517,8 +694,14 @@ export default function Webinars() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
@@ -636,17 +819,17 @@ export default function Webinars() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {filteredWebinars.length === 0 ? (
-              <div className="text-center py-20">
-                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>
-                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>
-                <button
-                  onClick={() => {
+              <div className="text-center py-20">;
+                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />;
+                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>;
+                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>;
+                <button;
+                  onClick={() => {;
                     setSearchQuery('');
                     setActiveCategory('all');
                     setFilterType('all');
                   }}
-                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                  className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -656,8 +839,24 @@ export default function Webinars() {
                 {filteredWebinars.map((webinar) => (
                   <motion.div
                     key={webinar.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                     className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
@@ -738,9 +937,19 @@ export default function Webinars() {
                   </motion.div>
                 ))}
               </div>
+<<<<<<< HEAD
             )}
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            )};
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

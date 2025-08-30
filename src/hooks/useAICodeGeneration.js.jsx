@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { useAnalytics } from './useAnalytics';
+import { useAnalytics } from "./useAnalytics";
 export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -49,7 +49,7 @@ export const useAICodeGeneration = () => {
             })}
         catch (error) {
             console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
@@ -62,15 +62,17 @@ export const useAICodeGeneration = () => {
             // Simulate AI analysis - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
             const analysis = {
-                complexity: calculateComplexity(code),
+  complexity: calculateComplexity(code),
                 maintainability: calculateMaintainability(code),
                 security: calculateSecurityScore(code),
                 performance: calculatePerformanceScore(code),
                 accessibility: calculateAccessibilityScore(code),
                 suggestions: generateCodeSuggestions(code, language),
                 metrics: getCodeMetrics(code),
-                issues: analyzeCodeIssues(code, language)
-            };
+                issues: analyzeCodeIssues(code,
+  language)
+            
+};
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysis', 'code_analyzed', language, code.length, {
@@ -81,7 +83,7 @@ export const useAICodeGeneration = () => {
             })}
         catch (error) {
             console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
@@ -94,17 +96,13 @@ export const useAICodeGeneration = () => {
             return prev.replace(/\/\/ TODO: Apply suggestion/g, suggestion.code)});
         // Remove the applied suggestion
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
-        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, undefined, {
+        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, null, {
             suggestionId: suggestion.id,
             impact: suggestion.impact,
             category: suggestion.category
         })}, [trackEvent]);
     // Optimize existing code
-    const optimizeCode = useCallback(async (code, focus) => {
-        try {
-            // Simulate AI optimization - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2500));
-            let optimizedCode = code;
+    const optimizedCode = code;
             switch (focus) {
                 case 'performance':
                     optimizedCode = optimizeForPerformance(code);
@@ -122,7 +120,7 @@ export const useAICodeGeneration = () => {
             return optimizedCode}
         catch (error) {
             console.error('Failed to optimize code:', error);
-            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code}
@@ -143,7 +141,7 @@ export const useAICodeGeneration = () => {
             return testCode}
         catch (error) {
             console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests'}
@@ -164,7 +162,7 @@ export const useAICodeGeneration = () => {
             return docs}
         catch (error) {
             console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation'}
@@ -174,8 +172,7 @@ export const useAICodeGeneration = () => {
         setHistory([]);
         trackEvent('ai_code_generation', 'history_cleared', 'manual')}, [trackEvent]);
     // Export generated code
-    const exportCode = useCallback((format) => {
-        let exportContent = '';
+    const exportContent = '';
         let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
@@ -267,36 +264,6 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(\`Server running on port \${PORT}\`)});`};
-    const generatePythonCode = (prompt, _options) => {
-        return `#!/usr/bin/env python3
-"""
-Generated Python code based on prompt: ${prompt}
-"""
-
-import asyncio
-from typing import Optional, List, Dict, Any
-from dataclasses import dataclass
-
-@dataclass
-class GeneratedClass:
-    """Generated class based on prompt."""
-    
-    def __init__(self):
-        # TODO: Implement initialization
-        pass
-    
-    async def process_data(self, data: Any) -> Any:
-        """Process data based on prompt requirements."""
-        # TODO: Implement data processing logic
-        return data
-
-async def main():
-    """Main function."""
-    instance = GeneratedClass()
-    # TODO: Implement main logic based on prompt
-    
-if __name__ == "__main__":
-    asyncio.run(main())`};
     const generateGenericCode = (prompt, options) => {
         return `// Generated ${options.language} code based on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
@@ -310,8 +277,7 @@ console.log("Generated code placeholder");
 console.log("Prompt:", "${prompt}");
 console.log("Language:", "${options.language}");`};
     // Helper functions for code analysis
-    const calculateComplexity = (code) => {
-        const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
+    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)))};
     const calculateMaintainability = (code) => {
         const lines = code.split('\n').length;
@@ -397,21 +363,11 @@ console.log("Language:", "${options.language}");`};
             })}
         return issues};
     // Helper functions for code optimization
-    const optimizeForPerformance = (code) => {
-        return code
-            .replace(/console\.log/g, '// console.log removed for performance')
-            .replace(/setInterval/g, '// Consider requestAnimationFrame instead of setInterval')
-            .replace(/querySelectorAll/g, '// Consider caching querySelectorAll results')};
     const optimizeForSecurity = (code) => {
         return code
             .replace(/innerHTML/g, 'textContent')
             .replace(/eval/g, '// eval() removed for security - use alternatives')
             .replace(/localStorage/g, '// Consider security implications of localStorage')};
-    const optimizeForMaintainability = (code) => {
-        return code
-            .replace(/\/\/ TODO/g, '// IMPLEMENTED:')
-            .replace(/any/g, 'unknown')
-            .replace(/function\s+(\w+)/g, 'const $1 = (')};
     const optimizeForAccessibility = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')
@@ -420,7 +376,7 @@ console.log("Language:", "${options.language}");`};
     // Helper functions for test generation
     const generateJestTests = (_code) => {
         return `import { render, screen, fireEvent } from '@testing-library/react';
-import GeneratedComponent from './GeneratedComponent';
+import GeneratedComponent from "./GeneratedComponent";
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
@@ -431,21 +387,6 @@ describe('GeneratedComponent', () => {
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
   })});`};
-    const generatePytestTests = (_code) => {
-        return `import pytest
-from generated_module import GeneratedClass
-
-class TestGeneratedClass:
-    def test_initialization(self):
-        instance = GeneratedClass()
-        assert instance is not None
-    
-    def test_process_data(self):
-        instance = GeneratedClass()
-        result = instance.process_data("test")
-        assert result == "test"
-    
-    # TODO: Add more specific test cases based on class functionality`};
     const generateGenericTests = (_code, language) => {
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
@@ -468,21 +409,6 @@ describe('Generated Code Tests', () => {
 export const GeneratedComponent = () => {
   // Component implementation
 };`};
-    const generatePythonDoc = (_code) => {
-        return `"""
-Generated Module
-
-This module was generated based on user requirements.
-"""
-
-def generated_function():
-    """
-    Generated function with docstring.
-    
-    Returns:
-        str: Description of return value
-    """
-    pass`};
     const generateGenericDocs = (_code, language) => {
         return `/**
  * Generated ${language} Code

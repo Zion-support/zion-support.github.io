@@ -135,15 +135,21 @@ const Leadership = () => {
         }
     ];
     const vision = {
-        title: "Our Vision",
+  title: "Our Vision",
         description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
         goals[
             "Advance AI consciousness and autonomous systems",
             "Democratize quantum computing access",
             "Create sustainable technology solutions",
-            "Build the most trusted technology partner network"
+  "Build the most trusted technology partner network"
         ]
-    };
+    
+
+
+
+
+
+};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">

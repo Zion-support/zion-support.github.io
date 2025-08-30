@@ -17,29 +17,22 @@ export function usePerformance() {
             console.warn('PerformanceObserver not supported');
             return}
         // First Contentful Paint (FCP)
-        const fcpObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
             if (fcpEntry) {
                 setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
         });
         // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const lcpEntry = entries[entries.length - 1];
+        const lcpEntry = entries[entries.length - 1];
             if (lcpEntry) {
                 setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))}
         });
         // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const fidEntry = entries[entries.length - 1];
+        const fidEntry = entries[entries.length - 1];
             if (fidEntry && 'processingStart' in fidEntry) {
                 setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))}
         });
         // Cumulative Layout Shift (CLS)
-        const clsObserver = new PerformanceObserver((list) => {
-            let clsValue = 0;
+        const clsValue = 0;
             for (const entry of list.getEntries()) {
                 const layoutShiftEntry = entry;
                 if (!layoutShiftEntry.hadRecentInput) {
@@ -71,13 +64,6 @@ export function usePerformance() {
             clsObserver.disconnect()}}, []);
     // Get performance rating
     const getRating = (metric, value) => {
-        const thresholds = {
-            fcp: { good: 1800, poor: 3000 },
-            lcp: { good: 2500, poor: 4000 },
-            fid: { good: 100, poor: 300 },
-            cls: { good: 0.1, poor: 0.25 },
-            ttfb: { good: 800, poor: 1800 }
-        };
         const threshold = thresholds[metric];
         if (!threshold)
             return 'good';

@@ -1,7 +1,45 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  TrendingUp, 
+  Users, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
+  Lightbulb,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Phone,
+  Mail,
+  MapPin,
+  BarChart3,
+  MessageCircle,
+  Calendar,
+  AlertTriangle,
+  Star
+} from 'lucide-react';
+import { SEO } from "../../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
@@ -19,12 +57,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: Users,
       title: 'Behavioral Analytics',
       description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'
-    }
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Alerts',;
+      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
+    };
   ];
 
   const capabilities = [
@@ -46,12 +84,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: Zap,
       benefits: ['Actionable insights', 'Timing optimization', 'Resource allocation', 'Success probability']
     },
-    {
-      title: 'Integration Hub',
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',
-      icon: Database,
-      benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation']
-    }
+    {;
+      title: 'Integration Hub',;
+      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
+      icon: Database,;
+      benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation'];
+    };
   ];
 
   const useCases = [
@@ -73,12 +111,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: DollarSign,
       metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
     },
-    {
-      industry: 'Healthcare',
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',
-      icon: Heart,
-      metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization']
-    }
+    {;
+      industry: 'Healthcare',;
+      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
+      icon: Heart,;
+      metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization'];
+    };
   ];
 
   const benefits = [
@@ -96,12 +134,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: Users,
       title: 'Improve Customer Satisfaction',
       description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.'
-    },
-    {
-      icon: Zap,
-      title: 'Optimize Resource Allocation',
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'
-    }
+    },;
+    {;
+      icon: Zap,;
+      title: 'Optimize Resource Allocation',;
+      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
+    };
   ];
 
   const pricing = [
@@ -146,12 +184,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
-        'Custom development',
-        'Advanced security'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+        'Custom development',;
+        'Advanced security';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -169,16 +207,16 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
       metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
-    }
+    };
   ];
 
   const integrations = [
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',
-    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'
+    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="AI Customer Success Prediction Platform | Zion Tech Group"
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
@@ -190,8 +228,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6">
@@ -216,8 +270,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -246,9 +316,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -266,8 +360,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -284,9 +394,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -314,8 +448,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -332,9 +482,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -362,8 +536,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -380,9 +570,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -400,8 +614,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -418,9 +648,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
                     ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
@@ -470,8 +724,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -509,9 +779,33 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             ].map((phase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -529,8 +823,24 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -606,11 +916,21 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AICustomerSuccessPrediction;
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

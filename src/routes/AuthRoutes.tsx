@@ -37,12 +37,12 @@ const AuthRoutes = () => {
       <Route
         path="/settings"
         element={
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
+          <ProtectedRoute>;
+            <div>Settings</div>;
+          </ProtectedRoute>;
+        };
+      />;
+    </Routes>;
   );
 };
 

@@ -93,27 +93,35 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
+<<<<<<< HEAD
+    const interval = setInterval(() => {;
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}, 8000);
+=======
+    const interval = setInterval(() => {;
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 8000);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false)};
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
 
-  const goToTestimonial = (index: number)  => {
+<<<<<<< HEAD
+  const goToTestimonial = (index: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)};
 
   const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
+    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
@@ -124,8 +132,24 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -143,9 +167,33 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial = {
+  { opacity: 0,
+  x: 100 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  x: -100 
+
+
+
+
+
+}}
               transition={{ duration: 0.5 }}
               className="relative"
             >
@@ -157,8 +205,35 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-                  animate={{ rotate[0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity }}
+<<<<<<< HEAD
+                  animate = {
+  { rotate[0,
+  360] 
+}}
+                  transition = {
+  { duration: 20,
+  repeat: Infinity 
+}}
+=======
+                  animate = {
+  { rotate: [0,
+  360] 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 20,
+  repeat: Infinity 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
                 </motion.div>
@@ -188,8 +263,24 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                     {currentTestimonialData.results.map((result, index)  => (
                       <motion.div
                         key={result}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                         transition={{ delay: 0.3 + index * 0.1 }}
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
                       >
@@ -261,10 +352,34 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
           className="mt-20"
         >
           <div className="text-center">
@@ -280,10 +395,34 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               ].map((indicator, index)  => (
                 <motion.div
                   key={indicator.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
@@ -299,10 +438,34 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
@@ -325,9 +488,19 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               >
                 View Case Studies
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
     </section>
   )}
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

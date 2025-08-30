@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
+import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
 export default function NextGenInnovativeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -12,7 +12,6 @@ export default function NextGenInnovativeServices() {
     // Filter services based on search and category
     const filteredServices = useMemo(() => {
         return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -36,7 +35,14 @@ export default function NextGenInnovativeServices() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -50,7 +56,23 @@ export default function NextGenInnovativeServices() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Next-Generation Innovative Services
             </h1>
@@ -216,7 +238,31 @@ export default function NextGenInnovativeServices() {
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}} className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               {/* Modal Header */}
               <div className="flex items-start justify-between mb-6">
@@ -364,7 +410,31 @@ export default function NextGenInnovativeServices() {
 
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+
+
+
+}} className="text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Innovate?

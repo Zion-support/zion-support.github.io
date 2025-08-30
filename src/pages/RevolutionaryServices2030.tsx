@@ -43,9 +43,10 @@ import { ArrowRight,
   FlaskConical,
   X
  } from 'lucide-react';
-import { SEO  } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from '../data/revolutionaryServices2030';
+import { SEO  } from "../components/SEO";
+import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from "../data/revolutionaryServices2030";
 
+<<<<<<< HEAD
 export default function RevolutionaryServices2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -55,16 +56,15 @@ export default function RevolutionaryServices2030(...args[]):  {
   const [selectedService, setSelectedService] = useState(null);
 
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-      case 'rating':
+      case 'rating':;
         return b.rating - a.rating;
       case 'price':
         return a.price - b.price;
@@ -72,23 +72,81 @@ export default function RevolutionaryServices2030(...args[]):  {
         return b.reviewCount - a.reviewCount;
       case 'aiScore':
         return b.aiScore - a.aiScore;
+=======
+export default function RevolutionaryServices2030() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  const categories = [;
+    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;
+    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;
+    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
+  ];
+
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;
+    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
+  ];
+
+  const sortOptions = [;
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
+    { id: 'price-high', name: 'Price: High to Low' },;
+    { id: 'innovation', name: 'Innovation Level' },;
+    { id: 'market-size', name: 'Market Size' };
+  ];
+
+  // Combine all revolutionary services
+  const allServices = [;
+    ...REVOLUTIONARY_SERVICES_2030,;
+    ...EMERGING_TECH_SERVICES_2030;
+  ];
+
+  // Filter and sort services
+  const filteredServices = allServices.filter(service => {;
+    const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+    const priceMatch = selectedPriceRange === 'all' || ;
+      (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||;
+      (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||;
+      (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
+    
+    return categoryMatch && priceMatch;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
+        return a.pricing.monthly - b.pricing.monthly;
+      case 'price-high':
+        return b.pricing.monthly - a.pricing.monthly;
+      case 'innovation':
+        return b.innovationLevel.localeCompare(a.innovationLevel);
+      case 'market-size':
+        return parseFloat(b.marketSize.replace(/[^0-9.]/g, '')) - parseFloat(a.marketSize.replace(/[^0-9.]/g, ''));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       default:
         return 0}
   });
 
+<<<<<<< HEAD
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: number)  => {
+  const handlePageChange = (page: number)  => {;
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' })};
 
-  const handleServiceSelect = (service)  => {
+  const handleServiceSelect = (service)  => {;
     setSelectedService(service)};
 
-  const closeModal = () => {
+  const closeModal = () => {;
     setSelectedService(null)};
 
   const getCategoryIcon = (category: string)  => {
@@ -109,7 +167,7 @@ export default function RevolutionaryServices2030(...args[]):  {
       'Digital Twin': <Eye className="w-6 h-6" />,
       'Sustainable Technology': <Leaf className="w-6 h-6" />,
       'IT Infrastructure': <Server className="w-6 h-6" />,
-      'Emerging Technology': <Lightbulb className="w-6 h-6" />
+      'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
 
@@ -131,19 +189,106 @@ export default function RevolutionaryServices2030(...args[]):  {
       'Digital Twin': 'from-blue-500 to-indigo-500',
       'Sustainable Technology': 'from-green-500 to-teal-500',
       'IT Infrastructure': 'from-slate-500 to-gray-500',
-      'Emerging Technology': 'from-violet-500 to-purple-500'
+      'Emerging Technology': 'from-violet-500 to-purple-500';
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
 
   return (
     <>
-      <SEO
+      <SEO = ======;
+  const getServiceIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
+        return Brain;
+      case 'Blockchain Services':
+        return Lock;
+      case 'Cybersecurity Services':
+        return Shield;
+      default:
+        return Rocket;
+    }
+  };
+
+  const getServiceColor = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
+        return 'from-zion-cyan to-zion-purple';
+      case 'Blockchain Services':
+        return 'from-zion-purple to-zion-blue';
+      case 'Cybersecurity Services':
+        return 'from-zion-purple to-zion-red';
+      default:
+        return 'from-zion-orange to-zion-green';
+    }
+  };
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."
         keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group"
         image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg"
         url="https://ziontechgroup.com/revolutionary-services-2030"
       />
+<<<<<<< HEAD
+=======
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Revolutionary Services
+              <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-orange bg-clip-text text-transparent">
+                2030
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services. 
+              Transform your business with solutions that were once science fiction.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+              >
+                <Rocket className="mr-2 h-5 w-5" />
+                Get Started Today
+              </Link>
+              <Link
+                to="#services"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <Target className="mr-2 h-5 w-5" />
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -151,8 +296,15 @@ export default function RevolutionaryServices2030(...args[]):  {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -195,6 +347,130 @@ export default function RevolutionaryServices2030(...args[]):  {
                   Get Started
                 </a>
               </div>
+=======
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}</div>
+              <div className="text-gray-400">Revolutionary Services</div>
+            </motion.div>
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-purple mb-2">$2.1T+</div>
+              <div className="text-gray-400">Combined Market Size</div>
+            </motion.div>
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-orange mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime Guarantee</div>
+            </motion.div>
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-green mb-2">24/7</div>
+              <div className="text-gray-400">Global Support</div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </motion.div>
           </div>
         </section>
@@ -217,6 +493,7 @@ export default function RevolutionaryServices2030(...args[]):  {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Services Section */}
@@ -242,6 +519,56 @@ export default function RevolutionaryServices2030(...args[]):  {
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+=======;
+;
+          {/* Services Grid */};
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            <AnimatePresence>;
+              {sortedServices.map((service, index) => {;
+                const IconComponent = getServiceIcon(service.category);
+                const colorClass = getServiceColor(service.category);
+                
+                return (
+                  <motion.div
+                    key = {service.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                    className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   >
                     <option value="rating">Sort by Rating</option>
                     <option value="price">Sort by Price</option>
@@ -286,8 +613,14 @@ export default function RevolutionaryServices2030(...args[]):  {
               {currentServices.map((service)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+}}
                   transition={{ duration: 0.5 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
                   onClick={() => handleServiceSelect(service)}
@@ -335,6 +668,7 @@ export default function RevolutionaryServices2030(...args[]):  {
                         key={index}
                         className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
                       >
+<<<<<<< HEAD
                         {tag}
                       </span>
                     ))}
@@ -394,8 +728,14 @@ export default function RevolutionaryServices2030(...args[]):  {
         <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -433,9 +773,18 @@ export default function RevolutionaryServices2030(...args[]):  {
               ].map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="text-center"
                 >
                   <div className="inline-flex p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white mb-4">
@@ -453,8 +802,14 @@ export default function RevolutionaryServices2030(...args[]):  {
         <section id="contact" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -470,8 +825,14 @@ export default function RevolutionaryServices2030(...args[]):  {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
               >
@@ -521,8 +882,14 @@ export default function RevolutionaryServices2030(...args[]):  {
 
               {/* Contact Information */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
               >
@@ -580,18 +947,98 @@ export default function RevolutionaryServices2030(...args[]):  {
                 </div>
               </motion.div>
             </div>
+=======
+                        Learn More
+                      </Link>
+                      
+                      <div className="flex space-x-2">
+                        <Link
+                          to="/contact"
+                          className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
+                        >
+                          <Phone className="inline mr-1 h-3 w-3" />
+                          Contact
+                        </Link>
+                        <Link
+                          to={service.website}
+                          className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
+                        >
+                          <Globe className="inline mr-1 h-3 w-3" />;
+                          Website;
+                        </Link>;
+                      </div>;
+                    </div>;
+                  </motion.div>;
+                );
+              })}
+            </AnimatePresence>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </section>
       </div>
 
+<<<<<<< HEAD
       {/* Service Detail Modal */}
       {selectedService && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className = "fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0.9 
+}}
             className="bg-slate-900 border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+=======
+          {/* No Results */};
+          {sortedServices.length = == 0 && (;
+            <div className="text-center py-12">;
+              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
+                  setSelectedCategory('all');
+                  setSelectedPriceRange('all');
+                  setSortBy('featured');
+                }}
+                className = "text-zion-cyan hover:text-zion-blue transition-colors duration-300"
+              >
+                Clear all filters
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
@@ -606,6 +1053,7 @@ export default function RevolutionaryServices2030(...args[]):  {
                 </button>
               </div>
 
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.title}</h2>
               <p className="text-gray-300 text-lg mb-6">{selectedService.description}</p>
 
@@ -710,3 +1158,27 @@ export default function RevolutionaryServices2030(...args[]):  {
       )}
     </>
   )}
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Get Started Today
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <DollarSign className="mr-2 h-5 w-5" />
+                View Pricing
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

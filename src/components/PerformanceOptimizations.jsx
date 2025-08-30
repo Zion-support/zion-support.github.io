@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
-import { LoadingSpinner } from './ui/loading-spinner';
+import { LoadingSpinner } from "./ui/loading-spinner";
 // Lazy load heavy components
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 // Memoized component for expensive calculations
@@ -43,9 +43,38 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
             }
         }))}, [items, scrollTop, itemHeight, containerHeight]);
     const handleScroll = useCallback((e) => {
+<<<<<<< HEAD
         setScrollTop(e.currentTarget.scrollTop)}, []);
-    return (<div style={{ height: containerHeight, overflow: 'auto' }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
-      <div style={{ height: items.length * itemHeight, position: 'relative' }}>
+    return (<div style = {
+  { height: containerHeight,
+  overflow: 'auto' 
+}} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
+      <div style = {
+  { height: items.length * itemHeight,
+  position: 'relative' 
+}}>
+=======
+        setScrollTop(e.currentTarget.scrollTop);
+    }, []);
+    return (<div style = {
+  { height: containerHeight,
+  overflow: 'auto' 
+
+
+
+
+
+}} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
+      <div style = {
+  { height: items.length * itemHeight,
+  position: 'relative' 
+
+
+
+
+
+}}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">
             <div className="flex items-center justify-between">
               <span className="text-zion-slate-light">{item.title}</span>

@@ -221,22 +221,23 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
-            wordCount,
+  wordCount,
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
             seoScore: Math.max(0, Math.min(100, seoScore)),
             engagementScore: Math.max(0, Math.min(100, engagementScore)),
             issues,
             suggestions,
-            overallScore: Math.max(0, Math.min(100, overallScore))
-        };
+            overallScore: Math.max(0, Math.min(100,
+  overallScore))
+        
+};
         setAnalysis(analysisResult);
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
         if (!analysis)
             return;
-        const fixableIssues = analysis.issues.filter(issue => issue.fixable);
-        let fixedCount = 0;
+        const fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
                 switch (issue.id.split('-')[0]) {
@@ -324,7 +325,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
       {/* Content Quality Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+}} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -526,9 +536,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   </button>
 
                   {/* Export Report */}
-                  {analysis && (<button onClick={() => {
+                  {analysis && (<button onClick = {
+  () => {
                         const report = JSON.stringify(analysis, null, 2);
-                        const blob = new Blob([report], { type: 'application/json' });
+                        const blob = new Blob([report],
+  { type: 'application/json' 
+});
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;

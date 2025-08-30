@@ -29,8 +29,13 @@ import { Brain,
   DollarSign,
   Clock,
   Shield as ShieldIcon
+<<<<<<< HEAD
  } from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from "../data/ultimateInnovativeServices2025";
+=======
+} from 'lucide-react';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "../data/ultimateInnovativeServices2025";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -38,8 +43,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
   const [searchTerm, setSearchTerm] = useState<any>('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const filteredServices = useMemo(() => {
-    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
+  const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
@@ -48,11 +52,20 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory)}
 
     if (searchTerm) {
+<<<<<<< HEAD
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       )}
+=======;
+      filtered = filtered.filter(service =>;
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      );
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     // Sort services
     switch (sortBy) {
@@ -63,19 +76,19 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
         filtered = [...filtered].sort((a, b) => b.price - a.price);
         break;
       case 'roi':
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const aRoi = parseInt(a.roi.split('%')[0]);
           const bRoi = parseInt(b.roi.split('%')[0]);
           return bRoi - aRoi});
         break;
       case 'delivery':
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
           const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
           return aWeeks - bWeeks});
         break;
       default: // innovation
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const innovationOrder = ['Revolutionary', 'Breakthrough', 'Advanced'];
           const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
@@ -83,8 +96,10 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
 
     return filtered}, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-  const getCategoryIcon = (category: string)  => {
-    switch (category) {
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
       case 'Blockchain & Web3': return <Globe className="w-6 h-6" />;
@@ -95,10 +110,12 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
       case 'Biotechnology': return <Database className="w-6 h-6" />;
       case 'Space Technology': return <Zap className="w-6 h-6" />;
       case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
-      default: return <Star className="w-6 h-6" />}
+      default: return <Star className = "w-6 h-6" />};
   };
 
-  const getInnovationBadge = (level: string)  => {
+<<<<<<< HEAD
+  const getInnovationBadge = (level: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':
@@ -108,25 +125,57 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
       case 'Advanced':
         return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
       default:
-        return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>}
+        return <span className = "px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>};
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
             >
               Ultimate Innovative Services 2025
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
             >
@@ -134,8 +183,24 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
               transition={{ delay: 0.4 }}
               className="mt-6 flex flex-wrap justify-center gap-4"
             >
@@ -171,15 +236,21 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-
-            {/* Category Filter */}
-            <div className="flex gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => {
+;
+            {/* Category Filter */};
+            <div className="flex gap-2">;
+              <select;
+                value={selectedCategory};
+                onChange={(e) => {;
                   setSelectedCategory(e.target.value);
+<<<<<<< HEAD
                   setSelectedSubcategory('all')}}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======;
+                  setSelectedSubcategory('all');
+                }}
+                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
@@ -220,8 +291,24 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
           {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
@@ -391,9 +478,19 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
               <p className="text-lg font-medium mb-2">Zion Tech Group</p>
               <p className="text-sm">364 E Main St STE 1008, Middletown DE 19709</p>
               <p className="text-sm">https://ziontechgroup.com</p>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </div>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

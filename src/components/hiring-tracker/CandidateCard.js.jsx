@@ -94,7 +94,7 @@ export function CandidateCard({ application, index }) {
               </div>
               
               {/* Match Score */}
-              {application.match_score !== null && application.match_score !== undefined && (<div className="mb-2">
+              {application.match_score !== null && application.match_score !== null && (<div className="mb-2">
                   <ScoreBadge application={application}/>
                 </div>)}
               

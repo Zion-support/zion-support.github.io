@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import {
   BarChart3,
   Brain,
@@ -52,21 +52,21 @@ export default function AIDataAnalytics() {
       icon: TrendingUp,
       title: "Performance Tracking",
       description: "Monitor KPIs and track business performance with intelligent alerts."
-    },
-    {
-      icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security with data encryption and compliance features."
-    }
+    },;
+    {;
+      icon: Shield,;
+      title: "Data Security",;
+      description: "Enterprise-grade security with data encryption and compliance features.";
+    };
   ];
 
   const benefits = [
-    "Increase data-driven decision making by 60-80% with AI insights",
-    "Improve business performance by 25-45% through predictive analytics",
-    "Reduce analysis time by 70-90% with automated processing",
-    "Enhance forecasting accuracy by 40-70% with ML algorithms",
-    "Identify new business opportunities with pattern recognition",
-    "Optimize operations and reduce costs by 20-35%"
+    "Increase data-driven decision making by 60-80% with AI insights",;
+    "Improve business performance by 25-45% through predictive analytics",;
+    "Reduce analysis time by 70-90% with automated processing",;
+    "Enhance forecasting accuracy by 40-70% with ML algorithms",;
+    "Identify new business opportunities with pattern recognition",;
+    "Optimize operations and reduce costs by 20-35%";
   ];
 
   const analyticsTypes = [
@@ -94,12 +94,12 @@ export default function AIDataAnalytics() {
       type: "Real-Time Analytics",
       description: "Live data processing and instant insights delivery",
       icon: Activity
-    },
-    {
-      type: "Big Data Analytics",
-      description: "Large-scale data processing and complex pattern analysis",
-      icon: Database
-    }
+    },;
+    {;
+      type: "Big Data Analytics",;
+      description: "Large-scale data processing and complex pattern analysis",;
+      icon: Database;
+    };
   ];
 
   const useCases = [
@@ -117,16 +117,16 @@ export default function AIDataAnalytics() {
     },
     {
       industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
-      industry: "Marketing",
-      description: "Campaign performance analysis, customer segmentation, and ROI optimization"
-    }
+      description: "Predictive maintenance, quality control, and supply chain optimization";
+    },;
+    {;
+      industry: "Marketing",;
+      description: "Campaign performance analysis, customer segmentation, and ROI optimization";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Data Analytics - Zion Tech Group"
         description="Transform your business with AI-powered data analytics, predictive insights, and intelligent business intelligence solutions. Make data-driven decisions with confidence."
@@ -137,8 +137,24 @@ export default function AIDataAnalytics() {
         <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -183,8 +199,24 @@ export default function AIDataAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -201,9 +233,33 @@ export default function AIDataAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-violet-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -221,8 +277,24 @@ export default function AIDataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -242,9 +314,33 @@ export default function AIDataAnalytics() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                     className="flex items-start space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-violet-400 mt-1 flex-shrink-0" />
@@ -287,8 +383,24 @@ export default function AIDataAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -305,9 +417,33 @@ export default function AIDataAnalytics() {
             {analyticsTypes.map((analyticsType, index) => (
               <motion.div
                 key={analyticsType.type}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -327,8 +463,24 @@ export default function AIDataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -345,9 +497,33 @@ export default function AIDataAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -367,8 +543,24 @@ export default function AIDataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 p-12 rounded-2xl border border-violet-400/20 text-center"
           >
@@ -393,11 +585,11 @@ export default function AIDataAnalytics() {
                 className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
               >
                 Contact Sales
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </motion.button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -29,7 +29,7 @@ export function FilterSidebar(...args[]):  {
       {/* Mobile overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -65,34 +65,61 @@ export function FilterSidebar(...args[]):  {
           </div>
           
           {/* Filter groups */}
+<<<<<<< HEAD
           {filters.map((group)  => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
               
               <div className="space-y-2">
                 {group.options.map((option) => {
+=======
+          {filters.map((group) => (;
+            <div key={group.key} className="space-y-3">;
+              <h4 className="font-medium text-white">{group.title}</h4>;
+              ;
+              <div className="space-y-2">;
+                {group.options.map((option) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
                   
                   return (
-                    <label key={option.value} className="flex items-center gap-3 cursor-pointer">
+                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
                         name={group.key}
                         value={option.value}
                         checked={isSelected}
-                        onChange={(e) => onFilterChange(group.key, option.value, e.target.checked)}
+                        onChange = {
+  (e) => onFilterChange(group.key, option.value,
+  e.target.checked)
+
+
+
+
+
+}
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
                       />
                       <span className="text-sm text-zion-slate-light">
                         {option.label}
                         {option.count && (
                           <span className="ml-2 text-zion-slate-light/60">
+<<<<<<< HEAD
                             ({option.count})
                           </span>
                         )}
                       </span>
                     </label>
                   )})}
+=======;
+                            ({option.count});
+                          </span>;
+                        )};
+                      </span>;
+                    </label>;
+                  );
+                })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
           ))}

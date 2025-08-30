@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   DollarSign, 
   TrendingUp, 
@@ -74,12 +74,12 @@ export default function AIFinancialPlanning() {
       icon: AlertCircle,
       title: "Financial Health Monitoring",
       description: "Real-time monitoring of your financial health with predictive insights and alerts."
-    },
-    {
-      icon: Activity,
-      title: "Tax Optimization",
-      description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities."
-    }
+    },;
+    {;
+      icon: Activity,;
+      title: "Tax Optimization",;
+      description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities.";
+    };
   ];
 
   const benefits = [
@@ -107,12 +107,12 @@ export default function AIFinancialPlanning() {
       icon: TrendingUp,
       title: "Investment Growth",
       description: "Optimize investment portfolios and maximize returns with AI-driven recommendations."
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      description: "Automate financial tasks and focus on what matters most with intelligent automation."
-    }
+    },;
+    {;
+      icon: Clock,;
+      title: "Time Savings",;
+      description: "Automate financial tasks and focus on what matters most with intelligent automation.";
+    };
   ];
 
   const pricingPlans = [
@@ -163,12 +163,12 @@ export default function AIFinancialPlanning() {
         "Advanced reporting",
         "API access",
         "Custom integrations",
-        "Multi-account support",
-        "Tax filing assistance"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "Multi-account support",;
+        "Tax filing assistance";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -196,12 +196,12 @@ export default function AIFinancialPlanning() {
       industry: "Tax Planning",
       description: "Optimize tax strategies and maximize deductions throughout the year",
       icon: Receipt
-    },
-    {
-      industry: "Investment Management",
-      description: "Build and manage investment portfolios with AI-driven insights",
-      icon: TrendingUp
-    }
+    },;
+    {;
+      industry: "Investment Management",;
+      description: "Build and manage investment portfolios with AI-driven insights",;
+      icon: TrendingUp;
+    };
   ];
 
   const integrations = [
@@ -223,12 +223,12 @@ export default function AIFinancialPlanning() {
     },
     {
       name: "Payment Platforms",
-      platforms: ["PayPal", "Venmo", "Square", "Stripe"]
-    },
-    {
-      name: "Cryptocurrency",
-      platforms: ["Coinbase", "Binance", "Kraken", "Gemini"]
-    }
+      platforms: ["PayPal", "Venmo", "Square", "Stripe"];
+    },;
+    {;
+      name: "Cryptocurrency",;
+      platforms: ["Coinbase", "Binance", "Kraken", "Gemini"];
+    };
   ];
 
   const keyMetrics = [
@@ -246,12 +246,12 @@ export default function AIFinancialPlanning() {
       metric: "90%",
       label: "Goal Achievement",
       description: "Users achieve their financial goals"
-    },
-    {
-      metric: "3x",
-      label: "Faster Planning",
-      description: "Faster financial planning process"
-    }
+    },;
+    {;
+      metric: "3x",;
+      label: "Faster Planning",;
+      description: "Faster financial planning process";
+    };
   ];
 
   const planningAreas = [
@@ -265,16 +265,16 @@ export default function AIFinancialPlanning() {
     },
     {
       category: "Tax Planning",
-      areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]
-    },
-    {
-      category: "Goal Planning",
-      areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]
-    }
+      areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"];
+    },;
+    {;
+      category: "Goal Planning",;
+      areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Financial Planning & Budgeting - Zion Tech Group"
         description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
@@ -286,8 +286,24 @@ export default function AIFinancialPlanning() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
@@ -325,9 +341,33 @@ export default function AIFinancialPlanning() {
             {keyMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -350,8 +390,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -368,9 +424,33 @@ export default function AIFinancialPlanning() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -403,8 +483,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -421,9 +517,33 @@ export default function AIFinancialPlanning() {
             {planningAreas.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -448,8 +568,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -466,9 +602,33 @@ export default function AIFinancialPlanning() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -501,8 +661,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -519,9 +695,33 @@ export default function AIFinancialPlanning() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
@@ -572,8 +772,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -590,9 +806,33 @@ export default function AIFinancialPlanning() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -625,8 +865,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -643,9 +899,33 @@ export default function AIFinancialPlanning() {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -672,8 +952,24 @@ export default function AIFinancialPlanning() {
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -692,11 +988,11 @@ export default function AIFinancialPlanning() {
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

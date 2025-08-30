@@ -5,134 +5,7 @@ import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
 import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
-const iotServices = [
-    {
-        id: "iot-platform",
-        title: "IoT Device Management Platform",
-        description: "Complete IoT solution including device provisioning, monitoring, data collection, and analytics dashboard.",
-        price: 1200,
-        currency: "$",
-        period: "/month",
-        features[
-            "Device provisioning & onboarding",
-            "Real-time monitoring",
-            "Data collection & storage",
-            "Analytics dashboard",
-            "Alert management",
-            "API integration"
-        ],
-        icon: <Settings className="h-8 w-8"/>,
-        category: "Platform",
-        badge: "Popular",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "iot-analytics",
-        title: "IoT Data Analytics & Insights",
-        description: "Advanced analytics platform for IoT data processing, machine learning, and predictive maintenance.",
-        price: 800,
-        currency: "$",
-        period: "/month",
-        features[
-            "Real-time data processing",
-            "Machine learning models",
-            "Predictive maintenance",
-            "Custom dashboards",
-            "Data visualization",
-            "Export capabilities"
-        ],
-        icon: <BarChart3 className="h-8 w-8"/>,
-        category: "Analytics",
-        badge: "Advanced",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "iot-security",
-        title: "IoT Security & Compliance",
-        description: "Comprehensive security solutions for IoT devices including encryption, authentication, and threat detection.",
-        price: 1500,
-        currency: "$",
-        period: "/month",
-        features[
-            "Device authentication",
-            "Data encryption",
-            "Threat detection",
-            "Compliance monitoring",
-            "Security audits",
-            "Incident response"
-        ],
-        icon: <Shield className="h-8 w-8"/>,
-        category: "Security",
-        badge: "Critical",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "iot-edge",
-        title: "Edge Computing for IoT",
-        description: "Edge computing solutions for real-time IoT data processing and local decision making.",
-        price: 2000,
-        currency: "$",
-        period: "/month",
-        features[
-            "Edge node deployment",
-            "Local data processing",
-            "Real-time analytics",
-            "Offline operation",
-            "Edge AI models",
-            "Cloud synchronization"
-        ],
-        icon: <Cpu className="h-8 w-8"/>,
-        category: "Edge Computing",
-        badge: "Innovative",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "iot-integration",
-        title: "IoT System Integration",
-        description: "Seamless integration of IoT devices with existing enterprise systems and cloud platforms.",
-        price: 3000,
-        currency: "$",
-        period: "/project",
-        features[
-            "System integration",
-            "API development",
-            "Data mapping",
-            "Workflow automation",
-            "Testing & validation",
-            "Training & support"
-        ],
-        icon: <Cloud className="h-8 w-8"/>,
-        category: "Integration",
-        badge: "Custom",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "iot-mobile",
-        title: "IoT Mobile Applications",
-        description: "Mobile apps for IoT device control, monitoring, and management on iOS and Android platforms.",
-        price: 2500,
-        currency: "$",
-        period: "/app",
-        features[
-            "Cross-platform development",
-            "Real-time monitoring",
-            "Push notifications",
-            "Offline capabilities",
-            "User management",
-            "App store deployment"
-        ],
-        icon: <Smartphone className="h-8 w-8"/>,
-        category: "Mobile",
-        badge: "Featured",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    }
-];
+<<<<<<< HEAD
 const iotBenefits = [
     {
         title: "Real-time Monitoring",
@@ -155,6 +28,8 @@ const iotBenefits = [
         icon: <TrendingUp className="h-6 w-6"/>
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotUseCases = [
     {
         title: "Smart Manufacturing",

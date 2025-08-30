@@ -71,21 +71,21 @@ export default function AIServices(...args[]):  {
       features[
         "ML pipeline automation",
         "Model versioning and deployment",
-        "Scalable training infrastructure",
-        "Monitoring and alerting systems"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-    }
+        "Scalable training infrastructure",;
+        "Monitoring and alerting systems";
+      ],;
+      price: "From $6,000",;
+      duration: "4-10 weeks";
+    };
   ];
 
   const aiTechnologies = [
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
-    { name: "AutoML", description: "Automated machine learning", icon: Zap }
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
+    { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
 
   const useCases = [
@@ -104,15 +104,23 @@ export default function AIServices(...args[]):  {
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
+<<<<<<< HEAD
     {
       industry: "Retail",
       applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
     }
+=======;
+    {;
+      industry: "Retail",;
+      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
+      icon: ShoppingCart;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -295,9 +303,19 @@ export default function AIServices(...args[]):  {
               >
                 Explore All Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

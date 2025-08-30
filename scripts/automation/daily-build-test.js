@@ -5,7 +5,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🏗️ Starting continuous build and test automation...');
@@ -88,12 +87,6 @@ async function runDailyBuildTest() {
     }
     
     // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      buildSuccess: true,
-      summary: 'Build and test completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'daily-build-test-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);

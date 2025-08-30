@@ -1,31 +1,40 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
 import { useState  } from 'react.ts';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027  } from '../data/advancedCybersecurityServices2027';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027  } from "../data/advancedCybersecurityServices2027";
 
-const AdvancedCybersecurityServices: NextPage = () => {
+const AdvancedCybersecurityServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
+=======
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecurityServices2027";
+
+const AdvancedCybersecurityServices: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
-    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
+    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
+    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
+    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
+    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
+    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
+    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
   ];
 
-  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
@@ -35,24 +44,30 @@ const AdvancedCybersecurityServices: NextPage = () => {
         return 0}
   });
 
-  const getInnovationColor = (level: string)  => {
-    switch (level) {
+<<<<<<< HEAD
+  const getInnovationColor = (level: string) => {;
+    switch (level) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
       default: return 'from-gray-500 to-gray-600'}
   };
 
-  const getBadgeColor = (badge: string)  => {
-    switch (badge) {
+<<<<<<< HEAD
+  const getBadgeColor = (badge: string) => {;
+    switch (badge) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
-  const getSecurityIcon = (category: string)  => {
-    switch (category) {
+<<<<<<< HEAD
+  const getSecurityIcon = (category: string) => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI Security': return '🤖';
       case 'Quantum Security': return '🔐';
       case 'Network Security': return '🌐';
@@ -62,7 +77,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Security Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -71,9 +86,17 @@ const AdvancedCybersecurityServices: NextPage = () => {
         
         {/* Security Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+          <div className="absolute inset-0" style = {
+  {
+            backgroundImage: `url("data:image/svg+xml,
+  %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          
+
+
+
+
+
+}}></div>
         </div>
       </div>
 
@@ -332,11 +355,21 @@ const AdvancedCybersecurityServices: NextPage = () => {
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📞 Call +1 (302) 464-0950
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AdvancedCybersecurityServices;

@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // // // console.log('📦 Starting continuous dependency updates automation...');
@@ -50,7 +49,6 @@ async function runDependencyUpdates() {
     // Check for major version updates
     // // // console.log('🔍 Checking for major version updates...');
     try {
-      const outdatedOutput = execSync('npm outdated --json', { encoding: 'utf8' });
       const outdated = JSON.parse(outdatedOutput);
 
       const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
@@ -87,12 +85,16 @@ async function runDependencyUpdates() {
       // Don't exit, just log the error and continue
 
     // Generate dependency update report
+<<<<<<< HEAD
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: 'Dependency updates completed',
-      status: 'completed'
-    };
+  status: 'completed'
+    
+};
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const reportPath = path.join(process.cwd(), 'dependency-updates-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);

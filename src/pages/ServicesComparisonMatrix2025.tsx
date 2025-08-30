@@ -41,9 +41,9 @@ import {
   Shield as ShieldIcon,
   Zap as ZapIcon
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
-const ServicesComparisonMatrix2025: React.FC = () => {
+const ServicesComparisonMatrix2025: React.FC = () => {;
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -62,13 +62,13 @@ const ServicesComparisonMatrix2025: React.FC = () => {
     { id: 'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Human Resources').length },
     { id: 'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Cybersecurity').length },
     { id: 'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Data Management').length },
-    { id: 'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Business Process').length },
+    { id: 'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
@@ -89,7 +89,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
     });
 
   const toggleServiceSelection = (serviceId: string) => {
-    if (selectedServices.includes(serviceId)) {
+    if (selectedServices.includes(serviceId)) {;
       setSelectedServices(selectedServices.filter(id => id !== serviceId));
     } else {
       if (selectedServices.length < 5) {
@@ -99,7 +99,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
   };
 
   const toggleFeatureExpansion = (feature: string) => {
-    if (expandedFeatures.includes(feature)) {
+    if (expandedFeatures.includes(feature)) {;
       setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
     } else {
       setExpandedFeatures([...expandedFeatures, feature]);
@@ -108,7 +108,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
 
   const getInnovationColor = (level: string) => {
     switch (level) {
-      case 'Revolutionary':
+      case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
       case 'Advanced':
         return 'text-blue-600 bg-blue-100 border-blue-200';
@@ -119,7 +119,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
     }
   };
 
-  const getROIColor = (roi: string) => {
+  const getROIColor = (roi: string) => {;
     const minROI = parseInt(roi.split('-')[0]);
     if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
@@ -127,7 +127,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
     return 'text-gray-600 bg-gray-100 border-gray-200';
   };
 
-  const getPriceTier = (price: number) => {
+  const getPriceTier = (price: number) => {;
     if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
@@ -135,24 +135,30 @@ const ServicesComparisonMatrix2025: React.FC = () => {
   };
 
   const selectedServicesData = selectedServices.map(id => 
-    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find(service => service.id === id)
+    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find(service => service.id === id);
   ).filter(Boolean);
 
   const allFeatures = Array.from(new Set(
     selectedServicesData.flatMap(service => 
       service ? [...service.features, ...service.benefits] : []
-    )
+    );
   ));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -332,8 +338,14 @@ const ServicesComparisonMatrix2025: React.FC = () => {
             {filteredServices.map((service) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
                 transition={{ duration: 0.3 }}
                 className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${
                   selectedServices.includes(service.id)
@@ -559,9 +571,18 @@ const ServicesComparisonMatrix2025: React.FC = () => {
               {selectedServicesData.map((service, index) => (
                 <motion.div
                   key={service?.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                   className="bg-white rounded-xl shadow-lg border border-gray-200"
                 >
                   <div className="p-6">
@@ -663,8 +684,14 @@ const ServicesComparisonMatrix2025: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -761,7 +788,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>
         </div>

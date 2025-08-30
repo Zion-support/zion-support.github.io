@@ -16,7 +16,7 @@ export default function SearchPage() {
     }, [initial]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/search?q=${encodeURIComponent(query)}`);
+        router(`/search?q=${encodeURIComponent(query)}`);
         search(query)};
     return (<main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">

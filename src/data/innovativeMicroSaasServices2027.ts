@@ -75,7 +75,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },
     images["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
@@ -502,5 +502,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
     integrations["Weather APIs", "Satellite Systems", "IoT Platforms", "Analytics Tools"],
     compliance["Environmental Standards", "Climate Protocols", "Data Accuracy", "Scientific Validation"],
     support["24/7 Support", "Scientific Consultation", "Implementation", "Training"]
-  }
+  };
 ];

@@ -34,7 +34,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
-    content = content.replace(/undefin,\s*e,\s*d/g, "undefined");
+    content = content.replace(/undefin,\s*e,\s*d/g, "null");
     content = content.replace(/innerWid,\s*t,\s*h/g, "innerWidth");
     content = content.replace(/innerHeig,\s*h,\s*t/g, "innerHeight");
     content = content.replace(/dispatchEve,\s*n,\s*t/g, "dispatchEvent");
@@ -122,11 +122,11 @@ function fixUtilsFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-async function fixAllUtilsFiles() {
-  const files = await glob("utils/**/*.{ts,tsx}", {
-    ignore["node_modules/**", ".next/**"],
-  });
-  let fixedCount = 0;
+<<<<<<< HEAD
+async function fixedCount = 0;
+=======
+async function fixedCount = 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}

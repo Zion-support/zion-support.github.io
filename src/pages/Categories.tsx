@@ -40,24 +40,30 @@ export default function Categories() {
       count: 36
     },
     {
-      id: 'development',
-      name: 'Development',
-      icon: <Code className="w-8 h-8" />,
-      color: 'from-zion-indigo to-zion-purple',
-      count: 41
-    }
+      id: 'development',;
+      name: 'Development',;
+      icon: <Code className="w-8 h-8" />,;
+      color: 'from-zion-indigo to-zion-purple',;
+      count: 41;
+    };
   ];
 
   const subCategories = {
-    'ai-ml': [
+  'ai-ml': [
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: <Brain className="w-6 h-6" />,
         services: 12,
         talent: 8,
-        equipment: 3
-      },
+  equipment: 3
+      
+
+
+
+
+
+},
       {
         name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
@@ -181,12 +187,12 @@ export default function Categories() {
       {
         name: 'API Development',
         description: 'RESTful APIs and microservices',
-        icon: <Network className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
-        equipment: 1
-      }
-    ]
+        icon: <Network className="w-6 h-6" />,;
+        services: 13,;
+        talent: 8,;
+        equipment: 1;
+      };
+    ];
   };
 
   const featuredItems = [
@@ -208,29 +214,38 @@ export default function Categories() {
     },
     {
       type: 'equipment',
-      title: 'High-Performance GPU Cluster',
-      category: 'AI & Machine Learning',
-      rating: 4.7,
-      price: '$15,000/month',
-      featured: true
-    }
+      title: 'High-Performance GPU Cluster',;
+      category: 'AI & Machine Learning',;
+      rating: 4.7,;
+      price: '$15,000/month',;
+      featured: true;
+    };
   ];
 
-  const getCategoryCount = (categoryId: string)  => {
-    if (categoryId === 'all') {
-      return Object.values(subCategories).flat().reduce((total, sub) => 
-        total + sub.services + sub.talent + sub.equipment, 0
-      )}
+<<<<<<< HEAD
+  const getCategoryCount = (categoryId: string) => {;
+    if (categoryId === 'all') {;
+      return Object.values(subCategories).flat().reduce((total, sub) => ;
+        total + sub.services + sub.talent + sub.equipment, 0;
+      );
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return subCategories[categoryId]?.reduce((total, sub) => 
       total + sub.services + sub.talent + sub.equipment, 0
     ) || 0};
 
   // Update counts
-  mainCategories.forEach(cat => {
+<<<<<<< HEAD
+  mainCategories.forEach(cat = > {;
     cat.count = getCategoryCount(cat.id)});
+=======
+  mainCategories.forEach(cat = > {;
+    cat.count = getCategoryCount(cat.id);
+  });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -373,9 +388,19 @@ export default function Categories() {
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >
               Contact Us
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </div>
     </div>
   )}
+=======;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -68,20 +68,28 @@ export default function CybersecuritySolutions(...args[]):  {
     },
     {
       icon: Cloud,
+<<<<<<< HEAD
       title: "Cloud Security",
       description: "Secure your cloud infrastructure and applications",
       features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
       color: "from-zion-indigo to-zion-purple"
     }
+=======;
+      title: "Cloud Security",;
+      description: "Secure your cloud infrastructure and applications",;
+      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
+      color: "from-zion-indigo to-zion-purple";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const threatTypes = [
-    { id: 'all', name: 'All Threats', icon: Shield },
-    { id: 'malware', name: 'Malware', icon: Bug },
-    { id: 'phishing', name: 'Phishing', icon: Target },
-    { id: 'ransomware', name: 'Ransomware', icon: Lock },
-    { id: 'ddos', name: 'DDoS Attacks', icon: Network },
-    { id: 'insider', name: 'Insider Threats', icon: Users }
+    { id: 'all', name: 'All Threats', icon: Shield },;
+    { id: 'malware', name: 'Malware', icon: Bug },;
+    { id: 'phishing', name: 'Phishing', icon: Target },;
+    { id: 'ransomware', name: 'Ransomware', icon: Lock },;
+    { id: 'ddos', name: 'DDoS Attacks', icon: Network },;
+    { id: 'insider', name: 'Insider Threats', icon: Users };
   ];
 
   const securityThreats = [
@@ -128,11 +136,19 @@ export default function CybersecuritySolutions(...args[]):  {
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
+<<<<<<< HEAD
       type: "malware",
       impact: "Critical",
       solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
       icon: Bug
     }
+=======;
+      type: "malware",;
+      impact: "Critical",;
+      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
+      icon: Bug;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const complianceFrameworks = [
@@ -167,44 +183,65 @@ export default function CybersecuritySolutions(...args[]):  {
       icon: CreditCard
     },
     {
+<<<<<<< HEAD
       name: "NIST Cybersecurity Framework",
       description: "U.S. government framework for cybersecurity risk management",
       requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
     }
+=======;
+      name: "NIST Cybersecurity Framework",;
+      description: "U.S. government framework for cybersecurity risk management",;
+      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
+      icon: BarChart3;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const securityMetrics = [
-    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
-    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },
-    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },
-    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
+  const securityMetrics = [;
+    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },;
+    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },;
+    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },;
+    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
   };
 
-  const filteredThreats = selectedThreat === 'all' 
+<<<<<<< HEAD
+  const filteredThreats = selectedThreat === 'all' ;
     ? securityThreats: securityThreats.filter(threat  => threat.type === selectedThreat);
+=======
+  const filteredThreats = selectedThreat === 'all' ;
+    ? securityThreats ;
+    : securityThreats.filter(threat => threat.type === selectedThreat);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -214,8 +251,24 @@ export default function CybersecuritySolutions(...args[]):  {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
@@ -256,8 +309,24 @@ export default function CybersecuritySolutions(...args[]):  {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -282,7 +351,15 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+}}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -310,8 +387,24 @@ export default function CybersecuritySolutions(...args[]):  {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -327,32 +420,73 @@ export default function CybersecuritySolutions(...args[]):  {
           {/* Threat Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             {threatTypes.map((threat)  => {
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+;
+}};
+            transition={{ duration: 0.6 }};
+            viewport={{ once: true }};
+          >;
+            {threatTypes.map((threat) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = threat.icon;
               return (
                 <button
-                  key={threat.id}
+                  key = {threat.id}
                   onClick={() => setSelectedThreat(threat.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
+<<<<<<< HEAD
                   }`}
                 >
                   <Icon className="w-5 h-5" />
                   {threat.name}
                 </button>
               )})}
+=======;
+                  }`};
+                >;
+                  <Icon className="w-5 h-5" />;
+                  {threat.name};
+                </button>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
 
           {/* Threats Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -363,7 +497,15 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+}}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
@@ -405,8 +547,24 @@ export default function CybersecuritySolutions(...args[]):  {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -431,7 +589,15 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
@@ -462,8 +628,24 @@ export default function CybersecuritySolutions(...args[]):  {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -505,8 +687,24 @@ export default function CybersecuritySolutions(...args[]):  {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -581,8 +779,24 @@ export default function CybersecuritySolutions(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -605,9 +819,19 @@ export default function CybersecuritySolutions(...args[]):  {
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

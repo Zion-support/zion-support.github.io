@@ -60,8 +60,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         for (let i = 0; i < count; i++) {
             orbs.push(new Orb())}
         // Animation loop
-        let animationId;
-        const animate = () => {
+        let animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             orbs.forEach(orb => {
                 orb.update();

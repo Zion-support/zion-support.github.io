@@ -34,11 +34,19 @@ const Consulting = () => {
       features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
     },
     {
+<<<<<<< HEAD
       icon: Zap,
       title: "Digital Innovation",
       description: "Emerging technology consulting and innovation acceleration",
       features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
     }
+=======;
+      icon: Zap,;
+      title: "Digital Innovation",;
+      description: "Emerging technology consulting and innovation acceleration",;
+      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const industries = [
@@ -66,21 +74,21 @@ const Consulting = () => {
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
       icon: Globe
-    },
-    {
-      title: "Government",
-      description: "Public sector digital transformation consulting",
-      icon: Briefcase
-    }
+    },;
+    {;
+      title: "Government",;
+      description: "Public sector digital transformation consulting",;
+      icon: Briefcase;
+    };
   ];
 
   const benefits = [
-    "Expert guidance from industry professionals",
-    "Proven methodologies and best practices",
-    "Customized solutions for your specific needs",
-    "Long-term strategic partnerships",
-    "Measurable results and ROI",
-    "Access to cutting-edge technology insights"
+    "Expert guidance from industry professionals",;
+    "Proven methodologies and best practices",;
+    "Customized solutions for your specific needs",;
+    "Long-term strategic partnerships",;
+    "Measurable results and ROI",;
+    "Access to cutting-edge technology insights";
   ];
 
   const process = [
@@ -98,16 +106,16 @@ const Consulting = () => {
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
       duration: "3-6 weeks"
-    },
-    {
-      phase: "Implementation",
-      description: "Executing the strategy with ongoing support and guidance",
-      duration: "Ongoing"
-    }
+    },;
+    {;
+      phase: "Implementation",;
+      description: "Executing the strategy with ongoing support and guidance",;
+      duration: "Ongoing";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -280,11 +288,21 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Consulting;

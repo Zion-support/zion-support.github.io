@@ -13,13 +13,16 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   onRemoveFilter: (key: string)  => void;
   onClearAll: ()  => void}
 
-export function ActiveFiltersBar(...args[]):  {
-  if (filters.length === 0) {
-    return null}
+<<<<<<< HEAD
+export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {;
+  if (filters.length = == 0) {;
+    return null;
+  }
 
   return (
-    <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
+    <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
+      <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       
       {filters.map((filter)  => (
         <div
@@ -38,9 +41,19 @@ export function ActiveFiltersBar(...args[]):  {
       
       <button
         onClick={onClearAll}
+<<<<<<< HEAD
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
       >
         Clear all
       </button>
     </div>
   )}
+=======;
+        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

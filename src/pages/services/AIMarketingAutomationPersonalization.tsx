@@ -6,21 +6,21 @@ export default function AIMarketingAutomationPersonalization() {
   const features = [
     'AI-powered customer segmentation with behavioral analysis',
     'Dynamic content personalization across all marketing channels',
-    'Predictive lead scoring and conversion optimization',
-    'Multi-channel campaign orchestration (email, SMS, social, web)',
-    'Real-time A/B testing with AI-driven optimization',
-    'Customer journey mapping and automated nurturing sequences',
-    'Advanced analytics and ROI tracking with attribution modeling',
-    'Integration with major CRM, e-commerce, and advertising platforms',
+    'Predictive lead scoring and conversion optimization',;
+    'Multi-channel campaign orchestration (email, SMS, social, web)',;
+    'Real-time A/B testing with AI-driven optimization',;
+    'Customer journey mapping and automated nurturing sequences',;
+    'Advanced analytics and ROI tracking with attribution modeling',;
+    'Integration with major CRM, e-commerce, and advertising platforms',;
   ];
 
   const benefits = [
-    'Increase conversion rates by 40-60% with personalization',
-    'Reduce customer acquisition costs by 30-50%',
-    'Improve email open rates by 25-40% with AI optimization',
-    'Generate 35-50% more qualified leads through automation',
-    'Boost customer lifetime value by 20-35%',
-    'Achieve 99.9% campaign delivery and tracking accuracy',
+    'Increase conversion rates by 40-60% with personalization',;
+    'Reduce customer acquisition costs by 30-50%',;
+    'Improve email open rates by 25-40% with AI optimization',;
+    'Generate 35-50% more qualified leads through automation',;
+    'Boost customer lifetime value by 20-35%',;
+    'Achieve 99.9% campaign delivery and tracking accuracy',;
   ];
 
   const marketingChannels = [
@@ -28,12 +28,12 @@ export default function AIMarketingAutomationPersonalization() {
     'SMS & Push Notifications',
     'Social Media Advertising',
     'Display & Retargeting Ads',
-    'Content Marketing',
-    'Search Engine Marketing',
-    'Influencer Marketing',
-    'Video Marketing',
-    'Voice & Chatbot Marketing',
-    'Location-Based Marketing',
+    'Content Marketing',;
+    'Search Engine Marketing',;
+    'Influencer Marketing',;
+    'Video Marketing',;
+    'Voice & Chatbot Marketing',;
+    'Location-Based Marketing',;
   ];
 
   const aiCapabilities = [
@@ -41,12 +41,12 @@ export default function AIMarketingAutomationPersonalization() {
     'Predictive Analytics',
     'Dynamic Content Generation',
     'Smart Segmentation',
-    'Lead Scoring & Qualification',
-    'Campaign Optimization',
-    'Personalization Engine',
-    'A/B Testing Automation',
-    'Performance Prediction',
-    'ROI Optimization',
+    'Lead Scoring & Qualification',;
+    'Campaign Optimization',;
+    'Personalization Engine',;
+    'A/B Testing Automation',;
+    'Performance Prediction',;
+    'ROI Optimization',;
   ];
 
   const integrations = [
@@ -54,27 +54,27 @@ export default function AIMarketingAutomationPersonalization() {
     'HubSpot Marketing Hub',
     'Mailchimp',
     'Klaviyo',
-    'Shopify',
-    'WooCommerce',
-    'Facebook Ads',
-    'Google Ads',
-    'LinkedIn Ads',
-    'TikTok Ads',
+    'Shopify',;
+    'WooCommerce',;
+    'Facebook Ads',;
+    'Google Ads',;
+    'LinkedIn Ads',;
+    'TikTok Ads',;
   ];
 
   const stack = [
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
     { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },
-    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },
-    { name: 'Apache Spark', url: 'https://spark.apache.org/' },
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },
-    { name: 'Redis', url: 'https://redis.io/' },
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
-    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },
+    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;
+    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;
+    { name: 'Redis', url: 'https://redis.io/' },;
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;
+    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -254,11 +254,11 @@ export default function AIMarketingAutomationPersonalization() {
               Call +1 302 464 0950
             </a>
           </div>
-          <p className="text-slate-400 mt-6">
-            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions
-          </p>
-        </div>
-      </section>
-    </div>
+          <p className="text-slate-400 mt-6">;
+            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
+          </p>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

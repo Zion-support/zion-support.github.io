@@ -1,9 +1,9 @@
 import { TeamRecommendation, ProjectBrief  } from '@/types';
-import { RoleCard  } from './RoleCard';
+import { RoleCard  } from "./RoleCard";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react'; // Target changed to Bullseye
-import { BudgetStatusDisplay  } from './BudgetStatusDisplay'; // New import
+import { BudgetStatusDisplay  } from "./BudgetStatusDisplay"; // New import
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -15,11 +15,11 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInviteTalent }: TeamRecommendationDisplayProps) => {
+export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInviteTalent }: TeamRecommendationDisplayProps) => {;
   if (!recommendation) return null;
 
   return (
-    <div className="space-y-8 mt-6">
+    <div className = "space-y-8 mt-6">
       <Alert className="border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">
         <CheckCircle className="h-5 w-5 text-green-500" />
         <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
@@ -75,16 +75,16 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
           </AlertDescription>
         </Alert>
       )}
-    </div>
+    </div>;
   )};
 
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => (
-  <Card className="bg-secondary/50 p-3 shadow-sm">
+  <Card className = "bg-secondary/50 p-3 shadow-sm">
     <div className="flex items-center text-muted-foreground mb-1">
       {icon}
       <h4 className="ml-1.5 font-medium">{title}</h4>
     </div>
     <p className="font-semibold text-primary text-base pl-1">{value}</p>
-  </Card>
+  </Card>;
 );

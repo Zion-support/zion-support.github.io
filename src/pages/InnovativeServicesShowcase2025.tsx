@@ -23,9 +23,10 @@ import {
   Grid3X3,
   List
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
-const InnovativeServicesShowcase2025: React.FC = () => {
+<<<<<<< HEAD
+const InnovativeServicesShowcase2025: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -43,12 +44,216 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     { id: 'AI & Cybersecurity', name: 'AI & Security', icon: Shield },
     { id: 'AI & Data Management', name: 'AI & Data', icon: Database },
     { id: 'AI & Business Process', name: 'AI & Process', icon: Cpu },
+=======
+export default function InnovativeServicesShowcase2025() {
+  const services = [
+    {
+      id: 'ai-workflow-orchestrator',
+      title: 'AI Workflow Orchestrator',
+      description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.',
+      icon: Brain,
+      price: 'From $299/month',
+      features: [
+        'AI-powered workflow automation and orchestration',
+        'Intelligent process optimization and decision making',
+        'Real-time workflow monitoring and analytics',
+        'Multi-platform integration and API management'
+      ],
+      benefits: [
+        'Reduce manual workflow processing by 85%',
+        'Improve process efficiency by 60%',
+        'Cut operational costs by 40%'
+      ],
+      path: '/services/ai-workflow-orchestrator',
+      category: 'AI & Automation'
+    },
+    {
+      id: 'ai-data-governance-platform',
+      title: 'AI Data Governance Platform',
+      description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',
+      icon: Database,
+      price: 'From $499/month',
+      features: [
+        'AI-powered data discovery and classification',
+        'Automated data quality assessment and monitoring',
+        'Intelligent data lineage tracking and visualization',
+        'Advanced data privacy and compliance automation'
+      ],
+      benefits: [
+        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)',
+        'Reduce data governance costs by 50%',
+        'Improve data quality by 80%'
+      ],
+      path: '/services/ai-data-governance-platform',
+      category: 'AI & Data'
+    },
+    {
+      id: 'ai-customer-experience-analytics',
+      title: 'AI Customer Experience Analytics',
+      description: 'Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.',
+      icon: Users,
+      price: 'From $399/month',
+      features: [
+        'AI-powered customer journey mapping and analysis',
+        'Real-time sentiment analysis and emotion detection',
+        'Predictive customer behavior modeling',
+        'Automated customer feedback collection and analysis'
+      ],
+      benefits: [
+        'Increase customer satisfaction scores by 45%',
+        'Reduce customer churn by 60%',
+        'Improve customer lifetime value by 35%'
+      ],
+      path: '/services/ai-customer-experience-analytics',
+      category: 'AI & Analytics'
+    },
+    {
+      id: 'ai-supply-chain-optimization',
+      title: 'AI Supply Chain Optimization',
+      description: 'Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
+      icon: Truck,
+      price: 'From $599/month',
+      features: [
+        'AI-powered demand forecasting and inventory optimization',
+        'Real-time supply chain monitoring and risk assessment',
+        'Intelligent route optimization and logistics planning',
+        'Automated supplier performance analysis and scoring'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 25-40%',
+        'Improve inventory accuracy by 90%',
+        'Reduce lead times by 30-50%'
+      ],
+      path: '/services/ai-supply-chain-optimization',
+      category: 'AI & Logistics'
+    },
+    {
+      id: 'ai-financial-risk-management',
+      title: 'AI Financial Risk Management',
+      description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
+      icon: Shield,
+      price: 'From $799/month',
+      features: [
+        'AI-powered credit risk assessment and scoring',
+        'Real-time market risk monitoring and alerts',
+        'Intelligent fraud detection and prevention',
+        'Advanced portfolio risk analysis and optimization'
+      ],
+      benefits: [
+        'Reduce credit losses by 40-60%',
+        'Improve risk-adjusted returns by 25%',
+        'Detect fraud with 99.5% accuracy'
+      ],
+      path: '/services/ai-financial-risk-management',
+      category: 'AI & Finance'
+    },
+    {
+      id: 'ai-hr-talent-acquisition',
+      title: 'AI HR Talent Acquisition',
+      description: 'Revolutionize your hiring process with AI-powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
+      icon: Briefcase,
+      price: 'From $299/month',
+      features: [
+        'AI-powered candidate sourcing and matching',
+        'Intelligent resume parsing and skill extraction',
+        'Automated candidate screening and assessment',
+        'Predictive candidate success modeling'
+      ],
+      benefits: [
+        'Reduce time-to-hire by 60%',
+        'Improve candidate quality by 45%',
+        'Reduce recruitment costs by 40%'
+      ],
+      path: '/services/ai-hr-talent-acquisition',
+      category: 'AI & HR'
+    },
+    {
+      id: 'ai-iot-edge-computing',
+      title: 'AI IoT Edge Computing',
+      description: 'Transform your IoT infrastructure with AI-powered edge computing that processes data locally, reduces latency, and enables real-time intelligent decision making.',
+      icon: Cpu,
+      price: 'From $499/month',
+      features: [
+        'AI-powered edge computing and processing',
+        'Real-time IoT device management and monitoring',
+        'Intelligent edge analytics and decision making',
+        'Advanced device connectivity and protocol support'
+      ],
+      benefits: [
+        'Reduce latency by 80-90%',
+        'Lower bandwidth costs by 60%',
+        'Improve device reliability by 75%'
+      ],
+      path: '/services/ai-iot-edge-computing',
+      category: 'AI & IoT'
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      title: 'AI Predictive Maintenance',
+      description: 'Transform your maintenance operations with AI-powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
+      icon: Wrench,
+      price: 'From $399/month',
+      features: [
+        'AI-powered equipment health monitoring and analysis',
+        'Real-time predictive maintenance scheduling',
+        'Intelligent failure prediction and prevention',
+        'Advanced sensor data analysis and processing'
+      ],
+      benefits: [
+        'Reduce unplanned downtime by 70-90%',
+        'Lower maintenance costs by 25-40%',
+        'Extend equipment lifespan by 20-30%'
+      ],
+      path: '/services/ai-predictive-maintenance',
+      category: 'AI & Maintenance'
+    },
+    {
+      id: 'ai-sustainable-technology',
+      title: 'AI Sustainable Technology',
+      description: 'Transform your organization into a sustainability leader with AI-powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
+      icon: Leaf,
+      price: 'From $299/month',
+      features: [
+        'AI-powered energy consumption optimization',
+        'Real-time sustainability monitoring and reporting',
+        'Intelligent carbon footprint tracking and reduction',
+        'Advanced waste management and recycling optimization'
+      ],
+      benefits: [
+        'Reduce energy consumption by 25-40%',
+        'Lower carbon footprint by 30-50%',
+        'Improve resource efficiency by 35%'
+      ],
+      path: '/services/ai-sustainable-technology',
+      category: 'AI & Sustainability'
+    },
+    {
+      id: 'ai-quantum-machine-learning',
+      title: 'AI Quantum Machine Learning',
+      description: 'Revolutionize your computational capabilities with AI-powered quantum machine learning that solves previously impossible problems and accelerates innovation.',
+      icon: Atom,
+      price: 'From $1,999/month',
+      features: [
+        'Quantum-enhanced machine learning algorithms',
+        'Hybrid quantum-classical computing solutions',
+        'Advanced quantum neural network optimization',
+        'Real-time quantum algorithm execution'
+      ],
+      benefits: [
+        'Solve complex problems 100x faster than classical computing',
+        'Improve machine learning accuracy by 40-60%',;
+        'Enable previously impossible computational tasks';
+      ],;
+      path: '/services/ai-quantum-machine-learning',;
+      category: 'AI & Quantum Computing';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
@@ -68,7 +273,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
 
   const getInnovationColor = (level: string) => {
     switch (level) {
-      case 'Revolutionary':
+      case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100';
       case 'Advanced':
         return 'text-blue-600 bg-blue-100';
@@ -79,7 +284,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getROIColor = (roi: string) => {
+  const getROIColor = (roi: string) => {;
     const minROI = parseInt(roi.split('-')[0]);
     if (minROI >= 500) return 'text-green-600 bg-green-100';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100';
@@ -88,16 +293,54 @@ const InnovativeServicesShowcase2025: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
+=======
+    <div className = "min-h-screen bg-white">
+      <SEO 
+        title="Innovative AI Services Showcase 2025 - Zion Tech Group"
+        description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
+      />
+      
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
               Innovative Micro SAAS Services 2025
@@ -137,6 +380,73 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </a>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+          <motion.h1 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
+          >
+            Innovative AI Services Showcase 2025
+          </motion.h1>
+          <motion.p 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+            className="text-zion-slate-light text-xl"
+          >
+            Discover our cutting-edge AI-powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
+          </motion.p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </section>
 
@@ -169,6 +479,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Search and Filters */}
       <section className="bg-white border-b sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -183,6 +494,50 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+              className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-zion-cyan/10 rounded-lg">
+                  <service.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <div className="ml-3">
+                  <span className="text-xs text-zion-slate-light bg-zion-slate-light/10 px-2 py-1 rounded-full">
+                    {service.category}
+                  </span>
+                </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
             
@@ -243,11 +598,52 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+=======
+                key={item.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="text-center"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -324,9 +720,18 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="p-6">
@@ -413,8 +818,14 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -511,12 +922,21 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
+<<<<<<< HEAD
       </footer>
     </div>
+=======
+        
+        <div className="text-sm text-zion-slate-light">;
+          Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

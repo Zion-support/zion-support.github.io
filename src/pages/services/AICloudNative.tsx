@@ -4,12 +4,12 @@ export default function AICloudNative() {
   const features = [
     'AI-powered cloud native optimization',
     'Intelligent cloud native management',
-    'Automated cloud native monitoring and alerting',
-    'Predictive analytics for cloud native scaling',
-    'Smart cloud native security and compliance',
-    'AI-driven cloud native automation and orchestration',
-    'Real-time cloud native analytics and insights',
-    'Custom AI models for cloud native applications'
+    'Automated cloud native monitoring and alerting',;
+    'Predictive analytics for cloud native scaling',;
+    'Smart cloud native security and compliance',;
+    'AI-driven cloud native automation and orchestration',;
+    'Real-time cloud native analytics and insights',;
+    'Custom AI models for cloud native applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AICloudNative() {
       name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full cloud native suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full cloud native suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Cloud native optimization',
-    'Cloud native management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Cloud native scaling and management'
+    'Cloud native optimization',;
+    'Cloud native management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Cloud native scaling and management';
   ];
 
   const benefits = [
-    'Improve cloud native performance by 50-80%',
-    'Reduce cloud native deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance cloud native reliability and scalability',
-    'Optimize resource utilization',
-    'Scale cloud native operations efficiently'
+    'Improve cloud native performance by 50-80%',;
+    'Reduce cloud native deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance cloud native reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale cloud native operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AICloudNative() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

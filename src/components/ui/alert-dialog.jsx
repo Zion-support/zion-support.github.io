@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
-const AlertDialogContext = createContext(undefined);
-export function AlertDialog({ children, open, onOpenChange }) {
+const AlertDialog({ children, open, onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
     const isOpen = isControlled ? open : internalOpen;
     const setIsOpen = (newOpen) => {
         if (!isControlled) {
@@ -10,7 +8,15 @@ export function AlertDialog({ children, open, onOpenChange }) {
         if (onOpenChange) {
             onOpenChange(newOpen)}
     };
-    return (<AlertDialogContext.Provider value={{ isOpen, setIsOpen }}>
+    return (<AlertDialogContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+
+
+
+
+
+}}>
       <div className="relative">
         {children}
       </div>
@@ -34,14 +40,6 @@ export function AlertDialogContent({ children, className = '' }) {
         {children}
       </div>
     </div>)}
-export function AlertDialogHeader({ children, className = '' }) {
-    return <div className={`mb-4 ${className}`}>{children}</div>}
-export function AlertDialogTitle({ children, className = '' }) {
-    return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>}
-export function AlertDialogDescription({ children, className = '' }) {
-    return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>}
-export function AlertDialogFooter({ children, className = '' }) {
-    return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}
 export function AlertDialogAction({ children, onClick, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)

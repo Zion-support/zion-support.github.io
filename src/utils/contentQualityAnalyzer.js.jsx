@@ -41,7 +41,7 @@ export class ContentQualityAnalyzer {
         const recommendations = this.generateRecommendations(issues);
         const overallScore = Math.round((readabilityScore + seoScore) / 2);
         const metrics = {
-            pageUrl,
+  pageUrl,
             title,
             wordCount,
             headingCount,
@@ -53,8 +53,9 @@ export class ContentQualityAnalyzer {
             seoScore,
             overallScore,
             issues,
-            recommendations
-        };
+  recommendations
+        
+};
         this.analyzedPages.set(pageUrl, metrics);
         return metrics;
     }
@@ -83,7 +84,6 @@ export class ContentQualityAnalyzer {
         if (!content)
             return 0;
         const wordCount = this.calculateWordCount(content);
-        const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
         const syllableCount = this.estimateSyllableCount(content);
         if (wordCount === 0 || sentenceCount === 0)
             return 0;
@@ -244,7 +244,6 @@ export class ContentQualityAnalyzer {
                 summary: 'No pages analyzed yet'
             };
         }
-        const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
         // Collect all issues and count frequency

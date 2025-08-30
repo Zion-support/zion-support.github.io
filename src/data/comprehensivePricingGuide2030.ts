@@ -1,5 +1,5 @@
 import { ProductListing  } from '@/types/listings';
-import { COMPREHENSIVE_SERVICES_INDEX_2030  } from './comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
@@ -336,20 +336,45 @@ export const PRICING_ANALYSIS_2030 = {
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
+<<<<<<< HEAD
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
-  },
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
+  
+},
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
     if (!acc[service.category]) {
-      acc[service.category] = []}
+      acc[service.category] = []};
     acc[service.category].push(service.basePrice);
     return acc}, {} as Record<string, any>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service  => ({
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
     serviceName: service.serviceName,
     roi: service.roi,
     setupTime: service.setupTime,
     price: service.basePrice
   }))
+=======
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+  
+;
+;
+;
+
+},;
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
+    if (!acc[service.category]) {;
+      acc[service.category] = [];
+    }
+    acc[service.category].push(service.basePrice);
+    return acc;
+  }, {} as Record<string, number[]>),
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
+    serviceName: service.serviceName,;
+    roi: service.roi,;
+    setupTime: service.setupTime,;
+    price: service.basePrice;
+  }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 };
 
 // Payment and Discount Information
@@ -367,9 +392,17 @@ export const PAYMENT_OPTIONS_2030 = {
     "White-label solutions",
     "Dedicated support",
     "On-premise deployment",
-    "Custom integrations",
-    "SLA guarantees"
-  ]
+    "Custom integrations",;
+  ;
+  ;
+  "SLA guarantees";
+  ];
+;
+
+
+
+
+
 };
 
 // Contact Information for Pricing Inquiries
@@ -378,6 +411,15 @@ export const PRICING_CONTACT_2030 = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "Within 24 hours for pricing inquiries"
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
+  ;
+  ;
+  ;
+  responseTime: "Within 24 hours for pricing inquiries";
+;
+
+
+
+
+
 };

@@ -5,43 +5,36 @@ export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
         const dataCenters = {
-            "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
+  "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom"["London", "Manchester", "Birmingham"],
             "Germ"["Frankfurt", "Berlin", "Munich"],
             "Japan"["Tokyo", "Osaka"],
             "Australia"["Sydney", "Melbourne", "Perth"],
             "Singapore"["Singapore Central"],
             "Canada"["Toronto", "Montreal", "Vancouver"],
-            // Default for other countries
+  // Default for other countries
             "default"["Major metropolitan areas"]
-        };
+        
+};
         return dataCenters[country] || dataCenters["default"]};
     // Get region-specific image
     const getRegionalImage = (country) => {
         // In a real app, you'd have specific images for each region
         const regions = {
-            "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
+  "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
             "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
             "Germ": "https://source.unsplash.com/featured/900x700/?datacenter,germ",
             "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
             "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
             "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
-            // Default placeholder
+  // Default placeholder
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-        };
+        
+};
         return regions[country] || regions["default"]};
     // Get region-specific instructions
     const getRegionalInstructions = (country) => {
         // In a real implementation, this would be much more detailed and specific
-        const timeZones = {
-            "United States": "EST/CST/PST depending on location",
-            "United Kingdom": "GMT/BST",
-            "Germ": "CET/CEST",
-            "Japan": "JST",
-            "Australia": "AEST/ACDT/AWST depending on location",
-            "Singapore": "SGT",
-            "default": "Local timezone"
-        };
         const timezone = timeZones[country] || timeZones["default"];
         return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
             `Response times are typically within 4 hours for metropolitan areas. ` +

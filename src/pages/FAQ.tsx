@@ -22,11 +22,11 @@ export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
+  const toggleItem = (index: number) => {;
+    setOpenItems(prev => ;
+      prev.includes(index) ;
+        ? prev.filter(i => i !== index);
+        : [...prev, index];
     );
   };
 
@@ -132,6 +132,7 @@ export default function FAQ() {
           answer: 'We provide different response time SLAs based on issue priority. Critical issues receive immediate attention, while standard requests are typically resolved within 4-8 hours. Emergency support is available 24/7.'
         },
         {
+<<<<<<< HEAD
           question: 'Do you provide training for our team?',
           answer: 'Yes! We provide comprehensive training for your team on all implemented solutions. This includes user training, administrator training, and ongoing education as new features are added.'
         },
@@ -162,7 +163,7 @@ export default function FAQ() {
           answer: 'We have comprehensive incident response procedures including immediate notification, containment, investigation, and resolution. We provide detailed incident reports and work to prevent future occurrences.'
         }
       ]
-    }
+    };
   ];
 
   const filteredCategories = faqCategories.map(category => ({
@@ -171,6 +172,21 @@ export default function FAQ() {
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
+=======;
+          question: "Do you comply with industry regulations?",;
+          answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements.";
+        };
+      ];
+    };
+  ];
+
+  const filteredFAQ = faqData.map(category => ({;
+    ...category,;
+    questions: category.questions.filter(q => ;
+      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+      q.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    );
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   })).filter(category => category.questions.length > 0);
 
   const contactInfo = [
@@ -183,6 +199,7 @@ export default function FAQ() {
       color: 'from-green-500 to-emerald-500'
     },
     {
+<<<<<<< HEAD
       icon: Mail,
       title: 'Email Us',
       value: 'kleber@ziontechgroup.com',
@@ -205,11 +222,11 @@ export default function FAQ() {
       description: '24/7 emergency support available',
       action: null,
       color: 'from-orange-500 to-red-500'
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className = "min-h-screen bg-slate-900">
       <SEO 
         title="FAQ - Zion Tech Group"
         description="Find answers to frequently asked questions about Zion Tech Group's AI services, cloud solutions, cybersecurity, and digital transformation services."
@@ -225,17 +242,32 @@ export default function FAQ() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             Frequently Asked Questions
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Find answers to common questions about our services, pricing, and how we can help transform your business
           </motion.p>
@@ -243,9 +275,18 @@ export default function FAQ() {
           {/* Search Bar */}
           <motion.div 
             className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <div className="relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
@@ -268,10 +309,19 @@ export default function FAQ() {
             {filteredCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: categoryIndex * 0.1 
+}}
               >
                 <div className="text-center mb-12">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -281,22 +331,180 @@ export default function FAQ() {
                 </div>
                 
                 <div className="max-w-4xl mx-auto space-y-4">
-                  {category.questions.map((item, index) => {
+                  {category.questions.map((item, index) => {;
                     const globalIndex = categoryIndex * 100 + index;
                     const isOpen = openItems.includes(globalIndex);
                     
                     return (
                       <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        key = {index}
+                        initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                        whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                         className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 overflow-hidden"
                       >
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors duration-200"
+=======
+      icon: MessageCircle,;
+      title: "Live Chat",;
+      description: "Chat with our team",;
+      contact: "Available on website",;
+      response: "Real-time support";
+    };
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+        <meta name = "description" content="Find answers to common questions about Zion Tech Group's services, pricing, support, and technology solutions." />
+        <meta name="keywords" content="FAQ, frequently asked questions, Zion Tech Group, support, help, technology services" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <HelpCircle className="w-10 h-10 text-white" />
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
+                Frequently Asked Questions
+              </h1>
+              
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Find answers to common questions about our services, pricing, and support. Can't find what you're looking for? Contact our team directly.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for questions or topics..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+            >
+              {filteredFAQ.map((category, categoryIndex) => (
+                <div key={category.category} className="mb-12">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    {category.category === "General" && <Users className="w-6 h-6 text-blue-600" />}
+                    {category.category === "Services" && <Zap className="w-6 h-6 text-blue-600" />}
+                    {category.category === "Pricing & Billing" && <CheckCircle className="w-6 h-6 text-blue-600" />}
+                    {category.category === "Support & Maintenance" && <Clock className="w-6 h-6 text-blue-600" />}
+                    {category.category === "Technology & Security" && <Shield className="w-6 h-6 text-blue-600" />};
+                    {category.category};
+                  </h2>;
+                  ;
+                  <div className="space-y-4">;
+                    {category.questions.map((item, questionIndex) => {;
+                      const isOpen = openItems.includes(index);
+                      
+                      return (
+                        <motion.div
+                          key = {index}
+                          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                          transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                          className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         >
                           <h3 className="text-lg font-semibold text-white pr-4">{item.question}</h3>
                           {isOpen ? (
@@ -309,12 +517,52 @@ export default function FAQ() {
                         <AnimatePresence>
                           {isOpen && (
                             <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
+<<<<<<< HEAD
+                              initial = {
+  { height: 0,
+  opacity: 0 
+}}
+                              animate = {
+  { height: 'auto',
+  opacity: 1 
+}}
+                              exit = {
+  { height: 0,
+  opacity: 0 
+}}
+=======
+                              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                              animate = {
+  { opacity: 1,
+  height: "auto" 
+
+
+
+
+
+}}
+                              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
+<<<<<<< HEAD
                               <div className="px-6 pb-6">
                                 <p className="text-slate-300 leading-relaxed">{item.answer}</p>
                               </div>
@@ -323,6 +571,17 @@ export default function FAQ() {
                         </AnimatePresence>
                       </motion.div>
                     )})}
+=======
+                              <p className="text-slate-600 leading-relaxed">;
+                                {item.answer};
+                              </p>;
+                            </motion.div>;
+                          )};
+                        </motion.div>;
+                      );
+                    })}
+                  </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               </motion.div>
             ))}
@@ -330,13 +589,20 @@ export default function FAQ() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Information */}
-      <section className="py-20 bg-slate-900">
+      <section className = "py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -352,10 +618,19 @@ export default function FAQ() {
             {contactInfo.map((contact, index)  => (
               <motion.div
                 key={contact.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
@@ -367,8 +642,8 @@ export default function FAQ() {
                   {contact.action ? (
                     <a 
                       href={contact.action}
-                      target={contact.action.startsWith('http') ? '_blank' : undefined}
-                      rel={contact.action.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      target={contact.action.startsWith('http') ? '_blank' : null}
+                      rel={contact.action.startsWith('http') ? 'noopener noreferrer' : null}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:scale-105 transition-all duration-300"
                     >
                       {contact.value}
@@ -388,8 +663,14 @@ export default function FAQ() {
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -397,19 +678,37 @@ export default function FAQ() {
           </motion.h2>
           <motion.p 
             className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Let's discuss how our AI-powered solutions can transform your business operations
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <a 
               href="tel:+13024640950" 
@@ -428,3 +727,144 @@ export default function FAQ() {
       </section>
     </div>
   )}
+=======
+        {/* Contact Support Section */}
+        <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Still Need Help?
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {contactMethods.map((method, index) => (
+                  <motion.div
+                    key={method.title}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                    className="text-center p-6 bg-slate-50 rounded-xl"
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <method.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{method.title}</h3>
+                    <p className="text-slate-600 mb-3">{method.description}</p>
+                    <p className="font-medium text-slate-900 mb-2">{method.contact}</p>
+                    <p className="text-sm text-slate-500">{method.response}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Contact our team to discuss your project requirements and get a personalized solution.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+                  Contact Sales
+                </button>
+                <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Consultation
+                </button>
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+};
+
+export default FAQ;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

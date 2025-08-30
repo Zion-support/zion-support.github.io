@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
 const notificationStyles = {
-    success: {
+  success: {
         icon: CheckCircle,
         bgColor: 'bg-zion-emerald/10',
         borderColor: 'border-zion-emerald/20',
         textColor: 'text-zion-emerald',
-        iconColor: 'text-zion-emerald'
-    },
+  iconColor: 'text-zion-emerald'
+    
+},
     error: {
         icon: XCircle,
         bgColor: 'bg-red-500/10',

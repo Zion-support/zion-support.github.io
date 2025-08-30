@@ -55,17 +55,19 @@ const mockProjects = [
     }
 ];
 const statusColors = {
-    'planning': 'bg-zion-blue text-white',
+  'planning': 'bg-zion-blue text-white',
     'in-progress': 'bg-zion-cyan text-white',
     'review': 'bg-zion-gold text-white',
     'completed': 'bg-zion-emerald text-white',
-    'on-hold': 'bg-zion-slate text-white'
+  'on-hold': 'bg-zion-slate text-white'
+
 };
 const priorityColors = {
-    'low': 'bg-zion-emerald text-white',
+  'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
-    'critical': 'bg-red-500 text-white'
+  'critical': 'bg-red-500 text-white'
+
 };
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false);

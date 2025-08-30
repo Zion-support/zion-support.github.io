@@ -46,7 +46,7 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid user data'));
+            throw new Error('Invalid user data');
           }
         }, 1000);
       });
@@ -107,6 +107,12 @@ const initialState = {
   isAuthenticated: false,
   isLoading: false,
   error: null
+
+
+
+
+
+
 };
 
 const authSlice = createSlice({
@@ -202,10 +208,6 @@ const authSlice = createSlice({
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
-export const selectUser = (state) => state.auth.user;
-export const selectToken = (state) => state.auth.token;
-export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
-export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
 
 export default authSlice.reducer;

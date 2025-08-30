@@ -1,10 +1,11 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -178,36 +179,135 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       ],
       href: '/revolutionary-services-2030',
       featured: false
-    }
+    };
   };
 
-  const filteredCategories = useMemo(() => {
+  const filteredCategories = useMemo(() => {;
     if (!searchQuery.trim()) return serviceCategories;
     
     const query = searchQuery.toLowerCase();
-    return serviceCategories.filter(category =>
+    return serviceCategories.filter(category = >
       category.title.toLowerCase().includes(query) ||
       category.description.toLowerCase().includes(query) ||
-      category.services.some(service => service.toLowerCase().includes(query))
+      category.services.some(service => service.toLowerCase().includes(query));
     )}, [searchQuery]);
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Globe, 
+  Cpu, 
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Users,
+  Target,
+  Award,
+  Sparkles,
+  Rocket,
+  BarChart3,
+  MessageSquare,
+  Mail,
+  Database,
+  Network,
+  Cloud,
+  Smartphone,
+  Palette,
+  Leaf,
+  Code,
+  Wallet,
+  Box,
+  Phone,
+  Mail as MailIcon,
+  MapPin,
+  Globe as GlobeIcon,
+  ExternalLink
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
+import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025";
+
+const ComprehensiveServicesLanding2025: React.FC = () => {;
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI & Automation':;
+        return <Brain className="w-8 h-8" />;
+      case 'AI & Security':
+        return <Shield className="w-8 h-8" />;
+      case 'AI & Marketing':
+        return <BarChart3 className="w-8 h-8" />;
+      case 'AI & Sales':
+        return <TrendingUp className="w-8 h-8" />;
+      case 'AI & Customer Experience':
+        return <MessageSquare className="w-8 h-8" />;
+      case 'AI & Analytics':
+        return <Database className="w-8 h-8" />;
+      case 'Quantum Computing':
+        return <Box className="w-8 h-8" />;
+      case 'IoT & Edge Computing':
+        return <Network className="w-8 h-8" />;
+      case 'Blockchain & Web3':
+        return <Wallet className="w-8 h-8" />;
+      case 'Sustainability & Technology':
+        return <Leaf className="w-8 h-8" />;
+      default:
+        return <Sparkles className="w-8 h-8" />;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'AI & Automation':;
+        return 'from-purple-500 to-pink-500';
+      case 'AI & Security':
+        return 'from-red-500 to-orange-500';
+      case 'AI & Marketing':
+        return 'from-blue-500 to-cyan-500';
+      case 'AI & Sales':
+        return 'from-green-500 to-emerald-500';
+      case 'AI & Customer Experience':
+        return 'from-indigo-500 to-purple-500';
+      case 'AI & Analytics':
+        return 'from-cyan-500 to-blue-500';
+      case 'Quantum Computing':
+        return 'from-violet-500 to-purple-500';
+      case 'IoT & Edge Computing':
+        return 'from-orange-500 to-red-500';
+      case 'Blockchain & Web3':
+        return 'from-yellow-500 to-orange-500';
+      case 'Sustainability & Technology':
+        return 'from-green-500 to-teal-500';
+      default:
+        return 'from-gray-500 to-slate-500';
+    }
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
-  const servicesByCategory = categories.map(category => ({
-    category,
-    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),
-    icon: getCategoryIcon(category),
-    color: getCategoryColor(category)
+  const servicesByCategory = categories.map(category => ({;
+    category,;
+    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
+    icon: getCategoryIcon(category),;
+    color: getCategoryColor(category);
   }));
 
-  const totalServices = INNOVATIVE_SERVICES_2025.length;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
     const roi = parseInt(service.roi.replace('%', ''));
     return sum + roi;
   }, 0) / totalServices;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
@@ -217,8 +317,24 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -289,9 +405,33 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             {featuredCategories.map((category, index)  => (
               <motion.div
                 key={categoryData.category}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="group"
               >
                 <Link
@@ -339,9 +479,18 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             {filteredCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.05 
+}}
                 className="group bg-slate-800/40 backdrop-blur border border-slate-700/30 hover:border-cyan-400/30 transition-all duration-300 rounded-xl p-5 hover:shadow-lg hover:shadow-cyan-400/5"
               >
                 <div className="flex items-start gap-4">
@@ -400,9 +549,33 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -513,9 +686,33 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border border-blue-400/30 mb-6">
@@ -533,8 +730,24 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       <section className="px-4 pb-20">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 text-center"
           >
@@ -579,11 +792,21 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ComprehensiveServicesLanding2025;

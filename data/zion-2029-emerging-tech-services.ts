@@ -720,23 +720,23 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   }
 ];
 
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return zionEmergingTechServices2029.filter(service => service.category === category);
 };
 
-export const getPopularServices = () => {
+export const getPopularServices = () => {;
   return zionEmergingTechServices2029.filter(service => service.popular);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return zionEmergingTechServices2029.filter(service => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return zionEmergingTechServices2029.filter(service => {;
     const starterPrice = service.pricing.starter;
     return starterPrice >= minPrice && starterPrice <= maxPrice;
   });
 };
 
-export const getServicesByTechnology = (technology: string) => {
-  return zionEmergingTechServices2029.filter(service => 
-    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
+export const getServicesByTechnology = (technology: string) => {;
+  return zionEmergingTechServices2029.filter(service => ;
+    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()));
   );
 };

@@ -3,7 +3,7 @@ import { Home, ArrowLeft, Search, Mail, Phone  } from 'lucide-react';
 
 export default function NotFound(...args[]):  {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className = "min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* 404 Icon */}
         <div className="mb-8">
@@ -139,9 +139,19 @@ export default function NotFound(...args[]):  {
             <Link to="/contact" className="text-zion-cyan hover:underline">
               contact our support team
             </Link>
+<<<<<<< HEAD
             .
           </p>
         </div>
       </div>
     </div>
   )}
+=======;
+            .;
+          </p>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

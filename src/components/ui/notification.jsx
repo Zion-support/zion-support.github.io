@@ -1,9 +1,9 @@
 import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
 // Context
-const NotificationContext = createContext(undefined);
+const NotificationContext = createContext(null);
 // Hook
 export function useNotifications() {
     const context = useContext(NotificationContext);
@@ -16,12 +16,18 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         setNotifications(prev => prev.filter(n => n.id !== id))}, []);
     const addNotification = useCallback((notification) => {
         const newNotification = {
-            ...notification,
+  ...notification,
             id: Math.random().toString(36).substr(2, 9),
             timestamp: new Date(),
             dismissible: notification.dismissible ?? true,
-            duration: notification.duration ?? 5000
-        };
+  duration: notification.duration ?? 5000
+        
+
+
+
+
+
+};
         setNotifications(prev => {
             const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications)});
@@ -33,11 +39,17 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     const clearAll = useCallback(() => {
         setNotifications([])}, []);
     const value = {
-        notifications,
+  notifications,
         addNotification,
         removeNotification,
-        clearAll
-    };
+  clearAll
+    
+
+
+
+
+
+};
     return (<NotificationContext.Provider value={value}>
       {children}
       <NotificationContainer position={position}/>
@@ -125,14 +137,53 @@ function NotificationItem({ notification }) {
             default:
                 return 'bg-zion-cyan'}
     };
-    return (<motion.div layout initial={{ opacity: 0, x: 300, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.8 }} transition={{
+    return (<motion.div layout initial = {
+  { opacity: 0, x: 300,
+  scale: 0.8 
+
+
+
+
+
+}} animate = {
+  { opacity: 1, x: 0,
+  scale: 1 
+
+
+
+
+
+}} exit = {
+  { opacity: 0, x: 300,
+  scale: 0.8 
+
+
+
+
+
+}} transition = {
+  {
             type: "spring",
             stiffness: 500,
             damping: 30,
-            opacity: { duration: 0.2 }
+  opacity: { duration: 0.2 
+
+
+
+
+
+}
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
-      {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition={{ duration: notification.duration / 1000, ease: "linear" }}/>)}
+      {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
+  { duration: notification.duration / 1000,
+  ease: "linear" 
+
+
+
+
+
+}}/>)}
 
       <div className="flex items-start gap-3">
         {/* Icon */}
@@ -169,12 +220,5 @@ function NotificationItem({ notification }) {
       </div>
     </motion.div>)}
 // Convenience functions for quick notifications
-export function showSuccess(title, message, options) {
-    // This would be called from the context
-    return { type: 'success', title, message, ...options }}
-export function showError(title, message, options) {
-    return { type: 'error', title, message, ...options }}
-export function showWarning(title, message, options) {
-    return { type: 'warning', title, message, ...options }}
 export function showInfo(title, message, options) {
     return { type: 'info', title, message, ...options }}

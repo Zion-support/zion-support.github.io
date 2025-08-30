@@ -485,8 +485,6 @@ const SERVICE_LISTINGS = [
         reviewCount: 85,
     },
 ];
-function getRandomItem(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]}
 function generateRandomService(idNum) {
     const templates = [
         {

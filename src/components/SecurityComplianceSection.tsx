@@ -12,6 +12,7 @@ import { Shield,
   Eye
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export const SecurityComplianceSection: React.FC = (): JSX.Element => {
   const securityFeatures = [
     {
@@ -37,8 +38,54 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
       title: 'Network Security',
       description: 'Advanced network protection with intrusion detection and prevention.',
       benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
-    }
+    };
   ];
+=======
+const securityFeatures = [
+  {
+    title: "SOC 2 Type II Compliance",
+    description: "Annual third-party audits ensuring data security, availability, and confidentiality",
+    icon: "🔒",
+    status: "Certified",
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    title: "ISO 27001",
+    description: "International standard for information security management systems",
+    icon: "🌐",
+    status: "Certified",
+    color: "from-blue-500 to-cyan-600"
+  },
+  {
+    title: "GDPR Compliance",
+    description: "Full compliance with European data protection regulations",
+    icon: "🇪🇺",
+    status: "Compliant",
+    color: "from-purple-500 to-pink-600"
+  },
+  {
+    title: "HIPAA Compliance",
+    description: "Healthcare data protection standards for medical information",
+    icon: "🏥",
+    status: "Compliant",
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    title: "Zero Trust Architecture",
+    description: "Never trust, always verify security model implementation",
+    icon: "🛡️",
+    status: "Implemented",
+    color: "from-indigo-500 to-purple-600"
+  },
+  {
+    title: "End-to-End Encryption",;
+    description: "256-bit AES encryption for all data in transit and at rest",;
+    icon: "🔐",;
+    status: "Active",;
+    color: "from-teal-500 to-green-600";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const complianceFeatures = [
   {
@@ -62,22 +109,38 @@ const complianceFeatures = [
   {
     category: "Monitoring & Auditing",
     features: [
-      "24/7 security monitoring",
-      "Comprehensive audit logs",
-      "Real-time alerts",
-      "Automated compliance reporting"
-    ]
-  }
+      "24/7 security monitoring",;
+      "Comprehensive audit logs",;
+      "Real-time alerts",;
+      "Automated compliance reporting";
+    ];
+  };
 ];
 
 export function SecurityComplianceSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -89,20 +152,80 @@ export function SecurityComplianceSection() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Security Metrics */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {securityMetrics.map((metric, index)  => {
+          {securityMetrics.map((metric, index)  => {;
             const IconComponent = metric.icon;
             return (
-              <div key={metric.label} className="text-center">
+              <div key = {metric.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-600 rounded-full">
                     <IconComponent className="h-8 w-8 text-white" />
+=======
+        {/* Security Certifications */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {securityFeatures.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+            >
+              <div className="flex items-start gap-4">
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  <span className="text-xl">{feature.icon}</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">
+                    <div className={`w-2 h-2 rounded-full ${
+                      feature.status === 'Certified' ? 'bg-green-400' :
+                      feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'
+                    }`}></div>
+                    <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                 </div>
               </div>
@@ -111,14 +234,23 @@ export function SecurityComplianceSection() {
 
         {/* Security Features Grid */}
         <div className="grid md: grid-cols-2 gap-8 mb-16">
-          {securityFeatures.map((feature, index)  => {
+          {securityFeatures.map((feature, index)  => {;
             const IconComponent = feature.icon;
             return (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key = {feature.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
@@ -137,10 +269,34 @@ export function SecurityComplianceSection() {
         {/* Compliance Features */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
@@ -166,19 +322,28 @@ export function SecurityComplianceSection() {
 
         {/* Compliance Frameworks */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFrameworks.map((framework, index)  => {
+            {complianceFrameworks.map((framework, index)  => {;
               const IconComponent = framework.icon;
               return (
-                <div key={framework.name} className="bg-gray-800 rounded-xl p-6 text-center">
+                <div key = {framework.name} className="bg-gray-800 rounded-xl p-6 text-center">
                   <div className="flex justify-center mb-4">
                     <IconComponent className={`h-8 w-8 ${framework.color}`} />
                   </div>
@@ -192,24 +357,48 @@ export function SecurityComplianceSection() {
         {/* Security Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Security Performance Metrics
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>
-                <div className="text-gray-400 text-sm">Uptime SLA</div>
-              </div>
-              <div className="text-center">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;
+              <div className="text-center">;
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;
+                <div className="text-gray-400 text-sm">Uptime SLA</div>;
+              </div>;
+              <div className="text-center">;
                 <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>
-                <div className="text-gray-400 text-sm">Response Time</div>
+                <div className = "text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
@@ -226,18 +415,54 @@ export function SecurityComplianceSection() {
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to secure your business?</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default SecurityComplianceSection;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default SecurityComplianceSection;

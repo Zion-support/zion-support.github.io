@@ -142,9 +142,9 @@ export default function Solutions(...args[]):  {
                 View All Services
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};

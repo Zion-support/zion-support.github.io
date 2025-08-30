@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom  } from 'lucide-react';
-import { ThemeToggle  } from '../components/ThemeToggle';
-import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
+import { ThemeToggle  } from "../components/ThemeToggle";
+import { ZionLoadingSpinner  } from "../components/ui/EnhancedLoadingSpinner";
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+=======
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ThemeToggle } from "../components/ThemeToggle";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function AppHeader(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,13 +20,21 @@ export function AppHeader(...args[]):  {
   const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+<<<<<<< HEAD
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 10)};
+=======
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 10);
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const handleSearch = async (e: React.FormEvent)  => {
+<<<<<<< HEAD
+  const handleSearch = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -27,16 +42,17 @@ export function AppHeader(...args[]):  {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
         setIsSearching(false)}
-    }
+    };
   };
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
+<<<<<<< HEAD
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
     { name: 'Comp', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Contact', href: '/contact', current: false },;
   ];
 
   const services = [
@@ -59,6 +75,104 @@ export function AppHeader(...args[]):  {
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
+=======;
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },;
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },;
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },;
+    { name: 'About', href: '/about', current: false },;
+    { name: 'Contact', href: '/contact', current: false },;
+  ];
+
+  const services = [
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal Tech Platform',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'FinTech AI Solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Workflow, 
+      description: 'Supply Chain AI',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Building, 
+      description: 'Enterprise Infrastructure',
+      featured: true,
+      color: 'from-slate-500 to-gray-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Innovative Services 2025', 
+      href: '/services/innovative-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', ;
+      icon: Rocket, ;
+      description: 'Future Technology Solutions',;
+      featured: true,;
+      color: 'from-purple-500 to-pink-500';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const servicesCategories = [
@@ -108,6 +222,7 @@ export function AppHeader(...args[]):  {
       ]
     },
     {
+<<<<<<< HEAD
       name: 'Digital Solutions',
       icon: Rocket,
       color: 'from-orange-600 to-red-600',
@@ -126,6 +241,21 @@ export function AppHeader(...args[]):  {
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
       ]
     }
+=======
+      name: 'SMB Solutions',
+      href: '/solutions',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: false
+    },
+    {
+      name: 'Startup Solutions',;
+      href: '/solutions',;
+      icon: Rocket,;
+      description: 'Accelerate your startup growth',;
+      featured: false;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const solutionsCategories = [
@@ -151,6 +281,7 @@ export function AppHeader(...args[]):  {
       ]
     },
     {
+<<<<<<< HEAD
       name: 'Innovation Showcase',
       icon: TrendingUp,
       color: 'from-green-600 to-emerald-600',
@@ -159,14 +290,14 @@ export function AppHeader(...args[]):  {
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
         { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
       ]
-    }
+    };
   ];
 
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },;
   ];
 
   const compCategories = [
@@ -191,7 +322,7 @@ export function AppHeader(...args[]):  {
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
         { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
       ]
-    }
+    };
   ];
 
   const supportCategories = [
@@ -216,19 +347,104 @@ export function AppHeader(...args[]):  {
         { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
         { name: 'Community', href: '/community', description: 'User community' }
       ]
-    }
+    };
   ];
 
   const supportLinks = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Support', href: '/support', icon: MessageCircle },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },;
   ];
 
   return (
     <>
-      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      <header role = "banner" className = {
+  `sticky top-0 z-50 w-full transition-all duration-300 ${
+=======
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+  featured: true
+    
+},
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: Users,
+      description: 'Expert-led learning sessions',
+      featured: true
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
+      description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Join our community',
+      featured: false
+    },
+    {
+      name: 'Developers',;
+      href: '/developers',;
+      icon: Code,;
+      description: 'Developer resources',;
+      featured: false;
+    };
+  ];
+
+  const quickLinks = [
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Partners', href: '/partners', icon: HeartHandshake },;
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
+    { name: 'Community', href: '/community', icon: Users },;
+    { name: 'Developers', href: '/developers', icon: Code },;
+    { name: 'Privacy', href: '/privacy', icon: Shield },;
+    { name: 'Terms', href: '/terms', icon: BookOpen },;
+  ];
+
+  const contactInfo = {
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+
+
+
+};
+
+  return (
+    <>
+      <header className = {`sticky top-0 z-50 w-full transition-all duration-300 ${
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
@@ -256,6 +472,7 @@ export function AppHeader(...args[]):  {
             <nav className="hidden lg: flex items-center space-x-8">
               {mainNavigation.map((item)  => (
                 <div key={item.name} className="relative">
+<<<<<<< HEAD
                   {item.hasDropdown ? (
                     <button
                       onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
@@ -264,6 +481,250 @@ export function AppHeader(...args[]):  {
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
+=======;
+                  {item.hasDropdown ? (;
+                    <div className="relative">;
+                      <button;
+                        onClick={() => {;
+                          if (item.name === 'Services') {;
+                            setServicesDropdownOpen(!servicesDropdownOpen);
+                            setSolutionsDropdownOpen(false);
+                            setResourcesDropdownOpen(false);
+                          } else if (item.name = == 'Solutions') {;
+                            setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                            setServicesDropdownOpen(false);
+                            setResourcesDropdownOpen(false);
+                          } else if (item.name = == 'Resources') {;
+                            setResourcesDropdownOpen(!resourcesDropdownOpen);
+                            setServicesDropdownOpen(false);
+                            setSolutionsDropdownOpen(false);
+                          }
+                        }}
+                        className = "flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                      >
+                        {item.name}
+                        <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${
+                          (item.name === 'Services' && servicesDropdownOpen) ||
+                          (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                          (item.name === 'Resources' && resourcesDropdownOpen)
+                            ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+                      {/* Services Dropdown */}
+                      {item.name === 'Services' && servicesDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                          <div className="p-6">
+                            <div className="grid grid-cols-2 gap-6">
+                              {services.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  to={service.href}
+                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
+                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
+                                  }`}
+                                  onClick={() => setServicesDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
+                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        {service.name}
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        {service.description}
+                                      </p>
+                                      {service.featured && (
+                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                          <Star className="w-3 h-3" />
+                                          Featured
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/services"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setServicesDropdownOpen(false)}
+                                >
+                                  View All Services
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/request-quote"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      Get Quote
+                                    </Link>
+                                    <Link
+                                      to="/schedule-demo"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      Schedule Demo
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Solutions Dropdown */}
+                      {item.name === 'Solutions' && solutionsDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                          <div className="p-6">
+                            <div className="grid grid-cols-2 gap-4">
+                              {solutions.map((solution) => (
+                                <Link
+                                  key={solution.name}
+                                  to={solution.href}
+                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
+                                    solution.featured ? 'ring-2 ring-cyan-400/50' : ''
+                                  }`}
+                                  onClick={() => setSolutionsDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
+                                      {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        {solution.name}
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        {solution.description}
+                                      </p>
+                                      {solution.featured && (
+                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                          <Star className="w-3 h-3" />
+                                          Featured
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/solutions"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setSolutionsDropdownOpen(false)}
+                                >
+                                  View All Solutions
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/contact"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      Contact Us
+                                    </Link>
+                                    <Link
+                                      to="/schedule-demo"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      Schedule Demo
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Resources Dropdown */}
+                      {item.name === 'Resources' && resourcesDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                          <div className="p-6">
+                            <div className="grid grid-cols-2 gap-4">
+                              {resources.map((resource) => (
+                                <Link
+                                  key={resource.name}
+                                  to={resource.href}
+                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
+                                    resource.featured ? 'ring-2 ring-cyan-400/50' : ''
+                                  }`}
+                                  onClick={() => setResourcesDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
+                                      {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        {resource.name}
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        {resource.description}
+                                      </p>
+                                      {resource.featured && (
+                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                          <Star className="w-3 h-3" />
+                                          Featured
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/resources"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setResourcesDropdownOpen(false)}
+                                >
+                                  View All Resources
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/faq"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      FAQ
+                                    </Link>
+                                    <Link
+                                      to="/contact"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      Contact
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   ) : (
                     <Link
                       to={item.href}
@@ -322,13 +783,23 @@ export function AppHeader(...args[]):  {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Services Dropdown */}
         <AnimatePresence>
           {servicesDropdownOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+}}
               transition={{ duration: 0.3 }}
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
@@ -344,6 +815,103 @@ export function AppHeader(...args[]):  {
                           <h3 className="font-semibold text-white">{category.name}</h3>
                           <p className="text-sm text-slate-400">{category.description}</p>
                         </div>
+=======
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/50">
+            <div className="container-responsive py-6">
+              {/* Mobile Search */}
+              <form onSubmit={handleSearch} className="mb-6">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search services, solutions..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+              </form>
+
+              {/* Mobile Navigation */}
+              <nav className="space-y-4">
+                {navigation.map((item) => (;
+                  <div key={item.name}>;
+                    {item.hasDropdown ? (;
+                      <div>;
+                        <button;
+                          onClick={() => {;
+                            if (item.name === 'Services') setServicesDropdownOpen(!servicesDropdownOpen);
+                            else if (item.name === 'Solutions') setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                            else if (item.name === 'Resources') setResourcesDropdownOpen(!resourcesDropdownOpen);
+                          }}
+                          className = "flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
+                        >
+                          {item.name}
+                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
+                            (item.name === 'Services' && servicesDropdownOpen) ||
+                            (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                            (item.name === 'Resources' && resourcesDropdownOpen)
+                              ? 'rotate-180' : ''
+                          }`} />
+                        </button>
+                        
+                        {/* Mobile Services Dropdown */}
+                        {item.name === 'Services' && servicesDropdownOpen && (
+                          <div className="ml-4 mt-2 space-y-2">
+                            {services.slice(0, 6).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {service.name}
+                              </Link>
+                            ))}
+                            <Link
+                              to="/services"
+                              className="block text-cyan-400 hover:text-cyan-300 py-1 font-medium"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              View All Services →
+                            </Link>
+                          </div>
+                        )}
+
+                        {/* Mobile Solutions Dropdown */}
+                        {item.name === 'Solutions' && solutionsDropdownOpen && (
+                          <div className="ml-4 mt-2 space-y-2">
+                            {solutions.map((solution) => (
+                              <Link
+                                key={solution.name}
+                                to={solution.href}
+                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {solution.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Mobile Resources Dropdown */}
+                        {item.name === 'Resources' && resourcesDropdownOpen && (
+                          <div className="ml-4 mt-2 space-y-2">
+                            {resources.map((resource) => (
+                              <Link
+                                key={resource.name}
+                                to={resource.href}
+                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {resource.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </div>
                       <div className="space-y-2">
                         {category.services.map((service) => (
@@ -396,13 +964,23 @@ export function AppHeader(...args[]):  {
         </AnimatePresence>
       </header>
 
+<<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial = {
+  { opacity: 0,
+  x: '100%' 
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+}}
+            exit = {
+  { opacity: 0,
+  x: '100%' 
+}}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 lg:hidden"
           >
@@ -514,5 +1092,18 @@ export function AppHeader(...args[]):  {
           </motion.div>
         )}
       </AnimatePresence>
+=======;
+      {/* Click outside to close dropdowns */};
+      {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (;
+        <div;
+          className="fixed inset-0 z-40";
+          onClick={() => {;
+            setServicesDropdownOpen(false);
+            setSolutionsDropdownOpen(false);
+            setResourcesDropdownOpen(false);
+          }}
+        />
+      )}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </>
   )}

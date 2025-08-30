@@ -1,12 +1,6 @@
 import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated, viewProfile, clearFilters, handleBook, handleMessage }) {
-    const handleBookInternal = (talent) => {
-        if (handleBook) {
-            handleBook(talent)}
-        else {
-            console.log("Book talent:", talent.id)}
-    };
     const handleMessageInternal = (talent) => {
         if (handleMessage) {
             handleMessage(talent)}

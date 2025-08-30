@@ -32,6 +32,7 @@ import { Brain,
 
 const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: "Intelligent Process Discovery",
@@ -67,7 +68,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       title: "Real-time Monitoring",
       description: "Live dashboard showing workflow status and performance metrics",
       color: "from-yellow-500 to-orange-500"
-    }
+    };
   ];
 
   const pricingPlans = [
@@ -123,24 +124,36 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       cta: "Contact Sales",
       popular: false
     }
+=======
+    'AI-powered workflow automation and orchestration',
+    'Intelligent process optimization and decision making',
+    'Real-time workflow monitoring and analytics',
+    'Automated task assignment and resource allocation',
+    'Predictive workflow failure prevention',;
+    'Multi-system integration and synchronization',;
+    'Advanced workflow templates and customization',;
+    'Intelligent exception handling and recovery',;
+    'Comprehensive audit trail and compliance',;
+    'Scalable workflow engine for enterprise use';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
-    'Increase workflow efficiency by 70%',
-    'Reduce manual errors by 85%',
-    'Improve process completion time by 60%',
-    'Reduce operational costs by 45%',
-    'Enable 24/7 automated operations',
-    'Provide real-time process visibility'
+    'Increase workflow efficiency by 70%',;
+    'Reduce manual errors by 85%',;
+    'Improve process completion time by 60%',;
+    'Reduce operational costs by 45%',;
+    'Enable 24/7 automated operations',;
+    'Provide real-time process visibility';
   ];
 
   const useCases = [
-    'Enterprise process automation',
-    'Manufacturing workflow optimization',
-    'Healthcare process management',
-    'Financial services automation',
-    'Supply chain orchestration',
-    'Customer service workflow automation'
+    'Enterprise process automation',;
+    'Manufacturing workflow optimization',;
+    'Healthcare process management',;
+    'Financial services automation',;
+    'Supply chain orchestration',;
+    'Customer service workflow automation';
   ];
 
   const tiers = [
@@ -153,16 +166,16 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       name: 'Workflow Professional', 
       price: '$1,299/mo', 
       details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
-    },
-    { 
-      name: 'Workflow Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+    },;
+    { ;
+      name: 'Workflow Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -189,9 +202,18 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -223,9 +245,18 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 mb-4">
@@ -256,9 +287,18 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -295,9 +335,18 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
                 className={`relative rounded-xl p-8 ${
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-500/20 to-blue-500/20 border-2 border-purple-500/50' 
@@ -347,8 +396,14 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -442,11 +497,21 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             </div>
           </div>
           <p className="text-zion-slate-light">
+<<<<<<< HEAD
             Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.
           </p>
         </div>
       </section>
-    </div>
+    </div>;
   )};
 
 export default AIWorkflowOrchestrator;
+=======
+            Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.;
+          </p>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

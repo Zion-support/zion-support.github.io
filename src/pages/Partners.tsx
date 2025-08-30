@@ -65,7 +65,7 @@ export default function Partners() {
         'Referral commission programs'
       ],
       color: 'from-orange-600 to-red-600'
-    }
+    };
   ];
 
   const partnerBenefits = [
@@ -84,23 +84,24 @@ export default function Partners() {
     {
       title: 'Market Expansion',
       description: 'Expand your reach into new industries and geographies',
-      icon: Globe,
-      partners: [
-        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
-        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
-      ]
-    }
+      icon: Globe,;
+      partners: [;
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },;
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' };
+      ];
+    };
   ];
 
-  const benefits = [
-    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },
-    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
-    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
-    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
+  const benefits = [;
+    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },;
+    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },;
+    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },;
+    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-slate-900">
       <SEO 
         title="Partnerships - Zion Tech Group"
         description="Join Zion Tech Group's partner ecosystem. Explore partnership opportunities in AI, cloud, and technology solutions."
@@ -116,33 +117,63 @@ export default function Partners() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div 
             className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.5 
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+}}
             transition={{ duration: 0.8 }}
           >
             <Handshake className="w-12 h-12 text-white" />
           </motion.div>
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             Partner With Us
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Join our ecosystem of technology innovators and business leaders
           </motion.p>
           <motion.div 
             className="text-slate-400"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             Together, we're transforming industries through AI and technology
           </motion.div>
@@ -154,8 +185,14 @@ export default function Partners() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -171,10 +208,19 @@ export default function Partners() {
             {partnershipTypes.map((type, index)  => (
               <motion.div
                 key={type.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
@@ -203,17 +249,60 @@ export default function Partners() {
                 </div>
               </motion.div>
             ))}
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Handshake className="h-10 w-10 text-white" />
+              </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Partners</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join our global partner ecosystem and help organizations transform their business with cutting-edge technology solutions.
+              </p>
+            </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Partner Benefits */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -227,10 +316,135 @@ export default function Partners() {
           
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {partnerBenefits.map((benefit, index)  => (
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Partner Categories */}
+        <div className="space-y-12">
+          {partnerCategories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  <category.icon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+                  <p className="text-gray-600">{category.description}</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {category.partners.map((partner, partnerIndex) => (
+                  <motion.div
+                    key={partner.name}
+                    initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+                    transition={{ delay: (index * 0.1) + (partnerIndex * 0.05) }}
+                    className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                      {partner.logo}
+                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{partner.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{partner.category}</p>
+                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                      partner.tier === 'Platinum' ? 'bg-yellow-100 text-yellow-800' :
+                      partner.tier === 'Gold' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {partner.tier}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Benefits Section */}
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition={{ delay: 0.4 }}
+          className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Partner Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="text-center p-6"
               >
@@ -246,8 +460,24 @@ export default function Partners() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
@@ -262,12 +492,22 @@ export default function Partners() {
             {existingPartners.map((partner, index)  => (
               <motion.div
                 key={partner.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="group"
               >
+<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-4xl">{partner.logo}</div>
@@ -295,8 +535,14 @@ export default function Partners() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -313,10 +559,19 @@ export default function Partners() {
               {partnershipProcess.map((step, index)  => (
                 <motion.div
                   key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                   className="text-center group"
                 >
                   <div className="relative">
@@ -340,3 +595,21 @@ export default function Partners() {
       </div>
     </div>
   )}
+=======
+                Become a Partner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Contact Partnership Team
+              </a>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

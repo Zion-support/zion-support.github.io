@@ -4,12 +4,12 @@ export default function AITransportation() {
   const features = [
     'AI-powered route optimization and fleet management',
     'Intelligent traffic prediction and congestion avoidance',
-    'Automated vehicle maintenance and predictive diagnostics',
-    'Real-time logistics optimization and delivery tracking',
-    'Predictive analytics for demand forecasting',
-    'Smart traffic signal optimization and control',
-    'Integration with major transportation management systems',
-    'Custom AI models for transportation-specific insights'
+    'Automated vehicle maintenance and predictive diagnostics',;
+    'Real-time logistics optimization and delivery tracking',;
+    'Predictive analytics for demand forecasting',;
+    'Smart traffic signal optimization and control',;
+    'Integration with major transportation management systems',;
+    'Custom AI models for transportation-specific insights';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AITransportation() {
       name: 'Medium Fleet', 
       price: '$999/mo', 
       details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] 
-    },
-    { 
-      name: 'Large Fleet', 
-      price: '$2,499/mo', 
-      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Large Fleet', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Fleet management and route optimization',
-    'Public transportation optimization',
-    'Logistics and supply chain management',
-    'Traffic management and smart cities',
-    'Ride-sharing and mobility services',
-    'Freight and cargo transportation'
+    'Fleet management and route optimization',;
+    'Public transportation optimization',;
+    'Logistics and supply chain management',;
+    'Traffic management and smart cities',;
+    'Ride-sharing and mobility services',;
+    'Freight and cargo transportation';
   ];
 
   const benefits = [
-    'Reduce fuel costs by 15-30%',
-    'Improve delivery efficiency by 25-40%',
-    'Cut maintenance costs by 20-35%',
-    'Optimize routes for maximum productivity',
-    'Enhance driver safety and compliance',
-    'Scale transportation operations efficiently'
+    'Reduce fuel costs by 15-30%',;
+    'Improve delivery efficiency by 25-40%',;
+    'Cut maintenance costs by 20-35%',;
+    'Optimize routes for maximum productivity',;
+    'Enhance driver safety and compliance',;
+    'Scale transportation operations efficiently';
   ];
 
   const industries = [
-    'Logistics & Freight',
-    'Public Transportation',
-    'Ride-sharing & Mobility',
-    'E-commerce Delivery',
-    'Construction & Heavy Equipment',
-    'Emergency Services'
+    'Logistics & Freight',;
+    'Public Transportation',;
+    'Ride-sharing & Mobility',;
+    'E-commerce Delivery',;
+    'Construction & Heavy Equipment',;
+    'Emergency Services';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AITransportation() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

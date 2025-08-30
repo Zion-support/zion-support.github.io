@@ -124,6 +124,12 @@ export const marketplaceFilters = {
     "Available",
     "Coming Soon",
     "Limited Availability",
-    "Custom Development"
+  "Custom Development"
   ]
+
+
+
+
+
+
 };

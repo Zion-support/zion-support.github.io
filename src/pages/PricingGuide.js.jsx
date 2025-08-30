@@ -12,15 +12,16 @@ export default function PricingGuide() {
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getCategoryIcon = (category) => {
         const icons = {
-            'AI Development': <Brain className="w-6 h-6"/>,
+  'AI Development': <Brain className="w-6 h-6"/>,
             'Cloud Services': <Cloud className="w-6 h-6"/>,
             'DevOps': <Zap className="w-6 h-6"/>,
             'Cybersecurity': <Shield className="w-6 h-6"/>,
             'Data & Analytics': <Database className="w-6 h-6"/>,
             'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
             'Emerging Tech': <Globe className="w-6 h-6"/>,
-            'Managed Services': <Lock className="w-6 h-6"/>
-        };
+  'Managed Services': <Lock className="w-6 h-6"/>
+        
+};
         return icons[category] || <Star className="w-6 h-6"/>};
     const formatPrice = (price) => {
         if (price >= 1000) {
@@ -28,7 +29,9 @@ export default function PricingGuide() {
         return `$${price}`};
     const getMarketComparison = (price, category) => {
         const comparisons = {
-            'AI Development': { avg: price * 1.3, savings: 23 },
+  'AI Development': { avg: price * 1.3,
+  savings: 23 
+},
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },
             'Cybersecurity': { avg: price * 1.4, savings: 29 },

@@ -11,14 +11,20 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";
 // Mock category data
 const categoriesInfo = {
-    "getting-hired": {
+  "getting-hired": {
         id: "getting-hired",
         name: "Getting Hired",
         description: "Tips, strategies, and questions about getting hired on the platform.",
         postCount: 45,
         adminOnly: false,
-        icon: "Briefcase"
-    },
+  icon: "Briefcase"
+    
+
+
+
+
+
+},
     "project-help": {
         id: "project-help",
         name: "Project Help",
@@ -53,11 +59,17 @@ const categoriesInfo = {
     }
 };
 const iconMap = {
-    "Briefcase": Briefcase,
+  "Briefcase": Briefcase,
     "MessageSquare": MessageSquare,
     "Code": Code,
     "FileText": FileText,
-    "Megaphone": Megaphone
+  "Megaphone": Megaphone
+
+
+
+
+
+
 };
 function CategoryContent({ categoryId, category, IconComponent, user, }) {
     const [searchQuery, setSearchQuery] = useState("");
@@ -116,7 +128,15 @@ export default function ForumCategoryPage() {
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
+      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {
+  `community, forum,
+  ${category.id
+
+
+
+
+
+}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>

@@ -104,11 +104,11 @@ export interface DocumentationConfig {
     primaryColor?: string;
     compName?: string}}
 export class APIDocGeneratorService {
-  private supportedFrameworks = [
-    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
+  private supportedFrameworks = [;
+    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel';
   ];
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
+  private supportedLanguages = [;
+    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby';
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -125,11 +125,19 @@ export class APIDocGeneratorService {
       examples[],
       metadata: {
         lastGenerated: new Date(),
+<<<<<<< HEAD
         totalEndpoints: 0,
         coverage: 0,
         languages[],
         frameworks[]
       }
+=======;
+        totalEndpoints: 0,;
+        coverage: 0,;
+        languages: [],;
+        frameworks: [];
+      };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
     try {
       // Analyze source code
@@ -143,13 +151,13 @@ export class APIDocGeneratorService {
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {
+      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {;
       console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length}
     return documentation}
-  private async analyzeSourceCode(sourcePath: string): Promise<{
+  private async analyzeSourceCode(sourcePath: string): Promise<{;
     endpoints: APIEndpoint[];
     schemas: APISchema[];
     languages: string[];
@@ -164,19 +172,27 @@ export class APIDocGeneratorService {
     for (const file of files) {
       const extension = file.split('.').pop()?.toLowerCase();
       
-      if (extension === 'js' || extension === 'ts') {
+      if (extension = == 'js' || extension === 'ts') {;
         languages.push('javascript', 'typescript');
         frameworks.push('express', 'fastify');
-        endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension === 'py') {
+<<<<<<< HEAD
+        endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = == 'py') {;
         languages.push('python');
         frameworks.push('django', 'flask', 'fastapi');
-        endpoints.push(...this.analyzePythonFile(file))} else if (extension === 'java') {
+        endpoints.push(...this.analyzePythonFile(file))} else if (extension = == 'java') {
+=======;
+        endpoints.push(...this.analyzeJavaScriptFile(file));
+      } else if (extension = == 'py') {;
+        languages.push('python');
+        frameworks.push('django', 'flask', 'fastapi');
+        endpoints.push(...this.analyzePythonFile(file));
+      } else if (extension = == 'java') {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         languages.push('java');
         frameworks.push('spring');
         endpoints.push(...this.analyzeJavaFile(file))}
     }
     // Remove duplicates
-    const uniqueLanguages = [...new Set(languages)];
     const uniqueFrameworks = [...new Set(frameworks)];
     return {
       endpoints,
@@ -223,8 +239,13 @@ export class APIDocGeneratorService {
               description: 'Number of users per page'
             }
           ],
-          requestBody: undefined,
+<<<<<<< HEAD
+          requestBody: null,
           responses[
+=======
+          requestBody: null,
+          responses: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             {
               code: '200',
               description: 'Successful response',
@@ -273,8 +294,13 @@ export class APIDocGeneratorService {
               description: 'User unique identifier'
             }
           ],
-          requestBody: undefined,
+<<<<<<< HEAD
+          requestBody: null,
           responses[
+=======
+          requestBody: null,
+          responses: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             {
               code: '200',
               description: 'User found successfully',
@@ -353,8 +379,13 @@ export class APIDocGeneratorService {
             description: 'Filter orders by status'
           }
         ],
-        requestBody: undefined,
+<<<<<<< HEAD
+        requestBody: null,
         responses[
+=======
+        requestBody: null,
+        responses: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           {
             code: '200',
             description: 'Successful response',
@@ -449,7 +480,7 @@ export class APIDocGeneratorService {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer your-jwt-token'
           },
-          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
+          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : null
         },
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
@@ -485,9 +516,15 @@ export class APIDocGeneratorService {
         method: 'GET',
         summary: 'Health check endpoint',
         description: 'Simple health check to verify API is running',
+<<<<<<< HEAD
         parameters[],
-        requestBody: undefined,
+        requestBody: null,
         responses[
+=======
+        parameters: [],
+        requestBody: null,
+        responses: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           {
             code: '200',
             description: 'API is healthy'

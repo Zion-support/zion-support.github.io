@@ -2,11 +2,21 @@ import { useState } from 'react';
 export default function Support() {
     const [activeCategory, setActiveCategory] = useState('general');
     const faqCategories = {
+  <<<<<<< HEAD
         general[
+=======
+  general: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             {
                 question: 'How do I get started with Zion Tech Group services?',
-                answer: 'Getting started is easy! Simply contact our team through our contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions for your business.'
-            },
+  answer: 'Getting started is easy! Simply contact our team through our contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions for your business.'
+            
+
+
+
+
+
+},
             {
                 question: 'What industries do you serve?',
                 answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our AI and technology solutions are designed to be industry-agnostic and can be customized for  sector.'

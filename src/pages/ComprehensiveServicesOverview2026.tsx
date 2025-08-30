@@ -205,25 +205,41 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
+<<<<<<< HEAD
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Sustainable Technology'),
       marketSize: '$1.2 trillion by 2027',
       avgROI: '300-800%',
       innovationLevel: 'Advanced'
-    }
+    };
   ];
 
-  const filteredCategories = selectedCategory === 'all' 
+  const filteredCategories = selectedCategory === 'all' ;
     ? serviceCategories: serviceCategories.filter(cat  => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: string)  => {
+  const toggleCategoryExpansion = (categoryId: string)  => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId)};
+=======
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),;
+      marketSize: '$1.2 trillion by 2027',;
+      avgROI: '300-800%',;
+      innovationLevel: 'Advanced';
+    };
+  ];
 
-  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
+  const filteredCategories = selectedCategory === 'all' ;
+    ? serviceCategories ;
+    : serviceCategories.filter(cat => cat.id === selectedCategory);
+
+  const toggleCategoryExpansion = (categoryId: string) => {;
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
@@ -235,8 +251,24 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -331,10 +363,42 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
               {filteredCategories.map((category, index) => (
                 <motion.div
                   key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6"
                 >
                   {/* Category Header */}
@@ -418,9 +482,33 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                   <AnimatePresence>
                     {expandedCategory === category.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
                       >
@@ -491,8 +579,24 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -522,9 +626,19 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

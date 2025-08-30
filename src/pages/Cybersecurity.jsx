@@ -2,6 +2,7 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
+<<<<<<< HEAD
     const securityServices = [
         {
             icon: Shield,
@@ -46,6 +47,8 @@ const Cybersecurity = () => {
             path: "/identity-access-management"
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const securityFeatures = [
         {
             icon: CheckCircle,

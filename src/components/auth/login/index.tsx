@@ -1,8 +1,12 @@
-import { LoginForm  } from './LoginForm';
+<<<<<<< HEAD
+import { LoginForm  } from "./LoginForm";
+=======
+import { LoginForm } from "./LoginForm";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function LoginContent(...args[]):  {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
@@ -18,9 +22,19 @@ export function LoginContent(...args[]):  {
             Don't have an account?{' '}
             <a href="/register" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
               Sign up
+<<<<<<< HEAD
             </a>
           </p>
         </div>
       </div>
     </div>
   )}
+=======;
+            </a>;
+          </p>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

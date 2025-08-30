@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // // // console.log('📊 Starting continuous performance monitoring automation...');
@@ -63,14 +62,19 @@ async function runPerformanceMonitor() {
       // // // console.log('ℹ️  Dependency check not available');
 
     // Generate performance report
+<<<<<<< HEAD
     // // // console.log('📊 Generating performance report...');
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       buildSize: getDirectorySize(distPath),
       largeFiles: findLargeFiles(distPath),
-      summary: 'Performance monitoring completed'
-    };
+  summary: 'Performance monitoring completed'
+    
+};
 
+=======
+    console.log('📊 Generating performance report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Performance report saved to ${reportPath}`);

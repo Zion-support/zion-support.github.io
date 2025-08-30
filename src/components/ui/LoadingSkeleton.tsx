@@ -10,27 +10,37 @@ interface SkeletonProps {
 }
 
 export function Skeleton({ 
-  className = '', 
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = true,
-  animated = true 
-}: SkeletonProps) {
+  className = '', ;
+  height = 'h-4', ;
+  width = 'w-full', ;
+  rounded = true,;
+  animated = true ;
+}: SkeletonProps) {;
   const baseClasses = `bg-gray-200 dark:bg-gray-700 ${height} ${width} ${rounded ? 'rounded' : ''}`;
   
   if (animated) {
     return (
       <motion.div
-        className={`${baseClasses} ${className}`}
-        animate={{
+        className = {`${baseClasses} ${className}`}
+        animate = {
+  {
           opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
+  
+
+}}
+        transition = {
+  {
           duration: 1.5,
           repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+  ease: "easeInOut";
+        ;
+;
+;
+
+
+
+}};
+      />;
     );
   }
   
@@ -70,12 +80,12 @@ export function CardSkeleton({
         <Skeleton className="h-6 w-3/4" />
         {Array.from({ length: lines }).map((_, index) => (
           <Skeleton 
-            key={index} 
-            className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} 
-          />
-        ))}
-      </div>
-    </div>
+            key={index} ;
+            className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} ;
+          />;
+        ))};
+      </div>;
+    </div>;
   );
 }
 
@@ -111,12 +121,12 @@ export function TableSkeleton({
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                 />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+              ))};
+            </div>;
+          </div>;
+        ))};
+      </div>;
+    </div>;
   );
 }
 
@@ -139,12 +149,12 @@ export function ListSkeleton({
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
           )}
           <div className="flex-1 space-y-2">
-            <Skeleton className="h-4 w-3/4" />
-            <Skeleton className="h-3 w-1/2" />
-          </div>
-        </div>
-      ))}
-    </div>
+            <Skeleton className="h-4 w-3/4" />;
+            <Skeleton className="h-3 w-1/2" />;
+          </div>;
+        </div>;
+      ))};
+    </div>;
   );
 }
 
@@ -166,11 +176,11 @@ export function GridSkeleton({
       {Array.from({ length: items }).map((_, index) => (
         <CardSkeleton 
           key={index} 
-          lines={3} 
-          showImage={showImage}
-          showAvatar={false}
-        />
-      ))}
-    </div>
+          lines={3} ;
+          showImage={showImage};
+          showAvatar={false};
+        />;
+      ))};
+    </div>;
   );
 }

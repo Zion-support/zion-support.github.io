@@ -4,12 +4,12 @@ export default function AIFinancialTrading() {
   const features = [
     'AI-powered market analysis and trend prediction',
     'Intelligent portfolio optimization and risk management',
-    'Automated trading strategies and execution',
-    'Real-time market data processing and insights',
-    'Predictive analytics for asset performance',
-    'Risk assessment and portfolio diversification',
-    'Integration with major trading platforms',
-    'Custom AI models for specific asset classes'
+    'Automated trading strategies and execution',;
+    'Real-time market data processing and insights',;
+    'Predictive analytics for asset performance',;
+    'Risk assessment and portfolio diversification',;
+    'Integration with major trading platforms',;
+    'Custom AI models for specific asset classes';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIFinancialTrading() {
       name: 'Professional Trader', 
       price: '$799/mo', 
       details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] 
-    },
-    { 
-      name: 'Institutional', 
-      price: '$2,499/mo', 
-      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Institutional', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Stock market trading and analysis',
-    'Cryptocurrency trading and portfolio management',
-    'Forex trading and currency analysis',
-    'Options and derivatives trading',
-    'Commodity trading and futures',
-    'Portfolio management and rebalancing'
+    'Stock market trading and analysis',;
+    'Cryptocurrency trading and portfolio management',;
+    'Forex trading and currency analysis',;
+    'Options and derivatives trading',;
+    'Commodity trading and futures',;
+    'Portfolio management and rebalancing';
   ];
 
   const benefits = [
-    'Improve trading performance by 20-40%',
-    'Reduce portfolio risk by 25-45%',
-    'Increase returns through optimized strategies',
-    'Automate routine trading operations',
-    'Enhance decision-making with AI insights',
-    'Scale trading operations efficiently'
+    'Improve trading performance by 20-40%',;
+    'Reduce portfolio risk by 25-45%',;
+    'Increase returns through optimized strategies',;
+    'Automate routine trading operations',;
+    'Enhance decision-making with AI insights',;
+    'Scale trading operations efficiently';
   ];
 
   const industries = [
-    'Individual Trading',
-    'Professional Trading',
-    'Institutional Investment',
-    'Hedge Funds',
-    'Asset Management',
-    'Quantitative Trading'
+    'Individual Trading',;
+    'Professional Trading',;
+    'Institutional Investment',;
+    'Hedge Funds',;
+    'Asset Management',;
+    'Quantitative Trading';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIFinancialTrading() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

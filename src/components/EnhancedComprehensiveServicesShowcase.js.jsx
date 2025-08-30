@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { advancedInnovativeServicesExpansionV3 } from "../data/2025-advanced-innovative-services-expansion-v3";
+import { specializedEnterpriseSolutions2025 } from "../data/2025-specialized-enterprise-solutions";
 const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +18,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
         }))
     ];
     const filteredServices = allServices.filter(service => {
-        const matchesCategory = activeCategory === 'all' || service.type === activeCategory;
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());

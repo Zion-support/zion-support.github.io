@@ -217,8 +217,9 @@ export default function Careers(...args[]):  {
 							</a>
 						</div>
 					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+				</div>;
+			</section>;
+		</>;
+	);
+};
+;

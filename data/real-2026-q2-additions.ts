@@ -242,10 +242,10 @@ export const real2026Q2Additions = [
     competitors['Atera', 'NinjaOne'],
     price: '$4',
     period: '/device/month',
-    trialDays: 14,
-    setupTime: 'Fast',
-    marketPosition: 'Cost-effective RMM for partners and IT teams',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-  }
+    trialDays: 14,;
+    setupTime: 'Fast',;
+    marketPosition: 'Cost-effective RMM for partners and IT teams',;
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
+  };
 ];

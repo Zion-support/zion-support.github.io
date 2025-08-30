@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
-const AllServicesIndex: React.FC = (): JSX.Element => {
+const AllServicesIndex: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -157,14 +157,14 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
       icon: '📋',
       features['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],
       benefits['Automated compliance', 'Reduced risk']
-    }
+    };
   ];
 
   const categories = ['all', 'AI-Powered Micro SAAS', 'Cloud & Infrastructure', 'Data & Analytics', 'Security & Compliance'];
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory});
@@ -172,7 +172,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO
-        title="All Services Index | Zion Tech Group - Complete Service Directory"
+        title = "All Services Index | Zion Tech Group - Complete Service Directory"
         description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs."
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/all-services"
@@ -183,8 +183,14 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -262,10 +268,10 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
                   Try adjusting your search terms or category filter
                 </p>
                 <button
-                  onClick={() => {
+                  onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('all')}}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                  className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
                 </button>
@@ -275,9 +281,18 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
                 {filteredServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                   >
                     <div className="flex items-start justify-between mb-4">
@@ -349,8 +364,14 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -411,7 +432,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default AllServicesIndex;

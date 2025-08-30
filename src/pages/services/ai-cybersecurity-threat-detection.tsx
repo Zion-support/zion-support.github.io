@@ -49,12 +49,12 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       icon: Lock,
       title: 'Automated Response',
       description: 'Instant threat containment and remediation without human intervention'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Intelligence',
-      description: 'Live threat intelligence feeds and global attack pattern recognition'
-    }
+    },;
+    {;
+      icon: Zap,;
+      title: 'Real-Time Intelligence',;
+      description: 'Live threat intelligence feeds and global attack pattern recognition';
+    };
   ];
 
   const pricingPlans = [
@@ -102,12 +102,12 @@ export default function AICybersecurityThreatDetection(...args: []):  {
         'Custom AI models',
         'Dedicated security team',
         'Advanced compliance',
-        'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
-      ],
-      popular: false
-    }
+        'On-premise options',;
+        'SLA guarantees',;
+        'Custom integrations';
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -125,12 +125,12 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       icon: Target,
       title: 'Zero False Positives',
       description: 'Advanced AI reduces alert fatigue with intelligent filtering'
-    },
-    {
-      icon: BarChart3,
-      title: '60% Cost Reduction',
-      description: 'Automated security reduces manual intervention and operational costs'
-    }
+    },;
+    {;
+      icon: BarChart3,;
+      title: '60% Cost Reduction',;
+      description: 'Automated security reduces manual intervention and operational costs';
+    };
   ];
 
   const threatTypes = [
@@ -148,25 +148,25 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       title: 'DDoS Attacks',
       description: 'Predictive AI blocks distributed attacks before they impact services',
       icon: Network
-    },
-    {
-      title: 'Insider Threats',
-      description: 'Behavioral analysis detects unusual user activities and data access patterns',
-      icon: Users
-    }
+    },;
+    {;
+      title: 'Insider Threats',;
+      description: 'Behavioral analysis detects unusual user activities and data access patterns',;
+      icon: Users;
+    };
   ];
 
   const complianceFrameworks = [
-    'SOC 2 Type II',
-    'ISO 27001',
-    'GDPR',
-    'HIPAA',
-    'PCI DSS',
-    'NIST Cybersecurity Framework'
+    'SOC 2 Type II',;
+    'ISO 27001',;
+    'GDPR',;
+    'HIPAA',;
+    'PCI DSS',;
+    'NIST Cybersecurity Framework';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Cybersecurity Threat Detection - Zion Tech Group"
         description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
@@ -176,8 +176,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
@@ -211,8 +227,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -229,9 +261,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300"
               >
@@ -250,8 +306,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -268,9 +340,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -289,8 +385,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -307,9 +419,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             {threatTypes.map((threat, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
               >
@@ -328,8 +464,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -346,9 +498,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
               >
@@ -364,8 +540,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -382,9 +574,33 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
@@ -435,8 +651,24 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -457,11 +689,11 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             </div>
             
             <p className="text-gray-400 mt-6">
-              No credit card required • 30-day free trial • 24/7 security monitoring
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              No credit card required • 30-day free trial • 24/7 security monitoring;
+            </p>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

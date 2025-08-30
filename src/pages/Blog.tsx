@@ -21,12 +21,20 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Posts', icon: TrendingUp, count: 24 },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 8 },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
     { id: 'innovation', name: 'Innovation', icon: Lightbulb, count: 3 },
     { id: 'transformation', name: 'Digital Transformation', icon: Rocket, count: 2 }
+=======;
+    { id: 'all', name: 'All Posts', count: 45 },;
+    { id: 'ai', name: 'AI & Machine Learning', count: 18 },;
+    { id: 'quantum', name: 'Quantum Computing', count: 12 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },;
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 7 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const featuredPosts = [
@@ -60,9 +68,10 @@ export default function Blog() {
       author: 'Jennifer Kim',
       date: 'December 10, 2024',
       readTime: '10 min read',
+<<<<<<< HEAD
       image: '/images/blog/cloud-native-dev.jpg',
       featured: true
-    }
+    };
   ];
 
   const recentPosts = [
@@ -125,10 +134,10 @@ export default function Blog() {
       date: 'November 25, 2024',
       readTime: '6 min read',
       image: '/images/blog/ai-ethics.jpg'
-    }
+    };
   ];
 
-  const filteredPosts = selectedCategory === 'all' 
+  const filteredPosts = selectedCategory === 'all' ;
     ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
 
   const searchResults = searchQuery 
@@ -136,11 +145,11 @@ export default function Blog() {
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+      );
     : [];
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className = "min-h-screen bg-slate-900">
       <SEO 
         title="Blog - Zion Tech Group"
         description="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and digital transformation from Zion Tech Group experts."
@@ -156,17 +165,108 @@ export default function Blog() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
+=======
+      views: 734,
+      featured: false,
+      tags: ['AI', 'Cybersecurity', 'Threat Detection'],
+      image: '/images/blog/ai-cybersecurity.jpg'
+    },
+    {
+      id: 5,
+      title: 'Micro SaaS Success Stories: Lessons from the Field',
+      excerpt: 'Real-world examples of successful micro SaaS businesses and the strategies that made them thrive.',
+      category: 'ai',
+      author: 'David Kim',
+      date: '2025-01-05',
+      readTime: '7 min read',
+      views: 445,
+      featured: false,
+      tags: ['Micro SaaS', 'Success Stories', 'Business Strategy'],
+      image: '/images/blog/micro-saas-success.jpg'
+    },
+    {
+      id: 6,
+      title: 'The Impact of Edge Computing on IoT Applications',
+      excerpt: 'Understanding how edge computing is transforming IoT deployments and improving performance.',
+      category: 'cloud',
+      author: 'Lisa Chen',
+      date: '2025-01-03',
+      readTime: '9 min read',;
+      views: 389,;
+      featured: false,;
+      tags: ['Edge Computing', 'IoT', 'Performance'],;
+      image: '/images/blog/edge-computing-iot.jpg';
+    };
+  ];
+
+  const filteredPosts = blogPosts.filter(post => {;
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const formatDate = (dateString: string) => {;
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             Our Blog
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Insights, trends, and expert perspectives on technology innovation
           </motion.p>
@@ -174,9 +274,18 @@ export default function Blog() {
           {/* Search Bar */}
           <motion.div 
             className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -197,8 +306,14 @@ export default function Blog() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             {categories.map((category)  => (
@@ -223,13 +338,44 @@ export default function Blog() {
       </section>
 
       {/* Featured Posts */}
+<<<<<<< HEAD
       {!searchQuery && (
         <section className="py-20 bg-slate-900">
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+      {filteredPosts.filter(post => post.featured).length > 0 && (
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.h2
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -241,19 +387,69 @@ export default function Blog() {
               </p>
             </motion.div>
             
+<<<<<<< HEAD
             <div className="grid lg: grid-cols-3 gap-8">
               {featuredPosts.map((post, index)  => (
                 <motion.article
                   key={post.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                   className="group"
                 >
                   <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
                     <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                       <div className="text-6xl">📱</div>
+=======
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredPosts
+                .filter(post => post.featured)
+                .map((post, index) => (
+                  <motion.article
+                    key={post.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    viewport={{ once: true }}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
+                  >
+                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                      <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     </div>
                     
                     <div className="p-6">
@@ -294,13 +490,44 @@ export default function Blog() {
         </section>
       )}
 
+<<<<<<< HEAD
       {/* Search Results or Recent Posts */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+      {/* All Posts Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -318,8 +545,14 @@ export default function Blog() {
           {searchQuery && searchResults.length === 0 ? (
             <motion.div 
               className="text-center py-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -337,11 +570,52 @@ export default function Blog() {
               {(searchQuery ? searchResults : filteredPosts).map((post, index)  => (
                 <motion.article
                   key={post.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                   className="group"
+=======
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  viewport={{ once: true }}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden h-full">
                     <div className="h-40 bg-gradient-to-br from-slate-700/50 to-slate-800/50 flex items-center justify-center">
@@ -388,12 +662,19 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -428,28 +709,76 @@ export default function Blog() {
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
             Ready to Transform Your Business?
           </motion.h2>
           <motion.p 
             className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+}}
           >
             Let's discuss how our expertise can help you achieve your technology goals
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
           >
             <a 
               href="/contact" 
@@ -467,5 +796,32 @@ export default function Blog() {
         </div>
       </section>
     </div>
+=======
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Get the latest articles, research updates, and technology insights delivered to your inbox.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200">
+                Subscribe
+              </button>
+            </div>
+            
+            <p className="text-sm text-slate-400 mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.;
+            </p>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

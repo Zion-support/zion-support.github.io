@@ -166,17 +166,45 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                 requestAnimationFrame(animate)};
             animate()}
         return () => {
+<<<<<<< HEAD
             window.removeEventListener('resize', resizeCanvas)}}, [variant, intensity]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>)}
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+}}/>)}
+=======
+            window.removeEventListener('resize', resizeCanvas);
+        };
+    }, [variant, intensity]);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+
+
+
+
+}}/>);
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
-    return (<span className={className} style={{
+    return (<span className={className} style = {
+  {
             color: color,
-            textShadow: `
-          ${glowSize} ${color},
+  textShadow: `
+          ${glowSize
+
+
+
+
+
+} ${color},
           0 0 30px ${color},
           0 0 40px ${color}
         `,
@@ -195,8 +223,16 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
       <div className="relative z-10 p-6">
         {children}
       </div>
-      <div className="absolute inset-0 opacity-20" style={{
-            background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`,
+      <div className="absolute inset-0 opacity-20" style = {
+  {
+            background: `linear-gradient(45deg, transparent 30%,
+  ${glowColor
+
+
+
+
+
+}20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
         }}/>
     </div>)}

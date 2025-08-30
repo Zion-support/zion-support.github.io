@@ -167,18 +167,18 @@ export function Sidebar() {
     }
   ];
 
-  const toggleItem = (itemName: string) => {
-    setExpandedItems(prev => 
-      prev.includes(itemName)
-        ? prev.filter(name => name !== itemName)
-        : [...prev, itemName]
+  const toggleItem = (itemName: string) => {;
+    setExpandedItems(prev => ;
+      prev.includes(itemName);
+        ? prev.filter(name => name !== itemName);
+        : [...prev, itemName];
     );
   };
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
+    <div className = {`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : 'translate-x-full'
     }`}>
       <div className="flex flex-col h-full">
@@ -268,12 +268,12 @@ export function Sidebar() {
               className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
               onClick={onClose}
             >
-              Contact Support
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+              Contact Support;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 }
 

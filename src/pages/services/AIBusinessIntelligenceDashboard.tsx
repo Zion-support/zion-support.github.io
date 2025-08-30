@@ -1,9 +1,9 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { GradientHeading  } from '../../components/ui/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../../components/ui/card';
-import { Badge  } from '../../components/ui/badge';
-import { Button  } from '../../components/ui/button';
+import { SEO  } from "../../components/SEO";
+import { GradientHeading  } from "../../components/ui/GradientHeading";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from "../../components/ui/card";
+import { Badge  } from "../../components/ui/badge";
+import { Button  } from "../../components/ui/button";
 import { CheckCircle, TrendingUp, BarChart3, Zap, Shield, Users, Globe, Clock  } from 'lucide-react';
 
 const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
@@ -37,7 +37,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       icon: <Globe className="h-6 w-6 text-teal-500" />,
       title: "Multi-platform Access",
       description: "Access your dashboards from where with responsive web and mobile interfaces"
-    }
+    };
   ];
 
   const pricingTiers = [
@@ -90,7 +90,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
         "Custom integrations"
       ],
       popular: false
-    }
+    };
   ];
 
   const benefits = [
@@ -109,11 +109,11 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
     {
       metric: "3x",
       description: "Increase in team productivity and collaboration"
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
         description="Transform your business data into actionable intelligence with our AI-powered BI dashboard. Real-time analytics, predictive insights, and comprehensive reporting."
@@ -273,7 +273,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   )};
 
 export default AIBusinessIntelligenceDashboard;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
+<<<<<<< HEAD
     const businessSolutions = [
         {
             category: 'Marketing & Sales',
@@ -71,6 +72,8 @@ export default function AIBusinessSolutions() {
             ]
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const benefits = [
         {
             title: 'Increased Efficiency',

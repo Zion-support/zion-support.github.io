@@ -309,9 +309,9 @@ export default function CaseStudies(...args[]):  {
 								Explore Our Services →
 							</Link>
 						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

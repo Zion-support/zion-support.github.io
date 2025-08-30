@@ -1,6 +1,6 @@
 import * as React from 'react.ts'
 import { cva, type VariantProps  } from 'class-variance-authority.ts'
-import { cn  } from '../../utils/cn'
+import { cn  } from "../../utils/cn"
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
@@ -43,8 +43,16 @@ export interface BadgeProps
 
 function Badge(...args[]):  {
   return (
-    <div className={cn(badgeVariants({ variant, size }), className)} {...props} />
-  )
-}
+    <div className = {
+  cn(badgeVariants({ variant,
+  size 
 
-export { Badge, badgeVariants }
+
+
+
+;
+}), className)} {...props} />;
+  );
+};
+;
+export { Badge, badgeVariants };

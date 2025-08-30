@@ -10,28 +10,28 @@ export default function Research() {
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },;
+    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 };
   ];
 
-  const statuses = [
-    { id: 'all', name: 'All Statuses', count: 0 },
-    { id: 'active', name: 'Active', count: 0 },
-    { id: 'completed', name: 'Completed', count: 0 },
-    { id: 'planning', name: 'Planning', count: 0 },
-    { id: 'published', name: 'Published', count: 0 }
+  const statuses = [;
+    { id: 'all', name: 'All Statuses', count: 0 },;
+    { id: 'active', name: 'Active', count: 0 },;
+    { id: 'completed', name: 'Completed', count: 0 },;
+    { id: 'planning', name: 'Planning', count: 0 },;
+    { id: 'published', name: 'Published', count: 0 };
   ];
 
-  const types = [
-    { id: 'all', name: 'All Types', count: 0 },
-    { id: 'research', name: 'Research Papers', count: 0 },
-    { id: 'patents', name: 'Patents', count: 0 },
-    { id: 'prototypes', name: 'Prototypes', count: 0 },
-    { id: 'collaborations', name: 'Collaborations', count: 0 }
+  const types = [;
+    { id: 'all', name: 'All Types', count: 0 },;
+    { id: 'research', name: 'Research Papers', count: 0 },;
+    { id: 'patents', name: 'Patents', count: 0 },;
+    { id: 'prototypes', name: 'Prototypes', count: 0 },;
+    { id: 'collaborations', name: 'Collaborations', count: 0 };
   ];
 
   const researchProjects = [
@@ -208,40 +208,58 @@ export default function Research() {
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
         }
-      ],
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
-      featured: true,
-      progress: 55,
-      impact: 'high'
-    }
+      ],;
+      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
+      featured: true,;
+      progress: 55,;
+      impact: 'high';
+    };
   ];
 
   // Update counts
-  categories.forEach(cat  => {
+<<<<<<< HEAD
+  categories.forEach(cat = > {;
     cat.count = researchProjects.filter(p => p.category === cat.id).length});
 
-  statuses.forEach(status => {
+  statuses.forEach(status = > {;
     status.count = researchProjects.filter(p => p.status === status.id).length});
 
-  types.forEach(type => {
+  types.forEach(type = > {;
     type.count = researchProjects.filter(p => p.type === type.id).length});
+=======
+  categories.forEach(cat = > {;
+    cat.count = researchProjects.filter(p => p.category === cat.id).length;
+  });
 
-  const filteredProjects = researchProjects.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  statuses.forEach(status = > {;
+    status.count = researchProjects.filter(p => p.status === status.id).length;
+  });
+
+  types.forEach(type = > {;
+    type.count = researchProjects.filter(p => p.type === type.id).length;
+  });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const filteredProjects = researchProjects.filter(project => {;
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-    const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
     
     return matchesSearch && matchesCategory && matchesStatus && matchesType});
 
-  const getCategoryIcon = (categoryId: string)  => {
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: string)  => {;
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
 
-  const getStatusColor = (status: string)  => {
-    switch (status) {
+  const getCategoryIcon = (categoryId: string) => {;
+    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
+  };
+
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
@@ -249,8 +267,10 @@ export default function Research() {
       default: return 'text-zion-slate-light'}
   };
 
-  const getImpactColor = (impact: string)  => {
-    switch (impact) {
+<<<<<<< HEAD
+  const getImpactColor = (impact: string) => {;
+    switch (impact) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
@@ -258,20 +278,38 @@ export default function Research() {
       default: return 'text-zion-slate-light'}
   };
 
+<<<<<<< HEAD
   const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'short'
+      month: 'short';
     })};
 
   const formatFunding = (amount: number)  => {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {
-      return `$${(amount / 1000).toFixed(0)}K`}
+      return `$${(amount / 1000).toFixed(0)}K`};
     return `$${amount.toLocaleString()}`};
+=======
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'short';
+    });
+  };
+
+  const formatFunding = (amount: number) => {;
+    if (amount >= 1000000) {;
+      return `$${(amount / 1000000).toFixed(1)}M`;
+    } else if (amount >= 1000) {
+      return `$${(amount / 1000).toFixed(0)}K`;
+    }
+    return `$${amount.toLocaleString()}`;
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -585,9 +623,19 @@ export default function Research() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Research Team
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </div>
   )}
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

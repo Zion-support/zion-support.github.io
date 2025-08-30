@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
-const Contact: React.FC = (): JSX.Element => {
+const Contact: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -19,10 +19,10 @@ const Contact: React.FC = (): JSX.Element => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     })};
 
-  const handleSubmit = (e: React.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {;
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
@@ -70,7 +70,7 @@ const Contact: React.FC = (): JSX.Element => {
       description: 'Explore our services and solutions',
       action: 'Visit Site',
       href: 'https://ziontechgroup.com'
-    }
+    };
   ];
 
   const serviceCategories = [
@@ -106,14 +106,14 @@ const Contact: React.FC = (): JSX.Element => {
         'AI Cybersecurity Suite',
         'AI Compliance Assistant'
       ]
-    }
+    };
   ];
 
   const quickLinks = [
     { title: 'AI Services Showcase', url: '/ai-services-showcase', icon: '🚀' },
     { title: 'All Services', url: '/all-services', icon: '📋' },
     { title: 'Pricing', url: '/pricing', icon: '💰' },
-    { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
+    { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' };
   ];
 
 const Contact: React.FC = () => {
@@ -131,8 +131,14 @@ const Contact: React.FC = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -166,8 +172,14 @@ const Contact: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -185,9 +197,18 @@ const Contact: React.FC = () => {
               {contactMethods.map((method, index)  => (
                 <motion.div
                   key={method.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
                 >
@@ -205,14 +226,42 @@ const Contact: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              📞 Call Now
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              ✉️ Send Email;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
         {/* Contact Form Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className = "py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -246,8 +295,14 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
@@ -394,8 +449,14 @@ const Contact: React.FC = () => {
 
               {/* Contact Information & Quick Links */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="space-y-8"
@@ -472,8 +533,14 @@ const Contact: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -503,7 +570,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};
 
 export default Contact;

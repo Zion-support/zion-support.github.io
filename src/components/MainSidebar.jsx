@@ -66,9 +66,17 @@ export function MainSidebar() {
             </h3>
             <ul className="space-y-1">
               {section.items.map((item) => (<li key={item.key}>
-                  <Link to={item.href} className={cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors", isActive(item.href)
+                  <Link to={item.href} className = {
+  cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+  isActive(item.href)
                     ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")}>
+                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
+
+
+
+
+
+}>
                     {item.icon}
                     <span>{item.label}</span>
                   </Link>

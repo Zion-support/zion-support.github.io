@@ -23,7 +23,7 @@ const SpaceTech = () => {
       price: "From $35,000/month",
       features: ["Ground stations", "Mission control", "Data processing", "Communication systems"],
       icon: Database
-    }
+    };
   ];
 
   const spaceTechnologies = [
@@ -40,11 +40,12 @@ const SpaceTech = () => {
       features: ["Environmental monitoring", "Climate data", "Resource mapping", "Disaster response"]
     },
     {
+<<<<<<< HEAD
       name: "Space Security",
       description: "Cybersecurity and protection for space systems",
       icon: Shield,
       features: ["Threat detection", "Secure communications", "System protection", "Compliance"]
-    }
+    };
   ];
 
   const benefits = [
@@ -53,11 +54,11 @@ const SpaceTech = () => {
     "Enhanced data collection and analysis",
     "Improved communication infrastructure",
     "Innovation in space technology applications",
-    "Support for scientific research and exploration"
+    "Support for scientific research and exploration";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -65,6 +66,101 @@ const SpaceTech = () => {
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2"/>
               Space Technology
+=======
+      icon: Navigation,
+      title: 'Space Navigation',
+      description: 'Advanced positioning and navigation systems for space missions'
+    },;
+    {;
+      icon: Telescope,;
+      title: 'Space Observation',;
+      description: 'Earth observation and space monitoring capabilities';
+    };
+  ];
+
+  const benefits = [
+    'Enable global connectivity and coverage',;
+    'Provide critical Earth observation data',;
+    'Support space exploration missions',;
+    'Enable advanced navigation systems',;
+    'Support disaster response and monitoring',;
+    'Drive innovation in space technology';
+  ];
+
+  const services = [
+    {
+      icon: Rocket,
+      title: 'Launch Services',
+      description: 'Satellite launch coordination and mission planning'
+    },
+    {
+      icon: Planet,
+      title: 'Earth Observation',
+      description: 'Satellite imagery and environmental monitoring'
+    },
+    {
+      icon: Star,
+      title: 'Space Research',
+      description: 'Scientific research and space exploration support'
+    },;
+    {;
+      icon: Globe2,;
+      title: 'Global Communications',;
+      description: 'Satellite communications and internet services';
+    };
+  ];
+
+  const useCases = [
+    {
+      industry: 'Telecommunications',
+      description: 'Global satellite communications and internet services'
+    },
+    {
+      industry: 'Environmental Monitoring',
+      description: 'Climate change tracking and natural disaster monitoring'
+    },
+    {
+      industry: 'Agriculture',
+      description: 'Crop monitoring and precision agriculture support';
+    },;
+    {;
+      industry: 'Defense & Security',;
+      description: 'Surveillance and national security applications';
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Space Technology Solutions
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Space Technology
@@ -86,17 +182,48 @@ const SpaceTech = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Space Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Space Technology Services
+=======
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Space Technology Features
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive space technology solutions designed to advance 
               exploration and innovation beyond Earth's atmosphere.
             </p>
+<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,6 +231,45 @@ const SpaceTech = () => {
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
+=======
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -122,17 +288,48 @@ const SpaceTech = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Space Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Space Technologies We Use
+=======
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Space Technology Services
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Cutting-edge technologies and platforms to build robust, 
               reliable space systems and solutions.
             </p>
+<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
@@ -140,6 +337,51 @@ const SpaceTech = () => {
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
+=======
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
@@ -157,6 +399,7 @@ const SpaceTech = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -189,6 +432,190 @@ const SpaceTech = () => {
                   <p>• Space technology experts</p>
                   <p>• Innovation leadership</p>
                   <p>• Proven methodologies</p>
+=======
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Space Technology Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in global connectivity, monitoring, and space exploration capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our space technology solutions adapt to various industries, providing 
+              innovative solutions for global challenges.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               </div>
             </div>
@@ -197,6 +624,7 @@ const SpaceTech = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -217,6 +645,51 @@ const SpaceTech = () => {
         </div>
       </section>
     </div>
+=======
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Launch Your Space Project Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join organizations worldwide that use our space technology solutions to 
+              explore new frontiers and solve global challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+                Contact Sales
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

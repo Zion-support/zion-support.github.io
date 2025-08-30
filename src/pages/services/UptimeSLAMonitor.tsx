@@ -30,12 +30,12 @@ export default function UptimeSLAMonitor(...args: []):  {
       icon: Globe,
       title: "Global Monitoring",
       description: "Monitor from multiple locations worldwide to ensure consistent user experience."
-    },
-    {
-      icon: Shield,
-      title: "Security Monitoring",
-      description: "SSL certificate monitoring, security headers, and vulnerability scanning included."
-    }
+    },;
+    {;
+      icon: Shield,;
+      title: "Security Monitoring",;
+      description: "SSL certificate monitoring, security headers, and vulnerability scanning included.";
+    };
   ];
 
   const monitoringTypes = [
@@ -63,12 +63,12 @@ export default function UptimeSLAMonitor(...args: []):  {
       icon: Cloud,
       title: "Cloud Services",
       description: "AWS, Azure, GCP service monitoring and cost tracking"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Monitoring",
-      description: "API endpoints, push notifications, and mobile performance"
-    }
+    },;
+    {;
+      icon: Smartphone,;
+      title: "Mobile App Monitoring",;
+      description: "API endpoints, push notifications, and mobile performance";
+    };
   ];
 
   const pricingPlans = [
@@ -113,12 +113,12 @@ export default function UptimeSLAMonitor(...args: []):  {
         "10-second check intervals",
         "Priority support",
         "Advanced SLA reporting",
-        "All global locations",
-        "White-label options",
-        "Custom integrations"
-      ],
-      popular: false
-    }
+        "All global locations",;
+        "White-label options",;
+        "Custom integrations";
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -136,18 +136,18 @@ export default function UptimeSLAMonitor(...args: []):  {
       title: "Improve Performance",
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
       icon: TrendingUp
-    },
-    {
-      title: "Reduce MTTR",
-      description: "Faster incident response with detailed error information and automated escalation.",
-      icon: Zap
-    }
+    },;
+    {;
+      title: "Reduce MTTR",;
+      description: "Faster incident response with detailed error information and automated escalation.",;
+      icon: Zap;
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Uptime SLA Monitor - Zion Tech Group"
+        title = "Uptime SLA Monitor - Zion Tech Group"
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
@@ -159,8 +159,24 @@ export default function UptimeSLAMonitor(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -207,9 +223,33 @@ export default function UptimeSLAMonitor(...args: []):  {
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -239,9 +279,33 @@ export default function UptimeSLAMonitor(...args: []):  {
               {monitoringTypes.map((type, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
@@ -271,9 +335,33 @@ export default function UptimeSLAMonitor(...args: []):  {
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -305,9 +393,33 @@ export default function UptimeSLAMonitor(...args: []):  {
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-green-500 ring-2 ring-green-500/20' 
@@ -360,8 +472,24 @@ export default function UptimeSLAMonitor(...args: []):  {
         <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -383,12 +511,12 @@ export default function UptimeSLAMonitor(...args: []):  {
                 >
                   Contact Sales
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }
 

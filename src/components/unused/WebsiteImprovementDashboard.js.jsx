@@ -40,13 +40,15 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {
-            loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
+  loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
             cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1
-            firstInputDelay: Math.random() * 100 + 50, // 50-150ms
+            firstInputDelay: Math.random() * 100 + 50,
+  // 50-150ms
             timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
-        };
+        
+};
         setMetrics(mockMetrics);
         setIsAnalyzing(false)}, []);
     // Analyze SEO
@@ -55,7 +57,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis
         const mockSEO = {
-            score: Math.floor(Math.random() * 40) + 60, // 60-100
+  score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues[
                 'Missing meta description on some pages',
                 'Some images lack alt text',
@@ -72,8 +74,9 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 keywords: Math.random() > 0.5,
                 canonical: true,
                 ogTags: Math.random() > 0.2,
-                twitterTags: Math.random() > 0.4
-            }
+  twitterTags: Math.random() > 0.4
+            
+}
         };
         setSeoAnalysis(mockSEO);
         setIsAnalyzing(false)}, []);
@@ -83,7 +86,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 1800));
         // Mock accessibility analysis
         const mockAccessibility = {
-            score: Math.floor(Math.random() * 30) + 70, // 70-100
+  score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues[
                 'Some form controls lack proper labels',
                 'Color contrast could be improved',
@@ -91,8 +94,9 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             ],
             wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant',
             criticalIssues: Math.floor(Math.random() * 3),
-            warnings: Math.floor(Math.random() * 5) + 1
-        };
+  warnings: Math.floor(Math.random() * 5) + 1
+        
+};
         setAccessibilityReport(mockAccessibility);
         setIsAnalyzing(false)}, []);
     // Run comprehensive analysis
@@ -128,7 +132,16 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
       {/* Dashboard Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0,
+  x: -400 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} exit = {
+  { opacity: 0,
+  x: -400 
+}} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
               <div className="flex items-center gap-2">

@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🚀 Starting PM2 Automation Dashboard...');
@@ -36,13 +35,19 @@ class AutomationDashboard {
     console.log('📊 Generating automation health report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: {
         totalProcesses: this.processes.length,
         onlineProcesses: this.processes.filter(p => p.pm2_env.status === 'online').length,
         erroredProcesses: this.processes.filter(p => p.pm2_env.status === 'errored').length,
-        stoppedProcesses: this.processes.filter(p => p.pm2_env.status === 'stopped').length
-      },
+  stoppedProcesses: this.processes.filter(p => p.pm2_env.status === 'stopped').length
+      
+
+
+
+
+
+},
       processes: this.processes.map(proc => ({
         name: proc.name,
         status: proc.pm2_env.status,
@@ -167,28 +172,6 @@ class AutomationDashboard {
 
   async generatePerformanceReport() {
     console.log('📊 Generating performance report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      system: {
-        memory: process.memoryUsage(),
-        uptime: process.uptime(),
-        platform: process.platform,
-        nodeVersion: process.version
-      },
-      processes: this.processes.map(proc => ({
-        name: proc.name,
-        memory: proc.monit.memory,
-        cpu: proc.monit.cpu,
-        status: proc.pm2_env.status,
-        restarts: proc.pm2_env.restart_time
-      })),
-      summary: {
-        totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
-        averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
-        totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)
-      }
-    };
     
     const reportPath = path.join(process.cwd(), 'automation-performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

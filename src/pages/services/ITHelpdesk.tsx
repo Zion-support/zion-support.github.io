@@ -2,22 +2,22 @@ import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } 
 
 export default function ITHelpdesk() {
   const features = [
-    'Ticketing with SLA and automation rules',
-    'Self-service knowledge base and chat widget',
-    'Asset inventory and remote assistance',
-    'Email-to-ticket and status notifications',
-    'Multi-tenant client portals',
-    'Reports: MTTR, CSAT, backlog trends'
+    'Ticketing with SLA and automation rules',;
+    'Self-service knowledge base and chat widget',;
+    'Asset inventory and remote assistance',;
+    'Email-to-ticket and status notifications',;
+    'Multi-tenant client portals',;
+    'Reports: MTTR, CSAT, backlog trends';
   ];
 
-  const pricing = [
-    { name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },
-    { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },
-    { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },
+  const pricing = [;
+    { name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },;
+    { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },;
+    { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">
@@ -70,12 +70,12 @@ export default function ITHelpdesk() {
         </div>
         <div className="mt-10 text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>;
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

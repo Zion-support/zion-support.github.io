@@ -10,11 +10,24 @@ export default function HelpCenter() {
             ? prev.filter(c => c !== category)
             [...prev, category])};
     const helpCategories = {
-        'getting-started': {
+  'getting-started': {
             title: 'Getting Started',
             icon: BookOpen,
+<<<<<<< HEAD
             articles[
-                { title: 'How to create your first account', href: '/help/create-account' },
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+},
+=======
+            articles: [
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
@@ -141,7 +154,15 @@ export default function HelpCenter() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (<div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
-                  <Link to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
+                  <Link to = {
+  `/help/${article.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+
+
+
+}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>

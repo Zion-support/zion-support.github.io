@@ -204,11 +204,19 @@ const AIAutonomousBusinessOperations = () => {
       benefits["Smart task allocation", "Performance tracking", "Communication optimization", "Knowledge sharing"]
     },
     {
+<<<<<<< HEAD
       icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence and reporting",
       benefits["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
     }
+=======;
+      icon: BarChart3,;
+      title: "Advanced Analytics",;
+      description: "Comprehensive business intelligence and reporting",;
+      benefits: ["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const useCases = [
@@ -237,11 +245,19 @@ const AIAutonomousBusinessOperations = () => {
       applications["DevOps automation", "Performance monitoring", "Security operations", "Customer support"],
       icon: Cpu
     },
+<<<<<<< HEAD
     {
       industry: "Consulting",
       applications["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
       icon: Briefcase
     }
+=======;
+    {;
+      industry: "Consulting",;
+      applications: ["Client management", "Project optimization", "Knowledge management", "Resource allocation"],;
+      icon: Briefcase;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const pricingTiers = [
@@ -286,23 +302,32 @@ const AIAutonomousBusinessOperations = () => {
         "Custom AI models",
         "Dedicated support team",
         "Advanced security & compliance",
-        "White-label options",
-        "Custom development",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
+        "White-label options",;
+        "Custom development",;
+        "On-premise deployment";
+      ],;
+      popular: false;
+    };
   ];
 
   const contactInfo = {
-    phone: "+1 302 464 0950",
+  phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
-  };
+    address: "364 E Main St STE 1008 Middletown DE 19709",;
+  ;
+  ;
+  ;
+  website: "https://ziontechgroup.com";
+  ;
+
+
+
+
+
+};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Autonomous Business Operations - Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Automate decision-making, optimize processes, and achieve unprecedented efficiency with our cutting-edge platform."
@@ -314,8 +339,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
             className="mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <span className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 text-sm font-semibold rounded-full border border-purple-500/30">
@@ -326,9 +367,33 @@ const AIAutonomousBusinessOperations = () => {
           
           <motion.h1 
             className="text-5xl md:text-7xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
           >
             AI Autonomous
             <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -338,9 +403,33 @@ const AIAutonomousBusinessOperations = () => {
           
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
           >
             Transform your business with intelligent automation. Our AI platform makes decisions, 
             optimizes processes, and operates autonomously 24/7 to maximize efficiency and profitability.
@@ -348,9 +437,33 @@ const AIAutonomousBusinessOperations = () => {
           
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+}}
           >
             <Link
               to="/request-quote"
@@ -375,8 +488,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -424,10 +553,34 @@ const AIAutonomousBusinessOperations = () => {
               <motion.div
                 key={benefit.title}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
               >
                 <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-purple-400" />
@@ -445,8 +598,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -465,10 +634,34 @@ const AIAutonomousBusinessOperations = () => {
                 className={`flex flex-col lg:flex-row items-center gap-8 ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
               >
                 <div className="flex-1">
                   <div className="flex items-center mb-4">
@@ -505,8 +698,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -523,10 +732,34 @@ const AIAutonomousBusinessOperations = () => {
               <motion.div
                 key={useCase.industry}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
               >
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg mr-4">
@@ -553,8 +786,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -575,10 +824,34 @@ const AIAutonomousBusinessOperations = () => {
                     ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-slate-700'
                 } hover:border-purple-400 transition-all duration-300`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
               >
                 {tier.popular && (
                   <div className="flex items-center justify-center mb-4">
@@ -628,8 +901,24 @@ const AIAutonomousBusinessOperations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -644,10 +933,34 @@ const AIAutonomousBusinessOperations = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div 
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition = {
+  { duration: 0.8,
+  delay: 0.1 
+
+
+
+
+
+}}
             >
               <div className="p-4 bg-purple-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Phone className="w-8 h-8 text-purple-400" />
@@ -658,10 +971,34 @@ const AIAutonomousBusinessOperations = () => {
 
             <motion.div 
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
             >
               <div className="p-4 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Mail className="w-8 h-8 text-blue-400" />
@@ -672,10 +1009,34 @@ const AIAutonomousBusinessOperations = () => {
 
             <motion.div 
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition = {
+  { duration: 0.8,
+  delay: 0.3 
+
+
+
+
+
+}}
             >
               <div className="p-4 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <MapPin className="w-8 h-8 text-green-400" />
@@ -687,10 +1048,34 @@ const AIAutonomousBusinessOperations = () => {
 
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
           >
             <Link
               to="/request-quote"
@@ -698,11 +1083,21 @@ const AIAutonomousBusinessOperations = () => {
             >
               <Rocket className="w-5 h-5 mr-2" />
               Request Custom Demo
+<<<<<<< HEAD
             </Link>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </Link>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AIAutonomousBusinessOperations;

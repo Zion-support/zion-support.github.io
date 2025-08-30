@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Users, 
   Brain, 
@@ -32,12 +32,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',
-    'Intelligent chatbot with natural language processing',
-    'Personalized recommendation engine',
-    'Omnichannel customer interaction tracking',
-    'Predictive customer behavior analytics',
-    'Automated customer feedback analysis',
-    'Integration with major CRM and marketing platforms'
+    'Intelligent chatbot with natural language processing',;
+    'Personalized recommendation engine',;
+    'Omnichannel customer interaction tracking',;
+    'Predictive customer behavior analytics',;
+    'Automated customer feedback analysis',;
+    'Integration with major CRM and marketing platforms';
   ];
 
   const services = [
@@ -53,6 +53,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       price: 'From $12,000',
       features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
+<<<<<<< HEAD
     {
       title: 'Ongoing Optimization',
       description: 'Continuous improvement and optimization of customer experience',
@@ -64,7 +65,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       description: 'Complete enterprise customer experience management with advanced AI capabilities',
       price: 'From $20,000',
       features['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
-    }
+    };
   ];
 
   const useCases = [
@@ -87,7 +88,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       title: 'Product Development Insights',
       description: 'Customer feedback analysis and product improvement recommendations',
       benefits['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
-    }
+    };
   ];
 
   const technologies = [
@@ -97,28 +98,44 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     { name: 'Real-time Processing', description: 'Instant customer interaction analysis and response' },
     { name: 'API Integration', description: 'Seamless integration with existing business systems' },
     { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' }
+=======;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] ;
+    },;
+  ];
+
+  const useCases = [
+    'E-commerce customer experience optimization',;
+    'SaaS product user engagement tracking',;
+    'Financial services customer journey mapping',;
+    'Healthcare patient experience improvement',;
+    'Retail customer satisfaction enhancement',;
+    'B2B customer relationship management';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
-    'Increase customer satisfaction scores by 25-40%',
-    'Improve customer retention rates by 30-50%',
-    'Reduce customer service costs by 35-45%',
-    'Boost customer lifetime value by 20-35%',
-    'Enhance brand loyalty and advocacy',
-    'Gain actionable insights for product development'
+    'Increase customer satisfaction scores by 25-40%',;
+    'Improve customer retention rates by 30-50%',;
+    'Reduce customer service costs by 35-45%',;
+    'Boost customer lifetime value by 20-35%',;
+    'Enhance brand loyalty and advocacy',;
+    'Gain actionable insights for product development';
   ];
 
   const metrics = [
-    'Customer Satisfaction Score (CSAT)',
-    'Net Promoter Score (NPS)',
-    'Customer Effort Score (CES)',
-    'Customer Lifetime Value (CLV)',
-    'Customer Churn Rate',
-    'First Response Time'
+    'Customer Satisfaction Score (CSAT)',;
+    'Net Promoter Score (NPS)',;
+    'Customer Effort Score (CES)',;
+    'Customer Lifetime Value (CLV)',;
+    'Customer Churn Rate',;
+    'First Response Time';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -217,8 +234,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -234,9 +257,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -253,8 +285,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -270,9 +308,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
@@ -295,8 +342,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -312,9 +365,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
@@ -336,8 +398,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -353,9 +421,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -366,6 +443,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -373,8 +451,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -390,9 +474,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
@@ -407,8 +500,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
           >
@@ -469,3 +568,13 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       </section>
     </div>
   )}
+=======
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

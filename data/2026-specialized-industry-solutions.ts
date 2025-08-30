@@ -38,8 +38,17 @@ export interface SpecializedIndustrySolution {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
 };
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
@@ -268,10 +277,10 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     reviews: 32
   }
 ];
-export const INDUSTRY_SOLUTION_CATEGORIES = [
-  'Healthcare Technology',
-  'FinTech Solutions',
-  'Manufacturing Technology',
-  'Retail Technology',
-  'Logistics Technology'
+export const INDUSTRY_SOLUTION_CATEGORIES = [;
+  'Healthcare Technology',;
+  'FinTech Solutions',;
+  'Manufacturing Technology',;
+  'Retail Technology',;
+  'Logistics Technology';
 ];

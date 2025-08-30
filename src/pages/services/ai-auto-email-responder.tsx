@@ -8,7 +8,7 @@ export default function AIAutoEmailResponder(...args: []):  {
     <>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
-        <meta name="description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
+        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
         <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot" />
       </Helmet>
 
@@ -370,11 +370,11 @@ export default function AIAutoEmailResponder(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

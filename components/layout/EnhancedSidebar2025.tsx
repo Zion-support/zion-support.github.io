@@ -234,12 +234,12 @@ const sidebarSections = [
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
           { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-      }
-    ]
-  }
+          { name: 'Community Forum', href: '/community' },;
+          { name: 'Knowledge Base', href: '/knowledge-base' };
+        ];
+      };
+    ];
+  };
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -251,7 +251,9 @@ export default function EnhancedSidebar2025(...args[]):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: string)  => {
+<<<<<<< HEAD
+  const toggleSection = (sectionTitle: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
       newExpanded.delete(sectionTitle)} else {
@@ -259,15 +261,17 @@ export default function EnhancedSidebar2025(...args[]):  {
     setExpandedSections(newExpanded)};
 
   const filteredServices = sidebarSections.flatMap(section =>
-    section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      ) || []
-    )
+    section.items.flatMap(item =>;
+      item.subItems?.filter(child =>;
+        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
+      ) || [];
+    );
   );
 
-  const toggleItem = (itemName: string)  => {
+<<<<<<< HEAD
+  const toggleItem = (itemName: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
       newExpanded.delete(itemName)} else {
@@ -279,7 +283,7 @@ export default function EnhancedSidebar2025(...args[]):  {
       document.body.style.overflow = 'hidden'} else {
       document.body.style.overflow = 'unset'}
 
-    return () => {
+    return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
   const isActive = (href: string)  => router.pathname === href;
@@ -290,7 +294,7 @@ export default function EnhancedSidebar2025(...args[]):  {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial = {{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
@@ -304,7 +308,15 @@ export default function EnhancedSidebar2025(...args[]):  {
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        transition = {
+  { type: 'spring', damping: 25,
+  stiffness: 200 
+
+
+
+
+
+}}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
       >
         {/* Header */}
@@ -380,9 +392,33 @@ export default function EnhancedSidebar2025(...args[]):  {
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
                   >
@@ -415,9 +451,33 @@ export default function EnhancedSidebar2025(...args[]):  {
                           <AnimatePresence>
                             {expandedItems.has(item.name) && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="space-y-1 ml-6"
                               >
@@ -476,9 +536,19 @@ export default function EnhancedSidebar2025(...args[]):  {
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </motion.div>
     </>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

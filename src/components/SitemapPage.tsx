@@ -37,16 +37,16 @@ export function SitemapPage() {
       title: 'Resources',
       links: [
         { name: 'Case Studies', url: '/case-studies' },
-        { name: 'White Papers', url: '/white-papers' },
-        { name: 'Webinars', url: '/webinars' },
-        { name: 'Documentation', url: '/docs' },
-        { name: 'API Reference', url: '/api' },
-      ]
-    }
+        { name: 'White Papers', url: '/white-papers' },;
+        { name: 'Webinars', url: '/webinars' },;
+        { name: 'Documentation', url: '/docs' },;
+        { name: 'API Reference', url: '/api' },;
+      ];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white py-16">
+    <div className = "min-h-screen bg-slate-900 text-white py-16">
       <SEO 
         title="Sitemap - Zion Tech Group" 
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
@@ -89,11 +89,11 @@ export function SitemapPage() {
             Can't find what you're looking for?{' '}
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact us
-            </a>{' '}
-            for assistance.
-          </p>
-        </div>
-      </div>
-    </div>
+            </a>{' '};
+            for assistance.;
+          </p>;
+        </div>;
+      </div>;
+    </div>;
   );
 }

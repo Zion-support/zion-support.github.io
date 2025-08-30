@@ -13,10 +13,12 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {
-            cyberpunk['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
+  cyberpunk['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
             holographic['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'],
-            quantum['#00ffff', '#ff00ff', '#ffff00', '#00ff00']
-        };
+            quantum['#00ffff', '#ff00ff', '#ffff00',
+  '#00ff00']
+        
+};
         const selectedColors = colors[theme];
         // Create particles
         for (let i = 0; i < 150; i++) {
@@ -113,7 +115,6 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 // Quantum entanglement effect
                 const time = Date.now() * 0.001;
                 for (let i = 0; i < 3; i++) {
-                    const wave1 = Math.sin(time + i) * 100;
                     const wave2 = Math.cos(time + i) * 100;
                     ctx.beginPath();
                     ctx.ellipse(canvas.width / 2 + wave1, canvas.height / 2 + wave2, 80, 40, time, 0, Math.PI * 2);
@@ -131,8 +132,10 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current)}
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {
+  {
             opacity: intensity,
-            filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
-        }}/>)};
+  filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
+        
+}}/>)};
 export default FuturisticAnimatedBackground2029;

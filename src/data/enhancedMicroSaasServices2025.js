@@ -645,9 +645,21 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
 export const SERVICE_PRICING_TIERS = {
   basic: {
     name: "Basic",
+<<<<<<< HEAD
     features["Core functionality", "Basic support", "Standard integrations", "Community forum"],
-    priceRange: "$19 - $99/month"
-  },
+  priceRange: "$19 - $99/month"
+  
+},
+=======
+    features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],
+  priceRange: "$19 - $99/month"
+  
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   professional: {
     name: "Professional",
     features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],
@@ -677,5 +689,12 @@ export const ZION_TECH_GROUP_CONTACT = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown DE 19709"
+  address: "364 E Main St STE 1008,
+  Middletown DE 19709"
+
+
+
+
+
+
 };

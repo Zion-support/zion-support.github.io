@@ -1,67 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-const mockMetrics = [
-    {
-        id: 'revenue',
-        name: 'Monthly Revenue',
-        value: 2847500,
-        target: 3000000,
-        unit: 'USD',
-        trend: 'up',
-        change: 8.5,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'customers',
-        name: 'Active Customers',
-        value: 15420,
-        target: 15000,
-        unit: 'Users',
-        trend: 'up',
-        change: 12.3,
-        category: 'Customer',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'satisfaction',
-        name: 'Customer Satisfaction',
-        value: 94.2,
-        target: 90,
-        unit: '%',
-        trend: 'up',
-        change: 2.1,
-        category: 'Customer',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'efficiency',
-        name: 'Operational Efficiency',
-        value: 87.5,
-        target: 85,
-        unit: '%',
-        trend: 'up',
-        change: 1.8,
-        category: 'Operations',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'costs',
-        name: 'Operating Costs',
-        value: 1250000,
-        target: 1200000,
-        unit: 'USD',
-        trend: 'down',
-        change: -3.2,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
-];
+<<<<<<< HEAD
 const mockInsights = [
     {
         id: 'insight-1',
@@ -100,6 +39,8 @@ const mockInsights = [
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockModels = [
     {
         id: 'model-1',
@@ -142,7 +83,6 @@ export function AdvancedBusinessIntelligence() {
     const [insights, setInsights] = useState(mockInsights);
     const [models, setModels] = useState(mockModels);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
     const timeRanges = [
         { value: '7d', label: '7 Days' },

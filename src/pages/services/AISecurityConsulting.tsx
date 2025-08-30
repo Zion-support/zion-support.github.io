@@ -4,12 +4,12 @@ export default function AISecurityConsulting() {
   const features = [
     'AI-powered security consulting optimization',
     'Intelligent consulting strategy management and execution',
-    'Automated security analysis and recommendations',
-    'Predictive analytics for consulting needs',
-    'Smart consulting framework management',
-    'AI-driven consulting automation and orchestration',
-    'Real-time consulting performance tracking',
-    'Custom AI models for consulting applications'
+    'Automated security analysis and recommendations',;
+    'Predictive analytics for consulting needs',;
+    'Smart consulting framework management',;
+    'AI-driven consulting automation and orchestration',;
+    'Real-time consulting performance tracking',;
+    'Custom AI models for consulting applications';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AISecurityConsulting() {
       name: 'Business', 
       price: '$1,999/mo', 
       details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$4,999/mo', 
-      details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Security consulting optimization',
-    'Consulting strategy management and execution',
-    'Security analysis and recommendations',
-    'Consulting framework management and automation',
-    'Consulting automation and orchestration',
-    'Consulting scaling and management'
+    'Security consulting optimization',;
+    'Consulting strategy management and execution',;
+    'Security analysis and recommendations',;
+    'Consulting framework management and automation',;
+    'Consulting automation and orchestration',;
+    'Consulting scaling and management';
   ];
 
   const benefits = [
-    'Improve security consulting performance by 50-80%',
-    'Reduce consulting delivery time by 40-70%',
-    'Cut security consulting costs by 35-65%',
-    'Enhance security consulting reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security consulting operations efficiently'
+    'Improve security consulting performance by 50-80%',;
+    'Reduce consulting delivery time by 40-70%',;
+    'Cut security consulting costs by 35-65%',;
+    'Enhance security consulting reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security consulting operations efficiently';
   ];
 
   const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AISecurityConsulting() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

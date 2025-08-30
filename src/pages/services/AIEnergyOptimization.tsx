@@ -4,12 +4,12 @@ export default function AIEnergyOptimization() {
   const features = [
     'AI-powered energy consumption forecasting and optimization',
     'Real-time monitoring of energy usage across facilities',
-    'Predictive maintenance for energy infrastructure',
-    'Smart grid integration and demand response optimization',
-    'Renewable energy integration and storage optimization',
-    'Carbon footprint tracking and sustainability reporting',
-    'Custom AI models for industry-specific energy patterns',
-    'Integration with major building management systems'
+    'Predictive maintenance for energy infrastructure',;
+    'Smart grid integration and demand response optimization',;
+    'Renewable energy integration and storage optimization',;
+    'Carbon footprint tracking and sustainability reporting',;
+    'Custom AI models for industry-specific energy patterns',;
+    'Integration with major building management systems';
   ];
 
   const tiers = [
@@ -22,43 +22,43 @@ export default function AIEnergyOptimization() {
       name: 'Professional', 
       price: '$799/mo', 
       details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
-    'Commercial building energy optimization',
-    'Manufacturing facility energy management',
-    'Data center power efficiency',
-    'Retail chain energy optimization',
-    'Healthcare facility energy management',
-    'Educational campus energy systems'
+    'Commercial building energy optimization',;
+    'Manufacturing facility energy management',;
+    'Data center power efficiency',;
+    'Retail chain energy optimization',;
+    'Healthcare facility energy management',;
+    'Educational campus energy systems';
   ];
 
   const benefits = [
-    'Reduce energy costs by 20-40%',
-    'Improve energy efficiency by 25-45%',
-    'Cut carbon emissions by 30-50%',
-    'Optimize renewable energy utilization',
-    'Enhance equipment lifespan and reliability',
-    'Achieve sustainability and ESG goals'
+    'Reduce energy costs by 20-40%',;
+    'Improve energy efficiency by 25-45%',;
+    'Cut carbon emissions by 30-50%',;
+    'Optimize renewable energy utilization',;
+    'Enhance equipment lifespan and reliability',;
+    'Achieve sustainability and ESG goals';
   ];
 
   const industries = [
-    'Commercial Real Estate',
-    'Manufacturing & Industrial',
-    'Data Centers & IT',
-    'Healthcare & Hospitals',
-    'Retail & Shopping Centers',
-    'Education & Universities'
+    'Commercial Real Estate',;
+    'Manufacturing & Industrial',;
+    'Data Centers & IT',;
+    'Healthcare & Hospitals',;
+    'Retail & Shopping Centers',;
+    'Education & Universities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -164,11 +164,11 @@ export default function AIEnergyOptimization() {
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -1,13 +1,26 @@
+<<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps  } from 'next.ts'
 import Head from 'next/head.ts'
 import Link from 'next/link.ts'
 import React from 'react.ts'
-import { innovativeRealMicroSaasServices2025  } from '../../data/2025-innovative-real-micro-saas-services'
-import { advancedITServices  } from '../../data/advanced-it-services'
-import { innovativeAIServices  } from '../../data/innovative-ai-services'
-import { addedMicroSaaS2025  } from '../../data/2025-added-micro-saas'
-import { addedITServices2025  } from '../../data/2025-added-it-services'
-import { addedAIServices2025  } from '../../data/2025-added-ai-services'
+import { innovativeRealMicroSaasServices2025  } from "../../data/2025-innovative-real-micro-saas-services"
+import { advancedITServices  } from "../../data/advanced-it-services"
+import { innovativeAIServices  } from "../../data/innovative-ai-services"
+import { addedMicroSaaS2025  } from "../../data/2025-added-micro-saas"
+import { addedITServices2025  } from "../../data/2025-added-it-services"
+import { addedAIServices2025  } from "../../data/2025-added-ai-services"
+=======
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import React from 'react'
+import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services"
+import { advancedITServices } from "../../data/advanced-it-services"
+import { innovativeAIServices } from "../../data/innovative-ai-services"
+import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas"
+import { addedITServices2025 } from "../../data/2025-added-it-services"
+import { addedAIServices2025 } from "../../data/2025-added-ai-services"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ServiceItem {
 
 id: string;
@@ -21,43 +34,10 @@ icon?: string;
 color?: string;
 textColor?: string}
 function collectAllServices(): ServiceItem[] {
-	const arrays[] = [
-		innovativeRealMicroSaasServices2025,
-		advancedITServices,
-		innovativeAIServices,
-		addedMicroSaaS2025,
-		addedITServices2025,
-		addedAIServices2025,
-	]
-	const map = new Map<string, ServiceItem>()
-	for (const arr of arrays) {
-		for (const item of arr) {
-			if (item && item.id && !map.has(item.id)) {
-				map.set(item.id, {
-					id: item.id,
-					name: item.name,
-					tagline: item.tagline,
-					price: item.price,
-					period: item.period,
-					description: item.description,
-					features: Array.isArray(item.features) ? item.features [],
-					icon: item.icon,
-					color: item.color,
-					textColor: item.textColor,
-				})
-			}
-		}
-	}
-	return Array.from(map.values())
-}
-export const getStaticPaths: GetStaticPaths = async () => {
-	const services = collectAllServices()
-	const paths = services.map((s) => ({ params: { id: s.id } }))
-	return { paths, fallback: false }
-}
-export const getStaticProps: GetStaticProps = async (context) => {
-	const id = context.params?.id as string
-	const services = collectAllServices()
+<<<<<<< HEAD
+	const arr of arrays) {
+		for (const id = context.params?.id as string
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 	const service = services.find((s) => s.id === id) || null
 	if (!service) {
 		return { notFound: true }
@@ -89,9 +69,9 @@ export default function ServiceDetail(...args[]):  {
 				)}
 				<div className="mt-10 flex gap-3">
 					<Link href="/request-quote/" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a quote</Link>
-					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>
-				</div>
-			</main>
-		</>
-	)
-}
+					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>;
+				</div>;
+			</main>;
+		</>;
+	);
+};

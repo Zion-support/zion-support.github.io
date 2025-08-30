@@ -370,9 +370,21 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
 ];
+<<<<<<< HEAD
 export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
   if (category === 'All') {
-    return NEXT_GEN_AI_SERVICES_2025}
+    return NEXT_GEN_AI_SERVICES_2025};
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
-export const getAllNextGenAIServices = (): NextGenAIService[] => {
+export const getAllNextGenAIServices = (): NextGenAIService[] => {;
   return NEXT_GEN_AI_SERVICES_2025};
+=======
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {;
+  if (category === 'All') {;
+    return NEXT_GEN_AI_SERVICES_2025;
+  }
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
+};
+export const getAllNextGenAIServices = (): NextGenAIService[] => {;
+  return NEXT_GEN_AI_SERVICES_2025;
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

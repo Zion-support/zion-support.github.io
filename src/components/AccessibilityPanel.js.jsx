@@ -64,14 +64,15 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         setSettings(prev => ({ ...prev, [key]: value }))};
     const resetSettings = () => {
         const defaultSettings = {
-            highContrast: false,
+  highContrast: false,
             fontSize: 100,
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
             focusIndicator: true,
-            colorBlindness: 'none'
-        };
+  colorBlindness: 'none'
+        
+};
         setSettings(defaultSettings)};
     const tabs = [
         { id: 'general', label: 'General', icon: '⚙️' },
@@ -105,7 +106,16 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
       {/* Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0,
+  x: -400 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} exit = {
+  { opacity: 0,
+  x: -400 
+}} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">
               <div className="flex items-center justify-between">
@@ -131,10 +141,22 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               <AnimatePresence mode="wait">
-                {activeTab === 'general' && (<motion.div key="general" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+                {activeTab === 'general' && (<motion.div key="general" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.highContrast} onChange={(e) => updateSetting('highContrast', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
+                        <input type="checkbox" checked={settings.highContrast} onChange = {
+  (e) => updateSetting('highContrast',
+  e.target.checked)
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           High Contrast Mode
                         </span>
@@ -148,12 +170,18 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%
                       </label>
-                      <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
+                      <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange = {
+  (e) => updateSetting('fontSize',
+  parseInt(e.target.value))
+} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
 
                     <div>
                       <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
+                        <input type="checkbox" checked={settings.reducedMotion} onChange = {
+  (e) => updateSetting('reducedMotion',
+  e.target.checked)
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Reduced Motion
                         </span>
@@ -164,12 +192,24 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     </div>
                   </motion.div>)}
 
-                {activeTab === 'visual' && (<motion.div key="visual" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+                {activeTab === 'visual' && (<motion.div key="visual" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Color Blindness Support
                       </label>
-                      <select value={settings.colorBlindness} onChange={(e) => updateSetting('colorBlindness', e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <select value={settings.colorBlindness} onChange = {
+  (e) => updateSetting('colorBlindness',
+  e.target.value)
+} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="none">None</option>
                         <option value="protanopia">Protanopia (Red-Blind)</option>
                         <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -179,7 +219,10 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
                     <div>
                       <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.focusIndicator} onChange={(e) => updateSetting('focusIndicator', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
+                        <input type="checkbox" checked={settings.focusIndicator} onChange = {
+  (e) => updateSetting('focusIndicator',
+  e.target.checked)
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Focus Indicators
                         </span>
@@ -190,10 +233,22 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     </div>
                   </motion.div>)}
 
-                {activeTab === 'audio' && (<motion.div key="audio" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+                {activeTab === 'audio' && (<motion.div key="audio" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.screenReader} onChange={(e) => updateSetting('screenReader', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
+                        <input type="checkbox" checked={settings.screenReader} onChange = {
+  (e) => updateSetting('screenReader',
+  e.target.checked)
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Screen Reader Mode
                         </span>
@@ -216,10 +271,22 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     </div>
                   </motion.div>)}
 
-                {activeTab === 'navigation' && (<motion.div key="navigation" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
+                {activeTab === 'navigation' && (<motion.div key="navigation" initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} exit = {
+  { opacity: 0,
+  y: -20 
+}} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.keyboardNavigation} onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
+                        <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
+  (e) => updateSetting('keyboardNavigation',
+  e.target.checked)
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Keyboard Navigation
                         </span>

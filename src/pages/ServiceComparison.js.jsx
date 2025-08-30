@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
-import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 const ServiceComparison = () => {
     const features = [
         {
@@ -43,7 +43,13 @@ const ServiceComparison = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Service Comparison
             </h1>
@@ -56,7 +62,10 @@ const ServiceComparison = () => {
                 Start Comparing
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help', '_blank')}>
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',
+  '_blank')
+}>
                 Get Expert Help
               </Button>
             </div>
@@ -67,7 +76,13 @@ const ServiceComparison = () => {
       {/* Features Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Why Use Our Comparison Tool?
             </h2>
@@ -78,7 +93,16 @@ const ServiceComparison = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {features.map((feature, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}} viewport={{ once: true }}>
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="mx-auto w-12 h-12 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">
@@ -102,7 +126,13 @@ const ServiceComparison = () => {
       {/* Benefits Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-4xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Key Benefits
             </h2>
@@ -112,7 +142,16 @@ const ServiceComparison = () => {
           </motion.div>
 
           <div className="space-y-4">
-            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
+            {benefits.map((benefit, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  x: -20 
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}} viewport={{ once: true }} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
                 <span className="text-zion-slate-dark">{benefit}</span>
               </motion.div>))}
@@ -123,7 +162,13 @@ const ServiceComparison = () => {
       {/* Comparison Tool Section */}
       <section id="comparison-tool" className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Start Comparing Services
             </h2>
@@ -140,7 +185,13 @@ const ServiceComparison = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Need Help Choosing?
             </h2>
@@ -149,11 +200,17 @@ const ServiceComparison = () => {
               and find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help', '_blank')}>
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help',
+  '_blank')
+}>
                 <Users className="w-5 h-5 mr-2"/>
                 Get Expert Consultation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+}>
                 <Zap className="w-5 h-5 mr-2"/>
                 Call Now
               </Button>

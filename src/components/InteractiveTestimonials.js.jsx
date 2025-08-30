@@ -108,7 +108,9 @@ export function InteractiveTestimonials() {
         }
     };
     const itemVariants = {
-        hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 20,
+  scale: 0.95 
+},
         visible: {
             opacity: 1,
             y: 0,
@@ -129,7 +131,13 @@ export function InteractiveTestimonials() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-4 py-2 rounded-full border border-blue-500/30 mb-6">
             <MessageCircle className="w-5 h-5 text-blue-400"/>
             <span className="text-blue-300 font-medium">Client Success Stories</span>
@@ -148,10 +156,28 @@ export function InteractiveTestimonials() {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}>
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                 ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25'
-                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}>
               {category}
             </motion.button>))}
         </motion.div>
@@ -159,7 +185,16 @@ export function InteractiveTestimonials() {
         {/* Main Testimonial Display */}
         <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
-            <motion.div key={currentIndex} initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.5 }} className="text-center">
+            <motion.div key={currentIndex} initial = {
+  { opacity: 0,
+  x: 100 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} exit = {
+  { opacity: 0,
+  x: -100 
+}} transition={{ duration: 0.5 }} className="text-center">
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-3xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
                 {/* Quote icon */}
                 <div className="absolute top-8 left-8 text-blue-400/20">
@@ -245,10 +280,12 @@ export function InteractiveTestimonials() {
 
         {/* Testimonial Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
+          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover = {
+  {
                 y: -8,
                 scale: 1.02,
-                transition: { duration: 0.2 }
+  transition: { duration: 0.2 
+}
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>
               <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm">
                 {/* Header */}
@@ -289,7 +326,16 @@ export function InteractiveTestimonials() {
         </motion.div>
 
         {/* Enhanced CTA Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
+        <motion.div className="text-center mt-20" initial = {
+  { opacity: 0,
+  y: 20 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.4 
+}}>
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-12 border border-blue-500/30 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-6">
               Join Our Success Stories

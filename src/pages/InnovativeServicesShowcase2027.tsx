@@ -16,35 +16,49 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
   const filteredServices = allServices
     .filter(service => 
-      (selectedCategory === 'All' || service.category === selectedCategory) &&
-      (searchQuery === '' || 
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    )
+      (selectedCategory === 'All' || service.category === selectedCategory) &&;
+      (searchQuery === '' || ;
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+    );
     .sort((a, b) => b[sortBy] - a[sortBy]);
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+},
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+      opacity: 1,;
+      transition: {;
+        duration: 0.5,;
+        ease: "easeOut";
+      };
+    };
   };
   const cardVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
+  hidden: { scale: 0.8,
+  opacity: 0 
+
+
+
+
+
+},
     visible: {
       scale: 1,
       opacity: 1,
@@ -55,15 +69,15 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
     },
     hover: {
       scale: 1.05,
-      y: -10,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-      }
-    }
+      y: -10,;
+      transition: {;
+        duration: 0.2,;
+        ease: "easeOut";
+      };
+    };
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
@@ -85,24 +99,88 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* Header Section */}
       <motion.section 
         className="relative z-10 pt-20 pb-16 px-6"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: -50 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
           >
             Innovative Services 2027
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
           >
             Discover the future of technology with our cutting-edge micro SAAS services, 
             featuring quantum computing, AI, blockchain, and emerging technologies
@@ -110,9 +188,33 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
           {/* Stats */}
           <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+}}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
@@ -134,9 +236,33 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* Search and Filters */}
       <motion.section 
         className="relative z-10 px-6 pb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+
+
+
+}}
       >
         <div className="max-w-7xl mx-auto">
           <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">
@@ -212,9 +338,33 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               <motion.div 
                 className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
                 transition={{ duration: 0.3 }}
               >
                 {filteredServices.map((service, index)  => (
@@ -228,7 +378,15 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-                        onClick={() => window.open(service.website, '_blank')}
+                        onClick = {
+  () => window.open(service.website,
+  '_blank')
+
+
+
+
+
+}
                       >
                         {/* Service Image */}
                         <div className="relative mb-6 overflow-hidden rounded-lg">
@@ -339,7 +497,15 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                               ))}
                             </div>
                             <button 
-                              onClick={() => window.open(service.website, '_blank')}
+                              onClick = {
+  () => window.open(service.website,
+  '_blank')
+
+
+
+
+
+}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
                               View Details
@@ -370,9 +536,33 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* CTA Section */}
       <motion.section 
         className="relative z-10 px-6 pb-20"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 1.2 
+
+
+
+
+
+}}
       >
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">
@@ -395,9 +585,19 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               >
                 Call +1 302 464 0950
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </motion.section>
     </div>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </motion.section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

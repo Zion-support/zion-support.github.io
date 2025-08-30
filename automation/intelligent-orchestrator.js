@@ -32,8 +32,7 @@ class IntelligentOrchestrator {
       { name: 'security-scanner', path: 'security-scanner.js', priority: 'high' },
       { name: 'test-generator', path: 'test-generator.js', priority: 'medium' }
     ];
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
+    for (const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
           ...system,
@@ -88,8 +87,25 @@ class IntelligentOrchestrator {
     
     const systems = Array.from(this.automationSystems.values())
       .sort((a, b) => {
-        const priorityOrder = { high: 3, medium: 2, low: 1 };
+<<<<<<< HEAD
+        const priorityOrder = {
+  high: 3, medium: 2,
+  low: 1 
+};
         return priorityOrder[b.priority] - priorityOrder[a.priority]});
+=======
+        const priorityOrder = {
+  high: 3, medium: 2,
+  low: 1 
+
+
+
+
+
+};
+        return priorityOrder[b.priority] - priorityOrder[a.priority];
+      });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const results = [];
     for (const system of systems) {
       if (system.status === 'available') {
@@ -123,15 +139,21 @@ class IntelligentOrchestrator {
     return results}
   async analyzeCurrentState() {
     const state = {
-      hasLintErrors: false,
+  hasLintErrors: false,
       hasTypeScriptErrors: false,
       hasSecurityIssues: false,
       hasPerformanceIssues: false,
       hasSEOMissing: false,
       hasMissingTests: false,
       lastBuildTime: null,
-      codeComplexity: 0
-    };
+  codeComplexity: 0
+    
+
+
+
+
+
+};
     try {
       // Check for lint errors
       execSync('npm run lint', { stdio: 'pipe' })} catch (error) {
@@ -166,8 +188,7 @@ class IntelligentOrchestrator {
     const now = Date.now();
     const systemsToCheck = ['performance', 'content-generator'];
     
-    for (const systemName of systemsToCheck) {
-      const system = this.automationSystems.get(systemName);
+    for (const system = this.automationSystems.get(systemName);
       if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {
         systems.push(systemName)}
     }
@@ -216,7 +237,6 @@ class IntelligentOrchestrator {
     this.log('✅ Intelligent file watcher started')}
   async handleIntelligentFileChange(filePath) {
     // Analyze the type of change and run appropriate systems
-    const fileExtension = path.extname(filePath);
     const fileName = path.basename(filePath);
     
     if (fileExtension === '.tsx' || fileExtension === '.ts') {
@@ -236,8 +256,14 @@ class IntelligentOrchestrator {
   }
   generateIntelligenceReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      systems: {},
+  timestamp: new Date().toISOString(),
+  systems: {
+
+
+
+
+
+},
       learningData: {},
       recommendations[]
     };
@@ -288,11 +314,17 @@ class IntelligentOrchestrator {
     this.log('🛑 Intelligent orchestrator stopped')}
   getStatus() {
     const status = {
-      running: true,
+  running: true,
       systemsCount: this.automationSystems.size,
       learningDataSize: this.learningData.size,
-      report: this.generateIntelligenceReport()
-    };
+  report: this.generateIntelligenceReport()
+    
+
+
+
+
+
+};
     
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Systems: ${status.systemsCount}`);

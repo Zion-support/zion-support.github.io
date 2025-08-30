@@ -21,15 +21,6 @@ class AuthService {
       }
       
       // Mock successful login
-      const mockUser = {
-        id: 1,
-        email: credentials.email,
-        name: 'John Doe',
-        role: 'user',
-        avatar: null,
-        createdAt: new Date().toISOString()
-      };
-      
       const mockToken = 'mock-jwt-token-' + Date.now();
       
       // Store in localStorage
@@ -59,15 +50,6 @@ class AuthService {
       }
       
       // Mock successful registration
-      const mockUser = {
-        id: Date.now(),
-        email: userData.email,
-        name: userData.name,
-        role: 'user',
-        avatar: null,
-        createdAt: new Date().toISOString()
-      };
-      
       const mockToken = 'mock-jwt-token-' + Date.now();
       
       // Store in localStorage
@@ -195,10 +177,16 @@ class AuthService {
       
       // Mock profile update
       const updatedUser = {
-        ...this.user,
+  ...this.user,
         ...profileData,
-        updatedAt: new Date().toISOString()
-      };
+  updatedAt: new Date().toISOString()
+      
+
+
+
+
+
+};
       
       this.user = updatedUser;
       localStorage.setItem('user', JSON.stringify(updatedUser));
@@ -263,10 +251,17 @@ class AuthService {
     
     // Mock permissions based on user role
     const permissions = {
-      user: ['read:own', 'write:own'],
+  user: ['read:own', 'write:own'],
       admin: ['read:all', 'write:all', 'delete:all', 'manage:users'],
-      moderator: ['read:all', 'write:all', 'moderate:content']
-    };
+      moderator: ['read:all', 'write:all',
+  'moderate:content']
+    
+
+
+
+
+
+};
     
     return permissions[this.user.role] || [];
   }

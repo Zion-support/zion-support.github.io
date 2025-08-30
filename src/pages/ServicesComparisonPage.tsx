@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
+=======
+import React from 'react';
+import { SEO } from "../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function ServicesComparisonPage(...args[]):  {
   return (
     <>
       <SEO
-        title="Services Comparison | Zion Tech Group"
+        title = "Services Comparison | Zion Tech Group"
         description="Compare our comprehensive range of technology services and find the perfect solution for your business needs."
         keywords="services comparison, technology services, AI services, IT services, Zion Tech Group"
         canonical="https://ziontechgroup.com/services-comparison"
@@ -23,9 +28,19 @@ export default function ServicesComparisonPage(...args[]):  {
           </div>
           
           <div className="mt-16 text-center text-white">
+<<<<<<< HEAD
             <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>
           </div>
         </div>
       </div>
     </>
   )}
+=======;
+            <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { Users, 
   BarChart3, 
   Brain, 
@@ -27,6 +27,7 @@ import { Users,
 
 export default function AICustomerExperienceAnalytics(...args[]):  {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
@@ -62,7 +63,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       title: 'Advanced Reporting',
       description: 'Comprehensive analytics dashboard with customizable reports and automated insights delivery.',
       benefits['Custom dashboards', 'Automated reporting', 'KPI tracking', 'Performance optimization']
-    }
+    };
   ];
 
   const useCases = [
@@ -90,24 +91,36 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       description: 'Monitor and improve service quality with real-time customer experience analytics and predictive insights.',
       metrics['40% reduction in customer churn', '35% improvement in service quality', '30% increase in customer loyalty']
     }
+=======
+    'AI-powered customer journey mapping and analysis',
+    'Real-time sentiment analysis and emotion detection',
+    'Predictive customer behavior modeling',
+    'Automated customer feedback collection and analysis',
+    'Multi-channel experience tracking and optimization',;
+    'Intelligent customer segmentation and personalization',;
+    'Advanced customer lifetime value prediction',;
+    'Automated customer satisfaction scoring',;
+    'Real-time customer experience monitoring',;
+    'AI-driven customer experience optimization recommendations';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
-    'Increase customer satisfaction scores by 45%',
-    'Reduce customer churn by 60%',
-    'Improve customer lifetime value by 35%',
-    'Boost customer engagement by 50%',
-    'Reduce customer support costs by 40%',
-    'Enable data-driven customer experience decisions'
+    'Increase customer satisfaction scores by 45%',;
+    'Reduce customer churn by 60%',;
+    'Improve customer lifetime value by 35%',;
+    'Boost customer engagement by 50%',;
+    'Reduce customer support costs by 40%',;
+    'Enable data-driven customer experience decisions';
   ];
 
   const useCases = [
-    'E-commerce customer experience optimization',
-    'SaaS product user experience improvement',
-    'Banking and financial services CX',
-    'Healthcare patient experience enhancement',
-    'Retail customer journey optimization',
-    'Hospitality guest experience management'
+    'E-commerce customer experience optimization',;
+    'SaaS product user experience improvement',;
+    'Banking and financial services CX',;
+    'Healthcare patient experience enhancement',;
+    'Retail customer journey optimization',;
+    'Hospitality guest experience management';
   ];
 
   const pricing = [
@@ -127,6 +140,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       cta: 'Start Free Trial',
       popular: false
     },
+<<<<<<< HEAD
     {
       plan: 'Professional',
       price: '$349',
@@ -163,10 +177,22 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       cta: 'Contact Sales',
       popular: false
     }
+=======
+    { 
+      name: 'CX Professional', 
+      price: '$999/mo', 
+      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    },;
+    { ;
+      name: 'CX Enterprise', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -181,8 +207,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -202,9 +234,18 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -235,8 +276,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -255,9 +302,18 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -286,8 +342,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -306,9 +368,18 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -327,8 +398,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -347,9 +424,18 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300 text-center"
               >
                 <div className="text-white font-semibold">{tech}</div>
@@ -363,8 +449,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section id="pricing" className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -383,9 +475,18 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-pink-400/50 scale-105' 
@@ -438,8 +539,14 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -478,9 +585,19 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             </div>
           </div>
           <p className="text-zion-slate-light">
+<<<<<<< HEAD
             Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.
           </p>
         </div>
       </section>
     </div>
   )}
+=======;
+            Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.;
+          </p>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

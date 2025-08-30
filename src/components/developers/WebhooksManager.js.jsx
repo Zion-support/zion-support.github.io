@@ -32,11 +32,9 @@ export function WebhooksManager() {
     const handleCreateWebhook = async () => {
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;
-        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? undefined : webhookSecret);
+        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? null : webhookSecret);
         setShowCreateDialog(false);
         resetWebhookForm()};
-    const handleToggleStatus = async (webhookId, currentStatus) => {
-        await toggleWebhook(webhookId, !currentStatus)};
     const handleDeleteWebhook = async (webhookId) => {
         await deleteWebhook(webhookId);
         setShowDeleteConfirm(null)};
@@ -160,7 +158,10 @@ export function WebhooksManager() {
                   
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
-                      <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}/>
+                      <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange = {
+  () => handleToggleStatus(webhook.id,
+  webhook.is_active)
+}/>
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}
                       </span>

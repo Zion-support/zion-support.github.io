@@ -36,7 +36,7 @@ export default async function handler(...args[]):  {
     const { data, error } = await supabase
       .from('team_invites')
       .insert(newInviteData)
-      .select()
+      .select();
       .single();
 
     if (error) {
@@ -53,3 +53,5 @@ export default async function handler(...args[]):  {
 */
 
 export {}; // Keep it as a module
+
+export default handler;

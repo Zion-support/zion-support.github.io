@@ -35,7 +35,13 @@ export default function VideoCall() {
         });
         // Navigate back after a short delay
         setTimeout(() => {
-            navigate(-1)}, 1500)};
+<<<<<<< HEAD
+            router(-1)}, 1500)};
+=======
+            router(-1);
+        }, 1500);
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [

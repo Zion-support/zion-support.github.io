@@ -15,12 +15,13 @@ import { Calendar,
   ArrowRight
  } from 'lucide-react';
 
+<<<<<<< HEAD
 function BlogPost(...args[]):  {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
-    id: id || "1",
+  id: id || "1",
     title: "The Future of AI in Business: 2024 Trends and Predictions",
     excerpt: "Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.",
     content: `
@@ -58,8 +59,9 @@ function BlogPost(...args[]):  {
         category: "Cybersecurity",
         readTime: "6 min read",
         publishDate: "2024-01-10",
-        slug: "ai-cybersecurity"
-      },
+  slug: "ai-cybersecurity"
+      
+},
       {
         id: "3",
         title: "The Rise of Quantum Computing in Business",
@@ -69,10 +71,10 @@ function BlogPost(...args[]):  {
         publishDate: "2024-01-05",
         slug: "quantum-computing-business"
       }
-    ]
+    ];
   };
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string)  => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -81,15 +83,21 @@ function BlogPost(...args[]):  {
     })};
 
   return (
-    <div className="min-h-screen bg-zion-blue text-white">
+    <div className = "min-h-screen bg-zion-blue text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
               transition={{ duration: 0.8 }}
             >
               <Link
@@ -135,9 +143,18 @@ function BlogPost(...args[]):  {
               {/* Main Content */}
               <motion.div 
                 className="lg:col-span-3"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: 0.6 
+}}
               >
                 {/* Featured Image */}
                 <div className="mb-8 rounded-lg overflow-hidden">
@@ -173,9 +190,18 @@ function BlogPost(...args[]):  {
               {/* Sidebar */}
               <motion.div 
                 className="lg:col-span-1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: 0.8 
+}}
               >
                 {/* Author Info */}
                 <div className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg p-6 mb-8">
@@ -214,8 +240,14 @@ function BlogPost(...args[]):  {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
@@ -229,9 +261,18 @@ function BlogPost(...args[]):  {
             {blogPost.relatedPosts.map((post, index)  => (
               <motion.article
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -270,8 +311,14 @@ function BlogPost(...args[]):  {
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-light">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -299,5 +346,23 @@ function BlogPost(...args[]):  {
       </section>
     </div>
   )}
+;
+export default BlogPost;
+=======
+const BlogPost: React.FC = () => {
+	return (
+		<div className="min-h-screen bg-slate-950 text-white py-16">
+			<SEO title="Blog Post" description="Read our latest insights and articles from Zion Tech Group." />
+			<div className="container mx-auto max-w-3xl px-6">
+				<h1 className="text-3xl font-bold mb-4">Blog Post</h1>
+				<p className="text-slate-300">Coming soon.</p>
+			</div>
+		</div>;
+	);
+};
+;
+export default BlogPost;
+;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default BlogPost;

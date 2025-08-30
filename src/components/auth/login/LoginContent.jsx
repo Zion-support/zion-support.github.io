@@ -20,9 +20,18 @@ export function LoginContent() {
 
     try {
       await login(email, password);
-      navigate('/dashboard')} catch (err) {
+<<<<<<< HEAD
+      router('/dashboard')} catch (err) {
       setError('Login failed. Please try again.')} finally {
       setIsLoading(false)}
+=======
+      router('/dashboard');
+    } catch (err) {
+      setError('Login failed. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (

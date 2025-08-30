@@ -33,8 +33,6 @@ export default function TenantOnboarding() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
-    const handleSelectChange = (name, value) => {
-        setFormData(prev => ({ ...prev, [name]: value }))};
     const handleSwitchChange = (name, checked) => {
         setFormData(prev => ({ ...prev, [name]: checked }))};
     const handleSubmit = async (e) => {
@@ -45,8 +43,19 @@ export default function TenantOnboarding() {
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
+  <<<<<<< HEAD
                 headline: "AI Hiring Assistant",
-                subtitle: `Find the best talent for your ${formData.industry || "comp"}`,
+  subtitle: `Find the best talent for your ${formData.industry || "comp"
+}`,
+=======
+  headline: "AI Hiring Assistant",
+  subtitle: `Find the best talent for your ${formData.industry || "company"
+
+
+
+
+}`,
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 cta: "Get Started"
             };
             // Submit to Supabase
@@ -128,7 +137,15 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select name="industry" value={formData.industry} onValueChange={(value) => handleSelectChange("industry", value)}>
+                      <Select name="industry" value={formData.industry} onValueChange = {
+  (value) => handleSelectChange("industry",
+  value)
+
+
+
+
+
+}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry"/>
                         </SelectTrigger>
@@ -146,8 +163,24 @@ export default function TenantOnboarding() {
                     </div>
                     
                     <div className="space-y-2">
+<<<<<<< HEAD
                       <Label htmlFor="comp_size">Comp Size</Label>
-                      <Select name="comp_size" value={formData.comp_size} onValueChange={(value) => handleSelectChange("comp_size", value)}>
+                      <Select name="comp_size" value={formData.comp_size} onValueChange = {
+  (value) => handleSelectChange("comp_size",
+  value)
+}>
+=======
+                      <Label htmlFor="company_size">Company Size</Label>
+                      <Select name="company_size" value={formData.company_size} onValueChange = {
+  (value) => handleSelectChange("company_size",
+  value)
+
+
+
+
+
+}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         <SelectTrigger>
                           <SelectValue placeholder="Select comp size"/>
                         </SelectTrigger>
@@ -182,7 +215,15 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select name="theme_preset" value={formData.theme_preset} onValueChange={(value) => handleSelectChange("theme_preset", value)}>
+                      <Select name="theme_preset" value={formData.theme_preset} onValueChange = {
+  (value) => handleSelectChange("theme_preset",
+  value)
+
+
+
+
+
+}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme"/>
                         </SelectTrigger>
@@ -203,7 +244,15 @@ export default function TenantOnboarding() {
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
                       </div>
-                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}/>
+                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {
+  (checked) => handleSwitchChange("is_co_branded",
+  checked)
+
+
+
+
+
+}/>
                     </div>
                   </TabsContent>
                   
@@ -211,7 +260,22 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "comp"} className="rounded-r-none"/>
+<<<<<<< HEAD
+                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
+  formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
+  '') : "comp"
+} className="rounded-r-none"/>
+=======
+                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
+  formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
+  '') : "company"
+
+
+
+
+
+} className="rounded-r-none"/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>

@@ -156,12 +156,10 @@ function ProjectDetailsContent() {
         </Card>
       </div>)}
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
         router.push("/unauthorized");
         return null}
-    const isOfferPending = project.status === "offer_sent";
     const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>

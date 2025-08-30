@@ -26,7 +26,13 @@ interface NavigationLink {
   matches: (path: string)  => boolean;
   children?: NavigationLink[]}
 
-export function MainNavigation(...args[]):  {
+<<<<<<< HEAD
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {;
+  isAdmin?: boolean;
+  unreadCount?: number;
+  className?: string;
+}) {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompOpen, setIsCompOpen] = useState(false);
@@ -36,8 +42,10 @@ export function MainNavigation(...args[]):  {
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent)  => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+<<<<<<< HEAD
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsServicesOpen(false);
         setIsCompOpen(false);
         setActiveDropdown(null)}
@@ -51,7 +59,11 @@ export function MainNavigation(...args[]):  {
       key: 'home',
       href: '/',
       name: 'Home',
-      matches: (path: string)  => path === '/'
+<<<<<<< HEAD
+      matches: (path: string)  => path = == '/'
+=======
+      matches: (path: string) => path = == '/'
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     },
     {
       key: 'services',
@@ -146,20 +158,30 @@ export function MainNavigation(...args[]):  {
       matches: (path: string)  => path.startsWith('/about')
     },
     {
+<<<<<<< HEAD
       key: 'contact',
       href: '/contact',
       name: 'Contact',
       matches: (path: string)  => path.startsWith('/contact')
     }
+=======;
+      key: 'contact',;
+      href: '/contact',;
+      name: 'Contact',;
+      matches: (path: string) => path.startsWith('/contact');
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const isActive = (link: NavigationLink)  => link.matches(location.pathname);
 
-  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean)  => void) => {
+<<<<<<< HEAD
+  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean) => void) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!link.children) return null;
 
     return (
-      <div className="relative" ref={dropdownRef}>
+      <div className = "relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -175,9 +197,33 @@ export function MainNavigation(...args[]):  {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  y: -10 
+
+
+
+
+
+}}
               transition={{ duration: 0.2 }}
               className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-white/10 rounded-lg shadow-xl z-50"
             >
@@ -194,15 +240,25 @@ export function MainNavigation(...args[]):  {
                     {child.name}
                   </Link>
                 ))}
+<<<<<<< HEAD
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div>;
     )};
+=======
+              </div>;
+            </motion.div>;
+          )};
+        </AnimatePresence>;
+      </div>;
+    );
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <nav className={`${className}`}>
+    <nav className = {`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">
         {baseLinks.map((link)  => (
@@ -241,9 +297,33 @@ export function MainNavigation(...args[]):  {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial = {
+  { opacity: 0,
+  x: '100%' 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  x: '100%' 
+
+
+
+
+
+}}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
           >
@@ -308,9 +388,19 @@ export function MainNavigation(...args[]):  {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </nav>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

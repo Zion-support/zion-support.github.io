@@ -110,7 +110,7 @@ export function QuoteWizard({ category }) {
                     }}>
                 <div className="font-semibold text-lg">{item.name}</div>
                 {/* Display other relevant info like price if available */}
-                {item.price !== undefined && (<div className="text-sm text-muted-foreground">
+                {item.price !== null && (<div className="text-sm text-muted-foreground">
                     Price: ${item.price.toFixed(2)}
                   </div>)}
                 {/* item.slug might not be directly displayable but useful for links if needed later */}
@@ -133,7 +133,7 @@ export function QuoteWizard({ category }) {
         {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
             Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
           </div>)}
-        {selectedItem && selectedItem.price !== undefined && (<div className="text-md text-muted-foreground">
+        {selectedItem && selectedItem.price !== null && (<div className="text-md text-muted-foreground">
              Price: ${selectedItem.price.toFixed(2)}
            </div>)}
         <Textarea value={message} onChange={(e) => setMessage(e.target.value)} data-testid="message-input" placeholder={`Any specific details about your request for ${selectedItem?.name || 'the selected item'}?`} rows={4}/>

@@ -28,11 +28,6 @@ export default function CheckoutPage() {
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const onSubmit = async (data) => {
         try {
-            const response = await apiClient('/api/checkout_sessions', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ amount: subtotal }),
-            });
             const result = await res.json();
             if (!res.ok)
                 throw new Error(result.error || 'Failed');
@@ -57,7 +52,12 @@ export default function CheckoutPage() {
                         console.error('Failed to add points', e)}
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
-                navigate(`/orders/${result.id}`)}
+<<<<<<< HEAD
+                router(`/orders/${result.id}`)}
+=======
+                router(`/orders/${result.id}`);
+            }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         catch (err) {
             console.error('Payment failed', err)}

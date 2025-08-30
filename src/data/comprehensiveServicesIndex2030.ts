@@ -1,5 +1,5 @@
 import { ProductListing  } from '@/types/listings';
-import { REVOLUTIONARY_SERVICES_2030  } from './revolutionaryServices2030';
+import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
@@ -33,12 +33,12 @@ export const SERVICE_CATEGORIES_2030 = [
   "Cloud & DevOps",
   "Quantum Computing",
   "IoT & Edge Computing",
-  "Blockchain & Web3",
-  "Digital Twin",
-  "Space Technology",
-  "Sustainable Technology",
-  "IT Infrastructure",
-  "Emerging Technology"
+  "Blockchain & Web3",;
+  "Digital Twin",;
+  "Space Technology",;
+  "Sustainable Technology",;
+  "IT Infrastructure",;
+  "Emerging Technology";
 ];
 
 // Service Statistics
@@ -56,27 +56,41 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
+<<<<<<< HEAD
   ).length,
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
+=======
+  ).length,;
+  ;
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
+    service.category === 'Emerging Technology';
+  ).length;
+;
+
+
+
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 };
 
 // Featured Services
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
 
 // High-ROI Services (ROI > 500%)
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const roi = service.roi;
-  if (typeof roi === 'string') {
+  if (typeof roi = == 'string') {;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 500}
   return false});
 
 // Quick Setup Services (< 8 weeks)
-export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const setupTime = service.setupTime;
-  if (typeof setupTime === 'string') {
+  if (typeof setupTime = == 'string') {;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 8}
   return false});

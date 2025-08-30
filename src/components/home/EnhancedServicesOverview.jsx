@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
+import { Button } from "../ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services
+<<<<<<< HEAD
 const ENHANCED_SERVICES = [
     {
         id: "ai-1",
@@ -49,6 +50,8 @@ const ENHANCED_SERVICES = [
         location: "Global"
     }
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const EnhancedServicesOverview = () => {
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);

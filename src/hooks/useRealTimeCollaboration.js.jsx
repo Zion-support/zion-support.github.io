@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { useAnalytics } from './useAnalytics';
+import { useAnalytics } from "./useAnalytics";
 export const useRealTimeCollaboration = (options, wsConfig) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -77,33 +77,34 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 // Attempt reconnection
                 if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
                     scheduleReconnection()}
-                trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
+                trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', null, {
                     code: event.code,
                     reason: event.reason
                 })};
             wsRef.current.onerror = (error) => {
                 console.error('WebSocket error:', error);
-                trackEvent('collaboration', 'connection_error', 'websocket_error', undefined, { error: error.toString() })}}
+                trackEvent('collaboration', 'connection_error', 'websocket_error', null, { error: error.toString() })}}
         catch (error) {
             console.error('Failed to initialize WebSocket connection:', error);
-            trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
+            trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
     }, [options, wsConfig, generateUserColor, trackEvent]);
     // Send message through WebSocket
     const sendMessage = useCallback((message) => {
         const fullMessage = {
-            ...message,
-            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+  ...message,
+  id: `msg_${Date.now()
+}_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
         if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
-            trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id })}
+            trackEvent('collaboration', 'message_sent', message.type, null, { messageId: fullMessage.id })}
         else {
             // Queue message for later
             messageQueueRef.current.push(fullMessage);
-            trackEvent('collaboration', 'message_queued', message.type, undefined, { messageId: fullMessage.id })}
+            trackEvent('collaboration', 'message_queued', message.type, null, { messageId: fullMessage.id })}
     }, [trackEvent]);
     // Handle incoming messages
     const handleIncomingMessage = useCallback((message) => {
@@ -132,7 +133,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             // Add message to history
             newState.messages = [...prev.messages, message].slice(-(options.messageRetention || 1000));
             return newState});
-        trackEvent('collaboration', 'message_received', message.type, undefined, {
+        trackEvent('collaboration', 'message_received', message.type, null, {
             messageId: message.id,
             userId: message.userId
         })}, [options.messageRetention, trackEvent]);
@@ -291,7 +292,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 ? { ...conflict, resolution }
                 : conflict)
         }));
-        trackEvent('collaboration', 'conflict_resolved', resolution, undefined, { conflictId })}, [trackEvent]);
+        trackEvent('collaboration', 'conflict_resolved', resolution, null, { conflictId })}, [trackEvent]);
     const disconnect = useCallback(() => {
         if (wsRef.current) {
             sendMessage({
@@ -329,17 +330,9 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             trackEvent('collaboration', 'queued_messages_sent', 'batch_send', queuedMessages.length)}
     }, [state.isConnected, trackEvent]);
     // Computed values
-    const onlineUsers = useMemo(() => {
-        return Array.from(state.users.values()).filter((user) => {
-            return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline})}, [state.users]);
     const offlineUsers = useMemo(() => {
         return Array.from(state.users.values()).filter((user) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && !user.isOnline})}, [state.users]);
-    const activeCursors = useMemo(() => {
-        return Array.from(state.users.values())
-            .filter((user) => {
-            return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline && 'cursor' in user && !!user.cursor})
-            .map(user => ({ ...user.cursor, user }))}, [state.users]);
     const activeSelections = useMemo(() => {
         return Array.from(state.users.values())
             .filter((user) => {

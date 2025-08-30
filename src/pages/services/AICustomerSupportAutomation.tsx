@@ -6,20 +6,20 @@ export default function AICustomerSupportAutomation() {
   const features = [
     '24/7 AI chatbot with human-like conversations',
     'Multi-language support (50+ languages)',
-    'Intelligent ticket routing and prioritization',
-    'Sentiment analysis and emotion detection',
-    'Automated response generation with brand voice',
-    'Seamless human-AI handoff system',
-    'Integration with CRM, helpdesk, and messaging platforms',
-    'Advanced analytics and performance insights'
+    'Intelligent ticket routing and prioritization',;
+    'Sentiment analysis and emotion detection',;
+    'Automated response generation with brand voice',;
+    'Seamless human-AI handoff system',;
+    'Integration with CRM, helpdesk, and messaging platforms',;
+    'Advanced analytics and performance insights';
   ];
 
-  const benefits = [
-    'Reduce support costs by 60-80%',
-    'Improve customer satisfaction by 40%',
-    'Handle 10x more support requests',
-    '24/7 availability without human limitations',
-    'Consistent quality across all interactions'
+  const benefits = [;
+    'Reduce support costs by 60-80%',;
+    'Improve customer satisfaction by 40%',;
+    'Handle 10x more support requests',;
+    '24/7 availability without human limitations',;
+    'Consistent quality across all interactions';
   ];
 
   const pricingTiers = [
@@ -38,31 +38,31 @@ export default function AICustomerSupportAutomation() {
       features: ['Advanced AI with sentiment analysis', 'Unlimited integrations', 'Priority support', 'Custom branding', 'Advanced analytics']
     },
     {
-      name: 'Enterprise',
-      price: '$499',
-      period: '/mo',
-      conversations: 'Unlimited conversations',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access']
-    }
+      name: 'Enterprise',;
+      price: '$499',;
+      period: '/mo',;
+      conversations: 'Unlimited conversations',;
+      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access'];
+    };
   ];
 
   const useCases = [
-    'E-commerce businesses',
-    'SaaS companies',
-    'Financial services',
-    'Healthcare providers',
-    'Travel agencies',
-    'Educational institutions'
+    'E-commerce businesses',;
+    'SaaS companies',;
+    'Financial services',;
+    'Healthcare providers',;
+    'Travel agencies',;
+    'Educational institutions';
   ];
 
-  const integrations = [
-    'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',
-    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',
-    'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion'
+  const integrations = [;
+    'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',;
+    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',;
+    'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Revolutionary AI customer support platform that provides 24/7 automated assistance, intelligent routing, and seamless human handoffs."
@@ -329,11 +329,11 @@ export default function AICustomerSupportAutomation() {
                 >
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

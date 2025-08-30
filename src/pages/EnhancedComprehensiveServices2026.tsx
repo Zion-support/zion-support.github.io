@@ -58,8 +58,13 @@ import { Brain,
  } from 'lucide-react';
 
 // Import our existing service data
-import { ultimateInnovativeServices2026  } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices  } from '../data/zion2026ComprehensiveServices';
+<<<<<<< HEAD
+import { ultimateInnovativeServices2026  } from "../data/ultimateInnovativeServices2026";
+import { zion2026ComprehensiveServices  } from "../data/zion2026ComprehensiveServices";
+=======
+import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
+import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -91,7 +96,9 @@ pricing: {
   growthRate?: string;
   roi?: string}
 
-const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const EnhancedComprehensiveServices2026: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [sortBy, setSortBy] = useState<any>('name');
@@ -103,7 +110,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
     const services: Service[] = [];
     
     // Add services from ultimateInnovativeServices2026
-    ultimateInnovativeServices2026.forEach(service => {
+    ultimateInnovativeServices2026.forEach(service = > {
       services.push({
         id: service.id,
         name: service.name,
@@ -121,15 +128,28 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo
+        contactInfo: service.contactInfo;
       })});
 
     // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service  => {
+    zion2026ComprehensiveServices.forEach(service = > {
+=======;
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      });
+    });
+
+    // Add services from zion2026ComprehensiveServices
+    zion2026ComprehensiveServices.forEach(service = > {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       services.push({
         id: service.id,
         name: service.name,
@@ -147,23 +167,37 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo
+        contactInfo: service.contactInfo;
       })});
+=======
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      });
+    });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return services}, []);
 
-  const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+<<<<<<< HEAD
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort()}, [allServices]);
+=======
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+    return cats.sort();
+  }, [allServices]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory});
@@ -189,9 +223,11 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string)  => {
-    switch (category) {
-      case 'Artificial Intelligence':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Artificial Intelligence':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-6 h-6" />;
       case 'Quantum Computing':
         return <Atom className="w-6 h-6" />;
@@ -212,12 +248,14 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
-        return <Lightbulb className="w-6 h-6" />}
+        return <Lightbulb className = "w-6 h-6" />};
   };
 
-  const getStatusColor = (status: string)  => {
-    switch (status.toLowerCase()) {
-      case 'live':
+<<<<<<< HEAD
+  const getStatusColor = (status: string) => {;
+    switch (status.toLowerCase()) {;
+      case 'live':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-green-100 text-green-800';
       case 'beta':
         return 'bg-blue-100 text-blue-800';
@@ -229,21 +267,48 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         return 'bg-gray-100 text-gray-800'}
   };
 
+<<<<<<< HEAD
   const getInnovationBadge = (service: Service)  => {
     if (service.innovationLevel === 'Revolutionary') {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>}
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>};
     return null};
+=======
+  const getInnovationBadge = (service: Service) => {;
+    if (service.innovationLevel === 'Revolutionary') {;
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
+    } else if (service.innovationLevel = == 'Cutting-Edge') {;
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
+    }
+    return null;
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -355,9 +420,33 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
               {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   whileHover={{ y: -5 }}
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
@@ -439,9 +528,33 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
                 >
@@ -511,9 +624,33 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
             onClick={() => setSelectedService(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+}}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -692,11 +829,21 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   )};
+=======
+            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedComprehensiveServices2026;

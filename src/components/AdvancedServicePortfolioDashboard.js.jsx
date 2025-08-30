@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Input } from "./ui/input";
 const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
@@ -106,14 +106,11 @@ const AdvancedServicePortfolioDashboard = () => {
     ];
     const filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesStatus = selectedStatus === 'all' || service.status === selectedStatus;
-            const matchesComplexity = selectedComplexity === 'all' || service.complexity === selectedComplexity;
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
     const portfolioMetrics = useMemo(() => {
         const activeServices = portfolioData.filter(s => s.status === 'Active');
-        const totalRevenue = portfolioData.reduce((sum, s) => sum + s.revenue, 0);
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
         const avgPerformance = activeServices.length > 0
             ? activeServices.reduce((sum, s) => sum + s.performance, 0) / activeServices.length
@@ -171,7 +168,13 @@ const AdvancedServicePortfolioDashboard = () => {
     ];
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} className="mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
@@ -194,7 +197,13 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* Portfolio Metrics */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -293,7 +302,13 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* Filters and Controls */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
@@ -345,7 +360,13 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* Portfolio Table */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.3 }} className="mb-8">
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
@@ -375,7 +396,13 @@ const AdvancedServicePortfolioDashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
+                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {
+  { opacity: 0,
+  x: -20 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
                       <td className="py-3 px-4">
                         <div className="font-medium text-zion-blue-dark">{service.title}</div>
                         <div className="text-sm text-zion-slate-light">{service.price}</div>
@@ -426,7 +453,13 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* Portfolio Insights */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
           <CardHeader>
@@ -437,7 +470,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
+              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
+  { opacity: 0,
+  x: -20 
+}} animate = {
+  { opacity: 1,
+  x: 0 
+}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :
                 index === 1 ? 'bg-purple-500' :
@@ -506,7 +545,13 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ delay: 0.5 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
@@ -514,11 +559,17 @@ const AdvancedServicePortfolioDashboard = () => {
             Contact us to discuss how we can help you achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation', '_blank')}>
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',
+  '_blank')
+}>
               <Users className="w-5 h-5 mr-2"/>
               Get Portfolio Consultation
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+}>
               <Zap className="w-5 h-5 mr-2"/>
               Call Now
             </Button>

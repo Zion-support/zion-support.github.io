@@ -22,11 +22,17 @@ import { HelpCircle,
   Cpu,
   Star
  } from 'lucide-react';
-import { SEO  } from '../components/SEO';
+import { SEO  } from "../components/SEO";
 
+<<<<<<< HEAD
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+=======
+const Support = () => {;
+  const [selectedCategory, setSelectedCategory] = useState('general');
+  const [contactMethod, setContactMethod] = useState('email');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const supportCategories = [
     { id: 'all', name: 'All Support', icon: HelpCircle, color: 'from-cyan-500 to-blue-600' },
@@ -34,7 +40,7 @@ export default function Support() {
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-500 to-cyan-600' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-600' },
     { id: 'infrastructure', name: 'Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-600' },
-    { id: 'quantum', name: 'Quantum Tech', icon: Star, color: 'from-indigo-500 to-purple-600' }
+    { id: 'quantum', name: 'Quantum Tech', icon: Star, color: 'from-indigo-500 to-purple-600' };
   ];
 
   const commonIssues = [
@@ -55,6 +61,7 @@ export default function Support() {
       color: 'from-blue-500 to-cyan-600'
     },
     {
+<<<<<<< HEAD
       category: 'security',
       title: 'Authentication Problems',
       description: 'User login and access control issues',
@@ -78,6 +85,15 @@ export default function Support() {
       icon: Star,
       color: 'from-indigo-500 to-purple-600'
     }
+=======
+      id: 'security',
+      name: 'Security & Compliance',;
+      icon: Shield,;
+      description: 'Security concerns, compliance questions, and access control',;
+      responseTime: 'Immediate',;
+      availability: '24/7';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const supportChannels = [
@@ -100,6 +116,7 @@ export default function Support() {
       features: ['Direct expert access', 'Complex issue resolution', 'Training support', 'Emergency response']
     },
     {
+<<<<<<< HEAD
       title: 'Email Support',
       description: 'Detailed technical assistance via email',
       icon: Mail,
@@ -108,6 +125,17 @@ export default function Support() {
       responseTime: '< 4 hours',
       features: ['Detailed documentation', 'Screenshot support', 'Code review', 'Long-form solutions']
     }
+=======
+      id: 'ticket',
+      name: 'Support Ticket',
+      icon: Ticket,
+      description: 'Create a detailed support ticket for tracking and follow-up',;
+      responseTime: 'Within 4 hours',;
+      availability: '24/7',;
+      action: 'Create Ticket',;
+      color: 'from-orange-500 to-red-500';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const quickActions = [
@@ -136,41 +164,140 @@ export default function Support() {
       members: '10K+ members'
     },
     {
+<<<<<<< HEAD
       title: 'API Documentation',
       description: 'Technical API references and examples',
       icon: Zap,
       color: 'from-orange-500 to-red-600',
       link: '/api',
       endpoints: '100+ endpoints'
-    }
+    };
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues 
+    ? commonIssues ;
     : commonIssues.filter(issue => issue.category === selectedCategory);
 
   const filteredSearchIssues = searchQuery 
     ? filteredIssues.filter(issue => 
         issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         issue.description.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+      );
     : filteredIssues;
 
   return (
     <>
       <SEO 
-        title="Support Center - Zion Tech Group"
+        title = "Support Center - Zion Tech Group"
         description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."
         canonical="/support"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+      title: 'Status Page',;
+      description: 'Check system status and maintenance schedules',;
+      icon: Globe,;
+      action: 'Check Status',;
+      color: 'from-yellow-500 to-orange-500';
+    };
+  ];
+
+  const faqItems = [
+    {
+      question: 'How do I reset my password?',
+      answer: 'You can reset your password by clicking the "Forgot Password" link on the login page, or by contacting our support team.',
+      category: 'general'
+    },
+    {
+      question: 'What are your support hours?',
+      answer: 'Our support team is available 24/7 for critical issues. General support is available 24/7, while phone support is available Monday-Friday 9AM-6PM EST.',
+      category: 'general'
+    },
+    {
+      question: 'How do I report a bug?',
+      answer: 'You can report bugs through our support ticket system, live chat, or by emailing support@ziontechgroup.com with detailed information about the issue.',
+      category: 'technical'
+    },
+    {
+      question: 'What is your response time guarantee?',
+      answer: 'Response times vary by support category. Critical security issues are addressed immediately, while general inquiries are responded to within 24 hours.',
+      category: 'general'
+    },
+    {
+      question: 'How do I upgrade my service plan?',
+      answer: 'You can upgrade your service plan through your account dashboard, or contact our billing team for assistance with custom enterprise plans.',
+      category: 'billing'
+    },;
+    {;
+      question: 'Do you offer training for new users?',;
+      answer: 'Yes, we offer comprehensive onboarding and training programs for new users. Contact our customer success team to schedule a training session.',;
+      category: 'general';
+    };
+  ];
+
+  const contactForm = {
+  name: '',
+    email: '',
+    company: '',
+    category: 'general',
+    priority: 'medium',
+    subject: '',;
+  ;
+  ;
+  ;
+  message: '';
+  ;
+
+
+
+
+
+};
+
+  return (
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group | Get Help & Contact Us</title>
+        <meta name = "description" content="Get support for Zion Tech Group services. Contact our team through multiple channels including email, chat, phone, and support tickets." />
+        <meta name="keywords" content="support, help, contact, customer service, Zion Tech Group, technical support" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
                 <HelpCircle className="h-10 w-10 text-white" />
+=======
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Headphones className="w-10 h-10 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Support Center
@@ -193,20 +320,106 @@ export default function Support() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Quick Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">24/7</div>
                   <div className="text-slate-400">Support Available</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center">;
                   <div className="text-3xl font-bold text-cyan-400">&lt; 2min</div>
-                  <div className="text-slate-400">Response Time</div>
+                  <div className = "text-slate-400">Response Time</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">99.9%</div>
                   <div className="text-slate-400">Satisfaction Rate</div>
                 </div>
+=======
+        {/* Support Methods */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                How Can We Help You?
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {supportMethods.map((method, index) => (
+                  <motion.div
+                    key={method.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <method.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{method.name}</h3>
+                    <p className="text-slate-600 text-sm mb-4">{method.description}</p>
+                    <div className="text-xs text-slate-500 mb-4">
+                      <p>Response: {method.responseTime}</p>
+                      <p>Available: {method.availability}</p>
+                    </div>
+                    <button className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                      {method.action}
+                    </button>
+                  </motion.div>
+                ))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
           </div>
@@ -215,6 +428,7 @@ export default function Support() {
         {/* Support Channels */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">How Can We Help You?</h2>
               <p className="text-xl text-slate-300">Choose the support channel that works best for your needs</p>
@@ -224,9 +438,18 @@ export default function Support() {
               {supportChannels.map((channel, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -240,6 +463,76 @@ export default function Support() {
                     <div className="flex items-center text-sm text-slate-400">
                       <Clock className="h-4 w-4 mr-2" />
                       <span>Available: {channel.availability}</span>
+=======
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Quick Actions
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {quickActions.map((action, index) => (
+                  <motion.div
+                    key={action.title}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <action.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     </div>
                     <div className="flex items-center text-sm text-slate-400">
                       <CheckCircle className="h-4 w-4 mr-2" />
@@ -268,6 +561,7 @@ export default function Support() {
         {/* Category Filter */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Common Issues & Solutions</h2>
               <p className="text-xl text-slate-300">Find quick solutions to frequently encountered problems</p>
@@ -296,14 +590,98 @@ export default function Support() {
               {filteredSearchIssues.map((issue, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${issue.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
                       <issue.icon className="h-6 w-6 text-white" />
+=======
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Support Categories
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {supportCategories.map((category, index) => (
+                  <motion.div
+                    key={category.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                    className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border-2 cursor-pointer ${
+                      selectedCategory === category.id 
+                        ? 'border-blue-500 bg-blue-50' 
+                        : 'border-slate-100 hover:border-blue-200'
+                    }`}
+                    onClick={() => setSelectedCategory(category.id)}
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <category.icon className="w-8 h-8 text-blue-600" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-2">{issue.title}</h3>
@@ -329,6 +707,7 @@ export default function Support() {
 
         {/* Resources Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Helpful Resources</h2>
@@ -339,13 +718,79 @@ export default function Support() {
               {resources.map((resource, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 text-center"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <resource.icon className="h-8 w-8 text-white" />
+=======
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Contact Our Support Team
+              </h2>
+              
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Name *</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Email *</label>
+                      <input
+                        type="email"
+                        required
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                   
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
@@ -355,9 +800,115 @@ export default function Support() {
                     {resource.articles || resource.videos || resource.members || resource.endpoints}
                   </div>
                   
+<<<<<<< HEAD
                   <Link
                     to={resource.link}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+=======
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Subject *</label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Brief description of your issue"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Message *</label>
+                    <textarea
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Please provide detailed information about your issue or question..."
+                    />
+                  </div>
+                  
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                    >
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Frequently Asked Questions
+              </h2>
+              
+              <div className="space-y-4">
+                {faqItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+}}
+                    className="bg-slate-50 rounded-lg p-6 border border-slate-200"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   >
                     Explore Resource
                     <span className="ml-1">→</span>
@@ -371,8 +922,41 @@ export default function Support() {
         {/* Contact CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-6">
+=======
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.2 
+
+
+
+
+
+}}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 Still Need Help?
               </h2>
               <p className="text-xl text-slate-300 mb-8">
@@ -392,9 +976,21 @@ export default function Support() {
                   Call Now
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </div>
     </>
   )}
+=======;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+};
+
+export default Support;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -339,12 +339,12 @@ export function MainSidebar(...args[]):  {
       items[
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Developer Portal', href: '/developers', icon: Code },
-        { name: 'API Documentation', href: '/api-docs', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Video Tutorials', href: '/tutorials', icon: Video },
-      ]
-    }
+        { name: 'API Documentation', href: '/api-docs', icon: FileText },;
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+        { name: 'White Papers', href: '/white-papers', icon: FileText },;
+        { name: 'Video Tutorials', href: '/tutorials', icon: Video },;
+      ];
+    };
   ];
 
   const contactInfo = [
@@ -360,19 +360,19 @@ export function MainSidebar(...args[]):  {
       href: 'mailto:kleber@ziontechgroup.com',
       description: 'Email us for support'
     },
-    { 
-      icon: MapPin, 
-      text: '364 E Main St STE 1008 Middletown DE 19709', 
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-      description: 'Headquarters location'
-    },
+    { ;
+      icon: MapPin, ;
+      text: '364 E Main St STE 1008 Middletown DE 19709', ;
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',;
+      description: 'Headquarters location';
+    },;
   ];
 
-  const quickStats = [
-    { value: '500+', label: 'Projects Delivered', icon: Award },
-    { value: '15+', label: 'Years Experience', icon: Star },
-    { value: '99.9%', label: 'Client Satisfaction', icon: TrendingUp },
-    { value: '24/7', label: 'Support Available', icon: Clock },
+  const quickStats = [;
+    { value: '500+', label: 'Projects Delivered', icon: Award },;
+    { value: '15+', label: 'Years Experience', icon: Star },;
+    { value: '99.9%', label: 'Client Satisfaction', icon: TrendingUp },;
+    { value: '24/7', label: 'Support Available', icon: Clock },;
   ];
 
   return (
@@ -380,16 +380,23 @@ export function MainSidebar(...args[]):  {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
+          className = "fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
           onClick={onClose}
         />
       )}
       
       {/* Sidebar */}
-      <div className={cn(
+      <div className = {
+  cn(
         "fixed left-0 top-0 z-50 h-full w-80 bg-gradient-to-b from-zion-slate-dark via-zion-slate to-zion-slate-light border-r border-white/20 transform transition-all duration-300 ease-in-out lg:translate-x-0 shadow-2xl",
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      )}>
+  isOpen ? "translate-x-0" : "-translate-x-full"
+      )
+
+
+
+
+
+}>
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-white/20 bg-white/5">
@@ -430,55 +437,79 @@ export function MainSidebar(...args[]):  {
           <nav className="flex-1 overflow-y-auto p-4 space-y-6">
             {navigationItems.map((section) => (
               <div key={section.title}>
-                <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                  {section.title}
-                </h3>
-                <ul className="space-y-1">
-                  {section.items.map((item) => {
+                <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">;
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
+                  {section.title};
+                </h3>;
+                <ul className="space-y-1">;
+                  {section.items.map((item) => {;
                     const IconComponent = item.icon;
                     const isActive = location.pathname === item.href;
                     
                     return (
-                      <li key={item.name}>
+                      <li key = {item.name}>
                         <Link
                           to={item.href}
                           onClick={onClose}
-                          className={cn(
+                          className = {
+  cn(
                             "flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 group",
-                            isActive
+  isActive
                               ? "bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 shadow-lg shadow-zion-cyan/10"
                               : "text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 border border-transparent"
-                          )}
+                          )
+
+
+
+
+
+}
                         >
-                          <IconComponent className={cn(
+                          <IconComponent className = {
+  cn(
                             "w-4 h-4 mr-3 transition-colors duration-200",
+  <<<<<<< HEAD
                             isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
-                          )} />
+                          )
+} />
                           {item.name}
                         </Link>
                       </li>
                     )})}
+=======
+  isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
+                          )
+
+
+;
+;
+} />;
+                          {item.name};
+                        </Link>;
+                      </li>;
+                    );
+                  })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </ul>
               </div>
             ))}
           </nav>
 
           {/* Contact Info */}
-          <div className="p-4 border-t border-white/20 bg-white/5">
-            <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              Contact Information
-            </h3>
-            <div className="space-y-3">
-              {contactInfo.map((contact) => {
+          <div className = "p-4 border-t border-white/20 bg-white/5">
+            <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">;
+              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
+              Contact Information;
+            </h3>;
+            <div className="space-y-3">;
+              {contactInfo.map((contact) => {;
                 const IconComponent = contact.icon;
                 return (
                   <a
-                    key={contact.text}
+                    key = {contact.text}
                     href={contact.href}
-                    target={contact.href.startsWith('http') ? '_blank' : undefined}
-                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={contact.href.startsWith('http') ? '_blank' : null}
+                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : null}
                     className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group"
                   >
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
@@ -488,16 +519,26 @@ export function MainSidebar(...args[]):  {
                       <div className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
                         {contact.text}
                       </div>
+<<<<<<< HEAD
                       <div className="text-xs text-gray-400 mt-1">
                         {contact.description}
                       </div>
                     </div>
                   </a>
                 )})}
+=======;
+                      <div className="text-xs text-gray-400 mt-1">;
+                        {contact.description};
+                      </div>;
+                    </div>;
+                  </a>;
+                );
+              })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
             
             {/* Website Link */}
-            <div className="mt-4 pt-4 border-t border-white/20">
+            <div className = "mt-4 pt-4 border-t border-white/20">
               <a
                 href="https://ziontechgroup.com"
                 target="_blank"
@@ -507,9 +548,19 @@ export function MainSidebar(...args[]):  {
                 <Globe className="w-4 h-4" />
                 Visit Website
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </div>
     </>
   )}
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

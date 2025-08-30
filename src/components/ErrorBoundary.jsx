@@ -31,7 +31,7 @@ function ErrorFallback({ error, resetError }) {
             Try Again
           </Button>
           
-          <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
+          <Button variant="outline" onClick={() => router(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
             <ArrowLeft className="w-4 h-4 mr-2"/>
             Go Back
           </Button>
@@ -83,7 +83,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
     if (hasError) {
         if (fallback) {
             return fallback}
-        return (<ErrorFallback error={error || undefined} resetError={resetError}/>)}
+        return (<ErrorFallback error={error || null} resetError={resetError}/>)}
     return <>{children}</>}
 // Hook for functional components to handle errors
 export function useErrorHandler() {

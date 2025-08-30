@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle  } from 'lucide-react';
 
@@ -17,6 +17,7 @@ export default function Sustainability(...args: []):  {
       description: 'Solar, wind, and other renewable energy integration',
       color: 'from-yellow-500 to-orange-500'
     },
+<<<<<<< HEAD
     {
       icon: Recycle,
       title: 'Circular Economy',
@@ -41,6 +42,13 @@ export default function Sustainability(...args: []):  {
       description: 'Business growth strategies that prioritize environmental responsibility',
       color: 'from-indigo-500 to-purple-500'
     }
+=======;
+    {;
+      icon: Globe,;
+      title: 'Carbon Neutral',;
+      description: 'Achieve net-zero emissions through smart technology';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const services = [
@@ -62,12 +70,20 @@ export default function Sustainability(...args: []):  {
       price: 'From $15,000',
       features: ['System design', 'Installation', 'Grid integration', 'Maintenance']
     },
+<<<<<<< HEAD
     {
       title: 'Sustainability Reporting',
       description: 'ESG reporting and sustainability metrics dashboard',
       price: 'From $5,000',
       features: ['Data collection', 'Report generation', 'Stakeholder communication', 'Compliance']
     }
+=======;
+    {;
+      title: 'Carbon Footprint Analysis',;
+      description: 'Comprehensive environmental impact assessment',;
+      icon: Globe;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const solutions = [
@@ -76,23 +92,43 @@ export default function Sustainability(...args: []):  {
     { name: 'Water Conservation', icon: Globe, description: 'Smart water management systems' },
     { name: 'Carbon Offsetting', icon: Leaf, description: 'Carbon credit and offset programs' },
     { name: 'Sustainable Supply Chain', icon: Network, description: 'Green procurement and logistics' },
-    { name: 'Employee Engagement', icon: Users, description: 'Sustainability training and programs' }
+    { name: 'Employee Engagement', icon: Users, description: 'Sustainability training and programs' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Sustainability Services - Zion Tech Group"
         description="Transform your business with sustainable technology solutions. From green IT to renewable energy, we help you reduce environmental impact while improving efficiency."
       />
       
+=======
+    <div className = "min-h-screen bg-futuristic">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -135,8 +171,24 @@ export default function Sustainability(...args: []):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -153,10 +205,51 @@ export default function Sustainability(...args: []):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -173,8 +266,24 @@ export default function Sustainability(...args: []):  {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -191,10 +300,51 @@ export default function Sustainability(...args: []):  {
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
@@ -224,8 +374,14 @@ export default function Sustainability(...args: []):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -242,9 +398,18 @@ export default function Sustainability(...args: []):  {
             {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
@@ -262,10 +427,27 @@ export default function Sustainability(...args: []):  {
       <section className="py-20 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green?
             </h2>
@@ -293,5 +475,28 @@ export default function Sustainability(...args: []):  {
         </div>
       </section>
     </div>
+=======
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Go Green?
+              </h2>
+              <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+                Make a positive impact on the environment while advancing your technology capabilities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  Go Green with Tech
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300">
+                  Contact Green Team
+                </button>
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

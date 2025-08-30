@@ -30,12 +30,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       icon: Smartphone,
       title: "Mobile App",
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
-    },
-    {
-      icon: Globe,
-      title: "Multi-location Support",
-      description: "Manage schedules across multiple locations, departments, and time zones seamlessly."
-    }
+    },;
+    {;
+      icon: Globe,;
+      title: "Multi-location Support",;
+      description: "Manage schedules across multiple locations, departments, and time zones seamlessly.";
+    };
   ];
 
   const schedulingCapabilities = [
@@ -63,12 +63,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       icon: Settings,
       title: "Custom Rules",
       description: "Configurable business rules for scheduling, overtime, and compliance"
-    },
-    {
-      icon: FileText,
-      title: "Compliance Tracking",
-      description: "Ensure compliance with labor laws, break requirements, and overtime regulations"
-    }
+    },;
+    {;
+      icon: FileText,;
+      title: "Compliance Tracking",;
+      description: "Ensure compliance with labor laws, break requirements, and overtime regulations";
+    };
   ];
 
   const pricingPlans = [
@@ -113,12 +113,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         "Custom scheduling algorithms",
         "Advanced compliance tools",
         "White-label options",
-        "Dedicated account manager",
-        "Custom training",
-        "On-premise options"
-      ],
-      popular: false
-    }
+        "Dedicated account manager",;
+        "Custom training",;
+        "On-premise options";
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -136,12 +136,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
       icon: TrendingUp
-    },
-    {
-      title: "Ensure Compliance",
-      description: "Automatically comply with labor laws and avoid costly violations.",
-      icon: Shield
-    }
+    },;
+    {;
+      title: "Ensure Compliance",;
+      description: "Automatically comply with labor laws and avoid costly violations.",;
+      icon: Shield;
+    };
   ];
 
   const industries = [
@@ -169,18 +169,18 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       icon: Settings,
       title: "Services",
       description: "Manage appointment-based scheduling for professional services"
-    },
-    {
-      icon: BarChart3,
-      title: "Construction",
-      description: "Coordinate complex project schedules with multiple teams and locations"
-    }
+    },;
+    {;
+      icon: BarChart3,;
+      title: "Construction",;
+      description: "Coordinate complex project schedules with multiple teams and locations";
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Employee Scheduling SaaS - Zion Tech Group"
+        title = "Employee Scheduling SaaS - Zion Tech Group"
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
       />
@@ -192,8 +192,24 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -240,9 +256,33 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -272,9 +312,33 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               {schedulingCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -304,9 +368,33 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               {industries.map((industry, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -336,9 +424,33 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -370,9 +482,33 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-orange-500 ring-2 ring-orange-500/20' 
@@ -425,8 +561,24 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -448,12 +600,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 >
                   Contact Sales
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }
 

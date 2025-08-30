@@ -21,7 +21,6 @@ export const matchesSearchTerm = (text, searchTerm) => {
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
-    const term = searchTerm.toLowerCase();
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
     // Exact title match gets highest score
@@ -58,8 +57,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 /**
  * Sort search results based on sort option
  */
-export const sortSearchResults = (results, sortBy, searchTerm) => {
-    const sortedResults = [...results];
+export const sortedResults = [...results];
     switch (sortBy) {
         case 'price_asc':
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
@@ -69,7 +67,6 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
             return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
         case 'date':
             return sortedResults.sort((a, b) => {
-                const dateA = a.date ? new Date(a.date).getTime() : 0;
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
             });
@@ -78,7 +75,6 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
         case 'relevance':
         default:
             return sortedResults.sort((a, b) => {
-                const scoreA = calculateRelevanceScore(a, searchTerm);
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
             });
@@ -87,8 +83,7 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
 /**
  * Filter search results based on active filters
  */
-export const filterSearchResults = (results, filters) => {
-    let filteredResults = [...results];
+export const filteredResults = [...results];
     // Filter by type
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
@@ -273,3 +268,5 @@ export default {
     getActiveFilterCount,
     getDefaultFilters
 };
+
+export default for;

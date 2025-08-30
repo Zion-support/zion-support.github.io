@@ -312,9 +312,6 @@ export const pricingTiers = [
   }
 ];
 
-export const getServiceById = (id) => {
-  return comprehensiveServices.find(service => service.id === id)};
-
 export const getServicesByCategory = (category) => {
   return comprehensiveServices.filter(service => service.category === category)};
 

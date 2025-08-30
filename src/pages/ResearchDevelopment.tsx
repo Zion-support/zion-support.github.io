@@ -18,16 +18,18 @@ import { Flask,
   ArrowRight
  } from 'lucide-react';
 
-const ResearchDevelopment: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+const ResearchDevelopment: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedArea, setSelectedArea] = useState('all');
 
   const researchAreas = [
-    { id: 'all', name: 'All Areas', icon: Flask },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'biotech', name: 'Biotechnology', icon: Microscope },
-    { id: 'space', name: 'Space Technology', icon: Rocket }
+    { id: 'all', name: 'All Areas', icon: Flask },;
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },;
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
+    { id: 'biotech', name: 'Biotechnology', icon: Microscope },;
+    { id: 'space', name: 'Space Technology', icon: Rocket };
   ];
 
   const researchProjects = [
@@ -115,16 +117,25 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2024-2027',
       team: '18 researchers',
       funding: '$4.1M',
+<<<<<<< HEAD
       outcomes[
         'Reduced energy consumption',
         'Green computing standards',
         'Sustainable technology practices'
       ]
     }
+=======
+      outcomes: [;
+        'Reduced energy consumption',;
+        'Green computing standards',;
+        'Sustainable technology practices';
+      ];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const filteredProjects = researchProjects.filter(project => 
-    selectedArea === 'all' || project.area === selectedArea
+  const filteredProjects = researchProjects.filter(project => ;
+    selectedArea === 'all' || project.area === selectedArea;
   );
 
   const publications = [
@@ -146,12 +157,12 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
     },
     {
       title: 'AI-Driven Drug Discovery: Current State and Future Directions',
-      authors: 'Dr. Maria Garcia, Dr. Robert Johnson, Dr. Amanda Lee',
-      journal: 'Science',
-      year: 2023,
-      citations: 78,
-      doi: '10.1126/science.abc1234'
-    }
+      authors: 'Dr. Maria Garcia, Dr. Robert Johnson, Dr. Amanda Lee',;
+      journal: 'Science',;
+      year: 2023,;
+      citations: 78,;
+      doi: '10.1126/science.abc1234';
+    };
   ];
 
   const partnerships = [
@@ -173,22 +184,38 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       focus: 'Space technology development',
       duration: '2024-2028'
     },
-    {
-      name: 'Google Research',
-      type: 'Industry',
-      focus: 'Large language models',
-      duration: '2023-2025'
-    }
+    {;
+      name: 'Google Research',;
+      type: 'Industry',;
+      focus: 'Large language models',;
+      duration: '2023-2025';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -227,8 +254,24 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -241,9 +284,33 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             {filteredProjects.map((project, index)  => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               >
@@ -295,8 +362,24 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -309,9 +392,33 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             {publications.map((pub, index) => (
               <motion.div
                 key={pub.doi}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20"
               >
@@ -351,8 +458,24 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -365,9 +488,33 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             {partnerships.map((partner, index)  => (
               <motion.div
                 key={partner.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               >
@@ -394,8 +541,24 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -424,9 +587,33 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             ].map((lab, index)  => (
               <motion.div
                 key={lab.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -445,8 +632,24 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -463,11 +666,21 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
               <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300">
                 Submit Research Proposal
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ResearchDevelopment;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
@@ -63,7 +63,7 @@ const ComprehensivePricingShowcase2025 = () => {
     };
     const getCategoryIcon = (category) => {
         const icons = {
-            'Legal Tech & Compliance': '⚖️',
+  'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
             'Energy & Sustainability': '🌱',
@@ -76,9 +76,22 @@ const ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+  <<<<<<< HEAD
             'AI & Customer Experience': '💬'
-        };
+        
+};
         return icons[category] || '🚀'};
+=======
+  'AI & Customer Experience': '💬'
+        
+
+
+
+
+};
+        return icons[category] || '🚀';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">

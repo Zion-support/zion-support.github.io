@@ -46,16 +46,25 @@ const testimonials = [
     id: 5,
     name: "Lisa Park",
     position: "Head of IT",
+<<<<<<< HEAD
     comp: "Healthcare Innovations",
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",
     rating: 5,
     industry: "Healthcare",
     project: "Cloud Migration & Optimization"
   }
+=======
+    company: "Healthcare Innovations",;
+    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
+    rating: 5,;
+    industry: "Healthcare",;
+    project: "Cloud Migration & Optimization";
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 export function TestimonialsSection(...args[]):  {
   return (
-    <section className="py-20 bg-zion-blue-dark">
+    <section className = "py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -120,9 +129,33 @@ export function TestimonialsSection(...args[]):  {
         </div>
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
@@ -140,9 +173,19 @@ export function TestimonialsSection(...args[]):  {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">24/7</div>
+<<<<<<< HEAD
             <div className="text-zion-slate-light">Support Available</div>
           </div>
         </motion.div>
       </div>
     </section>
   )}
+=======;
+            <div className="text-zion-slate-light">Support Available</div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

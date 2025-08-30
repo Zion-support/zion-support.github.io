@@ -259,9 +259,17 @@ export const quantumBreakthroughServices2025 = [
       'Renewable energy integration',
       'Energy storage management',
       'Demand response optimization',
+<<<<<<< HEAD
       'Grid stability management'
     ],
     integrations['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
     compliance['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards']
   }
+=======;
+      'Grid stability management';
+    ],;
+    integrations: ['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],;
+    compliance: ['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];

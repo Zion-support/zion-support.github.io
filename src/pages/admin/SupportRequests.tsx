@@ -83,12 +83,12 @@ const MOCK_SUPPORT_REQUESTS = [
     user: "jamie.taylor@tech.org",
     userId: "user-345",
     issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
-  }
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
+  };
 ];
 
 export default function SupportRequests() {
@@ -98,12 +98,12 @@ export default function SupportRequests() {
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   
   // Apply filters to the request data
-  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
-        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {;
+    // Apply search query filter;
+    if (searchQuery && ;
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
     }
     
@@ -131,7 +131,7 @@ export default function SupportRequests() {
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
   
-  const resetFilters = () => {
+  const resetFilters = () => {;
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
@@ -141,7 +141,7 @@ export default function SupportRequests() {
   return (
     <>
       <SEO 
-        title="Support Requests | Admin Dashboard"
+        title = "Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
       <div className="container mx-auto px-4 py-8">
@@ -341,11 +341,11 @@ export default function SupportRequests() {
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </>
+              </p>;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </div>;
+    </>;
   );
 }

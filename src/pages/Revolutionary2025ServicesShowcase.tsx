@@ -83,13 +83,23 @@ import { Search,
   SkipForward2,
   PlayCircle,
   PauseCircle
+<<<<<<< HEAD
  } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices  } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices  } from '../data/revolutionary-2025-specialized-it-ai-services';
+import { revolutionary2025AdvancedMicroSaasServices  } from "../data/revolutionary-2025-advanced-micro-saas-v2";
+import { revolutionary2025SpecializedITAIServices  } from "../data/revolutionary-2025-specialized-it-ai-services";
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
+const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ALL_SERVICES);
+=======
+} from 'lucide-react';
+import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2";
+import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services";
+// Combine all services
+const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
+const Revolutionary2025ServicesShowcase: React.FC = () => {;
+  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -101,23 +111,32 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
   useEffect(() => {
     let filtered = ALL_SERVICES;
     if (searchTerm) {
+<<<<<<< HEAD
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       )}
+=======;
+      filtered = filtered.filter(service =>;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      );
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
-    if (selectedPriceRange !== 'all') {
+    if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
-      filtered = filtered.filter(service => {
+      filtered = filtered.filter(service => {;
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {
           return price >= min && price <= max}
         return price >= min})}
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
-      filtered = filtered.filter(service => {
+      filtered = filtered.filter(service => {;
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
           return roi >= min && roi <= max}
@@ -136,21 +155,47 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
     });
     setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
+<<<<<<< HEAD
   const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
-        [...prev, serviceId]
+        [...prev, serviceId];
     )};
+=======
+  const handleServiceSelect = (serviceId: string) => {;
+    setSelectedServices(prev => ;
+      prev.includes(serviceId) ;
+        ? prev.filter(id => id !== serviceId);
+        : [...prev, serviceId];
+    );
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -268,8 +313,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -283,8 +344,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -302,9 +379,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center mb-4">
@@ -323,9 +424,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center mb-4">
@@ -354,8 +479,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -369,8 +510,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-violet-600/20 to-purple-700/20 p-6 rounded-xl border border-violet-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -396,9 +553,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center mb-4">
@@ -423,9 +604,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center mb-4">
@@ -462,8 +667,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -556,9 +777,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -607,9 +852,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                 >
                   <div className="flex items-start gap-6">
@@ -762,8 +1031,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -794,9 +1079,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-8 rounded-xl border-2 border-blue-500/50 transform scale-105"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block">
@@ -833,9 +1142,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Plan</h3>
@@ -907,8 +1240,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -920,9 +1269,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-purple-400 mb-2">25ms</div>
@@ -933,9 +1306,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-cyan-400 mb-2">1.2M</div>
@@ -946,9 +1343,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-green-400 mb-2">256-bit</div>
@@ -961,8 +1382,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-indigo-600/20 to-purple-700/20 p-6 rounded-xl border border-indigo-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -984,9 +1421,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-pink-700/20 p-6 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Quantum Services</h3>
@@ -1007,9 +1468,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-pink-600/20 to-red-700/20 p-6 rounded-xl border border-pink-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
@@ -1048,8 +1533,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1058,9 +1559,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-teal-400 mb-2">1,500+</div>
@@ -1068,9 +1593,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-cyan-400 mb-2">800%</div>
@@ -1078,9 +1627,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
@@ -1090,8 +1663,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-emerald-600/20 to-teal-700/20 p-6 rounded-xl border border-emerald-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1101,9 +1690,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-teal-600/20 to-cyan-700/20 p-6 rounded-xl border border-teal-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Startup Growth</h3>
@@ -1112,9 +1725,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-6 rounded-xl border border-cyan-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Healthcare Innovation</h3>
@@ -1136,8 +1773,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1146,9 +1799,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-orange-400 mb-2">200+</div>
@@ -1156,9 +1833,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
@@ -1166,9 +1867,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold text-pink-400 mb-2">15+</div>
@@ -1178,8 +1903,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <motion.div
               className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1189,9 +1930,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-orange-600/20 to-red-700/20 p-6 rounded-xl border border-orange-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
@@ -1200,9 +1965,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Emerging Markets</h3>
@@ -1222,8 +2011,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -1269,8 +2074,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             <div className="space-y-16">
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: -50 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
@@ -1290,9 +2111,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial = {
+  { opacity: 0,
+  x: 50 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
               >
                 <div className="w-1/2 pr-8 text-right">
@@ -1311,9 +2156,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial = {
+  { opacity: 0,
+  x: -50 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
               >
                 <div className="w-1/2 pr-8 text-right">
@@ -1332,9 +2201,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  x: 50 
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
                 viewport={{ once: true }}
               >
                 <div className="w-1/2 pr-8 text-right">
@@ -1367,8 +2260,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1380,9 +2289,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30 group-hover:border-purple-400 transition-all duration-300">
@@ -1393,9 +2326,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30 group-hover:border-green-400 transition-all duration-300">
@@ -1406,9 +2363,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30 group-hover:border-red-400 transition-all duration-300">
@@ -1447,8 +2428,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1457,9 +2454,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">90%</div>
@@ -1467,9 +2488,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">1,500+</div>
@@ -1477,9 +2522,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">24/7</div>
@@ -1500,8 +2569,24 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -1520,9 +2605,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-8 rounded-xl border border-cyan-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-center mb-4">
@@ -1540,9 +2649,33 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-center mb-4">
@@ -1601,21 +2734,31 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Visit Website
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Grid and List icons for the view mode toggle
-const Grid = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-  </svg>
+const Grid = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
+  </svg>;
 );
-const List = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-  </svg>
+const List = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
+  </svg>;
 );
 export default Revolutionary2025ServicesShowcase;

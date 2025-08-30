@@ -1,9 +1,15 @@
-import type { InnovativeAIService } from './innovative-ai-services'
+import type { InnovativeAIService } from "./innovative-ai-services"
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+
+
+
+
+
+
 }
 export const addedAIServices2025: InnovativeAIService[] = [
   {
@@ -71,11 +77,19 @@ export const addedAIServices2025: InnovativeAIService[] = [
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
     setupTime: '3–5 weeks',
+<<<<<<< HEAD
     category: 'AI Governance',
     realService: true,
     technology['Vector DB', 'Policy engine', 'Eval harness'],
     integrations['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],
     useCases['Model launches', 'Vendor AI due diligence', 'Policy tracking'],
+=======;
+    category: 'AI Governance',;
+    realService: true,;
+    technology: ['Vector DB', 'Policy engine', 'Eval harness'],;
+    integrations: ['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],;
+    useCases: ['Model launches', 'Vendor AI due diligence', 'Policy tracking'],;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     roi: 'Avoid compliance incidents; speed approvals by 2–4x',
     competitors['Lakera', 'Protect AI'],
     marketSize: '$5B AI security/gov',

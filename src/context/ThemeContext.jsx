@@ -1,6 +1,5 @@
 import * as React from 'react';
-const ThemeContext = React.createContext(undefined);
-export const ThemeProvider = ({ children }) => {
+const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState('system');
     React.useEffect(() => {
         const root = window.document.documentElement;
@@ -11,11 +10,27 @@ export const ThemeProvider = ({ children }) => {
         else {
             root.classList.add(theme)}
     }, [theme]);
-    return (<ThemeContext.Provider value={{ theme, setTheme }}>
+    return (<ThemeContext.Provider value = {
+  { theme,
+  setTheme 
+
+
+
+
+
+}}>
       {children}
     </ThemeContext.Provider>)};
 export const useTheme = () => {
     const context = React.useContext(ThemeContext);
-    if (context === undefined) {
+<<<<<<< HEAD
+    if (context === null) {
         throw new Error('useTheme must be used within a ThemeProvider')}
     return context};
+=======
+    if (context === null) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

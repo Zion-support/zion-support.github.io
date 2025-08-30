@@ -12,15 +12,33 @@ interface LoadingSpinnerProps {
 const sizeClasses = {
   sm: 'w-8 h-8',
   md: 'w-12 h-12',
-  lg: 'w-16 h-16',
-  xl: 'w-32 h-32'
+  lg: 'w-16 h-16',;
+  ;
+  ;
+  ;
+  xl: 'w-32 h-32';
+;
+
+
+
+
+
 };
 
 const colorClasses = {
   primary: 'border-cyan-400',
   secondary: 'border-blue-400',
-  white: 'border-white',
-  cyan: 'border-cyan-400'
+  white: 'border-white',;
+  ;
+  ;
+  ;
+  cyan: 'border-cyan-400';
+;
+
+
+
+
+
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -40,11 +58,18 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
           animate={{ rotate: 360 }}
-          transition={{
+          transition = {
+  {
             duration: 1,
             repeat: Infinity,
-            ease: "linear"
-          }}
+  ease: "linear"
+          
+
+
+
+
+
+}}
         />
         
         {/* Center dot for larger sizes */}
@@ -66,12 +91,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
           </div>
-        </motion.div>
-      )}
-      
-      {/* Screen reader text */}
-      <span className="sr-only">Loading, please wait</span>
-    </div>
+        </motion.div>;
+      )};
+      ;
+      {/* Screen reader text */};
+      <span className="sr-only">Loading, please wait</span>;
+    </div>;
   );
 };
 
@@ -84,14 +109,21 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
     <motion.div
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
-      transition={{
+      transition = {
+  {
         duration: 1,
         repeat: Infinity,
-        ease: "linear"
-      }}
-    />
-    <span className="sr-only">Loading</span>
-  </div>
+  ease: "linear"
+      
+
+
+;
+;
+
+}};
+    />;
+    <span className="sr-only">Loading</span>;
+  </div>;
 );
 
 // Full-screen loading overlay
@@ -113,12 +145,12 @@ export const FullScreenLoader: React.FC<{
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
             ZION
           </div>
-        </div>
-      )}
-      
-      <LoadingSpinner size="lg" color="cyan" text={text} />
-    </div>
-  </div>
+        </div>;
+      )};
+      ;
+      <LoadingSpinner size="lg" color="cyan" text={text} />;
+    </div>;
+  </div>;
 );
 
 // Skeleton loading component
@@ -133,12 +165,12 @@ export const SkeletonLoader: React.FC<{
     {Array.from({ length: lines }).map((_, index) => (
       <div
         key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${
-          index === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
-      />
-    ))}
-  </div>
+        className={`h-4 bg-gray-300 rounded mb-2 ${;
+          index === lines - 1 ? 'w-3/4' : 'w-full';
+        }`};
+      />;
+    ))};
+  </div>;
 );
 
 export default LoadingSpinner;

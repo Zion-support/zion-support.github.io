@@ -29,9 +29,6 @@ export default function Blog() {
         return () => clearInterval(interval)}, []);
     // Filter blog posts based on search and category
     const filteredPosts = posts.filter(post => {
-        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
         return matchesSearch && matchesCategory});
     // Get featured posts

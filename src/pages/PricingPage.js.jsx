@@ -7,17 +7,18 @@ import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 const categoryIcons = {
-    'AI Business Solutions': Brain,
+  'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
     'AI Development': Code,
     'FinTech': DollarSign,
     'HealthTech': Heart,
     'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
+  'EdTech': GraduationCap
+
 };
 const pricingFeatures = {
-    basic[
+  basic[
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
@@ -41,8 +42,9 @@ const pricingFeatures = {
         "SLA guarantees",
         "On-site training",
         "Custom contracts",
-        "Dedicated infrastructure"
+  "Dedicated infrastructure"
     ]
+
 };
 const comparisonFeatures = [
     "AI-Powered Automation",

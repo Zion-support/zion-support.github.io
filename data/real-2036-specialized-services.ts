@@ -1,4 +1,4 @@
-export type Real2036SpecializedService = {
+export type Real2036SpecializedService = {;
   id: string;
   name: string;
   tagline: string;

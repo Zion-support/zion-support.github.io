@@ -15,8 +15,6 @@ export function TemplateList({ templates, isLoading, onSelect, onEdit }) {
     const { user } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    const handleDeleteClick = (templateId) => {
-        setTemplateToDelete(templateId)};
     const handleDeleteConfirm = async () => {
         if (templateToDelete) {
             await deleteTemplate.mutateAsync(templateToDelete);
@@ -24,7 +22,7 @@ export function TemplateList({ templates, isLoading, onSelect, onEdit }) {
     };
     const handleSetDefault = async (templateId) => {
         if (!user) {
-            navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
+            router(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
             return}
         await setDefaultTemplate.mutateAsync(templateId)};
     if (isLoading) {

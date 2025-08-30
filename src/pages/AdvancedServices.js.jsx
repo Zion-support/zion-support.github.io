@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FuturisticServicesShowcase } from '../components/FuturisticServicesShowcase';
+import { FuturisticServicesShowcase } from "../components/FuturisticServicesShowcase";
 const AdvancedServices = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -17,7 +17,13 @@ const AdvancedServices = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 50 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }}>
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Advanced Micro SAAS
@@ -45,7 +51,16 @@ const AdvancedServices = () => {
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and GDPR compliant with advanced threat protection"
             }
-        ].map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.2 }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
+        ].map((benefit, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 30 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.2 
+}} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
                   <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -72,7 +87,13 @@ const AdvancedServices = () => {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 50 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Powered by Cutting-Edge Technology
             </h2>
@@ -89,7 +110,16 @@ const AdvancedServices = () => {
             { name: "Blockchain", icon: "⛓️", color: "from-orange-400 to-red-500" },
             { name: "Cloud", icon: "☁️", color: "from-blue-400 to-indigo-500" },
             { name: "Security", icon: "🔒", color: "from-red-400 to-pink-500" }
-        ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="text-center group">
+        ].map((tech, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}} viewport={{ once: true }} className="text-center group">
                 <div className={`w-20 h-20 mx-auto mb-4 bg-gradient-to-br ${tech.color} rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110`}>
                   {tech.icon}
                 </div>
@@ -103,7 +133,13 @@ const AdvancedServices = () => {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 50 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -150,7 +186,16 @@ const AdvancedServices = () => {
                 description: "We work as an extension of your team, not just a vendor",
                 stats: "Long-term strategic partnerships"
             }
-        ].map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
+        ].map((feature, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 30 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -164,7 +209,13 @@ const AdvancedServices = () => {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/40 backdrop-blur-sm">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 50 
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/40 backdrop-blur-sm">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>

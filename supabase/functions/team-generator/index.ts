@@ -1,12 +1,12 @@
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { corsHeaders } from '../_shared/cors.ts'; // Assuming shared CORS headers
-import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from '../../../src/types/index.ts'; // Adjust path as needed
+import { corsHeaders } from "../_shared/cors.ts"; // Assuming shared CORS headers
+import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from "../../../src/types/index.ts"; // Adjust path as needed
 
 // Initialize Supabase client (admin role for querying talent_profiles)
 const supabaseAdmin = createClient(
   Deno.env.get('SUPABASE_URL') ?? '',
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
 );
 
 async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIApiKey: string): Promise<Omit<TeamRecommendation, 'roles'> & { roles: Omit<RecommendedRole, 'matchedTalent'>[] }> {
@@ -45,7 +45,7 @@ Important Constraints: ${optimizationInstructions}
       "weeklyHours": 40
     }
 
-    Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.
+    Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.;
   `;
 
   // Using OpenAI API directly, similar to zion-gpt function for more control
@@ -60,7 +60,7 @@ Important Constraints: ${optimizationInstructions}
       messages: [{ role: 'user', content: prompt }],
       response_format: { type: 'json_object' }, // Enable JSON mode
       temperature: 0.5, // Lower temperature for more deterministic output
-    }),
+    }),;
   });
 
   if (!response.ok) {
@@ -103,12 +103,12 @@ async function findMatchingTalent(
   // For now, let's assume skills are stored in a text array column named 'skills' in talent_profiles.
   // And professional_title might also be relevant.
 
-  if (skillsToSearch.length === 0 && !projectBrief.talentFilters) {
+  if (skillsToSearch.length = == 0 && !projectBrief.talentFilters) {;
     return []; // No skills or filters to search for
   }
 
   let query = supabaseClient
-    .from('talent_profiles')
+    .from('talent_profiles');
     .select('*');
 
   // Apply skill-based search (simplified)
@@ -137,7 +137,7 @@ async function findMatchingTalent(
       // For now, let's try to chain it as an additional filter, which Supabase client usually handles as AND.
       // However, .or() within .or() can be tricky. A better way for complex AND/OR is:
       // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`)
-      // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.
+      // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.;
       query = query.or(regionConditions);
     }
   }
@@ -164,7 +164,7 @@ async function findMatchingTalent(
 }
 
 serve(async (req: Request) => {
-  if (req.method === 'OPTIONS') {
+  if (req.method = == 'OPTIONS') {;
     return new Response('ok', { headers: corsHeaders });
   }
 
@@ -191,29 +191,30 @@ serve(async (req: Request) => {
     }
 
     // 3. Calculate total estimates (simplified)
-    let minTotalRate = 0;
     let maxTotalRate = 0;
-    recommendedRolesWithTalent.forEach(role => {
+    recommendedRolesWithTalent.forEach(role = > {;
       minTotalRate += (role.hourlyRateRange.min || 0) * (role.weeklyHours || 0);
       maxTotalRate += (role.hourlyRateRange.max || 0) * (role.weeklyHours || 0);
     });
 
     // Placeholder for total project estimate - requires parsing timeline
     // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12
-    // This needs more robust parsing of projectBrief.timeline
+    // This needs more robust parsing of projectBrief.timeline;
     const estimateTimelineInWeeks = parseInt(projectBrief.timeline) * 4 || 12; // very naive
 
     const finalRecommendation: TeamRecommendation = {
-      projectBriefId: projectBrief.id,
+  projectBriefId: projectBrief.id,
       recommendationSummary: gptTeamStructure.recommendationSummary,
       roles: recommendedRolesWithTalent,
-      totalEstimatedRate: { min: minTotalRate, max: maxTotalRate }, // This is actually weekly burn
+      totalEstimatedRate: { min: minTotalRate,
+  max: maxTotalRate 
+}, // This is actually weekly burn
       totalWeeklyBurn: { min: minTotalRate, max: maxTotalRate },
       totalProjectEstimate: {
         min: minTotalRate * estimateTimelineInWeeks,
         max: maxTotalRate * estimateTimelineInWeeks
       },
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(),;
     };
 
     return new Response(

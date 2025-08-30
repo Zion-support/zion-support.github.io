@@ -11,7 +11,8 @@ import { Star,
   TrendingUp
  } from 'lucide-react';
 
-export const InteractiveTestimonials: React.FC = (): JSX.Element => {
+<<<<<<< HEAD
+export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -79,39 +80,138 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
       },
       industry: 'Manufacturing',
       projectDuration: '8 months'
-    }
+    };
   ];
 
-  const nextTestimonial = () => {
+  const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
 
-  const previousTestimonial = () => {
+  const previousTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: number)  => {
+  const goToTestimonial = (index: number)  => {;
     setCurrentIndex(index)};
 
-  const togglePlayPause = () => {
+  const togglePlayPause = () => {;
     setIsPlaying(!isPlaying)};
 
   // Auto-advance testimonials
   React.useEffect(() => {
     if (!isPlaying) return;
     
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       nextTestimonial()}, 5000);
 
     return () => clearInterval(interval)}, [isPlaying, currentIndex]);
 
   const currentTestimonial = testimonials[currentIndex];
+=======
+const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    position: "CTO, TechCorp Solutions",
+    company: "TechCorp Solutions",
+    avatar: "👩‍💼",
+    rating: 5,
+    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.",
+    category: "AI & Infrastructure",
+    results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    position: "VP Engineering, FinTech Pro",
+    company: "FinTech Pro",
+    avatar: "👨‍💻",
+    rating: 5,
+    content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.",
+    category: "Quantum Computing",
+    results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
+  },
+  {
+    id: 3,
+    name: "Dr. Emily Rodriguez",
+    position: "Research Director, BioTech Innovations",
+    company: "BioTech Innovations",
+    avatar: "👩‍🔬",
+    rating: 5,
+    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.",
+    category: "AI Research",
+    results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
+  },
+  {
+    id: 4,
+    name: "David Thompson",
+    position: "Operations Manager, Manufacturing Plus",
+    company: "Manufacturing Plus",
+    avatar: "👨‍🏭",
+    rating: 5,
+    content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.",
+    category: "Manufacturing IoT",
+    results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
+  },
+  {
+    id: 5,
+    name: "Lisa Wang",
+    position: "Security Director, SecureNet",
+    company: "SecureNet",
+    avatar: "👩‍💻",;
+    rating: 5,;
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",;
+    category: "Cybersecurity",;
+    results: ["100% compliance", "Zero incidents", "Automated security"];
+  };
+];
+
+const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
+
+export function InteractiveTestimonials() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
+
+  const filteredTestimonials = selectedCategory === "All" ;
+    ? testimonials ;
+    : testimonials.filter(t => t.category === selectedCategory);
+
+  const currentTestimonial = filteredTestimonials[selectedTestimonial];
+
+  const nextTestimonial = () => {;
+    setSelectedTestimonial((prev) => ;
+      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
+    );
+  };
+
+  const prevTestimonial = () => {;
+    setSelectedTestimonial((prev) => ;
+      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
+    );
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -123,14 +223,24 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Main Testimonial Display */}
         <div className="relative mb-12">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial.id}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial = {
+  { opacity: 0,
+  x: 100 
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+}}
+              exit = {
+  { opacity: 0,
+  x: -100 
+}}
               transition={{ duration: 0.5 }}
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
             >
@@ -232,19 +342,56 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+=======
+        {/* Category Filter */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-3 mb-12"
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+}};
+        >;
+          {categories.map((category) => (;
+            <button;
+              key={category};
+              onClick={() => {;
                 setSelectedCategory(category);
                 setSelectedTestimonial(0);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className = {`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
                   : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
@@ -258,10 +405,34 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
         {/* Main Testimonial Display */}
         <motion.div 
           className="max-w-4xl mx-auto mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 relative">
             {/* Navigation Arrows */}
@@ -281,9 +452,33 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTestimonial.id}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial = {
+  { opacity: 0,
+  x: 50 
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  x: -50 
+
+
+
+
+
+}}
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
@@ -330,10 +525,34 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
         {/* Testimonial Indicators */}
         <motion.div 
           className="flex justify-center gap-2 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+}}
         >
           {filteredTestimonials.map((_, index) => (
             <button
@@ -351,18 +570,54 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Join our success stories</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default InteractiveTestimonials;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InteractiveTestimonials;

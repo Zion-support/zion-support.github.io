@@ -8,7 +8,7 @@ export default function LLMContentStudio(...args: []):  {
     <>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
+        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
         <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation" />
       </Helmet>
 
@@ -405,11 +405,11 @@ export default function LLMContentStudio(...args: []):  {
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
                 Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

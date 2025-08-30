@@ -11,18 +11,20 @@ export function ITServiceRequestHero(...args[]):  {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {;
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
-        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+},
     visible: {
       opacity: 1,
       y: 0,
@@ -30,27 +32,29 @@ export function ITServiceRequestHero(...args[]):  {
         duration: 0.6,
         staggerChildren: 0.2
       }
-    }
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+},
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
-    }
+    };
   };
 
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
+    <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -60,8 +64,24 @@ export function ITServiceRequestHero(...args[]):  {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: -30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -118,10 +138,34 @@ export function ITServiceRequestHero(...args[]):  {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -178,9 +222,19 @@ export function ITServiceRequestHero(...args[]):  {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </div>
     </section>
   )}
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

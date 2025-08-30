@@ -28,7 +28,10 @@ export function MobileMenu({ className }) {
     ];
     if (isAuthenticated) {
         navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
-    return (<div className={cn("md:hidden", className)}>
+    return (<div className = {
+  cn("md:hidden",
+  className)
+}>
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
@@ -49,9 +52,12 @@ export function MobileMenu({ className }) {
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
-                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", isActive
+                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className = {
+  cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")}>
+                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")
+}>
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>
                   </Link>)})}

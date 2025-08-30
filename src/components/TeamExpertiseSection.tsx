@@ -12,6 +12,7 @@ import { Award,
   Rocket
  } from 'lucide-react';
 
+<<<<<<< HEAD
 export const TeamExpertiseSection: React.FC = (): JSX.Element => {
   const expertise = [
     {
@@ -61,28 +62,84 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
       experience: '20+ years',
       projects: '50+'
-    }
+    };
   ];
+=======
+const teamExpertise = [
+  {
+    icon: "🎓",
+    title: "Advanced Degrees",
+    description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
+    count: "95%"
+  },
+  {
+    icon: "🏆",
+    title: "Industry Certifications",
+    description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
+    count: "50+"
+  },
+  {
+    icon: "🌍",
+    title: "Global Experience",
+    description: "Team members with experience working across 25+ countries and diverse industries",
+    count: "25+"
+  },
+  {
+    icon: "⚡",
+    title: "Years of Experience",
+    description: "Combined experience of over 200 years in technology and business solutions",
+    count: "200+"
+  },
+  {
+    icon: "🔬",
+    title: "Research Publications",
+    description: "Published research in leading AI, quantum computing, and blockchain journals",
+    count: "30+"
+  },
+  {;
+    icon: "🚀",;
+    title: "Successful Projects",;
+    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;
+    count: "500+";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",
-  "Blockchain & Web3 Technologies",
-  "Cloud Infrastructure & DevOps",
-  "Cybersecurity & Compliance",
-  "Data Science & Analytics",
-  "IoT & Edge Computing",
-  "Mobile & Web Development"
+  "Blockchain & Web3 Technologies",;
+  "Cloud Infrastructure & DevOps",;
+  "Cybersecurity & Compliance",;
+  "Data Science & Analytics",;
+  "IoT & Edge Computing",;
+  "Mobile & Web Development";
 ];
 
 export function TeamExpertiseSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -94,17 +151,27 @@ export function TeamExpertiseSection() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index)  => {
+          {stats.map((stat, index)  => {;
             const IconComponent = stat.icon;
             return (
-              <div key={stat.label} className="text-center">
+              <div key = {stat.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-full">
                     <IconComponent className="h-8 w-8 text-blue-600" />
@@ -114,20 +181,67 @@ export function TeamExpertiseSection() {
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {teamExpertise.map((expertise, index) => (
+            <motion.div
+              key={expertise.title}
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+}}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl">{expertise.icon}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             )})}
         </motion.div>
 
         {/* Expertise Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {expertise.map((item, index)  => {
+          {expertise.map((item, index)  => {;
             const IconComponent = item.icon;
             return (
               <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key = {item.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
@@ -173,10 +287,34 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white mb-6">
             Core Technology Expertise
@@ -191,10 +329,34 @@ export function TeamExpertiseSection() {
             <motion.div
               key={skill}
               className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition = {
+  { duration: 0.4,
+  delay: index * 0.05 
+
+
+
+
+
+}}
             >
               <span className="text-white font-medium text-sm">{skill}</span>
             </motion.div>
@@ -203,18 +365,54 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to work with experts?</span>
+<<<<<<< HEAD
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
   )};
+
+export default TeamExpertiseSection;
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TeamExpertiseSection;

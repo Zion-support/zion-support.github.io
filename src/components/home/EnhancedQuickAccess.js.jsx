@@ -78,7 +78,9 @@ export function EnhancedQuickAccess() {
         }
     };
     const itemVariants = {
-        hidden: { opacity: 0, y: 20, scale: 0.9 },
+  hidden: { opacity: 0, y: 20,
+  scale: 0.9 
+},
         visible: {
             opacity: 1,
             y: 0,

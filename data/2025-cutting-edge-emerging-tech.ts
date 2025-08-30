@@ -259,9 +259,17 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Drone automation',
       'Robotic system development',
       'Logistics automation',
+<<<<<<< HEAD
       'Transportation optimization'
     ],
     integrations['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
     compliance['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines']
   }
+=======;
+      'Transportation optimization';
+    ],;
+    integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],;
+    compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];

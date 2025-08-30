@@ -1,4 +1,4 @@
-export type ServiceItem = {
+export type ServiceItem = {;
 	id: string;
 	title: string;
 	description: string;
@@ -8,8 +8,14 @@ export type ServiceItem = {
 	features: string[];
 	ctaLabel: string;
 	href: string; // internal path or external URL
+<<<<<<< HEAD
 	external?: boolean};
 export type ServiceCategory = {
+=======;
+	external?: boolean;
+};
+export type ServiceCategory = {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 	name: string;
 	slug: string;
 	items: ServiceItem[]};

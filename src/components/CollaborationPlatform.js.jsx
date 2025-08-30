@@ -30,12 +30,8 @@ export function CollaborationPlatform() {
         const interval = setInterval(() => {
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
-    const toggleVideo = () => {
-        setLocalUser(prev => ({ ...prev, isVideoOn: !prev.isVideoOn }))};
     const toggleAudio = () => {
         setLocalUser(prev => ({ ...prev, isAudioOn: !prev.isAudioOn }))};
-    const toggleScreenShare = () => {
-        setLocalUser(prev => ({ ...prev, isScreenSharing: !prev.isScreenSharing }))};
     const toggleMute = () => {
         setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }))};
     const toggleRecording = () => {
@@ -43,11 +39,12 @@ export function CollaborationPlatform() {
     const sendMessage = () => {
         if (newMessage.trim()) {
             const message = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 user: 'You',
                 message: newMessage,
-                timestamp: new Date()
-            };
+  timestamp: new Date()
+            
+};
             setChatMessages(prev => [...prev, message]);
             setNewMessage('')}
     };

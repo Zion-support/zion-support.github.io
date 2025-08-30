@@ -12,12 +12,12 @@ export const real2029ServiceAdditions = [
       'PII redaction and safety guardrails',
       'CRM/helpdesk sync (HubSpot, Zendesk)',
       'Weekly insights and KPI dashboard'
-    ],
-    popular: true,
-    icon: '📧',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
+    ],;
+    popular: true,;
+    icon: '📧',;
+    color: 'from-cyan-500 to-blue-600',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',;
     marketPosition: 'Comparable to Superhuman AI and Gmail add-ons; adds policy guardrails and SLA routing.',
     targetAudience: 'SMBs, agencies, support teams',
     trialDays: 14,

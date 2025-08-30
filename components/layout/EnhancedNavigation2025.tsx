@@ -40,23 +40,29 @@ export default function EnhancedNavigation2025(...args[]):  {
 			children[
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
 				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-				{ name: 'Careers', href: '/careers', description: 'Join our team' },
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
-			]
-		},
-		{ name: 'Blog', href: '/blog' },
-		{ name: 'Pricing', href: '/pricing' },
+				{ name: 'Careers', href: '/careers', description: 'Join our team' },;
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
+			];
+		},;
+		{ name: 'Blog', href: '/blog' },;
+		{ name: 'Pricing', href: '/pricing' },;
 	];
 
-	const toggleDropdown = (name: string)  => {
+<<<<<<< HEAD
+	const toggleDropdown = (name: string)  => {;
 		setActiveDropdown(activeDropdown === name ? null : name)};
+=======
+	const toggleDropdown = (name: string) => {;
+		setActiveDropdown(activeDropdown === name ? null : name);
+	};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-	const closeMobileMenu = () => {
+	const closeMobileMenu = () => {;
 		setIsOpen(false);
 		setActiveDropdown(null)};
 
 	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+		<nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
 		}`}>
 			{/* Top Contact Bar */}
@@ -226,9 +232,19 @@ export default function EnhancedNavigation2025(...args[]):  {
 									Request a quote
 								</button>
 							</Link>
+<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
 			)}
 		</nav>
 	)}
+=======;
+						</div>;
+					</div>;
+				</div>;
+			)};
+		</nav>;
+	);
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

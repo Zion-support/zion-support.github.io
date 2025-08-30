@@ -20,16 +20,16 @@ import {
   Target,
   Lightbulb
 } from 'lucide-react';
-import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices } from '../data/zionTechGroup2025ComprehensiveServices';
+import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices } from "../data/zionTechGroup2025ComprehensiveServices";
 
-const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
+const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo(() => {;
     let services = zionTechGroup2025Services;
 
     // Apply search filter
@@ -46,9 +46,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
     services = getServicesByPriceRange(priceRange[0], priceRange[1]);
 
     // Apply sorting
-    services = [...services].sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
+    services = [...services].sort((a, b) => {;
+      switch (sortBy) {;
+        case 'price':;
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
         case 'category':
           return a.category.localeCompare(b.category);
@@ -62,15 +62,15 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },
-    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple-500' },
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green-500' },
-    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange-500' },
-    { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' }
+    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple-500' },;
+    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue-500' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red-500' },;
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green-500' },;
+    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange-500' },;
+    { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     const categoryData = categories.find(cat => cat.id === category);
     if (categoryData) {
       const IconComponent = categoryData.icon;
@@ -79,20 +79,36 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
     return <Globe className="w-5 h-5" />;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string) => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
@@ -105,9 +121,33 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             </span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+}}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our cutting-edge suite of AI-powered micro SAAS solutions, 
@@ -115,9 +155,33 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             designed to transform your business and drive innovation.
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+}}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <div className="flex items-center space-x-2 text-white bg-blue-600/20 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-400/30">
@@ -176,14 +240,30 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                   type="number"
                   placeholder="Min Price"
                   value={priceRange[0]}
-                  onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
+                  onChange = {
+  (e) => setPriceRange([parseInt(e.target.value) || 0,
+  priceRange[1]])
+
+
+
+
+
+}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <input
                   type="number"
                   placeholder="Max Price"
                   value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
+                  onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value) || 10000])
+
+
+
+
+
+}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -214,10 +294,42 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+}}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Service Header */}
@@ -312,9 +424,33 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                   <AnimatePresence>
                     {expandedService === service.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+}}
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-white/20"
                       >
@@ -403,12 +539,24 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             >
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick = {;
+  ;
+  ;
+  ;
+  ;
+  () => {;
                   setSearchQuery('');
                   setSelectedCategory('all');
-                  setPriceRange([0, 10000]);
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
+                  setPriceRange([0,
+  10000]);
+                
+
+
+
+
+
+}}
+                className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
               >
                 Clear Filters
               </button>
@@ -446,12 +594,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             </div>
             <div className="mt-8 text-gray-400">
               <p>Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">ziontechgroup.com</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">ziontechgroup.com</a></p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

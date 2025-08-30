@@ -5,6 +5,7 @@ const IndustrySolutions = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data
+<<<<<<< HEAD
     const industrySolutions = [
         {
             id: 1,
@@ -247,13 +248,11 @@ const IndustrySolutions = () => {
             }
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
-        const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            solution.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType});
     const formatPrice = (price, model) => {

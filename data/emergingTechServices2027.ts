@@ -103,7 +103,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     link: "https://ziontechgroup.com/quantum-internet",
     badge: "Breakthrough",
     icon: "🌐",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = format&fit=crop&w=800&h=500",
     innovationLevel: "Breakthrough",
     marketSize: "$2.1B by 2027",
     competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
@@ -456,10 +456,10 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     roi: "1200-2500%",
     estimatedDelivery: "48-60 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+      phone: "+1 302 464 0950",;
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    };
+  };
 ];

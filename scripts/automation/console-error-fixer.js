@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // // // console.log('🔧 Starting continuous console error fixer automation...');
@@ -79,16 +78,21 @@ async function runConsoleErrorFixer() {
 
 
     // Generate console error fixer report
+<<<<<<< HEAD
     // // // console.log('📊 Generating console error fixer report...');
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       consoleStatements: consoleStatements.length,
       buildConsoleStatements: buildConsoleStatements.length,
       errorPatterns: errorPatterns.length,
       summary: 'Console error fixer completed',
-      status: 'completed'
-    };
+  status: 'completed'
+    
+};
 
+=======
+    console.log('📊 Generating console error fixer report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
