@@ -1,19 +1,19 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button  } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react';
 
 interface Props extends React.PropsWithChildren<{}> {
-
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo)  => void}
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
+}
 
 interface State {
-
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string}
+  errorId: string;
+}
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -23,14 +23,16 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: '',
-    }}
+    };
+  }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    }}
+    };
+  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -39,15 +41,18 @@ export class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo)}
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)}
+      this.logErrorToService(error, errorInfo);
+    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)}
+      this.props.onError(error, errorInfo);
+    }
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo)  => {
@@ -73,7 +78,8 @@ export class ErrorBoundary extends Component<Props, State> {
         body: JSON.stringify(errorData),
       }).catch(()  => {
         // Silently fail if error logging fails
-      })} catch (logError) {
+      });
+    } catch (logError) {
       // Silently fail if error logging fails
     }
   };
@@ -82,8 +88,10 @@ export class ErrorBoundary extends Component<Props, State> {
     try {
       // Get user ID from your auth system
       const user = localStorage.getItem('user');
-      return user ? JSON.parse(user).id : null} catch {
-      return null}
+      return user ? JSON.parse(user).id : null;
+    } catch {
+      return null;
+    }
   };
 
   private handleRetry = () => {
@@ -92,10 +100,12 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: '',
-    })};
+    });
+  };
 
   private handleGoHome = () => {
-    window.location.href = '/'};
+    window.location.href = '/';
+  };
 
   private handleReportError = () => {
     const errorDetails = `
@@ -109,17 +119,15 @@ Timestamp: ${new Date().toISOString()}
     `;
 
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(errorDetails)}`;
-    window.open(mailtoLink)};
-
-  private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
+    window.open(mailtoLink);
   };
 
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback}
+        return this.props.fallback;
+      }
 
       // Default error UI
       return (
@@ -193,30 +201,37 @@ Timestamp: ${new Date().toISOString()}
             </div>
           </div>
         </div>
-      )}
+      );
+    }
 
-    return this.props.children}
+    return this.props.children;
+  }
 }
 
 // Hook for functional components to catch errors
-export const useErrorHandler[, React.Dispatch<React.SetStateAction<any>>] = () => {
+export const useErrorHandler = (): [any, React.Dispatch<React.SetStateAction<any>>] => {
   const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
     const handleError = (event: ErrorEvent)  => {
-      setError(event.error)};
+      setError(event.error);
+    };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent)  => {
-      setError(new Error(event.reason))};
+      setError(new Error(event.reason));
+    };
 
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {
       window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}, []);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, []);
 
-  return error};
+  return [error, setError];
+};
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
@@ -230,4 +245,5 @@ export const withErrorBoundary = <P extends object>(
   );
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent};
+  return WrappedComponent;
+};
