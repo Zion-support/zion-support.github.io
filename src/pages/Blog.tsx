@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
-  ArrowRight, BookOpen, TrendingUp, Star, Eye
+import {
+    ArrowRight, BookOpen,
+    Calendar,
+    Eye,
+    Search,
+    User
 } from 'lucide-react';
+import React, { useState } from 'react';
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
