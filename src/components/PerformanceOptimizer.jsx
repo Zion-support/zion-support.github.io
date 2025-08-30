@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+
 export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
+
     // Preload critical resources
     useEffect(() => {
         const preloadCriticalResources = () => {
@@ -9,17 +11,21 @@ export const PerformanceOptimizer = ({ children }) => {
             const criticalCSS = document.createElement('link');
             criticalCSS.rel = 'preload';
             criticalCSS.as = 'style';
-            criticalCSS.href = '/src/index.css';
+            criticalCSS.href = '/critical.css';
             document.head.appendChild(criticalCSS);
+
             // Preload critical fonts
             const criticalFonts = document.createElement('link');
             criticalFonts.rel = 'preload';
             criticalFonts.as = 'font';
             criticalFonts.href = '/fonts/inter-var.woff2';
             criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts)};
-        preloadCriticalResources()}, []);
-    // Optimize images on route change
+            document.head.appendChild(criticalFonts);
+        };
+        preloadCriticalResources();
+    }, []);
+
+    // Image optimization
     useEffect(() => {
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
@@ -35,7 +41,8 @@ export const PerformanceOptimizer = ({ children }) => {
                     img.style.display = 'none';
                 };
             });
-        }
+        };
+
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages);
@@ -43,8 +50,10 @@ export const PerformanceOptimizer = ({ children }) => {
             setTimeout(optimizeImages, 100);
         }
     }, [location.pathname]);
+
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
+
     // Optimize scroll performance
     const handleScroll = useCallback(() => {
         // Throttle scroll events for better performance
@@ -55,10 +64,12 @@ export const PerformanceOptimizer = ({ children }) => {
             }, 16); // ~60fps
         }
     }, []);
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
+
     // Service Worker registration for caching
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
@@ -83,8 +94,9 @@ export const PerformanceOptimizer = ({ children }) => {
                 .catch((registrationError) => {
                     // console.warn('SW registration failed: ', registrationError);
                 });
-        });
+        }
     }, []);
+
     // Intersection Observer for lazy loading
     useEffect(() => {
         if ('IntersectionObserver' in window) {
@@ -103,31 +115,37 @@ export const PerformanceOptimizer = ({ children }) => {
                 rootMargin: '50px',
                 threshold: 0.1,
             });
+
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
+
             return () => observer.disconnect();
-        });
+        }
     }, [location.pathname]);
+
     return <>{optimizedChildren}</>;
-}
+};
+
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks
-            if ('scheduler' in window && 'postTask' in window.scheduler) {
-            window.scheduler.postTask(() => {
-                // Run non-critical tasks during idle time
-            }, { priority: 'background' });
-        }
-        // Optimize memory usage
-        if ('memory' in performance) {
-            const memoryThreshold = 50 * 1024 * 1024; // 50MB
-            if (performance.memory.usedJSHeapSize > memoryThreshold) {
-                // Trigger garbage collection if available
-                if ('gc' in window) {
-                    window.gc();
-                }
+    if ('scheduler' in window && 'postTask' in window.scheduler) {
+        window.scheduler.postTask(() => {
+            // Run non-critical tasks during idle time
+        }, { priority: 'background' });
+    }
+
+    // Optimize memory usage
+    if ('memory' in performance) {
+        const memoryThreshold = 50 * 1024 * 1024; // 50MB
+        if (performance.memory.usedJSHeapSize > memoryThreshold) {
+            // Trigger garbage collection if available
+            if ('gc' in window) {
+                window.gc();
             }
         }
     }
+}
+
 export default PerformanceOptimizer;
