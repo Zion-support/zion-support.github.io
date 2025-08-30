@@ -58,6 +58,8 @@ export function Header() {
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'Ultimate Services 2025', href: '/ultimate-services-2025', icon: Star },
+        { name: 'Ultimate Pricing 2025', href: '/ultimate-pricing-2025', icon: DollarSign },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },

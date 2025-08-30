@@ -20,6 +20,8 @@ const Training = lazy(() => import('./pages/Training').then(module => ({ default
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
+const UltimatePricing2025 = lazy(() => import('./pages/UltimatePricing2025').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -75,6 +77,8 @@ export default function App() {
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
+                <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                <Route path="/ultimate-pricing-2025" element={<UltimatePricing2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
