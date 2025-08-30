@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  X,
-  Activity,
-  Zap,
-  Target,
-  Award,
-  Monitor,
-  Smartphone,
-  Tablet
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+    Activity,
+    Award,
+    BarChart3,
+    Clock,
+    Eye,
+    Monitor,
+    MousePointer,
+    Smartphone,
+    Tablet,
+    Target,
+    Users,
+    X,
+    Zap
 } from 'lucide-react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
