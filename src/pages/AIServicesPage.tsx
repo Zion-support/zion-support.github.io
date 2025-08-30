@@ -271,7 +271,8 @@ const aiServices = [
     reviews: 89,
     customers: 156
   }
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
+];
+
 const AIServices = [
     {
         title: "AI Strategy Consulting",
@@ -385,95 +386,8 @@ const AIServices = [
         link: "/request-quote?service=ai-content"
     }
 ];
-const categories = [
+
 const AIServicesPage: React.FC = () => {
-  const aiServices = [
-    {
-      id: 1,
-      title: 'Machine Learning Development',
-      description: 'Custom ML models tailored to your business needs',
-      icon: Brain,
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making'],
-      useCases: ['Customer Segmentation', 'Risk Assessment', 'Demand Forecasting'],
-      pricing: 'Starting at $15,000'
-    },
-    {
-      id: 2,
-      title: 'Natural Language Processing',
-      description: 'Advanced text and speech processing solutions',
-      icon: MessageSquare,
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation'],
-      useCases: ['Chatbots', 'Document Processing', 'Content Moderation'],
-      pricing: 'Starting at $12,000'
-    },
-    {
-      id: 3,
-      title: 'Computer Vision',
-      description: 'Image and video analysis for automation',
-      icon: Eye,
-      features: ['Object Detection', 'Image Classification', 'Facial Recognition'],
-      useCases: ['Quality Control', 'Security Systems', 'Medical Imaging'],
-      pricing: 'Starting at $18,000'
-    },
-    {
-      id: 4,
-      title: 'Predictive Analytics',
-      description: 'Data-driven insights for strategic decision making',
-      icon: BarChart3,
-      features: ['Trend Analysis', 'Risk Modeling', 'Performance Optimization'],
-      useCases: ['Financial Planning', 'Inventory Management', 'Maintenance Scheduling'],
-      pricing: 'Starting at $10,000'
-    }
-  ];
-
-  const aiSolutions = [
-    {
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent customer service automation',
-      benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
-    },
-    {
-      title: 'Intelligent Document Processing',
-      description: 'Automated data extraction and analysis',
-      benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
-    },
-    {
-      title: 'Predictive Maintenance',
-      description: 'Prevent equipment failures with AI insights',
-      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
-    },
-    {
-      title: 'AI-Driven Marketing',
-      description: 'Personalized campaigns and customer insights',
-      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
-    }
-  ];
-
-  const caseStudies = [
-    {
-      company: 'TechCorp Industries',
-      industry: 'Manufacturing',
-      challenge: 'Quality control inefficiencies',
-      solution: 'Computer vision system for defect detection',
-      results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
-    },
-    {
-      company: 'Global Finance Ltd',
-      industry: 'Financial Services',
-      challenge: 'Fraud detection complexity',
-      solution: 'ML-powered risk assessment',
-      results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
-    },
-    {
-      company: 'HealthTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis',
-      solution: 'NLP for medical records',
-      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
-    }
-  ];
-
-const AIServicesPage = () => {
   return (
     <>
       <SEO 
