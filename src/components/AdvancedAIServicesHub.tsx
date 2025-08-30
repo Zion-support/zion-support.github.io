@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Rocket
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+    ArrowRight,
+    Brain,
+    CheckCircle,
+    Cpu,
+    Database,
+    Globe,
+    Rocket,
+    Shield,
+    TrendingUp,
+    Users
 } from 'lucide-react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface AIService {
