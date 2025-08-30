@@ -40,6 +40,12 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New AI Services 2025 - Additional
+const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
+const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/ai-data-governance-platform'));
+const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/ai-supply-chain-risk-management'));
+const AIRevenueOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-revenue-operations-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -171,6 +177,12 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    
+                    {/* New AI Services 2025 - Additional */}
+                    <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                    <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                    <Route path="/services/ai-revenue-operations-platform" element={<AIRevenueOperationsPlatform />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />

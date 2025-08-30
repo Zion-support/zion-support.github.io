@@ -2,16 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Globe,
-  AlertTriangle,
   TrendingUp,
+  DollarSign,
   BarChart3,
   Rocket,
   CheckCircle,
   Star,
   ArrowRight,
+  Globe,
+  Target,
+  Zap,
   Shield,
-  Eye,
   Activity,
   Clock,
   Award,
@@ -20,7 +21,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  DollarSign,
   Calendar,
   BookOpen,
   GraduationCap,
@@ -29,8 +29,6 @@ import {
   Network,
   Cpu,
   Brain,
-  Zap,
-  Target,
   Heart,
   Users,
   FileText,
@@ -93,7 +91,6 @@ import {
   CheckSquare,
   XCircle,
   HelpCircle,
-  Info,
   ExternalLink,
   Link as LinkIcon,
   GitBranch,
@@ -101,100 +98,90 @@ import {
   GitMerge,
   GitPullRequest,
   GitCompare,
-  GitBranchPlus,
-  GitCommit,
-  GitMerge,
-  GitPullRequest,
-  GitCompare,
-  GitBranchPlus,
-  GitCommit,
-  GitMerge,
-  GitPullRequest,
-  GitCompare,
   GitBranchPlus
 } from 'lucide-react';
 
-export function AISupplyChainRiskManagement() {
+export function AIRevenueOperationsPlatform() {
   const features = [
     {
-      icon: Globe,
-      title: 'Global Supply Chain Mapping',
-      description: 'Comprehensive mapping of your entire supply chain network with real-time visibility',
-      benefits: ['Multi-tier mapping', 'Real-time tracking', 'Geographic visualization', 'Risk hotspots']
-    },
-    {
-      icon: AlertTriangle,
-      title: 'AI-Powered Risk Detection',
-      description: 'Advanced machine learning algorithms that identify potential risks before they impact operations',
-      benefits: ['Predictive analytics', 'Risk scoring', 'Early warning system', 'Automated alerts']
-    },
-    {
       icon: TrendingUp,
-      title: 'Supply Chain Analytics',
-      description: 'Deep insights into supply chain performance, bottlenecks, and optimization opportunities',
-      benefits: ['Performance metrics', 'Bottleneck analysis', 'Optimization recommendations', 'Trend forecasting']
+      title: 'AI-Powered Revenue Forecasting',
+      description: 'Advanced machine learning algorithms that predict revenue with unprecedented accuracy',
+      benefits: ['Predictive modeling', 'Scenario planning', 'Trend analysis', 'Confidence scoring']
     },
     {
-      icon: Shield,
-      title: 'Risk Mitigation Strategies',
-      description: 'Intelligent recommendations for risk mitigation and contingency planning',
-      benefits: ['Mitigation plans', 'Contingency strategies', 'Cost-benefit analysis', 'Implementation guidance']
+      icon: DollarSign,
+      title: 'Intelligent Pipeline Management',
+      description: 'Smart pipeline optimization and deal scoring using AI and machine learning',
+      benefits: ['Deal scoring', 'Pipeline optimization', 'Conversion prediction', 'Risk assessment']
+    },
+    {
+      icon: BarChart3,
+      title: 'Revenue Analytics & Insights',
+      description: 'Comprehensive analytics that provide actionable insights for revenue growth',
+      benefits: ['Performance metrics', 'Growth analysis', 'Bottleneck identification', 'ROI measurement']
+    },
+    {
+      icon: Target,
+      title: 'Automated Revenue Operations',
+      description: 'Streamline revenue processes with intelligent automation and workflows',
+      benefits: ['Process automation', 'Workflow optimization', 'Efficiency gains', 'Error reduction']
     },
     {
       icon: Rocket,
-      title: 'Automated Monitoring',
-      description: '24/7 automated monitoring of supply chain events and risk indicators',
-      benefits: ['Real-time monitoring', 'Event detection', 'Automated responses', 'Escalation workflows']
+      title: 'Cross-Functional Alignment',
+      description: 'Align sales, marketing, and customer success teams for maximum revenue impact',
+      benefits: ['Team collaboration', 'Goal alignment', 'Performance tracking', 'Unified metrics']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$399',
+      name: 'Growth',
+      price: '$599',
       period: '/month',
-      description: 'Perfect for small businesses with basic supply chain needs',
+      description: 'Perfect for growing companies with basic revenue operations needs',
       features: [
-        'Basic supply chain mapping (up to 100 suppliers)',
-        'Standard risk assessment',
-        'Email alerts',
-        'Basic reporting',
+        'Basic revenue forecasting (up to $10M ARR)',
+        'Standard pipeline management',
+        'Basic analytics & reporting',
         'Email support',
-        'Up to 5 users',
+        'Up to 10 users',
         'Cloud deployment',
-        'Standard integrations'
+        'Standard integrations',
+        'Basic automation'
       ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$999',
+      name: 'Scale',
+      price: '$1,499',
       period: '/month',
-      description: 'Ideal for growing businesses with complex supply chains',
+      description: 'Ideal for scaling companies with complex revenue operations',
       features: [
-        'Advanced AI risk detection (up to 1000 suppliers)',
-        'Multi-tier mapping',
-        'Advanced analytics & reporting',
+        'Advanced AI forecasting (up to $100M ARR)',
+        'Intelligent pipeline optimization',
+        'Advanced analytics & insights',
         'Priority support',
-        'Up to 25 users',
+        'Up to 50 users',
         'API access',
         'Custom integrations',
-        'Advanced risk scoring',
-        'Automated monitoring',
-        'Risk mitigation strategies',
-        'Performance dashboards'
+        'Advanced automation',
+        'Cross-functional alignment',
+        'Performance dashboards',
+        'Custom workflows'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$2,499',
+      price: '$3,999',
       period: '/month',
-      description: 'For large organizations with global supply chain operations',
+      description: 'For large organizations with enterprise-scale revenue operations',
       features: [
-        'Unlimited supplier mapping',
+        'Unlimited revenue forecasting',
         'Custom AI models',
         'Enterprise analytics',
         '24/7 dedicated support',
@@ -212,77 +199,79 @@ export function AISupplyChainRiskManagement() {
     }
   ];
 
-  const riskCategories = [
+  const revenueMetrics = [
     {
-      title: 'Geopolitical Risks',
-      description: 'Monitor political instability, trade wars, and regulatory changes',
-      icon: Globe,
-      benefits: ['Political monitoring', 'Trade policy tracking', 'Regulatory updates', 'Risk assessment']
-    },
-    {
-      title: 'Financial Risks',
-      description: 'Track supplier financial health and credit risks',
+      title: 'Revenue Growth Rate',
+      description: 'Track and optimize your revenue growth with AI-powered insights',
       icon: TrendingUp,
-      benefits: ['Credit monitoring', 'Financial health scoring', 'Payment risk analysis', 'Bankruptcy alerts']
+      benefits: ['Growth tracking', 'Trend analysis', 'Forecasting', 'Optimization']
     },
     {
-      title: 'Operational Risks',
-      description: 'Monitor operational disruptions and capacity constraints',
-      icon: Activity,
-      benefits: ['Capacity monitoring', 'Disruption tracking', 'Performance metrics', 'Bottleneck detection']
+      title: 'Customer Lifetime Value',
+      description: 'Maximize customer value with intelligent CLV optimization strategies',
+      icon: Star,
+      benefits: ['CLV calculation', 'Optimization strategies', 'Retention focus', 'Upsell opportunities']
     },
     {
-      title: 'Environmental Risks',
-      description: 'Assess climate risks and sustainability impacts',
-      icon: Shield,
-      benefits: ['Climate monitoring', 'Sustainability scoring', 'Environmental compliance', 'Risk mitigation']
+      title: 'Sales Cycle Optimization',
+      description: 'Reduce sales cycle length and improve conversion rates',
+      icon: Clock,
+      benefits: ['Cycle analysis', 'Bottleneck identification', 'Process optimization', 'Conversion improvement']
+    },
+    {
+      title: 'Revenue Per Employee',
+      description: 'Measure and improve team productivity and revenue efficiency',
+      icon: Users,
+      benefits: ['Productivity tracking', 'Efficiency metrics', 'Performance optimization', 'Resource allocation']
     }
   ];
 
   const integrations = [
-    'SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'Salesforce', 'Workday', 'Coupa', 'Ariba',
-    'AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Alibaba Cloud', 'Oracle Cloud', 'VMware',
-    'Tableau', 'Power BI', 'Qlik', 'Looker', 'Apache Kafka', 'Apache Spark', 'Databricks',
-    'Slack', 'Microsoft Teams', 'Zoom', 'Webex', 'Jira', 'ServiceNow', 'Zendesk'
+    'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics', 'Oracle CRM',
+    'Stripe', 'Chargebee', 'Recurly', 'Braintree', 'PayPal', 'Square',
+    'QuickBooks', 'Xero', 'Sage', 'NetSuite', 'Intuit', 'FreshBooks',
+    'Slack', 'Microsoft Teams', 'Zoom', 'Webex', 'Jira', 'ServiceNow',
+    'Tableau', 'Power BI', 'Looker', 'Google Analytics', 'Mixpanel', 'Amplitude'
   ];
 
-  const riskMetrics = [
-    'Supplier Risk Score', 'Geopolitical Risk', 'Financial Risk', 'Operational Risk', 'Environmental Risk',
-    'Compliance Risk', 'Quality Risk', 'Delivery Risk', 'Cost Risk', 'Reputation Risk', 'Technology Risk', 'Capacity Risk'
+  const keyMetrics = [
+    'ARR Growth Rate', 'MRR Growth Rate', 'Customer Acquisition Cost', 'Customer Lifetime Value',
+    'Sales Cycle Length', 'Win Rate', 'Average Deal Size', 'Revenue Per Employee',
+    'Churn Rate', 'Expansion Revenue', 'Pipeline Velocity', 'Conversion Rates'
   ];
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-900/20 via-emerald-900/20 to-teal-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-rose-900/20">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain Risk Management
+              AI-Powered Revenue Operations
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              AI Supply Chain Risk Management
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">
+              AI Revenue Operations Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your supply chain with AI-powered risk detection, real-time monitoring, and intelligent 
-              mitigation strategies. Stay ahead of disruptions and ensure business continuity.
+              Unlock revenue growth with AI-powered forecasting, intelligent pipeline management, and automated 
+              revenue operations. Align your teams and optimize every revenue touchpoint.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="#demo"
-                className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -301,11 +290,11 @@ export function AISupplyChainRiskManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Intelligent Supply Chain Risk Management
+              Intelligent Revenue Operations Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides comprehensive supply chain visibility and risk management capabilities 
-              that help you anticipate, detect, and mitigate supply chain disruptions.
+              Our AI platform provides comprehensive revenue operations capabilities that help you forecast, 
+              optimize, and grow your revenue with unprecedented accuracy.
             </p>
           </motion.div>
 
@@ -316,9 +305,9 @@ export function AISupplyChainRiskManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
@@ -326,7 +315,7 @@ export function AISupplyChainRiskManagement() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -337,8 +326,8 @@ export function AISupplyChainRiskManagement() {
         </div>
       </section>
 
-      {/* Risk Categories Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/10 to-emerald-900/10">
+      {/* Revenue Metrics Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/10 to-pink-900/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -347,31 +336,31 @@ export function AISupplyChainRiskManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Comprehensive Risk Coverage
+              Key Revenue Metrics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Monitor and manage all types of supply chain risks with our comprehensive risk management framework.
+              Track and optimize the most important revenue metrics with AI-powered insights and recommendations.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {riskCategories.map((category, index) => (
+            {revenueMetrics.map((metric, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-emerald-900/20 to-teal-900/20 p-8 rounded-2xl border border-emerald-500/20"
+                className="bg-gradient-to-br from-pink-900/20 to-rose-900/20 p-8 rounded-2xl border border-pink-500/20"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                  <category.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6">
+                  <metric.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-4">{category.description}</p>
+                <h3 className="text-xl font-bold mb-4">{metric.title}</h3>
+                <p className="text-gray-300 mb-4">{metric.description}</p>
                 <ul className="space-y-2">
-                  {category.benefits.map((benefit, idx) => (
+                  {metric.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -382,7 +371,7 @@ export function AISupplyChainRiskManagement() {
         </div>
       </section>
 
-      {/* Risk Metrics Section */}
+      {/* Key Metrics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -392,21 +381,21 @@ export function AISupplyChainRiskManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Advanced Risk Metrics
+              Comprehensive Revenue Metrics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Track and analyze 12 key risk dimensions with AI-powered scoring and predictive analytics.
+              Monitor and optimize 12 key revenue metrics with AI-powered scoring and predictive analytics.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {riskMetrics.map((metric, index) => (
+            {keyMetrics.map((metric, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-gradient-to-br from-teal-800/20 to-green-800/20 p-4 rounded-xl border border-teal-500/20 text-center hover:border-green-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-rose-800/20 to-purple-800/20 p-4 rounded-xl border border-rose-500/20 text-center hover:border-purple-500/40 transition-all duration-300"
               >
                 <span className="text-sm font-medium text-gray-300">{metric}</span>
               </motion.div>
@@ -416,7 +405,7 @@ export function AISupplyChainRiskManagement() {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/10 to-emerald-900/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/10 to-pink-900/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -428,19 +417,19 @@ export function AISupplyChainRiskManagement() {
               Enterprise Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Seamlessly integrate with your existing ERP, SCM, and business systems for comprehensive 
-              supply chain visibility and risk management.
+              Seamlessly integrate with your existing CRM, billing, accounting, and business systems for 
+              comprehensive revenue operations management.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-gradient-to-br from-gray-800/20 to-gray-700/20 p-4 rounded-xl border border-gray-600/20 text-center hover:border-green-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-gray-800/20 to-gray-700/20 p-4 rounded-xl border border-gray-600/20 text-center hover:border-purple-500/40 transition-all duration-300"
               >
                 <span className="text-sm font-medium text-gray-300">{integration}</span>
               </motion.div>
@@ -462,7 +451,7 @@ export function AISupplyChainRiskManagement() {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain risk management needs. All plans include our core AI features 
+              Choose the plan that fits your revenue operations needs. All plans include our core AI features 
               and come with a 14-day free trial.
             </p>
           </motion.div>
@@ -474,15 +463,15 @@ export function AISupplyChainRiskManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 rounded-2xl border ${
+                className={`bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-2xl border ${
                   plan.popular 
-                    ? 'border-green-500/50 shadow-lg shadow-green-500/20' 
-                    : 'border-green-500/20'
+                    ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
+                    : 'border-purple-500/20'
                 } relative`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -500,7 +489,7 @@ export function AISupplyChainRiskManagement() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -510,8 +499,8 @@ export function AISupplyChainRiskManagement() {
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
-                      : 'border border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                      : 'border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
                   }`}
                 >
                   {plan.cta}
@@ -523,7 +512,7 @@ export function AISupplyChainRiskManagement() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -531,23 +520,23 @@ export function AISupplyChainRiskManagement() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Secure Your Supply Chain?
+              Ready to Optimize Your Revenue?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading organizations already using our AI platform to protect their supply chains, 
-              reduce risks, and ensure business continuity.
+              Join leading companies already using our AI platform to forecast, optimize, and grow their 
+              revenue with unprecedented accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/pricing"
-                className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing
               </Link>
@@ -567,17 +556,17 @@ export function AISupplyChainRiskManagement() {
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-green-400 mb-4" />
+                <Phone className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-green-400 mb-4" />
+                <Mail className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-green-400 mb-4" />
+                <MapPin className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="font-semibold mb-2">Address</h3>
                 <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>

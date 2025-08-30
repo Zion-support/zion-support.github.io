@@ -286,6 +286,50 @@ export default function Services() {
 
     // Micro SaaS Products
     {
+      name: 'AI Customer Success Platform',
+      description: 'AI-powered customer success with predictive churn prevention and automated workflows',
+      category: 'Micro SaaS',
+      icon: Users,
+      href: '/services/ai-customer-success-platform',
+      color: 'from-cyan-600 to-blue-600',
+      features: ['Customer journey mapping', 'Churn prevention', 'Success metrics', 'Automated workflows'],
+      pricing: 'From $299/month',
+      featured: true
+    },
+    {
+      name: 'AI Data Governance Platform',
+      description: 'Comprehensive data governance with AI-powered compliance and quality management',
+      category: 'Micro SaaS',
+      icon: Shield,
+      href: '/services/ai-data-governance-platform',
+      color: 'from-blue-600 to-indigo-600',
+      features: ['Data discovery', 'Compliance automation', 'Quality monitoring', 'Risk assessment'],
+      pricing: 'From $499/month',
+      featured: true
+    },
+    {
+      name: 'AI Supply Chain Risk Management',
+      description: 'AI-powered supply chain risk detection and mitigation platform',
+      category: 'Micro SaaS',
+      icon: Globe,
+      href: '/services/ai-supply-chain-risk-management',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Risk detection', 'Supply chain mapping', 'Predictive analytics', 'Mitigation strategies'],
+      pricing: 'From $399/month',
+      featured: true
+    },
+    {
+      name: 'AI Revenue Operations Platform',
+      description: 'AI-powered revenue forecasting and pipeline optimization platform',
+      category: 'Micro SaaS',
+      icon: TrendingUp,
+      href: '/services/ai-revenue-operations-platform',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Revenue forecasting', 'Pipeline optimization', 'Revenue analytics', 'Cross-functional alignment'],
+      pricing: 'From $599/month',
+      featured: true
+    },
+    {
       name: 'AI Sales Copilot',
       description: 'Complete sales automation suite with AI-powered insights',
       category: 'Micro SaaS',
@@ -294,7 +338,7 @@ export default function Services() {
       color: 'from-blue-600 to-cyan-600',
       features: ['Lead scoring', 'Sales automation', 'Pipeline management', 'Analytics'],
       pricing: '$299/month',
-      featured: true
+      featured: false
     },
     {
       name: 'AI Support Helpdesk',
