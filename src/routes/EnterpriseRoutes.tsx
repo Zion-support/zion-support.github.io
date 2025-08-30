@@ -1,12 +1,11 @@
-import { Route, Routes  } from 'react-router-dom.ts';
+import { Route, Routes } from 'react-router-dom';
 import EnterprisePlans from '../pages/EnterprisePlans';
 import EnterpriseAdmin from '../pages/EnterpriseAdmin';
 import CompWorkspace from '../pages/CompWorkspace';
 import EnterpriseBilling from '../pages/EnterpriseBilling';
 import EnterpriseDemo from '../pages/EnterpriseDemo';
 
-
-export default function EnterpriseRoutes(...args: []):  {
+export default function EnterpriseRoutes() {
   return (
     <Routes>
       {/* Enterprise Routes */}
@@ -16,7 +15,6 @@ export default function EnterpriseRoutes(...args: []):  {
       <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
       <Route path="/company/:compSlug" element={<CompWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-      
     </Routes>
   );
 }

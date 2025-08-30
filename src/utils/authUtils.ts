@@ -40,7 +40,7 @@ export const getAuthToken = (): string | null => {
   }
 };
 
-export const getUserData = ():  => {
+export const getUserData = (): any => {
   try {
     if (typeof window !== 'undefined') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');

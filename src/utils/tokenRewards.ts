@@ -1,6 +1,6 @@
+import { apiClient } from '@/utils/apiClient';
 
-
-export async function rewardOnboarding(...args: []):  {
+export async function rewardOnboarding(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -8,7 +8,7 @@ export async function rewardOnboarding(...args: []):  {
   });
 }
 
-export async function rewardReferral(...args: []):  {
+export async function rewardReferral(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -16,7 +16,7 @@ export async function rewardReferral(...args: []):  {
   });
 }
 
-export async function rewardFiveStarReview(...args: []):  {
+export async function rewardFiveStarReview(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
