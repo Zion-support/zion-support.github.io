@@ -1,500 +1,305 @@
 #!/usr/bin/env node
 
-/**
- * Enhanced Automation Runner
- * Coordinates and optimizes all PM2 automation processes with advanced error handling
- */
-
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
-
-const execAsync = util.promisify(exec);
+const { execSync, spawn } = require('child_process');
 
 class EnhancedAutomationRunner {
   constructor() {
-    this.config = {
-      maxConcurrentProcesses: 3,
-      retryAttempts: 3,
-      retryDelay: 5000,
-      healthCheckInterval: 30000,
-      logLevel: 'info'
-    };
-    
-    this.processQueue = [];
-    this.runningProcesses = new Map();
-    this.processHistory = [];
-    this.performanceMetrics = {};
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'enhanced-automation-runner-report.json');
+    this.automations = [];
+    this.results = [];
+    this.startTime = Date.now();
   }
 
   async start() {
     console.log('🚀 Starting Enhanced Automation Runner...');
     
     try {
-      // Initialize monitoring
-      await this.initializeMonitoring();
+      // Initialize automations
+      this.initializeAutomations();
       
-      // Start health monitoring
-      this.startHealthMonitoring();
+      // Run all automations
+      await this.runAllAutomations();
       
-      // Process automation queue
-      await this.processQueue();
+      // Generate comprehensive report
+      await this.generateReport();
       
-      console.log('✅ Enhanced Automation Runner started successfully');
-      
-    } catch (error) {
-      console.error('❌ Failed to start Enhanced Automation Runner:', error);
-      throw error;
-    }
-  }
-
-  async initializeMonitoring() {
-    console.log('📊 Initializing monitoring systems...');
-    
-    // Create monitoring directories
-    const dirs = ['logs', 'reports', 'metrics', 'cache'];
-    for (const dir of dirs) {
-      const dirPath = path.join(__dirname, '../../', dir);
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-      }
-    }
-    
-    // Initialize performance tracking
-    this.performanceMetrics = {
-      startTime: Date.now(),
-      totalProcesses: 0,
-      successfulProcesses: 0,
-      failedProcesses: 0,
-      averageExecutionTime: 0,
-      totalExecutionTime: 0
-    };
-  }
-
-  startHealthMonitoring() {
-    setInterval(async () => {
-      await this.performHealthCheck();
-    }, this.config.healthCheckInterval);
-  }
-
-  async performHealthCheck() {
-    try {
-      const healthStatus = await this.checkSystemHealth();
-      
-      if (healthStatus.overallHealth === 'critical') {
-        console.log('🚨 CRITICAL: System health check failed');
-        await this.triggerEmergencyProcedures();
-      } else if (healthStatus.overallHealth === 'warning') {
-        console.log('⚠️  WARNING: System showing signs of stress');
-        await this.optimizePerformance();
-      }
-      
-      // Log health status
-      await this.logHealthStatus(healthStatus);
+      console.log('✅ Enhanced Automation Runner completed successfully!');
       
     } catch (error) {
-      console.error('Health check failed:', error);
+      console.error('❌ Error in Enhanced Automation Runner:', error);
+      await this.generateReport();
     }
   }
 
-  async checkSystemHealth() {
-    const health = {
-      overallHealth: 'healthy',
-      cpu: 0,
-      memory: 0,
-      disk: 0,
-      processes: 0
-    };
-
-    try {
-      // Check CPU usage
-      const { stdout: cpuInfo } = await execAsync('top -bn1 | grep "Cpu(s)" | awk \'{print $2}\' | cut -d\'%\' -f1');
-      health.cpu = parseFloat(cpuInfo.trim());
-      
-      // Check memory usage
-      const { stdout: memInfo } = await execAsync('free | grep Mem | awk \'{printf("%.2f", $3/$2 * 100.0)}\'');
-      health.memory = parseFloat(memInfo.trim());
-      
-      // Check disk usage
-      const { stdout: diskInfo } = await execAsync('df / | tail -1 | awk \'{print $5}\' | cut -d\'%\' -f1');
-      health.disk = parseFloat(diskInfo.trim());
-      
-      // Check PM2 processes
-      const { stdout: pm2Info } = await execAsync('pm2 list | grep -c "online"');
-      health.processes = parseInt(pm2Info.trim());
-      
-      // Assess overall health
-      if (health.cpu > 90 || health.memory > 90 || health.disk > 90) {
-        health.overallHealth = 'critical';
-      } else if (health.cpu > 80 || health.memory > 80 || health.disk > 80) {
-        health.overallHealth = 'warning';
-      }
-      
-    } catch (error) {
-      console.error('Health check command failed:', error);
-      health.overallHealth = 'unknown';
-    }
-
-    return health;
-  }
-
-  async triggerEmergencyProcedures() {
-    console.log('🚨 Triggering emergency procedures...');
+  initializeAutomations() {
+    console.log('🔧 Initializing automations...');
     
-    try {
-      // Stop non-critical processes
-      await this.stopNonCriticalProcesses();
-      
-      // Clear caches
-      await this.clearCaches();
-      
-      // Restart critical processes
-      await this.restartCriticalProcesses();
-      
-      console.log('✅ Emergency procedures completed');
-      
-    } catch (error) {
-      console.error('Emergency procedures failed:', error);
-    }
-  }
-
-  async stopNonCriticalProcesses() {
-    const nonCritical = ['front-maximizer', 'sitemap-runner', 'performance-monitor'];
-    
-    for (const processName of nonCritical) {
-      try {
-        await execAsync(`pm2 stop ${processName}`);
-        console.log(`⏹️  Stopped non-critical process: ${processName}`);
-      } catch (error) {
-        console.log(`⚠️  Failed to stop ${processName}:`, error.message);
+    this.automations = [
+      {
+        name: 'comprehensive-error-fixer',
+        script: './scripts/automation/comprehensive-error-fixer.cjs',
+        priority: 1,
+        description: 'Fixes all types of project errors comprehensively'
+      },
+      {
+        name: 'typescript-error-fixer',
+        script: './scripts/automation/typescript-error-fixer.cjs',
+        priority: 2,
+        description: 'Fixes TypeScript-specific errors'
+      },
+      {
+        name: 'general-error-fixer',
+        script: './scripts/automation/error-fixer.cjs',
+        priority: 3,
+        description: 'Fixes general linting and syntax errors'
+      },
+      {
+        name: 'console-error-fixer',
+        script: './scripts/automation/console-error-fixer.cjs',
+        priority: 4,
+        description: 'Fixes console statement issues'
       }
-    }
-  }
-
-  async clearCaches() {
-    try {
-      const cacheDir = path.join(__dirname, '../../cache');
-      if (fs.existsSync(cacheDir)) {
-        const files = fs.readdirSync(cacheDir);
-        for (const file of files) {
-          fs.unlinkSync(path.join(cacheDir, file));
-        }
-        console.log('🗑️  Cleared cache directory');
-      }
-    } catch (error) {
-      console.error('Failed to clear cache:', error);
-    }
-  }
-
-  async restartCriticalProcesses() {
-    const critical = ['console-error-fixer', 'link-checker', 'security-audit'];
-    
-    for (const processName of critical) {
-      try {
-        await execAsync(`pm2 restart ${processName}`);
-        console.log(`🔄 Restarted critical process: ${processName}`);
-      } catch (error) {
-        console.error(`Failed to restart ${processName}:`, error);
-      }
-    }
-  }
-
-  async optimizePerformance() {
-    console.log('⚡ Optimizing performance...');
-    
-    try {
-      // Adjust PM2 process limits
-      await this.adjustProcessLimits();
-      
-      // Optimize memory usage
-      await this.optimizeMemoryUsage();
-      
-      console.log('✅ Performance optimization completed');
-      
-    } catch (error) {
-      console.error('Performance optimization failed:', error);
-    }
-  }
-
-  async adjustProcessLimits() {
-    try {
-      // Set memory limits for processes
-      const processes = ['console-error-fixer', 'link-checker', 'continuous-improvement'];
-      
-      for (const processName of processes) {
-        await execAsync(`pm2 restart ${processName} --max-memory-restart 100M`);
-      }
-      
-      console.log('📊 Adjusted process memory limits');
-      
-    } catch (error) {
-      console.error('Failed to adjust process limits:', error);
-    }
-  }
-
-  async optimizeMemoryUsage() {
-    try {
-      // Force garbage collection if available
-      if (global.gc) {
-        global.gc();
-        console.log('🧹 Forced garbage collection');
-      }
-      
-      // Clear module cache for non-essential modules
-      const nonEssentialModules = ['fs', 'path', 'util'];
-      for (const moduleName of nonEssentialModules) {
-        if (require.cache[require.resolve(moduleName)]) {
-          delete require.cache[require.resolve(moduleName)];
-        }
-      }
-      
-      console.log('🗂️  Cleared module cache');
-      
-    } catch (error) {
-      console.error('Failed to optimize memory:', error);
-    }
-  }
-
-  async processQueue() {
-    console.log('📋 Processing automation queue...');
-    
-    // Add automation tasks to queue
-    this.addAutomationTasks();
-    
-    // Process queue with concurrency control
-    while (this.processQueue.length > 0 || this.runningProcesses.size > 0) {
-      // Start new processes if under limit
-      while (this.runningProcesses.size < this.config.maxConcurrentProcesses && this.processQueue.length > 0) {
-        const task = this.processQueue.shift();
-        await this.startProcess(task);
-      }
-      
-      // Wait for processes to complete
-      await this.waitForProcesses();
-      
-      // Small delay to prevent busy waiting
-      await this.sleep(1000);
-    }
-  }
-
-  addAutomationTasks() {
-    const tasks = [
-      { name: 'console-error-fixer', priority: 'high', script: 'console-error-fixer.js' },
-      { name: 'link-checker', priority: 'high', script: 'link-checker.js' },
-      { name: 'continuous-improvement', priority: 'medium', script: 'continuous-improvement.js' },
-      { name: 'daily-build-test', priority: 'medium', script: 'daily-build-test.js' },
-      { name: 'security-audit', priority: 'high', script: 'security-audit.js' },
-      { name: 'quality-checks', priority: 'medium', script: 'quality-checks.js' },
-      { name: 'performance-monitor', priority: 'low', script: 'performance-monitor.js' },
-      { name: 'dependency-updates', priority: 'low', script: 'dependency-updates.js' }
     ];
-    
+
     // Sort by priority
-    tasks.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
+    this.automations.sort((a, b) => a.priority - b.priority);
+  }
+
+  async runAllAutomations() {
+    console.log('🔄 Running all automations...');
+    
+    for (const automation of this.automations) {
+      try {
+        console.log(`\n🔧 Running ${automation.name}...`);
+        const result = await this.runAutomation(automation);
+        this.results.push(result);
+        
+        if (result.success) {
+          console.log(`✅ ${automation.name} completed successfully`);
+        } else {
+          console.log(`⚠️ ${automation.name} completed with issues`);
+        }
+        
+      } catch (error) {
+        console.error(`❌ ${automation.name} failed:`, error.message);
+        this.results.push({
+          name: automation.name,
+          success: false,
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+  }
+
+  async runAutomation(automation) {
+    return new Promise((resolve, reject) => {
+      const startTime = Date.now();
+      
+      try {
+        // Run the automation script
+        const result = execSync(`node ${automation.script}`, { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        
+        const endTime = Date.now();
+        const duration = endTime - startTime;
+        
+        // Check if automation generated a report
+        const reportFile = this.getReportFile(automation.name);
+        let report = null;
+        
+        if (fs.existsSync(reportFile)) {
+          try {
+            report = JSON.parse(fs.readFileSync(reportFile, 'utf8'));
+          } catch (parseError) {
+            console.warn(`⚠️ Could not parse report for ${automation.name}`);
+          }
+        }
+        
+        resolve({
+          name: automation.name,
+          success: true,
+          duration: `${duration}ms`,
+          timestamp: new Date().toISOString(),
+          output: result,
+          report: report
+        });
+        
+      } catch (error) {
+        const endTime = Date.now();
+        const duration = endTime - startTime;
+        
+        resolve({
+          name: automation.name,
+          success: false,
+          duration: `${duration}ms`,
+          timestamp: new Date().toISOString(),
+          error: error.message,
+          output: error.stdout || error.stderr || ''
+        });
+      }
     });
-    
-    this.processQueue.push(...tasks);
   }
 
-  async startProcess(task) {
-    const processId = Date.now() + Math.random();
-    const startTime = Date.now();
+  getReportFile(automationName) {
+    const reportMappings = {
+      'comprehensive-error-fixer': 'comprehensive-error-fixer-report.json',
+      'typescript-error-fixer': 'typescript-error-fixer-report.json',
+      'general-error-fixer': 'general-error-fixer-report.json',
+      'console-error-fixer': 'console-error-fixer-report.json'
+    };
     
-    console.log(`🚀 Starting ${task.name} (Priority: ${task.priority})`);
-    
-    try {
-      const scriptPath = path.join(__dirname, task.script);
-      const child = exec(`node ${scriptPath}`, {
-        cwd: __dirname,
-        maxBuffer: 1024 * 1024 // 1MB buffer
-      });
-      
-      this.runningProcesses.set(processId, {
-        task,
-        child,
-        startTime,
-        status: 'running'
-      });
-      
-      // Handle process completion
-      child.on('close', (code) => {
-        this.handleProcessCompletion(processId, code, startTime);
-      });
-      
-      // Handle process errors
-      child.on('error', (error) => {
-        this.handleProcessError(processId, error);
-      });
-      
-    } catch (error) {
-      console.error(`Failed to start ${task.name}:`, error);
-      this.handleProcessError(processId, error);
-    }
+    return path.join(this.projectRoot, reportMappings[automationName] || 'unknown-report.json');
   }
 
-  handleProcessCompletion(processId, code, startTime) {
-    const process = this.runningProcesses.get(processId);
-    if (!process) return;
+  async generateReport() {
+    const endTime = Date.now();
+    const totalDuration = endTime - this.startTime;
     
-    const executionTime = Date.now() - startTime;
-    const success = code === 0;
-    
-    // Update metrics
-    this.performanceMetrics.totalProcesses++;
-    this.performanceMetrics.totalExecutionTime += executionTime;
-    this.performanceMetrics.averageExecutionTime = 
-      this.performanceMetrics.totalExecutionTime / this.performanceMetrics.totalProcesses;
-    
-    if (success) {
-      this.performanceMetrics.successfulProcesses++;
-      console.log(`✅ ${process.task.name} completed successfully in ${executionTime}ms`);
-    } else {
-      this.performanceMetrics.failedProcesses++;
-      console.log(`❌ ${process.task.name} failed with code ${code} in ${executionTime}ms`);
+    // Collect all individual reports
+    const allReports = [];
+    for (const automation of this.automations) {
+      const reportFile = this.getReportFile(automation.name);
+      if (fs.existsSync(reportFile)) {
+        try {
+          const report = JSON.parse(fs.readFileSync(reportFile, 'utf8'));
+          allReports.push({
+            automation: automation.name,
+            report: report
+          });
+        } catch (parseError) {
+          console.warn(`⚠️ Could not parse report for ${automation.name}`);
+        }
+      }
     }
     
-    // Record in history
-    this.processHistory.push({
-      name: process.task.name,
-      startTime: new Date(startTime).toISOString(),
-      executionTime,
-      success,
-      exitCode: code
-    });
+    // Calculate overall statistics
+    const successfulAutomations = this.results.filter(r => r.success).length;
+    const totalErrorsFixed = allReports.reduce((total, item) => {
+      if (item.report.summary && item.report.summary.fixedFiles) {
+        return total + item.report.summary.fixedFiles;
+      }
+      return total;
+    }, 0);
     
-    // Clean up
-    this.runningProcesses.delete(processId);
-  }
-
-  handleProcessError(processId, error) {
-    const process = this.runningProcesses.get(processId);
-    if (!process) return;
+    const totalRemainingErrors = allReports.reduce((total, item) => {
+      if (item.report.summary && item.report.summary.remainingErrors !== undefined) {
+        return total + item.report.summary.remainingErrors;
+      }
+      return total;
+    }, 0);
     
-    console.error(`💥 ${process.task.name} encountered an error:`, error.message);
-    
-    // Update metrics
-    this.performanceMetrics.totalProcesses++;
-    this.performanceMetrics.failedProcesses++;
-    
-    // Record in history
-    this.processHistory.push({
-      name: process.task.name,
-      startTime: new Date(process.startTime).toISOString(),
-      executionTime: Date.now() - process.startTime,
-      success: false,
-      error: error.message
-    });
-    
-    // Clean up
-    this.runningProcesses.delete(processId);
-  }
-
-  async waitForProcesses() {
-    // Wait for any process to complete
-    if (this.runningProcesses.size > 0) {
-      await this.sleep(100);
-    }
-  }
-
-  async logHealthStatus(healthStatus) {
-    try {
-      const logPath = path.join(__dirname, '../../logs/health.log');
-      const logEntry = {
-        timestamp: new Date().toISOString(),
-        ...healthStatus
-      };
-      
-      fs.appendFileSync(logPath, JSON.stringify(logEntry) + '\n');
-      
-    } catch (error) {
-      console.error('Failed to log health status:', error);
-    }
-  }
-
-  async generatePerformanceReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: this.performanceMetrics,
-      history: this.processHistory.slice(-100), // Last 100 processes
-      recommendations: this.generateRecommendations()
+      summary: {
+        totalAutomations: this.automations.length,
+        successfulAutomations: successfulAutomations,
+        failedAutomations: this.automations.length - successfulAutomations,
+        totalDuration: `${totalDuration}ms`,
+        totalErrorsFixed: totalErrorsFixed,
+        totalRemainingErrors: totalRemainingErrors,
+        successRate: `${Math.round((successfulAutomations / this.automations.length) * 100)}%`
+      },
+      automations: this.results,
+      individualReports: allReports,
+      recommendations: this.generateRecommendations(allReports)
     };
     
-    const reportPath = path.join(__dirname, '../../reports/performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    console.log(`📊 Enhanced Automation Runner report generated: ${this.reportFile}`);
     
-    console.log(`📊 Performance report generated: ${reportPath}`);
-    return report;
+    // Print summary
+    this.printSummary(report);
   }
 
-  generateRecommendations() {
+  generateRecommendations(allReports) {
     const recommendations = [];
     
-    // Success rate recommendations
-    const successRate = this.performanceMetrics.successfulProcesses / this.performanceMetrics.totalProcesses;
-    if (successRate < 0.9) {
-      recommendations.push('Investigate process failures - success rate below 90%');
+    // Check for high error counts
+    const highErrorCounts = allReports.filter(item => 
+      item.report.summary && 
+      item.report.summary.remainingErrors > 100
+    );
+    
+    if (highErrorCounts.length > 0) {
+      recommendations.push({
+        type: 'high_error_count',
+        message: 'Some automations have high remaining error counts. Consider manual review.',
+        automations: highErrorCounts.map(item => item.automation)
+      });
     }
     
-    // Performance recommendations
-    if (this.performanceMetrics.averageExecutionTime > 60000) { // 1 minute
-      recommendations.push('Processes taking too long - consider optimization or parallelization');
+    // Check for failed automations
+    const failedAutomations = this.results.filter(r => !r.success);
+    if (failedAutomations.length > 0) {
+      recommendations.push({
+        type: 'failed_automations',
+        message: 'Some automations failed to complete. Check logs for details.',
+        automations: failedAutomations.map(r => r.name)
+      });
     }
     
-    // Memory recommendations
-    if (this.performanceMetrics.totalProcesses > 100) {
-      recommendations.push('High process count - consider batching or reducing frequency');
+    // Check for console statements
+    const consoleReports = allReports.filter(item => 
+      item.automation === 'console-error-fixer'
+    );
+    
+    if (consoleReports.length > 0 && consoleReports[0].report.summary.totalConsoleErrors > 0) {
+      recommendations.push({
+        type: 'console_statements',
+        message: 'Console statements detected. Consider implementing proper logging.',
+        count: consoleReports[0].report.summary.totalConsoleErrors
+      });
+    }
+    
+    // Check for TypeScript errors
+    const tsReports = allReports.filter(item => 
+      item.automation === 'typescript-error-fixer'
+    );
+    
+    if (tsReports.length > 0 && tsReports[0].report.summary.remainingErrors > 50) {
+      recommendations.push({
+        type: 'typescript_errors',
+        message: 'High number of TypeScript errors remaining. Consider type annotation improvements.',
+        count: tsReports[0].report.summary.remainingErrors
+      });
     }
     
     return recommendations;
   }
 
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  async shutdown() {
-    console.log('🛑 Shutting down Enhanced Automation Runner...');
+  printSummary(report) {
+    console.log('\n📊 ENHANCED AUTOMATION RUNNER SUMMARY');
+    console.log('=====================================');
+    console.log(`Total Automations: ${report.summary.totalAutomations}`);
+    console.log(`Successful: ${report.summary.successfulAutomations}`);
+    console.log(`Failed: ${report.summary.failedAutomations}`);
+    console.log(`Success Rate: ${report.summary.successRate}`);
+    console.log(`Total Duration: ${report.summary.totalDuration}`);
+    console.log(`Errors Fixed: ${report.summary.totalErrorsFixed}`);
+    console.log(`Remaining Errors: ${report.summary.totalRemainingErrors}`);
     
-    try {
-      // Stop all running processes
-      for (const [id, process] of this.runningProcesses) {
-        process.child.kill();
-        this.runningProcesses.delete(id);
-      }
-      
-      // Generate final report
-      await this.generatePerformanceReport();
-      
-      console.log('✅ Enhanced Automation Runner shutdown complete');
-      
-    } catch (error) {
-      console.error('❌ Shutdown failed:', error);
+    if (report.recommendations.length > 0) {
+      console.log('\n💡 RECOMMENDATIONS:');
+      report.recommendations.forEach((rec, index) => {
+        console.log(`${index + 1}. ${rec.message}`);
+      });
     }
+    
+    console.log('\n📁 Detailed report saved to:', this.reportFile);
   }
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', async () => {
-  const runner = global.currentRunner;
-  if (runner) {
-    await runner.shutdown();
-  }
-  process.exit(0);
-});
-
-// Run the enhanced automation runner
+// Auto-start if run directly
 if (require.main === module) {
   const runner = new EnhancedAutomationRunner();
-  global.currentRunner = runner;
-  
-  runner.start().catch(async (error) => {
-    console.error('Fatal error:', error);
-    await runner.shutdown();
-    process.exit(1);
-  });
+  runner.start();
 }
 
 module.exports = EnhancedAutomationRunner;

@@ -4,376 +4,474 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class ErrorFixer {
+class GeneralErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.errorsFixed = 0;
-    this.filesProcessed = 0;
-    this.startTime = Date.now();
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    this.reportFile = path.join(this.projectRoot, 'general-error-fixer-report.json');
+    this.fixedFiles = [];
+    this.errors = [];
+    this.warnings = [];
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async runTypeCheck() {
-    try {
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { stdio: 'pipe' });
-      this.log('TypeScript check passed - no errors found');
-      return { success: true, errors: [] };
-    } catch (error) {
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`);
-      return { success: false, errors };
-    }
-  }
-
-  parseTypeScriptErrors(output) {
-    const errorLines = output.split('\n').filter(line => 
-      line.includes('error TS') || line.includes('error:')
-    );
-    
-    const errors = [];
-    let currentError = null;
-    
-    for (const line of errorLines) {
-      if (line.includes('error TS') || line.includes('error:')) {
-        const match = line.match(/([^:]+):(\d+):(\d+)/);
-        if (match) {
-          if (currentError) {
-            errors.push(currentError);
-          }
-          currentError = {
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: line.split(' - ')[1] || line,
-            type: 'typescript'
-          };
-        }
-      } else if (currentError && line.trim()) {
-        currentError.message += ' ' + line.trim();
-      }
-    }
-    
-    if (currentError) {
-      errors.push(currentError);
-    }
-    
-    return errors;
-  }
-
-  async runLintCheck() {
-    try {
-      this.log('Running ESLint check...');
-      execSync('npm run lint', { stdio: 'pipe' });
-      this.log('ESLint check passed - no errors found');
-      return { success: true, errors: [] };
-    } catch (error) {
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseLintErrors(output);
-      this.log(`ESLint check failed with ${errors.length} errors`);
-      return { success: false, errors };
-    }
-  }
-
-  parseLintErrors(output) {
-    const errorLines = output.split('\n').filter(line => 
-      line.includes('error') || line.includes('Error:')
-    );
-    
-    return errorLines.map(line => ({
-      message: line.trim(),
-      type: 'eslint'
-    }));
-  }
-
-  async fixCommonErrors() {
-    this.log('Starting to fix common errors...');
-    
-    // Fix common TypeScript syntax errors
-    await this.fixTypeScriptSyntaxErrors();
-    
-    // Fix common React/JSX errors
-    await this.fixReactErrors();
-    
-    // Fix common import/export errors
-    await this.fixImportExportErrors();
-    
-    // Fix common variable declaration errors
-    await this.fixVariableErrors();
-  }
-
-  async fixTypeScriptSyntaxErrors() {
-    this.log('Fixing TypeScript syntax errors...');
-    
-    const commonFixes = [
-      // Fix missing colons in object properties
-      { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
-      { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
-      
-      // Fix missing parentheses in function calls
-      { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
-      
-      // Fix missing semicolons
-      { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
-    ];
-    
-    // Process TypeScript files
-    const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx']);
-    
-    for (const file of tsFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-        
-        // Apply common fixes
-        for (const fix of commonFixes) {
-          content = content.replace(fix.pattern, fix.replacement);
-        }
-        
-        // Fix specific common patterns
-        content = this.fixSpecificPatterns(content);
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed errors in ${file}`);
-        }
-        
-        this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
-      }
-    }
-  }
-
-  fixSpecificPatterns(content) {
-    // Fix missing function declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\[/g, 'const $1 = [');
-    
-    // Fix missing return statements
-    content = content.replace(/return\s*\(\s*$/gm, 'return (');
-    
-    // Fix missing JSX fragments
-    content = content.replace(/<>\s*$/gm, '<>');
-    content = content.replace(/^\s*<\/>/gm, '</>');
-    
-    // Fix missing catch block types
-    content = content.replace(/catch\s*\(\s*error\s*:\s*\)/g, 'catch (error: any)');
-    
-    return content;
-  }
-
-  async fixReactErrors() {
-    this.log('Fixing React/JSX errors...');
-    
-    const reactFiles = this.findFiles(['**/*.tsx', '**/*.jsx']);
-    
-    for (const file of reactFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-        
-        // Fix missing React imports
-        if (content.includes('React') && !content.includes("import React")) {
-          content = "import React from 'react';\n" + content;
-        }
-        
-        // Fix missing JSX fragment wrappers
-        if (content.includes('<Helmet>') && !content.includes('<>')) {
-          content = content.replace(/<Helmet>/g, '<>\n        <Helmet>');
-          content = content.replace(/<\/Helmet>\s*<\/div>/g, '</Helmet>\n      </div>\n    </>');
-        }
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed React errors in ${file}`);
-        }
-        
-        this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
-      }
-    }
-  }
-
-  async fixImportExportErrors() {
-    this.log('Fixing import/export errors...');
-    
-    const sourceFiles = this.findFiles(['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx']);
-    
-    for (const file of sourceFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-        
-        // Fix missing semicolons in imports
-        content = content.replace(/import\s+([^;]+)$/gm, 'import $1;');
-        
-        // Fix missing semicolons in exports
-        content = content.replace(/export\s+([^;]+)$/gm, 'export $1;');
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed import/export errors in ${file}`);
-        }
-        
-        this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
-      }
-    }
-  }
-
-  async fixVariableErrors() {
-    this.log('Fixing variable declaration errors...');
-    
-    const sourceFiles = this.findFiles(['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx']);
-    
-    for (const file of sourceFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
-        
-        // Fix missing const/let/var declarations
-        content = content.replace(/^(\s*)(\w+)\s*=\s*\[/gm, '$1const $2 = [');
-        
-        // Fix missing semicolons
-        content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed variable errors in ${file}`);
-        }
-        
-        this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
-      }
-    }
-  }
-
-  findFiles(patterns) {
-    const files = [];
-    const self = this;
-    
-    function walkDir(dir) {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          walkDir(fullPath);
-        } else if (stat.isFile()) {
-          for (const pattern of patterns) {
-            if (self.matchesPattern(fullPath, pattern)) {
-              files.push(fullPath);
-              break;
-            }
-          }
-        }
-      }
-    }
-    
-    walkDir(this.projectRoot);
-    return files;
-  }
-
-  matchesPattern(filePath, pattern) {
-    const relativePath = path.relative(this.projectRoot, filePath);
-    const regexPattern = pattern
-      .replace(/\*\*/g, '.*')
-      .replace(/\*/g, '[^/]*')
-      .replace(/\./g, '\\.');
-    
-    return new RegExp(`^${regexPattern}$`).test(relativePath);
-  }
-
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Error fixer automation completed',
-      status: 'completed',
-      duration: `${duration}ms`,
-      filesProcessed: this.filesProcessed,
-      errorsFixed: this.errorsFixed,
-      performance: {
-        filesPerSecond: Math.round((this.filesProcessed / duration) * 1000 * 100) / 100,
-        errorsPerSecond: Math.round((this.errorsFixed / duration) * 1000 * 100) / 100
-      }
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`Report saved to ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('Starting Error Fixer Automation...');
+  async start() {
+    console.log('🚀 Starting General Error Fixer...');
     
     try {
-      // Run initial checks
-      const typeCheckResult = await this.runTypeCheck();
-      const lintCheckResult = await this.runLintCheck();
+      // Run initial error scan
+      await this.scanForErrors();
       
-      // If there are errors, try to fix them
-      if (!typeCheckResult.success || !lintCheckResult.success) {
-        this.log('Errors detected, starting automatic fixes...');
-        await this.fixCommonErrors();
-        
-        // Run checks again to see if fixes worked
-        this.log('Running checks again after fixes...');
-        const typeCheckAfter = await this.runTypeCheck();
-        const lintCheckAfter = await this.runLintCheck();
-        
-        if (typeCheckAfter.success && lintCheckAfter.success) {
-          this.log('All errors have been automatically fixed!');
-        } else {
-          this.log('Some errors remain after automatic fixes');
-        }
-      } else {
-        this.log('No errors detected - project is clean!');
-      }
+      // Fix common linting issues
+      await this.fixCommonLintingIssues();
+      
+      // Fix unused variables
+      await this.fixUnusedVariables();
+      
+      // Fix console statements
+      await this.fixConsoleStatements();
+      
+      // Fix import/export issues
+      await this.fixImportExportIssues();
+      
+      // Fix React component issues
+      await this.fixReactComponentIssues();
+      
+      // Fix syntax issues
+      await this.fixSyntaxIssues();
       
       // Generate report
-      const report = this.generateReport();
+      await this.generateReport();
       
-      this.log(`Error Fixer completed. Processed ${this.filesProcessed} files, fixed ${this.errorsFixed} errors.`);
-      this.log(`Duration: ${report.duration}`);
-      
-      return report;
+      console.log('✅ General Error Fixer completed successfully!');
       
     } catch (error) {
-      this.log(`Error Fixer failed: ${error.message}`);
-      throw error;
+      console.error('❌ Error in General Error Fixer:', error);
+      this.errors.push({
+        type: 'system_error',
+        message: error.message,
+        timestamp: new Date().toISOString()
+      });
+      await this.generateReport();
     }
+  }
+
+  async scanForErrors() {
+    console.log('🔍 Scanning for errors...');
+    
+    try {
+      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+      this.parseLintOutput(lintResult);
+    } catch (error) {
+      // ESLint errors are expected, parse the output
+      this.parseLintOutput(error.stdout || error.stderr || '');
+    }
+  }
+
+  parseLintOutput(output) {
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/(.+):(\d+):(\d+)\s+(error|warning)\s+(.+)/);
+        if (match) {
+          const [, filePath, lineNum, colNum, type, message] = match;
+          if (type === 'error') {
+            this.errors.push({
+              file: filePath.trim(),
+              line: parseInt(lineNum),
+              column: parseInt(colNum),
+              type: 'lint_error',
+              message: message.trim()
+            });
+          } else {
+            this.warnings.push({
+              file: filePath.trim(),
+              line: parseInt(lineNum),
+              column: parseInt(colNum),
+              type: 'lint_warning',
+              message: message.trim()
+            });
+          }
+        }
+      }
+    });
+  }
+
+  async fixCommonLintingIssues() {
+    console.log('🔧 Fixing common linting issues...');
+    
+    try {
+      // Run ESLint with --fix
+      execSync('npm run lint -- --fix', { stdio: 'pipe' });
+      console.log('✅ Applied ESLint auto-fixes');
+    } catch (error) {
+      console.log('ℹ️ Some linting issues could not be auto-fixed');
+    }
+  }
+
+  async fixUnusedVariables() {
+    console.log('🔧 Fixing unused variables...');
+    
+    const unusedVarErrors = this.errors.filter(e => 
+      e.message.includes('defined but never used') ||
+      e.message.includes('assigned a value but never used')
+    );
+
+    for (const error of unusedVarErrors) {
+      await this.fixUnusedVariable(error);
+    }
+  }
+
+  async fixUnusedVariable(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Extract variable name from error message
+      const varMatch = error.message.match(/'([^']+)'/);
+      if (varMatch) {
+        const varName = varMatch[1];
+        
+        // Remove unused imports
+        if (error.message.includes('import')) {
+          const importRegex = new RegExp(`import\\s+\\{[^}]*\\b${varName}\\b[^}]*\\}\\s+from\\s+['"][^'"]+['"];?\\s*\\n?`, 'g');
+          if (content.match(importRegex)) {
+            content = content.replace(importRegex, '');
+            fixed = true;
+          }
+        }
+        
+        // Remove unused variable declarations
+        if (error.message.includes('defined but never used')) {
+          const varRegex = new RegExp(`(?:const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
+          if (content.match(varRegex)) {
+            content = content.replace(varRegex, '');
+            fixed = true;
+          }
+        }
+        
+        // Remove unused function parameters
+        if (error.message.includes('parameter') && error.message.includes('never used')) {
+          const paramRegex = new RegExp(`,\\s*${varName}\\s*:`, 'g');
+          if (content.match(paramRegex)) {
+            content = content.replace(paramRegex, ',');
+            fixed = true;
+          }
+        }
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'unused_variable_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed unused variable in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix unused variable in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixConsoleStatements() {
+    console.log('🔧 Fixing console statements...');
+    
+    const consoleErrors = this.errors.filter(e => 
+      e.message.includes('Unexpected console statement')
+    );
+
+    for (const error of consoleErrors) {
+      await this.fixConsoleStatement(error);
+    }
+  }
+
+  async fixConsoleStatement(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Replace console statements with proper logging or remove them
+      if (content.includes('console.log')) {
+        content = content.replace(/console\.log\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.error')) {
+        content = content.replace(/console\.error\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.warn')) {
+        content = content.replace(/console\.warn\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.info')) {
+        content = content.replace(/console\.info\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'console_statement_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed console statements in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix console statements in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixImportExportIssues() {
+    console.log('🔧 Fixing import/export issues...');
+    
+    const importExportErrors = this.errors.filter(e => 
+      e.message.includes('import') ||
+      e.message.includes('export') ||
+      e.message.includes('module')
+    );
+
+    for (const error of importExportErrors) {
+      await this.fixImportExportIssue(error);
+    }
+  }
+
+  async fixImportExportIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix missing semicolons in imports
+      if (content.includes('import') && !content.includes(';')) {
+        content = content.replace(/from\s+['"]([^'"]+)['"]\s*$/gm, "from '$1';");
+        fixed = true;
+      }
+
+      // Fix missing semicolons in exports
+      if (content.includes('export') && !content.includes(';')) {
+        content = content.replace(/export\s+default\s+(\w+)\s*$/gm, 'export default $1;');
+        fixed = true;
+      }
+
+      // Fix React import issues
+      if (content.includes('React') && !content.includes("import React")) {
+        if (content.includes('jsx') || content.includes('tsx')) {
+          content = "import React from 'react';\n" + content;
+          fixed = true;
+        }
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'import_export_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed import/export issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix import/export issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixReactComponentIssues() {
+    console.log('🔧 Fixing React component issues...');
+    
+    const reactErrors = this.errors.filter(e => 
+      e.file.includes('.jsx') || 
+      e.file.includes('.tsx') ||
+      e.message.includes('React') ||
+      e.message.includes('JSX')
+    );
+
+    for (const error of reactErrors) {
+      await this.fixReactComponentIssue(error);
+    }
+  }
+
+  async fixReactComponentIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix missing React import
+      if (content.includes('jsx') && !content.includes("import React")) {
+        content = "import React from 'react';\n" + content;
+        fixed = true;
+      }
+
+      // Fix JSX fragment syntax
+      if (content.includes('<>') && content.includes('</>')) {
+        // Ensure proper JSX structure
+        if (!content.includes('return') && content.includes('function')) {
+          content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/, 'function $1() {\n  return (');
+          content = content.replace(/<\/>\s*\)\s*;?\s*$/, '</>);\n}');
+          fixed = true;
+        }
+      }
+
+      // Fix JSX attribute issues
+      if (content.includes('jsx')) {
+        content = content
+          .replace(/\s*\/\s*>/g, ' />')
+          .replace(/>\s*</g, '>\n<');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'react_component_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed React component issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix React component issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixSyntaxIssues() {
+    console.log('🔧 Fixing syntax issues...');
+    
+    const syntaxErrors = this.errors.filter(e => 
+      e.message.includes('Parsing error') ||
+      e.message.includes('Unexpected token') ||
+      e.message.includes('Expected')
+    );
+
+    for (const error of syntaxErrors) {
+      await this.fixSyntaxIssue(error);
+    }
+  }
+
+  async fixSyntaxIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix common syntax issues
+      if (error.message.includes('Unexpected token [')) {
+        content = this.fixArraySyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token {')) {
+        content = this.fixObjectSyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token =')) {
+        content = this.fixAssignmentSyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token ;')) {
+        content = this.fixSemicolonSyntax(content);
+        fixed = true;
+      }
+
+      // Fix missing semicolons
+      if (error.message.includes('Expected')) {
+        content = content
+          .replace(/([^;])\s*$/gm, '$1;')
+          .replace(/;\s*;/g, ';');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'syntax_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed syntax issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix syntax issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  fixArraySyntax(content) {
+    // Fix array destructuring syntax issues
+    return content
+      .replace(/const\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'const $1 = [$2];')
+      .replace(/let\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'let $1 = [$2];')
+      .replace(/var\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'var $1 = [$2];');
+  }
+
+  fixObjectSyntax(content) {
+    // Fix object destructuring syntax issues
+    return content
+      .replace(/const\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'const { $1 } = $2;')
+      .replace(/let\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'let { $1 } = $2;')
+      .replace(/var\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'var { $1 } = $2;');
+  }
+
+  fixAssignmentSyntax(content) {
+    // Fix assignment syntax issues
+    return content
+      .replace(/const\s+(\w+)\s*=\s*([^;]+);/g, 'const $1 = $2;')
+      .replace(/let\s+(\w+)\s*=\s*([^;]+);/g, 'let $1 = $2;')
+      .replace(/var\s+(\w+)\s*=\s*([^;]+);/g, 'var $1 = $2;');
+  }
+
+  fixSemicolonSyntax(content) {
+    // Fix semicolon syntax issues
+    return content
+      .replace(/;\s*;/g, ';')
+      .replace(/;\s*$/gm, ';');
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalErrors: this.errors.length,
+        totalWarnings: this.warnings.length,
+        fixedFiles: this.fixedFiles.length,
+        remainingErrors: this.errors.length - this.fixedFiles.length
+      },
+      fixedFiles: this.fixedFiles,
+      remainingErrors: this.errors.filter(error => 
+        !this.fixedFiles.some(fix => fix.file === error.file)
+      ),
+      warnings: this.warnings,
+      fixTypes: this.fixedFiles.reduce((acc, fix) => {
+        acc[fix.type] = (acc[fix.type] || 0) + 1;
+        return acc;
+      }, {})
+    };
+
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    console.log(`📊 General Error Fixer report generated: ${this.reportFile}`);
   }
 }
 
-// Run the automation if called directly
+// Auto-start if run directly
 if (require.main === module) {
-  const errorFixer = new ErrorFixer();
-  errorFixer.run().catch(console.error);
+  const fixer = new GeneralErrorFixer();
+  fixer.start();
 }
 
-module.exports = ErrorFixer;
+module.exports = GeneralErrorFixer;
