@@ -47,12 +47,14 @@ export default function Login() {
         <LoginContent />
       </ErrorBoundary>
     );
+  }
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
     return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+  }
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
-}}
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseSolutions = () => {
+import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
+
+const EnterpriseSolutions = () => {
     const solutions = [
         {
             title: 'AI-Powered Business Intelligence',
@@ -53,7 +55,7 @@ import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseS
             ],
             icon: Zap,
             href: '/services/ai-autonomous-systems'
-
+        }
     ];
     const industries = [
         {
@@ -79,7 +81,7 @@ import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseS
             description: 'Omnichannel retail solutions for modern commerce.',
             icon: Globe,
             solutions: ['Customer personalization', 'Inventory management', 'Demand forecasting', 'E-commerce optimization']
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -196,7 +198,7 @@ import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseS
                 title: '24/7 Support',
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
-
+            }
         ].map((benefit, index) => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
@@ -235,4 +237,3 @@ import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseS
     </div>);
 };
 export default EnterpriseSolutions;
-}}}}

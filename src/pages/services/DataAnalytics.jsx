@@ -130,7 +130,7 @@ export default function DataAnalyticsServices() {
                 'Better customer experience',
                 'Reduced downtime and losses'
             ]
-
+        }
     ];
     const industries = [
         'Financial Services & Banking',
@@ -396,4 +396,4 @@ export default function DataAnalyticsServices() {
         </div>
       </section>
     </div>);
-}}}
+}

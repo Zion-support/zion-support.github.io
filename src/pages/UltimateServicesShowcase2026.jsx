@@ -48,7 +48,7 @@ const UltimateServicesShowcase2026 = () => {
             case 'name':
             default:
                 return a.name.localeCompare(b.name);
-
+        }
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -81,8 +81,8 @@ const UltimateServicesShowcase2026 = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
+            }
+        }
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -92,8 +92,8 @@ const UltimateServicesShowcase2026 = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-
-
+            }
+        }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -327,5 +327,4 @@ const UltimateServicesShowcase2026 = () => {
       </section>
     </div>);
 };
-export default UltimateServicesShowcase2026;
-}}}}}
+export default UltimateServicesShowcase2026;}
