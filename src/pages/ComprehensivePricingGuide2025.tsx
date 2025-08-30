@@ -327,7 +327,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Savings:</span>
                     <span className="text-green-400 font-semibold">
-                      {Math.round(((MICRO_SAAS_SERVICES.reduce((sum, s) => {
+                      {Math.round((((MICRO_SAAS_SERVICES.reduce((sum, s) => {
                         const priceRange = s.marketPrice.match(/\$(\d+)/);
                         return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
                       }, 0) / MICRO_SAAS_SERVICES.length) - (MICRO_SAAS_SERVICES.reduce((sum, s) => sum + s.price, 0) / MICRO_SAAS_SERVICES.length)) / (MICRO_SAAS_SERVICES.reduce((sum, s) => {

@@ -40,6 +40,16 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
+// 2025 Services pages
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+
+// 2027 Services pages
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensiveServicesShowcase2027 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+
 // Revolutionary services pages for 2030
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
@@ -191,6 +201,14 @@ function App() {
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              
+              {/* 2027 Services Routes */}
+              <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/enhanced-innovative-services-showcase-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />

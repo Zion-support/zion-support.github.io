@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "../components/SEOHead";
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import { innovativeServices2027 } from '../data/innovativeServices2027';
 import { 
   Brain, 
   Shield, 
@@ -38,24 +38,24 @@ const AllServices2027: React.FC = () => {
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
   ];
 
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => 
+  const filteredServices = innovativeServices2027.filter(service => 
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
       return {
-        count: INNOVATIVE_SERVICES_2027.length,
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
+              count: innovativeServices2027.length,
+      avgPrice: Math.round(innovativeServices2027.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
       };
     }
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
-    return {
-      count: services.length,
-      avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
-      avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-    };
+    const services = innovativeServices2027.filter(s => s.category === categoryId);
+          return {
+        count: services.length,
+        avgPrice: Math.round(services.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
+        avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
+      };
   };
 
   const containerVariants = {
@@ -152,8 +152,6 @@ const AllServices2027: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive range of technology services, each designed to address 
               specific business challenges and drive innovation.
-            </p>
-          </div>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -374,7 +372,6 @@ const AllServices2027: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
->>>>>>> 6dd29c142034ec935b31fa0640beb1de37312487
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
