@@ -9,13 +9,13 @@ export class SitemapGenerator {
     /**
      * Generate XML sitemap content
      */
-    generateXML() {
-        const { baseUrl, urls } = this.config;
+    generateXML() {;
+const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         const urlsetClose = '</urlset>';
-        const urlElements = urls.map(url => {
-            const urlElement = `<url>
+        const urlElements = urls.map(url => {;
+const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
@@ -28,8 +28,8 @@ export class SitemapGenerator {
     /**
      * Generate sitemap index for large sites
      */
-    generateIndex(sitemaps) {
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
+    generateIndex(sitemaps) {;
+const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
@@ -43,8 +43,8 @@ export class SitemapGenerator {
     /**
      * Generate robots.txt content
      */
-    generateRobotsTxt() {
-        const { baseUrl } = this.config;
+    generateRobotsTxt() {;
+const { baseUrl } = this.config;
         return `User-agent: *
 Allow: /
 
@@ -72,8 +72,8 @@ Crawl-delay: 1`;
     /**
      * Generate JSON sitemap for JavaScript applications
      */
-    generateJSON() {
-        const { baseUrl, urls } = this.config;
+    generateJSON() {;
+const { baseUrl, urls } = this.config;
         const jsonSitemap = {
             baseUrl,
             urls: urls.map(url => ({
@@ -87,8 +87,8 @@ Crawl-delay: 1`;
     /**
      * Generate HTML sitemap for users
      */
-    generateHTML() {
-        const { baseUrl, urls } = this.config;
+    generateHTML() {;
+const { baseUrl, urls } = this.config;
         const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,7 +177,8 @@ Crawl-delay: 1`;
         return html;
     }
 }
-// Default sitemap configuration for Zion Tech Group
+// Default sitemap configuration for Zion Tech Group;;;
+
 export const defaultSitemapConfig = {
     baseUrl: 'https://ziontechgroup.com',
     urls: [
@@ -220,18 +221,19 @@ export const defaultSitemapConfig = {
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
     ]
 };
-// Utility function to generate all sitemap files
-export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
-    const generator = new SitemapGenerator(config);
+// Utility function to generate all sitemap files;;;
+
+export const generateAllSitemaps = async (config = defaultSitemapConfig) => {;
+const generator = new SitemapGenerator(config);
     try {
-        // Generate XML sitemap
-        const xmlSitemap = generator.generateXML();
-        // Generate robots.txt
-        const robotsTxt = generator.generateRobotsTxt();
-        // Generate HTML sitemap
-        const htmlSitemap = generator.generateHTML();
-        // Generate JSON sitemap
-        const jsonSitemap = generator.generateJSON();
+        // Generate XML sitemap;
+const xmlSitemap = generator.generateXML();
+        // Generate robots.txt;
+const robotsTxt = generator.generateRobotsTxt();
+        // Generate HTML sitemap;
+const htmlSitemap = generator.generateHTML();
+        // Generate JSON sitemap;
+const jsonSitemap = generator.generateJSON();
         return {
             xml: xmlSitemap,
             robots: robotsTxt,
@@ -243,5 +245,6 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
         console.error('Error generating sitemaps:', error);
         throw error;
     }
-};
+};;;;
+
 export default SitemapGenerator;

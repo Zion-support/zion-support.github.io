@@ -87,7 +87,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   const updateOpenGraphTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
-    const ogTags = [
+    const ogTags: any[] = [
       { property: 'og:title', content: fullTitle },
       { property: 'og:description', content: data.description },
       { property: 'og:type', content: data.ogType || 'website' },
@@ -109,7 +109,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   const updateTwitterCardTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
-    const twitterTags = [
+    const twitterTags: any[] = [
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: fullTitle },
       { name: 'twitter:description', content: data.description },
@@ -216,7 +216,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        const metrics = {
+        const metrics: any = {
           dns: navigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,

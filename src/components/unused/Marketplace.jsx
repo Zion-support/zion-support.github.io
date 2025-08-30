@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
-export default function Marketplace() {
-    const [searchTerm, setSearchTerm] = useState('');
+import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';;;;
+
+export default function Marketplace() {;
+const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
@@ -224,8 +225,8 @@ export default function Marketplace() {
             type: 'service'
         }
     ];
-    const filteredProducts = marketplaceProducts.filter(product => {
-        const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const filteredProducts = marketplaceProducts.filter(product => {;
+const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
@@ -260,11 +261,11 @@ export default function Marketplace() {
         if (price === 0)
             return 'Free';
         return `${currency} ${price.toLocaleString()}`};
-    const getCategoryIcon = (categoryId) => {
-        const category = categories.find(cat => cat.id === categoryId);
+    const getCategoryIcon = (categoryId) => {;
+const category = categories.find(cat => cat.id === categoryId);
         return category ? category.icon : Globe};
-    const getCategoryName = (categoryId) => {
-        const category = categories.find(cat => cat.id === categoryId);
+    const getCategoryName = (categoryId) => {;
+const category = categories.find(cat => cat.id === categoryId);
         return category ? category.name : 'Unknown'};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Header */}

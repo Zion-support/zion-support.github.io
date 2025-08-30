@@ -22,7 +22,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
     accessToken: null,
-    refreshToken: null
+    refreshToken: null,
   });
 
   useEffect(()  => {

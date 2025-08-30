@@ -74,7 +74,7 @@ export function PrimaryNav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
+  const services: any[] = [
     {
       category: 'AI & Research',
       items: [

@@ -3,8 +3,8 @@ export class ContentOptimizer {
     static MIN_HEADING_COUNT = 2;
     static MIN_IMAGE_COUNT = 1;
     static MIN_LINK_COUNT = 3;
-    static analyzeContent(content, page) {
-        const wordCount = this.countWords(content);
+    static analyzeContent(content, page) {;
+const wordCount = this.countWords(content);
         const headingCount = this.countHeadings(content);
         const imageCount = this.countImages(content);
         const linkCount = this.countLinks(content);
@@ -30,44 +30,44 @@ export class ContentOptimizer {
         };
     }
     static countWords(content) {
-        // Remove HTML tags and count words
-        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        // Remove HTML tags and count words;
+const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
     }
-    static countHeadings(content) {
-        const headingMatches = content.match(/<h[1-6][^>]*>/gi);
+    static countHeadings(content) {;
+const headingMatches = content.match(/<h[1-6][^>]*>/gi);
         return headingMatches ? headingMatches.length : 0;
     }
-    static countImages(content) {
-        const imageMatches = content.match(/<img[^>]*>/gi);
+    static countImages(content) {;
+const imageMatches = content.match(/<img[^>]*>/gi);
         return imageMatches ? imageMatches.length : 0;
     }
-    static countLinks(content) {
-        const linkMatches = content.match(/<a[^>]*>/gi);
+    static countLinks(content) {;
+const linkMatches = content.match(/<a[^>]*>/gi);
         return linkMatches ? linkMatches.length : 0;
     }
-    static calculateReadabilityScore(content) {
-        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+    static calculateReadabilityScore(content) {;
+const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
         const words = textContent.split(/\s+/).filter(w => w.length > 0);
         const syllables = this.countSyllables(textContent);
         if (sentences.length === 0 || words.length === 0)
             return 0;
-        // Flesch Reading Ease formula
-        const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
+        // Flesch Reading Ease formula;
+const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
         return Math.max(0, Math.min(100, score));
     }
     static countSyllables(text) {
-        // Simplified syllable counting
-        const words = text.toLowerCase().split(/\s+/);
+        // Simplified syllable counting;
+const words = text.toLowerCase().split(/\s+/);
         let syllableCount = 0;
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
             }
             else {
-                // Count vowel groups
-                const vowelGroups = word.match(/[aeiouy]+/g);
+                // Count vowel groups;
+const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
             }
         });
@@ -86,19 +86,19 @@ export class ContentOptimizer {
             score -= 10;
         if (!content.includes('<h2>'))
             score -= 5;
-        // Check for images with alt text
-        const images = content.match(/<img[^>]*>/gi) || [];
+        // Check for images with alt text;
+const images = content.match(/<img[^>]*>/gi) || [];
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
-        // Check for internal links
-        const internalLinks = content.match(/href="\/[^"]*"/g) || [];
+        // Check for internal links;
+const internalLinks = content.match(/href="\/[^"]*"/g) || [];
         if (internalLinks.length < 2)
             score -= 10;
         return Math.max(0, score);
     }
-    static identifyIssues(content, page, metrics) {
-        const issues = [];
+    static identifyIssues(content, page, metrics) {;
+const issues = [];
         // Check for missing headings
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
@@ -135,8 +135,8 @@ export class ContentOptimizer {
                 location: 'Page structure'
             });
         }
-        // Check for missing keywords
-        const pageKeywords = this.extractPageKeywords(page);
+        // Check for missing keywords;
+const pageKeywords = this.extractPageKeywords(page);
         const contentKeywords = this.extractContentKeywords(content);
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
@@ -149,8 +149,8 @@ export class ContentOptimizer {
         }
         return issues;
     }
-    static generateSuggestions(issues, page) {
-        const suggestions = [];
+    static generateSuggestions(issues, page) {;
+const suggestions = [];
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings':
@@ -198,21 +198,21 @@ export class ContentOptimizer {
         return suggestions;
     }
     static extractPageKeywords(page) {
-        // Extract keywords from page path
-        const segments = page.split('/').filter(Boolean);
+        // Extract keywords from page path;
+const segments = page.split('/').filter(Boolean);
         const keywords = [];
-        segments.forEach(segment => {
-            const words = segment.split('-').filter(w => w.length > 2);
+        segments.forEach(segment => {;
+const words = segment.split('-').filter(w => w.length > 2);
             keywords.push(...words);
         });
         return keywords;
     }
     static extractContentKeywords(content) {
-        // Extract potential keywords from content (simplified)
-        const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
+        // Extract potential keywords from content (simplified);
+const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
         const words = textContent.split(/\s+/).filter(w => w.length > 3);
-        // Count word frequency and return most common
-        const wordCount = {};
+        // Count word frequency and return most common;
+const wordCount = {};
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
@@ -221,8 +221,8 @@ export class ContentOptimizer {
             .slice(0, 10)
             .map(([word]) => word);
     }
-    static generateContentTemplate(page, contentType) {
-        const templates = {
+    static generateContentTemplate(page, contentType) {;
+const templates = {
             service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
@@ -317,8 +317,8 @@ export class ContentOptimizer {
         };
         return templates[contentType] || templates.service;
     }
-    static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
+    static generateMetaDescription(page, contentType) {;
+const baseDescriptions = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
             about: 'Learn about our comp, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',

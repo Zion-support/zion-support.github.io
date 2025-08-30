@@ -35,8 +35,8 @@ export class SEOOptimizer {
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
     };
-    static generateSEOData(path) {
-        const title = this.generateTitle(path);
+    static generateSEOData(path) {;
+const title = this.generateTitle(path);
         const description = this.generateDescription(path);
         const keywords = this.generateKeywords(path);
         const canonicalUrl = this.generateCanonicalUrl(path);
@@ -49,12 +49,12 @@ export class SEOOptimizer {
             structuredData
         };
     }
-    static generateTitle(path) {
-        const baseTitle = 'Zion Tech Group';
+    static generateTitle(path) {;
+const baseTitle = 'Zion Tech Group';
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
-        }
-        const pathSegments = path.split('/').filter(Boolean);
+        };
+const pathSegments = path.split('/').filter(Boolean);
         if (pathSegments.length === 0)
             return baseTitle;
         const lastSegment = pathSegments[pathSegments.length - 1];
@@ -72,12 +72,12 @@ export class SEOOptimizer {
         return this.KEYWORD_MAPPINGS[path] ||
             ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
     }
-    static generateCanonicalUrl(path) {
-        const baseUrl = 'https://ziontechgroup.com';
+    static generateCanonicalUrl(path) {;
+const baseUrl = 'https://ziontechgroup.com';
         return `${baseUrl}${path}`;
     }
-    static generateStructuredData(path) {
-        const baseData = {
+    static generateStructuredData(path) {;
+const baseData = {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
@@ -128,8 +128,8 @@ export class SEOOptimizer {
         }
         return baseData;
     }
-    static analyzeContentQuality(content, page) {
-        const issues = [];
+    static analyzeContentQuality(content, page) {;
+const issues = [];
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
@@ -148,8 +148,8 @@ export class SEOOptimizer {
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
         }
-        // Check for short meta description
-        const descMatch = content.match(/name="description" content="([^"]+)"/);
+        // Check for short meta description;
+const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
             issues.push({
                 page,
@@ -167,8 +167,8 @@ export class SEOOptimizer {
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
         }
-        // Check for minimal content
-        const textContent = content.replace(/<[^>]*>/g, '').trim();
+        // Check for minimal content;
+const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
             issues.push({
                 page,

@@ -85,7 +85,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   }
 }
 
-export const api = {
+export const api: any = {
   get: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'GET', headers }),
   

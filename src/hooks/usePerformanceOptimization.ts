@@ -28,7 +28,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
+    fps: 0,
   });
 
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -156,7 +156,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Debounced function utility
   const debounce = useCallback(<T extends (...args[])  => any>(
     func: T,
-    delay: number
+    delay: number,
   ): ((...args: Parameters<T>)  => void) => {
     let timeoutId: NodeJS.Timeout;
     
@@ -167,7 +167,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Throttled function utility
   const throttle = useCallback(<T extends (...args[])  => any>(
     func: T,
-    delay: number
+    delay: number,
   ): ((...args: Parameters<T>)  => void) => {
     let lastCall = 0;
     

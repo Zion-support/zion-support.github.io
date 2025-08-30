@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
-class EnhancedErrorBoundary extends Component {
-    constructor(props) {
+class EnhancedErrorBoundary extends Component {;
+constructor(props) {
         super(props);
         this.state = {
             hasError: false,
@@ -30,8 +30,8 @@ class EnhancedErrorBoundary extends Component {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     reportError(error, errorInfo) {
         // In a real application, you would send this to your error reporting service
-        // For example: Sentry, LogRocket, Bugsnag, etc.
-        const errorReport = {
+        // For example: Sentry, LogRocket, Bugsnag, etc.;
+const errorReport = {
             id: this.state.errorId,
             timestamp: new Date().toISOString(),
             error: {
@@ -67,11 +67,11 @@ class EnhancedErrorBoundary extends Component {
         })};
     handleGoHome = () => {
         window.location.href = '/'};
-    handleReportIssue = () => {
-        const error = this.state.error;
+    handleReportIssue = () => {;
+const error = this.state.error;
         const errorInfo = this.state.errorInfo;
-        if (error && errorInfo) {
-            const issueBody = `
+        if (error && errorInfo) {;
+const issueBody = `
 ## Error Report
 
 **Error ID:** ${this.state.errorId}
