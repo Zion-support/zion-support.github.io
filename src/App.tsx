@@ -29,12 +29,16 @@ import { EnhancedHeader } from './components/EnhancedHeader';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-// import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 // import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-// import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
+import { AIContentOptimizer } from './components/AIContentOptimizer';
+import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
+import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 // import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
@@ -458,8 +462,26 @@ function App() {
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
 
+            {/* Enhanced Performance Optimizer */}
+            <PerformanceOptimizer enabled={true} />
+
+            {/* Enhanced Accessibility Enhancer */}
+            <EnhancedAccessibilityEnhancer enabled={true} />
+
             {/* Smart Notification System */}
-            {/* <SmartNotificationSystem enabled={true} /> */}
+            <SmartNotificationSystem enabled={true} />
+
+            {/* Advanced Analytics Dashboard */}
+            <AdvancedAnalyticsDashboard enabled={true} />
+
+            {/* AI Content Optimizer */}
+            <AIContentOptimizer enabled={true} />
+
+            {/* Security Monitoring System */}
+            <SecurityMonitoringSystem enabled={true} />
+
+            {/* User Experience Optimizer */}
+            <UserExperienceOptimizer enabled={true} />
 
             {/* Chat Assistant */}
             {/* <ChatAssistant
