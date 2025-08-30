@@ -82,6 +82,7 @@ export function Footer() {
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
+              Based in Middletown, DE serving clients worldwide.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
@@ -199,10 +200,10 @@ export function Footer() {
             <div>
               <h4 className="text-zion-cyan font-medium mb-3">Resources</h4>
               <ul className="space-y-2 text-zion-slate-light">
-                <li><Link to="/blog" className="hover:text-zion-cyan transition-colors">Blog</Link></li>
-                <li><Link to="/docs" className="hover:text-zion-cyan transition-colors">Documentation</Link></li>
+                <li><Link to="/comprehensive-services-showcase-2025" className="hover:text-zion-cyan transition-colors">Services Showcase</Link></li>
                 <li><Link to="/white-papers" className="hover:text-zion-cyan transition-colors">White Papers</Link></li>
                 <li><Link to="/webinars" className="hover:text-zion-cyan transition-colors">Webinars</Link></li>
+                <li><Link to="/case-studies" className="hover:text-zion-cyan transition-colors">Case Studies</Link></li>
               </ul>
             </div>
             
@@ -229,10 +230,10 @@ export function Footer() {
             <div>
               <h4 className="text-zion-cyan font-medium mb-3">Connect</h4>
               <ul className="space-y-2 text-zion-slate-light">
-                <li><Link to="/marketplace" className="hover:text-zion-cyan transition-colors">Marketplace</Link></li>
+                <li><Link to="/services/ai-carbon-footprint-tracker" className="hover:text-zion-cyan transition-colors">AI Carbon Tracker</Link></li>
+                <li><Link to="/services/ai-talent-acquisition-platform" className="hover:text-zion-cyan transition-colors">AI Talent Platform</Link></li>
                 <li><Link to="/talent" className="hover:text-zion-cyan transition-colors">Talent Network</Link></li>
-                <li><Link to="/community" className="hover:text-zion-cyan transition-colors">Community</Link></li>
-                <li><Link to="/research-development" className="hover:text-zion-cyan transition-colors">R&D</Link></li>
+                <li><Link to="/contact" className="hover:text-zion-cyan transition-colors">Get in Touch</Link></li>
               </ul>
             </div>
           </div>
