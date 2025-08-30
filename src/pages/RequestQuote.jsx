@@ -1,13 +1,15 @@
 import React from 'react';
-import SEO from "@/components/SEO";
+import EnhancedSEO from "@/components/EnhancedSEO";
 import {Header} from "@/components/Header";
-import Footer from "@/components/Footer";
+import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
+import {CheckCircle, Clock, Users, Zap} from "lucide-react";
+
+export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO
+      <EnhancedSEO
         title="Request a Quote | Zion Tech Group"
         description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
         keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
@@ -191,9 +193,5 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
