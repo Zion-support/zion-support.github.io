@@ -88,7 +88,7 @@ const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages
 
 // Additional service components
 const ITInfrastructure = createLazyComponent(() => import('./pages/ITInfrastructure'));
-const MicroCRM = createLazyComponent(() => import('./pages/MicroCRM'));
+const MicroCRM = createLazyComponent(() => import('./pages/services/MicroCRM'));
 const AIMicroSaaSPlatform = createLazyComponent(() => import('./pages/services/ai-micro-saas-platform'));
 const QuantumAITradingPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-trading-platform'));
 const AICybersecurityPlatform = createLazyComponent(() => import('./pages/services/ai-cybersecurity-platform'));
