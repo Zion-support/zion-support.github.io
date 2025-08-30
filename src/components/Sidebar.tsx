@@ -269,7 +269,7 @@ export const Sidebar: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Desktop Sidebar */}
+      {/* Monitor Sidebar */}
       <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
         {/* Header */}
         <div className="p-6 border-b border-slate-700/50">

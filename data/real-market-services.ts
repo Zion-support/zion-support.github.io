@@ -393,7 +393,7 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Intune, ABM/DEP, Android Enterprise'],
     integrations: ['Azure AD, Microsoft 365'],
-    useCases: ['Device compliance, App protection, Zero‑touch rollout'],
+    useCases: ['Smartphone compliance, App protection, Zero‑touch rollout'],
     roi: 'Reduce manual enrollments and improve compliance posture.',
     competitors: ['Jamf, Kandji, Intune turnkey partners'],
     marketSize: '$6B+ MDM',

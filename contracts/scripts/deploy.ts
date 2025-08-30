@@ -1,3 +1,5 @@
+export default main;
+
 import ethers from 'hardhat';
 async function main() {
   const [deployer] = await ethers.getSigners();

@@ -474,7 +474,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: unknown) => {
     setSelectedService(service);
   };
 

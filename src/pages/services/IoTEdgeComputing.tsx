@@ -112,7 +112,7 @@ const IoTEdgeComputing = () => {
   const services = [
     {
       icon: Circuit,
-      title: 'Edge Device Development',
+      title: 'Edge Smartphone Development',
       description: 'Custom IoT edge device design and development'
     },
     {

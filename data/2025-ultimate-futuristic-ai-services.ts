@@ -279,7 +279,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI Healthcare',
     realService: true,
-    technology: ['AI/ML, Deep Learning, Natural Language Processing, IoT Health Devices, Predictive Analytics'],
+    technology: ['AI/ML, Deep Learning, Natural Language Processing, IoT Health Smartphones, Predictive Analytics'],
     integrations: ['Epic, Cerner, Allscripts, Athenahealth, Practice Fusion, DrChrono'],
     useCases: ['Disease prevention, Treatment optimization, Patient monitoring, Healthcare analytics, Preventive care'],
     roi: 'Healthcare providers report 450% ROI through improved patient outcomes and reduced costs.',

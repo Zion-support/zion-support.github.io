@@ -2,7 +2,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'mdm-mobile-device-management',
-		name: 'MDM Mobile Device Management',
+		name: 'MDM Mobile Smartphone Management',
 		tagline: 'Securely manage iOS, Android, Windows devices at scale',
 		price: '$399',
 		period: '/month',

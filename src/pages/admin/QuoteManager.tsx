@@ -60,7 +60,7 @@ export default function QuoteManager() {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
+    setDateRange({ from: undefined | null, to: undefined | null });
   };
 
   if (!isAdmin) {

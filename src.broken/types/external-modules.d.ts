@@ -24,7 +24,7 @@ declare module 'react-day-picker' {
   // TypeScript compiler can understand the imports without requiring the real
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any;
+  export const DayPicker: unknown;
 }
 declare module 'sonner';
 declare module 'lucide-react' {
@@ -232,7 +232,7 @@ declare module 'lucide-react' {
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
-  export const jsPDF: any;
+  export const jsPDF: unknown;
   export default jsPDF;
 }
 declare module '@hookform/resolvers/zod';
@@ -259,8 +259,8 @@ declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
-  export function cva(...inputs: any[]): any
-  export type VariantProps<T extends (...args: any) => any> = any
+  export function cva(...inputs: unknown[]): unknown
+  export type VariantProps<T extends (...args: unknown) => any> = any
 }
 declare module 'clsx' {
   export type ClassValue = any;
@@ -282,33 +282,33 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues,
   > {
     control: Control<TFieldValues>
-    handleSubmit: any
-    register: any
-    formState: any
-    [key: string]: any
+    handleSubmit: unknown
+    register: unknown
+    formState: unknown
+    [key: string]: unknown
   }
   export function useForm<
     TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
+  >(options?: unknown): UseFormReturn<TFieldValues>
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues,
-  >(options: any): any
+  >(options: unknown): unknown
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues,
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
     name: TName
     control?: Control<TFieldValues>
-    rules?: any
-    defaultValue?: any
-    render: (props: any) => ReactElement
+    rules?: unknown
+    defaultValue?: unknown
+    render: (props: unknown) => ReactElement
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues,
   > {
     children?: ReactNode
-    [key: string]: any
+    [key: string]: unknown
   }
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<

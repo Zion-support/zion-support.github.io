@@ -57,7 +57,7 @@ export default function AIEdgeComputingPlatform() {
     'Smart Cities & Infrastructure',
     'Manufacturing & Industry 4.0',
     'Transportation & Logistics',
-    'Healthcare & Medical Devices',
+    'Healthcare & Medical Smartphones',
     'Retail & E-commerce',
     'Energy & Utilities'
   ];

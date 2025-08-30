@@ -231,7 +231,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     },
     features: [
       "Identity verification",
-      "Device trust assessment",
+      "Smartphone trust assessment",
       "Network segmentation",
       "Application security",
       "Data protection",

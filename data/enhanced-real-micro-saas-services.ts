@@ -42,7 +42,7 @@ export type EnhancedRealMicroSaasService = {
 import { additionalEnhancedServices } from './additional-real-services';
 import { realMarketServices } from './real-market-services';
 // Normalize types to EnhancedRealMicroSaasService without mutating originals
-const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] =>
+const mapToEnhanced = (items: unknown[]): EnhancedRealMicroSaasService[] =>
 	(items || []).map((s) => ({ ...s }));
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 	...mapToEnhanced(realMarketServices as unknown as any[]),

@@ -83,7 +83,7 @@ interface TouchGesture {
   intensity?: number;
 }
 
-interface DeviceInfo {
+interface SmartphoneInfo {
   type: 'mobile' | 'tablet' | 'desktop';
   platform: 'ios' | 'android' | 'web' | 'unknown';
   screenSize: { width: number; height: number };
@@ -194,7 +194,7 @@ export function MobileExperienceEnhancer({
     }
   ]);
 
-  const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
+  const [deviceInfo, setSmartphoneInfo] = useState<SmartphoneInfo | null>(null);
   const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -207,7 +207,7 @@ export function MobileExperienceEnhancer({
 
   // Detect device information
   useEffect(() => {
-    const detectDevice = () => {
+    const detectSmartphone = () => {
       const userAgent = navigator.userAgent;
       const screen = window.screen;
       
@@ -231,7 +231,7 @@ export function MobileExperienceEnhancer({
         type = screen.width <= 480 ? 'mobile' : 'tablet';
       }
       
-      const deviceInfo: DeviceInfo = {
+      const deviceInfo: SmartphoneInfo = {
         type,
         platform,
         screenSize: { width: screen.width, height: screen.height },
@@ -243,23 +243,23 @@ export function MobileExperienceEnhancer({
         batteryLevel: 0
       };
       
-      setDeviceInfo(deviceInfo);
+      setSmartphoneInfo(deviceInfo);
       
       // Get battery level if available
       if ('getBattery' in navigator) {
-        (navigator as any).getBattery().then((battery: any) => {
-          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        (navigator as any).getBattery().then((battery: unknown) => {
+          setSmartphoneInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
         });
       }
     };
     
-    detectDevice();
-    window.addEventListener('resize', detectDevice);
-    window.addEventListener('orientationchange', detectDevice);
+    detectSmartphone();
+    window.addEventListener('resize', detectSmartphone);
+    window.addEventListener('orientationchange', detectSmartphone);
     
     return () => {
-      window.removeEventListener('resize', detectDevice);
-      window.removeEventListener('orientationchange', detectDevice);
+      window.removeEventListener('resize', detectSmartphone);
+      window.removeEventListener('orientationchange', detectSmartphone);
     };
   }, []);
 
@@ -531,17 +531,17 @@ export function MobileExperienceEnhancer({
 
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-                {/* Device Information */}
+                {/* Smartphone Information */}
                 {deviceInfo && (
                   <div className="mb-8">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      Device Information
+                      Smartphone Information
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="flex items-center justify-between mb-2">
                           <PhoneIcon className="w-5 h-5 text-zion-green" />
-                          <span className="text-sm text-gray-500">Device Type</span>
+                          <span className="text-sm text-gray-500">Smartphone Type</span>
                         </div>
                         <div className="text-lg font-bold text-gray-900 dark:text-white capitalize">
                           {deviceInfo.type}
@@ -826,7 +826,7 @@ export function MobileExperienceEnhancer({
                         
                         <div>
                           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                            Device Orientation
+                            Smartphone Orientation
                           </label>
                           <select
                             value={settings.deviceOrientation}

@@ -60,7 +60,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       path: '/services/iot-edge-computing',
       icon: Cpu,
       category: 'IoT & Edge',
-      features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge'],
+      features: ['Edge processing', 'Smartphone management', 'Real-time analytics', 'AI at the edge'],
       benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices'],
       color: 'from-orange-500 to-red-600',
       glowColor: 'orange'

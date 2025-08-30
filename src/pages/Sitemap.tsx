@@ -42,7 +42,7 @@ import {
 
 interface SitemapSection {
   title: string;
-  icon: any;
+  icon: unknown;
   color: string;
   pages: SitemapPage[];
 }

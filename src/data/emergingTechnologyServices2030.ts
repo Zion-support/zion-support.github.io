@@ -65,7 +65,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip"],
     roi: "1500% within 36 months",
     setupTime: "14-18 weeks",
-    integrations: ["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]
+    integrations: ["AI Frameworks", "Neural Networks", "IoT Smartphones", "Edge Computing", "Cloud Platforms"]
   },
 
   // DNA Data Storage Platform
@@ -193,7 +193,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     competitors: ["Touch ID", "Face ID", "Windows Hello"],
     roi: "700% within 18 months",
     setupTime: "6-8 weeks",
-    integrations: ["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]
+    integrations: ["Mobile Smartphones", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]
   },
 
   // Autonomous Drone Fleet Management

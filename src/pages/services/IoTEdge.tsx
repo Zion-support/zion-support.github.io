@@ -28,7 +28,7 @@ export default function IoTEdge() {
 
   const services = [
     {
-      title: 'IoT Device Management',
+      title: 'IoT Smartphone Management',
       description: 'Centralized management and monitoring of connected devices',
       icon: Smartphone
     },

@@ -15,7 +15,7 @@ export function Navigation() {
               <span className="text-xl font-bold gradient-text">Zion OS</span>
             </a>
           </div>
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a 
               href="/multiverse/launch" 

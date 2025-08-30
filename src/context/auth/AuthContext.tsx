@@ -23,7 +23,7 @@ interface AuthContextType {
   tokens: AuthTokens;
   login: (email: string, password: string) => Promise<{ error: string | null }>;
   register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
-  signup: (email: string, password: string, userData: any) => Promise<any>;
+  signup: (email: string, password: string, userData: unknown) => Promise<any>;
   logout: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   updateProfile: (updates: Partial<User>) => Promise<void>;

@@ -311,7 +311,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     features: [
       'Edge AI model deployment',
       'Real-time inference engine',
-      'Device optimization tools',
+      'Smartphone optimization tools',
       'Federated learning support',
       'Edge device management',
       'Performance monitoring',

@@ -35,9 +35,9 @@ export function FormLabel({ children, className = '' }: FormLabelProps) {
 }
 
 interface FormFieldProps {
-  control: any;
+  control: unknown;
   name: string;
-  render: (props: any) => React.ReactNode;
+  render: (props: unknown) => React.ReactNode;
 }
 
 export function FormField({ control, name, render }: FormFieldProps) {

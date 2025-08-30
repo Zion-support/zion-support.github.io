@@ -312,7 +312,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
       'Edge AI processing',
       'Real-time analytics',
       'Distributed computing',
-      'Device management',
+      'Smartphone management',
       'Data synchronization',
       'Security at edge',
       'Scalable architecture',

@@ -76,7 +76,7 @@ export const futuristic2034Services: Service2034[] = [
     api: true,
     sdk: true,
     integrations: ['Neuralink', 'Custom EEG devices', 'Medical platforms', 'Gaming engines'],
-    compliance: ['FDA Medical Device', 'Neural Data Privacy', 'Quantum Security Standards'],
+    compliance: ['FDA Medical Smartphone', 'Neural Data Privacy', 'Quantum Security Standards'],
     security: ['Quantum encryption', 'Neural data isolation', 'Biometric authentication'],
     scalability: 'Unlimited neural connections',
     uptime: '99.99% neural interface availability',

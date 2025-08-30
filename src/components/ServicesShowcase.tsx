@@ -47,7 +47,7 @@ export function ServicesShowcase() {
     {
       icon: Cpu,
       title: "IoT & Edge",
-      description: "Smart Devices & Networks",
+      description: "Smart Smartphones & Networks",
       href: "/services",
       category: "IoT",
       color: "from-green-500 to-emerald-600"

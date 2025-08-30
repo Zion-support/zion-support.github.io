@@ -61,7 +61,7 @@ export default function InnovativeServices2028() {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
-    const iconMap: { [key: string]: any } = {
+    const iconMap: { [key: string]: unknown } = {
       'Brain': Brain,
       'Zap': Zap,
       'Lock': Lock,

@@ -264,7 +264,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'SSO (SAML/OIDC) and SCIM',
       'RBAC/ABAC and group mapping',
       'Just-in-time access',
-      'Device posture checks',
+      'Smartphone posture checks',
       'Audit logging and reports'
     ],
     popular: true,
@@ -346,7 +346,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Identity-aware proxy',
       'DNS and web filtering',
       'Basic DLP policies',
-      'Device posture checks',
+      'Smartphone posture checks',
       'Monthly security reviews'
     ],
     popular: false,
@@ -567,7 +567,7 @@ export const addedITServices2025: AdvancedITService[] = [
     realService: true,
     technology: ['Okta/Entra', 'Google Workspace', 'CrowdStrike/SentinelOne', 'SIEM'],
     integrations: ['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
-    useCases: ['Phish resiliency', 'Device hygiene', 'Audit readiness'],
+    useCases: ['Phish resiliency', 'Smartphone hygiene', 'Audit readiness'],
     roi: 'Reduces phishing risk by 60%+',
     competitors: ['Security training-only vendors'],
     marketSize: '$8B email+endpoint security',

@@ -1,3 +1,5 @@
+export default results;
+
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { ModeToggle } from '@/components/ModeToggle';

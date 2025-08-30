@@ -64,13 +64,13 @@ import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
   name: string;
   path: string;
-  icon: any;
+  icon: unknown;
   external?: boolean;
 }
 
 interface FooterSection {
   title: string;
-  icon: any;
+  icon: unknown;
   links: FooterLink[];
 }
 

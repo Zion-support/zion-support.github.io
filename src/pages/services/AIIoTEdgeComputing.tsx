@@ -114,7 +114,7 @@ export default function AIIoTEdgeComputing() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { icon: Wifi, title: 'Device Connectivity', desc: 'Advanced IoT device management and monitoring' },
+            { icon: Wifi, title: 'Smartphone Connectivity', desc: 'Advanced IoT device management and monitoring' },
             { icon: TrendingUp, title: 'Real-time Processing', desc: 'Local AI processing for instant decisions' },
             { icon: Shield, title: 'Edge Security', desc: 'Advanced security and encryption at the edge' }
           ].map((item) => (

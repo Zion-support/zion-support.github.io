@@ -374,7 +374,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     features: [
       "Edge computing capabilities",
       "Real-time data processing",
-      "Device management dashboard",
+      "Smartphone management dashboard",
       "Predictive maintenance",
       "Data analytics platform",
       "API gateway",

@@ -138,7 +138,7 @@ export function AppHeader() {
           name: 'IoT Edge Computing', 
           href: '/services/iot-edge-computing', 
           icon: Wifi, 
-          description: 'Smart Device Networks',
+          description: 'Smart Smartphone Networks',
           featured: true
         },
         { 
@@ -434,7 +434,7 @@ export function AppHeader() {
               </Link>
             </div>
             
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">

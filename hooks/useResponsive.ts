@@ -5,7 +5,7 @@ interface ResponsiveState {
   orientation: "landscape" | "portrait";
   isMobile: boolean;
   isTablet: boolean;
-  isDesktop: boolean;
+  isMonitor: boolean;
 }
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
@@ -14,7 +14,7 @@ const useResponsive = (): ResponsiveState => {
     orientation: "landscape",
     isMobile: false,
     isTablet: false,
-    isDesktop: true,
+    isMonitor: true,
   });
   useEffect(() => {
     const updateDimensions = () => {
@@ -25,7 +25,7 @@ const useResponsive = (): ResponsiveState => {
           window.innerWidth > window.innerHeight ? "landscape" : "portrait",
         isMobile: window.innerWidth < 768,
         isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
-        isDesktop: window.innerWidth >= 1024,
+        isMonitor: window.innerWidth >= 1024,
       });
     };
     updateDimensions();

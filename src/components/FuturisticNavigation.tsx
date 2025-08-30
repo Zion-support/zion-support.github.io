@@ -301,7 +301,7 @@ export const FuturisticNavigation: React.FC = () => {
                 </div>
               </Link>
             </motion.div>
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div

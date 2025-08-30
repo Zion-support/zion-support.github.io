@@ -63,10 +63,10 @@ export default function HealthcareTech() {
       features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']
     },
     {
-      title: 'Medical Device Integration',
+      title: 'Medical Smartphone Integration',
       description: 'IoT integration for medical devices and wearables',
       price: 'From $18,000',
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
+      features: ['Smartphone connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
     }
   ];
 

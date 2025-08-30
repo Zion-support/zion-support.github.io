@@ -109,7 +109,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Monitor CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/pricing"

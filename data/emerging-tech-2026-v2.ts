@@ -365,7 +365,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Network management and monitoring',
       'Security and compliance',
       'Performance optimization',
-      'Device management',
+      'Smartphone management',
       'Network slicing',
       'Quality of service management',
       'Analytics and reporting',

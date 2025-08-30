@@ -564,7 +564,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Edge AI processing",
       "Real-time analytics",
       "Predictive maintenance",
-      "Device management",
+      "Smartphone management",
       "Data security",
       "Scalable architecture",
       "Integration APIs",

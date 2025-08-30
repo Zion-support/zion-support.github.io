@@ -259,7 +259,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     features: [
       'EEG signal processing',
       'Neural pattern recognition',
-      'Device control interfaces',
+      'Smartphone control interfaces',
       'Real-time brain mapping',
       'Machine learning models',
       'API development tools',

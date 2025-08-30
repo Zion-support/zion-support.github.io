@@ -353,7 +353,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       integrations: ["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["Device authentication", "Data encryption", "Secure communication", "Access controls"]
+      security: ["Smartphone authentication", "Data encryption", "Secure communication", "Access controls"]
     },
     competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],
     marketSize: "$15.7 billion by 2025"

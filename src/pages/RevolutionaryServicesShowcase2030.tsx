@@ -112,7 +112,7 @@ export default function RevolutionaryServicesShowcase2030() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleServiceSelect = (service: any) => {
+  const handleServiceSelect = (service: unknown) => {
     setSelectedService(service);
   };
 

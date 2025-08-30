@@ -91,19 +91,19 @@ import {
   UserCog,
   UserShield,
   UserStar,
-  UserHeart,
+  Heart,
   UserCheck2,
   UserX2,
   UserMinus2,
   UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
+  UserEdit,
+  Search,
+  Users2,
+  Settings2,
   UserCog2,
-  UserShield2,
-  UserStar2,
-  UserHeart2,
+  Shield,
+  Star,
+  Heart2,
   Monitor,
   Eye,
   Users,
@@ -178,8 +178,8 @@ const WebsiteAnalytics = () => {
       description: 'User location and regional performance data'
     },
     {
-      icon: Device,
-      title: 'Device Analytics',
+      icon: Smartphone,
+      title: 'Smartphone Analytics',
       description: 'Cross-device performance and user experience insights'
     }
   ];

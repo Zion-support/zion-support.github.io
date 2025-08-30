@@ -317,7 +317,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       title: 'Hardware & Equipment',
       items: [
         { name: 'Computers & Laptops', href: '/equipment/computers', icon: Laptop },
-        { name: 'Mobile Devices', href: '/equipment/mobile', icon: Smartphone },
+        { name: 'Mobile Smartphones', href: '/equipment/mobile', icon: Smartphone },
         { name: 'Networking Equipment', href: '/equipment/networking', icon: Router },
         { name: 'Security Hardware', href: '/equipment/security', icon: Shield },
         { name: 'Storage Solutions', href: '/equipment/storage', icon: HardDrive },
@@ -479,8 +479,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                   <a
                     key={contact.text}
                     href={contact.href}
-                    target={contact.href.startsWith('http') ? '_blank' : undefined}
-                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={contact.href.startsWith('http') ? '_blank' : undefined | null}
+                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined | null}
                     className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group"
                   >
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">

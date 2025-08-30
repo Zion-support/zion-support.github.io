@@ -143,7 +143,7 @@ const serviceCategories = [
 ];
 
 // Enhanced service features display
-const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
+const ServiceCard = ({ service, viewMode }: { service: unknown; viewMode: 'grid' | 'list' }) => {
   const [expanded, setExpanded] = useState(false);
   
   const getCategoryIcon = (category: string) => {
@@ -290,7 +290,7 @@ const ServicesSidebar = ({
 }: { 
   selectedCategory: string; 
   onCategoryChange: (category: string) => void; 
-  categoriesWithCounts: any[];
+  categoriesWithCounts: unknown[];
 }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">

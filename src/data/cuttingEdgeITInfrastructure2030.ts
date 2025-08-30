@@ -65,7 +65,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
     roi: "900% within 15 months",
     setupTime: "8-10 weeks",
-    integrations: ["Kubernetes", "Docker", "Cloud Platforms", "IoT Devices", "Monitoring Tools"]
+    integrations: ["Kubernetes", "Docker", "Cloud Platforms", "IoT Smartphones", "Monitoring Tools"]
   },
 
   // Quantum-Safe Cryptography Infrastructure

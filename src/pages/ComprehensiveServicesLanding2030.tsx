@@ -114,7 +114,7 @@ export default function ComprehensiveServicesLanding2030() {
     setAiScoreRange([80, 100]);
   };
 
-  const openServiceModal = (service: any) => {
+  const openServiceModal = (service: unknown) => {
     setSelectedService(service);
     setShowModal(true);
   };

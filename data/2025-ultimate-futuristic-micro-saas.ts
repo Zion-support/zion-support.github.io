@@ -175,7 +175,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     setupTime: '1-3 weeks',
     category: 'AI Healthcare',
     realService: true,
-    technology: ['AI/ML, Deep Learning, Natural Language Processing, IoT Health Devices'],
+    technology: ['AI/ML, Deep Learning, Natural Language Processing, IoT Health Smartphones'],
     integrations: ['Epic, Cerner, Allscripts, Athenahealth, Practice Fusion, DrChrono'],
     useCases: ['Disease prevention, Treatment optimization, Patient monitoring, Healthcare analytics, Preventive care'],
     roi: 'Healthcare providers report 350% ROI through improved patient outcomes and reduced costs.',

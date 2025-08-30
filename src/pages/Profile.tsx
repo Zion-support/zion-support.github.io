@@ -111,7 +111,7 @@ const Profile: React.FC = () => {
       { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
       { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
       { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
-      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
+      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Smartphone', status: 'failed' }
     ]
   });
 

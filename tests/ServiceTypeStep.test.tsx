@@ -1,3 +1,5 @@
+export default baseData;
+
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
 import { QuoteFormData } from '@/types/quotes';
@@ -7,8 +9,8 @@ const baseData: QuoteFormData = {
   specificItem: null,
   projectName: '',
   projectDescription: '',
-  startDate: undefined,
-  endDate: undefined,
+  startDate: undefined | null,
+  endDate: undefined | null,
   timeline: 'flexible',
   budget: { amount: 0, type: 'fixed' },
   contactInfo: { name: '', email: '', phone: '', company: '' },

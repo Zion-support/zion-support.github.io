@@ -1,3 +1,5 @@
+export default error;
+
 import { describe, it, expect, vi } from 'vitest';
 import apiClient from '@/services/apiClient';
 import { supabase } from '@/integrations/supabase/client';

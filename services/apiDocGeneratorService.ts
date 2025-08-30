@@ -35,7 +35,7 @@ export interface APIParameter {
   required: boolean;
   schema: APISchema;
   description: string;
-  example?: any;
+  example?: unknown;
   deprecated?: boolean;
 }
 export interface APIRequestBody {
@@ -45,7 +45,7 @@ export interface APIRequestBody {
 }
 export interface APIContent {
   schema: APISchema;
-  example?: any;
+  example?: unknown;
   examples?: Record<string, APIExample>;
 }
 export interface APIResponse {
@@ -66,8 +66,8 @@ export interface APISchema {
   properties?: Record<string, APISchema>;
   items?: APISchema;
   required?: string[];
-  enum?: any[];
-  example?: any;
+  enum?: unknown[];
+  example?: unknown;
   deprecated?: boolean;
   minimum?: number;
   maximum?: number;
@@ -76,7 +76,7 @@ export interface APISchema {
   minLength?: number;
   maxLength?: number;
   pattern?: string;
-  default?: any;
+  default?: unknown;
   nullable?: boolean;
   $ref?: string;
 }
@@ -93,12 +93,12 @@ export interface ExampleRequest {
   method: string;
   url: string;
   headers: Record<string, string>;
-  body?: any;
+  body?: unknown;
 }
 export interface ExampleResponse {
   status: number;
   headers: Record<string, string>;
-  body: any;
+  body: unknown;
 }
 export interface RateLimit {
   requests: number;
@@ -253,7 +253,7 @@ export class APIDocGeneratorService {
               description: 'Number of users per page'
             }
           ],
-          requestBody: undefined,
+          requestBody: undefined | null,
           responses: [
             {
               code: '200',
@@ -303,7 +303,7 @@ export class APIDocGeneratorService {
               description: 'User unique identifier'
             }
           ],
-          requestBody: undefined,
+          requestBody: undefined | null,
           responses: [
             {
               code: '200',
@@ -387,7 +387,7 @@ export class APIDocGeneratorService {
             description: 'Filter orders by status'
           }
         ],
-        requestBody: undefined,
+        requestBody: undefined | null,
         responses: [
           {
             code: '200',
@@ -486,7 +486,7 @@ export class APIDocGeneratorService {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer your-jwt-token'
           },
-          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
+          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined | null
         },
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
@@ -500,7 +500,7 @@ export class APIDocGeneratorService {
     }
     return examples;
   }
-  private generateExampleBody(requestBody: APIRequestBody): any {
+  private generateExampleBody(requestBody: APIRequestBody): unknown {
     // Generate example request body based on schema
     return {
       name: "Example Name",
@@ -508,7 +508,7 @@ export class APIDocGeneratorService {
       description: "This is an example description"
     };
   }
-  private generateExampleResponse(response: APIResponse): any {
+  private generateExampleResponse(response: APIResponse): unknown {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
       return {
@@ -528,7 +528,7 @@ export class APIDocGeneratorService {
         summary: 'Health check endpoint',
         description: 'Simple health check to verify API is running',
         parameters: [],
-        requestBody: undefined,
+        requestBody: undefined | null,
         responses: [
           {
             code: '200',

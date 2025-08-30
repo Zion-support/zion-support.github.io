@@ -173,7 +173,7 @@ export default function ApiPlayground() {
     },
     {
       id: 5,
-      name: 'IoT Device Management',
+      name: 'IoT Smartphone Management',
       description: 'Manage IoT devices, monitor sensors, and control actuators.',
       category: 'iot',
       method: 'GET',
@@ -184,9 +184,9 @@ export default function ApiPlayground() {
       rateLimit: '300 requests/hour',
       authentication: 'API Key',
       parameters: [
-        { name: 'location', type: 'string', required: false, description: 'Device location' },
-        { name: 'type', type: 'string', required: false, description: 'Device type' },
-        { name: 'status', type: 'string', required: false, description: 'Device status' }
+        { name: 'location', type: 'string', required: false, description: 'Smartphone location' },
+        { name: 'type', type: 'string', required: false, description: 'Smartphone type' },
+        { name: 'status', type: 'string', required: false, description: 'Smartphone status' }
       ],
       requestExample: {
         location: "building-a",
@@ -248,7 +248,7 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api: unknown) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');

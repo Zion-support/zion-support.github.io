@@ -138,7 +138,7 @@ export default function DigitalTwin() {
                   title: "Healthcare",
                   description: "Patient monitoring, medical device management, and treatment optimization.",
                   icon: Users,
-                  benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
+                  benefits: ["Patient monitoring", "Smartphone management", "Treatment optimization"]
                 },
                 {
                   title: "Energy & Utilities",

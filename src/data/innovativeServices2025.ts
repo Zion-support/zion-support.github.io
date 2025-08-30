@@ -502,7 +502,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     features: [
       "Edge Data Processing",
       "Real-time Analytics",
-      "Device Management",
+      "Smartphone Management",
       "Security Framework",
       "Scalable Infrastructure",
       "Low Latency Processing",
@@ -532,7 +532,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Healthcare providers",
       "Retail businesses"
     ],
-    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Security"],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Smartphone Management", "Security"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $6,999/month",

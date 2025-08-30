@@ -37,7 +37,7 @@ export default function Header() {
               </span>
             </Link>
           </div>
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link

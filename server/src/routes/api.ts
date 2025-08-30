@@ -4,7 +4,7 @@ import { body, validationResult } from 'express-validator';
 const router = Router();
 
 // Validation middleware
-const validate = (req: any, res: any, next: any) => {
+const validate = (req: unknown, res: unknown, next: unknown) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
@@ -39,7 +39,7 @@ router.post('/users', [
   body('name').isLength({ min: 2 }).trim().escape(),
   body('email').isEmail().normalizeEmail(),
   validate
-], async (req: any, res: any) => {
+], async (req: unknown, res: unknown) => {
   try {
     const { name, email } = req.body;
     

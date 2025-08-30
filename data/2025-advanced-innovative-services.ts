@@ -482,7 +482,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     realService: true,
     technology: ['Quantum Computing, IoT Security, Post-Quantum Cryptography'],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
-    useCases: ['Device security, Network protection, Compliance'],
+    useCases: ['Smartphone security, Network protection, Compliance'],
     roi: 'Future-proof IoT security investment; avoid costly migrations later.',
     competitors: ['Armis, Palo Alto Networks, Check Point, Fortinet'],
     marketSize: '$12B IoT security',

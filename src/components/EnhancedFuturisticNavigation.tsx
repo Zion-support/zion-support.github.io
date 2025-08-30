@@ -361,7 +361,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
+      {/* Monitor Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 

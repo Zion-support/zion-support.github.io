@@ -56,7 +56,7 @@ export default function AIDigitalTwinPlatform() {
   const industries = [
     'Manufacturing & Industry 4.0',
     'Smart Cities & Infrastructure',
-    'Healthcare & Medical Devices',
+    'Healthcare & Medical Smartphones',
     'Energy & Utilities',
     'Transportation & Logistics',
     'Construction & Real Estate'

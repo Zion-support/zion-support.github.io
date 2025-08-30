@@ -88,13 +88,13 @@ export function ChatAssistant({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: unknown) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: unknown) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -170,7 +170,7 @@ export function ChatAssistant({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
+  const generateAIResponse = (userInput: string): { content: string; metadata: unknown } => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input

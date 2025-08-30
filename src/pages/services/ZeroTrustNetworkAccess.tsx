@@ -103,9 +103,9 @@ const ZeroTrustNetworkAccess = () => {
       description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
     },
     {
-      icon: Device,
-      title: 'Device Security',
-      description: 'Device health checks, compliance validation, and security posture assessment'
+      icon: Smartphone,
+      title: 'Smartphone Security',
+      description: 'Smartphone health checks, compliance validation, and security posture assessment'
     },
     {
       icon: Globe2,

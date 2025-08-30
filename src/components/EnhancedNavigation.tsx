@@ -136,7 +136,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">

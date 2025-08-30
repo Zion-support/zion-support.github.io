@@ -101,7 +101,7 @@ export default function EnhancedNavigation2025() {
 						</div>
 					</Link>
 
-					{/* Desktop Navigation */}
+					{/* Monitor Navigation */}
 					<div className="hidden lg:flex lg:items-center lg:space-x-8">
 						{navigation.map((item) => (
 							<div key={item.name} className="relative group">

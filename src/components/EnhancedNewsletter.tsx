@@ -101,7 +101,7 @@ export const EnhancedNewsletter: React.FC = () => {
     
     // Clear error when user selects an interest
     if (errors.interests) {
-      setErrors(prev => ({ ...prev, interests: undefined }));
+      setErrors(prev => ({ ...prev, interests: undefined | null }));
     }
   };
 
@@ -110,7 +110,7 @@ export const EnhancedNewsletter: React.FC = () => {
     
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
+      setErrors(prev => ({ ...prev, [field]: undefined | null }));
     }
   };
 

@@ -486,7 +486,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     description: 'Deploys zero trust access with IdP integration, device posture checks, policy sets, and phased application onboarding.',
     features: [
       'IdP integration and SSO',
-      'Device posture and MFA',
+      'Smartphone posture and MFA',
       'App segmentation and policies',
       'Runbooks and training'
     ],
@@ -2523,7 +2523,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     period: '/month',
     description: 'Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.',
     features: [
-      'Device management',
+      'Smartphone management',
       'Real-time analytics',
       'Data visualization',
       'Automation workflows',
@@ -2550,7 +2550,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     variant: 'iot-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Device SDKs, cloud infrastructure, analytics engine.',
+    implementationDetails: 'Smartphone SDKs, cloud infrastructure, analytics engine.',
     launchDate: '2025-03-15',
     customers: 38,
     rating: 4.6,
@@ -3736,7 +3736,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     period: '/month',
     description: 'Manage edge devices with secure provisioning, remote updates, and real-time telemetry dashboards.',
     features: [
-      'Device identity and certificates',
+      'Smartphone identity and certificates',
       'OTA updates and rollbacks',
       'Rules engine and alerts',
       'Digital twins and dashboards'
@@ -3752,7 +3752,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     setupTime: '2 weeks',
     category: 'IoT & Edge',
     realService: true,
-    technology: ['MQTT', 'Device shadow', 'TLS', 'Time-series DB'],
+    technology: ['MQTT', 'Smartphone shadow', 'TLS', 'Time-series DB'],
     integrations: ['AWS IoT', 'Azure IoT', 'GCP IoT'],
     useCases: ['Remote monitoring', 'Predictive maintenance'],
     roi: 'Reduces downtime by 25%',

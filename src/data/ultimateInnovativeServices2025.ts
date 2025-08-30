@@ -51,7 +51,7 @@ export const SERVICE_SUBCATEGORIES = {
   'Quantum Computing': ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
   'Blockchain & Web3': ['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
   'Cybersecurity': ['Zero Trust Architecture', 'Threat Intelligence', 'Incident Response', 'Compliance Automation'],
-  'IoT & Edge Computing': ['Edge AI', 'Industrial IoT', 'Smart Cities', 'Connected Devices'],
+  'IoT & Edge Computing': ['Edge AI', 'Industrial IoT', 'Smart Cities', 'Connected Smartphones'],
   'Metaverse & AR/VR': ['Virtual Worlds', 'Augmented Reality', 'Digital Twins', 'Virtual Events'],
   'Robotics & Automation': ['Autonomous Systems', 'Collaborative Robots', 'Service Robots', 'Industrial Automation'],
   'Biotechnology': ['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
@@ -116,7 +116,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     },
     technicalSpecs: {
       technology: ['Advanced AI/ML', 'Quantum Computing Ready', 'Blockchain Integration', 'Edge Computing'],
-      integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'Cloud Services', 'IoT Devices'],
+      integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'Cloud Services', 'IoT Smartphones'],
       apiEndpoints: 150,
       uptime: '99.99%',
       security: ['Zero Trust Architecture', 'Quantum Encryption', 'AI-Powered Threat Detection', 'SOC 2 Type II']
@@ -308,7 +308,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     subcategory: 'Edge AI',
     price: 8000,
     currency: 'USD',
-    pricingModel: 'Per-Device + Data Processing',
+    pricingModel: 'Per-Smartphone + Data Processing',
     features: [
       'Edge AI processing',
       'Real-time data analytics',

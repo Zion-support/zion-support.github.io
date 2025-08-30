@@ -53,8 +53,8 @@ export default function Privacy() {
     },
     {
       title: 'Technical Data',
-      description: 'Device information and technical specifications',
-      examples: ['IP address', 'Browser type', 'Device information']
+      description: 'Smartphone information and technical specifications',
+      examples: ['IP address', 'Browser type', 'Smartphone information']
     },
     {
       title: 'Communication Data',

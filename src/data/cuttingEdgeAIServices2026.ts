@@ -353,7 +353,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "OPC UA"],
       apiEndpoints: 250,
       uptime: "99.9%",
-      security: ["TLS encryption", "Device authentication", "Secure boot", "Over-the-air updates"]
+      security: ["TLS encryption", "Smartphone authentication", "Secure boot", "Over-the-air updates"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
     marketSize: "$28.9 billion by 2026"

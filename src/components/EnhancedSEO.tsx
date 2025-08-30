@@ -13,7 +13,7 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 export function EnhancedSEO({

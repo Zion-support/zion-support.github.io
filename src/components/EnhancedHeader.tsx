@@ -276,7 +276,7 @@ export function EnhancedHeader() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden xl:flex items-center space-x-8">
               {navigation.slice(0, 6).map((item) => (
                 <Link

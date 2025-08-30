@@ -361,7 +361,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       'AI-powered security',
       'Scalable connectivity',
       'Real-time monitoring',
-      'Device management',
+      'Smartphone management',
       'Data analytics',
       'Edge computing',
       '5G integration',

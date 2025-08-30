@@ -58,7 +58,7 @@ const ModernHeader: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="nav-link">
               Home

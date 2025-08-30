@@ -348,7 +348,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
       apiEndpoints: 400,
       uptime: "99.9%",
-      security: ["Edge security", "Data encryption", "Secure boot", "Device authentication"]
+      security: ["Edge security", "Data encryption", "Secure boot", "Smartphone authentication"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2025"

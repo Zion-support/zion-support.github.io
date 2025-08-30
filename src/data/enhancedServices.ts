@@ -1063,12 +1063,12 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   },
   {
     id: "iot-platform-development",
-    title: "IoT Platform & Device Management",
+    title: "IoT Platform & Smartphone Management",
     description: "Comprehensive IoT platform development with device connectivity, data collection, and analytics. Includes edge computing, real-time monitoring, and automated device management.",
     category: "Edge Computing",
     price: 8999,
     currency: "$",
-    tags: ["IoT Platform", "Device Management", "Edge Computing", "Real-time Analytics"],
+    tags: ["IoT Platform", "Smartphone Management", "Edge Computing", "Real-time Analytics"],
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",

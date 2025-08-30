@@ -373,7 +373,7 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
       'Automated workflows',
       'Real-time monitoring',
       'Data analytics',
-      'Device security',
+      'Smartphone security',
       'Scalable architecture',
       'API integration',
       'Mobile applications'
@@ -390,7 +390,7 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     category: 'IoT & Automation',
     realService: true,
     technology: ['IoT', 'AI/ML', 'Edge Computing', 'Cloud Computing', '5G'],
-    integrations: ['IoT Devices', 'Cloud Platforms', 'Enterprise Systems', 'Mobile Apps'],
+    integrations: ['IoT Smartphones', 'Cloud Platforms', 'Enterprise Systems', 'Mobile Apps'],
     useCases: ['Smart manufacturing', 'Building automation', 'Energy management', 'Predictive maintenance'],
     tags: ['AI', 'Automation', 'Machine Learning', 'Innovation'],
     roi: '250% ROI through operational efficiency and cost reduction',

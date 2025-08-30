@@ -97,7 +97,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     competitors: ["Philips Healthcare", "GE Healthcare", "Siemens Healthineers"],
     roi: "800% within 18 months",
     setupTime: "8-10 weeks",
-    integrations: ["Vital Signs Monitors", "EHR Systems", "Alert Systems", "Mobile Devices", "Analytics Platforms"]
+    integrations: ["Vital Signs Monitors", "EHR Systems", "Alert Systems", "Mobile Smartphones", "Analytics Platforms"]
   },
 
   // AI-Powered Clinical Decision Support
@@ -161,7 +161,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     competitors: ["Teladoc", "Amwell", "MDLive"],
     roi: "700% within 15 months",
     setupTime: "6-8 weeks",
-    integrations: ["Video Conferencing", "EHR Systems", "Payment Processors", "Mobile Apps", "Wearable Devices"]
+    integrations: ["Video Conferencing", "EHR Systems", "Payment Processors", "Mobile Apps", "Wearable Smartphones"]
   },
 
   // AI-Powered Medical Records Management

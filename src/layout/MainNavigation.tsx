@@ -178,7 +178,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   return (
     <nav className={`${className}`}>
-      {/* Desktop Navigation */}
+      {/* Monitor Navigation */}
       <div className="hidden lg:flex items-center space-x-1">
         {baseLinks.map((link) => (
           <div key={link.key}>

@@ -189,7 +189,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

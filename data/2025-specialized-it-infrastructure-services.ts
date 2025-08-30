@@ -191,7 +191,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Adaptive access control',
       'Threat detection',
       'Identity management',
-      'Device trust scoring',
+      'Smartphone trust scoring',
       'Network segmentation',
       'Behavioral analytics',
       'Compliance reporting',

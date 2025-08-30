@@ -66,7 +66,7 @@ export default function NewServicesShowcase2025() {
   const industries = [
     'Manufacturing & Industry 4.0',
     'Smart Cities & Infrastructure',
-    'Healthcare & Medical Devices',
+    'Healthcare & Medical Smartphones',
     'Financial Services & Banking',
     'Energy & Utilities',
     'Transportation & Logistics',

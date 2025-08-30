@@ -107,7 +107,7 @@ export default function AICybersecurityPlatform() {
       industry: 'Healthcare',
       description: 'Secure patient data, protect medical devices, and maintain HIPAA compliance with intelligent cybersecurity solutions',
       icon: Activity,
-      metrics: ['HIPAA Compliance', 'Device Security', 'Data Breach Prevention', 'Patient Privacy']
+      metrics: ['HIPAA Compliance', 'Smartphone Security', 'Data Breach Prevention', 'Patient Privacy']
     },
     {
       industry: 'Manufacturing',

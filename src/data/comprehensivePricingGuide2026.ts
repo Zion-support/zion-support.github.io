@@ -529,7 +529,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
           "API access"
         ],
         limitations: [
-          "Device volume limits",
+          "Smartphone volume limits",
           "Business hours support"
         ],
         bestFor: ["Medium IoT deployments", "Manufacturing", "Smart buildings"],
@@ -591,7 +591,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       ],
       training: [
         "Platform administration",
-        "Device management",
+        "Smartphone management",
         "Analytics interpretation",
         "Performance monitoring"
       ]

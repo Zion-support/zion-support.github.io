@@ -229,7 +229,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
       apiEndpoints: 300,
       uptime: "99.95%",
-      security: ["Zero-trust security", "Device authentication", "Data encryption", "Secure boot"]
+      security: ["Zero-trust security", "Smartphone authentication", "Data encryption", "Secure boot"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2027",

@@ -397,14 +397,14 @@ const InteractiveUserExperience: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Smartphone className="h-5 w-5" />
-                Device Compatibility
+                Smartphone Compatibility
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center">
                   <Monitor className="h-8 w-8 mx-auto mb-2 text-blue-600" />
-                  <div className="text-sm font-semibold">Desktop</div>
+                  <div className="text-sm font-semibold">Monitor</div>
                   <div className="text-xs text-gray-600">Full Support</div>
                 </div>
                 <div className="text-center">
