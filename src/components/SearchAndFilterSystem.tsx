@@ -89,11 +89,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const filteredResults = useMemo(() => {
     let results = data.filter(item => {
       // Search query filter
-<<<<<<< HEAD
       const matchesSearch = searchQuery === '' ||
-=======
-      const matchesSearch = searchQuery === '' || 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -102,15 +98,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
       // Active filters
-<<<<<<< HEAD
       const matchesFilters = activeFilters.size === 0 ||
         Array.from(activeFilters).some(filter =>
           item.tags.includes(filter) ||
-=======
-      const matchesFilters = activeFilters.size === 0 || 
-        Array.from(activeFilters).some(filter => 
-          item.tags.includes(filter) || 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
           item.type === filter ||
           item.category === filter
         );
@@ -524,19 +514,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             onClick={clearAllFilters}
             className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-<<<<<<< HEAD
             Clear all filters
           </button>
         </motion.div>
-      )};
-    </div>;
-  )};
-=======
-            Clear all filters;
-          </button>;
-        </motion.div>;
-      )};
-    </div>;
+      )}
+    </div>
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+}
