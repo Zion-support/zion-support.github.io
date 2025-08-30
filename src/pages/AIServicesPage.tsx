@@ -271,7 +271,6 @@ const aiServices = [
     reviews: 89,
     customers: 156
   }
-=======
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
 const AIServices = [
     {
