@@ -104,9 +104,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
-                    <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
-                    <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
-                    <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
+                    <li><Link to="/services/ai-ethical-compliance-monitor" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Ethics Monitor</Link></li>
+                    <li><Link to="/services/ai-climate-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Climate Intelligence</Link></li>
+                    <li><Link to="/services/ai-digital-twin-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Twin Platform</Link></li>
                     <li><Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
                     <li><Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Customer Support</Link></li>
                   </ul>
