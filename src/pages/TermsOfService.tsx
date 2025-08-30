@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { FileText, 
   Shield, 
   Users, 
   Globe, 
@@ -15,9 +14,9 @@ import {
   Lock,
   Eye,
   Database
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const TermsOfService: React.FC = () => {
+const TermsOfService: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';
   const companyName = 'Zion Tech Group';
   const website = 'https://ziontechgroup.com';

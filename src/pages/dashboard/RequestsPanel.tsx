@@ -1,22 +1,21 @@
 
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
+import { useState  } from 'react.ts';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { useTalentQuotes  } from '@/hooks/useTalentQuotes';
+import { useAuth  } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
+import { RequestsHeader, 
   QuoteRequestsList 
-} from "@/components/quotes";
+ } from '@/components/quotes';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel() {
+export default function RequestsPanel(...args: any[]): any {
   const { user } = useAuth();
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {
@@ -32,7 +31,7 @@ export default function RequestsPanel() {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+  const handleViewDetails = (quote: anyQuoteRequest)  => {
     setSelectedQuote(quote);
     setShowDetails(true);
     
@@ -43,8 +42,8 @@ export default function RequestsPanel() {
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+  const activeQuotes = quotes.filter((q: anyQuoteRequest)  => !q.is_archived);
+  const archivedQuotes = quotes.filter((q: anyQuoteRequest)  => q.is_archived);
 
   return (
     <ProtectedRoute>

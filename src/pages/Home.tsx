@@ -1,12 +1,12 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { Suspense, useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
 
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { SEO  } from '@/components/SEO';
+import { HeroSection  } from '@/components/HeroSection';
+import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
 
 // Lazy load components for better performance
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -33,7 +33,7 @@ const InteractiveTestimonials = React.lazy(() => import("@/components/Interactiv
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
 
 // Loading fallback component
-const LoadingFallback = ({ message }: { message: string }) => (
+const LoadingFallback = ({ message }: { message: anystring })  => (
   <div className="py-20 bg-slate-900">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
@@ -239,7 +239,7 @@ const trustSignals = [
   }
 ];
 
-export default function Home() {
+export default function Home(...args: any[]): any {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -283,8 +283,8 @@ export default function Home() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {serviceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={category.name}
                 initial={{ y: 30, opacity: 0 }}

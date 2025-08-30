@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
   Filter, 
   Star, 
   Users, 
@@ -14,9 +13,9 @@ import {
   ShoppingCart,
   Heart,
   Eye
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Marketplace: React.FC = () => {
+const Marketplace: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
@@ -210,9 +209,9 @@ const Marketplace: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -242,8 +241,8 @@ const Marketplace: React.FC = () => {
       {/* Solutions Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedSolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}

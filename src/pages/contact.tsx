@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const Contact: React.FC = () => {
+const Contact: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -16,14 +16,14 @@ const Contact: React.FC = () => {
     timeline: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
@@ -182,8 +182,8 @@ const Contact: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {contactMethods.map((method, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index)  => (
                 <motion.div
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}

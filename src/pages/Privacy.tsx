@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -14,9 +13,9 @@ import {
   Clock,
   CheckCircle,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Privacy() {
+export default function Privacy(...args: any[]): any {
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
@@ -182,8 +181,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index)  => (
               <motion.div
                 key={principle.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -221,8 +220,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            {dataCategories.map((category, index) => (
+          <div className="grid lg: anygrid-cols-3 gap-8">
+            {dataCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -383,8 +382,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)  => (
               <motion.div
                 key={right.right}
                 initial={{ opacity: 0, y: 30 }}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const MicroSaasServices: React.FC = () => {
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+const MicroSaasServices: React.FC = (): JSX.Element => {
 	return (
 <>
 			<Helmet>

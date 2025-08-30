@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { useSearchParams, Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Grid, 
   List, 
@@ -27,9 +26,10 @@ import {
   CheckCircle,
   X,
   SlidersHorizontal
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface SearchResult {
+
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'company';
   title: string;
@@ -43,6 +43,7 @@ interface SearchResult {
   image?: string;
   path: string;
   featured?: boolean;
+
 }
 
 const mockSearchResults: SearchResult[] = [
@@ -142,23 +143,23 @@ const filters = {
   rating: ['4.5+', '4.0+', '3.5+']
 };
 
-export default function SearchPage() {
+export default function SearchPage(...args: any[]): any {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<any>([]);
+  const [filteredResults, setFilteredResults] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
-    type: [] as string[],
+    type: any[] as string[],
     category: [] as string[],
     location: [] as string[],
     priceRange: [] as string[],
     rating: [] as string[]
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     if (query) {
       performSearch(query);
     }
@@ -168,7 +169,7 @@ export default function SearchPage() {
     applyFilters();
   }, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: string) => {
+  const performSearch = async (searchQuery: anystring)  => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -212,7 +213,7 @@ export default function SearchPage() {
     setFilteredResults(filtered);
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter = (filterType: anykeyof typeof activeFilters, value: string)  => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -231,14 +232,14 @@ export default function SearchPage() {
     });
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
@@ -248,7 +249,7 @@ export default function SearchPage() {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -477,9 +478,9 @@ export default function SearchPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
+                    className="grid md: anygrid-cols-2 xl:grid-cols-3 gap-6"
                   >
-                    {filteredResults.map((result, index) => (
+                    {filteredResults.map((result, index)  => (
                       <motion.div
                         key={result.id}
                         initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Check, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Check, 
   Star, 
   Zap, 
   Shield, 
@@ -17,10 +16,10 @@ import {
   Brain,
   Cloud,
   Lock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
+export default function Pricing(...args: any[]): any {
+  const [billingCycle, setBillingCycle] = useState<any>('annual');
 
   const pricingTiers = [
     {
@@ -194,8 +193,8 @@ export default function Pricing() {
       {/* Pricing Tiers */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid lg: anygrid-cols-3 gap-8 max-w-7xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -272,8 +271,8 @@ export default function Pricing() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {addOnServices.map((service, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+            {addOnServices.map((service, index)  => (
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -328,7 +327,7 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
-                question: "Can I change my plan at any time?",
+                question: any"Can I change my plan at any time?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               },
               {
@@ -343,7 +342,7 @@ export default function Pricing() {
                 question: "Is there a setup fee?",
                 answer: "No setup fees for our standard plans. Custom implementations may have associated costs, which we'll discuss upfront."
               }
-            ].map((faq, index) => (
+            ].map((faq, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const ServicesSitemap: React.FC = () => {
+const ServicesSitemap: React.FC = (): JSX.Element => {
   const allServices = [
     {
       category: "AI-Powered Micro SAAS Services",
@@ -218,8 +218,8 @@ const ServicesSitemap: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {quickAccessLinks.map((link, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {quickAccessLinks.map((link, index)  => (
                 <motion.div
                   key={link.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -281,8 +281,8 @@ const ServicesSitemap: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {category.services.map((service, serviceIndex) => (
+                  <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+                    {category.services.map((service, serviceIndex)  => (
                       <motion.div
                         key={service.title}
                         initial={{ opacity: 0, scale: 0.9 }}

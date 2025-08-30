@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Zap, 
   Lock, 
   Cloud, 
@@ -26,14 +25,14 @@ import {
   Search,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
+ } from 'lucide-react.ts';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
 
-export default function InnovativeServices2028() {
+export default function InnovativeServices2028(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
-  const [expandedService, setExpandedService] = useState<number | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const filteredServices = innovativeServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -57,7 +56,7 @@ export default function InnovativeServices2028() {
     }
   });
 
-  const getCategoryIcon = (categoryName: string) => {
+  const getCategoryIcon = (categoryName: anystring)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
@@ -75,7 +74,7 @@ export default function InnovativeServices2028() {
     return iconMap[category.icon] || Brain;
   };
 
-  const getCategoryColor = (categoryName: string) => {
+  const getCategoryColor = (categoryName: anystring)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500';
   };
@@ -188,8 +187,8 @@ export default function InnovativeServices2028() {
       {/* Services Grid */}
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,8 +347,8 @@ export default function InnovativeServices2028() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  FileText, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { FileText, 
   Download, 
   Calendar, 
   Users, 
@@ -23,9 +22,9 @@ import {
   ExternalLink,
   Clock,
   Tag
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function WhitePapers() {
+export default function WhitePapers(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -42,7 +41,7 @@ export default function WhitePapers() {
 
   const whitePapers = [
     {
-      id: 1,
+      id: any1,
       title: 'The Future of AI-Powered Business Intelligence: A Comprehensive Guide',
       category: 'ai-ml',
       author: 'Dr. Sarah Chen, Chief AI Scientist',
@@ -164,10 +163,10 @@ export default function WhitePapers() {
   ];
 
   // Calculate category counts
-  React.useEffect(() => {
+  React.useEffect(()  => {
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? whitePapers.length : whitePapers.filter(wp => wp.category === cat.id).length
+      count: cat.id === 'all' ? whitePapers.length: anywhitePapers.filter(wp  => wp.category === cat.id).length
     }));
   }, []);
 
@@ -229,9 +228,9 @@ export default function WhitePapers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -289,8 +288,8 @@ export default function WhitePapers() {
       {/* White Papers Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredWhitePapers.map((paper, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredWhitePapers.map((paper, index)  => (
               <motion.article
                 key={paper.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -405,8 +404,8 @@ export default function WhitePapers() {
             Featured Research Areas
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.slice(1).map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.slice(1).map((category, index)  => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}

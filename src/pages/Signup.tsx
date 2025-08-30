@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, 
   Lock, 
   Eye, 
   EyeOff, 
@@ -13,8 +12,8 @@ import {
   Zap,
   Users,
   CheckCircle
-} from "lucide-react";
-export default function Signup() {
+ } from 'lucide-react.ts';
+export default function Signup(...args: any[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -27,13 +26,13 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');

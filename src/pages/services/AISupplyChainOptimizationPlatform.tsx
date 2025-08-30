@@ -1,12 +1,12 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { GradientHeading } from '../../components/ui/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
-import { Badge } from '../../components/ui/badge';
-import { Button } from '../../components/ui/button';
-import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3 } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { GradientHeading  } from '../../components/ui/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../../components/ui/card';
+import { Badge  } from '../../components/ui/badge';
+import { Button  } from '../../components/ui/button';
+import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3  } from 'lucide-react.ts';
 
-const AISupplyChainOptimizationPlatform: React.FC = () => {
+const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: <Truck className="h-6 w-6 text-blue-500" />,
@@ -168,8 +168,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
           <p className="text-gray-300 text-lg">See measurable improvements in your logistics operations</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index)  => (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>
               <p className="text-gray-300">{benefit.description}</p>
@@ -185,8 +185,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
           <p className="text-gray-300 text-lg">Everything you need for intelligent supply chain management</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index)  => (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -209,8 +209,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
           <p className="text-gray-300 text-lg">Optimize supply chains across various industries</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {useCases.map((useCase, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          {useCases.map((useCase, index)  => (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>
                 <CardTitle className="text-white">{useCase.title}</CardTitle>
@@ -230,8 +230,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
           <p className="text-gray-300 text-lg">Choose the plan that fits your supply chain needs</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingTiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          {pricingTiers.map((tier, index)  => (
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>
               {tier.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-slate-900">

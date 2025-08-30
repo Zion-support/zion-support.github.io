@@ -1,25 +1,24 @@
 
 
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
-import { 
-  ArrowRight, 
+import { Footer  } from '@/components/Footer';
+import { TrustedBySection  } from '@/components/TrustedBySection';
+import { TestimonialCarousel  } from '@/components/TestimonialCarousel';
+import { FloatingCTA  } from '@/components/FloatingCTA';
+import { HeroSection  } from '@/components/HeroSection';
+import { CategoriesSection  } from '@/components/CategoriesSection';
+import { BenefitsSection  } from '@/components/BenefitsSection';
+import { HowItWorksSection  } from '@/components/HowItWorksSection';
+import { WaitlistSection  } from '@/components/WaitlistSection';
+import { BlogSection  } from '@/components/BlogSection';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom.ts';
+import { FeaturedListingsSection  } from '@/components/FeaturedListingsSection';
+import { FeaturesGuideSection  } from '@/components/FeaturesGuideSection';
+import { SocialShareSection  } from '@/components/SocialShareSection';
+import { useTranslation  } from 'react-i18next.ts';
+import { useLanguage  } from '@/context/LanguageContext';
+import { ArrowRight, 
   Users, 
   Zap, 
   Settings, 
@@ -28,9 +27,9 @@ import {
   Sparkles,
   BarChart3,
   Smartphone
-} from "lucide-react";
+ } from 'lucide-react.ts';
 
-export default function Index() {
+export default function Index(...args: any[]): any {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   
@@ -102,8 +101,8 @@ export default function Index() {
             </p>
           </div>
           
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
+          <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+            {toolsFeatures.map((feature, index)  => (
               <Link 
                 key={index} 
                 to={feature.link} 

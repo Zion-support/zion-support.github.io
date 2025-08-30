@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -15,9 +14,9 @@ import {
   AlertTriangle,
   Info,
   Share
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const PrivacyPolicy: React.FC = () => {
+const PrivacyPolicy: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';
   const companyName = 'Zion Tech Group';
   const website = 'https://ziontechgroup.com';

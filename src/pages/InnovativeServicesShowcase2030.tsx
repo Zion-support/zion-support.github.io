@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Zap, 
@@ -18,12 +17,12 @@ import {
   Clock,
   DollarSign,
   Search
-} from 'lucide-react';
-import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+ } from 'lucide-react.ts';
+import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';
 
-const InnovativeServicesShowcase2030: React.FC = () => {
+const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -144,8 +143,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -306,7 +305,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Award,
@@ -328,7 +327,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
