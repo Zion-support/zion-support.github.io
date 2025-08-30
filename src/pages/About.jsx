@@ -172,20 +172,20 @@ const About = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-
+            >
               📞 Call +1 (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-
+            >
               ✉️ Get in Touch
             </a>
           </div>
         </div>
       </section>
     </div>
-  )};
+  );
+}
 
 export default About;
-}}}
