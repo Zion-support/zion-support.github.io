@@ -175,14 +175,59 @@ const Careers = () => {
   ];
 
   const benefits = [
-    "Competitive salary and equity packages",
-    "Comprehensive health, dental, and vision insurance",
-    "Flexible work arrangements and remote options",
-    "Professional development and learning opportunities",
-    "Modern equipment and tools",
-    "Regular team events and activities",
-    "Generous vacation and time-off policies",
-    "401(k) matching and financial planning"
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance, dental, vision, and mental health support'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Flexible Work',
+      description: 'Remote-first culture with flexible hours and unlimited PTO'
+    },
+    {
+      icon: <GraduationCap className="w-6 h-6" />,
+      title: 'Learning & Growth',
+      description: 'Professional development budget, conferences, and certification programs'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Innovation Time',
+      description: '20% time for personal projects and innovation initiatives'
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Global Team',
+      description: 'Work with talented professionals from around the world'
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: 'Team Events',
+      description: 'Regular team building, hackathons, and social events'
+    }
+  ];
+  const values = [
+    {
+      title: 'Innovation First',
+      description: 'We push boundaries and embrace cutting-edge technology to solve complex problems.'
+    },
+    {
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to client service.'
+    },
+    {
+      title: 'Collaboration',
+      description: 'We believe the best solutions come from diverse teams working together.'
+    },
+    {
+      title: 'Impact',
+      description: 'We focus on creating meaningful solutions that make a real difference.'
+    }
+  ];
+  const contactInfo = [
+    { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
+    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: MapPinIcon, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
   ];
 
   return (

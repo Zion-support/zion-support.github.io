@@ -129,7 +129,8 @@ export function ServicesShowcase() {
                   </Link>
                 </Button>
               </CardContent>
-            </Card>))}
+            </Card>
+          ))}
         </div>
 
         {/* CTA Section */}
