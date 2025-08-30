@@ -201,4 +201,3 @@ const ITInfrastructure = () => {
 };
 
 export default ITInfrastructure;
-}

@@ -31,6 +31,8 @@ import {
   Banknote,
   Building,
   Phone
+} from 'lucide-react';
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import SEO from '../components/SEO';
 
@@ -67,16 +69,16 @@ export default function InnovativeServices2027() {
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
         return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
@@ -84,17 +86,12 @@ export default function InnovativeServices2027() {
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
       default:
         return 0;
-
+    }
   });
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-futuristic">
       <SEO
-=======
-    <div className = "min-h-screen bg-futuristic">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
@@ -104,29 +101,11 @@ export default function InnovativeServices2027() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-
+          >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               2027 Innovative Services
             </h1>
@@ -138,19 +117,19 @@ export default function InnovativeServices2027() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold shadow-lg"
-
+              >
                 🚀 Cutting-Edge Innovation
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white font-semibold shadow-lg"
-
+              >
                 💎 Premium Quality
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-white font-semibold shadow-lg"
-
+              >
                 🌟 Market Leading ROI
               </motion.div>
             </div>
@@ -175,7 +154,7 @@ export default function InnovativeServices2027() {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                   }`}
-
+                >
                   {category === 'all' ? 'All Services' : category}
                 </motion.button>
               ))}
@@ -215,7 +194,7 @@ export default function InnovativeServices2027() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
+            >
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}

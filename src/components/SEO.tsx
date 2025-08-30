@@ -12,6 +12,7 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
   author?: string;
+}
 
 export function SEO({
   title,
@@ -106,43 +107,6 @@ export function SEO({
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
-    </Helmet>
-  );
-}
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image || defaultImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#2e73ea" />
-      <meta name="msapplication-TileColor" content="#2e73ea" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url || defaultUrl} />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     </Helmet>
   );
 }
@@ -271,4 +235,3 @@ export function BlogPostSEO({
     />
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

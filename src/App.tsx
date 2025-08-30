@@ -7,7 +7,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+// const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
@@ -19,23 +19,23 @@ const Support = lazy(() => import('./pages/Support').then(module => ({ default: 
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
+// const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Enhanced Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
+// import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 // import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+// import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 // import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant';
+// import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 
@@ -51,17 +51,17 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Core pages with optimized imports
 const Home = createLazyComponent(() => import('./pages/Home'));
-const Home2026 = createLazyComponent(() => import('./pages/Home2026'));
+// const Home2026 = createLazyComponent(() => import('./pages/Home2026'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const News = createLazyComponent(() => import('./pages/News'));
-const Press = createLazyComponent(() => import('./pages/Press'));
+// const Press = createLazyComponent(() => import('./pages/Press'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
-const Blog = createLazyComponent(() => import('./pages/Blog'));
+// const Blog = createLazyComponent(() => import('./pages/Blog'));
 
 // Service pages
 const Services = createLazyComponent(() => import('./pages/Services'));
@@ -76,7 +76,7 @@ const ComprehensiveServices = createLazyComponent(() => import('./pages/Comprehe
 
 // Additional pages
 const Partners = createLazyComponent(() => import('./pages/Partners'));
-const Team = createLazyComponent(() => import('./pages/Team'));
+// const Team = createLazyComponent(() => import('./pages/Team'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
 const Documentation = createLazyComponent(() => import('./pages/Documentation'));
 const Developers = createLazyComponent(() => import('./pages/Developers'));
@@ -145,9 +145,9 @@ const AICybersecurityPlatform = createLazyComponent(() => import('./pages/servic
 const AIHealthcarePlatform = createLazyComponent(() => import('./pages/services/AIHealthcarePlatform'));
 
 // Showcase pages
-const UltimateServicesShowcase2025 = createLazyComponent(() => import('./components/UltimateServicesShowcase2025'));
+// const UltimateServicesShowcase2025 = createLazyComponent(() => import('./components/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
-const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
+// const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
 
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
@@ -232,7 +232,7 @@ function App() {
             {/* <EnhancedAccessibilityEnhancer enabled={true} /> */}
 
             {/* Mobile Experience Enhancer */}
-            <MobileExperienceEnhancer enabled={true} />
+            {/* <MobileExperienceEnhancer enabled={true} /> */}
 
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />
@@ -259,13 +259,13 @@ function App() {
                         </motion.div>
                       }
                     />
-                    <Route path="/home2026" element={<Home2026 />} />
+                    {/* <Route path="/home2026" element={<Home2026 />} /> */}
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/blog" element={<Blog />} />
+                    {/* <Route path="/blog" element={<Blog />} /> */}
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/team" element={<Team />} />
+                    {/* <Route path="/team" element={<Team />} /> */}
                     <Route path="/help" element={<HelpCenter />} />
                     <Route path="/security" element={<Security />} />
                     <Route path="/status" element={<Status />} />
@@ -299,7 +299,7 @@ function App() {
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/terms" element={<Terms />} />
                     <Route path="/white-papers" element={<WhitePapers />} />
-                    <Route path="/press" element={<Press />} />
+                    {/* <Route path="/press" element={<Press />} /> */}
                     <Route path="/webinars" element={<Webinars />} />
                     <Route path="/training" element={<Training />} />
                     <Route path="/support" element={<Support />} />
@@ -330,13 +330,13 @@ function App() {
                     <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                    <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                    {/* <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} /> */}
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
 
                     {/* Innovative Services Routes */}
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-                    <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    {/* <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} /> */}
 
                     {/* Service Detail Routes */}
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -404,9 +404,9 @@ function App() {
                     <Route path="/developer-portal" element={<DeveloperPortal />} />
 
                     {/* Showcase Routes */}
-                    <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                    {/* <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} /> */}
                     <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
-                    <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                    {/* <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} /> */}
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
 
@@ -453,7 +453,7 @@ function App() {
             </main>
 
             {/* Footer */}
-            <EnhancedFooter />
+            {/* <EnhancedFooter /> */}
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
@@ -462,12 +462,12 @@ function App() {
             {/* <SmartNotificationSystem enabled={true} /> */}
 
             {/* Chat Assistant */}
-            <ChatAssistant
+            {/* <ChatAssistant
               enabled={true}
               position="bottom-right"
               theme="auto"
               language="en"
-            />
+            /> */}
           </div>
         </Router>
       </ErrorBoundary>

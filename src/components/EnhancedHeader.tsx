@@ -79,8 +79,8 @@ export function EnhancedHeader() {
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
         setIsSearching(false);
-
-
+      }
+    }
   };
 
   // Enhanced navigation with better organization
@@ -395,7 +395,7 @@ export function EnhancedHeader() {
                       transition={{ duration: 0.3 }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
-
+                    >
                       {/* Featured Services */}
                       <div className="mb-6">
                         <h3 className="text-lg font-semibold text-cyan-400 mb-4 font-orbitron">Featured Services</h3>
@@ -483,7 +483,7 @@ export function EnhancedHeader() {
                       ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-
+                >
                   {item.name}
                 </Link>
               ))}
@@ -573,7 +573,7 @@ export function EnhancedHeader() {
                             : 'text-gray-300 hover:text-cyan-400 pl-4'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
-
+                      >
                         {item.name}
                       </Link>
                     ))}
@@ -589,7 +589,7 @@ export function EnhancedHeader() {
                           to={service.href}
                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
                           onClick={() => setMobileMenuOpen(false)}
-
+                        >
                           <service.icon className="w-5 h-5 text-cyan-400" />
                           <div>
                             <span className="text-white font-medium">{service.name}</span>
