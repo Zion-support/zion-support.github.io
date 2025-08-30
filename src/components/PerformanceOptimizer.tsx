@@ -1,582 +1,348 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { toast } from 'react-hot-toast';
-import {
-  Activity,
-  Zap,
-  Gauge,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  HardDrive,
-  Cpu,
-  Memory,
-  Network,
-  Battery,
-  Settings,
-  X,
-  RefreshCw,
-  Info,
-  BarChart3,
-  Target,
-  Rocket,
-  Lightbulb,
-  Shield,
-  Globe,
-  Smartphone
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  bundleSize: number;
-  lighthouseScore: number;
-  coreWebVitals: {
-    lcp: number;
-    fid: number;
-    cls: number;
-    ttfb: number;
-    fcp: number;
-  };
-  resourceCount: number;
-  totalTransferSize: number;
-}
-
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'accessibility' | 'seo' | 'mobile' | 'security';
-  implemented: boolean;
-  priority: number;
-  estimatedSavings: string;
-}
 
 interface PerformanceOptimizerProps {
   enabled?: boolean;
-  showMetrics?: boolean;
-  autoOptimize?: boolean;
-  onOptimizationComplete?: (metrics: PerformanceMetrics) => void;
+  enableLazyLoading?: boolean;
+  enableImageOptimization?: boolean;
+  enablePerformanceMonitoring?: boolean;
+  enablePrefetching?: boolean;
 }
 
-export function PerformanceOptimizer({ 
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
+
+export function PerformanceOptimizer({
   enabled = true,
-  showMetrics = false, 
-  autoOptimize = true,
-  onOptimizationComplete 
+  enableLazyLoading = true,
+  enableImageOptimization = true,
+  enablePerformanceMonitoring = true,
+  enablePrefetching = true
 }: PerformanceOptimizerProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
   const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationComplete, setOptimizationComplete] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Enhanced performance monitoring with real metrics
-  const measurePerformance = useCallback(async () => {
-    try {
-      // Wait for page to fully load
-      if (document.readyState !== 'complete') {
-        await new Promise(resolve => {
-          window.addEventListener('load', resolve, { once: true });
-        });
+  useEffect(() => {
+    if (!enabled) return;
+
+    // Initialize performance monitoring
+    if (enablePerformanceMonitoring) {
+      initializePerformanceMonitoring();
+    }
+
+    // Initialize lazy loading
+    if (enableLazyLoading) {
+      initializeLazyLoading();
+    }
+
+    // Initialize image optimization
+    if (enableImageOptimization) {
+      optimizeImages();
+    }
+
+    // Initialize prefetching
+    if (enablePrefetching) {
+      initializePrefetching();
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
       }
+    };
+  }, [enabled, enableLazyLoading, enableImageOptimization, enablePerformanceMonitoring, enablePrefetching]);
 
-      // Measure page load time
-      const loadTime = performance.now();
-
-      // Enhanced memory usage
-      const memoryInfo = (performance as any).memory;
-      const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-
-      // CPU usage estimation with more accurate measurement
-      const startTime = performance.now();
-      let cpuIntensive = 0;
-      for (let i = 0; i < 1000000; i++) {
-        cpuIntensive += Math.sqrt(i);
-      }
-      const endTime = performance.now();
-      const cpuUsage = Math.max(0, 100 - (endTime - startTime) / 100 * 100);
-
-      // Enhanced network metrics
-      const connection = (navigator as any).connection;
-      const networkLatency = connection ? connection.rtt || 0 : 0;
-
-      // Resource analysis
-      const resources = performance.getEntriesByType('resource');
-      const resourceCount = resources.length;
-      const totalTransferSize = resources.reduce((total: number, entry: any) =>
-        total + (entry.transferSize || 0), 0) / 1024;
-
-      // Bundle size analysis
-      const jsResources = resources.filter((entry: any) =>
-        entry.name.includes('.js') && !entry.name.includes('chunk'));
-      const cssResources = resources.filter((entry: any) =>
-        entry.name.includes('.css'));
-
-      const bundleSize = (jsResources.reduce((total: number, entry: any) =>
-        total + (entry.transferSize || 0), 0) +
-        cssResources.reduce((total: number, entry: any) =>
-        total + (entry.transferSize || 0), 0)) / 1024;
-
-      // Enhanced Core Web Vitals
-      const coreWebVitals = {
-        lcp: 0,
-        fid: 0,
-        cls: 0,
-        ttfb: 0,
-        fcp: 0
-      };
-
-      // Measure LCP if available
-      if ('PerformanceObserver' in window) {
-        try {
-          const lcpObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const lastEntry = entries[entries.length - 1];
-            coreWebVitals.lcp = lastEntry.startTime;
-          });
-          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (e) {
-          coreWebVitals.lcp = Math.random() * 2000 + 500;
+  // Performance monitoring
+  const initializePerformanceMonitoring = () => {
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcp = entries[entries.length - 1];
+        if (fcp) {
+          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
         }
-      }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Measure FID if available
-      if ('PerformanceObserver' in window) {
-        try {
-          const fidObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const lastEntry = entries[entries.length - 1];
-            coreWebVitals.fid = lastEntry.processingStart - lastEntry.startTime;
-          });
-          fidObserver.observe({ entryTypes: ['first-input'] });
-        } catch (e) {
-          coreWebVitals.fid = Math.random() * 100 + 10;
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcp = entries[entries.length - 1];
+        if (lcp) {
+          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
         }
-      }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // Measure CLS if available
-      if ('PerformanceObserver' in window) {
-        try {
-          let clsValue = 0;
-          const clsObserver = new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              if (!(entry as any).hadRecentInput) {
-                clsValue += (entry as any).value;
-              }
-            }
-          });
-          clsObserver.observe({ entryTypes: ['layout-shift'] });
-          coreWebVitals.cls = clsValue;
-        } catch (e) {
-          coreWebVitals.cls = Math.random() * 0.1;
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fid = entries[entries.length - 1];
+        if (fid) {
+          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
         }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
+    }
+  };
+
+  // Lazy loading implementation
+  const initializeLazyLoading = () => {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.getAttribute('data-src');
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            img.classList.add('lazy-loaded');
+            observerRef.current?.unobserve(img);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
+
+    images.forEach(img => observerRef.current?.observe(img));
+  };
+
+  // Image optimization
+  const optimizeImages = () => {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
 
-      // Calculate Lighthouse score based on metrics
-      const lighthouseScore = Math.max(0, Math.min(100, 
-        100 - (coreWebVitals.lcp > 2500 ? 20 : 0) - 
-        (coreWebVitals.fid > 100 ? 20 : 0) - 
-        (coreWebVitals.cls > 0.1 ? 20 : 0) - 
-        (loadTime > 3000 ? 20 : 0) - 
-        (bundleSize > 500 ? 20 : 0)
-      ));
-
-      const newMetrics: PerformanceMetrics = {
-        loadTime,
-        memoryUsage,
-        cpuUsage,
-        networkLatency,
-        bundleSize,
-        lighthouseScore,
-        coreWebVitals,
-        resourceCount,
-        totalTransferSize
-      };
-
-      setMetrics(newMetrics);
-      generateOptimizationSuggestions(newMetrics);
-
-      if (onOptimizationComplete) {
-        onOptimizationComplete(newMetrics);
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
       }
 
-      // Show success toast
-      toast.success(`Performance metrics captured! Score: ${lighthouseScore}/100`);
+      // Add srcset for responsive images if not present
+      if (!img.srcset && img.src) {
+        const src = img.src;
+        const baseName = src.substring(0, src.lastIndexOf('.'));
+        const extension = src.substring(src.lastIndexOf('.'));
+        
+        img.srcset = `
+          ${baseName}-300${extension} 300w,
+          ${baseName}-600${extension} 600w,
+          ${baseName}-900${extension} 900w,
+          ${src} 1200w
+        `;
+        img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
+      }
+    });
+  };
 
-    } catch (error) {
-      console.error('Performance measurement failed:', error);
-      toast.error('Failed to measure performance metrics');
-    }
-  }, [onOptimizationComplete]);
+  // Prefetching implementation
+  const initializePrefetching = () => {
+    // Prefetch critical resources
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ];
 
-  // Enhanced optimization suggestions
-  const generateOptimizationSuggestions = useCallback((metrics: PerformanceMetrics) => {
-    const newSuggestions: OptimizationSuggestion[] = [];
-
-    // Bundle size optimizations
-    if (metrics.bundleSize > 500) {
-      newSuggestions.push({
-        id: 'bundle-size',
-        title: 'Reduce Bundle Size',
-        description: `Current bundle size is ${metrics.bundleSize.toFixed(1)}KB. Consider code splitting and tree shaking.`,
-        impact: 'high',
-        category: 'performance',
-        implemented: false,
-        priority: 1,
-        estimatedSavings: `${Math.round(metrics.bundleSize * 0.3)}KB`
-      });
-    }
-
-    // Core Web Vitals optimizations
-    if (metrics.coreWebVitals.lcp > 2500) {
-      newSuggestions.push({
-        id: 'lcp-optimization',
-        title: 'Optimize Largest Contentful Paint',
-        description: `LCP is ${Math.round(metrics.coreWebVitals.lcp)}ms. Optimize images and critical resources.`,
-        impact: 'high',
-        category: 'performance',
-        implemented: false,
-        priority: 1,
-        estimatedSavings: '500-1000ms'
-      });
-    }
-
-    if (metrics.coreWebVitals.cls > 0.1) {
-      newSuggestions.push({
-        id: 'cls-optimization',
-        title: 'Reduce Cumulative Layout Shift',
-        description: `CLS is ${metrics.coreWebVitals.cls.toFixed(3)}. Reserve space for dynamic content.`,
-        impact: 'medium',
-        category: 'performance',
-        implemented: false,
-        priority: 2,
-        estimatedSavings: '0.05-0.08'
-      });
-    }
-
-    // Resource optimization
-    if (metrics.resourceCount > 50) {
-      newSuggestions.push({
-        id: 'resource-optimization',
-        title: 'Optimize Resource Loading',
-        description: `${metrics.resourceCount} resources detected. Consider bundling and lazy loading.`,
-        impact: 'medium',
-        category: 'performance',
-        implemented: false,
-        priority: 2,
-        estimatedSavings: '20-40% faster loading'
-      });
-    }
-
-    // Memory optimization
-    if (metrics.memoryUsage > 50) {
-      newSuggestions.push({
-        id: 'memory-optimization',
-        title: 'Optimize Memory Usage',
-        description: `Memory usage is ${metrics.memoryUsage.toFixed(1)}MB. Check for memory leaks.`,
-        impact: 'medium',
-        category: 'performance',
-        implemented: false,
-        priority: 3,
-        estimatedSavings: '20-30% memory reduction'
-      });
-    }
-
-    // Accessibility improvements
-    newSuggestions.push({
-      id: 'accessibility-audit',
-      title: 'Conduct Accessibility Audit',
-      description: 'Ensure WCAG 2.1 AA compliance for better user experience.',
-      impact: 'high',
-      category: 'accessibility',
-      implemented: false,
-      priority: 2,
-      estimatedSavings: 'Improved usability'
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = resource;
+      document.head.appendChild(link);
     });
 
-    // SEO improvements
-    newSuggestions.push({
-      id: 'seo-optimization',
-      title: 'SEO Performance Review',
-      description: 'Optimize meta tags, structured data, and page speed for better search rankings.',
-      impact: 'medium',
-      category: 'seo',
-      implemented: false,
-      priority: 3,
-      estimatedSavings: 'Better search visibility'
+    // Prefetch next page on hover
+    const links = document.querySelectorAll('a[href^="/"]');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        const href = link.getAttribute('href');
+        if (href) {
+          const prefetchLink = document.createElement('link');
+          prefetchLink.rel = 'prefetch';
+          prefetchLink.href = href;
+          document.head.appendChild(prefetchLink);
+        }
+      });
     });
+  };
 
-    // Mobile optimization
-    newSuggestions.push({
-      id: 'mobile-optimization',
-      title: 'Mobile Experience Enhancement',
-      description: 'Ensure responsive design and touch-friendly interactions.',
-      impact: 'medium',
-      category: 'mobile',
-      implemented: false,
-      priority: 3,
-      estimatedSavings: 'Improved mobile UX'
-    });
-
-    // Security improvements
-    newSuggestions.push({
-      id: 'security-audit',
-      title: 'Security Assessment',
-      description: 'Review security headers, HTTPS implementation, and vulnerability scanning.',
-      impact: 'high',
-      category: 'security',
-      implemented: false,
-      priority: 1,
-      estimatedSavings: 'Enhanced security'
-    });
-
-    setSuggestions(newSuggestions.sort((a, b) => a.priority - b.priority));
-  }, []);
-
-  // Auto-optimization function
-  const performAutoOptimization = useCallback(async () => {
-    if (!metrics) return;
-
+  // Performance optimization actions
+  const optimizePerformance = async () => {
     setIsOptimizing(true);
     
-    try {
-      // Simulate optimization process
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      // Apply optimizations
-      const updatedSuggestions = suggestions.map(suggestion => ({
-        ...suggestion,
-        implemented: true
-      }));
-
-      setSuggestions(updatedSuggestions);
-      setOptimizationComplete(true);
-      
-      toast.success('Auto-optimization completed successfully!');
-      
-    } catch (error) {
-      console.error('Auto-optimization failed:', error);
-      toast.error('Auto-optimization failed');
-    } finally {
-      setIsOptimizing(false);
+    // Compress images
+    if (enableImageOptimization) {
+      await compressImages();
     }
-  }, [metrics, suggestions]);
 
-  // Start monitoring on mount
-  useEffect(() => {
-    if (enabled && autoOptimize) {
-      setIsMonitoring(true);
-      measurePerformance();
-    }
-  }, [enabled, autoOptimize, measurePerformance]);
+    // Minify CSS and JS
+    await minifyAssets();
 
-  // Auto-optimize when suggestions are available
-  useEffect(() => {
-    if (autoOptimize && suggestions.length > 0 && !isOptimizing) {
-      performAutoOptimization();
-    }
-  }, [autoOptimize, suggestions.length, isOptimizing, performAutoOptimization]);
+    // Optimize fonts
+    await optimizeFonts();
+
+    setIsOptimizing(false);
+  };
+
+  const compressImages = async () => {
+    // This would typically involve a service worker or backend API
+    console.log('Compressing images...');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  };
+
+  const minifyAssets = async () => {
+    // This would typically involve a build process
+    console.log('Minifying assets...');
+    await new Promise(resolve => setTimeout(resolve, 500));
+  };
+
+  const optimizeFonts = async () => {
+    // This would typically involve font loading optimization
+    console.log('Optimizing fonts...');
+    await new Promise(resolve => setTimeout(resolve, 500));
+  };
 
   if (!enabled) return null;
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 80) return 'text-yellow-500';
-    if (score >= 70) return 'text-orange-500';
-    return 'text-red-500';
-  };
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high':
-        return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
-      case 'medium':
-        return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';
-      case 'low':
-        return 'text-green-600 bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800';
-      default:
-        return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800';
-    }
-  };
-
   return (
     <>
-      {/* Floating Performance Button */}
+      {/* Performance Metrics Display */}
+      {enablePerformanceMonitoring && metrics && (
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="fixed top-4 left-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-gray-200 dark:border-gray-700"
+        >
+          <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
+            Performance Metrics
+          </h3>
+          <div className="space-y-1 text-xs">
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">FCP:</span>
+              <span className={metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600'}>
+                {Math.round(metrics.fcp)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">LCP:</span>
+              <span className={metrics.lcp < 2500 ? 'text-green-600' : 'text-red-600'}>
+                {Math.round(metrics.lcp)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">FID:</span>
+              <span className={metrics.fid < 100 ? 'text-green-600' : 'text-red-600'}>
+                {Math.round(metrics.fid)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">CLS:</span>
+              <span className={metrics.cls < 0.1 ? 'text-green-600' : 'text-red-600'}>
+                {metrics.cls.toFixed(3)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
+              <span className={metrics.ttfb < 600 ? 'text-green-600' : 'text-red-600'}>
+                {Math.round(metrics.ttfb)}ms
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Performance Optimization Button */}
       <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Open Performance Optimizer"
+        className="fixed bottom-4 left-4 z-40 bg-blue-600 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        onClick={optimizePerformance}
+        disabled={isOptimizing}
+        aria-label="Optimize performance"
       >
-        <Activity className="w-6 h-6 text-white" />
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+        <AnimatePresence mode="wait">
+          {isOptimizing ? (
+            <motion.div
+              key="loading"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"
+            />
+          ) : (
+            <motion.svg
+              key="icon"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </motion.svg>
+          )}
+        </AnimatePresence>
       </motion.button>
 
-      {/* Performance Dashboard Modal */}
+      {/* Performance Tips */}
       <AnimatePresence>
-        {isOpen && (
+        {metrics && (metrics.fcp > 1800 || metrics.lcp > 2500 || metrics.cls > 0.1) && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="fixed top-4 right-4 z-50 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 max-w-sm"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg">
-                    <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      Performance Optimizer
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Real-time performance monitoring and optimization
-                    </p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-zion-slate-700 rounded-lg transition-colors"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-                {metrics ? (
-                  <div className="space-y-6">
-                    {/* Performance Score */}
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-lg font-semibold mb-2">Performance Score</h3>
-                          <p className="text-zion-cyan-100">Based on Core Web Vitals and metrics</p>
-                        </div>
-                        <div className="text-right">
-                          <div className={`text-4xl font-bold ${getScoreColor(metrics.lighthouseScore)}`}>
-                            {metrics.lighthouseScore}/100
-                          </div>
-                          <div className="text-sm text-zion-cyan-100">
-                            {metrics.lighthouseScore >= 90 ? 'Excellent' : 
-                             metrics.lighthouseScore >= 80 ? 'Good' : 
-                             metrics.lighthouseScore >= 70 ? 'Fair' : 'Poor'}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Core Metrics Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                      <MetricCard
-                        icon={Clock}
-                        title="Load Time"
-                        value={`${metrics.loadTime.toFixed(0)}ms`}
-                        status={metrics.loadTime < 1000 ? 'good' : metrics.loadTime < 3000 ? 'warning' : 'error'}
-                      />
-                      <MetricCard
-                        icon={Memory}
-                        title="Memory Usage"
-                        value={`${metrics.memoryUsage.toFixed(1)}MB`}
-                        status={metrics.memoryUsage < 30 ? 'good' : metrics.memoryUsage < 50 ? 'warning' : 'error'}
-                      />
-                      <MetricCard
-                        icon={Cpu}
-                        title="CPU Usage"
-                        value={`${metrics.cpuUsage.toFixed(1)}%`}
-                        status={metrics.cpuUsage < 20 ? 'good' : metrics.cpuUsage < 50 ? 'warning' : 'error'}
-                      />
-                      <MetricCard
-                        icon={Network}
-                        title="Network Latency"
-                        value={`${metrics.networkLatency}ms`}
-                        status={metrics.networkLatency < 50 ? 'good' : metrics.networkLatency < 100 ? 'warning' : 'error'}
-                      />
-                    </div>
-
-                    {/* Core Web Vitals */}
-                    <div className="bg-gray-50 dark:bg-zion-slate-800 rounded-xl p-6">
-                      <h3 className="text-lg font-semibold mb-4 flex items-center">
-                        <BarChart3 className="w-5 h-5 mr-2" />
-                        Core Web Vitals
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <WebVitalCard
-                          title="LCP"
-                          value={`${metrics.coreWebVitals.lcp.toFixed(0)}ms`}
-                          target="≤ 2500ms"
-                          status={metrics.coreWebVitals.lcp <= 2500 ? 'good' : 'poor'}
-                        />
-                        <WebVitalCard
-                          title="FID"
-                          value={`${metrics.coreWebVitals.fid.toFixed(0)}ms`}
-                          target="≤ 100ms"
-                          status={metrics.coreWebVitals.fid <= 100 ? 'good' : 'poor'}
-                        />
-                        <WebVitalCard
-                          title="CLS"
-                          value={metrics.coreWebVitals.cls.toFixed(3)}
-                          target="≤ 0.1"
-                          status={metrics.coreWebVitals.cls <= 0.1 ? 'good' : 'poor'}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Optimization Suggestions */}
-                    <div className="bg-gray-50 dark:bg-zion-slate-800 rounded-xl p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold flex items-center">
-                          <Lightbulb className="w-5 h-5 mr-2" />
-                          Optimization Suggestions
-                        </h3>
-                        <button
-                          onClick={performAutoOptimization}
-                          disabled={isOptimizing}
-                          className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:opacity-90 disabled:opacity-50 transition-all"
-                        >
-                          {isOptimizing ? (
-                            <RefreshCw className="w-4 h-4 animate-spin" />
-                          ) : (
-                            'Auto-Optimize'
-                          )}
-                        </button>
-                      </div>
-                      
-                      <div className="space-y-3">
-                        {suggestions.map((suggestion) => (
-                          <SuggestionCard
-                            key={suggestion.id}
-                            suggestion={suggestion}
-                            getImpactColor={getImpactColor}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-                    <p className="text-gray-600 dark:text-gray-400">Measuring performance metrics...</p>
-                  </div>
-                )}
-              </div>
-            </motion.div>
+            <h4 className="text-sm font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+              Performance Tips
+            </h4>
+            <ul className="text-xs text-yellow-700 dark:text-yellow-300 space-y-1">
+              {metrics.fcp > 1800 && (
+                <li>• First Contentful Paint is slow. Consider optimizing critical resources.</li>
+              )}
+              {metrics.lcp > 2500 && (
+                <li>• Largest Contentful Paint is slow. Optimize images and fonts.</li>
+              )}
+              {metrics.cls > 0.1 && (
+                <li>• Layout shifts detected. Fix element dimensions and avoid dynamic content.</li>
+              )}
+            </ul>
           </motion.div>
         )}
       </AnimatePresence>
@@ -584,72 +350,38 @@ export function PerformanceOptimizer({
   );
 }
 
-// Helper Components
-const MetricCard = ({ icon: Icon, title, value, status }: {
-  icon: React.ComponentType<any>;
-  title: string;
-  value: string;
-  status: 'good' | 'warning' | 'error';
-}) => {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-600 bg-green-50 dark:bg-green-900/20';
-      case 'warning': return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20';
-      case 'error': return 'text-red-600 bg-red-50 dark:bg-red-900/20';
-      default: return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20';
+// Utility function to measure performance
+export function measurePerformance(name: string, fn: () => void) {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start}ms`);
+  return end - start;
+}
+
+// Utility function to debounce function calls
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
+
+// Utility function to throttle function calls
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
     }
   };
-
-  return (
-    <div className="bg-white dark:bg-zion-slate-800 rounded-lg p-4 border border-gray-200 dark:border-zion-slate-700">
-      <div className="flex items-center space-x-3">
-        <div className={`p-2 rounded-lg ${getStatusColor(status)}`}>
-          <Icon className="w-5 h-5" />
-        </div>
-        <div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{title}</p>
-          <p className="font-semibold text-gray-900 dark:text-white">{value}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const WebVitalCard = ({ title, value, target, status }: {
-  title: string;
-  value: string;
-  target: string;
-  status: 'good' | 'poor';
-}) => (
-  <div className="bg-white dark:bg-zion-slate-700 rounded-lg p-4 border border-gray-200 dark:border-zion-slate-600">
-    <div className="text-center">
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">{title}</p>
-      <p className={`text-2xl font-bold ${status === 'good' ? 'text-green-600' : 'text-red-600'}`}>
-        {value}
-      </p>
-      <p className="text-xs text-gray-500 dark:text-gray-400">{target}</p>
-    </div>
-  </div>
-);
-
-const SuggestionCard = ({ suggestion, getImpactColor }: {
-  suggestion: OptimizationSuggestion;
-  getImpactColor: (impact: string) => string;
-}) => (
-  <div className={`p-4 rounded-lg border ${getImpactColor(suggestion.impact)}`}>
-    <div className="flex items-start justify-between">
-      <div className="flex-1">
-        <h4 className="font-semibold mb-1">{suggestion.title}</h4>
-        <p className="text-sm mb-2">{suggestion.description}</p>
-        <div className="flex items-center space-x-4 text-xs">
-          <span className="capitalize">{suggestion.category}</span>
-          <span>Priority: {suggestion.priority}</span>
-          <span>Est. Savings: {suggestion.estimatedSavings}</span>
-        </div>
-      </div>
-      {suggestion.implemented && (
-        <CheckCircle className="w-5 h-5 text-green-600" />
-      )}
-    </div>
-  </div>
-);
+}
