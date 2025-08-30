@@ -1,109 +1,109 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, 
-  Clock, 
-  MessageSquare, 
-  Zap, 
+  RefreshCw, 
+  Package, 
+  Truck, 
   BarChart3, 
-  Users,
-  Smartphone,
-  Globe,
+  Users, 
+  Zap,
   Shield,
+  Globe,
+  Smartphone,
   Settings
 } from 'lucide-react';
 import SEO from '../../components/SEO';
 
-const AIAutoEmailResponder: React.FC = () => {
+const ReturnsManagement: React.FC = () => {
   const features = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Instant Response Generation",
-      description: "AI-powered email responses generated in seconds with context-aware content and personalized messaging."
+      icon: <RefreshCw className="w-6 h-6" />,
+      title: "Automated Returns Processing",
+      description: "Streamlined returns workflow with AI-powered decision making and automated approval processes."
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Respond to customer inquiries instantly, even outside business hours, improving customer satisfaction."
+      icon: <Package className="w-6 h-6" />,
+      title: "Smart Inventory Management",
+      description: "Real-time inventory updates and intelligent restocking recommendations based on return patterns."
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Multi-language Support",
-      description: "Automatically detect and respond in the customer's preferred language for global reach."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Smart Routing",
-      description: "Intelligent email categorization and routing to appropriate team members when human intervention is needed."
+      icon: <Truck className="w-6 h-6" />,
+      title: "Seamless Logistics",
+      description: "Integrated shipping labels, tracking, and reverse logistics for hassle-free returns."
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Track response times, customer satisfaction, and email volume with detailed analytics and insights."
+      title: "Analytics & Insights",
+      description: "Comprehensive reporting on return reasons, trends, and opportunities for product improvement."
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration",
-      description: "Seamless handoff between AI and human agents with full conversation context and history."
+      title: "Customer Experience",
+      description: "Self-service returns portal with real-time status updates and communication tools."
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Policy Automation",
+      description: "Flexible return policies with automated rule enforcement and exception handling."
     }
   ];
 
   const benefits = [
     {
-      metric: "90%",
-      description: "Instant response rate"
+      metric: "70%",
+      description: "Faster returns processing"
     },
     {
       metric: "40%",
-      description: "Increase in customer satisfaction"
+      description: "Reduction in return costs"
     },
     {
-      metric: "60%",
-      description: "Reduction in response time"
+      metric: "85%",
+      description: "Customer satisfaction"
     },
     {
       metric: "50%",
-      description: "Time saved on routine emails"
+      description: "Time saved on manual tasks"
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Support",
-      description: "Handle common inquiries, FAQs, and support requests automatically with intelligent responses."
+      title: "E-commerce Returns",
+      description: "Handle online retail returns with automated processing and customer self-service options."
     },
     {
-      title: "Sales Inquiries",
-      description: "Qualify leads and provide product information instantly to capture sales opportunities."
+      title: "B2B Returns",
+      description: "Streamline business-to-business returns with bulk processing and approval workflows."
     },
     {
-      title: "Appointment Booking",
-      description: "Automate scheduling and confirmation emails with calendar integration and availability checking."
+      title: "Subscription Returns",
+      description: "Manage recurring service cancellations and product returns efficiently."
     },
     {
-      title: "Order Updates",
-      description: "Send shipping confirmations, tracking information, and delivery updates automatically."
+      title: "International Returns",
+      description: "Handle cross-border returns with compliance and logistics optimization."
     }
   ];
 
   const integrations = [
-    "Gmail & Outlook",
-    "Slack & Teams",
-    "CRM Systems",
-    "Help Desk Platforms",
     "E-commerce Platforms",
-    "Calendar Applications"
+    "ERP Systems",
+    "Shipping Carriers",
+    "Payment Processors",
+    "CRM Systems",
+    "Analytics Tools"
   ];
 
   return (
     <>
       <SEO 
-        title="AI Auto Email Responder - Zion Tech Group"
-        description="Automate customer communication with AI-powered email responses. Achieve 90% instant response rate and increase customer satisfaction by 40%."
-        keywords="AI email responder, automated email responses, customer communication, email automation, AI customer service, instant responses"
+        title="Returns Management - Zion Tech Group"
+        description="Streamline your returns process with AI-powered automation. Process returns 70% faster and reduce costs by 40% while improving customer satisfaction."
+        keywords="returns management, automated returns, reverse logistics, customer returns, returns processing, inventory management"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-cyan-900">
+      <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -113,10 +113,10 @@ const AIAutoEmailResponder: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Auto Email Responder
+                Returns Management
               </h1>
               <p className="text-xl md:text-2xl text-cyan-200 mb-8 max-w-4xl mx-auto">
-                Transform customer communication with intelligent email automation that responds instantly, 24/7, with personalized and context-aware messages.
+                Transform your returns process with intelligent automation that processes returns 70% faster while reducing costs and improving customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -141,10 +141,10 @@ const AIAutoEmailResponder: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Email Automation
+                Intelligent Returns Features
               </h2>
               <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-                Our AI Email Responder combines natural language processing with business logic to deliver human-like responses instantly.
+                Our Returns Management system combines AI, automation, and customer experience optimization to deliver exceptional returns processing.
               </p>
             </motion.div>
 
@@ -178,10 +178,10 @@ const AIAutoEmailResponder: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Proven Results
+                Measurable Results
               </h2>
               <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-                Organizations using our AI Email Responder see dramatic improvements in customer communication efficiency.
+                Organizations using our Returns Management system see significant improvements in efficiency and customer satisfaction.
               </p>
             </motion.div>
 
@@ -216,10 +216,10 @@ const AIAutoEmailResponder: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For Every Business Need
+                Perfect For Every Business
               </h2>
               <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-                From customer support to sales inquiries, our AI Email Responder handles all types of customer communication.
+                From e-commerce to B2B, our Returns Management system adapts to your business model and industry requirements.
               </p>
             </motion.div>
 
@@ -255,11 +255,11 @@ const AIAutoEmailResponder: React.FC = () => {
                 Seamless Integrations
               </h2>
               <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-                Works with your existing tools and platforms for a smooth implementation experience.
+                Works with your existing systems and platforms for a smooth implementation experience.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {integrations.map((integration, index) => (
                 <motion.div
                   key={index}
@@ -286,10 +286,10 @@ const AIAutoEmailResponder: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Automate Your Email Communication?
+                Ready to Streamline Your Returns?
               </h2>
               <p className="text-xl text-cyan-200 mb-8">
-                Join businesses already using AI to provide instant, personalized customer responses 24/7.
+                Join businesses already using AI-powered returns management to improve efficiency and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -307,4 +307,4 @@ const AIAutoEmailResponder: React.FC = () => {
   );
 };
 
-export default AIAutoEmailResponder;
+export default ReturnsManagement;

@@ -152,6 +152,13 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/services/cloud-devops', priority: 0.7, changefreq: 'monthly' },
     { url: '/services/it-infrastructure', priority: 0.7, changefreq: 'monthly' },
     { url: '/services/ai-sales-copilot', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/ai-compliance-assistant', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/ai-auto-email-responder', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/llm-content-studio', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/cloud-finops-optimizer', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/returns-management', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/affiliate-tracking', priority: 0.7, changefreq: 'monthly' },
+    { url: '/services/mobile-feedback-surveys', priority: 0.7, changefreq: 'monthly' },
     
     // Solution pages
     { url: '/ai-solutions', priority: 0.8, changefreq: 'weekly' },

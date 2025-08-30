@@ -72,12 +72,15 @@ const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/Z
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
-const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
 const AIAutoEmailResponder = React.lazy(() => import('./pages/services/AIAutoEmailResponder'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
+const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
+const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
+const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
+const MobileFeedbackSurveys = React.lazy(() => import('./pages/services/MobileFeedbackSurveys'));
 const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
 const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
-const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
 
 // Additional service pages
@@ -205,12 +208,15 @@ function App() {
                   <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                   <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                  <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                   <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
                   <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
-                  <Route path="/services/mobile-feedback-surveys" element={<CustomerFeedbackSurveys />} />
-                  <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
                   <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
+                  <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                  <Route path="/services/returns-management" element={<ReturnsManagement />} />
+                  <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
+                  <Route path="/services/mobile-feedback-surveys" element={<MobileFeedbackSurveys />} />
+                  <Route path="/services/customer-feedback-surveys" element={<CustomerFeedbackSurveys />} />
+                  <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
                   <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
                   
                   {/* Additional Service Routes */}
