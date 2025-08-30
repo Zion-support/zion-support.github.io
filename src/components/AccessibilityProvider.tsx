@@ -1,24 +1,38 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
+=======
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
+
+interface AccessibilityContextType {
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   highContrast: boolean;
-  toggleHighContrast: () => void;
+  toggleHighContrast: ()  => void;
   reducedMotion: boolean;
-  toggleReducedMotion: () => void;
+  toggleReducedMotion: ()  => void;
   fontSize: number;
-  increaseFontSize: () => void;
-  decreaseFontSize: () => void;
-  resetFontSize: () => void;
+  increaseFontSize: ()  => void;
+  decreaseFontSize: ()  => void;
+  resetFontSize: ()  => void;
   showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean) => void;
+  setShowSkipLinks: (show: boolean)  => void;
   voiceNavigation: boolean;
+<<<<<<< HEAD
   toggleVoiceNavigation: () => void;
+=======
+  toggleVoiceNavigation: ()  => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export const useAccessibility = () => {
+export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
+<<<<<<< HEAD
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
 
   return context;
@@ -26,6 +40,14 @@ export const useAccessibility = () => {
 
 interface AccessibilityProviderProps {
   children: ReactNode;
+=======
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+  return context};
+
+interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
+
+  children: ReactNode}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
@@ -36,16 +58,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
-    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
-    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
-    const savedFontSize = localStorage.getItem('zion-font-size');
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
-    setVoiceNavigation(savedVoiceNavigation);
-  }, []);
+    setVoiceNavigation(savedVoiceNavigation)}, []);
 
   // Apply accessibility settings to document
   useEffect(() => {
@@ -53,6 +71,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     // Apply high contrast
     if (highContrast) {
+<<<<<<< HEAD
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
@@ -62,77 +81,100 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       root.classList.add('reduce-motion');
     } else {
       root.classList.remove('reduce-motion');
+=======
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
+
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduce-motion')} else {
+      root.classList.remove('reduce-motion')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply font size
-    root.style.fontSize = `${fontSize}px`;
-  }, [highContrast, reducedMotion, fontSize]);
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip links (Alt + S)
-      if (event.altKey && event.key === 's') {
+<<<<<<< HEAD
+    const handleKeyDown = (event: KeyboardEvent) => {;
+      // Skip links (Alt + S);
+      if (event.altKey && event.key === 's') {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         event.preventDefault();
         setShowSkipLinks(true);
+<<<<<<< HEAD
         setTimeout(() => setShowSkipLinks(false), 5000);
+=======
+        setTimeout(() => setShowSkipLinks(false), 5000)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // High contrast toggle (Alt + H)
-      if (event.altKey && event.key === 'h') {
+      if (event.altKey && event.key = == 'h') {;
         event.preventDefault();
+<<<<<<< HEAD
         toggleHighContrast();
+=======
+        toggleHighContrast()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Font size controls (Alt + Plus/Minus)
-      if (event.altKey && event.key === '+') {
+      if (event.altKey && event.key = == '+') {;
         event.preventDefault();
+<<<<<<< HEAD
+        increaseFontSize()}
+      if (event.altKey && event.key = == '-') {;
+=======;
         increaseFontSize();
+<<<<<<< HEAD
 
       if (event.altKey && event.key === '-') {
         event.preventDefault();
         decreaseFontSize();
 
+=======
+      }
+      if (event.altKey && event.key = == '-') {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+        event.preventDefault();
+        decreaseFontSize()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {
+  const toggleHighContrast = () => {;
     const newValue = !highContrast;
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString());
-  };
+    localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {
+  const toggleReducedMotion = () => {;
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString());
-  };
+    localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  const increaseFontSize = () => {
+  const increaseFontSize = () => {;
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const decreaseFontSize = () => {
+  const decreaseFontSize = () => {;
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const resetFontSize = () => {
+  const resetFontSize = () => {;
     setFontSize(16);
-    localStorage.setItem('zion-font-size', '16');
-  };
+    localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {
+  const toggleVoiceNavigation = () => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString());
-  };
+    localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
   const value = {
-    highContrast,
+  highContrast,
     toggleHighContrast,
     reducedMotion,
     toggleReducedMotion,
@@ -143,18 +185,57 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,
-  };
+    toggleVoiceNavigation,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
+
+};
 
   return (
-    <AccessibilityContext.Provider value={value}>
+    <AccessibilityContext.Provider value = {value}>
       {/* Skip Links */}
       <AnimatePresence>
         {showSkipLinks && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
             className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
 
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
@@ -184,8 +265,26 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       {/* Accessibility Controls */}
       <div className="fixed bottom-4 left-4 z-40">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
           className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
 
           <div className="flex flex-col gap-2">
@@ -238,13 +337,22 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               A
             </button>
           </div>
+<<<<<<< HEAD
         </motion.div>
       </div>
 
-      {children}
-    </AccessibilityContext.Provider>
+      {children};
+    </AccessibilityContext.Provider>;
+  )};
+=======
+        </motion.div>;
+      </div>;
+;
+      {children};
+    </AccessibilityContext.Provider>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
@@ -252,36 +360,51 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   isActive = true
 }) => {
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   useEffect(() => {
     if (!isActive) return;
 
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = document.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+<<<<<<< HEAD
+    const handleKeyDown = (event: KeyboardEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {
-        if (document.activeElement === firstElement) {
+        if (document.activeElement = == firstElement) {;
           event.preventDefault();
+<<<<<<< HEAD
           lastElement.focus();
 
+=======
+          lastElement.focus()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       } else {
-        if (document.activeElement === lastElement) {
+        if (document.activeElement = == lastElement) {;
           event.preventDefault();
+<<<<<<< HEAD
           firstElement.focus();
 
 
+=======
+          firstElement.focus()}
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isActive]);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
+<<<<<<< HEAD
   return <>{children}</>;
 };}}}}}}}}}}}}}
+=======
+  return <>{children}</>};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

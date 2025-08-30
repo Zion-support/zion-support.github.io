@@ -1,22 +1,22 @@
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
   const features = [
     'AI-powered candidate screening and matching',
-    'Automated resume parsing and skill assessment',
-    'Intelligent interview scheduling and feedback',
-    'Employee performance analytics and insights',
-    'Predictive turnover analysis and retention strategies',
-    'Automated onboarding and training workflows',
-    'Diversity and inclusion analytics',
-    'Compliance monitoring and reporting'
+    'Automated resume parsing and skill assessment',;
+    'Intelligent interview scheduling and feedback',;
+    'Employee performance analytics and insights',;
+    'Predictive turnover analysis and retention strategies',;
+    'Automated onboarding and training workflows',;
+    'Diversity and inclusion analytics',;
+    'Compliance monitoring and reporting';
   ];
 
-  const benefits = [
-    'Reduce time-to-hire by 60%',
-    'Improve candidate quality by 40%',
-    'Reduce hiring costs by 30%',
-    'Increase employee retention by 25%',
-    'Automate routine HR tasks',
-    'Data-driven decision making'
+  const benefits = [;
+    'Reduce time-to-hire by 60%',;
+    'Improve candidate quality by 40%',;
+    'Reduce hiring costs by 30%',;
+    'Increase employee retention by 25%',;
+    'Automate routine HR tasks',;
+    'Data-driven decision making';
   ];
 
   const pricing = [
@@ -31,6 +31,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       price: '$399/mo',
       features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
       popular: true
+<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
@@ -38,30 +39,39 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
       popular: false
 
+=======
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$999/mo', ;
+      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Recruitment and talent acquisition',
-    'Employee performance management',
-    'Learning and development',
-    'Workforce planning and analytics',
-    'Compliance and HR operations',
-    'Employee engagement and retention'
+  const useCases = [;
+    'Recruitment and talent acquisition',;
+    'Employee performance management',;
+    'Learning and development',;
+    'Workforce planning and analytics',;
+    'Compliance and HR operations',;
+    'Employee engagement and retention';
   ];
 
   const platformModules = [
     'Talent Acquisition',
-    'Performance Management',
-    'Learning & Development',
-    'Workforce Analytics',
-    'Employee Engagement',
-    'Compliance & Reporting',
-    'Onboarding & Offboarding',
-    'Succession Planning'
+    'Performance Management',;
+    'Learning & Development',;
+    'Workforce Analytics',;
+    'Employee Engagement',;
+    'Compliance & Reporting',;
+    'Onboarding & Offboarding',;
+    'Succession Planning';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -305,6 +315,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
+<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
@@ -316,5 +327,18 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         </div>
       </section>
     </div>
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

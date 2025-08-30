@@ -11,9 +11,13 @@ export interface Revolutionary2026MicroSaasService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: "2026-revolutionary-micro-saas",
@@ -21,7 +25,7 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     tagline: "Revolutionary micro SAAS for 2026",
     price: "$149/month",
     description: "Revolutionary micro SAAS platform that transforms how businesses operate in 2026.",
-    features: [
+    features[
       "Revolutionary features",
       "Transformative capabilities",
       "Advanced technology",

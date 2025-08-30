@@ -3,12 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube import SEOHead from '../components/SEOHead';
+=======
+import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide-react';
+import SEOHead from "../components/SEOHead";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import all service data
-import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
-import { IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+import { ADVANCED_AI_SERVICES } from "../data/advancedAIServices";
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from "../data/innovativeITInfrastructure";
+import { IOT_EDGE_COMPUTING_SERVICES } from "../data/iotEdgeComputingServices";
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from "../data/innovativeMicroSaasServices";
 const InnovativeServicesShowcase = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -16,11 +21,18 @@ const InnovativeServicesShowcase = () => {
     const [priceRange, setPriceRange] = useState('all');
     // SEO configuration
     const seoConfig = {
-        title: "Innovative Services 2025 - Zion Tech Group",
+  title: "Innovative Services 2025 - Zion Tech Group",
         description: "Discover cutting-edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",
         keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
-        url: "https://ziontechgroup.com/innovative-services"
-    };
+  url: "https://ziontechgroup.com/innovative-services"
+    
+
+
+
+
+
+
+};
     // Combine all services
     const allServices = [
         ...ADVANCED_AI_SERVICES,
@@ -31,35 +43,50 @@ const InnovativeServicesShowcase = () => {
     const getSubcategoriesForCategory = (category) => {
         if (category === 'all')
             return [];
-        return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || [];
-    };
+        return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || []};
     const getCategoryIcon = (category) => {
         const categoryIcons = {
-            'AI & Analytics': <Brain className="h-5 w-5"/>,
+  'AI & Analytics': <Brain className="h-5 w-5"/>,
             'Emerging Technology': <Rocket className="h-5 w-5"/>,
             'Blockchain & Web3': <Cube className="h-5 w-5"/>,
             'IoT & Edge Computing': <Network className="h-5 w-5"/>,
             'Cybersecurity': <Shield className="h-5 w-5"/>,
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
+  <<<<<<< HEAD
             'Digital Twin': <Cpu className="h-5 w-5"/>
-        };
+        
+
+};
+        return categoryIcons[category] || <Zap className="h-5 w-5"/>};
+=======
+  'Digital Twin': <Cpu className="h-5 w-5"/>
+        
+
+
+
+
+};
         return categoryIcons[category] || <Zap className="h-5 w-5"/>;
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceRange = (price) => {
         if (price < 10000)
             return 'starter';
         if (price < 25000)
             return 'professional';
-        return 'enterprise';
-    };
+        return 'enterprise'};
     const getPriceRangeColor = (range) => {
         switch (range) {
             case 'starter': return 'bg-green-100 text-green-800 border-green-200';
             case 'professional': return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'enterprise': return 'bg-purple-100 text-purple-800 border-purple-200';
+<<<<<<< HEAD
             default: return 'bg-gray-100 text-gray-800 border-gray-200';
 
+=======
+            default: return 'bg-gray-100 text-gray-800 border-gray-200'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig}/>
@@ -104,8 +131,7 @@ const InnovativeServicesShowcase = () => {
 
               <select value={selectedCategory} onChange={(e) => {
             setSelectedCategory(e.target.value);
-            setSelectedSubcategory('all');
-        }} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
+            setSelectedSubcategory('all')}} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Categories</option>
                 {INNOVATIVE_SERVICE_CATEGORIES_2025.map((category) => (<option key={category} value={category}>{category}</option>))}
               </select>
@@ -264,8 +290,7 @@ const InnovativeServicesShowcase = () => {
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSelectedSubcategory('all');
-                setPriceRange('all');
-            }} variant="outline">
+                setPriceRange('all')}} variant="outline">
                 Clear Filters
               </Button>
             </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -448,6 +473,10 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 </div></div></Card></Card></Card></Card>};
 }}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

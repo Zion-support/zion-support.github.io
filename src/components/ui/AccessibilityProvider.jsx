@@ -1,12 +1,17 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-const AccessibilityContext = createContext(undefined);
+const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
+<<<<<<< HEAD
         throw new Error('useAccessibility must be used within an AccessibilityProvider');
 
     return context;
 };
+=======
+        throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+    return context};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AccessibilityProvider = ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
     const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -25,19 +30,17 @@ export const AccessibilityProvider = ({ children }) => {
         // Listen for preference changes
         const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-        const handleMotionChange = (e) => setIsReducedMotion(e.matches);
         const handleContrastChange = (e) => setIsHighContrast(e.matches);
         motionQuery.addEventListener('change', handleMotionChange);
         contrastQuery.addEventListener('change', handleContrastChange);
         return () => {
             motionQuery.removeEventListener('change', handleMotionChange);
-            contrastQuery.removeEventListener('change', handleContrastChange);
-        };
-    }, []);
+            contrastQuery.removeEventListener('change', handleContrastChange)}}, []);
     // Apply accessibility classes to body
     useEffect(() => {
         const body = document.body;
         if (isHighContrast) {
+<<<<<<< HEAD
             body.classList.add('high-contrast');
 
         else {
@@ -55,12 +58,22 @@ export const AccessibilityProvider = ({ children }) => {
         else {
             body.classList.remove('large-text');
 
+=======
+            body.classList.add('high-contrast')}
+        else {
+            body.classList.remove('high-contrast')}
+        if (isReducedMotion) {
+            body.classList.add('reduced-motion')}
+        else {
+            body.classList.remove('reduced-motion')}
+        if (isLargeText) {
+            body.classList.add('large-text')}
+        else {
+            body.classList.remove('large-text')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
-    const focusTrap = (element) => {
-        if (!element)
-            return;
-        const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0)
             return;
         const firstElement = focusableElements[0];
@@ -70,6 +83,7 @@ export const AccessibilityProvider = ({ children }) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
+<<<<<<< HEAD
                         lastElement.focus();
 
 
@@ -80,16 +94,23 @@ export const AccessibilityProvider = ({ children }) => {
 
 
 
+=======
+                        lastElement.focus()}
+                }
+                else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus()}
+                }
+            }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
         return () => {
-            element.removeEventListener('keydown', handleKeyDown);
-        };
-    };
+            element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements
-    const announceToScreenReader = (message) => {
-        const announcement = document.createElement('div');
+    const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
         announcement.className = 'sr-only';
@@ -97,9 +118,7 @@ export const AccessibilityProvider = ({ children }) => {
         document.body.appendChild(announcement);
         // Remove after announcement
         setTimeout(() => {
-            document.body.removeChild(announcement);
-        }, 1000);
-    };
+            document.body.removeChild(announcement)}, 1000)};
     // Keyboard shortcuts
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -107,29 +126,44 @@ export const AccessibilityProvider = ({ children }) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 toggleHighContrast();
+<<<<<<< HEAD
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
 
+=======
+                announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
                 toggleReducedMotion();
+<<<<<<< HEAD
                 announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`);
 
+=======
+                announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
                 e.preventDefault();
                 toggleLargeText();
+<<<<<<< HEAD
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`);
 
+=======
+                announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
+        return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
+    const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
+=======
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [isHighContrast, isReducedMotion, isLargeText]);
-    const toggleHighContrast = () => setIsHighContrast(prev => !prev);
-    const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {
-        isHighContrast,
+  isHighContrast,
         isReducedMotion,
         isLargeText,
         toggleHighContrast,
@@ -137,11 +171,12 @@ export const AccessibilityProvider = ({ children }) => {
         toggleLargeText,
         focusTrap,
         announceToScreenReader,
-    };
+  
+
+};
     return (<AccessibilityContext.Provider value={value}>
       {children}
-    </AccessibilityContext.Provider>);
-};
+    </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
 export const AccessibilityToolbar = () => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
@@ -174,12 +209,15 @@ export const AccessibilityToolbar = () => {
           <p>Ctrl/Cmd + L: Large Text</p>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 // Skip to main content link
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
+<<<<<<< HEAD
     </a>);
 };
 }}}}}}}}}}}}}}}
+=======
+    </a>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

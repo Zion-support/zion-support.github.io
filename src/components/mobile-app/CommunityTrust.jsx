@@ -11,7 +11,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     {
       name: 'Sarah Chen',
       role: 'IT Director',
-      company: 'TechCorp Inc.',
+      comp: 'TechCorp Inc.',
       content: 'Zion mobile app has transformed how our team manages IT assets in the field. The offline capability is a game-changer.',
       rating: 5,
       avatar: '👩‍💼'
@@ -19,7 +19,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     {
       name: 'Marcus Rodriguez',
       role: 'Systems Administrator',
-      company: 'Global Solutions',
+      comp: 'Global Solutions',
       content: 'Intuitive interface and powerful features. Our asset tracking accuracy improved by 95% since switching to Zion.',
       rating: 5,
       avatar: '👨‍💻'
@@ -27,7 +27,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     {
       name: 'Emily Watson',
       role: 'IT Manager',
-      company: 'InnovateTech',
+      comp: 'InnovateTech',
       content: 'The real-time synchronization and mobile-first approach make Zion the perfect solution for our distributed team.',
       rating: 5,
       avatar: '👩‍🔧'
@@ -100,7 +100,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-xs text-gray-500">{testimonial.company}</div>
+                    <div className="text-xs text-gray-500">{testimonial.comp}</div>
                   </div>
                 </div>
 
@@ -214,5 +214,9 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,22 +1,43 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Filter, X interface FilterOption {
   value: string;
   label: string;
   count?: number;
+=======
+import React from 'react.ts';
+import { Filter, X  } from 'lucide-react';
+
+interface FilterOption {
+
+  value: string;
+  label: string;
+  count?: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterGroup {
+
   title: string;
   key: string;
   options: FilterOption[];
+<<<<<<< HEAD
   type: 'checkbox' | 'radio' | 'range';
+=======
+  type: 'checkbox' | 'radio' | 'range'}
 
-interface FilterSidebarProps {
+interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   filters: FilterGroup[];
-  selectedFilters: Record<string, string[]>;
-  onFilterChange: (key: string, value: string, checked: boolean) => void;
-  onClearFilters: () => void;
+  selectedFilters: Record<string, any>;
+  onFilterChange: (key: string, value: string, checked: boolean)  => void;
+  onClearFilters: ()  => void;
   isOpen: boolean;
+<<<<<<< HEAD
   onClose: () => void;
+=======
+  onClose: ()  => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function FilterSidebar({
   filters,
@@ -60,47 +81,83 @@ export function FilterSidebar({
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
+<<<<<<< HEAD
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
 
+=======
+              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline"
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear all
             </button>
           </div>
 
           {/* Filter groups */}
-          {filters.map((group) => (
+<<<<<<< HEAD
+          {filters.map((group)  => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
 
               <div className="space-y-2">
                 {group.options.map((option) => {
+=======;
+          {filters.map((group) => (;
+            <div key={group.key} className="space-y-3">;
+              <h4 className="font-medium text-white">{group.title}</h4>;
+              ;
+              <div className="space-y-2">;
+                {group.options.map((option) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
 
                   return (
-                    <label key={option.value} className="flex items-center gap-3 cursor-pointer">
+                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
                         name={group.key}
                         value={option.value}
                         checked={isSelected}
-                        onChange={(e) => onFilterChange(group.key, option.value, e.target.checked)}
+                        onChange = {
+  (e) => onFilterChange(group.key, option.value,
+  e.target.checked)
+
+
+
+
+
+
+}
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
                       />
                       <span className="text-sm text-zion-slate-light">
                         {option.label}
                         {option.count && (
                           <span className="ml-2 text-zion-slate-light/60">
+<<<<<<< HEAD
                             ({option.count})
                           </span>
                         )}
                       </span>
                     </label>
+                  )})};
+=======;
+                            ({option.count});
+                          </span>;
+                        )};
+                      </span>;
+                    </label>;
                   );
                 })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
           ))}
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 </div>}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

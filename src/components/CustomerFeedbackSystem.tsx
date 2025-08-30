@@ -16,7 +16,14 @@ import {
   Download,
   Filter,
   Search
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Feedback {
+
   id: string;
   customerName: string;
   rating: number;
@@ -27,36 +34,62 @@ interface Feedback {
   helpful: number;
   unhelpful: number;
   tags: string[];
+<<<<<<< HEAD
   verified: boolean;
+=======
+  verified: boolean}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
+<<<<<<< HEAD
   topCategories: Array<{ category: string; count: number; percentage: number }>;
+=======
+  topCategories: Array<any>}
 
-interface CustomerFeedbackSystemProps {
+interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   showStats?: boolean;
   showFilters?: boolean;
+<<<<<<< HEAD
   maxFeedback?: number;
+=======
+  maxFeedback?: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
+<<<<<<< HEAD
   showStats = true,
   showFilters = true,
-  maxFeedback = 10
-}) => {
+  maxFeedback = 10;
+}) => {;
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
+=======
+  showStats = true,;
+  showFilters = true,;
+  maxFeedback = 10;
+}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
-    topCategories: []
+    topCategories[]
   });
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedRating, setSelectedRating] = useState<number>(0);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedRating, setSelectedRating] = useState<any>(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
@@ -66,7 +99,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   });
 
   // Sample feedback data
-  useEffect(() => {
+  useEffect(()  => {
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -78,7 +111,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-15',
         helpful: 24,
         unhelpful: 1,
-        tags: ['AI', 'Consulting', 'Machine Learning'],
+        tags['AI', 'Consulting', 'Machine Learning'],
         verified: true
       },
       {
@@ -91,7 +124,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-12',
         helpful: 18,
         unhelpful: 2,
-        tags: ['Cloud', 'Migration', 'Support'],
+        tags['Cloud', 'Migration', 'Support'],
         verified: true
       },
       {
@@ -104,7 +137,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-10',
         helpful: 31,
         unhelpful: 0,
-        tags: ['Digital Transformation', 'Infrastructure', 'ROI'],
+        tags['Digital Transformation', 'Infrastructure', 'ROI'],
         verified: true
       },
       {
@@ -117,7 +150,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-08',
         helpful: 12,
         unhelpful: 5,
-        tags: ['Security', 'Communication', 'Project Management'],
+        tags['Security', 'Communication', 'Project Management'],
         verified: true
       },
       {
@@ -130,35 +163,46 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-05',
         helpful: 28,
         unhelpful: 1,
-        tags: ['AI', 'Efficiency', 'Implementation'],
+        tags['AI', 'Efficiency', 'Implementation'],
         verified: true
 
     ];
 
     setFeedback(sampleFeedback);
-    setFilteredFeedback(sampleFeedback);
-  }, []);
+    setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(() => {
+  useEffect(()  => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
       const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
       const responseRate = 95; // Simulated response rate
 
-      const categoryCounts = feedback.reduce((acc, f) => {
+      const categoryCounts = feedback.reduce((acc, f) => {;
         acc[f.category] = (acc[f.category] || 0) + 1;
+<<<<<<< HEAD
         return acc;
       }, { /* empty */ } as Record<string, number>);
+=======
+        return acc}, {} as Record<string, any>);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
+<<<<<<< HEAD
           category: category.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)  => b.count - a.count);
+=======;
+          category: category.charAt(0).toUpperCase() + category.slice(1),;
+          count,;
+          percentage: (count / totalFeedback) * 100;
+        }));
+        .sort((a, b) => b.count - a.count);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         .slice(0, 4);
 
       setStats({
@@ -167,8 +211,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         positivePercentage,
         responseRate,
         topCategories
+<<<<<<< HEAD
       });
 
+=======
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [feedback]);
 
   // Filter feedback
@@ -176,27 +224,44 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
+<<<<<<< HEAD
       filtered = filtered.filter(f => f.category === selectedCategory);
 
     if (selectedRating > 0) {
       filtered = filtered.filter(f => f.rating === selectedRating);
+=======
+      filtered = filtered.filter(f => f.category === selectedCategory)}
+
+    if (selectedRating > 0) {
+      filtered = filtered.filter(f => f.rating === selectedRating)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchQuery) {
       filtered = filtered.filter(f =>
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )};
+=======;
+      filtered = filtered.filter(f => ;
+        f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    setFilteredFeedback(filtered.slice(0, maxFeedback));
-  }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
+    setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   // Handle feedback submission
-  const handleSubmitFeedback = () => {
+  const handleSubmitFeedback = () => {;
     if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return;
 
     const feedback: Feedback = {
-      id: Date.now().toString(),
+  id: Date.now().toString(),
       customerName: 'Anonymous Customer',
       rating: newFeedback.rating,
       comment: newFeedback.comment,
@@ -205,23 +270,50 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
-      tags: [],
-      verified: false
-    };
+<<<<<<< HEAD
+      tags[],
+  verified: false;
+    ;
 
-    setFeedback(prev => [feedback, ...prev]);
+};
+=======
+      tags: [],;
+  ;
+  ;
+  verified: false;
+    ;
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+    setFeedback(prev  => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false);
-  };
+    setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {
+  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
     setFeedback(prev => prev.map(f => {
+<<<<<<< HEAD
       if (f.id === feedbackId) {
         return {
           ...f,
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
+        }};
+      return f}))};
+
+  // Get sentiment color
+  const getSentimentColor = (sentiment: string)  => {
+    switch (sentiment) {;
+=======;
+      if (f.id === feedbackId) {;
+        return {;
+          ...f,;
+          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
         };
 
       return f;
@@ -229,27 +321,48 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {
-    switch (sentiment) {
+  const getSentimentColor = (sentiment: string) => {;
+    switch (sentiment) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
+<<<<<<< HEAD
       default: return 'text-yellow-400 bg-yellow-400/20';
 
+=======
+      default: return 'text-yellow-400 bg-yellow-400/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors = {
-      'service': 'text-blue-400 bg-blue-400/20',
+  'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
+<<<<<<< HEAD
       'support': 'text-purple-400 bg-purple-400/20',
-      'overall': 'text-zion-cyan bg-zion-cyan/20'
-    };
+  'overall': 'text-zion-cyan bg-zion-cyan/20';
+    ;
+
+};
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
+=======
+      'support': 'text-purple-400 bg-purple-400/20',;
+  ;
+  ;
+  'overall': 'text-zion-cyan bg-zion-cyan/20';
+    ;
+
+
+
+
+};
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-6">
+    <div className = "w-full max-w-6xl mx-auto p-6">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-white mb-4">Customer Feedback</h1>
@@ -260,8 +373,26 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
             <div className="text-3xl font-bold text-white mb-2">{stats.totalFeedback}</div>
@@ -269,8 +400,26 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -291,8 +440,26 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.2 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -301,8 +468,26 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.3 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -316,12 +501,30 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)  => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
 
@@ -391,9 +594,36 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       <AnimatePresence>
         {showFeedbackForm && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+
+
+
+
+}}
+            exit = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.3 }}
             className="mb-6 overflow-hidden"
 
@@ -408,7 +638,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                     {[1, 2, 3, 4, 5].map((star) => (
                       <button
                         key={star}
-                        onClick={() => setNewFeedback(prev => ({ ...prev, rating: star }))}
+                        onClick = {
+  () => setNewFeedback(prev => ({ ...prev,
+  rating: star 
+
+
+
+
+
+
+}))}
                         className="p-2 hover:scale-110 transition-transform"
 
                         <Star
@@ -426,7 +665,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
-                    onChange={(e) => setNewFeedback(prev => ({ ...prev, category: e.target.value as Feedback['category'] }))}
+                    onChange = {
+  (e) => setNewFeedback(prev => ({ ...prev,
+  category: e.target.value as Feedback['category'] 
+
+
+
+
+
+
+}))}
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                     <option value="overall">Overall Experience</option>
@@ -441,7 +689,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
                   <textarea
                     value={newFeedback.comment}
-                    onChange={(e) => setNewFeedback(prev => ({ ...prev, comment: e.target.value }))}
+                    onChange = {
+  (e) => setNewFeedback(prev => ({ ...prev,
+  comment: e.target.value 
+
+
+
+
+
+
+}))}
                     placeholder="Share your experience with Zion Tech Group..."
                     rows={4}
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none"
@@ -476,8 +733,26 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         {filteredFeedback.map((item, index) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
 
@@ -545,14 +820,32 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
               <div className="flex items-center gap-4">
                 <button
-                  onClick={() => handleVote(item.id, 'helpful')}
+                  onClick = {
+  () => handleVote(item.id,
+  'helpful')
+
+
+
+
+
+
+}
                   className="flex items-center gap-2 text-zinc-400 hover:text-green-400 transition-colors"
 
                   <ThumbsUp className="w-4 h-4" />
                   <span className="text-sm">{item.helpful}</span>
                 </button>
                 <button
-                  onClick={() => handleVote(item.id, 'unhelpful')}
+                  onClick = {
+  () => handleVote(item.id,
+  'unhelpful')
+
+
+
+
+
+
+}
                   className="flex items-center gap-2 text-zinc-400 hover:text-red-400 transition-colors"
 
                   <ThumbsDown className="w-4 h-4" />
@@ -587,11 +880,28 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           <button
             onClick={() => setShowFeedbackForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+<<<<<<< HEAD
 
+=======
+          >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Add Feedback
           </button>
         </motion.div>
-      )}
-    </div>
+      )};
+    </div>;
+  )};
+=======
+            Add Feedback;
+          </button>;
+        </motion.div>;
+      )};
+    </div>;
   );
+<<<<<<< HEAD
 };}}}}}}}}}}}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

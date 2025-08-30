@@ -8,10 +8,17 @@ it('checkOnline returns false when navigator is offline', async () => {
   const result = await client.checkOnline();
   expect(result).toBe(false);
 });
-// Test that checkOnline returns false when navigator is undefined
-it('checkOnline returns false when navigator is undefined', async () => {
+<<<<<<< HEAD
+// Test that checkOnline returns false when navigator is null
+it('checkOnline returns false when navigator is null', async () => {
+  const original = (global as ).navigator;
+  Object.defineProperty(global, 'navigator', { value: null, configurable: true, writable: true });
+=======
+// Test that checkOnline returns false when navigator is null
+it('checkOnline returns false when navigator is null', async () => {
   const original = (global as any).navigator;
-  Object.defineProperty(global, 'navigator', { value: undefined, configurable: true, writable: true });
+  Object.defineProperty(global, 'navigator', { value: null, configurable: true, writable: true });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const result = await client.checkOnline();
   expect(result).toBe(false);
   Object.defineProperty(global, 'navigator', { value: original, configurable: true, writable: true });
@@ -35,7 +42,7 @@ it('safeFetch preserves Headers object values', async () => {
   const headers = new Headers({ apikey: 'test-key' });
   const fetchSpy = jest.fn().mockResolvedValue({ ok: true, status: 200 } as Response);
   jest.spyOn(client, 'checkOnline').mockResolvedValue(true);
-  (global as any).fetch = fetchSpy;
+  (global as ).fetch = fetchSpy;
   await client.safeFetch('https://example.com', { headers });
   const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
   expect(calledHeaders.get('apikey')).toBe('test-key');

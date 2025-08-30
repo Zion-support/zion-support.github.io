@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
@@ -24,10 +24,15 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                     .eq("id", profileId)
                     .single();
                 if (error) {
+<<<<<<< HEAD
                     throw error;
 
                 setProfileData(data);
 
+=======
+                    throw error}
+                setProfileData(data)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (error) {
 <<<<<<< HEAD
                 // // // console.error("Error fetching profile:", error);
@@ -39,6 +44,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
                     variant: "destructive",
+<<<<<<< HEAD
                 });
 
             finally {
@@ -48,10 +54,19 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
         if (profileId) {
             fetchProfile();
 
+=======
+                })}
+            finally {
+                setIsLoading(false)}
+        };
+        if (profileId) {
+            fetchProfile()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
+<<<<<<< HEAD
       </div>);
 
     if (isError || !profileData) {
@@ -59,6 +74,13 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
         <p className="text-red-500">Failed to load profile.</p>
       </div>);
 
+=======
+      </div>)}
+    if (isError || !profileData) {
+        return (<div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
 
@@ -154,16 +176,29 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
-            <HireNowCTA talentProfile={{
+            <HireNowCTA talentProfile = {
+  {
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
-        }}/>
+  hourly_rate: profileData?.hourly_rate || 0
+        
+
+
+
+
+
+
+}}/>
             {/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
     </>);
 }}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance() {
   const features = [
     'AI-powered security compliance optimization',
-    'Intelligent compliance monitoring and reporting',
-    'Automated compliance verification and validation',
-    'Predictive analytics for compliance needs',
-    'Smart compliance framework management',
-    'AI-driven compliance automation and orchestration',
-    'Real-time compliance performance tracking',
-    'Custom AI models for compliance applications'
+    'Intelligent compliance monitoring and reporting',;
+    'Automated compliance verification and validation',;
+    'Predictive analytics for compliance needs',;
+    'Smart compliance framework management',;
+    'AI-driven compliance automation and orchestration',;
+    'Real-time compliance performance tracking',;
+    'Custom AI models for compliance applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$399/mo',
       details: ['Up to 5 compliance frameworks', 'Basic AI features', 'Standard compliance', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$999/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$2,499/mo',
       details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$999/mo', 
+      details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security compliance optimization',
-    'Compliance monitoring and reporting',
-    'Compliance verification and validation',
-    'Compliance framework management and automation',
-    'Compliance automation and orchestration',
-    'Compliance scaling and management'
+  const useCases = [;
+    'Security compliance optimization',;
+    'Compliance monitoring and reporting',;
+    'Compliance verification and validation',;
+    'Compliance framework management and automation',;
+    'Compliance automation and orchestration',;
+    'Compliance scaling and management';
   ];
 
-  const benefits = [
-    'Improve security compliance performance by 50-80%',
-    'Reduce compliance verification time by 40-70%',
-    'Cut security compliance costs by 35-65%',
-    'Enhance security compliance reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security compliance operations efficiently'
+  const benefits = [;
+    'Improve security compliance performance by 50-80%',;
+    'Reduce compliance verification time by 40-70%',;
+    'Cut security compliance costs by 35-65%',;
+    'Enhance security compliance reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security compliance operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

@@ -32,14 +32,22 @@ export function ChatBotPanel() {
     // Auto-scroll to bottom when messages change
     useEffect(() => {
         if (scrollAreaRef.current) {
+<<<<<<< HEAD
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
 
+=======
+            scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
         if (inputRef.current) {
+<<<<<<< HEAD
             inputRef.current.focus();
 
+=======
+            inputRef.current.focus()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     const handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
@@ -68,6 +76,7 @@ export function ChatBotPanel() {
                 setFailedAttempts((prev) => prev + 1);
                 // After 3 failed attempts, suggest escalation
                 if (failedAttempts >= 2) {
+<<<<<<< HEAD
                     suggestEscalation();
 
 
@@ -76,6 +85,14 @@ export function ChatBotPanel() {
                 setFailedAttempts(0);
 
 
+=======
+                    suggestEscalation()}
+            }
+            else {
+                // Reset failed attempts if successful
+                setFailedAttempts(0)}
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error in AI chat:", error);
@@ -89,12 +106,19 @@ export function ChatBotPanel() {
             });
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
+<<<<<<< HEAD
                 suggestEscalation();
 
 
         finally {
             setIsLoading(false);
 
+=======
+                suggestEscalation()}
+        }
+        finally {
+            setIsLoading(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const sendToAIAssistant = async (message) => {
         try {
@@ -104,21 +128,29 @@ export function ChatBotPanel() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    messages: [{ role: "user", content: message }]
+                    messages[{ role: "user", content: message }]
                 }),
             });
             if (!response.ok) {
                 return {
                     success: false,
                     message: "I'm having trouble connecting to my knowledge base right now."
+<<<<<<< HEAD
                 };
 
+=======
+                }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const data = await response.json();
             return {
                 success: true,
                 message: data.message
+<<<<<<< HEAD
             };
 
+=======
+            }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error in AI chat:", error);
@@ -128,8 +160,12 @@ export function ChatBotPanel() {
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
+<<<<<<< HEAD
             };
 
+=======
+            }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const suggestEscalation = () => {
         const escalationMessage = {
@@ -140,8 +176,7 @@ export function ChatBotPanel() {
         };
         setMessages((prev) => [...prev, escalationMessage]);
         // Log this interaction for the support team
-        logSupportEscalation();
-    };
+        logSupportEscalation()};
     const logSupportEscalation = async () => {
         try {
             // Send the conversation to the backend for logging
@@ -156,6 +191,7 @@ export function ChatBotPanel() {
                     sender: m.sender,
                     timestamp: m.timestamp
                 }))
+<<<<<<< HEAD
             });
 
         catch (error) {
@@ -169,6 +205,11 @@ export function ChatBotPanel() {
     };
     const handleQuickReply = (text) => {
         handleSendMessage(text);
+=======
+            })}
+        catch (error) {
+            console.error("Failed to log support escalation:", error)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleEscalateToLiveAgent = () => {
         setMessages((prev) => [
@@ -190,8 +231,7 @@ export function ChatBotPanel() {
         toast({
             title: "Support request submitted",
             description: "A support agent will be with you shortly.",
-        });
-    };
+        })};
     const handleEmailSupport = () => {
         setMessages((prev) => [
             ...prev,
@@ -206,9 +246,14 @@ export function ChatBotPanel() {
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
                 sender: "bot",
                 timestamp: new Date()
+<<<<<<< HEAD
 
         ]);
     };
+=======
+            }
+        ])};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
@@ -221,7 +266,16 @@ export function ChatBotPanel() {
       </ScrollArea>
 
       {messages.length === 1 && (<div className="px-4 py-3">
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className = {
+  cn("text-sm mb-2",
+  theme === "dark" ? "text-gray-300" : "text-gray-600")
+
+
+
+
+
+
+}>
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -230,7 +284,16 @@ export function ChatBotPanel() {
         </div>)}
 
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className = {
+  cn("text-sm mb-2 font-medium",
+  theme === "dark" ? "text-gray-300" : "text-gray-600")
+
+
+
+
+
+
+}>
             Need more help?
           </p>
           <div className="flex gap-2">
@@ -242,19 +305,55 @@ export function ChatBotPanel() {
             </Button>
           </div>
         </div>)}
+<<<<<<< HEAD
 
       <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
+=======
+      
+      <div className = {
+  cn("p-4 border-t",
+  theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
+
+
+
+
+
+
+}>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <form onSubmit={(e) => {
             e.preventDefault();
+<<<<<<< HEAD
+            handleSendMessage()}} className="flex items-center gap-2">
+          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
+  cn("flex-1",
+  theme === "dark"
+=======
             handleSendMessage();
-        }} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={cn("flex-1", theme === "dark"
+        
+
+}} className="flex items-center gap-2">
+          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
+  cn("flex-1",
+  theme === "dark"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
-            : "bg-white border-gray-200")}/>
+            : "bg-white border-gray-200")
+
+
+
+
+
+
+}/>
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
             <Send className="h-4 w-4"/>
           </Button>
         </form>
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

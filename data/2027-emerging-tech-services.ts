@@ -13,8 +13,12 @@ export interface Service {
   implementationTime: string;
   roi: string;
   link: string;
+<<<<<<< HEAD
   tags: string[];
 
+=======
+  tags: string[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',
@@ -22,7 +26,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.',
     category: 'Quantum Computing',
     price: '$12,999/month',
-    features: [
+    features[
       'Quantum neural networks',
       'Quantum optimization algorithms',
       'Hybrid classical-quantum ML',
@@ -30,21 +34,21 @@ export const emergingTech2027Services: Service[] = [
       'Quantum clustering',
       'Real-time quantum processing'
     ],
-    benefits: [
+    benefits[
       '1000x faster ML training',
       'Unprecedented accuracy',
       'Quantum advantage in optimization',
       'Breakthrough AI capabilities',
       'Future-proof technology'
     ],
-    useCases: [
+    useCases[
       'Drug discovery',
       'Financial modeling',
       'Climate prediction',
       'Material science',
       'Cryptographic analysis'
     ],
-    targetAudience: [
+    targetAudience[
       'Research institutions',
       'Pharmaceutical companies',
       'Financial institutions',
@@ -56,7 +60,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks',
     roi: '1200% within 18 months',
     link: 'https://ziontechgroup.com/services/quantum-machine-learning',
-    tags: ['Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization']
+    tags['Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization']
   },
   {
     id: 'neuromorphic-computing',
@@ -64,7 +68,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Advanced computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing and learning.',
     category: 'AI & Computing',
     price: '$8,999/month',
-    features: [
+    features[
       'Brain-inspired architecture',
       'Spiking neural networks',
       'Event-driven processing',
@@ -72,21 +76,21 @@ export const emergingTech2027Services: Service[] = [
       'Real-time learning',
       'Adaptive algorithms'
     ],
-    benefits: [
+    benefits[
       '100x more energy efficient',
       'Real-time continuous learning',
       'Adaptive behavior',
       'Scalable architecture',
       'Biological accuracy'
     ],
-    useCases: [
+    useCases[
       'Edge computing',
       'IoT devices',
       'Autonomous systems',
       'Robotics',
       'Sensor networks'
     ],
-    targetAudience: [
+    targetAudience[
       'IoT companies',
       'Robotics manufacturers',
       'Edge computing providers',
@@ -98,7 +102,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '4-6 weeks',
     roi: '800% within 12 months',
     link: 'https://ziontechgroup.com/services/neuromorphic-computing',
-    tags: ['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics']
+    tags['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics']
   },
   {
     id: 'synthetic-biology-platform',
@@ -106,7 +110,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.',
     category: 'Biotechnology',
     price: '$15,999/month',
-    features: [
+    features[
       'DNA design automation',
       'Genetic circuit engineering',
       'Protein design',
@@ -114,21 +118,21 @@ export const emergingTech2027Services: Service[] = [
       'Biological simulation',
       'Lab automation integration'
     ],
-    benefits: [
+    benefits[
       'Faster biological design',
       'Reduced development costs',
       'Improved accuracy',
       'Scalable production',
       'Custom biological solutions'
     ],
-    useCases: [
+    useCases[
       'Pharmaceutical development',
       'Agricultural biotechnology',
       'Industrial biotechnology',
       'Environmental remediation',
       'Biofuel production'
     ],
-    targetAudience: [
+    targetAudience[
       'Pharmaceutical companies',
       'Agricultural companies',
       'Industrial biotech firms',
@@ -140,7 +144,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '8-12 weeks',
     roi: '1500% within 24 months',
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
-    tags: ['Synthetic Biology', 'Biotechnology', 'AI', 'Genetic Engineering', 'Research']
+    tags['Synthetic Biology', 'Biotechnology', 'AI', 'Genetic Engineering', 'Research']
   },
   {
     id: 'quantum-sensors-network',
@@ -148,7 +152,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Advanced network of quantum sensors for ultra-precise measurements in various fields including navigation, medical imaging, and environmental monitoring.',
     category: 'Quantum Technology',
     price: '$9,999/month',
-    features: [
+    features[
       'Quantum entanglement sensors',
       'Ultra-precise measurements',
       'Real-time data processing',
@@ -156,21 +160,21 @@ export const emergingTech2027Services: Service[] = [
       'Environmental monitoring',
       'Medical imaging capabilities'
     ],
-    benefits: [
+    benefits[
       '1000x more precise measurements',
       'Real-time monitoring',
       'Unprecedented sensitivity',
       'Multi-application support',
       'Future-proof technology'
     ],
-    useCases: [
+    useCases[
       'Medical imaging',
       'Environmental monitoring',
       'Navigation systems',
       'Scientific research',
       'Industrial inspection'
     ],
-    targetAudience: [
+    targetAudience[
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
@@ -182,7 +186,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks',
     roi: '900% within 15 months',
     link: 'https://ziontechgroup.com/services/quantum-sensors-network',
-    tags: ['Quantum Technology', 'Sensors', 'Medical Imaging', 'Environmental', 'Navigation']
+    tags['Quantum Technology', 'Sensors', 'Medical Imaging', 'Environmental', 'Navigation']
   },
   {
     id: 'brain-computer-interface',
@@ -190,7 +194,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human-computer interaction.',
     category: 'Neural Technology',
     price: '$19,999/month',
-    features: [
+    features[
       'Neural signal processing',
       'Thought-to-text conversion',
       'Brain-controlled devices',
@@ -198,21 +202,21 @@ export const emergingTech2027Services: Service[] = [
       'Safety protocols',
       'Real-time processing'
     ],
-    benefits: [
+    benefits[
       'Direct brain communication',
       'Assistive technology',
       'Enhanced human capabilities',
       'Medical applications',
       'Research breakthroughs'
     ],
-    useCases: [
+    useCases[
       'Assistive technology',
       'Medical rehabilitation',
       'Research applications',
       'Gaming and entertainment',
       'Communication aids'
     ],
-    targetAudience: [
+    targetAudience[
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
@@ -224,7 +228,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '10-12 weeks',
     roi: '2000% within 30 months',
     link: 'https://ziontechgroup.com/services/brain-computer-interface',
-    tags: ['Brain-Computer Interface', 'Neural Technology', 'Medical', 'Assistive Technology', 'Research']
+    tags['Brain-Computer Interface', 'Neural Technology', 'Medical', 'Assistive Technology', 'Research']
   },
   {
     id: 'quantum-internet-security',
@@ -232,7 +236,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Next-generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.',
     category: 'Cybersecurity',
     price: '$7,999/month',
-    features: [
+    features[
       'Quantum key distribution',
       'Quantum encryption',
       'Quantum-resistant algorithms',
@@ -240,21 +244,21 @@ export const emergingTech2027Services: Service[] = [
       'Quantum authentication',
       'Global security network'
     ],
-    benefits: [
+    benefits[
       'Unhackable communications',
       'Future-proof security',
       'Quantum-resistant protection',
       'Global coverage',
       'Real-time security'
     ],
-    useCases: [
+    useCases[
       'Government communications',
       'Financial transactions',
       'Healthcare data protection',
       'Military communications',
       'Critical infrastructure'
     ],
-    targetAudience: [
+    targetAudience[
       'Government agencies',
       'Financial institutions',
       'Healthcare organizations',
@@ -266,7 +270,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '4-6 weeks',
     roi: '1000% within 18 months',
     link: 'https://ziontechgroup.com/services/quantum-internet-security',
-    tags: ['Quantum Security', 'Cybersecurity', 'Encryption', 'Government', 'Financial']
+    tags['Quantum Security', 'Cybersecurity', 'Encryption', 'Government', 'Financial']
   },
   {
     id: 'autonomous-robotics-platform',
@@ -274,7 +278,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Advanced platform for developing, deploying, and managing autonomous robots with AI-powered decision making and learning capabilities.',
     category: 'Robotics & AI',
     price: '$6,999/month',
-    features: [
+    features[
       'AI-powered navigation',
       'Autonomous decision making',
       'Learning algorithms',
@@ -282,21 +286,21 @@ export const emergingTech2027Services: Service[] = [
       'Safety systems',
       'Performance analytics'
     ],
-    benefits: [
+    benefits[
       'Fully autonomous operation',
       'Continuous learning',
       'Scalable deployment',
       'Cost reduction',
       'Improved efficiency'
     ],
-    useCases: [
+    useCases[
       'Manufacturing automation',
       'Warehouse operations',
       'Agricultural automation',
       'Service robots',
       'Exploration robots'
     ],
-    targetAudience: [
+    targetAudience[
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
@@ -308,7 +312,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '5-7 weeks',
     roi: '700% within 12 months',
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platform',
-    tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics']
+    tags['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics']
   },
   {
     id: 'quantum-materials-discovery',
@@ -316,7 +320,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.',
     category: 'Materials Science',
     price: '$13,999/month',
-    features: [
+    features[
       'Quantum material simulation',
       'AI-powered discovery',
       'Property prediction',
@@ -324,21 +328,21 @@ export const emergingTech2027Services: Service[] = [
       'Performance testing',
       'Database management'
     ],
-    benefits: [
+    benefits[
       'Faster material discovery',
       'Unprecedented properties',
       'Cost reduction',
       'Custom solutions',
       'Breakthrough innovations'
     ],
-    useCases: [
+    useCases[
       'Semiconductor development',
       'Battery technology',
       'Aerospace materials',
       'Medical devices',
       'Energy storage'
     ],
-    targetAudience: [
+    targetAudience[
       'Semiconductor companies',
       'Battery manufacturers',
       'Aerospace companies',
@@ -350,7 +354,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '8-10 weeks',
     roi: '1100% within 20 months',
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery',
-    tags: ['Materials Science', 'Quantum Computing', 'AI', 'Discovery', 'Innovation']
+    tags['Materials Science', 'Quantum Computing', 'AI', 'Discovery', 'Innovation']
   },
   {
     id: 'quantum-financial-modeling',
@@ -358,7 +362,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Advanced financial modeling platform that uses quantum computing for ultra-accurate predictions, risk assessment, and portfolio optimization.',
     category: 'Financial Technology',
     price: '$11,999/month',
-    features: [
+    features[
       'Quantum risk modeling',
       'Portfolio optimization',
       'Market prediction',
@@ -366,21 +370,21 @@ export const emergingTech2027Services: Service[] = [
       'Real-time analysis',
       'Regulatory compliance'
     ],
-    benefits: [
+    benefits[
       '1000x faster calculations',
       'Improved accuracy',
       'Better risk assessment',
       'Optimized portfolios',
       'Real-time insights'
     ],
-    useCases: [
+    useCases[
       'Risk management',
       'Portfolio optimization',
       'Market analysis',
       'Stress testing',
       'Regulatory reporting'
     ],
-    targetAudience: [
+    targetAudience[
       'Investment banks',
       'Hedge funds',
       'Asset managers',
@@ -392,7 +396,7 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks',
     roi: '900% within 16 months',
     link: 'https://ziontechgroup.com/services/quantum-financial-modeling',
-    tags: ['Financial Technology', 'Quantum Computing', 'Risk Management', 'Portfolio', 'Modeling']
+    tags['Financial Technology', 'Quantum Computing', 'Risk Management', 'Portfolio', 'Modeling']
   },
   {
     id: 'quantum-climate-modeling',
@@ -400,7 +404,7 @@ export const emergingTech2027Services: Service[] = [
     description: 'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.',
     category: 'Environmental Technology',
     price: '$10,999/month',
-    features: [
+    features[
       'Quantum climate simulation',
       'Weather prediction',
       'Environmental modeling',
@@ -408,21 +412,21 @@ export const emergingTech2027Services: Service[] = [
       'Predictive analytics',
       'Data visualization'
     ],
-    benefits: [
+    benefits[
       '1000x faster modeling',
       'Improved accuracy',
       'Real-time predictions',
       'Better understanding',
       'Policy support'
     ],
-    useCases: [
+    useCases[
       'Climate research',
       'Weather forecasting',
       'Environmental planning',
       'Policy development',
       'Disaster preparedness'
     ],
-    targetAudience: [
+    targetAudience[
       'Government agencies',
       'Research institutions',
       'Environmental organizations',
@@ -434,6 +438,12 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '7-9 weeks',
     roi: '800% within 18 months',
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',
+<<<<<<< HEAD
     tags: ['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
 
 ];}}
+=======
+    tags['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
+  }
+];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

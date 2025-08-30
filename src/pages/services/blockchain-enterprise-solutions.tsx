@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function BlockchainEnterpriseSolutions() {
+export default function BlockchainEnterpriseSolutions(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
+        <meta name = "description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
         <meta name="keywords" content="blockchain, enterprise blockchain, smart contracts, DeFi, distributed ledger, cryptocurrency, enterprise solutions" />
       </Helmet>
 
@@ -62,7 +69,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Lock,
@@ -93,8 +100,13 @@ export default function BlockchainEnterpriseSolutions() {
                   icon: Globe,
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
+<<<<<<< HEAD
 
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -119,7 +131,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Supply Chain",
@@ -156,8 +168,13 @@ export default function BlockchainEnterpriseSolutions() {
                   description: "Peer-to-peer energy trading and renewable energy certificates.",
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
+<<<<<<< HEAD
 
               ].map((useCase, index) => (
+=======
+                }
+              ].map((useCase, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -217,7 +234,7 @@ export default function BlockchainEnterpriseSolutions() {
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -300,7 +317,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -321,8 +338,13 @@ export default function BlockchainEnterpriseSolutions() {
                   step: "04",
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
+<<<<<<< HEAD
 
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -355,6 +377,7 @@ export default function BlockchainEnterpriseSolutions() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200"
+<<<<<<< HEAD
 
                 Explore All Services
               </Link>
@@ -363,5 +386,15 @@ export default function BlockchainEnterpriseSolutions() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}

@@ -1,15 +1,21 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import SEO from "@/components/SEO";
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight export default function ServicesOverview() {
+=======
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
+export default function ServicesOverview() {
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const serviceCategories = [
         {
             name: "AI & Machine Learning",
             description: "Cutting-edge artificial intelligence solutions for business transformation",
             icon: Brain,
             color: "from-purple-600 to-blue-600",
-            services: [
+            services[
                 {
                     name: "AI Strategy & Consulting",
                     description: "Strategic guidance on implementing AI solutions",
@@ -35,7 +41,7 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             description: "Transform raw data into actionable business intelligence",
             icon: Database,
             color: "from-blue-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Business Intelligence & Reporting",
                     description: "Interactive dashboards and automated reporting",
@@ -61,7 +67,7 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             description: "Connected ecosystems and real-time edge processing",
             icon: Wifi,
             color: "from-green-600 to-emerald-600",
-            services: [
+            services[
                 {
                     name: "IoT Device Management Platform",
                     description: "Comprehensive IoT device management",
@@ -87,7 +93,7 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             description: "Decentralized applications and blockchain solutions",
             icon: LinkIcon,
             color: "from-purple-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Smart Contract Development",
                     description: "Secure, audited smart contracts",
@@ -113,7 +119,7 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             description: "Modern software delivery and cloud infrastructure",
             icon: Cloud,
             color: "from-orange-600 to-red-600",
-            services: [
+            services[
                 {
                     name: "Cloud Migration & Strategy",
                     description: "Multi-cloud strategy and migration",
@@ -139,7 +145,7 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             description: "Advanced security solutions and threat protection",
             icon: Shield,
             color: "from-red-600 to-pink-600",
-            services: [
+            services[
                 {
                     name: "Security Assessment & Auditing",
                     description: "Comprehensive security evaluations",
@@ -161,6 +167,8 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
             ]
 
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -177,7 +185,15 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -333,5 +349,9 @@ import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Us
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

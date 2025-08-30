@@ -29,7 +29,7 @@ const governmentSolutions = [
     title: "Citizen Portal Platform",
     description: "Comprehensive digital platform for citizen services and government interactions.",
     icon: Users,
-    features: [
+    features[
       "Service request management",
       "Document submission",
       "Payment processing",
@@ -38,14 +38,14 @@ const governmentSolutions = [
     price: "From $80,000",
     timeline: "20-32 weeks",
     category: "Citizen Services",
-    compliance: ["FISMA", "FedRAMP", "Section 508", "WCAG 2.1"]
+    compliance["FISMA", "FedRAMP", "Section 508", "WCAG 2.1"]
   },
   {
     id: 2,
     title: "Cybersecurity Framework",
     description: "Enterprise-grade security solutions meeting federal cybersecurity requirements.",
     icon: Shield,
-    features: [
+    features[
       "Threat detection",
       "Incident response",
       "Compliance monitoring",
@@ -54,14 +54,14 @@ const governmentSolutions = [
     price: "From $60,000",
     timeline: "16-24 weeks",
     category: "Security",
-    compliance: ["NIST", "FISMA", "FedRAMP", "CIS Controls"]
+    compliance["NIST", "FISMA", "FedRAMP", "CIS Controls"]
   },
   {
     id: 3,
     title: "Data Analytics Platform",
     description: "Advanced analytics and reporting tools for government decision-making.",
     icon: BarChart3,
-    features: [
+    features[
       "Real-time dashboards",
       "Predictive analytics",
       "Data visualization",
@@ -70,14 +70,14 @@ const governmentSolutions = [
     price: "From $50,000",
     timeline: "12-20 weeks",
     category: "Analytics",
-    compliance: ["FISMA", "FedRAMP", "Data Privacy", "Open Data"]
+    compliance["FISMA", "FedRAMP", "Data Privacy", "Open Data"]
   },
   {
     id: 4,
     title: "Legacy System Modernization",
     description: "Modernization of outdated government systems to improve efficiency and security.",
     icon: Server,
-    features: [
+    features[
       "System migration",
       "API development",
       "Cloud integration",
@@ -86,14 +86,14 @@ const governmentSolutions = [
     price: "From $100,000",
     timeline: "24-40 weeks",
     category: "System Modernization",
-    compliance: ["FISMA", "FedRAMP", "Section 508", "Cloud Security"]
+    compliance["FISMA", "FedRAMP", "Section 508", "Cloud Security"]
   },
   {
     id: 5,
     title: "Emergency Response System",
     description: "Integrated emergency management and response coordination platform.",
     icon: Activity,
-    features: [
+    features[
       "Real-time monitoring",
       "Alert systems",
       "Resource coordination",
@@ -102,14 +102,14 @@ const governmentSolutions = [
     price: "From $70,000",
     timeline: "16-28 weeks",
     category: "Emergency Management",
-    compliance: ["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"]
+    compliance["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"]
   },
   {
     id: 6,
     title: "Regulatory Compliance Platform",
     description: "Automated compliance monitoring and reporting for government regulations.",
     icon: FileText,
-    features: [
+    features[
       "Compliance tracking",
       "Automated reporting",
       "Audit trails",
@@ -118,8 +118,13 @@ const governmentSolutions = [
     price: "From $45,000",
     timeline: "12-20 weeks",
     category: "Compliance",
+<<<<<<< HEAD
     compliance: ["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
 
+=======
+    compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const complianceStandards = [
@@ -127,26 +132,31 @@ const complianceStandards = [
     name: "FISMA",
     description: "Federal Information Security Management Act",
     icon: Shield,
-    requirements: ["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"]
+    requirements["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"]
   },
   {
     name: "FedRAMP",
     description: "Federal Risk and Authorization Management Program",
     icon: Lock,
-    requirements: ["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"]
+    requirements["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"]
   },
   {
     name: "Section 508",
     description: "Accessibility requirements for federal electronic and information technology",
     icon: Users,
-    requirements: ["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"]
+    requirements["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"]
   },
   {
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
+<<<<<<< HEAD
     requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"]
 
+=======
+    requirements["Identify", "Protect", "Detect", "Respond", "Recover"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -232,15 +242,60 @@ export default function GovernmentSolutions() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Building2 className="w-10 h-10 text-white" />
@@ -278,8 +333,26 @@ export default function GovernmentSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -293,9 +366,36 @@ export default function GovernmentSolutions() {
             {complianceStandards.map((standard, index) => (
               <motion.div
                 key={standard.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -323,8 +423,26 @@ export default function GovernmentSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -338,9 +456,36 @@ export default function GovernmentSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -367,8 +512,26 @@ export default function GovernmentSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -399,9 +562,36 @@ export default function GovernmentSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -456,8 +646,26 @@ export default function GovernmentSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -471,9 +679,36 @@ export default function GovernmentSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -517,8 +752,26 @@ export default function GovernmentSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -546,5 +799,9 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

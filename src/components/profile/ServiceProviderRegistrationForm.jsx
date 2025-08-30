@@ -55,19 +55,26 @@ export function ServiceProviderRegistrationForm() {
         const serviceInput = form.getValues("services");
         if (serviceInput && !serviceTags.includes(serviceInput)) {
             setServiceTags([...serviceTags, serviceInput]);
+<<<<<<< HEAD
             form.setValue("services", "");
 
+=======
+            form.setValue("services", "")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle removing service tags
     const handleRemoveService = (service) => {
-        setServiceTags(serviceTags.filter((s) => s !== service));
-    };
+        setServiceTags(serviceTags.filter((s) => s !== service))};
     // Handle key press in services input (add on enter)
     const handleServiceKeyPress = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
+<<<<<<< HEAD
             handleAddService();
 
+=======
+            handleAddService()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle avatar upload
     const handleAvatarUpload = (e) => {
@@ -75,10 +82,15 @@ export function ServiceProviderRegistrationForm() {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
+<<<<<<< HEAD
                 setUploadedAvatar(reader.result);
             };
             reader.readAsDataURL(file);
 
+=======
+                setUploadedAvatar(reader.result)};
+            reader.readAsDataURL(file)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
@@ -88,8 +100,12 @@ export function ServiceProviderRegistrationForm() {
                 title: "More information needed",
                 description: "Please provide at least a detailed bio before generating enhanced content.",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             setIsGenerating(true);
             // Call the Supabase Edge Function
@@ -105,14 +121,22 @@ export function ServiceProviderRegistrationForm() {
 
             });
             if (error) {
+<<<<<<< HEAD
                 throw new Error(error.message);
 
+=======
+                throw new Error(error.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional services for your profile.",
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error generating enhanced profile:", error);
@@ -123,11 +147,17 @@ export function ServiceProviderRegistrationForm() {
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
         finally {
             setIsGenerating(false);
 
+=======
+            })}
+        finally {
+            setIsGenerating(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
@@ -136,10 +166,16 @@ export function ServiceProviderRegistrationForm() {
             if (generatedContent.services && generatedContent.services.length > 0) {
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
+<<<<<<< HEAD
                     setServiceTags([...serviceTags, ...newServices]);
 
 
 
+=======
+                    setServiceTags([...serviceTags, ...newServices])}
+            }
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -149,16 +185,23 @@ export function ServiceProviderRegistrationForm() {
                 description: "Please add at least one service to your profile.",
                 variant: "destructive",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
             if (!user?.id) {
+<<<<<<< HEAD
                 throw new Error("User not authenticated");
 
+=======
+                throw new Error("User not authenticated")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Enhance profile if not already done
-            let finalSummary = values.bio;
             let finalServices = serviceTags;
             if (values.enhancedProfile && !generatedContent) {
                 try {
@@ -177,9 +220,14 @@ export function ServiceProviderRegistrationForm() {
                         finalSummary = aiData.summary || values.bio;
                         // Merge AI suggested services with user-provided services
                         const aiServices = aiData.services || [];
+<<<<<<< HEAD
                         finalServices = [...new Set([...serviceTags, ...aiServices])];
 
 
+=======
+                        finalServices = [...new Set([...serviceTags, ...aiServices])]}
+                }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 catch (error) {
 <<<<<<< HEAD
                     // // // console.error("Error enhancing profile:", error);
@@ -191,8 +239,12 @@ export function ServiceProviderRegistrationForm() {
 
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
+<<<<<<< HEAD
                 finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
 
+=======
+                finalServices = [...new Set([...serviceTags, ...generatedContent.services])]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Get user email for notification
             const { data: userData } = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
@@ -246,9 +298,14 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
               `
+<<<<<<< HEAD
 
                     });
 
+=======
+                        }
+                    })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 catch (emailError) {
 <<<<<<< HEAD
                     // // // console.error("Failed to send notification email:", emailError);
@@ -264,9 +321,13 @@ export function ServiceProviderRegistrationForm() {
             });
             // Redirect to service provider dashboard or profile page
             setTimeout(() => {
+<<<<<<< HEAD
                 window.location.href = "/service-dashboard";
             }, 1500);
 
+=======
+                window.location.href = "/service-dashboard"}, 1500)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error creating profile:", error);
@@ -277,11 +338,17 @@ export function ServiceProviderRegistrationForm() {
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
         finally {
             setIsSubmitting(false);
 
+=======
+            })}
+        finally {
+            setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -544,5 +611,9 @@ export function ServiceProviderRegistrationForm() {
           </form>
         </Form>
       </Card>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

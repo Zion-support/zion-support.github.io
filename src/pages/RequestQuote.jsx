@@ -1,7 +1,7 @@
 import React from 'react';
-import {SEO} from "@/components/SEO";
+import SEO from "@/components/SEO";
 import {Header} from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
@@ -191,5 +191,9 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
 
       <Footer />
     </div>
+<<<<<<< HEAD
   );
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

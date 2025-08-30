@@ -8,12 +8,12 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     const menuRef = useRef(null);
     // Close menu when route changes
     useEffect(() => {
-        onToggle();
-    }, [location.pathname]);
+        onToggle()}, [location.pathname]);
     // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
+<<<<<<< HEAD
                 onToggle();
 
         };
@@ -21,16 +21,21 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             document.addEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'hidden';
 
+=======
+                onToggle()}
+        };
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.body.style.overflow = 'hidden'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'unset';
-        };
-    }, [isOpen, onToggle]);
+            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = [
         {
             label: 'Services',
             href: '/services',
-            children: [
+            children[
                 { label: 'AI & Machine Learning', href: '/services/ai' },
                 { label: 'Quantum Computing', href: '/services/quantum' },
                 { label: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -42,7 +47,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
         {
             label: 'Solutions',
             href: '/solutions',
-            children: [
+            children[
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
                 { label: 'Startup Solutions', href: '/solutions/startup' },
                 { label: 'Government Solutions', href: '/solutions/government' },
@@ -52,7 +57,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
         {
             label: 'Industries',
             href: '/industries',
-            children: [
+            children[
                 { label: 'Technology', href: '/industries/technology' },
                 { label: 'Healthcare', href: '/industries/healthcare' },
                 { label: 'Finance', href: '/industries/finance' },
@@ -61,9 +66,9 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             ]
         },
         {
-            label: 'Company',
+            label: 'Comp',
             href: '/about',
-            children: [
+            children[
                 { label: 'About Us', href: '/about' },
                 { label: 'Careers', href: '/careers' },
                 { label: 'News', href: '/news' },
@@ -73,25 +78,40 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
     ];
     const toggleDropdown = (label) => {
-        setActiveDropdown(activeDropdown === label ? null : label);
-    };
+        setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
+<<<<<<< HEAD
 <<<<<<< HEAD
         // // // console.log('Search query:', searchQuery);
 =======
         // // // // // // // console.log('Search query:', searchQuery);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
+=======
+        console.log('Search query:', searchQuery)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const menuVariants = {
-        closed: {
+  closed: {
             x: '100%',
             opacity: 0,
             transition: {
                 duration: 0.3,
+<<<<<<< HEAD
                 ease: 'easeInOut'
 
+=======
+  ease: 'easeInOut'
+            
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             x: 0,
@@ -103,13 +123,25 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
     };
     const dropdownVariants = {
-        closed: {
+  closed: {
             height: 0,
             opacity: 0,
             transition: {
                 duration: 0.2,
+<<<<<<< HEAD
                 ease: 'easeInOut'
 
+=======
+  ease: 'easeInOut'
+            
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             height: 'auto',
@@ -214,7 +246,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             </div>
           </motion.div>
         </>)}
-    </AnimatePresence>);
-};
+    </AnimatePresence>)};
 export default MobileNavigation;
 }}}}}}}}}</motion.div>}

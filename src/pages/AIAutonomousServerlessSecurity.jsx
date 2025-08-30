@@ -168,6 +168,5 @@ const AIAutonomousServerlessSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousServerlessSecurity;

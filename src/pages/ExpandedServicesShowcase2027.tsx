@@ -65,24 +65,33 @@ import {
   type ExpandedService2027
 } from '@/data/expandedInnovativeServices2027';
 
-const ExpandedServicesShowcase2027: React.FC = () => {
+<<<<<<< HEAD
+const ExpandedServicesShowcase2027: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
 
   useEffect(() => {
     let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
+<<<<<<< HEAD
       services = searchExpandedServices(searchQuery);
 
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
+=======
+      services = searchExpandedServices(searchQuery)};
+    setFilteredServices(services)}, [selectedCategory, searchQuery]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return Shield;
       case 'Data Analytics':
         return BarChart3;
@@ -95,13 +104,19 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
+<<<<<<< HEAD
         return Rocket;
 
+=======
+        return Rocket}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+<<<<<<< HEAD
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
         return 'from-blue-500 to-cyan-600';
@@ -114,26 +129,57 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
+<<<<<<< HEAD
         return 'from-gray-500 to-slate-600';
 
+=======
+        return 'from-gray-500 to-slate-600'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {
-    if (pricing.model === 'Transaction Fees + Governance') {
+<<<<<<< HEAD
+  const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
+    if (pricing.model === 'Transaction Fees + Governance') {;
+      return 'Free + Transaction Fees'};
+    return `$${pricing.basePrice.toLocaleString()}/month`};
+
+  const renderServiceCard = (service: ExpandedService2027)  => {;
+=======;
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {
+  const renderServiceCard = (service: ExpandedService2027) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
 
@@ -205,9 +251,36 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           <AnimatePresence>
             {expandedService === service.id && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                 className="mb-4"
 
                 <div className="space-y-1">
@@ -296,23 +369,52 @@ const ExpandedServicesShowcase2027: React.FC = () => {
 
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </div>;
+      </motion.div>;
+    )};
+
+  const renderServiceList = (service: ExpandedService2027)  => {;
+=======;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {
+  const renderServiceList = (service: ExpandedService2027) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6"
 
@@ -383,13 +485,22 @@ const ExpandedServicesShowcase2027: React.FC = () => {
 
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </div>;
+      </motion.div>;
+    )};
+=======
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -404,8 +515,26 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
 
@@ -415,20 +544,78 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+              initial = {
+  { opacity: 0,
+  y: 20 
 
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+<<<<<<< HEAD
+
+=======
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
               From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
             </motion.p>
 
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -484,9 +671,15 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                 className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
 
                 {EXPANDED_SERVICE_CATEGORIES.map((category) => (
+=======
+                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+              >
+                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -571,12 +764,21 @@ const ExpandedServicesShowcase2027: React.FC = () => {
 
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ExpandedServicesShowcase2027;}}}}}

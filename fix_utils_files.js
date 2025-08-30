@@ -6,7 +6,7 @@ function fixUtilsFile(filePath) {
     const originalContent = content;
     // Fix common patterns in utils files
     content = content.replace(
-      /export,\s*interface,\s*([^{]+)\s*{;/g,
+      /export,\s*interface,\s*([^{]+)\s*{/g,
       "export interface $1 {",
     );
     content = content.replace(
@@ -34,7 +34,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
-    content = content.replace(/undefin,\s*e,\s*d/g, "undefined");
+    content = content.replace(/undefin,\s*e,\s*d/g, "null");
     content = content.replace(/innerWid,\s*t,\s*h/g, "innerWidth");
     content = content.replace(/innerHeig,\s*h,\s*t/g, "innerHeight");
     content = content.replace(/dispatchEve,\s*n,\s*t/g, "dispatchEvent");
@@ -52,7 +52,7 @@ function fixUtilsFile(filePath) {
     // Fix type annotations
     content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
-    content = content.replace(/a,\s*n,\s*y/g, "any");
+    content = content.replace(/a,\s*n,\s*y/g, "");
     content = content.replace(/pendi,\s*n,\s*g/g, "pending");
     content = content.replace(/approv,\s*e,\s*d/g, "approved");
     content = content.replace(/reject,\s*e,\s*d/g, "rejected");
@@ -117,6 +117,7 @@ function fixUtilsFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.log(`Fixed: ${filePath}`);
 =======
       // // // // // // // console.log(`Fixed: ${filePath}`);
@@ -152,5 +153,23 @@ async function fixAllUtilsFiles() {
   // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
 }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      console.log(`Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false}
+}
+<<<<<<< HEAD
+async function fixedCount = 0;
+=======
+async function fixedCount = 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  for (const file of files) {
+    if (fixUtilsFile(file)) {
+      fixedCount++}
+  }
+  console.log(`Fixed ${fixedCount} utils files.`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 fixAllUtilsFiles();
 }}}}}}}}}

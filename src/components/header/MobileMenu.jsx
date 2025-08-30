@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 export function MobileMenu({ className }) {
+<<<<<<< HEAD
     const { user, isAuthenticated } = useAuth();
     const location = useLocation();
     const { t } = useTranslation();
@@ -27,9 +28,55 @@ export function MobileMenu({ className }) {
         { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
     ];
     if (isAuthenticated) {
+<<<<<<< HEAD
         navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
 
     return (<div className={cn("md:hidden", className)}>
+=======
+        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
+    return (<div className = {
+  cn("md:hidden",
+  className)
+
+}>
+=======
+  const { user, isAuthenticated } = useAuth();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleMenu = () => setIsOpen(!isOpen);
+  
+  const navigationItems = [
+    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },
+    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },
+    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
+    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },
+    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
+    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },
+  ];
+  
+  if (isAuthenticated) {
+    navigationItems.push({ 
+      href: '/dashboard', 
+      label: 'Dashboard', 
+      icon: Settings, 
+      matches: (path) => path.startsWith('/dashboard') 
+    });
+  }
+  
+  return (
+    <div className = {
+  cn("md:hidden",
+  className)
+
+
+
+
+
+
+}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
@@ -50,13 +97,39 @@ export function MobileMenu({ className }) {
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
-                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", isActive
+<<<<<<< HEAD
+                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className = {
+  cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")}>
+                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")
+
+}>
+=======
+                return (
+                  <Link 
+                    key={item.href} 
+                    to={item.href} 
+                    onClick={toggleMenu} 
+                    className = {
+  cn(
+                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
+                        ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
+                        : "hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )
+
+
+
+
+
+
+}
+                  >
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>
-                  </Link>);
-            })}
+                  </Link>)})}
             </nav>
 
             {/* User section */}
@@ -87,5 +160,9 @@ export function MobileMenu({ className }) {
             </div>
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
 }}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

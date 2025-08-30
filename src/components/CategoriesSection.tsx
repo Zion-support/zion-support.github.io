@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
+=======
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
+
+const categories = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
@@ -55,10 +61,10 @@ const specialServices = [
 
 ];
 
-interface CategoriesSectionProps {
+interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
   showTitle?: boolean;
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -71,7 +77,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { 
+      y: 30,
+      opacity: 0 
+    },
     visible: {
       y: 0,
       opacity: 1,
@@ -83,7 +92,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+    hidden: { 
+      scale: 0.95,
+      opacity: 0 
+    },
     visible: {
       scale: 1,
       opacity: 1,
@@ -198,7 +210,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
+<<<<<<< HEAD
 
+=======
+        >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <Link
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"

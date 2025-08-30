@@ -17,10 +17,8 @@ export const PerformanceOptimizer = ({ children }) => {
             criticalFonts.as = 'font';
             criticalFonts.href = '/fonts/inter-var.woff2';
             criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts);
-        };
-        preloadCriticalResources();
-    }, []);
+            document.head.appendChild(criticalFonts)};
+        preloadCriticalResources()}, []);
     // Optimize images on route change
     useEffect(() => {
         const optimizeImages = () => {
@@ -28,23 +26,30 @@ export const PerformanceOptimizer = ({ children }) => {
             images.forEach((img) => {
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
+<<<<<<< HEAD
                     img.loading = 'lazy';
 
+=======
+                    img.loading = 'lazy'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
                 // Add error handling
                 img.onerror = () => {
-                    img.style.display = 'none';
-                };
-            });
-        };
+                    img.style.display = 'none'}})};
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
+<<<<<<< HEAD
             requestIdleCallback(optimizeImages);
 
         else {
             setTimeout(optimizeImages, 100);
 
+=======
+            requestIdleCallback(optimizeImages)}
+        else {
+            setTimeout(optimizeImages, 100)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [location.pathname]);
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
@@ -54,23 +59,25 @@ export const PerformanceOptimizer = ({ children }) => {
         if (!window.scrollTimeout) {
             window.scrollTimeout = setTimeout(() => {
                 // Handle scroll-based optimizations here
+<<<<<<< HEAD
                 window.scrollTimeout = null;
             }, 16); // ~60fps
 
+=======
+                window.scrollTimeout = null}, 16); // ~60fps
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
+        return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
             navigator.serviceWorker
-                .register('/sw.js', {
-                    scope: '/',
-                    updateViaCache: 'none'
-                })
+                .register('/sw.js')
                 .then((registration) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     // // // console.log('SW registered: ', registration);
 =======
@@ -103,6 +110,11 @@ export const PerformanceOptimizer = ({ children }) => {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 });
 
+=======
+                console.log('SW registered: ', registration)})
+                .catch((registrationError) => {
+                console.log('SW registration failed: ', registrationError)})}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
@@ -114,40 +126,60 @@ export const PerformanceOptimizer = ({ children }) => {
                         if (target.dataset.src) {
                             target.src = target.dataset.src;
                             target.removeAttribute('data-src');
+<<<<<<< HEAD
                             observer.unobserve(target);
 
 
                 });
             }, {
+=======
+                            observer.unobserve(target)}
+                    }
+                })}, {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 rootMargin: '50px',
                 threshold: 0.1,
             });
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
+<<<<<<< HEAD
             return () => observer.disconnect();
 
+=======
+            return () => observer.disconnect()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
+    return <>{optimizedChildren}</>};
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks
     if ('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time
+<<<<<<< HEAD
         }, { priority: 'background' });
 
+=======
+        }, { priority: 'background' })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
         if (performance.memory.usedJSHeapSize > memoryThreshold) {
             // Trigger garbage collection if available
             if ('gc' in window) {
+<<<<<<< HEAD
                 window.gc();
 
 
 
 
+=======
+                window.gc()}
+        }
+    }
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default PerformanceOptimizer;
 }}}}}}}}}}}}}}}

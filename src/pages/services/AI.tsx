@@ -22,13 +22,19 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
+<<<<<<< HEAD
 export default function AIServices() {
+=======
+ } from 'lucide-react';
+
+export default function AIServices(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
-      features: [
+      features[
         "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
@@ -41,7 +47,7 @@ export default function AIServices() {
       name: "Machine Learning Development",
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
-      features: [
+      features[
         "Custom model development",
         "Data preprocessing and feature engineering",
         "Model training and optimization",
@@ -54,7 +60,7 @@ export default function AIServices() {
       name: "AI-Powered Applications",
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
-      features: [
+      features[
         "Chatbot and virtual assistant development",
         "Predictive analytics applications",
         "Computer vision solutions",
@@ -67,8 +73,9 @@ export default function AIServices() {
       name: "AI Infrastructure & MLOps",
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
-      features: [
+      features[
         "ML pipeline automation",
+<<<<<<< HEAD
         "Model versioning and deployment",
         "Scalable training infrastructure",
         "Monitoring and alerting systems"
@@ -76,42 +83,63 @@ export default function AIServices() {
       price: "From $6,000",
       duration: "4-10 weeks"
 
+=======
+        "Model versioning and deployment",;
+        "Scalable training infrastructure",;
+        "Monitoring and alerting systems";
+      ],;
+      price: "From $6,000",;
+      duration: "4-10 weeks";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const aiTechnologies = [
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
-    { name: "AutoML", description: "Automated machine learning", icon: Zap }
+  const aiTechnologies = [;
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
+    { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
 
   const useCases = [
     {
       industry: "Healthcare",
-      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
+      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
     },
     {
       industry: "Finance",
-      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
+      applications["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
     },
     {
       industry: "Manufacturing",
-      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
+      applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
+<<<<<<< HEAD
     {
       industry: "Retail",
-      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+    {;
+      industry: "Retail",;
+      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
+      icon: ShoppingCart;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -294,10 +322,23 @@ export default function AIServices() {
 
                 Explore All Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 </div></div></div></div>}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

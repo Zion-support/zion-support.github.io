@@ -8,10 +8,14 @@ export function TrustedBySection() {
           Trusted by leading companies worldwide
         </h3>
         <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-          {companies.map((company) => (<div key={company} className="text-zion-slate-light font-semibold">
-              {company}
+          {companies.map((comp) => (<div key={comp} className="text-zion-slate-light font-semibold">
+              {comp}
             </div>))}
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 }
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

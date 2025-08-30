@@ -1,5 +1,5 @@
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 export default function CreatePostPage() {
@@ -7,7 +7,6 @@ export default function CreatePostPage() {
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
-    const initialCategory = searchParams.get("category");
     const initialValues = {
         categoryId: initialCategory || "project-help"
     };
@@ -22,15 +21,28 @@ export default function CreatePostPage() {
                 description: "Your post has been published successfully"
             });
             // Redirect to the forum category
+<<<<<<< HEAD
             navigate(`/community/category/${values.categoryId}`);
 
+=======
+<<<<<<< HEAD
+            router(`/community/category/${values.categoryId}`)}
+=======
+            router(`/community/category/${values.categoryId}`);
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem creating your post",
                 variant: "destructive"
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread"/>
         ,
@@ -46,5 +58,9 @@ export default function CreatePostPage() {
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
+<<<<<<< HEAD
       </div>);
 }}}
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

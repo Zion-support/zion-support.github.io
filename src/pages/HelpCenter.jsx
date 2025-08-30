@@ -7,14 +7,27 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
     const toggleCategory = (category) => {
         setExpandedCategories(prev => prev.includes(category)
             ? prev.filter(c => c !== category)
-            : [...prev, category]);
-    };
+            [...prev, category])};
     const helpCategories = {
-        'getting-started': {
+  'getting-started': {
             title: 'Getting Started',
             icon: BookOpen,
+<<<<<<< HEAD
+            articles[
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+
+},
+=======
             articles: [
-                { title: 'How to create your first account', href: '/help/create-account' },
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
@@ -23,7 +36,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'marketplace': {
             title: 'Marketplace',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'How to list products and services', href: '/help/list-products' },
                 { title: 'Managing your listings', href: '/help/manage-listings' },
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
@@ -33,7 +46,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'talent': {
             title: 'Talent & Hiring',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Creating a talent profile', href: '/help/talent-profile' },
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },
@@ -43,7 +56,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'technical': {
             title: 'Technical Support',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Common technical issues', href: '/help/technical-issues' },
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
@@ -53,7 +66,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'billing': {
             title: 'Billing & Payments',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Understanding your invoice', href: '/help/invoice-guide' },
                 { title: 'Payment methods and security', href: '/help/payment-methods' },
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
@@ -63,7 +76,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'account': {
             title: 'Account & Security',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Account security best practices', href: '/help/account-security' },
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
@@ -141,7 +154,16 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (<div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
-                  <Link to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
+                  <Link to = {
+  `/help/${article.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+
+
+
+
+}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>
@@ -155,7 +177,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you 24/7. Get in touch with us through any of these channels.
+              Our support team is here to help you 24/7. Get in touch with us through  of these channels.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -195,5 +217,9 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </>);
 }}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

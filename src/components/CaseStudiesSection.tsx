@@ -9,14 +9,21 @@ import {
   ArrowRight,
   Star,
   CheckCircle
+<<<<<<< HEAD
 export const CaseStudiesSection: React.FC = () => {
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+export const CaseStudiesSection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const caseStudies = [
     {
-      company: 'TechCorp Solutions',
+      comp: 'TechCorp Solutions',
       industry: 'Financial Services',
       challenge: 'Legacy system modernization and digital transformation',
       solution: 'Implemented AI-powered automation and cloud migration',
-      results: [
+      results[
         '40% reduction in operational costs',
         '60% improvement in customer satisfaction',
         '3x faster transaction processing'
@@ -25,11 +32,11 @@ export const CaseStudiesSection: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      company: 'Global Manufacturing Inc.',
+      comp: 'Global Manufacturing Inc.',
       industry: 'Manufacturing',
       challenge: 'Supply chain optimization and predictive maintenance',
       solution: 'IoT sensors and AI-powered analytics platform',
-      results: [
+      results[
         '25% reduction in downtime',
         '30% improvement in supply chain efficiency',
         '$2M annual cost savings'
@@ -38,30 +45,109 @@ export const CaseStudiesSection: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      company: 'HealthTech Innovations',
+      comp: 'HealthTech Innovations',
       industry: 'Healthcare',
       challenge: 'Patient data security and compliance management',
       solution: 'Zero-trust security framework and automated compliance',
-      results: [
+      results[
         '99.9% security compliance rate',
         '50% reduction in audit preparation time',
         'Enhanced patient data protection'
       ],
       logo: '🏥',
+<<<<<<< HEAD
       color: 'from-purple-500 to-pink-500'
 
+=======
+      color: 'from-purple-500 to-pink-500';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
+=======
+const caseStudies = [
+  {
+    id: 1,
+    title: "AI-Powered Supply Chain Optimization",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Inefficient supply chain causing 30% cost overruns and delays",
+    solution: "Implemented AI-driven demand forecasting and route optimization",
+    results: [
+      "Reduced costs by 25%",
+      "Improved delivery times by 40%",
+      "Increased efficiency by 35%"
+    ],
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    id: 2,
+    title: "Quantum Computing Financial Modeling",
+    company: "FinTech Innovations Ltd",
+    industry: "Financial Services",
+    challenge: "Complex financial models taking days to compute",
+    solution: "Deployed quantum computing algorithms for portfolio optimization",
+    results: [
+      "1000x faster computation",
+      "Improved accuracy by 60%",
+      "Reduced risk by 45%"
+    ],
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    id: 3,
+    title: "Blockchain Supply Chain Transparency",
+    company: "Organic Foods Inc",
+    industry: "Food & Beverage",
+    challenge: "Lack of transparency in food supply chain",
+    solution: "Implemented blockchain-based tracking system",
+    results: [
+      "100% supply chain visibility",;
+      "Reduced fraud by 99%",;
+      "Improved customer trust by 80%";
+    ],;
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;
+    color: "from-green-500 to-emerald-500";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export function CaseStudiesSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
           className="text-center mb-16"
+<<<<<<< HEAD
 
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -70,22 +156,73 @@ export const CaseStudiesSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index) => (
+        <div className="grid lg: grid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)  => (
             <motion.div
+<<<<<<< HEAD
               key={study.company}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
 
+=======
+<<<<<<< HEAD
+              key={study.comp}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+=======
+              key={study.id}
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="flex items-center mb-6">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>
                   <span className="text-2xl">{study.logo}</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">
-                    {study.company}
+                    {study.comp}
                   </h3>
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
@@ -118,6 +255,7 @@ export const CaseStudiesSection: React.FC = () => {
                   <span className="mx-2">•</span>
                   <span>Verified Results</span>
                 </div>
+<<<<<<< HEAD
                 <Link
                   to="/case-studies"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200"
@@ -125,17 +263,56 @@ export const CaseStudiesSection: React.FC = () => {
                   Read Full Case Study
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </motion.div>
           ))}
         </div>
 
+<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
 
+=======
+        <motion.div 
+          className="mt-16 text-center"
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+        >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
@@ -162,10 +339,24 @@ export const CaseStudiesSection: React.FC = () => {
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
-  );
-};
+      </div>;
+    </section>;
+  )};
 
 export default CaseStudiesSection;
+<<<<<<< HEAD
 }}
+=======
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export default CaseStudiesSection;
+export default CaseStudiesSection;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

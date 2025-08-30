@@ -33,12 +33,16 @@ async function fixTypeScriptSyntaxErrors() {
             lines[i] = line.replace(oldName, newName);
             modified = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             // // // console.log(`  Fixed variable name: ${oldName} -> ${newName}`);
 
 
 =======
             // // // // // // // console.log(`  Fixed variable name: ${oldName} -> ${newName}`);
           }
+=======
+            console.log(`  Fixed variable name: ${oldName} -> ${newName}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         // Fix function names that start with numbers
@@ -50,6 +54,7 @@ async function fixTypeScriptSyntaxErrors() {
               "Chat" + oldName.charAt(0).toUpperCase() + oldName.slice(1);
             lines[i] = line.replace(oldName, newName);
             modified = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             // // // console.log(`  Fixed function name: ${oldName} -> ${newName}`);
 
@@ -68,10 +73,14 @@ async function fixTypeScriptSyntaxErrors() {
 =======
             // // // // // // // console.log(`  Fixed function name: ${oldName} -> ${newName}`);
           }
+=======
+            console.log(`  Fixed variable name: ${oldName} -> ${newName}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
       }
       if (modified) {
         await fs.writeFile(file, lines.join("\n"));
+<<<<<<< HEAD
         // // // // // // // console.log(`✅ Fixed syntax errors in: ${file}`);
       }
     } catch (error) {
@@ -81,5 +90,12 @@ async function fixTypeScriptSyntaxErrors() {
   // // // // // // // console.log("✅ TypeScript syntax error fixing completed");
 }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+        console.log(`✅ Fixed syntax errors in: ${file}`)}
+    } catch (error) {
+      console.error(`❌ Error processing ${file}:`, error.message)}
+  }
+  console.log("✅ TypeScript syntax error fixing completed")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 fixTypeScriptSyntaxErrors().catch(console.error);
 }}}}}}}}}

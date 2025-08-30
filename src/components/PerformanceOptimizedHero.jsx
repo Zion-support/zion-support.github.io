@@ -22,9 +22,7 @@ const PerformanceOptimizedHero = memo(() => {
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
         return () => {
             clearTimeout(timer);
-            clearTimeout(loadTimer);
-        };
-    }, []);
+            clearTimeout(loadTimer)}}, []);
     const stats = [
         { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },
         { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },
@@ -37,8 +35,12 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
+<<<<<<< HEAD
       </section>);
 
+=======
+      </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<section className="relative py-20 px-4 overflow-hidden" role="banner" aria-label="Zion Tech Group Hero Section">
       {/* Optimized Background Elements */}
       <div className="absolute inset-0 futuristic-bg">
@@ -97,8 +99,7 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
         </>)}
-    </section>);
-});
+    </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 }

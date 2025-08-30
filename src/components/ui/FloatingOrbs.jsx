@@ -11,8 +11,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         // Set canvas size
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+            canvas.height = window.innerHeight};
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Orb class
@@ -31,8 +30,12 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.vx = (Math.random() - 0.5) * 0.5;
                 this.vy = (Math.random() - 0.5) * 0.5;
                 this.opacity = Math.random() * 0.5 + 0.2;
+<<<<<<< HEAD
                 this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
 
+=======
+                this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
@@ -43,8 +46,12 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                     this.vy *= -1;
                 // Keep within bounds
                 this.x = Math.max(0, Math.min(canvas.width, this.x));
+<<<<<<< HEAD
                 this.y = Math.max(0, Math.min(canvas.height, this.y));
 
+=======
+                this.y = Math.max(0, Math.min(canvas.height, this.y))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             draw() {
                 ctx.save();
                 ctx.globalAlpha = this.opacity;
@@ -56,6 +63,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
                 ctx.fill();
+<<<<<<< HEAD
                 ctx.restore();
 
 
@@ -64,22 +72,32 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         for (const i = 0; i < count; i++) {
             orbs.push(new Orb());
 
+=======
+                ctx.restore()}
+        }
+        // Create orbs
+        const orbs = [];
+        for (let i = 0; i < count; i++) {
+            orbs.push(new Orb())}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Animation loop
-        let animationId;
-        const animate = () => {
+        let animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             orbs.forEach(orb => {
                 orb.update();
-                orb.draw();
-            });
-            animationId = requestAnimationFrame(animate);
-        };
+                orb.draw()});
+            animationId = requestAnimationFrame(animate)};
         animate();
         // Cleanup
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+<<<<<<< HEAD
             cancelAnimationFrame(animationId);
         };
     }, [count]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>);
 }}}}}}
+=======
+            cancelAnimationFrame(animationId)}}, [count]);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

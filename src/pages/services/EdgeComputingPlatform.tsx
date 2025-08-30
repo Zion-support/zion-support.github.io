@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -9,6 +10,18 @@ import {
   Network,
   Cloud,
   Shield,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Cpu, 
+  Zap, 
+  Globe, 
+  Server, 
+  Network, 
+  Cloud, 
+  Shield, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Clock,
   CheckCircle,
   TrendingUp,
@@ -62,7 +75,13 @@ import {
   Droplets,
   Umbrella,
   MapPin
+<<<<<<< HEAD
 const EdgeComputingPlatform: React.FC = () => {
+=======
+ } from 'lucide-react';
+
+const EdgeComputingPlatform: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Cpu,
@@ -93,6 +112,7 @@ const EdgeComputingPlatform: React.FC = () => {
       title: "5G & IoT Integration",
       description: "Seamless connectivity with 5G networks and IoT device ecosystems",
       color: "from-indigo-500 to-purple-500"
+<<<<<<< HEAD
     },
     {
       icon: Shield,
@@ -100,6 +120,15 @@ const EdgeComputingPlatform: React.FC = () => {
       description: "Advanced security protocols and encryption for edge computing environments",
       color: "from-yellow-500 to-orange-500"
 
+=======
+    },;
+    {;
+      icon: Shield,;
+      title: "Edge Security",;
+      description: "Advanced security protocols and encryption for edge computing environments",;
+      color: "from-yellow-500 to-orange-500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -149,6 +178,7 @@ const EdgeComputingPlatform: React.FC = () => {
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
+<<<<<<< HEAD
         "Custom development",
         "SLA guarantees",
         "On-premise option"
@@ -156,6 +186,15 @@ const EdgeComputingPlatform: React.FC = () => {
       cta: "Contact Sales",
       popular: false
 
+=======
+        "Custom development",;
+        "SLA guarantees",;
+        "On-premise option";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -176,6 +215,7 @@ const EdgeComputingPlatform: React.FC = () => {
       title: "99.9% Uptime",
       description: "Distributed architecture ensures high availability and reliability",
       metric: "99.9%"
+<<<<<<< HEAD
     },
     {
       icon: Users,
@@ -183,6 +223,15 @@ const EdgeComputingPlatform: React.FC = () => {
       description: "Deploy edge nodes worldwide for optimal user experience",
       metric: "200+"
 
+=======
+    },;
+    {;
+      icon: Users,;
+      title: "Global Scale",;
+      description: "Deploy edge nodes worldwide for optimal user experience",;
+      metric: "200+";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -207,6 +256,7 @@ const EdgeComputingPlatform: React.FC = () => {
       icon: Factory,
       color: "from-purple-500 to-pink-500"
     },
+<<<<<<< HEAD
     {
       industry: "Healthcare",
       title: "Remote Monitoring",
@@ -214,6 +264,15 @@ const EdgeComputingPlatform: React.FC = () => {
       icon: Heart,
       color: "from-orange-500 to-red-500"
 
+=======
+    {;
+      industry: "Healthcare",;
+      title: "Remote Monitoring",;
+      description: "Real-time patient monitoring and emergency response systems",;
+      icon: Heart,;
+      color: "from-orange-500 to-red-500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const edgeLocations = [
@@ -234,6 +293,7 @@ const EdgeComputingPlatform: React.FC = () => {
       cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
       icon: Satellite,
       color: "from-purple-500 to-pink-500"
+<<<<<<< HEAD
     },
     {
       region: "Latin America",
@@ -246,6 +306,20 @@ const EdgeComputingPlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    },;
+    {;
+      region: "Latin America",;
+      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
+      icon: MapPin,;
+      color: "from-orange-500 to-red-500";
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Edge Computing Platform - Zion Tech Group"
         description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
       />
@@ -256,8 +330,26 @@ const EdgeComputingPlatform: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
 
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
@@ -299,14 +391,47 @@ const EdgeComputingPlatform: React.FC = () => {
               Everything you need to deploy and manage edge computing infrastructure
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
 
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -333,14 +458,47 @@ const EdgeComputingPlatform: React.FC = () => {
               See how edge computing revolutionizes performance and user experience
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
@@ -366,14 +524,47 @@ const EdgeComputingPlatform: React.FC = () => {
               Edge computing solutions for every industry and use case
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
 
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -405,14 +596,47 @@ const EdgeComputingPlatform: React.FC = () => {
               Deploy edge nodes worldwide for optimal performance and reliability
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {edgeLocations.map((location, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {edgeLocations.map((location, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
 
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -445,14 +669,47 @@ const EdgeComputingPlatform: React.FC = () => {
               Choose the plan that fits your edge computing needs
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+=======
+          
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative rounded-xl p-8 ${
                   plan.popular
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
@@ -502,8 +759,26 @@ const EdgeComputingPlatform: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -517,13 +792,13 @@ const EdgeComputingPlatform: React.FC = () => {
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -1,6 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Bell, Users, Settings export function WorkspaceHeader({ company }) {
+=======
+import { Bell, Users, Settings } from "lucide-react";
+export function WorkspaceHeader({ comp }) {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -42,5 +47,9 @@ import { Bell, Users, Settings export function WorkspaceHeader({ company }) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 }}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

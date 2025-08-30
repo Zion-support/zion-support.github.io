@@ -5,14 +5,17 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // // // console.log('📊 Starting continuous performance monitoring automation...');
 =======
 // // // // // // // console.log('📊 Starting continuous performance monitoring automation...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+// // // console.log('📊 Starting continuous performance monitoring automation...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
@@ -20,6 +23,9 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000
 async function runPerformanceMonitor() {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
 
     // Build the project first
@@ -43,6 +49,7 @@ async function runPerformanceMonitor() {
       } else {
         // // // console.log('ℹ️  No Lighthouse configuration found');
 
+<<<<<<< HEAD
     } catch (error) {
       // // // console.log('⚠️  Lighthouse tests failed but continuing...');
 
@@ -80,11 +87,21 @@ async function runPerformanceMonitor() {
     // Check for large files in build output
     // // // // // // // console.log('📁 Checking build output for large files...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    } catch (error) {
+      // // // console.log('⚠️  Lighthouse tests failed but continuing...');
+
+    // Check for large files in build output
+    // // // console.log('📁 Checking build output for large files...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const distPath = path.join(process.cwd(), 'dist');
     if (fs.existsSync(distPath)) {
       const largeFiles = findLargeFiles(distPath);
       if (largeFiles.length > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // // // console.log('⚠️  Large files found in build output:');
         largeFiles.forEach(file => {
           // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
@@ -101,6 +118,7 @@ async function runPerformanceMonitor() {
       // // // console.log('ℹ️  Dependency check not available');
 
     // Generate performance report
+<<<<<<< HEAD
     // // // console.log('📊 Generating performance report...');
 =======
         // // // // // // // console.log('⚠️  Large files found in build output:');
@@ -123,22 +141,40 @@ async function runPerformanceMonitor() {
     // Generate performance report
     // // // // // // // console.log('📊 Generating performance report...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+<<<<<<< HEAD
+    // // // console.log('📊 Generating performance report...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       buildSize: getDirectorySize(distPath),
       largeFiles: findLargeFiles(distPath),
+<<<<<<< HEAD
       summary: 'Performance monitoring completed'
     };
 
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
+=======
+  summary: 'Performance monitoring completed'
+    
+
+};
+
+=======
+    console.log('📊 Generating performance report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const reportPath = path.join(process.cwd(), 'performance-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log(`✅ Performance report saved to ${reportPath}`);
 
     // // // console.log('✅ Continuous performance monitoring completed successfully');
 
   } catch (error) {
     // // // console.error('❌ Continuous performance monitoring failed:', error.message);
+<<<<<<< HEAD
 =======
     // // // // // // // console.log(`✅ Performance report saved to ${reportPath}`);
 
@@ -147,6 +183,8 @@ async function runPerformanceMonitor() {
   } catch (error) {
     // // // // // // // console.error('❌ Continuous performance monitoring failed:', error.message);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Don't exit, just log the error and continue
 
 
@@ -204,10 +242,14 @@ function getDirectorySize(dir) {
 // Main continuous loop
 async function runContinuous() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 =======
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Run initial performance monitoring
   await runPerformanceMonitor();
@@ -217,6 +259,7 @@ async function runContinuous() {
     await runPerformanceMonitor();
   }, AUTOMATION_INTERVAL);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 
@@ -231,25 +274,40 @@ process.on('SIGINT', () => {
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 =======
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 // Start the continuous performance monitor
 runContinuous().catch(error => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.error('❌ Failed to start continuous performance monitoring:', error);
 =======
   // // // // // // // console.error('❌ Failed to start continuous performance monitoring:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.error('❌ Failed to start continuous performance monitoring:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}

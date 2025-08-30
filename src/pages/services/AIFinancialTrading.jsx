@@ -39,7 +39,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$99",
             period: "/month",
             description: "Perfect for individual traders and beginners",
-            features: [
+            features[
                 "Basic AI trading signals",
                 "Up to 10 trades/day",
                 "Standard market data",
@@ -55,7 +55,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$299",
             period: "/month",
             description: "Ideal for active traders and small funds",
-            features: [
+            features[
                 "Advanced AI algorithms",
                 "Up to 100 trades/day",
                 "Real-time market data",
@@ -73,7 +73,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$1,999",
             period: "/month",
             description: "For hedge funds and large institutions",
-            features: [
+            features[
                 "Custom AI models",
                 "Unlimited trades",
                 "Institutional data feeds",
@@ -312,5 +312,9 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

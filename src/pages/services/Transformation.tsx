@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
+=======
+import React from 'react.ts';
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
+
+const DigitalTransformation = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const transformationServices = [
     {
       title: "Process Automation",
@@ -15,6 +22,7 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
+<<<<<<< HEAD
     {
       title: "Change Management",
       description: "Guide your team through digital adoption and transformation.",
@@ -22,6 +30,15 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
       icon: Users
 
+=======
+    {;
+      title: "Change Management",;
+      description: "Guide your team through digital adoption and transformation.",;
+      price: "From $8,000/month",;
+      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
+      icon: Users;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const transformationAreas = [
@@ -36,6 +53,7 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
+<<<<<<< HEAD
     },
     {
       name: "Technology",
@@ -43,19 +61,28 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
       icon: BarChart3,
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
 
+=======
+    },;
+    {;
+      name: "Technology",;
+      description: "Modernize your technology stack and infrastructure",;
+      icon: BarChart3,;
+      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Increased operational efficiency and productivity",
-    "Enhanced customer experience and satisfaction",
-    "Improved data insights and decision making",
-    "Reduced operational costs and manual work",
-    "Faster time to market for new products",
-    "Better competitive positioning in the market"
+  const benefits = [;
+    "Increased operational efficiency and productivity",;
+    "Enhanced customer experience and satisfaction",;
+    "Improved data insights and decision making",;
+    "Reduced operational costs and manual work",;
+    "Faster time to market for new products",;
+    "Better competitive positioning in the market";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -208,13 +235,13 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

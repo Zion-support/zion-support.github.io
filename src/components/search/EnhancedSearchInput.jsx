@@ -12,43 +12,57 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
             setFilteredSuggestions(filtered.slice(0, 5));
             setShowSuggestions(true);
+<<<<<<< HEAD
             setSelectedIndex(-1);
 
         else {
             setFilteredSuggestions([]);
             setShowSuggestions(false);
 
+=======
+            setSelectedIndex(-1)}
+        else {
+            setFilteredSuggestions([]);
+            setShowSuggestions(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [query, suggestions]);
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+<<<<<<< HEAD
                 setShowSuggestions(false);
 
+=======
+                setShowSuggestions(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-    const handleInputChange = (e) => {
-        setQuery(e.target.value);
-    };
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleClear = () => {
         setQuery('');
         setShowSuggestions(false);
-        inputRef.current?.focus();
-    };
+        inputRef.current?.focus()};
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim() && onSearch) {
             onSearch(query.trim());
+<<<<<<< HEAD
             setShowSuggestions(false);
 
+=======
+            setShowSuggestions(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.title);
         setShowSuggestions(false);
         if (onSearch) {
+<<<<<<< HEAD
             onSearch(suggestion.title);
 
+=======
+            onSearch(suggestion.title)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleKeyDown = (e) => {
         if (!showSuggestions)
@@ -65,17 +79,27 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
             case 'Enter':
                 e.preventDefault();
                 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+<<<<<<< HEAD
                     handleSuggestionClick(filteredSuggestions[selectedIndex]);
 
                 else if (query.trim()) {
                     handleSubmit(e);
 
+=======
+                    handleSuggestionClick(filteredSuggestions[selectedIndex])}
+                else if (query.trim()) {
+                    handleSubmit(e)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 break;
             case 'Escape':
                 setShowSuggestions(false);
                 setSelectedIndex(-1);
+<<<<<<< HEAD
                 break;
 
+=======
+                break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className={`relative ${className}`} ref={suggestionsRef}>
       <form onSubmit={handleSubmit} className="relative">
@@ -112,6 +136,10 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
               </div>
             </button>))}
         </div>)}
+<<<<<<< HEAD
     </div>);
 };
 }}}}}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,7 +16,13 @@ import {
   Cloud,
   Shield,
   Globe
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -25,19 +31,33 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
+<<<<<<< HEAD
   type: 'service' | 'article' | 'team' | 'technology';
+=======
+  type: 'service' | 'article' | 'team' | 'technology'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterOption {
+
   id: string;
   label: string;
   value: string;
+<<<<<<< HEAD
   count: number;
+=======
+  count: number}
 
-interface SearchAndFilterSystemProps {
+interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
+  onResultsChange?: (results: SearchResult[])  => void;
   placeholder?: string;
+<<<<<<< HEAD
   showFilters?: boolean;
+=======
+  showFilters?: boolean}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
@@ -49,23 +69,31 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
   const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('relevance');
 
   // Filter options
   const filterOptions = useMemo(() => {
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
+<<<<<<< HEAD
     }, { /* empty */ } as Record<string, number>);
+=======
+    }, {} as Record<string, any>);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
+<<<<<<< HEAD
     }, { /* empty */ } as Record<string, number>);
+=======
+    }, {} as Record<string, any>);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return {
-      categories: Object.entries(categories).map(([key, count]) => ({
+      categories: Object.entries(categories).map(([key, count])  => ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
@@ -256,7 +284,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <div className="relative">
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
 
               <option value="relevance">Relevance</option>
@@ -301,10 +329,46 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       <AnimatePresence>
         {showFilterPanel && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            initial = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+
+
+
+
+}}
+            exit = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.3,
+  ease: 'easeOut' 
+
+
+
+
+
+
+}}
             className="mb-6 overflow-hidden"
 
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
@@ -384,8 +448,26 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         {filteredResults.map((result) => (
           <motion.div
             key={result.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
 
             <div className="flex items-start gap-4">
@@ -460,4 +542,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       )}
     </div>
   );
+<<<<<<< HEAD
 };}}}}}}}
+=======
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

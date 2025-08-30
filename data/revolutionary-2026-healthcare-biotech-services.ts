@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2026HealthcareBiotechService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Revolutionary2026HealthcareBiotechService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [
   // AI Drug Discovery Platform
   {
@@ -48,7 +51,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary AI platform that accelerates drug discovery by analyzing molecular structures, predicting drug interactions, and optimizing clinical trial designs.',
-    features: [
+    features[
       'Molecular structure analysis',
       'Drug interaction prediction',
       'Clinical trial optimization',
@@ -71,11 +74,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     setupTime: '3 weeks',
     category: 'Healthcare & AI',
     realService: true,
-    technology: ['Machine Learning', 'Molecular Modeling', 'Bioinformatics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Laboratory systems', 'Clinical databases', 'Regulatory platforms', 'Research databases', 'Healthcare systems', 'Academic platforms'],
-    useCases: ['Drug discovery', 'Clinical trials', 'Personalized medicine', 'Drug repurposing', 'Target identification', 'Toxicity testing'],
+    technology['Machine Learning', 'Molecular Modeling', 'Bioinformatics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Laboratory systems', 'Clinical databases', 'Regulatory platforms', 'Research databases', 'Healthcare systems', 'Academic platforms'],
+    useCases['Drug discovery', 'Clinical trials', 'Personalized medicine', 'Drug repurposing', 'Target identification', 'Toxicity testing'],
     roi: 'Average customer sees 800% ROI within 18 months through accelerated drug discovery and development.',
-    competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI', 'Exscientia', 'Recursion Pharmaceuticals'],
+    competitors['Atomwise', 'Insilico Medicine', 'BenevolentAI', 'Exscientia', 'Recursion Pharmaceuticals'],
     marketSize: '$45.6B market',
     growthRate: '28.9% annual growth',
     variant: 'quantum-futuristic',
@@ -100,7 +103,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary autonomous AI platform that continuously learns and improves healthcare delivery, diagnosis, and treatment recommendations.',
-    features: [
+    features[
       'Self-learning diagnostics',
       'Autonomous treatment planning',
       'Continuous improvement',
@@ -123,11 +126,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     setupTime: '2 weeks',
     category: 'Healthcare & AI',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Electronic health records', 'Medical devices', 'Laboratory systems', 'Imaging systems', 'Insurance platforms', 'Government databases'],
-    useCases: ['Diagnosis assistance', 'Treatment planning', 'Patient monitoring', 'Risk assessment', 'Quality improvement', 'Clinical research'],
+    technology['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Electronic health records', 'Medical devices', 'Laboratory systems', 'Imaging systems', 'Insurance platforms', 'Government databases'],
+    useCases['Diagnosis assistance', 'Treatment planning', 'Patient monitoring', 'Risk assessment', 'Quality improvement', 'Clinical research'],
     roi: 'Average customer sees 600% ROI within 12 months through improved patient outcomes and operational efficiency.',
-    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Amazon Comprehend Medical', 'Cerner'],
+    competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Amazon Comprehend Medical', 'Cerner'],
     marketSize: '$67.4B market',
     growthRate: '25.3% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary quantum machine learning platform that combines quantum computing with AI to solve complex research problems and accelerate scientific discoveries.',
-    features: [
+    features[
       'Quantum AI algorithms',
       'Complex problem solving',
       'Research acceleration',
@@ -175,11 +178,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     setupTime: '2 weeks',
     category: 'Quantum AI & Research',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'AI Algorithms', 'Python', 'Qiskit', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Research databases', 'Academic platforms', 'Government systems', 'Defense platforms', 'Space systems', 'AI frameworks'],
-    useCases: ['Scientific research', 'AI model optimization', 'Complex problem solving', 'Cross-domain research', 'Breakthrough discoveries', 'Research automation'],
+    technology['Quantum Computing', 'Machine Learning', 'AI Algorithms', 'Python', 'Qiskit', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Research databases', 'Academic platforms', 'Government systems', 'Defense platforms', 'Space systems', 'AI frameworks'],
+    useCases['Scientific research', 'AI model optimization', 'Complex problem solving', 'Cross-domain research', 'Breakthrough discoveries', 'Research automation'],
     roi: 'Average customer sees 1000% ROI within 15 months through research acceleration and breakthrough discoveries.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'Amazon Braket', 'Rigetti'],
+    competitors['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'Amazon Braket', 'Rigetti'],
     marketSize: '$78.9B market',
     growthRate: '31.2% annual growth',
     variant: 'quantum-futuristic',
@@ -204,7 +207,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$899',
     period: '/month',
     description: 'Advanced AI platform that revolutionizes legal research by analyzing case law, predicting outcomes, and providing comprehensive legal insights.',
-    features: [
+    features[
       'AI case law analysis',
       'Outcome prediction',
       'Legal document review',
@@ -227,11 +230,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     setupTime: '1 week',
     category: 'Legal Tech & AI',
     realService: true,
-    technology: ['Natural Language Processing', 'Machine Learning', 'Legal Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Legal databases', 'Case management systems', 'Document management', 'Compliance platforms', 'Government databases', 'Academic platforms'],
-    useCases: ['Legal research', 'Case analysis', 'Risk assessment', 'Compliance monitoring', 'Contract review', 'Legal education'],
+    technology['Natural Language Processing', 'Machine Learning', 'Legal Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Legal databases', 'Case management systems', 'Document management', 'Compliance platforms', 'Government databases', 'Academic platforms'],
+    useCases['Legal research', 'Case analysis', 'Risk assessment', 'Compliance monitoring', 'Contract review', 'Legal education'],
     roi: 'Average customer sees 400% ROI within 8 months through research automation and outcome prediction.',
-    competitors: ['Westlaw', 'LexisNexis', 'Bloomberg Law', 'Casetext', 'Ravel Law'],
+    competitors['Westlaw', 'LexisNexis', 'Bloomberg Law', 'Casetext', 'Ravel Law'],
     marketSize: '$23.7B market',
     growthRate: '19.8% annual growth',
     variant: 'quantum-futuristic',
@@ -256,7 +259,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$3,999',
     period: '/month',
     description: 'Comprehensive AI platform for biotechnology research, including genetic analysis, protein folding, drug discovery, and personalized medicine development.',
-    features: [
+    features[
       'Genetic sequence analysis',
       'Protein structure prediction',
       'Drug discovery algorithms',
@@ -279,11 +282,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     setupTime: '2 weeks',
     category: 'Biotech & AI',
     realService: true,
-    technology: ['Machine Learning', 'Bioinformatics', 'Genomics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Laboratory systems', 'Sequencing platforms', 'Research databases', 'Healthcare systems', 'Academic platforms', 'Government databases'],
-    useCases: ['Genetic research', 'Drug discovery', 'Personalized medicine', 'Clinical trials', 'Biomarker research', 'Disease modeling'],
+    technology['Machine Learning', 'Bioinformatics', 'Genomics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Laboratory systems', 'Sequencing platforms', 'Research databases', 'Healthcare systems', 'Academic platforms', 'Government databases'],
+    useCases['Genetic research', 'Drug discovery', 'Personalized medicine', 'Clinical trials', 'Biomarker research', 'Disease modeling'],
     roi: 'Average customer sees 700% ROI within 14 months through research acceleration and breakthrough discoveries.',
-    competitors: ['Benchling', 'LabArchives', 'Labguru', 'Quartzy', 'LabCollector'],
+    competitors['Benchling', 'LabArchives', 'Labguru', 'Quartzy', 'LabCollector'],
     marketSize: '$34.8B market',
     growthRate: '26.4% annual growth',
     variant: 'quantum-futuristic',

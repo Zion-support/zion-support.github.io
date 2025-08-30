@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
-import { MessageBubble } from './MessageBubble';
-import { DateDivider } from './DateDivider';
+import { MessageBubble } from "./MessageBubble";
+import { DateDivider } from "./DateDivider";
 export function ConversationDetailView() {
     const { user } = useAuth();
     const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();
@@ -14,22 +14,23 @@ export function ConversationDetailView() {
     const messagesEndRef = useRef(null);
     useEffect(() => {
         if (activeConversation) {
+<<<<<<< HEAD
             loadMessages(activeConversation.id);
 
+=======
+            loadMessages(activeConversation.id)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
-        scrollToBottom();
-    }, [activeMessages]);
+        scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     const handleSendMessage = async (e) => {
         e.preventDefault();
         if (!messageText.trim() || !activeConversation)
             return;
         await sendMessage(activeConversation.id, messageText);
-        setMessageText('');
-    };
+        setMessageText('')};
     if (!activeConversation) {
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"/>
@@ -37,14 +38,19 @@ export function ConversationDetailView() {
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.
         </p>
+<<<<<<< HEAD
       </div>);
 
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Group messages by date
     const groupedMessages = [];
     activeMessages.forEach(message => {
         const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if (existingGroup) {
+<<<<<<< HEAD
             existingGroup.messages.push(message);
 
         else {
@@ -53,6 +59,14 @@ export function ConversationDetailView() {
                 messages: [message]
             });
 
+=======
+            existingGroup.messages.push(message)}
+        else {
+            groupedMessages.push({
+                date: messageDate,
+                messages[message]
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const hasContextData = activeConversation.context_data &&
         (activeConversation.context_data.title || activeConversation.context_data.description);
@@ -125,5 +139,9 @@ export function ConversationDetailView() {
           </Button>
         </form>
       </div>
+<<<<<<< HEAD
     </div>);
 </div>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

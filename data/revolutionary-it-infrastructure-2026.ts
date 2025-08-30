@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface RevolutionaryITInfrastructure2026 {
   id: string;
   name: string;
@@ -30,20 +30,34 @@ export interface RevolutionaryITInfrastructure2026 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [
   {
@@ -53,7 +67,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$2,999',
     period: '/month',
     description: 'Advanced cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.',
-    features: [
+    features[
       'Post-quantum cryptography algorithms',
       'Quantum-resistant key exchange',
       'Hybrid encryption systems',
@@ -76,11 +90,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-4 weeks',
     category: 'Cybersecurity & Quantum',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Rust', 'Go', 'Python', 'Kubernetes', 'Terraform', 'AWS/GCP/Azure'],
-    integrations: ['Active Directory', 'Okta', 'Ping Identity', 'Splunk', 'QRadar', 'Custom SIEM'],
-    useCases: ['Data encryption', 'Secure communications', 'Identity management', 'Compliance adherence'],
+    technology['Post-Quantum Cryptography', 'Rust', 'Go', 'Python', 'Kubernetes', 'Terraform', 'AWS/GCP/Azure'],
+    integrations['Active Directory', 'Okta', 'Ping Identity', 'Splunk', 'QRadar', 'Custom SIEM'],
+    useCases['Data encryption', 'Secure communications', 'Identity management', 'Compliance adherence'],
     roi: 'Future-proof security investment with 50% reduction in long-term security upgrade costs.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Traditional cybersecurity vendors'],
+    competitors['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Traditional cybersecurity vendors'],
     marketSize: '$45.2B cybersecurity market',
     growthRate: '130% annual growth',
     variant: 'quantum-futuristic',
@@ -99,7 +113,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$1,799',
     period: '/month',
     description: 'Comprehensive edge computing platform that manages, monitors, and optimizes distributed edge infrastructure for IoT, 5G, and edge applications.',
-    features: [
+    features[
       'Multi-edge location management',
       'Intelligent workload distribution',
       'Edge-to-cloud synchronization',
@@ -122,11 +136,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-3 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['Kubernetes', 'Docker', 'Go', 'Python', 'Apache Kafka', 'InfluxDB', 'Prometheus'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker Swarm', 'Custom edge devices'],
-    useCases: ['IoT data processing', '5G network optimization', 'Smart city management', 'Industrial automation'],
+    technology['Kubernetes', 'Docker', 'Go', 'Python', 'Apache Kafka', 'InfluxDB', 'Prometheus'],
+    integrations['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker Swarm', 'Custom edge devices'],
+    useCases['IoT data processing', '5G network optimization', 'Smart city management', 'Industrial automation'],
     roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application performance.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'VMware Edge'],
+    competitors['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'VMware Edge'],
     marketSize: '$18.7B edge computing market',
     growthRate: '160% annual growth',
     variant: 'edge-futuristic',
@@ -145,7 +159,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$899',
     period: '/month',
     description: 'Advanced DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes.',
-    features: [
+    features[
       'AI-powered pipeline optimization',
       'Intelligent test automation',
       'Predictive deployment analysis',
@@ -168,11 +182,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '1-2 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Kubernetes', 'Docker', 'Jenkins', 'GitLab', 'GitHub Actions'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams', 'PagerDuty'],
-    useCases: ['CI/CD optimization', 'Infrastructure automation', 'Deployment management', 'Performance monitoring'],
+    technology['Python', 'TensorFlow', 'Kubernetes', 'Docker', 'Jenkins', 'GitLab', 'GitHub Actions'],
+    integrations['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams', 'PagerDuty'],
+    useCases['CI/CD optimization', 'Infrastructure automation', 'Deployment management', 'Performance monitoring'],
     roi: 'Average 50% reduction in deployment time and 30% decrease in production incidents.',
-    competitors: ['GitLab CI/CD', 'GitHub Actions', 'Jenkins', 'CircleCI', 'Travis CI'],
+    competitors['GitLab CI/CD', 'GitHub Actions', 'Jenkins', 'CircleCI', 'Travis CI'],
     marketSize: '$7.8B DevOps market',
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
@@ -191,7 +205,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$1,499',
     period: '/month',
     description: 'Comprehensive blockchain platform that provides enterprise-grade infrastructure, smart contract management, and blockchain analytics for business applications.',
-    features: [
+    features[
       'Multi-blockchain support (Ethereum, Polygon, Solana)',
       'Smart contract development and deployment',
       'Blockchain node management',
@@ -214,11 +228,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-3 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Ethereum', 'Polygon', 'Solana', 'Node.js', 'Python', 'React', 'PostgreSQL'],
-    integrations: ['MetaMask', 'WalletConnect', 'OpenZeppelin', 'Hardhat', 'Truffle', 'Custom wallets'],
-    useCases: ['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
+    technology['Ethereum', 'Polygon', 'Solana', 'Node.js', 'Python', 'React', 'PostgreSQL'],
+    integrations['MetaMask', 'WalletConnect', 'OpenZeppelin', 'Hardhat', 'Truffle', 'Custom wallets'],
+    useCases['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
     roi: 'Average 60% reduction in blockchain development time and 40% improvement in transaction efficiency.',
-    competitors: ['Alchemy', 'Infura', 'QuickNode', 'Moralis', 'Chainstack'],
+    competitors['Alchemy', 'Infura', 'QuickNode', 'Moralis', 'Chainstack'],
     marketSize: '$19.9B blockchain market',
     growthRate: '170% annual growth',
     variant: 'blockchain-futuristic',
@@ -237,7 +251,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary platform that seamlessly integrates quantum computing resources with classical cloud infrastructure for hybrid computing applications.',
-    features: [
+    features[
       'Quantum-classical hybrid workflows',
       'Multiple quantum provider integration',
       'Quantum algorithm optimization',
@@ -260,11 +274,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & Cloud',
     realService: true,
-    technology: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'Kubernetes', 'AWS Braket', 'Azure Quantum'],
-    integrations: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Azure Quantum', 'Custom quantum hardware'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'Machine learning', 'Cryptography'],
+    technology['Qiskit', 'Cirq', 'PennyLane', 'Python', 'Kubernetes', 'AWS Braket', 'Azure Quantum'],
+    integrations['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Azure Quantum', 'Custom quantum hardware'],
+    useCases['Drug discovery', 'Financial modeling', 'Optimization problems', 'Machine learning', 'Cryptography'],
     roi: 'Access to quantum computing capabilities with 70% cost reduction compared to building quantum infrastructure.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Azure Quantum', 'D-Wave'],
+    competitors['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Azure Quantum', 'D-Wave'],
     marketSize: '$1.9B quantum computing market',
     growthRate: '200% annual growth',
     variant: 'quantum-futuristic',

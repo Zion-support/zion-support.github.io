@@ -9,8 +9,21 @@ export function InteractiveMap() {
         <h2 className="text-3xl font-bold">Zion Multiverse Map</h2>
         <div className="relative max-w-3xl mx-auto">
           <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.png" alt="World map" className="w-full h-auto"/>
-          {locations.map((loc) => (<a key={loc.name} href={`https://${loc.subdomain}`} className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full" style={{ top: loc.top, left: loc.left }} title={`Visit ${loc.name}`}/>))}
+          {locations.map((loc) => (<a key={loc.name} href={`https://${loc.subdomain}`} className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full" style = {
+  { top: loc.top,
+  left: loc.left 
+
+
+
+
+
+
+}} title={`Visit ${loc.name}`}/>))}
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 }
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

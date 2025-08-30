@@ -12,6 +12,7 @@ class AutomationDashboard {
     this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
+<<<<<<< HEAD
     this.startMetricsCollection();
 
   ensureLogDirectory() {
@@ -30,6 +31,19 @@ class AutomationDashboard {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
+=======
+    this.startMetricsCollection()}
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true })}
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   loadAutomationSystems() {
     const systems = [
       { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
@@ -44,8 +58,7 @@ class AutomationDashboard {
       { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
       { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
     ];
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
+    for (const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
           ...system,
@@ -57,33 +70,60 @@ class AutomationDashboard {
           averageExecutionTime: 0,
           uptime: 0,
           isRunning: false
+<<<<<<< HEAD
         });
 
 
 
+=======
+        })}
+    }
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   startMetricsCollection() {
     // Collect metrics every 30 seconds
     setInterval(() => {
-      this.collectMetrics();
-    }, 30000);
+      this.collectMetrics()}, 30000);
     // Generate alerts every minute
     setInterval(() => {
+<<<<<<< HEAD
       this.generateAlerts();
     }, 60000);
 
+=======
+      this.generateAlerts()}, 60000)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   collectMetrics() {
     for (const [name, system] of this.automationSystems) {
       const metrics = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         isRunning: system.isRunning,
         lastRun: system.lastRun,
         successRate: system.successCount / (system.successCount + system.failureCount) || 0,
         averageExecutionTime: system.averageExecutionTime,
+  <<<<<<< HEAD
         uptime: system.uptime
-      };
+      
+
+};
+      this.metrics.set(name, metrics)}
+=======
+  uptime: system.uptime
+      
+
+
+
+
+};
       this.metrics.set(name, metrics);
+<<<<<<< HEAD
 
 
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateAlerts() {
     this.alerts = [];
     for (const [name, system] of this.automationSystems) {
@@ -95,32 +135,50 @@ class AutomationDashboard {
           system: name,
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
           timestamp: new Date().toISOString()
+<<<<<<< HEAD
         });
 
+=======
+        })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       if (system.averageExecutionTime > 30000) {
         this.alerts.push({
           type: 'warning',
           system: name,
           message: `Slow execution time: ${system.averageExecutionTime}ms`,
           timestamp: new Date().toISOString()
+<<<<<<< HEAD
         });
 
+=======
+        })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         this.alerts.push({
           type: 'error',
           system: name,
           message: 'System not running recently',
           timestamp: new Date().toISOString()
+<<<<<<< HEAD
         });
 
 
 
+=======
+        })}
+    }
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   async runSystem(systemName) {
     const system = this.automationSystems.get(systemName);
     if (!system) {
       this.log(`❌ System not found: ${systemName}`);
+<<<<<<< HEAD
       return false;
 
+=======
+      return false}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const startTime = Date.now();
     system.isRunning = true;
     try {
@@ -135,21 +193,27 @@ class AutomationDashboard {
       this.updateSystemMetrics(systemName, true, executionTime);
 
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
-      return { success: true, output: result, executionTime };
-    } catch (error) {
+      return { success: true, output: result, executionTime }} catch (error) {
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
 
       this.log(`❌ System failed: ${systemName} - ${error.message}`);
+<<<<<<< HEAD
       return { success: false, error: error.message, executionTime };
     } finally {
       system.isRunning = false;
 
 
+=======
+      return { success: false, error: error.message, executionTime }} finally {
+      system.isRunning = false}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   updateSystemMetrics(systemName, success, executionTime) {
     const system = this.automationSystems.get(systemName);
     if (!system) return;
     if (success) {
+<<<<<<< HEAD
       system.successCount++;
     } else {
       system.failureCount++;
@@ -158,6 +222,13 @@ class AutomationDashboard {
     system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date();
 
+=======
+      system.successCount++} else {
+      system.failureCount++}
+    system.totalExecutionTime += executionTime;
+    system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
+    system.lastRun = new Date()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   async runAllSystems() {
     this.log('🚀 Running all automation systems...');
 
@@ -168,12 +239,20 @@ class AutomationDashboard {
         results.push({ name, ...result });
 
         // Add delay between systems
+<<<<<<< HEAD
         await this.sleep(2000);
 
 
     this.log(`📊 Completed ${results.length} systems`);
     return results;
 
+=======
+        await this.sleep(2000)}
+    }
+    
+    this.log(`📊 Completed ${results.length} systems`);
+    return results}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateDashboardHTML() {
     const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
@@ -252,7 +331,7 @@ class AutomationDashboard {
             type: 'line',
             data: {
                 labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},
-                datasets: [{
+                datasets[{
                     label: 'Success Rate',
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},
                     borderColor: 'rgb(59, 130, 246)',
@@ -275,12 +354,18 @@ class AutomationDashboard {
                 .then(response => response.json())
                 .then(data => {
                     alert('All systems started');
+<<<<<<< HEAD
                     setTimeout(refreshDashboard, 5000);
                 });
 
         function refreshDashboard() {
             location.reload();
 
+=======
+                    setTimeout(refreshDashboard, 5000)})}
+        function refreshDashboard() {
+            location.reload()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         function generateReport() {
             fetch('/api/report')
                 .then(response => response.json())
@@ -290,26 +375,48 @@ class AutomationDashboard {
                     const a = document.createElement('a');
                     a.href = url;
                     a.download = 'automation-report.json';
+<<<<<<< HEAD
                     a.click();
                 });
 
+=======
+                    a.click()})}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Auto-refresh every 30 seconds
         setInterval(refreshDashboard, 30000);
     </script>
 </body>
+<<<<<<< HEAD
 </html>`;
 
+=======
+</html>`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: {
         totalSystems: this.automationSystems.size,
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
         totalAlerts: this.alerts.length,
+<<<<<<< HEAD
         averageSuccessRate: this.calculateAverageSuccessRate()
       },
       systems: { /* empty */ },
       metrics: { /* empty */ },
+=======
+  averageSuccessRate: this.calculateAverageSuccessRate()
+      
+
+
+
+
+
+
+},
+      systems: {},
+      metrics: {},
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       alerts: this.alerts,
       recommendations: this.generateRecommendations()
     };
@@ -325,6 +432,7 @@ class AutomationDashboard {
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
         uptime: system.uptime
+<<<<<<< HEAD
       };
 
     // Metrics
@@ -333,15 +441,28 @@ class AutomationDashboard {
 
     return report;
 
+=======
+      }}
+    // Metrics
+    for (const [name, metric] of this.metrics) {
+      report.metrics[name] = metric}
+    return report}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   calculateAverageSuccessRate() {
     const systems = Array.from(this.automationSystems.values());
     const totalSuccessRate = systems.reduce((sum, system) => {
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;
+<<<<<<< HEAD
       return sum + rate;
     }, 0);
 
     return systems.length > 0 ? totalSuccessRate / systems.length : 0;
 
+=======
+      return sum + rate}, 0);
+    
+    return systems.length > 0 ? totalSuccessRate / systems.length : 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateRecommendations() {
     const recommendations = [];
     for (const [name, system] of this.automationSystems) {
@@ -353,30 +474,43 @@ class AutomationDashboard {
           system: name,
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
           priority: 'high'
+<<<<<<< HEAD
         });
 
+=======
+        })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       if (system.averageExecutionTime > 30000) {
         recommendations.push({
           type: 'optimization',
           system: name,
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
           priority: 'medium'
+<<<<<<< HEAD
         });
 
+=======
+        })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         recommendations.push({
           type: 'maintenance',
           system: name,
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
           priority: 'low'
+<<<<<<< HEAD
         });
 
 
     return recommendations;
 
+=======
+        })}
+    }
+    return recommendations}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   createServer() {
     const server = http.createServer((req, res) => {
-      const parsedUrl = url.parse(req.url, true);
       const pathname = parsedUrl.pathname;
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Access-Control-Allow-Origin', '*');
@@ -385,8 +519,12 @@ class AutomationDashboard {
       if (req.method === 'OPTIONS') {
         res.writeHead(200);
         res.end();
+<<<<<<< HEAD
         return;
 
+=======
+        return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       switch (pathname) {
         case '/':
           res.setHeader('Content-Type', 'text/html');
@@ -405,12 +543,14 @@ class AutomationDashboard {
           if (req.method === 'POST') {
             this.runAllSystems().then(results => {
               res.writeHead(200);
-              res.end(JSON.stringify({ success: true, results }));
-            });
-          } else {
+              res.end(JSON.stringify({ success: true, results }))})} else {
             res.writeHead(405);
+<<<<<<< HEAD
             res.end(JSON.stringify({ error: 'Method not allowed' }));
 
+=======
+            res.end(JSON.stringify({ error: 'Method not allowed' }))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           break;
         case '/api/run':
           if (req.method === 'POST') {
@@ -420,13 +560,14 @@ class AutomationDashboard {
               const { system } = JSON.parse(body);
               this.runSystem(system).then(result => {
                 res.writeHead(200);
-                res.end(JSON.stringify(result));
-              });
-            });
-          } else {
+                res.end(JSON.stringify(result))})})} else {
             res.writeHead(405);
+<<<<<<< HEAD
             res.end(JSON.stringify({ error: 'Method not allowed' }));
 
+=======
+            res.end(JSON.stringify({ error: 'Method not allowed' }))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           break;
         case '/api/report':
           res.writeHead(200);
@@ -434,6 +575,7 @@ class AutomationDashboard {
           break;
         default:
           res.writeHead(404);
+<<<<<<< HEAD
           res.end(JSON.stringify({ error: 'Not found' }));
 
     });
@@ -442,15 +584,27 @@ class AutomationDashboard {
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 
+=======
+          res.end(JSON.stringify({ error: 'Not found' }))}
+    });
+    return server}
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   start(port = 3001) {
     const server = this.createServer();
     server.listen(port, () => {
       this.log(`🚀 Automation Dashboard started on port ${port}`);
       this.log(`📊 Dashboard available at: http://localhost:${port}`);
+<<<<<<< HEAD
       this.log(`📊 API available at: http://localhost:${port}/api/status`);
     });
 
 
+=======
+      this.log(`📊 API available at: http://localhost:${port}/api/status`)})}
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // CLI handling
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
@@ -465,6 +619,7 @@ switch (command) {
     break;
   case 'run-all':
     dashboard.runAllSystems().then(results => {
+<<<<<<< HEAD
       // // // // // console.log(JSON.stringify(results, null, 2));
 =======
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
@@ -502,3 +657,19 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+=======
+      console.log(JSON.stringify(results, null, 2));
+      process.exit(0)});
+    break;
+  default:
+    console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
+    console.log('\nCommands:');
+    console.log('  start    - Start the dashboard server');
+    console.log('  status   - Show current status');
+    console.log('  run-all  - Run all automation systems');
+    process.exit(1)}
+// Graceful shutdown
+process.on('SIGINT', () => {
+  console.log('\n🛑 Shutting down automation dashboard...');
+  process.exit(0)});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

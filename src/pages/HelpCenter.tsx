@@ -13,33 +13,53 @@ import {
   ChevronDown,
   ChevronRight,
   Star,
-  Users,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
-  Zap,
+  ChevronDown,
+  ChevronRight,
+  ExternalLink,
+  Lightbulb,
+  TrendingUp,
+  Target,
   Heart,
   Building,
   Cpu,
   Lock,
-  Globe,
-  Award,
-  CheckCircle,
-  X,
-  ArrowRight,
-  ExternalLink,
-  Lightbulb,
-  AlertCircle,
-  Info,
+  Atom,
+  Network,
+  Eye,
+  BarChart3,
+  MessageSquare,
+  Calendar,
   Clock,
+<<<<<<< HEAD
   MapPin
 interface FAQItem {
+=======
+  CheckCircle,
+  AlertCircle,
+  Info
+} from 'lucide-react';
+
+interface HelpSection {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
+  title: string;
+  icon: any;
+  description: string;
+  articles: Array<{
+    title: string;
+    description: string;
+    path?: string;
+    external?: boolean;
+    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+    readTime: string;
+  }>;
+}
+
+interface FAQItem {
   question: string;
   answer: string;
   category: string;
+<<<<<<< HEAD
   tags: string[];
 
 interface HelpCategory {
@@ -60,52 +80,192 @@ interface SupportOption {
   path: string;
 
 const helpCategories: HelpCategory[] = [
+=======
+}
+
+const helpSections: HelpSection[] = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
-    id: 'getting-started',
     title: 'Getting Started',
-    description: 'Learn the basics of using Zion Tech Group services',
-    icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500',
-    articleCount: 12,
-    path: '/help/getting-started'
+    icon: Zap,
+    description: 'Essential information to begin using our services',
+    articles: [
+      {
+        title: 'Welcome to Zion Tech Group',
+        description: 'Introduction to our platform and services',
+        path: '/about',
+        difficulty: 'Beginner',
+        readTime: '5 min'
+      },
+      {
+        title: 'Setting Up Your Account',
+        description: 'Step-by-step account creation and configuration',
+        path: '/signup',
+        difficulty: 'Beginner',
+        readTime: '10 min'
+      },
+      {
+        title: 'First Steps with AI Services',
+        description: 'Quick start guide for AI-powered solutions',
+        path: '/ai-services',
+        difficulty: 'Beginner',
+        readTime: '15 min'
+      },
+      {
+        title: 'Understanding Our Pricing',
+        description: 'Complete pricing structure and plans',
+        path: '/pricing',
+        difficulty: 'Beginner',
+        readTime: '8 min'
+      }
+    ]
   },
   {
-    id: 'services',
-    title: 'Services Guide',
-    description: 'Detailed information about our technology services',
-    icon: Code,
-    color: 'from-purple-500 to-pink-500',
-    articleCount: 25,
-    path: '/help/services'
+    id: 'ai-services',
+    title: 'AI Services',
+    icon: Brain,
+    description: 'Artificial Intelligence and Machine Learning solutions',
+    articles: [
+      {
+        title: 'AI Business Intelligence Guide',
+        description: 'How to leverage AI for business insights',
+        path: '/services/ai-business-intelligence',
+        difficulty: 'Intermediate',
+        readTime: '20 min'
+      },
+      {
+        title: 'AI Compliance Assistant Setup',
+        description: 'Configuring automated compliance monitoring',
+        path: '/services/ai-compliance-assistant',
+        difficulty: 'Intermediate',
+        readTime: '25 min'
+      },
+      {
+        title: 'AI Sales Copilot Integration',
+        description: 'Integrating AI sales optimization tools',
+        path: '/services/ai-sales-copilot',
+        difficulty: 'Intermediate',
+        readTime: '18 min'
+      },
+      {
+        title: 'AI Content Marketing Suite',
+        description: 'Creating content with AI assistance',
+        path: '/services/ai-content-marketing-suite',
+        difficulty: 'Beginner',
+        readTime: '12 min'
+      }
+    ]
   },
   {
-    id: 'marketplace',
-    title: 'Marketplace',
-    description: 'How to use our marketplace for talent and equipment',
-    icon: Building,
-    color: 'from-green-500 to-teal-500',
-    articleCount: 18,
-    path: '/help/marketplace'
+    id: 'cloud-infrastructure',
+    title: 'Cloud & Infrastructure',
+    icon: Cloud,
+    description: 'Cloud computing and infrastructure services',
+    articles: [
+      {
+        title: 'Cloud DevOps Best Practices',
+        description: 'DevOps implementation in cloud environments',
+        path: '/services/cloud-devops',
+        difficulty: 'Advanced',
+        readTime: '30 min'
+      },
+      {
+        title: 'IT Infrastructure Planning',
+        description: 'Strategic infrastructure design and implementation',
+        path: '/services/it-infrastructure',
+        difficulty: 'Advanced',
+        readTime: '35 min'
+      },
+      {
+        title: 'FinOps Cost Optimization',
+        description: 'Managing and optimizing cloud costs',
+        path: '/services/finops-advisor',
+        difficulty: 'Intermediate',
+        readTime: '22 min'
+      },
+      {
+        title: 'Digital Transformation Guide',
+        description: 'Strategic technology transformation planning',
+        path: '/services/digital-transformation',
+        difficulty: 'Advanced',
+        readTime: '40 min'
+      }
+    ]
   },
   {
-    id: 'billing',
-    title: 'Billing & Payments',
-    description: 'Payment methods, invoices, and billing questions',
-    icon: Award,
-    color: 'from-yellow-500 to-orange-500',
-    articleCount: 8,
-    path: '/help/billing'
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    icon: Shield,
+    description: 'Security and compliance solutions',
+    articles: [
+      {
+        title: 'AI Cybersecurity Platform',
+        description: 'AI-powered security threat detection',
+        path: '/services/ai-cybersecurity-platform',
+        difficulty: 'Advanced',
+        readTime: '28 min'
+      },
+      {
+        title: 'Security Headers & CSP Setup',
+        description: 'Web security configuration and hardening',
+        path: '/services/security-headers-csp',
+        difficulty: 'Intermediate',
+        readTime: '20 min'
+      },
+      {
+        title: 'Zero Trust Network Architecture',
+        description: 'Implementing modern security frameworks',
+        path: '/services/zero-trust-network-access',
+        difficulty: 'Advanced',
+        readTime: '35 min'
+      },
+      {
+        title: 'GDPR/CCPA Compliance Guide',
+        description: 'Privacy regulation compliance automation',
+        path: '/services/dsr-portal',
+        difficulty: 'Intermediate',
+        readTime: '25 min'
+      }
+    ]
   },
   {
-    id: 'account',
-    title: 'Account Management',
-    description: 'Profile settings, security, and account preferences',
-    icon: Users,
-    color: 'from-indigo-500 to-purple-500',
-    articleCount: 15,
-    path: '/help/account'
+    id: 'micro-saas',
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    description: 'Niche software solutions and platforms',
+    articles: [
+      {
+        title: 'Micro SaaS Platform Overview',
+        description: 'Understanding our micro SaaS ecosystem',
+        path: '/micro-saas',
+        difficulty: 'Beginner',
+        readTime: '15 min'
+      },
+      {
+        title: 'Micro CRM Implementation',
+        description: 'Setting up customer relationship management',
+        path: '/services/micro-crm',
+        difficulty: 'Intermediate',
+        readTime: '20 min'
+      },
+      {
+        title: 'Helpdesk Platform Setup',
+        description: 'Customer support system configuration',
+        path: '/services/helpdesk',
+        difficulty: 'Intermediate',
+        readTime: '18 min'
+      },
+      {
+        title: 'Website Analytics Dashboard',
+        description: 'Performance tracking and insights setup',
+        path: '/services/website-analytics',
+        difficulty: 'Beginner',
+        readTime: '12 min'
+      }
+    ]
   },
   {
+<<<<<<< HEAD
     id: 'troubleshooting',
     title: 'Troubleshooting',
     description: 'Common issues and their solutions',
@@ -149,45 +309,73 @@ const supportOptions: SupportOption[] = [
     action: 'Watch Videos',
     path: '/help/videos'
 
+=======
+    id: 'emerging-tech',
+    title: 'Emerging Technologies',
+    icon: Atom,
+    description: 'Cutting-edge and future technologies',
+    articles: [
+      {
+        title: 'Quantum Computing Primer',
+        description: 'Introduction to quantum computing concepts',
+        path: '/services/quantum-computing',
+        difficulty: 'Advanced',
+        readTime: '45 min'
+      },
+      {
+        title: 'IoT Edge Computing Guide',
+        description: 'Internet of Things and edge computing',
+        path: '/services/iot-edge-computing',
+        difficulty: 'Intermediate',
+        readTime: '25 min'
+      },
+      {
+        title: 'AI Quantum Hybrid Platform',
+        description: 'Combining AI and quantum computing',
+        path: '/services/ai-quantum-hybrid-platform',
+        difficulty: 'Advanced',
+        readTime: '40 min'
+      },
+      {
+        title: 'Space Technology Solutions',
+        description: 'Space-based technology applications',
+        path: '/space-tech',
+        difficulty: 'Advanced',
+        readTime: '30 min'
+      }
+    ]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const faqData: FAQItem[] = [
   {
-    id: '1',
-    question: 'How do I get started with Zion Tech Group services?',
-    answer: 'Getting started is easy! Simply browse our services, contact our team for a consultation, or use our online quote request form. We\'ll assess your needs and recommend the best solutions for your business.',
-    category: 'getting-started',
-    tags: ['onboarding', 'consultation', 'services']
+    question: 'What services does Zion Tech Group offer?',
+    answer: 'We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',
+    category: 'General'
   },
   {
-    id: '2',
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our encrypted payment system.',
-    category: 'billing',
-    tags: ['payment', 'billing', 'security']
+    question: 'How do I get started with your AI services?',
+    answer: 'Getting started is easy! Begin by exploring our AI services overview page, then contact our team for a consultation. We\'ll assess your needs and recommend the best AI solutions for your business. We also offer comprehensive onboarding and training.',
+    category: 'AI Services'
   },
   {
-    id: '3',
-    question: 'How quickly can you deploy AI solutions?',
-    answer: 'Deployment timelines vary based on complexity. Simple AI integrations can be deployed in 2-4 weeks, while complex enterprise solutions typically take 8-12 weeks. We\'ll provide a detailed timeline during consultation.',
-    category: 'services',
-    tags: ['ai', 'deployment', 'timeline']
+    question: 'What is your pricing structure?',
+    answer: 'Our pricing varies based on the service and your specific requirements. We offer flexible plans including pay-as-you-go, subscription models, and enterprise custom pricing. Contact us for a detailed quote tailored to your needs.',
+    category: 'Pricing'
   },
   {
-    id: '4',
-    question: 'Do you provide ongoing support after deployment?',
-    answer: 'Yes! We offer comprehensive post-deployment support including 24/7 monitoring, regular maintenance, updates, and technical support. Our support packages are customizable to your needs.',
-    category: 'services',
-    tags: ['support', 'maintenance', 'monitoring']
+    question: 'Do you provide support and training?',
+    answer: 'Yes! We provide comprehensive support including 24/7 technical assistance, detailed documentation, video tutorials, and personalized training sessions. Our team is committed to ensuring your success with our solutions.',
+    category: 'Support'
   },
   {
-    id: '5',
-    question: 'Can you work with existing IT infrastructure?',
-    answer: 'Absolutely! We specialize in integrating with existing systems. Our team will assess your current infrastructure and design solutions that work seamlessly with what you already have.',
-    category: 'troubleshooting',
-    tags: ['integration', 'infrastructure', 'compatibility']
+    question: 'Are your services suitable for small businesses?',
+    answer: 'Absolutely! We design our services to be scalable and accessible to businesses of all sizes. Our micro SaaS solutions are particularly well-suited for small businesses, offering enterprise-grade technology at accessible price points.',
+    category: 'General'
   },
   {
+<<<<<<< HEAD
     id: '6',
     question: 'What security measures do you implement?',
     answer: 'We implement enterprise-grade security including SOC2 compliance, end-to-end encryption, regular security audits, and 24/7 threat monitoring. Your data security is our top priority.',
@@ -208,13 +396,18 @@ const faqData: FAQItem[] = [
     category: 'billing',
     tags: ['guarantee', 'refund', 'satisfaction']
 
+=======
+    question: 'How do you ensure data security and compliance?',
+    answer: 'Security is our top priority. We implement industry-leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations. Our AI-powered security platforms provide real-time threat detection and response.',
+    category: 'Security'
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function HelpCenter() {
+export function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<string | null>(null);
-  const [filteredFAQs, setFilteredFAQs] = useState<FAQItem[]>(faqData);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -230,10 +423,11 @@ export default function HelpCenter() {
     setFilteredFAQs(filtered);
   };
 
-  const toggleFAQ = (id: string) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
-  };
+  const filteredFAQ = selectedCategory === 'All' 
+    ? faqData 
+    : faqData.filter(item => item.category === selectedCategory);
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'getting-started': return BookOpen;
@@ -257,6 +451,9 @@ export default function HelpCenter() {
       default: return 'text-zion-cyan';
 
   };
+=======
+  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
@@ -398,16 +595,29 @@ export default function HelpCenter() {
                 </button>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </div>
 
-            {/* FAQ Items */}
-            <div className="space-y-4">
-              {filteredFAQs
-                .filter(faq => selectedCategory === 'all' || faq.category === selectedCategory)
-                .map((faq, index) => (
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Help Sections */}
+          <div className="lg:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
+              
+              <div className="space-y-6">
+                {helpSections.map((section, index) => (
                   <motion.div
-                    key={faq.id}
+                    key={section.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                     transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                     className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden"
 
@@ -430,25 +640,41 @@ export default function HelpCenter() {
                                 {tag}
                               </span>
                             ))}
+=======
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden"
+                  >
+                    <button
+                      onClick={() => toggleSection(section.id)}
+                      className="w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">
+                            <section.icon className="w-6 h-6 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold text-white">{section.title}</h3>
+                            <p className="text-cyan-300">{section.description}</p>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           </div>
                         </div>
-                      </div>
-                      <div className="ml-4">
-                        {expandedFAQ === faq.id ? (
-                          <ChevronDown className="h-5 w-5 text-zion-cyan" />
+                        {expandedSections.has(section.id) ? (
+                          <ChevronDown className="w-5 h-5 text-cyan-400" />
                         ) : (
-                          <ChevronRight className="h-5 w-5 text-zion-slate-light" />
+                          <ChevronRight className="w-5 h-5 text-cyan-400" />
                         )}
                       </div>
                     </button>
 
                     <AnimatePresence>
-                      {expandedFAQ === faq.id && (
+                      {expandedSections.has(section.id) && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
+<<<<<<< HEAD
                           className="overflow-hidden"
 
                           <div className="px-6 pb-6">
@@ -465,12 +691,75 @@ export default function HelpCenter() {
                                 </span>
                               </div>
                             </div>
+=======
+                          className="border-t border-cyan-400/20"
+                        >
+                          <div className="p-6 space-y-4">
+                            {section.articles.map((article, articleIndex) => (
+                              <motion.div
+                                key={article.title}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
+                                className="group"
+                              >
+                                {article.path ? (
+                                  <Link
+                                    to={article.path}
+                                    className="block p-4 bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 border border-cyan-400/10 hover:border-cyan-400/30 rounded-lg transition-all duration-300"
+                                  >
+                                    <div className="flex items-start justify-between">
+                                      <div className="flex-1">
+                                        <h4 className="font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                                          {article.title}
+                                        </h4>
+                                        <p className="text-gray-400 mt-1">{article.description}</p>
+                                        <div className="flex items-center space-x-4 mt-3">
+                                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                            article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                                            article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                                            'bg-red-500/20 text-red-400'
+                                          }`}>
+                                            {article.difficulty}
+                                          </span>
+                                          <span className="text-gray-500 text-sm flex items-center">
+                                            <Clock className="w-4 h-4 mr-1" />
+                                            {article.readTime}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                  </Link>
+                                ) : (
+                                  <div className="p-4 bg-zion-slate-dark/30 border border-cyan-400/10 rounded-lg">
+                                    <h4 className="font-semibold text-white">{article.title}</h4>
+                                    <p className="text-gray-400 mt-1">{article.description}</p>
+                                    <div className="flex items-center space-x-4 mt-3">
+                                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                        article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                                        article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                                        'bg-red-500/20 text-red-400'
+                                      }`}>
+                                        {article.difficulty}
+                                      </span>
+                                      <span className="text-gray-500 text-sm flex items-center">
+                                        <Clock className="w-4 h-4 mr-1" />
+                                        {article.readTime}
+                                      </span>
+                                    </div>
+                                  </div>
+                                )}
+                              </motion.div>
+                            ))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </motion.div>
                 ))}
+<<<<<<< HEAD
             </div>
 
             {filteredFAQs.length === 0 && (
@@ -498,14 +787,18 @@ export default function HelpCenter() {
                 </button>
               </motion.div>
             )}
+=======
+              </div>
+            </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
-        </motion.div>
 
         {/* Contact Support */}
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.8 }}
 
           <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8 max-w-2xl mx-auto">
@@ -528,9 +821,46 @@ export default function HelpCenter() {
                 Start Live Chat
               </Link>
             </div>
+=======
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mt-16"
+        >
+          <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+          
+          <div className="grid gap-4">
+            {filteredFAQ.map((faq, index) => (
+              <motion.div
+                key={faq.question}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg">
+                    <HelpCircle className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                    <p className="text-gray-300">{faq.answer}</p>
+                    <span className="inline-block mt-3 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
+                      {faq.category}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </motion.div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }}}}}}}}}}}
+=======
+}
+
+export default HelpCenter;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

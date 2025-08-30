@@ -1,4 +1,4 @@
-export type ServiceItem = {
+export type ServiceItem = {;
   id: string;
   title: string;
   description: string;
@@ -15,23 +15,20 @@ export type ServiceItem = {
   contactInfo: {
     phone: string;
     email: string;
-    address: string;
-  };
-};
+    address: string}};
 
-export type ServiceCategory = {
+export type ServiceCategory = {;
   name: string;
   slug: string;
   description: string;
-  items: ServiceItem[];
-};
+  items: ServiceItem[]};
 
 export const expandedServices2025: ServiceCategory[] = [
   {
     name: 'AI-Powered Micro SaaS',
     slug: 'ai-micro-saas',
     description: 'Intelligent software-as-a-service solutions powered by cutting-edge AI',
-    items: [
+    items[
       {
         id: 'ai-content-optimizer-pro',
         title: 'AI Content Optimizer Pro',
@@ -39,7 +36,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Micro SaaS',
         price: '$299',
         billing: 'month',
-        features: [
+        features[
           'AI-powered SEO optimization',
           'Content readability scoring',
           'Multi-language support',
@@ -49,7 +46,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Social media optimization',
           'Competitor analysis'
         ],
-        benefits: [
+        benefits[
           'Increase organic traffic by 40-60%',
           'Improve content engagement by 35%',
           'Reduce content creation time by 50%',
@@ -72,7 +69,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Micro SaaS',
         price: '$499',
         billing: 'month',
-        features: [
+        features[
           'AI-powered lead scoring',
           'Predictive analytics',
           'Automated outreach sequences',
@@ -82,7 +79,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Market trend analysis',
           'Performance tracking'
         ],
-        benefits: [
+        benefits[
           'Increase sales productivity by 45%',
           'Improve lead conversion by 30%',
           'Reduce sales cycle by 25%',
@@ -105,7 +102,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Micro SaaS',
         price: '$399',
         billing: 'month',
-        features: [
+        features[
           'Automated onboarding workflows',
           'Churn prediction',
           'Customer health scoring',
@@ -115,7 +112,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Reporting dashboard',
           'Mobile app support'
         ],
-        benefits: [
+        benefits[
           'Reduce churn by 40%',
           'Increase customer lifetime value by 50%',
           'Improve customer satisfaction by 35%',
@@ -138,7 +135,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Micro SaaS',
         price: '$599',
         billing: 'month',
-        features: [
+        features[
           'Visual workflow builder',
           'AI process optimization',
           'Integration with 100+ apps',
@@ -148,7 +145,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Analytics and reporting',
           'Multi-tenant support'
         ],
-        benefits: [
+        benefits[
           'Reduce manual work by 70%',
           'Improve process efficiency by 45%',
           'Cut operational costs by 30%',
@@ -170,7 +167,7 @@ export const expandedServices2025: ServiceCategory[] = [
     name: 'Advanced IT Infrastructure',
     slug: 'advanced-it-infrastructure',
     description: 'Enterprise-grade IT infrastructure solutions for modern businesses',
-    items: [
+    items[
       {
         id: 'zero-trust-security-framework',
         title: 'Zero Trust Security Framework',
@@ -178,7 +175,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'IT Services',
         price: '$15,000',
         billing: 'project',
-        features: [
+        features[
           'Identity and access management',
           'Network segmentation',
           'Continuous monitoring',
@@ -188,7 +185,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Incident response',
           '24/7 security operations'
         ],
-        benefits: [
+        benefits[
           'Reduce security incidents by 80%',
           'Improve compliance scores by 95%',
           'Lower security costs by 30%',
@@ -211,7 +208,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'IT Services',
         price: '$25,000',
         billing: 'project',
-        features: [
+        features[
           'Cloud readiness assessment',
           'Migration strategy planning',
           'Data migration services',
@@ -221,7 +218,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Security implementation',
           'Post-migration support'
         ],
-        benefits: [
+        benefits[
           'Reduce infrastructure costs by 40%',
           'Improve application performance by 60%',
           'Increase scalability and flexibility',
@@ -244,7 +241,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'IT Services',
         price: '$8,500',
         billing: 'project',
-        features: [
+        features[
           'CI/CD pipeline automation',
           'Infrastructure as code',
           'Container orchestration',
@@ -254,7 +251,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Deployment automation',
           'Team collaboration tools'
         ],
-        benefits: [
+        benefits[
           'Reduce deployment time by 80%',
           'Improve code quality by 45%',
           'Lower operational costs by 35%',
@@ -276,7 +273,7 @@ export const expandedServices2025: ServiceCategory[] = [
     name: 'AI-Powered Business Solutions',
     slug: 'ai-business-solutions',
     description: 'Intelligent AI solutions that transform business operations and decision-making',
-    items: [
+    items[
       {
         id: 'ai-business-intelligence-suite',
         title: 'AI Business Intelligence Suite',
@@ -284,7 +281,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'AI Solutions',
         price: '$12,000',
         billing: 'project',
-        features: [
+        features[
           'Real-time data analytics',
           'Predictive modeling',
           'Automated reporting',
@@ -294,7 +291,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Mobile BI access',
           'Integration capabilities'
         ],
-        benefits: [
+        benefits[
           'Improve decision-making by 60%',
           'Reduce reporting time by 75%',
           'Increase data accuracy by 90%',
@@ -317,7 +314,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'AI Solutions',
         price: '$18,000',
         billing: 'project',
-        features: [
+        features[
           'Demand forecasting',
           'Inventory optimization',
           'Route optimization',
@@ -327,7 +324,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Real-time tracking',
           'Performance analytics'
         ],
-        benefits: [
+        benefits[
           'Reduce inventory costs by 25%',
           'Improve forecast accuracy by 40%',
           'Optimize delivery routes by 30%',
@@ -350,7 +347,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'AI Solutions',
         price: '$9,500',
         billing: 'project',
-        features: [
+        features[
           'Customer journey mapping',
           'Personalization engine',
           'Sentiment analysis',
@@ -360,7 +357,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Performance metrics',
           'Integration capabilities'
         ],
-        benefits: [
+        benefits[
           'Increase customer satisfaction by 45%',
           'Improve customer retention by 35%',
           'Boost conversion rates by 30%',
@@ -382,7 +379,7 @@ export const expandedServices2025: ServiceCategory[] = [
     name: 'Emerging Technology Solutions',
     slug: 'emerging-tech-solutions',
     description: 'Cutting-edge technology solutions for forward-thinking organizations',
-    items: [
+    items[
       {
         id: 'quantum-computing-solutions',
         title: 'Quantum Computing Solutions',
@@ -390,7 +387,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Quantum Computing',
         price: '$50,000',
         billing: 'project',
-        features: [
+        features[
           'Quantum algorithm development',
           'Optimization problems',
           'Research collaboration',
@@ -400,7 +397,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Cloud quantum access',
           'Application development'
         ],
-        benefits: [
+        benefits[
           'Solve complex problems 1000x faster',
           'Optimize business processes',
           'Gain competitive advantage',
@@ -423,7 +420,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Blockchain & Web3',
         price: '$35,000',
         billing: 'project',
-        features: [
+        features[
           'Smart contract development',
           'Supply chain tracking',
           'Digital identity management',
@@ -433,7 +430,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Integration services',
           'Training and support'
         ],
-        benefits: [
+        benefits[
           'Increase transparency by 100%',
           'Reduce fraud by 90%',
           'Lower transaction costs by 60%',
@@ -456,7 +453,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'IoT & Edge',
         price: '$22,000',
         billing: 'project',
-        features: [
+        features[
           'Edge device management',
           'Real-time analytics',
           'Data processing',
@@ -466,7 +463,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Scalability support',
           '24/7 support'
         ],
-        benefits: [
+        benefits[
           'Reduce latency by 80%',
           'Lower bandwidth costs by 60%',
           'Improve reliability by 90%',
@@ -488,7 +485,7 @@ export const expandedServices2025: ServiceCategory[] = [
     name: 'Industry-Specific Solutions',
     slug: 'industry-solutions',
     description: 'Tailored solutions for specific industry verticals',
-    items: [
+    items[
       {
         id: 'healthcare-ai-platform',
         title: 'Healthcare AI Platform',
@@ -496,7 +493,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Healthcare Tech',
         price: '$45,000',
         billing: 'project',
-        features: [
+        features[
           'Medical image analysis',
           'Patient data analytics',
           'Drug discovery support',
@@ -506,7 +503,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Security and privacy',
           'Training and support'
         ],
-        benefits: [
+        benefits[
           'Improve diagnosis accuracy by 30%',
           'Reduce medical errors by 40%',
           'Lower healthcare costs by 25%',
@@ -529,7 +526,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'FinTech & DeFi',
         price: '$28,000',
         billing: 'project',
-        features: [
+        features[
           'Digital banking platform',
           'Payment processing',
           'Risk assessment',
@@ -539,7 +536,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'API integration',
           'Security implementation'
         ],
-        benefits: [
+        benefits[
           'Reduce operational costs by 35%',
           'Improve customer experience by 50%',
           'Increase transaction security by 95%',
@@ -562,7 +559,7 @@ export const expandedServices2025: ServiceCategory[] = [
         category: 'Education Tech',
         price: '$15,000',
         billing: 'project',
-        features: [
+        features[
           'Personalized learning paths',
           'Student performance analytics',
           'Content management system',
@@ -572,7 +569,7 @@ export const expandedServices2025: ServiceCategory[] = [
           'Integration capabilities',
           'Training and support'
         ],
-        benefits: [
+        benefits[
           'Improve student engagement by 40%',
           'Increase learning outcomes by 35%',
           'Reduce administrative workload by 50%',

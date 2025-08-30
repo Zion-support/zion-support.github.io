@@ -282,6 +282,5 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousBusinessPlatform2029;

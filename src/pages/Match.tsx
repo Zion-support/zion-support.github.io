@@ -38,19 +38,24 @@ import {
   Server,
   Network,
   Settings as SettingsIcon
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const Match: React.FC = () => {
+const Match: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 }
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;
+    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
   ];
 
   const matchedServices = [
@@ -125,6 +130,7 @@ const Match: React.FC = () => {
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
+<<<<<<< HEAD
       reviews: 112,
       price: "$2,799/mo",
       features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],
@@ -132,18 +138,31 @@ const Match: React.FC = () => {
       icon: Zap,
       featured: true
 
+=======
+      reviews: 112,;
+      price: "$2,799/mo",;
+      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
+      matchScore: 87,;
+      icon: Zap,;
+      featured: true;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const filteredServices = matchedServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = matchedServices.filter(service => {;
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
@@ -154,8 +173,26 @@ const Match: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -241,8 +278,26 @@ const Match: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -259,9 +314,36 @@ const Match: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
@@ -319,7 +401,16 @@ const Match: React.FC = () => {
                 {/* Actions */}
                 <div className="flex gap-2">
                   <Link
-                    to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to = {
+  `/services/${service.name.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+
+
+
+
+}`}
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"
 
                     Learn More
@@ -364,8 +455,26 @@ const Match: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -401,9 +510,36 @@ const Match: React.FC = () => {
             ].map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -422,8 +558,26 @@ const Match: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -445,6 +599,7 @@ const Match: React.FC = () => {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
+<<<<<<< HEAD
 
                 Browse All Services
               </Link>
@@ -453,6 +608,16 @@ const Match: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+              >
+                Browse All Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 

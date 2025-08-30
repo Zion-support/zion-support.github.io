@@ -11,9 +11,13 @@ export interface Revolutionary2026Innovation {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   {
     id: "2026-revolutionary-innovation",
@@ -21,7 +25,7 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
     tagline: "Breakthrough innovations for 2026",
     price: "$399/month",
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    features: [
+    features[
       "Revolutionary innovations",
       "Breakthrough technologies",
       "Future capabilities",

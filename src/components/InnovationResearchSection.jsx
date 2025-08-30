@@ -13,14 +13,14 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 8,
         funding: "$2.5M",
         status: "Active",
-        highlights: [
+        highlights[
             "Computer Vision Breakthroughs",
             "NLP Model Optimization",
             "Autonomous Systems Research",
             "AI Ethics & Governance"
         ],
-        technologies: ["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],
-        partners: ["MIT", "Stanford", "Google Research", "Microsoft Research"]
+        technologies["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],
+        partners["MIT", "Stanford", "Google Research", "Microsoft Research"]
     },
     {
         id: 2,
@@ -34,14 +34,14 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 5,
         funding: "$1.8M",
         status: "Active",
-        highlights: [
+        highlights[
             "Quantum Algorithm Development",
             "Post-Quantum Cryptography",
             "Quantum Machine Learning",
             "Quantum Error Correction"
         ],
-        technologies: ["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],
-        partners: ["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"]
+        technologies["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],
+        partners["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"]
     },
     {
         id: 3,
@@ -55,14 +55,14 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 6,
         funding: "$2.1M",
         status: "Active",
-        highlights: [
+        highlights[
             "Scalability Solutions",
             "Consensus Mechanisms",
             "DeFi Protocols",
             "Cross-Chain Interoperability"
         ],
-        technologies: ["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],
-        partners: ["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"]
+        technologies["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],
+        partners["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"]
     },
     {
         id: 4,
@@ -76,14 +76,14 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 7,
         funding: "$1.9M",
         status: "Active",
-        highlights: [
+        highlights[
             "Threat Intelligence",
             "Zero-Knowledge Proofs",
             "Secure Multi-Party Computation",
             "Privacy-Preserving ML"
         ],
-        technologies: ["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],
-        partners: ["DARPA", "NSA", "CISA", "Academic Institutions"]
+        technologies["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],
+        partners["DARPA", "NSA", "CISA", "Academic Institutions"]
     },
     {
         id: 5,
@@ -97,14 +97,14 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 4,
         funding: "$1.5M",
         status: "Active",
-        highlights: [
+        highlights[
             "Edge AI Deployment",
             "IoT Security Protocols",
             "Distributed Computing",
             "Real-time Processing"
         ],
-        technologies: ["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],
-        partners: ["Intel", "ARM", "Qualcomm", "Industrial Partners"]
+        technologies["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],
+        partners["Intel", "ARM", "Qualcomm", "Industrial Partners"]
     },
     {
         id: 6,
@@ -118,15 +118,21 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
         patents: 3,
         funding: "$1.2M",
         status: "Active",
-        highlights: [
+        highlights[
             "Green AI Algorithms",
             "Energy-Efficient Computing",
             "Renewable Energy Integration",
             "Carbon Footprint Reduction"
         ],
+<<<<<<< HEAD
         technologies: ["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
         partners: ["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
 
+=======
+        technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
+        partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const innovationStats = [
     { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
@@ -184,7 +190,15 @@ export function InnovationResearchSection() {
 
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -204,7 +218,25 @@ export function InnovationResearchSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Innovation & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Research</span>
           </h2>
@@ -215,7 +247,34 @@ export function InnovationResearchSection() {
 
           {/* Innovation stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {innovationStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            {innovationStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
                 </div>
@@ -226,13 +285,67 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Research Areas */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Areas</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index) => (<motion.div key={area.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {researchAreas.map((area, index) => (<motion.div key={area.id} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
                   {/* Header */}
                   <div className="text-center mb-6">
@@ -286,7 +399,34 @@ export function InnovationResearchSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+
+
+
+
+
+}} transition={{ duration: 0.3 }}>
                         <div className="grid grid-cols-2 gap-4 mb-4">
                           <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
                             <div className="text-zion-cyan font-bold text-sm">{area.publications}</div>
@@ -326,13 +466,67 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Research Labs */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Labs</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+            {researchLabs.map((lab, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
                   <TestTube className="w-6 h-6 text-white"/>
                 </div>
@@ -360,7 +554,34 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -382,5 +603,9 @@ export function InnovationResearchSection() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </section>);
 }}}}}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

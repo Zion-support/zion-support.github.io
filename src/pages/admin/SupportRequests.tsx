@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +8,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { Search, Filter import { SEO } from "@/components/SEO";
+=======
+import { Search, Filter } from "lucide-react";
+import SEO from "@/components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -24,7 +30,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1002",
-    user: "sarah.smith@company.co",
+    user: "sarah.smith@comp.co",
     userId: "user-456",
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
@@ -68,7 +74,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1006",
-    user: "alex.wong@datacompany.com",
+    user: "alex.wong@datacomp.com",
     userId: "user-890",
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
@@ -81,6 +87,7 @@ const MOCK_SUPPORT_REQUESTS = [
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
+<<<<<<< HEAD
     issue: "Cannot upload portfolio images",
     status: "resolved",
     priority: "medium",
@@ -88,6 +95,15 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
 
+=======
+    issue: "Cannot upload portfolio images",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function SupportRequests() {
@@ -104,18 +120,34 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return true;
   });
@@ -134,7 +166,11 @@ export default function SupportRequests() {
   };
 
   return (
+<<<<<<< HEAD
     <>
+=======
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -204,7 +240,7 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: any) => setSearchQuery(e.target.value)}
+                  onChange={(e: ) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
@@ -341,6 +377,10 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>
+<<<<<<< HEAD
     </>
+=======
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}

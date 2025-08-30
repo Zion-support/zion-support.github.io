@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
+=======
+import React from 'react.ts';
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
+
+const QuantumTechnology = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const quantumServices = [
     {
       title: "Quantum Neural Networks",
@@ -15,6 +22,7 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const Quantum
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
     },
+<<<<<<< HEAD
     {
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
@@ -22,6 +30,15 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const Quantum
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
       icon: Shield
 
+=======
+    {;
+      title: "Quantum Cryptography",;
+      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;
+      price: "From $42,000/month",;
+      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
+      icon: Shield;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quantumTechnologies = [
@@ -36,6 +53,7 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const Quantum
       description: "AI algorithms leveraging quantum properties",
       icon: BarChart3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
+<<<<<<< HEAD
     },
     {
       name: "Quantum Communications",
@@ -43,19 +61,28 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const Quantum
       icon: Globe,
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
 
+=======
+    },;
+    {;
+      name: "Quantum Communications",;
+      description: "Secure communication using quantum principles",;
+      icon: Globe,;
+      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Exponential speedup for complex computational problems",
-    "Unbreakable encryption and enhanced security",
-    "Advanced machine learning and AI capabilities",
-    "Revolutionary breakthroughs in scientific research",
-    "Competitive advantage in technology innovation",
-    "Future-proof solutions for emerging challenges"
+  const benefits = [;
+    "Exponential speedup for complex computational problems",;
+    "Unbreakable encryption and enhanced security",;
+    "Advanced machine learning and AI capabilities",;
+    "Revolutionary breakthroughs in scientific research",;
+    "Competitive advantage in technology innovation",;
+    "Future-proof solutions for emerging challenges";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -249,13 +276,13 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const Quantum
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

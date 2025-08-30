@@ -1,43 +1,54 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network export default function ManufacturingSolutions() {
+=======
+import Link from 'next/link';
+import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
+export default function ManufacturingSolutions() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const solutions = [
         {
             icon: Brain,
             title: "AI-Powered Manufacturing",
             description: "Intelligent automation and predictive maintenance for smart factories",
-            features: ["Predictive maintenance", "Quality control", "Process optimization"]
+            features["Predictive maintenance", "Quality control", "Process optimization"]
         },
         {
             icon: Cpu,
             title: "IoT Integration",
             description: "Connected devices and sensors for real-time monitoring and control",
-            features: ["Real-time monitoring", "Data collection", "Remote control"]
+            features["Real-time monitoring", "Data collection", "Remote control"]
         },
         {
             icon: BarChart3,
             title: "Advanced Analytics",
             description: "Data-driven insights for operational efficiency and quality improvement",
-            features: ["Performance analytics", "Quality metrics", "Efficiency tracking"]
+            features["Performance analytics", "Quality metrics", "Efficiency tracking"]
         },
         {
             icon: Shield,
             title: "Cybersecurity",
             description: "Industrial-grade security for connected manufacturing systems",
-            features: ["Threat detection", "Access control", "Data protection"]
+            features["Threat detection", "Access control", "Data protection"]
         },
         {
             icon: Network,
             title: "Digital Twin",
             description: "Virtual replicas of physical systems for simulation and optimization",
-            features: ["3D modeling", "Simulation", "Performance prediction"]
+            features["3D modeling", "Simulation", "Performance prediction"]
         },
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined workflows and automated decision-making processes",
+<<<<<<< HEAD
             features: ["Workflow automation", "Decision support", "Process optimization"]
 
+=======
+            features["Workflow automation", "Decision support", "Process optimization"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -208,5 +219,9 @@ import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, N
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 }}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

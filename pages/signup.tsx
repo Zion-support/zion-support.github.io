@@ -1,8 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  User,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { User,
   Mail,
   Lock,
   Eye,
@@ -16,14 +15,20 @@ import {
   Zap,
   Brain,
   Cloud
+<<<<<<< HEAD
 export default function Signup() {
+=======
+ } from 'lucide-react'
+
+export default function Signup(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
-    company: '',
+    comp: '',
     phone: '',
     website: '',
     industry: '',
@@ -33,7 +38,11 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+<<<<<<< HEAD
   const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
+=======
+  const [errors, setErrors] = useState<Record<string, any>>({})
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const industries = [
     'Technology',
@@ -59,6 +68,7 @@ export default function Signup() {
     'Other'
   ]
 
+<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -84,7 +94,11 @@ export default function Signup() {
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
 
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
 
     if (!validateForm()) return
@@ -97,6 +111,7 @@ export default function Signup() {
 
       // Success - redirect or show success message
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.log('Signup successful:', formData)
 
     } catch (error) {
@@ -107,6 +122,12 @@ export default function Signup() {
     } catch (error) {
       // // // // // // // console.error('Signup error:', error)
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      // // // // console.log('Signup successful:', formData)
+      
+    } catch (error) {
+      // // // // console.error('Signup error:', error)
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     } finally {
       setIsSubmitting(false)
 
@@ -145,8 +166,26 @@ export default function Signup() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
 
@@ -180,9 +219,36 @@ export default function Signup() {
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="max-w-2xl mx-auto"
 
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
@@ -341,22 +407,22 @@ export default function Signup() {
                     )}
                   </div>
 
-                  {/* Company Information */}
+                  {/* Comp Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Company Name
+                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Comp Name
                       </label>
                       <div className="relative">
                         <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                         <input
                           type="text"
-                          id="company"
-                          name="company"
-                          value={formData.company}
+                          id="comp"
+                          name="comp"
+                          value={formData.comp}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="Enter company name"
+                          placeholder="Enter comp name"
                         />
                       </div>
                     </div>
@@ -395,7 +461,7 @@ export default function Signup() {
                           value={formData.website}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="https://yourcompany.com"
+                          placeholder="https://yourcomp.com"
                         />
                       </div>
                     </div>
@@ -490,9 +556,36 @@ export default function Signup() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="text-center mb-16"
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -505,9 +598,36 @@ export default function Signup() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -520,9 +640,36 @@ export default function Signup() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -535,9 +682,36 @@ export default function Signup() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
@@ -548,6 +722,7 @@ export default function Signup() {
                   Scalable cloud infrastructure and DevOps solutions for modern applications
                 </p>
               </motion.div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -555,3 +730,12 @@ export default function Signup() {
     </>
   )
 }}}}}}}}
+=======
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

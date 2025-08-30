@@ -11,9 +11,13 @@ export interface Revolutionary2027AiService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
   {
     id: "2027-revolutionary-ai",
@@ -21,7 +25,7 @@ export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
     tagline: "Revolutionary AI for 2027",
     price: "$399/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.",
-    features: [
+    features[
       "Revolutionary AI",
       "Transformative capabilities",
       "Advanced algorithms",

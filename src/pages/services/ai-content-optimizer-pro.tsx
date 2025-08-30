@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
+import { CheckCircle, 
+=======
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   CheckCircle,
   TrendingUp,
@@ -9,6 +16,17 @@ import {
   BarChart3,
   Target,
   Users,
+=======
+import { 
+  CheckCircle, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  TrendingUp, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  Target, 
+  Users, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Award,
   Phone,
   Mail,
@@ -22,13 +40,30 @@ import {
   PenTool,
   Eye,
   Share2
+<<<<<<< HEAD
 const AIContentOptimizerPro: React.FC = () => {
+=======
+ } from 'lucide-react';
+
+const AIContentOptimizerPro: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+
+
+
+
+};
 
   const features = [
     {
@@ -60,6 +95,7 @@ const AIContentOptimizerPro: React.FC = () => {
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
+<<<<<<< HEAD
     },
     {
       icon: Shield,
@@ -67,6 +103,15 @@ const AIContentOptimizerPro: React.FC = () => {
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
 
+=======
+    },;
+    {;
+      icon: Shield,;
+      title: 'Content Plagiarism Detection',;
+      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
+      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -115,6 +160,7 @@ const AIContentOptimizerPro: React.FC = () => {
         'Custom AI models',
         'White-label options',
         'Dedicated support',
+<<<<<<< HEAD
         'Custom integrations',
         'Advanced reporting',
         'SLA guarantees'
@@ -122,6 +168,15 @@ const AIContentOptimizerPro: React.FC = () => {
       popular: false,
       cta: 'Contact Sales'
 
+=======
+        'Custom integrations',;
+        'Advanced reporting',;
+        'SLA guarantees';
+      ],;
+      popular: false,;
+      cta: 'Contact Sales';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -138,6 +193,7 @@ const AIContentOptimizerPro: React.FC = () => {
     {
       title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
+<<<<<<< HEAD
       metrics: ['50% increase in local search visibility', '30% improvement in local leads']
     },
     {
@@ -145,36 +201,57 @@ const AIContentOptimizerPro: React.FC = () => {
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
       metrics: ['45% improvement in readability scores', '40% increase in engagement']
 
+=======
+      metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
+    },;
+    {;
+      title: 'Technical Content',;
+      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
+      metrics: ['45% improvement in readability scores', '40% increase in engagement'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const testimonials = [
     {
       name: 'Jennifer Martinez',
       role: 'Content Marketing Director',
-      company: 'TechFlow Solutions',
+      comp: 'TechFlow Solutions',
       content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
       rating: 5
     },
     {
       name: 'David Kim',
       role: 'SEO Manager',
-      company: 'Digital Growth Agency',
+      comp: 'Digital Growth Agency',
       content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
       rating: 5
     },
     {
       name: 'Sarah Williams',
+<<<<<<< HEAD
       role: 'Content Creator',
-      company: 'Creative Content Studio',
+      comp: 'Creative Content Studio',
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
       rating: 5
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      role: 'Content Creator',;
+      company: 'Creative Content Studio',;
+      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
+      rating: 5;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
       <SEO
-        title="AI Content Optimizer Pro | Zion Tech Group"
+        title = "AI Content Optimizer Pro | Zion Tech Group"
         description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today."
         keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
@@ -185,8 +262,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
 
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -232,8 +327,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -246,13 +359,40 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
 
@@ -279,8 +419,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -293,13 +451,40 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
 
@@ -323,8 +508,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -337,13 +540,40 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular
@@ -389,9 +619,36 @@ const AIContentOptimizerPro: React.FC = () => {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="text-center mt-12"
 
@@ -409,8 +666,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -423,13 +698,40 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
 
@@ -442,7 +744,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.company}</p>
+                    <p className="text-blue-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </motion.div>
               ))}
@@ -454,8 +756,26 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
@@ -507,13 +827,13 @@ const AIContentOptimizerPro: React.FC = () => {
 
                   <ExternalLink className="w-4 h-4" />
                   <span>Visit Website</span>
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 };
 

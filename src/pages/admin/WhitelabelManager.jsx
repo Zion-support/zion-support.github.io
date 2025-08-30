@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,8 +11,12 @@ export default function WhitelabelManager() {
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
+<<<<<<< HEAD
         return <Navigate to="/unauthorized"/>;
 
+=======
+        return <Navigate to="/unauthorized"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title="White-Label Management - Zion AI Marketplace" description="Create and manage white-label instances of the Zion AI Marketplace platform."/>
 
@@ -90,6 +94,11 @@ export default function WhitelabelManager() {
           </Tabs>
         </div>
       </main>
+<<<<<<< HEAD
 
     </>);
 }}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

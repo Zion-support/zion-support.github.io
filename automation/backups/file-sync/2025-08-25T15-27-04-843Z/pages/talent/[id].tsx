@@ -1,40 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+<<<<<<< HEAD
 interface TalentProfile {
   full_name: string;
   skills?: string[];
+<<<<<<< HEAD
   availability_type?: string;
 
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>;
 
+=======
+  availability_type?: string}
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+interface TalentProfileWithSocial extends TalentProfile {
+  social?: Record<string, string>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
-  <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>
-      <p className="text-xl">
-        {statusCode === 404 ? 'Talent not found' : 'Something went wrong'}
-      </p>
-    </div>
-  </div>
+  <div className = "min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
+    <div className="text-center">;
+      <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>;
+      <p className="text-xl">;
+        {statusCode === 404 ? 'Talent not found' : 'Something went wrong'};
+      </p>;
+    </div>;
+  </div>;
 );
 // Simple loading component
-const ProfileLoadingState: React.FC = () => (
-  <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-      <p>Loading profile...</p>
-    </div>
-  </div>
+const ProfileLoadingState: React.FC = () => (;
+  <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">;
+    <div className="text-center">;
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>;
+      <p>Loading profile...</p>;
+    </div>;
+  </div>;
 );
-const TalentProfilePage: React.FC = () => {
+const TalentProfilePage: React.FC = () => {;
   const { id } = useParams();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    const fetchProfile = async () => {
+    const fetchProfile = async () => {;
       if (!id) return;
       setLoading(true);
       setError(null);
@@ -44,29 +53,47 @@ const TalentProfilePage: React.FC = () => {
         setTimeout(() => {
           const mockProfile: TalentProfileWithSocial = {
             full_name: `Talent ${id}`,
-            skills: ['React', 'TypeScript', 'Node.js'],
+<<<<<<< HEAD
+            skills['React', 'TypeScript', 'Node.js'],
             availability_type: 'Full-time',
             social: {
               linkedin: 'https://linkedin.com/in/talent',
               github: 'https://github.com/talent'
+<<<<<<< HEAD
 
+=======
+            }
+=======;
+            skills: ['React', 'TypeScript', 'Node.js'],;
+            availability_type: 'Full-time',;
+            social: {;
+              linkedin: 'https://linkedin.com/in/talent',;
+              github: 'https://github.com/talent';
+            };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           };
           setProfile(mockProfile);
-          setLoading(false);
-        }, 1000);
-      } catch (err) {
+          setLoading(false)}, 1000)} catch (err) {
         setError('Talent not found');
+<<<<<<< HEAD
         setLoading(false);
 
     };
     if (id) {
       fetchProfile();
 
+=======
+        setLoading(false)}
+    };
+    if (id) {
+      fetchProfile()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [id]);
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <Navigate to="/404" replace />;
   return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white">
+    <main className = "min-h-screen bg-zion-blue py-8 text-white">
       <div className="container mx-auto px-4 space-y-4">
         <h1 className="text-3xl font-bold" data-testid="profile-name">
           {profile.full_name}
@@ -99,12 +126,21 @@ const TalentProfilePage: React.FC = () => {
                   {platform}
                 </a>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         )}
-      </div>
-    </main>
+      </div>;
+    </main>;
+  )};
+=======
+            </div>;
+          </div>;
+        )};
+      </div>;
+    </main>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default TalentProfilePage;
 }}}}}

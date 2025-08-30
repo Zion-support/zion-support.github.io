@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { innovativeITServices2025 } from '../data/innovativeITServices2025';
-import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
+import { innovativeITServices2025 } from "../data/innovativeITServices2025";
+import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
 const InnovativeServicesShowcase = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
@@ -19,15 +19,17 @@ const InnovativeServicesShowcase = () => {
             case 'ai':
                 return innovativeAIServices2025;
             default:
+<<<<<<< HEAD
                 return [];
 
+=======
+                return []}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleServiceClick = (service) => {
-        setSelectedService(service);
-    };
+        setSelectedService(service)};
     const closeModal = () => {
-        setSelectedService(null);
-    };
+        setSelectedService(null)};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -279,7 +281,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesShowcase;
 }

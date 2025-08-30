@@ -3,17 +3,25 @@ import { cn } from '@/lib/utils';
 export function EnhancedCard({ children, className, variant = 'default', hover = true, onClick, as: Component = 'div', href }) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
-        default: 'bg-zion-blue-dark border border-zion-blue-light',
+  default: 'bg-zion-blue-dark border border-zion-blue-light',
         elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
         outlined: 'bg-transparent border-2 border-zion-cyan/30',
-        gradient: 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light'
-    };
+  gradient: 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light'
+    
+
+
+
+
+
+
+};
     const hoverClasses = hover ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : '';
     const interactiveClasses = onClick || href ? 'cursor-pointer' : '';
     const classes = cn(baseClasses, variantClasses[variant], hoverClasses, interactiveClasses, className);
     if (href) {
         return (<a href={href} className={classes} onClick={onClick}>
         {children}
+<<<<<<< HEAD
       </a>);
 
     return (<Component className={classes} onClick={onClick}>
@@ -33,8 +41,28 @@ export function EnhancedCardContent({ children, className }) {
     </div>);
 
 // Enhanced Card Footer component
-export function EnhancedCardFooter({ children, className }) {
-    return (<div className={cn('p-6 pt-0', className)}>
+=======
+      </a>)}
+    return (<Component className={classes} onClick={onClick}>
       {children}
+    </Component>)}
+// Enhanced Card Header component
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export function EnhancedCardFooter({ children, className }) {
+    return (<div className = {
+  cn('p-6 pt-0',
+  className)
+
+
+
+
+
+
+}>
+      {children}
+<<<<<<< HEAD
     </div>);
 }}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

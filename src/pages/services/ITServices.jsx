@@ -300,7 +300,11 @@ const ITServices = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">Mobile Services</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Mobile-first IT solutions that enable your workforce to be productive anywhere, anytime.
+=======
+                Mobile-first IT solutions that enable your workforce to be productive where, time. 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Our mobile services ensure secure, seamless access to business resources.
               </p>
               <ul className="space-y-3 text-gray-300">

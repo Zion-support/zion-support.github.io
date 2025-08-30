@@ -140,7 +140,6 @@ import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 cons
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AIAgentOrchestrator;
 }}}

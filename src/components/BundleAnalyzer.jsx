@@ -12,17 +12,24 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
             const mockAnalysis = {
-                totalSize: 1200000, // ~1.2MB
+  totalSize: 1200000, // ~1.2MB
                 totalGzipSize: 400000, // ~400KB gzipped
                 chunkCount: 45,
-                chunks: [
+                chunks[
                     {
                         name: 'react-vendor',
                         size: 170000,
                         gzipSize: 55000,
                         type: 'vendor',
-                        optimization: 'good'
-                    },
+  optimization: 'good'
+                    
+
+
+
+
+
+
+},
                     {
                         name: 'animation-vendor',
                         size: 114000,
@@ -73,7 +80,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                         optimization: 'critical'
 
                 ],
-                recommendations: [
+                recommendations[
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
                     'Consider code splitting for ServicesOverview page',
                     'Optimize animation-vendor bundle size',
@@ -83,6 +90,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 score: 78,
                 lastUpdated: new Date()
             };
+<<<<<<< HEAD
             setAnalysis(mockAnalysis);
 
         catch (error) {
@@ -96,47 +104,58 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
         finally {
             setIsAnalyzing(false);
 
+=======
+            setAnalysis(mockAnalysis)}
+        catch (error) {
+            console.error('Bundle analysis failed:', error)}
+        finally {
+            setIsAnalyzing(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
-        analyzeBundle();
-    }, [analyzeBundle]);
+        analyzeBundle()}, [analyzeBundle]);
     const formatBytes = (bytes) => {
         if (bytes === 0)
             return '0 B';
         const k = 1024;
         const sizes = ['B', 'KB', 'MB', 'GB'];
         const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    };
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
     const getScoreColor = (score) => {
         if (score >= 80)
             return 'text-green-500';
         if (score >= 60)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     const getScoreIcon = (score) => {
         if (score >= 80)
             return <CheckCircle className="w-5 h-5"/>;
         if (score >= 60)
             return <AlertTriangle className="w-5 h-5"/>;
-        return <AlertTriangle className="w-5 h-5"/>;
-    };
+        return <AlertTriangle className="w-5 h-5"/>};
     const getOptimizationColor = (optimization) => {
         switch (optimization) {
             case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
+<<<<<<< HEAD
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
 
+=======
+            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getOptimizationIcon = (optimization) => {
         switch (optimization) {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;
+<<<<<<< HEAD
             default: return <Info className="w-4 h-4"/>;
 
+=======
+            default: return <Info className="w-4 h-4"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (!analysis)
         return null;
@@ -148,7 +167,43 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
 
       {/* Bundle Analysis Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, y: 20, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.9 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0, y: 20,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, y: 20,
+  scale: 0.9 
+
+
+
+
+
+
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
+
+
+
+
+
+
+}} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
               <div className="flex items-center justify-between">
@@ -303,6 +358,10 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             </div>
           </motion.div>)}
       </AnimatePresence>
+<<<<<<< HEAD
     </>);
 };
 }}}}}}}
+=======
+    </>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

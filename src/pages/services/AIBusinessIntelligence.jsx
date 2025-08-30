@@ -7,32 +7,37 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
             icon: Brain,
             title: "AI-Powered Analytics",
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
-            benefits: ["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
+            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
         },
         {
             icon: BarChart3,
             title: "Real-time Dashboards",
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics",
-            benefits: ["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
+            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
         },
         {
             icon: TrendingUp,
             title: "Predictive Analytics",
             description: "Forecast future trends and outcomes using historical data and advanced statistical models",
-            benefits: ["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
+            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
         },
         {
             icon: Target,
             title: "Performance Tracking",
             description: "Monitor and measure business performance against goals and benchmarks in real-time",
+<<<<<<< HEAD
             benefits: ["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
 
+=======
+            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const solutions = [
         {
             category: "Sales & Marketing",
             icon: Users,
-            solutions: [
+            solutions[
                 "Customer behavior analysis",
                 "Lead scoring and qualification",
                 "Campaign performance optimization",
@@ -43,7 +48,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Operations & Supply Chain",
             icon: Activity,
-            solutions: [
+            solutions[
                 "Inventory optimization",
                 "Supply chain risk assessment",
                 "Operational efficiency analysis",
@@ -54,7 +59,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Financial Analytics",
             icon: TrendingUp,
-            solutions: [
+            solutions[
                 "Revenue forecasting",
                 "Cost analysis and optimization",
                 "Profitability analysis",
@@ -65,7 +70,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Human Resources",
             icon: Users,
-            solutions: [
+            solutions[
                 "Employee performance analytics",
                 "Talent acquisition insights",
                 "Workforce planning",
@@ -116,7 +121,15 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -131,7 +144,25 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
               <TrendingUp className="w-10 h-10 text-white"/>
             </div>
@@ -194,7 +225,25 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
       {/* Solutions by Industry */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Industry</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tailored AI Business Intelligence solutions designed to address the unique challenges
@@ -203,7 +252,34 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((category, index) => (<motion.div key={category.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
+            {solutions.map((category, index) => (<motion.div key={category.category} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
                     <category.icon className="w-6 h-6 text-white"/>
@@ -224,7 +300,25 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
 
       {/* Technology Stack */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Built on cutting-edge technologies to ensure scalability, performance, and reliability
@@ -233,7 +327,34 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
+          {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <tech.icon className="w-8 h-8 text-white"/>
               </div>
@@ -246,7 +367,25 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
             </h2>
@@ -265,7 +404,11 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 </div>};
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AIBusinessIntelligence;
 }}}}}}}}

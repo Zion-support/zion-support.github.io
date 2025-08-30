@@ -3,6 +3,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 export default function Careers() {
     // Sample job listings
     const jobs = {
@@ -78,30 +79,25 @@ export default function Careers() {
 
         ]
     };
+
     // Benefits list
     const benefits = [
         {
             title: "Flexible Work",
             description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>)
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>)
         },
         {
             title: "Health & Wellness",
-            description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-            icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-        </svg>)
-        },
-        {
-            title: "Continuous Learning",
-            description: "Education stipends and dedicated learning time to help you grow professionally.",
+            description: "Comprehensive health coverage, mental health support, and wellness programs to keep you at your best.",
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-        </svg>)
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>)
         },
         {
+<<<<<<< HEAD
             title: "Competitive Compensation",
             description: "Salary packages that recognize your value, plus equity options to share in our success.",
             icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -197,3 +193,115 @@ export default function Careers() {
       </main>
     </>);
 </Card>}}}}}}
+=======
+            title: "Learning & Growth",
+            description: "Continuous learning opportunities, conference attendance, and career development support.",
+            icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 5.477 5.754 5 7.5 5c1.747 0 3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C16.5 5 14.754 5 13.168 5.477L12 6.253z"/>
+            </svg>)
+        },
+        {
+            title: "Team & Culture",
+            description: "Collaborative environment with diverse perspectives and a culture of innovation and inclusion.",
+            icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>)
+        }
+    ];
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <SEO 
+                title="Careers at Zion Tech Group - Join Our Team"
+                description="Join our mission to revolutionize technology. Explore exciting career opportunities in AI, engineering, product, and more."
+                keywords="careers, jobs, employment, Zion Tech Group, AI, technology"
+            />
+            
+            <div className="container mx-auto px-4 py-16">
+                {/* Hero Section */}
+                <div className="text-center mb-16">
+                    <GradientHeading className="text-5xl md:text-6xl mb-6">
+                        Join Our Mission
+                    </GradientHeading>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Help us build the future of AI-powered technology solutions. We're looking for passionate individuals 
+                        who want to make a difference in the world.
+                    </p>
+                </div>
+
+                {/* Benefits Section */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <Card key={index} className="bg-slate-800 border-slate-700 hover:border-slate-600 transition-colors">
+                                <CardContent className="p-6 text-center">
+                                    <div className="flex justify-center mb-4">
+                                        {benefit.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                                    <p className="text-gray-300">{benefit.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Job Listings */}
+                <div>
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
+                    <Tabs defaultValue="engineering" className="w-full">
+                        <TabsList className="grid w-full grid-cols-4 bg-slate-800">
+                            <TabsTrigger value="engineering" className="text-white">Engineering</TabsTrigger>
+                            <TabsTrigger value="product" className="text-white">Product</TabsTrigger>
+                            <TabsTrigger value="marketing" className="text-white">Marketing</TabsTrigger>
+                            <TabsTrigger value="operations" className="text-white">Operations</TabsTrigger>
+                        </TabsList>
+                        
+                        {Object.entries(jobs).map(([department, departmentJobs]) => (
+                            <TabsContent key={department} value={department} className="mt-8">
+                                <div className="grid gap-6">
+                                    {departmentJobs.map((job, index) => (
+                                        <Card key={index} className="bg-slate-800 border-slate-700 hover:border-slate-600 transition-colors">
+                                            <CardContent className="p-6">
+                                                <div className="flex justify-between items-start mb-4">
+                                                    <div>
+                                                        <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
+                                                        <div className="flex items-center gap-4 text-gray-300 text-sm">
+                                                            <span>{job.location}</span>
+                                                            <span>•</span>
+                                                            <span>{job.type}</span>
+                                                            <span>•</span>
+                                                            <span>{job.department}</span>
+                                                        </div>
+                                                    </div>
+                                                    <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                                                        Apply Now
+                                                    </Button>
+                                                </div>
+                                                <p className="text-gray-300">{job.description}</p>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
+                            </TabsContent>
+                        ))}
+                    </Tabs>
+                </div>
+
+                {/* CTA Section */}
+                <div className="text-center mt-16">
+                    <h2 className="text-3xl font-bold text-white mb-6">Don't See the Right Role?</h2>
+                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        We're always looking for talented individuals to join our team. Send us your resume and let's discuss 
+                        how you can contribute to our mission.
+                    </p>
+                    <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white text-lg px-8 py-3">
+                        Send Resume
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

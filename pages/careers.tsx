@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock export default function Careers() {
+=======
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
+
+
+export default function Careers(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -77,7 +86,7 @@ import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock e
 								<div>
 									<h3 className="text-lg font-semibold text-gray-900 mb-2">Remote-First Culture</h3>
 									<p className="text-gray-600">
-										Work from anywhere in the world with flexible hours and a supportive remote work environment.
+										Work from where in the world with flexible hours and a supportive remote work environment.
 									</p>
 								</div>
 							</div>
@@ -160,8 +169,8 @@ import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock e
 							Ready to join our mission? Check out our current openings.
 						</p>
 					</div>
-					<div className="grid gap-6 lg:grid-cols-2">
-						{openPositions.map((position) => (
+					<div className="grid gap-6 lg: grid-cols-2">
+						{openPositions.map((position)  => (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>
@@ -213,9 +222,19 @@ import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock e
 								careers@ziontechgroup.com
 							</a>
 						</div>
+<<<<<<< HEAD
 					</div>
 				</div>
 			</section>
 		</>
 	)
 }}}
+=======
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

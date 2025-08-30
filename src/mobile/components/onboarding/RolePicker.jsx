@@ -6,8 +6,7 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
     const { t } = useTranslation();
     const handleSelect = (role) => {
         setSelectedRole(role);
-        onSelect(role);
-    };
+        onSelect(role)};
     return (<div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
@@ -47,5 +46,9 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
     </div>);
 </Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

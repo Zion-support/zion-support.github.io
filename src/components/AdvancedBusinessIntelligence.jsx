@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+<<<<<<< HEAD
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity const mockMetrics = [
     {
         id: 'revenue',
@@ -61,6 +62,10 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         lastUpdated: '2024-01-15T10:00:00.000Z'
 
 ];
+=======
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const mockInsights = [
     {
         id: 'insight-1',
@@ -72,7 +77,7 @@ const mockInsights = [
         category: 'Financial',
         timestamp: '2024-01-15T10:00:00.000Z',
         actionable: true,
-        actions: ['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
+        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
     },
     {
         id: 'insight-2',
@@ -84,7 +89,7 @@ const mockInsights = [
         category: 'Customer',
         timestamp: '2024-01-15T09:30:00.000Z',
         actionable: true,
-        actions: ['Investigate customer feedback', 'Review product updates', 'Enhance support response']
+        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
     },
     {
         id: 'insight-3',
@@ -96,9 +101,16 @@ const mockInsights = [
         category: 'Growth',
         timestamp: '2024-01-15T08:45:00.000Z',
         actionable: true,
+<<<<<<< HEAD
         actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
 
+=======
+        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockModels = [
     {
         id: 'model-1',
@@ -141,7 +153,6 @@ export function AdvancedBusinessIntelligence() {
     const [insights, setInsights] = useState(mockInsights);
     const [models, setModels] = useState(mockModels);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
     const timeRanges = [
         { value: '7d', label: '7 Days' },
@@ -156,13 +167,16 @@ export function AdvancedBusinessIntelligence() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+<<<<<<< HEAD
             return () => clearInterval(interval);
 
+=======
+            return () => clearInterval(interval)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -171,8 +185,12 @@ export function AdvancedBusinessIntelligence() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
+<<<<<<< HEAD
                 return <Activity className="w-4 h-4 text-gray-500"/>;
 
+=======
+                return <Activity className="w-4 h-4 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -181,8 +199,12 @@ export function AdvancedBusinessIntelligence() {
             case 'medium':
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:
+<<<<<<< HEAD
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20';
 
+=======
+                return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getInsightIcon = (type) => {
         switch (type) {
@@ -195,8 +217,12 @@ export function AdvancedBusinessIntelligence() {
             case 'risk':
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:
+<<<<<<< HEAD
                 return <Zap className="w-5 h-5 text-purple-500"/>;
 
+=======
+                return <Zap className="w-5 h-5 text-purple-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const formatValue = (value, unit) => {
         if (unit === 'USD') {
@@ -205,6 +231,7 @@ export function AdvancedBusinessIntelligence() {
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
+<<<<<<< HEAD
             }).format(value);
 
         if (unit === '%') {
@@ -217,6 +244,16 @@ export function AdvancedBusinessIntelligence() {
         <Brain className="w-6 h-6"/>
       </button>);
 
+=======
+            }).format(value)}
+        if (unit === '%') {
+            return `${value.toFixed(1)}%`}
+        return new Intl.NumberFormat('en-US').format(value)};
+    if (!isOpen) {
+        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
+        <Brain className="w-6 h-6"/>
+      </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -226,8 +263,12 @@ export function AdvancedBusinessIntelligence() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
+<<<<<<< HEAD
       </div>);
 
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -300,8 +341,7 @@ export function AdvancedBusinessIntelligence() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -351,8 +391,7 @@ export function AdvancedBusinessIntelligence() {
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">
                       <Icon className="w-4 h-4 mx-auto mb-2"/>
                       {item.label}
-                    </button>);
-            })}
+                    </button>)})}
               </div>
             </div>
           </div>)}
@@ -430,5 +469,9 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>)}
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,12 +1,21 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 export function ListingCard({ id, title, description, images, category, tags, author, className, profileType = 'service' }) {
     // Generate a profile ID based on the listing data
     // In a real app, this would be a proper ID from the database
     const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-    return (<Link href={`/profile/${profileId}`} tabIndex={0} className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple", className)}>
+    return (<Link href={`/profile/${profileId}`} tabIndex={0} className = {
+  cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+  className)
+
+
+
+
+
+
+}>
       {images && images.length > 0 && (<div className="h-48 w-full overflow-hidden">
           <img loading="lazy" src={images[0]} alt={title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"/>
         </div>)}
@@ -30,5 +39,9 @@ export function ListingCard({ id, title, description, images, category, tags, au
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>)}
       </div>
+<<<<<<< HEAD
     </Link>);
 </div>}
+=======
+    </Link>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

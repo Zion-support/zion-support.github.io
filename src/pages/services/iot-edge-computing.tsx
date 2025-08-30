@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor const IoTEdgeComputing: React.FC = () => {
   const features = [
@@ -16,6 +16,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       icon: Database,
       title: 'Local Storage',
+<<<<<<< HEAD
       description: 'Store and manage data at the edge'
     },
     {
@@ -23,6 +24,15 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       title: 'Hybrid Cloud',
       description: 'Seamless integration with cloud services'
 
+=======
+      description: 'Store and manage data at the edge';
+    },;
+    {;
+      icon: Cloud,;
+      title: 'Hybrid Cloud',;
+      description: 'Seamless integration with cloud services';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const applications = [
@@ -39,6 +49,7 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       title: 'Healthcare',
       description: 'Remote monitoring and telemedicine',
+<<<<<<< HEAD
       icon: '🏥'
     },
     {
@@ -46,20 +57,34 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       description: 'Smart inventory and customer analytics',
       icon: '🛍️'
 
+=======
+      icon: '🏥';
+    },;
+    {;
+      title: 'Retail',;
+      description: 'Smart inventory and customer analytics',;
+      icon: '🛍️';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    'Reduced latency and faster response times',
-    'Lower bandwidth costs and network efficiency',
-    'Enhanced privacy and data security',
-    'Real-time decision making capabilities',
-    'Scalable and flexible architecture',
-    'Improved reliability and uptime'
+  const benefits = [;
+    'Reduced latency and faster response times',;
+    'Lower bandwidth costs and network efficiency',;
+    'Enhanced privacy and data security',;
+    'Real-time decision making capabilities',;
+    'Scalable and flexible architecture',;
+    'Improved reliability and uptime';
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Transform your business with IoT edge computing solutions. Process data locally for faster insights and real-time decision making."
       />
@@ -68,8 +93,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -106,8 +149,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -123,9 +184,36 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -143,8 +231,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -160,9 +266,36 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
             {applications.map((application, index) => (
               <motion.div
                 key={application.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
 
                 <div className="flex items-start space-x-4">
@@ -182,8 +315,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -197,8 +348,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
 
@@ -214,8 +383,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-8"
 
@@ -236,8 +423,26 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,13 +456,13 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
                 Start Edge Journey
               </button>
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

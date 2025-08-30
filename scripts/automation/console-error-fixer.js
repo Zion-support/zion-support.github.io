@@ -5,14 +5,17 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // // // console.log('🔧 Starting continuous console error fixer automation...');
 =======
 // // // // // // // console.log('🔧 Starting continuous console error fixer automation...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+// // // console.log('🔧 Starting continuous console error fixer automation...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Get automation interval from environment variable (default: 15 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
@@ -20,6 +23,9 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000;
 async function runConsoleErrorFixer() {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
 
     // Build the project first
@@ -30,6 +36,7 @@ async function runConsoleErrorFixer() {
     } catch (error) {
       // // // console.log('⚠️  Build failed but continuing...');
       // // // console.log('Build error:', error.message);
+<<<<<<< HEAD
 =======
     // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
 
@@ -42,11 +49,14 @@ async function runConsoleErrorFixer() {
       // // // // // // // console.log('⚠️  Build failed but continuing...');
       // // // // // // // console.log('Build error:', error.message);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return;
 
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // // // console.log('⚠️  Build verification failed: dist folder not found');
 =======
@@ -56,6 +66,12 @@ async function runConsoleErrorFixer() {
 
     // Scan for console statements in source code
 <<<<<<< HEAD
+=======
+      // // // console.log('⚠️  Build verification failed: dist folder not found');
+      return;
+
+    // Scan for console statements in source code
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log('🔍 Scanning for console statements in source code...');
     const consoleStatements = findConsoleStatements('./src');
     if (consoleStatements.length > 0) {
@@ -100,6 +116,7 @@ async function runConsoleErrorFixer() {
         // // // console.log('⚠️  Console statements detected in linting output');
 
 
+<<<<<<< HEAD
     // Generate console error fixer report
     // // // console.log('📊 Generating console error fixer report...');
 =======
@@ -154,24 +171,43 @@ async function runConsoleErrorFixer() {
     // Generate console error fixer report
     // // // // // // // console.log('📊 Generating console error fixer report...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    // Generate console error fixer report
+<<<<<<< HEAD
+    // // // console.log('📊 Generating console error fixer report...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       consoleStatements: consoleStatements.length,
       buildConsoleStatements: buildConsoleStatements.length,
       errorPatterns: errorPatterns.length,
       summary: 'Console error fixer completed',
+<<<<<<< HEAD
       status: 'completed'
     };
 
     const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
+=======
+  status: 'completed'
+    
+
+};
+
+=======
+    console.log('📊 Generating console error fixer report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
 
     // // // console.log('✅ Continuous console error fixer completed successfully');
 
   } catch (error) {
     // // // console.error('❌ Continuous console error fixer failed:', error.message);
+<<<<<<< HEAD
 =======
     // // // // // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
 
@@ -180,6 +216,8 @@ async function runConsoleErrorFixer() {
   } catch (error) {
     // // // // // // // console.error('❌ Continuous console error fixer failed:', error.message);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Don't exit, just log the error and continue
 
 
@@ -281,10 +319,14 @@ function findErrorPatterns(dir) {
 // Main continuous loop
 async function runContinuous() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 =======
   // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Run initial console error fixer
   await runConsoleErrorFixer();
@@ -294,6 +336,7 @@ async function runContinuous() {
     await runConsoleErrorFixer();
   }, AUTOMATION_INTERVAL);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 
@@ -308,25 +351,40 @@ process.on('SIGINT', () => {
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 =======
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 // Start the continuous console error fixer
 runContinuous().catch(error => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.error('❌ Failed to start continuous console error fixer:', error);
 =======
   // // // // // // // console.error('❌ Failed to start continuous console error fixer:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.error('❌ Failed to start continuous console error fixer:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}})))

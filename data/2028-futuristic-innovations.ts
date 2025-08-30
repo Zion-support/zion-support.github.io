@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Futuristic2028Service {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Futuristic2028Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const futuristic2028Services: Futuristic2028Service[] = [
   // AI-Powered Climate Prediction Platform
   {
@@ -48,7 +51,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI platform that analyzes satellite data, ocean currents, atmospheric patterns, and historical climate data to predict weather patterns, natural disasters, and climate changes with unprecedented accuracy.',
-    features: [
+    features[
       'Real-time satellite data analysis',
       'Machine learning climate modeling',
       'Natural disaster prediction',
@@ -66,16 +69,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-climate-prediction',
     marketPosition: 'Leading AI climate prediction platform with the highest accuracy rates in the market. Used by government agencies, insurance companies, and agricultural businesses.',
-    targetAudience: ['Government agencies', 'Insurance companies', 'Agricultural businesses', 'Energy companies', 'Shipping companies', 'Tourism industry'],
+    targetAudience['Government agencies', 'Insurance companies', 'Agricultural businesses', 'Energy companies', 'Shipping companies', 'Tourism industry'],
     trialDays: 30,
     setupTime: '1 week',
     category: 'AI & Climate Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'Satellite APIs', 'AWS', 'Docker', 'Kubernetes', 'React', 'Node.js'],
-    integrations: ['Weather APIs', 'Satellite data feeds', 'Government databases', 'Insurance systems', 'Agricultural platforms'],
-    useCases: ['Natural disaster preparation', 'Crop planning', 'Insurance risk assessment', 'Energy production optimization', 'Shipping route planning'],
+    technology['Python', 'TensorFlow', 'PyTorch', 'Satellite APIs', 'AWS', 'Docker', 'Kubernetes', 'React', 'Node.js'],
+    integrations['Weather APIs', 'Satellite data feeds', 'Government databases', 'Insurance systems', 'Agricultural platforms'],
+    useCases['Natural disaster preparation', 'Crop planning', 'Insurance risk assessment', 'Energy production optimization', 'Shipping route planning'],
     roi: 'Insurance companies report 300% ROI through improved risk assessment and reduced claims.',
-    competitors: ['IBM Weather Company', 'AccuWeather', 'The Weather Channel'],
+    competitors['IBM Weather Comp', 'AccuWeather', 'The Weather Channel'],
     marketSize: '$8.5B weather forecasting market',
     growthRate: '25% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +103,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$4,999',
     period: '/month',
     description: 'Next-generation cybersecurity solution that uses quantum computing principles to create unbreakable encryption, protecting enterprise data from even the most sophisticated cyber attacks.',
-    features: [
+    features[
       'Quantum key distribution',
       'Post-quantum cryptography',
       'Real-time threat detection',
@@ -118,16 +121,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
     marketPosition: 'First-to-market quantum cybersecurity solution. Provides military-grade security for enterprise applications with quantum-resistant encryption.',
-    targetAudience: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Defense contractors', 'Technology companies', 'Energy companies'],
+    targetAudience['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Defense contractors', 'Technology companies', 'Energy companies'],
     trialDays: 14,
     setupTime: '2 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'Rust', 'AWS', 'Azure', 'Docker'],
-    integrations: ['SIEM systems', 'Firewall appliances', 'Identity providers', 'Cloud platforms', 'Security tools'],
-    useCases: ['Financial data protection', 'Patient data security', 'Government communications', 'Military communications', 'Cloud security'],
+    technology['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'Rust', 'AWS', 'Azure', 'Docker'],
+    integrations['SIEM systems', 'Firewall appliances', 'Identity providers', 'Cloud platforms', 'Security tools'],
+    useCases['Financial data protection', 'Patient data security', 'Government communications', 'Military communications', 'Cloud security'],
     roi: 'Financial institutions report 500% ROI through prevented cyber attacks and reduced security incidents.',
-    competitors: ['Palo Alto Networks', 'Cisco', 'Fortinet'],
+    competitors['Palo Alto Networks', 'Cisco', 'Fortinet'],
     marketSize: '$45B cybersecurity market',
     growthRate: '35% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$1,999',
     period: '/month',
     description: 'Complete autonomous drone delivery solution that uses AI, computer vision, and advanced navigation to deliver packages, food, and medical supplies with unprecedented speed and efficiency.',
-    features: [
+    features[
       'AI-powered route optimization',
       'Computer vision navigation',
       'Autonomous flight control',
@@ -170,16 +173,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-drone-delivery',
     marketPosition: 'Leading autonomous delivery solution with the most advanced AI navigation and safety features. Used by major logistics companies and e-commerce platforms.',
-    targetAudience: ['E-commerce companies', 'Logistics providers', 'Food delivery services', 'Medical supply companies', 'Retail chains', 'Pharmaceutical companies'],
+    targetAudience['E-commerce companies', 'Logistics providers', 'Food delivery services', 'Medical supply companies', 'Retail chains', 'Pharmaceutical companies'],
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Autonomous Delivery',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'ROS', 'C++', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['E-commerce platforms', 'Logistics systems', 'Payment gateways', 'Inventory management', 'Customer management'],
-    useCases: ['Package delivery', 'Food delivery', 'Medical supply delivery', 'Emergency response', 'Retail delivery'],
+    technology['Python', 'TensorFlow', 'Computer Vision', 'ROS', 'C++', 'AWS', 'Docker', 'React', 'Node.js'],
+    integrations['E-commerce platforms', 'Logistics systems', 'Payment gateways', 'Inventory management', 'Customer management'],
+    useCases['Package delivery', 'Food delivery', 'Medical supply delivery', 'Emergency response', 'Retail delivery'],
     roi: 'E-commerce companies report 400% ROI through faster delivery times and reduced logistics costs.',
-    competitors: ['Amazon Prime Air', 'UPS Flight Forward', 'DHL Parcelcopter'],
+    competitors['Amazon Prime Air', 'UPS Flight Forward', 'DHL Parcelcopter'],
     marketSize: '$12B drone delivery market',
     growthRate: '45% annual growth',
     variant: 'ai-autonomous',
@@ -204,7 +207,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$3,999',
     period: '/month',
     description: 'Advanced AI platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses, treatment recommendations, and health predictions.',
-    features: [
+    features[
       'Medical image analysis',
       'Symptom assessment AI',
       'Treatment recommendations',
@@ -222,16 +225,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnosis',
     marketPosition: 'Leading AI healthcare diagnosis platform with FDA approval for multiple diagnostic procedures. Used by major hospitals and healthcare networks.',
-    targetAudience: ['Hospitals', 'Healthcare networks', 'Medical clinics', 'Research institutions', 'Pharmaceutical companies', 'Insurance companies'],
+    targetAudience['Hospitals', 'Healthcare networks', 'Medical clinics', 'Research institutions', 'Pharmaceutical companies', 'Insurance companies'],
     trialDays: 30,
     setupTime: '4 weeks',
     category: 'AI Healthcare',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'AWS', 'HIPAA-compliant', 'Docker'],
-    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Lab systems', 'Pharmacy systems', 'Insurance systems'],
-    useCases: ['Medical diagnosis', 'Treatment planning', 'Health monitoring', 'Research analysis', 'Clinical trials'],
+    technology['Python', 'TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'AWS', 'HIPAA-compliant', 'Docker'],
+    integrations['Electronic Health Records', 'Medical imaging systems', 'Lab systems', 'Pharmacy systems', 'Insurance systems'],
+    useCases['Medical diagnosis', 'Treatment planning', 'Health monitoring', 'Research analysis', 'Clinical trials'],
     roi: 'Hospitals report 600% ROI through improved diagnosis accuracy and reduced treatment costs.',
-    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
+    competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
     marketSize: '$67B AI healthcare market',
     growthRate: '40% annual growth',
     variant: 'ai-healthcare',
@@ -256,7 +259,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$5,999',
     period: '/month',
     description: 'Comprehensive smart city solution that uses IoT sensors, AI analytics, and real-time monitoring to optimize traffic, energy, waste management, and public services.',
-    features: [
+    features[
       'IoT sensor network',
       'Real-time traffic optimization',
       'Energy consumption monitoring',
@@ -274,16 +277,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/smart-city-infrastructure',
     marketPosition: 'Leading smart city platform with the most comprehensive IoT integration and AI analytics. Used by major cities worldwide.',
-    targetAudience: ['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Utility companies', 'Transportation authorities'],
+    targetAudience['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Utility companies', 'Transportation authorities'],
     trialDays: 60,
     setupTime: '8 weeks',
     category: 'Smart City Technology',
     realService: true,
-    technology: ['IoT', 'Python', 'TensorFlow', 'AWS IoT', 'Docker', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Traffic systems', 'Energy grids', 'Waste management', 'Public safety', 'Transportation', 'Utilities'],
-    useCases: ['Traffic optimization', 'Energy management', 'Waste reduction', 'Public safety', 'Environmental monitoring'],
+    technology['IoT', 'Python', 'TensorFlow', 'AWS IoT', 'Docker', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL'],
+    integrations['Traffic systems', 'Energy grids', 'Waste management', 'Public safety', 'Transportation', 'Utilities'],
+    useCases['Traffic optimization', 'Energy management', 'Waste reduction', 'Public safety', 'Environmental monitoring'],
     roi: 'Cities report 800% ROI through reduced energy costs, improved traffic flow, and enhanced public services.',
-    competitors: ['Siemens', 'IBM', 'Cisco'],
+    competitors['Siemens', 'IBM', 'Cisco'],
     marketSize: '$25B smart city market',
     growthRate: '30% annual growth',
     variant: 'iot-futuristic',
@@ -308,7 +311,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary trading platform that uses quantum computing to analyze market data, predict price movements, and execute trades with unprecedented speed and accuracy.',
-    features: [
+    features[
       'Quantum market analysis',
       'Real-time price prediction',
       'High-frequency trading',
@@ -326,16 +329,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'First-to-market quantum trading platform with the fastest execution times and highest accuracy rates. Used by major hedge funds and trading firms.',
-    targetAudience: ['Hedge funds', 'Trading firms', 'Investment banks', 'Asset managers', 'Quantitative traders', 'Financial institutions'],
+    targetAudience['Hedge funds', 'Trading firms', 'Investment banks', 'Asset managers', 'Quantitative traders', 'Financial institutions'],
     trialDays: 14,
     setupTime: '2 weeks',
     category: 'Quantum Finance',
     realService: true,
-    technology: ['Quantum Computing', 'Python', 'Qiskit', 'TensorFlow', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Trading platforms', 'Market data feeds', 'Risk management systems', 'Compliance systems', 'Portfolio management'],
-    useCases: ['High-frequency trading', 'Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market analysis'],
+    technology['Quantum Computing', 'Python', 'Qiskit', 'TensorFlow', 'AWS', 'Docker', 'React', 'Node.js'],
+    integrations['Trading platforms', 'Market data feeds', 'Risk management systems', 'Compliance systems', 'Portfolio management'],
+    useCases['High-frequency trading', 'Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market analysis'],
     roi: 'Trading firms report 1000% ROI through improved trading accuracy and reduced execution times.',
-    competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers'],
+    competitors['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers'],
     marketSize: '$35B algorithmic trading market',
     growthRate: '50% annual growth',
     variant: 'quantum-futuristic',
@@ -360,7 +363,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$1,499',
     period: '/month',
     description: 'Revolutionary education platform that uses AI to create personalized learning experiences, adapt to student progress, and provide real-time feedback and support.',
-    features: [
+    features[
       'Personalized learning paths',
       'AI tutoring system',
       'Progress tracking',
@@ -378,16 +381,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
     marketPosition: 'Leading AI education platform with the most advanced personalization algorithms. Used by schools, universities, and corporate training programs.',
-    targetAudience: ['K-12 schools', 'Universities', 'Corporate training', 'Online education', 'Tutoring centers', 'Educational publishers'],
+    targetAudience['K-12 schools', 'Universities', 'Corporate training', 'Online education', 'Tutoring centers', 'Educational publishers'],
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Education',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'NLP', 'AWS', 'Docker', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Learning Management Systems', 'Student Information Systems', 'Content platforms', 'Assessment tools', 'Communication platforms'],
-    useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Online learning', 'Tutoring', 'Skill development'],
+    technology['Python', 'TensorFlow', 'NLP', 'AWS', 'Docker', 'React', 'Node.js', 'PostgreSQL'],
+    integrations['Learning Management Systems', 'Student Information Systems', 'Content platforms', 'Assessment tools', 'Communication platforms'],
+    useCases['K-12 education', 'Higher education', 'Corporate training', 'Online learning', 'Tutoring', 'Skill development'],
     roi: 'Educational institutions report 400% ROI through improved student outcomes and reduced administrative costs.',
-    competitors: ['Coursera', 'Udemy', 'Khan Academy'],
+    competitors['Coursera', 'Udemy', 'Khan Academy'],
     marketSize: '$18B AI education market',
     growthRate: '35% annual growth',
     variant: 'ai-education',
@@ -412,7 +415,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$6,999',
     period: '/month',
     description: 'Complete autonomous manufacturing solution that uses AI, robotics, and IoT to optimize production processes, reduce waste, and increase efficiency.',
-    features: [
+    features[
       'AI production optimization',
       'Predictive maintenance',
       'Quality control automation',
@@ -430,16 +433,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-manufacturing',
     marketPosition: 'Leading autonomous manufacturing platform with the most advanced AI optimization algorithms. Used by major manufacturing companies worldwide.',
-    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive industry', 'Electronics manufacturers', 'Food processors', 'Chemical companies'],
+    targetAudience['Manufacturing companies', 'Industrial companies', 'Automotive industry', 'Electronics manufacturers', 'Food processors', 'Chemical companies'],
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'Autonomous Manufacturing',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'IoT', 'Robotics', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['ERP systems', 'MES systems', 'Equipment APIs', 'Supply chain systems', 'Quality management'],
-    useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization'],
+    technology['Python', 'TensorFlow', 'IoT', 'Robotics', 'AWS', 'Docker', 'React', 'Node.js'],
+    integrations['ERP systems', 'MES systems', 'Equipment APIs', 'Supply chain systems', 'Quality management'],
+    useCases['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization'],
     roi: 'Manufacturing companies report 700% ROI through increased efficiency and reduced operational costs.',
-    competitors: ['Siemens', 'GE Digital', 'Rockwell Automation'],
+    competitors['Siemens', 'GE Digital', 'Rockwell Automation'],
     marketSize: '$30B smart manufacturing market',
     growthRate: '40% annual growth',
     variant: 'ai-autonomous',
@@ -464,7 +467,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     price: '$3,999',
     period: '/month',
     description: 'Next-generation internet security solution that uses quantum encryption to protect data transmission, prevent cyber attacks, and ensure secure communications.',
-    features: [
+    features[
       'Quantum key distribution',
       'Post-quantum cryptography',
       'Real-time threat detection',
@@ -482,16 +485,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'First-to-market quantum internet security solution. Provides military-grade security for internet communications with quantum-resistant encryption.',
-    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Technology companies', 'Defense contractors', 'Research institutions'],
+    targetAudience['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Technology companies', 'Defense contractors', 'Research institutions'],
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Internet Security',
     realService: true,
-    technology: ['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Firewalls', 'VPN systems', 'Identity providers', 'Cloud platforms', 'Security tools'],
-    useCases: ['Secure communications', 'Data protection', 'Cyber attack prevention', 'Compliance management', 'Government communications'],
+    technology['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'AWS', 'Docker', 'React', 'Node.js'],
+    integrations['Firewalls', 'VPN systems', 'Identity providers', 'Cloud platforms', 'Security tools'],
+    useCases['Secure communications', 'Data protection', 'Cyber attack prevention', 'Compliance management', 'Government communications'],
     roi: 'Government agencies report 600% ROI through prevented cyber attacks and secure communications.',
-    competitors: ['Cisco', 'Palo Alto Networks', 'Fortinet'],
+    competitors['Cisco', 'Palo Alto Networks', 'Fortinet'],
     marketSize: '$45B cybersecurity market',
     growthRate: '35% annual growth',
     variant: 'quantum-futuristic',

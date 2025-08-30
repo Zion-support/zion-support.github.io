@@ -70,13 +70,19 @@ import {
   Users,
   Settings,
   Palette
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const customerExperienceSolutions = [
   {
     id: 1,
     title: "User Experience Design",
     description: "Comprehensive UX design services for web, mobile, and desktop applications.",
     icon: Palette,
-    features: [
+    features[
       "User research & personas",
       "Information architecture",
       "Wireframing & prototyping",
@@ -85,14 +91,14 @@ const customerExperienceSolutions = [
     price: "From $30,000",
     timeline: "8-16 weeks",
     category: "UX Design",
-    technologies: ["Figma", "Adobe XD", "Sketch", "InVision"]
+    technologies["Figma", "Adobe XD", "Sketch", "InVision"]
   },
   {
     id: 2,
     title: "Customer Journey Mapping",
     description: "Visual representation of customer interactions and touchpoints across all channels.",
     icon: MapPin,
-    features: [
+    features[
       "Journey mapping",
       "Touchpoint analysis",
       "Pain point identification",
@@ -101,14 +107,14 @@ const customerExperienceSolutions = [
     price: "From $25,000",
     timeline: "6-12 weeks",
     category: "Journey Mapping",
-    technologies: ["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
+    technologies["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
   },
   {
     id: 3,
     title: "Customer Feedback Systems",
     description: "Comprehensive feedback collection and analysis systems for continuous improvement.",
     icon: MessageCircle,
-    features: [
+    features[
       "Feedback collection",
       "Sentiment analysis",
       "Real-time monitoring",
@@ -117,14 +123,14 @@ const customerExperienceSolutions = [
     price: "From $20,000",
     timeline: "4-10 weeks",
     category: "Feedback Systems",
-    technologies: ["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
+    technologies["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
   },
   {
     id: 4,
     title: "Personalization Engines",
     description: "AI-powered personalization systems for tailored customer experiences.",
     icon: Brain,
-    features: [
+    features[
       "User behavior analysis",
       "Content personalization",
       "Recommendation engines",
@@ -133,14 +139,14 @@ const customerExperienceSolutions = [
     price: "From $40,000",
     timeline: "12-20 weeks",
     category: "Personalization",
-    technologies: ["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
+    technologies["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
   },
   {
     id: 5,
     title: "Customer Support Platforms",
     description: "Integrated customer support and helpdesk solutions for seamless service delivery.",
     icon: Headphones,
-    features: [
+    features[
       "Multi-channel support",
       "Ticket management",
       "Knowledge base",
@@ -149,14 +155,14 @@ const customerExperienceSolutions = [
     price: "From $35,000",
     timeline: "10-18 weeks",
     category: "Support Platforms",
-    technologies: ["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
+    technologies["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
   },
   {
     id: 6,
     title: "Customer Analytics & Insights",
     description: "Advanced analytics and reporting systems for customer behavior and satisfaction metrics.",
     icon: BarChart3,
-    features: [
+    features[
       "Customer analytics",
       "Satisfaction metrics",
       "Behavior tracking",
@@ -165,10 +171,17 @@ const customerExperienceSolutions = [
     price: "From $30,000",
     timeline: "8-16 weeks",
     category: "Analytics",
+<<<<<<< HEAD
     technologies: ["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
 
+=======
+    technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const customerExperienceTechnologies = [
   {
     name: "User Research Tools",
@@ -203,7 +216,7 @@ const customerExperienceTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Retailer",
+    comp: "E-commerce Retailer",
     industry: "Retail",
     challenge: "Needed to improve customer satisfaction and reduce cart abandonment rates",
     solution: "Implemented comprehensive UX redesign with customer journey mapping and personalization",
@@ -212,7 +225,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services",
+    comp: "Financial Services",
     industry: "Finance",
     challenge: "Required better customer experience for online banking and mobile apps",
     solution: "Built customer-centric design system with personalized experiences and improved usability",
@@ -221,7 +234,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Provider",
+    comp: "Healthcare Provider",
     industry: "Healthcare",
     challenge: "Needed to improve patient portal experience and appointment booking",
     solution: "Redesigned patient portal with intuitive UX and streamlined appointment scheduling",
@@ -266,26 +279,31 @@ const customerExperienceBenefits = [
     title: "Improved Customer Satisfaction",
     description: "Better experiences lead to higher customer satisfaction and loyalty",
     icon: Heart,
-    examples: ["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]
+    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]
   },
   {
     title: "Increased Conversion Rates",
     description: "Optimized experiences drive better business outcomes",
     icon: TrendingUp,
-    examples: ["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]
+    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]
   },
   {
     title: "Reduced Support Costs",
     description: "Better experiences reduce the need for customer support",
     icon: Headphones,
-    examples: ["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]
+    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]
   },
   {
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
+<<<<<<< HEAD
     examples: ["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
 
+=======
+    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function CustomerExperience() {
@@ -310,15 +328,60 @@ export default function CustomerExperience() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Heart className="w-10 h-10 text-white" />
@@ -356,8 +419,26 @@ export default function CustomerExperience() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -371,9 +452,36 @@ export default function CustomerExperience() {
             {customerExperienceBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -402,8 +510,26 @@ export default function CustomerExperience() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -417,9 +543,36 @@ export default function CustomerExperience() {
             {customerExperienceTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -449,8 +602,26 @@ export default function CustomerExperience() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -464,9 +635,36 @@ export default function CustomerExperience() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -493,8 +691,26 @@ export default function CustomerExperience() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -525,9 +741,36 @@ export default function CustomerExperience() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -582,8 +825,26 @@ export default function CustomerExperience() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -597,9 +858,36 @@ export default function CustomerExperience() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -607,7 +895,7 @@ export default function CustomerExperience() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -643,8 +931,26 @@ export default function CustomerExperience() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -672,5 +978,9 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

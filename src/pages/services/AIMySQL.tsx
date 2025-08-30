@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMySQL() {
   const features = [
     'AI-powered MySQL query optimization',
-    'Intelligent database indexing and partitioning',
-    'Automated MySQL performance monitoring',
-    'Predictive analytics for database scaling',
-    'Smart MySQL security and compliance',
-    'AI-driven MySQL automation and orchestration',
-    'Real-time MySQL analytics and insights',
-    'Custom AI models for MySQL applications'
+    'Intelligent database indexing and partitioning',;
+    'Automated MySQL performance monitoring',;
+    'Predictive analytics for database scaling',;
+    'Smart MySQL security and compliance',;
+    'AI-driven MySQL automation and orchestration',;
+    'Real-time MySQL analytics and insights',;
+    'Custom AI models for MySQL applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$199/mo',
       details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$599/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,499/mo',
       details: ['Unlimited storage', 'Custom AI models', 'Full MySQL suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$599/mo', 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full MySQL suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'MySQL query optimization',
-    'Database indexing and partitioning',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Database scaling and management'
+  const useCases = [;
+    'MySQL query optimization',;
+    'Database indexing and partitioning',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Database scaling and management';
   ];
 
-  const benefits = [
-    'Improve query performance by 50-80%',
-    'Reduce storage costs by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance database reliability and scalability',
-    'Optimize resource utilization',
-    'Scale MySQL operations efficiently'
+  const benefits = [;
+    'Improve query performance by 50-80%',;
+    'Reduce storage costs by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance database reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale MySQL operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

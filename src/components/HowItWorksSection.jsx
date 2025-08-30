@@ -101,7 +101,10 @@ export function HowItWorksSection() {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { 
+      y: 30,
+      opacity: 0 
+    },
     visible: {
       y: 0,
       opacity: 1,
@@ -113,7 +116,10 @@ export function HowItWorksSection() {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+    hidden: { 
+      scale: 0.95,
+      opacity: 0 
+    },
     visible: {
       scale: 1,
       opacity: 1,
@@ -122,6 +128,21 @@ export function HowItWorksSection() {
         ease: "easeOut"
 
 
+  };
+
+  const statsVariants = {
+    hidden: { 
+      opacity: 0,
+      scale: 0.8 
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
   };
 
   return (
@@ -140,22 +161,28 @@ export function HowItWorksSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             How It Works
+=======
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Our streamlined process ensures your project success from discovery to delivery
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Our streamlined process ensures your project moves from concept to completion with maximum efficiency and quality.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <motion.div
+        <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
           variants={containerVariants}
           initial="hidden"
@@ -164,11 +191,12 @@ export function HowItWorksSection() {
 
           {steps.map((step, index) => (
             <motion.div
-              key={step.title}
-              className="relative"
+              key={index}
+              className="text-center"
               variants={itemVariants}
               onHoverStart={() => setHoveredStep(index)}
               onHoverEnd={() => setHoveredStep(null)}
+<<<<<<< HEAD
               onClick={() => setActiveStep(index)}
 
               {/* Step Card */}
@@ -189,22 +217,37 @@ export function HowItWorksSection() {
                 {/* Step Number */}
                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
+=======
+            >
+              <motion.div
+                className={`p-6 rounded-2xl bg-gradient-to-br ${step.bgColor} border border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 h-full`}
+                variants={cardVariants}
+                whileHover={{ y: -8, scale: 1.05 }}
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${step.color} mb-4`}>
+                  <div className="text-white">
+                    {step.icon}
+                  </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-white mb-4 mx-auto`}>
-                  {step.icon}
+                
+                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-zion-slate-light text-sm mb-4">{step.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  {step.details.map((detail, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
+                      <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
+                      <span>{detail}</span>
+                    </div>
+                  ))}
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{step.title}</h3>
-                <p className="text-zion-slate-light text-center mb-4">{step.description}</p>
-
-                {/* Stats */}
+                
                 <div className="text-center space-y-2">
-                  <div className="text-zion-cyan text-sm font-medium">{step.duration}</div>
-                  <div className="text-zion-purple text-sm font-medium">{step.success}</div>
+                  <div className="text-zion-cyan text-sm font-semibold">{step.duration}</div>
+                  <div className="text-zion-cyan-light text-xs">{step.success}</div>
                 </div>
+<<<<<<< HEAD
 
                 {/* Hover Details */}
                 {hoveredStep === index && (
@@ -225,21 +268,24 @@ export function HowItWorksSection() {
                     </ul>
                   </motion.div>
                 )}
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Stats Section */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        {/* Stats */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
 
           {stats.map((stat, index) => (
             <motion.div
+<<<<<<< HEAD
               key={stat.label}
               className="text-center p-6 bg-gradient-to-br from-zion-slate/20 to-zion-slate/10 rounded-2xl border border-zion-slate/30"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -248,13 +294,21 @@ export function HowItWorksSection() {
               viewport={{ once: true }}
 
               <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+=======
+              key={index}
+              className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
+              variants={statsVariants}
+            >
+              <div className="text-zion-cyan mb-3 flex justify-center">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 {stat.icon}
               </div>
-              <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-zion-slate-light">{stat.label}</div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <motion.div
@@ -279,6 +333,8 @@ export function HowItWorksSection() {
             </button>
           </div>
         </motion.div>
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </div>
     </section>
   );

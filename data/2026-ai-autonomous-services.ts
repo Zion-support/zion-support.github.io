@@ -1,4 +1,4 @@
-export const aiAutonomousServices2026 = [] as any[];
+export const aiAutonomousServices2026 = [] as [];
 export interface AiAutonomousService2026 {
   id: string;
   name: string;
@@ -12,9 +12,13 @@ export interface AiAutonomousService2026 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",
@@ -22,7 +26,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
     tagline: "Fully autonomous AI systems",
     price: "$499/month",
     description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-    features: [
+    features[
       "Autonomous operation",
       "Self-learning capabilities",
       "Independent decision making",

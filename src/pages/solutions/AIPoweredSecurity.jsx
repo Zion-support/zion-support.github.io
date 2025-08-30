@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud const AIPoweredSecurity = () => {
     const securityFeatures = [
         {
@@ -26,6 +27,10 @@ import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangl
             features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
 
     ];
+=======
+import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+const AIPoweredSecurity = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const securitySolutions = [
         {
             title: "Network Security",

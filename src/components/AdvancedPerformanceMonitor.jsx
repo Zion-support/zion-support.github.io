@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+<<<<<<< HEAD
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download const mockSystemMetrics = [
     {
         id: '1',
@@ -73,6 +74,10 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
         lastUpdated: '2024-01-15T10:00:00.000Z'
 
 ];
+=======
+import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const mockPerformanceAlerts = [
     {
         id: '1',
@@ -81,8 +86,8 @@ const mockPerformanceAlerts = [
         title: 'High CPU Usage Detected',
         description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
         timestamp: '2024-01-15T10:00:00.000Z',
-        affected: ['Web Server 1', 'Application Server 2'],
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'],
+        affected['Web Server 1', 'Application Server 2'],
+        recommendations['Scale horizontally', 'Optimize database queries', 'Review background processes'],
         status: 'active'
     },
     {
@@ -92,11 +97,13 @@ const mockPerformanceAlerts = [
         title: 'Database Connection Pool Near Capacity',
         description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
         timestamp: '2024-01-15T09:45:00.000Z',
-        affected: ['Database Cluster', 'Application Servers'],
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
+        affected['Database Cluster', 'Application Servers'],
+        recommendations['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
         status: 'acknowledged'
 
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockScalabilityMetrics = [
     {
         id: '1',
@@ -145,7 +152,6 @@ export function AdvancedPerformanceMonitor() {
     const [performanceAlerts, setPerformanceAlerts] = useState(mockPerformanceAlerts);
     const [scalabilityMetrics, setScalabilityMetrics] = useState(mockScalabilityMetrics);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', 'Processor', 'Memory', 'Storage', 'Network', 'Database', 'Performance'];
     const timeRanges = [
         { value: '15m', label: '15 Minutes' },
@@ -160,13 +166,16 @@ export function AdvancedPerformanceMonitor() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+<<<<<<< HEAD
             return () => clearInterval(interval);
 
+=======
+            return () => clearInterval(interval)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoRefresh]);
     const getStatusColor = (status) => {
         switch (status) {
@@ -175,8 +184,12 @@ export function AdvancedPerformanceMonitor() {
             case 'warning':
                 return 'bg-yellow-500 text-white';
             default:
+<<<<<<< HEAD
                 return 'bg-green-500 text-white';
 
+=======
+                return 'bg-green-500 text-white'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -187,8 +200,12 @@ export function AdvancedPerformanceMonitor() {
             case 'medium':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
+<<<<<<< HEAD
                 return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
 
+=======
+                return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -197,8 +214,12 @@ export function AdvancedPerformanceMonitor() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"/>;
             default:
+<<<<<<< HEAD
                 return <Activity className="w-4 h-4 text-gray-500"/>;
 
+=======
+                return <Activity className="w-4 h-4 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -213,21 +234,28 @@ export function AdvancedPerformanceMonitor() {
             case 'Database':
                 return <Database className="w-5 h-5 text-cyan-500"/>;
             default:
+<<<<<<< HEAD
                 return <Activity className="w-5 h-5 text-gray-500"/>;
 
+=======
+                return <Activity className="w-5 h-5 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getUtilizationColor = (utilization) => {
         if (utilization >= 80)
             return 'text-red-600';
         if (utilization >= 60)
             return 'text-yellow-600';
-        return 'text-green-600';
-    };
+        return 'text-green-600'};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Performance Monitor">
         <Activity className="w-6 h-6"/>
+<<<<<<< HEAD
       </button>);
 
+=======
+      </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -237,8 +265,12 @@ export function AdvancedPerformanceMonitor() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
+<<<<<<< HEAD
       </div>);
 
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -312,8 +344,7 @@ export function AdvancedPerformanceMonitor() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -530,5 +561,9 @@ export function AdvancedPerformanceMonitor() {
             </div>
           </div>)}
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

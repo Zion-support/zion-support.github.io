@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link const AIAutonomousEcosystem = () => {
     const ecosystemFeatures = [
         {
@@ -26,6 +27,10 @@ import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network
             features: ["Load balancing", "Resource management", "Performance monitoring", "Auto-scaling"]
 
     ];
+=======
+import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
+const AIAutonomousEcosystem = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const ecosystemComponents = [
         {
             title: "AI Core Engine",

@@ -1,14 +1,21 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink export default function Services() {
     const contact = {
-        mobile: '+1 302 464 0950',
+  mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com'
-    };
+  website: 'https://ziontechgroup.com'
+    
+
+
+
+
+
+
+};
     return (<>
 			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
 
@@ -42,7 +49,7 @@ import { Phone, Mail, MapPin, ExternalLink export default function Services() {
 											</ul>
 
 											<div className="mt-6 flex items-center justify-between">
-												<Link to={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener noreferrer' : undefined} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20">
+												<Link to={item.href} target={item.external ? '_blank' : null} rel={item.external ? 'noopener noreferrer' : null} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20">
 													<span>{item.ctaLabel}</span>
 													{item.external && <ExternalLink className="w-4 h-4"/>}
 												</Link>
@@ -73,5 +80,9 @@ import { Phone, Mail, MapPin, ExternalLink export default function Services() {
 
 				</div>
 			</main>
+<<<<<<< HEAD
 		</>);
 }}
+=======
+		</>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

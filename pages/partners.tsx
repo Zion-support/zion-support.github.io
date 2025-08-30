@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
 import {
@@ -6,6 +7,15 @@ import {
   Cloud,
   Brain,
   Users,
+=======
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { Handshake, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Users, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Globe,
   Award,
   Zap,
@@ -13,6 +23,7 @@ import {
   Database,
   Lock,
   Rocket
+<<<<<<< HEAD
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
@@ -87,23 +98,32 @@ export default function Partners() {
 
   ]
 
+=======
+ } from 'lucide-react'
+
+export default function Partners(...args[]):  {
+  const title = 'Partners — Zion Tech Group'
+  const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
+  
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const partnershipLevels = [
     {
       name: 'Platinum',
       description: 'Strategic partnerships with deep integration and joint go-to-market initiatives.',
-      benefits: ['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
+      benefits['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
       color: 'from-purple-600 to-pink-600'
     },
     {
       name: 'Gold',
       description: 'Preferred partnerships with significant collaboration and mutual benefits.',
-      benefits: ['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
+      benefits['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       name: 'Silver',
       description: 'Standard partnerships with basic collaboration and referral programs.',
-      benefits: ['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
+      benefits['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
       color: 'from-gray-400 to-gray-600'
 
   ]
@@ -128,18 +148,76 @@ export default function Partners() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-6 text-center">
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               className="mb-6"
 
               <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
+<<<<<<< HEAD
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+=======
+            <motion.h1 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-4xl md:text-6xl font-bold mb-6"
 
               Strategic
@@ -147,10 +225,44 @@ export default function Partners() {
                 Partnerships
               </span>
             </motion.h1>
+<<<<<<< HEAD
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+=======
+            <motion.p 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
 
               We collaborate with industry leaders to deliver comprehensive, cutting-edge
@@ -161,9 +273,33 @@ export default function Partners() {
         {/* Partnership Benefits */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -174,14 +310,47 @@ export default function Partners() {
                 that combine the best technologies and expertise in the industry.
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
 
@@ -198,9 +367,33 @@ export default function Partners() {
         {/* Partner Categories */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -216,9 +409,36 @@ export default function Partners() {
               {partnerCategories.map((category, categoryIndex) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: categoryIndex * 0.2 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl p-8 shadow-sm"
 
@@ -231,14 +451,47 @@ export default function Partners() {
                       <p className="text-gray-600">{category.description}</p>
                     </div>
                   </div>
+<<<<<<< HEAD
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {category.partners.map((partner, partnerIndex) => (
+=======
+                  
+                  <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <motion.div
                         key={partner.name}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.4, delay: partnerIndex * 0.1 }}
+                        initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                        whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                        transition = {
+  { duration: 0.4,
+  delay: partnerIndex * 0.1 
+
+
+
+
+
+
+}}
                         viewport={{ once: true }}
                         className="text-center p-4 rounded-lg border hover:shadow-md transition-all duration-300"
 
@@ -264,9 +517,33 @@ export default function Partners() {
         {/* Partnership Levels */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -277,14 +554,47 @@ export default function Partners() {
                 collaboration needs and business objectives.
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-3 gap-8">
               {partnershipLevels.map((level, index) => (
+=======
+            
+            <div className="grid md: grid-cols-3 gap-8">
+              {partnershipLevels.map((level, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={level.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="relative"
 
@@ -313,29 +623,121 @@ export default function Partners() {
         {/* Become a Partner */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
+<<<<<<< HEAD
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+            <motion.h2 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-6"
 
               Become a Partner
             </motion.h2>
+<<<<<<< HEAD
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+=======
+            <motion.p 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               viewport={{ once: true }}
               className="text-xl text-zion-slate-light mb-8"
 
               Join our ecosystem of technology leaders and help us deliver
               innovative solutions to businesses worldwide.
             </motion.p>
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+=======
+            <motion.div 
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
 
@@ -351,6 +753,7 @@ export default function Partners() {
 
                 partnerships@ziontechgroup.com
               </a>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
@@ -358,3 +761,12 @@ export default function Partners() {
     </>
   )
 }}}}}
+=======
+            </motion.div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

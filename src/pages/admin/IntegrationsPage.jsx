@@ -1,6 +1,6 @@
 import React from "react";
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function IntegrationsPage() {
     return (<ProtectedRoute adminOnly={true}>
@@ -9,6 +9,11 @@ export default function IntegrationsPage() {
       <main className="min-h-screen bg-background">
         <IntegrationsHub />
       </main>
+<<<<<<< HEAD
 
     </ProtectedRoute>);
 }
+=======
+      
+    </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

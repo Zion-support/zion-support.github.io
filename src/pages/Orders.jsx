@@ -29,7 +29,7 @@ export default function OrdersPage() {
                 <TableCell><Skeleton className="h-4 w-24"/></TableCell>
               </TableRow>))}
           </TableBody>
-        </Table>) : orders.length === 0 ? (<EmptyState icon={<FileText className="h-10 w-10"/>} title="No Orders" description="You haven't purchased anything yet."/>) : (<Table>
+        </Table>) : orders.length === 0 ? (<EmptyState icon={<FileText className="h-10 w-10"/>} title="No Orders" description="You haven't purchased thing yet."/>) : (<Table>
           <TableHeader>
             <TableRow>
               <TableHead>Order #</TableHead>
@@ -53,5 +53,9 @@ export default function OrdersPage() {
               </TableRow>))}
           </TableBody>
         </Table>)}
+<<<<<<< HEAD
     </div>);
 }}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

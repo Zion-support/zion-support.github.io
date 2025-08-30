@@ -11,52 +11,70 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     url,
                     status: 'external',
                     responseTime: Date.now() - startTime
+<<<<<<< HEAD
                 };
 
+=======
+                }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check if it's a mailto or tel link
             if (url.startsWith('mailto:') || url.startsWith('tel:')) {
                 return {
                     url,
                     status: 'healthy',
                     responseTime: Date.now() - startTime
+<<<<<<< HEAD
                 };
 
+=======
+                }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // For internal links, we'll assume they're healthy since they're part of our app
             if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
                 return {
                     url,
                     status: 'healthy',
                     responseTime: Date.now() - startTime
+<<<<<<< HEAD
                 };
 
+=======
+                }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // For external links, we could implement actual health checking
             // For now, we'll mark them as external
             return {
                 url,
                 status: 'external',
                 responseTime: Date.now() - startTime
+<<<<<<< HEAD
             };
 
+=======
+            }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             return {
                 url,
                 status: 'broken',
                 responseTime: Date.now() - startTime,
                 error: error instanceof Error ? error.message : 'Unknown error'
+<<<<<<< HEAD
             };
 
+=======
+            }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const checkAllLinks = async () => {
         setIsChecking(true);
         setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
         const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
         setLinkStatuses(statuses);
-        setIsChecking(false);
-    };
+        setIsChecking(false)};
     useEffect(() => {
         // Auto-check links when component mounts
-        checkAllLinks();
-    }, [links]);
+        checkAllLinks()}, [links]);
     const getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
@@ -68,8 +86,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
             default:
+<<<<<<< HEAD
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
 
+=======
+                return <AlertTriangle className="w-5 h-5 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusText = (status) => {
         switch (status) {
@@ -82,8 +104,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return 'Checking...';
             default:
+<<<<<<< HEAD
                 return 'Unknown';
 
+=======
+                return 'Unknown'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -96,8 +122,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return 'text-yellow-500';
             default:
+<<<<<<< HEAD
                 return 'text-gray-500';
 
+=======
+                return 'text-gray-500'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
@@ -159,8 +189,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     {status.responseTime}ms
                   </div>)}
               </div>
-            </div>);
-        })}
+            </div>)})}
       </div>
 
       {/* Recommendations */}
@@ -178,7 +207,11 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             Great job! All links are working properly. Your website is in excellent health.
           </p>
         </div>)}
+<<<<<<< HEAD
     </div>);
 </div>};
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default LinkHealthChecker;
 }}}}}}}}}

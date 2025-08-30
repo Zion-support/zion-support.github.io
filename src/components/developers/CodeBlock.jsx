@@ -10,5 +10,9 @@ export default function CodeBlock({ children, code, language = 'text', className
       <pre className="text-sm text-gray-100">
         <code>{content}</code>
       </pre>
+<<<<<<< HEAD
     </div>);
 }
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,6 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from '../../components/SEO';
 import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 export default function MicroSAASSolutions() {
+=======
+import SEO from '../../components/SEO';
+import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+export default function MicroSAASSolutions() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const services = [
         {
             title: "Custom SAAS Development",

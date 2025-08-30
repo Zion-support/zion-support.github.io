@@ -576,13 +576,19 @@ import {
   Shield,
   Zap,
   Cpu
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const autonomousSystemsSolutions = [
   {
     id: 1,
     title: "Autonomous Vehicles",
     description: "Self-driving vehicle systems with advanced AI and sensor fusion technology.",
     icon: Car,
-    features: [
+    features[
       "Computer vision",
       "Sensor fusion",
       "Path planning",
@@ -591,14 +597,14 @@ const autonomousSystemsSolutions = [
     price: "From $500,000",
     timeline: "24-48 weeks",
     category: "Vehicles",
-    technologies: ["LiDAR", "Computer Vision", "Machine Learning", "Sensor Fusion"]
+    technologies["LiDAR", "Computer Vision", "Machine Learning", "Sensor Fusion"]
   },
   {
     id: 2,
     title: "Industrial Robotics",
     description: "AI-powered industrial robots for manufacturing and automation.",
     icon: Factory,
-    features: [
+    features[
       "Robotic arms",
       "Computer vision",
       "Path planning",
@@ -607,14 +613,14 @@ const autonomousSystemsSolutions = [
     price: "From $200,000",
     timeline: "16-32 weeks",
     category: "Robotics",
-    technologies: ["ROS", "Computer Vision", "Motion Planning", "Safety Systems"]
+    technologies["ROS", "Computer Vision", "Motion Planning", "Safety Systems"]
   },
   {
     id: 3,
     title: "Drone Systems",
     description: "Autonomous drone systems for surveillance, delivery, and inspection.",
     icon: Plane,
-    features: [
+    features[
       "Autonomous flight",
       "Computer vision",
       "Path planning",
@@ -623,14 +629,14 @@ const autonomousSystemsSolutions = [
     price: "From $100,000",
     timeline: "12-24 weeks",
     category: "Drones",
-    technologies: ["Flight Control", "Computer Vision", "GPS", "Obstacle Detection"]
+    technologies["Flight Control", "Computer Vision", "GPS", "Obstacle Detection"]
   },
   {
     id: 4,
     title: "Smart Home Systems",
     description: "AI-powered home automation with autonomous decision making.",
     icon: Building,
-    features: [
+    features[
       "Smart devices",
       "AI decision making",
       "Learning algorithms",
@@ -639,14 +645,14 @@ const autonomousSystemsSolutions = [
     price: "From $50,000",
     timeline: "8-16 weeks",
     category: "Smart Home",
-    technologies: ["IoT", "Machine Learning", "Voice Recognition", "Automation"]
+    technologies["IoT", "Machine Learning", "Voice Recognition", "Automation"]
   },
   {
     id: 5,
     title: "Agricultural Robots",
     description: "Autonomous farming robots for precision agriculture and crop management.",
     icon: Globe,
-    features: [
+    features[
       "Crop monitoring",
       "Precision spraying",
       "Harvesting automation",
@@ -655,14 +661,14 @@ const autonomousSystemsSolutions = [
     price: "From $150,000",
     timeline: "20-36 weeks",
     category: "Agriculture",
-    technologies: ["Computer Vision", "GPS", "Sensors", "Robotics"]
+    technologies["Computer Vision", "GPS", "Sensors", "Robotics"]
   },
   {
     id: 6,
     title: "Medical Robotics",
     description: "AI-powered medical robots for surgery and patient care.",
     icon: Users,
-    features: [
+    features[
       "Surgical assistance",
       "Patient monitoring",
       "Rehabilitation support",
@@ -671,10 +677,17 @@ const autonomousSystemsSolutions = [
     price: "From $1,000,000",
     timeline: "32-64 weeks",
     category: "Medical",
+<<<<<<< HEAD
     technologies: ["Computer Vision", "Robotics", "AI", "Medical Imaging"]
 
+=======
+    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const autonomousTechnologies = [
   {
     name: "Computer Vision",
@@ -709,7 +722,7 @@ const autonomousTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Automotive Manufacturer",
+    comp: "Automotive Manufacturer",
     industry: "Automotive",
     challenge: "Needed autonomous driving system for next-generation vehicles",
     solution: "Built comprehensive autonomous system with computer vision, sensor fusion, and AI decision making",
@@ -718,7 +731,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Manufacturing Corporation",
+    comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Required autonomous robots for 24/7 production line operation",
     solution: "Implemented AI-powered industrial robots with computer vision and safety systems",
@@ -727,7 +740,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Agricultural Cooperative",
+    comp: "Agricultural Cooperative",
     industry: "Agriculture",
     challenge: "Needed autonomous farming system for large-scale crop management",
     solution: "Built autonomous agricultural robots with precision farming capabilities",
@@ -772,26 +785,31 @@ const autonomousBenefits = [
     title: "Increased Efficiency",
     description: "24/7 operation with consistent performance and reduced human error",
     icon: Zap,
-    examples: ["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]
+    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]
   },
   {
     title: "Enhanced Safety",
     description: "Advanced safety systems and risk mitigation capabilities",
     icon: Shield,
-    examples: ["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]
   },
   {
     title: "Cost Reduction",
     description: "Lower operational costs and improved resource utilization",
     icon: TrendingUp,
-    examples: ["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]
   },
   {
     title: "Scalability",
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
+<<<<<<< HEAD
     examples: ["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]
 
+=======
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIAutonomousSystems() {
@@ -816,15 +834,60 @@ export default function AIAutonomousSystems() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Cpu className="w-10 h-10 text-white" />
@@ -862,8 +925,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -877,9 +958,36 @@ export default function AIAutonomousSystems() {
             {autonomousBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -908,8 +1016,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -923,9 +1049,36 @@ export default function AIAutonomousSystems() {
             {autonomousTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -955,8 +1108,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -970,9 +1141,36 @@ export default function AIAutonomousSystems() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -999,8 +1197,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -1031,9 +1247,36 @@ export default function AIAutonomousSystems() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -1088,8 +1331,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -1103,9 +1364,36 @@ export default function AIAutonomousSystems() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -1113,7 +1401,7 @@ export default function AIAutonomousSystems() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1149,8 +1437,26 @@ export default function AIAutonomousSystems() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -1178,5 +1484,9 @@ export default function AIAutonomousSystems() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

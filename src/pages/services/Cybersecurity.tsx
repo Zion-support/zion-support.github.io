@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 import {
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Shield,
+  Lock,
+  Eye,
+  Zap,
+  Target,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Code,
+  Database,
+  Cloud,
+  BarChart3,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertTriangle,
   ArrowRight,
   CheckCircle,
@@ -62,6 +81,7 @@ export default function CybersecurityServices() {
       icon: Lock,
       features: [
         "Data encryption at rest and in transit",
+<<<<<<< HEAD
         "Data loss prevention",
         "Backup and recovery",
         "Compliance frameworks (GDPR, HIPAA, SOC2)"
@@ -69,14 +89,23 @@ export default function CybersecurityServices() {
       price: "From $6,000",
       duration: "4-10 weeks"
 
+=======
+        "Data loss prevention",;
+        "Backup and recovery",;
+        "Compliance frameworks (GDPR, HIPAA, SOC2)";
+      ],;
+      price: "From $6,000",;
+      duration: "4-10 weeks";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-  const securityTechnologies = [
-    { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
-    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
-    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },
-    { name: "WAF", description: "Web Application Firewall", icon: Shield },
-    { name: "DLP", description: "Data Loss Prevention", icon: Database },
-    { name: "IAM", description: "Identity and Access Management", icon: Key }
+  const securityTechnologies = [;
+    { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },;
+    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },;
+    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },;
+    { name: "WAF", description: "Web Application Firewall", icon: Shield },;
+    { name: "DLP", description: "Data Loss Prevention", icon: Database },;
+    { name: "IAM", description: "Identity and Access Management", icon: Key };
   ];
   const complianceFrameworks = [
     {
@@ -110,18 +139,57 @@ export default function CybersecurityServices() {
       color: "from-orange-500 to-amber-600"
     },
     {
+<<<<<<< HEAD
       name: "NIST",
       description: "National Institute of Standards and Technology",
       icon: Target,
       color: "from-cyan-500 to-blue-600"
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      name: "NIST",;
+      description: "National Institute of Standards and Technology",;
+      icon: Award,;
+      color: "from-cyan-500 to-blue-600";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+<<<<<<< HEAD
+          <motion.div className="text-center">
+=======
+          <motion.div 
+            className="text-center"
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+          >
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -149,9 +217,9 @@ export default function CybersecurityServices() {
         </div>
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
       {/* Services Grid */}
@@ -280,6 +348,7 @@ export default function CybersecurityServices() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+<<<<<<< HEAD
 
                 Explore All Services
               </Link>
@@ -288,5 +357,15 @@ export default function CybersecurityServices() {
         </div>
       </section>
     </div>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </div></div></div>}}}}

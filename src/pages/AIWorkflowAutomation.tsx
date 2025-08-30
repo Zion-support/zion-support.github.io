@@ -265,13 +265,18 @@ import {
   AVLTree,
   SplayTree,
   Treap,
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const workflowSolutions = [
   {
     id: 1,
     title: "AI Process Automation",
     description: "Intelligent automation of business processes using AI and machine learning.",
     icon: Cog,
-    features: [
+    features[
       "Process automation",
       "AI decision making",
       "Workflow optimization",
@@ -280,14 +285,14 @@ const workflowSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Process Automation",
-    technologies: ["AI", "RPA", "Workflow Engines", "Machine Learning"]
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"]
   },
   {
     id: 2,
     title: "Intelligent Document Processing",
     description: "AI-powered document processing and workflow automation.",
     icon: FileText,
-    features: [
+    features[
       "Document processing",
       "Data extraction",
       "Workflow automation",
@@ -296,14 +301,14 @@ const workflowSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Document Processing",
-    technologies: ["AI", "OCR", "Document Processing", "Workflow"]
+    technologies["AI", "OCR", "Document Processing", "Workflow"]
   },
   {
     id: 3,
     title: "Smart Workflow Orchestration",
     description: "Intelligent orchestration and management of complex workflows.",
     icon: Network,
-    features: [
+    features[
       "Workflow orchestration",
       "Process management",
       "Resource optimization",
@@ -312,14 +317,14 @@ const workflowSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Workflow Orchestration",
-    technologies: ["AI", "Workflow Management", "Orchestration", "Analytics"]
+    technologies["AI", "Workflow Management", "Orchestration", "Analytics"]
   },
   {
     id: 4,
     title: "AI Decision Automation",
     description: "Automated decision making using AI algorithms and business rules.",
     icon: Brain,
-    features: [
+    features[
       "Decision automation",
       "Business rules",
       "AI algorithms",
@@ -328,14 +333,14 @@ const workflowSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Decision Automation",
-    technologies: ["AI", "Decision Trees", "Machine Learning", "Risk Models"]
+    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"]
   },
   {
     id: 5,
     title: "Predictive Workflow Analytics",
     description: "AI-powered analytics for workflow optimization and prediction.",
     icon: BarChart3,
-    features: [
+    features[
       "Predictive analytics",
       "Workflow optimization",
       "Performance insights",
@@ -344,24 +349,37 @@ const workflowSolutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Analytics",
-    technologies: ["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
+    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
   },
   {
     id: 6,
     title: "Intelligent Task Management",
     description: "AI-powered task management and workflow optimization.",
     icon: Target,
-    features: [
+    features[
       "Task management",
       "Priority optimization",
       "Resource allocation",
       "Performance tracking"
     ],
+<<<<<<< HEAD
     price: "From $100,000",
     timeline: "16-28 weeks",
     category: "Task Management",
+<<<<<<< HEAD
     technologies: ["AI", "Task Management", "Optimization", "Analytics"]
 
+=======
+    technologies["AI", "Task Management", "Optimization", "Analytics"]
+  };
+=======;
+    price: "From $100,000",;
+    timeline: "16-28 weeks",;
+    category: "Task Management",;
+    technologies: ["AI", "Task Management", "Optimization", "Analytics"];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowTechnologies = [
@@ -386,6 +404,7 @@ const workflowTechnologies = [
     useCase: "Workflow Control",
     reliability: "High"
   },
+<<<<<<< HEAD
   {
     name: "Predictive Analytics",
     description: "AI-powered analytics for workflow optimization",
@@ -393,12 +412,21 @@ const workflowTechnologies = [
     useCase: "Performance Optimization",
     reliability: "High"
 
+=======
+  {;
+    name: "Predictive Analytics",;
+    description: "AI-powered analytics for workflow optimization",;
+    icon: BarChart3,;
+    useCase: "Performance Optimization",;
+    reliability: "High";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed AI workflow automation for production processes across 20+ facilities",
     solution: "Built comprehensive AI workflow automation system with predictive analytics",
@@ -407,7 +435,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required AI document processing and workflow automation for compliance",
     solution: "Implemented AI-powered document processing and workflow automation",
@@ -416,6 +444,7 @@ const successStories = [
   },
   {
     id: 3,
+<<<<<<< HEAD
     company: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Needed AI workflow automation for patient care processes",
@@ -423,6 +452,15 @@ const successStories = [
     results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",
     logo: "HTL"
 
+=======
+    comp: "Healthcare Technology Ltd",;
+    industry: "Healthcare",;
+    challenge: "Needed AI workflow automation for patient care processes",;
+    solution: "Built AI-powered workflow automation system for healthcare",;
+    results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",;
+    logo: "HTL";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const processSteps = [
@@ -447,6 +485,7 @@ const processSteps = [
     icon: Wrench,
     duration: "16-40 weeks"
   },
+<<<<<<< HEAD
   {
     step: 4,
     title: "Testing & Optimization",
@@ -454,6 +493,15 @@ const processSteps = [
     icon: Gauge,
     duration: "4-8 weeks"
 
+=======
+  {;
+    step: 4,;
+    title: "Testing & Optimization",;
+    description: "Test systems and optimize performance",;
+    icon: Gauge,;
+    duration: "4-8 weeks";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowBenefits = [
@@ -461,29 +509,42 @@ const workflowBenefits = [
     title: "Increased Efficiency",
     description: "AI automation significantly improves workflow efficiency and productivity",
     icon: Zap,
-    examples: ["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
+    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
   },
   {
     title: "Cost Reduction",
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,
-    examples: ["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
+    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
   },
   {
     title: "Better Decision Making",
     description: "AI-powered insights enable better, data-driven decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
+<<<<<<< HEAD
     title: "Scalability",
     description: "AI workflows scale efficiently with business growth",
     icon: Rocket,
+<<<<<<< HEAD
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
 
+=======
+    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
+  };
+=======;
+    title: "Scalability",;
+    description: "AI workflows scale efficiently with business growth",;
+    icon: Rocket,;
+    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function AIWorkflowAutomation() {
+export default function AIWorkflowAutomation(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -492,9 +553,10 @@ export default function AIWorkflowAutomation() {
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions
     : workflowSolutions.filter(solution => solution.category === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
@@ -505,15 +567,60 @@ export default function AIWorkflowAutomation() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Brain className="w-10 h-10 text-white" />
@@ -551,8 +658,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -562,13 +687,40 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {workflowBenefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {workflowBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -579,8 +731,8 @@ export default function AIWorkflowAutomation() {
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
 
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
-                  {benefit.examples.map((example, exampleIndex) => (
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
+                  {benefit.examples.map((example, exampleIndex)  => (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{example}</span>
@@ -597,8 +749,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -608,13 +778,40 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflowTechnologies.map((technology, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {workflowTechnologies.map((technology, index)  => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -644,8 +841,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -655,13 +870,40 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index)  => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -688,8 +930,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -716,13 +976,40 @@ export default function AIWorkflowAutomation() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -777,8 +1064,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -788,13 +1093,40 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {successStories.map((story, index)  => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -802,7 +1134,7 @@ export default function AIWorkflowAutomation() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -838,8 +1170,26 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -862,10 +1212,23 @@ export default function AIWorkflowAutomation() {
 
                 Workflow Consultation
               </a>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

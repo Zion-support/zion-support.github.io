@@ -29,20 +29,34 @@ export interface Q4Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails?: string;
   launchDate?: string;
   customers?: number;
   rating?: number;
+<<<<<<< HEAD
   reviews?: number;
 
+=======
+  reviews?: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const realQ4Services2025: RealQ4Service[] = [
 	{
@@ -52,7 +66,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.',
-		features: [
+		features[
 			'Multi-channel attribution and cookie-less tracking',
 			'Fraud rules, device fingerprinting, IP reputation checks',
 			'Customizable commission structures and tiers',
@@ -71,11 +85,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
-		integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
-		useCases: ['Affiliate programs', 'Influencer tracking', 'Partnership analytics'],
+		technology['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
+		integrations['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
+		useCases['Affiliate programs', 'Influencer tracking', 'Partnership analytics'],
 		roi: 'Increase attributed sales 10–25% with optimized partnerships.',
-		competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+		competitors['Refersion', 'LeadDyno', 'Tapfiliate'],
 		marketSize: '$1.5B affiliate software',
 		growthRate: '15% YoY',
 		variant: 'ai-futuristic',
@@ -94,7 +108,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
-		features: [
+		features[
 			'Multi-speaker diarization',
 			'Timestamps and filler removal',
 			'Chapter detection and show notes',
@@ -113,11 +127,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '10 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
-		integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
-		useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
+		technology['Whisper Large v3', 'Next.js', 'Node.js'],
+		integrations['Spotify', 'Apple Podcasts', 'YouTube'],
+		useCases['Transcripts', 'SEO summaries', 'Episode search'],
 		roi: 'Save 4–8 hours per episode and improve SEO traffic.',
-		competitors: ['Otter', 'Descript', 'Rev'],
+		competitors['Otter', 'Descript', 'Rev'],
 		marketSize: '$500M transcription tools',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
@@ -136,7 +150,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
-		features: [
+		features[
 			'Contact management and segmentation',
 			'Pipelines and kanban views',
 			'Calendar with SMS/email reminders',
@@ -155,11 +169,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
-		integrations: ['Gmail', 'Outlook', 'Stripe'],
-		useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
+		technology['Next.js', 'SQLite/Postgres', 'Twilio'],
+		integrations['Gmail', 'Outlook', 'Stripe'],
+		useCases['Leads', 'Follow-ups', 'Deal tracking'],
 		roi: 'Increase follow-through and close rates 10–20% via reminders.',
-		competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+		competitors['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
 		marketSize: '$5B SMB CRM',
 		growthRate: '12% YoY',
 		variant: 'ai-futuristic',
@@ -178,7 +192,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
-		features: [
+		features[
 			'Customer returns portal',
 			'Prepaid label generation',
 			'RMA approval rules',
@@ -197,11 +211,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '2 hours',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
-		integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
-		useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+		technology['Next.js', 'Node.js', 'Stripe', 'Shippo'],
+		integrations['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
+		useCases['Returns portal', 'Exchange workflows', 'Refund automation'],
 		roi: 'Reduce support tickets ~30% and speed refunds.',
-		competitors: ['Loop Returns', 'Returnly'],
+		competitors['Loop Returns', 'Returnly'],
 		marketSize: '$800M returns software',
 		growthRate: '18% YoY',
 		variant: 'ai-futuristic',
@@ -220,7 +234,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
-		features: [
+		features[
 			'Inbox and portal ticket intake',
 			'Auto-routing, SLAs, and escalations',
 			'Public/private knowledge base',
@@ -239,11 +253,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL'],
-		integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
-		useCases: ['IT support', 'SLA management', 'Client reporting'],
+		technology['Next.js', 'Node.js', 'PostgreSQL'],
+		integrations['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+		useCases['IT support', 'SLA management', 'Client reporting'],
 		roi: 'Faster resolution, less toil; better client satisfaction.',
-		competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+		competitors['Zendesk', 'Freshdesk', 'HaloPSA'],
 		marketSize: '$10B helpdesk software',
 		growthRate: '10% YoY',
 		variant: 'ai-futuristic',
@@ -264,30 +278,30 @@ export const real2025Q4Additions = [
     price: '$699',
     period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
-    features: [
+    features[
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
       'Human-in-the-loop approvals',
       'Observability and cost caps',
-      'SDKs for Node/Python'
-    ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+      'SDKs for Node/Python';
+    ],;
+    popular: true,;
+    icon: '🧠',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,;
     marketPosition: 'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
-    integrations: ['Zendesk, Confluence, Google Drive, S3'],
-    useCases: ['Support copilots, Internal search, Drafting with review'],
+    technology['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
+    integrations['Zendesk, Confluence, Google Drive, S3'],
+    useCases['Support copilots, Internal search, Drafting with review'],
     roi: 'Ship copilots 3x faster with governance baked in.',
-    competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
+    competitors['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
     marketSize: '$30B+ AI tooling',
     growthRate: '45% YoY',
     variant: 'ai-futuristic',
@@ -306,7 +320,7 @@ export const real2025Q4Additions = [
     price: '$249',
     period: '/month',
     description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
-    features: [
+    features[
       'Audience builder and traits',
       'Edge functions and KV cache',
       'A/B and holdout tests',
@@ -324,11 +338,11 @@ export const real2025Q4Additions = [
     setupTime: 'Same day',
     category: 'Micro SaaS',
     realService: true,
-    technology: ['Edge runtime, KV/Redis, Next.js'],
-    integrations: ['Shopify, Stripe, Segment'],
-    useCases: ['Homepage variants, Pricing tests, Onsite promos'],
+    technology['Edge runtime, KV/Redis, Next.js'],
+    integrations['Shopify, Stripe, Segment'],
+    useCases['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 5–15% via real-time variants.',
-    competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
+    competitors['Uniform, Optimizely, Cloudflare Workers + DIY'],
     marketSize: '$5B experimentation',
     growthRate: '12% YoY',
     variant: 'edge-futuristic',
@@ -347,7 +361,7 @@ export const real2025Q4Additions = [
     price: '$199',
     period: '/month',
     description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
-    features: [
+    features[
       'One-PR one-env automation',
       'Seed data and fixtures',
       'Smoke tests and screenshots',
@@ -364,11 +378,11 @@ export const real2025Q4Additions = [
     setupTime: '1–3 days',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Docker, K8s, IaC'],
-    integrations: ['GitHub, GitLab, Slack'],
-    useCases: ['Product review, QA signoff, Demos'],
+    technology['Docker, K8s, IaC'],
+    integrations['GitHub, GitLab, Slack'],
+    useCases['Product review, QA signoff, Demos'],
     roi: 'Cut review cycle time by 30–50%.',
-    competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
+    competitors['Uffizzi, Okteto, GitHub Codespaces'],
     marketSize: '$4B DevEx',
     growthRate: '18% YoY',
     variant: 'dev-futuristic',
@@ -387,7 +401,7 @@ export const real2025Q4Additions = [
     price: '$129',
     period: '/month',
     description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
-    features: [
+    features[
       'Streaming ingestion and rules',
       'Anomaly detection and drift',
       'LLM summaries and hints',
@@ -404,11 +418,11 @@ export const real2025Q4Additions = [
     setupTime: 'Same day',
     category: 'Observability',
     realService: true,
-    technology: ['Loki/Elastic, OpenTelemetry, LLMs'],
-    integrations: ['Grafana, Datadog, PagerDuty'],
-    useCases: ['Incident detection, Regression spotting, Postmortems'],
+    technology['Loki/Elastic, OpenTelemetry, LLMs'],
+    integrations['Grafana, Datadog, PagerDuty'],
+    useCases['Incident detection, Regression spotting, Postmortems'],
     roi: 'Reduce MTTR by 25–40%.',
-    competitors: ['Datadog Logs, Elastic ML, Axiom'],
+    competitors['Datadog Logs, Elastic ML, Axiom'],
     marketSize: '$10B log analytics',
     growthRate: '20% YoY',
     variant: 'monitoring-futuristic',
@@ -427,7 +441,7 @@ export const real2025Q4Additions = [
     price: '$99',
     period: '/month',
     description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
-    features: [
+    features[
       'Policies and approvals',
       'Change logs and RBAC',
       'SLO-based rollbacks',
@@ -444,11 +458,11 @@ export const real2025Q4Additions = [
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Edge, SDKs, Audit logs'],
-    integrations: ['GitHub, Jira, Slack'],
-    useCases: ['Safe launches, Change control, Experiments'],
+    technology['Edge, SDKs, Audit logs'],
+    integrations['GitHub, Jira, Slack'],
+    useCases['Safe launches, Change control, Experiments'],
     roi: 'Reduce incident risk and speed delivery.',
-    competitors: ['LaunchDarkly, Flagsmith, Unleash'],
+    competitors['LaunchDarkly, Flagsmith, Unleash'],
     marketSize: '$2B feature management',
     growthRate: '16% YoY',
     variant: 'dev-futuristic',
@@ -467,7 +481,7 @@ export const real2025Q4Additions = [
     price: '$79',
     period: '/month',
     description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
-    features: [
+    features[
       'Sequence composer and AI draft',
       'Warm-up and safety checks',
       'Reply intent and routing',
@@ -484,11 +498,11 @@ export const real2025Q4Additions = [
     setupTime: 'Same day',
     category: 'Growth & Marketing',
     realService: true,
-    technology: ['Postmaster, LLMs, ESP APIs'],
-    integrations: ['HubSpot, Salesforce, SendGrid/Mailgun'],
-    useCases: ['Outbound, Nurture, Follow-ups'],
+    technology['Postmaster, LLMs, ESP APIs'],
+    integrations['HubSpot, Salesforce, SendGrid/Mailgun'],
+    useCases['Outbound, Nurture, Follow-ups'],
     roi: 'Increase positive replies by 10–20%.',
-    competitors: ['Apollo, Instantly, Yesware'],
+    competitors['Apollo, Instantly, Yesware'],
     marketSize: '$6B sales engagement',
     growthRate: '9% YoY',
     variant: 'growth-futuristic',
@@ -507,7 +521,7 @@ export const real2025Q4Additions = [
     price: '$299',
     period: '/month',
     description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
-    features: [
+    features[
       'Schema registry and versioning',
       'Back/forward compatibility checks',
       'Lineage and ownership',
@@ -524,11 +538,11 @@ export const real2025Q4Additions = [
     setupTime: '3–5 days',
     category: 'Data & Analytics',
     realService: true,
-    technology: ['dbt, Kafka, OpenLineage'],
-    integrations: ['Snowflake, BigQuery, Databricks'],
-    useCases: ['Stability, SLA enforcement, Incident reduction'],
+    technology['dbt, Kafka, OpenLineage'],
+    integrations['Snowflake, BigQuery, Databricks'],
+    useCases['Stability, SLA enforcement, Incident reduction'],
     roi: 'Reduce data incidents by 30–50%.',
-    competitors: ['Monte Carlo, open-source stacks'],
+    competitors['Monte Carlo, open-source stacks'],
     marketSize: '$5B data quality',
     growthRate: '18% YoY',
     variant: 'quantum-matrix',
@@ -547,7 +561,7 @@ export const real2025Q4Additions = [
     price: '$4,500',
     period: '/fixed',
     description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
-    features: [
+    features[
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
       'Security test plans',
@@ -563,11 +577,11 @@ export const real2025Q4Additions = [
     setupTime: '1 week',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Okta, Entra, Auth0, SCIM'],
-    integrations: ['WorkOS, Frontegg'],
-    useCases: ['Enterprise SSO, Security posture'],
+    technology['Okta, Entra, Auth0, SCIM'],
+    integrations['WorkOS, Frontegg'],
+    useCases['Enterprise SSO, Security posture'],
     roi: 'Shorten security review cycles by 2–4 weeks.',
-    competitors: ['WorkOS PS, consultancies'],
+    competitors['WorkOS PS, consultancies'],
     marketSize: '$6B identity services',
     growthRate: '13% CAGR',
     variant: 'enterprise-futuristic',
@@ -586,7 +600,7 @@ export const real2025Q4Additions = [
     price: '$149',
     period: '/month',
     description: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
-    features: [
+    features[
       'Risk scoring and hygiene checks',
       'Stage SLAs and alerts',
       'Next-best action copilot',
@@ -602,11 +616,11 @@ export const real2025Q4Additions = [
     setupTime: '2–3 days',
     category: 'Business Automation',
     realService: true,
-    technology: ['CRM APIs, LLMs, Dashboards'],
-    integrations: ['Salesforce, HubSpot'],
-    useCases: ['Forecast accuracy, Pipeline velocity'],
+    technology['CRM APIs, LLMs, Dashboards'],
+    integrations['Salesforce, HubSpot'],
+    useCases['Forecast accuracy, Pipeline velocity'],
     roi: 'Increase forecast accuracy and win rates.',
-    competitors: ['People.ai, Clari (lightweight alt)'],
+    competitors['People.ai, Clari (lightweight alt)'],
     marketSize: '$12B RevOps',
     growthRate: '10% CAGR',
     variant: 'holographic-futuristic',
@@ -625,7 +639,7 @@ export const real2025Q4Additions = [
     price: '$59',
     period: '/month',
     description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
-    features: [
+    features[
       'Signature verification and secrets',
       'Replay and DLQs',
       'Retries and backoff',
@@ -642,11 +656,11 @@ export const real2025Q4Additions = [
     setupTime: 'Same day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Queues, HMAC, Workers'],
-    integrations: ['Stripe, Shopify, GitHub'],
-    useCases: ['Reliable webhooks, Auditing, Fan-out'],
+    technology['Queues, HMAC, Workers'],
+    integrations['Stripe, Shopify, GitHub'],
+    useCases['Reliable webhooks, Auditing, Fan-out'],
     roi: 'Reduce failures and save engineering time.',
-    competitors: ['Svix, Hookdeck'],
+    competitors['Svix, Hookdeck'],
     marketSize: '$1B+ integration tooling',
     growthRate: '14% YoY',
     variant: 'dev-futuristic',
@@ -665,7 +679,7 @@ export const real2025Q4Additions = [
     price: '$129',
     period: '/month',
     description: 'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
-    features: [
+    features[
       'Automated backups and PITR',
       'Failover drills and runbooks',
       'Index and bloat maintenance',
@@ -681,11 +695,11 @@ export const real2025Q4Additions = [
     setupTime: '3–5 days',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Postgres, Patroni/Cloud-native HA'],
-    integrations: ['Grafana, Prometheus'],
-    useCases: ['Reliability, Backups, Performance'],
+    technology['Postgres, Patroni/Cloud-native HA'],
+    integrations['Grafana, Prometheus'],
+    useCases['Reliability, Backups, Performance'],
     roi: 'Reduce incidents and toil for DB ops.',
-    competitors: ['Aiven, Crunchy Bridge (managed services)'],
+    competitors['Aiven, Crunchy Bridge (managed services)'],
     marketSize: '$3B DB ops services',
     growthRate: '11% YoY',
     variant: 'enterprise-futuristic',

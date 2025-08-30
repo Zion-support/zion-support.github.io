@@ -65,6 +65,7 @@ import {
   Users,
   Settings,
   Palette
+<<<<<<< HEAD
 const supplyChainSolutions = [
   {
     id: 1,
@@ -164,6 +165,11 @@ const supplyChainSolutions = [
 
 ];
 
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const supplyChainTechnologies = [
   {
     name: "IoT Sensors",
@@ -195,10 +201,12 @@ const supplyChainTechnologies = [
 
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const successStories = [
   {
     id: 1,
-    company: "Global Logistics Corp",
+    comp: "Global Logistics Corp",
     industry: "Logistics",
     challenge: "Needed real-time visibility across 50+ warehouses and 1000+ delivery vehicles",
     solution: "Implemented comprehensive supply chain visibility platform with IoT integration and real-time analytics",
@@ -207,7 +215,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Manufacturing Network",
+    comp: "Manufacturing Network",
     industry: "Manufacturing",
     challenge: "Required optimized inventory management across multiple production facilities",
     solution: "Built AI-powered inventory management system with demand forecasting and automated reordering",
@@ -216,7 +224,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Retail Chain",
+    comp: "Retail Chain",
     industry: "Retail",
     challenge: "Needed efficient route optimization for last-mile delivery to 500+ stores",
     solution: "Implemented AI-driven route optimization with real-time traffic integration",
@@ -261,26 +269,31 @@ const supplyChainBenefits = [
     title: "Cost Reduction",
     description: "Significant reduction in operational costs and inefficiencies",
     icon: TrendingUp,
-    examples: ["Lower transportation costs", "Reduced inventory costs", "Improved efficiency", "Better resource utilization"]
+    examples["Lower transportation costs", "Reduced inventory costs", "Improved efficiency", "Better resource utilization"]
   },
   {
     title: "Enhanced Visibility",
     description: "Real-time visibility across the entire supply chain network",
     icon: Eye,
-    examples: ["End-to-end tracking", "Real-time monitoring", "Exception alerts", "Proactive management"]
+    examples["End-to-end tracking", "Real-time monitoring", "Exception alerts", "Proactive management"]
   },
   {
     title: "Improved Efficiency",
     description: "Streamlined operations and optimized processes",
     icon: Zap,
-    examples: ["Faster delivery times", "Reduced lead times", "Better resource allocation", "Automated processes"]
+    examples["Faster delivery times", "Reduced lead times", "Better resource allocation", "Automated processes"]
   },
   {
     title: "Risk Mitigation",
     description: "Better risk management and contingency planning",
     icon: Shield,
+<<<<<<< HEAD
     examples: ["Supply chain resilience", "Risk assessment", "Contingency planning", "Compliance monitoring"]
 
+=======
+    examples["Supply chain resilience", "Risk assessment", "Contingency planning", "Compliance monitoring"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function SupplyChain() {
@@ -305,15 +318,60 @@ export default function SupplyChain() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Truck className="w-10 h-10 text-white" />
@@ -351,8 +409,26 @@ export default function SupplyChain() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -366,9 +442,36 @@ export default function SupplyChain() {
             {supplyChainBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -397,8 +500,26 @@ export default function SupplyChain() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -412,9 +533,36 @@ export default function SupplyChain() {
             {supplyChainTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -444,8 +592,26 @@ export default function SupplyChain() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -459,9 +625,36 @@ export default function SupplyChain() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -488,8 +681,26 @@ export default function SupplyChain() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -520,9 +731,36 @@ export default function SupplyChain() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -577,8 +815,26 @@ export default function SupplyChain() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -592,9 +848,36 @@ export default function SupplyChain() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -602,7 +885,7 @@ export default function SupplyChain() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -638,8 +921,26 @@ export default function SupplyChain() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -667,5 +968,9 @@ export default function SupplyChain() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

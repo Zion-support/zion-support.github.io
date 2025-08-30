@@ -28,10 +28,15 @@ import {
   Phone,
   Mail,
   MapPin
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
-const Services2026: React.FC = () => {
+const Services2026: React.FC = () => {;
   const [query, setQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
@@ -39,16 +44,16 @@ const Services2026: React.FC = () => {
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Workflow, count: allServices.length },
+    { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
     { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },
-    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },
-    { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length },
-    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },
-    { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length }
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },;
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },;
+    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },;
+    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },;
+    { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length },;
+    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },;
+    { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length };
   ];
 
   const filteredAndSorted = useMemo(() => {
@@ -57,16 +62,24 @@ const Services2026: React.FC = () => {
     // Filter by search query
     if (query.trim()) {
       const q = query.trim().toLowerCase();
-      filtered = filtered.filter(s =>
-        s.title.toLowerCase().includes(q) ||
-        s.description.toLowerCase().includes(q) ||
-        s.category.toLowerCase().includes(q) ||
-        s.tags?.some(t => t.toLowerCase().includes(q))
+      filtered = filtered.filter(s =>;
+        s.title.toLowerCase().includes(q) ||;
+        s.description.toLowerCase().includes(q) ||;
+        s.category.toLowerCase().includes(q) ||;
+        s.tags?.some(t => t.toLowerCase().includes(q));
       );
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(s => s.category === selectedCategory);
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     switch (sortBy) {
@@ -74,7 +87,21 @@ const Services2026: React.FC = () => {
         return filtered.sort((a, b) => a.price - b.price);
       case 'innovation':
         return filtered.sort((a, b) => {
-          const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
+          const innovationLevels = {
+  'Revolutionary': 3, 'Cutting-Edge': 2,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  'Advanced': 1 ;
+
+
+
+
+
+
+};
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
         });
       case 'roi':
@@ -110,8 +137,26 @@ const Services2026: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
 
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -207,8 +252,26 @@ const Services2026: React.FC = () => {
               {featuredServices.map((service) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                   transition={{ duration: 0.6 }}
                   className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
 
@@ -281,8 +344,26 @@ const Services2026: React.FC = () => {
             {filteredAndSorted.map((service) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10"
 
@@ -451,13 +532,13 @@ const Services2026: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm text-slate-400 mb-4">
             Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-          </div>
-          <div className="text-sm text-slate-500">
-            Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="text-sm text-slate-500">;
+            Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

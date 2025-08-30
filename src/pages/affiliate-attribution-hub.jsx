@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AffiliateAttributionHub = () => {
     const features = [
         {
@@ -48,20 +48,25 @@ const AffiliateAttributionHub = () => {
     const platformFeatures = [
         {
             category: "Affiliate Management",
-            features: ["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
+            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
         },
         {
             category: "Analytics & Reporting",
-            features: ["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]
+            features["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]
         },
         {
             category: "Fraud Prevention",
-            features: ["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]
+            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]
         },
         {
             category: "Integration & APIs",
+<<<<<<< HEAD
             features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
 
+=======
+            features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         {
@@ -234,7 +239,6 @@ const AffiliateAttributionHub = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AffiliateAttributionHub;
 }}}}

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+<<<<<<< HEAD
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug const mockSecurityEvents = [
     {
         id: '1',
@@ -72,6 +73,10 @@ const mockComplianceRequirements = [
         controls: ['Risk assessment', 'Mitigation planning', 'Documentation']
 
 ];
+=======
+import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const mockSecurityMetrics = [
     {
         id: '1',
@@ -114,14 +119,16 @@ const mockSecurityMetrics = [
         category: 'Remediation'
 
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockThreatIntelligence = [
     {
         id: '1',
         threatType: 'Ransomware Campaign',
         description: 'Active ransomware campaign targeting healthcare organizations in the region.',
         riskScore: 9.2,
-        affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],
-        mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
+        affectedSystems['Windows Servers', 'File Shares', 'Backup Systems'],
+        mitigationSteps['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
         lastSeen: '2024-01-15T09:00:00.000Z',
         frequency: 15
     },
@@ -130,8 +137,8 @@ const mockThreatIntelligence = [
         threatType: 'Phishing Attack',
         description: 'Sophisticated phishing campaign using executive impersonation.',
         riskScore: 7.8,
-        affectedSystems: ['Email Systems', 'User Workstations'],
-        mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
+        affectedSystems['Email Systems', 'User Workstations'],
+        mitigationSteps['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
 
@@ -152,10 +159,6 @@ export function AdvancedSecurityDashboard() {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const containerRef = useRef(null);
     const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
-    const frameworks = ['all', 'SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'PCI-DSS'];
-    const filteredEvents = selectedSeverity === 'all'
-        ? securityEvents
-        : securityEvents.filter(event => event.severity === selectedSeverity);
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
         : complianceRequirements.filter(req => req.framework === selectedFramework);
@@ -163,13 +166,16 @@ export function AdvancedSecurityDashboard() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+<<<<<<< HEAD
             return () => clearInterval(interval);
 
+=======
+            return () => clearInterval(interval)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoRefresh]);
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -182,8 +188,12 @@ export function AdvancedSecurityDashboard() {
             case 'low':
                 return 'bg-blue-500 text-white';
             default:
+<<<<<<< HEAD
                 return 'bg-gray-500 text-white';
 
+=======
+                return 'bg-gray-500 text-white'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -194,8 +204,12 @@ export function AdvancedSecurityDashboard() {
             case 'in_progress':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
+<<<<<<< HEAD
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
 
+=======
+                return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
@@ -204,8 +218,12 @@ export function AdvancedSecurityDashboard() {
             case 'medium':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
+<<<<<<< HEAD
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
 
+=======
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -214,8 +232,12 @@ export function AdvancedSecurityDashboard() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
+<<<<<<< HEAD
                 return <Activity className="w-4 h-4 text-gray-500"/>;
 
+=======
+                return <Activity className="w-4 h-4 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getEventIcon = (type) => {
         switch (type) {
@@ -228,14 +250,22 @@ export function AdvancedSecurityDashboard() {
             case 'access':
                 return <Users className="w-5 h-5 text-purple-500"/>;
             default:
+<<<<<<< HEAD
                 return <Server className="w-5 h-5 text-gray-500"/>;
 
+=======
+                return <Server className="w-5 h-5 text-gray-500"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
         <Shield className="w-6 h-6"/>
+<<<<<<< HEAD
       </button>);
 
+=======
+      </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -245,8 +275,12 @@ export function AdvancedSecurityDashboard() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
+<<<<<<< HEAD
       </div>);
 
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
@@ -320,8 +354,7 @@ export function AdvancedSecurityDashboard() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -506,5 +539,9 @@ export function AdvancedSecurityDashboard() {
             </div>
           </div>)}
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

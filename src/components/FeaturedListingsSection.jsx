@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award import { Link } from 'react-router-dom';
+=======
+import { motion } from 'framer-motion';
+import { Star, Eye, Heart, Clock, MapPin, Users, Tag, ArrowRight } from 'lucide-react';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const featuredListings = [
   {
     id: 1,
     title: "AI-Powered E-commerce Platform",
     category: "Web Development",
-    description: "Modern e-commerce solution with AI-driven product recommendations and personalized shopping experience",
+    description: "Modern e-commerce platform with AI-powered product recommendations and real-time analytics",
     rating: 4.9,
-    reviews: 127,
-    views: 2847,
+    reviews: 234,
+    views: 4567,
     likes: 156,
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$15,000",
@@ -115,7 +120,10 @@ export function FeaturedListingsSection() {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { 
+      y: 30,
+      opacity: 0 
+    },
     visible: {
       y: 0,
       opacity: 1,
@@ -143,11 +151,19 @@ export function FeaturedListingsSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+<<<<<<< HEAD
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+=======
+        <motion.div 
+          className="text-center mb-16" 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           transition={{ duration: 0.6 }}
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -159,12 +175,19 @@ export function FeaturedListingsSection() {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+=======
+        {/* Featured Listings Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+<<<<<<< HEAD
 
           {featuredListings.map((listing, index) => (
             <motion.div
@@ -177,6 +200,18 @@ export function FeaturedListingsSection() {
               className="group relative"
 
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+=======
+        >
+          {featuredListings.map((listing) => (
+            <motion.div
+              key={listing.id}
+              className="group relative"
+              variants={itemVariants}
+              onHoverStart={() => setHoveredListing(listing.id)}
+              onHoverEnd={() => setHoveredListing(null)}
+            >
+              <div className="bg-gradient-to-br from-zion-slate/20 to-zion-slate/10 backdrop-blur-sm rounded-2xl border border-zion-slate/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -185,44 +220,71 @@ export function FeaturedListingsSection() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   {listing.featured && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </div>
                   )}
-                  <div className="absolute top-4 left-4 bg-zion-blue-dark/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs">
-                    {listing.category}
+                  <div className="absolute top-4 right-4 bg-zion-slate-dark/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {listing.price}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
+                  {/* Category and Rating */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-zion-cyan text-sm font-medium">{listing.category}</span>
+                    <div className="flex items-center gap-1">
+                      {renderStars(listing.rating)}
+                      <span className="text-zion-slate-light text-sm ml-1">({listing.reviews})</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {listing.title}
                   </h3>
 
+<<<<<<< HEAD
                   <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+=======
+                  {/* Description */}
+                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     {listing.description}
                   </p>
 
-                  {/* Project details */}
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Clock className="w-3 h-3"/>
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <Clock className="w-4 h-4" />
                       <span>{listing.duration}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Users className="w-3 h-3"/>
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <Users className="w-4 h-4" />
                       <span>{listing.team}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <MapPin className="w-4 h-4" />
+                      <span>{listing.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <Eye className="w-4 h-4" />
+                      <span>{listing.views}</span>
                     </div>
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {listing.tags.slice(0, 3).map((tag, index) => (
-                      <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
+                      <span 
+                        key={index}
+                        className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
+                      >
                         {tag}
                       </span>
                     ))}
+<<<<<<< HEAD
                     {listing.tags.length > 3 && (
                       <span className="text-zion-cyan/60 text-xs">
                         +{listing.tags.length - 3} more
@@ -303,28 +365,43 @@ export function FeaturedListingsSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
+=======
+                  </div>
+
+                  {/* CTA Button */}
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center justify-center gap-2">
+                    View Details
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
+<<<<<<< HEAD
         {/* Enhanced bottom CTA */}
         <motion.div
           className="text-center mt-20"
+=======
+        {/* CTA Section */}
+        <motion.div 
+          className="text-center"
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
 
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
                 Ready to start your next project?
               </p>
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
-                View All Projects
-                <ArrowRight className="w-5 h-5"/>
+                Get Started Today
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>

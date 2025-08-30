@@ -1,4 +1,4 @@
-export type AdvancedServiceItem = {
+export type AdvancedServiceItem = {;
   id: string;
   title: string;
   description: string;
@@ -21,7 +21,7 @@ export type AdvancedServiceItem = {
   securityFeatures: string[];
 };
 
-export type AdvancedServiceCategory = {
+export type AdvancedServiceCategory = {;
   name: string;
   slug: string;
   description: string;

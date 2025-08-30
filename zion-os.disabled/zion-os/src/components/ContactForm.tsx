@@ -4,21 +4,21 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    comp: '',
     phone: '',
     service: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+    setFormData(prev = > ({;
+      ...prev,;
+      [name]: value;
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -33,7 +33,7 @@ export default function ContactForm() {
       setFormData({
         name: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -43,8 +43,13 @@ export default function ContactForm() {
   };
   return (
     <div>
+<<<<<<< HEAD
       <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
 
+=======
+      <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {submitSuccess && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">
@@ -90,17 +95,16 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-              Company
-            </label>
+            <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+              Comp </label>
             <input
               type="text"
-              id="company"
-              name="company"
-              value={formData.company}
+              id="comp"
+              name="comp"
+              value={formData.comp}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-              placeholder="Enter your company name"
+              placeholder="Enter your comp name"
             />
           </div>
 
@@ -159,6 +163,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
+<<<<<<< HEAD
           disabled={isSubmitting}
           className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
 
@@ -166,5 +171,14 @@ export default function ContactForm() {
         </button>
       </form>
     </div>
+=======
+          disabled={isSubmitting};
+          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200";
+        >;
+          {isSubmitting ? 'Sending Message...' : 'Send Message'};
+        </button>;
+      </form>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }

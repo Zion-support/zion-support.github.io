@@ -7,19 +7,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Quantum Computing",
             icon: Atom,
             description: "Next-generation computing that leverages quantum mechanics for unprecedented processing power",
-            technologies: [
+            technologies[
                 {
                     name: "Quantum Neural Networks",
                     description: "AI systems powered by quantum computing for complex pattern recognition",
                     href: "/quantum-neural-network-platform",
-                    features: ["Quantum Algorithms", "Superior Performance", "Future-Proof Architecture"],
+                    features["Quantum Algorithms", "Superior Performance", "Future-Proof Architecture"],
                     status: "Research & Development"
                 },
                 {
                     name: "Quantum Edge Computing",
                     description: "Quantum processing at the edge for real-time applications",
                     href: "/quantum-edge-computing-platform",
-                    features: ["Low Latency", "High Security", "Scalable Infrastructure"],
+                    features["Low Latency", "High Security", "Scalable Infrastructure"],
                     status: "Emerging Technology"
 
             ]
@@ -28,19 +28,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Space Technology",
             icon: Satellite,
             description: "Innovative solutions for space exploration, satellite systems, and space-based services",
-            technologies: [
+            technologies[
                 {
                     name: "Satellite IoT Networks",
                     description: "Global IoT connectivity through satellite constellations",
                     href: "/space-tech",
-                    features: ["Global Coverage", "Low Power", "Real-time Data"],
+                    features["Global Coverage", "Low Power", "Real-time Data"],
                     status: "Active Development"
                 },
                 {
                     name: "Space Analytics Platform",
                     description: "AI-powered analysis of space data and satellite imagery",
                     href: "/space-tech",
-                    features: ["Earth Observation", "Climate Monitoring", "Resource Management"],
+                    features["Earth Observation", "Climate Monitoring", "Resource Management"],
                     status: "Production Ready"
 
             ]
@@ -49,19 +49,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "5G & Edge Computing",
             icon: Network,
             description: "Advanced networking technologies enabling ultra-fast connectivity and edge processing",
-            technologies: [
+            technologies[
                 {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization and management",
                     href: "/5g-enterprise-solutions",
-                    features: ["Network Slicing", "Edge Computing", "IoT Integration"],
+                    features["Network Slicing", "Edge Computing", "IoT Integration"],
                     status: "Deployment Ready"
                 },
                 {
                     name: "Edge AI Processing",
                     description: "AI processing at the network edge for real-time applications",
                     href: "/services/edge-computing",
-                    features: ["Low Latency", "High Bandwidth", "Distributed Processing"],
+                    features["Low Latency", "High Bandwidth", "Distributed Processing"],
                     status: "Production Ready"
 
             ]
@@ -70,19 +70,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Autonomous Systems",
             icon: Brain,
             description: "Self-learning and self-optimizing systems that operate independently",
-            technologies: [
+            technologies[
                 {
                     name: "Autonomous Business Operations",
                     description: "AI-driven business process automation platform",
                     href: "/autonomous-business-operations-platform",
-                    features: ["Process Automation", "Decision Support", "Performance Analytics"],
+                    features["Process Automation", "Decision Support", "Performance Analytics"],
                     status: "Production Ready"
                 },
                 {
                     name: "AI Autonomous Research Assistant",
                     description: "Intelligent research and development automation",
                     href: "/ai-autonomous-research-assistant",
-                    features: ["Research Automation", "Data Analysis", "Insight Generation"],
+                    features["Research Automation", "Data Analysis", "Insight Generation"],
                     status: "Research & Development"
 
             ]
@@ -91,19 +91,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Advanced AI & ML",
             icon: Cpu,
             description: "Cutting-edge artificial intelligence and machine learning technologies",
-            technologies: [
+            technologies[
                 {
                     name: "AI-Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai-powered-it-asset-management",
-                    features: ["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],
+                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],
                     status: "Production Ready"
                 },
                 {
                     name: "AI Workflow Automation",
                     description: "Intelligent business process automation",
                     href: "/services/ai-workflow-automation",
-                    features: ["Process Optimization", "Error Reduction", "Efficiency Gains"],
+                    features["Process Optimization", "Error Reduction", "Efficiency Gains"],
                     status: "Production Ready"
 
             ]
@@ -112,19 +112,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             category: "Blockchain & Web3",
             icon: CircuitBoard,
             description: "Decentralized technologies and next-generation internet infrastructure",
-            technologies: [
+            technologies[
                 {
                     name: "Blockchain Enterprise Solutions",
                     description: "Enterprise-grade blockchain implementation and consulting",
                     href: "/services/blockchain-enterprise-solutions",
-                    features: ["Smart Contracts", "Supply Chain", "Digital Identity"],
+                    features["Smart Contracts", "Supply Chain", "Digital Identity"],
                     status: "Production Ready"
                 },
                 {
                     name: "DeFi Infrastructure",
                     description: "Decentralized finance infrastructure and solutions",
                     href: "/services/blockchain-defi-solutions",
-                    features: ["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
+                    features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
                     status: "Active Development"
 
             ]
@@ -166,7 +166,15 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -186,8 +194,12 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             case "Emerging Technology":
                 return "text-purple-400 bg-purple-400/20";
             default:
+<<<<<<< HEAD
                 return "text-gray-400 bg-gray-400/20";
 
+=======
+                return "text-gray-400 bg-gray-400/20"}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -195,7 +207,25 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 Emerging Technologies
@@ -270,7 +300,25 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
       {/* Research & Development Section */}
       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Research & Development
             </h2>
@@ -281,7 +329,34 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (<motion.div key={area.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
+            {researchAreas.map((area, index) => (<motion.div key={area.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-white">{area.title}</h3>
                   <span className="text-sm text-purple-400">{area.timeline}</span>
@@ -305,7 +380,25 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Explore the Future?
           </h2>
@@ -323,7 +416,11 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </div>);
 </div>};
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EmergingTech;
 }}}}}}}}}}}}}}

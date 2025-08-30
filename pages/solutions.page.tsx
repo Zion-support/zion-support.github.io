@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import Link from 'next/link.ts';
+import { Brain,
   Shield,
   Cloud,
   TrendingUp,
@@ -33,6 +32,11 @@ import {
   DollarSign,
   Search,
   Filter
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -40,7 +44,7 @@ const solutionCategories = [
     icon: Brain,
     description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
-    solutions: [
+    solutions[
       'Predictive Analytics',
       'Natural Language Processing',
       'Computer Vision',
@@ -55,7 +59,7 @@ const solutionCategories = [
     icon: Shield,
     description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
-    solutions: [
+    solutions[
       'Threat Detection & Response',
       'Identity & Access Management',
       'Security Compliance',
@@ -70,7 +74,7 @@ const solutionCategories = [
     icon: Cloud,
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
-    solutions: [
+    solutions[
       'Cloud Migration',
       'Infrastructure as Code',
       'Container Orchestration',
@@ -85,7 +89,7 @@ const solutionCategories = [
     icon: TrendingUp,
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
-    solutions: [
+    solutions[
       'Business Intelligence',
       'Data Warehousing',
       'Real-time Analytics',
@@ -100,7 +104,7 @@ const solutionCategories = [
     icon: Zap,
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
-    solutions: [
+    solutions[
       'IoT Device Management',
       'Edge Computing Platforms',
       'Sensor Networks',
@@ -115,8 +119,9 @@ const solutionCategories = [
     icon: Globe,
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
-    solutions: [
+    solutions[
       'Process Automation',
+<<<<<<< HEAD
       'Customer Experience',
       'Legacy Modernization',
       'Digital Strategy',
@@ -124,13 +129,22 @@ const solutionCategories = [
       'Technology Consulting'
     ]
 
+=======
+      'Customer Experience',;
+      'Legacy Modernization',;
+      'Digital Strategy',;
+      'Change Management',;
+      'Technology Consulting';
+    ];
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const industrySolutions = [
   {
     industry: 'Healthcare',
     icon: Heart,
-    solutions: [
+    solutions[
       'Electronic Health Records',
       'Telemedicine Platforms',
       'Medical Imaging AI',
@@ -143,7 +157,7 @@ const industrySolutions = [
   {
     industry: 'Finance',
     icon: DollarSign,
-    solutions: [
+    solutions[
       'Fintech Applications',
       'Risk Management',
       'Fraud Detection',
@@ -156,7 +170,7 @@ const industrySolutions = [
   {
     industry: 'Manufacturing',
     icon: Cpu,
-    solutions: [
+    solutions[
       'Smart Manufacturing',
       'Predictive Maintenance',
       'Quality Control',
@@ -169,7 +183,7 @@ const industrySolutions = [
   {
     industry: 'Retail',
     icon: ShoppingCart,
-    solutions: [
+    solutions[
       'E-commerce Platforms',
       'Customer Analytics',
       'Inventory Management',
@@ -182,7 +196,7 @@ const industrySolutions = [
   {
     industry: 'Education',
     icon: FileText,
-    solutions: [
+    solutions[
       'Learning Management Systems',
       'Virtual Classrooms',
       'Student Analytics',
@@ -195,9 +209,10 @@ const industrySolutions = [
   {
     industry: 'Government',
     icon: Shield,
-    solutions: [
+    solutions[
       'Digital Services',
       'Data Security',
+<<<<<<< HEAD
       'Process Automation',
       'Citizen Engagement',
       'Regulatory Compliance',
@@ -205,6 +220,15 @@ const industrySolutions = [
     ],
     color: 'from-gray-500 to-slate-600'
 
+=======
+      'Process Automation',;
+      'Citizen Engagement',;
+      'Regulatory Compliance',;
+      'Infrastructure Management';
+    ],;
+    color: 'from-gray-500 to-slate-600';
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const featuredSolutions = [
@@ -213,7 +237,7 @@ const featuredSolutions = [
     name: 'AI-Powered Business Intelligence',
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
-    features: [
+    features[
       'Real-time data processing',
       'Predictive analytics models',
       'Custom dashboard creation',
@@ -221,7 +245,7 @@ const featuredSolutions = [
       'Natural language queries',
       'Mobile-responsive design'
     ],
-    benefits: [
+    benefits[
       '30% faster decision making',
       'Reduced manual reporting',
       'Improved data accuracy',
@@ -237,7 +261,7 @@ const featuredSolutions = [
     name: 'Zero-Trust Security Framework',
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
-    features: [
+    features[
       'Identity verification',
       'Device authentication',
       'Network segmentation',
@@ -245,7 +269,7 @@ const featuredSolutions = [
       'Compliance monitoring',
       'Incident response'
     ],
-    benefits: [
+    benefits[
       '99.9% threat detection rate',
       'Reduced security incidents',
       'Compliance achievement',
@@ -261,7 +285,7 @@ const featuredSolutions = [
     name: 'Cloud-Native Infrastructure',
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
-    features: [
+    features[
       'Auto-scaling infrastructure',
       'Container orchestration',
       'CI/CD pipelines',
@@ -269,10 +293,11 @@ const featuredSolutions = [
       'Disaster recovery',
       'Cost optimization'
     ],
-    benefits: [
+    benefits[
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
+<<<<<<< HEAD
       'Improved scalability'
     ],
     price: 'Starting at $1,800/month',
@@ -280,9 +305,18 @@ const featuredSolutions = [
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600'
 
+=======
+      'Improved scalability';
+    ],;
+    price: 'Starting at $1,800/month',;
+    implementation: '8-16 weeks',;
+    icon: Cloud,;
+    color: 'from-blue-500 to-cyan-600';
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function Solutions() {
+export default function Solutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -290,22 +324,44 @@ export default function Solutions() {
   const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
 
-  const filteredSolutions = featuredSolutions.filter(solution => {
-    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredSolutions = featuredSolutions.filter(solution => {;
+    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
+<<<<<<< HEAD
 
     return matchesCategory && matchesSearch;
   });
+=======
+    
+    return matchesCategory && matchesSearch});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -348,9 +404,15 @@ export default function Solutions() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                   {categories.map(category => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {categories.map(category  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -361,9 +423,15 @@ export default function Solutions() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                   {industries.map(industry => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {industries.map(industry  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -377,25 +445,78 @@ export default function Solutions() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutionCategories.map((category, index)  => {;
+=======;
+            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {solutionCategories.map((category, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = category.icon;
               return (
                 <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {category.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
 
@@ -416,40 +537,102 @@ export default function Solutions() {
                       </div>
                       <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
+<<<<<<< HEAD
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
                   </Link>
                 </motion.div>
+              )})};
+=======;
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </div>;
+                    </div>;
+                  </Link>;
+                </motion.div>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {industrySolutions.map((industry, index)  => {;
+=======;
+            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {industrySolutions.map((industry, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = industry.icon;
               return (
                 <motion.div
-                  key={industry.industry}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {industry.industry}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
 
@@ -469,41 +652,107 @@ export default function Solutions() {
                     <Link
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+<<<<<<< HEAD
 
+=======
+                    >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       View {industry.industry} Solutions
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </motion.div>
+              )})};
+=======;
+                      View {industry.industry} Solutions;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
+                    </Link>;
+                  </div>;
+                </motion.div>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* Featured Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredSolutions.map((solution, index)  => {;
+=======;
+            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {filteredSolutions.map((solution, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = solution.icon;
               return (
                 <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {solution.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
 
@@ -564,24 +813,55 @@ export default function Solutions() {
                     <Link
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+<<<<<<< HEAD
 
+=======
+                    >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </motion.div>
+              )})};
+=======;
+                      Learn More;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
+                    </Link>;
+                  </div>;
+                </motion.div>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -607,10 +887,23 @@ export default function Solutions() {
 
                 View Case Studies
               </Link>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

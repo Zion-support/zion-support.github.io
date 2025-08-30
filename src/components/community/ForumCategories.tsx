@@ -1,17 +1,27 @@
+<<<<<<< HEAD
+=======
+import React from 'react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ForumCategoryInfo {
+
   id: string;
   name: string;
   description: string;
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-  lastPost?: {
+lastPost?: {
     title: string;
     author: string;
+<<<<<<< HEAD
     date: string;
   };
+=======
+    date: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function ForumCategories() {
+export default function ForumCategories(...args[]):  {
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -94,7 +104,7 @@ export default function ForumCategories() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
+    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
@@ -171,10 +181,23 @@ export default function ForumCategories() {
             </p>
             <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </section>
+  )};
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
 }}}}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

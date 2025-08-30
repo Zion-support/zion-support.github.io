@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
+
+<<<<<<< HEAD
+export const PricingSection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const plans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'AI-powered content generation',
         'Basic SEO optimization',
         'Email support',
@@ -23,7 +33,7 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI models',
         'Priority support',
@@ -40,7 +50,7 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
       price: '$799',
       period: '/month',
       description: 'For large organizations with complex needs',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI training',
         'Dedicated account manager',
@@ -50,21 +60,106 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
         '24/7 phone support'
       ],
       popular: false,
+<<<<<<< HEAD
       icon: Shield
 
+=======
+      icon: Shield;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
+=======
+const pricingTiers = [
+  {
+    name: "Starter",
+    price: "$99",
+    period: "/month",
+    description: "Perfect for small businesses and startups",
+    features: [
+      "Basic AI Services",
+      "Email Support",
+      "5GB Storage",
+      "Basic Analytics",
+      "Mobile App Access"
+    ],
+    popular: false,
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    name: "Professional",
+    price: "$299",
+    period: "/month",
+    description: "Ideal for growing businesses",
+    features: [
+      "Advanced AI Services",
+      "Priority Support",
+      "50GB Storage",
+      "Advanced Analytics",
+      "API Access",
+      "Custom Integrations",
+      "Team Collaboration"
+    ],
+    popular: true,
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    name: "Enterprise",
+    price: "$999",
+    period: "/month",
+    description: "For large organizations",
+    features: [
+      "Full AI Suite",
+      "24/7 Dedicated Support",
+      "Unlimited Storage",
+      "Custom Analytics",
+      "White-label Solutions",
+      "Advanced Security",;
+      "Custom Development",;
+      "SLA Guarantee";
+    ],;
+    popular: false,;
+    color: "from-green-500 to-emerald-500";
+  };
+];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export function PricingSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
           className="text-center mb-16"
+<<<<<<< HEAD
 
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Choose Your Plan
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Transparent Pricing
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Flexible pricing options designed to scale with your business.
@@ -72,15 +167,28 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => {
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-3 gap-8 mb-12">;
+          {plans.map((plan, index)  => {;
             const IconComponent = plan.icon;
             return (
               <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key = {plan.name}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                 }`}
@@ -90,6 +198,63 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index) => (
+            <motion.div
+              key={tier.name}
+              className={`relative ${tier.popular ? 'scale-105' : ''}`}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+            >
+              {tier.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+              <div className={`bg-slate-800 border-2 ${tier.popular ? 'border-purple-500' : 'border-slate-700'} rounded-2xl p-8 h-full relative overflow-hidden`}>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-700 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-400 text-sm mb-6">{tier.description}</p>
+                  
+                  <div className="mb-8">
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400">{tier.period}</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                 )}
 
@@ -133,10 +298,10 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
                   Get Started
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
+<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,12 +317,72 @@ import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: Rea
 
             Contact Sales
             <Cloud className="ml-2 h-5 w-5" />
+=======
+        <motion.div 
+          className="mt-16 text-center"
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+        >
+          <p className="text-gray-400 mb-6">
+            Need a custom solution? Contact us for a personalized quote.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+          >
+            Contact Sales Team
+<<<<<<< HEAD
+            <span className="text-sm">→</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </Link>
         </motion.div>
-      </div>
-    </section>
-  );
-};
+      </div>;
+    </section>;
+  )};
 
 export default PricingSection;
+<<<<<<< HEAD
 }}
+=======
+=======
+            <span className="text-sm">→</span>;
+          </Link>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export default PricingSection;
+export default PricingSection;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

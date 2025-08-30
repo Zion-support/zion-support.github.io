@@ -6,7 +6,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       description: 'Essential IT services for small businesses',
       price: 'Starting at $299/month',
       popular: false,
-      includes: [
+      includes[
         '24/7 Help Desk Support',
         'Remote Troubleshooting',
         'Basic Network Monitoring',
@@ -16,7 +16,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         'Basic Security Monitoring',
         'Backup Verification'
       ],
-      notIncluded: [
+      notIncluded[
         'On-site Visits',
         'Hardware Installation',
         'Advanced Security Features',
@@ -24,7 +24,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         'Custom Reporting',
         'Strategic IT Planning'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '4-8 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Basic', icon: Shield },
@@ -36,7 +36,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       description: 'Comprehensive IT services for growing businesses',
       price: 'Starting at $599/month',
       popular: true,
-      includes: [
+      includes[
         'Everything in Basic Package',
         'On-site Support (2 visits/month)',
         'Hardware Installation & Setup',
@@ -50,14 +50,14 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         'User Training Sessions',
         'Strategic IT Consulting'
       ],
-      notIncluded: [
+      notIncluded[
         'Unlimited On-site Visits',
         'Dedicated IT Manager',
         'Custom Software Development',
         'Hardware Procurement',
         'Advanced Analytics'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '2-4 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Advanced', icon: Shield },
@@ -69,7 +69,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       description: 'Full-service IT management for large organizations',
       price: 'Starting at $1,299/month',
       popular: false,
-      includes: [
+      includes[
         'Everything in Professional Package',
         'Unlimited On-site Support',
         'Dedicated IT Manager',
@@ -86,13 +86,13 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         'Vendor Management',
         'Technology Roadmap Planning'
       ],
-      notIncluded: [
+      notIncluded[
         'Custom Hardware Development',
         'Third-party Software Licensing',
         'Legal Compliance Services',
         'Insurance Requirements'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '1-2 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
@@ -310,7 +310,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               Need a Custom Solution?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our team can customize any service package to meet your specific business requirements.
+              Our team can customize  service package to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -330,5 +330,9 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

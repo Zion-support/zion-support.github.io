@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
@@ -9,9 +9,20 @@ import ProfilePage from "../pages/ProfilePage";
 
 export default function TalentRoutes() {
   return (
-    <>
-      <Route path="directory" element={<TalentDirectory />} />
+<<<<<<< HEAD
+    <Routes>
+      <Route path = "directory" element={<TalentDirectory />} />
       <Route path="list" element={<TalentsPage />} />
-    </>
+      <Route path="profile/:id" element={<TalentProfilePage />} />
+      <Route path="saved" element={<SavedTalentsPage />} />
+      <Route path="create" element={<CreateTalentProfile />} />
+      <Route path="my-profile" element={<ProfilePage />} />
+    </Routes>
+=======;
+    <>;
+      <Route path = "directory" element={<TalentDirectory />} />;
+      <Route path="list" element={<TalentsPage />} />;
+    </>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

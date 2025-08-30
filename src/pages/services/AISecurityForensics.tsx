@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
   const features = [
     'AI-powered security forensics optimization',
-    'Intelligent digital evidence analysis and processing',
-    'Automated incident investigation and reconstruction',
-    'Predictive analytics for forensic needs',
-    'Smart forensics framework management',
-    'AI-driven forensics automation and orchestration',
-    'Real-time forensics performance tracking',
-    'Custom AI models for forensics applications'
+    'Intelligent digital evidence analysis and processing',;
+    'Automated incident investigation and reconstruction',;
+    'Predictive analytics for forensic needs',;
+    'Smart forensics framework management',;
+    'AI-driven forensics automation and orchestration',;
+    'Real-time forensics performance tracking',;
+    'Custom AI models for forensics applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$799/mo',
       details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$1,999/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$4,999/mo',
       details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$1,999/mo', 
+      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security forensics optimization',
-    'Digital evidence analysis and processing',
-    'Incident investigation and reconstruction',
-    'Forensics framework management and automation',
-    'Forensics automation and orchestration',
-    'Forensics scaling and management'
+  const useCases = [;
+    'Security forensics optimization',;
+    'Digital evidence analysis and processing',;
+    'Incident investigation and reconstruction',;
+    'Forensics framework management and automation',;
+    'Forensics automation and orchestration',;
+    'Forensics scaling and management';
   ];
 
-  const benefits = [
-    'Improve security forensics performance by 50-80%',
-    'Reduce investigation time by 40-70%',
-    'Cut security forensics costs by 35-65%',
-    'Enhance security forensics reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security forensics operations efficiently'
+  const benefits = [;
+    'Improve security forensics performance by 50-80%',;
+    'Reduce investigation time by 40-70%',;
+    'Cut security forensics costs by 35-65%',;
+    'Enhance security forensics reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security forensics operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

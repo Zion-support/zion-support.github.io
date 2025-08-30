@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera const AIContentCreation: React.FC = () => {
   const features = [
@@ -16,6 +16,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
     {
       icon: Video,
       title: 'AI Video Creation',
+<<<<<<< HEAD
       description: 'Produce engaging video content automatically'
     },
     {
@@ -23,6 +24,15 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       title: 'Creative Design',
       description: 'AI-powered design tools and templates'
 
+=======
+      description: 'Produce engaging video content automatically';
+    },;
+    {;
+      icon: PenTool,;
+      title: 'Creative Design',;
+      description: 'AI-powered design tools and templates';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const contentTypes = [
@@ -39,6 +49,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
     {
       title: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content',
+<<<<<<< HEAD
       icon: '📊'
     },
     {
@@ -46,20 +57,34 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       description: 'Compelling product copy and descriptions',
       icon: '🛍️'
 
+=======
+      icon: '📊';
+    },;
+    {;
+      title: 'Product Descriptions',;
+      description: 'Compelling product copy and descriptions',;
+      icon: '🛍️';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    'Save time with automated content generation',
-    'Maintain consistent brand voice and style',
-    'Scale content production without additional staff',
-    'Optimize content for SEO and engagement',
-    'Reduce content creation costs',
-    'Faster time to market for campaigns'
+  const benefits = [;
+    'Save time with automated content generation',;
+    'Maintain consistent brand voice and style',;
+    'Scale content production without additional staff',;
+    'Optimize content for SEO and engagement',;
+    'Reduce content creation costs',;
+    'Faster time to market for campaigns';
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Content Creation Services - Zion Tech Group"
         description="Transform your content strategy with AI-powered creation tools. Generate high-quality text, images, and videos at scale."
       />
@@ -68,8 +93,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -106,8 +149,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -123,9 +184,36 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -143,8 +231,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -160,9 +266,36 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
             {contentTypes.map((contentType, index) => (
               <motion.div
                 key={contentType.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200"
 
                 <div className="flex items-start space-x-4">
@@ -182,8 +315,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -197,8 +348,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
 
@@ -214,8 +383,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-400/30 rounded-xl p-8"
 
@@ -236,8 +423,26 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,13 +456,13 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
                 Start Creating Now
               </button>
               <button className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-200">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

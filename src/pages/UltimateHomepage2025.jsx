@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+=======
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
+import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         setIsVisible(true);
         const interval = setInterval(() => {
-            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length)}, 5000);
+        return () => clearInterval(interval)}, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = [
@@ -351,5 +354,9 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 }}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

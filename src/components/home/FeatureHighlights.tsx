@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -46,38 +45,27 @@ const highlights = [
 
 const features = [
   {
-    icon: Zap,
-    title: 'AI-Powered Matching',
-    description: 'Advanced algorithms connect you with the perfect talent and services',
-    color: 'from-zion-purple to-zion-purple-dark',
-    bgColor: 'bg-zion-purple/10',
-    iconColor: 'text-zion-purple'
+    icon: "🚀",
+    title: "Cutting-Edge Technology",
+    description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
   },
   {
-    icon: Users,
-    title: 'Global Talent Network',
-    description: 'Access skilled professionals from 150+ countries worldwide',
-    color: 'from-zion-cyan to-zion-blue',
-    bgColor: 'bg-zion-cyan/10',
-    iconColor: 'text-zion-cyan'
+    icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
   },
   {
-    icon: Shield,
-    title: 'Verified & Secure',
-    description: 'All profiles and transactions are verified and secure',
-    color: 'from-zion-green to-zion-green-dark',
-    bgColor: 'bg-zion-green/10',
-    iconColor: 'text-zion-green'
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"
   },
   {
-    icon: Globe,
-    title: '24/7 Global Support',
-    description: 'Round-the-clock support in multiple languages',
-    color: 'from-zion-blue to-zion-blue-dark',
-    bgColor: 'bg-zion-blue/10',
-    iconColor: 'text-zion-blue'
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
   },
   {
+<<<<<<< HEAD
     icon: Clock,
     title: 'Instant Response',
     description: 'Get responses within minutes, not days',
@@ -93,20 +81,31 @@ const features = [
     bgColor: 'bg-zion-pink/10',
     iconColor: 'text-zion-pink'
 
+=======
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements";
+  },;
+  {;
+    icon: "📊",;
+    title: "Real-Time Analytics",;
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const achievements = [
   { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
   { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
-  { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
-  { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
+  { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },;
+  { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' };
 ];
 
-const technologies = [
-  'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
+const technologies = [;
+  'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics';
 ];
 
-export function FeatureHighlights() {
+export function FeatureHighlights(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -114,12 +113,20 @@ export function FeatureHighlights() {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
+<<<<<<< HEAD
 
 
+=======
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
+  hidden: { opacity: 0, y: 30,
+  scale: 0.95 
+
+},
     visible: {
       opacity: 1,
       y: 0,
@@ -127,45 +134,82 @@ export function FeatureHighlights() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
+<<<<<<< HEAD
 
 
+=======
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const achievementVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0,
+  scale: 0.8 
+
+},
     visible: {
       opacity: 1,
       scale: 1,
+<<<<<<< HEAD
       transition: { duration: 0.5 }
 
+=======
+      transition: { duration: 0.5 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const techVariants = {
-    hidden: { opacity: 0, x: -20 },
+  hidden: { opacity: 0,
+  x: -20 
+
+},
     visible: {
       opacity: 1,
       x: 0,
+<<<<<<< HEAD
       transition: { duration: 0.5 }
 
+=======
+      transition: { duration: 0.5 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
-      </div>
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial = {
+  { opacity: 0,
+  y: 20 
 
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
           className="text-center mb-20"
 
+=======
+        >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
@@ -266,9 +310,17 @@ export function FeatureHighlights() {
                   {feature.description}
                 </p>
               </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                {feature.title}
+              </h3>
+              
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Achievements Section */}
         <motion.div
@@ -336,6 +388,7 @@ export function FeatureHighlights() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           transition={{ duration: 0.6 }}
           className="text-center"
 
@@ -353,9 +406,39 @@ export function FeatureHighlights() {
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
+=======
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+        >
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
+            <span>Experience the difference</span>
+<<<<<<< HEAD
+            <span className="text-2xl">→</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </motion.div>
       </div>
     </section>
+  )};
+=======;
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
 }}}}}}}}}}
+=======
+}
+
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

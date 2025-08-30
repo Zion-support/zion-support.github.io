@@ -1,27 +1,46 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
+=======
+import React from 'react.ts';
+import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
+
+const CloudServices = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",
       description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
       price: "From $8,500/project",
-      features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
+      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
       icon: Cloud
     },
     {
       title: "Cloud-Native Development",
       description: "Build scalable applications using cloud-native technologies and microservices architecture.",
       price: "From $12,000/project",
-      features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
+      features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
       icon: Server
     },
     {
       title: "Cloud Security & Compliance",
+<<<<<<< HEAD
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
       price: "From $6,500/month",
-      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
+      features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
+      price: "From $6,500/month",;
+      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],;
+      icon: Shield;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const cloudPlatforms = [
@@ -29,33 +48,46 @@ import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const Cloud
       name: "Amazon Web Services",
       description: "Comprehensive cloud services and infrastructure",
       icon: Cloud,
-      features: ["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
+      features["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
     },
     {
       name: "Microsoft Azure",
       description: "Enterprise cloud platform with hybrid capabilities",
       icon: Server,
-      features: ["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
+      features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
+<<<<<<< HEAD
       name: "Google Cloud Platform",
       description: "AI-first cloud platform with advanced analytics",
       icon: Globe,
+<<<<<<< HEAD
       features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
 
+=======
+      features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
+    };
+=======;
+      name: "Google Cloud Platform",;
+      description: "AI-first cloud platform with advanced analytics",;
+      icon: Globe,;
+      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Scalable infrastructure that grows with your business",
-    "Reduced capital expenditure and operational costs",
-    "Enhanced security and compliance capabilities",
-    "Faster time to market with cloud-native tools",
-    "Global availability and disaster recovery",
-    "Automated scaling and resource management"
+  const benefits = [;
+    "Scalable infrastructure that grows with your business",;
+    "Reduced capital expenditure and operational costs",;
+    "Enhanced security and compliance capabilities",;
+    "Faster time to market with cloud-native tools",;
+    "Global availability and disaster recovery",;
+    "Automated scaling and resource management";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -209,12 +241,21 @@ import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const Cloud
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default CloudServices;}}}

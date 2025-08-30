@@ -27,51 +27,51 @@ export function CollaborationPlatform() {
     const containerRef = useRef(null);
     useEffect(() => {
         const interval = setInterval(() => {
-            setMeetingDuration(prev => prev + 1);
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
-    const toggleVideo = () => {
-        setLocalUser(prev => ({ ...prev, isVideoOn: !prev.isVideoOn }));
-    };
-    const toggleAudio = () => {
-        setLocalUser(prev => ({ ...prev, isAudioOn: !prev.isAudioOn }));
-    };
-    const toggleScreenShare = () => {
-        setLocalUser(prev => ({ ...prev, isScreenSharing: !prev.isScreenSharing }));
-    };
+            setMeetingDuration(prev => prev + 1)}, 1000);
+        return () => clearInterval(interval)}, []);
     const toggleMute = () => {
-        setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));
-    };
+        setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }))};
     const toggleRecording = () => {
-        setIsRecording(!isRecording);
-    };
+        setIsRecording(!isRecording)};
     const sendMessage = () => {
         if (newMessage.trim()) {
             const message = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 user: 'You',
                 message: newMessage,
-                timestamp: new Date()
-            };
+  timestamp: new Date()
+            
+
+
+
+
+
+
+};
             setChatMessages(prev => [...prev, message]);
+<<<<<<< HEAD
             setNewMessage('');
 
+=======
+            setNewMessage('')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const formatTime = (seconds) => {
         const hours = Math.floor(seconds / 3600);
         const minutes = Math.floor((seconds % 3600) / 60);
         const secs = seconds % 60;
-        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    };
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`};
     const toggleChat = () => {
-        setActiveChat(!activeChat);
-    };
+        setActiveChat(!activeChat)};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Start Collaboration Session">
         <Users className="w-5 h-5"/>
+<<<<<<< HEAD
       </button>);
 
+=======
+      </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-20 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -83,8 +83,12 @@ export function CollaborationPlatform() {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
       </div>);
 
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">
@@ -217,5 +221,9 @@ export function CollaborationPlatform() {
             </div>
           </div>)}
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -13,7 +13,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
     const serviceCategories = [
         {
             name: 'AI & Machine Learning',
-            services: [
+            services[
                 { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },
                 { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },
                 { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' },
@@ -21,7 +21,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         },
         {
             name: 'Emerging Technologies',
-            services: [
+            services[
                 { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },
                 { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },
                 { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' },
@@ -29,7 +29,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         },
         {
             name: 'Industry Solutions',
-            services: [
+            services[
                 { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },
@@ -38,10 +38,15 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
     ];
     const isActive = (href) => {
         if (href === '/') {
+<<<<<<< HEAD
             return location.pathname === '/';
 
         return location.pathname.startsWith(href);
     };
+=======
+            return location.pathname === '/'}
+        return location.pathname.startsWith(href)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -64,8 +69,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`}>
                   <Icon className="w-4 h-4"/>
                   <span>{item.name}</span>
-                </Link>);
-        })}
+                </Link>)})}
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -117,8 +121,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>
                   <Icon className="w-5 h-5"/>
                   <span>{item.name}</span>
-                </Link>);
-            })}
+                </Link>)})}
 
             {/* Mobile Services */}
             <div className="px-3 py-2">
@@ -144,7 +147,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
             </div>
           </div>
         </div>)}
-    </nav>);
-};
+    </nav>)};
 export default Navigation;
 }}}

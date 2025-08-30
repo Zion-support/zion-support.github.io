@@ -168,6 +168,5 @@ const AIAutonomousPrediction = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousPrediction;

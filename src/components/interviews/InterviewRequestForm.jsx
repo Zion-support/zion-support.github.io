@@ -46,8 +46,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: "Please log in to schedule an interview",
                 variant: "destructive",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Combine date and time
@@ -70,8 +74,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
+<<<<<<< HEAD
             onClose();
 
+=======
+            onClose()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Failed to schedule interview:", error);
@@ -82,12 +90,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
         finally {
             setIsSubmitting(false);
 
 
+=======
+            })}
+        finally {
+            setIsSubmitting(false)}
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const timeSlots = [
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
         "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
@@ -120,14 +135,32 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
-                      <Button variant="outline" className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
+                      <Button variant="outline" className = {
+  cn("w-full pl-3 text-left font-normal",
+  !field.value && "text-muted-foreground")
+
+
+
+
+
+
+}>
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < new Date() || date > addDays(new Date(), 90)} initialFocus className="p-3 pointer-events-auto"/>
+                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {
+  (date) => date < new Date() || date > addDays(new Date(),
+  90)
+
+
+
+
+
+
+} initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
@@ -214,5 +247,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           </Button>
         </div>
       </form>
+<<<<<<< HEAD
     </Form>);
 }}}}}}}
+=======
+    </Form>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

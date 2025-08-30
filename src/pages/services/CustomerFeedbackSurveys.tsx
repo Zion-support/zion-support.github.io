@@ -1,9 +1,9 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
-export default function CustomerFeedbackSurveys() {
+export default function CustomerFeedbackSurveys(...args[]):  {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO
         title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
         description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."
@@ -17,18 +17,18 @@ export default function CustomerFeedbackSurveys() {
           AI highlights themes, predicts churn risk, and recommends actions.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 mt-10">
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-xl font-semibold mb-3">Features</h2>
-            <ul className="space-y-2 text-sm text-zion-slate-light">
-              <li>• NPS, CSAT, CES templates</li>
-              <li>• Branching logic, translations, rich media</li>
-              <li>• AI topic clustering, sentiment trends</li>
+        <div className="grid gap-8 md:grid-cols-2 mt-10">;
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
+            <h2 className="text-xl font-semibold mb-3">Features</h2>;
+            <ul className="space-y-2 text-sm text-zion-slate-light">;
+              <li>• NPS, CSAT, CES templates</li>;
+              <li>• Branching logic, translations, rich media</li>;
+              <li>• AI topic clustering, sentiment trends</li>;
               <li>• Alerts to Slack/Teams; webhook and REST APIs</li>
               <li>• Exports to BigQuery, Snowflake, S3</li>
             </ul>
           </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
+          <div className = "rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-xl font-semibold mb-3">Pricing</h2>
             <ul className="space-y-2 text-sm text-zion-slate-light">
               <li>• Starter: $149/mo up to 5k responses</li>
@@ -45,10 +45,24 @@ export default function CustomerFeedbackSurveys() {
 
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
           <h3 className="font-semibold mb-2">Integrations</h3>
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>
           <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </section>
     </div>
+  )};
+=======;
+          <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>;
+          <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

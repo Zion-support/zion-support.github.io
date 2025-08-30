@@ -1,6 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform = () => {
+=======
+import Link from 'next/link';
+import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
+const QuantumEdgeComputingPlatform = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",
@@ -39,7 +45,7 @@ import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform
             price: "$1,299",
             period: "/month",
             description: "Perfect for small to medium businesses",
-            features: [
+            features[
                 "Up to 10 quantum edge nodes",
                 "Basic quantum processing capabilities",
                 "Standard security protocols",
@@ -52,7 +58,7 @@ import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform
             price: "$2,999",
             period: "/month",
             description: "Ideal for growing enterprises",
-            features: [
+            features[
                 "Up to 50 quantum edge nodes",
                 "Advanced quantum algorithms",
                 "Enhanced security features",
@@ -67,7 +73,7 @@ import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform
             price: "$5,999",
             period: "/month",
             description: "For large-scale deployments",
-            features: [
+            features[
                 "Unlimited quantum edge nodes",
                 "Custom quantum algorithm development",
                 "Military-grade security",
@@ -277,7 +283,6 @@ import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default QuantumEdgeComputingPlatform;
 }}}}

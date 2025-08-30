@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   MessageCircle,
@@ -96,18 +96,22 @@ import {
   MicOff,
   Volume2,
   VolumeX
+<<<<<<< HEAD
 const FloatingCTA: React.FC = () => {
+=======
+} from 'lucide-react';
+
+const FloatingCTA: React.FC = (): JSX.Element => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Show CTA after 5 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+    const timer = setTimeout(() => {;
+      setIsVisible(true)}, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
   const contactMethods = [
     {
@@ -129,21 +133,27 @@ const FloatingCTA: React.FC = () => {
       title: "Schedule Demo",
       description: "Book a consultation",
       action: "Book Now",
+<<<<<<< HEAD
       color: "from-purple-500 to-pink-500"
 
+=======
+      color: "from-purple-500 to-pink-500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quickServices = [
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
   ];
 
   if (!isVisible) return null;
 
   return (
     <>
+<<<<<<< HEAD
       {/* Floating Button */}
       <motion.button
         initial={{ scale: 0, opacity: 0 }}
@@ -154,23 +164,159 @@ const FloatingCTA: React.FC = () => {
 
         <MessageCircle className="w-8 h-8" />
       </motion.button>
+=======
+      {/* Floating Action Button */}
+      <motion.div
+        className = "fixed bottom-6 right-6 z-50"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition = {
+  { duration: 0.3,
+  delay: 2 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-      {/* Modal */}
+
+
+
+
+
+}}
+      >
+        <div className="relative">
+          {/* Main Button */}
+          <motion.button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isExpanded ? '✕' : '💬'}
+          </motion.button>
+
+          {/* Expanded Menu */}
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.div
+                className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]"
+                initial = {
+  { opacity: 0, scale: 0.8,
+  y: 10 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0, scale: 0.8,
+  y: 10 
+
+
+
+
+
+
+}}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="space-y-3">
+                  <Link
+                    to="/contact"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
+                    onClick={() => setIsExpanded(false)}
+                  >
+                    <span className="text-xl">📞</span>
+                    <div>
+                      <div className="font-semibold">Contact Us</div>
+                      <div className="text-sm text-gray-400">Get in touch</div>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/services"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
+                    onClick={() => setIsExpanded(false)}
+                  >
+                    <span className="text-xl">🚀</span>
+                    <div>
+                      <div className="font-semibold">Our Services</div>
+                      <div className="text-sm text-gray-400">Explore solutions</div>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/quote"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
+                    onClick={() => setIsExpanded(false)}
+                  >
+                    <span className="text-xl">💰</span>
+                    <div>
+                      <div className="font-semibold">Get Quote</div>
+                      <div className="text-sm text-gray-400">Request pricing</div>
+                    </div>
+                  </Link>
+                  
+                  <div className="border-t border-slate-600 pt-3">
+                    <div className="text-center text-sm text-gray-400 mb-2">
+                      Available 24/7
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-green-400 text-sm font-semibold">Online Now</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.div>
+
+      {/* Backdrop */}
       <AnimatePresence>
-        {isOpen && (
+        {isExpanded && (
           <motion.div
+            className="fixed inset-0 bg-black/20 z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
 
             <motion.div
-              initial={{ scale: 0.8, opacity: 0, y: 50 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.8, opacity: 0, y: 50 }}
-              transition={{ duration: 0.3, type: "spring" }}
+              initial = {
+  { scale: 0.8, opacity: 0,
+  y: 50 
+
+}}
+              animate = {
+  { scale: 1, opacity: 1,
+  y: 0 
+
+}}
+              exit = {
+  { scale: 0.8, opacity: 0,
+  y: 50 
+
+}}
+              transition = {
+  { duration: 0.3,
+  type: "spring" 
+
+}}
               className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-8 max-w-2xl w-full border border-slate-600 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
 
@@ -189,13 +335,25 @@ const FloatingCTA: React.FC = () => {
               </div>
 
               {/* Contact Methods */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                {contactMethods.map((method, index) => (
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
+                {contactMethods.map((method, index)  => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                    transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}}
                     className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 border border-slate-500 hover:border-cyan-400 transition-all duration-300 group cursor-pointer"
 
                     <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br ${method.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -218,9 +376,21 @@ const FloatingCTA: React.FC = () => {
                     <motion.a
                       key={index}
                       href={service.link}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  x: -20 
+
+}}
+                      animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+                      transition = {
+  { duration: 0.4,
+  delay: 0.4 + index * 0.1 
+
+}}
                       className="flex items-center p-4 bg-slate-700 rounded-xl border border-slate-500 hover:border-cyan-400 transition-all duration-300 group"
 
                       <service.icon className="w-5 h-5 text-cyan-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
@@ -235,9 +405,21 @@ const FloatingCTA: React.FC = () => {
 
               {/* CTA Button */}
               <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.4,
+  delay: 0.6 
+
+}}
                 className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
 
                 Start Your Project Today
@@ -264,10 +446,21 @@ const FloatingCTA: React.FC = () => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </>
-  );
-};
+      </AnimatePresence>;
+    </>;
+  )};
 
 export default FloatingCTA;
+<<<<<<< HEAD
 }}
+=======
+=======
+            onClick={() => setIsExpanded(false)};
+          />;
+        )};
+      </AnimatePresence>;
+    </>;
+  );
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

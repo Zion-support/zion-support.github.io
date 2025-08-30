@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -87,7 +87,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
         {
             title: "For Clients",
             icon: Users,
-            benefits: [
+            benefits[
                 "Access to verified, skilled professionals",
                 "AI-powered matching for better results",
                 "Secure payment protection",
@@ -98,7 +98,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
         {
             title: "For Talent",
             icon: Briefcase,
-            benefits: [
+            benefits[
                 "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",
@@ -247,5 +247,9 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
           </div>
         </div>
       </main>
+<<<<<<< HEAD
     </>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}</section>}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

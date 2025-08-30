@@ -6,12 +6,6 @@ import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { z } from "zod";
-const listingSchema = z.object({
-    id: z.string(),
-    title: z.string(),
-    category: z.string(),
-    image: z.string().optional(),
-});
 const listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep({ formData, updateFormData }) {
     const [searchQuery, setSearchQuery] = useState("");
@@ -23,8 +17,12 @@ export function ServiceTypeStep({ formData, updateFormData }) {
     useEffect(() => {
         if (!formData.serviceType) {
             setListings([]);
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const fetchServices = async () => {
             setLoading(true);
             setError(null);
@@ -42,6 +40,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setListings(parsed.data);
                     setError(null);
                     setLoading(false);
+<<<<<<< HEAD
                     return;
 
                 catch (err) {
@@ -66,32 +65,46 @@ export function ServiceTypeStep({ formData, updateFormData }) {
 
 
 
+=======
+                    return}
+                catch (err) {
+                    if (attempt === maxRetries - 1) {
+                        if (process.env.NODE_ENV === 'development') {
+                            console.error('Failed to load services:', err)}
+                        else {
+                            captureException(err)}
+                        setListings([]);
+                        setError('Failed to load services');
+                        setLoading(false)}
+                    else {
+                        await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
+                }
+            }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
-        fetchServices();
-    }, [formData.serviceType, debouncedQuery]);
-    const handleTypeSelect = (type) => {
-        updateFormData({ serviceType: type });
-    };
+        fetchServices()}, [formData.serviceType, debouncedQuery]);
     const handleItemSelect = (item) => {
         updateFormData({
             specificItem: item,
             serviceCategory: item.category,
             serviceType: item.category.toLowerCase()
-        });
-    };
+        })};
     const sourceListings = listings;
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected
         if (formData.serviceType !== "") {
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
+<<<<<<< HEAD
                 return false;
 
+=======
+                return false}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.category.toLowerCase().includes(searchQuery.toLowerCase());
-    });
+            item.category.toLowerCase().includes(searchQuery.toLowerCase())});
     return (<div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
@@ -141,5 +154,9 @@ export function ServiceTypeStep({ formData, updateFormData }) {
               </div>)}
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
 }}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

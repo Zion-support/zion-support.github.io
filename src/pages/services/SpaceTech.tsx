@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database const SpaceTech = () => {
+=======
+import React from 'react.ts';
+import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database  } from 'lucide-react';
+
+const SpaceTech = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const spaceServices = [
     {
       title: "Satellite Technology",
@@ -20,8 +27,13 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
       description: "Ground-based space infrastructure and support systems.",
       price: "From $35,000/month",
       features: ["Ground stations", "Mission control", "Data processing", "Communication systems"],
+<<<<<<< HEAD
       icon: Database
 
+=======
+      icon: Database;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const spaceTechnologies = [
@@ -38,11 +50,17 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
       features: ["Environmental monitoring", "Climate data", "Resource mapping", "Disaster response"]
     },
     {
+<<<<<<< HEAD
       name: "Space Security",
       description: "Cybersecurity and protection for space systems",
       icon: Shield,
+<<<<<<< HEAD
       features: ["Threat detection", "Secure communications", "System protection", "Compliance"]
 
+=======
+      features: ["Threat detection", "Secure communications", "System protection", "Compliance"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -50,12 +68,12 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
     "Advanced environmental monitoring capabilities",
     "Enhanced data collection and analysis",
     "Improved communication infrastructure",
-    "Innovation in space technology applications",
-    "Support for scientific research and exploration"
+    "Innovation in space technology applications",;
+    "Support for scientific research and exploration";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -63,6 +81,103 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2"/>
               Space Technology
+=======
+      icon: Navigation,
+      title: 'Space Navigation',
+      description: 'Advanced positioning and navigation systems for space missions';
+    },;
+    {;
+      icon: Telescope,;
+      title: 'Space Observation',;
+      description: 'Earth observation and space monitoring capabilities';
+    };
+  ];
+
+  const benefits = [;
+    'Enable global connectivity and coverage',;
+    'Provide critical Earth observation data',;
+    'Support space exploration missions',;
+    'Enable advanced navigation systems',;
+    'Support disaster response and monitoring',;
+    'Drive innovation in space technology';
+  ];
+
+  const services = [
+    {
+      icon: Rocket,
+      title: 'Launch Services',
+      description: 'Satellite launch coordination and mission planning'
+    },
+    {
+      icon: Planet,
+      title: 'Earth Observation',
+      description: 'Satellite imagery and environmental monitoring'
+    },
+    {
+      icon: Star,
+      title: 'Space Research',
+      description: 'Scientific research and space exploration support';
+    },;
+    {;
+      icon: Globe2,;
+      title: 'Global Communications',;
+      description: 'Satellite communications and internet services';
+    };
+  ];
+
+  const useCases = [
+    {
+      industry: 'Telecommunications',
+      description: 'Global satellite communications and internet services'
+    },
+    {
+      industry: 'Environmental Monitoring',
+      description: 'Climate change tracking and natural disaster monitoring'
+    },
+    {
+      industry: 'Agriculture',;
+      description: 'Crop monitoring and precision agriculture support';
+    },;
+    {;
+      industry: 'Defense & Security',;
+      description: 'Surveillance and national security applications';
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Space Technology Solutions
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Space Technology
@@ -84,12 +199,44 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Space Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Space Technology Services
+=======
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Space Technology Features
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive space technology solutions designed to advance
@@ -98,10 +245,44 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {spaceServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white"/>
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -120,12 +301,44 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Space Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Space Technologies We Use
+=======
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Space Technology Services
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Cutting-edge technologies and platforms to build robust,
@@ -202,6 +415,31 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how space technology can advance your mission
+<<<<<<< HEAD
+=======
+            and push the boundaries of what's possible.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Get Started
+            </a>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              View All Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Reach for the Stars?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how space technology can advance your mission 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             and push the boundaries of what's possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,6 +453,53 @@ import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database co
         </div>
       </section>
     </div>
+=======
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Launch Your Space Project Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join organizations worldwide that use our space technology solutions to 
+              explore new frontiers and solve global challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+                Contact Sales;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

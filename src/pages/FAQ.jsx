@@ -1,9 +1,9 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 export default function FAQ() {
     const faqData = [
         {
@@ -40,7 +40,7 @@ export default function FAQ() {
         },
         {
             question: "Can I use Zion for both hiring and finding work?",
-            answer: "Yes! Many users maintain both client and talent profiles, allowing them to hire for projects while also offering their own services. This flexibility makes Zion ideal for freelancers, agencies, and growing companies."
+            answer: "Yes! M users maintain both client and talent profiles, allowing them to hire for projects while also offering their own services. This flexibility makes Zion ideal for freelancers, agencies, and growing companies."
         },
         {
             question: "How do you handle payments and contracts?",
@@ -99,5 +99,9 @@ export default function FAQ() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

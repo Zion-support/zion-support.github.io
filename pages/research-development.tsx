@@ -1,30 +1,40 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket export default function ResearchDevelopment() {
+=======
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react'
+
+
+export default function ResearchDevelopment(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
 			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.',
-			projects: ['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
+			projects['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
 			icon: FlaskConical,
 			color: 'blue'
 		},
 		{
 			title: 'Quantum Computing',
 			description: 'Exploring quantum algorithms and their applications in business and scientific computing.',
-			projects: ['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
+			projects['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
 			icon: Microscope,
 			color: 'purple'
 		},
 		{
 			title: 'Edge Computing',
 			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.',
-			projects: ['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
+			projects['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
 			icon: Rocket,
 			color: 'green'
 
 	]
 
+<<<<<<< HEAD
 	const currentProjects = [
 		{
 			title: 'Autonomous Business Operations Platform',
@@ -126,6 +136,22 @@ import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope
 								green: 'bg-green-100 text-green-600',
 								purple: 'bg-purple-100 text-purple-600'
 
+=======
+<<<<<<< HEAD
+	const colorClasses = {
+  blue: 'bg-blue-100 text-blue-600',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+								green: 'bg-green-100 text-green-600',
+  purple: 'bg-purple-100 text-purple-600'
+							
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
 									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${colorClasses[area.color]} mb-6`}>
@@ -305,6 +331,7 @@ import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 
 							Join Our Team <span aria-hidden="true">→</span>
+<<<<<<< HEAD
 						</Link>
 					</div>
 				</div>
@@ -312,3 +339,12 @@ import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope
 		</>
 	)
 }}}}}}
+=======
+						</Link>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

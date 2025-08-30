@@ -1,7 +1,65 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Code, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+ } from 'lucide-react';
+=======
 import React from 'react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink const API: React.FC = () => {
+=======
+import { Link } from 'react-router-dom';
+import {
+  Code,
+  Search,
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+} from 'lucide-react';
+
+const API: React.FC = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const endpoints = [
     {
       method: 'GET',
@@ -20,6 +78,7 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       path: '/api/v1/analytics',
       description: 'Get analytics data',
       auth: 'Required'
+<<<<<<< HEAD
     },
     {
       method: 'PUT',
@@ -27,6 +86,15 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       description: 'Update user profile',
       auth: 'Required'
 
+=======
+    },;
+    {;
+      method: 'PUT',;
+      path: '/api/v1/user/profile',;
+      description: 'Update user profile',;
+      auth: 'Required';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const features = [
@@ -43,6 +111,7 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
     {
       icon: Globe,
       title: 'Global CDN',
+<<<<<<< HEAD
       description: 'Worldwide edge locations for fast access'
     },
     {
@@ -50,30 +119,112 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       title: 'Real-time Data',
       description: 'Live data synchronization across all endpoints'
 
+=======
+      description: 'Worldwide edge locations for fast access';
+    },;
+    {;
+      icon: Database,;
+      title: 'Real-time Data',;
+      description: 'Live data synchronization across all endpoints';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const sdks = [
-    { name: 'JavaScript/Node.js', icon: '🔷' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Java', icon: '☕' },
-    { name: 'C#', icon: '🔷' },
-    { name: 'Go', icon: '🐹' },
-    { name: 'PHP', icon: '🐘' }
-  ];
+url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
+headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+response = requests.post(url, json={
+    "text": "Your text here",
+    "analysis_type": "sentiment"
+})
+
+print(response.json())`,
+    category: 'AI & ML'
+  },
+  {
+    title: 'Cloud Resource Management',
+    language: 'JavaScript',
+    description: 'Example of managing cloud resources through our infrastructure API.',
+    code: `const axios = require('axios');
+
+const api = axios.create({
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
+    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+});
+
+const createInstance = async () => {
+    const response = await api.post('/instances', {
+        type: 'compute',
+        size: 'medium',
+        region: 'us-east-1'
+    });
+    return response.data;
+};`,
+    category: 'Cloud & DevOps'
+  },
+  {
+    title: 'Security Threat Detection',
+    language: 'Python',
+    description: 'Implement real-time threat detection using our security API.',
+    code: `import requests
+
+def check_threat(ip_address):
+    url = "https://api.ziontechgroup.com/v1/security/threat-check"
+    headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+    response = requests.post(url, json={
+        "ip": ip_address,
+        "check_type": "comprehensive"
+    })
+
+    return response.json()`,
+    category: 'Security'
+  }
+];
+
+export default function API() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -88,10 +239,16 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
                 API Reference
               </span>
             </h1>
+<<<<<<< HEAD
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Integrate with Zion Tech Group services using our comprehensive RESTful APIs.
               Build powerful applications with our developer tools and SDKs.
+=======
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Integrate Zion Tech Group's cutting-edge services into your applications
+              with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,8 +267,26 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -123,13 +298,40 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {apiCategories.map((category, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -147,8 +349,26 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -160,13 +380,40 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
             </p>
           </motion.div>
 
-          <div className="space-y-4">
-            {endpoints.map((endpoint, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {quickStartExamples.map((example, index)  => (
               <motion.div
                 key={endpoint.path}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
 
                 <div className="flex items-center justify-between">
@@ -198,8 +445,26 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -215,9 +480,36 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
             {sdks.map((sdk, index) => (
               <motion.div
                 key={sdk.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="text-4xl mb-4">{sdk.icon}</div>
@@ -242,15 +534,34 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers building with our APIs
+            <p className="text-xl text-white/90 mb-8">
+              Get API access, explore our documentation, and start integrating
+              Zion Tech Group services into your applications today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
@@ -259,13 +570,25 @@ import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Te
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 
 export default API;
+<<<<<<< HEAD
 }}}
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

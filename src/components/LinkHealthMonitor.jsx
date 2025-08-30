@@ -47,8 +47,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     ];
     useEffect(() => {
         setLinkStatuses(sampleLinks);
-        generateReport(sampleLinks);
-    }, []);
+        generateReport(sampleLinks)}, []);
     const generateReport = (links) => {
         const totalLinks = links.length;
         const healthyLinks = links.filter(l => l.status === 'healthy').length;
@@ -62,14 +61,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             externalLinks,
             averageResponseTime: avgResponseTime,
             lastUpdated: new Date()
-        });
-    };
+        })};
     const startMonitoring = async () => {
         setIsMonitoring(true);
         // Simulate link checking
         await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsMonitoring(false);
-    };
+        setIsMonitoring(false)};
     const getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
@@ -79,8 +76,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;
             default:
+<<<<<<< HEAD
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
 
+=======
+                return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -91,14 +92,17 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return 'text-blue-400';
             default:
+<<<<<<< HEAD
                 return 'text-yellow-400';
 
+=======
+                return 'text-yellow-400'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
             return true;
-        return link.status === selectedFilter;
-    });
+        return link.status === selectedFilter});
     return (<>
       {/* Floating Action Button */}
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -107,7 +111,34 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 
       {/* Modal */}
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <motion.div initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}} animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}} exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">
               <div className="flex items-center justify-between">
@@ -252,7 +283,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </>)};
 export default LinkHealthMonitor;
 }}}}

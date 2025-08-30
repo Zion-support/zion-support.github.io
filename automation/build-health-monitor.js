@@ -167,7 +167,6 @@ class BuildHealthMonitor {
       return [];
     } catch (error) {
       // Parse TypeScript errors from stderr
-      const errorOutput = error.stderr || '';
       const errors = errorOutput.split('\n')
         .filter(line => line.includes('error TS'))
         .map(line => line.trim())
@@ -282,8 +281,7 @@ class BuildHealthMonitor {
       }
     ];
 
-    const files = this.findSourceFiles();
-    let fixedCount = 0;
+    const fixedCount = 0;
 
     for (const file of files) {
       try {
@@ -317,7 +315,6 @@ class BuildHealthMonitor {
     this.log(`Found ${errors.length} TypeScript errors that need manual attention`);
     
     // Create a report file
-    const reportPath = path.join(this.projectRoot, 'logs', 'typescript-errors-report.txt');
     const reportContent = `TypeScript Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n`;
     
     try {
@@ -485,7 +482,6 @@ export default defineConfig({
     this.log('Build consistently failing, triggering alert...', 'WARN');
     
     // Create alert file
-    const alertPath = path.join(this.projectRoot, 'logs', 'build-alert.txt');
     const alertContent = `BUILD ALERT - ${new Date().toISOString()}\n\nBuild has failed ${this.errorCount} times consecutively.\nManual intervention required.\n\nCheck logs for details.`;
     
     try {
@@ -544,8 +540,7 @@ export default defineConfig({
       'index.html'
     ];
     
-    for (const file of criticalFiles) {
-      const filePath = path.join(this.projectRoot, file);
+    for (const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
         this.log(`Critical file missing: ${file}`, 'WARN');
       }
@@ -590,8 +585,7 @@ export default defineConfig({
         const now = Date.now();
         const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
         
-        for (const file of files) {
-          const filePath = path.join(logsDir, file);
+        for (const filePath = path.join(logsDir, file);
           const stats = fs.statSync(filePath);
           
           if (now - stats.mtime.getTime() > maxAge) {
@@ -667,3 +661,11 @@ setInterval(() => {
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 300000); // Every 5 minutes
+
+export default traverse;
+export default traverse;
+export default traverse;
+export default traverse;
+export default traverse;
+export default traverse;
+export default traverse;

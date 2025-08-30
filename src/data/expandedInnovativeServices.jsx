@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const EXPANDED_INNOVATIVE_SERVICES = [
     // AI-Powered Content Creation & Marketing
     {
@@ -872,6 +873,9 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
 
 ];
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const EXPANDED_SERVICE_CATEGORIES = [
     "AI & Content Marketing",
     "AI & Video Analytics",
@@ -889,6 +893,8 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     "AI & Insurance",
     "AI & Gaming"
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export const EXPANDED_SERVICE_SUBCATEGORIES = [
     "Content Creation",
     "Computer Vision",

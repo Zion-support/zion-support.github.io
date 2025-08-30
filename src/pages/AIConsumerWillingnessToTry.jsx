@@ -162,6 +162,5 @@ const AIConsumerWillingnessToTry = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIConsumerWillingnessToTry;

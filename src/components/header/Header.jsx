@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { Logo } from './Logo';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
@@ -10,6 +12,35 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { SearchIcon, Sparkles, Menu, X export function Header({
   customLogo,
   customTheme,
+=======
+import { Logo } from "./Logo";
+import { MainNavigation } from "./MainNavigation";
+import { MobileMenu } from "./MobileMenu";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
+import { EnhancedSearchInput } from "./EnhancedSearchInput";
+import { SearchIcon, Sparkles, Menu, X } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+import { Logo } from "./Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from "./MobileMenu";
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export function Header({ 
+  customLogo, 
+  customTheme, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   hideLogin = false,
   className = ''
 }) {
@@ -19,27 +50,53 @@ import { SearchIcon, Sparkles, Menu, X export function Header({
   const [searchSuggestions, setSearchSuggestions] = useState([]);
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   // Mock user state - replace with actual auth context
   const user = null;
+=======
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#000000', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : null);
+
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor,
+    color: effectiveTheme.textColor,
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {};
+
+  // Handle scroll effect
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10)};
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)};
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
+<<<<<<< HEAD
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
       setQuery('');
 
+=======
+<<<<<<< HEAD
+      router(`/search?q=${encodeURIComponent(query.trim())}`);
+      setQuery('')}
+=======
+      router(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const effectiveTheme = customTheme || {
@@ -77,9 +134,14 @@ import { SearchIcon, Sparkles, Menu, X export function Header({
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
+<<<<<<< HEAD
                   navigate(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("");
                 }}
+=======
+                  router(`/search?q=${encodeURIComponent(text)}`);
+                  setQuery("")}} 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 searchSuggestions={searchSuggestions}
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -109,6 +171,7 @@ import { SearchIcon, Sparkles, Menu, X export function Header({
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Search Bar */}
         <div className="lg:hidden px-4 pb-4">
           <form onSubmit={handleSubmit}>
@@ -117,19 +180,67 @@ import { SearchIcon, Sparkles, Menu, X export function Header({
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
+<<<<<<< HEAD
                   navigate(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("");
                 }}
                 searchSuggestions={searchSuggestions}
+=======
+                  router(`/search?q=${encodeURIComponent(text)}`);
+                  setQuery("")}} 
+                searchSuggestions={searchSuggestions} 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 placeholder="Search services, talent, equipment..."
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
               </div>
+=======
+        {/* Search Bar */}
+        <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <EnhancedSearchInput 
+              value={query} 
+              onChange={setQuery} 
+              onSelectSuggestion={(text) => {
+                router(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }} 
+              searchSuggestions={searchSuggestions}
+            />
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </form>
         </div>
+<<<<<<< HEAD
       </header>
+=======
+      </div>
+
+      {/* Mobile Search Bar */}
+      <div className="lg:hidden px-4 pb-4">
+        <form onSubmit={handleSubmit}>
+          <div className="relative">
+            <EnhancedSearchInput 
+              value={query} 
+              onChange={setQuery} 
+              onSelectSuggestion={(text) => {
+                router(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }} 
+              searchSuggestions={searchSuggestions} 
+              placeholder="Search services, talent, equipment..."
+            />
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+            </div>
+          </div>
+        </form>
+      </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
@@ -266,8 +377,17 @@ import { SearchIcon, Sparkles, Menu, X export function Header({
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>
+<<<<<<< HEAD
   );
   </div>};
 
 export default Header;
 }}
+=======
+  )};
+
+export default Header;
+
+export default Header;
+export default Header;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

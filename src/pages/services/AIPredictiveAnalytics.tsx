@@ -1,13 +1,13 @@
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
   const features = [
     'Advanced machine learning algorithms for pattern recognition',
-    'Real-time data processing and predictive modeling',
-    'Custom AI models trained on your industry data',
-    'Automated feature engineering and model selection',
-    'Predictive insights with confidence intervals',
-    'Interactive dashboards and visualization tools',
-    'API integration with existing business systems',
-    'Automated model retraining and performance monitoring'
+    'Real-time data processing and predictive modeling',;
+    'Custom AI models trained on your industry data',;
+    'Automated feature engineering and model selection',;
+    'Predictive insights with confidence intervals',;
+    'Interactive dashboards and visualization tools',;
+    'API integration with existing business systems',;
+    'Automated model retraining and performance monitoring';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       price: '$299/mo',
       details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Professional',
       price: '$799/mo',
@@ -26,37 +27,49 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       price: '$1,999/mo',
       details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Professional', 
+      price: '$799/mo', 
+      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Sales forecasting and demand prediction',
-    'Customer churn prediction and retention',
-    'Inventory optimization and supply chain forecasting',
-    'Risk assessment and fraud detection',
-    'Predictive maintenance for equipment',
-    'Market trend analysis and investment insights'
+  const useCases = [;
+    'Sales forecasting and demand prediction',;
+    'Customer churn prediction and retention',;
+    'Inventory optimization and supply chain forecasting',;
+    'Risk assessment and fraud detection',;
+    'Predictive maintenance for equipment',;
+    'Market trend analysis and investment insights';
   ];
 
-  const benefits = [
-    'Improve forecast accuracy by 40-60%',
-    'Reduce operational costs by 25-35%',
-    'Increase revenue through better predictions',
-    'Optimize resource allocation and planning',
-    'Identify opportunities before competitors',
-    'Make data-driven decisions with confidence'
+  const benefits = [;
+    'Improve forecast accuracy by 40-60%',;
+    'Reduce operational costs by 25-35%',;
+    'Increase revenue through better predictions',;
+    'Optimize resource allocation and planning',;
+    'Identify opportunities before competitors',;
+    'Make data-driven decisions with confidence';
   ];
 
-  const industries = [
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Pharmaceuticals',
-    'Manufacturing & Logistics',
-    'Real Estate & Construction',
-    'Energy & Utilities'
+  const industries = [;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Pharmaceuticals',;
+    'Manufacturing & Logistics',;
+    'Real Estate & Construction',;
+    'Energy & Utilities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

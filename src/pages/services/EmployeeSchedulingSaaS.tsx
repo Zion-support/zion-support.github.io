@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen import { SEO } from '@/components/SEO';
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function EmployeeSchedulingSaaS() {
+export default function EmployeeSchedulingSaaS(...args: []):  {
   const features = [
     {
       icon: Calendar,
@@ -28,6 +36,7 @@ export default function EmployeeSchedulingSaaS() {
     {
       icon: Smartphone,
       title: "Mobile App",
+<<<<<<< HEAD
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
     },
     {
@@ -35,6 +44,15 @@ export default function EmployeeSchedulingSaaS() {
       title: "Multi-location Support",
       description: "Manage schedules across multiple locations, departments, and time zones seamlessly."
 
+=======
+      description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out.";
+    },;
+    {;
+      icon: Globe,;
+      title: "Multi-location Support",;
+      description: "Manage schedules across multiple locations, departments, and time zones seamlessly.";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const schedulingCapabilities = [
@@ -61,6 +79,7 @@ export default function EmployeeSchedulingSaaS() {
     {
       icon: Settings,
       title: "Custom Rules",
+<<<<<<< HEAD
       description: "Configurable business rules for scheduling, overtime, and compliance"
     },
     {
@@ -68,6 +87,15 @@ export default function EmployeeSchedulingSaaS() {
       title: "Compliance Tracking",
       description: "Ensure compliance with labor laws, break requirements, and overtime regulations"
 
+=======
+      description: "Configurable business rules for scheduling, overtime, and compliance";
+    },;
+    {;
+      icon: FileText,;
+      title: "Compliance Tracking",;
+      description: "Ensure compliance with labor laws, break requirements, and overtime regulations";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -111,6 +139,7 @@ export default function EmployeeSchedulingSaaS() {
         "Unlimited employees",
         "Custom scheduling algorithms",
         "Advanced compliance tools",
+<<<<<<< HEAD
         "White-label options",
         "Dedicated account manager",
         "Custom training",
@@ -118,6 +147,15 @@ export default function EmployeeSchedulingSaaS() {
       ],
       popular: false
 
+=======
+        "White-label options",;
+        "Dedicated account manager",;
+        "Custom training",;
+        "On-premise options";
+      ],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -134,6 +172,7 @@ export default function EmployeeSchedulingSaaS() {
     {
       title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
+<<<<<<< HEAD
       icon: TrendingUp
     },
     {
@@ -141,6 +180,15 @@ export default function EmployeeSchedulingSaaS() {
       description: "Automatically comply with labor laws and avoid costly violations.",
       icon: Shield
 
+=======
+      icon: TrendingUp;
+    },;
+    {;
+      title: "Ensure Compliance",;
+      description: "Automatically comply with labor laws and avoid costly violations.",;
+      icon: Shield;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -167,6 +215,7 @@ export default function EmployeeSchedulingSaaS() {
     {
       icon: Settings,
       title: "Services",
+<<<<<<< HEAD
       description: "Manage appointment-based scheduling for professional services"
     },
     {
@@ -174,12 +223,26 @@ export default function EmployeeSchedulingSaaS() {
       title: "Construction",
       description: "Coordinate complex project schedules with multiple teams and locations"
 
+=======
+      description: "Manage appointment-based scheduling for professional services";
+    },;
+    {;
+      icon: BarChart3,;
+      title: "Construction",;
+      description: "Coordinate complex project schedules with multiple teams and locations";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
+<<<<<<< HEAD
       <SEO
         title="Employee Scheduling SaaS - Zion Tech Group"
+=======
+      <SEO 
+        title = "Employee Scheduling SaaS - Zion Tech Group"
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
       />
@@ -191,8 +254,26 @@ export default function EmployeeSchedulingSaaS() {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
 
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -234,14 +315,47 @@ export default function EmployeeSchedulingSaaS() {
                 Everything you need to manage your workforce efficiently and effectively
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -266,14 +380,47 @@ export default function EmployeeSchedulingSaaS() {
                 Intelligent tools that make scheduling simple and efficient
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map((capability, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {schedulingCapabilities.map((capability, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -298,14 +445,47 @@ export default function EmployeeSchedulingSaaS() {
                 Flexible scheduling solutions that adapt to your business needs
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -330,14 +510,47 @@ export default function EmployeeSchedulingSaaS() {
                 Professional scheduling tools that transform how you manage your workforce
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="flex items-start space-x-4"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -364,14 +577,47 @@ export default function EmployeeSchedulingSaaS() {
                 Choose the scheduling plan that fits your business size and needs
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
+=======
+            
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular
                       ? 'border-orange-500 ring-2 ring-orange-500/20'
@@ -424,8 +670,26 @@ export default function EmployeeSchedulingSaaS() {
         <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
 
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -446,12 +710,12 @@ export default function EmployeeSchedulingSaaS() {
                   className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
 
                   Contact Sales
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }}}}}}}

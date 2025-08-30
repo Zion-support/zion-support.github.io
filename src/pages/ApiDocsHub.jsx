@@ -1,6 +1,12 @@
 import React from "react";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+=======
+import Link from "next/link";
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ApiDocsHub() {
     const sections = [
         {
@@ -71,7 +77,20 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
     </ApiDocsLayout>);
 
 export default ApiDocsHub;
 }</section>}
+=======
+    </ApiDocsLayout>)}
+export default ApiDocsHub;
+
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

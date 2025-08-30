@@ -1,7 +1,13 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 import { useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
 import { useAnalytics } from '../hooks/useAnalytics';
+=======
+import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
+import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";
+import { useAnalytics } from "../hooks/useAnalytics";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -11,9 +17,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         content: initialContent,
         selection: { start: 0, end: 0, text: '' },
         version: 0,
-        changes: [],
-        suggestions: [],
-        conflicts: []
+        changes[],
+        suggestions[],
+        conflicts[]
     });
     const [showSuggestions] = useState(true);
     const [showCollaborators, setShowCollaborators] = useState(false);
@@ -36,15 +42,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Handle text changes
     const handleTextChange = useCallback((event) => {
         const newContent = event.target.value;
-        const selectionStart = event.target.selectionStart;
-        const selectionEnd = event.target.selectionEnd;
         const selectedText = newContent.slice(selectionStart, selectionEnd);
         setEditorState(prev => {
             const change = {
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',
                 position: Math.min(selectionStart, prev.content.length),
-                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : undefined,
+                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,
                 length: Math.abs(newContent.length - prev.content.length),
                 timestamp: new Date(),
                 userId,
@@ -55,9 +59,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 content: newContent,
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText },
                 version: prev.version + 1,
-                changes: [...prev.changes, change]
-            };
-        });
+                changes[...prev.changes, change]
+            }});
         // Sync with other collaborators
         if (enableCollaboration && collaboration.isConnected) {
             collaboration.syncTextChange({
@@ -65,11 +68,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 content: newContent,
                 selection: { start: selectionStart, end: selectionEnd },
                 version: editorState.version + 1
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Track text change
-        trackEvent('editor', 'text_changed', 'content_modified', newContent.length);
-    }, [enableCollaboration, collaboration, editorState.version, trackEvent]);
+        trackEvent('editor', 'text_changed', 'content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);
     // Handle selection change
     const handleSelectionChange = useCallback((event) => {
         const target = event.target;
@@ -82,8 +88,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }));
         // Sync selection with collaborators
         if (enableCollaboration && collaboration.isConnected) {
+<<<<<<< HEAD
             collaboration.updateSelection(start, end, text);
 
+=======
+            collaboration.updateSelection(start, end, text)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [enableCollaboration, collaboration]);
     // Handle cursor movement
     const handleCursorMove = useCallback((event) => {
@@ -92,8 +102,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const rect = event.currentTarget.getBoundingClientRect();
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
-        collaboration.updateCursor(x, y, 'editor');
-    }, [enableCollaboration, collaboration]);
+        collaboration.updateCursor(x, y, 'editor')}, [enableCollaboration, collaboration]);
     // Generate AI suggestions
     const generateAISuggestions = useCallback(async () => {
         if (!enableAI || !editorState.content.trim())
@@ -113,9 +122,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('its'),
                     length: 3,
                     reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)",
+<<<<<<< HEAD
                     alternatives: ["it's", "it is"]
                 });
 
+=======
+                    alternatives["it's", "it is"]
+                })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Style suggestions
             if (editorState.content.includes('very')) {
                 suggestions.push({
@@ -126,9 +140,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('very'),
                     length: 4,
                     reason: "Consider using a more specific adjective instead of 'very'",
+<<<<<<< HEAD
                     alternatives: ["extremely", "highly", "remarkably", "exceptionally"]
                 });
 
+=======
+                    alternatives["extremely", "highly", "remarkably", "exceptionally"]
+                })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Completion suggestions
             if (editorState.content.endsWith('The main benefits')) {
                 suggestions.push({
@@ -139,17 +158,22 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.length,
                     length: 0,
                     reason: "Complete the sentence with common benefit statements",
-                    alternatives: [
+                    alternatives[
                         " include improved efficiency, cost savings, and enhanced user experience.",
                         " are numerous and well-documented in industry research.",
                         " can be measured through key performance indicators."
                     ]
+<<<<<<< HEAD
                 });
 
+=======
+                })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setEditorState(prev => ({
                 ...prev,
-                suggestions: [...prev.suggestions, ...suggestions]
+                suggestions[...prev.suggestions, ...suggestions]
             }));
+<<<<<<< HEAD
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length);
 
         catch (error) {
@@ -165,12 +189,23 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         finally {
             setIsProcessing(false);
 
+=======
+            trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length)}
+        catch (error) {
+            console.error('Failed to generate AI suggestions:', error);
+            trackEvent('editor', 'ai_suggestions_failed', 'generation_error', null, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            })}
+        finally {
+            setIsProcessing(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [enableAI, editorState.content, trackEvent]);
     // Apply AI suggestion
     const applySuggestion = useCallback((suggestion) => {
         setEditorState(prev => {
             let newContent = prev.content;
             if (suggestion.type === 'completion') {
+<<<<<<< HEAD
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position);
 
             else if (suggestion.type === 'grammar' || suggestion.type === 'style') {
@@ -178,30 +213,46 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);
                 newContent = newContent.replace(searchText, suggestion.text);
 
+=======
+                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}
+            else if (suggestion.type === 'grammar' || suggestion.type === 'style') {
+                // For grammar and style, we need to find and replace the text
+                const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);
+                newContent = newContent.replace(searchText, suggestion.text)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             return {
                 ...prev,
                 content: newContent,
                 suggestions: prev.suggestions.filter(s => s.id !== suggestion.id)
-            };
-        });
+            }});
         // Focus editor and set cursor position
         if (editorRef.current) {
             editorRef.current.focus();
             const newPosition = suggestion.position + suggestion.text.length;
+<<<<<<< HEAD
+            editorRef.current.setSelectionRange(newPosition, newPosition)}
+        trackEvent('editor', 'ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id })}, [editorState.content, trackEvent]);
+=======
             editorRef.current.setSelectionRange(newPosition, newPosition);
+<<<<<<< HEAD
 
         trackEvent('editor', 'ai_suggestion_applied', suggestion.type, undefined, { suggestionId: suggestion.id });
+=======
+        }
+        trackEvent('editor', 'ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [editorState.content, trackEvent]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Save content
     const handleSave = useCallback(() => {
         onSave?.(editorState.content);
         setLastSaved(new Date());
-        trackEvent('editor', 'content_saved', 'save_completed');
-    }, [editorState.content, onSave, trackEvent]);
+        trackEvent('editor', 'content_saved', 'save_completed')}, [editorState.content, onSave, trackEvent]);
     // Export content
     const handleExport = useCallback((format) => {
         let exportContent = editorState.content;
         if (format === 'html') {
+<<<<<<< HEAD
             exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`;
 
         else if (format === 'md') {
@@ -210,6 +261,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if (onExport) {
             onExport(exportContent, format);
 
+=======
+            exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}
+        else if (format === 'md') {
+            exportContent = `# Document\n\n${editorState.content}`}
+        if (onExport) {
+            onExport(exportContent, format)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else {
             // Default export behavior
             const blob = new Blob([exportContent], { type: 'text/plain' });
@@ -218,10 +276,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             a.href = url;
             a.download = `document.${format}`;
             a.click();
+<<<<<<< HEAD
+            window.URL.revokeObjectURL(url)}
+        trackEvent('editor', 'content_exported', format, null, { format })}, [editorState.content, onExport, trackEvent]);
+=======
             window.URL.revokeObjectURL(url);
+<<<<<<< HEAD
 
         trackEvent('editor', 'content_exported', format, undefined, { format });
+=======
+        }
+        trackEvent('editor', 'content_exported', format, null, { format });
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [editorState.content, onExport, trackEvent]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Handle collaboration text changes
     useEffect(() => {
         const handleCollaborationTextChange = (event) => {
@@ -234,41 +302,54 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         ...prev,
                         content: message.payload.content,
                         version: Math.max(prev.version, message.payload.version)
+<<<<<<< HEAD
+                    }});
+                trackEvent('editor', 'collaboration_sync', 'text_synced', null, {
+=======
                     };
                 });
-                trackEvent('editor', 'collaboration_sync', 'text_synced', undefined, {
+                trackEvent('editor', 'collaboration_sync', 'text_synced', null, {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     userId: message.userId,
                     version: message.payload.version
+<<<<<<< HEAD
                 });
 
+=======
+                })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);
         return () => {
-            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange);
-        };
-    }, [userId, trackEvent]);
+            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
         if (!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
             if (editorState.content !== initialContent) {
+<<<<<<< HEAD
                 handleSave();
 
+=======
+                handleSave()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, 30000); // Auto-save every 30 seconds
-        return () => clearInterval(autoSaveInterval);
-    }, [editorState.content, initialContent, enableVersioning, handleSave]);
+        return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
     useEffect(() => {
         if (!enableAI)
             return;
         const debounceTimer = setTimeout(() => {
             if (editorState.content.length > 100) {
+<<<<<<< HEAD
                 generateAISuggestions();
 
+=======
+                generateAISuggestions()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, 3000);
-        return () => clearTimeout(debounceTimer);
-    }, [editorState.content, enableAI, generateAISuggestions]);
+        return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions]);
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
@@ -332,7 +413,25 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               </h4>
 
               <div className="space-y-3">
-                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
+                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
                     <div className="flex items-start justify-between mb-2">
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
@@ -417,17 +516,57 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
       {/* Collaboration Cursors Overlay */}
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>
-          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} className="absolute w-4 h-4" style={{
+          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0 
+
+
+
+
+
+
+}} className="absolute w-4 h-4" style = {
+  {
                     left: x,
                     top: y,
-                    transform: 'translate(-50%, -50%)'
-                }}>
+                    transform: 'translate(-50%,
+  -50%)'
+                
+
+
+
+
+
+
+}}>
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}
               </div>
             </motion.div>))}
         </div>)}
+<<<<<<< HEAD
     </div>);
 };
 }}}}}}}}}}}}}}}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

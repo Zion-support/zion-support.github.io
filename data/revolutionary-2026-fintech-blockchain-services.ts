@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2026FintechBlockchainService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Revolutionary2026FintechBlockchainService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [
   // Autonomous Supply Chain Optimization AI
   {
@@ -48,7 +51,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$899',
     period: '/month',
     description: 'Revolutionary AI platform that autonomously optimizes supply chains, predicts disruptions, and automates decision-making for maximum efficiency and cost reduction.',
-    features: [
+    features[
       'Autonomous optimization',
       'Disruption prediction',
       'Real-time monitoring',
@@ -71,11 +74,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     setupTime: '2 weeks',
     category: 'Supply Chain & AI',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'IoT Integration', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['ERP systems', 'WMS platforms', 'TMS systems', 'IoT sensors', 'Supplier platforms', 'Logistics systems'],
-    useCases: ['Supply chain optimization', 'Cost reduction', 'Disruption prevention', 'Inventory optimization', 'Route optimization', 'Performance improvement'],
+    technology['Machine Learning', 'Predictive Analytics', 'IoT Integration', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['ERP systems', 'WMS platforms', 'TMS systems', 'IoT sensors', 'Supplier platforms', 'Logistics systems'],
+    useCases['Supply chain optimization', 'Cost reduction', 'Disruption prevention', 'Inventory optimization', 'Route optimization', 'Performance improvement'],
     roi: 'Average customer sees 500% ROI within 8 months through supply chain optimization and cost reduction.',
-    competitors: ['SAP', 'Oracle', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
+    competitors['SAP', 'Oracle', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
     marketSize: '$45.2B market',
     growthRate: '21.7% annual growth',
     variant: 'quantum-futuristic',
@@ -100,7 +103,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$1,499',
     period: '/month',
     description: 'Revolutionary AI platform that autonomously manages marketing campaigns, optimizes performance, and generates content for maximum ROI and engagement.',
-    features: [
+    features[
       'Autonomous campaign management',
       'Content generation',
       'Performance optimization',
@@ -123,11 +126,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     setupTime: '2 weeks',
     category: 'Marketing & AI',
     realService: true,
-    technology: ['Natural Language Processing', 'Machine Learning', 'Content Generation', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['CRM systems', 'Social media platforms', 'Email marketing tools', 'Analytics platforms', 'Advertising platforms', 'Content management systems'],
-    useCases: ['Campaign management', 'Content creation', 'Performance optimization', 'Audience targeting', 'ROI improvement', 'Multi-channel marketing'],
+    technology['Natural Language Processing', 'Machine Learning', 'Content Generation', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['CRM systems', 'Social media platforms', 'Email marketing tools', 'Analytics platforms', 'Advertising platforms', 'Content management systems'],
+    useCases['Campaign management', 'Content creation', 'Performance optimization', 'Audience targeting', 'ROI improvement', 'Multi-channel marketing'],
     roi: 'Average customer sees 600% ROI within 10 months through marketing automation and optimization.',
-    competitors: ['HubSpot', 'Marketo', 'Salesforce Marketing Cloud', 'Adobe Marketing Cloud', 'Pardot'],
+    competitors['HubSpot', 'Marketo', 'Salesforce Marketing Cloud', 'Adobe Marketing Cloud', 'Pardot'],
     marketSize: '$56.8B market',
     growthRate: '24.3% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI cybersecurity platform that provides real-time threat detection, automated response, and predictive security intelligence for comprehensive protection.',
-    features: [
+    features[
       'AI threat detection',
       'Automated response',
       'Predictive security',
@@ -175,11 +178,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     setupTime: '2 weeks',
     category: 'Cybersecurity & AI',
     realService: true,
-    technology: ['Machine Learning', 'Behavioral Analysis', 'Threat Intelligence', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewall systems', 'Identity management', 'Compliance platforms', 'Security tools'],
-    useCases: ['Threat detection', 'Incident response', 'Compliance monitoring', 'Security analytics', 'Risk assessment', 'Security automation'],
+    technology['Machine Learning', 'Behavioral Analysis', 'Threat Intelligence', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['SIEM systems', 'EDR platforms', 'Firewall systems', 'Identity management', 'Compliance platforms', 'Security tools'],
+    useCases['Threat detection', 'Incident response', 'Compliance monitoring', 'Security analytics', 'Risk assessment', 'Security automation'],
     roi: 'Average customer sees 700% ROI within 12 months through threat prevention and security automation.',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance', 'Darktrace'],
+    competitors['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance', 'Darktrace'],
     marketSize: '$78.9B market',
     growthRate: '28.7% annual growth',
     variant: 'quantum-futuristic',
@@ -204,7 +207,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary AI platform that provides autonomous business intelligence, continuously learning and evolving to deliver deeper insights and better decision support.',
-    features: [
+    features[
       'Autonomous data analysis',
       'Self-evolving insights',
       'Predictive analytics',
@@ -227,11 +230,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     setupTime: '2 weeks',
     category: 'Business Intelligence & AI',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'Natural Language Processing', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Data warehouses', 'CRM systems', 'ERP platforms', 'Marketing tools', 'Financial systems', 'Analytics platforms'],
-    useCases: ['Data analysis', 'Performance tracking', 'Trend analysis', 'Decision support', 'Reporting automation', 'Business insights'],
+    technology['Machine Learning', 'Predictive Analytics', 'Natural Language Processing', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Data warehouses', 'CRM systems', 'ERP platforms', 'Marketing tools', 'Financial systems', 'Analytics platforms'],
+    useCases['Data analysis', 'Performance tracking', 'Trend analysis', 'Decision support', 'Reporting automation', 'Business insights'],
     roi: 'Average customer sees 500% ROI within 10 months through improved insights and decision support.',
-    competitors: ['Tableau', 'Power BI', 'QlikView', 'Looker', 'Domo'],
+    competitors['Tableau', 'Power BI', 'QlikView', 'Looker', 'Domo'],
     marketSize: '$67.3B market',
     growthRate: '22.8% annual growth',
     variant: 'quantum-futuristic',
@@ -256,7 +259,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with blockchain technology to create unbreakable, quantum-secured distributed ledgers and smart contracts.',
-    features: [
+    features[
       'Quantum-secured blockchain',
       'Quantum smart contracts',
       'Quantum cryptography',
@@ -279,11 +282,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     setupTime: '3 weeks',
     category: 'Blockchain & Quantum Tech',
     realService: true,
-    technology: ['Quantum Computing', 'Blockchain', 'Smart Contracts', 'Python', 'Qiskit', 'Solidity', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Financial systems', 'Government databases', 'Healthcare platforms', 'Supply chain systems', 'Identity platforms', 'DeFi protocols'],
-    useCases: ['Secure transactions', 'Identity verification', 'Supply chain tracking', 'Healthcare records', 'Government services', 'DeFi applications'],
+    technology['Quantum Computing', 'Blockchain', 'Smart Contracts', 'Python', 'Qiskit', 'Solidity', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Financial systems', 'Government databases', 'Healthcare platforms', 'Supply chain systems', 'Identity platforms', 'DeFi protocols'],
+    useCases['Secure transactions', 'Identity verification', 'Supply chain tracking', 'Healthcare records', 'Government services', 'DeFi applications'],
     roi: 'Average customer sees 1200% ROI within 18 months through quantum security and blockchain innovation.',
-    competitors: ['Ethereum', 'Solana', 'Cardano', 'Polkadot', 'Cosmos'],
+    competitors['Ethereum', 'Solana', 'Cardano', 'Polkadot', 'Cosmos'],
     marketSize: '$89.4B market',
     growthRate: '42.1% annual growth',
     variant: 'quantum-futuristic',

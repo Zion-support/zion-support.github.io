@@ -19,38 +19,56 @@ import {
   Workflow,
   FileText,
   Monitor,
-  Smartphone,
   BarChart3,
   Rocket,
   Building2,
   Cpu,
   Network
+<<<<<<< HEAD
 export default function CustomDevelopment() {
+=======
+ } from 'lucide-react';
+
+export default function CustomDevelopment(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
       title: 'Web Applications',
       description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
       icon: Globe,
-      features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
+      features['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
     },
     {
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
       icon: Smartphone,
-      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
     },
     {
       title: 'API Development',
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
-      features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
+      features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
+<<<<<<< HEAD
       title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
       icon: Workflow,
+<<<<<<< HEAD
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
 
+=======
+      features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
+    };
+=======;
+      title: 'System Integration',;
+      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
+              icon: GitFork,;
+      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -58,26 +76,39 @@ export default function CustomDevelopment() {
       title: 'Frontend',
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
       icon: Monitor,
-      stack: ['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
     },
     {
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu
-      stack: ['Node.js', 'Python', 'Java', 'C#', 'Go']
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go']
     },
     {
       title: 'Mobile',
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
-      stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
+      stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
+<<<<<<< HEAD
       title: 'Database',
       description: 'Modern database solutions for data storage and management.',
       icon: Database,
+<<<<<<< HEAD
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
 
+=======
+      stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
+    };
+=======;
+      title: 'Database',;
+      description: 'Modern database solutions for data storage and management.',;
+      icon: Database,;
+      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -94,6 +125,7 @@ export default function CustomDevelopment() {
     {
       title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
+<<<<<<< HEAD
       icon: Shield
     },
     {
@@ -101,22 +133,49 @@ export default function CustomDevelopment() {
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
       icon: Settings
 
+=======
+      icon: Shield;
+    },;
+    {;
+      title: 'Support & Maintenance',;
+      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      icon: Settings;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const industries = [
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy'
+  const industries = [;
+    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
@@ -149,8 +208,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -167,10 +244,44 @@ export default function CustomDevelopment() {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -203,8 +314,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -221,10 +350,44 @@ export default function CustomDevelopment() {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -248,8 +411,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -265,10 +446,44 @@ export default function CustomDevelopment() {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -285,8 +500,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -303,10 +536,44 @@ export default function CustomDevelopment() {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -319,8 +586,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -331,7 +616,7 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
@@ -341,10 +626,44 @@ export default function CustomDevelopment() {
               <motion.div
                 key={index}
                 className="text-center"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -361,8 +680,26 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -385,10 +722,23 @@ export default function CustomDevelopment() {
 
                 Explore Services
               </Link>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

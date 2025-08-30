@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/Button';
 import { Input } from './ui/input';
@@ -6,12 +7,23 @@ import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const QuoteRequestForm = () => {
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
+import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
+export const QuoteRequestForm = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     serviceType: '',
     projectDescription: '',
     timeline: '',
@@ -73,8 +85,12 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
       setErrors(prev => ({
         ...prev,
         [field]: ''
+<<<<<<< HEAD
       }));
 
+=======
+      }))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const validateForm = () => {
@@ -83,24 +99,33 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) {
+<<<<<<< HEAD
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
 
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
+=======
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
+    if (!formData.company.trim()) newErrors.comp = 'Comp name is required';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
     if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
+<<<<<<< HEAD
       return;
+=======
+      return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     setIsSubmitting(true);
 
@@ -121,7 +146,7 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         serviceType: '',
         projectDescription: '',
         timeline: '',
@@ -130,6 +155,7 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false
+<<<<<<< HEAD
       });
     } catch (error) {
 <<<<<<< HEAD
@@ -141,6 +167,12 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
     } finally {
       setIsSubmitting(false);
 
+=======
+      })} catch (error) {
+      console.error('Error submitting quote request:', error);
+      setErrors({ submit: 'Failed to submit request. Please try again.' })} finally {
+      setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   if (isSubmitted) {
@@ -164,7 +196,11 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     );
+=======
+    )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -188,7 +224,16 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Input
                 type="text"
                 value={formData.firstName}
-                onChange={(e) => handleChange('firstName', e.target.value)}
+                onChange = {
+  (e) => handleChange('firstName',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.firstName ? 'border-red-500' : ''}
                 placeholder="Enter your first name"
               />
@@ -204,7 +249,16 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Input
                 type="text"
                 value={formData.lastName}
-                onChange={(e) => handleChange('lastName', e.target.value)}
+                onChange = {
+  (e) => handleChange('lastName',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.lastName ? 'border-red-500' : ''}
                 placeholder="Enter your last name"
               />
@@ -223,7 +277,16 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Input
                 type="email"
                 value={formData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
+                onChange = {
+  (e) => handleChange('email',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.email ? 'border-red-500' : ''}
                 placeholder="your.email@company.com"
               />
@@ -239,26 +302,55 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Input
                 type="tel"
                 value={formData.phone}
-                onChange={(e) => handleChange('phone', e.target.value)}
+                onChange = {
+  (e) => handleChange('phone',
+  e.target.value)
+
+
+
+
+
+
+}
                 placeholder="+1 (555) 123-4567"
               />
             </div>
           </div>
 
-          {/* Company Information */}
+          {/* Comp Information */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Company Name *
+              Comp Name *
             </label>
             <Input
               type="text"
+<<<<<<< HEAD
+              value={formData.comp}
+              onChange = {
+  (e) => handleChange('comp',
+  e.target.value)
+
+}
+              className={errors.comp ? 'border-red-500' : ''}
+              placeholder="Your Comp Inc."
+=======
               value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
+              onChange = {
+  (e) => handleChange('company',
+  e.target.value)
+
+
+
+
+
+
+}
               className={errors.company ? 'border-red-500' : ''}
               placeholder="Your Company Inc."
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             />
-            {errors.company && (
-              <p className="text-red-500 text-sm mt-1">{errors.company}</p>
+            {errors.comp && (
+              <p className="text-red-500 text-sm mt-1">{errors.comp}</p>
             )}
           </div>
 
@@ -269,8 +361,22 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
             </label>
             <Select
               value={formData.serviceType}
+<<<<<<< HEAD
               onValueChange={(value) => handleChange('serviceType', value)}
 
+=======
+              onValueChange = {
+  (value) => handleChange('serviceType',
+  value)
+
+
+
+
+
+
+}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
                 <SelectValue placeholder="Select a service type" />
               </SelectTrigger>
@@ -294,9 +400,18 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
             </label>
             <Textarea
               value={formData.projectDescription}
-              onChange={(e) => handleChange('projectDescription', e.target.value)}
+              onChange = {
+  (e) => handleChange('projectDescription',
+  e.target.value)
+
+
+
+
+
+
+}
               className={errors.projectDescription ? 'border-red-500' : ''}
-              placeholder="Please describe your project requirements, goals, and any specific needs..."
+              placeholder="Please describe your project requirements, goals, and  specific needs..."
               rows={4}
             />
             {errors.projectDescription && (
@@ -312,8 +427,22 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               </label>
               <Select
                 value={formData.timeline}
+<<<<<<< HEAD
                 onValueChange={(value) => handleChange('timeline', value)}
 
+=======
+                onValueChange = {
+  (value) => handleChange('timeline',
+  value)
+
+
+
+
+
+
+}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <SelectTrigger>
                   <SelectValue placeholder="Select timeline" />
                 </SelectTrigger>
@@ -333,8 +462,22 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               </label>
               <Select
                 value={formData.budget}
+<<<<<<< HEAD
                 onValueChange={(value) => handleChange('budget', value)}
 
+=======
+                onValueChange = {
+  (value) => handleChange('budget',
+  value)
+
+
+
+
+
+
+}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <SelectTrigger>
                   <SelectValue placeholder="Select budget range" />
                 </SelectTrigger>
@@ -357,8 +500,22 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               </label>
               <Select
                 value={formData.urgency}
+<<<<<<< HEAD
                 onValueChange={(value) => handleChange('urgency', value)}
 
+=======
+                onValueChange = {
+  (value) => handleChange('urgency',
+  value)
+
+
+
+
+
+
+}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -378,8 +535,22 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               </label>
               <Select
                 value={formData.contactMethod}
+<<<<<<< HEAD
                 onValueChange={(value) => handleChange('contactMethod', value)}
 
+=======
+                onValueChange = {
+  (value) => handleChange('contactMethod',
+  value)
+
+
+
+
+
+
+}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -398,7 +569,16 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Checkbox
                 id="terms"
                 checked={formData.agreeToTerms}
-                onCheckedChange={(checked) => handleChange('agreeToTerms', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToTerms',
+  checked)
+
+
+
+
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="terms" className="text-sm text-gray-700">
@@ -418,7 +598,16 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
               <Checkbox
                 id="marketing"
                 checked={formData.agreeToMarketing}
-                onCheckedChange={(checked) => handleChange('agreeToMarketing', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToMarketing',
+  checked)
+
+
+
+
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="marketing" className="text-sm text-gray-700">
@@ -464,5 +653,9 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
         </form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   );
 </Card></Card></Card></Card></Card>};}}}}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

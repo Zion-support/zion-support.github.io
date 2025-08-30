@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () => {
+=======
+import React, { useState } from 'react.ts';
+import { Mail, Send, CheckCircle  } from 'lucide-react';
+
+<<<<<<< HEAD
+export const FooterNewsletter: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+<<<<<<< HEAD
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -18,6 +29,7 @@ import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () =>
       setEmail('');
 
       // Reset after 3 seconds
+<<<<<<< HEAD
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
 <<<<<<< HEAD
@@ -28,10 +40,15 @@ import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () =>
     } finally {
       setIsSubmitting(false);
 
+=======
+      setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
+      console.error('Newsletter subscription failed:', error)} finally {
+      setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
+    <div className = "bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
       <div className="text-center">
         <div className="flex justify-center mb-4">
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">
@@ -81,11 +98,24 @@ import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () =>
           </form>
         )}
 
+<<<<<<< HEAD
         <p className="text-xs text-gray-400 mt-4">
-          We respect your privacy. Unsubscribe at any time.
+          We respect your privacy. Unsubscribe at  time.
         </p>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+        <p className="text-xs text-gray-400 mt-4">;
+          We respect your privacy. Unsubscribe at any time.;
+        </p>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
 </div>};
 }}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

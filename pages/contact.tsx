@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact() {
+=======
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react'
+
+
+export default function Contact(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		company: '',
+		comp: '',
 		message: ''
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
+<<<<<<< HEAD
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
@@ -24,7 +34,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
 
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
@@ -90,14 +104,13 @@ import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(
 										/>
 									</div>
 									<div>
-										<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-											Company
-										</label>
+										<label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+											Comp </label>
 										<input
 											type="text"
-											id="company"
-											name="company"
-											value={formData.company}
+											id="comp"
+											name="comp"
+											value={formData.comp}
 											onChange={handleChange}
 											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
 										/>
@@ -202,6 +215,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(
 
 								Learn More About Us →
 							</Link>
+<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
@@ -209,3 +223,12 @@ import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(
 		</>
 	)
 }}}}
+=======
+						</div>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

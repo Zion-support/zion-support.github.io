@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     name: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     service: '',
     message: ''
   });
@@ -25,8 +25,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,12 +44,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         name: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         service: '',
         message: ''
-      });
-    }, 5000);
-  };
+      })}, 5000)};
 
   if (isSubmitted) {
     return (
@@ -78,7 +75,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     );
+=======
+    )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -199,17 +200,17 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company Name
+                  <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+                    Comp Name
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="comp"
+                    name="comp"
+                    value={formData.comp}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company Inc."
+                    placeholder="Your Comp Inc."
                   />
                 </div>
               </div>
@@ -244,7 +245,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project requirements, timeline, and any specific challenges you're facing..."
+                  placeholder="Tell us about your project requirements, timeline, and  specific challenges you're facing..."
                 />
               </div>
 
@@ -275,5 +276,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Gift, ArrowRight, ExternalLink import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
 const REWARD_OPTIONS = [
     {
@@ -27,14 +28,20 @@ const REWARD_OPTIONS = [
 
 ];
 export function RedeemTokensCard() {
+=======
+import { Gift, ArrowRight, ExternalLink } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
+<<<<<<< HEAD
+const RedeemTokensCard() {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const { wallet, spendTokens } = useWallet();
     const [open, setOpen] = useState(false);
     const handleRedeem = async (option) => {
         if (!wallet || wallet.balance < option.cost)
             return;
         await spendTokens(option.cost, `Redeemed: ${option.title}`);
-        setOpen(false);
-    };
+        setOpen(false)};
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -77,5 +84,9 @@ export function RedeemTokensCard() {
           </DialogContent>
         </Dialog>
       </CardContent>
+<<<<<<< HEAD
     </Card>);
 </Card></Card></Card></Card>}}}
+=======
+    </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

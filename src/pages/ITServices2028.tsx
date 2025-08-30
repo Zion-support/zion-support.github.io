@@ -14,6 +14,11 @@ import {
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const itServices2028 = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -22,7 +27,7 @@ const itServices2028 = [
     price: '$45,999',
     period: '/month',
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features: [
+    features[
       'Quantum-ready computing nodes',
       'Advanced AI optimization',
       'Zero-latency networking',
@@ -52,7 +57,7 @@ const itServices2028 = [
     price: '$32,999',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
-    features: [
+    features[
       'AI threat detection',
       'Behavioral analysis',
       'Zero-trust architecture',
@@ -82,7 +87,7 @@ const itServices2028 = [
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
-    features: [
+    features[
       'Quantum query optimization',
       'Real-time data processing',
       'Advanced encryption',
@@ -112,7 +117,7 @@ const itServices2028 = [
     price: '$22,999',
     period: '/month',
     description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
-    features: [
+    features[
       'AI network monitoring',
       'Automatic optimization',
       'Traffic analysis',
@@ -142,7 +147,7 @@ const itServices2028 = [
     price: '$35,999',
     period: '/month',
     description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
-    features: [
+    features[
       'AI-powered CI/CD',
       'Automated testing',
       'Deployment automation',
@@ -172,7 +177,7 @@ const itServices2028 = [
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
-    features: [
+    features[
       'Real-time data processing',
       'AI-powered insights',
       'Predictive analytics',
@@ -188,6 +193,7 @@ const itServices2028 = [
     icon: BarChart3,
     color: 'from-emerald-600 to-teal-700',
     category: 'Data & Analytics',
+<<<<<<< HEAD
     realService: true,
     marketSize: '$11.2B data analytics market',
     growthRate: '220% annual growth',
@@ -195,32 +201,42 @@ const itServices2028 = [
     reviews: 156,
     customers: 89
 
+=======
+    realService: true,;
+    marketSize: '$11.2B data analytics market',;
+    growthRate: '220% annual growth',;
+    rating: 4.6,;
+    reviews: 156,;
+    customers: 89;
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-const ITServices2028: React.FC = () => {
+<<<<<<< HEAD
+const ITServices2028: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },
-    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },
-    { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' },
-    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },
-    { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },;
+    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },;
+    { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' },;
+    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },;
+    { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
   ];
 
   const filteredServices = itServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
@@ -302,13 +318,40 @@ const ITServices2028: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
 
                 {/* Popular Badge */}
@@ -430,12 +473,21 @@ const ITServices2028: React.FC = () => {
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ITServices2028;}}

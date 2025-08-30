@@ -3,22 +3,22 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
     'AI-powered supply chain risk assessment and monitoring',
     'Real-time global supply chain disruption alerts',
     'Predictive analytics for supply chain vulnerabilities',
-    'Automated risk scoring and prioritization',
-    'Multi-tier supplier risk analysis',
-    'Geopolitical and economic risk integration',
-    'Supply chain resilience optimization',
-    'Compliance and regulatory risk monitoring',
-    'Custom risk threshold configuration',
-    'Advanced visualization and reporting dashboards'
+    'Automated risk scoring and prioritization',;
+    'Multi-tier supplier risk analysis',;
+    'Geopolitical and economic risk integration',;
+    'Supply chain resilience optimization',;
+    'Compliance and regulatory risk monitoring',;
+    'Custom risk threshold configuration',;
+    'Advanced visualization and reporting dashboards';
   ];
 
-  const benefits = [
-    'Reduce supply chain disruptions by 60-80%',
-    'Cut risk assessment time by 90%',
-    'Improve supplier selection accuracy by 75%',
-    'Real-time global risk monitoring',
-    'Predict supply chain issues 30-60 days in advance',
-    'Automated compliance reporting and alerts'
+  const benefits = [;
+    'Reduce supply chain disruptions by 60-80%',;
+    'Cut risk assessment time by 90%',;
+    'Improve supplier selection accuracy by 75%',;
+    'Real-time global risk monitoring',;
+    'Predict supply chain issues 30-60 days in advance',;
+    'Automated compliance reporting and alerts';
   ];
 
   const pricing = [
@@ -33,6 +33,7 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
       price: '$799/mo',
       features: ['Up to 500 suppliers', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
+<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
@@ -40,30 +41,39 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
       features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
 
+=======
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Manufacturing supply chain risk management',
-    'Retail inventory risk assessment',
-    'Healthcare supply chain monitoring',
-    'Automotive supplier risk analysis',
-    'Food and beverage supply chain safety',
-    'Technology component sourcing risk'
+  const useCases = [;
+    'Manufacturing supply chain risk management',;
+    'Retail inventory risk assessment',;
+    'Healthcare supply chain monitoring',;
+    'Automotive supplier risk analysis',;
+    'Food and beverage supply chain safety',;
+    'Technology component sourcing risk';
   ];
 
   const riskCategories = [
     'Geopolitical Risk Analysis',
-    'Economic Instability Monitoring',
-    'Natural Disaster Prediction',
-    'Supplier Financial Health',
-    'Regulatory Compliance Risk',
-    'Cybersecurity Threats',
-    'Transportation Disruptions',
-    'Quality Control Issues'
+    'Economic Instability Monitoring',;
+    'Natural Disaster Prediction',;
+    'Supplier Financial Health',;
+    'Regulatory Compliance Risk',;
+    'Cybersecurity Threats',;
+    'Transportation Disruptions',;
+    'Quality Control Issues';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 via-red-600 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -283,6 +293,7 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
+<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
@@ -294,5 +305,18 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
         </div>
       </section>
     </div>
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target export const EnhancedAbout = () => {
     const companyValues = [
+=======
+import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
+export const EnhancedAbout = () => {
+    const compValues = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         {
             icon: Brain,
             title: 'Innovation First',
@@ -32,32 +38,32 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
         {
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
             avatar: '👨‍💼'
         },
         {
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise: ['Deep Learning', 'NLP', 'Computer Vision'],
+            expertise['Deep Learning', 'NLP', 'Computer Vision'],
             avatar: '🤖'
         },
         {
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'],
+            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],
             avatar: '☁️'
         },
         {
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],
+            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
             avatar: '🔒'
 
     ];
     const milestones = [
         {
             year: '2020',
-            title: 'Company Founded',
+            title: 'Comp Founded',
             description: 'Zion Tech Group established with a vision for AI-driven innovation',
             achievement: 'First AI solution deployed'
         },
@@ -96,7 +102,15 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -107,7 +121,15 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
 
     };
     const cardVariants = {
-        hidden: { scale: 0.9, opacity: 0 },
+  hidden: { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
@@ -126,7 +148,15 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
 
     };
     const timelineVariants = {
-        hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0,
+  x: -50 
+
+
+
+
+
+
+},
         visible: {
             opacity: 1,
             x: 0,
@@ -195,7 +225,7 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -208,7 +238,7 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
           </motion.div>
 
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {companyValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
+            {compValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-4xl mb-4 flex justify-center">
                   <value.icon className={`h-16 w-16 text-${value.color} group-hover:scale-110 transition-transform duration-300`}/>
                 </div>
@@ -247,7 +277,7 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
         </div>
       </section>
 
-      {/* Company Timeline */}
+      {/* Comp Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -330,6 +360,10 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target ex
           </div>
         </motion.div>
       </section>
+<<<<<<< HEAD
     </div>);
 };
 }}}}}}}}}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

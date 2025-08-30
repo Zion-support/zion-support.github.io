@@ -1,6 +1,6 @@
 
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Route, Routes  } from 'react-router-dom.ts';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -9,16 +9,16 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
+// MessagingInbox import removed - page not found
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
+// Referrals import removed - page not found
 import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
+// WalletPage import removed - page not found
 import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
@@ -34,7 +34,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/client-dashboard"
@@ -42,7 +46,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/talent-dashboard"
@@ -58,7 +66,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/analytics"
@@ -66,7 +78,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/project/:id/milestones"
@@ -74,7 +90,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/project/:id"
@@ -96,17 +116,25 @@ const DashboardRoutes = () => {
         path="/messages"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Messages Page</div>
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/inbox"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Inbox Page</div>
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/payments"
@@ -114,7 +142,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/interviews"
@@ -122,7 +154,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/notifications"
@@ -130,7 +166,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/applications/track"
@@ -138,7 +178,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/hiring-tracker"
@@ -162,15 +206,23 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/referrals"
         element={
           <ProtectedRoute>
-            <Referrals />
+            <div>Referrals Page</div>
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/developers"
@@ -184,7 +236,7 @@ const DashboardRoutes = () => {
         path="/wallet"
         element={
           <ProtectedRoute>
-            <WalletPage />
+            <div>Wallet Page</div>
           </ProtectedRoute>
 
       />
@@ -210,7 +262,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/contract-builder"
@@ -218,7 +274,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
+<<<<<<< HEAD
 
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
     </Routes>
   );

@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 <<<<<<< HEAD
@@ -17,8 +16,13 @@ const __dirname = path.dirname(__filename);
 class AutomationDashboard {
   constructor() {
     this.processes = [];
+<<<<<<< HEAD
     this.reports = { /* empty */ };
     this.healthStatus = { /* empty */ };
+=======
+    this.reports = {};
+    this.healthStatus = {}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async getPM2Status() {
     try {
@@ -30,6 +34,7 @@ class AutomationDashboard {
         proc.name !== 'zion-app' &&
         proc.name !== 'zion-backend'
       );
+<<<<<<< HEAD
 
       return this.processes;
     } catch (error) {
@@ -40,6 +45,13 @@ class AutomationDashboard {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return [];
 
+=======
+      
+      return this.processes} catch (error) {
+      console.error('❌ Failed to get PM2 status:', error.message);
+      return []}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async generateHealthReport() {
 <<<<<<< HEAD
@@ -49,13 +61,20 @@ class AutomationDashboard {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: {
         totalProcesses: this.processes.length,
         onlineProcesses: this.processes.filter(p => p.pm2_env.status === 'online').length,
         erroredProcesses: this.processes.filter(p => p.pm2_env.status === 'errored').length,
-        stoppedProcesses: this.processes.filter(p => p.pm2_env.status === 'stopped').length
-      },
+  stoppedProcesses: this.processes.filter(p => p.pm2_env.status === 'stopped').length
+      
+
+
+
+
+
+
+},
       processes: this.processes.map(proc => ({
         name: proc.name,
         status: proc.pm2_env.status,
@@ -65,11 +84,12 @@ class AutomationDashboard {
         restarts: proc.pm2_env.restart_time,
         pm_id: proc.pm_id
       })),
-      recommendations: []
+      recommendations[]
     };
 
     // Generate recommendations
     if (report.summary.erroredProcesses > 0) {
+<<<<<<< HEAD
       report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.');
 
     if (report.summary.onlineProcesses === 0) {
@@ -77,20 +97,37 @@ class AutomationDashboard {
 
     if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
       report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.');
+=======
+      report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.')}
+
+    if (report.summary.onlineProcesses === 0) {
+      report.recommendations.push('🚨 No automation processes are running. Start the automation system.')}
+
+    if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
+      report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Save report
     const reportPath = path.join(process.cwd(), 'automation-health-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.reports.health = report;
+<<<<<<< HEAD
     return report;
+=======
+    return report}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   formatUptime(uptime) {
     if (!uptime) return 'N/A';
     const seconds = Math.floor((Date.now() - uptime) / 1000);
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
+<<<<<<< HEAD
     return `${hours}h ${minutes}m`;
+=======
+    return `${hours}h ${minutes}m`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async displayDashboard() {
     console.clear();
@@ -140,6 +177,7 @@ class AutomationDashboard {
         proc.cpu.padEnd(8) +
         proc.uptime.padEnd(15) +
         proc.restarts
+<<<<<<< HEAD
       );
     });
 
@@ -152,6 +190,18 @@ class AutomationDashboard {
       health.recommendations.forEach(rec => // // // console.log(`  ${rec}`));
       // // // console.log('');
 
+=======
+      )});
+    
+    console.log('');
+    
+    // Display recommendations
+    if (health.recommendations.length > 0) {
+      console.log('💡 Recommendations:');
+      health.recommendations.forEach(rec => console.log(`  ${rec}`));
+      console.log('')}
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Display recent logs
     // // // console.log('📝 Recent Activity:');
     // // // console.log('─'.repeat(50));
@@ -175,6 +225,7 @@ class AutomationDashboard {
       const recentLogs = logs.split('\n').slice(-5).filter(line => line.trim());
       recentLogs.forEach(log => {
         if (log.includes('ERROR') || log.includes('error')) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           // // // console.log(`🔴 ${log}`);
         } else if (log.includes('WARN') || log.includes('warn')) {
@@ -216,6 +267,21 @@ class AutomationDashboard {
     // // // // // // // console.log('  pm2 monit - Open PM2 monitoring interface');
     // // // // // // // console.log('  Ctrl+C - Exit dashboard');
   }
+=======
+          console.log(`🔴 ${log}`)} else if (log.includes('WARN') || log.includes('warn')) {
+          console.log(`🟡 ${log}`)} else {
+          console.log(`ℹ️  ${log}`)}
+      })} catch (error) {
+      console.log('  No recent logs available')}
+    
+    console.log('');
+    console.log('Commands:');
+    console.log('  pm2 logs <process-name> - View specific process logs');
+    console.log('  pm2 restart <process-name> - Restart specific process');
+    console.log('  pm2 restart all - Restart all processes');
+    console.log('  pm2 monit - Open PM2 monitoring interface');
+    console.log('  Ctrl+C - Exit dashboard')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async startMonitoring() {
     // // // // // // // console.log('🔄 Starting continuous monitoring...');
@@ -226,8 +292,12 @@ class AutomationDashboard {
 
     // Update every 30 seconds
     setInterval(async () => {
+<<<<<<< HEAD
       await this.displayDashboard();
     }, 30000);
+=======
+      await this.displayDashboard()}, 30000)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async restartFailedProcesses() {
 <<<<<<< HEAD
@@ -239,6 +309,7 @@ class AutomationDashboard {
     const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored');
 
     if (failedProcesses.length === 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // // // console.log('✅ No failed processes to restart');
 =======
@@ -291,12 +362,32 @@ class AutomationDashboard {
 
     };
 
+=======
+      console.log('✅ No failed processes to restart');
+      return}
+    
+    failedProcesses.forEach(proc => {
+      try {
+        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit' });
+        console.log(`✅ Restarted ${proc.name}`)} catch (error) {
+        console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
+    })}
+
+  async generatePerformanceReport() {
+    console.log('📊 Generating performance report...');
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const reportPath = path.join(process.cwd(), 'automation-performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.reports.performance = report;
+<<<<<<< HEAD
     return report;
 
+=======
+    return report}
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Main execution
 async function main() {
@@ -307,6 +398,7 @@ async function main() {
 <<<<<<< HEAD
     // // // console.log('\n🛑 Shutting down automation dashboard...');
     await dashboard.generatePerformanceReport();
+<<<<<<< HEAD
     // // // console.log('✅ Performance report saved');
 =======
     // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
@@ -326,6 +418,16 @@ async function main() {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
+=======
+    console.log('✅ Performance report saved');
+    process.exit(0)});
+  
+  try {
+    await dashboard.startMonitoring()} catch (error) {
+    console.error('❌ Dashboard failed:', error);
+    process.exit(1)}
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Start the dashboard
 main().catch(console.error);

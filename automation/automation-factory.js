@@ -11,6 +11,7 @@ class AutomationFactory {
     this.statusFile = path.join(__dirname, 'logs', 'automation-status.json');
     this.ensureLogDirectory();
     this.loadExistingScripts();
+<<<<<<< HEAD
     this.loadStatus();
 
   ensureLogDirectory() {
@@ -19,26 +20,55 @@ class AutomationFactory {
       fs.mkdirSync(logDir, { recursive: true });
 
 
+=======
+    this.loadStatus()}
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true })}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   loadStatus() {
     try {
       if (fs.existsSync(this.statusFile)) {
         const status = JSON.parse(fs.readFileSync(this.statusFile, 'utf8'));
+<<<<<<< HEAD
         this.runningScripts = new Map(Object.entries(status.runningScripts || { /* empty */ }));
 
     } catch (error) {
       this.log(`Error loading status: ${error.message}`);
 
 
+=======
+        this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}
+    } catch (error) {
+      this.log(`Error loading status: ${error.message}`)}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   saveStatus() {
     try {
       const status = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         runningScripts: Object.fromEntries(this.runningScripts),
+  <<<<<<< HEAD
         totalScripts: this.scripts.size
-      };
+      
+
+};
+      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {
+      this.log(`Error saving status: ${error.message}`)}
+=======
+  totalScripts: this.scripts.size
+      
+
+
+
+
+};
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
     } catch (error) {
       this.log(`Error saving status: ${error.message}`);
+<<<<<<< HEAD
 
 
   log(message, level = 'INFO') {
@@ -51,9 +81,27 @@ class AutomationFactory {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   loadExistingScripts() {
     const scriptTypes = {
-      'lint-monitor': { file: 'lint-monitor.js', description: 'Continuous lint monitoring' },
+  'lint-monitor': { file: 'lint-monitor.js',
+  description: 'Continuous lint monitoring' 
+
+
+
+
+
+
+},
       'lint-fixer': { file: 'lint-error-fixer.js', description: 'Automated lint error fixing' },
       'lint-manager': { file: 'lint-automation-manager.js', description: 'Lint automation management' }
     };
@@ -67,10 +115,16 @@ class AutomationFactory {
           lastRun: null,
           successCount: 0,
           errorCount: 0
+<<<<<<< HEAD
         });
 
 
 
+=======
+        })}
+    }
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateCodeQualityScript() {
     const script = `#!/usr/bin/env node
 const fs = require('fs');
@@ -79,13 +133,26 @@ const { execSync } = require('child_process');
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
-      complexity: 0,
+  complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
+  <<<<<<< HEAD
       lastUpdated: new Date().toISOString()
-    };
+    
+
+};
+    this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
+=======
+  lastUpdated: new Date().toISOString()
+    
+
+
+
+
+};
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
+<<<<<<< HEAD
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -97,6 +164,15 @@ class CodeQualityMonitor {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
+=======
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = \`[\${timestamp}] \${message}\\n\`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   async analyzeCodeQuality() {
     try {
       this.log('Starting code quality analysis...');
@@ -111,12 +187,16 @@ class CodeQualityMonitor {
 
       this.saveMetrics();
       this.log('Code quality analysis completed successfully');
-      return this.metrics;
-    } catch (error) {
+      return this.metrics} catch (error) {
       this.log(\`Code quality analysis failed: \${error.message}\`, 'ERROR');
+<<<<<<< HEAD
       return null;
 
 
+=======
+      return null}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   calculateComplexity() {
     // Enhanced complexity calculation based on file analysis
     try {
@@ -128,18 +208,26 @@ class CodeQualityMonitor {
         const lines = content.split('\\n');
         totalComplexity += lines.length * 0.1; // Simplified complexity metric
       });
+<<<<<<< HEAD
 
       return Math.min(Math.floor(totalComplexity), 100);
     } catch (error) {
       return Math.floor(Math.random() * 10) + 1;
 
 
+=======
+      
+      return Math.min(Math.floor(totalComplexity), 100)} catch (error) {
+      return Math.floor(Math.random() * 10) + 1}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
       const totalFiles = files.length;
       const avgFileSize = files.reduce((acc, file) => {
         const stats = fs.statSync(file);
+<<<<<<< HEAD
         return acc + stats.size;
       }, 0) / totalFiles;
 
@@ -157,6 +245,20 @@ class CodeQualityMonitor {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
 
+=======
+        return acc + stats.size}, 0) / totalFiles;
+      
+      // Lower file size = higher maintainability
+      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
+      return Math.floor(Math.random() * 100) + 50}
+  }
+  calculateTestCoverage() {
+    // Placeholder for test coverage calculation
+    return Math.floor(Math.random() * 100)}
+  calculatePerformance() {
+    // Placeholder for performance calculation
+    return Math.floor(Math.random() * 100) + 70}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, '..');
     const files = [];
@@ -168,6 +270,7 @@ class CodeQualityMonitor {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+<<<<<<< HEAD
           walkDir(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
           files.push(fullPath);
@@ -193,6 +296,22 @@ monitor.analyzeCodeQuality().then(metrics => {
     // // // // // // // // console.log('Metrics:', metrics);
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+          walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          files.push(fullPath)}
+      })};
+    
+    walkDir(projectRoot);
+    return files}
+  saveMetrics() {
+    const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
+}
+const monitor = new CodeQualityMonitor();
+monitor.analyzeCodeQuality().then(metrics => {
+  if (metrics) {
+    console.log('Metrics:', metrics)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 });
 `;
     const scriptPath = path.join(__dirname, 'code-quality-monitor.js');
@@ -206,8 +325,12 @@ monitor.analyzeCodeQuality().then(metrics => {
       successCount: 0,
       errorCount: 0
     });
+<<<<<<< HEAD
     this.log('Generated enhanced code quality monitor script');
 
+=======
+    this.log('Generated enhanced code quality monitor script')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generatePerformanceOptimizer() {
     const script = `#!/usr/bin/env node
 const fs = require('fs');
@@ -216,6 +339,7 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
+<<<<<<< HEAD
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
 
   log(message) {
@@ -228,6 +352,14 @@ class PerformanceOptimizer {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
+=======
+    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')}
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = \`[\${timestamp}] \${message}\\n\`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   async optimizePerformance() {
     try {
       this.log('Starting performance optimization...');
@@ -243,33 +375,57 @@ class PerformanceOptimizer {
 
       // Generate optimization report
       const report = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         bundleSize: bundleAnalysis,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
+<<<<<<< HEAD
         recommendations: this.generateRecommendations()
       };
 
+=======
+  recommendations: this.generateRecommendations()
+      
+
+
+
+
+
+
+};
+      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       this.saveReport(report);
       this.log('Performance optimization completed');
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(\`Performance optimization failed: \${error.message}\`, 'ERROR');
+<<<<<<< HEAD
       return null;
 
 
+=======
+      return null}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   analyzeBundleSize() {
     try {
       // Placeholder for bundle analysis
       return {
         totalSize: '2.1MB',
         gzippedSize: '650KB',
+<<<<<<< HEAD
         recommendations: ['Consider code splitting', 'Remove unused dependencies']
       };
     } catch (error) {
       return { error: error.message };
 
 
+=======
+        recommendations['Consider code splitting', 'Remove unused dependencies']
+      }} catch (error) {
+      return { error: error.message }}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   optimizeImages() {
     try {
       // Placeholder for image optimization
@@ -277,6 +433,7 @@ class PerformanceOptimizer {
         optimized: 0,
         totalImages: 0,
         savings: '0KB'
+<<<<<<< HEAD
       };
     } catch (error) {
       return { error: error.message };
@@ -288,11 +445,22 @@ class PerformanceOptimizer {
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
 
+=======
+      }} catch (error) {
+      return { error: error.message }}
+  }
+  analyzeDependencies() {
+    try {
+      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
+      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return {
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length,
         potentialUnused: this.findUnusedDependencies()
+<<<<<<< HEAD
       };
     } catch (error) {
       return { error: error.message };
@@ -302,6 +470,14 @@ class PerformanceOptimizer {
     // Placeholder for unused dependency detection
     return ['example-unused-package'];
 
+=======
+      }} catch (error) {
+      return { error: error.message }}
+  }
+  findUnusedDependencies() {
+    // Placeholder for unused dependency detection
+    return ['example-unused-package']}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   generateRecommendations() {
     return [
       'Implement code splitting for better performance',
@@ -309,6 +485,7 @@ class PerformanceOptimizer {
       'Remove unused dependencies',
       'Enable gzip compression',
       'Use React.memo for expensive components'
+<<<<<<< HEAD
     ];
 
   saveReport(report) {
@@ -326,6 +503,17 @@ optimizer.optimizePerformance().then(report => {
     // // // // // // // // console.log('Performance report:', report);
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    ]}
+  saveReport(report) {
+    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}
+}
+const optimizer = new PerformanceOptimizer();
+optimizer.optimizePerformance().then(report => {
+  if (report) {
+    console.log('Performance report:', report)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 });
 `;
     const scriptPath = path.join(__dirname, 'performance-optimizer.js');
@@ -339,14 +527,28 @@ optimizer.optimizePerformance().then(report => {
       successCount: 0,
       errorCount: 0
     });
+<<<<<<< HEAD
     this.log('Generated performance optimizer script');
 
   async runScript(scriptName, options = { /* empty */ }) {
+=======
+    this.log('Generated performance optimizer script')}
+  async runScript(scriptName, options = {}) {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!this.scripts.has(scriptName)) {
       this.log(`Script '${scriptName}' not found`, 'ERROR');
+<<<<<<< HEAD
+      return false}
+    const script = this.scripts.get(scriptName);
+=======
       return false;
+<<<<<<< HEAD
 
     const script = this.scripts.get(scriptName);
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const startTime = Date.now();
     try {
       this.log(`Starting script: ${scriptName}`);
@@ -365,31 +567,36 @@ optimizer.optimizePerformance().then(report => {
 
           if (code === 0) {
             script.successCount++;
-            this.log(`Script '${scriptName}' completed successfully in ${duration}ms`);
-          } else {
+            this.log(`Script '${scriptName}' completed successfully in ${duration}ms`)} else {
             script.errorCount++;
+<<<<<<< HEAD
             this.log(`Script '${scriptName}' failed with code ${code}`, 'ERROR');
 
+=======
+            this.log(`Script '${scriptName}' failed with code ${code}`, 'ERROR')}
+          
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           script.lastRun = new Date().toISOString();
           this.saveStatus();
-          resolve(code === 0);
-        });
+          resolve(code === 0)});
         child.on('error', (error) => {
           script.errorCount++;
           this.log(`Script '${scriptName}' error: ${error.message}`, 'ERROR');
           this.runningScripts.delete(scriptName);
           this.saveStatus();
-          resolve(false);
-        });
-      });
-    } catch (error) {
+          resolve(false)})})} catch (error) {
       script.errorCount++;
       this.log(`Failed to start script '${scriptName}': ${error.message}`, 'ERROR');
       this.runningScripts.delete(scriptName);
       this.saveStatus();
+<<<<<<< HEAD
       return false;
 
 
+=======
+      return false}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   async runAllScripts() {
     this.log('Running all available scripts...');
     const results = [];
@@ -397,6 +604,7 @@ optimizer.optimizePerformance().then(report => {
     for (const [name, script] of this.scripts) {
       if (script.status === 'available') {
         const success = await this.runScript(name);
+<<<<<<< HEAD
         results.push({ name, success });
 
 
@@ -408,6 +616,17 @@ optimizer.optimizePerformance().then(report => {
     this.generatePerformanceOptimizer();
     this.log('Generated all automation scripts');
 
+=======
+        results.push({ name, success })}
+    }
+    
+    this.log(`Completed running ${results.length} scripts`);
+    return results}
+  generateAllScripts() {
+    this.generateCodeQualityScript();
+    this.generatePerformanceOptimizer();
+    this.log('Generated all automation scripts')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   listScripts() {
 <<<<<<< HEAD
     // // // // // console.log('\\nAvailable Automation Scripts:');
@@ -418,6 +637,7 @@ optimizer.optimizePerformance().then(report => {
     for (const [name, script] of this.scripts) {
       const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase();
       const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       // // // // // console.log(`\n${name}:`);
@@ -447,6 +667,20 @@ optimizer.optimizePerformance().then(report => {
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     }
+=======
+      
+      console.log(`\n${name}:`);
+      console.log(`  Description: ${script.description}`);
+      console.log(`  Status: ${status}`);
+      console.log(`  Last Run: ${lastRun}`);
+      console.log(`  Success Count: ${script.successCount}`);
+      console.log(`  Error Count: ${script.errorCount}`)}
+    
+    console.log('\nRunning Scripts:');
+    for (const [name, info] of this.runningScripts) {
+      const duration = Date.now() - info.startTime;
+      console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   startContinuousMode() {
@@ -464,15 +698,19 @@ optimizer.optimizePerformance().then(report => {
       this.log(`File changed: ${filePath}`);
       // Run code quality check on file changes
       this.runScript('code-quality').catch(error => {
-        this.log(`Error running code quality check: ${error.message}`, 'ERROR');
-      });
-    });
+        this.log(`Error running code quality check: ${error.message}`, 'ERROR')})});
     // Run initial analysis
     this.runAllScripts();
+<<<<<<< HEAD
 
     this.log('Continuous mode active. Press Ctrl+C to stop.');
 
 
+=======
+    
+    this.log('Continuous mode active. Press Ctrl+C to stop.')}
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // CLI interface
 const factory = new AutomationFactory();
 const command = process.argv[2];
@@ -483,10 +721,15 @@ switch (command) {
     break;
   case 'run':
     if (scriptName) {
+<<<<<<< HEAD
       factory.runScript(scriptName);
     } else {
       factory.runAllScripts();
 
+=======
+      factory.runScript(scriptName)} else {
+      factory.runAllScripts()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     break;
   case 'generate':
     factory.generateAllScripts();
@@ -495,6 +738,7 @@ switch (command) {
     factory.startContinuousMode();
     break;
   default:
+<<<<<<< HEAD
 <<<<<<< HEAD
     // // // // // console.log('Usage:');
     // // // // // console.log('  node automation-factory.js list');
@@ -510,3 +754,11 @@ switch (command) {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+=======
+    console.log('Usage:');
+    console.log('  node automation-factory.js list');
+    console.log('  node automation-factory.js run [script-name]');
+    console.log('  node automation-factory.js generate');
+    console.log('  node automation-factory.js continuous');
+    break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

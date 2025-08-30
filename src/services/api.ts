@@ -1,7 +1,5 @@
-// API base URL - will use proxy in development, direct URL in production
-const API_BASE_URL = import.meta.env.DEV ? '/api' : 'http://localhost:5000/api';
+import { API_BASE_URL } from '../config/constants';
 
-// Generic API response type
 interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
@@ -16,6 +14,7 @@ class ApiError extends Error {
     this.name = 'ApiError';
 
 
+<<<<<<< HEAD
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
   endpoint: string,
@@ -23,15 +22,41 @@ async function apiRequest<T>(
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
 
+=======
+interface ApiClientOptions {
+  method?: string;
+  body?: string;
+  headers?: Record<string, string>;
+}
+
+export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
+  const { method = 'GET', body, headers = {} } = options;
+  
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const config: RequestInit = {
+  method,
     headers: {
       'Content-Type': 'application/json',
-      ...options.headers,
-    },
-    ...options,
+      ...headers,;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
+},;
   };
 
+  if (body) {
+    config.body = body;
+  }
+
   try {
+<<<<<<< HEAD
     const response = await fetch(url, config);
 
     if (!response.ok) {
@@ -45,9 +70,23 @@ async function apiRequest<T>(
 
     throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
 
+=======
+    const response = await fetch(endpoint, config);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('API request failed:', error);
+    throw error;
+  }
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-// API methods
 export const api = {
+<<<<<<< HEAD
   // Health check
   health: () => apiRequest('/health'),
 
@@ -59,6 +98,19 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(userData),
     }),
+=======
+  get: (endpoint: string, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
+  
+  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
+  
+  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
+  
+  delete: (endpoint: string, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 
 // Export types for use in components

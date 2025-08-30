@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+<<<<<<< HEAD
   ChevronRight,
   Home,
   Zap,
@@ -38,9 +39,24 @@ import {
   Workflow,
   Briefcase,
   Newspaper,
+=======
+  Home,
+  Zap,
+  Target,
+  Users,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   FileText,
-  Leaf,
+  Phone,
+  ChevronRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  BarChart3,
+  Activity,
+  Globe,
   Building,
+<<<<<<< HEAD
   Truck,
   Mail,
   Video,
@@ -53,9 +69,26 @@ interface SidebarProps {
   onClose: () => void;
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['Main Navigation']);
+=======
+  Eye,
+  Cpu,
+  Cloud,
+  Network,
+  Server,
+  GraduationCap,
+  HelpCircle,
+  Settings,
+  Menu,
+  X
+} from 'lucide-react';
 
+export function Sidebar() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const location = useLocation();
+
+<<<<<<< HEAD
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
       prev.includes(section)
@@ -65,91 +98,57 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 
   const navigationSections = [
+=======
+  const navigation = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Users },
-        { name: 'Services', href: '/services', icon: Zap },
-        { name: 'Contact', href: '/contact', icon: MessageCircle },
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Partners', href: '/partners', icon: Users },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Help Center', href: '/help', icon: HelpCircle }
-      ]
+      name: 'Home',
+      href: '/',
+      icon: Home,
+      description: 'Main dashboard and overview'
     },
     {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      items: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },
-        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: FileText },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
-        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
-        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign }
-      ]
-    },
-    {
-      title: 'Cloud & Infrastructure',
-      icon: Cloud,
-      items: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Server },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
-        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu }
-      ]
-    },
-    {
-      title: 'Cybersecurity & Privacy',
-      icon: Shield,
-      items: [
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Lock },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock }
-      ]
-    },
-    {
-      title: 'Emerging Technologies',
-      icon: Atom,
-      items: [
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      description: 'Our technology services',
+      subItems: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Brain },
-        { name: 'Space Technology', href: '/space-tech', icon: Satellite },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap }
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      items: [
-        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },
-        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
-        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Video }
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      description: 'Industry-specific solutions',
+      subItems: [
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
       ]
     },
     {
-      title: 'Quick Access',
-      icon: Star,
-      items: [
-        { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-        { name: 'Pricing', href: '/pricing', icon: DollarSign },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Sitemap', href: '/sitemap', icon: FileText }
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      description: 'Company information',
+      subItems: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: FileText }
       ]
+<<<<<<< HEAD
 
   ];
 
@@ -158,21 +157,62 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       return location.pathname === '/';
 
     return location.pathname.startsWith(href);
+=======
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      description: 'Documentation and support',
+      subItems: [
+        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Support', href: '/support', icon: HelpCircle },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Helpdesk', href: '/help', icon: HelpCircle }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone,
+      description: 'Get in touch with us'
+    }
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
+
+  const toggleSection = (sectionName: string) => {
+    setActiveSection(activeSection === sectionName ? null : sectionName);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-          />
+    <motion.aside
+      className={`fixed left-0 top-16 h-full bg-gray-900/95 backdrop-blur-md border-r border-gray-700 transition-all duration-300 z-40 ${
+        isCollapsed ? 'w-16' : 'w-64'
+      }`}
+      initial={{ x: -256 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="absolute -right-3 top-6 bg-gray-800 border border-gray-600 rounded-full p-1 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+      >
+        {isCollapsed ? (
+          <ChevronRight className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4 rotate-180" />
+        )}
+      </button>
 
+<<<<<<< HEAD
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
@@ -221,28 +261,61 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         expandedSections.includes(section.title) ? 'rotate-90' : ''
                       }`}
                     />
+=======
+      {/* Navigation */}
+      <nav className="h-full overflow-y-auto py-6 px-4">
+        <div className="space-y-2">
+          {navigation.map((item) => (
+            <div key={item.name}>
+              {item.subItems ? (
+                <div>
+                  <button
+                    onClick={() => toggleSection(item.name)}
+                    className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                      isActive(item.href) || activeSection === item.name
+                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`}
+                    aria-expanded={activeSection === item.name}
+                    title={!isCollapsed ? item.description : item.name}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <item.icon className="w-5 h-5 flex-shrink-0" />
+                      {!isCollapsed && <span className="font-medium">{item.name}</span>}
+                    </div>
+                    {!isCollapsed && (
+                      <ChevronRight 
+                        className={`w-4 h-4 transition-transform ${activeSection === item.name ? 'rotate-90' : ''}`} 
+                      />
+                    )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </button>
-
-                  {/* Section Items */}
+                  
                   <AnimatePresence>
-                    {expandedSections.includes(section.title) && (
+                    {activeSection === item.name && !isCollapsed && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                         className="ml-6 space-y-1"
 
                         {section.items.map((item) => (
+=======
+                        className="ml-6 mt-2 space-y-1"
+                      >
+                        {item.subItems.map((subItem) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <Link
-                            key={item.name}
-                            to={item.href}
-                            onClick={onClose}
-                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
-                              isActive(item.href)
-                                ? 'bg-cyan-400/20 text-cyan-400 border border-cyan-400/30'
-                                : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
+                            key={subItem.name}
+                            to={subItem.href}
+                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                              isActive(subItem.href)
+                                ? 'bg-cyan-500/10 text-cyan-400'
+                                : 'text-gray-400 hover:text-white hover:bg-gray-800/30'
                             }`}
+<<<<<<< HEAD
 
                             <item.icon className={`w-4 h-4 ${
                               isActive(item.href) ? 'text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'
@@ -251,26 +324,66 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                             {isActive(item.href) && (
                               <div className="ml-auto w-2 h-2 bg-cyan-400 rounded-full"></div>
                             )}
+=======
+                            title={subItem.name}
+                          >
+                            <subItem.icon className="w-4 h-4 flex-shrink-0" />
+                            <span className="truncate">{subItem.name}</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           </Link>
                         ))}
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
-              ))}
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                    isActive(item.href)
+                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                  }`}
+                  title={!isCollapsed ? item.description : item.name}
+                >
+                  <item.icon className="w-5 h-5 flex-shrink-0" />
+                  {!isCollapsed && <span className="font-medium">{item.name}</span>}
+                </Link>
+              )}
             </div>
+          ))}
+        </div>
 
-            {/* Footer */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-cyan-400/20 bg-zion-slate-dark/50 backdrop-blur-sm">
-              <div className="text-center text-sm text-gray-400">
-                <p>© 2024 Zion Tech Group</p>
-                <p className="text-xs mt-1">Innovation Hub</p>
-              </div>
+        {/* Quick Actions */}
+        {!isCollapsed && (
+          <div className="mt-8 pt-6 border-t border-gray-700">
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">
+              Quick Actions
+            </h3>
+            <div className="space-y-2">
+              <Link
+                to="/contact"
+                className="flex items-center space-x-3 px-3 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-medium">Get Started</span>
+              </Link>
+              <Link
+                to="/support"
+                className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset"
+              >
+                <HelpCircle className="w-4 h-4" />
+                <span className="font-medium">Support</span>
+              </Link>
             </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+          </div>
+        )}
+      </nav>
+    </motion.aside>
   );
+<<<<<<< HEAD
 };
 }}}</section></motion.div>}
+=======
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices";
+import { ADVANCED_INNOVATIVE_SERVICES } from "../data/advancedInnovativeServices";
+import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices";
 export function NewServices() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,12 +16,10 @@ export function NewServices() {
     // Get unique categories
     const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
     const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (('tags' in service && 'tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))) || false);
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -32,7 +30,15 @@ export function NewServices() {
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -59,7 +65,25 @@ export function NewServices() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
             Revolutionary Tech Services
           </h1>
@@ -124,7 +148,34 @@ export function NewServices() {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="mb-12">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}} className="mb-12">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category
                 ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/30'
@@ -135,7 +186,34 @@ export function NewServices() {
         </motion.div>
 
         {/* Featured Services Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}} className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
             Featured Revolutionary Services
           </h2>
@@ -206,7 +284,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
                         {tag}
                       </span>))}
                   </div>)}
@@ -285,7 +363,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
                         {tag}
                       </span>))}
                   </div>)}
@@ -300,8 +378,7 @@ export function NewServices() {
             </div>
             <button onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
-            }} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
+                setSelectedCategory('all')}} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
               Clear Filters
             </button>
           </motion.div>)}
@@ -312,12 +389,39 @@ export function NewServices() {
             Showing {filteredServices.length} of {allServices.length} revolutionary services
           </p>
           <p className="text-sm mt-2">
-            Contact us to learn more about any service or request a custom solution
+            Contact us to learn more about  service or request a custom solution
           </p>
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text-center mt-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}} className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -346,7 +450,25 @@ export function NewServices() {
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-start mb-6">
               <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
               <button onClick={() => setSelectedService(null)} className="text-zion-slate-light hover:text-white text-2xl">
@@ -447,7 +569,20 @@ export function NewServices() {
             </div>
           </motion.div>
         </div>)}
+<<<<<<< HEAD
     </div>);
 
 export default NewServices;
 }}}}}
+=======
+    </div>)}
+export default NewServices;
+
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target export default function AIBusinessIntelligence() {
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
+
+export default function AIBusinessIntelligence(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -15,6 +23,7 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
     {
       icon: Zap,
       title: 'Automated Intelligence',
+<<<<<<< HEAD
       description: 'Smart automation of business processes'
     },
     {
@@ -22,6 +31,15 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       title: 'Predictive Analytics',
       description: 'Forecast trends and identify opportunities'
 
+=======
+      description: 'Smart automation of business processes';
+    },;
+    {;
+      icon: Eye,;
+      title: 'Predictive Analytics',;
+      description: 'Forecast trends and identify opportunities';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -38,6 +56,7 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
     {
       title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
+<<<<<<< HEAD
       icon: Database
     },
     {
@@ -45,17 +64,44 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       description: 'Generate reports automatically with AI insights',
       icon: Target
 
+=======
+      icon: Database;
+    },;
+    {;
+      title: 'Automated Reporting',;
+      description: 'Generate reports automatically with AI insights',;
+      icon: Target;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -91,8 +137,26 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -105,13 +169,40 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
 
@@ -130,8 +221,26 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -144,13 +253,40 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {capabilities.map((capability, index)  => (
               <motion.div
                 key={capability.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
 
@@ -173,8 +309,26 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -190,9 +344,36 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
@@ -217,9 +398,36 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
 
             {/* Pro Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative"
 
@@ -253,9 +461,36 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
 
             {/* Enterprise Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
@@ -289,8 +524,26 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-3xl p-12 text-center relative overflow-hidden"
@@ -311,17 +564,30 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
                   Schedule Demo
                 </button>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Missing icon component
-const CheckCircle = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
+const CheckCircle = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
+  </svg>;
 );
 }}}}

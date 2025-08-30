@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTServices = () => {
+=======
+import React from 'react.ts';
+import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
+
+const IoTServices = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const iotServices = [
     {
       title: "IoT Device Development",
@@ -15,6 +22,7 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTS
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
     },
+<<<<<<< HEAD
     {
       title: "IoT Data Management",
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",
@@ -22,6 +30,15 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTS
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
       icon: Database
 
+=======
+    {;
+      title: "IoT Data Management",;
+      description: "Comprehensive data collection, processing, and analytics for IoT devices.",;
+      price: "From $6,500/month",;
+      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
+      icon: Database;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const iotTechnologies = [
@@ -36,6 +53,7 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTS
       description: "AI-powered IoT intelligence and automation",
       icon: BarChart3,
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
+<<<<<<< HEAD
     },
     {
       name: "Security & Privacy",
@@ -43,19 +61,28 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTS
       icon: Shield,
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
 
+=======
+    },;
+    {;
+      name: "Security & Privacy",;
+      description: "Enterprise-grade IoT security solutions",;
+      icon: Shield,;
+      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Real-time monitoring and control capabilities",
-    "Improved operational efficiency and automation",
-    "Enhanced data collection and insights",
-    "Reduced operational costs and manual work",
-    "Scalable and flexible IoT infrastructure",
-    "Better decision-making with real-time data"
+  const benefits = [;
+    "Real-time monitoring and control capabilities",;
+    "Improved operational efficiency and automation",;
+    "Enhanced data collection and insights",;
+    "Reduced operational costs and manual work",;
+    "Scalable and flexible IoT infrastructure",;
+    "Better decision-making with real-time data";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -208,13 +235,13 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTS
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

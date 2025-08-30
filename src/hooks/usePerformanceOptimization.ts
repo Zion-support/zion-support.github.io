@@ -1,16 +1,23 @@
-import { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface PerformanceMetrics {
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
+<<<<<<< HEAD
   fps: number;
+=======
+  fps: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UsePerformanceOptimizationOptions {
+
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
+<<<<<<< HEAD
   threshold?: number;
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = { /* empty */ }) => {
@@ -20,13 +27,24 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableMemoryManagement = true,
     enableFPSMonitoring = true,
     threshold = 0.1
+=======
+  threshold?: number}
+
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
+  const {;
+    enableLazyLoading = true,;
+    enableIntersectionObserver = true,;
+    enableMemoryManagement = true,;
+    enableFPSMonitoring = true,;
+    threshold = 0.1;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   } = options;
 
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
+  const metricsRef = useRef<PerformanceMetrics>({;
+    loadTime: 0,;
+    renderTime: 0,;
+    memoryUsage: 0,;
+    fps: 0;
   });
 
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -35,7 +53,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Measure initial load time
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'null') {
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
 
@@ -45,18 +63,23 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
+<<<<<<< HEAD
         });
 
 
+=======
+        })}
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // FPS monitoring
-  useEffect(() => {
+  useEffect(()  => {
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
 
-    const measureFPS = () => {
+    const measureFPS = () => {;
       const currentTime = performance.now();
       frameCountRef.current++;
 
@@ -70,37 +93,52 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         // Log low FPS for debugging
         if (fps < 30) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           // // // console.warn(`Low FPS detected: ${fps}`);
 
 =======
           // // // // // // // console.warn(`Low FPS detected: ${fps}`);
         }
+=======
+          console.warn(`Low FPS detected: ${fps}`)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
-      animationFrameId = requestAnimationFrame(measureFPS);
-    };
+      animationFrameId = requestAnimationFrame(measureFPS)};
 
     animationFrameId = requestAnimationFrame(measureFPS);
 
     return () => {
       if (animationFrameId) {
+<<<<<<< HEAD
         cancelAnimationFrame(animationFrameId);
 
     };
   }, [enableFPSMonitoring]);
+=======
+        cancelAnimationFrame(animationFrameId)}
+    }}, [enableFPSMonitoring]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Memory management
   useEffect(() => {
     if (!enableMemoryManagement) return;
 
-    const checkMemoryUsage = () => {
-      if ('memory' in performance) {
+<<<<<<< HEAD
+    const checkMemoryUsage = () => {;
+      if ('memory' in performance) {;
+        const memory = (performance as ).memory;
+=======
+    const checkMemoryUsage = () => {;
+      if ('memory' in performance) {;
         const memory = (performance as any).memory;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+<<<<<<< HEAD
 <<<<<<< HEAD
           // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
 
@@ -108,38 +146,51 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 =======
           // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
+=======
+          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 
     const intervalId = setInterval(checkMemoryUsage, 5000);
-    return () => clearInterval(intervalId);
-  }, [enableMemoryManagement]);
+    return () => clearInterval(intervalId)}, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {
+<<<<<<< HEAD
+  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enableIntersectionObserver) return null;
 
     return new IntersectionObserver(callback, {
       threshold,
       rootMargin: '50px'
-    });
-  }, [enableIntersectionObserver, threshold]);
+    })}, [enableIntersectionObserver, threshold]);
 
   // Lazy loading utility
-  const lazyLoad = useCallback((element: HTMLElement, callback: () => void) => {
-    if (!enableLazyLoading) {
+<<<<<<< HEAD
+  const lazyLoad = useCallback((element: HTMLElement, callback: () => void) => {;
+    if (!enableLazyLoading) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       callback();
+<<<<<<< HEAD
       return;
 
     if (observerRef.current) {
       observerRef.current.disconnect();
+=======
+      return}
 
-    observerRef.current = createIntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+    if (observerRef.current) {
+      observerRef.current.disconnect()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    observerRef.current = createIntersectionObserver((entries) => {;
+      entries.forEach((entry) => {;
+        if (entry.isIntersecting) {;
           callback();
           if (observerRef.current) {
+<<<<<<< HEAD
             observerRef.current.unobserve(entry.target);
 
 
@@ -149,10 +200,20 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (observerRef.current) {
       observerRef.current.observe(element);
 
+=======
+            observerRef.current.unobserve(entry.target)}
+        }
+      })});
+
+    if (observerRef.current) {
+      observerRef.current.observe(element)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [enableLazyLoading, createIntersectionObserver]);
 
   // Performance monitoring
-  const measureRenderTime = useCallback((componentName: string) => {
+<<<<<<< HEAD
+  const measureRenderTime = useCallback((componentName: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const startTime = performance.now();
 
     return () => {
@@ -163,11 +224,15 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
 <<<<<<< HEAD
+<<<<<<< HEAD
         // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
 =======
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Report to analytics if available
       if (window.gtag) {
@@ -175,30 +240,43 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
+<<<<<<< HEAD
         });
 
     };
   }, []);
+=======
+        })}
+    }}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    delay: number
-  ): ((...args: Parameters<T>) => void) => {
+<<<<<<< HEAD
+  const debounce = useCallback(<T extends (...args: any[]) => any>(;
+    func: T,;
+    delay: number;
+  ): ((...args: Parameters<T>) => void) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     let timeoutId: NodeJS.Timeout;
+<<<<<<< HEAD
 
     return (...args: Parameters<T>) => {
+=======
+    
+    return (...args: Parameters<T>)  => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func(...args), delay);
-    };
-  }, []);
+      timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    delay: number
-  ): ((...args: Parameters<T>) => void) => {
+<<<<<<< HEAD
+  const throttle = useCallback(<T extends (...args: any[]) => any>(;
+    func: T,;
+    delay: number;
+  ): ((...args: Parameters<T>) => void) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     let lastCall = 0;
+<<<<<<< HEAD
 
     return (...args: Parameters<T>) => {
       const now = Date.now();
@@ -208,29 +286,43 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     };
   }, []);
+=======
+    
+    return (...args: Parameters<T>)  => {
+      const now = Date.now();
+      if (now - lastCall >= delay) {
+        lastCall = now;
+        func(...args)}
+    }}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Cleanup function
-  const cleanup = useCallback(() => {
-    if (observerRef.current) {
+<<<<<<< HEAD
+  const cleanup = useCallback(() => {;
+    if (observerRef.current) {;
       observerRef.current.disconnect();
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Get current metrics
   const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
 
   // Memoized performance data
-  const performanceData = useMemo(() => ({
-    metrics: getMetrics(),
-    isLowFPS: metricsRef.current.fps < 30,
-    isHighMemory: metricsRef.current.memoryUsage > 100,
-    isSlowRender: metricsRef.current.renderTime > 16
+  const performanceData = useMemo(() => ({;
+    metrics: getMetrics(),;
+    isLowFPS: metricsRef.current.fps < 30,;
+    isHighMemory: metricsRef.current.memoryUsage > 100,;
+    isSlowRender: metricsRef.current.renderTime > 16;
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(() => {
-    return cleanup;
-  }, [cleanup]);
+  useEffect(()  => {
+    return cleanup}, [cleanup]);
 
   return {
     lazyLoad,
@@ -241,11 +333,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     getMetrics,
     performanceData,
     cleanup
-  };
-};
+  }};
 
 // Type declaration for gtag
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag?: (...args: any[]) => void;
 }}}}}}}}}}}}}}}}}}}}
+=======
+
+    gtag?: (...args[])  => void}
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

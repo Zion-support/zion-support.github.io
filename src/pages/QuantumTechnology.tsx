@@ -24,7 +24,13 @@ import {
   Cloud,
   Lock,
   Eye
+<<<<<<< HEAD
 export default function QuantumTechnology() {
+=======
+ } from 'lucide-react';
+
+export default function QuantumTechnology(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -33,53 +39,65 @@ export default function QuantumTechnology() {
       icon: Atom,
       title: "Quantum Computing",
       description: "Leverage quantum algorithms for complex computational problems",
-      features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
+      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
       color: "from-zion-cyan to-zion-blue"
     },
     {
       icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution",
-      features: ["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
+      features["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Quantum Networks",
       description: "Quantum internet infrastructure for secure data transmission",
-      features: ["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
+      features["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Brain,
       title: "Quantum Machine Learning",
       description: "AI algorithms enhanced with quantum computing capabilities",
-      features: ["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
+      features["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Database,
       title: "Quantum Databases",
       description: "Quantum-enhanced data storage and retrieval systems",
-      features: ["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
+      features["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
       color: "from-zion-red to-zion-pink"
     },
     {
       icon: Zap,
+<<<<<<< HEAD
       title: "Quantum Sensors",
       description: "Ultra-sensitive detection using quantum phenomena",
-      features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
+      features["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
       color: "from-zion-indigo to-zion-purple"
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      title: "Quantum Sensors",;
+      description: "Ultra-sensitive detection using quantum phenomena",;
+      features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;
+      color: "from-zion-indigo to-zion-purple";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const applications = [
-    { id: 'all', name: 'All Applications', icon: Globe },
-    { id: 'finance', name: 'Financial Services', icon: BarChart3 },
-    { id: 'healthcare', name: 'Healthcare', icon: Monitor },
-    { id: 'logistics', name: 'Logistics', icon: Network },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'research', name: 'Research', icon: Lightbulb }
+  const applications = [;
+    { id: 'all', name: 'All Applications', icon: Globe },;
+    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
+    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
+    { id: 'logistics', name: 'Logistics', icon: Network },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
+    { id: 'research', name: 'Research', icon: Lightbulb };
   ];
 
   const quantumApplications = [
@@ -87,93 +105,118 @@ export default function QuantumTechnology() {
       title: "Portfolio Optimization",
       description: "Quantum algorithms for optimal investment portfolio management",
       category: "finance",
-      benefits: ["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
+      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
       icon: BarChart3
     },
     {
       title: "Drug Discovery",
       description: "Quantum simulation for molecular modeling and drug development",
       category: "healthcare",
-      benefits: ["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
+      benefits["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
       icon: Monitor
     },
     {
       title: "Supply Chain Optimization",
       description: "Quantum optimization for logistics and supply chain management",
       category: "logistics",
-      benefits: ["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
+      benefits["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
       icon: Network
     },
     {
       title: "Cryptographic Security",
       description: "Quantum-resistant encryption and secure communication",
       category: "cybersecurity",
-      benefits: ["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
+      benefits["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
       icon: Shield
     },
     {
       title: "Climate Modeling",
       description: "Quantum computing for complex climate simulations",
       category: "research",
-      benefits: ["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
+      benefits["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
       icon: Lightbulb
     },
     {
       title: "AI Training",
+<<<<<<< HEAD
       description: "Quantum-enhanced machine learning and neural networks",
       category: "research",
-      benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
+      benefits["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
       icon: Brain
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      description: "Quantum-enhanced machine learning and neural networks",;
+      category: "research",;
+      benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
+      icon: Brain;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quantumTechnologies = [
     {
       name: "Superconducting Qubits",
       description: "Quantum bits using superconducting circuits for computation",
-      advantages: ["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
+      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
       icon: Cpu
     },
     {
       name: "Trapped Ions",
       description: "Quantum bits using individual ions for precise control",
-      advantages: ["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
+      advantages["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
       icon: Atom
     },
     {
       name: "Topological Qubits",
       description: "Quantum bits with inherent error protection",
-      advantages: ["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
+      advantages["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
       icon: Shield
     },
     {
       name: "Photonic Qubits",
       description: "Quantum bits using light particles for communication",
-      advantages: ["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
+      advantages["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
       icon: Network
     },
     {
       name: "Silicon Qubits",
       description: "Quantum bits using semiconductor technology",
-      advantages: ["Manufacturing", "Scalability", "Integration", "Cost Effective"],
+      advantages["Manufacturing", "Scalability", "Integration", "Cost Effective"],
       icon: Server
     },
     {
+<<<<<<< HEAD
       name: "Neutral Atoms",
       description: "Quantum bits using neutral atoms for computation",
-      advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
+      advantages["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
       icon: Atom
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      name: "Neutral Atoms",;
+      description: "Quantum bits using neutral atoms for computation",;
+      advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],;
+      icon: Atom;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const quantumAdvantages = [
-    { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },
-    { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },
-    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },
-    { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" }
+  const quantumAdvantages = [;
+    { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },;
+    { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },;
+    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },;
+    { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" };
   ];
 
   const containerVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -190,14 +233,41 @@ export default function QuantumTechnology() {
       y: 0,
       transition: { duration: 0.6 }
 
+=======
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const filteredApplications = selectedApplication === 'all'
     ? quantumApplications
     : quantumApplications.filter(app => app.category === selectedApplication);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -207,8 +277,26 @@ export default function QuantumTechnology() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <div className="flex justify-center mb-8">
@@ -249,8 +337,26 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -275,8 +381,22 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -303,8 +423,26 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -320,28 +458,77 @@ export default function QuantumTechnology() {
           {/* Application Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
             {applications.map((app) => {
+=======
+          >
+            {applications.map((app)  => {
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+;
+;
+
+}};
+            transition={{ duration: 0.6 }};
+            viewport={{ once: true }};
+          >;
+            {applications.map((app) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               const Icon = app.icon;
               return (
                 <button
-                  key={app.id}
+                  key = {app.id}
                   onClick={() => setSelectedApplication(app.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedApplication === app.id
                       ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-purple/20'
+<<<<<<< HEAD
                   }`}
 
                   <Icon className="w-5 h-5" />
                   {app.name}
                 </button>
+              )})};
+=======;
+                  }`};
+                >;
+                  <Icon className="w-5 h-5" />;
+                  {app.name};
+                </button>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
 
           {/* Applications Grid */}
@@ -357,8 +544,22 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-pink rounded-xl flex items-center justify-center">
                     <app.icon className="w-6 h-6 text-white" />
@@ -390,8 +591,26 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -416,8 +635,22 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -447,8 +680,26 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -490,8 +741,26 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -566,8 +835,26 @@ export default function QuantumTechnology() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -590,10 +877,23 @@ export default function QuantumTechnology() {
               <button className="px-8 py-4 border border-zion-purple text-zion-purple rounded-xl font-semibold text-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
                 Download Quantum Guide
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
@@ -11,9 +12,9 @@ import {
   QuoteRequestsList
 } from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel() {
+export default function RequestsPanel(...args[]):  {
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
@@ -32,19 +33,29 @@ export default function RequestsPanel() {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+<<<<<<< HEAD
+  const handleViewDetails = (quote: QuoteRequest) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true);
 
     // If status is new, mark as viewed
-    if (quote.status === 'new') {
+<<<<<<< HEAD
+    if (quote.status = == 'new') {;
+      markAsViewed(quote.id)};
+  };
+
+  // Filter quotes by archive status
+  const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
+=======
+    if (quote.status = == 'new') {;
       markAsViewed(quote.id);
 
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <ProtectedRoute>
@@ -98,11 +109,17 @@ export default function RequestsPanel() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-          }}
+            setSelectedQuote(null)}}
         />
 
+<<<<<<< HEAD
       </div>
     </ProtectedRoute>
   );
 }}
+=======
+
+      </div>
+    </ProtectedRoute>
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -12,6 +12,7 @@ const cron = require('node-cron');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 class CodeQualityMonitor {
   constructor() {
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.issuesFound = 0;
     this.issuesFixed = 0;
@@ -48,6 +49,40 @@ class CodeQualityMonitor {
     } catch (error) {
       // // // // // // // console.error('Failed to write to log file:', error.message);
     }
+=======
+    this.metrics = {
+  complexity: 0,
+      maintainability: 0,
+      testCoverage: 0,
+      performance: 0,
+  lastUpdated: new Date().toISOString()
+    
+
+};
+    this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage)}
+  async analyzeCodeQuality() {
+    try {
+      this.log('Starting code quality analysis...');
+      
+      // Analyze TypeScript complexity
+      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' });
+      this.metrics.complexity = this.calculateComplexity();
+      this.metrics.maintainability = this.calculateMaintainability();
+      this.metrics.testCoverage = this.calculateTestCoverage();
+      this.metrics.performance = this.calculatePerformance();
+      this.metrics.lastUpdated = new Date().toISOString();
+      
+      this.saveMetrics();
+      this.log('Code quality analysis completed successfully');
+      return this.metrics} catch (error) {
+      this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
+      return null}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
@@ -109,6 +144,7 @@ class CodeQualityMonitor {
         description: `${syntaxErrors.length} syntax errors found`,
         details: syntaxErrors
       });
+<<<<<<< HEAD
 
     // Check for unused imports
     const unusedImports = await this.checkUnusedImports();
@@ -141,9 +177,22 @@ class CodeQualityMonitor {
       });
 
     return issues;
+=======
+      
+      return Math.min(Math.floor(totalComplexity), 100)} catch (error) {
+      return Math.floor(Math.random() * 10) + 1}
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async checkSyntaxErrors() {
     try {
+<<<<<<< HEAD
+      const files = this.getTypeScriptFiles();
+      const totalFiles = files.length;
+      const avgFileSize = files.reduce((acc, file) => {
+        const stats = fs.statSync(file);
+        return acc + stats.size}, 0) / totalFiles;
+=======
       // Use TypeScript compiler to check syntax
       const result = execSync('npx tsc --noEmit --skipLibCheck', {
         cwd: this.projectRoot,
@@ -152,14 +201,32 @@ class CodeQualityMonitor {
       });
       return [];
     } catch (error) {
-      const errorOutput = error.stderr || '';
       const errors = errorOutput.split('\n')
         .filter(line => line.includes('error TS'))
         .map(line => line.trim())
         .filter(line => line.length > 0);
+<<<<<<< HEAD
 
       return errors.slice(0, 20); // Limit to first 20 errors
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      
+      // Lower file size = higher maintainability
+      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
+      return Math.floor(Math.random() * 100) + 50}
+  }
+<<<<<<< HEAD
+  calculateTestCoverage() {
+    // Placeholder for test coverage calculation
+    return Math.floor(Math.random() * 100)}
+  calculatePerformance() {
+    // Placeholder for performance calculation
+    return Math.floor(Math.random() * 100) + 70}
+  getTypeScriptFiles() {
+    const projectRoot = path.resolve(__dirname, '..');
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   async checkUnusedImports() {
     try {
@@ -285,7 +352,14 @@ class CodeQualityMonitor {
 
   async fixSyntaxErrors(errors) {
     this.log('Attempting to fix syntax errors...');
+<<<<<<< HEAD
 
+=======
+    
+    // Create a detailed report
+    const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n\nThese errors require manual attention.`;
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     try {
       // Try to auto-fix with ESLint
       execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --fix', {
@@ -508,10 +582,15 @@ class CodeQualityMonitor {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days
+<<<<<<< HEAD
 
         for (const file of files) {
           if (file.includes('-report.txt')) {
             const filePath = path.join(logsDir, file);
+=======
+        
+        for (const filePath = path.join(logsDir, file);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const stats = fs.statSync(filePath);
 
             if (now - stats.mtime.getTime() > maxAge) {
@@ -541,6 +620,7 @@ class CodeQualityMonitor {
 
   findSourceFiles() {
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const files = [];
 
     function traverse(dir) {
@@ -549,6 +629,7 @@ class CodeQualityMonitor {
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
 
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
@@ -581,6 +662,24 @@ process.on('SIGINT', async () => {
   if (monitor) {
     await monitor.stop();
 
+=======
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          files.push(fullPath)}
+      })};
+    
+    walkDir(projectRoot);
+    return files}
+  saveMetrics() {
+    const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
+}
+const monitor = new CodeQualityMonitor();
+monitor.analyzeCodeQuality().then(metrics => {
+  if (metrics) {
+    console.log('Metrics:', metrics)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 });
 
 process.on('SIGTERM', async () => {

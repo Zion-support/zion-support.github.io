@@ -5,23 +5,28 @@ const ResearchDevelopment = () => {
         {
             title: "Artificial Intelligence & Machine Learning",
             description: "Advancing the frontiers of AI with autonomous systems, neural networks, and intelligent automation.",
-            focus: ["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
+            focus["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
         },
         {
             title: "Quantum Computing",
             description: "Exploring quantum algorithms and applications for solving complex computational problems.",
-            focus: ["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
+            focus["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
         },
         {
             title: "Cybersecurity & Privacy",
             description: "Developing next-generation security solutions and privacy-preserving technologies.",
-            focus: ["Zero-Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
+            focus["Zero-Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
         },
         {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
+<<<<<<< HEAD
             focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
 
+=======
+            focus["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -69,7 +74,6 @@ const ResearchDevelopment = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ResearchDevelopment;
 }

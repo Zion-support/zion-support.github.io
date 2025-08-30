@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead";
+import SEO from "../components/SEOHead";
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import {
   Brain,
@@ -24,28 +24,57 @@ import {
   Lock,
   Cloud,
   Rocket
+<<<<<<< HEAD
 const AllServices2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+=======
+ } from 'lucide-react';
 
-  const categories = [
-    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },
-    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
+<<<<<<< HEAD
+const AllServices2027: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+=======
+const AllServices2027: React.FC = () => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const categories = [;
+    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
+    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
+    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
   ];
 
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: string) => {
+  const getCategoryStats = (categoryId: string)  => {
     if (categoryId === 'All') {
       return {
-        count: INNOVATIVE_SERVICES_2027.length,
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
+              count: innovativeServices2027.length,
+      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
+      }};
+    const services = innovativeServices2027.filter(s => s.category === categoryId);
+          return {
+        count: services.length,
+        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
+        avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
+      }};
+=======
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
+    selectedCategory === 'All' || service.category === selectedCategory;
+  );
+
+  const getCategoryStats = (categoryId: string) => {;
+    if (categoryId === 'All') {;
+      return {;
+        count: INNOVATIVE_SERVICES_2027.length,;
+        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
+        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
 
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
@@ -55,8 +84,10 @@ const AllServices2027: React.FC = () => {
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -75,6 +106,34 @@ const AllServices2027: React.FC = () => {
         duration: 0.5
 
 
+=======
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -92,8 +151,26 @@ const AllServices2027: React.FC = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -152,14 +229,21 @@ const AllServices2027: React.FC = () => {
               specific business challenges and drive innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category) => {
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category)  => {;
+=======;
+              specific business challenges and drive innovation.;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {categories.map((category) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
 
               return (
                 <motion.div
-                  key={category.id}
+                  key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
@@ -180,19 +264,28 @@ const AllServices2027: React.FC = () => {
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div className="flex justify-between">
+<<<<<<< HEAD
                       <span>Avg. Rating:</span>
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
                     </div>
                   </div>
                 </motion.div>
+              )})};
+=======;
+                      <span>Avg. Rating:</span>;
+                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
+                    </div>;
+                  </div>;
+                </motion.div>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className = "py-20 bg-zion-slate-dark">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -207,9 +300,15 @@ const AllServices2027: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+<<<<<<< HEAD
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
             {filteredServices.map((service) => (
+=======
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredServices.map((service)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>
@@ -249,8 +348,14 @@ const AllServices2027: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Leverage the power of artificial intelligence to automate processes,
                 gain insights from data, and create intelligent solutions.
+=======
+                Transform your business with cutting-edge artificial intelligence solutions.
+                From predictive analytics to autonomous systems, our AI services drive innovation
+                and efficiency across all business operations.
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -280,8 +385,14 @@ const AllServices2027: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Protect your digital assets with comprehensive security solutions
                 that detect, prevent, and respond to cyber threats.
+=======
+                Protect your digital assets with enterprise-grade security solutions.
+                Our cybersecurity services provide comprehensive protection against evolving threats
+                while ensuring compliance with industry standards.
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -294,7 +405,71 @@ const AllServices2027: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Security Audits</span>
+                  <span className="text-gray-300">Compliance automation</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Emerging Technology */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Stay ahead of the curve with next-generation technologies. From quantum computing
+                to blockchain solutions, we help you explore and implement cutting-edge innovations
+                that give you a competitive advantage.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Quantum computing access</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Blockchain development</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">IoT and edge computing</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* IT Services */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                  <Code className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">IT Services</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Streamline your IT operations with our comprehensive technology services.
+                From DevOps automation to infrastructure management, we help you build
+                robust, scalable, and efficient technology systems.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">DevOps automation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Cloud infrastructure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Performance optimization</span>
                 </div>
               </div>
             </motion.div>
@@ -304,6 +479,7 @@ const AllServices2027: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -328,17 +504,62 @@ const AllServices2027: React.FC = () => {
               Call Now
             </a>
           </div>
+=======
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+              Choose from our comprehensive portfolio of services and start your digital
+              transformation journey today. Our experts are ready to help you succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/comprehensive-pricing-2027"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
-      </section>
-    </>
+      </section>;
+    </>;
+  )};
+
+// Service Card Component
+const ServiceCard: React.FC<{ service}> = ({ service }) => {
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'AI Services':;
+=======;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </>;
   );
 };
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI Services':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
         return <Shield className="w-5 h-5" />;
@@ -349,13 +570,17 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       case 'Telecommunications':
         return <Signal className="w-5 h-5" />;
       default:
+<<<<<<< HEAD
         return <Users className="w-5 h-5" />;
 
+=======
+        return <Users className = "w-5 h-5" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
     <motion.div
-      variants={itemVariants}
+      variants = {itemVariants}
       className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
 
       {/* Service Image */}
@@ -387,7 +612,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 2).map((feature: string, index: number) => (
+            {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
@@ -422,12 +647,29 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           <Link
             to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
+<<<<<<< HEAD
 
+=======
+          >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Contact
           </Link>
         </div>
-      </div>
-    </motion.div>
+      </div>;
+    </motion.div>;
+  )};
+=======
+            Contact;
+          </Link>;
+        </div>;
+      </div>;
+    </motion.div>;
   );
 };
+<<<<<<< HEAD
 export default AllServices2027;}}}}}}}
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export default AllServices2027;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

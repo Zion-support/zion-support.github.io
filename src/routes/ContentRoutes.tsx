@@ -1,5 +1,5 @@
 
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate  } from 'react-router-dom.ts';
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
@@ -11,7 +11,7 @@ import Careers from "@/pages/Careers";
 import FAQ from "@/pages/FAQ";
 import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
+import { SitemapPage  } from '@/components/SitemapPage';
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
 import Cookies from "@/pages/Cookies";

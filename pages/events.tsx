@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export default function Events() {
+=======
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react'
+
+
+export default function Events(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const upcomingEvents = [
 		{
 			id: 1,
@@ -196,8 +205,8 @@ import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export 
 							Missed an event? Watch recordings and access materials
 						</p>
 					</div>
-					<div className="grid gap-6 lg:grid-cols-2">
-						{pastEvents.map((event) => (
+					<div className="grid gap-6 lg: grid-cols-2">
+						{pastEvents.map((event)  => (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-lg p-6">
 								<div className="flex items-start justify-between">
 									<div>
@@ -255,6 +264,7 @@ import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export 
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 
 							View Services <span aria-hidden="true">→</span>
+<<<<<<< HEAD
 						</Link>
 					</div>
 				</div>
@@ -262,3 +272,12 @@ import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export 
 		</>
 	)
 }}}}
+=======
+						</Link>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

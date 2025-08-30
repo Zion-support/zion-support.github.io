@@ -103,6 +103,5 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousResearch;

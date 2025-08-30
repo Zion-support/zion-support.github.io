@@ -1,8 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  Mail,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { Mail,
   Lock,
   Eye,
   EyeOff,
@@ -12,7 +11,13 @@ import {
   Cloud,
   Zap,
   ArrowRight
+<<<<<<< HEAD
 export default function Login() {
+=======
+ } from 'lucide-react'
+
+export default function Login(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -20,6 +25,7 @@ export default function Login() {
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+<<<<<<< HEAD
   const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,8 +46,13 @@ export default function Login() {
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
+=======
+  const [errors, setErrors] = useState<Record<string, any>>({})
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
 
     if (!validateForm()) return
@@ -54,6 +65,7 @@ export default function Login() {
 
       // Success - redirect or show success message
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.log('Login successful:', formData)
 
     } catch (error) {
@@ -64,6 +76,12 @@ export default function Login() {
     } catch (error) {
       // // // // // // // console.error('Login error:', error)
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      // // // // console.log('Login successful:', formData)
+      
+    } catch (error) {
+      // // // // console.error('Login error:', error)
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     } finally {
       setIsSubmitting(false)
 
@@ -102,8 +120,26 @@ export default function Login() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
 
@@ -137,9 +173,36 @@ export default function Login() {
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="max-w-md mx-auto"
 
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
@@ -296,9 +359,36 @@ export default function Login() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="text-center mb-16"
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -311,9 +401,36 @@ export default function Login() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -326,9 +443,36 @@ export default function Login() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -341,9 +485,36 @@ export default function Login() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
@@ -354,6 +525,7 @@ export default function Login() {
                   Manage cloud infrastructure, monitor costs, and optimize resource allocation
                 </p>
               </motion.div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -361,3 +533,12 @@ export default function Login() {
     </>
   )
 }}}}}}}
+=======
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

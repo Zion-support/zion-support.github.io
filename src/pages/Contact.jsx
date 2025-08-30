@@ -28,7 +28,7 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     value: 'kleber@ziontechgroup.com',
-    description: 'Send us a message anytime',
+    description: 'Send us a message time',
     action: 'mailto:kleber@ziontechgroup.com',
     color: 'from-purple-500 to-pink-500'
   },
@@ -113,18 +113,18 @@ const contactFormFields = [
     placeholder: 'Enter your phone number (optional)'
   },
   {
-    name: 'company',
-    label: 'Company',
+    name: 'comp',
+    label: 'Comp',
     type: 'text',
     required: false,
-    placeholder: 'Enter your company name (optional)'
+    placeholder: 'Enter your comp name (optional)'
   },
   {
     name: 'service',
     label: 'Service Interest',
     type: 'select',
     required: true,
-    options: [
+    options[
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -143,7 +143,7 @@ export default function Contact() {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     service: '',
     message: ''
   });
@@ -155,8 +155,7 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -176,12 +175,10 @@ export default function Contact() {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         service: '',
         message: ''
-      });
-    }, 3000);
-  };
+      })}, 3000)};
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -195,15 +192,60 @@ export default function Contact() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <MessageSquare className="w-10 h-10 text-white" />
@@ -226,8 +268,26 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -241,9 +301,36 @@ export default function Contact() {
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
 
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -257,8 +344,8 @@ export default function Contact() {
                 {method.action && (
                   <a
                     href={method.action}
-                    target={method.action.startsWith('http') ? '_blank' : undefined}
-                    rel={method.action.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={method.action.startsWith('http') ? '_blank' : null}
+                    rel={method.action.startsWith('http') ? 'noopener noreferrer' : null}
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
 
                     <span className="text-sm font-medium">Contact</span>
@@ -277,8 +364,26 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
 
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
@@ -289,8 +394,26 @@ export default function Contact() {
 
               {submitSuccess ? (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
 
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -404,18 +527,41 @@ export default function Contact() {
               )}
             </motion.div>
 
-            {/* Company Info */}
+            {/* Comp Info */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="space-y-8"
 
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
                 <p className="text-zion-slate-light leading-relaxed mb-6">
+<<<<<<< HEAD
                   We are a leading technology company specializing in AI, cybersecurity, cloud solutions,
                   and digital transformation. Our team of experts is dedicated to helping businesses
+=======
+                  We are a leading technology comp specializing in AI, cybersecurity, cloud solutions, 
+                  and digital transformation. Our team of experts is dedicated to helping businesses 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   leverage cutting-edge technology to achieve their goals.
                 </p>
                 <div className="flex items-center gap-3 text-zion-cyan">
@@ -472,8 +618,26 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -501,5 +665,9 @@ export default function Contact() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

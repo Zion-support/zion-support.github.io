@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -34,6 +34,7 @@ export default function TranslationManager() {
                     return Object.keys(obj).reduce((acc, key) => {
                         const pre = prefix.length ? `${prefix}.` : '';
                         if (typeof obj[key] === 'object' && obj[key] !== null) {
+<<<<<<< HEAD
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
 
                         else {
@@ -44,26 +45,34 @@ export default function TranslationManager() {
                 };
                 currentTranslations[lang.code] = flattenObject(res);
 
+=======
+                            Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))}
+                        else {
+                            acc[`${pre}${key}`] = obj[key]}
+                        return acc}, {})};
+                currentTranslations[lang.code] = flattenObject(res)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         setTranslations(currentTranslations);
         // Get all unique keys across all languages
         const allKeys = new Set();
         Object.values(currentTranslations).forEach(langTranslations => {
-            Object.keys(langTranslations).forEach(key => allKeys.add(key));
-        });
-        setFilteredKeys(Array.from(allKeys));
-    }, [selectedNamespace, i18n]);
+            Object.keys(langTranslations).forEach(key => allKeys.add(key))});
+        setFilteredKeys(Array.from(allKeys))}, [selectedNamespace, i18n]);
     // Filter keys based on search query
     useEffect(() => {
         if (!searchQuery.trim()) {
             // Get all unique keys across all languages
             const allKeys = new Set();
             Object.values(translations).forEach(langTranslations => {
-                Object.keys(langTranslations).forEach(key => allKeys.add(key));
-            });
+                Object.keys(langTranslations).forEach(key => allKeys.add(key))});
             setFilteredKeys(Array.from(allKeys));
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const query = searchQuery.toLowerCase().trim();
         const filtered = [];
         // Search in keys and values
@@ -71,24 +80,28 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
+<<<<<<< HEAD
                     filtered.push(key);
 
             });
         });
         setFilteredKeys([...new Set(filtered)]);
     }, [searchQuery, translations]);
+=======
+                    filtered.push(key)}
+            })});
+        setFilteredKeys([...new Set(filtered)])}, [searchQuery, translations]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleEdit = (key) => {
         setEditingKey(key);
         // Initialize edited translations for this key
         const initialEdits = { /* empty */ };
         supportedLanguages.forEach(lang => {
-            initialEdits[lang.code] = translations[lang.code]?.[key] || '';
-        });
+            initialEdits[lang.code] = translations[lang.code]?.[key] || ''});
         setEditedTranslations({
             ...editedTranslations,
             [key]: initialEdits
-        });
-    };
+        })};
     const handleSave = (key) => {
         setIsSaving(true);
         // In a real application, you would save these to your backend
@@ -97,38 +110,49 @@ export default function TranslationManager() {
             const updatedTranslations = { ...translations };
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
+<<<<<<< HEAD
                     updatedTranslations[lang.code] = { /* empty */ };
 
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
             });
+=======
+                    updatedTranslations[lang.code] = {}}
+                updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setTranslations(updatedTranslations);
             setEditingKey(null);
             setIsSaving(false);
             toast({
                 title: t("translation.saved"),
                 description: t("translation.changes_saved"),
-            });
-        }, 1000);
-    };
+            })}, 1000)};
     const handleTranslateKey = async (key) => {
         // Find first non-empty translation to use as source
-        let sourceLanguage = 'en';
         let sourceText = '';
         for (const lang of supportedLanguages.map(l => l.code)) {
             if (translations[lang]?.[key]) {
                 sourceLanguage = lang;
                 sourceText = translations[lang][key];
+<<<<<<< HEAD
                 break;
 
 
+=======
+                break}
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (!sourceText) {
             toast({
                 title: t('translation.no_content'),
                 description: t('translation.add_content_first'),
                 variant: "destructive",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage);
             if (error) {
@@ -137,8 +161,12 @@ export default function TranslationManager() {
                     description: error,
                     variant: "destructive",
                 });
+<<<<<<< HEAD
                 return;
 
+=======
+                return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Update edited translations with auto-translated content
             setEditedTranslations({
                 ...editedTranslations,
@@ -147,8 +175,12 @@ export default function TranslationManager() {
             toast({
                 title: t('translation.translation_success'),
                 description: t('translation.content_translated'),
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error(`Error translating key ${key}:`, error);
@@ -159,11 +191,15 @@ export default function TranslationManager() {
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
     };
     const handleCancel = () => {
         setEditingKey(null);
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleChange = (lang, key, value) => {
         setEditedTranslations({
@@ -171,14 +207,18 @@ export default function TranslationManager() {
             [key]: {
                 ...editedTranslations[key],
                 [lang]: value
+<<<<<<< HEAD
 
         });
     };
+=======
+            }
+        })};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getMissingLanguages = (key) => {
         return supportedLanguages
             .map(lang => lang.code)
-            .filter(lang => !translations[lang]?.[key]);
-    };
+            .filter(lang => !translations[lang]?.[key])};
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
 
@@ -224,7 +264,25 @@ export default function TranslationManager() {
                                     <span>{lang.name}</span>
                                   </div>
                                   {editedTranslations[key][lang.code]?.includes('\n') ||
-                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key, e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key, e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
+                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {
+  (e) => handleChange(lang.code, key,
+  e.target.value)
+
+
+
+
+
+
+} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {
+  (e) => handleChange(lang.code, key,
+  e.target.value)
+
+
+
+
+
+
+} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
                                 </div>))}
                             </div>
                             <div className="flex gap-2 mt-4">
@@ -271,6 +329,11 @@ export default function TranslationManager() {
           </CardContent>
         </Card>
       </main>
+<<<<<<< HEAD
 
     </>);
 </Card></Card></Card>}}}}}}}}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

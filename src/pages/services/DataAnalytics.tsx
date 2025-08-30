@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart  } from 'lucide-react';
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -27,9 +33,14 @@ import {
   Cpu,
   Network,
   FileText
+<<<<<<< HEAD
 import { SEO } from '../../components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '../../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function DataAnalytics() {
+export default function DataAnalytics(...args: []):  {
   const features = [
     {
       icon: Database,
@@ -44,6 +55,7 @@ export default function DataAnalytics() {
     {
       icon: BarChart3,
       title: 'Real-time Dashboards',
+<<<<<<< HEAD
       description: 'Interactive visualizations that provide instant insights into your business performance.'
     },
     {
@@ -51,6 +63,15 @@ export default function DataAnalytics() {
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
 
+=======
+      description: 'Interactive visualizations that provide instant insights into your business performance.';
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Reporting',;
+      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const solutions = [
@@ -71,6 +92,7 @@ export default function DataAnalytics() {
       description: 'Discover hidden patterns and relationships in large datasets',
       icon: Search,
       benefits: ['Pattern recognition', 'Anomaly detection', 'Customer segmentation', 'Market insights']
+<<<<<<< HEAD
     },
     {
       title: 'Performance Analytics',
@@ -78,6 +100,15 @@ export default function DataAnalytics() {
       icon: Activity,
       benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment']
 
+=======
+    },;
+    {;
+      title: 'Performance Analytics',;
+      description: 'Monitor and optimize business performance across all key metrics',;
+      icon: Activity,;
+      benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -98,6 +129,7 @@ export default function DataAnalytics() {
       description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
       icon: Activity,
       metrics: ['Patient Outcomes', 'Resource Utilization', 'Treatment Success Rate', 'Cost Efficiency']
+<<<<<<< HEAD
     },
     {
       industry: 'Manufacturing',
@@ -105,6 +137,15 @@ export default function DataAnalytics() {
       icon: Cpu,
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction']
 
+=======
+    },;
+    {;
+      industry: 'Manufacturing',;
+      description: 'Predictive maintenance, quality control, and production optimization',;
+      icon: Cpu,;
+      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -121,6 +162,7 @@ export default function DataAnalytics() {
     {
       icon: Eye,
       title: 'Better Visibility',
+<<<<<<< HEAD
       description: 'Gain comprehensive visibility into all aspects of your business performance'
     },
     {
@@ -128,6 +170,15 @@ export default function DataAnalytics() {
       title: 'Strategic Planning',
       description: 'Develop informed strategies and plans based on predictive analytics and trends'
 
+=======
+      description: 'Gain comprehensive visibility into all aspects of your business performance';
+    },;
+    {;
+      icon: Target,;
+      title: 'Strategic Planning',;
+      description: 'Develop informed strategies and plans based on predictive analytics and trends';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -142,8 +193,26 @@ export default function DataAnalytics() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -176,8 +245,26 @@ export default function DataAnalytics() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
 
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -214,8 +301,26 @@ export default function DataAnalytics() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="relative"
 
@@ -258,8 +363,26 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -272,13 +395,40 @@ export default function DataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -292,12 +442,88 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* Core Solutions */}
+      {/* Industries */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our data analytics solutions are tailored for specific industries, 
+              providing relevant insights and actionable intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {industries.map((industry, index)  => (
+              <motion.div
+                key={industry.name}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
+                  <industry.icon className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                <p className="text-sm text-slate-400">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services & Pricing */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -310,13 +536,40 @@ export default function DataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
 
                 <div className="flex items-center space-x-4 mb-6">
@@ -344,8 +597,26 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -362,9 +633,36 @@ export default function DataAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
 
                 <div className="flex items-center space-x-4 mb-6">
@@ -392,8 +690,26 @@ export default function DataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -410,9 +726,36 @@ export default function DataAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 text-center"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -430,8 +773,26 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -468,9 +829,36 @@ export default function DataAnalytics() {
             ].map((phase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -488,8 +876,26 @@ export default function DataAnalytics() {
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -504,12 +910,12 @@ export default function DataAnalytics() {
                 Start Your Analytics Journey
               </button>
               <button className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-                Schedule Consultation
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Consultation;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}}}}}}

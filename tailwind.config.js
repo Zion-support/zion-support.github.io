@@ -33,11 +33,12 @@ export default {
         'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
         'zion-purple-light': '#a855f7',
-        'zion-cyan': '#22ddd2',
-        'zion-cyan-light': '#67e8e0',
-        'zion-slate': '#475569',
-        'zion-slate-dark': '#334155',
-        'zion-slate-light': '#94a3b8',
+        // Added brand tokens used by header/footer
+        'zion-cyan': '#06b6d4',
+        'zion-cyan-light': '#22d3ee',
+        'zion-slate-dark': '#0b1220',
+        'zion-slate': '#111827',
+        'zion-slate-light': '#1f2937',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
@@ -146,5 +147,18 @@ export default {
       },
     },
   },
+<<<<<<< HEAD
   plugins: [],
 }
+=======
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+  darkMode: 'class',
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

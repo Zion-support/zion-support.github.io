@@ -576,13 +576,19 @@ import {
   Shield,
   Zap,
   Brain
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const infrastructureSolutions = [
   {
     id: 1,
     title: "Network Infrastructure",
     description: "Comprehensive network design, implementation, and management solutions.",
     icon: Network,
-    features: [
+    features[
       "Network design",
       "Implementation",
       "Management",
@@ -591,14 +597,14 @@ const infrastructureSolutions = [
     price: "From $100,000",
     timeline: "16-28 weeks",
     category: "Networking",
-    technologies: ["Network Design", "Implementation", "Management", "Optimization"]
+    technologies["Network Design", "Implementation", "Management", "Optimization"]
   },
   {
     id: 2,
     title: "Server Infrastructure",
     description: "Robust server infrastructure design and deployment solutions.",
     icon: Server,
-    features: [
+    features[
       "Server design",
       "Deployment",
       "Management",
@@ -607,14 +613,14 @@ const infrastructureSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Servers",
-    technologies: ["Server Design", "Deployment", "Management", "Maintenance"]
+    technologies["Server Design", "Deployment", "Management", "Maintenance"]
   },
   {
     id: 3,
     title: "Storage Infrastructure",
     description: "Scalable storage solutions for enterprise data management.",
     icon: Database,
-    features: [
+    features[
       "Storage design",
       "Data management",
       "Backup solutions",
@@ -623,14 +629,14 @@ const infrastructureSolutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Storage",
-    technologies: ["Storage Design", "Data Management", "Backup", "Recovery"]
+    technologies["Storage Design", "Data Management", "Backup", "Recovery"]
   },
   {
     id: 4,
     title: "Cloud Infrastructure",
     description: "Hybrid and multi-cloud infrastructure solutions.",
     icon: Cloud,
-    features: [
+    features[
       "Cloud design",
       "Migration",
       "Management",
@@ -639,14 +645,14 @@ const infrastructureSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Cloud",
-    technologies: ["Cloud Design", "Migration", "Management", "Optimization"]
+    technologies["Cloud Design", "Migration", "Management", "Optimization"]
   },
   {
     id: 5,
     title: "Security Infrastructure",
     description: "Comprehensive security infrastructure and compliance solutions.",
     icon: Shield,
-    features: [
+    features[
       "Security design",
       "Implementation",
       "Monitoring",
@@ -655,14 +661,14 @@ const infrastructureSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Security",
-    technologies: ["Security Design", "Implementation", "Monitoring", "Compliance"]
+    technologies["Security Design", "Implementation", "Monitoring", "Compliance"]
   },
   {
     id: 6,
     title: "Data Center Infrastructure",
     description: "Modern data center design and implementation solutions.",
     icon: Building,
-    features: [
+    features[
       "Data center design",
       "Implementation",
       "Management",
@@ -671,10 +677,17 @@ const infrastructureSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Data Center",
+<<<<<<< HEAD
     technologies: ["Data Center Design", "Implementation", "Management", "Optimization"]
 
+=======
+    technologies["Data Center Design", "Implementation", "Management", "Optimization"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const infrastructureTechnologies = [
   {
     name: "Network Technologies",
@@ -709,7 +722,7 @@ const infrastructureTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed comprehensive IT infrastructure upgrade for 50+ global facilities",
     solution: "Built modern IT infrastructure with network, server, and storage solutions",
@@ -718,7 +731,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required secure and compliant IT infrastructure for regulatory requirements",
     solution: "Implemented secure IT infrastructure with compliance and security solutions",
@@ -727,7 +740,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Needed reliable IT infrastructure for patient care systems",
     solution: "Built robust IT infrastructure with high availability and security",
@@ -772,26 +785,31 @@ const infrastructureBenefits = [
     title: "Improved Performance",
     description: "Modern infrastructure provides better performance and reliability",
     icon: Zap,
-    examples: ["Faster systems", "Better reliability", "Improved efficiency", "Enhanced user experience"]
+    examples["Faster systems", "Better reliability", "Improved efficiency", "Enhanced user experience"]
   },
   {
     title: "Cost Reduction",
     description: "Optimized infrastructure reduces operational costs",
     icon: TrendingUp,
-    examples: ["Lower maintenance", "Better efficiency", "Reduced downtime", "Optimized resources"]
+    examples["Lower maintenance", "Better efficiency", "Reduced downtime", "Optimized resources"]
   },
   {
     title: "Enhanced Security",
     description: "Modern infrastructure provides better security and compliance",
     icon: Shield,
-    examples: ["Better security", "Compliance", "Risk reduction", "Data protection"]
+    examples["Better security", "Compliance", "Risk reduction", "Data protection"]
   },
   {
     title: "Scalability",
     description: "Flexible infrastructure supports business growth",
     icon: Rocket,
+<<<<<<< HEAD
     examples: ["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
 
+=======
+    examples["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ITInfrastructure() {
@@ -816,15 +834,60 @@ export default function ITInfrastructure() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Server className="w-10 h-10 text-white" />
@@ -862,8 +925,26 @@ export default function ITInfrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -877,9 +958,36 @@ export default function ITInfrastructure() {
             {infrastructureBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -908,8 +1016,26 @@ export default function ITInfrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -923,9 +1049,36 @@ export default function ITInfrastructure() {
             {infrastructureTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -955,8 +1108,26 @@ export default function ITInfrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -970,9 +1141,36 @@ export default function ITInfrastructure() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -999,8 +1197,26 @@ export default function ITInfrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -1031,9 +1247,36 @@ export default function ITInfrastructure() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -1088,8 +1331,26 @@ export default function ITInfrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -1103,9 +1364,36 @@ export default function ITInfrastructure() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -1113,7 +1401,7 @@ export default function ITInfrastructure() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1149,8 +1437,26 @@ export default function ITInfrastructure() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -1178,5 +1484,9 @@ export default function ITInfrastructure() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

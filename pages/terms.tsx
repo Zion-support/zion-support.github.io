@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export default function Terms() {
+=======
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react'
+
+
+export default function Terms(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+			<section className = "bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -72,15 +81,15 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export 
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Use the materials for any commercial purpose
+									Use the materials for  commercial purpose
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Attempt to reverse engineer any software
+									Attempt to reverse engineer  software
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Remove any copyright or proprietary notations
+									Remove  copyright or proprietary notations
 								</li>
 							</ul>
 						</div>
@@ -167,7 +176,7 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export 
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">7. Limitation of Liability</h2>
 							<p className="text-gray-600 mb-4">
-								In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+								In no event shall Zion Tech Group or its suppliers be liable for  damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
 							</p>
 							<p className="text-gray-600">
 								Our total liability shall not exceed the amount paid by you for the specific service in question.
@@ -233,7 +242,7 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export 
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
 							<p className="text-gray-600">
-								Zion Tech Group reserves the right to revise these terms of service at any time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+								Zion Tech Group reserves the right to revise these terms of service at  time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
 							</p>
 						</div>
 
@@ -251,7 +260,7 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export 
 						Questions About Our Terms?
 					</h2>
 					<p className="text-gray-600 mb-6">
-						We're here to clarify any questions about our terms of service.
+						We're here to clarify  questions about our terms of service.
 					</p>
 					<Link
 						to="/contact"
@@ -259,9 +268,19 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export 
 
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 					</Link>
 				</div>
 			</section>
 		</>
 	)
 }}
+=======
+					</Link>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

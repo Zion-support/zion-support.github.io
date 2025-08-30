@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AISupplyChainOptimization() {
+export default function AISupplyChainOptimization(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
-        <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
+        <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
       </Helmet>
 
@@ -62,7 +69,7 @@ export default function AISupplyChainOptimization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -93,8 +100,13 @@ export default function AISupplyChainOptimization() {
                   icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
+<<<<<<< HEAD
 
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -119,7 +131,7 @@ export default function AISupplyChainOptimization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Demand Forecasting",
@@ -156,8 +168,13 @@ export default function AISupplyChainOptimization() {
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
+<<<<<<< HEAD
 
               ].map((area, index) => (
+=======
+                }
+              ].map((area, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -190,7 +207,7 @@ export default function AISupplyChainOptimization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Machine Learning",
@@ -227,8 +244,13 @@ export default function AISupplyChainOptimization() {
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
+<<<<<<< HEAD
 
               ].map((capability, index) => (
+=======
+                }
+              ].map((capability, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
@@ -288,7 +310,7 @@ export default function AISupplyChainOptimization() {
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -313,7 +335,7 @@ export default function AISupplyChainOptimization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -334,8 +356,13 @@ export default function AISupplyChainOptimization() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
+<<<<<<< HEAD
 
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -368,6 +395,7 @@ export default function AISupplyChainOptimization() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
+<<<<<<< HEAD
 
                 Explore All Services
               </Link>
@@ -376,5 +404,15 @@ export default function AISupplyChainOptimization() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

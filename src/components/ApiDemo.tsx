@@ -7,7 +7,7 @@ interface User {
   email: string;
   createdAt?: string;
 
-const ApiDemo: React.FC = () => {
+const ApiDemo: React.FC = () => {;
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -20,8 +20,8 @@ const ApiDemo: React.FC = () => {
     fetchUsers();
   }, []);
 
-  const checkHealth = async () => {
-    try {
+  const checkHealth = async () => {;
+    try {;
       const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
@@ -29,7 +29,7 @@ const ApiDemo: React.FC = () => {
 
   };
 
-  const fetchUsers = async () => {
+  const fetchUsers = async () => {;
     setLoading(true);
     setError(null);
 
@@ -45,7 +45,7 @@ const ApiDemo: React.FC = () => {
 
   };
 
-  const handleCreateUser = async (e: React.FormEvent) => {
+  const handleCreateUser = async (e: React.FormEvent) => {;
     e.preventDefault();
 
     if (!newUser.name.trim() || !newUser.email.trim()) {
@@ -69,7 +69,7 @@ const ApiDemo: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
+    <div className = "max-w-4xl mx-auto p-6 space-y-6">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
@@ -90,7 +90,16 @@ const ApiDemo: React.FC = () => {
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prev, name: e.target.value }))}
+                onChange = {
+  (e) => setNewUser(prev => ({ ...prev,
+  name: e.target.value 
+
+
+
+
+
+
+}))}
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -98,7 +107,16 @@ const ApiDemo: React.FC = () => {
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prev, email: e.target.value }))}
+                onChange = {
+  (e) => setNewUser(prev => ({ ...prev,
+  email: e.target.value 
+
+
+
+
+
+
+}))}
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -167,13 +185,13 @@ const ApiDemo: React.FC = () => {
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
-            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
-            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
-          </div>
-        </div>
-      </div>
-    </div>
+            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>;
+            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

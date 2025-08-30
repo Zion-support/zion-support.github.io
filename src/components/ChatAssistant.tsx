@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   MessageCircle,
@@ -14,12 +15,28 @@ import {
   FileText,
   Video,
   Smile,
+=======
+import { 
+  MessageCircle, 
+  X, 
+  Send, 
+  Bot, 
+  User, 
+  Sparkles,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Settings,
+  Mic,
+  MicOff,
+  Paperclip,
+  Download,
+  RefreshCw,
   Zap,
   Brain,
-  TrendingUp,
   Lightbulb,
+  TrendingUp,
+  Shield,
   Clock,
+<<<<<<< HEAD
   CheckCircle,
   AlertCircle,
   Loader2,
@@ -30,59 +47,98 @@ import {
   Volume2,
   VolumeX
 interface Message {
+=======
+  Star
+} from 'lucide-react';
+
+interface ChatMessage {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: Date;
   isTyping?: boolean;
-  attachments?: Array<{
-    type: 'image' | 'file' | 'video';
-    url: string;
-    name: string;
-    size?: string;
-  }>;
   metadata?: {
     confidence?: number;
     sources?: string[];
     suggestions?: string[];
+    actionRequired?: boolean;
   };
 
-interface ChatAssistantProps {
+interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
+<<<<<<< HEAD
   language?: string;
 
 export function ChatAssistant({
   enabled = true,
+=======
+  maxMessages?: number;
+  enableVoice?: boolean;
+  enableFileUpload?: boolean;
+  enableSuggestions?: boolean;
+}
+
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({ 
+  enabled = true, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   position = 'bottom-right',
   theme = 'auto',
-  language = 'en'
-}: ChatAssistantProps) {
+  maxMessages = 100,
+  enableVoice = false,
+  enableFileUpload = false,
+  enableSuggestions = true
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [chatHistory, setChatHistory] = useState<Message[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(theme);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<any>(null);
 
-  // Initialize speech recognition
+  // Auto-scroll to bottom when new messages arrive
+  const scrollToBottom = useCallback(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
   useEffect(() => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    scrollToBottom();
+  }, [messages, scrollToBottom]);
+
+  // Theme management
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+      
+      const handleChange = (e: MediaQueryListEvent) => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
+    }
+  }, [theme]);
+
+  // Voice recognition setup
+  useEffect(() => {
+    if (enableVoice && 'webkitSpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = language;
+      recognitionRef.current.lang = 'en-US';
 
       recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
@@ -98,74 +154,73 @@ export function ChatAssistant({
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setIsListening(false);
       };
+<<<<<<< HEAD
 
   }, [language]);
+=======
+    }
+  }, [enableVoice]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Initialize with welcome message
   useEffect(() => {
     if (enabled && messages.length === 0) {
-      const welcomeMessage: Message = {
+      const welcomeMessage: ChatMessage = {
         id: 'welcome',
         type: 'assistant',
-        content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
+        content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
         metadata: {
           suggestions: [
-            'Tell me about your AI solutions',
-            'What quantum computing services do you offer?',
-            'How can I get started with your platform?',
-            'What are your pricing plans?'
+            'Tell me about your services',
+            'Help me with pricing',
+            'Schedule a consultation',
+            'Technical support'
           ]
 
       };
       setMessages([welcomeMessage]);
+<<<<<<< HEAD
       setSuggestions(welcomeMessage.metadata?.suggestions || []);
 
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [enabled, messages.length]);
 
-  // Auto-scroll to bottom
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  // Handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
-
-  // Handle send message
-  const handleSendMessage = useCallback(async () => {
+  const handleSendMessage = async () => {
     if (!inputValue.trim() || isProcessing) return;
 
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
+    const userMessage: ChatMessage = {
+      id: Date.now().toString(),
       type: 'user',
-      content: inputValue.trim(),
+      content: inputValue,
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setChatHistory(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
     setIsProcessing(true);
 
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponse = generateAIResponse(inputValue.trim());
-      const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
+    try {
+      // Simulate AI response
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      const aiMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: aiResponse.content,
-        timestamp: new Date(),
-        metadata: aiResponse.metadata
+        content: `I received your message: "${userMessage.content}". This is a simulated response. In a real implementation, this would connect to an AI service.`,
+        timestamp: new Date()
       };
 
-      setMessages(prev => [...prev, assistantMessage]);
-      setChatHistory(prev => [...prev, assistantMessage]);
-      setSuggestions(aiResponse.metadata?.suggestions || []);
+      setMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      console.error('Error processing message:', error);
+    } finally {
       setIsTyping(false);
       setIsProcessing(false);
+<<<<<<< HEAD
     }, 1000 + Math.random() * 2000); // Random delay for realism
   }, [inputValue, isProcessing]);
 
@@ -257,26 +312,32 @@ export function ChatAssistant({
 
       };
 
+=======
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
-    setInputValue(suggestion);
-    inputRef.current?.focus();
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    setIsMinimized(false);
   };
 
+<<<<<<< HEAD
   // Toggle speech recognition
   const toggleSpeechRecognition = () => {
     if (!recognitionRef.current) {
       alert('Speech recognition is not supported in your browser');
       return;
+=======
+  const minimizeChat = () => {
+    setIsMinimized(!isMinimized);
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    if (isListening) {
-      recognitionRef.current.stop();
-      setIsListening(false);
-    } else {
-      recognitionRef.current.start();
+  const startVoiceInput = () => {
+    if (recognitionRef.current) {
       setIsListening(true);
+<<<<<<< HEAD
 
   };
 
@@ -315,6 +376,19 @@ export function ChatAssistant({
     URL.revokeObjectURL(url);
   };
 
+=======
+      recognitionRef.current.start();
+    }
+  };
+
+  const stopVoiceInput = () => {
+    if (recognitionRef.current) {
+      setIsListening(false);
+      recognitionRef.current.stop();
+    }
+  };
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   if (!enabled) return null;
 
   const positionClasses = {
@@ -324,6 +398,7 @@ export function ChatAssistant({
     'top-left': 'top-4 left-4'
   };
 
+<<<<<<< HEAD
   if (!isOpen) {
     return (
       <motion.button
@@ -394,12 +469,46 @@ export function ChatAssistant({
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
                 title="Close"
 
+=======
+  return (
+    <div className={`fixed ${positionClasses[position]} z-50`}>
+      {/* Chat Toggle Button */}
+      {!isOpen && (
+        <button
+          onClick={toggleChat}
+          className="bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan-light transition-all duration-300 hover:scale-110"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </button>
+      )}
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-700 w-80 h-96 flex flex-col">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-700">
+            <div className="flex items-center space-x-2">
+              <Bot className="w-5 h-5 text-zion-cyan" />
+              <span className="font-semibold text-zinc-900 dark:text-white">AI Assistant</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={minimizeChat}
+                className="text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+              >
+                <Settings className="w-4 h-4" />
+              </button>
+              <button
+                onClick={toggleChat}
+                className="text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <X className="w-4 h-4" />
               </button>
             </div>
           </div>
-        </div>
 
+<<<<<<< HEAD
         {/* Settings Panel */}
         <AnimatePresence>
           {showSettings && (
@@ -522,10 +631,44 @@ export function ChatAssistant({
                       {suggestion}
                     </motion.button>
                   ))}
+=======
+          {/* Messages */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-xs p-3 rounded-lg ${
+                    message.type === 'user'
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white'
+                  }`}
+                >
+                  <p className="text-sm">{message.content}</p>
+                  <p className="text-xs opacity-70 mt-1">
+                    {message.timestamp.toLocaleTimeString()}
+                  </p>
+                </div>
+              </div>
+            ))}
+            {isTyping && (
+              <div className="flex justify-start">
+                <div className="bg-zinc-100 dark:bg-zinc-800 p-3 rounded-lg">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
             )}
+            <div ref={messagesEndRef} />
+          </div>
 
+<<<<<<< HEAD
             {/* Input */}
             <div className="p-4 border-t border-gray-200">
               <div className="flex items-center gap-2">
@@ -566,10 +709,48 @@ export function ChatAssistant({
                   )}
                 </button>
               </div>
+=======
+          {/* Input */}
+          <div className="p-4 border-t border-zinc-200 dark:border-zinc-700">
+            <div className="flex items-center space-x-2">
+              {enableVoice && (
+                <button
+                  onClick={isListening ? stopVoiceInput : startVoiceInput}
+                  className={`p-2 rounded-lg ${
+                    isListening
+                      ? 'bg-red-500 text-white'
+                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
+                  }`}
+                >
+                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                </button>
+              )}
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                placeholder="Type your message..."
+                className="flex-1 p-2 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                disabled={isProcessing}
+              />
+              <button
+                onClick={handleSendMessage}
+                disabled={!inputValue.trim() || isProcessing}
+                className="p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
-          </>
-        )}
-      </motion.div>
-    </AnimatePresence>
+          </div>
+        </div>
+      )}
+    </div>
   );
+<<<<<<< HEAD
 </div></div></div></div>}}}}}}}}}}}}}}}}}</motion.div>}
+=======
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

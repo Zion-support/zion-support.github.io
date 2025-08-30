@@ -1,9 +1,9 @@
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
-        '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
+  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
-        '/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',
+        '/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',
         '/contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.',
         '/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.',
         '/careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.',
@@ -15,26 +15,32 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
-        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-    };
+        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
+  and innovative IT services for the healthcare industry.'
+    
+
+};
     static KEYWORD_MAPPINGS = {
-        '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
+  '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
-        '/about': ['Zion Tech Group', 'technology company', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'company history'],
+        '/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],
         '/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],
         '/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],
         '/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],
         '/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],
-        '/news': ['company news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
+        '/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
         '/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],
         '/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],
         '/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],
         '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
-        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-    };
+        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
+  'medical technology']
+    
+
+};
     static generateSEOData(path) {
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -78,7 +84,7 @@ export class SEOOptimizer {
 
     static generateStructuredData(path) {
         const baseData = {
-            "@context": "https://schema.org",
+  "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -87,8 +93,15 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
+<<<<<<< HEAD
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 
+=======
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+            
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         // Add specific structured data based on page type
         if (path === '/') {
@@ -207,4 +220,144 @@ export class SEOOptimizer {
 
 
 export const seoOptimizer = new SEOOptimizer();
+<<<<<<< HEAD
 }}}}}}}}}}}}}}}}}}}}
+=======
+=======
+    // Simulate SEO analysis
+    setTimeout(() => {
+      let score = 0;
+      const newRecommendations = [];
+      
+      // Check title length
+      const titleMatch = content.match(/<title>(.*?)<\/title>/i);
+      if (titleMatch) {
+        const titleLength = titleMatch[1].length;
+        if (titleLength >= 30 && titleLength <= 60) {
+          score += 20;
+        } else if (titleLength > 0) {
+          score += 10;
+          newRecommendations.push('Optimize title length (30-60 characters)');
+        }
+      } else {
+        newRecommendations.push('Add a title tag');
+      }
+      
+      // Check meta description
+      const metaMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
+      if (metaMatch) {
+        const metaLength = metaMatch[1].length;
+        if (metaLength >= 120 && metaLength <= 160) {
+          score += 20;
+        } else if (metaLength > 0) {
+          score += 10;
+          newRecommendations.push('Optimize meta description length (120-160 characters)');
+        }
+      } else {
+        newRecommendations.push('Add a meta description');
+      }
+      
+      // Check headings
+      const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
+      if (h1Count > 0 && h2Count > 0) {
+        score += 20;
+      } else if (h1Count > 0 || h2Count > 0) {
+        score += 10;
+        newRecommendations.push('Add more heading structure (H1, H2, H3)');
+      } else {
+        newRecommendations.push('Add heading structure to your content');
+      }
+      
+      // Check images with alt text
+      const imagesWithAlt = images.filter(img => img.includes('alt='));
+      if (images.length > 0) {
+        if (imagesWithAlt.length === images.length) {
+          score += 20;
+        } else {
+          score += 10;
+          newRecommendations.push('Add alt text to all images');
+        }
+      }
+      
+      // Check internal links
+      const internalLinks = content.match(/href="\/[^"]*"/g) || [];
+      if (internalLinks.length >= 2) {
+        score += 20;
+      } else if (internalLinks.length > 0) {
+        score += 10;
+        newRecommendations.push('Add more internal links');
+      } else {
+        newRecommendations.push('Add internal links to related pages');
+      }
+      
+      setSeoScore(score);
+      setRecommendations(newRecommendations);
+      setIsAnalyzing(false);
+      
+      if (onOptimize) {
+        onOptimize({ score, recommendations: newRecommendations });
+      }
+    }, 2000);
+  };
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={analyzeSEO}
+        disabled={isAnalyzing}
+        className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50"
+      >
+        {isAnalyzing ? 'Analyzing SEO...' : 'Analyze SEO'}
+      </button>
+      
+      {seoScore > 0 && (
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          className="space-y-4"
+        >
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-600 mb-2">{seoScore}/100</div>
+            <div className="text-lg text-gray-600">SEO Score</div>
+          </div>
+          
+          {recommendations.length > 0 && (
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Recommendations:</h3>
+              <ul className="space-y-2">
+                {recommendations.map((recommendation, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <span>{recommendation}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+export default SEOOptimizer;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

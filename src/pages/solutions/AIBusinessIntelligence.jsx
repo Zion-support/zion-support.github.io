@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search const AIBusinessIntelligence = () => {
     const biFeatures = [
         {
@@ -64,6 +65,10 @@ import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, A
             capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
 
     ];
+=======
+import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+const AIBusinessIntelligence = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const benefits = [
         "Data-driven decision making across all business areas",
         "Real-time insights and instant access to critical information",

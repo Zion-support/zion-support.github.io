@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 const serviceIcons = {
-    'AI Automation': Brain,
+  'AI Automation': Brain,
     'Cloud Management': Cloud,
     'Cybersecurity': Shield,
     'Data Engineering': Database,
@@ -16,6 +16,8 @@ const serviceIcons = {
     'Healthcare Technology': Heart,
     'Financial Technology': DollarSign,
     'Blockchain': LinkIcon,
+  
+
 };
 export function EnhancedServicesShowcase() {
     return (<section className="py-20 bg-zion-blue-dark">
@@ -84,8 +86,7 @@ export function EnhancedServicesShowcase() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Service Categories Overview */}
@@ -192,5 +193,9 @@ export function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 </Card></Card></Card></Card>}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

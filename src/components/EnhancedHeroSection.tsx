@@ -15,7 +15,13 @@ import {
   Rocket,
   Target,
   TrendingUp
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface HeroSlide {
+
   title: string;
   subtitle: string;
   description: string;
@@ -25,9 +31,14 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
+<<<<<<< HEAD
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+=======
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function EnhancedHeroSection() {
+export default function EnhancedHeroSection(...args[]):  {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -39,10 +50,10 @@ export default function EnhancedHeroSection() {
       image: "/images/hero-ai-solutions.jpg",
       cta: "Explore AI Solutions",
       path: "/services/ai-business-intelligence",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
       gradient: "from-zion-cyan via-zion-purple to-zion-blue",
       icon: Brain,
-      stats: [
+      stats[
         { label: "Accuracy Rate", value: "95%+", icon: Target },
         { label: "ROI Increase", value: "450%", icon: TrendingUp },
         { label: "Market Growth", value: "280%", icon: Rocket }
@@ -55,10 +66,10 @@ export default function EnhancedHeroSection() {
       image: "/images/hero-it-services.jpg",
       cta: "View Our Services",
       path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
       gradient: "from-zion-blue via-zion-cyan to-zion-purple",
       icon: Shield,
-      stats: [
+      stats[
         { label: "Uptime", value: "99.99%", icon: Target },
         { label: "Cost Savings", value: "700%", icon: TrendingUp },
         { label: "Response Time", value: "<5min", icon: Rocket }
@@ -71,10 +82,10 @@ export default function EnhancedHeroSection() {
       image: "/images/hero-green-it.jpg",
       cta: "Learn More",
       path: "/green-it",
-      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
       gradient: "from-zion-cyan via-zion-blue to-zion-purple",
       icon: Globe,
-      stats: [
+      stats[
         { label: "Energy Savings", value: "60%", icon: Target },
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
         { label: "Cost Reduction", value: "40%", icon: Rocket }
@@ -82,35 +93,38 @@ export default function EnhancedHeroSection() {
 
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
+<<<<<<< HEAD
+    const interval = setInterval(() => {;
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}, 6000);
+=======
+    const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 6000);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, heroSlides.length]);
+    return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
 
-  const nextSlide = () => {
+  const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
-  const prevSlide = () => {
+  const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
-  const goToSlide = (index: number) => {
+<<<<<<< HEAD
+  const goToSlide = (index: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const currentSlideData = heroSlides[currentSlide];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
@@ -134,13 +148,31 @@ export default function EnhancedHeroSection() {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity }}
+            scale: [1, 1.1,
+  1]
+          
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 20,
+  repeat: Infinity 
+
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         ></motion.div>
 
         {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map((_, i)  => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -148,15 +180,33 @@ export default function EnhancedHeroSection() {
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`,
             }}
-            animate={{
+<<<<<<< HEAD
+            animate = {
+  {
+              y[0, -20, 0],
+              opacity[0.4, 1, 0.4],
+  
+
+}}
+            transition = {
+  {
+=======
+            animate = {
+  {
               y: [0, -20, 0],
               opacity: [0.4, 1, 0.4],
-            }}
-            transition={{
+  
+
+}}
+            transition = {
+  {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               duration: 3 + i * 0.5,
               repeat: Infinity,
               delay: i * 0.3,
-            }}
+  
+
+}}
           />
         ))}
       </div>
@@ -166,17 +216,62 @@ export default function EnhancedHeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: -50 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
 
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.5 }}
 
                 {/* Icon and category */}
@@ -206,12 +301,30 @@ export default function EnhancedHeroSection() {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData.features.map((feature, index) => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">
+                  {currentSlideData.features.map((feature, index)  => (
                     <motion.div
                       key={feature}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
 
@@ -245,9 +358,36 @@ export default function EnhancedHeroSection() {
 
           {/* Right content - Image and stats */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  x: 50 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             className="relative"
 
             {/* Main image */}
@@ -262,9 +402,46 @@ export default function EnhancedHeroSection() {
                   <div className="text-center text-white">
                     <motion.div
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
+<<<<<<< HEAD
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 20, repeat: Infinity }}
 
+=======
+<<<<<<< HEAD
+                      animate = {
+  { rotate[0,
+  360] 
+
+}}
+                      transition = {
+  { duration: 20,
+  repeat: Infinity 
+
+}}
+=======
+                      animate = {
+  { rotate: [0,
+  360] 
+
+
+
+
+
+
+}}
+                      transition = {
+  { duration: 20,
+  repeat: Infinity 
+
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                    >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
                     </motion.div>
                     <p className="text-lg font-medium">Visual Representation</p>
@@ -278,8 +455,26 @@ export default function EnhancedHeroSection() {
               {currentSlideData.stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                   transition={{ delay: 0.5 + index * 0.1 }}
                   className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300"
 
@@ -298,8 +493,26 @@ export default function EnhancedHeroSection() {
 
             {/* Rating card */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ delay: 0.8 }}
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
 
@@ -361,18 +574,91 @@ export default function EnhancedHeroSection() {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
+          animate = {
+  { y[0, 10,
+  0] 
+
+}}
+          transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+}}
           className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
 
           <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate = {
+  { y[0, 12,
+  0] 
+
+}}
+            transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+}}
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
           />
         </motion.div>
         <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>
       </motion.div>
     </section>
+  )}
+=======
+          animate = {
+  { y: [0, 10,
+  0] 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+
+}}
+          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
+        >
+          <motion.div
+            animate = {
+  { y: [0, 12,
+  0] 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+
+}};
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
+          />;
+        </motion.div>;
+        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>;
+      </motion.div>;
+    </section>;
   );
+<<<<<<< HEAD
 }}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

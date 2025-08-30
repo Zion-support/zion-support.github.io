@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 5000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP, please try again later.'
+const limiter = rateLimit({;
+  windowMs: 15 * 60 * 1000, // 15 minutes;
+  max: 100, // limit each IP to 100 requests per windowMs;
+  message: 'Too many requests from this IP, please try again later.';
 });
 
 // Middleware
@@ -33,10 +33,17 @@ app.use(helmet({
   },
 }));
 app.use(cors({
+<<<<<<< HEAD
   origin: NODE_ENV === 'development'
     ? ['http://localhost:3000', 'http://localhost:5000']
     : process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true
+=======
+  origin: NODE_ENV = == 'development' ;
+    ? ['http://localhost:3000', 'http://localhost:5000'] ;
+    : process.env.FRONTEND_URL || 'http://localhost:3000',;
+  credentials: true;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }));
 app.use(compression());
 app.use(morgan('combined'));
@@ -45,7 +52,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Import API routes
-import apiRoutes from './routes/api';
+import apiRoutes from "./routes/api";
 
 // API Routes
 app.use('/api/health', (_req, res) => {
@@ -61,7 +68,7 @@ app.use('/api/health', (_req, res) => {
 app.use('/api', apiRoutes);
 
 // Serve static files from the built Vite frontend
-if (NODE_ENV === 'production') {
+if (NODE_ENV = == 'production') {;
   const frontendPath = path.join(__dirname, '../../dist');
   app.use(express.static(frontendPath));
 
@@ -79,7 +86,7 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   res.status(500).json({
     error: 'Something went wrong!',
-    message: NODE_ENV === 'development' ? err.message : 'Internal server error'
+    message: NODE_ENV = == 'development' ? err.message : 'Internal server error';
   });
 });
 

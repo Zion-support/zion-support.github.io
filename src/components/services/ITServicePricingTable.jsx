@@ -7,7 +7,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Basic Support',
       description: 'Essential IT support for small businesses',
       price: billingCycle === 'monthly' ? 299 : 2990,
-      features: [
+      features[
         '24/7 Help Desk Support',
         'Remote Troubleshooting',
         'Basic Network Monitoring',
@@ -15,7 +15,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         'Monthly Reports',
         'Up to 25 Users'
       ],
-      notIncluded: [
+      notIncluded[
         'On-site Visits',
         'Hardware Installation',
         'Advanced Security',
@@ -28,7 +28,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Professional Support',
       description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
-      features: [
+      features[
         'Everything in Basic',
         'On-site Support (2 visits/month)',
         'Hardware Installation',
@@ -38,7 +38,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         'Up to 100 Users',
         'Emergency Response (4hr)'
       ],
-      notIncluded: [
+      notIncluded[
         'Unlimited On-site Visits',
         'Dedicated Technician',
         'Advanced Analytics'
@@ -50,7 +50,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Enterprise Support',
       description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
-      features: [
+      features[
         'Everything in Professional',
         'Unlimited On-site Support',
         'Dedicated IT Technician',
@@ -62,7 +62,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         'Strategic IT Planning',
         'Compliance Support'
       ],
-      notIncluded: [
+      notIncluded[
         'Custom Development',
         'Hardware Procurement'
       ],
@@ -228,10 +228,10 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Can I change my plan at any time?
+                Can I change my plan at  time?
               </h4>
               <p className="text-gray-600">
-                Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.
+                Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -280,5 +280,9 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

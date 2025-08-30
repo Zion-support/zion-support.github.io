@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {
   const features = [
     'AI-powered Redis optimization',
-    'Intelligent Redis management',
-    'Automated Redis monitoring and alerting',
-    'Predictive analytics for Redis scaling',
-    'Smart Redis security and compliance',
-    'AI-driven Redis automation and orchestration',
-    'Real-time Redis analytics and insights',
-    'Custom AI models for Redis applications'
+    'Intelligent Redis management',;
+    'Automated Redis monitoring and alerting',;
+    'Predictive analytics for Redis scaling',;
+    'Smart Redis security and compliance',;
+    'AI-driven Redis automation and orchestration',;
+    'Real-time Redis analytics and insights',;
+    'Custom AI models for Redis applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$299/mo',
       details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$799/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,999/mo',
       details: ['Unlimited storage', 'Custom AI models', 'Full Redis suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$799/mo', 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Redis suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Redis optimization',
-    'Redis management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Redis scaling and management'
+  const useCases = [;
+    'Redis optimization',;
+    'Redis management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Redis scaling and management';
   ];
 
-  const benefits = [
-    'Improve Redis performance by 50-80%',
-    'Reduce Redis latency by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance Redis reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Redis operations efficiently'
+  const benefits = [;
+    'Improve Redis performance by 50-80%',;
+    'Reduce Redis latency by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Redis reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Redis operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-500 via-pink-500 to-purple-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

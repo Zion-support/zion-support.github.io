@@ -13,12 +13,17 @@ import {
   Zap,
   Users,
   CheckCircle
+<<<<<<< HEAD
 export default function Signup() {
+=======
+ } from 'lucide-react';
+export default function Signup(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    company: '',
+    comp: '',
     password: '',
     confirmPassword: ''
   });
@@ -26,26 +31,41 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+<<<<<<< HEAD
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+      ...formData,;
+      [e.target.name]: e.target.value;
+    })};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    setFormData({;
+      ...formData,;
+      [e.target.name]: e.target.value;
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');
+<<<<<<< HEAD
       return;
 
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
 
+=======
+      return}
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match');
+      return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
+<<<<<<< HEAD
 <<<<<<< HEAD
     // // // console.log('Signup attempt:', formData);
 =======
@@ -53,6 +73,10 @@ export default function Signup() {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     setIsLoading(false);
   };
+=======
+    console.log('Signup attempt:', formData);
+    setIsLoading(false)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: <Shield className="h-6 w-6 text-zion-cyan" />,
@@ -62,6 +86,7 @@ export default function Signup() {
     {
       icon: <Zap className="h-6 w-6 text-zion-purple" />,
       title: "Lightning Fast",
+<<<<<<< HEAD
       description: "Optimized performance for seamless user experience across all devices"
     },
     {
@@ -69,24 +94,51 @@ export default function Signup() {
       title: "Team Collaboration",
       description: "Built-in tools for seamless team communication and project management"
 
+=======
+      description: "Optimized performance for seamless user experience across all devices";
+    },;
+    {;
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,;
+      title: "Team Collaboration",;
+      description: "Built-in tools for seamless team communication and project management";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-  const benefits = [
-    "Access to cutting-edge AI solutions",
-    "24/7 customer support",
-    "Free consultation session",
-    "Exclusive partner discounts",
-    "Early access to new features",
-    "Dedicated account manager"
+  const benefits = [;
+    "Access to cutting-edge AI solutions",;
+    "24/7 customer support",;
+    "Free consultation session",;
+    "Exclusive partner discounts",;
+    "Early access to new features",;
+    "Dedicated account manager";
   ];
   return (
-    <div className="min-h-screen bg-zion-blue text-white flex">
+    <div className = "min-h-screen bg-zion-blue text-white flex">
       {/* Left Side - Signup Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
 
@@ -102,10 +154,44 @@ export default function Signup() {
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
 
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+          >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -164,21 +250,21 @@ export default function Signup() {
                 />
               </div>
             </div>
-            {/* Company Field */}
+            {/* Comp Field */}
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name
+              <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                Comp Name
               </label>
               <div className="relative">
                 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="comp"
+                  name="comp"
+                  value={formData.comp}
                   onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  placeholder="Company name (optional)"
+                  placeholder="Comp name (optional)"
                 />
               </div>
             </div>
@@ -325,10 +411,44 @@ export default function Signup() {
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
 
+=======
+            initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+          >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the AI Revolution
             </h2>
@@ -342,10 +462,44 @@ export default function Signup() {
                 <motion.div
                   key={feature.title}
                   className="flex items-start gap-4"
+<<<<<<< HEAD
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
 
+=======
+                  initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: 0.6 + index * 0.1 
+
+
+
+
+
+
+}}
+                >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {feature.icon}
                   </div>
@@ -364,10 +518,44 @@ export default function Signup() {
                   <motion.div
                     key={benefit}
                     className="flex items-center gap-3"
+<<<<<<< HEAD
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
 
+=======
+                    initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.8,
+  delay: 1 + index * 0.1 
+
+
+
+
+
+
+}}
+                  >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <span className="text-zion-slate-light">{benefit}</span>
                   </motion.div>
@@ -377,10 +565,44 @@ export default function Signup() {
             {/* Stats */}
             <motion.div
               className="grid grid-cols-3 gap-8 text-center"
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 1.5 
+
+
+
+
+
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
                 <div className="text-zion-slate-light text-sm">Happy Clients</div>
@@ -393,10 +615,23 @@ export default function Signup() {
                 <div className="text-3xl font-bold text-white mb-1">99.9%</div>
                 <div className="text-zion-slate-light text-sm">Uptime</div>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </motion.div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

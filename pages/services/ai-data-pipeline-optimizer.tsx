@@ -1,9 +1,9 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function AIDataPipelineOptimizer() {
+export default function AIDataPipelineOptimizer(...args[]):  {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>AI Data Pipeline Optimizer — Services — Zion</title>
         <meta name="description" content="Reduce spend and latency in ETL/ELT and LLM RAG pipelines with AI tuning." />
@@ -23,10 +23,24 @@ export default function AIDataPipelineOptimizer() {
           <li>End-to-end lineage with cost and SLO tracking</li>
         </ul>
         <div className="mt-8 flex gap-3">
+<<<<<<< HEAD
           <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
         </div>
       </main>
     </div>
+  )};
+=======;
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>;
+          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>;
+        </div>;
+      </main>;
+    </div>;
   );
+<<<<<<< HEAD
 </div></div></div></div>}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

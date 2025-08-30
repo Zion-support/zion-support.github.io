@@ -1,7 +1,20 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck  } from 'lucide-react';
+=======
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck export default function ZeroTrustNetworkArchitecture() {
+=======
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export default function ZeroTrustNetworkArchitecture(...args: []):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Shield,
@@ -32,6 +45,7 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       title: 'Identity-Based Security',
       description: 'Security policies based on user identity and context',
       color: 'from-purple-500 to-pink-500'
+<<<<<<< HEAD
     },
     {
       icon: ShieldCheck,
@@ -39,6 +53,15 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       description: 'Network segmentation at the application and workload level',
       color: 'from-indigo-500 to-purple-500'
 
+=======
+    },;
+    {;
+      icon: ShieldCheck,;
+      title: 'Micro-Segmentation',;
+      description: 'Network segmentation at the application and workload level',;
+      color: 'from-indigo-500 to-purple-500';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -59,6 +82,7 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       description: 'Micro-segmentation and network isolation strategies',
       price: 'From $20,000',
       features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
+<<<<<<< HEAD
     },
     {
       title: 'Continuous Monitoring',
@@ -66,20 +90,34 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       price: 'From $12,000',
       features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics']
 
+=======
+    },;
+    {;
+      title: 'Continuous Monitoring',;
+      description: 'Real-time security monitoring and threat detection',;
+      price: 'From $12,000',;
+      features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },
-    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },
-    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },
-    { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },
-    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },
-    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' }
+  const benefits = [;
+    { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;
+    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
+    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;
+    { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;
+    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;
+    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Zero Trust Network Architecture - Zion Tech Group"
         description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
       />
@@ -89,8 +127,26 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -133,8 +189,26 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -147,13 +221,40 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
 
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -171,8 +272,26 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -185,13 +304,40 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
 
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -222,8 +368,26 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -236,13 +400,40 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center group"
 
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
@@ -260,8 +451,26 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
       <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -283,6 +492,7 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+<<<<<<< HEAD
 
                 View Case Studies
               </motion.button>
@@ -291,5 +501,15 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
         </div>
       </section>
     </div>
+=======
+              >
+                View Case Studies;
+              </motion.button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}

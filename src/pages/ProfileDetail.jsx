@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
-    // useParams is typed as `any` in this environment due to missing type
+    // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { profileId } = useParams();
     const [profileData, setProfileData] = useState(null);
@@ -21,14 +21,19 @@ export default function ProfileDetail() {
             try {
                 if (!profileId) {
                     setError("Profile ID is missing.");
+<<<<<<< HEAD
                     return;
 
+=======
+                    return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single();
                 if (error) {
+<<<<<<< HEAD
                     throw new Error(error.message);
 
                 if (!data) {
@@ -37,23 +42,36 @@ export default function ProfileDetail() {
 
                 setProfileData(data);
 
+=======
+                    throw new Error(error.message)}
+                if (!data) {
+                    setError("Profile not found.");
+                    return}
+                setProfileData(data)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
+<<<<<<< HEAD
                 });
 
             finally {
                 setIsLoading(false);
 
+=======
+                })}
+            finally {
+                setIsLoading(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
-        fetchProfile();
-    }, [profileId]);
+        fetchProfile()}, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
+<<<<<<< HEAD
       </div>);
 
     if (error) {
@@ -66,6 +84,17 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>);
 
+=======
+      </div>)}
+    if (error) {
+        return (<div className="min-h-screen flex items-center justify-center">
+        <p>Error: {error}</p>
+      </div>)}
+    if (!profileData) {
+        return (<div className="min-h-screen flex items-center justify-center">
+        <p>Profile not found.</p>
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
 
@@ -137,7 +166,7 @@ export default function ProfileDetail() {
               <CardContent>
                 {profileData.experience ? (profileData.experience.map((exp, index) => (<div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
-                      <p className="text-zion-cyan">{exp.company}</p>
+                      <p className="text-zion-cyan">{exp.comp}</p>
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
                     </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}
@@ -162,12 +191,20 @@ export default function ProfileDetail() {
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
-            <HireNowCTA talentProfile={{
+            <HireNowCTA talentProfile = {
+  {
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
-        }}/>
+  hourly_rate: profileData?.hourly_rate || 0
+        
+
+
+
+
+
+
+}}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
@@ -210,6 +247,11 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
     </>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

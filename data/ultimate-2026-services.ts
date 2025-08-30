@@ -11,9 +11,13 @@ export interface Ultimate2026Service {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
     id: "2026-ultimate-service",
@@ -21,7 +25,7 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     tagline: "The ultimate platform for 2026",
     price: "$699/month",
     description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
-    features: [
+    features[
       "Ultimate platform",
       "All technologies",
       "Maximum capabilities",

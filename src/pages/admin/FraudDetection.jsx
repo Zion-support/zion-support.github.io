@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -37,15 +37,28 @@ export default function FraudDetection() {
             setFilteredFlags(data || []);
             // Calculate stats
             const newStats = {
-                total_flags: data?.length || 0,
+  total_flags: data?.length || 0,
                 pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
                 suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
                 dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
                 false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
-            };
-            setStats(newStats);
+  <<<<<<< HEAD
+            
 
+};
+            setStats(newStats)}
+=======
+  
+
+};
+            setStats(newStats);
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error fetching fraud flags:", error);
@@ -56,15 +69,20 @@ export default function FraudDetection() {
                 title: "Error",
                 description: "Failed to load fraud detection data",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
         finally {
             setIsLoading(false);
 
+=======
+            })}
+        finally {
+            setIsLoading(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     useEffect(() => {
-        fetchFraudFlags();
-    }, []);
+        fetchFraudFlags()}, []);
     // Apply filters
     useEffect(() => {
         let result = [...flags];
@@ -73,6 +91,7 @@ export default function FraudDetection() {
             const query = searchQuery.toLowerCase();
             result = result.filter((flag) => flag.user_email?.toLowerCase().includes(query) ||
                 flag.content_excerpt.toLowerCase().includes(query) ||
+<<<<<<< HEAD
                 flag.reason.toLowerCase().includes(query));
 
         // Apply status filter
@@ -89,6 +108,19 @@ export default function FraudDetection() {
 
         setFilteredFlags(result);
     }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+=======
+                flag.reason.toLowerCase().includes(query))}
+        // Apply status filter
+        if (statusFilter) {
+            result = result.filter((flag) => flag.status === statusFilter)}
+        // Apply severity filter
+        if (severityFilter) {
+            result = result.filter((flag) => flag.severity === severityFilter)}
+        // Apply content type filter
+        if (contentTypeFilter) {
+            result = result.filter((flag) => flag.content_type === contentTypeFilter)}
+        setFilteredFlags(result)}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleAction = async (flagId, action) => {
         try {
             const status = action === 'ignore' ? 'ignored' : 'actioned';
@@ -110,8 +142,12 @@ export default function FraudDetection() {
                 description: `Action '${action}' was applied successfully.`,
             });
             // Refresh the data
+<<<<<<< HEAD
             fetchFraudFlags();
 
+=======
+            fetchFraudFlags()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error updating fraud flag:", error);
@@ -122,15 +158,18 @@ export default function FraudDetection() {
                 title: "Error",
                 description: "Failed to update flag",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const resetFilters = () => {
         setSearchQuery("");
         setStatusFilter(null);
         setSeverityFilter(null);
-        setContentTypeFilter(null);
-    };
+        setContentTypeFilter(null)};
     const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
     return (<SEO title="Fraud Detection | Admin Dashboard" description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"/>
         ,
@@ -187,5 +226,9 @@ export default function FraudDetection() {
             <FraudTabContent tabValue="actioned"/>
           </TabsContent>
         </Tabs>
+<<<<<<< HEAD
       </div>);
 </Card>}}}}}}}}}}
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

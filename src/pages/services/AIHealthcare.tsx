@@ -1,13 +1,13 @@
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
   const features = [
     'AI-powered medical image analysis and diagnosis',
-    'Intelligent patient data analysis and risk assessment',
-    'Automated medical record processing and coding',
-    'Predictive analytics for patient outcomes',
-    'Drug interaction and adverse event monitoring',
-    'Telemedicine and remote patient monitoring',
-    'Integration with major EHR and healthcare systems',
-    'Custom AI models for specialized medical domains'
+    'Intelligent patient data analysis and risk assessment',;
+    'Automated medical record processing and coding',;
+    'Predictive analytics for patient outcomes',;
+    'Drug interaction and adverse event monitoring',;
+    'Telemedicine and remote patient monitoring',;
+    'Integration with major EHR and healthcare systems',;
+    'Custom AI models for specialized medical domains';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$399/mo',
       details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Medium Practice',
       price: '$999/mo',
@@ -26,37 +27,49 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$2,999/mo',
       details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Medium Practice', 
+      price: '$999/mo', 
+      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Large Health System', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Medical imaging and radiology analysis',
-    'Patient diagnosis and treatment planning',
-    'Electronic health record optimization',
-    'Drug discovery and clinical trials',
-    'Population health management',
-    'Medical research and data analysis'
+  const useCases = [;
+    'Medical imaging and radiology analysis',;
+    'Patient diagnosis and treatment planning',;
+    'Electronic health record optimization',;
+    'Drug discovery and clinical trials',;
+    'Population health management',;
+    'Medical research and data analysis';
   ];
 
-  const benefits = [
-    'Improve diagnostic accuracy by 20-35%',
-    'Reduce medical errors by 30-50%',
-    'Cut administrative costs by 25-40%',
-    'Accelerate treatment decisions by 40-60%',
-    'Enhance patient outcomes and satisfaction',
-    'Scale healthcare operations efficiently'
+  const benefits = [;
+    'Improve diagnostic accuracy by 20-35%',;
+    'Reduce medical errors by 30-50%',;
+    'Cut administrative costs by 25-40%',;
+    'Accelerate treatment decisions by 40-60%',;
+    'Enhance patient outcomes and satisfaction',;
+    'Scale healthcare operations efficiently';
   ];
 
-  const industries = [
-    'Hospitals & Health Systems',
-    'Medical Practices & Clinics',
-    'Radiology & Imaging Centers',
-    'Pharmaceutical Companies',
-    'Research Institutions',
-    'Health Insurance Providers'
+  const industries = [;
+    'Hospitals & Health Systems',;
+    'Medical Practices & Clinics',;
+    'Radiology & Imaging Centers',;
+    'Pharmaceutical Companies',;
+    'Research Institutions',;
+    'Health Insurance Providers';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

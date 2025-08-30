@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud const QuantumComputing: React.FC = () => {
   const features = [
@@ -16,6 +16,7 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       icon: Shield,
       title: 'Quantum Cryptography',
+<<<<<<< HEAD
       description: 'Unbreakable encryption for next-generation security'
     },
     {
@@ -23,6 +24,15 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       title: 'Quantum Simulation',
       description: 'Model complex molecular and physical systems'
 
+=======
+      description: 'Unbreakable encryption for next-generation security';
+    },;
+    {;
+      icon: Cpu,;
+      title: 'Quantum Simulation',;
+      description: 'Model complex molecular and physical systems';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -39,6 +49,7 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       title: 'Climate Research',
       description: 'Advanced climate modeling and prediction',
+<<<<<<< HEAD
       icon: '🌍'
     },
     {
@@ -46,20 +57,34 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       description: 'Solve complex routing and supply chain problems',
       icon: '🚚'
 
+=======
+      icon: '🌍';
+    },;
+    {;
+      title: 'Logistics Optimization',;
+      description: 'Solve complex routing and supply chain problems',;
+      icon: '🚚';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    'Exponential speedup for specific algorithms',
-    'Unprecedented computational power',
-    'Breakthrough capabilities in cryptography',
-    'Revolutionary AI and machine learning',
-    'Advanced scientific research capabilities',
-    'Competitive advantage in innovation'
+  const benefits = [;
+    'Exponential speedup for specific algorithms',;
+    'Unprecedented computational power',;
+    'Breakthrough capabilities in cryptography',;
+    'Revolutionary AI and machine learning',;
+    'Advanced scientific research capabilities',;
+    'Competitive advantage in innovation';
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
       />
@@ -68,8 +93,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -106,8 +149,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -123,9 +184,36 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -143,8 +231,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -160,9 +266,36 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200"
 
                 <div className="flex items-start space-x-4">
@@ -182,8 +315,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -197,8 +348,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
 
@@ -214,8 +383,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-8"
 
@@ -236,8 +423,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,13 +456,13 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
                 Start Quantum Journey
               </button>
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

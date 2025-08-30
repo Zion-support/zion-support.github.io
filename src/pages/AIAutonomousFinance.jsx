@@ -162,6 +162,5 @@ const AIAutonomousFinance = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousFinance;

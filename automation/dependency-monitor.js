@@ -324,8 +324,12 @@ class DependencyMonitor {
 
     try {
       // Create a report of what will be updated
+<<<<<<< HEAD
       const reportPath = path.join(this.projectRoot, 'logs', 'dependency-update-report.txt');
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>
+=======
+      const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg => 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`
       ).join('\n')}\n\nUpdating packages...`;
 
@@ -374,7 +378,6 @@ class DependencyMonitor {
       this.log(`Failed to auto-fix peer dependencies: ${error.message}`, 'WARN');
 
       // Create a report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'peer-dependency-report.txt');
       const reportContent = `Peer Dependency Issues Report - ${new Date().toISOString()}\n\n${issues.join('\n')}\n\nThese issues require manual attention.`;
 
       fs.writeFileSync(reportPath, reportContent);
@@ -395,7 +398,6 @@ class DependencyMonitor {
       this.log(`Failed to auto-fix dependency conflicts: ${error.message}`, 'WARN');
 
       // Create a report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'dependency-conflict-report.txt');
       const reportContent = `Dependency Conflict Report - ${new Date().toISOString()}\n\n${conflicts.join('\n')}\n\nThese conflicts require manual attention.`;
 
       fs.writeFileSync(reportPath, reportContent);
@@ -439,7 +441,6 @@ class DependencyMonitor {
       this.log('Security vulnerabilities auto-fixed');
 
       // Create a report
-      const reportPath = path.join(this.projectRoot, 'logs', 'security-audit-report.txt');
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix attempted and completed.`;
 
       fs.writeFileSync(reportPath, reportContent);
@@ -448,7 +449,6 @@ class DependencyMonitor {
       this.log(`Failed to auto-fix vulnerabilities: ${error.message}`, 'WARN');
 
       // Create a detailed report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'security-audit-report.txt');
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix failed. Manual intervention required.\n\nAudit details:\n${JSON.stringify(audit, null, 2)}`;
 
       fs.writeFileSync(reportPath, reportContent);
@@ -466,8 +466,12 @@ class DependencyMonitor {
         this.log(`Found ${majorUpdates.length} packages with major updates available`);
 
         // Create a report for major updates
+<<<<<<< HEAD
         const reportPath = path.join(this.projectRoot, 'logs', 'major-updates-report.txt');
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>
+=======
+        const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg => 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 
@@ -532,10 +536,15 @@ class DependencyMonitor {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
+<<<<<<< HEAD
 
         for (const file of files) {
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {
             const filePath = path.join(logsDir, file);
+=======
+        
+        for (const filePath = path.join(logsDir, file);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const stats = fs.statSync(filePath);
 
             if (now - stats.mtime.getTime() > maxAge) {

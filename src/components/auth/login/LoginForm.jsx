@@ -33,6 +33,7 @@ function LoginForm() {
             setIsSubmitting(true);
             const { error } = await login(data.email, data.password);
             if (error) {
+<<<<<<< HEAD
                 form.setError("root", { message: error });
 
             else {
@@ -42,6 +43,19 @@ function LoginForm() {
         finally {
             setIsSubmitting(false);
 
+=======
+                form.setError("root", { message: error })}
+            else {
+<<<<<<< HEAD
+                router("/")}
+=======
+                router("/");
+            }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+        }
+        finally {
+            setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
@@ -92,7 +106,21 @@ function LoginForm() {
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
+<<<<<<< HEAD
     </Form>);
 
 export default LoginForm;
 }}}}}}
+=======
+    </Form>)}
+
+export default LoginForm;
+
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

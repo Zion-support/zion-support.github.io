@@ -244,7 +244,6 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AIBusinessIntelligence;
 }

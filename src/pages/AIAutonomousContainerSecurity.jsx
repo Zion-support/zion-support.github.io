@@ -168,6 +168,5 @@ const AIAutonomousContainerSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousContainerSecurity;

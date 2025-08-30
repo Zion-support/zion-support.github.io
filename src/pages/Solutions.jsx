@@ -22,6 +22,5 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default Solutions;

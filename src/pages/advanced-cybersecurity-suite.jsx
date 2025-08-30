@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AdvancedCybersecuritySuite = () => {
     const features = [
         {
@@ -27,23 +27,28 @@ const AdvancedCybersecuritySuite = () => {
         {
             title: "Network Security",
             description: "Advanced firewall, intrusion detection, and network monitoring",
-            features: ["Next-gen firewall", "IDS/IPS", "Network segmentation", "Traffic analysis"]
+            features["Next-gen firewall", "IDS/IPS", "Network segmentation", "Traffic analysis"]
         },
         {
             title: "Endpoint Protection",
             description: "Comprehensive endpoint security and device management",
-            features: ["Antivirus", "EDR", "Device control", "Application whitelisting"]
+            features["Antivirus", "EDR", "Device control", "Application whitelisting"]
         },
         {
             title: "Cloud Security",
             description: "Multi-cloud security and compliance management",
-            features: ["CSPM", "Cloud DLP", "Identity management", "API security"]
+            features["CSPM", "Cloud DLP", "Identity management", "API security"]
         },
         {
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
+<<<<<<< HEAD
             features: ["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
 
+=======
+            features["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const complianceFrameworks = [
         "SOC 2 Type II",
@@ -247,7 +252,6 @@ const AdvancedCybersecuritySuite = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AdvancedCybersecuritySuite;
 }}}

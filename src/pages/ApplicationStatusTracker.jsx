@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ApplicationsTracker } from "@/components/jobs/applications";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Inbox import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -29,12 +29,21 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
+<<<<<<< HEAD
     </>);
 
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
 
         <ApplicationStatusTrackerContent />
+<<<<<<< HEAD
 
     </ProtectedRoute>);
 </Card></Card></Card>}}}
+=======
+      
+    </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

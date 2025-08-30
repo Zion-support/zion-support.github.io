@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
@@ -31,6 +32,12 @@ export default function CybersecurityServices() {
             price: "From $500"
 
     ];
+=======
+import SEO from "@/components/SEO";
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
+import { Link } from "react-router-dom";
+export default function CybersecurityServices() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const securitySolutions = [
         {
             title: "Network Security",
@@ -69,7 +76,7 @@ export default function CybersecurityServices() {
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
-            features: [
+            features[
                 "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
@@ -83,7 +90,7 @@ export default function CybersecurityServices() {
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
-            features: [
+            features[
                 "Full security audit",
                 "24/7 monitoring",
                 "Incident response",
@@ -98,7 +105,7 @@ export default function CybersecurityServices() {
             price: "$1,999",
             period: "/month",
             description: "Full-scale cybersecurity for large organizations",
-            features: [
+            features[
                 "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
@@ -125,7 +132,7 @@ export default function CybersecurityServices() {
         {
             name: "Robert Johnson",
             role: "CEO, E-commerce Pro",
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
 
     ];
@@ -323,5 +330,9 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, User, Bell import ThemeToggle from './ThemeToggle';
+=======
+import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
+import ThemeToggle from "./ThemeToggle";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -8,16 +13,14 @@ export function MainNavigation() {
     const location = useLocation();
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
+            setIsScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll)}, []);
     const navigation = [
         {
             name: 'Services',
             href: '/services',
-            dropdown: [
+            dropdown[
                 { name: 'AI Solutions', href: '/services/ai' },
                 { name: 'Cybersecurity', href: '/services/cybersecurity' },
                 { name: 'Cloud Computing', href: '/services/cloud' },
@@ -28,7 +31,7 @@ export function MainNavigation() {
         {
             name: 'Solutions',
             href: '/solutions',
-            dropdown: [
+            dropdown[
                 { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
                 { name: 'Quantum Computing', href: '/solutions/quantum' },
                 { name: 'Autonomous Systems', href: '/solutions/autonomous' },
@@ -39,7 +42,7 @@ export function MainNavigation() {
         {
             name: 'Industries',
             href: '/industries',
-            dropdown: [
+            dropdown[
                 { name: 'Healthcare', href: '/industries/healthcare' },
                 { name: 'Finance', href: '/industries/finance' },
                 { name: 'Manufacturing', href: '/industries/manufacturing' },
@@ -50,7 +53,7 @@ export function MainNavigation() {
         {
             name: 'Resources',
             href: '/resources',
-            dropdown: [
+            dropdown[
                 { name: 'Blog', href: '/blog' },
                 { name: 'Case Studies', href: '/case-studies' },
                 { name: 'White Papers', href: '/white-papers' },
@@ -59,9 +62,9 @@ export function MainNavigation() {
             ]
         },
         {
-            name: 'Company',
+            name: 'Comp',
             href: '/about',
-            dropdown: [
+            dropdown[
                 { name: 'About Us', href: '/about' },
                 { name: 'Leadership', href: '/leadership' },
                 { name: 'Careers', href: '/careers' },
@@ -73,8 +76,7 @@ export function MainNavigation() {
     const isActive = (path) => {
         if (path === '/')
             return location.pathname === '/';
-        return location.pathname.startsWith(path);
-    };
+        return location.pathname.startsWith(path)};
     return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/20 shadow-lg'
             : 'bg-transparent'}`}>
@@ -182,8 +184,7 @@ export function MainNavigation() {
                   {activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">
                       {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-200" onClick={() => {
                             setActiveDropdown(null);
-                            setIsOpen(false);
-                        }}>
+                            setIsOpen(false)}}>
                           {subItem.name}
                         </Link>))}
                     </div>)}
@@ -198,5 +199,9 @@ export function MainNavigation() {
             </div>
           </div>)}
       </div>
+<<<<<<< HEAD
     </nav>);
 }}}
+=======
+    </nav>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

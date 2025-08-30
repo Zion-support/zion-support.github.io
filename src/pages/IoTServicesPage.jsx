@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
 const iotServices = [
     {
@@ -132,6 +133,11 @@ const iotServices = [
         image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
 
 ];
+=======
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
+import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const iotBenefits = [
     {
         title: "Real-time Monitoring",
@@ -154,6 +160,8 @@ const iotBenefits = [
         icon: <TrendingUp className="h-6 w-6"/>
 
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotUseCases = [
     {
         title: "Smart Manufacturing",
@@ -346,5 +354,9 @@ export default function IoTServicesPage() {
       </section>
 
       <TrustedBySection />
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

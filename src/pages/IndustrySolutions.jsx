@@ -4,6 +4,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data
+<<<<<<< HEAD
     const industrySolutions = [
         {
             id: 1,
@@ -14,11 +15,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 75000,
             pricingModel: "project-based",
             industryScore: 96,
-            features: ["Telemedicine platform", "EHR integration", "Patient portal", "HIPAA compliance"],
-            benefits: ["Improved patient care", "Operational efficiency", "Regulatory compliance", "Cost reduction"],
-            useCases: ["Hospitals", "Clinics", "Telemedicine providers", "Health systems"],
-            compliance: ["HIPAA", "HITECH", "FDA", "SOC 2"],
-            tags: ["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
+            features["Telemedicine platform", "EHR integration", "Patient portal", "HIPAA compliance"],
+            benefits["Improved patient care", "Operational efficiency", "Regulatory compliance", "Cost reduction"],
+            useCases["Hospitals", "Clinics", "Telemedicine providers", "Health systems"],
+            compliance["HIPAA", "HITECH", "FDA", "SOC 2"],
+            tags["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -34,11 +35,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 85000,
             pricingModel: "project-based",
             industryScore: 95,
-            features: ["Digital banking", "Payment processing", "Risk management", "Compliance automation"],
-            benefits: ["Operational efficiency", "Cost reduction", "Enhanced security", "Regulatory compliance"],
-            useCases: ["Banks", "Credit unions", "Payment processors", "Investment firms"],
-            compliance: ["PCI DSS", "SOX", "GLBA", "SOC 2"],
-            tags: ["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
+            features["Digital banking", "Payment processing", "Risk management", "Compliance automation"],
+            benefits["Operational efficiency", "Cost reduction", "Enhanced security", "Regulatory compliance"],
+            useCases["Banks", "Credit unions", "Payment processors", "Investment firms"],
+            compliance["PCI DSS", "SOX", "GLBA", "SOC 2"],
+            tags["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -54,11 +55,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 65000,
             pricingModel: "project-based",
             industryScore: 94,
-            features: ["IoT sensors", "Predictive analytics", "Supply chain optimization", "Quality control"],
-            benefits: ["Increased productivity", "Reduced downtime", "Cost savings", "Quality improvement"],
-            useCases: ["Automotive", "Electronics", "Pharmaceuticals", "Food & beverage"],
-            compliance: ["ISO 9001", "ISO 14001", "FDA", "GMP"],
-            tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
+            features["IoT sensors", "Predictive analytics", "Supply chain optimization", "Quality control"],
+            benefits["Increased productivity", "Reduced downtime", "Cost savings", "Quality improvement"],
+            useCases["Automotive", "Electronics", "Pharmaceuticals", "Food & beverage"],
+            compliance["ISO 9001", "ISO 14001", "FDA", "GMP"],
+            tags["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -74,11 +75,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 55000,
             pricingModel: "project-based",
             industryScore: 93,
-            features: ["E-commerce platform", "Inventory management", "Customer analytics", "Multi-channel integration"],
-            benefits: ["Increased sales", "Better customer experience", "Operational efficiency", "Market expansion"],
-            useCases: ["Online retailers", "Brick & mortar stores", "Marketplaces", "Brands"],
-            compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
-            tags: ["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
+            features["E-commerce platform", "Inventory management", "Customer analytics", "Multi-channel integration"],
+            benefits["Increased sales", "Better customer experience", "Operational efficiency", "Market expansion"],
+            useCases["Online retailers", "Brick & mortar stores", "Marketplaces", "Brands"],
+            compliance["PCI DSS", "GDPR", "CCPA", "SOC 2"],
+            tags["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -94,11 +95,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 45000,
             pricingModel: "project-based",
             industryScore: 92,
-            features: ["Learning management system", "Student portal", "Assessment tools", "Analytics dashboard"],
-            benefits: ["Improved learning outcomes", "Administrative efficiency", "Student engagement", "Cost reduction"],
-            useCases: ["K-12 schools", "Universities", "Corporate training", "Online education"],
-            compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
-            tags: ["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
+            features["Learning management system", "Student portal", "Assessment tools", "Analytics dashboard"],
+            benefits["Improved learning outcomes", "Administrative efficiency", "Student engagement", "Cost reduction"],
+            useCases["K-12 schools", "Universities", "Corporate training", "Online education"],
+            compliance["FERPA", "COPPA", "GDPR", "SOC 2"],
+            tags["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -114,11 +115,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 70000,
             pricingModel: "project-based",
             industryScore: 94,
-            features: ["Route optimization", "Real-time tracking", "Inventory management", "Analytics dashboard"],
-            benefits: ["Cost reduction", "Improved efficiency", "Better visibility", "Customer satisfaction"],
-            useCases: ["Transportation", "Warehousing", "Distribution", "E-commerce"],
-            compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-            tags: ["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
+            features["Route optimization", "Real-time tracking", "Inventory management", "Analytics dashboard"],
+            benefits["Cost reduction", "Improved efficiency", "Better visibility", "Customer satisfaction"],
+            useCases["Transportation", "Warehousing", "Distribution", "E-commerce"],
+            compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
+            tags["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -134,11 +135,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 50000,
             pricingModel: "project-based",
             industryScore: 91,
-            features: ["Property management", "Virtual tours", "Market analytics", "Client portal"],
-            benefits: ["Increased sales", "Better client experience", "Operational efficiency", "Market insights"],
-            useCases: ["Real estate agencies", "Property managers", "Developers", "Investors"],
-            compliance: ["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
-            tags: ["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
+            features["Property management", "Virtual tours", "Market analytics", "Client portal"],
+            benefits["Increased sales", "Better client experience", "Operational efficiency", "Market insights"],
+            useCases["Real estate agencies", "Property managers", "Developers", "Investors"],
+            compliance["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
+            tags["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -154,11 +155,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 80000,
             pricingModel: "project-based",
             industryScore: 95,
-            features: ["Smart grid management", "Renewable energy integration", "Energy analytics", "Customer portal"],
-            benefits: ["Energy efficiency", "Cost savings", "Sustainability", "Customer satisfaction"],
-            useCases: ["Utility companies", "Energy providers", "Industrial facilities", "Smart cities"],
-            compliance: ["NERC", "FERC", "ISO standards", "SOC 2"],
-            tags: ["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
+            features["Smart grid management", "Renewable energy integration", "Energy analytics", "Customer portal"],
+            benefits["Energy efficiency", "Cost savings", "Sustainability", "Customer satisfaction"],
+            useCases["Utility companies", "Energy providers", "Industrial facilities", "Smart cities"],
+            compliance["NERC", "FERC", "ISO standards", "SOC 2"],
+            tags["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -174,11 +175,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 90000,
             pricingModel: "project-based",
             industryScore: 97,
-            features: ["Threat detection", "Compliance automation", "Risk assessment", "Security monitoring"],
-            benefits: ["Enhanced security", "Regulatory compliance", "Risk mitigation", "Business continuity"],
-            useCases: ["Financial services", "Healthcare", "Government", "Enterprise"],
-            compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR"],
-            tags: ["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
+            features["Threat detection", "Compliance automation", "Risk assessment", "Security monitoring"],
+            benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Business continuity"],
+            useCases["Financial services", "Healthcare", "Government", "Enterprise"],
+            compliance["SOC 2", "ISO 27001", "NIST", "GDPR"],
+            tags["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -194,11 +195,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 60000,
             pricingModel: "project-based",
             industryScore: 93,
-            features: ["Case management", "Document automation", "Legal research", "Client portal"],
-            benefits: ["Increased efficiency", "Cost reduction", "Better client service", "Compliance"],
-            useCases: ["Law firms", "Corporate legal", "Government", "Legal services"],
-            compliance: ["Attorney-client privilege", "Data security", "SOC 2", "GDPR"],
-            tags: ["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
+            features["Case management", "Document automation", "Legal research", "Client portal"],
+            benefits["Increased efficiency", "Cost reduction", "Better client service", "Compliance"],
+            useCases["Law firms", "Corporate legal", "Government", "Legal services"],
+            compliance["Attorney-client privilege", "Data security", "SOC 2", "GDPR"],
+            tags["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -214,11 +215,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 55000,
             pricingModel: "project-based",
             industryScore: 92,
-            features: ["Content management", "Streaming platform", "Analytics dashboard", "Monetization tools"],
-            benefits: ["Increased engagement", "Revenue growth", "Content efficiency", "Audience insights"],
-            useCases: ["Streaming services", "Content creators", "Media companies", "Entertainment"],
-            compliance: ["Copyright", "Licensing", "GDPR", "SOC 2"],
-            tags: ["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
+            features["Content management", "Streaming platform", "Analytics dashboard", "Monetization tools"],
+            benefits["Increased engagement", "Revenue growth", "Content efficiency", "Audience insights"],
+            useCases["Streaming services", "Content creators", "Media companies", "Entertainment"],
+            compliance["Copyright", "Licensing", "GDPR", "SOC 2"],
+            tags["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -234,11 +235,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             price: 75000,
             pricingModel: "project-based",
             industryScore: 94,
-            features: ["Fleet management", "Route optimization", "Passenger app", "Analytics platform"],
-            benefits: ["Operational efficiency", "Cost reduction", "Better service", "Safety improvement"],
-            useCases: ["Public transit", "Logistics", "Ride-sharing", "Fleet operators"],
-            compliance: ["DOT", "Safety regulations", "GDPR", "SOC 2"],
-            tags: ["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
+            features["Fleet management", "Route optimization", "Passenger app", "Analytics platform"],
+            benefits["Operational efficiency", "Cost reduction", "Better service", "Safety improvement"],
+            useCases["Public transit", "Logistics", "Ride-sharing", "Fleet operators"],
+            compliance["DOT", "Safety regulations", "GDPR", "SOC 2"],
+            tags["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -246,16 +247,13 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
 
 
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
-        const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            solution.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
-        return matchesSearch && matchesIndustry && matchesSolutionType;
-    });
+        return matchesSearch && matchesIndustry && matchesSolutionType});
     const formatPrice = (price, model) => {
         switch (model) {
             case 'monthly':
@@ -265,8 +263,12 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             case 'project-based':
                 return `$${price.toLocaleString()}`;
             default:
+<<<<<<< HEAD
                 return `$${price.toLocaleString()}`;
 
+=======
+                return `$${price.toLocaleString()}`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getIndustryColor = (score) => {
         if (score >= 95)
@@ -275,8 +277,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             return 'text-blue-500';
         if (score >= 85)
             return 'text-yellow-500';
-        return 'text-orange-500';
-    };
+        return 'text-orange-500'};
     const getIndustryIcon = (industry) => {
         switch (industry) {
             case 'Healthcare': return <Stethoscope className="w-6 h-6"/>;
@@ -287,8 +288,12 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             case 'Logistics': return <Truck className="w-6 h-6"/>;
             case 'Real Estate': return <Home className="w-6 h-6"/>;
             case 'Energy': return <Zap className="w-6 h-6"/>;
+<<<<<<< HEAD
             default: return <Building className="w-6 h-6"/>;
 
+=======
+            default: return <Building className="w-6 h-6"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -411,7 +416,6 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default IndustrySolutions;
 }}}}}}}}}}}}}}}}

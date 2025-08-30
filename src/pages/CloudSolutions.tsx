@@ -15,32 +15,51 @@ import {
   Code,
   Settings,
   Users
+<<<<<<< HEAD
 export default function CloudSolutions() {
+=======
+ } from 'lucide-react';
+
+export default function CloudSolutions(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const cloudServices = [
     {
       icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
-      features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
+      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
     },
     {
       icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
-      features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
+      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
+<<<<<<< HEAD
       icon: Zap,
       title: "DevOps Automation",
       description: "Streamline your development and deployment processes with automation",
+<<<<<<< HEAD
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
 
+=======
+      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+    };
+=======;
+      icon: Zap,;
+      title: "DevOps Automation",;
+      description: "Streamline your development and deployment processes with automation",;
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -57,6 +76,7 @@ export default function CloudSolutions() {
     {
       icon: Lock,
       title: "Enhanced Security",
+<<<<<<< HEAD
       description: "Enterprise-grade security with advanced threat protection and compliance"
     },
     {
@@ -64,18 +84,28 @@ export default function CloudSolutions() {
       title: "24/7 Support",
       description: "Round-the-clock expert support for your cloud infrastructure needs"
 
+=======
+      description: "Enterprise-grade security with advanced threat protection and compliance";
+    },;
+    {;
+      icon: Users,;
+      title: "24/7 Support",;
+      description: "Round-the-clock expert support for your cloud infrastructure needs";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const technologies = [
-    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },
-    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },
-    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },
-    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },
-    { name: "Docker", logo: "Docker", description: "Containerization" },
-    { name: "Terraform", logo: "TF", description: "Infrastructure as Code" }
+  const technologies = [;
+    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },;
+    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },;
+    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },;
+    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },;
+    { name: "Docker", logo: "Docker", description: "Containerization" },;
+    { name: "Terraform", logo: "TF", description: "Infrastructure as Code" };
   ];
 
   const containerVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -92,10 +122,36 @@ export default function CloudSolutions() {
       y: 0,
       transition: { duration: 0.6 }
 
+=======
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -105,8 +161,26 @@ export default function CloudSolutions() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -122,10 +196,44 @@ export default function CloudSolutions() {
 
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.3 
+
+
+
+
+
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.button
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
@@ -152,8 +260,26 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -178,8 +304,22 @@ export default function CloudSolutions() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -206,8 +346,26 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -249,8 +407,26 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -292,8 +468,26 @@ export default function CloudSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -310,10 +504,23 @@ export default function CloudSolutions() {
               whileTap={{ scale: 0.95 }}
 
               Start Your Cloud Journey
+<<<<<<< HEAD
             </motion.button>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </motion.button>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

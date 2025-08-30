@@ -142,7 +142,6 @@ import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Dat
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AIAnalyticsCopilot;
 }}}

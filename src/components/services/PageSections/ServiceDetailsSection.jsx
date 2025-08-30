@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
+<<<<<<< HEAD
   const defaultServices = [
     {
       id: 1,
@@ -9,7 +10,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       description: 'Complete IT infrastructure design, implementation, and optimization',
       duration: '2-4 weeks',
       teamSize: '3-5 engineers',
-      features: [
+      features[
         'Network architecture design',
         'Server configuration and setup',
         'Security implementation',
@@ -17,14 +18,14 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         'Monitoring and alerting',
         'Documentation and training'
       ],
-      benefits: [
+      benefits[
         'Scalable and reliable infrastructure',
         'Enhanced security posture',
         'Improved performance and uptime',
         'Reduced operational costs',
         'Compliance-ready systems'
       ],
-      requirements: [
+      requirements[
         'Site survey and assessment',
         'Hardware specifications',
         'Network requirements',
@@ -42,7 +43,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       description: 'Comprehensive network security setup and monitoring',
       duration: '1-2 weeks',
       teamSize: '2-3 engineers',
-      features: [
+      features[
         'Firewall configuration',
         'Intrusion detection systems',
         'VPN setup and management',
@@ -50,14 +51,14 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         'Security monitoring',
         'Incident response planning'
       ],
-      benefits: [
+      benefits[
         'Protection against cyber threats',
         'Compliance with security standards',
         'Real-time threat detection',
         'Secure remote access',
         'Audit trail and reporting'
       ],
-      requirements: [
+      requirements[
         'Network topology review',
         'Security policy definition',
         'Compliance requirements',
@@ -75,7 +76,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       description: 'Seamless migration to cloud infrastructure',
       duration: '4-8 weeks',
       teamSize: '4-6 engineers',
-      features: [
+      features[
         'Cloud platform assessment',
         'Migration strategy planning',
         'Data migration and testing',
@@ -83,14 +84,14 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         'Performance optimization',
         'Cost optimization analysis'
       ],
-      benefits: [
+      benefits[
         'Reduced infrastructure costs',
         'Improved scalability',
         'Enhanced disaster recovery',
         'Better performance',
         'Simplified management'
       ],
-      requirements: [
+      requirements[
         'Current infrastructure audit',
         'Cloud platform selection',
         'Data classification',
@@ -104,11 +105,12 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
 
   ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
   const getComplexityColor = (complexity) => {
     switch (complexity.toLowerCase()) {
@@ -119,8 +121,12 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       case 'high':
         return 'text-red-600 bg-red-100';
       default:
+<<<<<<< HEAD
         return 'text-gray-600 bg-gray-100';
 
+=======
+        return 'text-gray-600 bg-gray-100'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -275,7 +281,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
               Need a Custom Solution?
             </h3>
             <p className="text-blue-100 mb-6">
-              Our team can tailor any service to meet your specific business requirements.
+              Our team can tailor  service to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -295,5 +301,9 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

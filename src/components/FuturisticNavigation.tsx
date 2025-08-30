@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MobileSidebarToggle  } from "./MobileSidebarToggle";
+import { Menu, 
+=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -178,37 +185,61 @@ import {
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
+<<<<<<< HEAD
 export const FuturisticNavigation: React.FC = () => {
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+export const FuturisticNavigation: React.FC = (): JSX.Element => {;
+=======;
+} from 'lucide-react';
+export const FuturisticNavigation: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    const handleScroll = () => {
+<<<<<<< HEAD
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 20)};
+=======
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
+<<<<<<< HEAD
+    setActiveDropdown(null)}, [location.pathname]);
+  const handleSearch = (e: React.FormEvent)  => {;
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
+=======;
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
+  const toggleDropdown = (dropdown: string)  => {;
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
-      dropdown: [
+      dropdown[
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
@@ -222,7 +253,7 @@ export const FuturisticNavigation: React.FC = () => {
     {
       name: "Micro SAAS Solutions",
       icon: Cloud,
-      services: [
+      services[
         { name: "Micro SAAS Services", href: "/micro-saas" },
         { name: "Business Tools", href: "/micro-saas/business-tools" },
         { name: "Productivity Apps", href: "/micro-saas/productivity" },
@@ -234,7 +265,7 @@ export const FuturisticNavigation: React.FC = () => {
     {
       name: "IT Infrastructure",
       icon: Server,
-      services: [
+      services[
         { name: "IT Services", href: "/it-services" },
         { name: "Cloud Solutions", href: "/it-services/cloud" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
@@ -246,7 +277,7 @@ export const FuturisticNavigation: React.FC = () => {
     {
       name: "Emerging Technologies",
       icon: Rocket,
-      services: [
+      services[
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -260,6 +291,7 @@ export const FuturisticNavigation: React.FC = () => {
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
+<<<<<<< HEAD
       dropdown: [
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
@@ -267,6 +299,15 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
       ]
 
+=======
+      dropdown[;
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
+      ];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
     <>
@@ -280,8 +321,26 @@ export const FuturisticNavigation: React.FC = () => {
             {/* Enhanced Logo */}
             <motion.div
               className="flex items-center"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.5 }}
 
               <Link to="/" className="flex items-center space-x-3 group">
@@ -304,10 +363,44 @@ export const FuturisticNavigation: React.FC = () => {
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: 0.1 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <Link
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -317,10 +410,44 @@ export const FuturisticNavigation: React.FC = () => {
                 </Link>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
 
+=======
+                initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: 0.15 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <Link
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -333,9 +460,36 @@ export const FuturisticNavigation: React.FC = () => {
               {serviceCategories.map((category, index) => (
                 <div key={category.name} className="relative">
                   <motion.button
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: (index + 2) * 0.1 
+
+
+
+
+
+
+}}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                       activeDropdown === category.name
@@ -353,9 +507,36 @@ export const FuturisticNavigation: React.FC = () => {
                   <AnimatePresence>
                     {activeDropdown === category.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
 
@@ -368,10 +549,44 @@ export const FuturisticNavigation: React.FC = () => {
                             {category.services.map((service, subIndex) => (
                               <motion.div
                                 key={service.name}
+<<<<<<< HEAD
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: subIndex * 0.05 }}
 
+=======
+                                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                                transition = {
+  { duration: 0.3,
+  delay: subIndex * 0.05 
+
+
+
+
+
+
+}}
+                              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                 <Link
                                   to={service.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
@@ -436,10 +651,23 @@ export const FuturisticNavigation: React.FC = () => {
               </div>
               {/* Mobile Sidebar Toggle */}
               <MobileSidebarToggle />
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </header>
-    </>
+      </header>;
+    </>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </header>;
+    </>;
   );
+<<<<<<< HEAD
 };}}}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

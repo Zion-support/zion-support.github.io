@@ -20,12 +20,15 @@ export function AdvancedSearch() {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
+<<<<<<< HEAD
                 setShowSuggestions(false);
 
+=======
+                setShowSuggestions(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     useEffect(() => {
         if (query.trim()) {
             const filtered = mockSuggestions
@@ -34,12 +37,19 @@ export function AdvancedSearch() {
                 .sort((a, b) => b.relevance - a.relevance)
                 .slice(0, 8);
             setSuggestions(filtered);
+<<<<<<< HEAD
             setShowSuggestions(true);
 
         else {
             setSuggestions([]);
             setShowSuggestions(false);
 
+=======
+            setShowSuggestions(true)}
+        else {
+            setSuggestions([]);
+            setShowSuggestions(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [query]);
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
@@ -49,19 +59,21 @@ export function AdvancedSearch() {
     const toggleFilter = (category) => {
         setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
-            : [...prev, category]);
-    };
+            [...prev, category])};
     const clearFilters = () => {
-        setSelectedFilters([]);
-    };
+        setSelectedFilters([])};
     const getSuggestionIcon = (type) => {
         switch (type) {
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;
+<<<<<<< HEAD
             default: return <Search className="w-4 h-4 text-zion-slate"/>;
 
+=======
+            default: return <Search className="w-4 h-4 text-zion-slate"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSuggestionColor = (type) => {
         switch (type) {
@@ -69,8 +81,12 @@ export function AdvancedSearch() {
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
             case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
+<<<<<<< HEAD
             default: return 'bg-zion-slate/10 border-zion-slate/20';
 
+=======
+            default: return 'bg-zion-slate/10 border-zion-slate/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}
@@ -147,5 +163,9 @@ export function AdvancedSearch() {
             Try different keywords or browse our categories
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
 }}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

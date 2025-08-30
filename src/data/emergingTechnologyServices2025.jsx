@@ -9,7 +9,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 25000,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Access to quantum processors",
             "Quantum algorithm library",
             "Hybrid classical-quantum computing",
@@ -21,7 +21,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Performance analytics",
             "API access"
         ],
-        benefits: [
+        benefits[
             "Solve previously impossible problems",
             "Accelerate research by 1000x",
             "Competitive advantage",
@@ -29,7 +29,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Research leadership",
             "Breakthrough discoveries"
         ],
-        useCases: [
+        useCases[
             "Pharmaceutical research",
             "Financial modeling",
             "Materials science",
@@ -37,7 +37,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Cryptography",
             "Machine learning"
         ],
-        targetAudience: [
+        targetAudience[
             "Research institutions",
             "Pharmaceutical companies",
             "Financial services",
@@ -45,7 +45,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Technology companies",
             "Academic researchers"
         ],
-        tags: ["Quantum Computing", "Research", "Optimization", "Simulation", "Innovation", "Breakthrough Technology"],
+        tags["Quantum Computing", "Research", "Optimization", "Simulation", "Innovation", "Breakthrough Technology"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $100,000/month",
@@ -55,16 +55,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Quantum processors", "Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
-        integrations: ["Research databases", "Scientific instruments", "Cloud platforms", "Data sources"],
-        compliance: ["Research ethics", "Data privacy", "Intellectual property", "Export controls"],
+        technology["Quantum processors", "Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
+        integrations["Research databases", "Scientific instruments", "Cloud platforms", "Data sources"],
+        compliance["Research ethics", "Data privacy", "Intellectual property", "Export controls"],
         roi: "1000% within 24 months",
-        competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave", "Rigetti"],
+        competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave", "Rigetti"],
         marketTrend: "Quantum computing market expected to reach $65B by 2030",
         innovationLevel: "Revolutionary quantum technology with breakthrough capabilities",
-        deploymentOptions: ["Cloud", "Hybrid", "On-premise"],
+        deploymentOptions["Cloud", "Hybrid", "On-premise"],
         scalability: "Quantum advantage for specific problem classes",
-        securityFeatures: ["Quantum encryption", "Secure quantum communication", "Privacy-preserving computation"],
+        securityFeatures["Quantum encryption", "Secure quantum communication", "Privacy-preserving computation"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -82,7 +82,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 8999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Autonomous decision-making engines",
             "Multi-agent coordination systems",
             "Self-learning algorithms",
@@ -94,7 +94,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "API integration",
             "Custom agent development"
         ],
-        benefits: [
+        benefits[
             "Automate complex decision-making",
             "Reduce operational costs by 40%",
             "Improve efficiency by 300%",
@@ -102,7 +102,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Data-driven optimization",
             "Competitive advantage"
         ],
-        useCases: [
+        useCases[
             "Manufacturing automation",
             "Supply chain optimization",
             "Financial trading",
@@ -110,7 +110,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Logistics management",
             "Customer service"
         ],
-        targetAudience: [
+        targetAudience[
             "Operations managers",
             "Technology leaders",
             "Process engineers",
@@ -118,7 +118,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Business consultants",
             "IT directors"
         ],
-        tags: ["Artificial Intelligence", "Autonomous Systems", "Automation", "Decision Making", "Process Optimization"],
+        tags["Artificial Intelligence", "Autonomous Systems", "Automation", "Decision Making", "Process Optimization"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$8,999 - $25,000/month",
@@ -128,16 +128,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "NLP", "Computer Vision", "Python"],
-        integrations: ["ERP systems", "CRM platforms", "IoT devices", "Cloud services", "Data sources"],
-        compliance: ["SOC 2", "ISO 27001", "Industry-specific regulations"],
+        technology["Machine Learning", "Deep Learning", "Reinforcement Learning", "NLP", "Computer Vision", "Python"],
+        integrations["ERP systems", "CRM platforms", "IoT devices", "Cloud services", "Data sources"],
+        compliance["SOC 2", "ISO 27001", "Industry-specific regulations"],
         roi: "500% within 12 months",
-        competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Zapier"],
+        competitors["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Zapier"],
         marketTrend: "Autonomous systems market growing at 35% annually",
         innovationLevel: "Cutting-edge AI technology with advanced autonomous capabilities",
-        deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
+        deploymentOptions["Cloud", "On-premise", "Hybrid", "Edge"],
         scalability: "Handles enterprise-scale autonomous operations",
-        securityFeatures: ["AI safety measures", "Explainable AI", "Bias detection", "Secure decision-making"],
+        securityFeatures["AI safety measures", "Explainable AI", "Bias detection", "Secure decision-making"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -155,7 +155,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 5999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Blockchain-based tracking",
             "Smart contract automation",
             "Real-time visibility",
@@ -167,7 +167,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Mobile applications",
             "API integration"
         ],
-        benefits: [
+        benefits[
             "End-to-end transparency",
             "Reduce fraud by 90%",
             "Improve traceability",
@@ -175,7 +175,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Reduce costs by 25%",
             "Enhanced trust"
         ],
-        useCases: [
+        useCases[
             "Food safety tracking",
             "Pharmaceutical supply chains",
             "Luxury goods authentication",
@@ -183,7 +183,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Logistics companies",
             "Retail chains"
         ],
-        targetAudience: [
+        targetAudience[
             "Supply chain managers",
             "Logistics directors",
             "Compliance officers",
@@ -191,7 +191,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Operations directors",
             "Business owners"
         ],
-        tags: ["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Traceability", "Compliance"],
+        tags["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Traceability", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,999 - $18,000/month",
@@ -201,16 +201,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Ethereum", "Polygon", "Hyperledger", "IPFS", "React", "Node.js", "Solidity"],
-        integrations: ["ERP systems", "WMS", "TMS", "IoT sensors", "Payment processors"],
-        compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2", "Industry standards"],
+        technology["Ethereum", "Polygon", "Hyperledger", "IPFS", "React", "Node.js", "Solidity"],
+        integrations["ERP systems", "WMS", "TMS", "IoT sensors", "Payment processors"],
+        compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2", "Industry standards"],
         roi: "400% within 10 months",
-        competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens", "Hyperledger Fabric"],
+        competitors["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens", "Hyperledger Fabric"],
         marketTrend: "Blockchain supply chain market expected to reach $20B by 2027",
         innovationLevel: "Revolutionary blockchain technology with advanced supply chain features",
-        deploymentOptions: ["Cloud", "Hybrid", "Private blockchain"],
+        deploymentOptions["Cloud", "Hybrid", "Private blockchain"],
         scalability: "Handles global supply chain networks",
-        securityFeatures: ["Blockchain security", "Cryptographic verification", "Immutable records", "Smart contract security"],
+        securityFeatures["Blockchain security", "Cryptographic verification", "Immutable records", "Smart contract security"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -228,7 +228,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 3999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Edge computing infrastructure",
             "IoT device management",
             "Real-time data processing",
@@ -240,7 +240,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Performance monitoring",
             "API management"
         ],
-        benefits: [
+        benefits[
             "Reduce latency by 90%",
             "Lower bandwidth costs",
             "Real-time processing",
@@ -248,7 +248,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Improved reliability",
             "Cost optimization"
         ],
-        useCases: [
+        useCases[
             "Smart cities",
             "Industrial IoT",
             "Autonomous vehicles",
@@ -256,7 +256,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Retail analytics",
             "Energy management"
         ],
-        targetAudience: [
+        targetAudience[
             "IoT architects",
             "System integrators",
             "Technology leaders",
@@ -264,7 +264,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "IT directors",
             "Product managers"
         ],
-        tags: ["Edge Computing", "IoT", "Real-time Processing", "AI Inference", "Device Management", "Analytics"],
+        tags["Edge Computing", "IoT", "Real-time Processing", "AI Inference", "Device Management", "Analytics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$3,999 - $12,000/month",
@@ -274,16 +274,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "React", "Python", "Edge AI"],
-        integrations: ["Cloud platforms", "IoT devices", "Data sources", "Analytics tools", "Security systems"],
-        compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
+        technology["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "React", "Python", "Edge AI"],
+        integrations["Cloud platforms", "IoT devices", "Data sources", "Analytics tools", "Security systems"],
+        compliance["SOC 2", "ISO 27001", "Industry-specific standards"],
         roi: "350% within 8 months",
-        competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
+        competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
         marketTrend: "Edge computing market growing at 40% annually",
         innovationLevel: "Advanced edge computing technology with AI capabilities",
-        deploymentOptions: ["Edge", "Hybrid", "Multi-cloud"],
+        deploymentOptions["Edge", "Hybrid", "Multi-cloud"],
         scalability: "Handles thousands of edge nodes",
-        securityFeatures: ["Device authentication", "Data encryption", "Secure communication", "Threat detection"],
+        securityFeatures["Device authentication", "Data encryption", "Secure communication", "Threat detection"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -301,7 +301,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 7999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered threat detection",
             "Autonomous incident response",
             "Behavioral analytics",
@@ -313,7 +313,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Incident management",
             "Performance analytics"
         ],
-        benefits: [
+        benefits[
             "Detect threats 90% faster",
             "Automate 80% of responses",
             "Reduce false positives",
@@ -321,7 +321,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "24/7 protection",
             "Cost optimization"
         ],
-        useCases: [
+        useCases[
             "Enterprise security",
             "Financial services",
             "Healthcare organizations",
@@ -329,7 +329,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Critical infrastructure",
             "Cloud environments"
         ],
-        targetAudience: [
+        targetAudience[
             "CISOs and security teams",
             "IT security managers",
             "Compliance officers",
@@ -337,7 +337,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Security analysts",
             "Technology leaders"
         ],
-        tags: ["Cybersecurity", "Artificial Intelligence", "Threat Detection", "Incident Response", "Compliance"],
+        tags["Cybersecurity", "Artificial Intelligence", "Threat Detection", "Incident Response", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$7,999 - $25,000/month",
@@ -347,16 +347,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Machine Learning", "Deep Learning", "NLP", "Python", "Elasticsearch", "Kafka", "Redis"],
-        integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "GDPR"],
+        technology["Machine Learning", "Deep Learning", "NLP", "Python", "Elasticsearch", "Kafka", "Redis"],
+        integrations["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
+        compliance["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "GDPR"],
         roi: "600% within 8 months",
-        competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Microsoft Defender", "Cisco"],
+        competitors["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Microsoft Defender", "Cisco"],
         marketTrend: "AI cybersecurity market growing at 30% annually",
         innovationLevel: "Advanced AI technology with autonomous security capabilities",
-        deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Multi-cloud"],
+        deploymentOptions["Cloud", "On-premise", "Hybrid", "Multi-cloud"],
         scalability: "Handles enterprise-scale security operations",
-        securityFeatures: ["Zero-trust architecture", "AI safety measures", "Encryption", "Multi-factor authentication"],
+        securityFeatures["Zero-trust architecture", "AI safety measures", "Encryption", "Multi-factor authentication"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -374,7 +374,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 12999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Post-quantum cryptography",
             "Quantum-resistant algorithms",
             "Hybrid encryption systems",
@@ -386,7 +386,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "API integration",
             "Migration tools"
         ],
-        benefits: [
+        benefits[
             "Future-proof security",
             "Protect against quantum threats",
             "Maintain current security",
@@ -394,7 +394,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Competitive advantage",
             "Risk mitigation"
         ],
-        useCases: [
+        useCases[
             "Financial institutions",
             "Government agencies",
             "Healthcare organizations",
@@ -402,7 +402,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Critical infrastructure",
             "Cloud providers"
         ],
-        targetAudience: [
+        targetAudience[
             "CISOs and security teams",
             "Cryptography experts",
             "Compliance officers",
@@ -410,7 +410,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Security architects",
             "Risk managers"
         ],
-        tags: ["Quantum Technology", "Cryptography", "Post-Quantum", "Security", "Compliance", "Future-Proof"],
+        tags["Quantum Technology", "Cryptography", "Post-Quantum", "Security", "Compliance", "Future-Proof"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$12,999 - $35,000/month",
@@ -420,16 +420,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Post-quantum algorithms", "Lattice-based cryptography", "Code-based cryptography", "Hash-based signatures"],
-        integrations: ["PKI systems", "TLS/SSL", "VPN solutions", "Identity providers", "Cloud platforms"],
-        compliance: ["NIST standards", "FIPS", "SOC 2", "ISO 27001", "Industry regulations"],
+        technology["Post-quantum algorithms", "Lattice-based cryptography", "Code-based cryptography", "Hash-based signatures"],
+        integrations["PKI systems", "TLS/SSL", "VPN solutions", "Identity providers", "Cloud platforms"],
+        compliance["NIST standards", "FIPS", "SOC 2", "ISO 27001", "Industry regulations"],
         roi: "500% within 18 months",
-        competitors: ["IBM Quantum Safe", "Microsoft Post-Quantum", "Google Post-Quantum", "Cloudflare Post-Quantum"],
+        competitors["IBM Quantum Safe", "Microsoft Post-Quantum", "Google Post-Quantum", "Cloudflare Post-Quantum"],
         marketTrend: "Post-quantum cryptography market expected to reach $10B by 2030",
         innovationLevel: "Revolutionary quantum-safe technology with industry-leading security",
-        deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Hardware security modules"],
+        deploymentOptions["Cloud", "On-premise", "Hybrid", "Hardware security modules"],
         scalability: "Handles enterprise-scale cryptographic operations",
-        securityFeatures: ["Quantum-resistant encryption", "Hybrid security", "Key management", "Secure communication"],
+        securityFeatures["Quantum-resistant encryption", "Hybrid security", "Key management", "Secure communication"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -447,7 +447,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 19999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered compound screening",
             "Molecular design optimization",
             "Drug-target interaction prediction",
@@ -459,7 +459,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Performance monitoring",
             "Expert consultation"
         ],
-        benefits: [
+        benefits[
             "Accelerate drug discovery by 10x",
             "Reduce development costs by 60%",
             "Improve success rates",
@@ -467,7 +467,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Enhanced collaboration",
             "Competitive advantage"
         ],
-        useCases: [
+        useCases[
             "Pharmaceutical companies",
             "Biotech firms",
             "Research institutions",
@@ -475,7 +475,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Contract research organizations",
             "Drug development companies"
         ],
-        targetAudience: [
+        targetAudience[
             "Research scientists",
             "Drug developers",
             "Biotech executives",
@@ -483,7 +483,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Pharmaceutical leaders",
             "Technology directors"
         ],
-        tags: ["Healthcare Technology", "Artificial Intelligence", "Drug Discovery", "Pharmaceuticals", "Research", "Innovation"],
+        tags["Healthcare Technology", "Artificial Intelligence", "Drug Discovery", "Pharmaceuticals", "Research", "Innovation"],
         estimatedDelivery: "12-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$19,999 - $50,000/month",
@@ -493,16 +493,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Deep Learning", "Molecular modeling", "Bioinformatics", "Python", "TensorFlow", "PyTorch"],
-        integrations: ["Research databases", "Laboratory systems", "Clinical trial platforms", "Data sources"],
-        compliance: ["FDA guidelines", "GxP", "HIPAA", "SOC 2", "Research ethics"],
+        technology["Deep Learning", "Molecular modeling", "Bioinformatics", "Python", "TensorFlow", "PyTorch"],
+        integrations["Research databases", "Laboratory systems", "Clinical trial platforms", "Data sources"],
+        compliance["FDA guidelines", "GxP", "HIPAA", "SOC 2", "Research ethics"],
         roi: "800% within 24 months",
-        competitors: ["Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia", "Recursion Pharmaceuticals"],
+        competitors["Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia", "Recursion Pharmaceuticals"],
         marketTrend: "AI drug discovery market expected to reach $15B by 2027",
         innovationLevel: "Revolutionary AI technology with breakthrough drug discovery capabilities",
-        deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Research cloud"],
+        deploymentOptions["Cloud", "On-premise", "Hybrid", "Research cloud"],
         scalability: "Handles enterprise-scale drug discovery operations",
-        securityFeatures: ["Data privacy", "Intellectual property protection", "Secure collaboration", "Audit logging"],
+        securityFeatures["Data privacy", "Intellectual property protection", "Secure collaboration", "Audit logging"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,
@@ -520,7 +520,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         price: 15999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Autonomous driving algorithms",
             "Sensor fusion systems",
             "Computer vision processing",
@@ -532,7 +532,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Performance analytics",
             "API integration"
         ],
-        benefits: [
+        benefits[
             "Accelerate autonomous development",
             "Reduce development costs",
             "Improve safety systems",
@@ -540,7 +540,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Enhanced testing capabilities",
             "Competitive advantage"
         ],
-        useCases: [
+        useCases[
             "Automotive manufacturers",
             "Transportation companies",
             "Logistics providers",
@@ -548,7 +548,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Research institutions",
             "Government agencies"
         ],
-        targetAudience: [
+        targetAudience[
             "Automotive engineers",
             "Technology leaders",
             "Research scientists",
@@ -556,7 +556,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Mobility executives",
             "Government officials"
         ],
-        tags: ["Autonomous Vehicles", "Computer Vision", "Machine Learning", "Robotics", "Transportation", "Innovation"],
+        tags["Autonomous Vehicles", "Computer Vision", "Machine Learning", "Robotics", "Transportation", "Innovation"],
         estimatedDelivery: "12-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$15,999 - $45,000/month",
@@ -566,16 +566,16 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["Computer Vision", "Deep Learning", "Robotics", "Sensor fusion", "Python", "C++", "ROS"],
-        integrations: ["Vehicle systems", "Cloud platforms", "Simulation tools", "Testing frameworks", "Data sources"],
-        compliance: ["Automotive safety standards", "ISO 26262", "ASIL", "Regulatory requirements"],
+        technology["Computer Vision", "Deep Learning", "Robotics", "Sensor fusion", "Python", "C++", "ROS"],
+        integrations["Vehicle systems", "Cloud platforms", "Simulation tools", "Testing frameworks", "Data sources"],
+        compliance["Automotive safety standards", "ISO 26262", "ASIL", "Regulatory requirements"],
         roi: "600% within 24 months",
-        competitors: ["Waymo", "Tesla", "Cruise", "Argo AI", "Mobileye", "Aurora"],
+        competitors["Waymo", "Tesla", "Cruise", "Argo AI", "Mobileye", "Aurora"],
         marketTrend: "Autonomous vehicle market expected to reach $500B by 2030",
         innovationLevel: "Revolutionary autonomous technology with advanced safety features",
-        deploymentOptions: ["On-vehicle", "Cloud", "Hybrid", "Edge computing"],
+        deploymentOptions["On-vehicle", "Cloud", "Hybrid", "Edge computing"],
         scalability: "Handles fleet-scale autonomous operations",
-        securityFeatures: ["Cybersecurity", "Safety systems", "Redundancy", "Fail-safe mechanisms"],
+        securityFeatures["Cybersecurity", "Safety systems", "Redundancy", "Fail-safe mechanisms"],
         apiAccess: true,
         customDevelopment: true,
         trainingIncluded: true,

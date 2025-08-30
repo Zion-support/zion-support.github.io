@@ -9,7 +9,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
@@ -102,5 +102,9 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
+<<<<<<< HEAD
     </div>);
 }}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

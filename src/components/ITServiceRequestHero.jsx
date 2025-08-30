@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, Zap, Brain, Shield, Cloud import { GradientHeading } from '../ui/GradientHeading';
 import { NeonGlow } from '../ui/NeonGlow';
+=======
+import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
+import { GradientHeading } from "../ui/GradientHeading";
+import { NeonGlow } from "../ui/NeonGlow";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ITServiceRequestHero() {
     const features = [
         {
@@ -62,5 +68,9 @@ export function ITServiceRequestHero() {
             </div>))}
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 }}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

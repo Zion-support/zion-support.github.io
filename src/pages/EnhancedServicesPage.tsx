@@ -28,16 +28,21 @@ import {
   Link,
   Users,
   CheckCircle
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function EnhancedServicesPage() {
+export default function EnhancedServicesPage(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
-  const filteredServices = ENHANCED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ENHANCED_SERVICES.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
     const matchesCategory = selectedCategory === 'all' ||
@@ -52,10 +57,12 @@ export default function EnhancedServicesPage() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'ai automation':
-      case 'ai & machine learning':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category.toLowerCase()) {;
+      case 'ai automation':;
+      case 'ai & machine learning':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'cloud management':
       case 'cloud & infrastructure':
@@ -82,16 +89,21 @@ export default function EnhancedServicesPage() {
       case 'quantum computing':
         return <Zap className="w-5 h-5" />;
       default:
+<<<<<<< HEAD
         return <Code className="w-5 h-5" />;
 
+=======
+        return <Code className = "w-5 h-5" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getPriceRange = (price: number) => {
+<<<<<<< HEAD
+  const getPriceRange = (price: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
-    return 'premium';
-  };
+    return 'premium'};
 
   return (
     <div className="min-h-screen bg-background">
@@ -137,8 +149,8 @@ export default function EnhancedServicesPage() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Service Pricing Tiers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info])  => (
               <Card key={tier} className="bg-zion-blue border-zion-blue-light">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
@@ -291,8 +303,8 @@ export default function EnhancedServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)  => (
               <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
@@ -389,9 +401,9 @@ export default function EnhancedServicesPage() {
 
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
               <TabsContent key={category.value} value={category.value} className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES
-                    .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
+                    .filter(service  => service.category.toLowerCase().includes(category.value.toLowerCase()))
                     .slice(0, 6)
                     .map(service => (
                       <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">
@@ -528,8 +540,22 @@ export default function EnhancedServicesPage() {
                 size="lg"
                 variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+<<<<<<< HEAD
                 onClick={() => window.open(CONTACT_INFO.website, '_blank')}
 
+=======
+                onClick = {
+  () => window.open(CONTACT_INFO.website,
+  '_blank')
+
+
+
+
+
+
+}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
               </Button>
@@ -546,10 +572,23 @@ export default function EnhancedServicesPage() {
 
                 Request Enterprise Consultation
               </Button>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

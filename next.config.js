@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
+  reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-	images: {
+  images: {
 		unoptimized: true
-	},
+	
+
+},
 	eslint: {
 		ignoreDuringBuilds: true
 	},
@@ -22,8 +24,12 @@ const nextConfig = {
 			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
+<<<<<<< HEAD
 		];
 
+=======
+		]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 
 export default nextConfig;

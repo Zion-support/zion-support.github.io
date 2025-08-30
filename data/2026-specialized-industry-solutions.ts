@@ -28,20 +28,34 @@ export interface SpecializedIndustrySolution {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
@@ -51,7 +65,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$18,999',
     period: '/month',
     description: 'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.',
-    features: [
+    features[
       'AI-powered image analysis (X-rays, MRIs, CT scans)',
       'Symptom analysis and diagnosis support',
       'Treatment recommendation engine',
@@ -74,11 +88,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     setupTime: '4-6 weeks',
     category: 'Healthcare Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['EMR systems', 'PACS systems', 'Lab information systems', 'Pharmacy systems', 'Insurance platforms'],
-    useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Patient care optimization', 'Clinical research'],
+    technology['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+    integrations['EMR systems', 'PACS systems', 'Lab information systems', 'Pharmacy systems', 'Insurance platforms'],
+    useCases['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Patient care optimization', 'Clinical research'],
     roi: 'Average 300% ROI through improved diagnostic accuracy and reduced medical errors.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Philips Healthcare'],
+    competitors['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Philips Healthcare'],
     marketSize: '$45.2B healthcare AI market',
     growthRate: '44.9% annual growth',
     contactInfo: contact,
@@ -96,7 +110,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$22,999',
     period: '/month',
     description: 'Advanced blockchain platform designed specifically for financial services, providing secure, transparent, and efficient transaction processing, smart contracts, and digital asset management.',
-    features: [
+    features[
       'Smart contract development and deployment',
       'Digital asset management',
       'Cross-border payment processing',
@@ -119,11 +133,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     setupTime: '6-8 weeks',
     category: 'FinTech Solutions',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'Python', 'React', 'Node.js', 'Ethereum', 'Hyperledger'],
-    integrations: ['Banking systems', 'Payment gateways', 'Compliance platforms', 'Trading systems', 'Insurance platforms'],
-    useCases: ['Cross-border payments', 'Smart contracts', 'Digital asset management', 'Supply chain finance', 'Insurance automation'],
+    technology['Blockchain', 'Smart Contracts', 'Python', 'React', 'Node.js', 'Ethereum', 'Hyperledger'],
+    integrations['Banking systems', 'Payment gateways', 'Compliance platforms', 'Trading systems', 'Insurance platforms'],
+    useCases['Cross-border payments', 'Smart contracts', 'Digital asset management', 'Supply chain finance', 'Insurance automation'],
     roi: 'Average 400% ROI through reduced transaction costs and improved efficiency.',
-    competitors: ['Ripple', 'ConsenSys', 'Corda', 'Hyperledger'],
+    competitors['Ripple', 'ConsenSys', 'Corda', 'Hyperledger'],
     marketSize: '$19.9B blockchain in fintech market',
     growthRate: '87.7% annual growth',
     contactInfo: contact,
@@ -141,7 +155,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$16,999',
     period: '/month',
     description: 'Advanced IoT platform that enables smart manufacturing through real-time monitoring, predictive maintenance, quality control, and operational optimization.',
-    features: [
+    features[
       'Real-time equipment monitoring',
       'Predictive maintenance alerts',
       'Quality control automation',
@@ -164,11 +178,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     setupTime: '4-6 weeks',
     category: 'Manufacturing Technology',
     realService: true,
-    technology: ['IoT sensors', 'Machine Learning', 'Python', 'React', 'Node.js', 'Cloud platforms', 'Edge computing'],
-    integrations: ['ERP systems', 'MES systems', 'SCADA systems', 'PLC controllers', 'Cloud services'],
-    useCases: ['Predictive maintenance', 'Quality control', 'Energy optimization', 'Supply chain tracking', 'Production optimization'],
+    technology['IoT sensors', 'Machine Learning', 'Python', 'React', 'Node.js', 'Cloud platforms', 'Edge computing'],
+    integrations['ERP systems', 'MES systems', 'SCADA systems', 'PLC controllers', 'Cloud services'],
+    useCases['Predictive maintenance', 'Quality control', 'Energy optimization', 'Supply chain tracking', 'Production optimization'],
     roi: 'Average 250% ROI through reduced downtime and improved operational efficiency.',
-    competitors: ['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'IBM Watson IoT'],
+    competitors['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'IBM Watson IoT'],
     marketSize: '$263.4B manufacturing IoT market',
     growthRate: '18.2% annual growth',
     contactInfo: contact,
@@ -186,7 +200,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$12,999',
     period: '/month',
     description: 'Comprehensive AI platform that optimizes retail operations through customer behavior analysis, inventory management, pricing optimization, and personalized marketing.',
-    features: [
+    features[
       'Customer behavior analysis',
       'Inventory optimization',
       'Dynamic pricing strategies',
@@ -209,11 +223,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     setupTime: '2-3 weeks',
     category: 'Retail Technology',
     realService: true,
-    technology: ['Machine Learning', 'Python', 'React', 'Node.js', 'Data Analytics', 'Cloud platforms'],
-    integrations: ['POS systems', 'E-commerce platforms', 'CRM systems', 'Inventory systems', 'Marketing platforms'],
-    useCases: ['Customer analytics', 'Inventory optimization', 'Pricing strategies', 'Marketing automation', 'Performance tracking'],
+    technology['Machine Learning', 'Python', 'React', 'Node.js', 'Data Analytics', 'Cloud platforms'],
+    integrations['POS systems', 'E-commerce platforms', 'CRM systems', 'Inventory systems', 'Marketing platforms'],
+    useCases['Customer analytics', 'Inventory optimization', 'Pricing strategies', 'Marketing automation', 'Performance tracking'],
     roi: 'Average 300% ROI through improved customer experience and operational efficiency.',
-    competitors: ['Salesforce Commerce Cloud', 'Adobe Commerce', 'Shopify Plus', 'BigCommerce'],
+    competitors['Salesforce Commerce Cloud', 'Adobe Commerce', 'Shopify Plus', 'BigCommerce'],
     marketSize: '$31.2B retail AI market',
     growthRate: '35.9% annual growth',
     contactInfo: contact,
@@ -231,7 +245,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$19,999',
     period: '/month',
     description: 'Advanced AI platform that optimizes logistics operations, supply chain management, route planning, and delivery optimization for maximum efficiency and cost reduction.',
-    features: [
+    features[
       'Route optimization algorithms',
       'Supply chain visibility',
       'Demand forecasting',
@@ -243,6 +257,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
+<<<<<<< HEAD
 
 ];
 export const INDUSTRY_SOLUTION_CATEGORIES = [
@@ -252,3 +267,39 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Retail Technology',
   'Logistics Technology'
 ];}}
+=======
+    popular: true,
+    icon: '🚚',
+    color: 'from-orange-600 to-red-600',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
+    marketPosition: 'Leading logistics AI platform. Competes with SAP Logistics ($30K+ setup), Oracle Transportation ($25K+ setup). Our advantage: AI-powered optimization and comprehensive features.',
+    targetAudience: 'Logistics companies, Supply chain managers, Transportation companies, E-commerce businesses, Manufacturing companies',
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'Logistics Technology',
+    realService: true,
+    technology: ['AI/ML', 'Python', 'React', 'Node.js', 'IoT', 'Cloud platforms', 'GPS tracking'],
+    integrations: ['ERP systems', 'WMS systems', 'TMS systems', 'GPS platforms', 'E-commerce platforms'],
+    useCases: ['Route optimization', 'Supply chain visibility', 'Demand forecasting', 'Inventory management', 'Performance tracking'],
+    roi: 'Average 280% ROI through optimized logistics and reduced operational costs.',
+    competitors: ['SAP Logistics', 'Oracle Transportation', 'Manhattan Associates', 'JDA Software'],
+    marketSize: '$18.2B logistics AI market',
+    growthRate: '22.5% annual growth',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
+    launchDate: '2024-05-01',
+    customers: 38,
+    rating: 4.6,
+    reviews: 32
+  }
+];
+export const INDUSTRY_SOLUTION_CATEGORIES = [;
+  'Healthcare Technology',;
+  'FinTech Solutions',;
+  'Manufacturing Technology',;
+  'Retail Technology',;
+  'Logistics Technology';
+];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -10,34 +10,15 @@ import {
   Calendar,
   Users,
   DollarSign,
-  Target,
   Activity,
   Eye,
-  Settings,
-  RefreshCw,
   FileText,
-  Image,
-  Printer,
-  Mail,
   Clock,
-  CheckCircle,
-  AlertCircle,
-  XCircle,
   Star,
-  Award,
-  TrendingDown,
-  ArrowUp,
-  ArrowDown,
-  Minus,
   Search,
   ChevronDown,
   ChevronUp,
-  Zap,
-  Brain,
-  Cloud,
   Shield,
-  Globe,
-  Database,
   Server,
   Lock,
   Unlock,
@@ -45,13 +26,18 @@ import {
   Smartphone,
   Monitor,
   Tablet
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ReportData {
+
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
   category: string;
-  data: any;
-  lastUpdated: string;
+  data;lastUpdated: string;
   status: 'active' | 'archived' | 'draft';
   priority: 'low' | 'medium' | 'high' | 'critical';
   tags: string[];
@@ -59,41 +45,69 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
+<<<<<<< HEAD
   rating: number;
+=======
+  rating: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ReportMetrics {
+
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
+<<<<<<< HEAD
   topCategories: Array<{ name: string; count: number; percentage: number }>;
   recentActivity: Array<{ action: string; timestamp: string; user: string }>;
+=======
+  topCategories: Array<any>;
+  recentActivity: Array<any>}
 
-interface AdvancedReportingDashboardProps {
+interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
+<<<<<<< HEAD
   maxReports?: number;
+=======
+  maxReports?: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+<<<<<<< HEAD
   showMetrics = true,
   showFilters = true,
   showCharts = true,
-  maxReports = 15
-}) => {
+  maxReports = 15;
+}) => {;
+  const [reports, setReports] = useState<any>([]);
+  const [filteredReports, setFilteredReports] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+=======
+  showMetrics = true,;
+  showFilters = true,;
+  showCharts = true,;
+  maxReports = 15;
+}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'detailed'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
-  const [selectedReport, setSelectedReport] = useState<ReportData | null>(null);
+  const [selectedReport, setSelectedReport] = useState<any>(null);
   const [showReportDetails, setShowReportDetails] = useState(false);
-  const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [sortBy, setSortBy] = useState<any>('date');
+  const [sortOrder, setSortOrder] = useState<any>('desc');
 
   // Sample report data
   useEffect(() => {
@@ -108,12 +122,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           expenses: 1800000,
           profit: 700000,
           growth: 15.5,
-          keyMetrics: ['Revenue Growth', 'Profit Margin', 'Cost Efficiency']
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']
         },
         lastUpdated: '2024-01-15',
         status: 'active',
         priority: 'high',
-        tags: ['Finance', 'Q4', 'Performance', 'Analysis'],
+        tags['Finance', 'Q4', 'Performance', 'Analysis'],
         description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
         author: 'Sarah Johnson',
         views: 245,
@@ -130,12 +144,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           responseTime: 1.8,
           uptime: 99.9,
           userSatisfaction: 4.6,
-          keyMetrics: ['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']
         },
         lastUpdated: '2024-01-14',
         status: 'active',
         priority: 'critical',
-        tags: ['AI', 'Performance', 'Metrics', 'Machine Learning'],
+        tags['AI', 'Performance', 'Metrics', 'Machine Learning'],
         description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
         author: 'Michael Chen',
         views: 189,
@@ -152,12 +166,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           incidentsResolved: 154,
           responseTime: 2.3,
           riskLevel: 'Medium',
-          keyMetrics: ['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']
         },
         lastUpdated: '2024-01-13',
         status: 'active',
         priority: 'high',
-        tags: ['Security', 'Threats', 'Assessment', 'Risk Management'],
+        tags['Security', 'Threats', 'Assessment', 'Risk Management'],
         description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',
         author: 'David Kim',
         views: 312,
@@ -174,12 +188,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           memoryUsage: 82.3,
           storageUsage: 65.8,
           networkTraffic: 45.2,
-          keyMetrics: ['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']
         },
         lastUpdated: '2024-01-12',
         status: 'active',
         priority: 'medium',
-        tags: ['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],
+        tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],
         description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',
         author: 'Lisa Thompson',
         views: 167,
@@ -195,13 +209,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           overallSatisfaction: 4.6,
           netPromoterScore: 72,
           responseRate: 89.5,
-          topConcerns: ['Response Time', 'Documentation', 'Support Quality'],
-          keyMetrics: ['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']
+          topConcerns['Response Time', 'Documentation', 'Support Quality'],
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']
         },
         lastUpdated: '2024-01-11',
         status: 'active',
         priority: 'medium',
-        tags: ['Customer', 'Satisfaction', 'Survey', 'NPS'],
+        tags['Customer', 'Satisfaction', 'Survey', 'NPS'],
         description: 'Analysis of customer satisfaction survey results and net promoter score metrics',
         author: 'Alex Wong',
         views: 203,
@@ -211,14 +225,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     ];
 
     setReports(sampleReports);
-    setFilteredReports(sampleReports);
-  }, []);
+    setFilteredReports(sampleReports)}, []);
 
   // Filter and sort reports
-  useEffect(() => {
+  useEffect(()  => {
     let filtered = reports;
 
     if (selectedType !== 'all') {
+<<<<<<< HEAD
       filtered = filtered.filter(r => r.type === selectedType);
 
     if (selectedCategory !== 'all') {
@@ -226,13 +240,33 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus);
+=======
+      filtered = filtered.filter(r => r.type === selectedType)}
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(r => r.category === selectedCategory)}
+
+    if (selectedStatus !== 'all') {
+      filtered = filtered.filter(r => r.status === selectedStatus)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchQuery) {
       filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )};
+=======;
+      filtered = filtered.filter(r => ;
+        r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort reports
     filtered.sort((a, b) => {
@@ -252,7 +286,21 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           bValue = b.rating;
           break;
         case 'priority':
-          const priorityOrder = { low: 1, medium: 2, high: 3, critical: 4 };
+          const priorityOrder = {
+  low: 1, medium: 2, high: 3,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  critical: 4 ;
+
+
+
+
+
+
+};
           aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
@@ -262,30 +310,71 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         default:
           aValue = 0;
+<<<<<<< HEAD
           bValue = 0;
+=======
+          bValue = 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
       if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1} else {
+        return aValue < bValue ? 1 : -1};
+=======;
+      if (sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
+<<<<<<< HEAD
 
+=======
+      }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
-    setFilteredReports(filtered.slice(0, maxReports));
-  }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
+    setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
 
   // Calculate report metrics
   const reportMetrics = {
+  <<<<<<< HEAD
     totalReports: reports.length,
-    activeReports: reports.filter(r => r.status === 'active').length,
+    activeReports: reports.filter(r  => r.status === 'active').length,
+    totalViews: reports.reduce((sum, r)  => sum + r.views, 0),
+    totalDownloads: reports.reduce((sum, r)  => sum + r.downloads, 0),
+    averageRating: reports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
+    topCategories: (()  => {
+      const catCounts = reports.reduce((acc,;
+  r) => {;
+        acc[r.category] = (acc[r.category] || 0) + 1;
+        return acc
+
+}, {} as Record<string, any>);
+=======
+  totalReports: reports.length,
+    activeReports: reports.filter(r = > r.status === 'active').length,
     totalViews: reports.reduce((sum, r) => sum + r.views, 0),
     totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
-    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,
-    topCategories: (() => {
-      const catCounts = reports.reduce((acc, r) => {
+    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,;
+    topCategories: (() => {;
+      const catCounts = reports.reduce((acc,;
+  ;
+  ;
+  ;
+  r) => {;
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
+<<<<<<< HEAD
       }, { /* empty */ } as Record<string, number>);
+=======
+      
+
+
+
+
+}, {} as Record<string, number>);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       return Object.entries(catCounts)
         .map(([name, count]) => ({
@@ -293,10 +382,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           count,
           percentage: (count / reports.length) * 100
         }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
-    })(),
-    recentActivity: [
+        .sort((a, b)  => b.count - a.count)
+        .slice(0, 5)})(),
+    recentActivity[
       { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' },
       { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' },
       { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' },
@@ -305,41 +393,62 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get type icon and color
-  const getTypeDisplay = (type: string) => {
+  const getTypeDisplay = (type: string)  => {
     const types = {
-      financial: { icon: <DollarSign className="w-4 h-4" />, color: 'text-green-400 bg-green-400/20' },
-      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },
-      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },
-      security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' },
-      customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' },
-      technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' }
+  financial: { icon: <DollarSign className="w-4 h-4" />,
+  color: 'text-green-400 bg-green-400/20' 
+
+
+
+
+
+;
+},;
+      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },;
+      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },;
+      security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' },;
+      customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' },;
+      technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' };
     };
-    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' };
-  };
+    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
+<<<<<<< HEAD
+  const getPriorityColor = (priority: string) => {;
+    switch (priority) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
+<<<<<<< HEAD
       default: return 'text-zinc-400 bg-zinc-400/20';
 
+=======
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get status color
-  const getStatusColor = (status: string) => {
-    switch (status) {
+<<<<<<< HEAD
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'archived': return 'text-zinc-400 bg-zinc-400/20';
       case 'draft': return 'text-yellow-400 bg-yellow-400/20';
+<<<<<<< HEAD
       default: return 'text-zinc-400 bg-zinc-400/20';
 
+=======
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Handle report actions
-  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {
+<<<<<<< HEAD
+  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const report = reports.find(r => r.id === reportId);
     if (report) {
       switch (action) {
@@ -349,6 +458,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'download':
           // Simulate download
+<<<<<<< HEAD
 <<<<<<< HEAD
           // // // console.log(`Downloading ${report.title}`);
           break;
@@ -382,11 +492,31 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 =======
     // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+          // // // // console.log(`Downloading ${report.title}`);
+          break;
+        case 'share':
+          // Simulate share
+          // // // // console.log(`Sharing ${report.title}`);
+          break;
+        case 'print':
+          // Simulate print
+          console.log(`Printing ${report.title}`);
+          break}
+    }
+  };
+
+  // Export report data
+<<<<<<< HEAD
+  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    console.log(`Exporting ${report.title} as ${format}`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // In a real implementation, this would generate and download the file
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
+    <div className = "w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
@@ -404,7 +534,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
@@ -419,7 +549,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
           {/* Create Report Button */}
           <button
-            onClick={() => setShowReportForm(true)}
+            onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
 
             <FileText className="w-4 h-4" />
@@ -432,8 +562,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       {showMetrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
             <div className="text-3xl font-bold text-white mb-2">{reportMetrics.totalReports}</div>
@@ -441,8 +589,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -451,8 +617,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.2 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -461,8 +645,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.3 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
@@ -476,8 +678,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       {showMetrics && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.4 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
 
@@ -491,7 +711,16 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${category.percentage}%` }}
-                        transition={{ delay: index * 0.1, duration: 0.8 }}
+                        transition = {
+  { delay: index * 0.1,
+  duration: 0.8 
+
+
+
+
+
+
+}}
                         className="h-2 bg-zion-cyan rounded-full"
                       />
                     </div>
@@ -503,8 +732,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.5 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
 
@@ -523,8 +770,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.6 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
 
@@ -591,7 +856,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           {/* Sort Options */}
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as )}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 
             <option value="date">Sort by Date</option>
@@ -628,8 +893,26 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         {filteredReports.map((report, index) => (
           <motion.div
             key={report.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
 
@@ -710,8 +993,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             {/* Key Metrics Preview */}
             <div className="mb-4">
               <h4 className="text-sm font-medium text-zinc-300 mb-3">Key Metrics</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {report.data.keyMetrics?.slice(0, 4).map((metric, idx) => (
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-3">
+                {report.data.keyMetrics?.slice(0, 4).map((metric, idx)  => (
                   <div key={idx} className="p-2 bg-zinc-800/30 rounded-lg text-center">
                     <div className="text-xs text-zinc-400">{metric}</div>
                   </div>
@@ -782,7 +1065,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             Try adjusting your filters or create a new report to get started!
           </p>
           <button
-            onClick={() => setShowReportForm(true)}
+            onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
 
             Create Report
@@ -801,9 +1084,36 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             onClick={() => setShowReportDetails(false)}
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
               className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
 
@@ -825,8 +1135,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {selectedReport.data.keyMetrics?.map((metric, idx) => (
+                  <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
+                    {selectedReport.data.keyMetrics?.map((metric, idx)  => (
                       <div key={idx} className="p-4 bg-zinc-800/30 rounded-lg text-center">
                         <div className="text-lg font-semibold text-white">{metric}</div>
                       </div>
@@ -843,10 +1153,23 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </div>
+      </AnimatePresence>;
+    </div>;
+  )};
+=======
+            </motion.div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </div>;
   );
+<<<<<<< HEAD
 };}}}}}}}}}}}}}}</motion.div>}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

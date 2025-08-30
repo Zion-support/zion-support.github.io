@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {
+=======
+import React from 'react.ts';
+import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings  } from 'lucide-react';
+
+const MicroSAAS = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const microsaasServices = [
     {
       icon: Package,
@@ -36,6 +43,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
       price: "From $18,000/month",
       features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
     },
+<<<<<<< HEAD
     {
       icon: Globe,
       title: "Cloud Deployment",
@@ -43,15 +51,24 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
       price: "From $15,000/month",
       features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
 
+=======
+    {;
+      icon: Globe,;
+      title: "Cloud Deployment",;
+      description: "Scalable cloud infrastructure and deployment solutions",;
+      price: "From $15,000/month",;
+      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Lower development costs and faster time to market",
-    "Scalable architecture that grows with your business",
-    "Reduced infrastructure management overhead",
-    "Access to enterprise-grade security and compliance",
-    "Flexible subscription models and pricing strategies",
-    "Continuous updates and feature improvements"
+  const benefits = [;
+    "Lower development costs and faster time to market",;
+    "Scalable architecture that grows with your business",;
+    "Reduced infrastructure management overhead",;
+    "Access to enterprise-grade security and compliance",;
+    "Flexible subscription models and pricing strategies",;
+    "Continuous updates and feature improvements";
   ];
 
   const technologies = [
@@ -66,6 +83,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
       description: "Node.js, Python, Java with microservices architecture",
       icon: Database,
       features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
+<<<<<<< HEAD
     },
     {
       name: "Cloud",
@@ -73,6 +91,15 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
       icon: Globe,
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]
 
+=======
+    },;
+    {;
+      name: "Cloud",;
+      description: "AWS, Azure, GCP with containerization and orchestration",;
+      icon: Globe,;
+      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -89,6 +116,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
     {
       title: "Education",
       description: "Learning management systems and educational technology platforms",
+<<<<<<< HEAD
       icon: Users
     },
     {
@@ -96,10 +124,19 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
       description: "Online marketplace and retail management solutions",
       icon: Package
 
+=======
+      icon: Users;
+    },;
+    {;
+      title: "E-commerce",;
+      description: "Online marketplace and retail management solutions",;
+      icon: Package;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -279,13 +316,13 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

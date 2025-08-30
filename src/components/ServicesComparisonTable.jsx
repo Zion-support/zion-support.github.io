@@ -1,17 +1,22 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Check, X, Star, Clock, Phone, Mail import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
+=======
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ServicesComparisonTable() {
     const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
-    const getCategoryServices = (category) => {
-        return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-    };
     const getFeatureIcon = (hasFeature) => {
-        return hasFeature ? (<Check className="w-4 h-4 text-green-500"/>) : (<X className="w-4 h-4 text-red-500"/>);
-    };
+        return hasFeature ? (<Check className="w-4 h-4 text-green-500"/>) : (<X className="w-4 h-4 text-red-500"/>)};
     return (<div className="py-16 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -44,8 +49,7 @@ export function ServicesComparisonTable() {
                     View {category}
                   </Button>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Detailed Comparison Table */}
@@ -190,5 +194,9 @@ export function ServicesComparisonTable() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

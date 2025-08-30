@@ -16,11 +16,16 @@ import {
   Cloud,
   Brain,
   Globe
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const caseStudies = [
   {
     id: 1,
     title: "AI-Powered Customer Service Transformation",
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "Technology",
     challenge: "High customer service costs and long response times",
     solution: "Implemented AI chatbot with natural language processing",
@@ -44,7 +49,7 @@ const caseStudies = [
   {
     id: 2,
     title: "Cloud Migration & DevOps Automation",
-    company: "InnovateLab Inc",
+    comp: "InnovateLab Inc",
     industry: "Healthcare",
     challenge: "Legacy infrastructure causing downtime and security risks",
     solution: "Complete cloud migration with CI/CD pipeline implementation",
@@ -68,7 +73,7 @@ const caseStudies = [
   {
     id: 3,
     title: "Data Analytics & Business Intelligence Platform",
-    company: "DataFlow Analytics",
+    comp: "DataFlow Analytics",
     industry: "Finance",
     challenge: "Scattered data sources and lack of real-time insights",
     solution: "Centralized data warehouse with real-time analytics dashboard",
@@ -92,7 +97,7 @@ const caseStudies = [
   {
     id: 4,
     title: "Cybersecurity & Compliance Implementation",
-    company: "SecureBank Ltd",
+    comp: "SecureBank Ltd",
     industry: "Banking",
     challenge: "Increasing cyber threats and regulatory compliance requirements",
     solution: "Comprehensive security framework with SOC2 compliance",
@@ -116,7 +121,7 @@ const caseStudies = [
   {
     id: 5,
     title: "IoT & Edge Computing Solution",
-    company: "SmartManufacturing Co",
+    comp: "SmartManufacturing Co",
     industry: "Manufacturing",
     challenge: "Inefficient production monitoring and quality control",
     solution: "IoT sensors with edge computing for real-time monitoring",
@@ -140,7 +145,7 @@ const caseStudies = [
   {
     id: 6,
     title: "Digital Transformation & Legacy Modernization",
-    company: "LegacyCorp Enterprises",
+    comp: "LegacyCorp Enterprises",
     industry: "Retail",
     challenge: "Outdated systems limiting growth and customer experience",
     solution: "Complete digital transformation with modern tech stack",
@@ -176,20 +181,38 @@ export default function CaseStudies() {
     const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesIndustry && matchesTechnology && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -232,9 +255,15 @@ export default function CaseStudies() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                   {industries.map(industry => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {industries.map(industry  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -245,9 +274,15 @@ export default function CaseStudies() {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                   {technologies.map(tech => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {technologies.map(tech  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
                 </select>
@@ -260,13 +295,40 @@ export default function CaseStudies() {
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)  => (
               <motion.div
                 key={study.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
 
                 {/* Header */}
@@ -276,7 +338,7 @@ export default function CaseStudies() {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {study.company}
+                        {study.comp}
                       </span>
                       <span className="flex items-center gap-1">
                         <Globe className="w-4 h-4" />
@@ -369,8 +431,26 @@ export default function CaseStudies() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -402,4 +482,8 @@ export default function CaseStudies() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }}}
+=======
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

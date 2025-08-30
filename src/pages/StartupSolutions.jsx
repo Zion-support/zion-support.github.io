@@ -21,13 +21,19 @@ import {
   Server,
   Palette,
   Cpu
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const startupSolutions = [
   {
     id: 1,
     title: "MVP Development",
     description: "Rapidly build and launch your minimum viable product to test market fit and gather user feedback.",
     icon: Rocket,
-    features: [
+    features[
       "Quick prototype development",
       "User experience optimization",
       "Market validation testing",
@@ -42,7 +48,7 @@ const startupSolutions = [
     title: "AI-Powered Analytics",
     description: "Leverage artificial intelligence to gain deep insights into your business performance and user behavior.",
     icon: Brain,
-    features: [
+    features[
       "Predictive analytics",
       "User behavior tracking",
       "Performance optimization",
@@ -57,7 +63,7 @@ const startupSolutions = [
     title: "Cloud Infrastructure",
     description: "Scalable cloud solutions that grow with your startup from day one to enterprise scale.",
     icon: Cloud,
-    features: [
+    features[
       "Auto-scaling infrastructure",
       "Cost optimization",
       "Security compliance",
@@ -72,7 +78,7 @@ const startupSolutions = [
     title: "Cybersecurity Framework",
     description: "Protect your startup's data and systems with enterprise-grade security solutions.",
     icon: Shield,
-    features: [
+    features[
       "Threat detection",
       "Data encryption",
       "Compliance management",
@@ -87,7 +93,7 @@ const startupSolutions = [
     title: "Mobile App Development",
     description: "Native and cross-platform mobile applications that engage users and drive growth.",
     icon: Smartphone,
-    features: [
+    features[
       "iOS & Android development",
       "Cross-platform solutions",
       "Performance optimization",
@@ -102,7 +108,7 @@ const startupSolutions = [
     title: "Digital Marketing Platform",
     description: "Comprehensive marketing tools to acquire, engage, and retain customers effectively.",
     icon: Target,
-    features: [
+    features[
       "Multi-channel campaigns",
       "Automation workflows",
       "Analytics & reporting",
@@ -114,10 +120,12 @@ const startupSolutions = [
 
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const successStories = [
   {
     id: 1,
-    company: "TechFlow",
+    comp: "TechFlow",
     industry: "SaaS",
     challenge: "Needed rapid MVP development to secure funding",
     solution: "Built MVP in 6 weeks with AI-powered analytics",
@@ -126,7 +134,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "GreenStart",
+    comp: "GreenStart",
     industry: "CleanTech",
     challenge: "Required scalable cloud infrastructure for IoT platform",
     solution: "Implemented auto-scaling cloud solution with security",
@@ -135,7 +143,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "HealthTech Pro",
+    comp: "HealthTech Pro",
     industry: "Healthcare",
     challenge: "Needed HIPAA-compliant mobile app development",
     solution: "Built secure mobile app with compliance framework",
@@ -197,15 +205,60 @@ export default function StartupSolutions() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Rocket className="w-10 h-10 text-white" />
@@ -243,8 +296,26 @@ export default function StartupSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -258,9 +329,36 @@ export default function StartupSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -287,8 +385,26 @@ export default function StartupSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -319,9 +435,36 @@ export default function StartupSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -365,8 +508,26 @@ export default function StartupSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -380,9 +541,36 @@ export default function StartupSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -390,7 +578,7 @@ export default function StartupSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -426,8 +614,26 @@ export default function StartupSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -455,5 +661,9 @@ export default function StartupSolutions() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

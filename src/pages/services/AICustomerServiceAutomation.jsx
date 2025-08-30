@@ -39,7 +39,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$199",
             period: "/month",
             description: "Perfect for small businesses and startups",
-            features: [
+            features[
                 "Up to 1,000 conversations/month",
                 "Basic AI chatbot",
                 "Email and chat support",
@@ -55,7 +55,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$599",
             period: "/month",
             description: "Ideal for growing businesses and mid-size companies",
-            features: [
+            features[
                 "Up to 10,000 conversations/month",
                 "Advanced AI chatbot",
                 "Multi-channel support",
@@ -73,7 +73,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$1,999",
             period: "/month",
             description: "For large corporations and global customer service teams",
-            features: [
+            features[
                 "Unlimited conversations",
                 "Custom AI models",
                 "Omnichannel support",
@@ -312,5 +312,9 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 }}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

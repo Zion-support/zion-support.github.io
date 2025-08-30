@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: React.FC = () => {
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
+
+const CTASection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Rocket,
@@ -16,6 +25,7 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
     {
       icon: Calendar,
       title: "Flexible Plans",
+<<<<<<< HEAD
       description: "Scale up or down as your business grows"
     },
     {
@@ -23,10 +33,19 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
       title: "Proven Results",
       description: "Trusted by industry leaders worldwide"
 
+=======
+      description: "Scale up or down as your business grows";
+    },;
+    {;
+      icon: Star,;
+      title: "Proven Results",;
+      description: "Trusted by industry leaders worldwide";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5" />
@@ -37,8 +56,26 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="mb-6"
@@ -51,9 +88,36 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
 
           <motion.h2
             id="cta-heading"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
 
@@ -61,9 +125,36 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
             viewport={{ once: true }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
 
@@ -74,18 +165,77 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
         {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
           {features.map((feature, index) => (
+=======
+        >
+          {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               key={feature.title}
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
 
@@ -101,9 +251,36 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
         {/* CTA Buttons */}
         <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
 
           <Link
@@ -128,7 +305,16 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition = {
+  { duration: 1,
+  delay: 1 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
 
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>
@@ -136,12 +322,25 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: Rea
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>
             <div className="text-zion-blue font-bold text-lg">Startups</div>
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>
+<<<<<<< HEAD
             <div className="text-zion-cyan font-bold text-lg">Government</div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            <div className="text-zion-cyan font-bold text-lg">Government</div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
 </div></div></div>};
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default CTASection;}}

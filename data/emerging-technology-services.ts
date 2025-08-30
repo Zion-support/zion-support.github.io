@@ -11,9 +11,13 @@ export interface EmergingTechnologyService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",
@@ -21,7 +25,7 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
     tagline: "Build and deploy blockchain applications",
     price: "$179/month",
     description: "Comprehensive blockchain development platform for creating decentralized applications.",
-    features: [
+    features[
       "Smart contract development",
       "DApp deployment",
       "Blockchain integration",

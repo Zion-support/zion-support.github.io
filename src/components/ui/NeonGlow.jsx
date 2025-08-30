@@ -18,10 +18,22 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
                 filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`
 
         };
-        return intensityMap[intensity];
-    };
+        return intensityMap[intensity]};
     const glowStyles = getGlowStyles();
-    return (<span className={cn('transition-all duration-300', className)} style={glowStyles}>
+    return (<span className = {
+  cn('transition-all duration-300',
+  className)
+
+
+
+
+
+
+} style={glowStyles}>
       {children}
+<<<<<<< HEAD
     </span>);
 }}
+=======
+    </span>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

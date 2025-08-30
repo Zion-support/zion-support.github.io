@@ -1,20 +1,38 @@
+<<<<<<< HEAD
 import React from 'react';
 import { X interface Filter {
   key: string;
   value: string;
   label: string;
+=======
+import React from 'react.ts';
+import { X  } from 'lucide-react';
 
-interface ActiveFiltersBarProps {
+interface Filter {
+
+  key: string;
+  value: string;
+  label: string}
+
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   filters: Filter[];
+<<<<<<< HEAD
   onRemoveFilter: (key: string) => void;
   onClearAll: () => void;
+=======
+  onRemoveFilter: (key: string)  => void;
+  onClearAll: ()  => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
-  if (filters.length === 0) {
+<<<<<<< HEAD
+export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {;
+  if (filters.length = == 0) {;
     return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
+    <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
       <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
 
       {filters.map((filter) => (
@@ -34,10 +52,23 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
 
       <button
         onClick={onClearAll}
+<<<<<<< HEAD
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
 
         Clear all
       </button>
     </div>
+  )};
+=======;
+        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

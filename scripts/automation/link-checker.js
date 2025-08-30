@@ -5,14 +5,17 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // // // console.log('🔗 Starting continuous link checker automation...');
 =======
 // // // // // // // console.log('🔗 Starting continuous link checker automation...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+// // // console.log('🔗 Starting continuous link checker automation...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
@@ -20,6 +23,9 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000
 async function checkLinks() {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
 
     // Build the project first
@@ -29,6 +35,7 @@ async function checkLinks() {
       // // // console.log('✅ Build completed');
     } catch (error) {
       // // // console.log('⚠️  Build failed but continuing...');
+<<<<<<< HEAD
 =======
     // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
 
@@ -40,21 +47,28 @@ async function checkLinks() {
     } catch (error) {
       // // // // // // // console.log('⚠️  Build failed but continuing...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return;
 
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.log('⚠️  Dist folder not found, skipping link check');
 =======
       // // // // // // // console.log('⚠️  Dist folder not found, skipping link check');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      // // // console.log('⚠️  Dist folder not found, skipping link check');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return;
 
     // Check for index.html
     const indexHtmlPath = path.join(distPath, 'index.html');
     if (!fs.existsSync(indexHtmlPath)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // // // console.log('⚠️  index.html not found in build output');
 =======
@@ -63,11 +77,17 @@ async function checkLinks() {
       return;
 
 <<<<<<< HEAD
+=======
+      // // // console.log('⚠️  index.html not found in build output');
+      return;
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // // // console.log('✅ index.html found in build output');
 
     // Find all HTML files
     const htmlFiles = findHtmlFiles(distPath);
     // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
+<<<<<<< HEAD
 =======
     // // // // // // // console.log('✅ index.html found in build output');
 
@@ -75,6 +95,8 @@ async function checkLinks() {
     const htmlFiles = findHtmlFiles(distPath);
     // // // // // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Check for broken references
     let hasIssues = false;
@@ -95,6 +117,7 @@ async function checkLinks() {
 
 
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
 
@@ -122,13 +145,28 @@ async function checkLinks() {
       // // // // // // // console.log('✅ No broken references found');
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+        // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
+
+
+    if (brokenReferences.length > 0) {
+      // // // console.log('⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {
+        // // // console.log(`  - ${ref.file}: ${ref.reference}`);
+      });
+
+    if (!hasIssues) {
+      // // // console.log('✅ No broken references found');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Generate report
+<<<<<<< HEAD
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       hasIssues,
       htmlFiles: htmlFiles.length,
       brokenReferences: brokenReferences.length,
+<<<<<<< HEAD
       summary: 'Link check completed'
     };
 
@@ -147,9 +185,25 @@ async function checkLinks() {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     // Don't exit, just log the error and continue
 
+=======
+  summary: 'Link check completed'
+    
 
-function findHtmlFiles(dir) {
-  const files = [];
+};
+
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    // // // console.log(`📊 Report saved to ${reportPath}`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  } catch (error) {
+    // // // console.error('❌ Link check failed:', error.message);
+    // Don't exit, just log the error and continue
+
+
+function files = [];
   const items = fs.readdirSync(dir);
 
   for (const item of items) {
@@ -199,10 +253,14 @@ function isValidReference(ref, distPath) {
 // Main continuous loop
 async function runContinuous() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 =======
   // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Run initial check
   await checkLinks();
@@ -212,6 +270,7 @@ async function runContinuous() {
     await checkLinks();
   }, AUTOMATION_INTERVAL);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 
@@ -226,25 +285,40 @@ process.on('SIGINT', () => {
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 =======
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(0);
 });
 
 // Start the continuous link checker
 runContinuous().catch(error => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // console.error('❌ Failed to start continuous link checker:', error);
 =======
   // // // // // // // console.error('❌ Failed to start continuous link checker:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.error('❌ Failed to start continuous link checker:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}

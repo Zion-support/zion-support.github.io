@@ -10,14 +10,24 @@ import {
   Shield,
   Award,
   Rocket
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
+
   id: string;
   icon: React.ComponentType<any>;
   value: string;
   label: string;
   description: string;
   color: string;
+<<<<<<< HEAD
   gradient: string;
+=======
+  gradient: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const stats: Stat[] = [
   {
@@ -76,54 +86,87 @@ const stats: Stat[] = [
 
 ];
 
+<<<<<<< HEAD
 export default function EnhancedStatsSection() {
   const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({ /* empty */ });
+=======
+export default function EnhancedStatsSection(...args[]):  {
+  const [countedValues, setCountedValues] = useState<any>({});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     if (inView) {
+<<<<<<< HEAD
       controls.start('visible');
 
+=======
+      controls.start('visible')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [controls, inView]);
 
-  const animateCount = (target: string, duration: number = 2000) => {
+  const animateCount = (target: string, duration: number = 2000) => {;
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
     const start = 0;
     const increment = numericValue / (duration / 16); // 60fps
 
     let current = start;
-    const timer = setInterval(() => {
+    const timer = setInterval(() => {;
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
+<<<<<<< HEAD
+        clearInterval(timer)}
+      setCountedValues(prev = > ({
+        ...prev,;
+        [target]: Math.floor(current);
+      }))}, 16);
+=======
         clearInterval(timer);
+<<<<<<< HEAD
 
       setCountedValues(prev => ({
         ...prev,
         [target]: Math.floor(current)
+=======
+      }
+      setCountedValues(prev = > ({;
+        ...prev,;
+        [target]: Math.floor(current);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }));
     }, 16);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return timer;
-  };
+    return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
-        const timer = setTimeout(() => {
+<<<<<<< HEAD
+        const timer = setTimeout(() => {;
+          animateCount(stat.value)}, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer)})}
+=======
+        const timer = setTimeout(() => {;
           animateCount(stat.value);
         }, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer);
       });
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [inView]);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
@@ -135,16 +178,38 @@ export default function EnhancedStatsSection() {
         {/* Section Header */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
           animate={controls}
-          variants={{
+          variants = {
+  {
             visible: {
               opacity: 1,
               y: 0,
-              transition: {
+  transition: {
                 duration: 0.6
+<<<<<<< HEAD
 
 
+=======
+              
+
+
+
+
+
+
+}
+            }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="text-center mb-16"
 
@@ -157,21 +222,44 @@ export default function EnhancedStatsSection() {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
               animate={controls}
-              variants={{
+              variants = {
+  {
                 visible: {
                   opacity: 1,
                   y: 0,
                   transition: {
                     duration: 0.6,
+<<<<<<< HEAD
                     delay: index * 0.1
 
 
+=======
+  delay: index * 0.1
+                  
+
+
+
+
+
+
+}
+                }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               }}
               className="group relative"
 
@@ -180,8 +268,16 @@ export default function EnhancedStatsSection() {
                 whileHover={{
                   y: -10,
                   scale: 1.02,
-                  borderColor: `rgba(34, 221, 210, 0.5)`
-                }}
+                  borderColor: `rgba(34, 221, 210,
+  0.5)`
+                
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.3 }}
 
                 {/* Background gradient overlay */}
@@ -192,8 +288,15 @@ export default function EnhancedStatsSection() {
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
                     rotate: 360,
-                    scale: 1.1
-                  }}
+  scale: 1.1
+                  
+
+
+
+
+
+
+}}
                   transition={{ duration: 0.6 }}
 
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
@@ -204,8 +307,22 @@ export default function EnhancedStatsSection() {
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 
+=======
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
                     {stat.value.includes('%') && '%'}
@@ -235,17 +352,40 @@ export default function EnhancedStatsSection() {
 
         {/* Bottom Achievement Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
           animate={controls}
-          variants={{
+          variants = {
+  {
             visible: {
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.6,
+<<<<<<< HEAD
                 delay: 0.6
 
 
+=======
+  delay: 0.6
+              
+
+
+
+
+
+
+}
+            }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="mt-16"
 
@@ -278,10 +418,23 @@ export default function EnhancedStatsSection() {
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
                 <div className="text-gray-300">Client Retention</div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
       </div>
     </section>
+  )};
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
 }}}}}}}}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

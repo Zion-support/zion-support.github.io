@@ -3,7 +3,7 @@ import { useState } from "react";
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav className = "fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -94,12 +94,12 @@ export function Navigation() {
                 Docs
               </a>
               <button className="w-full mt-4 btn-primary text-sm">
-                Get Started
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
+                Get Started;
+              </button>;
+            </div>;
+          </div>;
+        )};
+      </div>;
+    </nav>;
   );
 }

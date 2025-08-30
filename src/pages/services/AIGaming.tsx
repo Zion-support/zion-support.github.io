@@ -1,13 +1,13 @@
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
   const features = [
     'AI-powered player behavior analysis and personalization',
-    'Intelligent game difficulty adjustment and balancing',
-    'Automated content generation and procedural creation',
-    'Predictive analytics for player engagement and retention',
-    'Real-time matchmaking and player pairing optimization',
-    'Smart anti-cheat and security systems',
-    'Integration with major gaming engines and platforms',
-    'Custom AI models for gaming-specific insights'
+    'Intelligent game difficulty adjustment and balancing',;
+    'Automated content generation and procedural creation',;
+    'Predictive analytics for player engagement and retention',;
+    'Real-time matchmaking and player pairing optimization',;
+    'Smart anti-cheat and security systems',;
+    'Integration with major gaming engines and platforms',;
+    'Custom AI models for gaming-specific insights';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$299/mo',
       details: ['Up to 10,000 players', 'Basic AI features', 'Standard reports', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Mid-size Studio',
       price: '$799/mo',
@@ -26,37 +27,49 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,999/mo',
       details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Mid-size Studio', 
+      price: '$799/mo', 
+      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Large Studio', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Player engagement and retention optimization',
-    'Game difficulty and balance adjustment',
-    'Content generation and procedural creation',
-    'Matchmaking and player pairing',
-    'Anti-cheat and security systems',
-    'Monetization and in-game economy optimization'
+  const useCases = [;
+    'Player engagement and retention optimization',;
+    'Game difficulty and balance adjustment',;
+    'Content generation and procedural creation',;
+    'Matchmaking and player pairing',;
+    'Anti-cheat and security systems',;
+    'Monetization and in-game economy optimization';
   ];
 
-  const benefits = [
-    'Increase player engagement by 35-55%',
-    'Improve player retention by 40-60%',
-    'Cut development costs by 25-40%',
-    'Optimize game balance and difficulty',
-    'Enhance player experience and satisfaction',
-    'Scale gaming operations efficiently'
+  const benefits = [;
+    'Increase player engagement by 35-55%',;
+    'Improve player retention by 40-60%',;
+    'Cut development costs by 25-40%',;
+    'Optimize game balance and difficulty',;
+    'Enhance player experience and satisfaction',;
+    'Scale gaming operations efficiently';
   ];
 
-  const industries = [
-    'Mobile Gaming',
-    'PC Gaming',
-    'Console Gaming',
-    'VR/AR Gaming',
-    'Esports & Competitive Gaming',
-    'Educational & Serious Games'
+  const industries = [;
+    'Mobile Gaming',;
+    'PC Gaming',;
+    'Console Gaming',;
+    'VR/AR Gaming',;
+    'Esports & Competitive Gaming',;
+    'Educational & Serious Games';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

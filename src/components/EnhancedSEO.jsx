@@ -4,7 +4,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
     const currentUrl = typeof window !== 'undefined' ? window.location.href : canonical || 'https://ziontechgroup.com';
     // Default structured data for organization
     const defaultStructuredData = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
@@ -16,8 +16,10 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "addressLocality": "Middletown",
             "addressRegion": "DE",
             "postalCode": "19709",
-            "addressCountry": "US"
-        },
+  "addressCountry": "US"
+        
+
+},
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
@@ -101,5 +103,9 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta httpEquiv="X-Frame-Options" content="DENY"/>
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<<<<<<< HEAD
     </Helmet>);
 }}
+=======
+    </Helmet>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = () => {
   const features = [
@@ -16,6 +16,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       icon: Target,
       title: 'Performance Analytics',
+<<<<<<< HEAD
       description: 'Data-driven insights for better decisions'
     },
     {
@@ -23,6 +24,15 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       title: 'Compliance Automation',
       description: 'Automated HR compliance and reporting'
 
+=======
+      description: 'Data-driven insights for better decisions';
+    },;
+    {;
+      icon: Shield,;
+      title: 'Compliance Automation',;
+      description: 'Automated HR compliance and reporting';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const modules = [
@@ -39,6 +49,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       title: 'Learning & Development',
       description: 'Personalized training and skill development',
+<<<<<<< HEAD
       icon: '🎓'
     },
     {
@@ -46,20 +57,34 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       description: 'Monitor and improve workplace satisfaction',
       icon: '❤️'
 
+=======
+      icon: '🎓';
+    },;
+    {;
+      title: 'Employee Engagement',;
+      description: 'Monitor and improve workplace satisfaction',;
+      icon: '❤️';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    'Reduce time-to-hire by 50% with AI screening',
-    'Improve candidate quality and retention rates',
-    'Automate routine HR tasks and workflows',
-    'Data-driven insights for better decisions',
-    'Enhanced employee experience and engagement',
-    'Compliance automation and risk reduction'
+  const benefits = [;
+    'Reduce time-to-hire by 50% with AI screening',;
+    'Improve candidate quality and retention rates',;
+    'Automate routine HR tasks and workflows',;
+    'Data-driven insights for better decisions',;
+    'Enhanced employee experience and engagement',;
+    'Compliance automation and risk reduction';
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />
@@ -68,8 +93,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
 
@@ -106,8 +149,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -123,9 +184,36 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -143,8 +231,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -160,9 +266,36 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             {modules.map((module, index) => (
               <motion.div
                 key={module.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
 
                 <div className="flex items-start space-x-4">
@@ -182,8 +315,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
 
@@ -197,8 +348,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
 
@@ -214,8 +383,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-400/30 rounded-xl p-8"
 
@@ -236,8 +423,26 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,13 +456,13 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 Start HR Transformation
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
-                Request Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Request Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

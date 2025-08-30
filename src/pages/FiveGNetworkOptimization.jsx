@@ -183,7 +183,6 @@ import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu cons
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default FiveGNetworkOptimization;
 }}}}

@@ -1,27 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const SpaceTech = () => {
     const spaceTechnologies = [
         {
             title: "Satellite Technology",
             description: "Advanced satellite systems for communication, navigation, and Earth observation.",
-            applications: ["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
+            applications["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
         },
         {
             title: "Space Robotics",
             description: "Autonomous robotic systems for space exploration and satellite maintenance.",
-            applications: ["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
+            applications["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
         },
         {
             title: "Space Communications",
             description: "High-speed, secure communication networks for space missions and satellite operations.",
-            applications: ["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
+            applications["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
         },
         {
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
+<<<<<<< HEAD
             applications: ["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
 
+=======
+            applications["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -70,7 +75,6 @@ const SpaceTech = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default SpaceTech;
 }

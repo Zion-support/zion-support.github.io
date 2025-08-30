@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -21,6 +21,7 @@ export default function AccountSettings() {
                 const parsed = JSON.parse(saved);
                 setDisplayWeb3(!!parsed.displayWeb3);
                 setDidHandle(parsed.didHandle || '');
+<<<<<<< HEAD
                 setEnableBackup(!!parsed.enableBackup);
 
 
@@ -32,6 +33,12 @@ export default function AccountSettings() {
             // // // // // // // console.error('Error loading account settings', e);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+                setEnableBackup(!!parsed.enableBackup)}
+        }
+        catch (e) {
+            console.error('Error loading account settings', e)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     const handleSave = () => {
         setIsSubmitting(true);
@@ -39,6 +46,7 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
+<<<<<<< HEAD
 <<<<<<< HEAD
                 // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
 =======
@@ -59,28 +67,42 @@ export default function AccountSettings() {
 
         }, 1000);
     };
+=======
+                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                toast.success('Account settings updated successfully')}
+            catch (e) {
+                console.error('Failed to save settings', e);
+                toast.error('Failed to save settings')}
+            finally {
+                setIsSubmitting(false)}
+        }, 1000)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleConnectWallet = async () => {
         try {
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+<<<<<<< HEAD
                 return;
 
+=======
+                return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
-                params: [address, message]
+                params[address, message]
             });
             // Auto-set DID handle if ENS is available
             try {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
                 const ensName = await provider.lookupAddress(address);
                 if (ensName) {
+<<<<<<< HEAD
                     setDidHandle(ensName);
 
 
@@ -97,6 +119,15 @@ export default function AccountSettings() {
         catch (error) {
             toast.error(error.message || 'Failed to connect wallet');
 
+=======
+                    setDidHandle(ensName)}
+            }
+            catch (error) {
+                console.error('ENS lookup error:', error)}
+            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)}
+        catch (error) {
+            toast.error(error.message || 'Failed to connect wallet')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
@@ -121,6 +152,7 @@ export default function AccountSettings() {
                 <div className="flex gap-2">
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
+<<<<<<< HEAD
                     <Wallet className="h-4 w-4"/>
                     Connect
                   </Button>
@@ -184,6 +216,9 @@ export default function AccountSettings() {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                     <span>No wallet connected</span>
+=======
+                    <Wallet connected</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>)}
               </div>
 
@@ -232,6 +267,11 @@ export default function AccountSettings() {
           </Card>
         </div>
       </main>
+<<<<<<< HEAD
 
     </>);
 </Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

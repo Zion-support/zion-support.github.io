@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music const AIContentGeneration = () => {
     const contentFeatures = [
         {
@@ -26,6 +27,10 @@ import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Im
             features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
 
     ];
+=======
+import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
+const AIContentGeneration = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const contentTypes = [
         {
             title: "Marketing Content",

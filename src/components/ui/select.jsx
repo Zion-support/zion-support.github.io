@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function Select({ children, className = '', value, onValueChange }) {
   return (
     <div className={`relative ${className}`}>
@@ -28,6 +29,9 @@ export function SelectContent({ children, className = '' }) {
       {children}
     </div>
   );
+=======
+import React from 'react';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
@@ -40,5 +44,9 @@ export function SelectItem({ children, className = '', value, ...props }) {
     `} data-value={value} {...props}>
       {children}
     </div>
+<<<<<<< HEAD
   );
 }}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface AutonomousSystemsRobotics2025 {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface AutonomousSystemsRobotics2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
   // Autonomous Manufacturing
   {
@@ -48,7 +51,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary AI platform that transforms manufacturing operations through complete automation, predictive maintenance, quality control, and supply chain optimization. Achieve 24/7 production with zero defects and maximum efficiency.',
-    features: [
+    features[
       'Complete production automation',
       'Predictive maintenance AI',
       'Quality control automation',
@@ -71,11 +74,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '4-6 weeks',
     category: 'Autonomous Manufacturing',
     realService: true,
-    technology: ['AI & Machine Learning', 'Industrial IoT', 'Predictive Analytics', 'Computer Vision', 'Robotics', 'Automation Systems'],
-    integrations: ['ERP Systems', 'MES Systems', 'SCADA Systems', 'Equipment APIs', 'Supply Chain Platforms', 'Quality Management Systems'],
-    useCases: ['Production automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Waste reduction'],
+    technology['AI & Machine Learning', 'Industrial IoT', 'Predictive Analytics', 'Computer Vision', 'Robotics', 'Automation Systems'],
+    integrations['ERP Systems', 'MES Systems', 'SCADA Systems', 'Equipment APIs', 'Supply Chain Platforms', 'Quality Management Systems'],
+    useCases['Production automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Waste reduction'],
     roi: 'Manufacturing companies report 800% ROI through automation. Industrial organizations see 600% ROI in efficiency improvements.',
-    competitors: ['Traditional manufacturing systems: $25,000+/month', 'Industrial AI: $15,000+/month', 'Automation platforms: $20,000+/month'],
+    competitors['Traditional manufacturing systems: $25,000+/month', 'Industrial AI: $15,000+/month', 'Automation platforms: $20,000+/month'],
     marketSize: '$18B autonomous manufacturing market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +103,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     price: '$11,999',
     period: '/month',
     description: 'Advanced swarm robotics platform that coordinates hundreds of robots to work together on complex tasks. Perfect for warehouse automation, search and rescue operations, agricultural automation, and large-scale industrial applications.',
-    features: [
+    features[
       'Multi-robot coordination',
       'Swarm intelligence algorithms',
       'Task distribution optimization',
@@ -123,11 +126,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '6-8 weeks',
     category: 'Swarm Robotics',
     realService: true,
-    technology: ['Swarm Intelligence', 'Multi-Agent Systems', 'Robotics', 'AI & Machine Learning', 'Computer Vision', 'Communication Systems'],
-    integrations: ['Robot APIs', 'Warehouse Management Systems', 'Logistics Platforms', 'Agricultural Systems', 'Industrial Equipment', 'Monitoring Tools'],
-    useCases: ['Warehouse automation', 'Logistics optimization', 'Agricultural automation', 'Search and rescue', 'Industrial automation', 'Research applications'],
+    technology['Swarm Intelligence', 'Multi-Agent Systems', 'Robotics', 'AI & Machine Learning', 'Computer Vision', 'Communication Systems'],
+    integrations['Robot APIs', 'Warehouse Management Systems', 'Logistics Platforms', 'Agricultural Systems', 'Industrial Equipment', 'Monitoring Tools'],
+    useCases['Warehouse automation', 'Logistics optimization', 'Agricultural automation', 'Search and rescue', 'Industrial automation', 'Research applications'],
     roi: 'Warehouse companies report 1000% ROI through automation. Logistics companies see 800% ROI in efficiency improvements.',
-    competitors: ['Traditional robotics: $50,000+/month', 'Multi-robot systems: $30,000+/month', 'Automation platforms: $25,000+/month'],
+    competitors['Traditional robotics: $50,000+/month', 'Multi-robot systems: $30,000+/month', 'Automation platforms: $25,000+/month'],
     marketSize: '$12B swarm robotics market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -152,7 +155,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     price: '$16,999',
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles that provides advanced perception, decision-making, and control systems. Enable safe, efficient autonomous operation for cars, trucks, drones, and industrial vehicles.',
-    features: [
+    features[
       'Advanced perception systems',
       'Real-time decision making',
       'Path planning optimization',
@@ -175,11 +178,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '8-12 weeks',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Computer Vision', 'AI & Machine Learning', 'Sensor Fusion', 'Path Planning', 'Control Systems', 'Safety Systems'],
-    integrations: ['Vehicle Systems', 'Sensor Networks', 'Traffic Systems', 'Weather Services', 'Navigation Platforms', 'Safety Systems'],
-    useCases: ['Autonomous cars', 'Self-driving trucks', 'Autonomous drones', 'Industrial vehicles', 'Transportation systems', 'Safety systems'],
+    technology['Computer Vision', 'AI & Machine Learning', 'Sensor Fusion', 'Path Planning', 'Control Systems', 'Safety Systems'],
+    integrations['Vehicle Systems', 'Sensor Networks', 'Traffic Systems', 'Weather Services', 'Navigation Platforms', 'Safety Systems'],
+    useCases['Autonomous cars', 'Self-driving trucks', 'Autonomous drones', 'Industrial vehicles', 'Transportation systems', 'Safety systems'],
     roi: 'Automotive companies report 1200% ROI through autonomous capabilities. Trucking companies see 800% ROI in efficiency improvements.',
-    competitors: ['Traditional autonomous systems: $75,000+/month', 'Vehicle AI: $40,000+/month', 'Safety systems: $30,000+/month'],
+    competitors['Traditional autonomous systems: $75,000+/month', 'Vehicle AI: $40,000+/month', 'Safety systems: $30,000+/month'],
     marketSize: '$25B autonomous vehicle market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     price: '$13,999',
     period: '/month',
     description: 'Advanced robotics platform that provides cutting-edge automation capabilities for industrial, medical, and service robotics. Enable robots to perform complex tasks with human-like precision and adaptability.',
-    features: [
+    features[
       'Advanced robot control',
       'Human-robot collaboration',
       'Adaptive learning systems',
@@ -227,11 +230,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '6-8 weeks',
     category: 'Advanced Robotics',
     realService: true,
-    technology: ['Robotics', 'AI & Machine Learning', 'Computer Vision', 'Control Systems', 'Safety Systems', 'Human-Robot Interaction'],
-    integrations: ['Robot APIs', 'Industrial Systems', 'Healthcare Systems', 'Service Platforms', 'Monitoring Tools', 'Analytics Systems'],
-    useCases: ['Industrial automation', 'Medical robotics', 'Service robotics', 'Research applications', 'Manufacturing automation', 'Safety systems'],
+    technology['Robotics', 'AI & Machine Learning', 'Computer Vision', 'Control Systems', 'Safety Systems', 'Human-Robot Interaction'],
+    integrations['Robot APIs', 'Industrial Systems', 'Healthcare Systems', 'Service Platforms', 'Monitoring Tools', 'Analytics Systems'],
+    useCases['Industrial automation', 'Medical robotics', 'Service robotics', 'Research applications', 'Manufacturing automation', 'Safety systems'],
     roi: 'Industrial companies report 800% ROI through automation. Healthcare organizations see 600% ROI in robotic assistance.',
-    competitors: ['Traditional robotics: $40,000+/month', 'Advanced robotics: $25,000+/month', 'Automation platforms: $20,000+/month'],
+    competitors['Traditional robotics: $40,000+/month', 'Advanced robotics: $25,000+/month', 'Automation platforms: $20,000+/month'],
     marketSize: '$15B advanced robotics market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +259,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     price: '$7,999',
     period: '/month',
     description: 'Comprehensive autonomous supply chain platform that optimizes every aspect of supply chain operations through AI-powered automation, predictive analytics, and real-time optimization.',
-    features: [
+    features[
       'Supply chain automation',
       'Predictive demand forecasting',
       'Inventory optimization',
@@ -279,11 +282,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '3-4 weeks',
     category: 'Autonomous Supply Chain',
     realService: true,
-    technology: ['AI & Machine Learning', 'Predictive Analytics', 'Optimization Algorithms', 'Supply Chain Management', 'Real-time Analytics', 'Risk Management'],
-    integrations: ['ERP Systems', 'WMS Systems', 'TMS Systems', 'Supplier Platforms', 'Logistics Systems', 'Analytics Platforms'],
-    useCases: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Performance optimization'],
+    technology['AI & Machine Learning', 'Predictive Analytics', 'Optimization Algorithms', 'Supply Chain Management', 'Real-time Analytics', 'Risk Management'],
+    integrations['ERP Systems', 'WMS Systems', 'TMS Systems', 'Supplier Platforms', 'Logistics Systems', 'Analytics Platforms'],
+    useCases['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Performance optimization'],
     roi: 'Retail companies report 600% ROI through optimization. Manufacturing companies see 500% ROI in supply chain efficiency.',
-    competitors: ['Traditional supply chain systems: $20,000+/month', 'AI optimization: $15,000+/month', 'Supply chain platforms: $12,000+/month'],
+    competitors['Traditional supply chain systems: $20,000+/month', 'AI optimization: $15,000+/month', 'Supply chain platforms: $12,000+/month'],
     marketSize: '$22B supply chain optimization market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',

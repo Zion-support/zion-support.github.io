@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface CybersecuritySolutions2026 {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface CybersecuritySolutions2026 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -48,7 +51,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$3,999',
     period: '/month',
     description: 'Comprehensive threat intelligence platform that provides real-time threat detection, analysis, and response using advanced AI and machine learning algorithms.',
-    features: [
+    features[
       'Real-time threat detection',
       'AI-powered intelligence',
       'Advanced threat analysis',
@@ -71,11 +74,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Threat Intelligence',
     realService: true,
-    technology: ['Advanced AI', 'Threat Detection', 'Machine Learning', 'Real-time Analysis', 'Automated Response', 'Threat Hunting'],
-    integrations: ['Security platforms', 'Government systems', 'Financial systems', 'Healthcare platforms', 'Tech infrastructure', 'Defense systems'],
-    useCases: ['Threat detection', 'Security monitoring', 'Incident response', 'Threat hunting', 'Compliance management', 'Security analytics'],
+    technology['Advanced AI', 'Threat Detection', 'Machine Learning', 'Real-time Analysis', 'Automated Response', 'Threat Hunting'],
+    integrations['Security platforms', 'Government systems', 'Financial systems', 'Healthcare platforms', 'Tech infrastructure', 'Defense systems'],
+    useCases['Threat detection', 'Security monitoring', 'Incident response', 'Threat hunting', 'Compliance management', 'Security analytics'],
     roi: 'Large enterprises see 600% ROI through improved threat detection and reduced security incidents.',
-    competitors: ['Specialized security tools', 'Custom threat intelligence', 'Traditional security solutions'],
+    competitors['Specialized security tools', 'Custom threat intelligence', 'Traditional security solutions'],
     marketSize: '$35B market',
     growthRate: '350% annual growth',
     variant: 'security-futuristic',
@@ -100,7 +103,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$4,999',
     period: '/month',
     description: 'Advanced cryptography suite that provides quantum-resistant encryption algorithms, ensuring data security against future quantum computing threats.',
-    features: [
+    features[
       'Quantum-resistant algorithms',
       'Advanced encryption protocols',
       'Key management systems',
@@ -123,11 +126,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '4-5 weeks',
     category: 'Cybersecurity & Quantum Cryptography',
     realService: true,
-    technology: ['Quantum-Resistant Cryptography', 'Advanced Encryption', 'Key Management', 'Security Protocols', 'Compliance Systems', 'Performance Optimization'],
-    integrations: ['Government systems', 'Financial platforms', 'Healthcare systems', 'Tech infrastructure', 'Defense systems', 'Research platforms'],
-    useCases: ['Data encryption', 'Secure communications', 'Key management', 'Compliance management', 'Performance optimization', 'Security monitoring'],
+    technology['Quantum-Resistant Cryptography', 'Advanced Encryption', 'Key Management', 'Security Protocols', 'Compliance Systems', 'Performance Optimization'],
+    integrations['Government systems', 'Financial platforms', 'Healthcare systems', 'Tech infrastructure', 'Defense systems', 'Research platforms'],
+    useCases['Data encryption', 'Secure communications', 'Key management', 'Compliance management', 'Performance optimization', 'Security monitoring'],
     roi: 'Government agencies see 700% ROI through future-proof security and reduced breach risks.',
-    competitors: ['Traditional encryption', 'Custom cryptography solutions', 'Government research projects'],
+    competitors['Traditional encryption', 'Custom cryptography solutions', 'Government research projects'],
     marketSize: '$25B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced AI-powered security operations center that provides intelligent security monitoring, automated threat response, and comprehensive security management.',
-    features: [
+    features[
       'AI-powered security monitoring',
       'Automated threat response',
       'Intelligent security analytics',
@@ -175,11 +178,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '5-6 weeks',
     category: 'Cybersecurity & AI Operations',
     realService: true,
-    technology: ['Advanced AI', 'Security Operations', 'Threat Response', 'Intelligent Analytics', 'Real-time Monitoring', 'Automation Systems'],
-    integrations: ['Security platforms', 'Government systems', 'Financial systems', 'Healthcare platforms', 'Tech infrastructure', 'Defense systems'],
-    useCases: ['Security monitoring', 'Threat response', 'Security analytics', 'Compliance management', 'Performance optimization', 'Incident management'],
+    technology['Advanced AI', 'Security Operations', 'Threat Response', 'Intelligent Analytics', 'Real-time Monitoring', 'Automation Systems'],
+    integrations['Security platforms', 'Government systems', 'Financial systems', 'Healthcare platforms', 'Tech infrastructure', 'Defense systems'],
+    useCases['Security monitoring', 'Threat response', 'Security analytics', 'Compliance management', 'Performance optimization', 'Incident management'],
     roi: 'Large enterprises see 800% ROI through automated security operations and improved threat response.',
-    competitors: ['Traditional SOC solutions', 'Custom security automation', 'Basic monitoring tools'],
+    competitors['Traditional SOC solutions', 'Custom security automation', 'Basic monitoring tools'],
     marketSize: '$45B market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$3,499',
     period: '/month',
     description: 'Advanced vulnerability detection system that identifies zero-day vulnerabilities using AI and machine learning, providing proactive security protection.',
-    features: [
+    features[
       'Zero-day vulnerability detection',
       'AI-powered analysis',
       'Proactive security protection',
@@ -227,11 +230,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Vulnerability Detection',
     realService: true,
-    technology: ['Advanced AI', 'Vulnerability Detection', 'Machine Learning', 'Proactive Security', 'Real-time Analysis', 'Custom Models'],
-    integrations: ['Security platforms', 'Tech systems', 'Government platforms', 'Financial systems', 'Healthcare platforms', 'Defense systems'],
-    useCases: ['Vulnerability detection', 'Proactive security', 'Security monitoring', 'Compliance management', 'Risk assessment', 'Security analytics'],
+    technology['Advanced AI', 'Vulnerability Detection', 'Machine Learning', 'Proactive Security', 'Real-time Analysis', 'Custom Models'],
+    integrations['Security platforms', 'Tech systems', 'Government platforms', 'Financial systems', 'Healthcare platforms', 'Defense systems'],
+    useCases['Vulnerability detection', 'Proactive security', 'Security monitoring', 'Compliance management', 'Risk assessment', 'Security analytics'],
     roi: 'Tech companies see 500% ROI through proactive vulnerability detection and reduced security risks.',
-    competitors: ['Traditional vulnerability scanners', 'Custom detection solutions', 'Basic security tools'],
+    competitors['Traditional vulnerability scanners', 'Custom detection solutions', 'Basic security tools'],
     marketSize: '$30B market',
     growthRate: '320% annual growth',
     variant: 'security-futuristic',
@@ -256,7 +259,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced blockchain-based identity management system that provides secure, decentralized identity verification and management with advanced security features.',
-    features: [
+    features[
       'Blockchain-based identity',
       'Decentralized verification',
       'Advanced security protocols',
@@ -279,11 +282,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Identity Management',
     realService: true,
-    technology: ['Blockchain Technology', 'Identity Management', 'Decentralized Systems', 'Advanced Security', 'Real-time Verification', 'Custom Models'],
-    integrations: ['Financial platforms', 'Government systems', 'Healthcare platforms', 'Tech systems', 'Educational platforms', 'Research systems'],
-    useCases: ['Identity verification', 'Access control', 'Secure authentication', 'Compliance management', 'Risk assessment', 'Identity analytics'],
+    technology['Blockchain Technology', 'Identity Management', 'Decentralized Systems', 'Advanced Security', 'Real-time Verification', 'Custom Models'],
+    integrations['Financial platforms', 'Government systems', 'Healthcare platforms', 'Tech systems', 'Educational platforms', 'Research systems'],
+    useCases['Identity verification', 'Access control', 'Secure authentication', 'Compliance management', 'Risk assessment', 'Identity analytics'],
     roi: 'Financial institutions see 600% ROI through improved security and reduced fraud risks.',
-    competitors: ['Traditional identity systems', 'Custom blockchain solutions', 'Basic authentication tools'],
+    competitors['Traditional identity systems', 'Custom blockchain solutions', 'Basic authentication tools'],
     marketSize: '$35B market',
     growthRate: '380% annual growth',
     variant: 'blockchain-futuristic',

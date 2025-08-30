@@ -2,19 +2,18 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     const sizeClasses = {
-        sm: 'w-4 h-4',
+  sm: 'w-4 h-4',
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
-        xl: 'w-12 h-12'
-    };
-    const renderSpinner = () => (<div className={cn('border-2 border-current border-t-transparent rounded-full animate-spin', sizeClasses[size])}/>);
-    const renderDots = () => (<div className="flex space-x-1">
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '0ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '150ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '300ms' }}/>
-    </div>);
-    const renderPulse = () => (<div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])}/>);
-    const renderSkeleton = () => (<div className={cn('bg-current rounded animate-pulse', sizeClasses[size])}/>);
+  xl: 'w-12 h-12'
+    
+
+
+
+
+
+
+};
     const renderContent = () => {
         switch (variant) {
             case 'dots':
@@ -24,18 +23,56 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
             case 'skeleton':
                 return renderSkeleton();
             default:
+<<<<<<< HEAD
                 return renderSpinner();
 
+=======
+                return renderSpinner()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-    return (<div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+    return (<div className = {
+  cn('flex flex-col items-center justify-center gap-3',
+  className)
+
+
+
+
+
+
+}>
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
+<<<<<<< HEAD
     </div>);
 
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
     return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
 
+=======
+    </div>)}
+// Skeleton loading for content
+export function Skeleton({ className, ...props }) {
+<<<<<<< HEAD
+    return (<div className = {
+  cn('animate-pulse rounded-md bg-zion-slate-light/20',
+  className)
+
+} {...props}/>)}
+=======
+    return (<div className = {
+  cn('animate-pulse rounded-md bg-zion-slate-light/20',
+  className)
+
+
+
+
+
+
+} {...props}/>);
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Page loading component
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">
@@ -44,6 +81,7 @@ export function PageLoading() {
         <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
+<<<<<<< HEAD
     </div>);
 
 // Content skeleton loading
@@ -58,6 +96,10 @@ export function ContentSkeleton() {
     </div>);
 
 // Card skeleton loading
+=======
+    </div>)}
+// Content skeleton loading
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function CardSkeleton() {
     return (<div className="bg-card border border-border rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
@@ -66,5 +108,9 @@ export function CardSkeleton() {
         <div className="h-4 bg-zion-slate-light/20 rounded w-3/4"></div>
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
+<<<<<<< HEAD
     </div>);
 </div></div></div></div></div></div></div>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -4,6 +4,11 @@ import {
   BarChart3,
   Users,
   TrendingUp,
+<<<<<<< HEAD
+=======
+  DollarSign,
+  Activity,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   DollarSign,
   Activity,
   Shield,
@@ -16,8 +21,15 @@ import {
   MessageSquare,
   Star,
   ArrowRight
+<<<<<<< HEAD
 export default function Dashboard() {
+=======
+ } from 'lucide-react';
+
+export default function Dashboard(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const stats = [
+<<<<<<< HEAD
     {
       title: "Total Revenue",
       value: "$124,563",
@@ -44,8 +56,13 @@ export default function Dashboard() {
       value: "3.24%",
       change: "-1.2%",
       changeType: "negative",
+<<<<<<< HEAD
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />
 
+=======
+      icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const recentProjects = [
@@ -79,8 +96,13 @@ export default function Dashboard() {
       status: "In Progress",
       progress: 60,
       dueDate: "2024-02-28",
+<<<<<<< HEAD
       priority: "Medium"
 
+=======
+      priority: "Medium";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const notifications = [
@@ -103,8 +125,13 @@ export default function Dashboard() {
       title: "System update",
       message: "Scheduled maintenance completed successfully",
       time: "1 day ago",
+<<<<<<< HEAD
       read: true
 
+=======
+      read: true;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quickActions = [
@@ -131,37 +158,85 @@ export default function Dashboard() {
       description: "Submit support request",
       icon: <MessageSquare className="h-8 w-8 text-zion-purple" />,
       color: "bg-zion-purple/10 border-zion-purple/20"
+<<<<<<< HEAD
 
+=======
+    }
+=======;
+    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
+    { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Completed":
+  const recentServices = [;
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
+    { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' };
+  ];
+
+  const upcomingEvents = [;
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
+    { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
+  ];
+
+  const quickActions = [;
+    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
+    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  ];
+
+  const getStatusColor = (status: string)  => {
+    switch (status) {;
+      case "Completed":;
         return "bg-green-100 text-green-800";
       case "In Progress":
         return "bg-blue-100 text-blue-800";
       case "Planning":
         return "bg-yellow-100 text-yellow-800";
       default:
+<<<<<<< HEAD
         return "bg-gray-100 text-gray-800";
 
+=======
+        return "bg-gray-100 text-gray-800"}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case "High":
+  const getPriorityColor = (priority: string)  => {
+    switch (priority) {;
+      case "High":;
         return "bg-red-100 text-red-800";
       case "Medium":
         return "bg-yellow-100 text-yellow-800";
       case "Low":
         return "bg-green-100 text-green-800";
       default:
+<<<<<<< HEAD
         return "bg-gray-100 text-gray-800";
 
+=======
+        return "bg-gray-100 text-gray-800"}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="min-h-screen bg-zion-blue text-white">
+<<<<<<< HEAD
+    <div className = "min-h-screen bg-zion-blue text-white">
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Header */}
       <div className="bg-zion-blue-dark border-b border-zion-purple/20 px-6 py-4">
         <div className="flex items-center justify-between">
@@ -183,15 +258,60 @@ export default function Dashboard() {
 
       <div className="p-6">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {stats.map((stat, index)  => (
             <motion.div
+<<<<<<< HEAD
               key={stat.title}
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+}}
+=======
+              key={stat.name}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="flex items-center justify-between mb-4">
                 <div className="p-2 bg-zion-purple/20 rounded-lg">
                   {stat.icon}
@@ -213,10 +333,29 @@ export default function Dashboard() {
           <div className="lg:col-span-2">
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
+<<<<<<< HEAD
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.4 
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-semibold text-white">Recent Projects</h2>
                 <button className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium">
@@ -225,8 +364,40 @@ export default function Dashboard() {
               </div>
 
               <div className="space-y-4">
+<<<<<<< HEAD
                 {recentProjects.map((project) => (
                   <div key={project.id} className="flex items-center justify-between p-4 bg-zion-blue-light/10 rounded-lg border border-zion-purple/20">
+=======
+                {recentServices.map((service, index) => (
+                  <motion.div
+                    key={service.name}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center p-4 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
+                  >
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color} mr-4`}>
+                      <service.icon className="h-5 w-5 text-white" />
+                    </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="font-medium text-white">{project.name}</h3>
@@ -265,17 +436,67 @@ export default function Dashboard() {
             {/* Quick Actions */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.6 
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
+<<<<<<< HEAD
                   <button
                     key={action.title}
                     className={`p-4 rounded-lg border ${action.color} hover:scale-105 transition-all duration-300 text-left`}
+<<<<<<< HEAD
 
+=======
+=======
+                  <motion.button
+                    key={action.name}
+                    initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                    transition={{ delay: index * 0.1 }}
+                    className={`p-3 rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover:shadow-lg transition-shadow flex flex-col items-center`}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                  >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <div className="mb-2">{action.icon}</div>
                     <h3 className="font-medium text-white text-sm mb-1">{action.title}</h3>
                     <p className="text-zion-slate-light text-xs">{action.description}</p>
@@ -287,12 +508,32 @@ export default function Dashboard() {
             {/* Notifications */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.8 
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-xl font-semibold text-white mb-4">Notifications</h2>
               <div className="space-y-3">
+<<<<<<< HEAD
                 {notifications.map((notification) => (
                   <div key={notification.id} className={`p-3 rounded-lg ${
                     notification.read ? 'bg-zion-blue-light/5' : 'bg-zion-purple/10'
@@ -305,9 +546,51 @@ export default function Dashboard() {
                         <h4 className="font-medium text-white text-sm mb-1">{notification.title}</h4>
                         <p className="text-zion-slate-light text-xs mb-2">{notification.message}</p>
                         <span className="text-zion-slate-light text-xs">{notification.time}</span>
+=======
+                {upcomingEvents.map((event, index) => (
+                  <motion.div
+                    key={event.title}
+                    initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-start p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
+                  >
+                    <div className="p-2 rounded-lg bg-blue-100 mr-3">
+                      <event.icon className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-sm font-medium text-gray-900">{event.title}</h4>
+                      <div className="flex items-center mt-1 text-xs text-gray-500 space-x-2">
+                        <span className="flex items-center">
+                          <Calendar className="h-3 w-3 mr-1" />
+                          {event.date}
+                        </span>
+                        <span>{event.time}</span>
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
+                          {event.type}
+                        </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <button className="w-full mt-4 text-zion-cyan hover:text-zion-cyan-light text-sm font-medium">
@@ -318,10 +601,29 @@ export default function Dashboard() {
             {/* System Status */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
 
+=======
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 1 
+
+}}
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-xl font-semibold text-white mb-4">System Status</h2>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -343,10 +645,40 @@ export default function Dashboard() {
                   <span className="text-white text-sm">99.9%</span>
                 </div>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </div>
       </div>
     </div>
+  )}
+=======
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">Cloud Services</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">Security Services</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Placeholder for chart */}
+          <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
+            <div className="text-center">
+              <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+              <p className="text-gray-500">Performance chart will be displayed here</p>;
+              <p className="text-sm text-gray-400">Integration with analytics service required</p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

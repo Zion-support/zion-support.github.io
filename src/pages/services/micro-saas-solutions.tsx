@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function MicroSAASSolutions() {
+export default function MicroSAASSolutions(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
+        <meta name = "description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
         <meta name="keywords" content="micro SaaS, software as a service, SaaS development, SaaS marketing, SaaS growth, subscription business" />
       </Helmet>
 
@@ -62,7 +69,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Rocket,
@@ -93,8 +100,13 @@ export default function MicroSAASSolutions() {
                   icon: Globe,
                   title: "Multi-tenant Architecture",
                   description: "Scalable multi-tenant architecture for growing SaaS businesses."
+<<<<<<< HEAD
 
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -119,7 +131,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Business Tools",
@@ -156,8 +168,13 @@ export default function MicroSAASSolutions() {
                   description: "Content management, SEO tools, and digital marketing platforms.",
                   icon: Database,
                   benefits: ["Content management", "SEO tools", "Digital marketing"]
+<<<<<<< HEAD
 
               ].map((category, index) => (
+=======
+                }
+              ].map((category, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <category.icon className="w-6 h-6 text-white" />
@@ -190,7 +207,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -211,8 +228,13 @@ export default function MicroSAASSolutions() {
                   step: "04",
                   title: "Launch & Growth",
                   description: "Product launch, marketing, and continuous improvement."
+<<<<<<< HEAD
 
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -264,7 +286,7 @@ export default function MicroSAASSolutions() {
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -344,7 +366,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   metric: "MRR",
@@ -365,8 +387,13 @@ export default function MicroSAASSolutions() {
                   metric: "CAC",
                   title: "Customer Acquisition Cost",
                   description: "Optimize marketing and sales efficiency"
+<<<<<<< HEAD
 
               ].map((metric, index) => (
+=======
+                }
+              ].map((metric, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>
@@ -399,6 +426,7 @@ export default function MicroSAASSolutions() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"
+<<<<<<< HEAD
 
                 Explore All Services
               </Link>
@@ -407,5 +435,15 @@ export default function MicroSAASSolutions() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

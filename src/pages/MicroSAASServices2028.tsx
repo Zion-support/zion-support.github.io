@@ -148,6 +148,11 @@ import {
   Space,
   Handshake,
   Calendar
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -157,7 +162,7 @@ const microSAASServices2028 = [
     price: '$299',
     period: '/month',
     description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
-    features: [
+    features[
       'AI article generation',
       'Social media content creation',
       'Marketing copy optimization',
@@ -180,11 +185,11 @@ const microSAASServices2028 = [
     setupTime: '1-2 days',
     category: 'AI Content & Marketing',
     realService: true,
-    technology: ['Natural language processing', 'Machine learning', 'Content optimization', 'SEO algorithms', 'Multi-language AI'],
-    integrations: ['WordPress', 'Social media platforms', 'CMS systems', 'Marketing tools', 'Analytics platforms'],
-    useCases: ['Blog content creation', 'Social media marketing', 'Email marketing', 'SEO content', 'Brand content'],
+    technology['Natural language processing', 'Machine learning', 'Content optimization', 'SEO algorithms', 'Multi-language AI'],
+    integrations['WordPress', 'Social media platforms', 'CMS systems', 'Marketing tools', 'Analytics platforms'],
+    useCases['Blog content creation', 'Social media marketing', 'Email marketing', 'SEO content', 'Brand content'],
     roi: 'Content marketers achieve 300% ROI through increased engagement and reduced content creation time.',
-    competitors: ['Traditional content tools', 'Basic AI writing tools', 'Content management platforms'],
+    competitors['Traditional content tools', 'Basic AI writing tools', 'Content management platforms'],
     marketSize: '$4.2B content creation market',
     growthRate: '180% annual growth',
     rating: 4.8,
@@ -200,7 +205,7 @@ const microSAASServices2028 = [
     price: '$199',
     period: '/month',
     description: 'Professional AI image generation platform that creates high-quality, customizable images for marketing, design, and business needs.',
-    features: [
+    features[
       'High-resolution image generation',
       'Custom style training',
       'Brand-specific image creation',
@@ -223,11 +228,11 @@ const microSAASServices2028 = [
     setupTime: '1 day',
     category: 'AI Design & Creative',
     realService: true,
-    technology: ['Generative AI', 'Computer vision', 'Style transfer', 'Image processing', 'Machine learning'],
-    integrations: ['Design tools', 'E-commerce platforms', 'Marketing tools', 'CMS systems', 'Social media'],
-    useCases: ['Marketing materials', 'Product images', 'Social media graphics', 'Website design', 'Brand assets'],
+    technology['Generative AI', 'Computer vision', 'Style transfer', 'Image processing', 'Machine learning'],
+    integrations['Design tools', 'E-commerce platforms', 'Marketing tools', 'CMS systems', 'Social media'],
+    useCases['Marketing materials', 'Product images', 'Social media graphics', 'Website design', 'Brand assets'],
     roi: 'Design agencies achieve 400% ROI through reduced design costs and faster project delivery.',
-    competitors: ['Open-source AI tools', 'Basic image generators', 'Stock photo services'],
+    competitors['Open-source AI tools', 'Basic image generators', 'Stock photo services'],
     marketSize: '$2.8B AI image generation market',
     growthRate: '250% annual growth',
     rating: 4.9,
@@ -243,7 +248,7 @@ const microSAASServices2028 = [
     price: '$399',
     period: '/month',
     description: 'Professional AI video creation platform that generates, edits, and optimizes videos for marketing, social media, and business needs.',
-    features: [
+    features[
       'AI video generation',
       'Automated video editing',
       'Text-to-video conversion',
@@ -266,11 +271,11 @@ const microSAASServices2028 = [
     setupTime: '2-3 days',
     category: 'AI Video & Media',
     realService: true,
-    technology: ['Computer vision', 'Natural language processing', 'Video processing', 'AI editing', 'Machine learning'],
-    integrations: ['Social media platforms', 'Video hosting', 'Marketing tools', 'CMS systems', 'Analytics platforms'],
-    useCases: ['Marketing videos', 'Social media content', 'Product demos', 'Training videos', 'Brand videos'],
+    technology['Computer vision', 'Natural language processing', 'Video processing', 'AI editing', 'Machine learning'],
+    integrations['Social media platforms', 'Video hosting', 'Marketing tools', 'CMS systems', 'Analytics platforms'],
+    useCases['Marketing videos', 'Social media content', 'Product demos', 'Training videos', 'Brand videos'],
     roi: 'Video marketers achieve 350% ROI through reduced production costs and increased engagement.',
-    competitors: ['Traditional video tools', 'Basic video editors', 'Video templates'],
+    competitors['Traditional video tools', 'Basic video editors', 'Video templates'],
     marketSize: '$3.5B AI video market',
     growthRate: '220% annual growth',
     rating: 4.7,
@@ -286,7 +291,7 @@ const microSAASServices2028 = [
     price: '$499',
     period: '/month',
     description: 'Advanced AI code generation platform that helps developers write, debug, and optimize code across multiple programming languages.',
-    features: [
+    features[
       'Multi-language code generation',
       'Code completion and suggestions',
       'Bug detection and fixing',
@@ -309,11 +314,11 @@ const microSAASServices2028 = [
     setupTime: '2-3 days',
     category: 'AI Development & Coding',
     realService: true,
-    technology: ['Large language models', 'Code analysis', 'Machine learning', 'Static analysis', 'AI optimization'],
-    integrations: ['Git repositories', 'IDEs', 'CI/CD platforms', 'Project management tools', 'Testing frameworks'],
-    useCases: ['Code generation', 'Bug fixing', 'Code review', 'Documentation', 'Testing automation'],
+    technology['Large language models', 'Code analysis', 'Machine learning', 'Static analysis', 'AI optimization'],
+    integrations['Git repositories', 'IDEs', 'CI/CD platforms', 'Project management tools', 'Testing frameworks'],
+    useCases['Code generation', 'Bug fixing', 'Code review', 'Documentation', 'Testing automation'],
     roi: 'Development teams achieve 500% ROI through increased productivity and reduced development time.',
-    competitors: ['Open-source AI tools', 'Basic code editors', 'Traditional IDEs'],
+    competitors['Open-source AI tools', 'Basic code editors', 'Traditional IDEs'],
     marketSize: '$6.8B AI development market',
     growthRate: '280% annual growth',
     rating: 4.8,
@@ -329,7 +334,7 @@ const microSAASServices2028 = [
     price: '$249',
     period: '/month',
     description: 'Intelligent AI design platform that creates logos, graphics, layouts, and visual assets with brand consistency and professional quality.',
-    features: [
+    features[
       'Logo generation and design',
       'Graphic design creation',
       'Layout optimization',
@@ -352,11 +357,11 @@ const microSAASServices2028 = [
     setupTime: '2-3 days',
     category: 'AI Design & Creative',
     realService: true,
-    technology: ['Computer vision', 'Design algorithms', 'Machine learning', 'Brand recognition', 'AI optimization'],
-    integrations: ['Design tools', 'Brand platforms', 'Marketing tools', 'CMS systems', 'Social media'],
-    useCases: ['Logo design', 'Brand graphics', 'Marketing materials', 'Website design', 'Social media assets'],
+    technology['Computer vision', 'Design algorithms', 'Machine learning', 'Brand recognition', 'AI optimization'],
+    integrations['Design tools', 'Brand platforms', 'Marketing tools', 'CMS systems', 'Social media'],
+    useCases['Logo design', 'Brand graphics', 'Marketing materials', 'Website design', 'Social media assets'],
     roi: 'Design agencies achieve 300% ROI through faster design delivery and brand consistency.',
-    competitors: ['Traditional design tools', 'Basic design platforms', 'Logo generators'],
+    competitors['Traditional design tools', 'Basic design platforms', 'Logo generators'],
     marketSize: '$3.2B AI design market',
     growthRate: '200% annual growth',
     rating: 4.6,
@@ -372,7 +377,7 @@ const microSAASServices2028 = [
     price: '$349',
     period: '/month',
     description: 'Comprehensive AI e-commerce platform that optimizes product recommendations, pricing, inventory, and customer experience.',
-    features: [
+    features[
       'AI product recommendations',
       'Dynamic pricing optimization',
       'Inventory management',
@@ -395,11 +400,11 @@ const microSAASServices2028 = [
     setupTime: '3-5 days',
     category: 'AI E-commerce & Retail',
     realService: true,
-    technology: ['Machine learning', 'Predictive analytics', 'Personalization algorithms', 'Optimization engines', 'Real-time processing'],
-    integrations: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Analytics platforms'],
-    useCases: ['Product recommendations', 'Pricing optimization', 'Inventory management', 'Customer personalization', 'Conversion optimization'],
+    technology['Machine learning', 'Predictive analytics', 'Personalization algorithms', 'Optimization engines', 'Real-time processing'],
+    integrations['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Analytics platforms'],
+    useCases['Product recommendations', 'Pricing optimization', 'Inventory management', 'Customer personalization', 'Conversion optimization'],
     roi: 'E-commerce businesses achieve 400% ROI through increased sales and reduced operational costs.',
-    competitors: ['Traditional e-commerce tools', 'Basic analytics platforms', 'Manual optimization tools'],
+    competitors['Traditional e-commerce tools', 'Basic analytics platforms', 'Manual optimization tools'],
     marketSize: '$8.9B AI e-commerce market',
     growthRate: '320% annual growth',
     rating: 4.8,
@@ -415,7 +420,7 @@ const microSAASServices2028 = [
     price: '$199',
     period: '/month',
     description: 'Intelligent AI customer service platform that provides 24/7 support through chatbots, automated responses, and intelligent ticket routing.',
-    features: [
+    features[
       'AI chatbot creation',
       'Natural language processing',
       'Automated ticket routing',
@@ -438,11 +443,11 @@ const microSAASServices2028 = [
     setupTime: '2-3 days',
     category: 'AI Customer Service',
     realService: true,
-    technology: ['Natural language processing', 'Machine learning', 'Chatbot frameworks', 'Automation engines', 'AI routing'],
-    integrations: ['CRM systems', 'Help desk platforms', 'E-commerce platforms', 'Social media', 'Messaging apps'],
-    useCases: ['Customer support', 'FAQ automation', 'Ticket routing', 'Customer engagement', 'Support analytics'],
+    technology['Natural language processing', 'Machine learning', 'Chatbot frameworks', 'Automation engines', 'AI routing'],
+    integrations['CRM systems', 'Help desk platforms', 'E-commerce platforms', 'Social media', 'Messaging apps'],
+    useCases['Customer support', 'FAQ automation', 'Ticket routing', 'Customer engagement', 'Support analytics'],
     roi: 'Customer service teams achieve 350% ROI through reduced response times and improved customer satisfaction.',
-    competitors: ['Traditional help desk tools', 'Basic chatbot platforms', 'Manual support systems'],
+    competitors['Traditional help desk tools', 'Basic chatbot platforms', 'Manual support systems'],
     marketSize: '$5.6B AI customer service market',
     growthRate: '240% annual growth',
     rating: 4.7,
@@ -458,7 +463,7 @@ const microSAASServices2028 = [
     price: '$299',
     period: '/month',
     description: 'Advanced AI analytics platform that provides intelligent insights, predictive analytics, and automated reporting for business decision-making.',
-    features: [
+    features[
       'AI-powered insights',
       'Predictive analytics',
       'Automated reporting',
@@ -481,10 +486,11 @@ const microSAASServices2028 = [
     setupTime: '3-5 days',
     category: 'AI Analytics & BI',
     realService: true,
-    technology: ['Machine learning', 'Predictive analytics', 'Data processing', 'Visualization engines', 'AI insights'],
-    integrations: ['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],
-    useCases: ['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],
+    technology['Machine learning', 'Predictive analytics', 'Data processing', 'Visualization engines', 'AI insights'],
+    integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],
+    useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
+<<<<<<< HEAD
     competitors: ['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],
     marketSize: '$7.2B AI analytics market',
     growthRate: '260% annual growth',
@@ -492,32 +498,42 @@ const microSAASServices2028 = [
     reviews: 234,
     customers: 123
 
+=======
+    competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;
+    marketSize: '$7.2B AI analytics market',;
+    growthRate: '260% annual growth',;
+    rating: 4.6,;
+    reviews: 234,;
+    customers: 123;
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-const MicroSAASServices2028: React.FC = () => {
+<<<<<<< HEAD
+const MicroSAASServices2028: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },
-    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },
-    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },
-    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },
-    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },
-    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
+    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },;
+    { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },;
+    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },;
+    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },;
+    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },;
+    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },;
+    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
   ];
 
   const filteredServices = microSAASServices2028
     .filter(service => {
       const matchesCategory = selectedCategory === 'all' ||
         service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
-    })
+      return matchesCategory && matchesSearch})
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
@@ -528,12 +544,16 @@ const MicroSAASServices2028: React.FC = () => {
           return b.rating - a.rating;
         case 'popularity':
         default:
+<<<<<<< HEAD
           return b.popular ? 1 : -1;
 
+=======
+          return b.popular ? 1 : -1}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
@@ -627,13 +647,40 @@ const MicroSAASServices2028: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
 
                 {/* Popular Badge */}
@@ -755,12 +802,21 @@ const MicroSAASServices2028: React.FC = () => {
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default MicroSAASServices2028;}}}

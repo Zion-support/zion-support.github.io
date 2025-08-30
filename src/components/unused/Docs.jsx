@@ -5,7 +5,7 @@ const Docs = () => {
         {
             title: "Getting Started",
             description: "Quick start guides and basic setup instructions",
-            articles: [
+            articles[
                 { title: "Installation Guide", description: "Step-by-step installation instructions", readTime: "5 min", difficulty: "Beginner" },
                 { title: "First Steps", description: "Create your first project and basic configuration", readTime: "10 min", difficulty: "Beginner" },
                 { title: "Quick Start Tutorial", description: "Build your first AI model in minutes", readTime: "15 min", difficulty: "Beginner" }
@@ -14,7 +14,7 @@ const Docs = () => {
         {
             title: "AI & Machine Learning",
             description: "Comprehensive guides for AI development and ML workflows",
-            articles: [
+            articles[
                 { title: "Model Training", description: "Train custom AI models with your data", readTime: "20 min", difficulty: "Intermediate" },
                 { title: "Data Preparation", description: "Prepare and format data for training", readTime: "12 min", difficulty: "Intermediate" },
                 { title: "Hyperparameter Tuning", description: "Optimize model performance", readTime: "18 min", difficulty: "Advanced" },
@@ -24,7 +24,7 @@ const Docs = () => {
         {
             title: "API Reference",
             description: "Complete API documentation with examples",
-            articles: [
+            articles[
                 { title: "Authentication", description: "API keys and authentication methods", readTime: "8 min", difficulty: "Beginner" },
                 { title: "Endpoints", description: "All available API endpoints", readTime: "30 min", difficulty: "Intermediate" },
                 { title: "Rate Limits", description: "Understanding API rate limits", readTime: "5 min", difficulty: "Beginner" },
@@ -34,7 +34,7 @@ const Docs = () => {
         {
             title: "Security & Compliance",
             description: "Security best practices and compliance guidelines",
-            articles: [
+            articles[
                 { title: "Data Security", description: "Protect your data and models", readTime: "15 min", difficulty: "Intermediate" },
                 { title: "Access Control", description: "Manage user permissions and roles", readTime: "12 min", difficulty: "Intermediate" },
                 { title: "SOC2 Compliance", description: "Meet compliance requirements", readTime: "20 min", difficulty: "Advanced" },
@@ -201,7 +201,6 @@ const Docs = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default Docs;
 }}

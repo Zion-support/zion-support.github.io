@@ -25,7 +25,7 @@ import {
   HelpCircle,
   Search,
   PenTool,
-  Workflow,
+  GitFork,
   Atom,
   Truck,
   Building,
@@ -38,7 +38,12 @@ import {
   Download,
   Play,
   ExternalLink
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Developers() {
   const apis = [
@@ -67,6 +72,7 @@ export default function Developers() {
       status: 'Beta'
     },
     {
+<<<<<<< HEAD
       name: 'AI Security API',
       description: 'Integrate AI-powered security and compliance features',
       category: 'Security',
@@ -74,6 +80,15 @@ export default function Developers() {
       documentation: '/docs/api/security',
       status: 'Production'
 
+=======
+      name: 'AI Security API',;
+      description: 'Integrate AI-powered security and compliance features',;
+      category: 'Security',;
+      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],;
+      documentation: '/docs/api/security',;
+      status: 'Production';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const sdks = [
@@ -102,6 +117,7 @@ export default function Developers() {
       documentation: '/docs/sdk/java'
     },
     {
+<<<<<<< HEAD
       name: 'Go',
       description: 'Go SDK for high-performance applications',
       version: 'v1.2.0',
@@ -109,6 +125,15 @@ export default function Developers() {
       repository: 'https://github.com/ziontechgroup/go-sdk',
       documentation: '/docs/sdk/go'
 
+=======
+      name: 'Go',;
+      description: 'Go SDK for high-performance applications',;
+      version: 'v1.2.0',;
+      downloads: '8K+',;
+      repository: 'https://github.com/ziontechgroup/go-sdk',;
+      documentation: '/docs/sdk/go';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const tools = [
@@ -133,6 +158,7 @@ export default function Developers() {
       href: '/docs',
       category: 'Reference'
     },
+<<<<<<< HEAD
     {
       name: 'Code Examples',
       description: 'Ready-to-use code samples and tutorials',
@@ -140,6 +166,15 @@ export default function Developers() {
       href: '/examples',
       category: 'Learning'
 
+=======
+    {;
+      name: 'Code Examples',;
+      description: 'Ready-to-use code samples and tutorials',;
+      icon: Terminal,;
+      href: '/examples',;
+      category: 'Learning';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quickStartSteps = [
@@ -164,6 +199,7 @@ export default function Developers() {
       action: 'Get Started',
       href: '/docs/quickstart'
     },
+<<<<<<< HEAD
     {
       step: 4,
       title: 'Make First Call',
@@ -176,6 +212,20 @@ export default function Developers() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+    {;
+      step: 4,;
+      title: 'Make First Call',;
+      description: 'Test your integration with our sample endpoints',;
+      action: 'Try API',;
+      href: '/api-playground';
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
       />
@@ -485,12 +535,12 @@ export default function Developers() {
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
 
                 Contact Support
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+                <ArrowRight className="ml-2 w-4 h-4" />;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}}}}}

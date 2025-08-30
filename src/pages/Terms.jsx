@@ -1,6 +1,6 @@
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import TermsOfService from "@/legal/TermsOfService";
 export default function Terms() {
     return (<>
@@ -12,5 +12,9 @@ export default function Terms() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

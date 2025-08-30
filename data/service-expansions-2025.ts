@@ -11,9 +11,13 @@ export interface ServiceExpansion2025 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",
@@ -21,7 +25,7 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
     tagline: "Intelligent process automation and optimization",
     price: "$89/month",
     description: "Advanced AI-powered workflow automation platform that streamlines business processes.",
-    features: [
+    features[
       "Process automation",
       "AI optimization",
       "Workflow analytics",

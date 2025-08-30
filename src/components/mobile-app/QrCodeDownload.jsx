@@ -4,13 +4,20 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
   const [activeTab, setActiveTab] = useState('ios');
 
   const downloadLinks = {
-    ios: {
+  ios: {
       name: 'iOS App Store',
       url: 'https://apps.apple.com/app/zion-it-asset-management',
       qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
       icon: '🍎',
-      description: 'Download for iPhone and iPad'
-    },
+  description: 'Download for iPhone and iPad'
+    
+
+
+
+
+
+
+},
     android: {
       name: 'Google Play Store',
       url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',
@@ -24,6 +31,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+<<<<<<< HEAD
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
 <<<<<<< HEAD
@@ -33,6 +41,10 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       // // // // // // // console.error('Failed to copy: ', err);
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      setTimeout(() => setCopied(false), 2000)} catch (err) {
+      console.error('Failed to copy: ', err)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleShare = async (platform) => {
@@ -45,6 +57,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
           title: 'Zion Mobile App',
           text: text,
           url: url
+<<<<<<< HEAD
         });
       } catch (err) {
 <<<<<<< HEAD
@@ -58,6 +71,13 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url);
 
+=======
+        })} catch (err) {
+        console.error('Error sharing:', err)}
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      handleCopyLink(url)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const currentPlatform = downloadLinks[activeTab];
@@ -99,7 +119,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
                   <Smartphone className="w-4 h-4" />
-                  <span>Works with any QR code scanner app</span>
+                  <span>Works with  QR code scanner app</span>
                 </div>
               </div>
             </div>
@@ -247,6 +267,10 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 }}}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

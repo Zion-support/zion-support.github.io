@@ -3,14 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight import { SEO } from '@/components/SEO';
+=======
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const pricingTiers = [
     {
         name: "Starter",
         description: "Perfect for small businesses and startups",
         price: "From $500",
         priceRange: "500 - 1,999",
-        features: [
+        features[
             "Basic AI Integration",
             "Standard Security",
             "Email Support",
@@ -18,7 +23,7 @@ const pricingTiers = [
             "5 User Licenses",
             "Standard Templates"
         ],
-        notIncluded: [
+        notIncluded[
             "Advanced Customization",
             "Priority Support",
             "Custom Integrations",
@@ -32,7 +37,7 @@ const pricingTiers = [
         description: "Ideal for growing businesses and teams",
         price: "From $2,000",
         priceRange: "2,000 - 4,999",
-        features: [
+        features[
             "Advanced AI Features",
             "Enhanced Security",
             "Priority Support",
@@ -42,7 +47,7 @@ const pricingTiers = [
             "API Access",
             "Integration Support"
         ],
-        notIncluded: [
+        notIncluded[
             "Enterprise Security",
             "Custom Development",
             "Dedicated Account Manager"
@@ -55,7 +60,7 @@ const pricingTiers = [
         description: "For large organizations with complex needs",
         price: "From $5,000",
         priceRange: "5,000 - 15,000",
-        features: [
+        features[
             "Full AI Suite",
             "Enterprise Security",
             "24/7 Premium Support",
@@ -67,7 +72,7 @@ const pricingTiers = [
             "Custom Integrations",
             "Training & Onboarding"
         ],
-        notIncluded: [],
+        notIncluded[],
         color: "from-purple-500 to-indigo-600",
         popular: false
 
@@ -76,7 +81,7 @@ const serviceCategories = [
     {
         name: "AI Services",
         icon: <Zap className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 },
             { name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 },
             { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },
@@ -86,7 +91,7 @@ const serviceCategories = [
     {
         name: "IT Services",
         icon: <Shield className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },
@@ -96,7 +101,7 @@ const serviceCategories = [
     {
         name: "Business Solutions",
         icon: <TrendingUp className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 },
             { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },
             { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },
@@ -106,7 +111,7 @@ const serviceCategories = [
     {
         name: "Digital Solutions",
         icon: <Globe className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
             { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
@@ -356,5 +361,9 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

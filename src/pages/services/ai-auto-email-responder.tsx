@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AIAutoEmailResponder() {
+export default function AIAutoEmailResponder(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
-        <meta name="description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
+        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
         <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot" />
       </Helmet>
 
@@ -62,7 +69,7 @@ export default function AIAutoEmailResponder() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Bot,
@@ -93,8 +100,13 @@ export default function AIAutoEmailResponder() {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
+<<<<<<< HEAD
 
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -119,7 +131,7 @@ export default function AIAutoEmailResponder() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Customer Support",
@@ -147,7 +159,7 @@ export default function AIAutoEmailResponder() {
                 },
                 {
                   title: "Internal Communication",
-                  description: "Team notifications, project updates, and company announcements.",
+                  description: "Team notifications, project updates, and comp announcements.",
                   icon: MessageCircle,
                   benefits: ["Team notifications", "Project updates", "Announcements"]
                 },
@@ -156,8 +168,13 @@ export default function AIAutoEmailResponder() {
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
+<<<<<<< HEAD
 
               ].map((useCase, index) => (
+=======
+                }
+              ].map((useCase, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -190,7 +207,7 @@ export default function AIAutoEmailResponder() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -211,8 +228,13 @@ export default function AIAutoEmailResponder() {
                   step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
+<<<<<<< HEAD
 
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -264,7 +286,7 @@ export default function AIAutoEmailResponder() {
                     { metric: "10x", label: "Email Volume Capacity" },
                     { metric: "24/7", label: "Availability" },
                     { metric: "95%", label: "Customer Satisfaction" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-blue-400">{item.metric}</span>
@@ -288,7 +310,7 @@ export default function AIAutoEmailResponder() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Email Platforms",
@@ -325,8 +347,13 @@ export default function AIAutoEmailResponder() {
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
+<<<<<<< HEAD
 
               ].map((integration, index) => (
+=======
+                }
+              ].map((integration, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <integration.icon className="w-6 h-6 text-white" />
@@ -367,6 +394,7 @@ export default function AIAutoEmailResponder() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
+<<<<<<< HEAD
 
                 Explore All Services
               </Link>
@@ -375,5 +403,15 @@ export default function AIAutoEmailResponder() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

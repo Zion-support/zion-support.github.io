@@ -3,7 +3,7 @@ export const enterpriseITBreakthroughServices2025 = [
     id: 'quantum-cloud-infrastructure-pro',
     name: 'Quantum Cloud Infrastructure Pro',
     description: 'Revolutionary cloud infrastructure platform leveraging quantum computing principles for unprecedented performance, security, and scalability in enterprise environments.',
-    features: [
+    features[
       'Quantum-enhanced cloud computing and processing',
       'Advanced quantum security and encryption protocols',
       'Scalable infrastructure management with quantum optimization',
@@ -16,6 +16,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Custom infrastructure solutions and development'
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
         price: 2999,
         period: 'month',
@@ -31,9 +32,26 @@ export const enterpriseITBreakthroughServices2025 = [
         period: 'month',
         features: ['Full quantum suite', 'Custom development', 'Dedicated support']
 
+=======
+      starter: { 
+        price: 2999, 
+        period: 'month', 
+        features['Basic quantum features', 'Standard security', 'Email support'] 
+      },
+      professional: { 
+        price: 7999, 
+        period: 'month', 
+        features['Advanced quantum features', 'Custom security', 'Priority support'] 
+      },
+      enterprise: { 
+        price: 19999, 
+        period: 'month', 
+        features['Full quantum suite', 'Custom development', 'Dedicated support'] 
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'Cloud Infrastructure',
-    tags: ['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Scalability', 'Enterprise'],
+    tags['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Scalability', 'Enterprise'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -42,21 +60,21 @@ export const enterpriseITBreakthroughServices2025 = [
     marketSize: '$178.6B',
     targetAudience: 'Enterprises, cloud providers, government agencies, research institutions',
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, advanced security protocols, unprecedented performance optimization',
-    useCases: [
+    useCases[
       'Enterprise cloud computing',
       'High-performance computing',
       'Secure cloud infrastructure',
       'Scalable cloud solutions',
       'Quantum computing research'
     ],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
-    compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA']
+    integrations['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
+    compliance['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA']
   },
   {
     id: 'edge-computing-orchestrator-pro',
     name: 'Edge Computing Orchestrator Pro',
     description: 'Advanced edge computing platform that optimizes data processing, reduces latency, and enhances performance for IoT devices and edge applications.',
-    features: [
+    features[
       'Intelligent edge computing optimization and management',
       'Real-time data processing and analytics',
       'Advanced IoT device management and monitoring',
@@ -69,6 +87,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise edge solutions and customization'
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
         price: 1999,
         period: 'month',
@@ -84,9 +103,26 @@ export const enterpriseITBreakthroughServices2025 = [
         period: 'month',
         features: ['Full edge suite', 'Custom development', 'Dedicated support']
 
+=======
+      starter: { 
+        price: 1999, 
+        period: 'month', 
+        features['Basic edge features', 'Standard optimization', 'Email support'] 
+      },
+      professional: { 
+        price: 5999, 
+        period: 'month', 
+        features['Advanced edge features', 'Custom optimization', 'Priority support'] 
+      },
+      enterprise: { 
+        price: 14999, 
+        period: 'month', 
+        features['Full edge suite', 'Custom development', 'Dedicated support'] 
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'Edge Computing',
-    tags: ['Edge Computing', 'IoT', 'Real-time Processing', 'Performance Optimization', 'Enterprise'],
+    tags['Edge Computing', 'IoT', 'Real-time Processing', 'Performance Optimization', 'Enterprise'],
     website: 'https://ziontechgroup.com/edge-computing-orchestrator-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -95,21 +131,21 @@ export const enterpriseITBreakthroughServices2025 = [
     marketSize: '$43.4B',
     targetAudience: 'IoT companies, manufacturing, smart cities, autonomous systems, edge computing providers',
     competitiveAdvantage: 'Advanced edge computing optimization, intelligent IoT management, comprehensive edge security',
-    useCases: [
+    useCases[
       'IoT device management',
       'Real-time data processing',
       'Edge analytics and insights',
       'Performance optimization',
       'Edge security and monitoring'
     ],
-    integrations: ['IoT platforms', 'Cloud services', 'Analytics tools', 'Security systems', 'Monitoring platforms'],
-    compliance: ['SOC2', 'ISO 27001', 'IoT security standards', 'GDPR', 'CCPA']
+    integrations['IoT platforms', 'Cloud services', 'Analytics tools', 'Security systems', 'Monitoring platforms'],
+    compliance['SOC2', 'ISO 27001', 'IoT security standards', 'GDPR', 'CCPA']
   },
   {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     description: 'Comprehensive zero trust security platform providing advanced identity verification, continuous monitoring, and adaptive security for enterprise environments.',
-    features: [
+    features[
       'Advanced identity verification and authentication',
       'Continuous monitoring and threat detection',
       'Adaptive security policies and enforcement',
@@ -122,6 +158,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'API for security automation and integration'
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
         price: 1499,
         period: 'month',
@@ -137,9 +174,26 @@ export const enterpriseITBreakthroughServices2025 = [
         period: 'month',
         features: ['Full zero trust platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
 
+=======
+      starter: { 
+        price: 1499, 
+        period: 'month', 
+        features['Basic zero trust', 'Up to 1000 users', 'Standard monitoring', 'Email support'] 
+      },
+      professional: { 
+        price: 3999, 
+        period: 'month', 
+        features['Advanced zero trust', 'Unlimited users', 'Custom policies', 'Priority support', 'API access'] 
+      },
+      enterprise: { 
+        price: 9999, 
+        period: 'month', 
+        features['Full zero trust platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'Cybersecurity',
-    tags: ['Zero Trust', 'Cybersecurity', 'Identity Management', 'Access Control', 'Enterprise Security'],
+    tags['Zero Trust', 'Cybersecurity', 'Identity Management', 'Access Control', 'Enterprise Security'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -148,21 +202,21 @@ export const enterpriseITBreakthroughServices2025 = [
     marketSize: '$45.2B',
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare providers',
     competitiveAdvantage: 'Comprehensive zero trust platform, advanced identity verification, adaptive security policies',
-    useCases: [
+    useCases[
       'Enterprise security and compliance',
       'Government and military security',
       'Financial institution protection',
       'Healthcare data security',
       'Critical infrastructure protection'
     ],
-    integrations: ['Identity providers', 'Security tools', 'Monitoring systems', 'Compliance platforms', 'Enterprise systems'],
-    compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA', 'NIST standards']
+    integrations['Identity providers', 'Security tools', 'Monitoring systems', 'Compliance platforms', 'Enterprise systems'],
+    compliance['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA', 'NIST standards']
   },
   {
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
     description: 'Intelligent DevOps platform leveraging AI for automated deployment, monitoring, and optimization of enterprise applications and infrastructure.',
-    features: [
+    features[
       'AI-powered deployment automation and optimization',
       'Intelligent monitoring and alerting systems',
       'Automated testing and quality assurance',
@@ -175,6 +229,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise-grade reliability and support'
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
         price: 999,
         period: 'month',
@@ -190,9 +245,26 @@ export const enterpriseITBreakthroughServices2025 = [
         period: 'month',
         features: ['Full AI DevOps platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
 
+=======
+      starter: { 
+        price: 999, 
+        period: 'month', 
+        features['Basic AI DevOps', 'Up to 10 applications', 'Standard automation', 'Email support'] 
+      },
+      professional: { 
+        price: 2999, 
+        period: 'month', 
+        features['Advanced AI DevOps', 'Unlimited applications', 'Custom automation', 'Priority support', 'API access'] 
+      },
+      enterprise: { 
+        price: 7999, 
+        period: 'month', 
+        features['Full AI DevOps platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'DevOps & Automation',
-    tags: ['AI', 'DevOps', 'Automation', 'CI/CD', 'Enterprise'],
+    tags['AI', 'DevOps', 'Automation', 'CI/CD', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -201,21 +273,21 @@ export const enterpriseITBreakthroughServices2025 = [
     marketSize: '$67.8B',
     targetAudience: 'Enterprises, technology companies, development teams, DevOps engineers',
     competitiveAdvantage: 'First AI-powered DevOps platform, intelligent automation, comprehensive enterprise integration',
-    useCases: [
+    useCases[
       'Application deployment and management',
       'Infrastructure automation and optimization',
       'Quality assurance and testing',
       'Performance monitoring and optimization',
       'Security and compliance automation'
     ],
-    integrations: ['CI/CD tools', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Development platforms'],
-    compliance: ['SOC2', 'ISO 27001', 'DevOps best practices', 'Security standards', 'Enterprise requirements']
+    integrations['CI/CD tools', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Development platforms'],
+    compliance['SOC2', 'ISO 27001', 'DevOps best practices', 'Security standards', 'Enterprise requirements']
   },
   {
     id: 'quantum-data-center-platform',
     name: 'Quantum Data Center Platform',
     description: 'Revolutionary data center platform leveraging quantum computing for unprecedented performance, security, and efficiency in enterprise data management.',
-    features: [
+    features[
       'Quantum-enhanced data processing and storage',
       'Advanced quantum security and encryption',
       'Intelligent data center management and optimization',
@@ -228,6 +300,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise-grade reliability and support'
     ],
     pricing: {
+<<<<<<< HEAD
       starter: {
         price: 3999,
         period: 'month',
@@ -243,9 +316,26 @@ export const enterpriseITBreakthroughServices2025 = [
         period: 'month',
         features: ['Full quantum data center platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
 
+=======
+      starter: { 
+        price: 3999, 
+        period: 'month', 
+        features['Basic quantum data center', 'Standard quantum features', 'Email support'] 
+      },
+      professional: { 
+        price: 9999, 
+        period: 'month', 
+        features['Advanced quantum data center', 'Custom quantum features', 'Priority support', 'API access'] 
+      },
+      enterprise: { 
+        price: 24999, 
+        period: 'month', 
+        features['Full quantum data center platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     category: 'Data Center',
-    tags: ['Quantum Computing', 'Data Center', 'Data Management', 'Enterprise', 'Performance'],
+    tags['Quantum Computing', 'Data Center', 'Data Management', 'Enterprise', 'Performance'],
     website: 'https://ziontechgroup.com/quantum-data-center-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -254,14 +344,29 @@ export const enterpriseITBreakthroughServices2025 = [
     marketSize: '$89.2B',
     targetAudience: 'Enterprises, data center providers, technology companies, research institutions',
     competitiveAdvantage: 'First quantum data center platform, quantum-enhanced performance, comprehensive enterprise integration',
-    useCases: [
+    useCases[
       'Enterprise data management',
       'High-performance computing',
       'Data center optimization',
       'Quantum computing research',
+<<<<<<< HEAD
       'Enterprise infrastructure management'
     ],
+<<<<<<< HEAD
     integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
     compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
 
 ];}}}}}}
+=======
+    integrations['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
+    compliance['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
+  };
+=======;
+      'Enterprise infrastructure management';
+    ],;
+    integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],;
+    compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

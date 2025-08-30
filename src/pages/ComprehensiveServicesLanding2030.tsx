@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ArrowRight,
   Brain,
   Cloud,
   Database,
@@ -16,46 +15,61 @@ import {
   Users,
   Zap,
   Phone
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
 import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from '../data/comprehensivePricingGuide2030';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../components/SEO";
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030  } from "../data/comprehensiveServicesIndex2030";
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030  } from "../data/comprehensivePricingGuide2030";
+=======
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data/comprehensiveServicesIndex2030";
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data/comprehensivePricingGuide2030";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function ComprehensiveServicesLanding2030() {
+export default function ComprehensiveServicesLanding2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
-  const [aiScoreRange, setAiScoreRange] = useState<[number, number]>([80, 100]);
+  const [priceRange, setPriceRange] = useState<any>([0, 50000]);
+  const [aiScoreRange, setAiScoreRange] = useState<any>([80, 100]);
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
 
   // Filter services based on category, search, price, and AI score
-  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
-    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore;
-  });
+    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore});
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'rating':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'rating':;
         return b.rating - a.rating;
       case 'price':
         return a.price - b.price;
       case 'aiScore':
         return b.aiScore - a.aiScore;
       default:
+<<<<<<< HEAD
         return 0;
 
+=======
+        return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -69,18 +83,17 @@ export default function ComprehensiveServicesLanding2030() {
       'AI & Education': <Users className="w-6 h-6" />,
       'AI & Entertainment': <Star className="w-6 h-6" />,
       'Cybersecurity': <Shield className="w-6 h-6" />,
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
-      'Quantum Computing': <Zap className="w-6 h-6" />,
-      'IoT & Edge Computing': <Database className="w-6 h-6" />,
-      'Blockchain & Web3': <Lock className="w-6 h-6" />,
-      'Digital Twin': <Globe className="w-6 h-6" />,
-      'Space Technology': <Rocket className="w-6 h-6" />,
-      'Sustainable Technology': <Heart className="w-6 h-6" />
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />,;
+      'Quantum Computing': <Zap className="w-6 h-6" />,;
+      'IoT & Edge Computing': <Database className="w-6 h-6" />,;
+      'Blockchain & Web3': <Lock className="w-6 h-6" />,;
+      'Digital Twin': <Globe className="w-6 h-6" />,;
+      'Space Technology': <Rocket className="w-6 h-6" />,;
+      'Sustainable Technology': <Heart className="w-6 h-6" />;
     };
-    return icons[category] || <Rocket className="w-6 h-6" />;
-  };
+    return icons[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -94,39 +107,37 @@ export default function ComprehensiveServicesLanding2030() {
       'AI & Education': 'from-blue-500 to-indigo-500',
       'AI & Entertainment': 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-red-500 to-orange-500',
-      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
-      'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
-      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
-      'Digital Twin': 'from-blue-500 to-indigo-500',
-      'Space Technology': 'from-purple-500 to-pink-500',
-      'Sustainable Technology': 'from-green-500 to-teal-500'
+      'Cloud & DevOps': 'from-blue-500 to-cyan-500',;
+      'Quantum Computing': 'from-indigo-500 to-purple-500',;
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
+      'Digital Twin': 'from-blue-500 to-indigo-500',;
+      'Space Technology': 'from-purple-500 to-pink-500',;
+      'Sustainable Technology': 'from-green-500 to-teal-500';
     };
-    return colors[category] || 'from-gray-500 to-slate-500';
-  };
+    return colors[category] || 'from-gray-500 to-slate-500'};
 
-  const resetFilters = () => {
+  const resetFilters = () => {;
     setActiveCategory('all');
     setSearchTerm('');
     setSortBy('rating');
     setPriceRange([0, 50000]);
-    setAiScoreRange([80, 100]);
-  };
+    setAiScoreRange([80, 100])};
 
-  const openServiceModal = (service: any) => {
+<<<<<<< HEAD
+  const openServiceModal = (service: any) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedService(service);
-    setShowModal(true);
-  };
+    setShowModal(true)};
 
-  const closeServiceModal = () => {
+  const closeServiceModal = () => {;
     setShowModal(false);
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   return (
     <>
       <SEO
-        title="Comprehensive Services 2030 - Zion Tech Group"
+        title = "Comprehensive Services 2030 - Zion Tech Group"
         description="Discover our cutting-edge AI, IT infrastructure, and emerging technology services for 2030. Transform your business with innovative solutions."
         keywords="AI services, IT infrastructure, emerging technology, Zion Tech Group, 2030 services"
       />
@@ -137,8 +148,26 @@ export default function ComprehensiveServicesLanding2030() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center"
 
@@ -175,8 +204,26 @@ export default function ComprehensiveServicesLanding2030() {
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
 
@@ -266,9 +313,36 @@ export default function ComprehensiveServicesLanding2030() {
               {/* Advanced Filters */}
               {showAdvancedFilters && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
+                  initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                   className="border-t border-white/20 pt-6"
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -283,7 +357,16 @@ export default function ComprehensiveServicesLanding2030() {
                           min="0"
                           max="50000"
                           value={priceRange[0]}
-                          onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                          onChange = {
+  (e) => setPriceRange([parseInt(e.target.value),
+  priceRange[1]])
+
+
+
+
+
+
+}
                           className="flex-1"
                         />
                         <input
@@ -291,7 +374,16 @@ export default function ComprehensiveServicesLanding2030() {
                           min="0"
                           max="50000"
                           value={priceRange[1]}
-                          onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                          onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value)])
+
+
+
+
+
+
+}
                           className="flex-1"
                         />
                       </div>
@@ -308,7 +400,16 @@ export default function ComprehensiveServicesLanding2030() {
                           min="80"
                           max="100"
                           value={aiScoreRange[0]}
-                          onChange={(e) => setAiScoreRange([parseInt(e.target.value), aiScoreRange[1]])}
+                          onChange = {
+  (e) => setAiScoreRange([parseInt(e.target.value),
+  aiScoreRange[1]])
+
+
+
+
+
+
+}
                           className="flex-1"
                         />
                         <input
@@ -316,7 +417,16 @@ export default function ComprehensiveServicesLanding2030() {
                           min="80"
                           max="100"
                           value={aiScoreRange[1]}
-                          onChange={(e) => setAiScoreRange([aiScoreRange[0], parseInt(e.target.value)])}
+                          onChange = {
+  (e) => setAiScoreRange([aiScoreRange[0],
+  parseInt(e.target.value)])
+
+
+
+
+
+
+}
                           className="flex-1"
                         />
                       </div>
@@ -334,8 +444,26 @@ export default function ComprehensiveServicesLanding2030() {
             {/* Results Counter */}
             <div className="mb-8 text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 inline-block"
 
@@ -351,13 +479,40 @@ export default function ComprehensiveServicesLanding2030() {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20"
 
                   {/* Service Header */}
@@ -423,8 +578,26 @@ export default function ComprehensiveServicesLanding2030() {
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
 
@@ -434,13 +607,40 @@ export default function ComprehensiveServicesLanding2030() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index)  => (
                 <motion.div
                   key={service.serviceId}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.2 
+
+
+
+
+
+
+}}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
 
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.serviceName}</h3>
@@ -474,8 +674,26 @@ export default function ComprehensiveServicesLanding2030() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 text-center"
 
@@ -531,9 +749,36 @@ export default function ComprehensiveServicesLanding2030() {
             onClick={closeServiceModal}
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
               className="bg-gray-900 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
 
@@ -565,7 +810,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.tags.map((tag: string) => (
+                      {selectedService.tags.map((tag: string)  => (
                         <span
                           key={tag}
                           className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30"
@@ -638,10 +883,23 @@ export default function ComprehensiveServicesLanding2030() {
                   Close
                 </motion.button>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
         )}
       </div>
     </>
+  )};
+=======;
+            </motion.div>;
+          </motion.div>;
+        )};
+      </div>;
+    </>;
   );
+<<<<<<< HEAD
 </div></div>}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

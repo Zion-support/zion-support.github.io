@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+=======
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -33,11 +39,34 @@ import { SEO } from '../../components/SEO';
   Lock
 } from 'lucide-react';
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Lightbulb
+ } from 'lucide-react';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AIBusinessIntelligence() {
+const AIBusinessIntelligence: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'Predictive Analytics',
       description: 'AI-powered forecasting models that predict market trends, customer behavior, and business outcomes with 95%+ accuracy.',
       benefits: ['Revenue forecasting', 'Customer churn prediction', 'Market trend analysis', 'Risk assessment']
@@ -53,10 +82,26 @@ export default function AIBusinessIntelligence() {
       title: 'Customer Intelligence',
       description: 'Deep customer segmentation and behavior analysis to drive personalized marketing and sales strategies.',
       benefits: ['Customer segmentation', 'Behavioral analysis', 'Lifetime value prediction', 'Churn prevention']
+=======
+      title: "Predictive Analytics",
+      description: "Advanced machine learning algorithms that forecast trends and identify opportunities before they emerge."
     },
+    {
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
+    },
+    {
+      icon: Target,
+      title: "Intelligent Forecasting",
+      description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
       icon: Zap,
+<<<<<<< HEAD
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency across your organization.'
 
@@ -138,10 +183,40 @@ export default function AIBusinessIntelligence() {
       popular: false
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      title: "Automated Insights",
+      description: "Automatically discover patterns, anomalies, and actionable insights from your data.";
+    };
+  ];
+
+  const benefits = [
+    "Increase revenue by 15-25% through predictive insights",
+    "Reduce operational costs by 20-30% with automated analytics",
+    "Improve decision-making speed by 60%",
+    "Enhance customer satisfaction through personalized insights",
+    "Identify new market opportunities faster than competitors";
+=======;
+    {;
+      icon: Zap,;
+      title: "Automated Insights",;
+      description: "AI-generated recommendations and actionable insights delivered in real-time.";
+    };
+  ];
+
+  const benefits = [;
+    "Increase revenue by 15-25% through data-driven decision making",;
+    "Reduce operational costs by 20-30% with optimized processes",;
+    "Improve customer satisfaction by 35% with personalized insights",;
+    "Accelerate time-to-market by 40% with predictive analytics",;
+    "Enhance team productivity by 25% with automated reporting",;
+    "Reduce risk by 30% with early warning systems";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'Retail & E-commerce',
       description: 'Optimize inventory, predict demand, and personalize customer experiences',
       metrics: ['25% increase in conversion rates', '30% reduction in inventory costs', '40% improvement in customer retention']
@@ -227,6 +302,96 @@ export default function AIBusinessIntelligence() {
           <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
+=======
+      industry: "Retail",
+      description: "Customer behavior analysis, inventory optimization, and demand forecasting"
+    },
+    {
+      industry: "Finance",
+      description: "Risk assessment, fraud detection, and investment portfolio optimization"
+    },
+    {
+<<<<<<< HEAD
+      industry: "Healthcare",
+      description: "Patient outcome prediction, resource allocation, and treatment optimization"
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization";
+    };
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="AI Business Intelligence Services - Zion Tech Group"
+        description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analytics, predictive modeling, and automated reporting."
+      />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Intelligence
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              AI Business Intelligence
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business data into actionable insights with AI-powered analytics.
+              Make data-driven decisions faster and more accurately than ever before.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">
@@ -368,10 +533,30 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
@@ -402,35 +587,132 @@ export default function AIBusinessIntelligence() {
 
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-cyan-400" />
+=======
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Business Intelligence platform provides comprehensive capabilities for
+              data analysis, visualization, and decision-making support.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
+              <motion.div
+                key={feature.title}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Core Capabilities */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Capabilities
+=======
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Proven Benefits
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive tools and features to transform your business data into actionable intelligence.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Join thousands of businesses that have transformed their operations with AI-powered insights
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+<<<<<<< HEAD
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -461,20 +743,144 @@ export default function AIBusinessIntelligence() {
                   </ul>
                 </div>
               </div>
+=======
+                key={benefit}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                <p className="text-zion-slate-light text-lg">{benefit}</p>
+              </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-8 rounded-xl border border-cyan-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Industry-leading AI algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Enterprise-grade security</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Cloud className="w-5 h-5 text-blue-400" />
+                  <span className="text-gray-300">Scalable cloud infrastructure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-300">24/7 expert support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Proven track record</span>
+                </div>
+              </div>
+            </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
-      </section>
+      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Industry Use Cases */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
@@ -506,8 +912,79 @@ export default function AIBusinessIntelligence() {
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-cyan-400" />
+=======
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI Business Intelligence is transforming industries across the globe,
+              enabling data-driven decision making and operational excellence.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
+              <motion.div
+                key={useCase.industry}
+<<<<<<< HEAD
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-cyan-400" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
+                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
@@ -556,9 +1033,15 @@ export default function AIBusinessIntelligence() {
               Transparent Pricing Plans
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the plan that best fits your business needs. All plans include our core AI capabilities 
               and dedicated support.
+=======
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI Business Intelligence can transform your organization
+              and drive measurable business outcomes.
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </div>
 
@@ -694,6 +1177,7 @@ export default function AIBusinessIntelligence() {
 
       {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
@@ -703,11 +1187,42 @@ export default function AIBusinessIntelligence() {
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how AI-powered Business Intelligence can revolutionize your decision-making
               process and drive unprecedented business growth.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-4">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
                 Start Your AI BI Journey
@@ -747,6 +1262,25 @@ export default function AIBusinessIntelligence() {
               <Clock className="w-5 h-5 text-blue-400" />
               <span>14-day free trial</span>
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                Request Demo
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                Contact Sales
+              </motion.button>
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-400" />
@@ -758,7 +1292,13 @@ export default function AIBusinessIntelligence() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 }}}}}}}
+=======
+};
+
+export default AIBusinessIntelligence;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

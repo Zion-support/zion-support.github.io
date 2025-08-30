@@ -19,6 +19,7 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       description: "Complex topics for experienced users",
       color: "from-red-500 to-pink-500",
       count: "8"
+<<<<<<< HEAD
     },
     {
       title: "Expert",
@@ -26,9 +27,38 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       color: "from-purple-500 to-indigo-500",
       count: "5"
 
+=======
+    },;
+    {;
+      title: "Expert",;
+      description: "Cutting-edge research and techniques",;
+      color: "from-purple-500 to-indigo-500",;
+      count: "5";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const featuredTutorials = [
+    {
+      title: "AI Autonomous Research Assistant Implementation",
+      description: "Learn to implement and configure AI Autonomous Research Assistant systems for enterprise research and intelligence gathering.",
+      category: "Advanced",
+      duration: "75 min",
+      instructor: "Dr. Sarah Chen",
+      rating: 4.9,
+      students: "1.2k",
+      thumbnail: "/images/tutorials/ai-autonomous-research.jpg"
+    },
+    {
+      title: "AI Supply Chain Optimization Setup",
+      description: "Master the implementation of AI-powered supply chain optimization solutions for cost reduction and efficiency improvement.",
+      category: "Expert",
+      duration: "90 min",
+      instructor: "Michael Rodriguez",
+      rating: 4.8,
+      students: "856",
+      thumbnail: "/images/tutorials/ai-supply-chain.jpg"
+    },
     {
       title: "Building Your First AI Chatbot",
       description: "Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.",
@@ -62,6 +92,7 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
     {
       title: "AI Model Optimization",
       description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
+<<<<<<< HEAD
       category: "Expert",
       duration: "75 min",
       instructor: "Dr. Emily Watson",
@@ -69,6 +100,15 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       students: "623",
       thumbnail: "/images/tutorials/model-optimization.jpg"
 
+=======
+      category: "Expert",;
+      duration: "75 min",;
+      instructor: "Dr. Emily Watson",;
+      rating: 4.6,;
+      students: "623",;
+      thumbnail: "/images/tutorials/model-optimization.jpg";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const recentTutorials = [
@@ -97,6 +137,7 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       students: "567"
     },
     {
+<<<<<<< HEAD
       title: "Machine Learning Model Deployment",
       category: "Advanced",
       duration: "65 min",
@@ -104,6 +145,15 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       rating: 4.7,
       students: "345"
 
+=======
+      title: "Machine Learning Model Deployment",;
+      category: "Advanced",;
+      duration: "65 min",;
+      instructor: "Michael Rodriguez",;
+      rating: 4.7,;
+      students: "345";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const learningPaths = [
@@ -121,6 +171,7 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       duration: "8 weeks",
       level: "Intermediate to Expert"
     },
+<<<<<<< HEAD
     {
       title: "Quantum Computing Engineer",
       description: "Learn quantum algorithms and applications",
@@ -128,10 +179,19 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
       duration: "10 weeks",
       level: "Advanced to Expert"
 
+=======
+    {;
+      title: "Quantum Computing Engineer",;
+      description: "Learn quantum algorithms and applications",;
+      courses: 5,;
+      duration: "10 weeks",;
+      level: "Advanced to Expert";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -310,12 +370,25 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Contact Us
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default Tutorials;
 }}}}}}

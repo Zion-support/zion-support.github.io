@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {
   const features = [
     'AI-powered security awareness optimization',
-    'Intelligent awareness strategy management and execution',
-    'Automated security behavior assessment and training',
-    'Predictive analytics for awareness needs',
-    'Smart awareness framework management',
-    'AI-driven awareness automation and orchestration',
-    'Real-time awareness performance tracking',
-    'Custom AI models for awareness applications'
+    'Intelligent awareness strategy management and execution',;
+    'Automated security behavior assessment and training',;
+    'Predictive analytics for awareness needs',;
+    'Smart awareness framework management',;
+    'AI-driven awareness automation and orchestration',;
+    'Real-time awareness performance tracking',;
+    'Custom AI models for awareness applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$149/mo',
       details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$449/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,199/mo',
       details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$449/mo', 
+      details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,199/mo', ;
+      details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security awareness optimization',
-    'Awareness strategy management and execution',
-    'Security behavior assessment and training',
-    'Awareness framework management and automation',
-    'Awareness automation and orchestration',
-    'Awareness scaling and management'
+  const useCases = [;
+    'Security awareness optimization',;
+    'Awareness strategy management and execution',;
+    'Security behavior assessment and training',;
+    'Awareness framework management and automation',;
+    'Awareness automation and orchestration',;
+    'Awareness scaling and management';
   ];
 
-  const benefits = [
-    'Improve security awareness performance by 50-80%',
-    'Reduce awareness training time by 40-70%',
-    'Cut security awareness costs by 35-65%',
-    'Enhance security awareness reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security awareness operations efficiently'
+  const benefits = [;
+    'Improve security awareness performance by 50-80%',;
+    'Reduce awareness training time by 40-70%',;
+    'Cut security awareness costs by 35-65%',;
+    'Enhance security awareness reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security awareness operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-sky-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

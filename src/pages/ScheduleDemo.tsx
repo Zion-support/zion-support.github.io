@@ -1,68 +1,104 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react';
+import { SEO  } from "../components/SEO";
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO } from '../components/SEO';
+=======
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
+import { SEO } from "../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface DemoFormData {
+
   firstName: string;
   lastName: string;
   email: string;
-  company: string;
+  comp: string;
   phone: string;
   preferredDate: string;
   preferredTime: string;
   attendees: string;
   services: string[];
+<<<<<<< HEAD
   message: string;
+=======
+  message: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const ScheduleDemo: React.FC = () => {
-  const [formData, setFormData] = useState<DemoFormData>({
+const ScheduleDemo: React.FC = (): JSX.Element => {
+  const [formData, setFormData] = useState<any>({
     firstName: '',
     lastName: '',
     email: '',
-    company: '',
+    comp: '',
     phone: '',
+<<<<<<< HEAD
     preferredDate: '',
     preferredTime: '',
     attendees: '1-5',
-    services: [],
-    message: ''
+    services[],
+    message: '';
+=======;
+    preferredDate: '',;
+    preferredTime: '',;
+    attendees: '1-5',;
+    services: [],;
+    message: '';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
+  const timeSlots = [;
+    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',;
+    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM';
   ];
 
   const availableServices = [
     { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },
-    { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },
-    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },
-    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },
-    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
+    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },;
+    { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },;
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;
+    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },;
+    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;
+    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
+    { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
 
-  const handleServiceToggle = (serviceId: string) => {
+<<<<<<< HEAD
+  const handleServiceToggle = (serviceId: string)  => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
-        : [...prev.services, serviceId]
+        ? prev.services.filter(id  => id !== serviceId);
+        [...prev.services, serviceId];
+    }))};
+
+  const handleServiceToggle = (serviceId: string) => {;
+    setFormData(prev => ({;
+      ...prev,;
+      services: prev.services.includes(serviceId);
+        ? prev.services.filter(id => id !== serviceId);
+        : [...prev.services, serviceId];
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
+<<<<<<< HEAD
       setIsSubmitted(true);
     } catch (error) {
 <<<<<<< HEAD
@@ -73,18 +109,41 @@ const ScheduleDemo: React.FC = () => {
     } finally {
       setIsSubmitting(false);
 
+=======
+      setIsSubmitted(true)} catch (error) {
+      console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <SEO
           title="Demo Scheduled - Zion Tech Group"
           description="Your demo has been successfully scheduled. We'll be in touch soon to confirm the details."
         />
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
           className="max-w-2xl mx-auto text-center p-8"
 
           <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -127,16 +186,33 @@ const ScheduleDemo: React.FC = () => {
             <a
               href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
+<<<<<<< HEAD
 
+=======
+            >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Contact Us
             </a>
           </div>
         </motion.div>
       </div>
+    )};
+=======;
+              Contact Us;
+            </a>;
+          </div>;
+        </motion.div>;
+      </div>;
     );
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Schedule a Demo - Zion Tech Group"
         description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
@@ -147,8 +223,26 @@ const ScheduleDemo: React.FC = () => {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -185,9 +279,36 @@ const ScheduleDemo: React.FC = () => {
             {/* Form */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
 
                 <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
@@ -203,7 +324,16 @@ const ScheduleDemo: React.FC = () => {
                         type="text"
                         required
                         value={formData.firstName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  firstName: e.target.value 
+
+
+
+
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your first name"
                       />
@@ -216,7 +346,16 @@ const ScheduleDemo: React.FC = () => {
                         type="text"
                         required
                         value={formData.lastName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  lastName: e.target.value 
+
+
+
+
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your last name"
                       />
@@ -232,22 +371,49 @@ const ScheduleDemo: React.FC = () => {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  email: e.target.value 
+
+
+
+
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company *
+                        Comp *
                       </label>
                       <input
                         type="text"
                         required
+<<<<<<< HEAD
+                        value={formData.comp}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  comp: e.target.value 
+
+}))}
+=======
                         value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  company: e.target.value 
+
+
+
+
+
+
+}))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter company name"
+                        placeholder="Enter comp name"
                       />
                     </div>
                   </div>
@@ -259,7 +425,16 @@ const ScheduleDemo: React.FC = () => {
                     <input
                       type="tel"
                       value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  phone: e.target.value 
+
+
+
+
+
+
+}))}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter phone number"
                     />
@@ -275,7 +450,16 @@ const ScheduleDemo: React.FC = () => {
                         type="date"
                         required
                         value={formData.preferredDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  preferredDate: e.target.value 
+
+
+
+
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         min={new Date().toISOString().split('T')[0]}
                       />
@@ -287,7 +471,16 @@ const ScheduleDemo: React.FC = () => {
                       <select
                         required
                         value={formData.preferredTime}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredTime: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  preferredTime: e.target.value 
+
+
+
+
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 
                         <option value="">Select time</option>
@@ -304,7 +497,16 @@ const ScheduleDemo: React.FC = () => {
                     </label>
                     <select
                       value={formData.attendees}
-                      onChange={(e) => setFormData(prev => ({ ...prev, attendees: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  attendees: e.target.value 
+
+
+
+
+
+
+}))}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 
                       <option value="1-5">1-5 people</option>
@@ -319,8 +521,8 @@ const ScheduleDemo: React.FC = () => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {availableServices.map((service) => (
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
+                      {availableServices.map((service)  => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input
                             type="checkbox"
@@ -343,7 +545,16 @@ const ScheduleDemo: React.FC = () => {
                     </label>
                     <textarea
                       value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  message: e.target.value 
+
+
+
+
+
+
+}))}
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your specific needs, challenges, or questions..."
@@ -375,9 +586,36 @@ const ScheduleDemo: React.FC = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
                 className="space-y-6"
 
                 {/* What to Expect */}
@@ -449,12 +687,21 @@ const ScheduleDemo: React.FC = () => {
                   </ul>
                 </div>
               </motion.div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ScheduleDemo;}}}}

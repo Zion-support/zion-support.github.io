@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const InfrastructureServices = () => {
+=======
+import React from 'react.ts';
+import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
+
+const InfrastructureServices = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const infrastructureServices = [
     {
       title: "Network Design & Management",
@@ -15,6 +22,7 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
       icon: Server
     },
+<<<<<<< HEAD
     {
       title: "Data Center Solutions",
       description: "Reliable hosting, colocation, and data center management.",
@@ -22,6 +30,15 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
       icon: Database
 
+=======
+    {;
+      title: "Data Center Solutions",;
+      description: "Reliable hosting, colocation, and data center management.",;
+      price: "From $8,000/month",;
+      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
+      icon: Database;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -36,6 +53,7 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const
       description: "Enterprise storage and backup systems",
       icon: HardDrive,
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
+<<<<<<< HEAD
     },
     {
       name: "Network Security",
@@ -43,19 +61,28 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const
       icon: Shield,
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
 
+=======
+    },;
+    {;
+      name: "Network Security",;
+      description: "Advanced network protection and monitoring",;
+      icon: Shield,;
+      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Improved system reliability and uptime",
-    "Enhanced security and compliance",
-    "Scalable infrastructure that grows with your business",
-    "Reduced operational costs and complexity",
-    "Expert support and maintenance",
-    "Future-proof technology solutions"
+  const benefits = [;
+    "Improved system reliability and uptime",;
+    "Enhanced security and compliance",;
+    "Scalable infrastructure that grows with your business",;
+    "Reduced operational costs and complexity",;
+    "Expert support and maintenance",;
+    "Future-proof technology solutions";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -208,13 +235,13 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

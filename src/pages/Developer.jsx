@@ -23,6 +23,5 @@ const Developer = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default Developer;

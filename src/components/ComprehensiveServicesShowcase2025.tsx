@@ -34,7 +34,7 @@ import {
   ShieldCheck,
   Globe2,
   Bot,
-  Workflow,
+  GitFork,
   Eye,
   Sparkles,
   Atom,
@@ -402,7 +402,12 @@ import {
   Psi,
   Omega,
   Crown
+<<<<<<< HEAD
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+=======
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceContact {
   mobile: string;
@@ -410,7 +415,7 @@ interface ServiceContact {
   address: string;
   website: string;
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {
+const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -427,43 +432,60 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
     { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
     { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' }
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-  const innovationLevels = [
-    { id: 'all', name: 'All Levels', icon: '🌟' },
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' }
+  const innovationLevels = [;
+    { id: 'all', name: 'All Levels', icon: '🌟' },;
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
 
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.price - b.price;
       case 'name':
         return a.title.localeCompare(b.title);
       case 'innovation':
+<<<<<<< HEAD
         const innovationOrder = { 'Advanced': 1, 'Cutting-edge': 2, 'Revolutionary': 3 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) -
+=======
+        const innovationOrder = {
+  'Advanced': 1, 'Cutting-edge': 2,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  'Revolutionary': 3 ;
+
+
+
+
+
+
+};
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'category':
         return a.category.localeCompare(b.category);
@@ -472,15 +494,18 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 
   });
 
-  const handleServiceClick = (service: any) => {
+<<<<<<< HEAD
+  const handleServiceClick = (service: any) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedService(service);
   };
 
-  const closeModal = () => {
+  const closeModal = () => {;
     setSelectedService(null);
   };
 
   const containerVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -488,11 +513,29 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         staggerChildren: 0.1
 
 
+=======
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
     visible: {
+<<<<<<< HEAD
       y: 0,
       opacity: 1,
       transition: {
@@ -500,10 +543,19 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         ease: "easeOut"
 
 
+=======
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5,;
+        ease: "easeOut";
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
       case 'AI & Research': return <Search className="w-5 h-5" />;
@@ -519,8 +571,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 
   };
 
-  const getInnovationIcon = (level: string) => {
-    switch (level) {
+  const getInnovationIcon = (level: string) => {;
+    switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500" />;
@@ -529,7 +581,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />
@@ -541,8 +593,26 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
@@ -570,9 +640,36 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       <section className="relative px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
 
             {/* Search Bar */}
@@ -672,7 +769,16 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   min="0"
                   max="10000"
                   value={priceRange[0]}
-                  onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                  onChange = {
+  (e) => setPriceRange([parseInt(e.target.value),
+  priceRange[1]])
+
+
+
+
+
+
+}
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
                 <input
@@ -680,7 +786,16 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   min="0"
                   max="10000"
                   value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value)])
+
+
+
+
+
+
+}
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
               </div>
@@ -839,14 +954,34 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 Try adjusting your search criteria or filters
               </p>
               <button
-                onClick={() => {
+                onClick = {;
+  ;
+  ;
+  ;
+  ;
+  ;
+  () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
-                  setPriceRange([0, 10000]);
+                  setPriceRange([0,
+  10000]);
                   setInnovationLevel('all');
+<<<<<<< HEAD
                 }}
                 className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
 
+=======
+                
+
+
+
+
+
+
+}}
+                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear All Filters
               </button>
             </motion.div>
@@ -865,9 +1000,36 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             onClick={closeModal}
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
 
@@ -1031,13 +1193,13 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+                </div>;
+              </div>;
+            </motion.div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </div>;
   );
 </div></div></div></div></div></div></div>};
 

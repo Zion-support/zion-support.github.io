@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink export function ContactInfo() {
     const contactMethods = [
         {
@@ -43,7 +44,13 @@ import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink exp
             color: "#8c15e9"
 
     ];
+=======
+import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
+export function ContactInfo() {
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const companyStats = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {
             label: "Years Experience",
             value: "10+",
@@ -119,7 +126,7 @@ import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink exp
             </FuturisticCard>))}
         </div>
 
-        {/* Company Statistics */}
+        {/* Comp Statistics */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
@@ -132,7 +139,7 @@ import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink exp
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {compStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">
@@ -191,5 +198,9 @@ import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink exp
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 </div></Card></Card></Card></Card></Card>}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -20,30 +20,41 @@ export function OnChainExport() {
                     description: "Please install MetaMask or another Ethereum wallet to use this feature",
                     variant: "destructive"
                 });
+<<<<<<< HEAD
                 return;
 
+=======
+                return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
-                params: [address, message]
+                params[address, message]
             });
             setIsConnected(true);
             toast({
                 title: "Wallet connected",
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Connection failed",
                 description: error.message || "Could not connect to wallet",
                 variant: "destructive"
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleExportTokens = async () => {
         setIsExporting(true);
@@ -55,24 +66,34 @@ export function OnChainExport() {
             toast({
                 title: "Tokens exported",
                 description: "Your ZION$ tokens have been exported to your wallet",
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             setExportStatus('error');
             toast({
                 title: "Export failed",
                 description: error.message || "Could not export tokens",
                 variant: "destructive"
+<<<<<<< HEAD
             });
 
         finally {
             setIsExporting(false);
 
+=======
+            })}
+        finally {
+            setIsExporting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5 text-primary"/>) : (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
+          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
           On-chain Export
           <TooltipProvider>
             <Tooltip>
@@ -109,5 +130,9 @@ export function OnChainExport() {
             </Button>
           </div>)}
       </CardContent>
+<<<<<<< HEAD
     </Card>);
 </Card></Card></Card></Card>}}}}}}}}
+=======
+    </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

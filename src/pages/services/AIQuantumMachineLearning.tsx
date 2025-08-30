@@ -3,31 +3,31 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
     'Quantum-enhanced machine learning algorithms',
     'Hybrid quantum-classical computing solutions',
     'Advanced quantum neural network optimization',
-    'Real-time quantum algorithm execution',
-    'Quantum machine learning model training',
-    'Advanced quantum data processing and analysis',
-    'Quantum-enhanced optimization algorithms',
-    'Real-time quantum computing resource management',
-    'AI-driven quantum algorithm selection',
-    'Comprehensive quantum computing analytics'
+    'Real-time quantum algorithm execution',;
+    'Quantum machine learning model training',;
+    'Advanced quantum data processing and analysis',;
+    'Quantum-enhanced optimization algorithms',;
+    'Real-time quantum computing resource management',;
+    'AI-driven quantum algorithm selection',;
+    'Comprehensive quantum computing analytics';
   ];
 
-  const benefits = [
-    'Solve complex problems 100x faster than classical computing',
-    'Improve machine learning accuracy by 40-60%',
-    'Enable previously impossible computational tasks',
-    'Reduce computational costs for complex algorithms',
-    'Accelerate scientific research and discovery',
-    'Enable breakthrough innovations in AI and ML'
+  const benefits = [;
+    'Solve complex problems 100x faster than classical computing',;
+    'Improve machine learning accuracy by 40-60%',;
+    'Enable previously impossible computational tasks',;
+    'Reduce computational costs for complex algorithms',;
+    'Accelerate scientific research and discovery',;
+    'Enable breakthrough innovations in AI and ML';
   ];
 
-  const useCases = [
-    'Drug discovery and pharmaceutical research',
-    'Financial modeling and risk assessment',
-    'Climate modeling and environmental research',
-    'Materials science and nanotechnology',
-    'Cryptography and cybersecurity',
-    'Artificial intelligence and machine learning'
+  const useCases = [;
+    'Drug discovery and pharmaceutical research',;
+    'Financial modeling and risk assessment',;
+    'Climate modeling and environmental research',;
+    'Materials science and nanotechnology',;
+    'Cryptography and cybersecurity',;
+    'Artificial intelligence and machine learning';
   ];
 
   const tiers = [
@@ -36,6 +36,7 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
       price: '$1,999/mo',
       details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Quantum Professional',
       price: '$4,999/mo',
@@ -46,10 +47,22 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
       price: '$12,999/mo',
       details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support']
     },
+=======
+    { 
+      name: 'Quantum Professional', 
+      price: '$4,999/mo', 
+      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise Quantum', ;
+      price: '$12,999/mo', ;
+      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -145,12 +158,12 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-zion-slate-light">;
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

@@ -7,32 +7,37 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
             icon: Brain,
             title: "AI-Powered Campaign Optimization",
             description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI",
-            benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
+            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
         },
         {
             icon: Users,
             title: "Intelligent Customer Segmentation",
             description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns",
-            benefits: ["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
+            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
         },
         {
             icon: BarChart3,
             title: "Predictive Analytics",
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
-            benefits: ["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
+            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
         },
         {
             icon: Zap,
             title: "Automated Workflows",
             description: "Intelligent automation of marketing processes, from lead generation to customer retention",
+<<<<<<< HEAD
             benefits: ["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
 
+=======
+            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const solutions = [
         {
             category: "Email Marketing",
             icon: Mail,
-            solutions: [
+            solutions[
                 "AI-powered email personalization",
                 "Send time optimization",
                 "Subject line optimization",
@@ -43,7 +48,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         {
             category: "Social Media Marketing",
             icon: MessageSquare,
-            solutions: [
+            solutions[
                 "Content performance prediction",
                 "Optimal posting times",
                 "Audience engagement analysis",
@@ -54,7 +59,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         {
             category: "Search & Display Advertising",
             icon: Target,
-            solutions: [
+            solutions[
                 "Bid optimization",
                 "Audience targeting",
                 "Ad creative optimization",
@@ -65,7 +70,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         {
             category: "Content Marketing",
             icon: TrendingUp,
-            solutions: [
+            solutions[
                 "Content performance analysis",
                 "Topic recommendations",
                 "SEO optimization",
@@ -138,7 +143,15 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -153,7 +166,25 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">
               <Target className="w-10 h-10 text-white"/>
             </div>
@@ -216,7 +247,25 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
       {/* Solutions by Channel */}
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI automation solutions across all major marketing channels
@@ -225,7 +274,34 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((category, index) => (<motion.div key={category.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
+            {solutions.map((category, index) => (<motion.div key={category.category} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
                     <category.icon className="w-6 h-6 text-white"/>
@@ -246,7 +322,25 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             AI Marketing Automation delivers measurable results that directly impact your bottom line
@@ -255,7 +349,34 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
+          {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-8 h-8 text-white"/>
               </div>
@@ -268,7 +389,25 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
       {/* Technology Stack */}
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built on cutting-edge AI and marketing technologies to ensure scalability,
@@ -277,7 +416,34 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
+            {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -290,7 +456,25 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Marketing?
           </h2>
@@ -308,7 +492,11 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </div>);
 </div>};
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AIMarketingAutomation;
 }}}}}}}}}

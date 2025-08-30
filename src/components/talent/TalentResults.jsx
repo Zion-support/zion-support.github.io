@@ -12,5 +12,9 @@ export function TalentResults({ talents, totalCount, isLoading, viewProfile, han
 
       {/* Talents grid */}
       <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters}/>
+<<<<<<< HEAD
     </div>);
 }
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

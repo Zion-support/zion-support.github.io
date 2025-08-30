@@ -1,5 +1,6 @@
-import SEO from '../SEO';
+import SEO from "../SEO";
 const Mobile = () => {
+<<<<<<< HEAD
     const mobileFeatures = [
         {
             title: "Mobile-First Design",
@@ -61,6 +62,9 @@ const Mobile = () => {
             features: ["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
 
     ];
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const mobileBenefits = [
         {
             title: "Increased Engagement",
@@ -83,6 +87,8 @@ const Mobile = () => {
             icon: "🏆"
 
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const mobileStats = [
         {
             stat: "73%",
@@ -255,7 +261,6 @@ const Mobile = () => {
           </div>
         </main>
       </div>
-    </>);
-};
+    </>)};
 export default Mobile;
 }}}}

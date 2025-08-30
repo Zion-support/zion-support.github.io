@@ -8,10 +8,8 @@ import {
   BarChart3,
   Users,
   Globe,
-  Zap,
-  Target,
-  Award,
   ArrowRight,
+<<<<<<< HEAD
   Accessibility,
   Monitor,
   Smartphone,
@@ -19,53 +17,168 @@ import {
   Laptop
 const AccessibilityAuditor: React.FC = () => {
   const features = [
+=======
+  Star,
+  Heart,
+  Users,
+  Zap,
+  Lock,
+  FileText,
+  Phone,
+  Mail,
+  MessageCircle
+} from 'lucide-react';
+
+export default function AccessibilityPage() {
+  const currentYear = new Date().getFullYear();
+
+  const accessibilityFeatures = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
-      title: "Automated Testing",
-      description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
-      icon: "🔍"
+      category: 'Visual Accessibility',
+      icon: Eye,
+      features: [
+        'High contrast mode support',
+        'Adjustable font sizes',
+        'Color-blind friendly design',
+        'Clear typography and spacing',
+        'Alternative text for images',
+        'Focus indicators for navigation'
+      ]
     },
     {
-      title: "Manual Review",
-      description: "Expert manual accessibility audits by certified professionals",
-      icon: "👁️"
+      category: 'Auditory Accessibility',
+      icon: Ear,
+      features: [
+        'Closed captions for videos',
+        'Audio descriptions',
+        'Volume controls',
+        'Visual alerts and notifications',
+        'Transcripts for audio content'
+      ]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring and alerting for accessibility issues",
-      icon: "📊"
+      category: 'Motor Accessibility',
+      icon: Hand,
+      features: [
+        'Keyboard navigation support',
+        'Voice control compatibility',
+        'Large click targets',
+        'Customizable timing',
+        'Alternative input methods'
+      ]
     },
     {
+<<<<<<< HEAD
       title: "Compliance Reporting",
       description: "Detailed reports with actionable recommendations",
       icon: "📋"
 
+=======
+      category: 'Cognitive Accessibility',
+      icon: Brain,
+      features: [
+        'Clear and simple language',
+        'Consistent navigation structure',
+        'Logical content organization',
+        'Reduced distractions',
+        'Step-by-step instructions'
+      ]
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceStandards = [
-    "WCAG 2.1 AA",
-    "Section 508",
-    "ADA Title III",
-    "EN 301 549",
-    "ISO 9241-171"
+    {
+      standard: 'WCAG 2.1 AA',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      color: 'text-green-500'
+    },
+    {
+      standard: 'Section 508',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Federal accessibility requirements for electronic and information technology',
+      color: 'text-green-500'
+    },
+    {
+      standard: 'ADA Title III',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Americans with Disabilities Act requirements for public accommodations',
+      color: 'text-green-500'
+    },
+    {
+      standard: 'EN 301 549',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'European accessibility requirements for ICT products and services',
+      color: 'text-green-500'
+    }
+=======;
+      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
+    },;
+    {;
+      category: "Technical Accessibility",;
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const testingAreas = [
+  const accessibilityTools = [
     {
-      category: "Visual Accessibility",
-      items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+      name: 'Screen Reader Support',
+      description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
+      icon: Monitor
     },
     {
-      category: "Content Accessibility",
-      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+      name: 'Mobile Accessibility',
+      description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',
+      icon: Smartphone
     },
     {
+<<<<<<< HEAD
       category: "Technical Accessibility",
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
 
+=======
+      name: 'Voice Navigation',
+      description: 'Voice control support for hands-free navigation and interaction',
+      icon: Globe
+    },
+    {
+      name: 'Customizable Interface',
+      description: 'Personalizable themes, fonts, and layout options to meet individual needs',
+      icon: Zap
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -85,8 +198,8 @@ const AccessibilityAuditor: React.FC = () => {
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -100,8 +213,8 @@ const AccessibilityAuditor: React.FC = () => {
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index) => (
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">
+                {complianceStandards.map((standard, index)  => (
                   <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
                   </div>
@@ -113,8 +226,8 @@ const AccessibilityAuditor: React.FC = () => {
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {testingAreas.map((area, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+              {testingAreas.map((area, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
@@ -240,12 +353,24 @@ const AccessibilityAuditor: React.FC = () => {
                   View All Services
                 </Link>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 };
 
 export default AccessibilityAuditor;}}}
+=======
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface EmergingTech2026ServiceV2 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Photonic Computing Platform
   {
@@ -48,7 +51,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast processing. Perfect for AI training, scientific computing, and real-time data analysis.',
-    features: [
+    features[
       'Photonic processor architecture',
       'Light-speed computation',
       'Quantum photonic integration',
@@ -71,11 +74,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '6 hours',
     category: 'Emerging Technology & Computing',
     realService: true,
-    technology: ['Photonic computing', 'Quantum photonics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom photonic APIs'],
-    integrations: ['TensorFlow', 'PyTorch', 'CUDA', 'OpenCL', 'MATLAB', 'Python', 'Julia', 'Research platforms'],
-    useCases: ['AI model training', 'Scientific simulations', 'Climate modeling', 'Drug discovery', 'Financial modeling', 'Cryptography'],
+    technology['Photonic computing', 'Quantum photonics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom photonic APIs'],
+    integrations['TensorFlow', 'PyTorch', 'CUDA', 'OpenCL', 'MATLAB', 'Python', 'Julia', 'Research platforms'],
+    useCases['AI model training', 'Scientific simulations', 'Climate modeling', 'Drug discovery', 'Financial modeling', 'Cryptography'],
     roi: 'Research institutions see 900% ROI through accelerated scientific discoveries and breakthrough research.',
-    competitors: ['Specialized photonic platforms', 'Academic computing tools', 'Research computing systems'],
+    competitors['Specialized photonic platforms', 'Academic computing tools', 'Research computing systems'],
     marketSize: '$3B market',
     growthRate: '600% annual growth',
     variant: 'emerging-tech',
@@ -100,7 +103,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced holographic display platform that creates immersive 3D visualizations for presentations, training, entertainment, and scientific visualization.',
-    features: [
+    features[
       '3D holographic projection',
       'Interactive holographic interfaces',
       'Real-time 3D rendering',
@@ -123,11 +126,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '3 hours',
     category: 'Emerging Technology & Visualization',
     realService: true,
-    technology: ['Holographic projection', '3D rendering', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'WebGL', 'WebXR'],
-    integrations: ['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'SketchUp', 'Revit', 'AutoCAD'],
-    useCases: ['Virtual presentations', 'Training simulations', 'Medical visualization', 'Architectural walkthroughs', 'Entertainment experiences', 'Educational content'],
+    technology['Holographic projection', '3D rendering', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'WebGL', 'WebXR'],
+    integrations['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'SketchUp', 'Revit', 'AutoCAD'],
+    useCases['Virtual presentations', 'Training simulations', 'Medical visualization', 'Architectural walkthroughs', 'Entertainment experiences', 'Educational content'],
     roi: 'Training organizations see 400% ROI through improved engagement and retention rates.',
-    competitors: ['Magic Leap', 'Microsoft HoloLens', 'Vuzix', 'RealWear', 'Nreal'],
+    competitors['Magic Leap', 'Microsoft HoloLens', 'Vuzix', 'RealWear', 'Nreal'],
     marketSize: '$12B market',
     growthRate: '350% annual growth',
     variant: 'emerging-tech',
@@ -152,7 +155,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced quantum internet security platform that protects against quantum threats and ensures secure communication in the quantum era.',
-    features: [
+    features[
       'Quantum-resistant protocols',
       'Post-quantum cryptography',
       'Quantum key distribution',
@@ -175,11 +178,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '4 hours',
     category: 'Quantum & Internet Security',
     realService: true,
-    technology: ['Post-quantum cryptography', 'Quantum key distribution', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes'],
-    integrations: ['Cloudflare', 'AWS', 'Azure', 'Google Cloud', 'CDN services', 'Load balancers', 'Firewalls', 'VPN services'],
-    useCases: ['Secure web traffic', 'API protection', 'Data transmission', 'Cloud security', 'IoT security', 'Financial transactions'],
+    technology['Post-quantum cryptography', 'Quantum key distribution', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes'],
+    integrations['Cloudflare', 'AWS', 'Azure', 'Google Cloud', 'CDN services', 'Load balancers', 'Firewalls', 'VPN services'],
+    useCases['Secure web traffic', 'API protection', 'Data transmission', 'Cloud security', 'IoT security', 'Financial transactions'],
     roi: 'Internet companies see 500% ROI through improved security and customer trust.',
-    competitors: ['Specialized quantum platforms', 'Advanced security solutions', 'Government tools'],
+    competitors['Specialized quantum platforms', 'Advanced security solutions', 'Government tools'],
     marketSize: '$20B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -204,7 +207,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Revolutionary platform that enables businesses to operate autonomously using AI agents for decision-making, process automation, and strategic planning.',
-    features: [
+    features[
       'Autonomous business operations',
       'AI-powered decision making',
       'Strategic planning automation',
@@ -227,11 +230,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'AI & Business Automation',
     realService: true,
-    technology: ['Advanced AI', 'Machine learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Cloud native'],
-    integrations: ['ERP systems', 'CRM platforms', 'Financial software', 'HR systems', 'Supply chain tools', 'Analytics platforms'],
-    useCases: ['Business process automation', 'Strategic decision making', 'Resource optimization', 'Risk management', 'Performance optimization', 'Customer experience'],
+    technology['Advanced AI', 'Machine learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Cloud native'],
+    integrations['ERP systems', 'CRM platforms', 'Financial software', 'HR systems', 'Supply chain tools', 'Analytics platforms'],
+    useCases['Business process automation', 'Strategic decision making', 'Resource optimization', 'Risk management', 'Performance optimization', 'Customer experience'],
     roi: 'Enterprise customers see 800% ROI through improved efficiency and strategic advantage.',
-    competitors: ['Enterprise AI platforms', 'Business automation tools', 'Strategic planning software'],
+    competitors['Enterprise AI platforms', 'Business automation tools', 'Strategic planning software'],
     marketSize: '$50B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +259,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced biotech AI platform that accelerates drug discovery, protein analysis, and genetic research using cutting-edge AI and machine learning.',
-    features: [
+    features[
       'AI-powered drug discovery',
       'Protein structure prediction',
       'Genetic sequence analysis',
@@ -279,11 +282,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '8 hours',
     category: 'AI & Biotechnology',
     realService: true,
-    technology: ['AI/ML', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Molecular modeling'],
-    integrations: ['NCBI', 'Ensembl', 'PDB', 'ChEMBL', 'PubChem', 'Clinical trial databases', 'Research platforms'],
-    useCases: ['Drug discovery', 'Protein analysis', 'Genetic research', 'Clinical trials', 'Drug repurposing', 'Biomarker research'],
+    technology['AI/ML', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Molecular modeling'],
+    integrations['NCBI', 'Ensembl', 'PDB', 'ChEMBL', 'PubChem', 'Clinical trial databases', 'Research platforms'],
+    useCases['Drug discovery', 'Protein analysis', 'Genetic research', 'Clinical trials', 'Drug repurposing', 'Biomarker research'],
     roi: 'Pharmaceutical companies see 1000% ROI through accelerated drug discovery and development.',
-    competitors: ['Specialized biotech platforms', 'Academic tools', 'Pharmaceutical software'],
+    competitors['Specialized biotech platforms', 'Academic tools', 'Pharmaceutical software'],
     marketSize: '$15B market',
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
@@ -308,7 +311,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and ensures reliability across edge networks.',
-    features: [
+    features[
       'Distributed edge management',
       'Intelligent resource allocation',
       'Performance optimization',
@@ -331,11 +334,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '1 week',
     category: 'Edge Computing & Infrastructure',
     realService: true,
-    technology: ['Edge computing', 'AI orchestration', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Edge APIs'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker Swarm', 'IoT platforms', '5G networks'],
-    useCases: ['IoT device management', '5G network optimization', 'Smart city operations', 'Manufacturing automation', 'Edge AI deployment', 'Content delivery'],
+    technology['Edge computing', 'AI orchestration', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Edge APIs'],
+    integrations['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker Swarm', 'IoT platforms', '5G networks'],
+    useCases['IoT device management', '5G network optimization', 'Smart city operations', 'Manufacturing automation', 'Edge AI deployment', 'Content delivery'],
     roi: 'Telecom companies see 600% ROI through improved network performance and reduced operational costs.',
-    competitors: ['Edge computing platforms', 'IoT management tools', 'Network orchestration systems'],
+    competitors['Edge computing platforms', 'IoT management tools', 'Network orchestration systems'],
     marketSize: '$18B market',
     growthRate: '380% annual growth',
     variant: 'emerging-tech',
@@ -360,7 +363,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Advanced 5G private network solutions that enable enterprises to deploy and manage their own high-performance, secure 5G networks for industrial applications.',
-    features: [
+    features[
       'Private 5G network deployment',
       'Network management and monitoring',
       'Security and compliance',
@@ -383,11 +386,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: '5G & Telecommunications',
     realService: true,
-    technology: ['5G technology', 'Network management', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', '5G APIs'],
-    integrations: ['Industrial IoT platforms', 'Manufacturing systems', 'Healthcare systems', 'Educational platforms', 'Government systems'],
-    useCases: ['Industrial automation', 'Smart manufacturing', 'Healthcare connectivity', 'Educational connectivity', 'Government communications', 'Transportation systems'],
+    technology['5G technology', 'Network management', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', '5G APIs'],
+    integrations['Industrial IoT platforms', 'Manufacturing systems', 'Healthcare systems', 'Educational platforms', 'Government systems'],
+    useCases['Industrial automation', 'Smart manufacturing', 'Healthcare connectivity', 'Educational connectivity', 'Government communications', 'Transportation systems'],
     roi: 'Manufacturing companies see 700% ROI through improved connectivity and operational efficiency.',
-    competitors: ['5G private network providers', 'Telecommunications companies', 'Industrial network solutions'],
+    competitors['5G private network providers', 'Telecommunications companies', 'Industrial network solutions'],
     marketSize: '$22B market',
     growthRate: '420% annual growth',
     variant: 'emerging-tech',

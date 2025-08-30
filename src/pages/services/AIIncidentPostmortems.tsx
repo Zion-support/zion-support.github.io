@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -8,6 +9,17 @@ import {
   Users,
   Database,
   BarChart3,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { AlertTriangle, 
+  Clock, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  Database, 
+  BarChart3, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Zap,
   CheckCircle,
   ArrowRight,
@@ -25,15 +37,36 @@ import {
   Mail,
   MapPin,
   Server
+<<<<<<< HEAD
 import { SEO } from '../../components/SEO';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../../components/SEO";
+=======
+} from 'lucide-react';
+import { SEO } from "../../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AIIncidentPostmortems() {
+export default function AIIncidentPostmortems(...args[]):  {
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+
+
+
+
+};
 
   const features = [
     {
@@ -59,6 +92,7 @@ export default function AIIncidentPostmortems() {
     {
       icon: Users,
       title: 'Team Collaboration Tools',
+<<<<<<< HEAD
       description: 'Built-in communication and collaboration features for incident response teams'
     },
     {
@@ -66,15 +100,24 @@ export default function AIIncidentPostmortems() {
       title: 'Centralized Knowledge Base',
       description: 'Maintain a searchable repository of all incidents and resolutions'
 
+=======
+      description: 'Built-in communication and collaboration features for incident response teams';
+    },;
+    {;
+      icon: Database,;
+      title: 'Centralized Knowledge Base',;
+      description: 'Maintain a searchable repository of all incidents and resolutions';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    'Reduce incident resolution time by 60%',
-    'Improve team productivity by 45%',
-    'Decrease repeat incidents by 80%',
-    'Enhance customer satisfaction scores',
-    'Streamline compliance reporting',
-    'Optimize resource allocation'
+  const benefits = [;
+    'Reduce incident resolution time by 60%',;
+    'Improve team productivity by 45%',;
+    'Decrease repeat incidents by 80%',;
+    'Enhance customer satisfaction scores',;
+    'Streamline compliance reporting',;
+    'Optimize resource allocation';
   ];
 
   const pricingPlans = [
@@ -83,7 +126,7 @@ export default function AIIncidentPostmortems() {
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: [
+      features[
         'Up to 10 incidents per month',
         'Basic AI analysis',
         'Email support',
@@ -99,7 +142,7 @@ export default function AIIncidentPostmortems() {
       price: '$599',
       period: '/month',
       description: 'Ideal for growing organizations',
-      features: [
+      features[
         'Up to 50 incidents per month',
         'Advanced AI analysis',
         'Priority support',
@@ -117,7 +160,7 @@ export default function AIIncidentPostmortems() {
       price: '$1,299',
       period: '/month',
       description: 'For large enterprises with complex needs',
-      features: [
+      features[
         'Unlimited incidents',
         'Premium AI analysis',
         '24/7 dedicated support',
@@ -125,6 +168,7 @@ export default function AIIncidentPostmortems() {
         'Unlimited team members',
         'Enterprise integrations',
         'Advanced analytics',
+<<<<<<< HEAD
         'Custom AI models',
         'On-premise deployment option',
         'Dedicated account manager'
@@ -132,6 +176,15 @@ export default function AIIncidentPostmortems() {
       cta: 'Contact Sales',
       popular: false
 
+=======
+        'Custom AI models',;
+        'On-premise deployment option',;
+        'Dedicated account manager';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -148,6 +201,7 @@ export default function AIIncidentPostmortems() {
     {
       title: 'Security Teams',
       description: 'Enhance security incident response with AI-powered threat analysis',
+<<<<<<< HEAD
       icon: Shield
     },
     {
@@ -160,6 +214,20 @@ export default function AIIncidentPostmortems() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO
+=======
+      icon: Shield;
+    },;
+    {;
+      title: 'Customer Support',;
+      description: 'Improve customer experience with faster incident resolution and communication',;
+      icon: MessageSquare;
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Incident Postmortems Platform | Zion Tech Group"
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
         keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
@@ -169,8 +237,26 @@ export default function AIIncidentPostmortems() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6">
@@ -206,8 +292,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -219,14 +323,47 @@ export default function AIIncidentPostmortems() {
               Everything you need to manage incidents effectively and build a culture of continuous improvement
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
 
@@ -245,8 +382,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -258,14 +413,47 @@ export default function AIIncidentPostmortems() {
               Transform your incident management process and unlock new levels of efficiency
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
 
@@ -281,8 +469,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -294,14 +500,47 @@ export default function AIIncidentPostmortems() {
               Choose the plan that fits your team size and incident volume
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular
@@ -352,8 +591,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -365,14 +622,47 @@ export default function AIIncidentPostmortems() {
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
 
@@ -391,8 +681,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -413,7 +721,7 @@ export default function AIIncidentPostmortems() {
             </div>
 
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -423,8 +731,26 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -432,7 +758,7 @@ export default function AIIncidentPostmortems() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team is here to help you get started and answer any questions
+              Our team is here to help you get started and answer  questions
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -459,10 +785,24 @@ export default function AIIncidentPostmortems() {
 
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

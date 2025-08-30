@@ -6,8 +6,12 @@ export default function ServiceOnboarding() {
     const { user, isLoading } = useAuth();
     // If not authenticated, redirect to login
     if (!isLoading && !user) {
+<<<<<<< HEAD
         return <Navigate to="/login" replace/>;
 
+=======
+        return <Navigate to="/login" replace/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
 
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
@@ -23,6 +27,11 @@ export default function ServiceOnboarding() {
           <ServiceProviderRegistrationForm />
         </div>
       </div>
+<<<<<<< HEAD
 
     </>);
 }}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

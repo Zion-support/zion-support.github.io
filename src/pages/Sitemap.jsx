@@ -40,7 +40,7 @@ const Sitemap = () => {
             ]
         },
         {
-            title: "Company & Resources",
+            title: "Comp & Resources",
             links: [
                 { name: "Blog", path: "/blog", description: "Latest insights and news" },
                 { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
@@ -137,7 +137,6 @@ const Sitemap = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )};
 export default Sitemap;
 }

@@ -168,6 +168,5 @@ const AIAutonomousOrchestration = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousOrchestration;

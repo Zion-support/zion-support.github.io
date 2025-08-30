@@ -38,23 +38,28 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
         {
             title: "Smart Manufacturing",
             description: "Enable Industry 4.0 with real-time monitoring and automation",
-            applications: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
+            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
         },
         {
             title: "Healthcare Innovation",
             description: "Transform healthcare delivery with connected medical devices",
-            applications: ["Remote Monitoring", "Telemedicine", "Medical IoT"]
+            applications["Remote Monitoring", "Telemedicine", "Medical IoT"]
         },
         {
             title: "Autonomous Vehicles",
             description: "Power the future of transportation with reliable connectivity",
-            applications: ["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
+            applications["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
         },
         {
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
+<<<<<<< HEAD
             applications: ["Traffic Management", "Energy Grids", "Public Safety"]
 
+=======
+            applications["Traffic Management", "Energy Grids", "Public Safety"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         {
@@ -84,17 +89,94 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-blue-600/20"></div>
         <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <motion.h1 initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl font-bold text-white mb-6">
             5G Enterprise
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
               Solutions
             </span>
           </motion.h1>
+<<<<<<< HEAD
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your enterprise with next-generation 5G connectivity.
+=======
+          <motion.p initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your enterprise with next-generation 5G connectivity. 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Experience ultra-fast speeds, ultra-low latency, and massive IoT support.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-teal-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
@@ -108,7 +190,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* Features Section */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               5G Technology Features
             </h2>
@@ -118,7 +218,34 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+            {features.map((feature, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white"/>
                 </div>
@@ -132,7 +259,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Solutions
             </h2>
@@ -142,7 +287,34 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (<motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="bg-gradient-to-r from-teal-600/10 to-blue-600/10 rounded-xl p-8 border border-teal-500/20">
+            {solutions.map((solution, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+
+
+
+
+
+
+}} className="bg-gradient-to-r from-teal-600/10 to-blue-600/10 rounded-xl p-8 border border-teal-500/20">
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 text-lg mb-6">{solution.description}</p>
                 <ul className="space-y-2">
@@ -159,7 +331,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-teal-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise Benefits
             </h2>
@@ -169,7 +359,34 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
+            {benefits.map((benefit, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -183,7 +400,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* Technology Stack Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               5G Technology Stack
             </h2>
@@ -197,8 +432,52 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
             { icon: Network, name: "Core Network", description: "5G core infrastructure" },
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
             { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
+<<<<<<< HEAD
             { icon: Workflow, name: "Management", description: "Network orchestration" }
-        ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
+        ].map((tech, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}} className="text-center">
+=======
+            { icon: GitFork, name: "Management", description: "Network orchestration" }
+        ].map((tech, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="text-center">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
                   <tech.icon className="w-10 h-10 text-teal-400"/>
                 </div>
@@ -212,7 +491,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* Implementation Process Section */}
       <section className="py-20 bg-gradient-to-r from-teal-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Implementation Process
             </h2>
@@ -227,7 +524,34 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
             { icon: Settings, title: "Planning", description: "Design 5G network architecture and deployment strategy" },
             { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" },
             { icon: BarChart3, title: "Optimization", description: "Monitor performance and optimize network" }
-        ].map((step, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="text-center">
+        ].map((step, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+
+
+
+
+
+
+}} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
                   <step.icon className="w-10 h-10 text-teal-400"/>
                 </div>
@@ -241,7 +565,25 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform with 5G?
             </h2>
@@ -259,7 +601,6 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default FiveGEnterpriseSolutions;
 }}}}

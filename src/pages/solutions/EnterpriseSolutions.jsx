@@ -49,14 +49,14 @@ import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircl
     ];
     const caseStudies = [
         {
-            company: "Fortune 500 Manufacturing",
+            comp: "Fortune 500 Manufacturing",
             industry: "Manufacturing",
             challenge: "Legacy system modernization and digital transformation",
             solution: "Implemented cloud-native architecture with AI-powered analytics",
             results: "35% cost reduction, 50% faster time-to-market"
         },
         {
-            company: "Global Financial Services",
+            comp: "Global Financial Services",
             industry: "Financial Services",
             challenge: "Compliance automation and risk management",
             solution: "AI-driven compliance monitoring and automated reporting",
@@ -167,7 +167,7 @@ import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircl
                   <Star className="w-5 h-5 text-yellow-400 mr-2"/>
                   <span className="text-sm text-gray-400">{study.industry}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{study.company}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{study.comp}</h3>
                 <div className="space-y-3 mb-6">
                   <div>
                     <h4 className="font-semibold text-cyan-400 mb-1">Challenge:</h4>

@@ -1,10 +1,10 @@
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes  } from 'react-router-dom.ts';
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
@@ -36,6 +36,7 @@ const AuthRoutes = () => {
 
       <Route
         path="/settings"
+<<<<<<< HEAD
         element={
           <ProtectedRoute>
             <div>Settings</div>
@@ -43,6 +44,15 @@ const AuthRoutes = () => {
 
       />
     </Routes>
+=======
+        element={;
+          <ProtectedRoute>;
+            <div>Settings</div>;
+          </ProtectedRoute>;
+        };
+      />;
+    </Routes>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 

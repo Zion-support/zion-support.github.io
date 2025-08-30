@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface NextGenAIService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface NextGenAIService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -48,7 +51,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$25,999',
     period: '/month',
     description: 'Revolutionary neural interface that directly connects human brains to quantum AI systems, enabling unprecedented cognitive enhancement, memory augmentation, and real-time learning acceleration.',
-    features: [
+    features[
       'Direct neural signal processing',
       'Quantum AI cognitive enhancement',
       'Real-time memory augmentation',
@@ -71,11 +74,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '8-12 weeks',
     category: 'Neural AI & Brain Interface',
     realService: true,
-    technology: ['Neural interfaces', 'Quantum computing', 'AI algorithms', 'Brain-computer interface', 'Neural networks', 'Quantum neural processing', 'Advanced neuroscience'],
-    integrations: ['Medical systems', 'Research platforms', 'Gaming engines', 'Educational systems', 'Healthcare platforms', 'Defense systems'],
-    useCases: ['Cognitive enhancement', 'Memory augmentation', 'Learning acceleration', 'Medical research', 'Gaming experiences', 'Educational simulations'],
+    technology['Neural interfaces', 'Quantum computing', 'AI algorithms', 'Brain-computer interface', 'Neural networks', 'Quantum neural processing', 'Advanced neuroscience'],
+    integrations['Medical systems', 'Research platforms', 'Gaming engines', 'Educational systems', 'Healthcare platforms', 'Defense systems'],
+    useCases['Cognitive enhancement', 'Memory augmentation', 'Learning acceleration', 'Medical research', 'Gaming experiences', 'Educational simulations'],
     roi: 'Research institutions achieve 1000% ROI through breakthrough discoveries and cognitive enhancement capabilities',
-    competitors: ['Neuralink', 'Kernel', 'Synchron', 'Paradromics'],
+    competitors['Neuralink', 'Kernel', 'Synchron', 'Paradromics'],
     marketSize: '$2B brain-computer interface market, 500% annual growth',
     growthRate: '500% annual growth',
     variant: 'neural-quantum',
@@ -100,7 +103,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary content generation platform that uses quantum AI to create unlimited high-quality content across all media types. Generates content 1000x faster than traditional methods.',
-    features: [
+    features[
       'Quantum AI content generation',
       'Multi-media content creation',
       'Real-time content optimization',
@@ -123,11 +126,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '1 week',
     category: 'Quantum AI Content',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Natural language processing', 'Content generation', 'Machine learning', 'Quantum creativity', 'Multi-media processing'],
-    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Social media platforms', 'CMS systems', 'Marketing automation'],
-    useCases: ['Content marketing', 'Social media content', 'E-commerce descriptions', 'Educational content', 'Entertainment content', 'Brand content'],
+    technology['Quantum computing', 'AI algorithms', 'Natural language processing', 'Content generation', 'Machine learning', 'Quantum creativity', 'Multi-media processing'],
+    integrations['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Social media platforms', 'CMS systems', 'Marketing automation'],
+    useCases['Content marketing', 'Social media content', 'E-commerce descriptions', 'Educational content', 'Entertainment content', 'Brand content'],
     roi: 'Content agencies achieve 800% ROI through 1000x faster content generation and improved quality',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business', 'Surfer SEO'],
+    competitors['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business', 'Surfer SEO'],
     marketSize: '$5B AI content market, 300% annual growth',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -152,7 +155,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$18,999',
     period: '/month',
     description: 'Revolutionary AI platform that conducts autonomous research across all domains, making breakthrough discoveries without human intervention. Achieves research breakthroughs 100x faster than traditional methods.',
-    features: [
+    features[
       'Autonomous research capabilities',
       'Cross-domain knowledge synthesis',
       'Breakthrough discovery algorithms',
@@ -175,11 +178,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '4-6 weeks',
     category: 'AI Autonomous Research',
     realService: true,
-    technology: ['AI algorithms', 'Machine learning', 'Natural language processing', 'Knowledge graphs', 'Research databases', 'Autonomous systems', 'Cross-domain learning'],
-    integrations: ['Research databases', 'Academic platforms', 'Scientific journals', 'Laboratory systems', 'Collaboration tools', 'Publication platforms'],
-    useCases: ['Scientific research', 'Drug discovery', 'Technology innovation', 'Academic research', 'Policy research', 'Market research'],
+    technology['AI algorithms', 'Machine learning', 'Natural language processing', 'Knowledge graphs', 'Research databases', 'Autonomous systems', 'Cross-domain learning'],
+    integrations['Research databases', 'Academic platforms', 'Scientific journals', 'Laboratory systems', 'Collaboration tools', 'Publication platforms'],
+    useCases['Scientific research', 'Drug discovery', 'Technology innovation', 'Academic research', 'Policy research', 'Market research'],
     roi: 'Research institutions achieve 1500% ROI through breakthrough discoveries and accelerated research',
-    competitors: ['No direct competitors', 'Traditional research methods'],
+    competitors['No direct competitors', 'Traditional research methods'],
     marketSize: '$200B research market, autonomous AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary video production platform that uses quantum AI to create Hollywood-quality videos, movies, and content in minutes. Generates professional content 100x faster than traditional production.',
-    features: [
+    features[
       'Quantum AI video generation',
       'Hollywood-quality production',
       'Real-time video editing',
@@ -227,11 +230,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum AI Video',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Computer vision', 'Video processing', 'Natural language processing', 'Audio synthesis', 'Special effects generation'],
-    integrations: ['Video platforms', 'Social media', 'Streaming services', 'Editing software', 'Audio platforms', 'Distribution platforms'],
-    useCases: ['Film production', 'Commercial creation', 'Marketing videos', 'Educational content', 'Entertainment content', 'Social media content'],
+    technology['Quantum computing', 'AI algorithms', 'Computer vision', 'Video processing', 'Natural language processing', 'Audio synthesis', 'Special effects generation'],
+    integrations['Video platforms', 'Social media', 'Streaming services', 'Editing software', 'Audio platforms', 'Distribution platforms'],
+    useCases['Film production', 'Commercial creation', 'Marketing videos', 'Educational content', 'Entertainment content', 'Social media content'],
     roi: 'Production companies achieve 1000% ROI through 100x faster production and reduced costs',
-    competitors: ['Adobe Premiere', 'Final Cut Pro', 'DaVinci Resolve', 'Professional studios'],
+    competitors['Adobe Premiere', 'Final Cut Pro', 'DaVinci Resolve', 'Professional studios'],
     marketSize: '$100B video production market, AI segment growing 400% annually',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +259,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$22,999',
     period: '/month',
     description: 'Revolutionary quantum computing platform that makes quantum computing accessible to businesses and researchers. Features AI optimization and real-time quantum algorithm development.',
-    features: [
+    features[
       'Quantum computing access',
       'AI algorithm optimization',
       'Real-time quantum development',
@@ -279,11 +282,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '6-8 weeks',
     category: 'AI Quantum Computing',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Quantum algorithms', 'Error correction', 'Multi-qubit systems', 'Quantum optimization', 'Machine learning'],
-    integrations: ['Research platforms', 'Development environments', 'Cloud platforms', 'Analytics tools', 'Scientific software', 'Academic platforms'],
-    useCases: ['Quantum research', 'Algorithm development', 'Optimization problems', 'Cryptography', 'Material science', 'Financial modeling'],
+    technology['Quantum computing', 'AI algorithms', 'Quantum algorithms', 'Error correction', 'Multi-qubit systems', 'Quantum optimization', 'Machine learning'],
+    integrations['Research platforms', 'Development environments', 'Cloud platforms', 'Analytics tools', 'Scientific software', 'Academic platforms'],
+    useCases['Quantum research', 'Algorithm development', 'Optimization problems', 'Cryptography', 'Material science', 'Financial modeling'],
     roi: 'Research institutions achieve 800% ROI through quantum computing access and AI optimization',
-    competitors: ['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Microsoft Azure Quantum'],
+    competitors['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Microsoft Azure Quantum'],
     marketSize: '$500M quantum computing market, 400% annual growth',
     growthRate: '400% annual growth',
     variant: 'quantum-advanced',
@@ -308,7 +311,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$14,999',
     period: '/month',
     description: 'Revolutionary platform that creates self-evolving neural networks that continuously improve and adapt without human intervention. Achieves exponential performance improvements over time.',
-    features: [
+    features[
       'Self-evolving neural networks',
       'Continuous improvement',
       'Adaptive learning',
@@ -331,11 +334,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '4-6 weeks',
     category: 'Neural Network Evolution',
     realService: true,
-    technology: ['Neural networks', 'Evolutionary algorithms', 'Machine learning', 'AutoML', 'Neural architecture search', 'Performance optimization', 'Adaptive learning'],
-    integrations: ['ML platforms', 'Data science tools', 'Cloud platforms', 'Development environments', 'Research platforms', 'Analytics tools'],
-    useCases: ['AI research', 'Machine learning development', 'Performance optimization', 'Model evolution', 'Research automation', 'Innovation acceleration'],
+    technology['Neural networks', 'Evolutionary algorithms', 'Machine learning', 'AutoML', 'Neural architecture search', 'Performance optimization', 'Adaptive learning'],
+    integrations['ML platforms', 'Data science tools', 'Cloud platforms', 'Development environments', 'Research platforms', 'Analytics tools'],
+    useCases['AI research', 'Machine learning development', 'Performance optimization', 'Model evolution', 'Research automation', 'Innovation acceleration'],
     roi: 'AI research institutions achieve 1200% ROI through self-evolving networks and exponential improvements',
-    competitors: ['No direct competitors', 'Traditional ML platforms'],
+    competitors['No direct competitors', 'Traditional ML platforms'],
     marketSize: '$50B machine learning market, evolution segment growing 500% annually',
     growthRate: '500% annual growth',
     variant: 'neural-quantum',
@@ -360,7 +363,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary creativity engine that uses quantum AI to generate unlimited creative content across all domains. Creates original art, music, literature, and designs with human-level creativity.',
-    features: [
+    features[
       'Quantum AI creativity',
       'Multi-domain generation',
       'Original content creation',
@@ -383,11 +386,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum AI Creativity',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Creative AI', 'Style transfer', 'Content generation', 'Machine learning', 'Neural networks'],
-    integrations: ['Design software', 'Creative platforms', 'Marketing tools', 'Social media', 'Content platforms', 'Collaboration tools'],
-    useCases: ['Creative design', 'Content generation', 'Marketing materials', 'Entertainment content', 'Educational content', 'Brand creation'],
+    technology['Quantum computing', 'AI algorithms', 'Creative AI', 'Style transfer', 'Content generation', 'Machine learning', 'Neural networks'],
+    integrations['Design software', 'Creative platforms', 'Marketing tools', 'Social media', 'Content platforms', 'Collaboration tools'],
+    useCases['Creative design', 'Content generation', 'Marketing materials', 'Entertainment content', 'Educational content', 'Brand creation'],
     roi: 'Creative agencies achieve 600% ROI through unlimited creative content and reduced production time',
-    competitors: ['Traditional creative tools', 'Basic AI generators'],
+    competitors['Traditional creative tools', 'Basic AI generators'],
     marketSize: '$150B creative market, AI segment growing 350% annually',
     growthRate: '350% annual growth',
     variant: 'quantum-advanced',
@@ -412,7 +415,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$15,999',
     period: '/month',
     description: 'Revolutionary neural interface technology that enables direct communication between the human brain and AI systems. Features real-time neural signal processing, cognitive enhancement, and secure quantum encryption.',
-    features: [
+    features[
       'Real-time neural signal processing',
       'AI-powered cognitive enhancement',
       'Quantum-secured data transmission',
@@ -435,11 +438,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI & Neuroscience',
     realService: true,
-    technology: ['Neural signal processing', 'Quantum AI', 'Machine learning', 'Real-time analytics', 'Secure encryption'],
-    integrations: ['Research platforms', 'Medical systems', 'AI frameworks', 'Data analytics tools'],
-    useCases: ['Medical research', 'Cognitive enhancement', 'Human-AI collaboration', 'Neural rehabilitation', 'Brain-computer interfaces'],
+    technology['Neural signal processing', 'Quantum AI', 'Machine learning', 'Real-time analytics', 'Secure encryption'],
+    integrations['Research platforms', 'Medical systems', 'AI frameworks', 'Data analytics tools'],
+    useCases['Medical research', 'Cognitive enhancement', 'Human-AI collaboration', 'Neural rehabilitation', 'Brain-computer interfaces'],
     roi: 'Research institutions report 500% ROI through accelerated discoveries and breakthrough innovations.',
-    competitors: ['Neuralink', 'Kernel', 'Synchron', 'Paradromics'],
+    competitors['Neuralink', 'Kernel', 'Synchron', 'Paradromics'],
     marketSize: '$2.5B BCI market',
     growthRate: '500% annual growth',
     variant: 'neural-quantum',
@@ -463,7 +466,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$25,999',
     period: '/month',
     description: 'Enterprise-grade quantum computing platform optimized with AI algorithms. Provides quantum advantage for complex computational problems in finance, logistics, and scientific research.',
-    features: [
+    features[
       'Quantum processing units (QPUs)',
       'AI-optimized quantum algorithms',
       'Real-time quantum error correction',
@@ -486,11 +489,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '4-6 weeks',
     category: 'AI & Quantum Computing',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Hybrid computing', 'Quantum error correction', 'Real-time optimization'],
-    integrations: ['Financial systems', 'Research platforms', 'Cloud infrastructure', 'Data analytics tools'],
-    useCases: ['Financial modeling', 'Drug discovery', 'Logistics optimization', 'Cryptography', 'Scientific simulations'],
+    technology['Quantum computing', 'AI algorithms', 'Hybrid computing', 'Quantum error correction', 'Real-time optimization'],
+    integrations['Financial systems', 'Research platforms', 'Cloud infrastructure', 'Data analytics tools'],
+    useCases['Financial modeling', 'Drug discovery', 'Logistics optimization', 'Cryptography', 'Scientific simulations'],
     roi: 'Financial institutions report 800% ROI through quantum-accelerated trading algorithms and risk modeling.',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
+    competitors['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
     marketSize: '$1.8B quantum computing market',
     growthRate: '400% annual growth',
     variant: 'quantum-advanced',
@@ -514,7 +517,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$35,999',
     period: '/month',
     description: 'AI-powered space mission control system that automates satellite operations, mission planning, and space traffic management. Features autonomous decision-making and real-time mission optimization.',
-    features: [
+    features[
       'Autonomous mission planning',
       'Real-time satellite monitoring',
       'AI-powered anomaly detection',
@@ -537,11 +540,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '6-8 weeks',
     category: 'AI & Space Technology',
     realService: true,
-    technology: ['AI mission control', 'Satellite automation', 'Space traffic management', 'Predictive analytics', 'Real-time optimization'],
-    integrations: ['Ground stations', 'Satellite systems', 'Mission planning tools', 'Communication networks'],
-    useCases: ['Satellite operations', 'Mission planning', 'Space traffic management', 'Emergency response', 'Mission optimization'],
+    technology['AI mission control', 'Satellite automation', 'Space traffic management', 'Predictive analytics', 'Real-time optimization'],
+    integrations['Ground stations', 'Satellite systems', 'Mission planning tools', 'Communication networks'],
+    useCases['Satellite operations', 'Mission planning', 'Space traffic management', 'Emergency response', 'Mission optimization'],
     roi: 'Space agencies report 1000% ROI through automated operations and reduced mission costs.',
-    competitors: ['Traditional space operations', 'Manual mission control', 'Basic satellite management systems'],
+    competitors['Traditional space operations', 'Manual mission control', 'Basic satellite management systems'],
     marketSize: '$450B space industry',
     growthRate: '300% annual growth in AI space applications',
     variant: 'quantum-space',
@@ -565,7 +568,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$45,999',
     period: '/month',
     description: 'Comprehensive AI platform for drug discovery, genetic research, and biotechnology innovation. Accelerates research timelines by 10x while reducing costs by 80%.',
-    features: [
+    features[
       'AI-powered drug discovery',
       'Genetic sequence analysis',
       'Protein structure prediction',
@@ -588,11 +591,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '8-12 weeks',
     category: 'AI & Biotechnology',
     realService: true,
-    technology: ['AI drug discovery', 'Machine learning', 'Bioinformatics', 'Computational chemistry', 'Genetic analysis'],
-    integrations: ['Research databases', 'Laboratory systems', 'Clinical trial platforms', 'Regulatory databases'],
-    useCases: ['Drug discovery', 'Genetic research', 'Clinical trials', 'Biomarker research', 'Drug repurposing'],
+    technology['AI drug discovery', 'Machine learning', 'Bioinformatics', 'Computational chemistry', 'Genetic analysis'],
+    integrations['Research databases', 'Laboratory systems', 'Clinical trial platforms', 'Regulatory databases'],
+    useCases['Drug discovery', 'Genetic research', 'Clinical trials', 'Biomarker research', 'Drug repurposing'],
     roi: 'Pharmaceutical companies report 1200% ROI through accelerated drug discovery and reduced research costs.',
-    competitors: ['Insilico Medicine', 'BenevolentAI', 'Atomwise', 'Exscientia'],
+    competitors['Insilico Medicine', 'BenevolentAI', 'Atomwise', 'Exscientia'],
     marketSize: '$150B drug discovery market',
     growthRate: '250% annual growth in AI applications',
     variant: 'ai-futuristic',
@@ -616,7 +619,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Advanced AI platform for predictive maintenance of industrial equipment. Reduce downtime by 90% and maintenance costs by 70% through intelligent monitoring and prediction.',
-    features: [
+    features[
       'IoT sensor integration',
       'AI-powered failure prediction',
       'Real-time monitoring dashboard',
@@ -639,11 +642,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '3 weeks',
     category: 'AI & Industrial IoT',
     realService: true,
-    technology: ['Machine Learning', 'IoT', 'Time Series Analysis', 'React', 'Node.js', 'AWS IoT', 'Docker'],
-    integrations: ['SAP', 'Oracle', 'Maximo', 'Custom CMMS', 'IoT platforms', 'Cloud services'],
-    useCases: ['Equipment monitoring', 'Failure prediction', 'Maintenance optimization', 'Performance tracking', 'Cost reduction', 'Safety improvement'],
+    technology['Machine Learning', 'IoT', 'Time Series Analysis', 'React', 'Node.js', 'AWS IoT', 'Docker'],
+    integrations['SAP', 'Oracle', 'Maximo', 'Custom CMMS', 'IoT platforms', 'Cloud services'],
+    useCases['Equipment monitoring', 'Failure prediction', 'Maintenance optimization', 'Performance tracking', 'Cost reduction', 'Safety improvement'],
     roi: 'Average customer sees 800% ROI through reduced downtime and maintenance costs.',
-    competitors: ['Traditional maintenance systems ($50K+)', 'Basic monitoring tools ($15K+)'],
+    competitors['Traditional maintenance systems ($50K+)', 'Basic monitoring tools ($15K+)'],
     marketSize: '$18B predictive maintenance market',
     growthRate: '220% annual growth',
     variant: 'quantum-cyberpunk',
@@ -668,7 +671,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Enterprise-grade predictive analytics platform that uses machine learning to forecast business trends, customer behavior, and market opportunities with unprecedented accuracy.',
-    features: [
+    features[
       '95% prediction accuracy guarantee',
       'Real-time data processing',
       'Multi-dimensional forecasting models',
@@ -691,11 +694,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '3-6 weeks',
     category: 'AI & Business Intelligence',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Apache Spark', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['Salesforce', 'SAP', 'Oracle', 'Microsoft Dynamics', 'Tableau', 'Power BI', 'Custom data sources'],
-    useCases: ['Sales forecasting', 'Customer churn prediction', 'Inventory optimization', 'Risk management', 'Market trend analysis', 'Operational efficiency'],
+    technology['TensorFlow', 'PyTorch', 'Apache Spark', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+    integrations['Salesforce', 'SAP', 'Oracle', 'Microsoft Dynamics', 'Tableau', 'Power BI', 'Custom data sources'],
+    useCases['Sales forecasting', 'Customer churn prediction', 'Inventory optimization', 'Risk management', 'Market trend analysis', 'Operational efficiency'],
     roi: 'Average customer sees 800% ROI within 12 months through improved decision-making and operational efficiency.',
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'SAS', 'IBM Watson'],
+    competitors['Tableau', 'Power BI', 'Qlik', 'SAS', 'IBM Watson'],
     marketSize: '$23B business intelligence market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -720,7 +723,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive customer experience platform that uses AI to create personalized interactions across all touchpoints, dramatically improving customer satisfaction and loyalty.',
-    features: [
+    features[
       '360-degree customer view',
       'Real-time personalization engine',
       'Predictive customer behavior',
@@ -743,11 +746,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI & Customer Experience',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'TensorFlow'],
-    integrations: ['Shopify', 'WooCommerce', 'Magento', 'HubSpot', 'Mailchimp', 'Zapier', 'Custom platforms'],
-    useCases: ['Personalized marketing', 'Customer service automation', 'Product recommendations', 'Loyalty optimization', 'Customer journey mapping', 'Feedback management'],
+    technology['OpenAI GPT-4', 'Anthropic Claude', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'TensorFlow'],
+    integrations['Shopify', 'WooCommerce', 'Magento', 'HubSpot', 'Mailchimp', 'Zapier', 'Custom platforms'],
+    useCases['Personalized marketing', 'Customer service automation', 'Product recommendations', 'Loyalty optimization', 'Customer journey mapping', 'Feedback management'],
     roi: 'Average customer sees 300% increase in customer lifetime value within 6 months.',
-    competitors: ['Adobe Experience Cloud', 'Salesforce Marketing Cloud', 'HubSpot', 'Marketo', 'Pardot'],
+    competitors['Adobe Experience Cloud', 'Salesforce Marketing Cloud', 'HubSpot', 'Marketo', 'Pardot'],
     marketSize: '$18B customer experience market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -772,7 +775,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
-    features: [
+    features[
       'Demand forecasting with 90% accuracy',
       'Inventory optimization algorithms',
       'Route optimization & logistics planning',
@@ -795,11 +798,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '4-8 weeks',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['TensorFlow', 'Apache Spark', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'Custom ERP systems', 'Logistics platforms'],
-    useCases: ['Demand planning', 'Inventory management', 'Logistics optimization', 'Supplier management', 'Risk mitigation', 'Cost optimization'],
+    technology['TensorFlow', 'Apache Spark', 'Kubernetes', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'Custom ERP systems', 'Logistics platforms'],
+    useCases['Demand planning', 'Inventory management', 'Logistics optimization', 'Supplier management', 'Risk mitigation', 'Cost optimization'],
     roi: 'Average customer sees 40% reduction in supply chain costs within 8 months.',
-    competitors: ['SAP SCM', 'Oracle SCM', 'JDA Software', 'Manhattan Associates', 'Blue Yonder'],
+    competitors['SAP SCM', 'Oracle SCM', 'JDA Software', 'Manhattan Associates', 'Blue Yonder'],
     marketSize: '$28B supply chain management market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -824,7 +827,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$7,999',
     period: '/month',
     description: 'Professional-grade AI trading platform that uses machine learning to analyze market data, identify opportunities, and execute trades automatically with high accuracy.',
-    features: [
+    features[
       '85% win rate guarantee',
       'Real-time market analysis',
       'Multi-strategy trading algorithms',
@@ -847,11 +850,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI & Financial Technology',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Binance', 'Coinbase Pro', 'Custom APIs'],
-    useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Strategy backtesting', 'Performance optimization'],
+    technology['TensorFlow', 'PyTorch', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Binance', 'Coinbase Pro', 'Custom APIs'],
+    useCases['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Strategy backtesting', 'Performance optimization'],
     roi: 'Average customer sees 200% ROI within 6 months through improved trading performance.',
-    competitors: ['AlgoTrader', 'MetaTrader', 'NinjaTrader', 'TradeStation', 'Custom solutions'],
+    competitors['AlgoTrader', 'MetaTrader', 'NinjaTrader', 'TradeStation', 'Custom solutions'],
     marketSize: '$35B algorithmic trading market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -876,7 +879,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
-    features: [
+    features[
       '95% diagnostic accuracy',
       'Multi-modality image analysis',
       'Patient data integration',
@@ -899,11 +902,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '6-12 weeks',
     category: 'AI & Healthcare',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'HIPAA-compliant infrastructure'],
-    integrations: ['Epic', 'Cerner', 'Allscripts', 'Custom EMR systems', 'PACS systems', 'Lab information systems'],
-    useCases: ['Medical imaging analysis', 'Patient diagnosis', 'Treatment planning', 'Risk assessment', 'Clinical research', 'Population health'],
+    technology['TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'HIPAA-compliant infrastructure'],
+    integrations['Epic', 'Cerner', 'Allscripts', 'Custom EMR systems', 'PACS systems', 'Lab information systems'],
+    useCases['Medical imaging analysis', 'Patient diagnosis', 'Treatment planning', 'Risk assessment', 'Clinical research', 'Population health'],
     roi: 'Average customer sees 300% ROI within 12 months through improved diagnostic accuracy and patient outcomes.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Siemens Healthineers', 'GE Healthcare'],
+    competitors['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Siemens Healthineers', 'GE Healthcare'],
     marketSize: '$45B AI healthcare market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',

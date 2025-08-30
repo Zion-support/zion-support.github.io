@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import SEO from "@/components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -181,5 +186,9 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
+<<<<<<< HEAD
     </>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

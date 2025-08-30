@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -8,6 +9,17 @@ import {
   Target,
   Users,
   BarChart3,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  BookOpen, 
+  TrendingUp, 
+  Target, 
+  Users, 
+  BarChart3, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -32,39 +44,45 @@ import {
   Library,
   Briefcase,
   Award
+<<<<<<< HEAD
 export default function AILegalResearchPlatform() {
+=======
+ } from 'lucide-react';
+
+export default function AILegalResearchPlatform(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",
     "Automated legal citation checking and validation",
     "Real-time legal precedent tracking",
     "Advanced search with natural language queries",
-    "Legal document generation and templates",
-    "Compliance monitoring and risk assessment",
-    "Multi-jurisdiction legal research",
-    "Legal trend analysis and predictions",
-    "Automated case outcome prediction",
-    "Legal knowledge base management",
-    "Collaborative research and sharing tools"
+    "Legal document generation and templates",;
+    "Compliance monitoring and risk assessment",;
+    "Multi-jurisdiction legal research",;
+    "Legal trend analysis and predictions",;
+    "Automated case outcome prediction",;
+    "Legal knowledge base management",;
+    "Collaborative research and sharing tools";
   ];
 
-  const benefits = [
-    "Reduce research time by 70%",
-    "Improve case outcome accuracy by 45%",
-    "Increase billable hours by 30%",
-    "Reduce legal research costs by 50%",
-    "Enhance client service quality"
+  const benefits = [;
+    "Reduce research time by 70%",;
+    "Improve case outcome accuracy by 45%",;
+    "Increase billable hours by 30%",;
+    "Reduce legal research costs by 50%",;
+    "Enhance client service quality";
   ];
 
   const useCases = [
     "Law firms and attorneys",
-    "Corporate legal departments",
-    "Legal research institutions",
-    "Government agencies",
-    "Compliance officers",
-    "Risk management teams",
-    "Legal technology companies",
-    "Academic legal research"
+    "Corporate legal departments",;
+    "Legal research institutions",;
+    "Government agencies",;
+    "Compliance officers",;
+    "Risk management teams",;
+    "Legal technology companies",;
+    "Academic legal research";
   ];
 
   const pricing = [
@@ -73,7 +91,7 @@ export default function AILegalResearchPlatform() {
       price: "$299",
       period: "/month",
       description: "Perfect for individual attorneys and small law firms",
-      features: [
+      features[
         "AI legal research (up to 100 queries/month)",
         "Basic document analysis",
         "Case law database access",
@@ -89,7 +107,7 @@ export default function AILegalResearchPlatform() {
       price: "$799",
       period: "/month",
       description: "Ideal for growing law firms and legal teams",
-      features: [
+      features[
         "AI legal research (unlimited queries)",
         "Advanced document analysis",
         "Multi-jurisdiction research",
@@ -106,11 +124,12 @@ export default function AILegalResearchPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For large law firms and corporate legal departments",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced analytics and reporting",
         "Custom integrations",
+<<<<<<< HEAD
         "Dedicated account manager",
         "24/7 phone support",
         "Unlimited users"
@@ -123,6 +142,20 @@ export default function AILegalResearchPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+        "Dedicated account manager",;
+        "24/7 phone support",;
+        "Unlimited users";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Legal Research Platform - Zion Tech Group"
         description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
       />
@@ -131,8 +164,26 @@ export default function AILegalResearchPlatform() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6">
@@ -173,8 +224,26 @@ export default function AILegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -186,13 +255,40 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300"
 
                 <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
@@ -209,8 +305,26 @@ export default function AILegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -222,13 +336,40 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -245,8 +386,26 @@ export default function AILegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -258,13 +417,40 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -281,8 +467,26 @@ export default function AILegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -294,13 +498,40 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
                     ? 'border-amber-500 ring-2 ring-amber-500/20'
@@ -354,8 +585,26 @@ export default function AILegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -381,7 +630,7 @@ export default function AILegalResearchPlatform() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -396,10 +645,23 @@ export default function AILegalResearchPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
             <span>🌐 https://ziontechgroup.com</span>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

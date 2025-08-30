@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -30,7 +29,7 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Atom,
-  // Blockchain icon removed - not available in lucide-react
+  Link,
   Heart,
   Scale,
   Factory,
@@ -50,24 +49,34 @@ import {
   Gauge,
   ShieldCheck,
   X
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices } from '../data/comprehensiveServices';
+<<<<<<< HEAD
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from "../data/ultimateInnovativeServices2026";
+import { ALL_REVOLUTIONARY_SERVICES_2026  } from "../data/comprehensiveServices2026";
+=======
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "../data/ultimateInnovativeServices2026";
+import { comprehensiveServices } from "../data/comprehensiveServices";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  };
+    billingCycle: string};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -78,21 +87,32 @@ interface Service {
   contactInfo?: {
     phone: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const ComprehensiveServicesShowcase2027: React.FC = () => {
+<<<<<<< HEAD
+const ComprehensiveServicesShowcase2027: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [sortBy, setSortBy] = useState<any>('name');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
 
+<<<<<<< HEAD
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
+=======
+    // Add services from ultimateInnovativeServices2026
+    ultimateInnovativeServices2026.forEach(service => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       services.push({
         id: service.id,
         name: service.name,
@@ -110,16 +130,28 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      })});
+
+    // Add services from ALL_REVOLUTIONARY_SERVICES_2026
+    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service = > {;
+=======;
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
       });
     });
 
     // Add services from comprehensiveServices
-    comprehensiveServices.forEach(service => {
+    comprehensiveServices.forEach(service = > {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       services.push({
         id: service.id,
         name: service.name,
@@ -137,30 +169,40 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      })});
+=======
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
       });
     });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return services;
-  }, []);
+    return services}, []);
 
-  const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+<<<<<<< HEAD
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+    return cats.sort()}, [allServices]);
+=======
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -175,14 +217,19 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+<<<<<<< HEAD
         break;
+=======
+        break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Artificial Intelligence':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Artificial Intelligence':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-6 h-6" />;
       case 'Quantum Computing':
         return <Atom className="w-6 h-6" />;
@@ -203,13 +250,19 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
+<<<<<<< HEAD
         return <Lightbulb className="w-6 h-6" />;
 
+=======
+        return <Lightbulb className = "w-6 h-6" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
-      case 'live':
+<<<<<<< HEAD
+  const getStatusColor = (status: string) => {;
+    switch (status.toLowerCase()) {;
+      case 'live':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-green-100 text-green-800';
       case 'beta':
         return 'bg-blue-100 text-blue-800';
@@ -218,19 +271,41 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
+<<<<<<< HEAD
         return 'bg-gray-100 text-gray-800';
 
+=======
+        return 'bg-gray-100 text-gray-800'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
 
@@ -286,9 +361,15 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
 
                 {categories.map(category => (
+=======
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                {categories.map(category  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -298,7 +379,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
 
                 <option value="name">Sort by Name</option>
@@ -313,14 +394,41 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 whileHover={{ y: -5 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service)}
@@ -419,9 +527,36 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             onClick={() => setSelectedService(null)}
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
 
@@ -591,12 +726,25 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
 </div>};
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default ComprehensiveServicesShowcase2027;}}}}}

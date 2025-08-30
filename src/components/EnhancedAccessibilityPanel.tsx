@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -7,6 +8,16 @@ import {
   VolumeX,
   Type,
   Contrast,
+=======
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Type, 
+  Contrast, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   MousePointer,
   Keyboard,
   Monitor,
@@ -14,7 +25,13 @@ import {
   X,
   Check,
   AlertTriangle
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -22,11 +39,17 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+<<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+=======
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export const EnhancedAccessibilityPanel: React.FC = () => {
+<<<<<<< HEAD
+export const EnhancedAccessibilityPanel: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -37,7 +60,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     fontSize: 'medium'
   });
 
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [announcements, setAnnouncements] = useState<any>([]);
   const [isAnnouncing, setIsAnnouncing] = useState(false);
 
   // Load settings from localStorage
@@ -47,6 +70,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       try {
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
+<<<<<<< HEAD
         applySettings({ ...prev, ...parsed });
       } catch (error) {
 <<<<<<< HEAD
@@ -56,12 +80,18 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 =======
         // // // // // // // console.error('Failed to parse accessibility settings:', error);
       }
+=======
+        applySettings({ ...prev, ...parsed })} catch (error) {
+        console.error('Failed to parse accessibility settings:', error)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+<<<<<<< HEAD
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const root = document.documentElement;
 
     // High contrast mode
@@ -69,11 +99,11 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       root.classList.add('high-contrast');
       root.style.setProperty('--bg-primary', '#000000');
       root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--accent-color', '#ffff00');
-    } else {
+      root.style.setProperty('--accent-color', '#ffff00')} else {
       root.classList.remove('high-contrast');
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--text-primary');
+<<<<<<< HEAD
       root.style.removeProperty('--accent-color');
 
     // Large text
@@ -81,37 +111,82 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       root.style.fontSize = '120%';
     } else {
       root.style.fontSize = '100%';
+=======
+      root.style.removeProperty('--accent-color')}
 
-    // Reduced motion
-    if (newSettings.reducedMotion) {
+    // Large text
+    if (newSettings.largeText) {
+      root.style.fontSize = '120%'} else {
+      root.style.fontSize = '100%'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    // Reduced motion;
+    if (newSettings.reducedMotion) {;
       root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--transition-duration', '0.01ms');
-    } else {
+      root.style.setProperty('--transition-duration', '0.01ms')} else {
       root.style.removeProperty('--animation-duration');
+<<<<<<< HEAD
       root.style.removeProperty('--transition-duration');
+=======
+      root.style.removeProperty('--transition-duration')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
       const filters = {
+  <<<<<<< HEAD
         protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
-        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
-      };
+  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
+      ;
+
+};
+      root.style.filter = filters[newSettings.colorBlindness]} else {
+      root.style.filter = 'none'}
+=======;
+  protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',;
+        deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',;
+  ;
+  ;
+  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
+      ;
+
+
+
+
+};
       root.style.filter = filters[newSettings.colorBlindness];
     } else {
       root.style.filter = 'none';
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Font size
     const fontSizes = {
-      small: '0.875rem',
+  small: '0.875rem',
       medium: '1rem',
-      large: '1.125rem',
-      'extra-large': '1.25rem'
-    };
+      large: '1.125rem',;
+  ;
+  ;
+  ;
+  ;
+  'extra-large': '1.25rem';
+    ;
+
+
+
+
+
+
+};
     root.style.setProperty('--base-font-size', fontSizes[newSettings.fontSize]);
 
     // Focus indicator
     if (newSettings.focusIndicator) {
+<<<<<<< HEAD
       root.style.setProperty('--focus-outline', '2px solid #06b6d4');
     } else {
       root.style.setProperty('--focus-outline', 'none');
@@ -121,15 +196,25 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       document.addEventListener('keydown', handleKeyboardNavigation);
     } else {
       document.removeEventListener('keydown', handleKeyboardNavigation);
+=======
+      root.style.setProperty('--focus-outline', '2px solid #06b6d4')} else {
+      root.style.setProperty('--focus-outline', 'none')}
+
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      document.addEventListener('keydown', handleKeyboardNavigation)} else {
+      document.removeEventListener('keydown', handleKeyboardNavigation)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Save settings
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
 
   // Handle keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
-    const focusableElements = document.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+<<<<<<< HEAD
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {;
+    const focusableElements = document.querySelectorAll(;
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     );
 
     const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
@@ -155,14 +240,21 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       case 'Enter':
       case ' ':
         if (document.activeElement instanceof HTMLElement) {
+<<<<<<< HEAD
           document.activeElement.click();
 
         break;
 
+=======
+          document.activeElement.click()}
+        break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
+<<<<<<< HEAD
+  const announceToScreenReader = useCallback((message: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -176,78 +268,144 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     // Remove after announcement
     setTimeout(() => {
       if (announcement.parentNode) {
+<<<<<<< HEAD
         announcement.parentNode.removeChild(announcement);
 
+=======
+        announcement.parentNode.removeChild(announcement)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, 1000);
 
     setAnnouncements(prev => [...prev, message]);
     setIsAnnouncing(true);
-    setTimeout(() => setIsAnnouncing(false), 1000);
-  }, [settings.screenReader]);
+    setTimeout(() => setIsAnnouncing(false), 1000)}, [settings.screenReader]);
 
   // Update settings
+<<<<<<< HEAD
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value)  => {
+    const newSettings = {
+  ...settings,;
+  [key]: value ;
+
+};
+=======
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = {
+  ...settings,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  [key]: value ;
+
+
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
 
     // Announce changes to screen reader
     const settingNames = {
-      highContrast: 'high contrast mode',
+  highContrast: 'high contrast mode',
       largeText: 'large text',
       reducedMotion: 'reduced motion',
       screenReader: 'screen reader support',
       keyboardNavigation: 'keyboard navigation',
       focusIndicator: 'focus indicator',
+<<<<<<< HEAD
       colorBlindness: 'color blindness simulation',
       fontSize: 'font size'
     };
 
     announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
   }, [settings, applySettings, announceToScreenReader]);
+=======
+      colorBlindness: 'color blindness simulation',;
+  ;
+  ;
+  ;
+  ;
+  fontSize: 'font size';
+    ;
+
+
+
+
+
+
+};
+    
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [settings, applySettings, announceToScreenReader]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
+  highContrast: false,
       largeText: false,
       reducedMotion: false,
       screenReader: false,
       keyboardNavigation: false,
       focusIndicator: true,
+<<<<<<< HEAD
       colorBlindness: 'none',
       fontSize: 'medium'
     };
 
+=======
+      colorBlindness: 'none',;
+  ;
+  ;
+  ;
+  ;
+  fontSize: 'medium';
+    ;
+
+
+
+
+
+
+};
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     setSettings(defaultSettings);
     applySettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to defaults');
-  }, [applySettings, announceToScreenReader]);
+    announceToScreenReader('Accessibility settings reset to defaults')}, [applySettings, announceToScreenReader]);
 
   // Toggle panel
-  const togglePanel = useCallback(() => {
+  const togglePanel = useCallback(() => {;
     setIsOpen(!isOpen);
-    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened');
-  }, [isOpen, announceToScreenReader]);
+    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened')}, [isOpen, announceToScreenReader]);
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isOpen) {
+<<<<<<< HEAD
+    const handleEscape = (event: KeyboardEvent) => {;
+      if (event.key === 'Escape' && isOpen) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsOpen(false);
+<<<<<<< HEAD
         announceToScreenReader('Accessibility panel closed');
 
+=======
+        announceToScreenReader('Accessibility panel closed')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, [isOpen, announceToScreenReader]);
+    return () => document.removeEventListener('keydown', handleEscape)}, [isOpen, announceToScreenReader]);
 
   return (
     <>
       {/* Toggle Button */}
       <motion.button
-        initial={{ opacity: 0 }}
+        initial = {{ opacity: 0 }}
         animate={{ opacity: 1 }}
         onClick={togglePanel}
         className="fixed top-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
@@ -263,9 +421,36 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
+            initial = {
+  { opacity: 0,
+  x: 300 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  x: 300 
+
+
+
+
+
+
+}}
             className="fixed top-0 right-0 h-full w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-700 shadow-2xl z-50 overflow-y-auto"
             id="accessibility-panel"
             role="dialog"
@@ -301,7 +486,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">High Contrast</span>
                     <button
-                      onClick={() => updateSetting('highContrast', !settings.highContrast)}
+                      onClick = {
+  () => updateSetting('highContrast',
+  !settings.highContrast)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.highContrast ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -319,7 +513,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Large Text</span>
                     <button
-                      onClick={() => updateSetting('largeText', !settings.largeText)}
+                      onClick = {
+  () => updateSetting('largeText',
+  !settings.largeText)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.largeText ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -337,7 +540,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Reduced Motion</span>
                     <button
-                      onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
+                      onClick = {
+  () => updateSetting('reducedMotion',
+  !settings.reducedMotion)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.reducedMotion ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -358,7 +570,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                     </label>
                     <select
                       value={settings.fontSize}
-                      onChange={(e) => updateSetting('fontSize', e.target.value)}
+                      onChange = {
+  (e) => updateSetting('fontSize',
+  e.target.value)
+
+
+
+
+
+
+}
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
 
                       <option value="small">Small</option>
@@ -374,7 +595,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                     </label>
                     <select
                       value={settings.colorBlindness}
-                      onChange={(e) => updateSetting('colorBlindness', e.target.value)}
+                      onChange = {
+  (e) => updateSetting('colorBlindness',
+  e.target.value)
+
+
+
+
+
+
+}
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
 
                       <option value="none">None</option>
@@ -397,7 +627,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Keyboard Navigation</span>
                     <button
-                      onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
+                      onClick = {
+  () => updateSetting('keyboardNavigation',
+  !settings.keyboardNavigation)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -415,7 +654,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Focus Indicator</span>
                     <button
-                      onClick={() => updateSetting('focusIndicator', !settings.focusIndicator)}
+                      onClick = {
+  () => updateSetting('focusIndicator',
+  !settings.focusIndicator)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.focusIndicator ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -443,7 +691,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Screen Reader Mode</span>
                     <button
-                      onClick={() => updateSetting('screenReader', !settings.screenReader)}
+                      onClick = {
+  () => updateSetting('screenReader',
+  !settings.screenReader)
+
+
+
+
+
+
+}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.screenReader ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
@@ -498,9 +755,36 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       <AnimatePresence>
         {isAnnouncing && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
             className="fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2"
 
             <Check className="w-4 h-4" />
@@ -515,10 +799,23 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+<<<<<<< HEAD
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={togglePanel}
         />
-      )}
-    </>
+      )};
+    </>;
+  )};
+=======
+          className="fixed inset-0 bg-black bg-opacity-50 z-40";
+          onClick={togglePanel};
+        />;
+      )};
+    </>;
   );
+<<<<<<< HEAD
 };}}}}}}}}}}}}}</motion.div>}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

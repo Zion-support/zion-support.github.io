@@ -32,7 +32,7 @@ const onsiteServices = [
     title: "Network Infrastructure Setup",
     description: "Complete network design, installation, and configuration for businesses of all sizes.",
     icon: Network,
-    features: [
+    features[
       "Network design & planning",
       "Hardware installation",
       "Configuration & optimization",
@@ -41,14 +41,14 @@ const onsiteServices = [
     price: "From $5,000",
     timeline: "3-7 days",
     category: "Infrastructure",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 2,
     title: "Server Installation & Configuration",
     description: "Professional server setup, configuration, and optimization for optimal performance.",
     icon: Server,
-    features: [
+    features[
       "Hardware installation",
       "OS configuration",
       "Security hardening",
@@ -57,14 +57,14 @@ const onsiteServices = [
     price: "From $3,000",
     timeline: "2-5 days",
     category: "Servers",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 3,
     title: "Cybersecurity Assessment",
     description: "Comprehensive security audit and vulnerability assessment of your IT infrastructure.",
     icon: Shield,
-    features: [
+    features[
       "Security audit",
       "Vulnerability scanning",
       "Penetration testing",
@@ -73,14 +73,14 @@ const onsiteServices = [
     price: "From $4,000",
     timeline: "3-6 days",
     category: "Security",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 4,
     title: "Data Center Setup",
     description: "Complete data center design, construction, and equipment installation.",
     icon: Database,
-    features: [
+    features[
       "Facility design",
       "Equipment installation",
       "Power & cooling setup",
@@ -89,14 +89,14 @@ const onsiteServices = [
     price: "From $25,000",
     timeline: "2-4 weeks",
     category: "Data Centers",
-    coverage: ["Regional", "National"]
+    coverage["Regional", "National"]
   },
   {
     id: 5,
     title: "Workstation Deployment",
     description: "Bulk workstation setup, configuration, and deployment for enterprise environments.",
     icon: Monitor,
-    features: [
+    features[
       "Hardware setup",
       "Software installation",
       "User configuration",
@@ -105,14 +105,14 @@ const onsiteServices = [
     price: "From $150/unit",
     timeline: "1-3 days",
     category: "Workstations",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 6,
     title: "Emergency IT Support",
     description: "24/7 emergency on-site IT support for critical system failures and issues.",
     icon: Activity,
-    features: [
+    features[
       "24/7 availability",
       "Rapid response",
       "Critical issue resolution",
@@ -121,6 +121,7 @@ const onsiteServices = [
     price: "From $200/hour",
     timeline: "2-8 hours",
     category: "Emergency Support",
+<<<<<<< HEAD
     coverage: ["Local", "Regional", "National"]
 
 ];
@@ -147,12 +148,16 @@ const serviceAreas = [
     icon: Globe,
     color: "text-blue-400"
 
+=======
+    coverage["Local", "Regional", "National"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "TechCorp Manufacturing",
+    comp: "TechCorp Manufacturing",
     industry: "Manufacturing",
     challenge: "Needed complete network infrastructure for new facility",
     solution: "Designed and installed enterprise network with 500+ devices",
@@ -161,7 +166,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Plus Network",
+    comp: "Healthcare Plus Network",
     industry: "Healthcare",
     challenge: "Required secure server infrastructure for HIPAA compliance",
     solution: "Installed and configured secure server cluster with encryption",
@@ -170,7 +175,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services Inc",
+    comp: "Financial Services Inc",
     industry: "Finance",
     challenge: "Needed emergency IT support for trading system failure",
     solution: "Provided 24/7 emergency support and system recovery",
@@ -232,15 +237,60 @@ export default function ITOnsiteServices() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <Wrench className="w-10 h-10 text-white" />
@@ -278,8 +328,26 @@ export default function ITOnsiteServices() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -293,9 +361,36 @@ export default function ITOnsiteServices() {
             {serviceAreas.map((area, index) => (
               <motion.div
                 key={area.region}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -323,8 +418,26 @@ export default function ITOnsiteServices() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -338,9 +451,36 @@ export default function ITOnsiteServices() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -367,8 +507,26 @@ export default function ITOnsiteServices() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -399,9 +557,36 @@ export default function ITOnsiteServices() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service)}
 
@@ -456,8 +641,26 @@ export default function ITOnsiteServices() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -471,9 +674,36 @@ export default function ITOnsiteServices() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -481,7 +711,7 @@ export default function ITOnsiteServices() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -517,8 +747,26 @@ export default function ITOnsiteServices() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -546,5 +794,9 @@ export default function ITOnsiteServices() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment() {
   const features = [
     'AI-powered security assessment optimization',
-    'Intelligent assessment strategy management and execution',
-    'Automated security risk detection and evaluation',
-    'Predictive analytics for assessment needs',
-    'Smart assessment framework management',
-    'AI-driven assessment automation and orchestration',
-    'Real-time assessment performance tracking',
-    'Custom AI models for assessment applications'
+    'Intelligent assessment strategy management and execution',;
+    'Automated security risk detection and evaluation',;
+    'Predictive analytics for assessment needs',;
+    'Smart assessment framework management',;
+    'AI-driven assessment automation and orchestration',;
+    'Real-time assessment performance tracking',;
+    'Custom AI models for assessment applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$499/mo',
       details: ['Up to 5 assessments/month', 'Basic AI features', 'Standard assessment', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$1,299/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$3,199/mo',
       details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$1,299/mo', 
+      details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,199/mo', ;
+      details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security assessment optimization',
-    'Assessment strategy management and execution',
-    'Security risk detection and evaluation',
-    'Assessment framework management and automation',
-    'Assessment automation and orchestration',
-    'Assessment scaling and management'
+  const useCases = [;
+    'Security assessment optimization',;
+    'Assessment strategy management and execution',;
+    'Security risk detection and evaluation',;
+    'Assessment framework management and automation',;
+    'Assessment automation and orchestration',;
+    'Assessment scaling and management';
   ];
 
-  const benefits = [
-    'Improve security assessment performance by 50-80%',
-    'Reduce assessment completion time by 40-70%',
-    'Cut security assessment costs by 35-65%',
-    'Enhance security assessment reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security assessment operations efficiently'
+  const benefits = [;
+    'Improve security assessment performance by 50-80%',;
+    'Reduce assessment completion time by 40-70%',;
+    'Cut security assessment costs by 35-65%',;
+    'Enhance security assessment reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security assessment operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-lime-600 text-lime-600 rounded-lg hover:bg-lime-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

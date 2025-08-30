@@ -41,7 +41,7 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
     },
     {
       year: "2022",
-      title: "Company Founded",
+      title: "Comp Founded",
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
 
   ];
@@ -68,7 +68,11 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+<<<<<<< HEAD
               Zion Tech Group is a leading technology company dedicated to transforming businesses through
+=======
+              Zion Tech Group is a leading technology comp dedicated to transforming businesses through 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               innovative AI solutions, quantum computing, and cutting-edge digital technologies.
             </p>
           </div>
@@ -183,8 +187,7 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default About;
 }}}

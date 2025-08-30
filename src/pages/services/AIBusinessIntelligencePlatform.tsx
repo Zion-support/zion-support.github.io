@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -8,6 +9,17 @@ import {
   Shield,
   Users,
   Globe,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  TrendingUp, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Phone,
@@ -21,11 +33,18 @@ import {
   PieChart,
   LineChart,
   Activity
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+=======
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AIBusinessIntelligencePlatform() {
+export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -50,6 +69,7 @@ export default function AIBusinessIntelligencePlatform() {
     {
       icon: Shield,
       title: "Data Security",
+<<<<<<< HEAD
       description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
     },
     {
@@ -57,15 +77,24 @@ export default function AIBusinessIntelligencePlatform() {
       title: "Collaborative Insights",
       description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."
 
+=======
+      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit.";
+    },;
+    {;
+      icon: Users,;
+      title: "Collaborative Insights",;
+      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making.";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Improve decision-making speed by 80%",
-    "Reduce manual reporting by 90%",
-    "Identify business opportunities 3x faster",
-    "Increase operational efficiency by 45%",
-    "Reduce data analysis time by 70%",
-    "Improve forecast accuracy by 60%"
+  const benefits = [;
+    "Improve decision-making speed by 80%",;
+    "Reduce manual reporting by 90%",;
+    "Identify business opportunities 3x faster",;
+    "Increase operational efficiency by 45%",;
+    "Reduce data analysis time by 70%",;
+    "Improve forecast accuracy by 60%";
   ];
 
   const pricingTiers = [
@@ -74,7 +103,7 @@ export default function AIBusinessIntelligencePlatform() {
       price: 199,
       period: "month",
       description: "Perfect for small businesses getting started with AI analytics",
-      features: [
+      features[
         "Up to 5 users",
         "Basic AI analytics",
         "Standard dashboards",
@@ -89,7 +118,7 @@ export default function AIBusinessIntelligencePlatform() {
       price: 499,
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
-      features: [
+      features[
         "Up to 25 users",
         "Advanced AI algorithms",
         "Custom dashboards",
@@ -106,11 +135,12 @@ export default function AIBusinessIntelligencePlatform() {
       price: 1299,
       period: "month",
       description: "For large organizations with complex data analytics requirements",
-      features: [
+      features[
         "Unlimited users",
         "Custom AI models",
         "White-label dashboards",
         "24/7 dedicated support",
+<<<<<<< HEAD
         "Unlimited data sources",
         "Advanced security features",
         "Custom integrations",
@@ -118,6 +148,15 @@ export default function AIBusinessIntelligencePlatform() {
       ],
       popular: false
 
+=======
+        "Unlimited data sources",;
+        "Advanced security features",;
+        "Custom integrations",;
+        "SLA guarantees";
+      ],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -134,6 +173,7 @@ export default function AIBusinessIntelligencePlatform() {
       description: "Risk assessment, fraud detection, and portfolio optimization"
     },
     {
+<<<<<<< HEAD
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
@@ -146,6 +186,20 @@ export default function AIBusinessIntelligencePlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
+=======
+      industry: "Manufacturing",;
+      description: "Predictive maintenance, quality control, and supply chain optimization";
+    },;
+    {;
+      industry: "Retail",;
+      description: "Demand forecasting, customer segmentation, and store performance analysis";
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
@@ -154,8 +208,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
@@ -186,8 +258,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -201,13 +291,40 @@ export default function AIBusinessIntelligencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
 
@@ -226,8 +343,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -240,13 +375,40 @@ export default function AIBusinessIntelligencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
 
@@ -262,8 +424,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -276,13 +456,40 @@ export default function AIBusinessIntelligencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   tier.popular
@@ -335,8 +542,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -349,13 +574,40 @@ export default function AIBusinessIntelligencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
 
@@ -371,8 +623,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -399,8 +669,26 @@ export default function AIBusinessIntelligencePlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -436,10 +724,23 @@ export default function AIBusinessIntelligencePlatform() {
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Send Message
               </Button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

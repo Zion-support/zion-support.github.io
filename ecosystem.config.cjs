@@ -4,30 +4,56 @@ module.exports = {
     {
       name: 'zion-app',
       script: 'npm',
+<<<<<<< HEAD
       args: 'start',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+=======
+      args: 'run dev',
+      cwd: './',
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       env: {
+        NODE_ENV: 'development',
+        PORT: 3000
+      },
+<<<<<<< HEAD
+=======
+      env_production: {
         NODE_ENV: 'production',
         PORT: 3000
       },
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       error_file: './logs/zion-app-error.log',
       out_file: './logs/zion-app-out.log',
       log_file: './logs/zion-app-combined.log',
       time: true
     },
+<<<<<<< HEAD
     
     // Backend services
     {
       name: 'zion-backend',
       script: 'npm',
       args: 'run dev:backend',
+=======
+
+    // Auto Error Fixer - Continuously monitors and fixes errors
+    {
+      name: 'auto-error-fixer',
+      script: './scripts/automation/auto-error-fixer.cjs',
+      cwd: './',
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
+<<<<<<< HEAD
       env: {
         NODE_ENV: 'development',
         PORT: 5000
@@ -36,94 +62,284 @@ module.exports = {
       out_file: './logs/zion-backend-out.log',
       log_file: './logs/zion-backend-combined.log',
       time: true
+=======
+      error_file: './logs/auto-error-fixer-error.log',
+      out_file: './logs/auto-error-fixer-out.log',
+      log_file: './logs/auto-error-fixer-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Restart every 6 hours to ensure fresh state
+      cron_restart: '0 */6 * * *'
     },
 
-    // Build Health Monitor - Prevents build issues
+    // Merge Conflict Resolver - Monitors for and resolves merge conflicts
     {
-      name: 'build-health-monitor',
-      script: './automation/build-health-monitor.js',
+      name: 'merge-conflict-resolver',
+      script: './scripts/automation/merge-conflict-resolver.cjs',
+      cwd: './',
       instances: 1,
       autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      error_file: './logs/merge-conflict-resolver-error.log',
+      out_file: './logs/merge-conflict-resolver-out.log',
+      log_file: './logs/merge-conflict-resolver-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Restart every 4 hours
+      cron_restart: '0 */4 * * *'
+    },
+
+    // Comprehensive Error Fixer - Runs comprehensive fixes on schedule
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      cwd: './',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '1G',
+      error_file: './logs/comprehensive-error-fixer-error.log',
+      out_file: './logs/comprehensive-error-fixer-out.log',
+      log_file: './logs/comprehensive-error-fixer-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Run every 2 hours
+      cron_restart: '0 */2 * * *'
+    },
+
+    // TypeScript Error Fixer - Specialized for TypeScript issues
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      cwd: './',
+      instances: 1,
+      autorestart: false,
       watch: false,
       max_memory_restart: '512M',
+      error_file: './logs/typescript-error-fixer-error.log',
+      out_file: './logs/typescript-error-fixer-out.log',
+      log_file: './logs/typescript-error-fixer-combined.log',
+      time: true,
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development'
       },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
-      log_file: './logs/build-monitor.log',
-      error_file: './logs/build-monitor-error.log',
-      out_file: './logs/build-monitor-out.log'
+      // Run every 3 hours
+      cron_restart: '0 */3 * * *'
     },
 
-    // Code Quality Monitor - Prevents code issues
+    // Console Error Fixer - Fixes console and runtime errors
     {
-      name: 'code-quality-monitor',
-      script: './automation/code-quality-monitor.js',
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
+      cwd: './',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '256M',
+      error_file: './logs/console-error-fixer-error.log',
+      out_file: './logs/console-error-fixer-out.log',
+      log_file: './logs/console-error-fixer-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Run every 4 hours
+      cron_restart: '0 */4 * * *'
+    },
+
+    // Performance Monitor - Monitors app performance
+    {
+      name: 'performance-monitor',
+      script: './scripts/automation/performance-monitor.cjs',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '256M',
+      error_file: './logs/performance-monitor-error.log',
+      out_file: './logs/performance-monitor-out.log',
+      log_file: './logs/performance-monitor-combined.log',
+      time: true,
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 6 * * *', // Restart daily at 6 AM
-      log_file: './logs/code-quality.log',
-      error_file: './logs/code-quality-error.log',
-      out_file: './logs/code-quality-out.log'
+        NODE_ENV: 'development'
+      }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
 
-    // Dependency Health Monitor - Prevents dependency issues
+    // Health Checker - Monitors overall system health
     {
-      name: 'dependency-monitor',
-      script: './automation/dependency-monitor.js',
+      name: 'health-checker',
+      script: './scripts/automation/health-checker.cjs',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      error_file: './logs/health-checker-error.log',
+      out_file: './logs/health-checker-out.log',
+      log_file: './logs/health-checker-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Run every 15 minutes
+      cron_restart: '*/15 * * * *'
+    },
+
+    // Git Operations Manager - Manages git operations and PRs
+    {
+      name: 'git-operations-manager',
+      script: './scripts/automation/git-operations-manager.cjs',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '256M',
+      error_file: './logs/git-operations-manager-error.log',
+      out_file: './logs/git-operations-manager-out.log',
+      log_file: './logs/git-operations-manager-combined.log',
+      time: true,
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development'
       },
-      cron_restart: '0 12 * * *', // Restart daily at noon
-      log_file: './logs/dependency.log',
-      error_file: './logs/dependency-error.log',
-      out_file: './logs/dependency-out.log'
+      // Restart every 8 hours
+      cron_restart: '0 */8 * * *'
     },
 
-    // Build Automation - Automatically fixes common issues
+    // Dependency Manager - Manages npm dependencies
     {
-      name: 'build-automation',
-      script: './automation/build-automation.js',
+      name: 'dependency-manager',
+      script: './scripts/automation/dependency-manager.cjs',
+      cwd: './',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
       max_memory_restart: '512M',
+      error_file: './logs/dependency-manager-error.log',
+      out_file: './logs/dependency-manager-out.log',
+      log_file: './logs/dependency-manager-combined.log',
+      time: true,
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development'
       },
-      cron_restart: '0 18 * * *', // Restart daily at 6 PM
-      log_file: './logs/build-automation.log',
-      error_file: './logs/build-automation-error.log',
-      out_file: './logs/build-automation-out.log'
+      // Run daily at 2 AM
+      cron_restart: '0 2 * * *'
     },
 
-    // File Integrity Monitor - Prevents file corruption
+    // Build Optimizer - Optimizes build process
     {
-      name: 'file-integrity-monitor',
-      script: './automation/file-integrity-monitor.js',
+      name: 'build-optimizer',
+      script: './scripts/automation/build-optimizer.cjs',
+      cwd: './',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      max_memory_restart: '1G',
+      error_file: './logs/build-optimizer-error.log',
+      out_file: './logs/build-optimizer-out.log',
+      log_file: './logs/build-optimizer-combined.log',
+      time: true,
+      env: {
+        NODE_ENV: 'development'
+      },
+      // Run every 6 hours
+      cron_restart: '0 */6 * * *'
+    },
+
+    // NEW: AI-Powered Code Quality Enhancer
+    {
+      name: 'ai-code-quality-enhancer',
+      script: './scripts/automation/ai-code-quality-enhancer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development'
       },
-      cron_restart: '0 3 * * *', // Restart daily at 3 AM
-      log_file: './logs/file-integrity.log',
-      error_file: './logs/file-integrity-error.log',
-      out_file: './logs/file-integrity-out.log'
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      log_file: './logs/ai-code-quality-enhancer.log',
+      error_file: './logs/ai-code-quality-enhancer-error.log',
+      out_file: './logs/ai-code-quality-enhancer-out.log'
+    },
+
+    // NEW: Intelligent Performance Optimizer
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/intelligent-performance-optimizer.log',
+      error_file: './logs/intelligent-performance-optimizer-error.log',
+      out_file: './logs/intelligent-performance-optimizer-out.log'
+    },
+
+    // NEW: Smart Testing Automation
+    {
+      name: 'smart-testing-automation',
+      script: './scripts/automation/smart-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-testing-automation.log',
+      error_file: './logs/smart-testing-automation-error.log',
+      out_file: './logs/smart-testing-automation-out.log'
+    },
+
+    // NEW: Unified Automation Dashboard
+    {
+      name: 'unified-automation-dashboard',
+      script: './scripts/automation/unified-automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: './logs/unified-automation-dashboard.log',
+      error_file: './logs/unified-automation-dashboard-error.log',
+      out_file: './logs/unified-automation-dashboard-out.log'
+    },
+
+    // NEW: Intelligent Conflict Resolver
+    {
+      name: 'intelligent-conflict-resolver',
+      script: './scripts/automation/intelligent-conflict-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/intelligent-conflict-resolver.log',
+      error_file: './logs/intelligent-conflict-resolver-error.log',
+      out_file: './logs/intelligent-conflict-resolver-out.log'
     }
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Console Error Fixer - Fixes console errors
     {
@@ -545,6 +761,28 @@ module.exports = {
     max_memory_restart: '100M',
     env: {
       NODE_ENV: 'production'
+=======
+  deploy: {
+    production: {
+      user: 'deploy',
+      host: 'your-production-host.com',
+      ref: 'origin/main',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/var/www/zion-app',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': ''
+    },
+    staging: {
+      user: 'deploy',
+      host: 'your-staging-host.com',
+      ref: 'origin/develop',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/var/www/zion-app-staging',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env staging',
+      'pre-setup': ''
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }
   }
 };

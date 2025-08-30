@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
@@ -27,6 +27,7 @@ function PortfolioBuilderContent() {
           </TabsContent>
         </Tabs>
       </main>
+<<<<<<< HEAD
 
     </>);
 
@@ -35,3 +36,11 @@ export default function PortfolioBuilder() {
       <PortfolioBuilderContent />
     </ProtectedRoute>);
 }}
+=======
+      
+    </>)}
+export default function PortfolioBuilder() {
+    return (<ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

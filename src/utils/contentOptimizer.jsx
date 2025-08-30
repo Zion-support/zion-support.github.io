@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
@@ -87,7 +88,6 @@ export class ContentOptimizer {
         if (!content.includes('<h2>'))
             score -= 5;
         // Check for images with alt text
-        const images = content.match(/<img[^>]*>/gi) || [];
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
@@ -223,7 +223,7 @@ export class ContentOptimizer {
 
     static generateContentTemplate(page, contentType) {
         const templates = {
-            service: `
+  service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
 
@@ -292,7 +292,7 @@ export class ContentOptimizer {
         <h2>Support</h2>
         <p>Technical support and customer service information.</p>
       `,
-            blog: `
+  blog: `
         <h1>Blog Post Title</h1>
         <p>Engaging introduction that hooks the reader and explains the value.</p>
 
@@ -314,19 +314,123 @@ export class ContentOptimizer {
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
-        };
+        
+
+};
         return templates[contentType] || templates.service;
 
     static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
-            service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
-            about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
-            contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
-            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
-        };
         const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
+<<<<<<< HEAD
 
 
 export const contentOptimizer = new ContentOptimizer();}}}}}}}}}}}}}}}}}}}}}}}
+=======
+    }
+}
+export const contentOptimizer = new ContentOptimizer();
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const ContentOptimizer = ({ content, onOptimize }) => {
+  const [optimizedContent, setOptimizedContent] = useState('');
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+
+  const optimizeContent = async () => {
+    setIsOptimizing(true);
+    
+    // Simulate optimization process
+    setTimeout(() => {
+      const optimized = content
+        .replace(/\s+/g, ' ')
+        .trim()
+        .split('. ')
+        .map(sentence => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+        .join('. ');
+      
+      setOptimizedContent(optimized);
+      
+      // Generate suggestions
+      const newSuggestions = [
+        'Consider adding more specific keywords',
+        'Break down long sentences for better readability',
+        'Add bullet points for key information',
+        'Include a clear call-to-action'
+      ];
+      
+      setSuggestions(newSuggestions);
+      setIsOptimizing(false);
+      
+      if (onOptimize) {
+        onOptimize(optimized);
+      }
+    }, 2000);
+  };
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={optimizeContent}
+        disabled={isOptimizing}
+        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+      >
+        {isOptimizing ? 'Optimizing...' : 'Optimize Content'}
+      </button>
+      
+      {optimizedContent && (
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          className="space-y-4"
+        >
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Optimized Content:</h3>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              {optimizedContent}
+            </div>
+          </div>
+          
+          {suggestions.length > 0 && (
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>
+              <ul className="space-y-2">
+                {suggestions.map((suggestion, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <span>{suggestion}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+export default ContentOptimizer;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

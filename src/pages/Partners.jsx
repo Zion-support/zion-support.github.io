@@ -1,31 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity export default function Partners() {
+=======
+import { 
+  Users, 
+  Globe, 
+  Award,
+  TrendingUp,
+  Building,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
+export default function Partners() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const partnershipTypes = [
     {
       title: 'Technology Partners',
       description: 'Collaborate with leading tech companies to deliver cutting-edge solutions',
       icon: '🔧',
-      benefits: ['Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']
+      benefits['Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']
     },
     {
       title: 'Channel Partners',
       description: 'Expand your reach through our global network of resellers and distributors',
       icon: '🌐',
-      benefits: ['Increased market presence', 'Revenue sharing programs', 'Training and certification']
+      benefits['Increased market presence', 'Revenue sharing programs', 'Training and certification']
     },
     {
       title: 'Strategic Partners',
       description: 'Form long-term alliances for mutual growth and market expansion',
       icon: '🤝',
-      benefits: ['Joint ventures', 'Market expansion support', 'Shared R&D initiatives']
+      benefits['Joint ventures', 'Market expansion support', 'Shared R&D initiatives']
     },
     {
       title: 'Academic Partners',
       description: 'Partner with universities and research institutions for innovation',
       icon: '🎓',
+<<<<<<< HEAD
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
 
+=======
+      benefits['Research collaboration', 'Talent pipeline', 'Innovation programs']
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const existingPartners = [
     {
@@ -259,5 +277,9 @@ import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shi
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -12,6 +12,7 @@ async function main() {
   const addr = await token.getAddress();
   const totalSupply = await token.totalSupply();
 <<<<<<< HEAD
+<<<<<<< HEAD
   // // // // // console.log('ZIONToken deployed at:', addr);
   // // // // // console.log('Total supply:', totalSupply.toString());
 
@@ -26,3 +27,10 @@ main().catch((error) => {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exitCode = 1;
 });}
+=======
+  console.log('ZIONToken deployed at:', addr);
+  console.log('Total supply:', totalSupply.toString())}
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

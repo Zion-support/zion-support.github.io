@@ -15,7 +15,12 @@ import {
 	Star,
 	Play,
 	Pause
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
+
 	id: string;
 	title: string;
 	description: string;
@@ -23,8 +28,12 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
+<<<<<<< HEAD
 	status: 'active' | 'beta' | 'new';
 
+=======
+	status: 'active' | 'beta' | 'new'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -32,7 +41,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
 		icon: Brain,
 		color: 'from-purple-500 to-cyan-500',
-		features: ['Quantum decision making', 'Autonomous learning', 'System optimization'],
+		features['Quantum decision making', 'Autonomous learning', 'System optimization'],
 		price: '$32,000/month',
 		status: 'new'
 	},
@@ -42,7 +51,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'AI-powered satellite constellation management for optimal orbital positioning.',
 		icon: Rocket,
 		color: 'from-blue-500 to-indigo-600',
-		features: ['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],
+		features['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],
 		price: '$15,000/month',
 		status: 'beta'
 	},
@@ -52,7 +61,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Next-generation metaverse platform using quantum computing for infinite scalability.',
 		icon: Eye,
 		color: 'from-green-500 to-emerald-600',
-		features: ['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],
+		features['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],
 		price: '$28,000/month',
 		status: 'active'
 	},
@@ -62,7 +71,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Self-managing DeFi protocol that automatically optimizes yields and manages risks.',
 		icon: DollarSign,
 		color: 'from-yellow-500 to-orange-500',
-		features: ['Autonomous yield farming', 'Risk management', 'Strategy optimization'],
+		features['Autonomous yield farming', 'Risk management', 'Strategy optimization'],
 		price: '$12,000/month',
 		status: 'beta'
 	},
@@ -72,7 +81,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Advanced genome analysis platform using quantum computing for personalized medicine.',
 		icon: Heart,
 		color: 'from-pink-500 to-rose-600',
-		features: ['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],
+		features['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],
 		price: '$18,000/month',
 		status: 'new'
 	},
@@ -82,39 +91,57 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',
 		icon: Bot,
 		color: 'from-gray-500 to-slate-600',
-		features: ['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
+		features['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
 		price: '$22,000/month',
 		status: 'active'
 
 ];
-export default function FuturisticServicesShowcase() {
+export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-		const interval = setInterval(() => {
+<<<<<<< HEAD
+		const interval = setInterval(() => {;
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
+		return () => clearInterval(interval)}, [isPlaying]);
+	const getStatusColor = (status: string)  => {
+		switch (status) {;
+=======;
+		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
-		switch (status) {
+	const getStatusColor = (status: string) => {;
+		switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
+<<<<<<< HEAD
 			default: return 'bg-gray-500';
 
+=======
+			default: return 'bg-gray-500'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
-	const getStatusText = (status: string) => {
-		switch (status) {
+<<<<<<< HEAD
+	const getStatusText = (status: string) => {;
+		switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
 			case 'active': return 'ACTIVE';
+<<<<<<< HEAD
 			default: return 'UNKNOWN';
 
+=======
+			default: return 'UNKNOWN'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 	return (
-		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
@@ -168,9 +195,36 @@ export default function FuturisticServicesShowcase() {
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentService}
-							initial={{ opacity: 0, x: 100 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -100 }}
+							initial = {
+  { opacity: 0,
+  x: 100 
+
+
+
+
+
+
+}}
+							animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+							exit = {
+  { opacity: 0,
+  x: -100 
+
+
+
+
+
+
+}}
 							transition={{ duration: 0.5 }}
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 
@@ -199,8 +253,26 @@ export default function FuturisticServicesShowcase() {
 											{futuristicServices[currentService].features.map((feature, index) => (
 												<motion.li
 													key={index}
-													initial={{ opacity: 0, x: -20 }}
-													animate={{ opacity: 1, x: 0 }}
+													initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+													animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
 													transition={{ delay: index * 0.1 }}
 													className="flex items-center text-zion-slate-light"
 
@@ -255,13 +327,40 @@ export default function FuturisticServicesShowcase() {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index) => (
+					<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)  => (
 							<motion.div
 								key={service.id}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
+								initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+								whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+								transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 
@@ -283,10 +382,23 @@ export default function FuturisticServicesShowcase() {
 									{service.price}
 								</div>
 							</motion.div>
+<<<<<<< HEAD
 						))}
 					</div>
 				</div>
 			</div>
 		</div>
+	)};
+=======;
+						))};
+					</div>;
+				</div>;
+			</div>;
+		</div>;
 	);
+<<<<<<< HEAD
 }}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

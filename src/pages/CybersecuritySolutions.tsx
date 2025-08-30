@@ -25,7 +25,13 @@ import {
   Clock,
   BarChart3,
   CreditCard
+<<<<<<< HEAD
 export default function CybersecuritySolutions() {
+=======
+ } from 'lucide-react';
+
+export default function CybersecuritySolutions(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
@@ -34,53 +40,65 @@ export default function CybersecuritySolutions() {
       icon: Shield,
       title: "Threat Detection & Response",
       description: "Advanced security monitoring and incident response to protect against cyber threats",
-      features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
+      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
       color: "from-zion-red to-zion-orange"
     },
     {
       icon: Lock,
       title: "Identity & Access Management",
       description: "Secure authentication and authorization systems for your organization",
-      features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
+      features["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
       color: "from-zion-blue to-zion-cyan"
     },
     {
       icon: Eye,
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance management",
-      features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
+      features["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Network Security",
       description: "Protect your network infrastructure with advanced security measures",
-      features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
+      features["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Database,
       title: "Data Protection",
       description: "Safeguard sensitive data with encryption and backup solutions",
-      features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
+      features["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Cloud,
+<<<<<<< HEAD
       title: "Cloud Security",
       description: "Secure your cloud infrastructure and applications",
-      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
+      features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
       color: "from-zion-indigo to-zion-purple"
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      title: "Cloud Security",;
+      description: "Secure your cloud infrastructure and applications",;
+      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
+      color: "from-zion-indigo to-zion-purple";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const threatTypes = [
-    { id: 'all', name: 'All Threats', icon: Shield },
-    { id: 'malware', name: 'Malware', icon: Bug },
-    { id: 'phishing', name: 'Phishing', icon: Target },
-    { id: 'ransomware', name: 'Ransomware', icon: Lock },
-    { id: 'ddos', name: 'DDoS Attacks', icon: Network },
-    { id: 'insider', name: 'Insider Threats', icon: Users }
+  const threatTypes = [;
+    { id: 'all', name: 'All Threats', icon: Shield },;
+    { id: 'malware', name: 'Malware', icon: Bug },;
+    { id: 'phishing', name: 'Phishing', icon: Target },;
+    { id: 'ransomware', name: 'Ransomware', icon: Lock },;
+    { id: 'ddos', name: 'DDoS Attacks', icon: Network },;
+    { id: 'insider', name: 'Insider Threats', icon: Users };
   ];
 
   const securityThreats = [
@@ -89,7 +107,7 @@ export default function CybersecuritySolutions() {
       description: "Sophisticated, long-term cyber attacks targeting specific organizations",
       type: "malware",
       impact: "High",
-      solutions: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
+      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
       icon: Target
     },
     {
@@ -97,7 +115,7 @@ export default function CybersecuritySolutions() {
       description: "Malicious software that encrypts data and demands payment for decryption",
       type: "ransomware",
       impact: "Critical",
-      solutions: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
+      solutions["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
       icon: Lock
     },
     {
@@ -105,7 +123,7 @@ export default function CybersecuritySolutions() {
       description: "Manipulation tactics to trick users into revealing sensitive information",
       type: "phishing",
       impact: "Medium",
-      solutions: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
+      solutions["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
       icon: Users
     },
     {
@@ -113,7 +131,7 @@ export default function CybersecuritySolutions() {
       description: "Overwhelming systems with traffic to disrupt services",
       type: "ddos",
       impact: "Medium",
-      solutions: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
+      solutions["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
       icon: Network
     },
     {
@@ -121,66 +139,91 @@ export default function CybersecuritySolutions() {
       description: "Security risks from employees or contractors with access to systems",
       type: "insider",
       impact: "High",
-      solutions: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
+      solutions["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
       icon: Shield
     },
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
+<<<<<<< HEAD
       type: "malware",
       impact: "Critical",
-      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
+      solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
       icon: Bug
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      type: "malware",;
+      impact: "Critical",;
+      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
+      icon: Bug;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for data security",
-      requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
+      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
       icon: ShieldCheck
     },
     {
       name: "ISO 27001",
       description: "International standard for information security management",
-      requirements: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
+      requirements["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
       icon: CheckCircle
     },
     {
       name: "GDPR",
       description: "General Data Protection Regulation for EU data privacy",
-      requirements: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
+      requirements["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
       icon: Lock
     },
     {
       name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
-      requirements: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
+      requirements["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
       icon: Database
     },
     {
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
-      requirements: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
+      requirements["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
       icon: CreditCard
     },
     {
+<<<<<<< HEAD
       name: "NIST Cybersecurity Framework",
       description: "U.S. government framework for cybersecurity risk management",
-      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
+      requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
+<<<<<<< HEAD
 
+=======
+    };
+=======;
+      name: "NIST Cybersecurity Framework",;
+      description: "U.S. government framework for cybersecurity risk management",;
+      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
+      icon: BarChart3;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const securityMetrics = [
-    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
-    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },
-    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },
-    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
+  const securityMetrics = [;
+    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },;
+    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },;
+    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },;
+    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
   ];
 
   const containerVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -197,14 +240,41 @@ export default function CybersecuritySolutions() {
       y: 0,
       transition: { duration: 0.6 }
 
+=======
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
     : securityThreats.filter(threat => threat.type === selectedThreat);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -214,8 +284,26 @@ export default function CybersecuritySolutions() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
 
             <div className="flex justify-center mb-8">
@@ -256,8 +344,26 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -282,8 +388,22 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -310,8 +430,26 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -327,28 +465,77 @@ export default function CybersecuritySolutions() {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
             {threatTypes.map((threat) => {
+=======
+          >
+            {threatTypes.map((threat)  => {
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+;
+;
+
+}};
+            transition={{ duration: 0.6 }};
+            viewport={{ once: true }};
+          >;
+            {threatTypes.map((threat) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               const Icon = threat.icon;
               return (
                 <button
-                  key={threat.id}
+                  key = {threat.id}
                   onClick={() => setSelectedThreat(threat.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
+<<<<<<< HEAD
                   }`}
 
                   <Icon className="w-5 h-5" />
                   {threat.name}
                 </button>
+              )})};
+=======;
+                  }`};
+                >;
+                  <Icon className="w-5 h-5" />;
+                  {threat.name};
+                </button>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
 
           {/* Threats Grid */}
@@ -364,8 +551,22 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-zion-red to-zion-orange rounded-xl flex items-center justify-center">
@@ -406,8 +607,26 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -432,8 +651,22 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
 
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
                 </div>
@@ -463,8 +696,26 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -506,8 +757,26 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
@@ -582,8 +851,26 @@ export default function CybersecuritySolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
@@ -606,10 +893,23 @@ export default function CybersecuritySolutions() {
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }}}}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

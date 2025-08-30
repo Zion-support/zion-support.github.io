@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart export default function Accessibility() {
+=======
+import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
+
+export default function Accessibility() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityFeatures = [
     {
       icon: <Eye className="w-8 h-8" />,
@@ -81,6 +87,7 @@ import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail
 
   ];
 
+<<<<<<< HEAD
   const assistiveTechnologies = [
     {
       name: 'Screen Readers',
@@ -104,6 +111,8 @@ import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail
 
   ];
 
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityTools = [
     {
       title: 'Accessibility Checker',
@@ -138,7 +147,7 @@ import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <Accessibility className="w-16 h-16 text-zion-cyan" />
+              <AccessibilityIcon className="w-16 h-16 text-zion-cyan" />
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">

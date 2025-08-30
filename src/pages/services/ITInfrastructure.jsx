@@ -30,13 +30,6 @@ const ITInfrastructure = () => {
 
   ];
 
-  const infrastructureFeatures = [
-    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
-    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
-    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
-    { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
-  ];
-
   const infrastructureAreas = [
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
@@ -17,12 +17,11 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { ModeToggle } from '@/components/ModeToggle';
 
-export function PrimaryNav() {
+<<<<<<< HEAD
+export function PrimaryNav(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
-  const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const router = useLocation();
@@ -32,17 +31,17 @@ export function PrimaryNav() {
   let unreadCount = 0;
   try {
     const messaging = useMessaging();
-    unreadCount = messaging.unreadCount;
-  } catch {
+    unreadCount = messaging.unreadCount} catch {
     // context not available
 
-  const cartCount = useSelector((s: RootState) =>
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
+  const cartCount = useSelector((s: RootState)  =>;
+    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent)  => {;
     e.preventDefault();
     if (query.trim()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // // // console.log('PrimaryNav search submit:', query);
 =======
@@ -51,6 +50,20 @@ export function PrimaryNav() {
       router.push(`/search/${slugify(query)}`);
       setQuery('');
 
+=======
+      // // // // console.log('PrimaryNav search submit:', query);
+      router.push(`/search/${slugify(query)}`);
+      setQuery('')}
+=======
+// Theme toggle component
+const ModeToggle = () => {;
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {;
+    setIsDark(!isDark);
+    // Add theme switching logic here
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -72,42 +85,64 @@ export function PrimaryNav() {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
+  { width: 'clamp(12rem, 20vw,
+  16rem)' 
+
+}}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
+<<<<<<< HEAD
                 onSelectSuggestion={(sugg) => {
 <<<<<<< HEAD
                   // // // console.log('PrimaryNav search suggestion selected:', sugg);
 =======
                   // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+                onSelectSuggestion = {
+  (sugg) => {
+                  // // // // console.log('PrimaryNav search suggestion selected:',;
+  ;
+  sugg);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`);
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    router.push(`/marketplace/listing/${sugg.id
+
+}`)} else if (sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug);
-                  } else if (sugg.type === 'blog' && sugg.slug) {
+                    router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
+<<<<<<< HEAD
                     router.push(`/blog/${sugg.slug}`);
                   } else {
                     // Default: search results page with slug
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
 
+=======
+                    router.push(`/blog/${sugg.slug}`)} else {
+                    // Default: search results page with slug;
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   setQuery('');
 
                   // Track analytics event
-                  if (typeof window !== 'undefined' && window.gtag) {
+                  if (typeof window !== 'null' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
+<<<<<<< HEAD
                     });
 
+=======
+                    })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 }}
-                searchSuggestions={suggestions}
+                searchSuggestions = {suggestions}
               />
             </form>
 
@@ -119,8 +154,17 @@ export function PrimaryNav() {
                   <Link
                     href="/cart"
                     className="relative p-1"
+<<<<<<< HEAD
                     aria-label={t('nav.cart', 'Cart')}
 
+=======
+                    aria-label = {
+  t('nav.cart',
+  'Cart')
+
+}
+                  >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -130,7 +174,9 @@ export function PrimaryNav() {
                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <MiniCartPreview />
+                  <div className="p-4">
+                    <p className="text-sm text-muted-foreground">Cart preview</p>
+                  </div>
                 </HoverCardContent>
               </HoverCard>
             </div>
@@ -160,12 +206,13 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-            {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu />}
             </div>
           </div>
 
           {/* Mobile menu button */}
           <button
+<<<<<<< HEAD
             className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
@@ -176,8 +223,15 @@ export function PrimaryNav() {
             ) : (
               <Menu className="h-6 w-6" />
             )}
+=======
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </button>
         </div>
+<<<<<<< HEAD
       </header>
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
@@ -196,5 +250,107 @@ export function PrimaryNav() {
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
+  )}
+=======
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {services.map((category, index) => (
+                  <div key={index}>
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
+                      {category.category}
+                    </h3>
+                    <div className="space-y-2 ml-4">
+                      {category.items.map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}
+                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link 
+                    to="/solutions" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Solutions
+                  </Link>
+                  <Link 
+                    to="/about" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link 
+                    to="/blog" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </div>;
+              </div>;
+            </motion.div>;
+          )};
+        </AnimatePresence>;
+      </nav>;
+    </header>;
   );
+<<<<<<< HEAD
 </div>}}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

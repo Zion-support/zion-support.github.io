@@ -175,7 +175,6 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AdvancedCybersecuritySuite;
 }}}

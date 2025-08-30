@@ -1,24 +1,60 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Sparkles interface Service {
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
+
+interface Service {
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   category: string;
-  icon: React.ComponentType<{ className?: string }>;
+icon: React.ComponentType<{ className?: string}>;
   color: string;
   items: string[];
+<<<<<<< HEAD
   description?: string;
 
 interface ServicesOverviewProps {
   services: Service[];
+=======
+  description?: string}
+
+interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
+
+  services: Service[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
+    <section className = "py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 
@@ -36,18 +72,52 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
+          {services.map((service, index)  => (
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               whileHover={{
                 y: -5,
-                transition: { duration: 0.3 }
+  transition: { duration: 0.3 
+
+
+
+
+
+
+}
               }}
 
               {/* Animated background */}
@@ -75,9 +145,36 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                   <motion.li
                     key={itemIndex}
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: itemIndex * 0.1 
+
+
+
+
+
+
+}}
                     viewport={{ once: true }}
 
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
@@ -97,12 +194,25 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />
+<<<<<<< HEAD
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            </motion.div>;
+          ))};
+        </div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
 </div></div></div>};
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default ServicesOverview;}}}

@@ -116,13 +116,19 @@ import {
   Bluetooth,
   Battery,
   Signal
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contentCreationSolutions = [
   {
     id: 1,
     title: "Content Management System",
     description: "Comprehensive platform for creating, managing, and publishing digital content across multiple channels.",
     icon: FileText,
-    features: [
+    features[
       "Content creation tools",
       "Multi-channel publishing",
       "Version control",
@@ -131,14 +137,14 @@ const contentCreationSolutions = [
     price: "From $50,000",
     timeline: "12-20 weeks",
     category: "CMS",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"]
+    technologies["React", "Node.js", "MongoDB", "AWS"]
   },
   {
     id: 2,
     title: "Video Production Platform",
     description: "Professional video creation and editing tools for marketing and educational content.",
     icon: Video,
-    features: [
+    features[
       "Video editing",
       "Motion graphics",
       "Audio processing",
@@ -147,14 +153,14 @@ const contentCreationSolutions = [
     price: "From $80,000",
     timeline: "16-24 weeks",
     category: "Video",
-    technologies: ["WebRTC", "Canvas API", "Web Audio API", "FFmpeg"]
+    technologies["WebRTC", "Canvas API", "Web Audio API", "FFmpeg"]
   },
   {
     id: 3,
     title: "Graphic Design Suite",
     description: "Web-based graphic design tools for creating marketing materials and visual content.",
     icon: Palette,
-    features: [
+    features[
       "Design templates",
       "Asset library",
       "Collaboration tools",
@@ -163,14 +169,14 @@ const contentCreationSolutions = [
     price: "From $60,000",
     timeline: "14-22 weeks",
     category: "Design",
-    technologies: ["Canvas API", "SVG", "WebGL", "Three.js"]
+    technologies["Canvas API", "SVG", "WebGL", "Three.js"]
   },
   {
     id: 4,
     title: "Audio Production Tools",
     description: "Professional audio recording, editing, and processing applications.",
     icon: Music,
-    features: [
+    features[
       "Audio recording",
       "Sound editing",
       "Effects processing",
@@ -179,14 +185,14 @@ const contentCreationSolutions = [
     price: "From $70,000",
     timeline: "16-24 weeks",
     category: "Audio",
-    technologies: ["Web Audio API", "MediaRecorder", "AudioWorklet", "WebAssembly"]
+    technologies["Web Audio API", "MediaRecorder", "AudioWorklet", "WebAssembly"]
   },
   {
     id: 5,
     title: "Content Analytics Platform",
     description: "Advanced analytics and insights for content performance and audience engagement.",
     icon: BarChart3,
-    features: [
+    features[
       "Performance metrics",
       "Audience insights",
       "A/B testing",
@@ -195,14 +201,14 @@ const contentCreationSolutions = [
     price: "From $40,000",
     timeline: "12-18 weeks",
     category: "Analytics",
-    technologies: ["Google Analytics", "Mixpanel", "Amplitude", "Custom APIs"]
+    technologies["Google Analytics", "Mixpanel", "Amplitude", "Custom APIs"]
   },
   {
     id: 6,
     title: "Content Distribution Network",
     description: "Global content delivery and distribution platform for maximum reach and performance.",
     icon: Globe,
-    features: [
+    features[
       "Global CDN",
       "Load balancing",
       "Performance optimization",
@@ -211,10 +217,17 @@ const contentCreationSolutions = [
     price: "From $100,000",
     timeline: "20-32 weeks",
     category: "Distribution",
+<<<<<<< HEAD
     technologies: ["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
 
+=======
+    technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const contentTechnologies = [
   {
     name: "Content Creation Tools",
@@ -249,7 +262,7 @@ const contentTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Digital Marketing Agency",
+    comp: "Digital Marketing Agency",
     industry: "Marketing",
     challenge: "Needed scalable content creation platform for 100+ clients",
     solution: "Built custom CMS with AI-powered content generation and multi-channel publishing",
@@ -258,7 +271,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Educational Platform",
+    comp: "Educational Platform",
     industry: "Education",
     challenge: "Required video production tools for online course creation",
     solution: "Developed web-based video editing platform with collaboration features",
@@ -267,7 +280,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "E-commerce Brand",
+    comp: "E-commerce Brand",
     industry: "Retail",
     challenge: "Needed automated content generation for product descriptions",
     solution: "Implemented AI-powered content creation system with brand voice consistency",
@@ -312,26 +325,31 @@ const contentBenefits = [
     title: "Increased Productivity",
     description: "Streamlined workflows and automated processes boost content creation efficiency",
     icon: Zap,
-    examples: ["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"]
+    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"]
   },
   {
     title: "Better Quality",
     description: "Professional tools and AI assistance improve content quality and consistency",
     icon: Award,
-    examples: ["Professional templates", "AI assistance", "Quality checks", "Brand consistency"]
+    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"]
   },
   {
     title: "Multi-channel Reach",
     description: "Distribute content across multiple platforms and channels simultaneously",
     icon: Globe,
-    examples: ["Social media", "Website", "Email marketing", "Mobile apps"]
+    examples["Social media", "Website", "Email marketing", "Mobile apps"]
   },
   {
     title: "Data-driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
+<<<<<<< HEAD
     examples: ["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
 
+=======
+    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
+  }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ContentCreation() {
@@ -356,15 +374,60 @@ export default function ContentCreation() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <PenTool className="w-10 h-10 text-white" />
@@ -402,8 +465,26 @@ export default function ContentCreation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -417,9 +498,36 @@ export default function ContentCreation() {
             {contentBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -448,8 +556,26 @@ export default function ContentCreation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -463,9 +589,36 @@ export default function ContentCreation() {
             {contentTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -495,8 +648,26 @@ export default function ContentCreation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -510,9 +681,36 @@ export default function ContentCreation() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
 
                 <div className="relative mb-6">
@@ -539,8 +737,26 @@ export default function ContentCreation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -571,9 +787,36 @@ export default function ContentCreation() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
 
@@ -628,8 +871,26 @@ export default function ContentCreation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
 
@@ -643,9 +904,36 @@ export default function ContentCreation() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-4 mb-6">
@@ -653,7 +941,7 @@ export default function ContentCreation() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -689,8 +977,26 @@ export default function ContentCreation() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
@@ -718,5 +1024,9 @@ export default function ContentCreation() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

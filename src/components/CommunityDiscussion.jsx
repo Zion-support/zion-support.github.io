@@ -41,8 +41,7 @@ export const CommunityDiscussion = () => {
         ]);
         setNewTitle("");
         setNewBody("");
-        setShowNew(false);
-    };
+        setShowNew(false)};
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
         <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>
@@ -100,6 +99,10 @@ export const CommunityDiscussion = () => {
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
+<<<<<<< HEAD
     </div>);
 </Card></Card>};
 }
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from "../components/SEO";
+import { Code, 
+=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 import {
@@ -22,38 +27,57 @@ import {
   Star,
   ArrowRight,
   Brain
+<<<<<<< HEAD
 export default function MicroSAASSolutions() {
+=======
+ } from 'lucide-react';
+
+export default function MicroSAASSolutions(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
       title: "Custom SAAS Development",
       description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
       icon: Code,
-      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+      features["Custom workflows", "API integration", "User management", "Scalable architecture"]
     },
     {
       title: "Multi-tenant Architecture",
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,
-      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
+      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
     },
     {
       title: "Subscription Management",
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,
-      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
+      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
     },
     {
       title: "API Development & Integration",
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,
-      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
+<<<<<<< HEAD
       title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
+<<<<<<< HEAD
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
 
+=======
+      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+    };
+=======;
+      title: "Analytics & Reporting",;
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
+      icon: TrendingUp,;
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -70,6 +94,7 @@ export default function MicroSAASSolutions() {
     {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
+<<<<<<< HEAD
       icon: BarChart3
     },
     {
@@ -77,6 +102,15 @@ export default function MicroSAASSolutions() {
       description: "Enterprise-grade security and compliance standards",
       icon: Shield
 
+=======
+      icon: BarChart3;
+    },;
+    {;
+      title: "Security",;
+      description: "Enterprise-grade security and compliance standards",;
+      icon: Shield;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -103,6 +137,7 @@ export default function MicroSAASSolutions() {
     {
       name: "Retail",
       description: "E-commerce and point-of-sale solutions",
+<<<<<<< HEAD
       icon: Building
     },
     {
@@ -110,6 +145,15 @@ export default function MicroSAASSolutions() {
       description: "Property management and client portals",
       icon: Building
 
+=======
+      icon: Building;
+    },;
+    {;
+      name: "Real Estate",;
+      description: "Property management and client portals",;
+      icon: Building;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const processSteps = [
@@ -134,6 +178,7 @@ export default function MicroSAASSolutions() {
       icon: Cpu,
       duration: "8-16 weeks"
     },
+<<<<<<< HEAD
     {
       step: 4,
       title: "Testing & Deployment",
@@ -141,6 +186,15 @@ export default function MicroSAASSolutions() {
       icon: Rocket,
       duration: "2-4 weeks"
 
+=======
+    {;
+      step: 4,;
+      title: "Testing & Deployment",;
+      description: "Comprehensive testing and production deployment",;
+      icon: Rocket,;
+      duration: "2-4 weeks";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -204,8 +258,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index)  => (
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -241,8 +295,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -269,8 +323,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index)  => (
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -297,8 +351,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index)  => (
                 <div key={step.step} className="text-center">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
@@ -344,10 +398,23 @@ export default function MicroSAASSolutions() {
                   Get Consultation
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </div>
     </>
+  )};
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
+<<<<<<< HEAD
 }}}}}}
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

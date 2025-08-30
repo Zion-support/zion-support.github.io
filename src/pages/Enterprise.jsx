@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise() {
@@ -41,7 +41,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
             price: "$999",
             period: "/month",
             description: "Perfect for growing teams",
-            features: [
+            features[
                 "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
@@ -53,7 +53,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
             price: "$2,499",
             period: "/month",
             description: "Ideal for established companies",
-            features: [
+            features[
                 "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
@@ -66,7 +66,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
             price: "Custom",
             period: "",
             description: "For large organizations",
-            features: [
+            features[
                 "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",
@@ -192,5 +192,9 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card></Card></Card></Card>}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

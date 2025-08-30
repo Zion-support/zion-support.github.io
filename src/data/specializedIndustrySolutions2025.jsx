@@ -9,7 +9,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 3999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered medical image analysis",
             "Symptom assessment algorithms",
             "Patient data integration",
@@ -21,28 +21,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Custom model training",
             "24/7 diagnostic support"
         ],
-        benefits: [
+        benefits[
             "95% diagnostic accuracy improvement",
             "60% faster diagnosis",
             "Reduced misdiagnosis rates",
             "Enhanced patient outcomes",
             "Improved clinical efficiency"
         ],
-        useCases: [
+        useCases[
             "Hospitals and clinics",
             "Radiology departments",
             "Primary care practices",
             "Specialty medical groups",
             "Telemedicine platforms"
         ],
-        targetAudience: [
+        targetAudience[
             "Healthcare administrators",
             "Radiologists",
             "Primary care physicians",
             "Medical directors",
             "IT managers"
         ],
-        tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
+        tags["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,999 - $15,000/month",
@@ -54,16 +54,16 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
-            integrations: ["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
+            technology["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
+            integrations["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
             apiEndpoints: 100,
             uptime: "99.99%",
-            security: ["HIPAA compliance", "Data encryption", "Access controls"],
-            compliance: ["HIPAA", "HITECH", "FDA 21 CFR Part 11", "SOC 2"]
+            security["HIPAA compliance", "Data encryption", "Access controls"],
+            compliance["HIPAA", "HITECH", "FDA 21 CFR Part 11", "SOC 2"]
         },
-        competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
+        competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
         demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-diagnostics",
-        caseStudies: ["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
+        caseStudies["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
     },
     // Financial Services & Banking
     {
@@ -75,7 +75,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 4999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Real-time fraud detection",
             "Multi-channel monitoring",
             "Behavioral analysis",
@@ -87,28 +87,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "API integration",
             "24/7 fraud monitoring"
         ],
-        benefits: [
+        benefits[
             "99.9% fraud detection accuracy",
             "90% reduction in false positives",
             "Real-time threat response",
             "Compliance automation",
             "Cost savings optimization"
         ],
-        useCases: [
+        useCases[
             "Banks and credit unions",
             "Payment processors",
             "E-commerce platforms",
             "Insurance companies",
             "Investment firms"
         ],
-        targetAudience: [
+        targetAudience[
             "Risk managers",
             "Compliance officers",
             "Security directors",
             "Fraud analysts",
             "IT managers"
         ],
-        tags: ["Financial Services", "AI", "Fraud Detection", "Risk Management", "Compliance"],
+        tags["Financial Services", "AI", "Fraud Detection", "Risk Management", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$4,999 - $20,000/month",
@@ -120,14 +120,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
-            integrations: ["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
+            technology["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
+            integrations["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
             apiEndpoints: 150,
             uptime: "99.99%",
-            security: ["PCI DSS compliance", "Encryption", "Multi-factor authentication"],
-            compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"]
+            security["PCI DSS compliance", "Encryption", "Multi-factor authentication"],
+            compliance["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"]
         },
-        competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
+        competitors["FICO", "LexisNexis", "Experian", "TransUnion"],
         demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"
     },
     // Manufacturing & Industry 4.0
@@ -140,7 +140,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 3499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "IoT device integration",
             "Real-time monitoring",
             "Predictive maintenance",
@@ -152,28 +152,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Custom dashboards",
             "24/7 operations support"
         ],
-        benefits: [
+        benefits[
             "25% reduction in downtime",
             "30% improvement in quality",
             "20% energy cost savings",
             "Increased production efficiency",
             "Real-time decision making"
         ],
-        useCases: [
+        useCases[
             "Automotive manufacturing",
             "Electronics production",
             "Food and beverage",
             "Pharmaceutical manufacturing",
             "Aerospace industry"
         ],
-        targetAudience: [
+        targetAudience[
             "Operations managers",
             "Plant managers",
             "Maintenance supervisors",
             "Quality managers",
             "IT directors"
         ],
-        tags: ["Manufacturing", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"],
+        tags["Manufacturing", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,499 - $15,000/month",
@@ -185,14 +185,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
-            integrations: ["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
+            technology["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
+            integrations["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
             apiEndpoints: 200,
             uptime: "99.95%",
-            security: ["Industrial security", "Network segmentation", "Access controls"],
-            compliance: ["ISO 27001", "NIST", "Industry standards"]
+            security["Industrial security", "Network segmentation", "Access controls"],
+            compliance["ISO 27001", "NIST", "Industry standards"]
         },
-        competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
+        competitors["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
         demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"
     },
     // Retail & E-commerce
@@ -205,7 +205,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 2299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Demand forecasting",
             "Inventory optimization",
             "Customer segmentation",
@@ -217,28 +217,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Custom dashboards",
             "24/7 retail support"
         ],
-        benefits: [
+        benefits[
             "20% increase in sales",
             "30% reduction in inventory costs",
             "Improved customer satisfaction",
             "Better pricing strategies",
             "Enhanced customer loyalty"
         ],
-        useCases: [
+        useCases[
             "Retail chains",
             "E-commerce platforms",
             "Department stores",
             "Specialty retailers",
             "Online marketplaces"
         ],
-        targetAudience: [
+        targetAudience[
             "Retail managers",
             "E-commerce directors",
             "Marketing managers",
             "Operations directors",
             "Business analysts"
         ],
-        tags: ["Retail", "E-commerce", "AI", "Inventory Management", "Customer Experience"],
+        tags["Retail", "E-commerce", "AI", "Inventory Management", "Customer Experience"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$2,299 - $8,000/month",
@@ -250,14 +250,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-            integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
+            technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
+            integrations["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
             apiEndpoints: 100,
             uptime: "99.9%",
-            security: ["Data encryption", "Access controls", "PCI compliance"],
-            compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"]
+            security["Data encryption", "Access controls", "PCI compliance"],
+            compliance["PCI DSS", "GDPR", "CCPA", "SOC 2"]
         },
-        competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
+        competitors["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
         demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"
     },
     // Transportation & Logistics
@@ -270,7 +270,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 2799,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Route optimization",
             "Demand forecasting",
             "Fleet management",
@@ -282,28 +282,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Custom dashboards",
             "24/7 logistics support"
         ],
-        benefits: [
+        benefits[
             "25% reduction in fuel costs",
             "30% improvement in delivery times",
             "20% increase in fleet utilization",
             "Enhanced customer satisfaction",
             "Reduced carbon footprint"
         ],
-        useCases: [
+        useCases[
             "Shipping companies",
             "Trucking firms",
             "E-commerce logistics",
             "Manufacturing supply chains",
             "Retail distribution"
         ],
-        targetAudience: [
+        targetAudience[
             "Logistics managers",
             "Fleet managers",
             "Operations directors",
             "Supply chain managers",
             "Transportation directors"
         ],
-        tags: ["Transportation", "Logistics", "AI", "Route Optimization", "Fleet Management"],
+        tags["Transportation", "Logistics", "AI", "Route Optimization", "Fleet Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$2,799 - $10,000/month",
@@ -315,14 +315,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-            integrations: ["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
+            technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
+            integrations["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
             apiEndpoints: 125,
             uptime: "99.9%",
-            security: ["Data encryption", "Access controls", "Real-time monitoring"],
-            compliance: ["Industry standards", "Data privacy", "Security protocols"]
+            security["Data encryption", "Access controls", "Real-time monitoring"],
+            compliance["Industry standards", "Data privacy", "Security protocols"]
         },
-        competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
+        competitors["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
         demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"
     },
     // Energy & Utilities
@@ -335,7 +335,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 3999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Energy consumption monitoring",
             "Demand forecasting",
             "Grid optimization",
@@ -347,28 +347,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Custom dashboards",
             "24/7 energy support"
         ],
-        benefits: [
+        benefits[
             "20% reduction in energy costs",
             "30% improvement in grid efficiency",
             "Enhanced sustainability metrics",
             "Better demand management",
             "Reduced carbon footprint"
         ],
-        useCases: [
+        useCases[
             "Power utilities",
             "Energy companies",
             "Industrial facilities",
             "Commercial buildings",
             "Smart cities"
         ],
-        targetAudience: [
+        targetAudience[
             "Energy managers",
             "Facility managers",
             "Operations directors",
             "Sustainability managers",
             "IT directors"
         ],
-        tags: ["Energy", "Utilities", "AI", "IoT", "Sustainability"],
+        tags["Energy", "Utilities", "AI", "IoT", "Sustainability"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,999 - $15,000/month",
@@ -380,14 +380,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
-            integrations: ["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
+            technology["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
+            integrations["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
             apiEndpoints: 150,
             uptime: "99.99%",
-            security: ["Grid security", "Data encryption", "Access controls"],
-            compliance: ["NERC CIP", "ISO 27001", "Industry standards"]
+            security["Grid security", "Data encryption", "Access controls"],
+            compliance["NERC CIP", "ISO 27001", "Industry standards"]
         },
-        competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
+        competitors["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"
     },
     // Education & EdTech
@@ -400,7 +400,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 1899,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Personalized learning paths",
             "Adaptive content delivery",
             "Student progress tracking",
@@ -412,28 +412,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "API integration",
             "24/7 educational support"
         ],
-        benefits: [
+        benefits[
             "30% improvement in learning outcomes",
             "Personalized student experiences",
             "Reduced administrative workload",
             "Better student engagement",
             "Data-driven insights"
         ],
-        useCases: [
+        useCases[
             "K-12 schools",
             "Universities",
             "Corporate training",
             "Online learning platforms",
             "Educational institutions"
         ],
-        targetAudience: [
+        targetAudience[
             "Educators",
             "Administrators",
             "IT directors",
             "Training managers",
             "Curriculum developers"
         ],
-        tags: ["Education", "EdTech", "AI", "Personalized Learning", "Analytics"],
+        tags["Education", "EdTech", "AI", "Personalized Learning", "Analytics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,899 - $6,000/month",
@@ -445,14 +445,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-            integrations: ["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
+            technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
+            integrations["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
             apiEndpoints: 75,
             uptime: "99.9%",
-            security: ["Data encryption", "Access controls", "Student privacy"],
-            compliance: ["FERPA", "COPPA", "GDPR", "Data privacy"]
+            security["Data encryption", "Access controls", "Student privacy"],
+            compliance["FERPA", "COPPA", "GDPR", "Data privacy"]
         },
-        competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
+        competitors["Blackboard", "Canvas", "Moodle", "Google Classroom"],
         demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"
     },
     // Real Estate & Property Management
@@ -465,7 +465,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 2499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Property monitoring",
             "Maintenance automation",
             "Tenant portal",
@@ -477,28 +477,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "API integration",
             "24/7 property support"
         ],
-        benefits: [
+        benefits[
             "25% reduction in maintenance costs",
             "Improved tenant satisfaction",
             "Enhanced property value",
             "Better operational efficiency",
             "Real-time monitoring"
         ],
-        useCases: [
+        useCases[
             "Commercial properties",
             "Residential complexes",
             "Office buildings",
             "Retail centers",
             "Industrial facilities"
         ],
-        targetAudience: [
+        targetAudience[
             "Property managers",
             "Facility managers",
             "Real estate investors",
             "Building owners",
             "Operations directors"
         ],
-        tags: ["Real Estate", "Property Management", "IoT", "AI", "Maintenance"],
+        tags["Real Estate", "Property Management", "IoT", "AI", "Maintenance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$2,499 - $8,000/month",
@@ -510,14 +510,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
-            integrations: ["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
+            technology["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
+            integrations["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
             apiEndpoints: 100,
             uptime: "99.9%",
-            security: ["Data encryption", "Access controls", "Tenant privacy"],
-            compliance: ["Data privacy", "Industry standards", "Security protocols"]
+            security["Data encryption", "Access controls", "Tenant privacy"],
+            compliance["Data privacy", "Industry standards", "Security protocols"]
         },
-        competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
+        competitors["Yardi", "RealPage", "AppFolio", "Buildium"],
         demoUrl: "https://ziontechgroup.com/demo/smart-property-management"
     },
     // Legal & Compliance
@@ -530,7 +530,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 3299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Regulatory monitoring",
             "Risk assessment",
             "Compliance automation",
@@ -542,28 +542,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Mobile app support",
             "24/7 compliance support"
         ],
-        benefits: [
+        benefits[
             "90% reduction in compliance time",
             "Improved risk management",
             "Enhanced audit readiness",
             "Cost savings optimization",
             "Better regulatory insights"
         ],
-        useCases: [
+        useCases[
             "Law firms",
             "Corporate legal departments",
             "Compliance teams",
             "Risk management",
             "Regulatory affairs"
         ],
-        targetAudience: [
+        targetAudience[
             "Legal professionals",
             "Compliance officers",
             "Risk managers",
             "General counsel",
             "IT directors"
         ],
-        tags: ["Legal", "Compliance", "AI", "Risk Management", "Regulatory"],
+        tags["Legal", "Compliance", "AI", "Risk Management", "Regulatory"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$3,299 - $12,000/month",
@@ -575,14 +575,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
-            technology: ["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
-            integrations: ["Legal databases", "Document management", "CRM systems", "Analytics tools"],
+            technology["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
+            integrations["Legal databases", "Document management", "CRM systems", "Analytics tools"],
             apiEndpoints: 75,
             uptime: "99.9%",
-            security: ["Data encryption", "Access controls", "Audit logging"],
-            compliance: ["SOC 2", "ISO 27001", "Legal industry standards"]
+            security["Data encryption", "Access controls", "Audit logging"],
+            compliance["SOC 2", "ISO 27001", "Legal industry standards"]
         },
-        competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
+        competitors["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
         demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"
 
 ];

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default function Blog() {
+=======
+import React from 'react.ts'
+import Link from 'next/link.ts'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
+
+export default function Blog(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -10,7 +18,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2025-01-15',
       readTime: '8 min read',
       category: 'AI & Automation',
-      tags: ['AI', 'Automation', 'Trends', '2025'],
+      tags['AI', 'Automation', 'Trends', '2025'],
       featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
@@ -22,7 +30,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2025-01-10',
       readTime: '12 min read',
       category: 'Cybersecurity',
-      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
+      tags['Cloud', 'Security', 'DevOps', 'Best Practices'],
       featured: false,
       image: '/blog/cloud-security.jpg'
     },
@@ -34,7 +42,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2025-01-08',
       readTime: '10 min read',
       category: 'Emerging Tech',
-      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
+      tags['Quantum', 'Computing', 'Enterprise', 'Future'],
       featured: false,
       image: '/blog/quantum-computing.jpg'
     },
@@ -46,7 +54,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2025-01-05',
       readTime: '15 min read',
       category: 'DevOps',
-      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
+      tags['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
       featured: false,
       image: '/blog/devops-automation.jpg'
     },
@@ -58,7 +66,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2025-01-03',
       readTime: '11 min read',
       category: 'AI & Ethics',
-      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
+      tags['AI Ethics', 'Governance', 'Compliance', 'Business'],
       featured: false,
       image: '/blog/ai-ethics.jpg'
     },
@@ -70,7 +78,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
       date: '2024-12-28',
       readTime: '14 min read',
       category: 'Cybersecurity',
-      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
+      tags['Cybersecurity', 'Threats', 'Analysis', '2025'],
       featured: false,
       image: '/blog/cyber-threats.jpg'
 
@@ -176,9 +184,15 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
               Explore our collection of articles covering the latest trends, best practices, and industry insights.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.filter(post => !post.featured).map((post, index) => (
+=======
+          
+          <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post  => !post.featured).map((post, index) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -246,6 +260,7 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
               <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
                 Subscribe
               </button>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -253,3 +268,12 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default funct
     </div>
   )
 }}}
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

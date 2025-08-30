@@ -168,6 +168,5 @@ const AIAutonomousSynthesis = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousSynthesis;

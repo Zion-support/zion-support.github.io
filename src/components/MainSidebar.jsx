@@ -6,7 +6,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
     const sidebarSections = [
         {
             title: 'Main',
-            items: [
+            items[
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
@@ -15,8 +15,8 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
             ]
         },
         {
-            title: 'Company',
-            items: [
+            title: 'Comp',
+            items[
                 { key: 'about', href: '/about', icon: <Building className="w-4 h-4"/>, label: 'About Us' },
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },
                 { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
@@ -25,7 +25,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
         },
         {
             title: 'Resources',
-            items: [
+            items[
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
                 { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },
                 { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },
@@ -34,7 +34,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
         },
         {
             title: 'Support',
-            items: [
+            items[
                 { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4"/>, label: 'Help Center' },
                 { key: 'developers', href: '/developers', icon: <Code className="w-4 h-4"/>, label: 'Developer Portal' },
                 { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },
@@ -44,10 +44,15 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
     ];
     const isActive = (href) => {
         if (href === '/') {
+<<<<<<< HEAD
             return location.pathname === '/';
 
         return location.pathname.startsWith(href);
     };
+=======
+            return location.pathname === '/'}
+        return location.pathname.startsWith(href)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
       <div className="mb-8">
         <Link to="/" className="flex items-center space-x-2">
@@ -67,9 +72,18 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
             </h3>
             <ul className="space-y-1">
               {section.items.map((item) => (<li key={item.key}>
-                  <Link to={item.href} className={cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors", isActive(item.href)
+                  <Link to={item.href} className = {
+  cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+  isActive(item.href)
                     ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")}>
+                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
+
+
+
+
+
+
+}>
                     {item.icon}
                     <span>{item.label}</span>
                   </Link>
@@ -86,5 +100,9 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
     </aside>);
 }}}}
+=======
+    </aside>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

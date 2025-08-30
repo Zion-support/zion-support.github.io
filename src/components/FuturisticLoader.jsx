@@ -1,14 +1,28 @@
 export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
     const sizeClasses = {
-        small: 'w-8 h-8',
+  small: 'w-8 h-8',
         medium: 'w-16 h-16',
-        large: 'w-24 h-24'
-    };
+  large: 'w-24 h-24'
+    
+
+
+
+
+
+
+};
     const textSizes = {
-        small: 'text-sm',
+  small: 'text-sm',
         medium: 'text-lg',
-        large: 'text-xl'
-    };
+  large: 'text-xl'
+    
+
+
+
+
+
+
+};
     const renderLoader = () => {
         switch (variant) {
             case 'matrix':
@@ -22,7 +36,16 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             </div>
             {/* Orbital Rings */}
             <div className="absolute inset-0 rounded-full border border-cyan-500/20 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '3s' }}></div>
+            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style = {
+  { animationDirection: 'reverse',
+  animationDuration: '3s' 
+
+
+
+
+
+
+}}></div>
           </div>);
             case 'neural':
                 return (<div className="relative">
@@ -91,9 +114,31 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             default:
                 return (<div className={`${sizeClasses[size]} relative`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '2s' }}></div>
-          </div>);
+<<<<<<< HEAD
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style = {
+  { animationDirection: 'reverse',
+  animationDuration: '2s' 
 
+}}></div>
+          </div>)}
+=======
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style = {
+  { animationDirection: 'reverse',
+  animationDuration: '2s' 
+
+
+
+
+
+
+}}></div>
+          </div>);
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}
@@ -105,7 +150,6 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-400"></div>
           </div>
         </div>)}
-    </div>);
-};
+    </div>)};
 export default FuturisticLoader;
 }

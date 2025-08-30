@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import CommunityPage from "../pages/CommunityPage";
 import ForumCategoryPage from "../pages/ForumCategoryPage";
@@ -9,8 +9,19 @@ import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 export default function CommunityRoutes() {
   return (
-    <>
-      <Route path="" element={<CommunityPage />} />
-    </>
+<<<<<<< HEAD
+    <Routes>
+      <Route path = "" element={<CommunityPage />} />
+      <Route path="category/:categorySlug" element={<ForumCategoryPage />} />
+      <Route path="post/:postId" element={<ForumPostPage />} />
+      <Route path="create" element={<CreatePostPage />} />
+      <Route path="edit/:postId" element={<EditPostPage />} />
+      <Route path="profile/:username" element={<CommunityProfilePage />} />
+    </Routes>
+=======;
+    <>;
+      <Route path = "" element={<CommunityPage />} />;
+    </>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

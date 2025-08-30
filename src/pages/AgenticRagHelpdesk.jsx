@@ -6,52 +6,62 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
             icon: Brain,
             title: 'Intelligent Knowledge Retrieval',
             description: 'AI-powered retrieval of relevant information from your knowledge base',
-            benefits: ['Context-aware responses', 'Multi-source information synthesis', 'Real-time learning']
+            benefits['Context-aware responses', 'Multi-source information synthesis', 'Real-time learning']
         },
         {
             icon: MessageCircle,
             title: 'Natural Language Processing',
             description: 'Understand and respond to customer queries in natural language',
-            benefits: ['Human-like conversations', 'Multi-language support', 'Sentiment analysis']
+            benefits['Human-like conversations', 'Multi-language support', 'Sentiment analysis']
         },
         {
             icon: Zap,
             title: 'Instant Response Generation',
             description: 'Generate accurate and helpful responses in real-time',
-            benefits: ['24/7 availability', 'Consistent quality', 'Scalable support']
+            benefits['24/7 availability', 'Consistent quality', 'Scalable support']
         },
         {
             icon: Shield,
             title: 'Secure & Compliant',
             description: 'Enterprise-grade security with compliance features',
+<<<<<<< HEAD
             benefits: ['Data encryption', 'Access controls', 'Audit trails']
 
+=======
+            benefits['Data encryption', 'Access controls', 'Audit trails']
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
             title: 'Customer Support',
             description: 'Provide instant, accurate responses to customer inquiries',
             icon: Users,
-            benefits: ['Reduced response time', 'Improved customer satisfaction', 'Lower support costs']
+            benefits['Reduced response time', 'Improved customer satisfaction', 'Lower support costs']
         },
         {
             title: 'Internal Knowledge Management',
             description: 'Help employees find information quickly and efficiently',
             icon: Brain,
-            benefits: ['Faster problem resolution', 'Knowledge retention', 'Training support']
+            benefits['Faster problem resolution', 'Knowledge retention', 'Training support']
         },
         {
             title: 'Sales Support',
             description: 'Assist sales teams with product information and customer queries',
             icon: BarChart3,
-            benefits: ['Increased conversion rates', 'Better customer engagement', 'Sales enablement']
+            benefits['Increased conversion rates', 'Better customer engagement', 'Sales enablement']
         },
         {
             title: 'Technical Documentation',
             description: 'Provide technical support and documentation assistance',
             icon: Globe,
+<<<<<<< HEAD
             benefits: ['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
 
+=======
+            benefits['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
@@ -262,5 +272,9 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 }}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

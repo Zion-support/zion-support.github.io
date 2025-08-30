@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -25,7 +25,7 @@ export default function CybersecuritySuite() {
             price: "$199",
             period: "/month",
             description: "Perfect for small businesses and startups",
-            features: [
+            features[
                 "Basic threat monitoring",
                 "Vulnerability scanning (monthly)",
                 "Security awareness training",
@@ -40,7 +40,7 @@ export default function CybersecuritySuite() {
             price: "$499",
             period: "/month",
             description: "Ideal for growing businesses",
-            features: [
+            features[
                 "Advanced threat monitoring",
                 "Real-time vulnerability scanning",
                 "Penetration testing (quarterly)",
@@ -57,7 +57,7 @@ export default function CybersecuritySuite() {
             price: "$1,299",
             period: "/month",
             description: "For large organizations with advanced security needs",
-            features: [
+            features[
                 "Full-spectrum threat monitoring",
                 "Continuous vulnerability assessment",
                 "Advanced penetration testing",
@@ -277,5 +277,9 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card></Card></Card>}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

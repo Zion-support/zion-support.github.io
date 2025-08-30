@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface AdvancedAIAutomationService {
   id: string;
   name: string;
@@ -29,20 +29,34 @@ export interface AdvancedAIAutomationService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   {
@@ -52,7 +66,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$899',
     period: '/month',
     description: 'Fully autonomous AI customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention. Uses advanced NLP and machine learning for natural conversations.',
-    features: [
+    features[
       'Natural language processing',
       'Multi-language support',
       'Emotion detection',
@@ -70,16 +84,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-customer-service',
     marketPosition: 'Competes with Intercom ($74/month), Zendesk ($49/month). Our advantage: 90% automation rate with 95% customer satisfaction.',
-    targetAudience: ['E-commerce businesses', 'SaaS companies', 'Customer support teams', 'Retail chains', 'Service providers'],
+    targetAudience['E-commerce businesses', 'SaaS companies', 'Customer support teams', 'Retail chains', 'Service providers'],
     trialDays: 21,
     setupTime: '1 week',
     category: 'Customer Experience',
     realService: true,
-    technology: ['GPT-4, Claude, BERT, TensorFlow, PyTorch'],
-    integrations: ['Shopify, Salesforce, HubSpot, Zendesk, Intercom'],
-    useCases: ['Customer support, Order inquiries, Technical support, Product information, Complaint resolution'],
+    technology['GPT-4, Claude, BERT, TensorFlow, PyTorch'],
+    integrations['Shopify, Salesforce, HubSpot, Zendesk, Intercom'],
+    useCases['Customer support, Order inquiries, Technical support, Product information, Complaint resolution'],
     roi: 'Reduce support costs by 75% and improve response time by 90%',
-    competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],
+    competitors['Intercom, Zendesk, Freshdesk, Help Scout'],
     marketSize: '$18B customer experience market',
     growthRate: '120% YoY',
     contactInfo: contact,
@@ -97,7 +111,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$1,599',
     period: '/month',
     description: 'Advanced predictive maintenance platform that uses IoT sensors, machine learning, and AI to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.',
-    features: [
+    features[
       'IoT sensor integration',
       'Machine learning algorithms',
       'Real-time monitoring',
@@ -115,16 +129,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
     marketPosition: 'Competes with Uptake ($500/month), C3.ai ($1,000/month). Our advantage: 85% accuracy in failure prediction with 40% cost reduction.',
-    targetAudience: ['Manufacturing companies', 'Industrial facilities', 'Energy companies', 'Transportation', 'Healthcare facilities'],
+    targetAudience['Manufacturing companies', 'Industrial facilities', 'Energy companies', 'Transportation', 'Healthcare facilities'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Industrial IoT',
     realService: true,
-    technology: ['IoT, Machine Learning, TensorFlow, Python, Cloud Computing'],
-    integrations: ['SAP, Oracle, Siemens, GE Predix, Azure IoT'],
-    useCases: ['Equipment monitoring, Predictive maintenance, Cost optimization, Performance tracking, Safety compliance'],
+    technology['IoT, Machine Learning, TensorFlow, Python, Cloud Computing'],
+    integrations['SAP, Oracle, Siemens, GE Predix, Azure IoT'],
+    useCases['Equipment monitoring, Predictive maintenance, Cost optimization, Performance tracking, Safety compliance'],
     roi: 'Reduce maintenance costs by 40% and increase equipment uptime by 25%',
-    competitors: ['Uptake, C3.ai, GE Digital, Siemens Mindsphere'],
+    competitors['Uptake, C3.ai, GE Digital, Siemens Mindsphere'],
     marketSize: '$6.5B predictive maintenance market',
     growthRate: '95% annual growth',
     contactInfo: contact,
@@ -142,7 +156,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum performance.',
-    features: [
+    features[
       'Campaign optimization',
       'Budget allocation',
       'A/B testing automation',
@@ -160,16 +174,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-marketing-optimization',
     marketPosition: 'Competes with Marin Software ($500/month), Kenshoo ($1,000/month). Our advantage: 35% better ROI through autonomous optimization.',
-    targetAudience: ['Marketing agencies', 'E-commerce businesses', 'B2B companies', 'Digital marketers', 'Brand managers'],
+    targetAudience['Marketing agencies', 'E-commerce businesses', 'B2B companies', 'Digital marketers', 'Brand managers'],
     trialDays: 14,
     setupTime: '2 weeks',
     category: 'Digital Marketing',
     realService: true,
-    technology: ['Machine Learning, Python, TensorFlow, Google Ads API, Facebook Marketing API'],
-    integrations: ['Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, TikTok Ads'],
-    useCases: ['PPC optimization, Social media advertising, Display advertising, Retargeting campaigns, Brand awareness'],
+    technology['Machine Learning, Python, TensorFlow, Google Ads API, Facebook Marketing API'],
+    integrations['Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, TikTok Ads'],
+    useCases['PPC optimization, Social media advertising, Display advertising, Retargeting campaigns, Brand awareness'],
     roi: 'Increase marketing ROI by 35% and reduce manual optimization time by 80%',
-    competitors: ['Marin Software, Kenshoo, Acquisio, AdRoll'],
+    competitors['Marin Software, Kenshoo, Acquisio, AdRoll'],
     marketSize: '$12B marketing automation market',
     growthRate: '110% annual growth',
     contactInfo: contact,
@@ -187,7 +201,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$799',
     period: '/month',
     description: 'Intelligent financial advisory platform that provides personalized investment advice, portfolio management, and financial planning using advanced AI algorithms and market analysis.',
-    features: [
+    features[
       'Portfolio analysis',
       'Investment recommendations',
       'Risk assessment',
@@ -205,16 +219,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-advisory',
     marketPosition: 'Competes with Betterment ($0.25% assets), Wealthfront ($0.25% assets). Our advantage: Fixed monthly pricing with unlimited advice.',
-    targetAudience: ['Individual investors', 'Financial advisors', 'Wealth management firms', 'Banks', 'Credit unions'],
+    targetAudience['Individual investors', 'Financial advisors', 'Wealth management firms', 'Banks', 'Credit unions'],
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'FinTech',
     realService: true,
-    technology: ['Machine Learning, Python, TensorFlow, Financial APIs, Blockchain'],
-    integrations: ['Plaid, Yodlee, TD Ameritrade, E*TRADE, Robinhood'],
-    useCases: ['Investment planning, Portfolio management, Financial advice, Risk management, Tax optimization'],
+    technology['Machine Learning, Python, TensorFlow, Financial APIs, Blockchain'],
+    integrations['Plaid, Yodlee, TD Ameritrade, E*TRADE, Robinhood'],
+    useCases['Investment planning, Portfolio management, Financial advice, Risk management, Tax optimization'],
     roi: 'Improve investment returns by 15-25% through AI-driven optimization',
-    competitors: ['Betterment, Wealthfront, Personal Capital, Acorns'],
+    competitors['Betterment, Wealthfront, Personal Capital, Acorns'],
     marketSize: '$8.2B robo-advisory market',
     growthRate: '85% annual growth',
     contactInfo: contact,
@@ -232,7 +246,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$2,199',
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to forecast demand, optimize inventory levels, and streamline logistics operations for maximum efficiency and cost savings.',
-    features: [
+    features[
       'Demand forecasting',
       'Inventory optimization',
       'Supplier management',
@@ -250,16 +264,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
     marketPosition: 'Competes with SAP Ariba ($50/user/month), Oracle SCM ($100/user/month). Our advantage: 30% cost reduction through AI optimization.',
-    targetAudience: ['Manufacturing companies', 'Retail chains', 'Logistics providers', 'E-commerce businesses', 'Distribution centers'],
+    targetAudience['Manufacturing companies', 'Retail chains', 'Logistics providers', 'E-commerce businesses', 'Distribution centers'],
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Supply Chain Management',
     realService: true,
-    technology: ['Machine Learning, Python, TensorFlow, IoT, Cloud Computing'],
-    integrations: ['SAP, Oracle, NetSuite, Shopify, Amazon FBA'],
-    useCases: ['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],
+    technology['Machine Learning, Python, TensorFlow, IoT, Cloud Computing'],
+    integrations['SAP, Oracle, NetSuite, Shopify, Amazon FBA'],
+    useCases['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],
     roi: 'Reduce supply chain costs by 30% and improve delivery times by 40%',
-    competitors: ['SAP Ariba, Oracle SCM, JDA Software, Manhattan Associates'],
+    competitors['SAP Ariba, Oracle SCM, JDA Software, Manhattan Associates'],
     marketSize: '$15B supply chain management market',
     growthRate: '75% annual growth',
     contactInfo: contact,

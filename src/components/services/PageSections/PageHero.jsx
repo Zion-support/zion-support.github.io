@@ -9,6 +9,7 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
   backgroundImage = null,
   stats = []
 }) => {
+<<<<<<< HEAD
   const defaultFeatures = [
     {
       icon: Star,
@@ -33,7 +34,11 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
   ];
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const displayStats = stats.length > 0 ? stats : [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     { value: '500+', label: 'Happy Clients' },
     { value: '99.9%', label: 'Uptime' },
     { value: '24/7', label: 'Support' },
@@ -143,5 +148,9 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
         </svg>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

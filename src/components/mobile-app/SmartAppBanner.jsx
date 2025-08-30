@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
+<<<<<<< HEAD
 import { X, ArrowRight import { Link } from 'react-router-dom';
+=======
+import { X, ArrowRight } from "lucide-react";
+import Link from "next/link";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { useIsMobile } from "@/hooks/use-mobile";
 export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -9,25 +14,32 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
         // Only show banner on mobile devices and if it hasn't been dismissed
         if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
             const timer = setTimeout(() => {
+<<<<<<< HEAD
                 setIsVisible(true);
             }, delay);
             return () => clearTimeout(timer);
 
+=======
+                setIsVisible(true)}, delay);
+            return () => clearTimeout(timer)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isMobile, delay]);
     const dismissBanner = () => {
         setIsVisible(false);
-        safeStorage.setItem("smartBannerDismissed", "true");
-    };
+        safeStorage.setItem("smartBannerDismissed", "true")};
     const resetBanner = () => {
         safeStorage.removeItem("smartBannerDismissed");
-        setIsVisible(true);
-    };
+        setIsVisible(true)};
     // Only render on mobile devices
     if (!isMobile || !isVisible) {
         return process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
+<<<<<<< HEAD
       </div>) : null;
 
+=======
+      </div>) : null}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Detect iOS or Android
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
@@ -53,6 +65,10 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 };
 }}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

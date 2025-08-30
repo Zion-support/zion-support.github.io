@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase function HiringTrackerContent() {
     const { jobId } = useParams();
@@ -39,6 +39,7 @@ import { Briefcase function HiringTrackerContent() {
           </TabsContent>
         </Tabs>
       </main>
+<<<<<<< HEAD
 
     </>);
 
@@ -47,3 +48,11 @@ export default function HiringTracker() {
       <HiringTrackerContent />
     </ProtectedRoute>);
 }}}
+=======
+      
+    </>)}
+export default function HiringTracker() {
+    return (<ProtectedRoute>
+      <HiringTrackerContent />
+    </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

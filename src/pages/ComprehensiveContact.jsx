@@ -9,7 +9,7 @@ export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -18,17 +18,20 @@ export default function ComprehensiveContact() {
         e.preventDefault();
         // Handle form submission
 <<<<<<< HEAD
+<<<<<<< HEAD
         // // // console.log('Form submitted:', formData);
 =======
         // // // // // // // console.log('Form submitted:', formData);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
+=======
+        console.log('Form submitted:', formData)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        });
-    };
+        })};
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -73,8 +76,8 @@ export default function ComprehensiveContact() {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="company" className="text-white">Company</Label>
-                      <Input id="company" name="company" value={formData.company} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter company name"/>
+                      <Label htmlFor="comp" className="text-white">Company</Label>
+                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter comp name"/>
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-white">Phone Number</Label>
@@ -354,5 +357,9 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </footer>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

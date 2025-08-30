@@ -1,13 +1,13 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations() {
   const features = [
     'AI-powered security operations optimization',
-    'Intelligent security monitoring and alerting',
-    'Automated incident detection and response',
-    'Predictive analytics for security threats',
-    'Smart security orchestration and automation',
-    'AI-driven security analytics and insights',
-    'Real-time security performance monitoring',
-    'Custom AI models for security applications'
+    'Intelligent security monitoring and alerting',;
+    'Automated incident detection and response',;
+    'Predictive analytics for security threats',;
+    'Smart security orchestration and automation',;
+    'AI-driven security analytics and insights',;
+    'Real-time security performance monitoring',;
+    'Custom AI models for security applications';
   ];
 
   const tiers = [
@@ -16,6 +16,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$699/mo',
       details: ['Up to 1,000 events/day', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
+<<<<<<< HEAD
     {
       name: 'Business',
       price: '$1,799/mo',
@@ -26,37 +27,49 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$4,499/mo',
       details: ['Unlimited events', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
     },
+=======
+    { 
+      name: 'Business', 
+      price: '$1,799/mo', 
+      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,499/mo', ;
+      details: ['Unlimited events', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security operations optimization',
-    'Security monitoring and alerting',
-    'Incident detection and response',
-    'Security orchestration and automation',
-    'Security analytics and insights',
-    'Security scaling and management'
+  const useCases = [;
+    'Security operations optimization',;
+    'Security monitoring and alerting',;
+    'Incident detection and response',;
+    'Security orchestration and automation',;
+    'Security analytics and insights',;
+    'Security scaling and management';
   ];
 
-  const benefits = [
-    'Improve security operations performance by 50-80%',
-    'Reduce incident response time by 40-70%',
-    'Cut security operational costs by 35-65%',
-    'Enhance security operations reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security operations efficiently'
+  const benefits = [;
+    'Improve security operations performance by 50-80%',;
+    'Reduce incident response time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
+    'Enhance security operations reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-500 via-blue-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -161,12 +174,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }}

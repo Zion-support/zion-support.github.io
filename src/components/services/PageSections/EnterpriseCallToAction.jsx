@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle export const EnterpriseCallToAction = () => {
   const enterpriseFeatures = [
     {
@@ -28,6 +29,11 @@ import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calend
 
   ];
 
+=======
+import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
+
+export const EnterpriseCallToAction = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const enterpriseBenefits = [
     'Customized solutions tailored to your business needs',
     'Dedicated account manager and support team',
@@ -242,5 +248,9 @@ import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calend
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

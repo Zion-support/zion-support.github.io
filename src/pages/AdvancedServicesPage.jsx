@@ -4,19 +4,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink import { SEO } from '@/components/SEO';
+=======
+import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
     // Filter services based on search and category
     const filteredServices = ADVANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
+        return matchesSearch && matchesCategory});
     // Sort services
     const sortedServices = [...filteredServices].sort((a, b) => {
         switch (sortBy) {
@@ -29,8 +30,12 @@ export default function AdvancedServicesPage() {
             case 'ai-score':
                 return (b.aiScore || 0) - (a.aiScore || 0);
             default:
+<<<<<<< HEAD
                 return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
 
+=======
+                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
@@ -258,8 +263,12 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Service Card Component
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -330,5 +339,9 @@ function ServiceCard({ service }) {
           </Button>
         </div>
       </CardContent>
+<<<<<<< HEAD
     </Card>);
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}
+=======
+    </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

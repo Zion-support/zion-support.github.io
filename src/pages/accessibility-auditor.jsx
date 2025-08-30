@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AccessibilityAuditor = () => {
     const features = [
         {
@@ -33,16 +33,21 @@ const AccessibilityAuditor = () => {
     const testingAreas = [
         {
             category: "Visual Accessibility",
-            items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+            items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
         },
         {
             category: "Content Accessibility",
-            items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+            items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
         },
         {
             category: "Technical Accessibility",
+<<<<<<< HEAD
             items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
 
+=======
+            items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -209,7 +214,6 @@ const AccessibilityAuditor = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AccessibilityAuditor;
 }}

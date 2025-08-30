@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+<<<<<<< HEAD
 import { ArrowRight, Star // Temporary placeholder components until the real ones are available
 const NeonText = ({ children, color, glowIntensity }) => (
   <span style={{ color, textShadow: `0 0 10px ${color}` }}>{children}</span>
@@ -50,6 +51,47 @@ export function ServicesShowcase() {
             icon: "🔗",
             link: "/services/blockchain"
 
+=======
+import { ArrowRight, Star } from "lucide-react";
+import { FuturisticCard } from '@/components/ui/futuristic-card';
+import { NeonText } from '@/components/ui/neon-text';
+export function ServicesShowcase() {
+    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+    
+    const emergingServices = [
+        {
+            title: "AI Workflow Orchestrator",
+            description: "Intelligent process automation with AI-driven optimization",
+            category: "AI & Automation",
+            price: "$99/month",
+            icon: "🤖",
+            link: "/services/ai-workflow-orchestrator"
+        },
+        {
+            title: "AI Data Governance Platform",
+            description: "Enterprise data protection and compliance automation",
+            category: "Data & Security",
+            price: "$149/month",
+            icon: "🛡️",
+            link: "/services/ai-data-governance-platform"
+        },
+        {
+            title: "AI Customer Experience Analytics",
+            description: "Intelligent analytics and insights for data-driven decisions",
+            category: "Analytics",
+            price: "$99/month",
+            icon: "📊",
+            link: "/services/ai-customer-experience-analytics"
+        },
+        {
+            title: "Cloud DevOps Platform",
+            description: "Streamlined cloud infrastructure and deployment automation",
+            category: "Cloud & DevOps",
+            price: "$299/month",
+            icon: "☁️",
+            link: "/services/cloud-devops"
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<section className="py-20 relative">
       {/* Background accent */}
@@ -127,7 +169,12 @@ export function ServicesShowcase() {
                   </Link>
                 </div>
               </CardContent>
+<<<<<<< HEAD
             </FuturisticCard>))}
+=======
+            </FuturisticCard>
+          ))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
 
         {/* Emerging Technologies */}
@@ -201,5 +248,9 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 </div></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

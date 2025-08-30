@@ -13,7 +13,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             currency: "$",
             billingCycle: "monthly"
         },
-        features: [
+        features[
             "AI-powered content generation",
             "Multiple content formats",
             "SEO optimization",
@@ -23,25 +23,25 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Team collaboration",
             "API access"
         ],
-        benefits: [
+        benefits[
             "Save 80% of content creation time",
             "Improve SEO rankings",
             "Maintain brand consistency",
             "Scale content production"
         ],
-        targetAudience: [
+        targetAudience[
             "Marketing agencies",
             "Content creators",
             "Small businesses",
             "E-commerce stores"
         ],
-        useCases: [
+        useCases[
             "Blog post creation",
             "Social media content",
             "Email marketing",
             "Product descriptions"
         ],
-        integration: [
+        integration[
             "WordPress",
             "Shopify",
             "Mailchimp",
@@ -73,7 +73,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             currency: "$",
             billingCycle: "monthly"
         },
-        features: [
+        features[
             "Compliance monitoring",
             "Risk assessment",
             "Policy management",
@@ -83,25 +83,25 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Reporting dashboard",
             "Training modules"
         ],
-        benefits: [
+        benefits[
             "Ensure regulatory compliance",
             "Reduce security risks",
             "Streamline audit processes",
             "Protect customer data"
         ],
-        targetAudience: [
+        targetAudience[
             "Financial institutions",
             "Healthcare providers",
             "E-commerce businesses",
             "Government agencies"
         ],
-        useCases: [
+        useCases[
             "GDPR compliance",
             "HIPAA compliance",
             "SOC 2 certification",
             "PCI DSS compliance"
         ],
-        integration: [
+        integration[
             "Active Directory",
             "SIEM systems",
             "Cloud platforms",
@@ -133,7 +133,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             currency: "$",
             billingCycle: "monthly"
         },
-        features: [
+        features[
             "Migration planning",
             "Cost optimization",
             "Performance monitoring",
@@ -143,25 +143,25 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Compliance checking",
             "Support dashboard"
         ],
-        benefits: [
+        benefits[
             "Reduce migration time by 60%",
             "Lower cloud costs",
             "Minimize downtime",
             "Ensure data security"
         ],
-        targetAudience: [
+        targetAudience[
             "Enterprise companies",
             "IT consulting firms",
             "Software companies",
             "Government organizations"
         ],
-        useCases: [
+        useCases[
             "AWS migration",
             "Azure migration",
             "Google Cloud migration",
             "Multi-cloud setup"
         ],
-        integration: [
+        integration[
             "AWS CLI",
             "Azure CLI",
             "Terraform",

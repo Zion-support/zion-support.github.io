@@ -11,9 +11,13 @@ export interface ComprehensiveItSolution {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
     id: "full-stack-development",
@@ -21,7 +25,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     tagline: "End-to-end web application development",
     price: "$80/hour",
     description: "Complete full-stack development services from frontend to backend and database design.",
-    features: [
+    features[
       "Frontend development",
       "Backend APIs",
       "Database design",

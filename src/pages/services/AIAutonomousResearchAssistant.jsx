@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAutonomousResearchAssistant = () => {
+=======
+import { MagnifyingGlassIcon, LightBulbIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+const AIAutonomousResearchAssistant = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -8,7 +13,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <Search className="h-12 w-12 text-blue-400"/>
+                <MagnifyingGlassIcon className="h-12 w-12 text-blue-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -65,25 +70,25 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <GraduationCap className="h-5 w-5 text-white"/>
+                      <AcademicCapIcon className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Academic Research</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <BarChart3 className="h-5 w-5 text-white"/>
+                      <ChartBarIcon className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Market Analysis</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <Lightbulb className="h-5 w-5 text-white"/>
+                      <LightBulbIcon className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Innovation Discovery</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <Globe className="h-5 w-5 text-white"/>
+                      <GlobeAltIcon className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Global Trends</span>
                   </div>
@@ -103,7 +108,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Search className="h-8 w-8 text-blue-400"/>
+                <MagnifyingGlassIcon className="h-8 w-8 text-blue-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Intelligent Search & Discovery</h3>
               <p className="text-gray-300">
@@ -114,7 +119,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Lightbulb className="h-8 w-8 text-green-400"/>
+                <LightBulbIcon className="h-8 w-8 text-green-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Pattern Recognition</h3>
               <p className="text-gray-300">
@@ -125,7 +130,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="h-8 w-8 text-purple-400"/>
+                <ChartBarIcon className="h-8 w-8 text-purple-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Analysis & Visualization</h3>
               <p className="text-gray-300">
@@ -135,7 +140,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <GraduationCap className="h-8 w-8 text-orange-400"/>
+                <AcademicCapIcon className="h-8 w-8 text-orange-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Multi-Domain Expertise</h3>
               <p className="text-gray-300">
@@ -146,7 +151,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Rocket className="h-8 w-8 text-cyan-400"/>
+                <RocketLaunchIcon className="h-8 w-8 text-cyan-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">
@@ -157,7 +162,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="h-8 w-8 text-pink-400"/>
+                <GlobeAltIcon className="h-8 w-8 text-pink-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Knowledge Access</h3>
               <p className="text-gray-300">
@@ -405,7 +410,6 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAuto
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousResearchAssistant;
 }

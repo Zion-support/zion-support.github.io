@@ -3,22 +3,22 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
     'Real-time sustainability performance tracking',
-    'Carbon footprint calculation and optimization',
-    'Social responsibility metrics and reporting',
-    'Governance risk assessment and monitoring',
-    'Regulatory compliance automation',
-    'Stakeholder engagement tracking',
-    'ESG scoring and benchmarking',
-    'Custom sustainability dashboard creation'
+    'Carbon footprint calculation and optimization',;
+    'Social responsibility metrics and reporting',;
+    'Governance risk assessment and monitoring',;
+    'Regulatory compliance automation',;
+    'Stakeholder engagement tracking',;
+    'ESG scoring and benchmarking',;
+    'Custom sustainability dashboard creation';
   ];
 
-  const benefits = [
-    'Reduce ESG reporting time by 85%',
-    'Improve compliance accuracy by 90%',
-    'Cut carbon emissions tracking costs by 70%',
-    'Real-time sustainability performance insights',
-    'Automated regulatory compliance updates',
-    'Enhanced stakeholder transparency and trust'
+  const benefits = [;
+    'Reduce ESG reporting time by 85%',;
+    'Improve compliance accuracy by 90%',;
+    'Cut carbon emissions tracking costs by 70%',;
+    'Real-time sustainability performance insights',;
+    'Automated regulatory compliance updates',;
+    'Enhanced stakeholder transparency and trust';
   ];
 
   const pricing = [
@@ -33,6 +33,7 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
       price: '$899/mo',
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
+<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
@@ -40,30 +41,39 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
       features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
 
+=======
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,999/mo', ;
+      features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Corporate sustainability reporting',
-    'ESG investment portfolio analysis',
-    'Supply chain sustainability tracking',
-    'Regulatory compliance automation',
-    'Stakeholder ESG communication',
-    'Sustainability performance benchmarking'
+  const useCases = [;
+    'Corporate sustainability reporting',;
+    'ESG investment portfolio analysis',;
+    'Supply chain sustainability tracking',;
+    'Regulatory compliance automation',;
+    'Stakeholder ESG communication',;
+    'Sustainability performance benchmarking';
   ];
 
   const esgCategories = [
     'Environmental Impact Assessment',
-    'Carbon Footprint Management',
-    'Renewable Energy Tracking',
-    'Waste Management Analytics',
-    'Social Responsibility Metrics',
-    'Diversity & Inclusion Tracking',
-    'Governance Risk Assessment',
-    'Compliance Monitoring'
+    'Carbon Footprint Management',;
+    'Renewable Energy Tracking',;
+    'Waste Management Analytics',;
+    'Social Responsibility Metrics',;
+    'Diversity & Inclusion Tracking',;
+    'Governance Risk Assessment',;
+    'Compliance Monitoring';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -283,6 +293,7 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
+<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
@@ -294,5 +305,18 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
         </div>
       </section>
     </div>
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

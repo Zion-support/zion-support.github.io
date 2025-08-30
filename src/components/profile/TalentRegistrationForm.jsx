@@ -54,19 +54,26 @@ export function TalentRegistrationForm() {
         const skillInput = form.getValues("skills");
         if (skillInput && !skillTags.includes(skillInput)) {
             setSkillTags([...skillTags, skillInput]);
+<<<<<<< HEAD
             form.setValue("skills", "");
 
+=======
+            form.setValue("skills", "")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle removing skill tags
     const handleRemoveSkill = (skill) => {
-        setSkillTags(skillTags.filter((s) => s !== skill));
-    };
+        setSkillTags(skillTags.filter((s) => s !== skill))};
     // Handle key press in skills input (add on enter)
     const handleSkillKeyPress = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
+<<<<<<< HEAD
             handleAddSkill();
 
+=======
+            handleAddSkill()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle avatar upload
     const handleAvatarUpload = (e) => {
@@ -74,10 +81,15 @@ export function TalentRegistrationForm() {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
+<<<<<<< HEAD
                 setUploadedAvatar(reader.result);
             };
             reader.readAsDataURL(file);
 
+=======
+                setUploadedAvatar(reader.result)};
+            reader.readAsDataURL(file)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
@@ -87,8 +99,12 @@ export function TalentRegistrationForm() {
                 title: "More information needed",
                 description: "Please provide at least a detailed bio before generating enhanced content.",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             setIsGenerating(true);
             // Call the Supabase Edge Function
@@ -104,14 +120,22 @@ export function TalentRegistrationForm() {
 
             });
             if (error) {
+<<<<<<< HEAD
                 throw new Error(error.message);
 
+=======
+                throw new Error(error.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional skills for your profile.",
+<<<<<<< HEAD
             });
 
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
 <<<<<<< HEAD
             // // // console.error("Error generating enhanced profile:", error);
@@ -122,11 +146,17 @@ export function TalentRegistrationForm() {
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
+<<<<<<< HEAD
             });
 
         finally {
             setIsGenerating(false);
 
+=======
+            })}
+        finally {
+            setIsGenerating(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
@@ -140,6 +170,7 @@ export function TalentRegistrationForm() {
                 if (Array.isArray(categorySkills)) {
                     categorySkills.forEach(skill => {
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+<<<<<<< HEAD
                             newSkills.push(skill);
 
                     });
@@ -149,6 +180,14 @@ export function TalentRegistrationForm() {
                 setSkillTags([...skillTags, ...newSkills]);
 
 
+=======
+                            newSkills.push(skill)}
+                    })}
+            });
+            if (newSkills.length > 0) {
+                setSkillTags([...skillTags, ...newSkills])}
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get category color
     const getCategoryColor = (category) => {
@@ -158,8 +197,12 @@ export function TalentRegistrationForm() {
             case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
             case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
             case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
+<<<<<<< HEAD
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
 
+=======
+            default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Send notification email
     const sendEnhancementNotification = async (userId, email) => {
@@ -179,6 +222,7 @@ export function TalentRegistrationForm() {
             </div>
           </div>
           `
+<<<<<<< HEAD
 
             });
 
@@ -190,6 +234,12 @@ export function TalentRegistrationForm() {
             // // // // // // // console.error("Failed to send notification email:", error);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+                }
+            })}
+        catch (error) {
+            console.error("Failed to send notification email:", error)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -199,16 +249,23 @@ export function TalentRegistrationForm() {
                 description: "Please add at least one skill to your profile.",
                 variant: "destructive",
             });
+<<<<<<< HEAD
             return;
 
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
             if (!user?.id) {
+<<<<<<< HEAD
                 throw new Error("User not authenticated");
 
+=======
+                throw new Error("User not authenticated")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Enhance profile if not already done
-            let finalSummary = "";
             let finalSkills = skillTags;
             if (values.enhancedProfile && !generatedContent) {
                 try {
@@ -233,6 +290,7 @@ export function TalentRegistrationForm() {
                             if (Array.isArray(categorySkills)) {
                                 categorySkills.forEach(skill => {
                                     if (typeof skill === 'string' && skill) {
+<<<<<<< HEAD
                                         aiSkills.push(skill);
 
                                 });
@@ -242,6 +300,14 @@ export function TalentRegistrationForm() {
                         finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
 
+=======
+                                        aiSkills.push(skill)}
+                                })}
+                        });
+                        // Create a unique set of skills
+                        finalSkills = [...new Set([...skillTags, ...aiSkills])]}
+                }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 catch (error) {
 <<<<<<< HEAD
                     // // // console.error("Error enhancing profile:", error);
@@ -249,12 +315,19 @@ export function TalentRegistrationForm() {
                     // // // // // // // console.error("Error enhancing profile:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Continue with submission even if enhancement fails
+<<<<<<< HEAD
                     finalSummary = "";
 
 
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
 
+=======
+                    finalSummary = ""}
+            }
+            else if (generatedContent) {
+                finalSummary = generatedContent.summary}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Get user email for notification
             const { data: userData } = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
@@ -267,10 +340,15 @@ export function TalentRegistrationForm() {
                 });
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {
+<<<<<<< HEAD
                     sendEnhancementNotification(user.id, userEmail);
 
                 setIsSubmitting(false);
             }, 1500);
+=======
+                    sendEnhancementNotification(user.id, userEmail)}
+                setIsSubmitting(false)}, 1500);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Here would be the actual code to save the profile to Supabase
             /*
             const { error } = await supabase
@@ -302,8 +380,12 @@ export function TalentRegistrationForm() {
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
             });
+<<<<<<< HEAD
             setIsSubmitting(false);
 
+=======
+            setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -559,5 +641,9 @@ export function TalentRegistrationForm() {
           </form>
         </Form>
       </Card>
+<<<<<<< HEAD
     </div>);
 </Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

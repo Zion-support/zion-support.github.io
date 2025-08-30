@@ -22,6 +22,7 @@ const EquipmentPage = () => {
   useEffect(() => {
     // Simulate loading
     setTimeout(() => {
+<<<<<<< HEAD
       setLoading(false);
     }, 1000);
   }, []);
@@ -83,6 +84,9 @@ const EquipmentPage = () => {
       </Button>
     </div>
   );
+=======
+      setLoading(false)}, 1000)}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const EquipmentCard = ({ equipment }) => (
     <Card className="h-full hover:shadow-lg transition-shadow">
@@ -193,8 +197,12 @@ const EquipmentPage = () => {
       </div>
       <Footer />
     </div>
+<<<<<<< HEAD
   );
 </Card></Card></Card></Card>};
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default EquipmentPage;
 }}

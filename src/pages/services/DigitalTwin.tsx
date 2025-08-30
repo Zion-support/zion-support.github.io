@@ -1,8 +1,31 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
+=======
+import {
+  Cpu,
+  Eye,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
+  Settings,
+  Database,
+  Network,
+  Cloud,
+  Brain,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Pause,
+  RotateCcw
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DigitalTwin() {
   const features = [
@@ -29,6 +52,7 @@ export default function DigitalTwin() {
     {
       icon: Globe,
       title: "Data Synchronization",
+<<<<<<< HEAD
       description: "Real-time data sync between physical and digital representations"
     },
     {
@@ -36,6 +60,15 @@ export default function DigitalTwin() {
       title: "Security & Compliance",
       description: "Enterprise-grade security with industry compliance standards"
 
+=======
+      description: "Real-time data sync between physical and digital representations";
+    },;
+    {;
+      icon: Cpu,;
+      title: "Security & Compliance",;
+      description: "Enterprise-grade security with industry compliance standards";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -50,6 +83,7 @@ export default function DigitalTwin() {
       title: "Smart Cities",
       description: "Monitor infrastructure, traffic patterns, and environmental conditions",
       benefits: ["Traffic optimization", "Infrastructure monitoring", "Environmental tracking"]
+<<<<<<< HEAD
     },
     {
       icon: Cloud,
@@ -57,17 +91,26 @@ export default function DigitalTwin() {
       description: "Patient monitoring, medical device management, and facility optimization",
       benefits: ["Patient care", "Equipment tracking", "Resource optimization"]
 
+=======
+    },;
+    {;
+      icon: Cloud,;
+      title: "Healthcare",;
+      description: "Patient monitoring, medical device management, and facility optimization",;
+      benefits: ["Patient care", "Equipment tracking", "Resource optimization"];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
     { name: "IoT Sensors", icon: "📡", description: "High-precision sensors for data collection" },
-    { name: "Edge Computing", icon: "⚡", description: "Local processing for real-time decisions" },
-    { name: "5G Networks", icon: "🌐", description: "Ultra-fast connectivity for data transmission" },
-    { name: "AI/ML Models", icon: "🤖", description: "Advanced algorithms for predictions" },
-    { name: "Cloud Platform", icon: "☁️", description: "Scalable data storage and processing" },
-    { name: "Blockchain", icon: "🔗", description: "Secure and transparent data sharing" },
-    { name: "Augmented Reality", icon: "👁️", description: "Immersive visualization and interaction" },
-    { name: "Digital Thread", icon: "🧵", description: "End-to-end data connectivity" }
+    { name: "Edge Computing", icon: "⚡", description: "Local processing for real-time decisions" },;
+    { name: "5G Networks", icon: "🌐", description: "Ultra-fast connectivity for data transmission" },;
+    { name: "AI/ML Models", icon: "🤖", description: "Advanced algorithms for predictions" },;
+    { name: "Cloud Platform", icon: "☁️", description: "Scalable data storage and processing" },;
+    { name: "Blockchain", icon: "🔗", description: "Secure and transparent data sharing" },;
+    { name: "Augmented Reality", icon: "👁️", description: "Immersive visualization and interaction" },;
+    { name: "Digital Thread", icon: "🧵", description: "End-to-end data connectivity" };
   ];
 
   const pricing = [
@@ -111,6 +154,7 @@ export default function DigitalTwin() {
         "Unlimited digital twins",
         "Custom AI models",
         "24/7 phone support",
+<<<<<<< HEAD
         "Advanced security",
         "Multi-site management",
         "Dedicated support team"
@@ -118,6 +162,15 @@ export default function DigitalTwin() {
       cta: "Contact Sales",
       popular: false
 
+=======
+        "Advanced security",;
+        "Multi-site management",;
+        "Dedicated support team";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -134,6 +187,7 @@ export default function DigitalTwin() {
     {
       icon: Database,
       title: "Cost Reduction",
+<<<<<<< HEAD
       description: "Reduce operational costs by 30-40% through intelligent optimization"
     },
     {
@@ -156,11 +210,86 @@ export default function DigitalTwin() {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
           <div className="container-responsive relative z-10">
+=======
+      description: "Reduce operational costs by 30-40% through intelligent optimization";
+    },;
+    {;
+      icon: Globe,;
+      title: "Better Decision Making",;
+      description: "Make data-driven decisions with real-time insights and analytics";
+    };
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Digital Twin Services - Zion Tech Group"
+        description="Transform your physical assets into intelligent digital replicas with our advanced Digital Twin technology. Real-time monitoring, predictive analytics, and automated optimization."
+      />
+
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
+              <Cpu className="w-4 h-4 mr-2" />
+              Digital Twin Technology
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Digital Twin
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your physical assets into intelligent digital replicas. Monitor, analyze,
+              and optimize your operations in real-time with cutting-edge Digital Twin technology.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
+                Get Started
+              </button>
+              <button className="px-8 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What is Digital Twin */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
+<<<<<<< HEAD
 
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
                 <Eye className="w-4 h-4 mr-2" />
@@ -175,6 +304,16 @@ export default function DigitalTwin() {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Transform your physical assets into intelligent digital twins for real-time monitoring,
                 predictive analytics, and intelligent automation.
+=======
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                What is a Digital Twin?
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                A Digital Twin is a virtual representation of a physical object, system, or process
+                that mirrors its real-world counterpart in real-time. It combines IoT sensors,
+                AI algorithms, and advanced analytics to provide unprecedented insights and control.
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -192,15 +331,28 @@ export default function DigitalTwin() {
                 </Link>
               </div>
             </motion.div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -218,9 +370,36 @@ export default function DigitalTwin() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group hover:scale-105"
 
@@ -239,8 +418,26 @@ export default function DigitalTwin() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -258,9 +455,36 @@ export default function DigitalTwin() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
 
@@ -289,8 +513,26 @@ export default function DigitalTwin() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -307,9 +549,36 @@ export default function DigitalTwin() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={plan.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className={`relative bg-slate-800/50 border rounded-xl p-8 ${
                     plan.popular
@@ -363,8 +632,26 @@ export default function DigitalTwin() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -382,9 +669,36 @@ export default function DigitalTwin() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="text-center"
 
@@ -403,8 +717,26 @@ export default function DigitalTwin() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -422,9 +754,36 @@ export default function DigitalTwin() {
               {technologies.map((tech, index) => (
                 <motion.div
                   key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   viewport={{ once: true }}
                   className="text-center group"
 
@@ -443,8 +802,26 @@ export default function DigitalTwin() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center max-w-4xl mx-auto"
@@ -473,8 +850,211 @@ export default function DigitalTwin() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our Digital Twin platform provides comprehensive capabilities for monitoring,
+              analyzing, and optimizing your physical assets.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Industry Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Digital Twin technology is transforming industries across the globe,
+              enabling unprecedented levels of efficiency and insight.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built on cutting-edge technologies to deliver reliable, scalable, and secure Digital Twin solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <tech.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{tech.name}</h3>
+                <p className="text-gray-300">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Process */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Implementation Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our proven methodology ensures successful Digital Twin deployment and rapid value realization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Assessment',
+                description: 'Evaluate your current infrastructure and identify Digital Twin opportunities'
+              },
+              {
+                step: '02',
+                title: 'Design',
+                description: 'Create a comprehensive Digital Twin architecture and implementation plan'
+              },
+              {
+                step: '03',
+                title: 'Deployment',
+                description: 'Install sensors, deploy software, and establish data connections'
+              },
+              {
+                step: '04',
+                title: 'Optimization',
+                description: 'Fine-tune the system and implement advanced analytics and automation'
+              }
+            ].map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {phase.step}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
+                <p className="text-gray-300">{phase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Operations?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how Digital Twin technology can revolutionize your business processes,
+              improve efficiency, and drive innovation.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
+                Start Your Digital Twin Journey
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }}}}}}
