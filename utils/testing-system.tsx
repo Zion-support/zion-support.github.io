@@ -1,7 +1,5 @@
 import React from 'react';
 import '@testing - library / jest - dom';
-
-
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElementaction: 'click' | 'type' | 'hover') {
     switch (action) {

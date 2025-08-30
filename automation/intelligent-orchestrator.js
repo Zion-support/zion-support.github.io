@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-
 class IntelligentOrchestrator {
   constructor() {
     this.automationSystems = new Map();
@@ -13,21 +11,18 @@ class IntelligentOrchestrator {
     this.ensureLogDirectory();
     this.loadAutomationSystems();
   }
-
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   loadAutomationSystems() {
     const systems = [
       { name: 'lint-monitor', path: 'lint-monitor.js', priority: 'high' },
@@ -40,7 +35,6 @@ class IntelligentOrchestrator {
       { name: 'security-scanner', path: 'security-scanner.js', priority: 'high' },
       { name: 'test-generator', path: 'test-generator.js', priority: 'medium' }
     ];
-
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {
@@ -55,14 +49,12 @@ class IntelligentOrchestrator {
       }
     }
   }
-
   async runSystem(systemName, options = {}) {
     const system = this.automationSystems.get(systemName);
     if (!system) {
       this.log(`❌ System not found: ${systemName}`);
       return false;
     }
-
     const startTime = Date.now();
     try {
       this.log(`🚀 Running system: ${systemName}`);
@@ -86,24 +78,19 @@ class IntelligentOrchestrator {
       return { success: false, error: error.message, executionTime };
     }
   }
-
   updateSystemMetrics(systemName, success, executionTime) {
     const system = this.automationSystems.get(systemName);
     if (!system) return;
-
     // Update success rate
     const currentSuccessRate = system.successRate;
     const totalRuns = (system.lastRun ? 1 : 0) + 1;
     system.successRate = success ? (currentSuccessRate + 1) / totalRuns : currentSuccessRate / totalRuns;
-
     // Update average execution time
     const currentAvgTime = system.averageExecutionTime;
     system.averageExecutionTime = (currentAvgTime + executionTime) / totalRuns;
-
     system.lastRun = new Date();
     system.status = success ? 'success' : 'failed';
   }
-
   async runPriorityBasedExecution() {
     this.log('🎯 Running priority-based execution...');
     
@@ -112,7 +99,6 @@ class IntelligentOrchestrator {
         const priorityOrder = { high: 3, medium: 2, low: 1 };
         return priorityOrder[b.priority] - priorityOrder[a.priority];
       });
-
     const results = [];
     for (const system of systems) {
       if (system.status === 'available') {
@@ -125,11 +111,9 @@ class IntelligentOrchestrator {
         }
       }
     }
-
     this.log(`📊 Priority execution completed: ${results.length} systems`);
     return results;
   }
-
   async runIntelligentExecution() {
     this.log('🧠 Running intelligent execution...');
     
@@ -147,11 +131,9 @@ class IntelligentOrchestrator {
       // Learn from the result
       this.learnFromExecution(systemName, result, state);
     }
-
     this.log(`📊 Intelligent execution completed: ${results.length} systems`);
     return results;
   }
-
   async analyzeCurrentState() {
     const state = {
       hasLintErrors: false,
@@ -163,21 +145,18 @@ class IntelligentOrchestrator {
       lastBuildTime: null,
       codeComplexity: 0
     };
-
     try {
       // Check for lint errors
       execSync('npm run lint', { stdio: 'pipe' });
     } catch (error) {
       state.hasLintErrors = true;
     }
-
     try {
       // Check for TypeScript errors
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
     } catch (error) {
       state.hasTypeScriptErrors = true;
     }
-
     // Check build time
     try {
       const buildStart = Date.now();
@@ -186,13 +165,10 @@ class IntelligentOrchestrator {
     } catch (error) {
       // Build failed
     }
-
     return state;
   }
-
   determineOptimalSystems(state) {
     const systems = [];
-
     // Always run high-priority systems if there are issues
     if (state.hasLintErrors) {
       systems.push('lint-fixer');
@@ -203,7 +179,6 @@ class IntelligentOrchestrator {
     if (state.hasSecurityIssues) {
       systems.push('security-scanner');
     }
-
     // Run medium-priority systems based on conditions
     if (state.hasSEOMissing) {
       systems.push('seo-optimizer');
@@ -211,7 +186,6 @@ class IntelligentOrchestrator {
     if (state.hasMissingTests) {
       systems.push('test-generator');
     }
-
     // Run low-priority systems periodically
     const now = Date.now();
     const systemsToCheck = ['performance', 'content-generator'];
@@ -222,10 +196,8 @@ class IntelligentOrchestrator {
         systems.push(systemName);
       }
     }
-
     return systems;
   }
-
   learnFromExecution(systemName, result, state) {
     const learningKey = `${systemName}_${JSON.stringify(state)}`;
     const currentData = this.learningData.get(learningKey) || {
@@ -233,16 +205,13 @@ class IntelligentOrchestrator {
       successfulRuns: 0,
       averageExecutionTime: 0
     };
-
     currentData.totalRuns++;
     if (result.success) {
       currentData.successfulRuns++;
     }
     currentData.averageExecutionTime = (currentData.averageExecutionTime + result.executionTime) / currentData.totalRuns;
-
     this.learningData.set(learningKey, currentData);
   }
-
   async runContinuousIntelligence() {
     this.log('🔄 Starting continuous intelligent automation...');
     
@@ -254,11 +223,9 @@ class IntelligentOrchestrator {
       this.log('🔄 Running continuous intelligence cycle...');
       await this.runIntelligentExecution();
     }, 5 * 60 * 1000); // Every 5 minutes
-
     // Set up file watcher for immediate response
     this.startFileWatcher();
   }
-
   startFileWatcher() {
     this.log('👀 Starting intelligent file watcher...');
     
@@ -281,7 +248,6 @@ class IntelligentOrchestrator {
     
     this.log('✅ Intelligent file watcher started');
   }
-
   async handleIntelligentFileChange(filePath) {
     // Analyze the type of change and run appropriate systems
     const fileExtension = path.extname(filePath);
@@ -305,7 +271,6 @@ class IntelligentOrchestrator {
       }
     }
   }
-
   generateIntelligenceReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -313,7 +278,6 @@ class IntelligentOrchestrator {
       learningData: {},
       recommendations: []
     };
-
     // System performance data
     for (const [name, system] of this.automationSystems) {
       report.systems[name] = {
@@ -324,7 +288,6 @@ class IntelligentOrchestrator {
         status: system.status
       };
     }
-
     // Learning data
     for (const [key, data] of this.learningData) {
       report.learningData[key] = {
@@ -333,7 +296,6 @@ class IntelligentOrchestrator {
         totalRuns: data.totalRuns
       };
     }
-
     // Generate recommendations
     for (const [name, system] of this.automationSystems) {
       if (system.successRate < 0.8) {
@@ -343,10 +305,8 @@ class IntelligentOrchestrator {
         report.recommendations.push(`Optimize ${name} system performance (avg time: ${system.averageExecutionTime}ms)`);
       }
     }
-
     return report;
   }
-
   async optimizeSystems() {
     this.log('🔧 Optimizing automation systems...');
     
@@ -356,7 +316,6 @@ class IntelligentOrchestrator {
     for (const recommendation of report.recommendations) {
       this.log(`💡 Recommendation: ${recommendation}`);
     }
-
     // Adjust system priorities based on performance
     for (const [name, system] of this.automationSystems) {
       if (system.successRate < 0.7) {
@@ -368,15 +327,12 @@ class IntelligentOrchestrator {
       }
     }
   }
-
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
   stop() {
     this.log('🛑 Intelligent orchestrator stopped');
   }
-
   getStatus() {
     const status = {
       running: true,
@@ -392,12 +348,10 @@ class IntelligentOrchestrator {
     return status;
   }
 }
-
 // CLI handling
 const orchestrator = new IntelligentOrchestrator();
 const command = process.argv[2];
 const subCommand = process.argv[3];
-
 switch (command) {
   case 'run':
     if (subCommand === 'priority') {
@@ -434,13 +388,11 @@ switch (command) {
     console.log('  report           - Generate intelligence report');
     process.exit(1);
 }
-
 // Graceful shutdown
 process.on('SIGINT', () => {
   orchestrator.stop();
   process.exit(0);
 });
-
 process.on('SIGTERM', () => {
   orchestrator.stop();
   process.exit(0);

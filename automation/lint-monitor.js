@@ -1,15 +1,12 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { execSync, spawn } from 'child_process';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
 class LintMonitor {
   constructor() {
     this.isRunning = false;
@@ -19,21 +16,18 @@ class LintMonitor {
     this.logFile = path.join(__dirname, 'logs', 'lint-monitor.log');
     this.ensureLogDirectory();
   }
-
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async checkLintStatus() {
     try {
       this.log('🔍 Checking lint status...');
@@ -59,7 +53,6 @@ class LintMonitor {
       return { success: false, errors: this.errorCount, output: errorOutput };
     }
   }
-
   async autoFix() {
     try {
       this.log('🔧 Attempting auto-fix...');
@@ -74,7 +67,6 @@ class LintMonitor {
       return false;
     }
   }
-
   startContinuousMonitoring() {
     this.log('👀 Starting continuous lint monitoring...');
     
@@ -84,7 +76,6 @@ class LintMonitor {
         clearInterval(checkInterval);
         return;
       }
-
       const status = await this.checkLintStatus();
       
       if (!status.success && status.errors > 0) {
@@ -99,11 +90,9 @@ class LintMonitor {
         }
       }
     }, 30000);
-
     // Store interval for cleanup
     this.checkInterval = checkInterval;
   }
-
   startFileWatcher() {
     this.log('📁 Starting file watcher...');
     
@@ -116,7 +105,6 @@ class LintMonitor {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true
     });
-
     let debounceTimer;
     watcher.on('change', (filePath) => {
       clearTimeout(debounceTimer);
@@ -125,11 +113,9 @@ class LintMonitor {
         await this.handleFileChange(filePath);
       }, 2000);
     });
-
     this.watcher = watcher;
     this.log('✅ File watcher started');
   }
-
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
     
@@ -155,28 +141,21 @@ class LintMonitor {
       }
     }
   }
-
   async start() {
     if (this.isRunning) {
       this.log('⚠️ Monitor is already running');
       return;
     }
-
     this.isRunning = true;
     this.log('🚀 Starting Lint Monitor...');
-
     // Initial check
     await this.checkLintStatus();
-
     // Start continuous monitoring
     this.startContinuousMonitoring();
-
     // Start file watcher
     this.startFileWatcher();
-
     this.log('✅ Lint Monitor started successfully');
   }
-
   stop() {
     this.isRunning = false;
     
@@ -192,7 +171,6 @@ class LintMonitor {
     
     this.log('🛑 Lint Monitor stopped');
   }
-
   status() {
     const status = {
       running: this.isRunning,
@@ -207,7 +185,6 @@ class LintMonitor {
     
     return status;
   }
-
   getStats() {
     const stats = {
       totalChecks: 0,
@@ -215,7 +192,6 @@ class LintMonitor {
       autoFixes: 0,
       filesWatched: 0
     };
-
     try {
       const logContent = fs.readFileSync(this.logFile, 'utf8');
       const lines = logContent.split('\n');
@@ -227,15 +203,12 @@ class LintMonitor {
     } catch (error) {
       this.log('❌ Could not read stats from log file');
     }
-
     return stats;
   }
 }
-
 // CLI handling
 const monitor = new LintMonitor();
 const command = process.argv[2];
-
 switch (command) {
   case 'start':
     monitor.start();
@@ -261,13 +234,11 @@ switch (command) {
     console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1);
 }
-
 // Graceful shutdown
 process.on('SIGINT', () => {
   monitor.stop();
   process.exit(0);
 });
-
 process.on('SIGTERM', () => {
   monitor.stop();
   process.exit(0);
