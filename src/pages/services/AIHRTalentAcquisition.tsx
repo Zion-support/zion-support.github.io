@@ -1,8 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
   Brain, 
   BarChart3, 
   Target, 
@@ -18,9 +17,9 @@ import {
   Shield,
   Cpu,
   Filter
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIHRTalentAcquisition: React.FC = () => {
+const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -74,21 +73,21 @@ const AIHRTalentAcquisition: React.FC = () => {
       plan: "Starter",
       price: "$399",
       period: "/month",
-      features: ["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
+      features["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
       popular: false
     },
     {
       plan: "Professional",
       price: "$899",
       period: "/month",
-      features: ["Up to 200 active jobs", "Advanced AI models", "Predictive analytics", "Priority support", "API access"],
+      features["Up to 200 active jobs", "Advanced AI models", "Predictive analytics", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -158,8 +157,8 @@ const AIHRTalentAcquisition: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -197,8 +196,8 @@ const AIHRTalentAcquisition: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
@@ -235,8 +234,8 @@ const AIHRTalentAcquisition: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -273,8 +272,8 @@ const AIHRTalentAcquisition: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -308,8 +307,8 @@ const AIHRTalentAcquisition: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}
@@ -403,7 +402,7 @@ const AIHRTalentAcquisition: React.FC = () => {
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                 <p className="font-semibold">Starting at $399/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
+                <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
@@ -428,7 +427,6 @@ const AIHRTalentAcquisition: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHRTalentAcquisition;

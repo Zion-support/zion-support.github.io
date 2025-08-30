@@ -21,17 +21,13 @@ export function UpcomingInterviewsCard() {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
-                setUpcomingInterviews(upcoming);
-            }
+                setUpcomingInterviews(upcoming)}
             catch (error) {
-                console.error("Error loading upcoming interviews:", error);
-            }
+                console.error("Error loading upcoming interviews:", error)}
             finally {
-                setIsLoading(false);
-            }
+                setIsLoading(false)}
         };
-        loadInterviews();
-    }, []);
+        loadInterviews()}, []);
     if (isLoading) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -51,8 +47,7 @@ export function UpcomingInterviewsCard() {
               </div>))}
           </div>
         </CardContent>
-      </Card>);
-    }
+      </Card>)}
     if (upcomingInterviews.length === 0) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -70,8 +65,7 @@ export function UpcomingInterviewsCard() {
             </Button>
           </div>
         </CardContent>
-      </Card>);
-    }
+      </Card>)}
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -109,8 +103,7 @@ export function UpcomingInterviewsCard() {
                     {formattedDate} at {formattedTime}
                   </div>
                 </div>
-              </div>);
-        })}
+              </div>)})}
         </div>
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
@@ -121,5 +114,4 @@ export function UpcomingInterviewsCard() {
           </Button>
         </div>
       </CardContent>
-    </Card>);
-}
+    </Card>)}

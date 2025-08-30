@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle  } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
+
   mobile: string;
   email: string;
   address: string;
-  website: string;
-}
+  website: string}
 
-const UltimateServicesShowcase2025: React.FC = () => {
+const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥' }
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: '🤖' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: '⚛️' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: '🏥' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: '🌐' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: '🌍' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: '✍️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -38,8 +38,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -52,17 +51,14 @@ const UltimateServicesShowcase2025: React.FC = () => {
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-        return 0;
-    }
+        return 0}
   });
 
-  const handleServiceClick = (service: any) => {
-    setSelectedService(service);
-  };
+  const handleServiceClick = (service)  => {
+    setSelectedService(service)};
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -201,7 +197,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {categories.map((category) => (
+            {categories.map((category)  => (
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -444,7 +440,6 @@ const UltimateServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 export default UltimateServicesShowcase2025;

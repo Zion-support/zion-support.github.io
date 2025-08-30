@@ -29,22 +29,18 @@ export const AuthProvider = ({ children }) => {
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.",
                 variant: "destructive",
             });
-            return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
-        }
+            return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }}
         // Handle other errors from the API call
         if (res.status === 400) { // Bad request (e.g. missing fields)
             toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
-            return { error: data?.error || 'Missing email or password' };
-        }
+            return { error: data?.error || 'Missing email or password' }}
         if (res.status === 401) { // Unauthorized (invalid credentials)
             toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
-            return { error: 'Incorrect email or password' };
-        }
+            return { error: 'Incorrect email or password' }}
         // Catch-all for other non-200 statuses from loginUser
         if (res.status !== 200) {
             toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
-            return { error: data?.error || 'Login failed' };
-        }
+            return { error: data?.error || 'Login failed' }}
         // At this point, loginUser call was successful (200 OK)
         setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
         // Now, attempt client-side Supabase sign-in to synchronize auth state
@@ -57,8 +53,7 @@ export const AuthProvider = ({ children }) => {
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
-            return { error: clientLoginResult.error?.message || "Client-side login failed." };
-        }
+            return { error: clientLoginResult.error?.message || "Client-side login failed." }}
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
         navigate(next, { replace: true });
@@ -69,16 +64,13 @@ export const AuthProvider = ({ children }) => {
         try {
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
-                return { error: data?.message || 'Registration failed' };
-            }
+                return { error: data?.message || 'Registration failed' }}
             safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
-            return { error: null };
-        }
+            return { error: null }}
         catch (err) {
-            return { error: err?.message || 'Registration failed' };
-        }
+            return { error: err?.message || 'Registration failed' }}
     };
     // Wrapper for signup to match the AuthContextType interface
     const signup = async (email, password, userData) => {
@@ -90,13 +82,11 @@ export const AuthProvider = ({ children }) => {
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                navigate(next, { replace: true });
-            }
+                navigate(next, { replace: true })}
         }
-        return result;
-    };
+        return result};
     useEffect(() => {
-        // Clean up any potential stale auth state before setting up listeners
+        // Clean up  potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
             if (session?.user) {
@@ -120,37 +110,29 @@ export const AuthProvider = ({ children }) => {
                                 // Clear pending action from state first
                                 navigate(location.pathname, { state: {}, replace: true });
                                 // Navigate to checkout
-                                navigate('/checkout', { replace: true });
-                            }
+                                navigate('/checkout', { replace: true })}
                             else if (next) {
-                                navigate(decodeURIComponent(next), { replace: true });
-                            }
+                                navigate(decodeURIComponent(next), { replace: true })}
                             // --- END MODIFICATION ---
                         }
                     }
                     else if (error) {
                         console.error("Error fetching user profile:", error);
-                        setUser(null);
-                    }
+                        setUser(null)}
                 }
                 catch (error) {
                     console.error("Error fetching user profile:", error);
-                    setUser(null);
-                }
+                    setUser(null)}
             }
             else {
                 setUser(false);
                 // Show logout toast when user logs out
                 if (event === 'SIGNED_OUT') {
-                    handleSignedOut();
-                }
+                    handleSignedOut()}
             }
-            setIsLoading(false);
-        });
+            setIsLoading(false)});
         return () => {
-            subscription.unsubscribe();
-        };
-    }, [navigate]);
+            subscription.unsubscribe()}}, [navigate]);
     const authContextValue = {
         user,
         isLoading,
@@ -171,5 +153,4 @@ export const AuthProvider = ({ children }) => {
     };
     return (<AuthContext.Provider value={authContextValue}>
       {children}
-    </AuthContext.Provider>);
-};
+    </AuthContext.Provider>)};

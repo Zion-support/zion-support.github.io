@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { 
-  Twitter, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { FooterNewsletter  } from '@/components/FooterNewsletter';
+import { Twitter, 
   Linkedin, 
   Facebook, 
   Instagram, 
@@ -34,20 +33,19 @@ import {
   Activity,
   Cpu,
   GraduationCap
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export function Footer() {
+export function Footer(...args[]):  {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-      title: 'Company',
+      title: 'Comp',
       icon: Globe,
-      links: [
+      links[
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
@@ -58,7 +56,7 @@ export function Footer() {
     {
       title: 'Services',
       icon: Zap,
-      links: [
+      links[
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
@@ -79,7 +77,7 @@ export function Footer() {
     {
       title: 'Resources',
       icon: FileText,
-      links: [
+      links[
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Request a Quote', path: '/request-quote', icon: FileText },
@@ -89,7 +87,7 @@ export function Footer() {
     {
       title: 'Support',
       icon: Shield,
-      links: [
+      links[
         { name: 'Contact Us', path: '/contact', icon: Phone }, 
         { name: 'Dashboard', path: '/dashboard', icon: Activity },
         { name: 'Login', path: '/login', icon: HelpCircle },
@@ -167,7 +165,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
+          {/* Comp Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
@@ -276,5 +274,4 @@ export function Footer() {
         </motion.button>
       </div>
     </footer>
-  );
-}
+  )}

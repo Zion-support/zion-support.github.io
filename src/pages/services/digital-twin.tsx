@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function DigitalTwin() {
+export default function DigitalTwin(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function DigitalTwin() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -95,7 +95,7 @@ export default function DigitalTwin() {
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function DigitalTwin() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Manufacturing",
@@ -158,7 +158,7 @@ export default function DigitalTwin() {
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
                 }
-              ].map((application, index) => (
+              ].map((application, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
@@ -218,7 +218,7 @@ export default function DigitalTwin() {
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />

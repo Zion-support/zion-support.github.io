@@ -12,7 +12,7 @@ export default function MicroSAASServicesPage() {
             icon: <Users className="h-8 w-8 text-blue-500"/>,
             price: 29,
             currency: "$",
-            features: [
+            features[
                 "Contact Management",
                 "Sales Pipeline",
                 "Lead Scoring",
@@ -40,7 +40,7 @@ export default function MicroSAASServicesPage() {
             icon: <Calendar className="h-8 w-8 text-green-500"/>,
             price: 19,
             currency: "$",
-            features: [
+            features[
                 "Task Management",
                 "Team Collaboration",
                 "Time Tracking",
@@ -68,7 +68,7 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,
             price: 39,
             currency: "$",
-            features: [
+            features[
                 "Real-time Dashboards",
                 "Custom Reports",
                 "Data Integration",
@@ -96,7 +96,7 @@ export default function MicroSAASServicesPage() {
             icon: <MessageSquare className="h-8 w-8 text-orange-500"/>,
             price: 15,
             currency: "$",
-            features: [
+            features[
                 "Team Chat",
                 "Video Calls",
                 "File Sharing",
@@ -124,7 +124,7 @@ export default function MicroSAASServicesPage() {
             icon: <FileText className="h-8 w-8 text-cyan-500"/>,
             price: 25,
             currency: "$",
-            features: [
+            features[
                 "Document Storage",
                 "Version Control",
                 "Collaborative Editing",
@@ -152,7 +152,7 @@ export default function MicroSAASServicesPage() {
             icon: <CreditCard className="h-8 w-8 text-emerald-500"/>,
             price: 0,
             currency: "$",
-            features: [
+            features[
                 "Multiple Payment Methods",
                 "Recurring Billing",
                 "Invoice Generation",
@@ -180,7 +180,7 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart className="h-8 w-8 text-pink-500"/>,
             price: 49,
             currency: "$",
-            features: [
+            features[
                 "Email Campaigns",
                 "Lead Nurturing",
                 "A/B Testing",
@@ -208,7 +208,7 @@ export default function MicroSAASServicesPage() {
             icon: <Building className="h-8 w-8 text-indigo-500"/>,
             price: 35,
             currency: "$",
-            features: [
+            features[
                 "Stock Tracking",
                 "Order Management",
                 "Supplier Management",
@@ -236,7 +236,7 @@ export default function MicroSAASServicesPage() {
             icon: <Users className="h-8 w-8 text-teal-500"/>,
             price: 45,
             currency: "$",
-            features: [
+            features[
                 "Employee Onboarding",
                 "Time Tracking",
                 "Performance Reviews",
@@ -264,7 +264,7 @@ export default function MicroSAASServicesPage() {
             icon: <BarChart3 className="h-8 w-8 text-amber-500"/>,
             price: 30,
             currency: "$",
-            features: [
+            features[
                 "Invoicing",
                 "Expense Tracking",
                 "Financial Reports",
@@ -292,7 +292,7 @@ export default function MicroSAASServicesPage() {
             icon: <Globe className="h-8 w-8 text-red-500"/>,
             price: 40,
             currency: "$",
-            features: [
+            features[
                 "Online Store Builder",
                 "Payment Processing",
                 "Inventory Management",
@@ -320,7 +320,7 @@ export default function MicroSAASServicesPage() {
             icon: <FileText className="h-8 w-8 text-violet-500"/>,
             price: 55,
             currency: "$",
-            features: [
+            features[
                 "Course Creation",
                 "Student Management",
                 "Progress Tracking",
@@ -361,11 +361,9 @@ export default function MicroSAASServicesPage() {
     const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
     React.useEffect(() => {
         if (selectedCategory === "All Services") {
-            setFilteredServices(microSAASServices);
-        }
+            setFilteredServices(microSAASServices)}
         else {
-            setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
-        }
+            setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory))}
     }, [selectedCategory]);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -503,7 +501,7 @@ export default function MicroSAASServicesPage() {
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel anytime.
+            improve productivity, and drive growth. No long-term contracts, cancel time.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
@@ -517,5 +515,4 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

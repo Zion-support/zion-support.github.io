@@ -1,23 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Globe, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Globe, 
   MapPin, 
   Users, 
   Clock, 
   Star,
   Award,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const GlobalPresenceSection: React.FC = () => {
+export const GlobalPresenceSection: React.FC = (): JSX.Element => {
   const locations = [
     {
       city: 'New York',
       country: 'United States',
       flag: '🇺🇸',
       timezone: 'EST (UTC-5)',
-      services: ['AI Development', 'Cloud Solutions', 'Cybersecurity'],
+      services['AI Development', 'Cloud Solutions', 'Cybersecurity'],
       teamSize: '25+',
       established: '2018'
     },
@@ -26,7 +25,7 @@ export const GlobalPresenceSection: React.FC = () => {
       country: 'United Kingdom',
       flag: '🇬🇧',
       timezone: 'GMT (UTC+0)',
-      services: ['Digital Transformation', 'FinTech Solutions', 'Compliance'],
+      services['Digital Transformation', 'FinTech Solutions', 'Compliance'],
       teamSize: '20+',
       established: '2019'
     },
@@ -35,7 +34,7 @@ export const GlobalPresenceSection: React.FC = () => {
       country: 'Singapore',
       flag: '🇸🇬',
       timezone: 'SGT (UTC+8)',
-      services: ['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
+      services['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
       teamSize: '15+',
       established: '2020'
     },
@@ -44,16 +43,16 @@ export const GlobalPresenceSection: React.FC = () => {
       country: 'Canada',
       flag: '🇨🇦',
       timezone: 'EST (UTC-5)',
-      services: ['Healthcare Tech', 'AI Research', 'Startup Incubation'],
+      services['Healthcare Tech', 'AI Research', 'Startup Incubation'],
       teamSize: '18+',
       established: '2021'
     },
     {
       city: 'Berlin',
-      country: 'Germany',
+      country: 'Germ',
       flag: '🇩🇪',
       timezone: 'CET (UTC+1)',
-      services: ['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
+      services['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
       teamSize: '12+',
       established: '2022'
     },
@@ -62,7 +61,7 @@ export const GlobalPresenceSection: React.FC = () => {
       country: 'Australia',
       flag: '🇦🇺',
       timezone: 'AEST (UTC+10)',
-      services: ['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
+      services['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
       teamSize: '10+',
       established: '2022'
     }
@@ -100,9 +99,9 @@ export const GlobalPresenceSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
+          className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
         >
-          {globalStats.map((stat, index) => {
+          {globalStats.map((stat, index)  => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -116,13 +115,12 @@ export const GlobalPresenceSection: React.FC = () => {
                 </div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Locations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {locations.map((location, index) => (
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index)  => (
             <motion.div
               key={location.city}
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +203,6 @@ export const GlobalPresenceSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default GlobalPresenceSection;

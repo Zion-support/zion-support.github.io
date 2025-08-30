@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Cpu, 
   Database, 
   Eye, 
@@ -21,9 +20,9 @@ import {
   Globe,
   Smartphone,
   Monitor
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AISolutions() {
+export default function AISolutions(...args[]):  {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
@@ -32,42 +31,42 @@ export default function AISolutions() {
       icon: Brain,
       title: "Machine Learning",
       description: "Custom ML models and algorithms tailored to your business needs",
-      features: ["Predictive Analytics", "Pattern Recognition", "Automated Decision Making", "Continuous Learning"],
+      features["Predictive Analytics", "Pattern Recognition", "Automated Decision Making", "Continuous Learning"],
       color: "from-zion-cyan to-zion-blue"
     },
     {
       icon: Eye,
       title: "Computer Vision",
       description: "Advanced image and video analysis for automation and quality control",
-      features: ["Object Detection", "Facial Recognition", "Quality Inspection", "Process Automation"],
+      features["Object Detection", "Facial Recognition", "Quality Inspection", "Process Automation"],
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: MessageSquare,
       title: "Natural Language Processing",
       description: "Text and speech analysis for customer insights and automation",
-      features: ["Sentiment Analysis", "Chatbots", "Document Processing", "Language Translation"],
+      features["Sentiment Analysis", "Chatbots", "Document Processing", "Language Translation"],
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast trends and behaviors to make data-driven decisions",
-      features: ["Demand Forecasting", "Risk Assessment", "Customer Behavior", "Market Trends"],
+      features["Demand Forecasting", "Risk Assessment", "Customer Behavior", "Market Trends"],
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Zap,
       title: "Automation & RPA",
       description: "Intelligent process automation to streamline operations",
-      features: ["Workflow Automation", "Data Entry", "Report Generation", "Process Optimization"],
+      features["Workflow Automation", "Data Entry", "Report Generation", "Process Optimization"],
       color: "from-zion-red to-zion-pink"
     },
     {
       icon: Database,
       title: "Data Intelligence",
       description: "Transform raw data into actionable business insights",
-      features: ["Data Mining", "Business Intelligence", "Real-time Analytics", "Data Visualization"],
+      features["Data Mining", "Business Intelligence", "Real-time Analytics", "Data Visualization"],
       color: "from-zion-indigo to-zion-purple"
     }
   ];
@@ -86,42 +85,42 @@ export default function AISolutions() {
       title: "AI-Powered Customer Service",
       description: "Intelligent chatbots and virtual assistants that provide 24/7 customer support",
       industry: "retail",
-      benefits: ["24/7 Availability", "Instant Responses", "Cost Reduction", "Customer Satisfaction"],
+      benefits["24/7 Availability", "Instant Responses", "Cost Reduction", "Customer Satisfaction"],
       icon: MessageSquare
     },
     {
       title: "Predictive Maintenance",
       description: "AI-driven equipment monitoring to prevent downtime and optimize maintenance schedules",
       industry: "manufacturing",
-      benefits: ["Reduced Downtime", "Cost Savings", "Extended Equipment Life", "Safety Improvement"],
+      benefits["Reduced Downtime", "Cost Savings", "Extended Equipment Life", "Safety Improvement"],
       icon: Shield
     },
     {
       title: "Fraud Detection",
       description: "Advanced algorithms to detect and prevent fraudulent activities in real-time",
       industry: "finance",
-      benefits: ["Real-time Detection", "False Positive Reduction", "Compliance", "Risk Mitigation"],
+      benefits["Real-time Detection", "False Positive Reduction", "Compliance", "Risk Mitigation"],
       icon: Eye
     },
     {
       title: "Medical Image Analysis",
       description: "AI-powered diagnostic tools for faster and more accurate medical imaging",
       industry: "healthcare",
-      benefits: ["Faster Diagnosis", "Improved Accuracy", "Cost Reduction", "Better Patient Care"],
+      benefits["Faster Diagnosis", "Improved Accuracy", "Cost Reduction", "Better Patient Care"],
       icon: Brain
     },
     {
       title: "Supply Chain Optimization",
       description: "Intelligent forecasting and route optimization for logistics operations",
       industry: "logistics",
-      benefits: ["Cost Reduction", "Efficiency", "Real-time Tracking", "Predictive Planning"],
+      benefits["Cost Reduction", "Efficiency", "Real-time Tracking", "Predictive Planning"],
       icon: TrendingUp
     },
     {
       title: "Personalized Recommendations",
       description: "AI-driven product and content recommendations for enhanced user experience",
       industry: "retail",
-      benefits: ["Increased Sales", "Customer Engagement", "Personalization", "Conversion Rate"],
+      benefits["Increased Sales", "Customer Engagement", "Personalization", "Conversion Rate"],
       icon: Target
     }
   ];
@@ -130,37 +129,37 @@ export default function AISolutions() {
     {
       name: "Deep Learning",
       description: "Neural networks that learn complex patterns from large datasets",
-      applications: ["Image Recognition", "Speech Processing", "Natural Language Understanding"],
+      applications["Image Recognition", "Speech Processing", "Natural Language Understanding"],
       icon: Brain
     },
     {
       name: "Machine Learning",
       description: "Algorithms that improve through experience and data",
-      applications: ["Predictive Modeling", "Classification", "Clustering", "Regression"],
+      applications["Predictive Modeling", "Classification", "Clustering", "Regression"],
       icon: Cpu
     },
     {
       name: "Computer Vision",
       description: "AI systems that interpret and understand visual information",
-      applications: ["Object Detection", "Facial Recognition", "Quality Control", "Autonomous Vehicles"],
+      applications["Object Detection", "Facial Recognition", "Quality Control", "Autonomous Vehicles"],
       icon: Eye
     },
     {
       name: "Natural Language Processing",
       description: "AI that understands and generates human language",
-      applications: ["Chatbots", "Translation", "Sentiment Analysis", "Document Processing"],
+      applications["Chatbots", "Translation", "Sentiment Analysis", "Document Processing"],
       icon: MessageSquare
     },
     {
       name: "Reinforcement Learning",
       description: "AI that learns through trial and error and rewards",
-      applications: ["Game AI", "Robotics", "Autonomous Systems", "Optimization"],
+      applications["Game AI", "Robotics", "Autonomous Systems", "Optimization"],
       icon: Rocket
     },
     {
       name: "Federated Learning",
       description: "Distributed AI training while preserving data privacy",
-      applications: ["Healthcare", "Finance", "IoT Devices", "Privacy-Sensitive Applications"],
+      applications["Healthcare", "Finance", "IoT Devices", "Privacy-Sensitive Applications"],
       icon: Shield
     }
   ];
@@ -192,8 +191,7 @@ export default function AISolutions() {
   };
 
   const filteredSolutions = selectedIndustry === 'all' 
-    ? aiSolutions 
-    : aiSolutions.filter(solution => solution.industry === selectedIndustry);
+    ? aiSolutions: aiSolutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -269,7 +267,7 @@ export default function AISolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -323,7 +321,7 @@ export default function AISolutions() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {industries.map((industry) => {
+            {industries.map((industry)  => {
               const Icon = industry.icon;
               return (
                 <button
@@ -338,8 +336,7 @@ export default function AISolutions() {
                   <Icon className="w-5 h-5" />
                   {industry.name}
                 </button>
-              );
-            })}
+              )})}
           </motion.div>
 
           {/* Solutions Grid */}
@@ -350,7 +347,7 @@ export default function AISolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredSolutions.map((solution, index) => (
+            {filteredSolutions.map((solution, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -409,7 +406,7 @@ export default function AISolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {aiTechnologies.map((tech, index) => (
+            {aiTechnologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -466,7 +463,7 @@ export default function AISolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {successMetrics.map((metric, index) => (
+            {successMetrics.map((metric, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -533,7 +530,7 @@ export default function AISolutions() {
                 description: "Launch AI solutions and continuously improve",
                 icon: Rocket
               }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div 
                 key={index}
                 className="relative"
@@ -592,5 +589,4 @@ export default function AISolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

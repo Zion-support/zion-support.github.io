@@ -45,15 +45,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                         timestamp: Date.now()
                     };
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-                    onAlert?.('fps', fps, thresholds.fps);
-                }
+                    onAlert?.('fps', fps, thresholds.fps)}
                 frameCount = 0;
-                lastTime = currentTime;
-            }
-            requestAnimationFrame(countFrame);
-        };
-        requestAnimationFrame(countFrame);
-    }, [thresholds.fps, onAlert]);
+                lastTime = currentTime}
+            requestAnimationFrame(countFrame)};
+        requestAnimationFrame(countFrame)}, [thresholds.fps, onAlert]);
     const measureMemory = useCallback(() => {
         if ('memory' in performance) {
             const memoryInfo = performance.memory;
@@ -73,8 +69,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-                onAlert?.('memory', percentage, thresholds.memory);
-            }
+                onAlert?.('memory', percentage, thresholds.memory)}
         }
     }, [thresholds.memory, onAlert]);
     const measureRenderTime = useCallback(() => {
@@ -93,10 +88,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-                onAlert?.('renderTime', renderTime, thresholds.renderTime);
-            }
-        });
-    }, [thresholds.renderTime, onAlert]);
+                onAlert?.('renderTime', renderTime, thresholds.renderTime)}
+        })}, [thresholds.renderTime, onAlert]);
     const measureNetworkLatency = useCallback(async () => {
         const start = performance.now();
         try {
@@ -116,13 +109,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-                onAlert?.('networkLatency', latency, thresholds.networkLatency);
-            }
+                onAlert?.('networkLatency', latency, thresholds.networkLatency)}
         }
         catch {
             // Network error, set high latency
-            setMetrics(prev => ({ ...prev, networkLatency: 999 }));
-        }
+            setMetrics(prev => ({ ...prev, networkLatency: 999 }))}
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
@@ -143,8 +134,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-            onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
-        }
+            onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
         if (diskUsage > thresholds.diskUsage) {
             const alert = {
                 id: `disk-${Date.now()}`,
@@ -154,8 +144,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-            onAlert?.('diskUsage', diskUsage, thresholds.diskUsage);
-        }
+            onAlert?.('diskUsage', diskUsage, thresholds.diskUsage)}
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
@@ -165,30 +154,24 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             measureMemory();
             measureRenderTime();
             measureNetworkLatency();
-            simulateMetrics();
-        }, refreshInterval);
-        return () => clearInterval(interval);
-    }, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
+            simulateMetrics()}, refreshInterval);
+        return () => clearInterval(interval)}, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
     // Start FPS monitoring
     useEffect(() => {
         if (!enabled)
             return;
-        measureFPS();
-    }, [enabled, measureFPS]);
+        measureFPS()}, [enabled, measureFPS]);
     // Clear old alerts
     useEffect(() => {
         const interval = setInterval(() => {
             const now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+        return () => clearInterval(interval)}, []);
     const getMetricColor = (metric, value, threshold) => {
         if (metric === 'FPS') {
-            return value >= threshold ? 'text-green-400' : 'text-red-400';
-        }
-        return value <= threshold ? 'text-green-400' : 'text-red-400';
-    };
+            return value >= threshold ? 'text-green-400' : 'text-red-400'}
+        return value <= threshold ? 'text-green-400' : 'text-red-400'};
     const getMetricIcon = (metric) => {
         switch (metric) {
             case 'FPS': return Activity;
@@ -197,16 +180,14 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'Network': return Wifi;
             case 'CPU': return Cpu;
             case 'Disk': return HardDrive;
-            default: return Activity;
-        }
+            default: return Activity}
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
-            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     if (!enabled)
         return null;
@@ -218,8 +199,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               {alerts.length}
             </Badge>)}
         </Button>
-      </motion.div>);
-    }
+      </motion.div>)}
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
       <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">
         {/* Header */}
@@ -382,8 +362,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                         </span>
                       </div>
                       <p className="mt-1 opacity-90">{alert.message}</p>
-                    </motion.div>);
-            })}
+                    </motion.div>)})}
               </div>
             </div>)}
 
@@ -394,8 +373,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             measureMemory();
             measureRenderTime();
             measureNetworkLatency();
-            simulateMetrics();
-        }} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">
+            simulateMetrics()}} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">
                 <RefreshCw className="w-3 h-3 mr-2"/>
                 Refresh
               </Button>
@@ -407,5 +385,4 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           </div>
         </div>
       </div>
-    </motion.div>);
-}
+    </motion.div>)}

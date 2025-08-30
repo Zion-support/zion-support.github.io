@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Server, 
@@ -31,15 +30,15 @@ import {
   Globe as GlobeIcon,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
+ } from 'lucide-react.ts';
+import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '@/data/innovativeMicroSaasServices2025';
 
-interface ServiceShowcaseProps {
-  className?: string;
-}
+interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
 
-export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  className?: string}
+
+export function ServicesShowcase(...args[]):  {
+  const [expandedCategories, setExpandedCategories] = useState<any>([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025];
@@ -48,11 +47,9 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
   const servicesByCategory = allServices.reduce((acc, service) => {
     const category = service.category;
     if (!acc[category]) {
-      acc[category] = [];
-    }
+      acc[category] = []}
     acc[category].push(service);
-    return acc;
-  }, {} as Record<string, typeof allServices>);
+    return acc}, {} as Record<string, any>);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue', count: allServices.length },
@@ -67,27 +64,23 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     { id: 'Sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green', count: servicesByCategory['Sustainability']?.length || 0 }
   ];
 
-  const toggleCategory = (category: string) => {
+  const toggleCategory = (category: string)  => {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
-  };
+        [...prev, category]
+    )};
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => 
+    ? allServices: allServices.filter(service  => 
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -181,8 +174,8 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+        <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               className="bg-zion-slate-dark/50 rounded-2xl p-6 border border-zion-slate-light/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 group"
@@ -351,5 +344,4 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

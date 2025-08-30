@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight,
@@ -9,85 +8,85 @@ import {
   Building,
   Users,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Testimonial {
+
   id: string;
   name: string;
   position: string;
-  company: string;
-  companyLogo: string;
+  comp: string;
+  compLogo: string;
   content: string;
   rating: number;
   industry: string;
   results: string[];
-  avatar: string;
-}
+  avatar: string}
 
 const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'Sarah Chen',
     position: 'CTO',
-    company: 'TechFlow Solutions',
-    companyLogo: '/images/company-logos/techflow.svg',
+    comp: 'TechFlow Solutions',
+    compLogo: '/images/company-logos/techflow.svg',
     content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
     rating: 5,
     industry: 'Technology',
-    results: ['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
+    results['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
     avatar: '/images/avatars/sarah-chen.jpg'
   },
   {
     id: '2',
     name: 'Marcus Rodriguez',
     position: 'VP of Operations',
-    company: 'Global Manufacturing Corp',
-    companyLogo: '/images/company-logos/gmc.svg',
+    comp: 'Global Manufacturing Corp',
+    compLogo: '/images/company-logos/gmc.svg',
     content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
     rating: 5,
     industry: 'Manufacturing',
-    results: ['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
+    results['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
     avatar: '/images/avatars/marcus-rodriguez.jpg'
   },
   {
     id: '3',
     name: 'Dr. Emily Watson',
     position: 'Chief Medical Officer',
-    company: 'HealthTech Innovations',
-    companyLogo: '/images/company-logos/healthtech.svg',
+    comp: 'HealthTech Innovations',
+    compLogo: '/images/company-logos/healthtech.svg',
     content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
     rating: 5,
     industry: 'Healthcare',
-    results: ['95% detection improvement', 'Reduced false positives', 'Lives saved'],
+    results['95% detection improvement', 'Reduced false positives', 'Lives saved'],
     avatar: '/images/avatars/emily-watson.jpg'
   },
   {
     id: '4',
     name: 'James Thompson',
     position: 'Head of Security',
-    company: 'FinSecure Bank',
-    companyLogo: '/images/company-logos/finsecure.svg',
+    comp: 'FinSecure Bank',
+    compLogo: '/images/company-logos/finsecure.svg',
     content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
     rating: 5,
     industry: 'Financial Services',
-    results: ['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
+    results['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
     avatar: '/images/avatars/james-thompson.jpg'
   },
   {
     id: '5',
     name: 'Lisa Park',
     position: 'Director of IT',
-    company: 'CloudScale Enterprises',
-    companyLogo: '/images/company-logos/cloudscale.svg',
+    comp: 'CloudScale Enterprises',
+    compLogo: '/images/company-logos/cloudscale.svg',
     content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
     rating: 5,
     industry: 'Cloud Services',
-    results: ['40% cost reduction', '60% performance boost', 'Unified management'],
+    results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
   }
 ];
 
-export default function EnhancedTestimonialsSection() {
+export default function EnhancedTestimonialsSection(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -95,26 +94,21 @@ export default function EnhancedTestimonialsSection() {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}, 8000);
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
+    return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: number)  => {
     setCurrentTestimonial(index);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const currentTestimonialData = testimonials[currentTestimonial];
 
@@ -163,7 +157,7 @@ export default function EnhancedTestimonialsSection() {
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-                  animate={{ rotate: [0, 360] }}
+                  animate={{ rotate[0, 360] }}
                   transition={{ duration: 20, repeat: Infinity }}
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
@@ -190,8 +184,8 @@ export default function EnhancedTestimonialsSection() {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index) => (
+                  <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index)  => (
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 }}
@@ -215,7 +209,7 @@ export default function EnhancedTestimonialsSection() {
                       <div>
                         <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>
                         <p className="text-zion-cyan">{currentTestimonialData.position}</p>
-                        <p className="text-gray-300">{currentTestimonialData.company}</p>
+                        <p className="text-gray-300">{currentTestimonialData.comp}</p>
                         <div className="flex items-center space-x-2 mt-1">
                           <Building className="w-4 h-4 text-zion-cyan" />
                           <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
@@ -277,13 +271,13 @@ export default function EnhancedTestimonialsSection() {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index) => (
+              ].map((indicator, index)  => (
                 <motion.div
                   key={indicator.label}
                   initial={{ opacity: 0, y: 20 }}
@@ -336,5 +330,4 @@ export default function EnhancedTestimonialsSection() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

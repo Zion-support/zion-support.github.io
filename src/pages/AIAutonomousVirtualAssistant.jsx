@@ -41,7 +41,7 @@ const AIAutonomousVirtualAssistant = () => {
             <div className="text-center">
               <div className="text-6xl mb-4">📱</div>
               <h3 className="text-xl font-semibold text-white mb-2">Multi-Platform</h3>
-              <p className="text-gray-300">Access from anywhere</p>
+              <p className="text-gray-300">Access from where</p>
             </div>
           </div>
 
@@ -168,6 +168,5 @@ const AIAutonomousVirtualAssistant = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousVirtualAssistant;

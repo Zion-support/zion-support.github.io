@@ -25,7 +25,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 contactType: 'customer service',
                 availableLanguage: 'English'
             },
-            sameAs: [
+            sameAs[
                 'https://linkedin.com/company/ziontechgroup',
                 'https://twitter.com/ziontechgroup',
                 'https://github.com/ziontechgroup'
@@ -55,7 +55,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 hasOfferCatalog: {
                     '@type': 'OfferCatalog',
                     name: 'Technology Services',
-                    itemListElement: [
+                    itemListElement[
                         {
                             '@type': 'Offer',
                             itemOffered: {
@@ -87,8 +87,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
         // Remove existing structured data
         const existingScript = document.querySelector('script[type="application/ld+json"]');
         if (existingScript) {
-            existingScript.remove();
-        }
+            existingScript.remove()}
         // Add new structured data
         const script = document.createElement('script');
         script.type = 'application/ld+json';
@@ -108,8 +107,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             const metaTag = document.createElement('meta');
             metaTag.name = meta.name;
             metaTag.content = meta.content;
-            document.head.appendChild(metaTag);
-        });
+            document.head.appendChild(metaTag)});
         // Add resource hints
         const resourceHints = [
             { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -123,8 +121,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             link.href = hint.href;
             if (hint.crossorigin)
                 link.crossOrigin = hint.crossorigin;
-            document.head.appendChild(link);
-        });
+            document.head.appendChild(link)});
         return () => {
             // Cleanup on unmount
             const addedScript = document.querySelector('script[type="application/ld+json"]');
@@ -133,15 +130,11 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             performanceMeta.forEach(meta => {
                 const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
                 if (metaTag)
-                    metaTag.remove();
-            });
+                    metaTag.remove()});
             resourceHints.forEach(hint => {
                 const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
                 if (link)
-                    link.remove();
-            });
-        };
-    }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
+                    link.remove()})}}, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -213,6 +206,5 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       {/* Service Areas */}
       <meta name="service:area" content="Worldwide"/>
       <meta name="service:type" content="Technology Consulting, AI Solutions, Cloud Services, Cybersecurity"/>
-    </Helmet>);
-};
+    </Helmet>)};
 export default SEOEnhancer;

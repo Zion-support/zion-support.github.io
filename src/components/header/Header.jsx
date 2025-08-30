@@ -25,23 +25,19 @@ export function Header({
   const user = null;
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10)};
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)};
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
-      setQuery('');
-    }
+      setQuery('')}
   };
 
   const effectiveTheme = customTheme || {
@@ -80,8 +76,7 @@ export function Header({
                 onChange={setQuery} 
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }} 
+                  setQuery("")}} 
                 searchSuggestions={searchSuggestions}
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -120,8 +115,7 @@ export function Header({
                 onChange={setQuery} 
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }} 
+                  setQuery("")}} 
                 searchSuggestions={searchSuggestions} 
                 placeholder="Search services, talent, equipment..."
               />
@@ -268,7 +262,6 @@ export function Header({
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>
-  );
-  };
+  )};
 
 export default Header;

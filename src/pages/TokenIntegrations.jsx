@@ -22,8 +22,7 @@ function suggestChain(region, stake) {
         return 'bnb';
     if (region === 'europe')
         return 'polygon';
-    return 'optimism';
-}
+    return 'optimism'}
 export default function TokenIntegrations() {
     const { address, isConnected } = useWallet();
     const [fromChain, setFromChain] = useState('ethereum');
@@ -41,13 +40,10 @@ export default function TokenIntegrations() {
         // Use burn-and-mint model if tokens are wrapped
         setTimeout(() => {
             setTxHash('0xabc123');
-            setStatus(`ZION$ arrived on ${toChain} in 12s`);
-        }, 1200);
-    };
+            setStatus(`ZION$ arrived on ${toChain} in 12s`)}, 1200)};
     const handleSuggest = () => {
         const chain = suggestChain(region.toLowerCase(), stake);
-        setSuggested(chain);
-    };
+        setSuggested(chain)};
     return (<div>
       <Header />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20">
@@ -119,5 +115,4 @@ export default function TokenIntegrations() {
         </div>
       </div>
       <Footer />
-    </div>);
-}
+    </div>)}

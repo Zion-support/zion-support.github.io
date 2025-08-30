@@ -46,8 +46,7 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             case 'name':
             default:
-                return a.name.localeCompare(b.name);
-        }
+                return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -70,8 +69,7 @@ const AdvancedServicesShowcase2025 = () => {
             'API Management': '🔌',
             'Network Security': '🛡️'
         };
-        return icons[category] || '🚀';
-    };
+        return icons[category] || '🚀'};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -306,6 +304,5 @@ const AdvancedServicesShowcase2025 = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AdvancedServicesShowcase2025;

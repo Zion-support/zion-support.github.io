@@ -28,8 +28,7 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
-            router.push("/login?redirect=/content-generator");
-        }
+            router.push("/login?redirect=/content-generator")}
     }, [user, isLoading, router]);
     const generateContent = async () => {
         setIsGenerating(true);
@@ -47,25 +46,20 @@ export default function ContentGenerator() {
             if (error)
                 throw error;
             setPreviewContent(data);
-            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-        }
+            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
             console.error("Error generating content:", error);
-            toast.error("Failed to generate content. Please try again.");
-        }
+            toast.error("Failed to generate content. Please try again.")}
         finally {
-            setIsGenerating(false);
-        }
+            setIsGenerating(false)}
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
-            return;
-        }
+            return}
         if (!previewContent) {
             toast.error("Generate newsletter content first");
-            return;
-        }
+            return}
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
                 body: {
@@ -78,12 +72,10 @@ export default function ContentGenerator() {
             });
             if (error)
                 throw error;
-            toast.success(`Test newsletter sent to ${testEmail}!`);
-        }
+            toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
             console.error("Error sending test newsletter:", error);
-            toast.error("Failed to send test newsletter. Please try again.");
-        }
+            toast.error("Failed to send test newsletter. Please try again.")}
     };
     // Check if user is still loading
     if (isLoading) {
@@ -93,8 +85,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
         
-      </>);
-    }
+      </>)}
     return (<>
       
       <div className="min-h-screen bg-zion-blue py-12">
@@ -296,5 +287,4 @@ export default function ContentGenerator() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

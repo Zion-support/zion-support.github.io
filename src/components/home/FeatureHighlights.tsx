@@ -1,8 +1,7 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Globe, 
   Shield, 
   Zap, 
@@ -14,14 +13,14 @@ import {
   Award,
   Clock,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const highlights = [
   {
     icon: Brain,
     title: 'AI-Powered Intelligence',
     description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
+    features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
     color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'bg-zion-purple/10',
     borderColor: 'border-zion-purple/20'
@@ -30,7 +29,7 @@ const highlights = [
     icon: Globe,
     title: 'Global Network',
     description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-    features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
+    features['Multi-language Support', 'Local Expertise', '24/7 Availability'],
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'bg-zion-cyan/10',
     borderColor: 'border-zion-cyan/20'
@@ -39,7 +38,7 @@ const highlights = [
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-    features: ['Data Protection', 'Access Control', 'Audit Trails'],
+    features['Data Protection', 'Access Control', 'Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
     borderColor: 'border-zion-blue/20'
@@ -108,7 +107,7 @@ const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
 
-export function FeatureHighlights() {
+export function FeatureHighlights(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -189,9 +188,9 @@ export function FeatureHighlights() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-20"
         >
-          {highlights.map((highlight, index) => (
+          {highlights.map((highlight, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -242,9 +241,9 @@ export function FeatureHighlights() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
-          {features.map((feature, index) => (
+          {features.map((feature, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -284,8 +283,8 @@ export function FeatureHighlights() {
             Trusted by Industry Leaders
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+            {achievements.map((achievement, index)  => (
               <motion.div
                 key={index}
                 variants={achievementVariants}
@@ -359,5 +358,4 @@ export function FeatureHighlights() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

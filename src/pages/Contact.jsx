@@ -30,7 +30,7 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     value: 'kleber@ziontechgroup.com',
-    description: 'Send us a message anytime',
+    description: 'Send us a message time',
     action: 'mailto:kleber@ziontechgroup.com',
     color: 'from-purple-500 to-pink-500'
   },
@@ -115,18 +115,18 @@ const contactFormFields = [
     placeholder: 'Enter your phone number (optional)'
   },
   {
-    name: 'company',
-    label: 'Company',
+    name: 'comp',
+    label: 'Comp',
     type: 'text',
     required: false,
-    placeholder: 'Enter your company name (optional)'
+    placeholder: 'Enter your comp name (optional)'
   },
   {
     name: 'service',
     label: 'Service Interest',
     type: 'select',
     required: true,
-    options: [
+    options[
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -145,7 +145,7 @@ export default function Contact() {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     service: '',
     message: ''
   });
@@ -157,8 +157,7 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -178,12 +177,10 @@ export default function Contact() {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         service: '',
         message: ''
-      });
-    }, 3000);
-  };
+      })}, 3000)};
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -406,7 +403,7 @@ export default function Contact() {
               )}
             </motion.div>
 
-            {/* Company Info */}
+            {/* Comp Info */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -416,7 +413,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
                 <p className="text-zion-slate-light leading-relaxed mb-6">
-                  We are a leading technology company specializing in AI, cybersecurity, cloud solutions, 
+                  We are a leading technology comp specializing in AI, cybersecurity, cloud solutions, 
                   and digital transformation. Our team of experts is dedicated to helping businesses 
                   leverage cutting-edge technology to achieve their goals.
                 </p>
@@ -503,5 +500,4 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

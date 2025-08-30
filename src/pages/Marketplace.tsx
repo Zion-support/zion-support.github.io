@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ShoppingCart, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ShoppingCart, 
   Users, 
   Server, 
   Wrench,
@@ -18,7 +17,7 @@ import {
   TrendingUp,
   Award,
   Zap
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const marketplaceCategories = [
   {
@@ -67,7 +66,7 @@ const featuredProducts = [
     views: 2847,
     likes: 156,
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags: ['AI', 'High Performance', 'Scalable'],
+    tags['AI', 'High Performance', 'Scalable'],
     featured: true
   },
   {
@@ -81,7 +80,7 @@ const featuredProducts = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Security', 'Expert', 'Certified'],
+    tags['Security', 'Expert', 'Certified'],
     featured: true
   },
   {
@@ -95,7 +94,7 @@ const featuredProducts = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Quantum', 'Research', 'Advanced'],
+    tags['Quantum', 'Research', 'Advanced'],
     featured: false
   }
 ];
@@ -108,19 +107,16 @@ const filters = [
   { name: 'Services', value: 'services' }
 ];
 
-export default function Marketplace() {
+export default function Marketplace(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredProducts = featuredProducts.filter(product => {
     if (selectedCategory !== 'all' && product.category.toLowerCase() !== selectedCategory) {
-      return false;
-    }
+      return false}
     if (searchQuery && !product.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
-    }
-    return true;
-  });
+      return false}
+    return true});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
@@ -219,8 +215,8 @@ export default function Marketplace() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {marketplaceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {marketplaceCategories.map((category, index)  => (
               <motion.div 
                 key={category.id}
                 className="group text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20 cursor-pointer"
@@ -278,7 +274,7 @@ export default function Marketplace() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {filters.map((filter) => (
+            {filters.map((filter)  => (
               <button
                 key={filter.value}
                 onClick={() => setSelectedCategory(filter.value)}
@@ -294,8 +290,8 @@ export default function Marketplace() {
           </motion.div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.map((product, index)  => (
               <motion.div 
                 key={product.id}
                 className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20"
@@ -433,5 +429,4 @@ export default function Marketplace() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function M365SecurityCopilot() {
+export default function M365SecurityCopilot(...args[]):  {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -31,6 +31,5 @@ export default function M365SecurityCopilot() {
         </div>
       </main>
     </div>
-  );
-}
+  )}
 

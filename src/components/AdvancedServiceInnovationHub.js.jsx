@@ -22,8 +22,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2025-2030',
             adoption: 85,
             investment: '$50B+',
-            keyPlayers: ['IBM', 'Google', 'Microsoft', 'Startups'],
-            technologies: ['Quantum Computing', 'Quantum Algorithms', 'Quantum Software'],
+            keyPlayers['IBM', 'Google', 'Microsoft', 'Startups'],
+            technologies['Quantum Computing', 'Quantum Algorithms', 'Quantum Software'],
             status: 'Emerging'
         },
         {
@@ -35,8 +35,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 45,
             investment: '$100B+',
-            keyPlayers: ['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],
-            technologies: ['AI Consciousness', 'General AI', 'Neural Networks'],
+            keyPlayers['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],
+            technologies['AI Consciousness', 'General AI', 'Neural Networks'],
             status: 'Emerging'
         },
         {
@@ -48,8 +48,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 30,
             investment: '$200B+',
-            keyPlayers: ['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],
-            technologies: ['Space Robotics', 'Resource Processing', 'Space Logistics'],
+            keyPlayers['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],
+            technologies['Space Robotics', 'Resource Processing', 'Space Logistics'],
             status: 'Emerging'
         },
         {
@@ -61,8 +61,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 60,
             investment: '$500B+',
-            keyPlayers: ['ITER', 'Private Fusion Companies', 'Government Labs'],
-            technologies: ['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],
+            keyPlayers['ITER', 'Private Fusion Companies', 'Government Labs'],
+            technologies['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],
             status: 'Growing'
         },
         {
@@ -74,8 +74,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2025-2035',
             adoption: 70,
             investment: '$150B+',
-            keyPlayers: ['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],
-            technologies: ['DNA Programming', 'Genetic Engineering', 'Bio-Manufacturing'],
+            keyPlayers['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],
+            technologies['DNA Programming', 'Genetic Engineering', 'Bio-Manufacturing'],
             status: 'Growing'
         },
         {
@@ -87,8 +87,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 40,
             investment: '$80B+',
-            keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'],
-            technologies: ['Neural Interfaces', 'Signal Processing', 'AI/ML'],
+            keyPlayers['Neuralink', 'Kernel', 'Medical Device Companies'],
+            technologies['Neural Interfaces', 'Signal Processing', 'AI/ML'],
             status: 'Emerging'
         }
     ];
@@ -98,19 +98,19 @@ const AdvancedServiceInnovationHub = () => {
             title: 'Quantum Internet Infrastructure',
             description: 'Global quantum internet enabling ultra-secure, instant communication worldwide.',
             timeline: '2030-2040',
-            milestones: [
+            milestones[
                 'Quantum network prototypes',
                 'Inter-city quantum links',
                 'Global quantum backbone',
                 'Consumer quantum internet'
             ],
-            challenges: [
+            challenges[
                 'Quantum entanglement over long distances',
                 'Infrastructure costs',
                 'Technical complexity',
                 'Regulatory frameworks'
             ],
-            opportunities: [
+            opportunities[
                 'Unbreakable security',
                 'Instant global communication',
                 'Quantum computing access',
@@ -124,19 +124,19 @@ const AdvancedServiceInnovationHub = () => {
             title: 'Space Colonization & Settlement',
             description: 'Establishment of permanent human settlements on Mars and other celestial bodies.',
             timeline: '2040-2060',
-            milestones: [
+            milestones[
                 'Mars mission planning',
                 'Habitat construction',
                 'Sustainable life support',
                 'Self-sufficient colonies'
             ],
-            challenges: [
+            challenges[
                 'Life support systems',
                 'Radiation protection',
                 'Resource sustainability',
                 'Human psychology'
             ],
-            opportunities: [
+            opportunities[
                 'New human civilization',
                 'Resource expansion',
                 'Scientific research',
@@ -150,19 +150,19 @@ const AdvancedServiceInnovationHub = () => {
             title: 'AI Governance & Regulation',
             description: 'Comprehensive frameworks for responsible AI development and deployment.',
             timeline: '2025-2035',
-            milestones: [
+            milestones[
                 'Ethical AI frameworks',
                 'Regulatory standards',
                 'Global AI governance',
                 'AI safety protocols'
             ],
-            challenges: [
+            challenges[
                 'International coordination',
                 'Technology evolution',
                 'Balancing innovation and safety',
                 'Stakeholder alignment'
             ],
-            opportunities: [
+            opportunities[
                 'Responsible AI development',
                 'Public trust building',
                 'Innovation guidance',
@@ -179,16 +179,13 @@ const AdvancedServiceInnovationHub = () => {
             const matchesStatus = selectedStatus === 'all' || trend.status === selectedStatus;
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());
-            return matchesCategory && matchesImpact && matchesStatus && matchesSearch;
-        });
-    }, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
+            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
     const getImpactColor = (impact) => {
         switch (impact) {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -196,8 +193,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Disruptive': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -206,8 +202,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'space-tech': return <Satellite className="w-5 h-5"/>;
             case 'green-tech': return <Leaf className="w-5 h-5"/>;
             case 'biotech-ai': return <Dna className="w-5 h-5"/>;
-            default: return <Cpu className="w-5 h-5"/>;
-        }
+            default: return <Cpu className="w-5 h-5"/>}
     };
     const categories = [
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },
@@ -601,6 +596,5 @@ const AdvancedServiceInnovationHub = () => {
           </div>
         </div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default AdvancedServiceInnovationHub;

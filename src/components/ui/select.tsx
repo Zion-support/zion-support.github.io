@@ -1,20 +1,14 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface SelectProps {
+interface SelectProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  disabled?: boolean;
-}
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)  => void;
+  disabled?: boolean}
 
-export function Select({ 
-  children, 
-  className = '', 
-  value, 
-  onChange, 
-  disabled = false 
-}: SelectProps) {
+export function Select(...args[]):  {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
   
   return (
@@ -26,47 +20,42 @@ export function Select({
     >
       {children}
     </select>
-  );
-}
+  )}
 
-interface SelectItemProps {
+interface SelectItemProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
-  value: string;
-}
+  value: string}
 
-export function SelectItem({ children, value }: SelectItemProps) {
+export function SelectItem(...args[]):  {
   return (
     <option value={value}>
       {children}
     </option>
-  );
-}
+  )}
 
-interface SelectTriggerProps {
+interface SelectTriggerProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
-export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
+export function SelectTrigger(...args[]):  {
   return (
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
       {children}
     </div>
-  );
-}
+  )}
 
-interface SelectValueProps {
-  placeholder?: string;
-}
+interface SelectValueProps extends React.PropsWithChildren<{}> {
 
-export function SelectValue({ placeholder }: SelectValueProps) {
-  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
+  placeholder?: string}
 
-interface SelectContentProps {
-  children: React.ReactNode;
-}
+export function SelectValue(...args[]):  {
+  return <span className="text-sm">{placeholder || 'Select an option'}</span>}
 
-export function SelectContent({ children }: SelectContentProps) {
-  return <div className="relative">{children}</div>;
-}
+interface SelectContentProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode}
+
+export function SelectContent(...args[]):  {
+  return <div className="relative">{children}</div>}

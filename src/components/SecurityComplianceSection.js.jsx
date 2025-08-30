@@ -10,8 +10,8 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2026-12-31",
         scope: "Global Operations",
-        features: ["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
-        benefits: ["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
+        features["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
+        benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
     },
     {
         name: "SOC 2 Type II",
@@ -21,8 +21,8 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2025-06-30",
         scope: "Cloud Services & Data Processing",
-        features: ["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
-        benefits: ["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
+        features["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
+        benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
     },
     {
         name: "GDPR Compliance",
@@ -32,8 +32,8 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "EU Data Processing",
-        features: ["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],
-        benefits: ["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
+        features["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],
+        benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
     },
     {
         name: "HIPAA",
@@ -43,8 +43,8 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "Healthcare Solutions",
-        features: ["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
-        benefits: ["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
+        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
+        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
     }
 ];
 const complianceFrameworks = [
@@ -54,8 +54,8 @@ const complianceFrameworks = [
         description: "Voluntary framework for managing and reducing cybersecurity risk",
         implementation: "Fully Implemented",
         maturity: "Tier 4 - Adaptive",
-        controls: ["Identify", "Protect", "Detect", "Respond", "Recover"],
-        benefits: ["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
+        controls["Identify", "Protect", "Detect", "Respond", "Recover"],
+        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
     },
     {
         name: "OWASP Top 10",
@@ -63,8 +63,8 @@ const complianceFrameworks = [
         description: "Standard awareness document for developers and web application security",
         implementation: "Fully Implemented",
         maturity: "Advanced",
-        controls: ["Input Validation", "Authentication", "Session Management", "Data Protection"],
-        benefits: ["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
+        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],
+        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
     },
     {
         name: "PCI DSS",
@@ -72,8 +72,8 @@ const complianceFrameworks = [
         description: "Payment Card Industry Data Security Standard compliance",
         implementation: "Compliant",
         maturity: "Level 1",
-        controls: ["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],
-        benefits: ["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
+        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],
+        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
     },
     {
         name: "FedRAMP",
@@ -81,8 +81,8 @@ const complianceFrameworks = [
         description: "Federal Risk and Authorization Management Program compliance",
         implementation: "In Progress",
         maturity: "Authorization Phase",
-        controls: ["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
-        benefits: ["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
+        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
+        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
     }
 ];
 const securityFeatures = [
@@ -90,43 +90,43 @@ const securityFeatures = [
         icon: <Shield className="w-8 h-8"/>,
         title: "End-to-End Encryption",
         description: "256-bit AES encryption for data in transit and at rest",
-        features: ["TLS 1.3", "Database Encryption", "File-level Security", "API Security"],
-        benefits: ["Data Protection", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
+        features["TLS 1.3", "Database Encryption", "File-level Security", "API Security"],
+        benefits["Data Protection", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
     },
     {
         icon: <Lock className="w-8 h-8"/>,
         title: "Multi-Factor Authentication",
         description: "Advanced authentication with biometric, hardware, and software tokens",
-        features: ["Biometric Auth", "Hardware Tokens", "SMS/Email Codes", "SSO Integration"],
-        benefits: ["Account Security", "Unauthorized Access Prevention", "Compliance", "User Experience"]
+        features["Biometric Auth", "Hardware Tokens", "SMS/Email Codes", "SSO Integration"],
+        benefits["Account Security", "Unauthorized Access Prevention", "Compliance", "User Experience"]
     },
     {
         icon: <Eye className="w-8 h-8"/>,
         title: "Continuous Monitoring",
         description: "24/7 security monitoring with AI-powered threat detection",
-        features: ["Real-time Alerts", "Threat Intelligence", "Behavioral Analysis", "Incident Response"],
-        benefits: ["Proactive Security", "Quick Response", "Risk Reduction", "Compliance"]
+        features["Real-time Alerts", "Threat Intelligence", "Behavioral Analysis", "Incident Response"],
+        benefits["Proactive Security", "Quick Response", "Risk Reduction", "Compliance"]
     },
     {
         icon: <Users className="w-8 h-8"/>,
         title: "Role-Based Access Control",
         description: "Granular access control based on user roles and responsibilities",
-        features: ["Permission Management", "Access Reviews", "Privilege Escalation", "Audit Logging"],
-        benefits: ["Data Security", "Compliance", "Operational Efficiency", "Risk Management"]
+        features["Permission Management", "Access Reviews", "Privilege Escalation", "Audit Logging"],
+        benefits["Data Security", "Compliance", "Operational Efficiency", "Risk Management"]
     },
     {
         icon: <Database className="w-8 h-8"/>,
         title: "Data Loss Prevention",
         description: "Advanced DLP with content analysis and policy enforcement",
-        features: ["Content Analysis", "Policy Enforcement", "Data Classification", "Incident Response"],
-        benefits: ["Data Protection", "Compliance", "Risk Mitigation", "Customer Trust"]
+        features["Content Analysis", "Policy Enforcement", "Data Classification", "Incident Response"],
+        benefits["Data Protection", "Compliance", "Risk Mitigation", "Customer Trust"]
     },
     {
         icon: <Network className="w-8 h-8"/>,
         title: "Network Security",
         description: "Comprehensive network protection with firewalls and intrusion detection",
-        features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
-        benefits: ["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
+        features["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
+        benefits["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
     }
 ];
 const securityStats = [
@@ -478,5 +478,4 @@ export function SecurityComplianceSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

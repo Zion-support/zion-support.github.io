@@ -1,24 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, 
   Users, 
   DollarSign, 
   Clock, 
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const CaseStudiesSection: React.FC = () => {
+export const CaseStudiesSection: React.FC = (): JSX.Element => {
   const caseStudies = [
     {
-      company: 'TechCorp Solutions',
+      comp: 'TechCorp Solutions',
       industry: 'Financial Services',
       challenge: 'Legacy system modernization and digital transformation',
       solution: 'Implemented AI-powered automation and cloud migration',
-      results: [
+      results[
         '40% reduction in operational costs',
         '60% improvement in customer satisfaction',
         '3x faster transaction processing'
@@ -27,11 +26,11 @@ export const CaseStudiesSection: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      company: 'Global Manufacturing Inc.',
+      comp: 'Global Manufacturing Inc.',
       industry: 'Manufacturing',
       challenge: 'Supply chain optimization and predictive maintenance',
       solution: 'IoT sensors and AI-powered analytics platform',
-      results: [
+      results[
         '25% reduction in downtime',
         '30% improvement in supply chain efficiency',
         '$2M annual cost savings'
@@ -40,11 +39,11 @@ export const CaseStudiesSection: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      company: 'HealthTech Innovations',
+      comp: 'HealthTech Innovations',
       industry: 'Healthcare',
       challenge: 'Patient data security and compliance management',
       solution: 'Zero-trust security framework and automated compliance',
-      results: [
+      results[
         '99.9% security compliance rate',
         '50% reduction in audit preparation time',
         'Enhanced patient data protection'
@@ -72,10 +71,10 @@ export const CaseStudiesSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index) => (
+        <div className="grid lg: grid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)  => (
             <motion.div
-              key={study.company}
+              key={study.comp}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -87,7 +86,7 @@ export const CaseStudiesSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">
-                    {study.company}
+                    {study.comp}
                   </h3>
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
@@ -166,7 +165,6 @@ export const CaseStudiesSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default CaseStudiesSection;

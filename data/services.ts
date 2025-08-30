@@ -10,13 +10,11 @@ export interface Service {
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
+    period: string};
   link: string;
   icon: string;
   isPopular?: boolean;
-  isNew?: boolean;
-}
+  isNew?: boolean}
 
 export const services: Service[] = [
   // AI Services
@@ -25,7 +23,7 @@ export const services: Service[] = [
     name: 'AI Chatbot Platform',
     category: 'AI',
     description: 'Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration.',
-    features: [
+    features[
       'Advanced NLP with GPT-4 integration',
       'Multi-language support (50+ languages)',
       'Custom training on your data',
@@ -33,7 +31,7 @@ export const services: Service[] = [
       'API integration and webhooks',
       '24/7 customer support'
     ],
-    benefits: [
+    benefits[
       'Reduce customer service costs by 60%',
       'Handle 1000+ conversations simultaneously',
       'Improve customer satisfaction by 40%',
@@ -55,7 +53,7 @@ export const services: Service[] = [
     name: 'AI Content Generator',
     category: 'AI',
     description: 'Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.',
-    features: [
+    features[
       'SEO-optimized content generation',
       'Multiple content types (blogs, social, ads)',
       'Plagiarism-free content',
@@ -63,7 +61,7 @@ export const services: Service[] = [
       'Content calendar management',
       'Performance analytics'
     ],
-    benefits: [
+    benefits[
       'Save 80% of content creation time',
       'Improve SEO rankings by 45%',
       'Generate 100+ articles per month',
@@ -84,7 +82,7 @@ export const services: Service[] = [
     name: 'AI-Powered Data Analytics',
     category: 'AI',
     description: 'Transform raw data into actionable insights with machine learning algorithms and predictive analytics.',
-    features: [
+    features[
       'Real-time data processing',
       'Predictive analytics models',
       'Custom dashboard creation',
@@ -92,7 +90,7 @@ export const services: Service[] = [
       'Data visualization tools',
       'API integration capabilities'
     ],
-    benefits: [
+    benefits[
       'Increase data-driven decisions by 70%',
       'Reduce analysis time by 85%',
       'Predict trends with 90% accuracy',
@@ -116,7 +114,7 @@ export const services: Service[] = [
     name: 'Managed IT Services',
     category: 'IT',
     description: 'Comprehensive IT management including network monitoring, security, and 24/7 technical support.',
-    features: [
+    features[
       '24/7 network monitoring',
       'Proactive issue resolution',
       'Security patch management',
@@ -124,7 +122,7 @@ export const services: Service[] = [
       'Help desk support',
       'Monthly reporting and analytics'
     ],
-    benefits: [
+    benefits[
       'Reduce IT downtime by 95%',
       'Lower IT costs by 30%',
       'Improve system reliability',
@@ -145,7 +143,7 @@ export const services: Service[] = [
     name: 'Cybersecurity Suite',
     category: 'Security',
     description: 'Advanced cybersecurity solutions including threat detection, vulnerability assessment, and incident response.',
-    features: [
+    features[
       'Real-time threat detection',
       'Vulnerability scanning',
       'Penetration testing',
@@ -153,7 +151,7 @@ export const services: Service[] = [
       'Incident response planning',
       'Compliance reporting'
     ],
-    benefits: [
+    benefits[
       'Protect against 99.9% of cyber threats',
       'Meet industry compliance standards',
       'Reduce security breach risk by 80%',
@@ -175,7 +173,7 @@ export const services: Service[] = [
     name: 'Cloud Migration Services',
     category: 'Cloud',
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    features: [
+    features[
       'Migration strategy planning',
       'Data migration tools',
       'Performance optimization',
@@ -183,7 +181,7 @@ export const services: Service[] = [
       'Training and documentation',
       'Post-migration support'
     ],
-    benefits: [
+    benefits[
       'Reduce infrastructure costs by 40%',
       'Improve scalability and flexibility',
       'Enhanced disaster recovery',
@@ -206,7 +204,7 @@ export const services: Service[] = [
     name: 'Project Management Platform',
     category: 'SAAS',
     description: 'Collaborative project management tool with task tracking, team collaboration, and progress monitoring.',
-    features: [
+    features[
       'Task and project tracking',
       'Team collaboration tools',
       'Time tracking and reporting',
@@ -214,7 +212,7 @@ export const services: Service[] = [
       'Mobile app access',
       'Integration with popular tools'
     ],
-    benefits: [
+    benefits[
       'Increase team productivity by 35%',
       'Reduce project delays by 50%',
       'Improve communication efficiency',
@@ -235,7 +233,7 @@ export const services: Service[] = [
     name: 'Customer Relationship Management',
     category: 'SAAS',
     description: 'Comprehensive CRM solution for managing customer relationships, sales pipeline, and marketing campaigns.',
-    features: [
+    features[
       'Contact and lead management',
       'Sales pipeline tracking',
       'Email marketing automation',
@@ -243,7 +241,7 @@ export const services: Service[] = [
       'Analytics and reporting',
       'Mobile app access'
     ],
-    benefits: [
+    benefits[
       'Increase sales by 30%',
       'Improve customer retention by 25%',
       'Streamline sales processes',
@@ -265,7 +263,7 @@ export const services: Service[] = [
     name: 'HR Management System',
     category: 'SAAS',
     description: 'Complete HR solution for employee management, payroll, benefits, and performance tracking.',
-    features: [
+    features[
       'Employee database management',
       'Payroll processing',
       'Benefits administration',
@@ -273,7 +271,7 @@ export const services: Service[] = [
       'Time and attendance',
       'Compliance reporting'
     ],
-    benefits: [
+    benefits[
       'Reduce HR administrative tasks by 60%',
       'Improve employee satisfaction',
       'Ensure compliance with regulations',
@@ -296,7 +294,7 @@ export const services: Service[] = [
     name: 'Custom Web Development',
     category: 'Development',
     description: 'Professional web development services including responsive design, e-commerce, and custom applications.',
-    features: [
+    features[
       'Responsive web design',
       'E-commerce integration',
       'Custom functionality',
@@ -304,7 +302,7 @@ export const services: Service[] = [
       'Performance optimization',
       'Ongoing maintenance'
     ],
-    benefits: [
+    benefits[
       'Professional online presence',
       'Improved user experience',
       'Better search engine rankings',
@@ -325,7 +323,7 @@ export const services: Service[] = [
     name: 'Mobile App Development',
     category: 'Development',
     description: 'Native and cross-platform mobile app development for iOS and Android platforms.',
-    features: [
+    features[
       'Native iOS and Android development',
       'Cross-platform solutions',
       'UI/UX design',
@@ -333,7 +331,7 @@ export const services: Service[] = [
       'Testing and quality assurance',
       'Post-launch support'
     ],
-    benefits: [
+    benefits[
       'Reach mobile users effectively',
       'Improve customer engagement',
       'Increase brand visibility',
@@ -354,7 +352,7 @@ export const services: Service[] = [
     name: 'API Development & Integration',
     category: 'Development',
     description: 'Custom API development and third-party service integration for seamless data exchange.',
-    features: [
+    features[
       'RESTful API development',
       'GraphQL implementation',
       'Third-party integrations',
@@ -362,7 +360,7 @@ export const services: Service[] = [
       'Testing and monitoring',
       'Performance optimization'
     ],
-    benefits: [
+    benefits[
       'Enable system interoperability',
       'Improve data flow efficiency',
       'Reduce development time',
@@ -385,7 +383,7 @@ export const services: Service[] = [
     name: 'Business Intelligence Solutions',
     category: 'Analytics',
     description: 'Transform business data into actionable insights with advanced analytics and reporting tools.',
-    features: [
+    features[
       'Data warehousing',
       'Interactive dashboards',
       'Custom reporting',
@@ -393,7 +391,7 @@ export const services: Service[] = [
       'Predictive analytics',
       'Real-time monitoring'
     ],
-    benefits: [
+    benefits[
       'Make data-driven decisions',
       'Identify business opportunities',
       'Improve operational efficiency',
@@ -412,13 +410,10 @@ export const services: Service[] = [
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)};
 
 export const getPopularServices = () => {
-  return services.filter(service => service.isPopular);
-};
+  return services.filter(service => service.isPopular)};
 
 export const getNewServices = () => {
-  return services.filter(service => service.isNew);
-};
+  return services.filter(service => service.isNew)};

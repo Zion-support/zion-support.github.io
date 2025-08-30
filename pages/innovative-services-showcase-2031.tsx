@@ -1,12 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { 
-  innovativeMicroSaasServices2031, 
+import React from 'react.ts';
+import Head from 'next/head.ts';
+import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-} from '../src/data/innovativeServices2031';
-import { 
-  Brain, 
+ } from '../src/data/innovativeServices2031';
+import { Brain, 
   Cloud, 
   CheckCircle, 
   TrendingUp, 
@@ -20,12 +18,11 @@ import {
   Target,
   Award,
   Clock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const InnovativeServicesShowcase2031: React.FC = () => {
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
-    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
 
   return (
     <>
@@ -384,7 +381,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="Your company name"
+                      placeholder="Your comp name"
                     />
                   </div>
                   
@@ -448,7 +445,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default InnovativeServicesShowcase2031;

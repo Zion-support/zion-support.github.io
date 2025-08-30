@@ -9,7 +9,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 2500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Quantum-classical hybrid algorithms",
             "Real-time optimization engine",
             "AI-driven quantum circuit design",
@@ -19,28 +19,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "API-first architecture",
             "Enterprise-grade security"
         ],
-        benefits: [
+        benefits[
             "Solve NP-hard problems in polynomial time",
             "Reduce computational costs by 90%",
             "Accelerate drug discovery by 100x",
             "Optimize supply chains in real-time",
             "Future-proof quantum advantage"
         ],
-        useCases: [
+        useCases[
             "Pharmaceutical research",
             "Financial portfolio optimization",
             "Logistics and supply chain",
             "Climate modeling",
             "Cryptography and security"
         ],
-        targetAudience: [
+        targetAudience[
             "Research institutions",
             "Pharmaceutical companies",
             "Financial services",
             "Government agencies",
             "Tech enterprises"
         ],
-        tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
+        tags["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
@@ -49,11 +49,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"],
-        integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
-        compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
+        technology["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"],
+        integrations["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
+        compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
         roi: "500% within 12 months",
-        competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
+        competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         launchDate: "Q1 2025",
         betaAccess: true
     },
@@ -67,7 +67,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 1800,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Autonomous decision-making engine",
             "Real-time business intelligence",
             "Predictive analytics dashboard",
@@ -77,28 +77,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Performance optimization",
             "Multi-tenant architecture"
         ],
-        benefits: [
+        benefits[
             "Reduce operational costs by 60%",
             "Increase efficiency by 80%",
             "24/7 autonomous operation",
             "Real-time optimization",
             "Scalable business growth"
         ],
-        useCases: [
+        useCases[
             "E-commerce operations",
             "Manufacturing automation",
             "Service delivery optimization",
             "Financial operations",
             "Healthcare administration"
         ],
-        targetAudience: [
+        targetAudience[
             "Business owners",
             "Operations managers",
             "CIOs and CTOs",
             "Enterprise leaders",
             "Startup founders"
         ],
-        tags: ["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"],
+        tags["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,000/month",
@@ -107,11 +107,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-        integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
-        compliance: ["SOC 2", "GDPR", "ISO 27001"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+        integrations["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
+        compliance["SOC 2", "GDPR", "ISO 27001"],
         roi: "400% within 8 months",
-        competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+        competitors["UiPath", "Automation Anywhere", "Blue Prism"],
         launchDate: "Q2 2025",
         betaAccess: true
     },
@@ -125,7 +125,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 3500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "EEG signal processing",
             "Neural pattern recognition",
             "Real-time brain mapping",
@@ -135,28 +135,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Research collaboration tools",
             "Compliance monitoring"
         ],
-        benefits: [
+        benefits[
             "Enable communication for disabled individuals",
             "Revolutionize human-computer interaction",
             "Advance medical research",
             "Create new accessibility solutions",
             "Pioneer neural technology"
         ],
-        useCases: [
+        useCases[
             "Medical research",
             "Accessibility applications",
             "Gaming and entertainment",
             "Education and training",
             "Assistive technology"
         ],
-        targetAudience: [
+        targetAudience[
             "Medical researchers",
             "Accessibility developers",
             "Gaming companies",
             "Educational institutions",
             "Healthcare providers"
         ],
-        tags: ["Neural Interface", "BCI", "Accessibility", "Medical", "Research"],
+        tags["Neural Interface", "BCI", "Accessibility", "Medical", "Research"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $15,000/month",
@@ -165,11 +165,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "PyTorch", "C++", "CUDA"],
-        integrations: ["Medical devices", "Research platforms", "Gaming engines"],
-        compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"],
+        technology["Python", "TensorFlow", "PyTorch", "C++", "CUDA"],
+        integrations["Medical devices", "Research platforms", "Gaming engines"],
+        compliance["FDA", "HIPAA", "ISO 13485", "CE Mark"],
         roi: "300% within 18 months",
-        competitors: ["Neuralink", "Kernel", "CTRL-labs"],
+        competitors["Neuralink", "Kernel", "CTRL-labs"],
         launchDate: "Q3 2025",
         betaAccess: false
     },
@@ -183,7 +183,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 1200,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "3D holographic displays",
             "Spatial audio communication",
             "Gesture-based interactions",
@@ -193,28 +193,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Cross-platform compatibility",
             "Cloud-based rendering"
         ],
-        benefits: [
+        benefits[
             "Enhance remote collaboration",
             "Improve creative workflows",
             "Reduce travel costs",
             "Increase engagement",
             "Accelerate decision-making"
         ],
-        useCases: [
+        useCases[
             "Remote team collaboration",
             "Design and architecture",
             "Product development",
             "Training and education",
             "Creative industries"
         ],
-        targetAudience: [
+        targetAudience[
             "Remote teams",
             "Design firms",
             "Architecture companies",
             "Educational institutions",
             "Creative agencies"
         ],
-        tags: ["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"],
+        tags["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $3,500/month",
@@ -223,11 +223,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
-        integrations: ["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"],
-        compliance: ["GDPR", "SOC 2", "ISO 27001"],
+        technology["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
+        integrations["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"],
+        compliance["GDPR", "SOC 2", "ISO 27001"],
         roi: "250% within 6 months",
-        competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
+        competitors["Microsoft Mesh", "Meta Horizon", "Spatial"],
         launchDate: "Q2 2025",
         betaAccess: true
     },
@@ -241,7 +241,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 2200,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Distributed security architecture",
             "AI threat detection",
             "Zero-trust security model",
@@ -251,28 +251,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Compliance monitoring",
             "Security orchestration"
         ],
-        benefits: [
+        benefits[
             "Reduce security incidents by 90%",
             "Automate threat response",
             "Comprehensive protection coverage",
             "Real-time security monitoring",
             "Scalable security architecture"
         ],
-        useCases: [
+        useCases[
             "Enterprise security",
             "Cloud infrastructure",
             "IoT device protection",
             "Financial services",
             "Healthcare security"
         ],
-        targetAudience: [
+        targetAudience[
             "CISOs and security teams",
             "IT administrators",
             "Compliance officers",
             "Enterprise organizations",
             "Government agencies"
         ],
-        tags: ["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
+        tags["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,200 - $8,000/month",
@@ -281,11 +281,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"],
-        integrations: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+        technology["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"],
+        integrations["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "350% within 12 months",
-        competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
+        competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
         launchDate: "Q1 2025",
         betaAccess: true
     },
@@ -299,7 +299,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         price: 1500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Green computing optimization",
             "Renewable energy management",
             "Carbon footprint tracking",
@@ -309,28 +309,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Sustainability reporting",
             "Eco-friendly development tools"
         ],
-        benefits: [
+        benefits[
             "Reduce environmental impact",
             "Achieve sustainability goals",
             "Comply with green regulations",
             "Improve brand reputation",
             "Cost savings through efficiency"
         ],
-        useCases: [
+        useCases[
             "Corporate sustainability",
             "Green building management",
             "Renewable energy projects",
             "Supply chain optimization",
             "Environmental compliance"
         ],
-        targetAudience: [
+        targetAudience[
             "Sustainability officers",
             "Environmental consultants",
             "Green building companies",
             "Renewable energy firms",
             "Corporate responsibility teams"
         ],
-        tags: ["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"],
+        tags["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$1,500 - $4,500/month",
@@ -339,11 +339,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"],
-        integrations: ["Energy management systems", "IoT sensors", "Sustainability platforms"],
-        compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
+        technology["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"],
+        integrations["Energy management systems", "IoT sensors", "Sustainability platforms"],
+        compliance["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
         roi: "200% within 12 months",
-        competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
+        competitors["WattTime", "Carbon Trust", "Sustain.Life"],
         launchDate: "Q2 2025",
         betaAccess: true
     }

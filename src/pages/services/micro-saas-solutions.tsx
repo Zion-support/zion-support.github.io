@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function MicroSAASSolutions() {
+export default function MicroSAASSolutions(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Rocket,
@@ -95,7 +95,7 @@ export default function MicroSAASSolutions() {
                   title: "Multi-tenant Architecture",
                   description: "Scalable multi-tenant architecture for growing SaaS businesses."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Business Tools",
@@ -158,7 +158,7 @@ export default function MicroSAASSolutions() {
                   icon: Database,
                   benefits: ["Content management", "SEO tools", "Digital marketing"]
                 }
-              ].map((category, index) => (
+              ].map((category, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <category.icon className="w-6 h-6 text-white" />
@@ -191,7 +191,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -213,7 +213,7 @@ export default function MicroSAASSolutions() {
                   title: "Launch & Growth",
                   description: "Product launch, marketing, and continuous improvement."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -265,7 +265,7 @@ export default function MicroSAASSolutions() {
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -345,7 +345,7 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   metric: "MRR",
@@ -367,7 +367,7 @@ export default function MicroSAASSolutions() {
                   title: "Customer Acquisition Cost",
                   description: "Optimize marketing and sales efficiency"
                 }
-              ].map((metric, index) => (
+              ].map((metric, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>

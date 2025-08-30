@@ -11,9 +11,7 @@ export interface RealMarketService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const realMarketServices: RealMarketService[] = [
   {
     id: "market-analysis-platform",
@@ -21,7 +19,7 @@ export const realMarketServices: RealMarketService[] = [
     tagline: "Comprehensive market research and analysis",
     price: "$69/month",
     description: "Advanced market analysis platform providing insights and trends for business decision making.",
-    features: [
+    features[
       "Market research tools",
       "Trend analysis",
       "Competitor tracking",
@@ -45,7 +43,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$149',
     period: '/month',
     description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
-    features: [
+    features[
       'Self‑serve returns portal',
       'Label generation and tracking',
       'Exchange/repair workflows',
@@ -64,15 +62,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–3 days',
     category: 'E‑commerce',
     realService: true,
-    technology: ['Shopify', 'WooCommerce', 'Stripe', 'Shippo'],
-    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'UPS/FedEx'],
-    useCases: ['Reduce refunds', 'Increase exchanges', 'Shorten RMA cycle'],
+    technology['Shopify', 'WooCommerce', 'Stripe', 'Shippo'],
+    integrations['Shopify', 'WooCommerce', 'Shippo', 'UPS/FedEx'],
+    useCases['Reduce refunds', 'Increase exchanges', 'Shorten RMA cycle'],
     roi: 'Reduce return handling time by 40% and logistics costs by 10–20%.',
-    competitors: ['Loop', 'Returnly', 'Happy Returns'],
+    competitors['Loop', 'Returnly', 'Happy Returns'],
     marketSize: '$9B returns tech',
     growthRate: '18% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -92,7 +89,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$79',
     period: '/month',
     description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
-    features: [
+    features[
       'Sequence builder and templates',
       'Reply/booking detection and stops',
       'Inbox rotation and throttling',
@@ -111,15 +108,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Growth & Marketing',
     realService: true,
-    technology: ['Next.js', 'IMAP/SMTP', 'Calendars'],
-    integrations: ['HubSpot', 'Pipedrive', 'Google/Outlook'],
-    useCases: ['Lead nurturing', 'Onboarding nudges', 'Renewal reminders'],
+    technology['Next.js', 'IMAP/SMTP', 'Calendars'],
+    integrations['HubSpot', 'Pipedrive', 'Google/Outlook'],
+    useCases['Lead nurturing', 'Onboarding nudges', 'Renewal reminders'],
     roi: 'Lift reply rates by 15–35% and shorten sales cycles.',
-    competitors: ['Mailshake', 'Lemlist', 'Apollo'],
+    competitors['Mailshake', 'Lemlist', 'Apollo'],
     marketSize: '$6B sales engagement',
     growthRate: '20% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -139,7 +135,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$49',
     period: '/month',
     description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
-    features: [
+    features[
       'High‑accuracy transcription',
       'Speaker diarization',
       'Summaries and chaptering',
@@ -158,15 +154,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: 'Same day',
     category: 'Creator Tools',
     realService: true,
-    technology: ['ASR', 'NLP', 'FFmpeg'],
-    integrations: ['Spotify for Podcasters', 'Buzzsprout', 'Riverside'],
-    useCases: ['SEO, accessibility, repurposing clips'],
+    technology['ASR', 'NLP', 'FFmpeg'],
+    integrations['Spotify for Podcasters', 'Buzzsprout', 'Riverside'],
+    useCases['SEO, accessibility, repurposing clips'],
     roi: 'Cut post‑production time by 50–70% and improve SEO traffic.',
-    competitors: ['Descript', 'Castmagic', 'Capsho'],
+    competitors['Descript', 'Castmagic', 'Capsho'],
     marketSize: '$2B podcast tooling',
     growthRate: '19% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -186,7 +181,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$19',
     period: '/month',
     description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
-    features: [
+    features[
       'Drag‑and‑drop templates',
       'Case study generator',
       'Contact and booking forms',
@@ -205,15 +200,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '15 minutes',
     category: 'Creator Tools',
     realService: true,
-    technology: ['Next.js', 'Forms', 'SEO'],
-    integrations: ['Calendly', 'HubSpot', 'GA4'],
-    useCases: ['Showcase work', 'Capture leads', 'Book meetings'],
+    technology['Next.js', 'Forms', 'SEO'],
+    integrations['Calendly', 'HubSpot', 'GA4'],
+    useCases['Showcase work', 'Capture leads', 'Book meetings'],
     roi: 'Increase inbound leads by 10–25% with polished case studies.',
-    competitors: ['Webflow', 'Squarespace', 'Wix'],
+    competitors['Webflow', 'Squarespace', 'Wix'],
     marketSize: '$4B creator sites',
     growthRate: '11% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -233,7 +227,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$15',
     period: '/month',
     description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
-    features: [
+    features[
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
@@ -252,15 +246,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: 'Same day',
     category: 'CRM',
     realService: true,
-    technology: ['Next.js', 'SQLite/Postgres'],
-    integrations: ['Gmail/Outlook', 'Twilio'],
-    useCases: ['Track customers', 'Follow‑ups', 'Close more deals'],
+    technology['Next.js', 'SQLite/Postgres'],
+    integrations['Gmail/Outlook', 'Twilio'],
+    useCases['Track customers', 'Follow‑ups', 'Close more deals'],
     roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
-    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
+    competitors['HubSpot Starter', 'Pipedrive Essentials'],
     marketSize: '$20B SMB CRM',
     growthRate: '10% YoY',
-    variant: 'analytics-futuristic' as any,
-    contactInfo: {
+    variant: 'analytics-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -280,7 +273,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$29',
     period: '/month',
     description: 'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
-    features: [
+    features[
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -299,15 +292,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: 'Same day',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['NLP/LLM', 'ESP APIs'],
-    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
-    useCases: ['Boost open rates', 'Faster copy iteration'],
+    technology['NLP/LLM', 'ESP APIs'],
+    integrations['Mailchimp', 'Klaviyo', 'SendGrid'],
+    useCases['Boost open rates', 'Faster copy iteration'],
     roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
-    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
+    competitors['Copy.ai', 'Jasper', 'Headline analyzers'],
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -327,7 +319,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$199',
     period: '/month',
     description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
-    features: [
+    features[
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
@@ -346,15 +338,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '3 days',
     category: 'Dev Productivity',
     realService: true,
-    technology: ['GitHub/GitLab APIs', 'CI logs'],
-    integrations: ['GitHub', 'GitLab', 'Jira', 'Linear'],
-    useCases: ['Improve code review', 'Reduce cycle time', 'Stabilize CI'],
+    technology['GitHub/GitLab APIs', 'CI logs'],
+    integrations['GitHub', 'GitLab', 'Jira', 'Linear'],
+    useCases['Improve code review', 'Reduce cycle time', 'Stabilize CI'],
     roi: 'Shorten cycle time by 10–25% and cut flaky tests.',
-    competitors: ['LinearB', 'Swarmia', 'Velocity'],
+    competitors['LinearB', 'Swarmia', 'Velocity'],
     marketSize: '$5B dev analytics',
     growthRate: '21% YoY',
-    variant: 'analytics-futuristic' as any,
-    contactInfo: {
+    variant: 'analytics-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -374,7 +365,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$4',
     period: '/device/month',
     description: 'Baseline mobile device and app management with policy templates, compliance rules, and reporting integrated with Microsoft 365.',
-    features: [
+    features[
       'Zero‑touch enrollment (ABM/DEP, Android Enterprise)',
       'Compliance and conditional access',
       'App protection policies',
@@ -391,15 +382,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 days',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Intune, ABM/DEP, Android Enterprise'],
-    integrations: ['Azure AD, Microsoft 365'],
-    useCases: ['Device compliance, App protection, Zero‑touch rollout'],
+    technology['Intune, ABM/DEP, Android Enterprise'],
+    integrations['Azure AD, Microsoft 365'],
+    useCases['Device compliance, App protection, Zero‑touch rollout'],
     roi: 'Reduce manual enrollments and improve compliance posture.',
-    competitors: ['Jamf, Kandji, Intune turnkey partners'],
+    competitors['Jamf, Kandji, Intune turnkey partners'],
     marketSize: '$6B+ MDM',
     growthRate: '18% YoY',
-    variant: 'cloud-futuristic' as any,
-    contactInfo: {
+    variant: 'cloud-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -419,7 +409,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$25',
     period: '/user/month',
     description: 'Multi‑speaker transcription, action item extraction, and automatic creation of Jira/GitHub issues with summaries and owners.',
-    features: [
+    features[
       'Speaker‑aware transcription',
       'Action extraction and owners',
       'Jira/GitHub ticket creation',
@@ -436,15 +426,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 hour',
     category: 'AI & Data',
     realService: true,
-    technology: ['OpenAI STT, Embeddings, Jira/GitHub APIs'],
-    integrations: ['Google Meet, Zoom, Jira, GitHub'],
-    useCases: ['Reduce manual note‑taking, Faster follow‑ups, Better accountability'],
+    technology['OpenAI STT, Embeddings, Jira/GitHub APIs'],
+    integrations['Google Meet, Zoom, Jira, GitHub'],
+    useCases['Reduce manual note‑taking, Faster follow‑ups, Better accountability'],
     roi: 'Save hours/week per team; fewer missed actions.',
-    competitors: ['Supernormal, Tactiq + custom flows'],
+    competitors['Supernormal, Tactiq + custom flows'],
     marketSize: '$3B productivity AI',
     growthRate: '25% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -464,7 +453,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$29',
     period: '/month',
     description: 'Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',
-    features: [
+    features[
       'Stale and orphan flag detection',
       'Env parity and drift checks',
       'Experiment hygiene scoring',
@@ -481,15 +470,14 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Static analysis, SDK hooks, CI'],
-    integrations: ['LaunchDarkly, Flagsmith, Split.io'],
-    useCases: ['Reduce tech debt, Safer rollouts, Faster cleanups'],
+    technology['Static analysis, SDK hooks, CI'],
+    integrations['LaunchDarkly, Flagsmith, Split.io'],
+    useCases['Reduce tech debt, Safer rollouts, Faster cleanups'],
     roi: 'Cut incidents from stale flags; improve developer velocity.',
-    competitors: ['Native vendor hygiene, manual audits'],
+    competitors['Native vendor hygiene, manual audits'],
     marketSize: '$2B experimentation',
     growthRate: '18% YoY',
-    variant: 'devops-futuristic' as any,
-    contactInfo: {
+    variant: 'devops-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

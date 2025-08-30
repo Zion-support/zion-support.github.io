@@ -41,10 +41,8 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
       
-    </>);
-}
+    </>)}
 export default function HiringTracker() {
     return (<ProtectedRoute>
       <HiringTrackerContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

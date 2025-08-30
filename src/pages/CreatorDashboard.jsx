@@ -46,5 +46,4 @@ export default function CreatorDashboard() {
         </div>
       </div>
       <SidebarTrigger />
-    </SidebarProvider>);
-}
+    </SidebarProvider>)}

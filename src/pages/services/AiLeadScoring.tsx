@@ -1,10 +1,10 @@
 // removed duplicate old section
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react.ts';
 
-const AiLeadScoring: React.FC = () => {
+const AiLeadScoring: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -80,8 +80,7 @@ const AiLeadScoring: React.FC = () => {
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AiLeadScoring;
 

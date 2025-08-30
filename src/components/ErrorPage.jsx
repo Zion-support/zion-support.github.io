@@ -16,6 +16,5 @@ export const ErrorPage = ({ statusCode = 404, title = 'Page Not Found', message 
           </Button>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default ErrorPage;

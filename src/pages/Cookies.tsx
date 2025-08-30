@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cookie, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Cookie, 
   Shield, 
   Settings, 
   BarChart3, 
@@ -9,15 +8,15 @@ import {
   CheckCircle,
   XCircle,
   Info
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const Cookies: React.FC = () => {
+const Cookies: React.FC = (): JSX.Element => {
   const cookieTypes = [
     {
       type: 'Essential Cookies',
       description: 'Required for the website to function properly',
-      examples: ['Authentication', 'Security', 'Session management'],
+      examples['Authentication', 'Security', 'Session management'],
       necessary: true,
       icon: Shield,
       color: 'from-red-500 to-orange-500'
@@ -25,7 +24,7 @@ const Cookies: React.FC = () => {
     {
       type: 'Performance Cookies',
       description: 'Help us understand how visitors interact with our website',
-      examples: ['Analytics', 'Error tracking', 'Performance monitoring'],
+      examples['Analytics', 'Error tracking', 'Performance monitoring'],
       necessary: false,
       icon: BarChart3,
       color: 'from-blue-500 to-cyan-500'
@@ -33,7 +32,7 @@ const Cookies: React.FC = () => {
     {
       type: 'Functional Cookies',
       description: 'Remember your preferences and settings',
-      examples: ['Language settings', 'Theme preferences', 'Form data'],
+      examples['Language settings', 'Theme preferences', 'Form data'],
       necessary: false,
       icon: Settings,
       color: 'from-green-500 to-emerald-500'
@@ -41,7 +40,7 @@ const Cookies: React.FC = () => {
     {
       type: 'Marketing Cookies',
       description: 'Deliver relevant advertisements and content',
-      examples: ['Ad targeting', 'Social media integration', 'Remarketing'],
+      examples['Ad targeting', 'Social media integration', 'Remarketing'],
       necessary: false,
       icon: Eye,
       color: 'from-purple-500 to-pink-500'
@@ -155,8 +154,8 @@ const Cookies: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
               Types of Cookies We Use
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cookieTypes.map((cookieType, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {cookieTypes.map((cookieType, index)  => (
                 <motion.div
                   key={cookieType.type}
                   initial={{ opacity: 0, y: 20 }}
@@ -299,7 +298,7 @@ const Cookies: React.FC = () => {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h3 className="text-2xl font-bold text-white mb-8">Questions About Cookies?</h3>
             <p className="text-gray-300 mb-6">
-              If you have any questions about our cookie policy or how we use cookies, 
+              If you have  questions about our cookie policy or how we use cookies, 
               please don't hesitate to contact us.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -331,7 +330,6 @@ const Cookies: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default Cookies;

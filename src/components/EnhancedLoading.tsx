@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Loader2, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, 
   CheckCircle, 
   AlertCircle, 
   Zap, 
@@ -11,19 +10,15 @@ import {
   Database,
   Network,
   Shield
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 
-export function LoadingSpinner({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
-}: LoadingSpinnerProps) {
+export function LoadingSpinner(...args[]):  {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
@@ -42,7 +37,7 @@ export function LoadingSpinner({
           className="relative mx-auto mb-4"
           animate={{ 
             rotate: 360,
-            scale: [1, 1.1, 1]
+            scale[1, 1.1, 1]
           }}
           transition={{ 
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },
@@ -53,7 +48,7 @@ export function LoadingSpinner({
             <motion.div
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
               animate={{
-                background: [
+                background[
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
                   'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)'
@@ -67,7 +62,7 @@ export function LoadingSpinner({
           {/* Glow Effect */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
-            animate={{ opacity: [0.3, 0.6, 0.3] }}
+            animate={{ opacity[0.3, 0.6, 0.3] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
         </motion.div>
@@ -75,7 +70,7 @@ export function LoadingSpinner({
         {/* Loading Text */}
         <motion.div
           className="text-zion-cyan font-medium"
-          animate={{ opacity: [0.5, 1, 0.5] }}
+          animate={{ opacity[0.5, 1, 0.5] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           {text}
@@ -88,8 +83,8 @@ export function LoadingSpinner({
               key={index}
               className="w-2 h-2 bg-zion-cyan rounded-full"
               animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 1, 0.5]
+                scale[1, 1.5, 1],
+                opacity[0.5, 1, 0.5]
               }}
               transition={{
                 duration: 1.5,
@@ -101,14 +96,13 @@ export function LoadingSpinner({
         </div>
       </div>
     </div>
-  );
-}
+  )}
 
-interface PageLoaderProps {
-  pageName?: string;
-}
+interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
-export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
+  pageName?: string}
+
+export function PageLoader(...args[]):  {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -117,16 +111,16 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           <motion.div
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.6, 0.3]
+              scale[1, 1.5, 1],
+              opacity[0.3, 0.6, 0.3]
             }}
             transition={{ duration: 4, repeat: Infinity }}
           />
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
             animate={{
-              scale: [1.5, 1, 1.5],
-              opacity: [0.6, 0.3, 0.6]
+              scale[1.5, 1, 1.5],
+              opacity[0.6, 0.3, 0.6]
             }}
             transition={{ duration: 4, repeat: Infinity, delay: 1 }}
           />
@@ -153,7 +147,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
 
           <motion.h2
             className="text-2xl font-bold text-white mb-2"
-            animate={{ opacity: [0.7, 1, 0.7] }}
+            animate={{ opacity[0.7, 1, 0.7] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             Loading {pageName}
@@ -161,7 +155,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
 
           <motion.p
             className="text-zion-slate-light"
-            animate={{ opacity: [0.5, 1, 0.5] }}
+            animate={{ opacity[0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             Please wait while we prepare everything for you...
@@ -181,24 +175,23 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}
 
-interface SkeletonLoaderProps {
+interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
+
   lines?: number;
-  className?: string;
-}
+  className?: string}
 
-export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
+export function SkeletonLoader(...args[]):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map((_, index)  => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
           animate={{
-            opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0', '-200% 0']
+            opacity[0.5, 1, 0.5],
+            backgroundPosition['200% 0', '-200% 0']
           }}
           transition={{
             duration: 1.5,
@@ -212,5 +205,4 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
         />
       ))}
     </div>
-  );
-}
+  )}

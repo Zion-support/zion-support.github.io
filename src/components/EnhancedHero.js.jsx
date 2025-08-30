@@ -43,31 +43,23 @@ const EnhancedHero = () => {
             return;
         const interval = setInterval(() => {
             if (isPlaying) {
-                setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-            }
+                setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
         }, 5000);
-        return () => clearInterval(interval);
-    }, [isPlaying, isAutoPlaying, heroSlides.length]);
+        return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    };
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length)};
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    };
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
     const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
+        setCurrentSlide(index)};
     const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
-    };
+        setIsPlaying(!isPlaying)};
     const toggleMute = () => {
-        setIsMuted(!isMuted);
-    };
+        setIsMuted(!isMuted)};
     const toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
-            setIsPlaying(true);
-        }
+            setIsPlaying(true)}
     };
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}
@@ -104,7 +96,7 @@ const EnhancedHero = () => {
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
-                  <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="ml-2">
+                  <motion.div animate={{ x[0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="ml-2">
                     →
                   </motion.div>
                 </a>
@@ -160,6 +152,5 @@ const EnhancedHero = () => {
           <p>Use ← → keys or click to navigate</p>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default EnhancedHero;

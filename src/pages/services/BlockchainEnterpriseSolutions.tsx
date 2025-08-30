@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle  } from 'lucide-react.ts';
 
-export default function BlockchainEnterpriseSolutions() {
+export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
     {
       icon: Lock,
@@ -48,25 +48,25 @@ export default function BlockchainEnterpriseSolutions() {
       title: 'Blockchain Strategy',
       description: 'Comprehensive blockchain roadmap and implementation strategy',
       price: 'From $5,000',
-      features: ['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']
+      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']
     },
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features: ['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
+      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
     },
     {
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features: ['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
+      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
     },
     {
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
     }
   ];
 
@@ -149,8 +149,8 @@ export default function BlockchainEnterpriseSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -186,8 +186,8 @@ export default function BlockchainEnterpriseSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -237,8 +237,8 @@ export default function BlockchainEnterpriseSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.name}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -292,5 +292,4 @@ export default function BlockchainEnterpriseSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

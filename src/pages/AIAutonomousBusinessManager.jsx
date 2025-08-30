@@ -584,7 +584,7 @@ const businessManagerSolutions = [
     title: "AI Business Intelligence",
     description: "Intelligent business analytics and insights powered by artificial intelligence.",
     icon: BarChart3,
-    features: [
+    features[
       "Predictive analytics",
       "Data visualization",
       "Real-time insights",
@@ -593,14 +593,14 @@ const businessManagerSolutions = [
     price: "From $100,000",
     timeline: "16-24 weeks",
     category: "Analytics",
-    technologies: ["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
+    technologies["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
   },
   {
     id: 2,
     title: "Autonomous Process Automation",
     description: "AI-powered automation of business processes and workflows.",
     icon: Cog,
-    features: [
+    features[
       "Process optimization",
       "Workflow automation",
       "Decision automation",
@@ -609,14 +609,14 @@ const businessManagerSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Automation",
-    technologies: ["RPA", "AI", "Workflow Engines", "Process Mining"]
+    technologies["RPA", "AI", "Workflow Engines", "Process Mining"]
   },
   {
     id: 3,
     title: "Smart Resource Management",
     description: "Intelligent allocation and optimization of business resources.",
     icon: Users,
-    features: [
+    features[
       "Resource optimization",
       "Capacity planning",
       "Cost optimization",
@@ -625,14 +625,14 @@ const businessManagerSolutions = [
     price: "From $120,000",
     timeline: "18-28 weeks",
     category: "Resource Management",
-    technologies: ["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
+    technologies["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
   },
   {
     id: 4,
     title: "Predictive Business Planning",
     description: "AI-driven forecasting and strategic business planning.",
     icon: Target,
-    features: [
+    features[
       "Market forecasting",
       "Trend analysis",
       "Risk assessment",
@@ -641,14 +641,14 @@ const businessManagerSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Planning",
-    technologies: ["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
+    technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
   },
   {
     id: 5,
     title: "Intelligent Customer Management",
     description: "AI-powered customer relationship and experience management.",
     icon: Users,
-    features: [
+    features[
       "Customer insights",
       "Personalization",
       "Predictive marketing",
@@ -657,14 +657,14 @@ const businessManagerSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Customer Management",
-    technologies: ["AI", "CRM", "Machine Learning", "Customer Analytics"]
+    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"]
   },
   {
     id: 6,
     title: "Autonomous Financial Management",
     description: "AI-driven financial planning, analysis, and decision making.",
     icon: TrendingUp,
-    features: [
+    features[
       "Financial forecasting",
       "Risk management",
       "Investment analysis",
@@ -673,7 +673,7 @@ const businessManagerSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Financial",
-    technologies: ["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
+    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
 
@@ -711,7 +711,7 @@ const businessTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed AI-powered business intelligence for 50+ global facilities",
     solution: "Built comprehensive AI business manager with predictive analytics and process automation",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required autonomous financial management and risk assessment",
     solution: "Implemented AI-driven financial planning and risk management system",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Retail Chain Network",
+    comp: "Retail Chain Network",
     industry: "Retail",
     challenge: "Needed intelligent customer management and predictive marketing",
     solution: "Built AI-powered customer analytics and personalization platform",
@@ -774,25 +774,25 @@ const businessBenefits = [
     title: "Intelligent Decision Making",
     description: "AI-powered insights enable better, data-driven business decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples: ["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
   },
   {
     title: "Cost Optimization",
     description: "AI identifies cost-saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples: ["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
   },
   {
     title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-    examples: ["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
   }
 ];
 
@@ -1115,7 +1115,7 @@ export default function AIAutonomousBusinessManager() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1180,5 +1180,4 @@ export default function AIAutonomousBusinessManager() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

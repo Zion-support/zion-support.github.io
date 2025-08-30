@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  FileText, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { FileText, 
   Shield, 
   Clock, 
   Zap, 
@@ -16,9 +15,9 @@ import {
   Users,
   BarChart3,
   Lock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AILegalDocumentAutomation() {
+export default function AILegalDocumentAutomation(...args[]):  {
   const features = [
     {
       icon: FileText,
@@ -56,7 +55,7 @@ export default function AILegalDocumentAutomation() {
     {
       name: "Contract Generation",
       price: "From $299/month",
-      features: [
+      features[
         "AI-powered contract templates",
         "Automated compliance checks",
         "Custom clause generation",
@@ -68,7 +67,7 @@ export default function AILegalDocumentAutomation() {
     {
       name: "Legal Research Assistant",
       price: "From $199/month",
-      features: [
+      features[
         "Case law analysis",
         "Precedent tracking",
         "Regulatory updates",
@@ -80,7 +79,7 @@ export default function AILegalDocumentAutomation() {
     {
       name: "Document Review & Analysis",
       price: "From $399/month",
-      features: [
+      features[
         "Automated risk assessment",
         "Compliance validation",
         "Legal precedent analysis",
@@ -92,7 +91,7 @@ export default function AILegalDocumentAutomation() {
     {
       name: "Legal Workflow Automation",
       price: "From $599/month",
-      features: [
+      features[
         "End-to-end workflow automation",
         "Task assignment and tracking",
         "Deadline management",
@@ -196,8 +195,8 @@ export default function AILegalDocumentAutomation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -234,8 +233,8 @@ export default function AILegalDocumentAutomation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {servicePackages.map((pkg, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {servicePackages.map((pkg, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -284,8 +283,8 @@ export default function AILegalDocumentAutomation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportedDocuments.map((doc, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {supportedDocuments.map((doc, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -319,8 +318,8 @@ export default function AILegalDocumentAutomation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -356,8 +355,8 @@ export default function AILegalDocumentAutomation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {technologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -486,5 +485,4 @@ export default function AILegalDocumentAutomation() {
         </section>
       </div>
     </>
-  );
-}
+  )}

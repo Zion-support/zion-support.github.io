@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react.ts';
 
-const AICustomerSuccessPrediction: React.FC = () => {
+const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: TrendingUp,
@@ -49,7 +49,7 @@ const AICustomerSuccessPrediction: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'Perfect for growing SaaS companies',
-      features: [
+      features[
         'Up to 1,000 customers',
         'Basic predictive analytics',
         'Customer health scoring',
@@ -65,7 +65,7 @@ const AICustomerSuccessPrediction: React.FC = () => {
       price: '$799',
       period: '/month',
       description: 'Ideal for established businesses',
-      features: [
+      features[
         'Up to 10,000 customers',
         'Advanced AI predictions',
         'Custom success workflows',
@@ -82,7 +82,7 @@ const AICustomerSuccessPrediction: React.FC = () => {
       price: '$1,999',
       period: '/month',
       description: 'For large-scale operations',
-      features: [
+      features[
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
@@ -100,17 +100,17 @@ const AICustomerSuccessPrediction: React.FC = () => {
     {
       title: 'SaaS Companies',
       description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
-      metrics: ['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
+      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
     },
     {
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
-      metrics: ['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
+      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
     },
     {
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
-      metrics: ['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
+      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
     }
   ];
 
@@ -234,8 +234,8 @@ const AICustomerSuccessPrediction: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -266,8 +266,8 @@ const AICustomerSuccessPrediction: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -333,8 +333,8 @@ const AICustomerSuccessPrediction: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -370,8 +370,8 @@ const AICustomerSuccessPrediction: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -430,7 +430,7 @@ const AICustomerSuccessPrediction: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>Cancel anytime</span>
+                <span>Cancel time</span>
               </div>
             </div>
           </motion.div>
@@ -469,7 +469,6 @@ const AICustomerSuccessPrediction: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerSuccessPrediction;

@@ -11,9 +11,7 @@ export interface NewOperationalService2025 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
     id: "smart-operations-center",
@@ -21,7 +19,7 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     tagline: "AI-powered operations management",
     price: "$119/month",
     description: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-    features: [
+    features[
       "AI process optimization",
       "Real-time monitoring",
       "Predictive analytics",

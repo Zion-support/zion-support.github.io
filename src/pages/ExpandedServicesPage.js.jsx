@@ -17,12 +17,10 @@ export default function ExpandedServicesPage() {
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-        }
+                service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))}
         // Filter by category
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+            filtered = filtered.filter(service => service.category === selectedCategory)}
         // Sort services
         filtered.sort((a, b) => {
             if (sortBy === 'rating')
@@ -31,18 +29,15 @@ export default function ExpandedServicesPage() {
                 return a.price - b.price;
             if (sortBy === 'aiScore')
                 return b.aiScore - a.aiScore;
-            return 0;
-        });
-        setFilteredServices(filtered);
-    }, [searchQuery, selectedCategory, sortBy]);
+            return 0});
+        setFilteredServices(filtered)}, [searchQuery, selectedCategory, sortBy]);
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-            default: return '⚡';
-        }
+            default: return '⚡'}
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -50,8 +45,7 @@ export default function ExpandedServicesPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -312,5 +306,4 @@ export default function ExpandedServicesPage() {
       </section>
 
       <TrustedBySection />
-    </div>);
-}
+    </div>)}

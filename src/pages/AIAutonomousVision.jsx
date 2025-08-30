@@ -168,6 +168,5 @@ const AIAutonomousVision = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousVision;

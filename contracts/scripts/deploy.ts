@@ -8,9 +8,7 @@ async function main() {
   const addr = await token.getAddress();
   const totalSupply = await token.totalSupply();
   console.log('ZIONToken deployed at:', addr);
-  console.log('Total supply:', totalSupply.toString());
-}
+  console.log('Total supply:', totalSupply.toString())}
 main().catch((error) => {
   console.error(error);
-  process.exitCode = 1;
-});
+  process.exitCode = 1});

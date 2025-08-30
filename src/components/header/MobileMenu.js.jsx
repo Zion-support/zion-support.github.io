@@ -27,8 +27,7 @@ export function MobileMenu({ className }) {
         { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
     ];
     if (isAuthenticated) {
-        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
-    }
+        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
     return (<div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
@@ -55,8 +54,7 @@ export function MobileMenu({ className }) {
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan")}>
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>
-                  </Link>);
-            })}
+                  </Link>)})}
             </nav>
 
             {/* User section */}
@@ -87,5 +85,4 @@ export function MobileMenu({ className }) {
             </div>
           </div>
         </div>)}
-    </div>);
-}
+    </div>)}

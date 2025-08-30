@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function DigitalTransformation() {
+export default function DigitalTransformation(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -95,7 +95,7 @@ export default function DigitalTransformation() {
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Technology Infrastructure",
@@ -158,7 +158,7 @@ export default function DigitalTransformation() {
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
                 }
-              ].map((area, index) => (
+              ].map((area, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -191,7 +191,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cloud Platforms",
@@ -229,7 +229,7 @@ export default function DigitalTransformation() {
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
                 }
-              ].map((tech, index) => (
+              ].map((tech, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -289,7 +289,7 @@ export default function DigitalTransformation() {
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -314,7 +314,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -336,7 +336,7 @@ export default function DigitalTransformation() {
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

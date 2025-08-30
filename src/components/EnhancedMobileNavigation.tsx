@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
+import React, { useState, useEffect, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { Menu, 
   X, 
   ChevronDown, 
   Home, 
@@ -33,15 +32,16 @@ import {
   Mail,
   MapPin,
   Clock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface NavigationItem {
+
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   children?: NavigationItem[];
-  description?: string;
-}
+  description?: string}
 
 const navigationItems: NavigationItem[] = [
   {
@@ -54,13 +54,13 @@ const navigationItems: NavigationItem[] = [
     label: 'About',
     path: '/about',
     icon: Info,
-    description: 'Learn about our company and mission'
+    description: 'Learn about our comp and mission'
   },
   {
     label: 'Services',
     path: '/services',
     icon: Briefcase,
-    children: [
+    children[
       {
         label: 'AI & Machine Learning',
         path: '/services/ai',
@@ -134,7 +134,7 @@ const quickActions = [
   }
 ];
 
-export const EnhancedMobileNavigation: React.FC = () => {
+export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
@@ -142,50 +142,38 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setActivePath(location.pathname);
-  }, [location]);
+    setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent)  => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden';
-    }
+      document.body.style.overflow = 'hidden'}
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
+      document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
+  const toggleExpanded = (label: string)  => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
-        newSet.delete(label);
-      } else {
-        newSet.add(label);
-      }
-      return newSet;
-    });
-  };
+        newSet.delete(label)} else {
+        newSet.add(label)}
+      return newSet})};
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path: string)  => {
     setIsOpen(false);
-    setExpandedItems(new Set());
-  };
+    setExpandedItems(new Set())};
 
-  const isActive = (path: string) => {
+  const isActive = (path: string)  => {
     if (path === '/') {
-      return activePath === '/';
-    }
-    return activePath.startsWith(path);
-  };
+      return activePath === '/'}
+    return activePath.startsWith(path)};
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
@@ -264,8 +252,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </AnimatePresence>
         )}
       </div>
-    );
-  };
+    )};
 
   return (
     <>
@@ -393,5 +380,4 @@ export const EnhancedMobileNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};

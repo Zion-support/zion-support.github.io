@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  TrendingUp, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { TrendingUp, 
   Users, 
   DollarSign, 
   Clock, 
@@ -23,9 +22,9 @@ import {
   Zap,
   BarChart3,
   ShoppingCart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function CaseStudies() {
+export default function CaseStudies(...args[]):  {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -58,7 +57,7 @@ export default function CaseStudies() {
       title: 'AI-Powered Compliance Automation for Global Bank',
       client: 'Fortune 500 Financial Institution',
       industry: 'finance',
-      services: ['ai-analytics', 'cybersecurity'],
+      services['ai-analytics', 'cybersecurity'],
       challenge: 'Manual compliance processes causing delays and regulatory risks',
       solution: 'Implemented AI Compliance Copilot with natural language processing',
       results: {
@@ -76,7 +75,7 @@ export default function CaseStudies() {
       title: 'Digital Twin Implementation for Manufacturing Plant',
       client: 'Leading Automotive Manufacturer',
       industry: 'manufacturing',
-      services: ['iot-edge', 'digital-transformation'],
+      services['iot-edge', 'digital-transformation'],
       challenge: 'Limited visibility into production processes and equipment performance',
       solution: 'Deployed comprehensive digital twin platform with real-time monitoring',
       results: {
@@ -94,7 +93,7 @@ export default function CaseStudies() {
       title: 'Healthcare AI Diagnostic Platform',
       client: 'Regional Hospital Network',
       industry: 'healthcare',
-      services: ['ai-analytics', 'healthcare-tech'],
+      services['ai-analytics', 'healthcare-tech'],
       challenge: 'Long wait times for diagnostic results and limited specialist availability',
       solution: 'AI-powered diagnostic platform with machine learning algorithms',
       results: {
@@ -109,10 +108,10 @@ export default function CaseStudies() {
     },
     {
       id: 4,
-      title: 'Zero Trust Security Architecture for Tech Company',
+      title: 'Zero Trust Security Architecture for Tech Comp',
       client: 'SaaS Technology Provider',
       industry: 'technology',
-      services: ['cybersecurity', 'cloud-devops'],
+      services['cybersecurity', 'cloud-devops'],
       challenge: 'Increasing cyber threats and complex access management',
       solution: 'Implemented zero trust network architecture with AI threat detection',
       results: {
@@ -130,7 +129,7 @@ export default function CaseStudies() {
       title: 'Cloud FinOps Optimization for Enterprise',
       client: 'Global Retail Corporation',
       industry: 'retail',
-      services: ['cloud-devops', 'ai-analytics'],
+      services['cloud-devops', 'ai-analytics'],
       challenge: 'Uncontrolled cloud costs and lack of spending visibility',
       solution: 'Cloud FinOps platform with AI-powered cost optimization',
       results: {
@@ -146,9 +145,9 @@ export default function CaseStudies() {
     {
       id: 6,
       title: 'Blockchain Supply Chain Solution',
-      client: 'International Logistics Company',
+      client: 'International Logistics Comp',
       industry: 'manufacturing',
-      services: ['blockchain', 'iot-edge'],
+      services['blockchain', 'iot-edge'],
       challenge: 'Supply chain transparency and counterfeit prevention',
       solution: 'Blockchain-based supply chain tracking with IoT sensors',
       results: {
@@ -169,8 +168,7 @@ export default function CaseStudies() {
     const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          study.client.toLowerCase().includes(searchQuery.toLowerCase());
     
-    return matchesIndustry && matchesService && matchesSearch;
-  });
+    return matchesIndustry && matchesService && matchesSearch});
 
   const stats = [
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
@@ -221,9 +219,9 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -259,9 +257,9 @@ export default function CaseStudies() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
-                  {industries.map((industry) => (
+                  {industries.map((industry)  => (
                     <option key={industry.id} value={industry.id}>
                       {industry.name}
                     </option>
@@ -275,9 +273,9 @@ export default function CaseStudies() {
                 <select
                   value={selectedService}
                   onChange={(e) => setSelectedService(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
-                  {services.map((service) => (
+                  {services.map((service)  => (
                     <option key={service.id} value={service.id}>
                       {service.name}
                     </option>
@@ -293,8 +291,8 @@ export default function CaseStudies() {
       {/* Case Studies Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)  => (
               <motion.article
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -433,5 +431,4 @@ export default function CaseStudies() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

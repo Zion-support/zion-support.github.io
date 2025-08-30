@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone, 
   Mail, 
   MapPin, 
   Globe, 
@@ -24,16 +23,15 @@ import {
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
-} from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {
+ } from 'lucide-react.ts';
+export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
       title: "Services",
-      links: [
+      links[
         { name: "AI & Machine Learning", href: "/ai-services" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" },
         { name: "IT Infrastructure", href: "/it-services" },
@@ -46,7 +44,7 @@ export const FuturisticFooter: React.FC = () => {
     },
     {
       title: "Solutions",
-      links: [
+      links[
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -58,8 +56,8 @@ export const FuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: "Company",
-      links: [
+      title: "Comp",
+      links[
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
         { name: "Careers", href: "/careers" },
@@ -72,7 +70,7 @@ export const FuturisticFooter: React.FC = () => {
     },
     {
       title: "Resources",
-      links: [
+      links[
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
         { name: "Developer Portal", href: "/developer" },
@@ -98,7 +96,7 @@ export const FuturisticFooter: React.FC = () => {
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -152,7 +150,7 @@ export const FuturisticFooter: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
+                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
                     {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title}
                   </h3>
@@ -281,5 +279,4 @@ export const FuturisticFooter: React.FC = () => {
       {/* Bottom Border Glow */}
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
     </footer>
-  );
-};
+  )};

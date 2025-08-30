@@ -1,4 +1,5 @@
 export interface AdvancedAIService {
+
   id: string;
   title: string;
   description: string;
@@ -17,21 +18,18 @@ export interface AdvancedAIService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Cybersecurity & Threat Detection
@@ -44,7 +42,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 2499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered threat hunting",
       "Behavioral anomaly detection",
       "Real-time threat intelligence",
@@ -56,28 +54,28 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "Compliance reporting",
       "24/7 security monitoring"
     ],
-    benefits: [
+    benefits[
       "Reduce security incidents by 85%",
       "Detect threats 10x faster than traditional methods",
       "Automated response reduces manual intervention",
       "Proactive threat prevention",
       "Comprehensive security coverage"
     ],
-    useCases: [
+    useCases[
       "Enterprise security operations",
       "Financial institution protection",
       "Healthcare data security",
       "Government cybersecurity",
       "Critical infrastructure protection"
     ],
-    targetAudience: [
+    targetAudience[
       "CISOs",
       "Security teams",
       "IT administrators",
       "Compliance officers",
       "Risk managers"
     ],
-    tags: ["AI Security", "Threat Detection", "Cybersecurity", "Machine Learning", "Incident Response"],
+    tags["AI Security", "Threat Detection", "Cybersecurity", "Machine Learning", "Incident Response"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $6,999/month",
@@ -89,13 +87,13 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "Elasticsearch", "Kafka"],
-      integrations: ["SIEM systems", "EDR platforms", "Firewalls", "Identity providers", "Cloud platforms"],
+      technology["Python", "TensorFlow", "PyTorch", "Elasticsearch", "Kafka"],
+      integrations["SIEM systems", "EDR platforms", "Firewalls", "Identity providers", "Cloud platforms"],
       apiEndpoints: 200,
       uptime: "99.99%",
-      security: ["SOC 2 Type II", "ISO 27001", "NIST", "Zero Trust Architecture"]
+      security["SOC 2 Type II", "ISO 27001", "NIST", "Zero Trust Architecture"]
     },
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     marketSize: "$45.2 billion by 2025"
   },
 
@@ -109,7 +107,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI market prediction models",
       "Real-time market analysis",
       "Automated trading strategies",
@@ -121,28 +119,28 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "Backtesting capabilities",
       "Performance analytics"
     ],
-    benefits: [
+    benefits[
       "Increase trading accuracy by 40%",
       "Reduce trading risks by 60%",
       "24/7 automated trading",
       "Data-driven investment decisions",
       "Optimized portfolio performance"
     ],
-    useCases: [
+    useCases[
       "Algorithmic trading",
       "Portfolio management",
       "Risk assessment",
       "Market research",
       "Investment advisory"
     ],
-    targetAudience: [
+    targetAudience[
       "Traders",
       "Investment firms",
       "Hedge funds",
       "Financial advisors",
       "Institutional investors"
     ],
-    tags: ["AI Trading", "Financial Markets", "Machine Learning", "Algorithmic Trading", "Risk Management"],
+    tags["AI Trading", "Financial Markets", "Machine Learning", "Algorithmic Trading", "Risk Management"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "premium",
     marketPrice: "$3,999 - $9,999/month",
@@ -154,13 +152,13 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "Apache Kafka", "Redis"],
-      integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs", "Market data feeds"],
+      technology["Python", "TensorFlow", "PyTorch", "Apache Kafka", "Redis"],
+      integrations["Bloomberg", "Reuters", "Trading platforms", "Broker APIs", "Market data feeds"],
       apiEndpoints: 300,
       uptime: "99.99%",
-      security: ["SOC 2", "PCI DSS", "Financial regulations", "End-to-end encryption"]
+      security["SOC 2", "PCI DSS", "Financial regulations", "End-to-end encryption"]
     },
-    competitors: ["Alpaca", "QuantConnect", "MetaTrader", "TradingView"],
+    competitors["Alpaca", "QuantConnect", "MetaTrader", "TradingView"],
     marketSize: "$18.7 billion by 2025"
   },
 
@@ -174,7 +172,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 3499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Medical image analysis (X-ray, MRI, CT)",
       "Symptom analysis and diagnosis",
       "Treatment recommendation engine",
@@ -186,28 +184,28 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "HIPAA compliance",
       "Multi-specialty support"
     ],
-    benefits: [
+    benefits[
       "Improve diagnostic accuracy by 35%",
       "Reduce diagnosis time by 70%",
       "Lower healthcare costs",
       "Better patient outcomes",
       "24/7 diagnostic support"
     ],
-    useCases: [
+    useCases[
       "Radiology departments",
       "Emergency rooms",
       "Primary care clinics",
       "Specialist practices",
       "Telemedicine platforms"
     ],
-    targetAudience: [
+    targetAudience[
       "Radiologists",
       "Physicians",
       "Healthcare systems",
       "Medical clinics",
       "Telemedicine providers"
     ],
-    tags: ["AI Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning", "Telemedicine"],
+    tags["AI Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning", "Telemedicine"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $8,499/month",
@@ -219,13 +217,13 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "DICOM", "HL7 FHIR"],
-      integrations: ["PACS systems", "EHR platforms", "Telemedicine tools", "Medical devices", "Lab systems"],
+      technology["Python", "TensorFlow", "PyTorch", "DICOM", "HL7 FHIR"],
+      integrations["PACS systems", "EHR platforms", "Telemedicine tools", "Medical devices", "Lab systems"],
       apiEndpoints: 250,
       uptime: "99.9%",
-      security: ["HIPAA", "SOC 2", "HITECH", "End-to-end encryption", "Audit logging"]
+      security["HIPAA", "SOC 2", "HITECH", "End-to-end encryption", "Audit logging"]
     },
-    competitors: ["Butterfly Network", "Zebra Medical", "Aidoc", "Lunit"],
+    competitors["Butterfly Network", "Zebra Medical", "Aidoc", "Lunit"],
     marketSize: "$67.4 billion by 2025"
   },
 
@@ -239,7 +237,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 2799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Demand forecasting",
       "Inventory optimization",
       "Route optimization",
@@ -251,28 +249,28 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "Sustainability metrics",
       "Multi-location management"
     ],
-    benefits: [
+    benefits[
       "Reduce inventory costs by 25%",
       "Improve delivery times by 40%",
       "Reduce supply chain disruptions",
       "Optimize resource allocation",
       "Increase customer satisfaction"
     ],
-    useCases: [
+    useCases[
       "Manufacturing companies",
       "Retail chains",
       "E-commerce businesses",
       "Logistics providers",
       "Distribution centers"
     ],
-    targetAudience: [
+    targetAudience[
       "Supply chain managers",
       "Operations directors",
       "Logistics coordinators",
       "Inventory managers",
       "Procurement teams"
     ],
-    tags: ["AI Operations", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+    tags["AI Operations", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $6,799/month",
@@ -284,13 +282,13 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis"],
-      integrations: ["ERP systems", "WMS platforms", "TMS solutions", "IoT devices", "E-commerce platforms"],
+      technology["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis"],
+      integrations["ERP systems", "WMS platforms", "TMS solutions", "IoT devices", "E-commerce platforms"],
       apiEndpoints: 180,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Data encryption", "Access controls"]
+      security["SOC 2", "ISO 27001", "Data encryption", "Access controls"]
     },
-    competitors: ["SAP", "Oracle", "Manhattan Associates", "Blue Yonder"],
+    competitors["SAP", "Oracle", "Manhattan Associates", "Blue Yonder"],
     marketSize: "$31.2 billion by 2025"
   },
 
@@ -304,7 +302,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 1899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Contract analysis and review",
       "Legal document classification",
       "Risk identification",
@@ -316,28 +314,28 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "Client communication tools",
       "Billing integration"
     ],
-    benefits: [
+    benefits[
       "Reduce document review time by 80%",
       "Improve accuracy by 60%",
       "Lower legal costs",
       "Faster contract processing",
       "Better risk management"
     ],
-    useCases: [
+    useCases[
       "Law firms",
       "Corporate legal departments",
       "Compliance teams",
       "Contract managers",
       "Legal consultants"
     ],
-    targetAudience: [
+    targetAudience[
       "Attorneys",
       "Legal professionals",
       "Compliance officers",
       "Contract managers",
       "Legal departments"
     ],
-    tags: ["AI Legal", "Document Analysis", "Contract Review", "Compliance", "Legal Tech"],
+    tags["AI Legal", "Document Analysis", "Contract Review", "Compliance", "Legal Tech"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
     marketPrice: "$1,899 - $4,899/month",
@@ -349,13 +347,13 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "NLP", "BERT", "FastAPI", "PostgreSQL"],
-      integrations: ["Legal practice management", "Document management", "E-signature platforms", "Billing systems", "Court filing systems"],
+      technology["Python", "NLP", "BERT", "FastAPI", "PostgreSQL"],
+      integrations["Legal practice management", "Document management", "E-signature platforms", "Billing systems", "Court filing systems"],
       apiEndpoints: 120,
       uptime: "99.9%",
-      security: ["SOC 2", "Data encryption", "Access controls", "Audit trails"]
+      security["SOC 2", "Data encryption", "Access controls", "Audit trails"]
     },
-    competitors: ["DoNotPay", "LegalZoom", "Rocket Lawyer", "LawVu"],
+    competitors["DoNotPay", "LegalZoom", "Rocket Lawyer", "LawVu"],
     marketSize: "$25.8 billion by 2025"
   }
 ];

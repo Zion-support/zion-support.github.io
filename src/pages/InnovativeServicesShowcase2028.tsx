@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Rocket, 
@@ -48,24 +47,23 @@ import {
   Users,
   Check,
   X
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { 
-  revolutionaryMicroSaasServices2028, 
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
-} from '@/data/innovativeMicroSaasServices2028';
+ } from '@/data/innovativeMicroSaasServices2028';
 
-export default function InnovativeServicesShowcase2028() {
+export default function InnovativeServicesShowcase2028(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
     ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),
-    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }))
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
+    ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
   ];
 
   const categories = [
@@ -76,10 +74,9 @@ export default function InnovativeServicesShowcase2028() {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(s => s.type === selectedCategory);
+    ? allServices: allServices.filter(s  => s.type === selectedCategory);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -92,11 +89,10 @@ export default function InnovativeServicesShowcase2028() {
       case 'Cloud Computing': return Cloud;
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
-      default: return Rocket;
-    }
+      default: return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',
@@ -107,8 +103,7 @@ export default function InnovativeServicesShowcase2028() {
       'from-teal-600 to-blue-600',
       'from-pink-600 to-red-600'
     ];
-    return colors[Math.abs(category.length) % colors.length];
-  };
+    return colors[Math.abs(category.length) % colors.length]};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -222,8 +217,8 @@ export default function InnovativeServicesShowcase2028() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -592,5 +587,4 @@ export default function InnovativeServicesShowcase2028() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

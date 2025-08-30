@@ -4,7 +4,7 @@ export default {
     'autoprefixer': {
       flexbox: 'no-2009',
       grid: 'autoplace',
-      overrideBrowserslist: [
+      overrideBrowserslist[
         '> 1%',
         'last 2 versions',
         'Firefox ESR',
@@ -53,7 +53,7 @@ export default {
       }
     },
     'cssnano': {
-      preset: ['default', {
+      preset['default', {
         discardComments: {
           removeAll: true,
         },

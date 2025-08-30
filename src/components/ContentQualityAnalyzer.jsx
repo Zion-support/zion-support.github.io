@@ -53,8 +53,7 @@ const ContentQualityAnalyzer = () => {
     ];
     useEffect(() => {
         setContentIssues(sampleIssues);
-        generateReport(sampleIssues);
-    }, []);
+        generateReport(sampleIssues)}, []);
     const generateReport = (issues) => {
         const totalPages = 79; // From analysis report
         const pagesWithIssues = issues.length;
@@ -71,14 +70,12 @@ const ContentQualityAnalyzer = () => {
             pagesWithImages: 45, // Sample data
             pagesWithMetaDescriptions: 32, // Sample data
             lastUpdated: new Date()
-        });
-    };
+        })};
     const startAnalysis = async () => {
         setIsAnalyzing(true);
         // Simulate content analysis
         await new Promise(resolve => setTimeout(resolve, 3000));
-        setIsAnalyzing(false);
-    };
+        setIsAnalyzing(false)};
     const getSeverityIcon = (severity) => {
         switch (severity) {
             case 'high':
@@ -88,8 +85,7 @@ const ContentQualityAnalyzer = () => {
             case 'low':
                 return <Info className="w-4 h-4 text-blue-400"/>;
             default:
-                return <Info className="w-4 h-4 text-gray-400"/>;
-        }
+                return <Info className="w-4 h-4 text-gray-400"/>}
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -100,8 +96,7 @@ const ContentQualityAnalyzer = () => {
             case 'low':
                 return 'text-blue-400';
             default:
-                return 'text-gray-400';
-        }
+                return 'text-gray-400'}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -112,15 +107,13 @@ const ContentQualityAnalyzer = () => {
             case 'open':
                 return 'text-red-400';
             default:
-                return 'text-gray-400';
-        }
+                return 'text-gray-400'}
     };
     const filteredIssues = contentIssues.filter(issue => {
         const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter;
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesFilter && matchesSearch;
-    });
+        return matchesFilter && matchesSearch});
     const getIssueTypeLabel = (type) => {
         switch (type) {
             case 'missing_title':
@@ -134,8 +127,7 @@ const ContentQualityAnalyzer = () => {
             case 'no_images':
                 return 'No Images';
             default:
-                return type;
-        }
+                return type}
     };
     return (<>
       {/* Floating Action Button */}
@@ -347,6 +339,5 @@ const ContentQualityAnalyzer = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </>)};
 export default ContentQualityAnalyzer;

@@ -2,8 +2,7 @@ import React from 'react';
 export function Select({ children, className = '', value, onValueChange }) {
     return (<select className={`${baseClasses} ${className}`} value={value} onChange={onChange} disabled={disabled}>
       {children}
-    </select>);
-}
+    </select>)}
 export function SelectItem({ children, value }) {
     return (<div className={`
         flex h-10 w-full items-center justify-between rounded-md border 
@@ -14,11 +13,9 @@ export function SelectItem({ children, value }) {
         ${className}
       `} {...props}>
       {children}
-    </div>);
-}
+    </div>)}
 export function SelectValue({ placeholder }) {
-    return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
+    return <span className="text-sm">{placeholder || 'Select an option'}</span>}
 export function SelectContent({ children, className = '' }) {
     return (<div className={`
       absolute top-full left-0 right-0 z-50 mt-1 rounded-md border 
@@ -26,8 +23,7 @@ export function SelectContent({ children, className = '' }) {
       shadow-lg ${className}
     `}>
       {children}
-    </div>);
-}
+    </div>)}
 export function SelectItem({ children, className = '', value, ...props }) {
     return (<div className={`
         relative flex w-full cursor-pointer select-none items-center 
@@ -37,5 +33,4 @@ export function SelectItem({ children, className = '', value, ...props }) {
         ${className}
       `} data-value={value} {...props}>
       {children}
-    </div>);
-}
+    </div>)}

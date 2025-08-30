@@ -3,7 +3,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
-      title: 'Company',
+      title: 'Comp',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Leadership', href: '/leadership' },
@@ -55,7 +55,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-          {/* Company Info */}
+          {/* Comp Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">

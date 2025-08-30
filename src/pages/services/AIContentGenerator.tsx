@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AIContentGenerator() {
+export default function AIContentGenerator(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -29,7 +29,7 @@ export default function AIContentGenerator() {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Create and edit content on any device with our responsive platform and mobile apps."
+      description: "Create and edit content on  device with our responsive platform and mobile apps."
     },
     {
       icon: Globe,
@@ -77,7 +77,7 @@ export default function AIContentGenerator() {
       price: "$39",
       period: "/month",
       description: "Perfect for individual creators and small businesses",
-      features: [
+      features[
         "Up to 100 content pieces/month",
         "Basic AI writing tools",
         "5 content templates",
@@ -92,7 +92,7 @@ export default function AIContentGenerator() {
       price: "$99",
       period: "/month",
       description: "Ideal for growing businesses and content teams",
-      features: [
+      features[
         "Up to 500 content pieces/month",
         "Advanced AI capabilities",
         "Unlimited templates",
@@ -108,7 +108,7 @@ export default function AIContentGenerator() {
       price: "$299",
       period: "/month",
       description: "For large organizations with high-volume content needs",
-      features: [
+      features[
         "Unlimited content generation",
         "Custom AI models",
         "White-label solutions",
@@ -236,8 +236,8 @@ export default function AIContentGenerator() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -268,8 +268,8 @@ export default function AIContentGenerator() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {contentTypes.map((type, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {contentTypes.map((type, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -300,8 +300,8 @@ export default function AIContentGenerator() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -332,8 +332,8 @@ export default function AIContentGenerator() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -366,8 +366,8 @@ export default function AIContentGenerator() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -454,5 +454,4 @@ export default function AIContentGenerator() {
         </section>
       </div>
     </>
-  );
-}
+  )}

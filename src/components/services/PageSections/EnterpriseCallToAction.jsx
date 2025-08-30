@@ -244,5 +244,4 @@ export const EnterpriseCallToAction = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

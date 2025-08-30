@@ -273,7 +273,7 @@ const infrastructureSolutions = [
     title: "Data Center Infrastructure",
     description: "Enterprise-grade data center design and implementation with high availability and scalability.",
     icon: Server,
-    features: [
+    features[
       "Server infrastructure",
       "Storage systems",
       "Network architecture",
@@ -282,14 +282,14 @@ const infrastructureSolutions = [
     price: "From $500,000",
     timeline: "24-48 weeks",
     category: "Data Center",
-    technologies: ["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
+    technologies["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
   },
   {
     id: 2,
     title: "Cloud Infrastructure",
     description: "Multi-cloud and hybrid cloud infrastructure design and management.",
     icon: Cloud,
-    features: [
+    features[
       "Cloud architecture",
       "Multi-cloud strategy",
       "Hybrid cloud setup",
@@ -298,14 +298,14 @@ const infrastructureSolutions = [
     price: "From $200,000",
     timeline: "16-32 weeks",
     category: "Cloud",
-    technologies: ["AWS", "Azure", "GCP", "Kubernetes"]
+    technologies["AWS", "Azure", "GCP", "Kubernetes"]
   },
   {
     id: 3,
     title: "Network Infrastructure",
     description: "Enterprise networking solutions with security and performance optimization.",
     icon: Network,
-    features: [
+    features[
       "Network design",
       "Security implementation",
       "Performance optimization",
@@ -314,14 +314,14 @@ const infrastructureSolutions = [
     price: "From $150,000",
     timeline: "12-24 weeks",
     category: "Networking",
-    technologies: ["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
+    technologies["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
   },
   {
     id: 4,
     title: "Security Infrastructure",
     description: "Comprehensive security infrastructure with threat detection and prevention.",
     icon: Shield,
-    features: [
+    features[
       "Firewall systems",
       "Intrusion detection",
       "Access control",
@@ -330,14 +330,14 @@ const infrastructureSolutions = [
     price: "From $300,000",
     timeline: "20-36 weeks",
     category: "Security",
-    technologies: ["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
+    technologies["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
   },
   {
     id: 5,
     title: "Storage Infrastructure",
     description: "High-performance storage solutions with data protection and backup.",
     icon: HardDrive,
-    features: [
+    features[
       "Storage architecture",
       "Data protection",
       "Backup systems",
@@ -346,14 +346,14 @@ const infrastructureSolutions = [
     price: "From $250,000",
     timeline: "16-28 weeks",
     category: "Storage",
-    technologies: ["SAN", "NAS", "Backup Software", "DR Systems"]
+    technologies["SAN", "NAS", "Backup Software", "DR Systems"]
   },
   {
     id: 6,
     title: "Monitoring & Observability",
     description: "Comprehensive monitoring and observability platform for infrastructure management.",
     icon: Activity,
-    features: [
+    features[
       "Infrastructure monitoring",
       "Application performance",
       "Log management",
@@ -362,7 +362,7 @@ const infrastructureSolutions = [
     price: "From $100,000",
     timeline: "12-20 weeks",
     category: "Monitoring",
-    technologies: ["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
+    technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
   }
 ];
 
@@ -400,7 +400,7 @@ const infrastructureTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Financial Institution",
+    comp: "Global Financial Institution",
     industry: "Finance",
     challenge: "Needed enterprise-grade infrastructure for 50,000+ users across 30 countries",
     solution: "Built comprehensive infrastructure with data centers, cloud integration, and security",
@@ -409,7 +409,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Required HIPAA-compliant infrastructure for patient data management",
     solution: "Implemented secure infrastructure with encryption, access controls, and monitoring",
@@ -418,7 +418,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Manufacturing Corporation",
+    comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Needed IoT-ready infrastructure for smart manufacturing operations",
     solution: "Built edge computing infrastructure with IoT integration and real-time monitoring",
@@ -463,25 +463,25 @@ const infrastructureBenefits = [
     title: "High Availability",
     description: "99.99% uptime with redundant systems and failover capabilities",
     icon: Shield,
-    examples: ["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"]
+    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"]
   },
   {
     title: "Scalability",
     description: "Infrastructure that grows with your business needs",
     icon: TrendingUp,
-    examples: ["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"]
+    examples["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"]
   },
   {
     title: "Security",
     description: "Enterprise-grade security with compliance and monitoring",
     icon: Lock,
-    examples: ["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"]
+    examples["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"]
   },
   {
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
-    examples: ["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
+    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
   }
 ];
 
@@ -804,7 +804,7 @@ export default function Infrastructure() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -869,5 +869,4 @@ export default function Infrastructure() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

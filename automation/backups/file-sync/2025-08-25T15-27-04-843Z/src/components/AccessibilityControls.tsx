@@ -3,8 +3,7 @@ import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react'
 import { useAccessibility } from '../hooks/useAccessibility';
 interface AccessibilityControlsProps {
   className?: string;
-  position?: 'top-right' | 'bottom-right' | 'floating';
-}
+  position?: 'top-right' | 'bottom-right' | 'floating'}
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
   className = '',
   position = 'floating'
@@ -18,27 +17,22 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       const target = event.target as HTMLElement;
       if (!target.closest('.accessibility-controls')) {
         setIsOpen(false);
-        setIsExpanded(false);
-      }
+        setIsExpanded(false)}
     };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      return () => document.removeEventListener('mousedown', handleClickOutside);
-    }
+      return () => document.removeEventListener('mousedown', handleClickOutside)}
   }, [isOpen]);
   const togglePanel = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
-      announceToScreenReader('Accessibility controls opened');
-    }
+      announceToScreenReader('Accessibility controls opened')}
   };
   const toggleExpanded = () => {
-    setIsExpanded(!isExpanded);
-  };
+    setIsExpanded(!isExpanded)};
   const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
     savePreferences({ [key]: value });
-    announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`)};
   const getPositionClasses = () => {
     switch (position) {
       case 'top-right':
@@ -47,8 +41,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         return 'bottom-4 right-4';
       case 'floating':
       default:
-        return 'bottom-4 right-4';
-    }
+        return 'bottom-4 right-4'}
   };
   return (
     <div className={`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>
@@ -201,5 +194,4 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )};

@@ -6,7 +6,7 @@ function fixUtilsFile(filePath) {
     let originalContent = content;
     // Fix common patterns in utils files
     content = content.replace(
-      /export,\s*interface,\s*([^{]+)\s*{;/g,
+      /export,\s*interface,\s*([^{]+)\s*{/g,
       "export interface $1 {",
     );
     content = content.replace(
@@ -52,7 +52,7 @@ function fixUtilsFile(filePath) {
     // Fix type annotations
     content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
-    content = content.replace(/a,\s*n,\s*y/g, "any");
+    content = content.replace(/a,\s*n,\s*y/g, "");
     content = content.replace(/pendi,\s*n,\s*g/g, "pending");
     content = content.replace(/approv,\s*e,\s*d/g, "approved");
     content = content.replace(/reject,\s*e,\s*d/g, "rejected");
@@ -117,24 +117,19 @@ function fixUtilsFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
+    ignore["node_modules/**", ".next/**"],
   });
   let fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
-  console.log(`Fixed ${fixedCount} utils files.`);
-}
+  console.log(`Fixed ${fixedCount} utils files.`)}
 fixAllUtilsFiles();

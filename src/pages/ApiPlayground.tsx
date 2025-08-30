@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react.ts';
 
-export default function ApiPlayground() {
+export default function ApiPlayground(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -41,7 +41,7 @@ export default function ApiPlayground() {
       status: 'stable',
       rateLimit: '1000 requests/hour',
       authentication: 'Bearer Token',
-      parameters: [
+      parameters[
         { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
         { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
         { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
@@ -49,14 +49,14 @@ export default function ApiPlayground() {
       requestExample: {
         text: "I love this new AI technology! It's amazing how it can understand context.",
         language: "en",
-        features: ["sentiment", "entities", "keywords"]
+        features["sentiment", "entities", "keywords"]
       },
       responseExample: {
         sentiment: { score: 0.9, label: "positive" },
-        entities: [
+        entities[
           { text: "AI technology", type: "technology", confidence: 0.95 }
         ],
-        keywords: ["AI", "technology", "amazing", "context"],
+        keywords["AI", "technology", "amazing", "context"],
         language: "en"
       },
       documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',
@@ -75,7 +75,7 @@ export default function ApiPlayground() {
       status: 'stable',
       rateLimit: '500 requests/hour',
       authentication: 'API Key',
-      parameters: [
+      parameters[
         { name: 'region', type: 'string', required: false, description: 'Cloud region' },
         { name: 'type', type: 'string', required: false, description: 'Resource type' },
         { name: 'status', type: 'string', required: false, description: 'Resource status' }
@@ -86,7 +86,7 @@ export default function ApiPlayground() {
         status: "running"
       },
       responseExample: {
-        resources: [
+        resources[
           {
             id: "i-1234567890abcdef0",
             name: "web-server-01",
@@ -113,7 +113,7 @@ export default function ApiPlayground() {
       status: 'beta',
       rateLimit: '200 requests/hour',
       authentication: 'OAuth 2.0',
-      parameters: [
+      parameters[
         { name: 'data', type: 'object', required: true, description: 'Security event data' },
         { name: 'source', type: 'string', required: true, description: 'Data source identifier' },
         { name: 'timestamp', type: 'string', required: false, description: 'Event timestamp' }
@@ -130,7 +130,7 @@ export default function ApiPlayground() {
       responseExample: {
         threat_level: "low",
         risk_score: 0.2,
-        recommendations: ["Enable 2FA", "Monitor login patterns"],
+        recommendations["Enable 2FA", "Monitor login patterns"],
         detected: false
       },
       documentation: 'https://docs.ziontechgroup.com/api/security-threats',
@@ -149,7 +149,7 @@ export default function ApiPlayground() {
       status: 'stable',
       rateLimit: '100 requests/hour',
       authentication: 'API Key',
-      parameters: [
+      parameters[
         { name: 'query', type: 'string', required: true, description: 'SQL query string' },
         { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },
         { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' }
@@ -160,7 +160,7 @@ export default function ApiPlayground() {
         timeout: 30
       },
       responseExample: {
-        results: [
+        results[
           { user_id: "user123", login_count: 45 },
           { user_id: "user456", login_count: 38 }
         ],
@@ -183,7 +183,7 @@ export default function ApiPlayground() {
       status: 'stable',
       rateLimit: '300 requests/hour',
       authentication: 'API Key',
-      parameters: [
+      parameters[
         { name: 'location', type: 'string', required: false, description: 'Device location' },
         { name: 'type', type: 'string', required: false, description: 'Device type' },
         { name: 'status', type: 'string', required: false, description: 'Device status' }
@@ -194,7 +194,7 @@ export default function ApiPlayground() {
         status: "active"
       },
       responseExample: {
-        devices: [
+        devices[
           {
             id: "sensor-001",
             name: "Temperature Sensor A1",
@@ -213,13 +213,11 @@ export default function ApiPlayground() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
-    cat.count = apis.filter(api => api.category === cat.id).length;
-  });
+  categories.forEach(cat  => {
+    cat.count = apis.filter(api => api.category === cat.id).length});
 
   methods.forEach(method => {
-    method.count = apis.filter(api => api.method === method.id).length;
-  });
+    method.count = apis.filter(api => api.method === method.id).length});
 
   const filteredApis = apis.filter(api => {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -228,32 +226,27 @@ export default function ApiPlayground() {
     const matchesCategory = activeCategory === 'all' || api.category === category.id;
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
     
-    return matchesSearch && matchesCategory && matchesMethod;
-  });
+    return matchesSearch && matchesCategory && matchesMethod});
 
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
-  };
+  const getCategoryIcon = (categoryId: string)  => {
+    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
 
-  const getMethodColor = (method: string) => {
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
-  };
+  const getMethodColor = (method: string)  => {
+    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api)  => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
-    setActiveTab('playground');
-  };
+    setActiveTab('playground')};
 
   const handleTestApi = async () => {
     if (!selectedApi) return;
@@ -263,13 +256,10 @@ export default function ApiPlayground() {
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false);
-    }, 1500);
-  };
+      setIsLoading(false)}, 1500)};
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
+  const copyToClipboard = (text: string)  => {
+    navigator.clipboard.writeText(text)};
 
   const downloadResponse = () => {
     if (!responseData) return;
@@ -282,8 +272,7 @@ export default function ApiPlayground() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    URL.revokeObjectURL(url)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -647,5 +636,4 @@ export default function ApiPlayground() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

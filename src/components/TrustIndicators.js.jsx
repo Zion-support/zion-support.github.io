@@ -112,8 +112,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>
       </div>
-    </section>);
-}
+    </section>)}
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -133,5 +132,4 @@ export function TrustIndicatorsCompact({ className }) {
         <Zap className="w-4 h-4"/>
         <span>99.9% Uptime</span>
       </div>
-    </div>);
-}
+    </div>)}

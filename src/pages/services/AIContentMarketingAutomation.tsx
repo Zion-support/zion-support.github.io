@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   PenTool, 
   TrendingUp, 
   Target, 
@@ -26,9 +25,9 @@ import {
   Shield,
   Headphones,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIContentMarketingAutomation() {
+export default function AIContentMarketingAutomation(...args[]):  {
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",
@@ -69,7 +68,7 @@ export default function AIContentMarketingAutomation() {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI content generation (50 pieces/month)",
         "Basic social media automation",
         "Email campaign templates",
@@ -84,7 +83,7 @@ export default function AIContentMarketingAutomation() {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features: [
+      features[
         "AI content generation (200 pieces/month)",
         "Advanced social media automation",
         "Multi-channel distribution",
@@ -100,7 +99,7 @@ export default function AIContentMarketingAutomation() {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex needs",
-      features: [
+      features[
         "Unlimited AI content generation",
         "Custom AI model training",
         "Advanced audience targeting",
@@ -180,8 +179,8 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -216,8 +215,8 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -252,8 +251,8 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -325,8 +324,8 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -375,7 +374,7 @@ export default function AIContentMarketingAutomation() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -395,5 +394,4 @@ export default function AIContentMarketingAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

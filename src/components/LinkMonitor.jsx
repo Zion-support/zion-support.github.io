@@ -20,14 +20,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
-                        await fixBrokenLink(href, result);
-                    }
+                        await fixBrokenLink(href, result)}
                 }
                 // Update progress
                 setScanProgress(((i + 1) / links.length) * 100);
                 // Small delay to prevent overwhelming the browser
-                await new Promise(resolve => setTimeout(resolve, 10));
-            }
+                await new Promise(resolve => setTimeout(resolve, 10))}
         }
         setBrokenLinks(results);
         setLastScanTime(new Date());
@@ -35,10 +33,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // Notify parent component of issues
         results.forEach(result => {
             if (onLinkIssue) {
-                onLinkIssue(result);
-            }
-        });
-    };
+                onLinkIssue(result)}
+        })};
     // Fix a broken link
     const fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {
@@ -48,8 +44,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             links.forEach(link => {
                 link.href = newUrl;
                 link.setAttribute('data-fixed', 'true');
-                link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
-            });
+                link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`)});
             // Add to fixed links list
             const fix = {
                 originalUrl,
@@ -57,16 +52,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 type: 'redirect',
                 reason: 'Automatically fixed broken internal link'
             };
-            setFixedLinks(prev => [...prev, fix]);
-        }
+            setFixedLinks(prev => [...prev, fix])}
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
-            await fixBrokenLink(brokenLink.url, brokenLink);
-        }
-        setBrokenLinks([]);
-    };
+            await fixBrokenLink(brokenLink.url, brokenLink)}
+        setBrokenLinks([])};
     // Generate redirect rules for server configuration
     const generateRedirectRules = () => {
         const rules = LinkValidator.generateRedirectRules();
@@ -76,8 +68,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         a.href = url;
         a.download = 'redirect-rules.txt';
         a.click();
-        URL.revokeObjectURL(url);
-    };
+        URL.revokeObjectURL(url)};
     // Export broken links report
     const exportReport = () => {
         const report = {
@@ -92,13 +83,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         a.href = url;
         a.download = 'broken-links-report.json';
         a.click();
-        URL.revokeObjectURL(url);
-    };
+        URL.revokeObjectURL(url)};
     // Auto-scan on component mount
     useEffect(() => {
         if (autoFix) {
-            scanPageLinks();
-        }
+            scanPageLinks()}
     }, [autoFix]);
     return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -216,6 +205,5 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <li>• Update sitemap to exclude broken URLs</li>
           </ul>
         </div>)}
-    </div>);
-};
+    </div>)};
 export default LinkMonitor;

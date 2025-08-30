@@ -56,22 +56,18 @@ export function ProductSubmissionForm() {
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
+                setImagePreview(reader.result)};
+            reader.readAsDataURL(file)}
     };
     const handleVideoChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-            form.setValue("video", file);
-        }
+            form.setValue("video", file)}
     };
     const handleModelChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-            form.setValue("model", file);
-        }
+            form.setValue("model", file)}
     };
     // Apply AI-generated content to the form
     const handleApplyGenerated = (content) => {
@@ -81,8 +77,7 @@ export function ProductSubmissionForm() {
         const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
         form.setValue("price", averagePrice);
         // Switch to the manual tab to show applied content
-        setActiveTab("manual");
-    };
+        setActiveTab("manual")};
     // Handle form submission
     const onSubmit = async (values) => {
         if (!user) {
@@ -91,8 +86,7 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products",
                 variant: "destructive",
             });
-            return;
-        }
+            return}
         setIsSubmitting(true);
         try {
             // Create the product listing
@@ -102,7 +96,7 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
+                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
@@ -115,8 +109,7 @@ export function ProductSubmissionForm() {
                 .select('id')
                 .single();
             if (productError) {
-                throw new Error(productError.message);
-            }
+                throw new Error(productError.message)}
             // If we have an image, upload it
             if (values.image) {
                 const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -124,8 +117,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(imagePath, values.image);
                 if (uploadError) {
-                    throw new Error(uploadError.message);
-                }
+                    throw new Error(uploadError.message)}
                 // Get the public URL for the image
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
@@ -134,12 +126,11 @@ export function ProductSubmissionForm() {
                 const { error: updateError } = await supabase
                     .from('product_listings')
                     .update({
-                    images: [publicUrlData.publicUrl]
+                    images[publicUrlData.publicUrl]
                 })
                     .eq('id', productRecord.id);
                 if (updateError) {
-                    throw new Error(updateError.message);
-                }
+                    throw new Error(updateError.message)}
             }
             // Upload video if provided
             if (values.video) {
@@ -148,8 +139,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(videoPath, values.video);
                 if (uploadError) {
-                    throw new Error(uploadError.message);
-                }
+                    throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(videoPath);
@@ -158,8 +148,7 @@ export function ProductSubmissionForm() {
                     .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-                    throw new Error(updateError.message);
-                }
+                    throw new Error(updateError.message)}
             }
             // Upload model if provided
             if (values.model) {
@@ -168,8 +157,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(modelPath, values.model);
                 if (uploadError) {
-                    throw new Error(uploadError.message);
-                }
+                    throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(modelPath);
@@ -178,8 +166,7 @@ export function ProductSubmissionForm() {
                     .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-                    throw new Error(updateError.message);
-                }
+                    throw new Error(updateError.message)}
             }
             // Show success message
             toast({
@@ -187,18 +174,15 @@ export function ProductSubmissionForm() {
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
-            navigate(`/marketplace/listing/${productRecord.id}`);
-        }
+            navigate(`/marketplace/listing/${productRecord.id}`)}
         catch (error) {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     };
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -330,5 +314,4 @@ export function ProductSubmissionForm() {
             category: form.getValues("category")
         }}/>
       </TabsContent>
-    </Tabs>);
-}
+    </Tabs>)}

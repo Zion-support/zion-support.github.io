@@ -24,7 +24,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
         },
-        "sameAs": [
+        "sameAs"[
             "https://linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup",
             "https://github.com/Zion-Holdings"
@@ -101,5 +101,4 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta httpEquiv="X-Frame-Options" content="DENY"/>
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
-    </Helmet>);
-}
+    </Helmet>)}

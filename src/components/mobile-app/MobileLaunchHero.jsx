@@ -20,5 +20,4 @@ export const MobileLaunchHero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};

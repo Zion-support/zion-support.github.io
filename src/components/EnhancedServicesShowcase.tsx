@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Database, 
@@ -15,9 +14,10 @@ import {
   Clock,
   CheckCircle,
   Search
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -28,8 +28,7 @@ interface Service {
   roi: string;
   marketSize: string;
   path: string;
-  category: string;
-}
+  category: string}
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
   <motion.div
@@ -137,7 +136,7 @@ const services: Service[] = [
     description: 'Advanced machine learning algorithms for real-time business insights and forecasting',
     icon: Brain,
     gradient: 'from-zion-cyan to-zion-purple',
-    features: ['95% prediction accuracy', 'Real-time processing', 'Custom model training', 'Multi-dimensional forecasting'],
+    features['95% prediction accuracy', 'Real-time processing', 'Custom model training', 'Multi-dimensional forecasting'],
     price: '$12,999/month',
     roi: '450% ROI',
     marketSize: '$23.1B Market',
@@ -150,7 +149,7 @@ const services: Service[] = [
     description: 'Solve complex optimization problems with hybrid quantum-classical computing',
     icon: Zap,
     gradient: 'from-zion-purple to-zion-blue',
-    features: ['Quantum advantage', 'Custom algorithms', 'Hybrid computing', '800% ROI'],
+    features['Quantum advantage', 'Custom algorithms', 'Hybrid computing', '800% ROI'],
     price: '$25,999/month',
     roi: '800% ROI',
     marketSize: '$1.8B Market',
@@ -163,7 +162,7 @@ const services: Service[] = [
     description: 'Continuous verification with AI behavioral analysis and real-time threat detection',
     icon: Shield,
     gradient: 'from-zion-blue to-zion-cyan',
-    features: ['Continuous verification', 'AI behavioral analysis', 'Real-time detection', '600% ROI'],
+    features['Continuous verification', 'AI behavioral analysis', 'Real-time detection', '600% ROI'],
     price: '$18,999/month',
     roi: '600% ROI',
     marketSize: '$18.5B Market',
@@ -176,7 +175,7 @@ const services: Service[] = [
     description: 'Unified management across AWS, Azure, and Google Cloud with cost optimization',
     icon: Cloud,
     gradient: 'from-zion-cyan to-zion-blue',
-    features: ['Unified management', 'Cost optimization', 'Performance monitoring', '700% ROI'],
+    features['Unified management', 'Cost optimization', 'Performance monitoring', '700% ROI'],
     price: '$15,999/month',
     roi: '700% ROI',
     marketSize: '$12.8B Market',
@@ -189,7 +188,7 @@ const services: Service[] = [
     description: 'Process millions of events per second with AI analytics and enterprise scalability',
     icon: Database,
     gradient: 'from-zion-purple to-zion-cyan',
-    features: ['Millions of events/sec', 'AI analytics', 'Low latency', '500% ROI'],
+    features['Millions of events/sec', 'AI analytics', 'Low latency', '500% ROI'],
     price: '$13,999/month',
     roi: '500% ROI',
     marketSize: '$15.2B Market',
@@ -202,7 +201,7 @@ const services: Service[] = [
     description: 'AI-powered governance and smart contracts with multi-chain support',
     icon: Globe,
     gradient: 'from-zion-blue to-zion-purple',
-    features: ['AI governance', 'Multi-chain support', 'Smart contracts', '600% ROI'],
+    features['AI governance', 'Multi-chain support', 'Smart contracts', '600% ROI'],
     price: '$22,999/month',
     roi: '600% ROI',
     marketSize: '$19.9B Market',
@@ -213,7 +212,7 @@ const services: Service[] = [
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase() {
+export default function EnhancedServicesShowcase(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -223,8 +222,7 @@ export default function EnhancedServicesShowcase() {
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
@@ -295,8 +293,8 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </div>
@@ -306,8 +304,7 @@ export default function EnhancedServicesShowcase() {
               <button
                 onClick={() => {
                   setSelectedCategory('All');
-                  setSearchTerm('');
-                }}
+                  setSearchTerm('')}}
                 className="mt-4 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Clear filters
@@ -349,5 +346,4 @@ export default function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

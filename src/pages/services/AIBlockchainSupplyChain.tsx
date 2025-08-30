@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Link as LinkIcon, 
   Shield, 
   Clock, 
@@ -16,8 +15,8 @@ import {
   Activity,
   BarChart3,
   Network
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
 const AIBlockchainSupplyChain = () => {
   const features = [
@@ -58,7 +57,7 @@ const AIBlockchainSupplyChain = () => {
       name: "Starter Plan",
       price: "$5,999",
       period: "/month",
-      features: [
+      features[
         "Basic blockchain tracking",
         "AI analytics dashboard",
         "Standard compliance",
@@ -71,7 +70,7 @@ const AIBlockchainSupplyChain = () => {
       name: "Professional Plan",
       price: "$14,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI algorithms",
         "Smart contract automation",
         "Priority support",
@@ -85,7 +84,7 @@ const AIBlockchainSupplyChain = () => {
       name: "Enterprise Plan",
       price: "$34,999",
       period: "/month",
-      features: [
+      features[
         "Full AI blockchain suite",
         "Unlimited transactions",
         "Custom development",
@@ -101,22 +100,22 @@ const AIBlockchainSupplyChain = () => {
     {
       industry: "Manufacturing",
       description: "Track raw materials from source to finished product with AI-powered quality control and compliance monitoring",
-      benefits: ["40% reduction in delays", "35% improvement in quality", "50% faster compliance"]
+      benefits["40% reduction in delays", "35% improvement in quality", "50% faster compliance"]
     },
     {
       industry: "Retail & E-commerce",
       description: "Ensure product authenticity and optimize inventory management with real-time tracking and AI forecasting",
-      benefits: ["30% reduction in fraud", "25% better inventory", "Improved customer trust"]
+      benefits["30% reduction in fraud", "25% better inventory", "Improved customer trust"]
     },
     {
       industry: "Food & Beverage",
       description: "Maintain food safety standards with blockchain traceability and AI-powered quality monitoring",
-      benefits: ["100% traceability", "Faster recalls", "Enhanced safety"]
+      benefits["100% traceability", "Faster recalls", "Enhanced safety"]
     },
     {
       industry: "Pharmaceuticals",
       description: "Combat counterfeit drugs and ensure regulatory compliance with blockchain verification and AI monitoring",
-      benefits: ["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]
+      benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]
     }
   ];
 
@@ -189,8 +188,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +227,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,8 +301,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -349,8 +348,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -427,7 +426,6 @@ const AIBlockchainSupplyChain = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIBlockchainSupplyChain;

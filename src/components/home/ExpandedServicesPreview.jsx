@@ -12,8 +12,7 @@ export function ExpandedServicesPreview() {
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-            default: return '⚡';
-        }
+            default: return '⚡'}
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -21,8 +20,7 @@ export function ExpandedServicesPreview() {
             case 'Micro SAAS': return 'from-blue-500 to-cyan-600';
             case 'IT Services': return 'from-green-500 to-emerald-600';
             case 'Digital Services': return 'from-orange-500 to-red-600';
-            default: return 'from-gray-500 to-slate-600';
-        }
+            default: return 'from-gray-500 to-slate-600'}
     };
     return (<section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
@@ -215,5 +213,4 @@ export function ExpandedServicesPreview() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

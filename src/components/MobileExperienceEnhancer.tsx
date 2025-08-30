@@ -1,21 +1,21 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
+import { useLocation  } from 'react-router-dom.ts';
 
 interface MobileSettings {
+
   touchOptimized: boolean;
   gestureSupport: boolean;
   mobileNavigation: boolean;
   responsiveImages: boolean;
   mobilePerformance: boolean;
-  offlineSupport: boolean;
-}
+  offlineSupport: boolean}
 
-interface MobileExperienceEnhancerProps {
+interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   showControls?: boolean;
   autoDetect?: boolean;
-  onSettingsChange?: (settings: MobileSettings) => void;
-}
+  onSettingsChange?: (settings: MobileSettings)  => void}
 
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
   enabled = true,
@@ -26,8 +26,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [settings, setSettings] = useState<MobileSettings>({
+  const [orientation, setOrientation] = useState<any>('portrait');
+  const [settings, setSettings] = useState<any>({
     touchOptimized: true,
     gestureSupport: true,
     mobileNavigation: true,
@@ -50,25 +50,20 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       const isTabletDevice = /tablet|ipad|android(?=.*\b(?!mobile\b))|ipad/i.test(userAgent);
       
       setIsMobile(isMobileDevice);
-      setIsTablet(isTabletDevice);
-    };
+      setIsTablet(isTabletDevice)};
 
     const detectOrientation = () => {
       if (window.innerHeight > window.innerWidth) {
-        setOrientation('portrait');
-      } else {
-        setOrientation('landscape');
-      }
+        setOrientation('portrait')} else {
+        setOrientation('landscape')}
     };
 
     const handleResize = () => {
       detectDevice();
-      detectOrientation();
-    };
+      detectOrientation()};
 
     const handleOrientationChange = () => {
-      setTimeout(detectOrientation, 100);
-    };
+      setTimeout(detectOrientation, 100)};
 
     // Initial detection
     detectDevice();
@@ -80,9 +75,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleOrientationChange);
-    };
-  }, [enabled]);
+      window.removeEventListener('orientationchange', handleOrientationChange)}}, [enabled]);
 
   // Auto-detect mobile preferences
   useEffect(() => {
@@ -101,11 +94,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       ...prev,
       touchOptimized: hasTouchSupport,
       mobilePerformance: isSlowConnection || false,
-    }));
-  }, [autoDetect, enabled]);
+    }))}, [autoDetect, enabled]);
 
   // Touch optimization
-  useEffect(() => {
+  useEffect(()  => {
     if (!enabled || !settings.touchOptimized || !isMobile) return;
 
     // Add touch-action CSS for better touch handling
@@ -118,18 +110,15 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        user-select: none;
-      }
+        user-select: none}
       
       .touch-optimized * {
-        touch-action: manipulation;
-      }
+        touch-action: manipulation}
       
       .touch-optimized button,
       .touch-optimized a {
         min-height: 44px;
-        min-width: 44px;
-      }
+        min-width: 44px}
       
       .touch-optimized input,
       .touch-optimized select,
@@ -142,30 +131,27 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Apply touch optimization classes
     document.body.classList.add('touch-optimized');
 
-    return () => {
+    return ()  => {
       document.body.classList.remove('touch-optimized');
       if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
-    };
-  }, [enabled, settings.touchOptimized, isMobile]);
+        style.parentNode.removeChild(style)}
+    }}, [enabled, settings.touchOptimized, isMobile]);
 
   // Gesture support
   useEffect(() => {
     if (!enabled || !settings.gestureSupport || !isMobile) return;
 
-    const handleTouchStart = (event: TouchEvent) => {
+    const handleTouchStart = (event: TouchEvent)  => {
       if (event.touches.length === 1) {
         const touch = event.touches[0];
         touchStartRef.current = {
           x: touch.clientX,
           y: touch.clientY,
           time: Date.now(),
-        };
-      }
+        }}
     };
 
-    const handleTouchEnd = (event: TouchEvent) => {
+    const handleTouchEnd = (event: TouchEvent)  => {
       if (!touchStartRef.current || event.changedTouches.length !== 1) return;
 
       const touch = event.changedTouches[0];
@@ -180,10 +166,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         let gesture = '';
         
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
-          gesture = deltaX > 0 ? 'swipe-right' : 'swipe-left';
-        } else {
-          gesture = deltaY > 0 ? 'swipe-down' : 'swipe-up';
-        }
+          gesture = deltaX > 0 ? 'swipe-right' : 'swipe-left'} else {
+          gesture = deltaY > 0 ? 'swipe-down' : 'swipe-up'}
 
         // Handle gestures
         handleGesture(gesture, { deltaX, deltaY, velocity });
@@ -191,14 +175,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         // Track gesture history
         gestureHistoryRef.current.push(gesture);
         if (gestureHistoryRef.current.length > 10) {
-          gestureHistoryRef.current.shift();
-        }
+          gestureHistoryRef.current.shift()}
       }
 
-      touchStartRef.current = null;
-    };
+      touchStartRef.current = null};
 
-    const handleGesture = (gesture: string, data: { deltaX: number; deltaY: number; velocity: number }) => {
+    const handleGesture = (gesture: string, data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Handle common gestures
       switch (gesture) {
         case 'swipe-left':
@@ -216,48 +198,40 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         case 'swipe-down':
           // Refresh or show less content
           handleSwipeDown(data);
-          break;
-      }
+          break}
     };
 
-    const handleSwipeLeft = (data: { deltaX: number; deltaY: number; velocity: number }) => {
+    const handleSwipeLeft = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Navigate to next page or item
       const nextButton = document.querySelector('[data-next], .next-button, .carousel-next');
       if (nextButton) {
-        (nextButton as HTMLElement).click();
-      }
+        (nextButton as HTMLElement).click()}
     };
 
-    const handleSwipeRight = (data: { deltaX: number; deltaY: number; velocity: number }) => {
+    const handleSwipeRight = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Navigate to previous page or item
       const prevButton = document.querySelector('[data-prev], .prev-button, .carousel-prev');
       if (prevButton) {
-        (prevButton as HTMLElement).click();
-      } else if (window.history.length > 1) {
-        window.history.back();
-      }
+        (prevButton as HTMLElement).click()} else if (window.history.length > 1) {
+        window.history.back()}
     };
 
-    const handleSwipeUp = (data: { deltaX: number; deltaY: number; velocity: number }) => {
+    const handleSwipeUp = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Scroll up or show more content
-      window.scrollBy({ top: -100, behavior: 'smooth' });
-    };
+      window.scrollBy({ top: -100, behavior: 'smooth' })};
 
-    const handleSwipeDown = (data: { deltaX: number; deltaY: number; velocity: number }) => {
+    const handleSwipeDown = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Refresh or show less content
       if (data.velocity > 1.0) {
-        window.location.reload();
-      }
+        window.location.reload()}
     };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
 
-    return () => {
+    return ()  => {
       document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [enabled, settings.gestureSupport, isMobile]);
+      document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, settings.gestureSupport, isMobile]);
 
   // Mobile navigation optimization
   useEffect(() => {
@@ -275,8 +249,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         backdrop-filter: blur(10px);
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        padding: 10px 0;
-      }
+        padding: 10px 0}
       
       .mobile-nav .nav-item {
         display: flex;
@@ -287,25 +260,21 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         font-size: 12px;
         padding: 8px;
         border-radius: 8px;
-        transition: all 0.2s ease;
-      }
+        transition: all 0.2s ease}
       
       .mobile-nav .nav-item:hover,
       .mobile-nav .nav-item.active {
         color: #007bff;
-        background: rgba(0, 123, 255, 0.1);
-      }
+        background: rgba(0, 123, 255, 0.1)}
       
       .mobile-nav .nav-icon {
         width: 24px;
         height: 24px;
-        margin-bottom: 4px;
-      }
+        margin-bottom: 4px}
       
       @media (max-width: 768px) {
         body {
-          padding-bottom: 80px;
-        }
+          padding-bottom: 80px}
       }
     `;
     document.head.appendChild(style);
@@ -313,19 +282,15 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Create mobile navigation if it doesn't exist
     if (!document.querySelector('.mobile-nav')) {
       const mobileNav = createMobileNavigation();
-      document.body.appendChild(mobileNav);
-    }
+      document.body.appendChild(mobileNav)}
 
     return () => {
       if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
+        style.parentNode.removeChild(style)}
       const mobileNav = document.querySelector('.mobile-nav');
       if (mobileNav && mobileNav.parentNode) {
-        mobileNav.parentNode.removeChild(mobileNav);
-      }
-    };
-  }, [enabled, settings.mobileNavigation, isMobile, location.pathname]);
+        mobileNav.parentNode.removeChild(mobileNav)}
+    }}, [enabled, settings.mobileNavigation, isMobile, location.pathname]);
 
   // Create mobile navigation
   const createMobileNavigation = useCallback(() => {
@@ -341,7 +306,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       { href: '/contact', label: 'Contact', icon: '📞' },
     ];
 
-    navItems.forEach(item => {
+    navItems.forEach(item  => {
       const link = document.createElement('a');
       link.href = item.href;
       link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
@@ -349,11 +314,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <span class="nav-icon">${item.icon}</span>
         <span>${item.label}</span>
       `;
-      nav.appendChild(link);
-    });
+      nav.appendChild(link)});
 
-    return nav;
-  }, [location.pathname]);
+    return nav}, [location.pathname]);
 
   // Responsive images
   useEffect(() => {
@@ -364,20 +327,16 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       images.forEach(img => {
         // Add responsive image attributes
         if (!img.sizes) {
-          img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-        }
+          img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
         
         // Add loading attribute for better performance
         if (!img.loading) {
-          img.loading = 'lazy';
-        }
+          img.loading = 'lazy'}
         
         // Add decoding attribute
         if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
+          img.decoding = 'async'}
+      })};
 
     optimizeImages();
 
@@ -385,8 +344,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const observer = new MutationObserver(optimizeImages);
     observer.observe(document.body, { childList: true, subtree: true });
 
-    return () => observer.disconnect();
-  }, [enabled, settings.responsiveImages, isMobile]);
+    return ()  => observer.disconnect()}, [enabled, settings.responsiveImages, isMobile]);
 
   // Mobile performance optimization
   useEffect(() => {
@@ -397,16 +355,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     style.textContent = `
       .mobile-performance * {
         animation-duration: 0.3s !important;
-        transition-duration: 0.3s !important;
-      }
+        transition-duration: 0.3s !important}
       
       .mobile-performance .animate-slow {
-        animation-duration: 0.5s !important;
-      }
+        animation-duration: 0.5s !important}
       
       .mobile-performance .animate-fast {
-        animation-duration: 0.1s !important;
-      }
+        animation-duration: 0.1s !important}
     `;
     document.head.appendChild(style);
 
@@ -418,22 +373,17 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       if (!ticking) {
         requestAnimationFrame(() => {
           // Handle scroll optimizations here
-          ticking = false;
-        });
-        ticking = true;
-      }
+          ticking = false});
+        ticking = true}
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => {
+    return ()  => {
       document.body.classList.remove('mobile-performance');
       if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [enabled, settings.mobilePerformance, isMobile]);
+        style.parentNode.removeChild(style)}
+      window.removeEventListener('scroll', handleScroll)}}, [enabled, settings.mobilePerformance, isMobile]);
 
   // Offline support
   useEffect(() => {
@@ -444,10 +394,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
           serviceWorkerRef.current = registration;
-          console.log('Service Worker registered successfully');
-        } catch (error) {
-          console.warn('Service Worker registration failed:', error);
-        }
+          console.log('Service Worker registered successfully')} catch (error) {
+          console.warn('Service Worker registration failed:', error)}
       }
     };
 
@@ -457,26 +405,22 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleOnline = () => {
       document.body.classList.remove('offline');
       // Show online notification
-      showNotification('You are back online', 'success');
-    };
+      showNotification('You are back online', 'success')};
 
     const handleOffline = () => {
       document.body.classList.add('offline');
       // Show offline notification
-      showNotification('You are currently offline', 'warning');
-    };
+      showNotification('You are currently offline', 'warning')};
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
     return () => {
       window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, [enabled, settings.offlineSupport]);
+      window.removeEventListener('offline', handleOffline)}}, [enabled, settings.offlineSupport]);
 
   // Show notification
-  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error') => {
+  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error')  => {
     const notification = document.createElement('div');
     notification.className = `mobile-notification mobile-notification-${type}`;
     notification.textContent = message;
@@ -496,20 +440,17 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     document.body.appendChild(notification);
 
-    setTimeout(() => {
+    setTimeout(()  => {
       if (notification.parentNode) {
-        notification.parentNode.removeChild(notification);
-      }
-    }, 3000);
-  }, []);
+        notification.parentNode.removeChild(notification)}
+    }, 3000)}, []);
 
   // Toggle mobile settings
-  const toggleSetting = useCallback((key: keyof MobileSettings) => {
+  const toggleSetting = useCallback((key: keyof MobileSettings)  => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key],
-    }));
-  }, []);
+    }))}, []);
 
   // Reset to default settings
   const resetSettings = useCallback(() => {
@@ -520,13 +461,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       responsiveImages: true,
       mobilePerformance: true,
       offlineSupport: false,
-    });
-  }, []);
+    })}, []);
 
   // Toggle mobile panel visibility
   const togglePanel = useCallback(() => {
-    setIsVisible(prev => !prev);
-  }, []);
+    setIsVisible(prev => !prev)}, []);
 
   if (!enabled) return null;
 
@@ -678,8 +617,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         </div>
       )}
     </>
-  );
-};
+  )};
 
 // Export default component
 export default MobileExperienceEnhancer;

@@ -30,5 +30,4 @@ export function ListingCard({ id, title, description, images, category, tags, au
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>)}
       </div>
-    </Link>);
-}
+    </Link>)}

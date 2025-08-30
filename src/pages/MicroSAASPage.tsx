@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Zap, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Zap, 
   Code, 
   Database, 
   Users, 
@@ -20,7 +19,7 @@ import {
   Rocket,
   Target,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -28,8 +27,8 @@ const MicroSAASPage = () => {
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
+      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
       pricing: 'Starting from $2,500/month'
     },
     {
@@ -37,8 +36,8 @@ const MicroSAASPage = () => {
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
+      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
       pricing: 'Starting from $1,800/month'
     },
     {
@@ -46,8 +45,8 @@ const MicroSAASPage = () => {
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
+      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
       pricing: 'Starting from $3,200/month'
     },
     {
@@ -55,8 +54,8 @@ const MicroSAASPage = () => {
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
       icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
+      features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
+      useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
       pricing: 'Starting from $1,500/month'
     }
   ];
@@ -125,9 +124,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index) => (
+          {saasServices.map((service, index)  => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -201,8 +200,8 @@ const MicroSAASPage = () => {
               and how they can transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -288,6 +287,5 @@ const MicroSAASPage = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 export default MicroSAASPage;

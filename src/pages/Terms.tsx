@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   FileText, 
   CheckCircle, 
   AlertTriangle,
@@ -13,9 +12,9 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Terms() {
+export default function Terms(...args[]):  {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [
@@ -26,7 +25,7 @@ export default function Terms() {
     },
     {
       title: 'Service Description',
-      content: 'Zion Tech Group provides AI-powered technology solutions, cloud services, cybersecurity, digital transformation, and IT consulting services. We reserve the right to modify or discontinue services at any time.',
+      content: 'Zion Tech Group provides AI-powered technology solutions, cloud services, cybersecurity, digital transformation, and IT consulting services. We reserve the right to modify or discontinue services at  time.',
       icon: Shield
     },
     {
@@ -46,7 +45,7 @@ export default function Terms() {
     },
     {
       title: 'Limitation of Liability',
-      content: 'Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
+      content: 'Zion Tech Group shall not be liable for  indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
       icon: AlertTriangle
     }
   ];
@@ -57,7 +56,7 @@ export default function Terms() {
     'Interfering with the operation of our services',
     'Attempting to reverse engineer our software',
     'Sharing account credentials with unauthorized users',
-    'Violating any applicable laws or regulations'
+    'Violating  applicable laws or regulations'
   ];
 
   const terminationConditions = [
@@ -129,8 +128,8 @@ export default function Terms() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {termsSections.map((section, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {termsSections.map((section, index)  => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -171,8 +170,8 @@ export default function Terms() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {prohibitedActivities.map((activity, index) => (
+            <div className="grid md: grid-cols-2 gap-6">
+              {prohibitedActivities.map((activity, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -209,8 +208,8 @@ export default function Terms() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {terminationConditions.map((condition, index) => (
+            <div className="grid md: grid-cols-2 gap-6">
+              {terminationConditions.map((condition, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -266,7 +265,7 @@ export default function Terms() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Changes to Terms</h3>
-                    <p className="text-slate-300">We may update these terms from time to time. We will notify users of any material changes via email or through our website.</p>
+                    <p className="text-slate-300">We may update these terms from time to time. We will notify users of  material changes via email or through our website.</p>
                   </div>
                 </div>
               </div>
@@ -284,8 +283,8 @@ export default function Terms() {
                 <div className="space-y-4">
                   {[
                     'These terms constitute the entire agreement between you and Zion Tech Group',
-                    'If any provision is found to be unenforceable, the remaining provisions remain in effect',
-                    'Our failure to enforce any right does not constitute a waiver of that right',
+                    'If  provision is found to be unenforceable, the remaining provisions remain in effect',
+                    'Our failure to enforce  right does not constitute a waiver of that right',
                     'These terms are binding on your successors and assigns',
                     'You may not assign your rights under these terms without our written consent',
                     'Notices must be sent to our registered address or email'
@@ -316,7 +315,7 @@ export default function Terms() {
               Questions About These Terms?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              If you have any questions or concerns about these Terms of Service, please contact us
+              If you have  questions or concerns about these Terms of Service, please contact us
             </p>
           </motion.div>
           
@@ -396,7 +395,7 @@ export default function Terms() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            By using our services, you agree to these terms. Contact us if you have any questions.
+            By using our services, you agree to these terms. Contact us if you have  questions.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -421,5 +420,4 @@ export default function Terms() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -14,9 +13,9 @@ import {
   Clock,
   CheckCircle,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Privacy() {
+export default function Privacy(...args[]):  {
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
@@ -45,16 +44,16 @@ export default function Privacy() {
   const dataCategories = [
     {
       title: 'Personal Information',
-      items: [
+      items[
         'Name and contact information (email, phone, address)',
-        'Company and job title information',
+        'Comp and job title information',
         'Professional credentials and certifications',
         'Communication preferences and history'
       ]
     },
     {
       title: 'Technical Information',
-      items: [
+      items[
         'IP address and device information',
         'Browser type and version',
         'Operating system and platform',
@@ -63,7 +62,7 @@ export default function Privacy() {
     },
     {
       title: 'Business Information',
-      items: [
+      items[
         'Project requirements and specifications',
         'Service usage and performance data',
         'Payment and billing information',
@@ -182,8 +181,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index)  => (
               <motion.div
                 key={principle.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -221,8 +220,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            {dataCategories.map((category, index) => (
+          <div className="grid lg: grid-cols-3 gap-8">
+            {dataCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -383,8 +382,8 @@ export default function Privacy() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)  => (
               <motion.div
                 key={right.right}
                 initial={{ opacity: 0, y: 30 }}
@@ -497,7 +496,7 @@ export default function Privacy() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Our privacy team is here to help with any questions or concerns about your data
+            Our privacy team is here to help with  questions or concerns about your data
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -522,5 +521,4 @@ export default function Privacy() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

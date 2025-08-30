@@ -5,7 +5,7 @@ const Mobile = () => {
             title: "Mobile-First Design",
             description: "We design with mobile users in mind first, ensuring optimal experience across all devices",
             icon: "📱",
-            benefits: [
+            benefits[
                 "Responsive design principles",
                 "Touch-friendly interfaces",
                 "Mobile performance optimization",
@@ -16,7 +16,7 @@ const Mobile = () => {
             title: "Zion Mobile App",
             description: "Access our services and manage your projects on the go with our mobile application",
             icon: "🚀",
-            benefits: [
+            benefits[
                 "Project management",
                 "Real-time updates",
                 "Client communication",
@@ -27,7 +27,7 @@ const Mobile = () => {
             title: "Progressive Web Apps",
             description: "Web applications that work like native apps with offline functionality",
             icon: "🌐",
-            benefits: [
+            benefits[
                 "No app store required",
                 "Offline capabilities",
                 "Push notifications",
@@ -40,25 +40,25 @@ const Mobile = () => {
             title: "iOS Development",
             description: "Native iPhone and iPad applications using Swift and SwiftUI",
             icon: "🍎",
-            features: ["Swift & SwiftUI", "App Store optimization", "iOS-specific features", "Performance tuning"]
+            features["Swift & SwiftUI", "App Store optimization", "iOS-specific features", "Performance tuning"]
         },
         {
             title: "Android Development",
             description: "Native Android applications using Kotlin and Jetpack Compose",
             icon: "🤖",
-            features: ["Kotlin & Jetpack Compose", "Google Play optimization", "Material Design 3", "Android features"]
+            features["Kotlin & Jetpack Compose", "Google Play optimization", "Material Design 3", "Android features"]
         },
         {
             title: "Cross-Platform",
             description: "Single codebase for iOS and Android using React Native or Flutter",
             icon: "📱",
-            features: ["React Native", "Flutter", "Shared codebase", "Native performance"]
+            features["React Native", "Flutter", "Shared codebase", "Native performance"]
         },
         {
             title: "Mobile Web",
             description: "Responsive web applications optimized for mobile devices",
             icon: "🌐",
-            features: ["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
+            features["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
         }
     ];
     const mobileBenefits = [
@@ -255,6 +255,5 @@ const Mobile = () => {
           </div>
         </main>
       </div>
-    </>);
-};
+    </>)};
 export default Mobile;

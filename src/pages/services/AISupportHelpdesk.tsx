@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AISupportHelpdesk() {
+export default function AISupportHelpdesk(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -29,7 +29,7 @@ export default function AISupportHelpdesk() {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Fully responsive support platform accessible on any device with native mobile apps."
+      description: "Fully responsive support platform accessible on  device with native mobile apps."
     },
     {
       icon: Globe,
@@ -77,7 +77,7 @@ export default function AISupportHelpdesk() {
       price: "$79",
       period: "/month",
       description: "Perfect for small teams starting with AI support",
-      features: [
+      features[
         "Up to 5 agents",
         "Basic AI chatbot",
         "Email & chat support",
@@ -92,7 +92,7 @@ export default function AISupportHelpdesk() {
       price: "$199",
       period: "/month",
       description: "Ideal for growing support teams with advanced needs",
-      features: [
+      features[
         "Up to 20 agents",
         "Advanced AI capabilities",
         "Multi-channel support",
@@ -108,7 +108,7 @@ export default function AISupportHelpdesk() {
       price: "$499",
       period: "/month",
       description: "For large organizations with complex support requirements",
-      features: [
+      features[
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
@@ -236,8 +236,8 @@ export default function AISupportHelpdesk() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -268,8 +268,8 @@ export default function AISupportHelpdesk() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -300,8 +300,8 @@ export default function AISupportHelpdesk() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -332,8 +332,8 @@ export default function AISupportHelpdesk() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -366,8 +366,8 @@ export default function AISupportHelpdesk() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -454,6 +454,5 @@ export default function AISupportHelpdesk() {
         </section>
       </div>
     </>
-  );
-}
+  )}
 

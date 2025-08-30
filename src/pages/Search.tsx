@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react.ts';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react.ts';
+import { useSearchParams  } from 'react-router-dom.ts';
 
-export default function Search() {
+export default function Search(...args[]):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -38,8 +38,8 @@ export default function Search() {
       reviews: 127,
       price: '$2,500/month',
       location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
+      comp: 'Zion Tech Group',
+      tags['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
       featured: true
     },
     {
@@ -52,8 +52,8 @@ export default function Search() {
       reviews: 89,
       price: '$150/hour',
       location: 'San Francisco, CA',
-      company: 'Tech Solutions Inc',
-      tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
+      comp: 'Tech Solutions Inc',
+      tags['AI', 'Machine Learning', 'Python', 'TensorFlow'],
       featured: false
     },
     {
@@ -66,8 +66,8 @@ export default function Search() {
       reviews: 45,
       price: '$15,000/month',
       location: 'New York, NY',
-      company: 'Cloud Computing Corp',
-      tags: ['GPU', 'AI Training', 'High Performance', 'Enterprise'],
+      comp: 'Cloud Computing Corp',
+      tags['GPU', 'AI Training', 'High Performance', 'Enterprise'],
       featured: true
     },
     {
@@ -80,16 +80,15 @@ export default function Search() {
       reviews: 203,
       price: '$300/hour',
       location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
+      comp: 'Zion Tech Group',
+      tags['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     if (searchQuery) {
-      performSearch();
-    }
+      performSearch()}
   }, [searchQuery, activeCategory, sortBy]);
 
   const performSearch = async () => {
@@ -105,8 +104,7 @@ export default function Search() {
       
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
       
-      return matchesQuery && matchesCategory;
-    });
+      return matchesQuery && matchesCategory});
 
     // Sort results
     filteredResults.sort((a, b) => {
@@ -120,22 +118,19 @@ export default function Search() {
         case 'price-high':
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
         default:
-          return 0;
-      }
+          return 0}
     });
 
     setResults(filteredResults);
-    setLoading(false);
-  };
+    setLoading(false)};
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
-    }
+      setSearchParams({ q: searchQuery.trim() })}
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -144,11 +139,10 @@ export default function Search() {
       case 'equipment':
         return <Building className="w-5 h-5 text-zion-orange" />;
       default:
-        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
-    }
+        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />}
   };
 
-  const getTypeLabel = (type: string) => {
+  const getTypeLabel = (type: string)  => {
     switch (type) {
       case 'service':
         return 'Service';
@@ -157,8 +151,7 @@ export default function Search() {
       case 'equipment':
         return 'Equipment';
       default:
-        return 'Unknown';
-    }
+        return 'Unknown'}
   };
 
   return (
@@ -212,7 +205,7 @@ export default function Search() {
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length : results.filter(r => r.type === category.id).length}
+                    {category.id === 'all' ? results.length: results.filter(r  => r.type === category.id).length}
                   </span>
                 </button>
               ))}
@@ -224,9 +217,9 @@ export default function Search() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
               >
-                {sortOptions.map((option) => (
+                {sortOptions.map((option)  => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
@@ -291,7 +284,7 @@ export default function Search() {
                       </div>
                       <div className="flex items-center gap-1">
                         <Building className="w-4 h-4" />
-                        {result.company}
+                        {result.comp}
                       </div>
                       <div className="text-zion-cyan font-medium">{result.price}</div>
                     </div>
@@ -335,5 +328,4 @@ export default function Search() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

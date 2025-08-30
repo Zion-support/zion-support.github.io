@@ -16,7 +16,7 @@ export const BundleAnalyzer = () => {
                 totalSize: 1200000, // ~1.2MB
                 totalGzipSize: 400000, // ~400KB gzipped
                 chunkCount: 45,
-                chunks: [
+                chunks[
                     {
                         name: 'react-vendor',
                         size: 170000,
@@ -74,7 +74,7 @@ export const BundleAnalyzer = () => {
                         optimization: 'critical'
                     }
                 ],
-                recommendations: [
+                recommendations[
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
                     'Consider code splitting for ServicesOverview page',
                     'Optimize animation-vendor bundle size',
@@ -84,55 +84,46 @@ export const BundleAnalyzer = () => {
                 score: 78,
                 lastUpdated: new Date()
             };
-            setAnalysis(mockAnalysis);
-        }
+            setAnalysis(mockAnalysis)}
         catch (error) {
-            console.error('Bundle analysis failed:', error);
-        }
+            console.error('Bundle analysis failed:', error)}
         finally {
-            setIsAnalyzing(false);
-        }
+            setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
-        analyzeBundle();
-    }, [analyzeBundle]);
+        analyzeBundle()}, [analyzeBundle]);
     const formatBytes = (bytes) => {
         if (bytes === 0)
             return '0 B';
         const k = 1024;
         const sizes = ['B', 'KB', 'MB', 'GB'];
         const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    };
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
     const getScoreColor = (score) => {
         if (score >= 80)
             return 'text-green-500';
         if (score >= 60)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     const getScoreIcon = (score) => {
         if (score >= 80)
             return <CheckCircle className="w-5 h-5"/>;
         if (score >= 60)
             return <AlertTriangle className="w-5 h-5"/>;
-        return <AlertTriangle className="w-5 h-5"/>;
-    };
+        return <AlertTriangle className="w-5 h-5"/>};
     const getOptimizationColor = (optimization) => {
         switch (optimization) {
             case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-        }
+            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getOptimizationIcon = (optimization) => {
         switch (optimization) {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;
-            default: return <Info className="w-4 h-4"/>;
-        }
+            default: return <Info className="w-4 h-4"/>}
     };
     if (!analysis)
         return null;
@@ -299,5 +290,4 @@ export const BundleAnalyzer = () => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </>)};

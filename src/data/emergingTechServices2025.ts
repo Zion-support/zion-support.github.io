@@ -1,4 +1,5 @@
 export interface EmergingTechService {
+
   id: string;
   title: string;
   description: string;
@@ -17,19 +18,16 @@ export interface EmergingTechService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
-}
+    security: string[]}}
 
 export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing as a Service
@@ -42,7 +40,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 5999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Quantum processor access",
       "Quantum algorithm library",
       "Quantum software development kit",
@@ -54,28 +52,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Expert consultation",
       "Training and support"
     ],
-    benefits: [
+    benefits[
       "Access to cutting-edge quantum technology",
       "Solve complex optimization problems",
       "Accelerate research and development",
       "Competitive advantage in innovation",
       "Future-proof technology investment"
     ],
-    useCases: [
+    useCases[
       "Drug discovery",
       "Financial modeling",
       "Cryptography research",
       "Material science",
       "Machine learning optimization"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Pharmaceutical companies",
       "Financial services",
       "Technology companies",
       "Government agencies"
     ],
-    tags: ["Quantum Computing", "Cloud Services", "Research", "Optimization", "Innovation"],
+    tags["Quantum Computing", "Cloud Services", "Research", "Optimization", "Innovation"],
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,999 - $19,999/month",
@@ -98,7 +96,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 1299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Connectors (Google Drive, Confluence, Jira, Slack, SharePoint)",
       "SSO + row‑level permissions",
       "Citations + sources",
@@ -110,16 +108,16 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Air‑gapped option",
       "Admin dashboard"
     ],
-    benefits: [
+    benefits[
       "Faster answers for employees",
       "Lower ticket volume",
       "Reduced onboarding time",
       "Improved knowledge reuse",
       "Auditable responses"
     ],
-    useCases: ["IT helpdesk", "Policy Q&A", "Onboarding", "Engineering runbooks"],
-    targetAudience: ["IT", "HR", "Support", "Engineering"],
-    tags: ["RAG", "Search", "Vector DB", "Security"],
+    useCases["IT helpdesk", "Policy Q&A", "Onboarding", "Engineering runbooks"],
+    targetAudience["IT", "HR", "Support", "Engineering"],
+    tags["RAG", "Search", "Vector DB", "Security"],
     estimatedDelivery: "2–3 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,000 – $4,000/month",
@@ -138,7 +136,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Pretrained defect models",
       "Active learning",
       "Edge inference acceleration",
@@ -150,16 +148,16 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "REST/OPC‑UA APIs",
       "24/7 monitoring"
     ],
-    benefits: [
+    benefits[
       "Scrap reduction",
       "Higher first‑pass yield",
       "Fewer line stoppages",
       "Traceable quality data",
       "Rapid model iteration"
     ],
-    useCases: ["Electronics", "Automotive", "Food & Bev", "Pharma"],
-    targetAudience: ["Plant managers", "Quality engineers", "Ops"],
-    tags: ["Edge AI", "Computer Vision", "Manufacturing", "OPC‑UA"],
+    useCases["Electronics", "Automotive", "Food & Bev", "Pharma"],
+    targetAudience["Plant managers", "Quality engineers", "Ops"],
+    tags["Edge AI", "Computer Vision", "Manufacturing", "OPC‑UA"],
     estimatedDelivery: "6–10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,000 – $12,000/month",
@@ -167,11 +165,11 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     innovationLevel: "Cutting-edge",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology: ["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
-      integrations: ["Ignition", "Kepware", "Siemens"],
+      technology["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
+      integrations["Ignition", "Kepware", "Siemens"],
       apiEndpoints: 27,
       uptime: "99.95%",
-      security: ["Network isolation", "Offline mode"]
+      security["Network isolation", "Offline mode"]
     }
   },
 
@@ -185,7 +183,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 1599,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Custom policy definitions",
       "PII/PHI detection",
       "Redaction + templating",
@@ -197,16 +195,16 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Model choice controls",
       "E‑discovery ready"
     ],
-    benefits: [
+    benefits[
       "Safer AI adoption",
       "Lower legal risk",
       "Faster content review",
       "Audit readiness",
       "Consistent brand voice"
     ],
-    useCases: ["Healthcare content", "Bank marketing", "Legal drafting"],
-    targetAudience: ["Compliance", "Legal", "Marketing Ops"],
-    tags: ["LLM", "Compliance", "DLP", "Audit"],
+    useCases["Healthcare content", "Bank marketing", "Legal drafting"],
+    targetAudience["Compliance", "Legal", "Marketing Ops"],
+    tags["LLM", "Compliance", "DLP", "Audit"],
     estimatedDelivery: "3–5 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,200 – $6,000/month",
@@ -225,7 +223,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 3299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AR/VR content creation",
       "Multi-platform deployment",
       "Collaborative virtual spaces",
@@ -237,28 +235,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Mobile app support",
       "Cloud rendering"
     ],
-    benefits: [
+    benefits[
       "Reduce training costs by 60%",
       "Improve learning retention by 80%",
       "Enhanced collaboration",
       "Remote work capabilities",
       "Immersive customer experiences"
     ],
-    useCases: [
+    useCases[
       "Employee training",
       "Product design and prototyping",
       "Virtual meetings",
       "Customer demonstrations",
       "Maintenance and repair"
     ],
-    targetAudience: [
+    targetAudience[
       "Manufacturing companies",
       "Healthcare organizations",
       "Educational institutions",
       "Retail businesses",
       "Training providers"
     ],
-    tags: ["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
+    tags["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,299 - $9,999/month",
@@ -281,7 +279,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 3899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "5G network monitoring",
       "Performance analytics",
       "Automated optimization",
@@ -293,28 +291,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "API integration",
       "Mobile app access"
     ],
-    benefits: [
+    benefits[
       "Improve network performance by 40%",
       "Reduce operational costs by 30%",
       "Enhanced user experience",
       "Automated network management",
       "Future-ready infrastructure"
     ],
-    useCases: [
+    useCases[
       "Telecommunications",
       "Smart cities",
       "Industrial IoT",
       "Mobile operators",
       "Enterprise networks"
     ],
-    targetAudience: [
+    targetAudience[
       "Telecom operators",
       "Network providers",
       "City governments",
       "Industrial companies",
       "Technology consultants"
     ],
-    tags: ["5G", "Network Optimization", "Telecommunications", "IoT", "Edge Computing"],
+    tags["5G", "Network Optimization", "Telecommunications", "IoT", "Edge Computing"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,899 - $11,999/month",
@@ -337,7 +335,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 4999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Satellite data processing",
       "Earth observation analytics",
       "Mission planning tools",
@@ -349,28 +347,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Custom algorithms",
       "Expert consultation"
     ],
-    benefits: [
+    benefits[
       "Access to space-based data",
       "Global monitoring capabilities",
       "Environmental insights",
       "Research and development support",
       "Competitive advantage"
     ],
-    useCases: [
+    useCases[
       "Environmental monitoring",
       "Agriculture optimization",
       "Climate research",
       "Urban planning",
       "Disaster response"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Environmental agencies",
       "Agricultural companies",
       "Urban planners",
       "Government agencies"
     ],
-    tags: ["Space Technology", "Satellite Data", "Earth Observation", "Environmental Monitoring", "Research"],
+    tags["Space Technology", "Satellite Data", "Earth Observation", "Environmental Monitoring", "Research"],
     estimatedDelivery: "18-22 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,999/month",
@@ -393,7 +391,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 6999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Neuromorphic processors",
       "Cognitive computing algorithms",
       "Pattern recognition",
@@ -405,28 +403,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Expert consultation",
       "Training and support"
     ],
-    benefits: [
+    benefits[
       "Energy-efficient AI processing",
       "Advanced pattern recognition",
       "Real-time learning capabilities",
       "Cognitive computing power",
       "Future-proof technology"
     ],
-    useCases: [
+    useCases[
       "AI research",
       "Pattern recognition",
       "Cognitive computing",
       "Neuroscience research",
       "Advanced robotics"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Technology companies",
       "AI research labs",
       "Neuroscience researchers",
       "Robotics companies"
     ],
-    tags: ["Neuromorphic Computing", "Cognitive Computing", "AI", "Pattern Recognition", "Research"],
+    tags["Neuromorphic Computing", "Cognitive Computing", "AI", "Pattern Recognition", "Research"],
     estimatedDelivery: "22-26 weeks",
     supportLevel: "enterprise",
     marketPrice: "$6,999 - $22,999/month",
@@ -449,7 +447,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 2799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "3D modeling and visualization",
       "Real-time data integration",
       "Predictive analytics",
@@ -461,28 +459,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Collaboration tools",
       "Custom dashboards"
     ],
-    benefits: [
+    benefits[
       "Reduce maintenance costs by 35%",
       "Improve operational efficiency by 40%",
       "Predictive maintenance capabilities",
       "Enhanced decision making",
       "Risk mitigation"
     ],
-    useCases: [
+    useCases[
       "Manufacturing",
       "Infrastructure management",
       "Smart cities",
       "Healthcare facilities",
       "Energy systems"
     ],
-    targetAudience: [
+    targetAudience[
       "Manufacturing companies",
       "Infrastructure managers",
       "City governments",
       "Healthcare organizations",
       "Energy companies"
     ],
-    tags: ["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
+    tags["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $8,999/month",
@@ -505,7 +503,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 5499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "DNA design tools",
       "Genetic circuit design",
       "Synthetic biology workflows",
@@ -517,28 +515,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Training programs",
       "Research collaboration"
     ],
-    benefits: [
+    benefits[
       "Accelerate research timelines",
       "Reduce laboratory costs",
       "Enhanced genetic engineering",
       "Compliance automation",
       "Research collaboration"
     ],
-    useCases: [
+    useCases[
       "Pharmaceutical research",
       "Agricultural biotechnology",
       "Industrial biotechnology",
       "Environmental remediation",
       "Medical research"
     ],
-    targetAudience: [
+    targetAudience[
       "Pharmaceutical companies",
       "Agricultural companies",
       "Research institutions",
       "Biotechnology firms",
       "Environmental agencies"
     ],
-    tags: ["Synthetic Biology", "Genetic Engineering", "Biotechnology", "Research", "Automation"],
+    tags["Synthetic Biology", "Genetic Engineering", "Biotechnology", "Research", "Automation"],
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,499 - $17,999/month",
@@ -561,7 +559,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     price: 7999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Neural signal processing",
       "Brain-computer communication",
       "Medical device integration",
@@ -573,28 +571,28 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       "Training programs",
       "Compliance management"
     ],
-    benefits: [
+    benefits[
       "Revolutionary medical applications",
       "Assistive technology advancement",
       "Research breakthrough potential",
       "Quality of life improvement",
       "Cutting-edge innovation"
     ],
-    useCases: [
+    useCases[
       "Medical rehabilitation",
       "Assistive technology",
       "Neuroscience research",
       "Disability support",
       "Cognitive enhancement"
     ],
-    targetAudience: [
+    targetAudience[
       "Medical institutions",
       "Research organizations",
       "Assistive technology companies",
       "Neuroscience researchers",
       "Healthcare providers"
     ],
-    tags: ["Brain-Computer Interface", "Neural Technology", "Medical Technology", "Research", "Innovation"],
+    tags["Brain-Computer Interface", "Neural Technology", "Medical Technology", "Research", "Innovation"],
     estimatedDelivery: "24-28 weeks",
     supportLevel: "enterprise",
     marketPrice: "$7,999 - $25,999/month",

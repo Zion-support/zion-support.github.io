@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Shield, 
   Activity, 
   TrendingUp, 
@@ -20,17 +19,17 @@ import {
   DollarSign,
   Truck,
   Target
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+ } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function ComprehensiveAIServicesShowcase2025() {
+export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   const aiServices = [
     {
       icon: FileText,
       title: "AI Legal Document Automation",
       description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research",
       price: "From $199/month",
-      features: ["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],
+      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],
       link: "/services/ai-legal-document-automation",
       category: "Legal Tech"
     },
@@ -39,7 +38,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "AI Healthcare Predictive Analytics",
       description: "Revolutionize healthcare delivery with AI-powered predictive analytics and early disease detection",
       price: "From $1,999/month",
-      features: ["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],
+      features["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],
       link: "/services/ai-healthcare-predictive-analytics",
       category: "Healthcare"
     },
@@ -48,7 +47,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "AI Financial Trading & Risk Management",
       description: "Transform trading operations with AI-powered algorithms and comprehensive risk management",
       price: "From $2,999/month",
-      features: ["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],
+      features["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],
       link: "/services/ai-financial-trading-risk-management",
       category: "FinTech"
     },
@@ -57,7 +56,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "AI Supply Chain Optimization",
       description: "Optimize supply chains with AI-powered demand forecasting and logistics optimization",
       price: "From $2,499/month",
-      features: ["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],
+      features["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],
       link: "/services/ai-supply-chain-optimization",
       category: "Logistics"
     },
@@ -66,7 +65,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "AI Cybersecurity Suite",
       description: "Advanced cybersecurity with AI-powered threat detection and automated response",
       price: "From $1,999/month",
-      features: ["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],
+      features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],
       link: "/services/ai-cybersecurity-suite",
       category: "Security"
     },
@@ -75,7 +74,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "AI Business Intelligence Platform",
       description: "Transform data into actionable insights with AI-powered business intelligence",
       price: "From $1,499/month",
-      features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
+      features["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
       link: "/services/ai-business-intelligence-platform",
       category: "Analytics"
     }
@@ -189,8 +188,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -256,8 +255,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((solution, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -294,8 +293,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {advancedTechnologies.map((tech, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {advancedTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -424,5 +423,4 @@ export default function ComprehensiveAIServicesShowcase2025() {
         </section>
       </div>
     </>
-  );
-}
+  )}

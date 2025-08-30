@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Bot, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Bot, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -24,10 +23,10 @@ import {
   Database,
   Rocket,
   Star
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const AutonomousBusinessOperationsPlatform: React.FC = () => {
+const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Bot,
@@ -169,8 +168,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -201,8 +200,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -233,8 +232,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -262,8 +261,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {industries.map((industry, index) => (
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
+              {industries.map((industry, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -290,8 +289,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -340,7 +339,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </div>
               
               <p className="text-sm text-gray-400 mt-6">
-                No credit card required • 14-day free trial • Cancel anytime
+                No credit card required • 14-day free trial • Cancel time
               </p>
             </div>
           </div>
@@ -394,7 +393,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AutonomousBusinessOperationsPlatform;

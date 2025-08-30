@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Target, 
   TrendingUp, 
   Users, 
@@ -31,9 +30,9 @@ import {
   ShoppingCart,
   Eye,
   MousePointer
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation() {
+export default function AIMarketingAutomation(...args[]):  {
   const features = [
     "AI-powered customer segmentation and targeting",
     "Intelligent email marketing automation",
@@ -74,7 +73,7 @@ export default function AIMarketingAutomation() {
       price: "$199",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI customer segmentation (up to 10,000 contacts)",
         "Basic email automation",
         "Social media scheduling",
@@ -90,7 +89,7 @@ export default function AIMarketingAutomation() {
       price: "$599",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features: [
+      features[
         "AI customer segmentation (unlimited contacts)",
         "Advanced email automation",
         "Multi-channel campaigns",
@@ -107,7 +106,7 @@ export default function AIMarketingAutomation() {
       price: "$1,499",
       period: "/month",
       description: "For large organizations with complex marketing needs",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -187,8 +186,8 @@ export default function AIMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,8 +222,8 @@ export default function AIMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -259,8 +258,8 @@ export default function AIMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -295,8 +294,8 @@ export default function AIMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -382,7 +381,7 @@ export default function AIMarketingAutomation() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -402,5 +401,4 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

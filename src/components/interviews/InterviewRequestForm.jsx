@@ -47,8 +47,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: "Please log in to schedule an interview",
                 variant: "destructive",
             });
-            return;
-        }
+            return}
         setIsSubmitting(true);
         try {
             // Combine date and time
@@ -71,19 +70,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
-            onClose();
-        }
+            onClose()}
         catch (error) {
             console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     }
     const timeSlots = [
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
@@ -211,5 +207,4 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           </Button>
         </div>
       </form>
-    </Form>);
-}
+    </Form>)}

@@ -28,32 +28,26 @@ export function WebhooksManager() {
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {
-        fetchWebhooks();
-    }, []);
+        fetchWebhooks()}, []);
     const handleCreateWebhook = async () => {
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;
         await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? undefined : webhookSecret);
         setShowCreateDialog(false);
-        resetWebhookForm();
-    };
+        resetWebhookForm()};
     const handleToggleStatus = async (webhookId, currentStatus) => {
-        await toggleWebhook(webhookId, !currentStatus);
-    };
+        await toggleWebhook(webhookId, !currentStatus)};
     const handleDeleteWebhook = async (webhookId) => {
         await deleteWebhook(webhookId);
-        setShowDeleteConfirm(null);
-    };
+        setShowDeleteConfirm(null)};
     const handleTestWebhook = async (webhookId) => {
         await testWebhook(webhookId, testEventType);
-        setShowTestResult(true);
-    };
+        setShowTestResult(true)};
     const resetWebhookForm = () => {
         setWebhookName("");
         setWebhookUrl("");
         setWebhookSecret("");
-        setSelectedEvents([]);
-    };
+        setSelectedEvents([])};
     // Event type options
     const eventOptions = [
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
@@ -65,8 +59,7 @@ export function WebhooksManager() {
     const toggleEvent = (event) => {
         setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
-            : [...prev, event]);
-    };
+            [...prev, event])};
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -136,8 +129,7 @@ export function WebhooksManager() {
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
             setShowCreateDialog(false);
-            resetWebhookForm();
-        }}>
+            resetWebhookForm()}}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||
@@ -222,8 +214,7 @@ export function WebhooksManager() {
                 setTestEventType('new_application');
                 if (showTestResult) {
                     setShowTestResult(false);
-                    clearTestResult();
-                }
+                    clearTestResult()}
             }
         }}>
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -289,14 +280,12 @@ export function WebhooksManager() {
                 <Button variant="default" onClick={() => {
                 setShowTestDialog(null);
                 setShowTestResult(false);
-                clearTestResult();
-            }}>
+                clearTestResult()}}>
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
                 setShowTestResult(false);
-                clearTestResult();
-            }}>
+                clearTestResult()}}>
                   Test Another Event
                 </Button>
               </DialogFooter>
@@ -324,5 +313,4 @@ export function WebhooksManager() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </Card>);
-}
+    </Card>)}

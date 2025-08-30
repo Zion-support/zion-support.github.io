@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const AllServicesIndex: React.FC = () => {
+const AllServicesIndex: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -17,8 +17,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: '$49 - $799/month',
       url: '/services/ai-code-review-security',
       icon: '🔒',
-      features: ['85% vulnerability reduction', '50+ programming languages', 'Real-time analysis'],
-      benefits: ['Reduce security incidents by 60%', 'Faster code review process']
+      features['85% vulnerability reduction', '50+ programming languages', 'Real-time analysis'],
+      benefits['Reduce security incidents by 60%', 'Faster code review process']
     },
     {
       id: 'ai-customer-experience-analytics',
@@ -28,8 +28,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: '$299 - $1,999/month',
       url: '/services/ai-customer-experience-analytics',
       icon: '📊',
-      features: ['Real-time sentiment analysis', 'Customer journey tracking', 'Predictive analytics'],
-      benefits: ['Increase satisfaction by 35%', 'Reduce churn by 25%']
+      features['Real-time sentiment analysis', 'Customer journey tracking', 'Predictive analytics'],
+      benefits['Increase satisfaction by 35%', 'Reduce churn by 25%']
     },
     {
       id: 'ai-devops-automation-platform',
@@ -39,8 +39,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: '$199 - $1,499/month',
       url: '/services/ai-devops-automation-platform',
       icon: '🚀',
-      features: ['AI pipeline optimization', 'Intelligent deployment', 'GitOps workflows'],
-      benefits: ['Reduce deployment time by 80%', 'Decrease failures by 90%']
+      features['AI pipeline optimization', 'Intelligent deployment', 'GitOps workflows'],
+      benefits['Reduce deployment time by 80%', 'Decrease failures by 90%']
     },
     {
       id: 'ai-iot-edge-computing-platform',
@@ -50,8 +50,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: '$299 - $2,499/month',
       url: '/services/ai-iot-edge-computing-platform',
       icon: '🌐',
-      features: ['Sub-millisecond processing', 'Edge AI intelligence', 'Distributed computing'],
-      benefits: ['Reduce latency by 90%', 'Lower bandwidth costs by 70%']
+      features['Sub-millisecond processing', 'Edge AI intelligence', 'Distributed computing'],
+      benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%']
     },
     
     // Cloud & Infrastructure Services
@@ -63,8 +63,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/cloud-devops',
       icon: '☁️',
-      features: ['Multi-cloud deployment', 'Infrastructure as Code', 'Automated scaling'],
-      benefits: ['Faster deployments', 'Cost optimization']
+      features['Multi-cloud deployment', 'Infrastructure as Code', 'Automated scaling'],
+      benefits['Faster deployments', 'Cost optimization']
     },
     {
       id: 'it-infrastructure',
@@ -74,8 +74,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/it-infrastructure',
       icon: '🏗️',
-      features: ['Network design', 'Server management', 'Storage solutions'],
-      benefits: ['Reliable infrastructure', 'Scalable solutions']
+      features['Network design', 'Server management', 'Storage solutions'],
+      benefits['Reliable infrastructure', 'Scalable solutions']
     },
     {
       id: 'digital-twin',
@@ -85,8 +85,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/digital-twin',
       icon: '🔄',
-      features: ['Real-time monitoring', 'Predictive maintenance', 'Simulation modeling'],
-      benefits: ['Improved efficiency', 'Reduced downtime']
+      features['Real-time monitoring', 'Predictive maintenance', 'Simulation modeling'],
+      benefits['Improved efficiency', 'Reduced downtime']
     },
     
     // Data & Analytics Services
@@ -98,8 +98,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/data-analytics',
       icon: '📈',
-      features: ['Data visualization', 'Statistical analysis', 'Trend identification'],
-      benefits: ['Better insights', 'Data-driven decisions']
+      features['Data visualization', 'Statistical analysis', 'Trend identification'],
+      benefits['Better insights', 'Data-driven decisions']
     },
     {
       id: 'ai-business-intelligence',
@@ -109,8 +109,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/ai-business-intelligence',
       icon: '🧠',
-      features: ['Predictive analytics', 'Natural language queries', 'Automated insights'],
-      benefits: ['Faster insights', 'Predictive capabilities']
+      features['Predictive analytics', 'Natural language queries', 'Automated insights'],
+      benefits['Faster insights', 'Predictive capabilities']
     },
     {
       id: 'iot-edge',
@@ -120,8 +120,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/iot-edge',
       icon: '⚡',
-      features: ['Edge processing', 'Real-time analytics', 'Data filtering'],
-      benefits: ['Low latency', 'Real-time decisions']
+      features['Edge processing', 'Real-time analytics', 'Data filtering'],
+      benefits['Low latency', 'Real-time decisions']
     },
     
     // Security & Compliance Services
@@ -133,8 +133,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/zero-trust-network-architecture',
       icon: '🛡️',
-      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring'],
-      benefits: ['Enhanced security', 'Compliance ready']
+      features['Identity verification', 'Micro-segmentation', 'Continuous monitoring'],
+      benefits['Enhanced security', 'Compliance ready']
     },
     {
       id: 'ai-cybersecurity-suite',
@@ -144,8 +144,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/ai-cybersecurity-suite',
       icon: '🔐',
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-      benefits: ['Proactive security', 'Faster response']
+      features['Threat detection', 'Vulnerability assessment', 'Incident response'],
+      benefits['Proactive security', 'Faster response']
     },
     {
       id: 'ai-compliance-assistant',
@@ -155,8 +155,8 @@ const AllServicesIndex: React.FC = () => {
       pricing: 'Custom pricing',
       url: '/services/ai-compliance-assistant',
       icon: '📋',
-      features: ['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],
-      benefits: ['Automated compliance', 'Reduced risk']
+      features['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],
+      benefits['Automated compliance', 'Reduced risk']
     }
   ];
 
@@ -167,8 +167,7 @@ const AllServicesIndex: React.FC = () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory});
 
   return (
     <>
@@ -212,9 +211,9 @@ const AllServicesIndex: React.FC = () => {
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      {categories.map(category => (
+                      {categories.map(category  => (
                         <option key={category} value={category} className="bg-gray-800 text-white">
                           {category === 'all' ? 'All Categories' : category}
                         </option>
@@ -265,16 +264,15 @@ const AllServicesIndex: React.FC = () => {
                 <button
                   onClick={() => {
                     setSearchTerm('');
-                    setSelectedCategory('all');
-                  }}
+                    setSelectedCategory('all')}}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
                 </button>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -414,7 +412,6 @@ const AllServicesIndex: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AllServicesIndex;

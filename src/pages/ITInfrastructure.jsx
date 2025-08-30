@@ -584,7 +584,7 @@ const infrastructureSolutions = [
     title: "Network Infrastructure",
     description: "Comprehensive network design, implementation, and management solutions.",
     icon: Network,
-    features: [
+    features[
       "Network design",
       "Implementation",
       "Management",
@@ -593,14 +593,14 @@ const infrastructureSolutions = [
     price: "From $100,000",
     timeline: "16-28 weeks",
     category: "Networking",
-    technologies: ["Network Design", "Implementation", "Management", "Optimization"]
+    technologies["Network Design", "Implementation", "Management", "Optimization"]
   },
   {
     id: 2,
     title: "Server Infrastructure",
     description: "Robust server infrastructure design and deployment solutions.",
     icon: Server,
-    features: [
+    features[
       "Server design",
       "Deployment",
       "Management",
@@ -609,14 +609,14 @@ const infrastructureSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Servers",
-    technologies: ["Server Design", "Deployment", "Management", "Maintenance"]
+    technologies["Server Design", "Deployment", "Management", "Maintenance"]
   },
   {
     id: 3,
     title: "Storage Infrastructure",
     description: "Scalable storage solutions for enterprise data management.",
     icon: Database,
-    features: [
+    features[
       "Storage design",
       "Data management",
       "Backup solutions",
@@ -625,14 +625,14 @@ const infrastructureSolutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Storage",
-    technologies: ["Storage Design", "Data Management", "Backup", "Recovery"]
+    technologies["Storage Design", "Data Management", "Backup", "Recovery"]
   },
   {
     id: 4,
     title: "Cloud Infrastructure",
     description: "Hybrid and multi-cloud infrastructure solutions.",
     icon: Cloud,
-    features: [
+    features[
       "Cloud design",
       "Migration",
       "Management",
@@ -641,14 +641,14 @@ const infrastructureSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Cloud",
-    technologies: ["Cloud Design", "Migration", "Management", "Optimization"]
+    technologies["Cloud Design", "Migration", "Management", "Optimization"]
   },
   {
     id: 5,
     title: "Security Infrastructure",
     description: "Comprehensive security infrastructure and compliance solutions.",
     icon: Shield,
-    features: [
+    features[
       "Security design",
       "Implementation",
       "Monitoring",
@@ -657,14 +657,14 @@ const infrastructureSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Security",
-    technologies: ["Security Design", "Implementation", "Monitoring", "Compliance"]
+    technologies["Security Design", "Implementation", "Monitoring", "Compliance"]
   },
   {
     id: 6,
     title: "Data Center Infrastructure",
     description: "Modern data center design and implementation solutions.",
     icon: Building,
-    features: [
+    features[
       "Data center design",
       "Implementation",
       "Management",
@@ -673,7 +673,7 @@ const infrastructureSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Data Center",
-    technologies: ["Data Center Design", "Implementation", "Management", "Optimization"]
+    technologies["Data Center Design", "Implementation", "Management", "Optimization"]
   }
 ];
 
@@ -711,7 +711,7 @@ const infrastructureTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed comprehensive IT infrastructure upgrade for 50+ global facilities",
     solution: "Built modern IT infrastructure with network, server, and storage solutions",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required secure and compliant IT infrastructure for regulatory requirements",
     solution: "Implemented secure IT infrastructure with compliance and security solutions",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Needed reliable IT infrastructure for patient care systems",
     solution: "Built robust IT infrastructure with high availability and security",
@@ -774,25 +774,25 @@ const infrastructureBenefits = [
     title: "Improved Performance",
     description: "Modern infrastructure provides better performance and reliability",
     icon: Zap,
-    examples: ["Faster systems", "Better reliability", "Improved efficiency", "Enhanced user experience"]
+    examples["Faster systems", "Better reliability", "Improved efficiency", "Enhanced user experience"]
   },
   {
     title: "Cost Reduction",
     description: "Optimized infrastructure reduces operational costs",
     icon: TrendingUp,
-    examples: ["Lower maintenance", "Better efficiency", "Reduced downtime", "Optimized resources"]
+    examples["Lower maintenance", "Better efficiency", "Reduced downtime", "Optimized resources"]
   },
   {
     title: "Enhanced Security",
     description: "Modern infrastructure provides better security and compliance",
     icon: Shield,
-    examples: ["Better security", "Compliance", "Risk reduction", "Data protection"]
+    examples["Better security", "Compliance", "Risk reduction", "Data protection"]
   },
   {
     title: "Scalability",
     description: "Flexible infrastructure supports business growth",
     icon: Rocket,
-    examples: ["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
+    examples["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
   }
 ];
 
@@ -1115,7 +1115,7 @@ export default function ITInfrastructure() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1180,5 +1180,4 @@ export default function ITInfrastructure() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

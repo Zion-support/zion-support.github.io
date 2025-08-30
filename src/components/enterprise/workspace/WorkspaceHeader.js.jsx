@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Bell, Users, Settings } from "lucide-react";
-export function WorkspaceHeader({ company }) {
+export function WorkspaceHeader({ comp }) {
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -43,5 +43,4 @@ export function WorkspaceHeader({ company }) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

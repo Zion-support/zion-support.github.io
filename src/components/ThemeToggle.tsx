@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { Sun, Moon, Monitor  } from 'lucide-react.ts';
 
 type Theme = 'dark' | 'light' | 'system';
 
-export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('system');
+export function ThemeToggle(...args[]):  {
+  const [theme, setTheme] = useState<any>('system');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('zion-theme') as Theme;
     if (savedTheme) {
-      setTheme(savedTheme);
-    }
+      setTheme(savedTheme)}
   }, []);
 
   useEffect(() => {
@@ -23,16 +22,12 @@ export function ThemeToggle() {
 
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-    localStorage.setItem('zion-theme', theme);
-  }, [theme, mounted]);
+      root.classList.add(systemTheme)} else {
+      root.classList.add(theme)}
+    localStorage.setItem('zion-theme', theme)}, [theme, mounted]);
 
-  const toggleTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-  };
+  const toggleTheme = (newTheme: Theme)  => {
+    setTheme(newTheme)};
 
   if (!mounted) return null;
 
@@ -60,5 +55,4 @@ export function ThemeToggle() {
         <Monitor className="h-5 w-5" />
       </button>
     </div>
-  );
-}
+  )}

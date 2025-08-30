@@ -36,7 +36,7 @@ export function ContactInfo() {
         },
         {
             title: "Main Website",
-            description: "Explore our complete company portfolio",
+            description: "Explore our complete comp portfolio",
             icon: <Globe className="h-8 w-8 text-zion-purple"/>,
             value: "ziontechgroup.com",
             action: "https://ziontechgroup.com",
@@ -44,7 +44,7 @@ export function ContactInfo() {
             color: "#8c15e9"
         }
     ];
-    const companyStats = [
+    const compStats = [
         {
             label: "Years Experience",
             value: "10+",
@@ -120,7 +120,7 @@ export function ContactInfo() {
             </FuturisticCard>))}
         </div>
 
-        {/* Company Statistics */}
+        {/* Comp Statistics */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
@@ -133,7 +133,7 @@ export function ContactInfo() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {compStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">
@@ -192,5 +192,4 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

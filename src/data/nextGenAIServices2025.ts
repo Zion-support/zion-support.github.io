@@ -1,4 +1,5 @@
 export interface NextGenAIService {
+
   id: string;
   title: string;
   description: string;
@@ -9,12 +10,11 @@ export interface NextGenAIService {
   features: string[];
   benefits: string[];
   useCases: string[];
-  pricing: {
+pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string;
-  };
+    custom: string};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,8 +23,7 @@ export interface NextGenAIService {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   researchLevel: 'production' | 'research' | 'experimental';
-  ethicalCompliance: string[];
-}
+  ethicalCompliance: string[]}
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: 'autonomous-ai-systems',
@@ -34,7 +33,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Brain',
     color: 'from-purple-500 to-pink-600',
     category: 'autonomous-systems',
-    features: [
+    features[
       'Self-learning algorithms',
       'Autonomous decision making',
       'Continuous optimization',
@@ -42,13 +41,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Goal-oriented learning',
       'Ethical constraint enforcement'
     ],
-    benefits: [
+    benefits[
       'Reduced human intervention',
       'Continuous improvement',
       'Adaptive problem solving',
       'Scalable AI operations'
     ],
-    useCases: [
+    useCases[
       'Autonomous vehicles',
       'Smart cities',
       'Industrial automation',
@@ -61,13 +60,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['Reinforcement Learning', 'Deep Learning', 'Neural Networks', 'Python', 'PyTorch', 'TensorFlow'],
+    technologies['Reinforcement Learning', 'Deep Learning', 'Neural Networks', 'Python', 'PyTorch', 'TensorFlow'],
     aiScore: 98,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance: ['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention']
+    ethicalCompliance['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention']
   },
   {
     id: 'advanced-nlp-platform',
@@ -77,7 +76,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'MessageCircle',
     color: 'from-blue-500 to-indigo-600',
     category: 'nlp',
-    features: [
+    features[
       'Multilingual understanding',
       'Context-aware generation',
       'Domain-specific models',
@@ -85,13 +84,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Entity recognition',
       'Language translation'
     ],
-    benefits: [
+    benefits[
       'Global communication',
       'Improved customer service',
       'Content localization',
       'Multilingual support'
     ],
-    useCases: [
+    useCases[
       'Global businesses',
       'Customer service',
       'Content creation',
@@ -104,13 +103,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-8 weeks',
-    technologies: ['GPT-4', 'BERT', 'Transformer Models', 'Python', 'Hugging Face', 'FastAPI'],
+    technologies['GPT-4', 'BERT', 'Transformer Models', 'Python', 'Hugging Face', 'FastAPI'],
     aiScore: 96,
     marketPrice: '$799-$4,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance: ['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency']
+    ethicalCompliance['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency']
   },
   {
     id: 'computer-vision-ai',
@@ -120,7 +119,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Eye',
     color: 'from-green-500 to-emerald-600',
     category: 'computer-vision',
-    features: [
+    features[
       '3D object recognition',
       'Spatial understanding',
       'Real-time processing',
@@ -128,13 +127,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Depth perception',
       'Motion tracking'
     ],
-    benefits: [
+    benefits[
       'Enhanced visual understanding',
       'Improved accuracy',
       'Real-time processing',
       '3D spatial awareness'
     ],
-    useCases: [
+    useCases[
       'Autonomous vehicles',
       'Robotics',
       'Augmented reality',
@@ -147,13 +146,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['OpenCV', 'PyTorch', 'TensorFlow', 'CUDA', '3D Vision', 'Computer Vision'],
+    technologies['OpenCV', 'PyTorch', 'TensorFlow', 'CUDA', '3D Vision', 'Computer Vision'],
     aiScore: 97,
     marketPrice: '$1,299-$7,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance: ['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability']
+    ethicalCompliance['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability']
   },
   {
     id: 'ai-ethics-platform',
@@ -163,7 +162,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Shield',
     color: 'from-teal-500 to-cyan-600',
     category: 'ai-ethics',
-    features: [
+    features[
       'Bias detection & mitigation',
       'Fairness metrics',
       'Transparency tools',
@@ -171,13 +170,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Ethical guidelines',
       'Compliance monitoring'
     ],
-    benefits: [
+    benefits[
       'Responsible AI development',
       'Regulatory compliance',
       'Reduced bias',
       'Trustworthy AI systems'
     ],
-    useCases: [
+    useCases[
       'AI development teams',
       'Regulatory bodies',
       'Ethics committees',
@@ -190,13 +189,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '2-6 weeks',
-    technologies: ['Python', 'Fairness Metrics', 'Bias Detection', 'Explainable AI', 'Governance Tools'],
+    technologies['Python', 'Fairness Metrics', 'Bias Detection', 'Explainable AI', 'Governance Tools'],
     aiScore: 94,
     marketPrice: '$599-$3,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance: ['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability']
+    ethicalCompliance['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability']
   },
   {
     id: 'quantum-ai-hybrid',
@@ -206,7 +205,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Rocket',
     color: 'from-violet-500 to-fuchsia-600',
     category: 'ai-research',
-    features: [
+    features[
       'Quantum neural networks',
       'Hybrid algorithms',
       'Quantum advantage',
@@ -214,13 +213,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Optimization problems',
       'Research tools'
     ],
-    benefits: [
+    benefits[
       'Exponential speedups',
       'New problem-solving capabilities',
       'Research breakthroughs',
       'Competitive advantage'
     ],
-    useCases: [
+    useCases[
       'Pharmaceutical research',
       'Financial modeling',
       'Climate science',
@@ -233,13 +232,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '12-20 weeks',
-    technologies: ['Qiskit', 'Cirq', 'PyTorch', 'TensorFlow', 'Quantum Hardware', 'Hybrid Algorithms'],
+    technologies['Qiskit', 'Cirq', 'PyTorch', 'TensorFlow', 'Quantum Hardware', 'Hybrid Algorithms'],
     aiScore: 99,
     marketPrice: '$4,999-$29,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance: ['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency']
+    ethicalCompliance['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency']
   },
   {
     id: 'federated-learning-platform',
@@ -249,7 +248,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Network',
     color: 'from-orange-500 to-red-600',
     category: 'machine-learning',
-    features: [
+    features[
       'Distributed training',
       'Privacy preservation',
       'Secure aggregation',
@@ -257,13 +256,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Performance monitoring',
       'Collaborative learning'
     ],
-    benefits: [
+    benefits[
       'Privacy preservation',
       'Collaborative learning',
       'Reduced data transfer',
       'Regulatory compliance'
     ],
-    useCases: [
+    useCases[
       'Healthcare collaboration',
       'Financial services',
       'Cross-organization AI',
@@ -276,13 +275,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],
+    technologies['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],
     aiScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance: ['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']
+    ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']
   },
   {
     id: 'ai-research-platform',
@@ -292,7 +291,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'TestTube',
     color: 'from-indigo-500 to-purple-600',
     category: 'ai-research',
-    features: [
+    features[
       'Experimental frameworks',
       'Research tools',
       'Collaboration features',
@@ -300,13 +299,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Experiment tracking',
       'Result analysis'
     ],
-    benefits: [
+    benefits[
       'Faster research cycles',
       'Better collaboration',
       'Reproducible results',
       'Research acceleration'
     ],
-    useCases: [
+    useCases[
       'AI research labs',
       'Academic institutions',
       'Corporate R&D',
@@ -319,13 +318,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '2-4 weeks',
-    technologies: ['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],
+    technologies['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],
     aiScore: 93,
     marketPrice: '$299-$1,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'research',
-    ethicalCompliance: ['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']
+    ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']
   },
   {
     id: 'ai-optimization-engine',
@@ -335,7 +334,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     icon: 'Target',
     color: 'from-yellow-500 to-orange-600',
     category: 'machine-learning',
-    features: [
+    features[
       'Genetic algorithms',
       'Neural optimization',
       'Multi-objective optimization',
@@ -343,13 +342,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       'Real-time optimization',
       'Scalable algorithms'
     ],
-    benefits: [
+    benefits[
       'Optimal solutions',
       'Faster decision making',
       'Cost optimization',
       'Resource efficiency'
     ],
-    useCases: [
+    useCases[
       'Supply chain optimization',
       'Resource allocation',
       'Scheduling problems',
@@ -362,21 +361,18 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-8 weeks',
-    technologies: ['Genetic Algorithms', 'Neural Networks', 'Optimization Libraries', 'Python', 'SciPy', 'NumPy'],
+    technologies['Genetic Algorithms', 'Neural Networks', 'Optimization Libraries', 'Python', 'SciPy', 'NumPy'],
     aiScore: 94,
     marketPrice: '$899-$5,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance: ['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
+    ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
 ];
-export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
   if (category === 'All') {
-    return NEXT_GEN_AI_SERVICES_2025;
-  }
-  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
-};
+    return NEXT_GEN_AI_SERVICES_2025}
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
 export const getAllNextGenAIServices = (): NextGenAIService[] => {
-  return NEXT_GEN_AI_SERVICES_2025;
-};
+  return NEXT_GEN_AI_SERVICES_2025};

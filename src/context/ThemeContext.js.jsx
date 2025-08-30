@@ -7,20 +7,15 @@ export const ThemeProvider = ({ children }) => {
         root.classList.remove('light', 'dark');
         if (theme === 'system') {
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            root.classList.add(systemTheme);
-        }
+            root.classList.add(systemTheme)}
         else {
-            root.classList.add(theme);
-        }
+            root.classList.add(theme)}
     }, [theme]);
     return (<ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
-    </ThemeContext.Provider>);
-};
+    </ThemeContext.Provider>)};
 export const useTheme = () => {
     const context = React.useContext(ThemeContext);
     if (context === undefined) {
-        throw new Error('useTheme must be used within a ThemeProvider');
-    }
-    return context;
-};
+        throw new Error('useTheme must be used within a ThemeProvider')}
+    return context};

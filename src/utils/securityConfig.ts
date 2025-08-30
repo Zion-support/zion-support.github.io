@@ -62,7 +62,7 @@ export const securityConfig = {
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-    message: 'Too many requests from this IP, please try again later.',
+    message: 'Too m requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false,
   },
@@ -111,7 +111,7 @@ export const generateCSPHeader = (): string => {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: any, res: any, next: any) => {
+export const securityMiddleware = (req: , res: , next: )  => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -124,7 +124,7 @@ export const securityMiddleware = (req: any, res: any, next: any) => {
 };
 
 // Input sanitization
-export const sanitizeInput = (input: string): string => {
+export const sanitizeInput = (input: string): string  => {
   return input
     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
@@ -133,7 +133,7 @@ export const sanitizeInput = (input: string): string => {
 };
 
 // XSS Protection
-export const escapeHtml = (text: string): string => {
+export const escapeHtml = (text: string): string  => {
   const map: { [key: string]: string } = {
     '&': '&amp;',
     '<': '&lt;',
@@ -150,6 +150,6 @@ export const generateCSRFToken = (): string => {
 };
 
 // Validate CSRF Token
-export const validateCSRFToken = (token: string, storedToken: string): boolean => {
+export const validateCSRFToken = (token: string, storedToken: string): boolean  => {
   return token === storedToken && token.length > 0;
 };

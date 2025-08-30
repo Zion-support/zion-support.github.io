@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
-    const companyValues = [
+    const compValues = [
         {
             icon: Brain,
             title: 'Innovation First',
@@ -33,32 +33,32 @@ export const EnhancedAbout = () => {
         {
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
             avatar: '👨‍💼'
         },
         {
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise: ['Deep Learning', 'NLP', 'Computer Vision'],
+            expertise['Deep Learning', 'NLP', 'Computer Vision'],
             avatar: '🤖'
         },
         {
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'],
+            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],
             avatar: '☁️'
         },
         {
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],
+            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
             avatar: '🔒'
         }
     ];
     const milestones = [
         {
             year: '2020',
-            title: 'Company Founded',
+            title: 'Comp Founded',
             description: 'Zion Tech Group established with a vision for AI-driven innovation',
             achievement: 'First AI solution deployed'
         },
@@ -196,7 +196,7 @@ export const EnhancedAbout = () => {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -209,7 +209,7 @@ export const EnhancedAbout = () => {
           </motion.div>
           
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {companyValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
+            {compValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-4xl mb-4 flex justify-center">
                   <value.icon className={`h-16 w-16 text-${value.color} group-hover:scale-110 transition-transform duration-300`}/>
                 </div>
@@ -248,7 +248,7 @@ export const EnhancedAbout = () => {
         </div>
       </section>
 
-      {/* Company Timeline */}
+      {/* Comp Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -331,5 +331,4 @@ export const EnhancedAbout = () => {
           </div>
         </motion.div>
       </section>
-    </div>);
-};
+    </div>)};

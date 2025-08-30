@@ -61,7 +61,7 @@ const useCases = [
 ];
 const testimonials = [
     {
-        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from anywhere with real-time insights.",
+        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from where with real-time insights.",
         name: "Jennifer Martinez",
         role: "CTO, GlobalTech Solutions",
         rating: 5
@@ -133,8 +133,7 @@ export default function AIAutonomousBusinessPlatform() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </motion.div>);
-        })}
+                </motion.div>)})}
           </div>
         </div>
       </section>
@@ -181,8 +180,7 @@ export default function AIAutonomousBusinessPlatform() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </motion.div>);
-        })}
+                </motion.div>)})}
           </div>
         </div>
       </section>
@@ -239,5 +237,4 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

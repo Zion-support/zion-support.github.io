@@ -1,22 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '../../utils/cn';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'white' | 'gray';
   className?: string;
   showText?: boolean;
-  text?: string;
-}
+  text?: string}
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-}: LoadingSpinnerProps) {
+export default function LoadingSpinner(...args[]):  {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -48,22 +42,13 @@ export default function LoadingSpinner({
         </motion.p>
       )}
     </div>
-  );
-}
+  )}
 
 // Optimized skeleton loader
-export function SkeletonLoader({ 
-  className = '', 
-  lines = 3, 
-  height = 'h-4' 
-}: { 
-  className?: string; 
-  lines?: number; 
-  height?: string; 
-}) {
+export function SkeletonLoader(...args[]):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map((_, index)  => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -73,33 +58,19 @@ export function SkeletonLoader({
         />
       ))}
     </div>
-  );
-}
+  )}
 
 // Button loading state
-export function ButtonLoader({
-  size = 'sm',
-  className
-}: {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}) {
+export function ButtonLoader(...args[]):  {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
     </div>
-  );
-}
+  )}
 
 // Page loading overlay
-export function PageLoaderOverlay({ 
-  text = 'Loading page...',
-  showSpinner = true 
-}: { 
-  text?: string; 
-  showSpinner?: boolean; 
-}) {
+export function PageLoaderOverlay(...args[]):  {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -119,17 +90,10 @@ export function PageLoaderOverlay({
         </motion.p>
       </div>
     </motion.div>
-  );
-}
+  )}
 
 // Content loading placeholder
-export function ContentPlaceholder({ 
-  className = '',
-  variant = 'default'
-}: { 
-  className?: string; 
-  variant?: 'default' | 'card' | 'list' | 'grid'; 
-}) {
+export function ContentPlaceholder(...args[]):  {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -141,7 +105,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: 6 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -156,7 +120,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: 5 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -170,7 +134,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: 8 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -184,7 +148,7 @@ export function ContentPlaceholder({
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: 4 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -195,5 +159,4 @@ export function ContentPlaceholder({
         ))
       )}
     </div>
-  );
-}
+  )}

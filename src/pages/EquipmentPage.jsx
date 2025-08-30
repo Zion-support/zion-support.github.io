@@ -23,9 +23,7 @@ const EquipmentPage = () => {
   useEffect(() => {
     // Simulate loading
     setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+      setLoading(false)}, 1000)}, []);
 
   const EquipmentFilterControls = () => (
     <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
@@ -194,7 +192,6 @@ const EquipmentPage = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default EquipmentPage;

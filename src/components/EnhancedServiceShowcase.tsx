@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -18,13 +17,14 @@ import {
   Target,
   Award,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+icon: React.ComponentType<{ className?: string}>;
   category: string;
   features: string[];
   pricing: string;
@@ -32,8 +32,7 @@ interface Service {
   reviews: number;
   color: string;
   popular?: boolean;
-  link: string;
-}
+  link: string}
 
 const services: Service[] = [
   {
@@ -42,7 +41,7 @@ const services: Service[] = [
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
     category: 'AI & Machine Learning',
-    features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
     pricing: '$2,999/month',
     rating: 4.9,
     reviews: 156,
@@ -56,7 +55,7 @@ const services: Service[] = [
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
+    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -69,7 +68,7 @@ const services: Service[] = [
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
     category: 'Cybersecurity',
-    features: ['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
+    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
     pricing: '$2,500/month',
     rating: 4.9,
     reviews: 234,
@@ -83,7 +82,7 @@ const services: Service[] = [
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
     category: 'Cloud & DevOps',
-    features: ['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
+    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
     pricing: '$1,500/month',
     rating: 4.7,
     reviews: 189,
@@ -96,7 +95,7 @@ const services: Service[] = [
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
     category: 'Blockchain & Web3',
-    features: ['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
+    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
     pricing: '$1,800/month',
     rating: 4.6,
     reviews: 123,
@@ -109,7 +108,7 @@ const services: Service[] = [
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
     category: 'Digital Transformation',
-    features: ['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
+    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
     pricing: '$3,500/month',
     rating: 4.8,
     reviews: 167,
@@ -122,7 +121,7 @@ const services: Service[] = [
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
     category: 'Micro SAAS',
-    features: ['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
+    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
     pricing: '$899/month',
     rating: 4.7,
     reviews: 98,
@@ -135,7 +134,7 @@ const services: Service[] = [
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
     category: 'Healthcare AI',
-    features: ['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
+    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
     pricing: '$4,500/month',
     rating: 4.9,
     reviews: 78,
@@ -156,35 +155,31 @@ const categories = [
   'Healthcare AI'
 ];
 
-export const EnhancedServiceShowcase: React.FC = () => {
+export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredService, setHoveredService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+          setIsVisible(true)}
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)}
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+    ? services: services.filter(service  => service.category === selectedCategory);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -193,8 +188,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
             : 'text-gray-400'
         }`}
       />
-    ));
-  };
+    ))};
 
   return (
     <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -366,5 +360,4 @@ export const EnhancedServiceShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};

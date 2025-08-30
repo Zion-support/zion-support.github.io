@@ -11,8 +11,8 @@ const frontendTechnologies = [
         expertise: "Expert",
         projects: 150,
         rating: 5,
-        features: ["Hooks", "Context API", "Suspense", "Concurrent Features"],
-        alternatives: ["Vue.js", "Angular", "Svelte"]
+        features["Hooks", "Context API", "Suspense", "Concurrent Features"],
+        alternatives["Vue.js", "Angular", "Svelte"]
     },
     {
         name: "Next.js",
@@ -23,8 +23,8 @@ const frontendTechnologies = [
         expertise: "Expert",
         projects: 120,
         rating: 5,
-        features: ["SSR/SSG", "API Routes", "Image Optimization", "Middleware"],
-        alternatives: ["Nuxt.js", "Gatsby", "Remix"]
+        features["SSR/SSG", "API Routes", "Image Optimization", "Middleware"],
+        alternatives["Nuxt.js", "Gatsby", "Remix"]
     },
     {
         name: "TypeScript",
@@ -35,8 +35,8 @@ const frontendTechnologies = [
         expertise: "Expert",
         projects: 200,
         rating: 5,
-        features: ["Static Typing", "Interfaces", "Generics", "Decorators"],
-        alternatives: ["JavaScript", "Flow", "Dart"]
+        features["Static Typing", "Interfaces", "Generics", "Decorators"],
+        alternatives["JavaScript", "Flow", "Dart"]
     },
     {
         name: "Tailwind CSS",
@@ -47,8 +47,8 @@ const frontendTechnologies = [
         expertise: "Expert",
         projects: 180,
         rating: 5,
-        features: ["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],
-        alternatives: ["Bootstrap", "Material-UI", "Chakra UI"]
+        features["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],
+        alternatives["Bootstrap", "Material-UI", "Chakra UI"]
     }
 ];
 const backendTechnologies = [
@@ -61,8 +61,8 @@ const backendTechnologies = [
         expertise: "Expert",
         projects: 160,
         rating: 5,
-        features: ["Event-driven", "Non-blocking I/O", "NPM Ecosystem", "Microservices"],
-        alternatives: ["Python", "Java", "Go", "C#"]
+        features["Event-driven", "Non-blocking I/O", "NPM Ecosystem", "Microservices"],
+        alternatives["Python", "Java", "Go", "C#"]
     },
     {
         name: "Python",
@@ -73,8 +73,8 @@ const backendTechnologies = [
         expertise: "Expert",
         projects: 140,
         rating: 5,
-        features: ["AI/ML Libraries", "Web Frameworks", "Data Science", "Automation"],
-        alternatives: ["Node.js", "Java", "Go", "Rust"]
+        features["AI/ML Libraries", "Web Frameworks", "Data Science", "Automation"],
+        alternatives["Node.js", "Java", "Go", "Rust"]
     },
     {
         name: "PostgreSQL",
@@ -85,8 +85,8 @@ const backendTechnologies = [
         expertise: "Expert",
         projects: 130,
         rating: 5,
-        features: ["ACID Compliance", "JSON Support", "Extensions", "Partitioning"],
-        alternatives: ["MySQL", "MongoDB", "Redis", "SQLite"]
+        features["ACID Compliance", "JSON Support", "Extensions", "Partitioning"],
+        alternatives["MySQL", "MongoDB", "Redis", "SQLite"]
     },
     {
         name: "Redis",
@@ -97,8 +97,8 @@ const backendTechnologies = [
         expertise: "Expert",
         projects: 110,
         rating: 5,
-        features: ["Caching", "Session Storage", "Real-time", "Pub/Sub"],
-        alternatives: ["Memcached", "Hazelcast", "Apache Ignite"]
+        features["Caching", "Session Storage", "Real-time", "Pub/Sub"],
+        alternatives["Memcached", "Hazelcast", "Apache Ignite"]
     }
 ];
 const cloudTechnologies = [
@@ -111,8 +111,8 @@ const cloudTechnologies = [
         expertise: "Expert",
         projects: 180,
         rating: 5,
-        features: ["EC2", "Lambda", "S3", "RDS", "CloudFormation"],
-        alternatives: ["Azure", "Google Cloud", "DigitalOcean", "Heroku"]
+        features["EC2", "Lambda", "S3", "RDS", "CloudFormation"],
+        alternatives["Azure", "Google Cloud", "DigitalOcean", "Heroku"]
     },
     {
         name: "Docker",
@@ -123,8 +123,8 @@ const cloudTechnologies = [
         expertise: "Expert",
         projects: 160,
         rating: 5,
-        features: ["Containerization", "Orchestration", "Microservices", "DevOps"],
-        alternatives: ["Podman", "LXC", "rkt", "Kubernetes"]
+        features["Containerization", "Orchestration", "Microservices", "DevOps"],
+        alternatives["Podman", "LXC", "rkt", "Kubernetes"]
     },
     {
         name: "Kubernetes",
@@ -135,8 +135,8 @@ const cloudTechnologies = [
         expertise: "Expert",
         projects: 120,
         rating: 5,
-        features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"],
-        alternatives: ["Docker Swarm", "Nomad", "OpenShift", "Rancher"]
+        features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"],
+        alternatives["Docker Swarm", "Nomad", "OpenShift", "Rancher"]
     },
     {
         name: "Terraform",
@@ -147,8 +147,8 @@ const cloudTechnologies = [
         expertise: "Expert",
         projects: 100,
         rating: 5,
-        features: ["IaC", "Multi-cloud", "State Management", "Modules"],
-        alternatives: ["CloudFormation", "Pulumi", "Ansible", "Chef"]
+        features["IaC", "Multi-cloud", "State Management", "Modules"],
+        alternatives["CloudFormation", "Pulumi", "Ansible", "Chef"]
     }
 ];
 const aiTechnologies = [
@@ -161,8 +161,8 @@ const aiTechnologies = [
         expertise: "Expert",
         projects: 80,
         rating: 5,
-        features: ["Deep Learning", "Neural Networks", "GPU Support", "Model Serving"],
-        alternatives: ["PyTorch", "Scikit-learn", "Keras", "MXNet"]
+        features["Deep Learning", "Neural Networks", "GPU Support", "Model Serving"],
+        alternatives["PyTorch", "Scikit-learn", "Keras", "MXNet"]
     },
     {
         name: "OpenAI",
@@ -173,8 +173,8 @@ const aiTechnologies = [
         expertise: "Expert",
         projects: 60,
         rating: 5,
-        features: ["GPT Models", "DALL-E", "Whisper", "Embeddings"],
-        alternatives: ["Anthropic", "Google AI", "Azure OpenAI", "Hugging Face"]
+        features["GPT Models", "DALL-E", "Whisper", "Embeddings"],
+        alternatives["Anthropic", "Google AI", "Azure OpenAI", "Hugging Face"]
     },
     {
         name: "LangChain",
@@ -185,8 +185,8 @@ const aiTechnologies = [
         expertise: "Expert",
         projects: 40,
         rating: 5,
-        features: ["LLM Integration", "Chains", "Agents", "Memory"],
-        alternatives: ["Semantic Kernel", "AutoGPT", "LlamaIndex", "Haystack"]
+        features["LLM Integration", "Chains", "Agents", "Memory"],
+        alternatives["Semantic Kernel", "AutoGPT", "LlamaIndex", "Haystack"]
     },
     {
         name: "Hugging Face",
@@ -197,8 +197,8 @@ const aiTechnologies = [
         expertise: "Expert",
         projects: 50,
         rating: 5,
-        features: ["Model Hub", "Transformers", "Datasets", "Spaces"],
-        alternatives: ["ModelScope", "Replicate", "Gradio", "Streamlit"]
+        features["Model Hub", "Transformers", "Datasets", "Spaces"],
+        alternatives["ModelScope", "Replicate", "Gradio", "Streamlit"]
     }
 ];
 const developmentTools = [
@@ -211,8 +211,8 @@ const developmentTools = [
         expertise: "Expert",
         projects: 300,
         rating: 5,
-        features: ["Branching", "Merging", "Stashing", "Rebasing"],
-        alternatives: ["SVN", "Mercurial", "Perforce", "GitHub Desktop"]
+        features["Branching", "Merging", "Stashing", "Rebasing"],
+        alternatives["SVN", "Mercurial", "Perforce", "GitHub Desktop"]
     },
     {
         name: "VS Code",
@@ -223,8 +223,8 @@ const developmentTools = [
         expertise: "Expert",
         projects: 250,
         rating: 5,
-        features: ["IntelliSense", "Debugging", "Extensions", "Git Integration"],
-        alternatives: ["WebStorm", "Sublime Text", "Atom", "Vim"]
+        features["IntelliSense", "Debugging", "Extensions", "Git Integration"],
+        alternatives["WebStorm", "Sublime Text", "Atom", "Vim"]
     },
     {
         name: "Postman",
@@ -235,8 +235,8 @@ const developmentTools = [
         expertise: "Expert",
         projects: 180,
         rating: 5,
-        features: ["API Testing", "Collections", "Mock Servers", "Documentation"],
-        alternatives: ["Insomnia", "Thunder Client", "Hoppscotch", "Swagger"]
+        features["API Testing", "Collections", "Mock Servers", "Documentation"],
+        alternatives["Insomnia", "Thunder Client", "Hoppscotch", "Swagger"]
     },
     {
         name: "Jest",
@@ -247,8 +247,8 @@ const developmentTools = [
         expertise: "Expert",
         projects: 200,
         rating: 5,
-        features: ["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
-        alternatives: ["Vitest", "Mocha", "Jasmine", "Cypress"]
+        features["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
+        alternatives["Vitest", "Mocha", "Jasmine", "Cypress"]
     }
 ];
 const technologyStats = [
@@ -451,5 +451,4 @@ export function TechnologyStackSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

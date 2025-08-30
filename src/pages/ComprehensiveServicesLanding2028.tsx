@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Rocket, 
@@ -49,31 +48,30 @@ import {
   Play,
   ChevronRight,
   ChevronLeft
-} from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2028, 
+ } from 'lucide-react.ts';
+import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
-} from '@/data/innovativeMicroSaasServices2028';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+ } from '@/data/innovativeMicroSaasServices2028';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 
-export default function ComprehensiveServicesLanding2028() {
+export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
     ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),
-    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }))
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
+    ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
       role: "CTO, TechFlow Solutions",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "Zion Tech Group's AI-powered legal document analyzer has revolutionized our contract review process. We've reduced review time by 80% and identified potential risks we would have missed.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
@@ -81,7 +79,7 @@ export default function ComprehensiveServicesLanding2028() {
     {
       name: "Michael Chen",
       role: "Operations Director, Global Logistics Inc",
-      company: "Global Logistics Inc",
+      comp: "Global Logistics Inc",
       content: "The quantum-enhanced supply chain optimizer has transformed our logistics operations. We've reduced costs by 35% and improved delivery accuracy to 98%.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
@@ -89,7 +87,7 @@ export default function ComprehensiveServicesLanding2028() {
     {
       name: "Dr. Emily Rodriguez",
       role: "Research Director, BioTech Innovations",
-      company: "BioTech Innovations",
+      comp: "BioTech Innovations",
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
@@ -103,7 +101,7 @@ export default function ComprehensiveServicesLanding2028() {
     { number: "24/7", label: "Support Available", icon: Clock }
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -116,11 +114,10 @@ export default function ComprehensiveServicesLanding2028() {
       case 'Cloud Computing': return Cloud;
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
-      default: return Rocket;
-    }
+      default: return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',
@@ -131,16 +128,13 @@ export default function ComprehensiveServicesLanding2028() {
       'from-teal-600 to-blue-600',
       'from-pink-600 to-red-600'
     ];
-    return colors[Math.abs(category.length) % colors.length];
-  };
+    return colors[Math.abs(category.length) % colors.length]};
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)};
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -203,8 +197,8 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -238,8 +232,8 @@ export default function ComprehensiveServicesLanding2028() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.slice(0, 6).map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {allServices.slice(0, 6).map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -368,7 +362,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <div className="text-left">
                   <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
                   <div className="text-zion-slate-light">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].comp}</div>
                 </div>
               </div>
             </motion.div>
@@ -738,5 +732,4 @@ export default function ComprehensiveServicesLanding2028() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

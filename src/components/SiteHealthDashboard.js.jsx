@@ -15,7 +15,7 @@ export function SiteHealthDashboard() {
                     name: 'Performance',
                     icon: Zap,
                     overallScore: 88,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Page Load Time',
                             value: 2.1,
@@ -47,7 +47,7 @@ export function SiteHealthDashboard() {
                     name: 'SEO Health',
                     icon: Search,
                     overallScore: 82,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Meta Descriptions',
                             value: 78,
@@ -86,7 +86,7 @@ export function SiteHealthDashboard() {
                     name: 'Accessibility',
                     icon: Eye,
                     overallScore: 91,
-                    metrics: [
+                    metrics[
                         {
                             name: 'ARIA Implementation',
                             value: 88,
@@ -118,7 +118,7 @@ export function SiteHealthDashboard() {
                     name: 'Security',
                     icon: Shield,
                     overallScore: 94,
-                    metrics: [
+                    metrics[
                         {
                             name: 'HTTPS Implementation',
                             value: 100,
@@ -150,7 +150,7 @@ export function SiteHealthDashboard() {
                     name: 'Content Quality',
                     icon: Globe,
                     overallScore: 76,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Content Completeness',
                             value: 68,
@@ -183,7 +183,7 @@ export function SiteHealthDashboard() {
                     name: 'User Experience',
                     icon: Users,
                     overallScore: 85,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Mobile Responsiveness',
                             value: 96,
@@ -215,18 +215,15 @@ export function SiteHealthDashboard() {
             // Calculate overall score
             const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
             setOverallScore(Math.round(totalScore / healthCategories.length));
-            setIsLoading(false);
-        };
-        performHealthCheck();
-    }, []);
+            setIsLoading(false)};
+        performHealthCheck()}, []);
     const getStatusColor = (status) => {
         switch (status) {
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
-            default: return 'text-gray-500 bg-gray-50 border-gray-200';
-        }
+            default: return 'text-gray-500 bg-gray-50 border-gray-200'}
     };
     const getStatusIcon = (status) => {
         switch (status) {
@@ -234,8 +231,7 @@ export function SiteHealthDashboard() {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
-            default: return <Clock className="w-4 h-4"/>;
-        }
+            default: return <Clock className="w-4 h-4"/>}
     };
     const getScoreColor = (score) => {
         if (score >= 90)
@@ -244,8 +240,7 @@ export function SiteHealthDashboard() {
             return 'text-blue-500';
         if (score >= 60)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     if (isLoading) {
         return (<div className="max-w-7xl mx-auto p-6">
         <div className="text-center py-12">
@@ -253,8 +248,7 @@ export function SiteHealthDashboard() {
           <h2 className="text-2xl font-bold mb-2">Analyzing Site Health</h2>
           <p className="text-gray-600">Performing comprehensive health check...</p>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
       <div className="text-center">
@@ -317,8 +311,7 @@ export function SiteHealthDashboard() {
                       </p>)}
                   </div>))}
               </div>
-            </div>);
-        })}
+            </div>)})}
       </div>
 
       {/* Action Items */}
@@ -390,5 +383,4 @@ export function SiteHealthDashboard() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

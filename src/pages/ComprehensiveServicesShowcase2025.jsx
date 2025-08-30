@@ -18,8 +18,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesIndustry && matchesSearch;
-    });
+        return matchesCategory && matchesIndustry && matchesSearch});
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -243,8 +242,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <button onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedIndustry('all');
-            }} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                setSelectedIndustry('all')}} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
               View All Services
             </button>
           </motion.div>)}
@@ -270,6 +268,5 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default ComprehensiveServicesShowcase2025;

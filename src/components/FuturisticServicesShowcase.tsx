@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-	Rocket, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Rocket, 
 	Brain, 
 	Zap, 
 	Shield, 
@@ -15,8 +14,9 @@ import {
 	Star,
 	Play,
 	Pause
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 interface ServiceShowcase {
+
 	id: string;
 	title: string;
 	description: string;
@@ -24,8 +24,7 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-	status: 'active' | 'beta' | 'new';
-}
+	status: 'active' | 'beta' | 'new'}
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -33,7 +32,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
 		icon: Brain,
 		color: 'from-purple-500 to-cyan-500',
-		features: ['Quantum decision making', 'Autonomous learning', 'System optimization'],
+		features['Quantum decision making', 'Autonomous learning', 'System optimization'],
 		price: '$32,000/month',
 		status: 'new'
 	},
@@ -43,7 +42,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'AI-powered satellite constellation management for optimal orbital positioning.',
 		icon: Rocket,
 		color: 'from-blue-500 to-indigo-600',
-		features: ['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],
+		features['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],
 		price: '$15,000/month',
 		status: 'beta'
 	},
@@ -53,7 +52,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Next-generation metaverse platform using quantum computing for infinite scalability.',
 		icon: Eye,
 		color: 'from-green-500 to-emerald-600',
-		features: ['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],
+		features['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],
 		price: '$28,000/month',
 		status: 'active'
 	},
@@ -63,7 +62,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Self-managing DeFi protocol that automatically optimizes yields and manages risks.',
 		icon: DollarSign,
 		color: 'from-yellow-500 to-orange-500',
-		features: ['Autonomous yield farming', 'Risk management', 'Strategy optimization'],
+		features['Autonomous yield farming', 'Risk management', 'Strategy optimization'],
 		price: '$12,000/month',
 		status: 'beta'
 	},
@@ -73,7 +72,7 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Advanced genome analysis platform using quantum computing for personalized medicine.',
 		icon: Heart,
 		color: 'from-pink-500 to-rose-600',
-		features: ['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],
+		features['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],
 		price: '$18,000/month',
 		status: 'new'
 	},
@@ -83,36 +82,32 @@ const futuristicServices: ServiceShowcase[] = [
 		description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',
 		icon: Bot,
 		color: 'from-gray-500 to-slate-600',
-		features: ['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
+		features['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
 		price: '$22,000/month',
 		status: 'active'
 	}
 ];
-export default function FuturisticServicesShowcase() {
+export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
 		const interval = setInterval(() => {
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
+		return () => clearInterval(interval)}, [isPlaying]);
+	const getStatusColor = (status: string)  => {
 		switch (status) {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
-			default: return 'bg-gray-500';
-		}
+			default: return 'bg-gray-500'}
 	};
-	const getStatusText = (status: string) => {
+	const getStatusText = (status: string)  => {
 		switch (status) {
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
 			case 'active': return 'ACTIVE';
-			default: return 'UNKNOWN';
-		}
+			default: return 'UNKNOWN'}
 	};
 	return (
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -231,8 +226,8 @@ export default function FuturisticServicesShowcase() {
 										{/* Animated particles */}
 										<motion.div
 											animate={{ 
-												rotate: [0, 360],
-												scale: [1, 1.1, 1]
+												rotate[0, 360],
+												scale[1, 1.1, 1]
 											}}
 											transition={{ 
 												duration: 20, 
@@ -256,8 +251,8 @@ export default function FuturisticServicesShowcase() {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index) => (
+					<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)  => (
 							<motion.div
 								key={service.id}
 								initial={{ opacity: 0, y: 20 }}
@@ -289,5 +284,4 @@ export default function FuturisticServicesShowcase() {
 				</div>
 			</div>
 		</div>
-	);
-}
+	)}

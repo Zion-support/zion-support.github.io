@@ -1,14 +1,14 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
-import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import React, { Suspense } from 'react.ts';
+import { Routes, Route  } from 'react-router-dom.ts';
+import { AppHeader  } from './layout/AppHeader';
+import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
+import { ChatAssistant  } from './components/ChatAssistant';
+import { LoadingSpinner  } from './components/ui/LoadingSpinner';
+import { SEO  } from './components/SEO';
+import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
+import { EnhancedAccessibilityEnhancer  } from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
+import { ErrorBoundary  } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -174,7 +174,7 @@ const Marketplace = () => (
   </div>
 );
 
-function App() {
+function App(...args[]):  {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
@@ -324,7 +324,6 @@ function App() {
         <MobileExperienceEnhancer />
       </div>
     </ErrorBoundary>
-  );
-}
+  )}
 
 export default App;

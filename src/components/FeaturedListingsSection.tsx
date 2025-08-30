@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
 const featuredListings = [
   {
@@ -15,13 +15,13 @@ const featuredListings = [
     likes: 156,
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$15,000",
-    tags: ["React", "Node.js", "AI/ML", "E-commerce"],
+    tags["React", "Node.js", "AI/ML", "E-commerce"],
     duration: "3-4 months",
     team: "5 experts",
     location: "Remote",
     featured: true,
-    technologies: ["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
-    highlights: ["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
+    technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
+    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
   },
   {
     id: 2,
@@ -34,13 +34,13 @@ const featuredListings = [
     likes: 134,
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$22,000",
-    tags: ["React Native", "Security", "FinTech", "Biometrics"],
+    tags["React Native", "Security", "FinTech", "Biometrics"],
     duration: "4-5 months",
     team: "6 experts",
     location: "Hybrid",
     featured: true,
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
-    highlights: ["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
+    technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
+    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
   },
   {
     id: 3,
@@ -53,13 +53,13 @@ const featuredListings = [
     likes: 189,
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
     price: "$18,500",
-    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+    tags["AWS", "Docker", "Kubernetes", "CI/CD"],
     duration: "2-3 months",
     team: "4 experts",
     location: "On-site",
     featured: true,
-    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
-    highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
+    technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
+    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
   }
 ];
 
@@ -73,7 +73,7 @@ const featuredServices = [
     price: 'From $2,500',
     image: '🤖',
     link: '/services/ai',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
+    features['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
   },
   {
     title: 'Cloud Migration & Optimization',
@@ -84,7 +84,7 @@ const featuredServices = [
     price: 'From $5,000',
     image: '☁️',
     link: '/services/cloud',
-    features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
+    features['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
   },
   {
     title: 'Cybersecurity Assessment & Implementation',
@@ -95,18 +95,17 @@ const featuredServices = [
     price: 'From $3,500',
     image: '🔒',
     link: '/services/cybersecurity',
-    features: ['Security Audits', 'Threat Detection', 'Incident Response']
+    features['Security Audits', 'Threat Detection', 'Incident Response']
   }
 ];
 
-export function FeaturedListingsSection() {
+export function FeaturedListingsSection(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
+  const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
+    ? featuredListings: featuredListings.filter(listing  => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -119,13 +118,12 @@ export function FeaturedListingsSection() {
     }
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
-    ));
-  };
+    ))};
 
   return (
     <section className="py-16 bg-white">
@@ -139,8 +137,8 @@ export function FeaturedListingsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index)  => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -201,5 +199,4 @@ export function FeaturedListingsSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Heart, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Heart, 
   Brain, 
   Activity, 
   Shield, 
@@ -22,9 +21,9 @@ import {
   PieChart,
   TrendingUp,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIHealthcareAnalyticsPlatform() {
+export default function AIHealthcareAnalyticsPlatform(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -226,8 +225,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -265,8 +264,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -304,8 +303,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -343,8 +342,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceStandards.map((standard, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -379,8 +378,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

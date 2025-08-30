@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
-import { MICRO_SAAS_SERVICES } from '../data/microSaasServices';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
 
-const ComprehensivePricingGuide2025: React.FC = () => {
+const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -17,7 +17,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'Basic features and functionality',
         'Email support',
         'Up to 3 users',
@@ -31,7 +31,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
-      features: [
+      features[
         'Advanced features and automation',
         'Priority support',
         'Up to 10 users',
@@ -46,7 +46,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex needs',
-      features: [
+      features[
         'Custom features and development',
         '24/7 dedicated support',
         'Unlimited users',
@@ -128,8 +128,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <div 
                 key={tier.name}
                 className={`relative rounded-xl p-8 ${
@@ -204,8 +204,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                  {category.items.map((service) => (
+                <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">
+                  {category.items.map((service)  => (
                     <div key={service.id} className="bg-slate-700/50 rounded-lg p-6">
                       <h4 className="text-lg font-semibold text-white mb-3">{service.title}</h4>
                       <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -289,8 +289,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                         <span>{services.length} services</span>
                       </div>
                     </div>
-                  );
-                })}
+                  )})}
               </div>
             </div>
 
@@ -302,8 +301,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   <div className="text-3xl font-bold text-blue-400">
                     ${Math.round(MICRO_SAAS_SERVICES.reduce((sum, s) => {
                       const priceRange = s.marketPrice.match(/\$(\d+)/);
-                      return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
-                    }, 0) / MICRO_SAAS_SERVICES.length)}
+                      return sum + (priceRange ? parseInt(priceRange[1]) : s.price)}, 0) / MICRO_SAAS_SERVICES.length)}
                   </div>
                   <p className="text-gray-300 text-sm">per month</p>
                 </div>
@@ -320,8 +318,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                     <span className="text-blue-400 font-semibold">
                       ${Math.round(MICRO_SAAS_SERVICES.reduce((sum, s) => {
                         const priceRange = s.marketPrice.match(/\$(\d+)/);
-                        return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
-                      }, 0) / MICRO_SAAS_SERVICES.length)}
+                        return sum + (priceRange ? parseInt(priceRange[1]) : s.price)}, 0) / MICRO_SAAS_SERVICES.length)}
                     </span>
                   </div>
                                       <div className="flex justify-between items-center">
@@ -330,14 +327,12 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                       {(() => {
                         const avgMarketPrice = MICRO_SAAS_SERVICES.reduce((sum, s) => {
                           const priceRange = s.marketPrice.match(/\$(\d+)/);
-                          return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
-                        }, 0) / MICRO_SAAS_SERVICES.length;
+                          return sum + (priceRange ? parseInt(priceRange[1]) : s.price)}, 0) / MICRO_SAAS_SERVICES.length;
                         
                         const avgOurPrice = MICRO_SAAS_SERVICES.reduce((sum, s) => sum + s.price, 0) / MICRO_SAAS_SERVICES.length;
                         
                         const savingsPercentage = ((avgMarketPrice - avgOurPrice) / avgMarketPrice) * 100;
-                        return Math.round(savingsPercentage);
-                      })()}%
+                        return Math.round(savingsPercentage)})()}%
                       </span>
                     </div>
                 </div>
@@ -473,7 +468,6 @@ const ComprehensivePricingGuide2025: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2025;

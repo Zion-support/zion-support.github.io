@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
 
 
-export default function CaseStudies() {
+export default function CaseStudies(...args[]):  {
 	const caseStudies = [
 		{
 			id: 1,
@@ -12,7 +12,7 @@ export default function CaseStudies() {
 			industry: 'Technology',
 			challenge: 'Manual processes were slowing down operations and causing errors in customer service.',
 			solution: 'Implemented AI-powered multi-agent system for customer service and sales operations.',
-			results: [
+			results[
 				'300% increase in operational efficiency',
 				'90% reduction in response time',
 				'$2.5M annual cost savings',
@@ -29,7 +29,7 @@ export default function CaseStudies() {
 			industry: 'Healthcare',
 			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.',
 			solution: 'Migrated to secure cloud infrastructure with HIPAA compliance and disaster recovery.',
-			results: [
+			results[
 				'40% reduction in infrastructure costs',
 				'99.9% uptime achieved',
 				'Full HIPAA compliance',
@@ -46,7 +46,7 @@ export default function CaseStudies() {
 			industry: 'Manufacturing',
 			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.',
 			solution: 'Deployed IoT sensors and AI analytics for predictive maintenance and optimization.',
-			results: [
+			results[
 				'25% increase in production output',
 				'60% reduction in downtime',
 				'Predictive maintenance alerts',
@@ -63,7 +63,7 @@ export default function CaseStudies() {
 			industry: 'Financial Services',
 			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.',
 			solution: 'Built custom micro SaaS platform with automated workflows and AI-powered insights.',
-			results: [
+			results[
 				'50% faster service delivery',
 				'Automated compliance reporting',
 				'Scalable architecture',
@@ -169,8 +169,8 @@ export default function CaseStudies() {
 							Explore how we've helped businesses across different industries achieve their goals
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-2">
-						{caseStudies.slice(1).map((study) => (
+					<div className="grid gap-8 lg: grid-cols-2">
+						{caseStudies.slice(1).map((study)  => (
 							<div key={study.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
 								<div className="flex items-center justify-between mb-4">
 									<div className="flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function CaseStudies() {
 										<span className="text-sm text-gray-500">{study.industry}</span>
 									</div>
 									<div className="flex items-center gap-1">
-										{Array.from({ length: study.rating }).map((_, i) => (
+										{Array.from({ length: study.rating }).map((_, i)  => (
 											<Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
 										))}
 									</div>
@@ -211,7 +211,7 @@ export default function CaseStudies() {
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record<string, any>
 						<p className="mt-6 text-lg text-gray-600">
 							Consistent results across all our client engagements
 						</p>

@@ -108,7 +108,6 @@ const ZionHireAI = () => {
       </main>
       <Footer />
     </>
-  );
-};
+  )};
 
 export default ZionHireAI;

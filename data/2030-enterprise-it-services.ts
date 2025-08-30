@@ -30,15 +30,13 @@ export interface EnterpriseITService2030 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {
@@ -48,7 +46,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.',
-    features: [
+    features[
       'Autonomous CI/CD',
       'Self-optimizing deployments',
       'Self-healing infrastructure',
@@ -71,11 +69,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-4 weeks',
     category: 'Autonomous DevOps Platform 2030',
     realService: true,
-    technology: ['Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code'],
-    integrations: ['Cloud platforms, CI/CD tools, Monitoring systems, Security tools'],
-    useCases: ['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization'],
+    technology['Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code'],
+    integrations['Cloud platforms, CI/CD tools, Monitoring systems, Security tools'],
+    useCases['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization'],
     roi: 'Revolutionary DevOps technology with potential for massive efficiency gains and operational excellence.',
-    competitors: ['Limited competition in autonomous DevOps'],
+    competitors['Limited competition in autonomous DevOps'],
     marketSize: 'Growing market - $250B+ potential',
     growthRate: '1500%+ annual growth potential',
     variant: 'it-futuristic',
@@ -100,7 +98,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for zero trust network architecture, providing comprehensive security with continuous verification and authentication.',
-    features: [
+    features[
       'Continuous verification',
       'Identity-based access',
       'Micro-segmentation',
@@ -123,11 +121,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '3-6 weeks',
     category: 'Zero Trust Network Architecture 2030',
     realService: true,
-    technology: ['Zero Trust Security, Network Security, Identity Management, Threat Detection'],
-    integrations: ['Security platforms, Identity systems, Network tools, Monitoring systems'],
-    useCases: ['Network security, Identity verification, Threat detection, Security automation'],
+    technology['Zero Trust Security, Network Security, Identity Management, Threat Detection'],
+    integrations['Security platforms, Identity systems, Network tools, Monitoring systems'],
+    useCases['Network security, Identity verification, Threat detection, Security automation'],
     roi: 'Revolutionary security technology with potential for complete network protection.',
-    competitors: ['Limited competition in zero trust security'],
+    competitors['Limited competition in zero trust security'],
     marketSize: 'Growing market - $180B+ potential',
     growthRate: '1200%+ annual growth potential',
     variant: 'security-futuristic',
@@ -152,7 +150,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$5,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for edge computing orchestration, enabling intelligent distributed computing and real-time processing at the edge.',
-    features: [
+    features[
       'Edge intelligence',
       'Distributed computing',
       'Real-time processing',
@@ -175,11 +173,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-4 weeks',
     category: 'Edge Computing Orchestration 2030',
     realService: true,
-    technology: ['Edge Computing, Distributed Systems, IoT, Real-time Processing'],
-    integrations: ['IoT platforms, Edge devices, Cloud systems, Monitoring tools'],
-    useCases: ['Edge computing, IoT processing, Real-time analytics, Distributed computing'],
+    technology['Edge Computing, Distributed Systems, IoT, Real-time Processing'],
+    integrations['IoT platforms, Edge devices, Cloud systems, Monitoring tools'],
+    useCases['Edge computing, IoT processing, Real-time analytics, Distributed computing'],
     roi: 'Revolutionary edge computing technology with potential for massive performance improvements.',
-    competitors: ['Limited competition in edge orchestration'],
+    competitors['Limited competition in edge orchestration'],
     marketSize: 'Growing market - $150B+ potential',
     growthRate: '1000%+ annual growth potential',
     variant: 'edge-futuristic',
@@ -204,7 +202,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$7,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered IT operations, enabling intelligent monitoring, automation, and optimization of IT infrastructure.',
-    features: [
+    features[
       'AI-powered monitoring',
       'Intelligent automation',
       'Predictive maintenance',
@@ -227,11 +225,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '3-6 weeks',
     category: 'AI-Powered IT Operations Center 2030',
     realService: true,
-    technology: ['Advanced AI, IT Operations, Machine Learning, Predictive Analytics'],
-    integrations: ['IT platforms, Monitoring systems, Automation tools, Analytics platforms'],
-    useCases: ['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization'],
+    technology['Advanced AI, IT Operations, Machine Learning, Predictive Analytics'],
+    integrations['IT platforms, Monitoring systems, Automation tools, Analytics platforms'],
+    useCases['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization'],
     roi: 'Revolutionary IT technology with potential for massive efficiency gains and operational excellence.',
-    competitors: ['Limited competition in AI IT operations'],
+    competitors['Limited competition in AI IT operations'],
     marketSize: 'Growing market - $200B+ potential',
     growthRate: '1300%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -256,7 +254,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for quantum-secure infrastructure, providing quantum-proof security for critical infrastructure and systems.',
-    features: [
+    features[
       'Quantum-proof security',
       'Quantum encryption',
       'Quantum key distribution',
@@ -279,11 +277,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-3 months',
     category: 'Quantum-Secure Infrastructure 2030',
     realService: true,
-    technology: ['Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption'],
-    integrations: ['Infrastructure platforms, Security systems, Quantum computers, Encryption tools'],
-    useCases: ['Infrastructure security, Quantum encryption, Critical systems protection, Security validation'],
+    technology['Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption'],
+    integrations['Infrastructure platforms, Security systems, Quantum computers, Encryption tools'],
+    useCases['Infrastructure security, Quantum encryption, Critical systems protection, Security validation'],
     roi: 'Revolutionary quantum security technology with potential for complete infrastructure protection.',
-    competitors: ['None - First to market'],
+    competitors['None - First to market'],
     marketSize: 'Emerging market - $300B+ potential',
     growthRate: '2000%+ annual growth potential',
     variant: 'quantum-futuristic',

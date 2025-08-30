@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 // Specialized Financial AI Services 2028 - Zion Tech Group
 // Advanced AI-powered financial solutions for modern enterprises
@@ -13,9 +13,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Risk Management",
     price: 18999,
     currency: "$",
-    tags: ["Risk Assessment", "Portfolio Management", "Market Analysis", "AI Analytics", "Financial Risk"],
+    tags["Risk Assessment", "Portfolio Management", "Market Analysis", "AI Analytics", "Financial Risk"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-risk-assessment.jpg"],
+    images["https://ziontechgroup.com/images/ai-risk-assessment.jpg"],
     createdAt: "2024-06-01T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 67,
@@ -30,10 +30,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-40,000",
-    competitors: ["Bloomberg Risk", "Reuters Risk", "S&P Global"],
+    competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],
     roi: "900% within 18 months",
     setupTime: "8-10 weeks",
-    integrations: ["Trading Platforms", "Portfolio Management Systems", "Market Data APIs", "Risk Models", "Compliance Tools"]
+    integrations["Trading Platforms", "Portfolio Management Systems", "Market Data APIs", "Risk Models", "Compliance Tools"]
   },
 
   // AI-Powered Fraud Detection System
@@ -45,9 +45,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Fraud Prevention",
     price: 14999,
     currency: "$",
-    tags: ["Fraud Detection", "Transaction Monitoring", "Machine Learning", "Real-time Analysis", "Financial Security"],
+    tags["Fraud Detection", "Transaction Monitoring", "Machine Learning", "Real-time Analysis", "Financial Security"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-fraud-detection.jpg"],
+    images["https://ziontechgroup.com/images/ai-fraud-detection.jpg"],
     createdAt: "2024-06-05T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 89,
@@ -62,10 +62,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$12,000-30,000",
-    competitors: ["FICO", "SAS", "IBM Watson"],
+    competitors["FICO", "SAS", "IBM Watson"],
     roi: "800% within 15 months",
     setupTime: "6-8 weeks",
-    integrations: ["Payment Processors", "Banking Systems", "Transaction Databases", "Alert Systems", "Compliance Platforms"]
+    integrations["Payment Processors", "Banking Systems", "Transaction Databases", "Alert Systems", "Compliance Platforms"]
   },
 
   // AI-Powered Credit Scoring Platform
@@ -77,9 +77,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Credit Assessment",
     price: 12999,
     currency: "$",
-    tags: ["Credit Scoring", "Alternative Data", "Machine Learning", "Risk Assessment", "Financial Inclusion"],
+    tags["Credit Scoring", "Alternative Data", "Machine Learning", "Risk Assessment", "Financial Inclusion"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-credit-scoring.jpg"],
+    images["https://ziontechgroup.com/images/ai-credit-scoring.jpg"],
     createdAt: "2024-06-10T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 123,
@@ -94,10 +94,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$10,000-25,000",
-    competitors: ["FICO", "Experian", "TransUnion"],
+    competitors["FICO", "Experian", "TransUnion"],
     roi: "700% within 12 months",
     setupTime: "5-7 weeks",
-    integrations: ["Credit Bureaus", "Banking Systems", "Alternative Data Sources", "Loan Management Systems", "Compliance Tools"]
+    integrations["Credit Bureaus", "Banking Systems", "Alternative Data Sources", "Loan Management Systems", "Compliance Tools"]
   },
 
   // AI-Powered Investment Advisory Platform
@@ -109,9 +109,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Investment Advisory",
     price: 16999,
     currency: "$",
-    tags: ["Investment Advisory", "Portfolio Optimization", "Personalized Recommendations", "AI Analytics", "Wealth Management"],
+    tags["Investment Advisory", "Portfolio Optimization", "Personalized Recommendations", "AI Analytics", "Wealth Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-investment-advisory.jpg"],
+    images["https://ziontechgroup.com/images/ai-investment-advisory.jpg"],
     createdAt: "2024-06-15T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 78,
@@ -126,10 +126,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$13,000-35,000",
-    competitors: ["Betterment", "Wealthfront", "Personal Capital"],
+    competitors["Betterment", "Wealthfront", "Personal Capital"],
     roi: "850% within 16 months",
     setupTime: "7-9 weeks",
-    integrations: ["Trading Platforms", "Portfolio Management Systems", "Market Data APIs", "Risk Models", "Client Management"]
+    integrations["Trading Platforms", "Portfolio Management Systems", "Market Data APIs", "Risk Models", "Client Management"]
   },
 
   // AI-Powered Regulatory Compliance Platform
@@ -141,9 +141,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Regulatory Compliance",
     price: 19999,
     currency: "$",
-    tags: ["Regulatory Compliance", "Compliance Monitoring", "Risk Assessment", "Automated Reporting", "Financial Regulations"],
+    tags["Regulatory Compliance", "Compliance Monitoring", "Risk Assessment", "Automated Reporting", "Financial Regulations"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-compliance-platform.jpg"],
+    images["https://ziontechgroup.com/images/ai-compliance-platform.jpg"],
     createdAt: "2024-06-20T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 56,
@@ -158,10 +158,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$16,000-45,000",
-    competitors: ["Thomson Reuters", "Wolters Kluwer", "LexisNexis"],
+    competitors["Thomson Reuters", "Wolters Kluwer", "LexisNexis"],
     roi: "1000% within 20 months",
     setupTime: "10-12 weeks",
-    integrations: ["Banking Systems", "Regulatory Databases", "Compliance Frameworks", "Reporting Tools", "Audit Systems"]
+    integrations["Banking Systems", "Regulatory Databases", "Compliance Frameworks", "Reporting Tools", "Audit Systems"]
   },
 
   // AI-Powered Market Sentiment Analysis
@@ -173,9 +173,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Market Analysis",
     price: 11999,
     currency: "$",
-    tags: ["Market Sentiment", "Social Media Analysis", "News Analysis", "Market Prediction", "Sentiment AI"],
+    tags["Market Sentiment", "Social Media Analysis", "News Analysis", "Market Prediction", "Sentiment AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-sentiment-analysis.jpg"],
+    images["https://ziontechgroup.com/images/ai-sentiment-analysis.jpg"],
     createdAt: "2024-06-25T10:00:00.000Z",
     rating: 4.6,
     reviewCount: 145,
@@ -190,10 +190,10 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$9,000-22,000",
-    competitors: ["Bloomberg", "Reuters", "MarketWatch"],
+    competitors["Bloomberg", "Reuters", "MarketWatch"],
     roi: "600% within 10 months",
     setupTime: "4-6 weeks",
-    integrations: ["Social Media APIs", "News APIs", "Market Data Sources", "Trading Platforms", "Analytics Tools"]
+    integrations["Social Media APIs", "News APIs", "Market Data Sources", "Trading Platforms", "Analytics Tools"]
   },
 
   // AI-Powered Insurance Underwriting Platform
@@ -205,9 +205,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     subcategory: "Insurance Technology",
     price: 15999,
     currency: "$",
-    tags: ["Insurance Underwriting", "Risk Assessment", "Policy Pricing", "Automation", "Insurance AI"],
+    tags["Insurance Underwriting", "Risk Assessment", "Policy Pricing", "Automation", "Insurance AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-insurance-underwriting.jpg"],
+    images["https://ziontechgroup.com/images/ai-insurance-underwriting.jpg"],
     createdAt: "2024-06-30T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 89,
@@ -222,9 +222,9 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$12,000-35,000",
-    competitors: ["Lemonade", "Root Insurance", "Metromile"],
+    competitors["Lemonade", "Root Insurance", "Metromile"],
     roi: "750% within 15 months",
     setupTime: "8-10 weeks",
-    integrations: ["Insurance Systems", "Risk Models", "Customer Data", "Policy Management", "Claims Systems"]
+    integrations["Insurance Systems", "Risk Models", "Customer Data", "Policy Management", "Claims Systems"]
   }
 ];

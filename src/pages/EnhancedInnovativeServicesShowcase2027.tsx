@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Globe, 
   Zap, 
   Shield, 
@@ -33,8 +32,8 @@ import {
   Search,
   Grid3X3,
   List
-} from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories } from '../data/enhancedInnovativeServices2027';
+ } from 'lucide-react.ts';
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from '../data/enhancedInnovativeServices2027';
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Web3 Solutions': Globe,
   'Metaverse Solutions': Eye,
@@ -61,18 +60,17 @@ const categoryColors: { [key: string]: string } = {
   'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
-export default function EnhancedInnovativeServicesShowcase2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation'>('name');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('name');
   const filteredServices = enhancedInnovativeServices2027.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
@@ -84,8 +82,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
-        return 0;
-    }
+        return 0}
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -192,12 +189,12 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark/70'
                 }`}
               >
                 All Categories
               </button>
-              {enhancedInnovativeServices2027Categories.map((category) => (
+              {enhancedInnovativeServices2027Categories.map((category)  => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -233,7 +230,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               >
                 <option value="name">Sort by Name</option>
@@ -251,9 +248,9 @@ export default function EnhancedInnovativeServicesShowcase2027() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {sortedServices.map((service) => (
+            {sortedServices.map((service)  => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -466,5 +463,4 @@ export default function EnhancedInnovativeServicesShowcase2027() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

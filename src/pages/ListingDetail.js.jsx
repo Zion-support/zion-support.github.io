@@ -36,15 +36,12 @@ export default function ListingDetail() {
               </Button>
             </div>
           </div>
-        </div>);
-    }
+        </div>)}
     const handleContact = () => {
         if (user) {
-            setIsChatOpen(true);
-        }
+            setIsChatOpen(true)}
         else {
-            setIsContactDialogOpen(true);
-        }
+            setIsContactDialogOpen(true)}
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -145,8 +142,7 @@ export default function ListingDetail() {
                 toast({
                     title: "Payment Processing",
                     description: "Redirecting to secure checkout..."
-                });
-            }}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
+                })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}
                   
@@ -162,8 +158,7 @@ export default function ListingDetail() {
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (<img loading="lazy" src={listing.author.avatarUrl} alt={listing.author.name} className="h-12 w-12 rounded-full" onError={(e) => {
                 const target = e.target;
-                target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-            }}/>) : (<div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
+                target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}/>) : (<div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
                       </div>)}
                     <div>
@@ -201,5 +196,4 @@ export default function ListingDetail() {
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;
-    ;
-}
+    }

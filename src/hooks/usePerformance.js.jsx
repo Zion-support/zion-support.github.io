@@ -15,31 +15,27 @@ export function usePerformance() {
         // Check if PerformanceObserver is supported
         if (!('PerformanceObserver' in window)) {
             console.warn('PerformanceObserver not supported');
-            return;
-        }
+            return}
         // First Contentful Paint (FCP)
         const fcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
             if (fcpEntry) {
-                setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-            }
+                setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
         });
         // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const lcpEntry = entries[entries.length - 1];
             if (lcpEntry) {
-                setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-            }
+                setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))}
         });
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const fidEntry = entries[entries.length - 1];
             if (fidEntry && 'processingStart' in fidEntry) {
-                setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-            }
+                setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))}
         });
         // Cumulative Layout Shift (CLS)
         const clsObserver = new PerformanceObserver((list) => {
@@ -47,21 +43,17 @@ export function usePerformance() {
             for (const entry of list.getEntries()) {
                 const layoutShiftEntry = entry;
                 if (!layoutShiftEntry.hadRecentInput) {
-                    clsValue += layoutShiftEntry.value;
-                }
+                    clsValue += layoutShiftEntry.value}
             }
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
+            setMetrics(prev => ({ ...prev, cls: clsValue }))});
         // Start observing
         try {
-            fcpObserver.observe({ entryTypes: ['paint'] });
-            lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-            fidObserver.observe({ entryTypes: ['first-input'] });
-            clsObserver.observe({ entryTypes: ['layout-shift'] });
-        }
+            fcpObserver.observe({ entryTypes['paint'] });
+            lcpObserver.observe({ entryTypes['largest-contentful-paint'] });
+            fidObserver.observe({ entryTypes['first-input'] });
+            clsObserver.observe({ entryTypes['layout-shift'] })}
         catch (error) {
-            console.warn('Error setting up performance observers:', error);
-        }
+            console.warn('Error setting up performance observers:', error)}
         // Navigation timing metrics
         const navigationEntry = performance.getEntriesByType('navigation')[0];
         if (navigationEntry) {
@@ -70,16 +62,13 @@ export function usePerformance() {
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
                 windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
-            }));
-        }
+            }))}
         // Cleanup
         return () => {
             fcpObserver.disconnect();
             lcpObserver.disconnect();
             fidObserver.disconnect();
-            clsObserver.disconnect();
-        };
-    }, []);
+            clsObserver.disconnect()}}, []);
     // Get performance rating
     const getRating = (metric, value) => {
         const thresholds = {
@@ -96,8 +85,7 @@ export function usePerformance() {
             return 'good';
         if (value <= threshold.poor)
             return 'needs-improvement';
-        return 'poor';
-    };
+        return 'poor'};
     // Get all metrics with ratings
     const getMetricsWithRatings = () => {
         const result = [];
@@ -107,21 +95,17 @@ export function usePerformance() {
                     name: key.toUpperCase(),
                     value,
                     rating: getRating(key, value)
-                });
-            }
+                })}
         });
-        return result;
-    };
+        return result};
     // Log performance metrics
     const logMetrics = () => {
         const metricsWithRatings = getMetricsWithRatings();
         console.group('🚀 Performance Metrics');
         metricsWithRatings.forEach(({ name, value, rating }) => {
             const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
-            console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
-        });
-        console.groupEnd();
-    };
+            console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`)});
+        console.groupEnd()};
     // Get performance score (0-100)
     const getPerformanceScore = () => {
         const metricsWithRatings = getMetricsWithRatings();
@@ -132,11 +116,9 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-                default: return 0;
-            }
+                default: return 0}
         });
-        return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
-    };
+        return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length)};
     // Monitor long tasks
     useEffect(() => {
         if (!('PerformanceObserver' in window))
@@ -149,18 +131,13 @@ export function usePerformance() {
                         duration: entry.duration,
                         startTime: entry.startTime,
                         name: entry.name
-                    });
-                }
-            });
-        });
+                    })}
+            })});
         try {
-            longTaskObserver.observe({ entryTypes: ['longtask'] });
-        }
+            longTaskObserver.observe({ entryTypes['longtask'] })}
         catch (error) {
-            console.warn('Error setting up long task observer:', error);
-        }
-        return () => longTaskObserver.disconnect();
-    }, []);
+            console.warn('Error setting up long task observer:', error)}
+        return () => longTaskObserver.disconnect()}, []);
     return {
         metrics,
         observers: getMetricsWithRatings(),
@@ -168,27 +145,20 @@ export function usePerformance() {
         logMetrics,
         getRating: (metric) => {
             const value = metrics[metric];
-            return value !== null ? getRating(metric, value) : null;
-        }
-    };
-}
+            return value !== null ? getRating(metric, value) : null}
+    }}
 // Hook for monitoring specific performance events
 export function usePerformanceEvent(eventName, callback) {
     useEffect(() => {
         if (!('PerformanceObserver' in window))
             return;
         const observer = new PerformanceObserver((list) => {
-            list.getEntries().forEach(callback);
-        });
+            list.getEntries().forEach(callback)});
         try {
-            observer.observe({ entryTypes: [eventName] });
-        }
+            observer.observe({ entryTypes[eventName] })}
         catch (error) {
-            console.warn(`Error observing ${eventName}:`, error);
-        }
-        return () => observer.disconnect();
-    }, [eventName, callback]);
-}
+            console.warn(`Error observing ${eventName}:`, error)}
+        return () => observer.disconnect()}, [eventName, callback])}
 // Hook for measuring time between renders
 export function useRenderTime() {
     const renderStart = useRef(performance.now());
@@ -197,7 +167,5 @@ export function useRenderTime() {
         const renderEnd = performance.now();
         const time = renderEnd - renderStart.current;
         setRenderTime(time);
-        renderStart.current = renderEnd;
-    });
-    return renderTime;
-}
+        renderStart.current = renderEnd});
+    return renderTime}

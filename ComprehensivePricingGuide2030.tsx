@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { CheckCircle, 
   Star, 
   Zap, 
   Shield, 
@@ -35,11 +34,11 @@ import {
   Lock,
   Heart,
   Sparkles
-} from 'lucide-react';
-import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensivePricingGuide2030: React.FC = () => {
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
 
@@ -48,12 +47,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   const categories = useMemo(() => {
     const cats = services.reduce((acc, service) => {
       if (!acc.includes(service.category)) {
-        acc.push(service.category);
-      }
-      return acc;
-    }, [] as string[]);
-    return ['all', ...cats];
-  }, [services]);
+        acc.push(service.category)}
+      return acc}, [] as string[]);
+    return ['all', ...cats]}, [services]);
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
@@ -61,17 +57,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     let filtered = services;
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedPricingModel !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
-    }
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)}
 
-    return filtered;
-  }, [services, selectedCategory, selectedPricingModel]);
+    return filtered}, [services, selectedCategory, selectedPricingModel]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -88,11 +81,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       case 'Quantum Computing':
         return Rocket;
       default:
-        return Zap;
-    }
+        return Zap}
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -109,8 +101,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       case 'Quantum Computing':
         return 'from-indigo-600 to-purple-600';
       default:
-        return 'from-gray-600 to-slate-600';
-    }
+        return 'from-gray-600 to-slate-600'}
   };
 
   const pricingTiers = [
@@ -118,7 +109,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
-      features: [
+      features[
         'Basic AI features',
         'Email support',
         'Up to 5 users',
@@ -135,7 +126,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features: [
+      features[
         'Advanced AI capabilities',
         'Priority support',
         'Up to 25 users',
@@ -154,7 +145,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features: [
+      features[
         'Full AI suite access',
         '24/7 dedicated support',
         'Unlimited users',
@@ -271,8 +262,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           >
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)  => (
               <motion.div
                 key={insight.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -304,8 +295,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           >
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -377,9 +368,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {categories.map(category => (
+              {categories.map(category  => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -388,9 +379,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {pricingModels.map(model => (
+              {pricingModels.map(model  => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
                 </option>
@@ -399,8 +390,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index) => {
+          <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)  => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               
@@ -486,8 +477,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     </Link>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
 
           {filteredServices.length === 0 && (
@@ -496,8 +486,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPricingModel('all');
-                }}
+                  setSelectedPricingModel('all')}}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 Clear all filters
@@ -669,7 +658,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2030;

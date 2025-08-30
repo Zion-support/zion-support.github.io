@@ -13,43 +13,35 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
             setFilteredSuggestions(filtered.slice(0, 5));
             setShowSuggestions(true);
-            setSelectedIndex(-1);
-        }
+            setSelectedIndex(-1)}
         else {
             setFilteredSuggestions([]);
-            setShowSuggestions(false);
-        }
+            setShowSuggestions(false)}
     }, [query, suggestions]);
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
-                setShowSuggestions(false);
-            }
+                setShowSuggestions(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleInputChange = (e) => {
-        setQuery(e.target.value);
-    };
+        setQuery(e.target.value)};
     const handleClear = () => {
         setQuery('');
         setShowSuggestions(false);
-        inputRef.current?.focus();
-    };
+        inputRef.current?.focus()};
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim() && onSearch) {
             onSearch(query.trim());
-            setShowSuggestions(false);
-        }
+            setShowSuggestions(false)}
     };
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.title);
         setShowSuggestions(false);
         if (onSearch) {
-            onSearch(suggestion.title);
-        }
+            onSearch(suggestion.title)}
     };
     const handleKeyDown = (e) => {
         if (!showSuggestions)
@@ -66,17 +58,14 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
             case 'Enter':
                 e.preventDefault();
                 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
-                    handleSuggestionClick(filteredSuggestions[selectedIndex]);
-                }
+                    handleSuggestionClick(filteredSuggestions[selectedIndex])}
                 else if (query.trim()) {
-                    handleSubmit(e);
-                }
+                    handleSubmit(e)}
                 break;
             case 'Escape':
                 setShowSuggestions(false);
                 setSelectedIndex(-1);
-                break;
-        }
+                break}
     };
     return (<div className={`relative ${className}`} ref={suggestionsRef}>
       <form onSubmit={handleSubmit} className="relative">
@@ -113,5 +102,4 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
               </div>
             </button>))}
         </div>)}
-    </div>);
-};
+    </div>)};

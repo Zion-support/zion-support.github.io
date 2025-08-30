@@ -16,8 +16,7 @@ export default function AdvancedServicesPage() {
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
+        return matchesSearch && matchesCategory});
     // Sort services
     const sortedServices = [...filteredServices].sort((a, b) => {
         switch (sortBy) {
@@ -30,8 +29,7 @@ export default function AdvancedServicesPage() {
             case 'ai-score':
                 return (b.aiScore || 0) - (a.aiScore || 0);
             default:
-                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        }
+                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)}
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
@@ -259,8 +257,7 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}
 // Service Card Component
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -331,5 +328,4 @@ function ServiceCard({ service }) {
           </Button>
         </div>
       </CardContent>
-    </Card>);
-}
+    </Card>)}

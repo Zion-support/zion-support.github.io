@@ -10,7 +10,7 @@ const globalOffices = [
         flag: "🇺🇸",
         established: "2018",
         teamSize: "45+",
-        specialties: ["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
+        specialties["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
         projects: 120,
         clients: 85,
         rating: 4.9,
@@ -25,7 +25,7 @@ const globalOffices = [
         flag: "🇬🇧",
         established: "2019",
         teamSize: "32+",
-        specialties: ["FinTech", "Digital Banking", "RegTech"],
+        specialties["FinTech", "Digital Banking", "RegTech"],
         projects: 95,
         clients: 67,
         rating: 4.8,
@@ -40,7 +40,7 @@ const globalOffices = [
         flag: "🇸🇬",
         established: "2020",
         teamSize: "28+",
-        specialties: ["E-commerce", "Digital Transformation", "Smart Cities"],
+        specialties["E-commerce", "Digital Transformation", "Smart Cities"],
         projects: 78,
         clients: 54,
         rating: 4.9,
@@ -55,7 +55,7 @@ const globalOffices = [
         flag: "🇨🇦",
         established: "2021",
         teamSize: "25+",
-        specialties: ["Healthcare Tech", "AI Research", "Enterprise Solutions"],
+        specialties["Healthcare Tech", "AI Research", "Enterprise Solutions"],
         projects: 65,
         clients: 42,
         rating: 4.8,
@@ -65,12 +65,12 @@ const globalOffices = [
     {
         id: 5,
         city: "Berlin",
-        country: "Germany",
+        country: "Germ",
         region: "Europe",
         flag: "🇩🇪",
         established: "2021",
         teamSize: "22+",
-        specialties: ["IoT", "Manufacturing Tech", "Sustainability"],
+        specialties["IoT", "Manufacturing Tech", "Sustainability"],
         projects: 58,
         clients: 38,
         rating: 4.7,
@@ -85,7 +85,7 @@ const globalOffices = [
         flag: "🇦🇺",
         established: "2022",
         teamSize: "18+",
-        specialties: ["EdTech", "Green Tech", "Digital Marketing"],
+        specialties["EdTech", "Green Tech", "Digital Marketing"],
         projects: 42,
         clients: 29,
         rating: 4.8,
@@ -407,5 +407,4 @@ export function GlobalPresenceSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, 
   Users, 
   TrendingUp, 
   DollarSign,
@@ -16,9 +15,9 @@ import {
   MessageSquare,
   Star,
   ArrowRight
-} from "lucide-react";
+ } from 'lucide-react.ts';
 
-export default function Dashboard() {
+export default function Dashboard(...args[]):  {
   const stats = [
     {
       title: "Total Revenue",
@@ -136,7 +135,7 @@ export default function Dashboard() {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case "Completed":
         return "bg-green-100 text-green-800";
@@ -145,11 +144,10 @@ export default function Dashboard() {
       case "Planning":
         return "bg-yellow-100 text-yellow-800";
       default:
-        return "bg-gray-100 text-gray-800";
-    }
+        return "bg-gray-100 text-gray-800"}
   };
 
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case "High":
         return "bg-red-100 text-red-800";
@@ -158,8 +156,7 @@ export default function Dashboard() {
       case "Low":
         return "bg-green-100 text-green-800";
       default:
-        return "bg-gray-100 text-gray-800";
-    }
+        return "bg-gray-100 text-gray-800"}
   };
 
   return (
@@ -185,8 +182,8 @@ export default function Dashboard() {
 
       <div className="p-6">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.title}
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -350,5 +347,4 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

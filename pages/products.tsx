@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import { 
-  Brain, 
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState  } from 'react.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Globe, 
@@ -21,7 +20,7 @@ import {
   Target,
   Users,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const Products: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -43,7 +42,7 @@ const Products: NextPage = () => {
       tagline: 'AI-Powered Content Creation Platform',
       description: 'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.',
       price: '$299/month',
-      features: [
+      features[
         'AI Content Generation',
         'SEO Optimization',
         'Multi-Platform Publishing',
@@ -53,7 +52,7 @@ const Products: NextPage = () => {
         'Social Media Integration',
         'Automated Workflows'
       ],
-      benefits: [
+      benefits[
         '10x faster content creation',
         'Improved SEO rankings',
         'Consistent brand messaging',
@@ -71,7 +70,7 @@ const Products: NextPage = () => {
       tagline: 'Intelligent Lead Generation & CRM',
       description: 'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.',
       price: '$199/month',
-      features: [
+      features[
         'AI Lead Scoring',
         'Automated Follow-ups',
         'CRM Integration',
@@ -81,7 +80,7 @@ const Products: NextPage = () => {
         'A/B Testing',
         'ROI Tracking'
       ],
-      benefits: [
+      benefits[
         '3x higher conversion rates',
         'Automated lead nurturing',
         'Comprehensive reporting',
@@ -99,7 +98,7 @@ const Products: NextPage = () => {
       tagline: 'AI-Powered Code Generation & Review',
       description: 'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.',
       price: '$399/month',
-      features: [
+      features[
         'AI Code Generation',
         'Code Review & Optimization',
         'Automated Testing',
@@ -109,7 +108,7 @@ const Products: NextPage = () => {
         'Multi-Language Support',
         'Git Integration'
       ],
-      benefits: [
+      benefits[
         '50% faster development',
         'Reduced bug rates',
         'Improved code quality',
@@ -127,7 +126,7 @@ const Products: NextPage = () => {
       tagline: 'Intelligent Task Management & Automation',
       description: 'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.',
       price: '$149/month',
-      features: [
+      features[
         'AI Task Assignment',
         'Workflow Automation',
         'Resource Optimization',
@@ -137,7 +136,7 @@ const Products: NextPage = () => {
         'Performance Analytics',
         'Integration Hub'
       ],
-      benefits: [
+      benefits[
         '30% productivity increase',
         'Automated task management',
         'Better resource utilization',
@@ -155,7 +154,7 @@ const Products: NextPage = () => {
       tagline: 'Advanced Cybersecurity & Threat Detection',
       description: 'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.',
       price: '$499/month',
-      features: [
+      features[
         'Real-time Threat Detection',
         'Automated Incident Response',
         'Compliance Management',
@@ -165,7 +164,7 @@ const Products: NextPage = () => {
         'Penetration Testing',
         'Security Training'
       ],
-      benefits: [
+      benefits[
         '99.9% threat detection rate',
         'Automated security responses',
         'Regulatory compliance',
@@ -183,7 +182,7 @@ const Products: NextPage = () => {
       tagline: 'Blockchain Development & Deployment Platform',
       description: 'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.',
       price: '$799/month',
-      features: [
+      features[
         'Smart Contract Development',
         'DApp Creation Tools',
         'Testing Frameworks',
@@ -193,7 +192,7 @@ const Products: NextPage = () => {
         'Security Auditing',
         'Developer SDKs'
       ],
-      benefits: [
+      benefits[
         'Faster blockchain development',
         'Reduced deployment time',
         'Enhanced security',
@@ -207,8 +206,7 @@ const Products: NextPage = () => {
   ];
 
   const filteredProducts = activeCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === activeCategory);
+    ? products: products.filter(product  => product.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -264,13 +262,12 @@ const Products: NextPage = () => {
                 <IconComponent className="w-5 h-5" />
                 <span>{category.name}</span>
               </button>
-            );
-          })}
+            )})}
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {filteredProducts.map((product) => {
+        <div className="grid lg: grid-cols-2 gap-8">
+          {filteredProducts.map((product)  => {
             const IconComponent = product.icon;
             return (
               <div
@@ -336,8 +333,7 @@ const Products: NextPage = () => {
                   </a>
                 </div>
               </div>
-            );
-          })}
+            )})}
         </div>
 
         {/* Enterprise Solutions */}
@@ -522,7 +518,6 @@ const Products: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Products;

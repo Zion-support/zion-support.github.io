@@ -12,10 +12,8 @@ export default function EnterpriseBilling() {
         (user?.permissions && user.permissions.includes('billing_access'));
     if (!hasBillingAccess) {
         if (typeof window !== 'undefined') {
-            router.push('/unauthorized');
-        }
-        return null;
-    }
+            router.push('/unauthorized')}
+        return null}
     return (<ProtectedRoute>
       <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements."/>
       
@@ -23,5 +21,4 @@ export default function EnterpriseBilling() {
         <BillingDashboard />
       </main>
       
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

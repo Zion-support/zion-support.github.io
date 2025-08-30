@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Activity, 
   Shield, 
   Clock, 
@@ -16,8 +15,8 @@ import {
   Heart,
   Stethoscope,
   Microscope
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
 const AIHealthcareDiagnostics = () => {
   const features = [
@@ -58,7 +57,7 @@ const AIHealthcareDiagnostics = () => {
       name: "Basic Plan",
       price: "$3,999",
       period: "/month",
-      features: [
+      features[
         "Core diagnostic tools",
         "Basic AI analysis",
         "Standard support",
@@ -71,7 +70,7 @@ const AIHealthcareDiagnostics = () => {
       name: "Professional Plan",
       price: "$8,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI diagnostics",
         "Custom integrations",
         "Priority support",
@@ -85,7 +84,7 @@ const AIHealthcareDiagnostics = () => {
       name: "Enterprise Plan",
       price: "$19,999",
       period: "/month",
-      features: [
+      features[
         "Full AI diagnostic suite",
         "Unlimited patients",
         "Custom development",
@@ -101,22 +100,22 @@ const AIHealthcareDiagnostics = () => {
     {
       industry: "Hospitals",
       description: "Enhance diagnostic accuracy and reduce time to treatment with AI-powered analysis of medical images and patient data",
-      benefits: ["30% faster diagnosis", "25% improvement in accuracy", "40% reduction in wait times"]
+      benefits["30% faster diagnosis", "25% improvement in accuracy", "40% reduction in wait times"]
     },
     {
       industry: "Clinics",
       description: "Provide advanced diagnostic capabilities to patients with limited access to specialists",
-      benefits: ["Improved patient outcomes", "Better resource utilization", "Enhanced patient satisfaction"]
+      benefits["Improved patient outcomes", "Better resource utilization", "Enhanced patient satisfaction"]
     },
     {
       industry: "Research Institutions",
       description: "Accelerate medical research with AI-driven analysis of large datasets and clinical trials",
-      benefits: ["Faster research cycles", "Better data insights", "Improved collaboration"]
+      benefits["Faster research cycles", "Better data insights", "Improved collaboration"]
     },
     {
       industry: "Telemedicine",
       description: "Enable remote diagnosis and monitoring for patients in underserved areas",
-      benefits: ["Increased access to care", "Reduced travel costs", "Better patient engagement"]
+      benefits["Increased access to care", "Reduced travel costs", "Better patient engagement"]
     }
   ];
 
@@ -189,8 +188,8 @@ const AIHealthcareDiagnostics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +227,8 @@ const AIHealthcareDiagnostics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,8 +301,8 @@ const AIHealthcareDiagnostics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -349,8 +348,8 @@ const AIHealthcareDiagnostics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -427,7 +426,6 @@ const AIHealthcareDiagnostics = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcareDiagnostics;

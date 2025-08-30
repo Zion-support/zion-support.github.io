@@ -8,32 +8,32 @@ const AIWorkflowAutomation = () => {
             icon: Brain,
             title: "AI-Powered Process Analysis",
             description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",
-            benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
+            benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
             icon: Workflow,
             title: "Intelligent Workflow Design",
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
-            benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
+            benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
         },
         {
             icon: Zap,
             title: "Automated Decision Making",
             description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
-            benefits: ["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
+            benefits["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
         },
         {
             icon: Clock,
             title: "Real-time Monitoring",
             description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
-            benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
+            benefits["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
         }
     ];
     const solutions = [
         {
             category: "Document Processing",
             icon: Database,
-            solutions: [
+            solutions[
                 "Automated document classification",
                 "Intelligent data extraction",
                 "Form processing automation",
@@ -44,7 +44,7 @@ const AIWorkflowAutomation = () => {
         {
             category: "Customer Service",
             icon: Users,
-            solutions: [
+            solutions[
                 "Ticket routing and prioritization",
                 "Automated responses",
                 "Customer inquiry handling",
@@ -55,7 +55,7 @@ const AIWorkflowAutomation = () => {
         {
             category: "Financial Operations",
             icon: TrendingUp,
-            solutions: [
+            solutions[
                 "Invoice processing automation",
                 "Payment approval workflows",
                 "Expense report processing",
@@ -66,7 +66,7 @@ const AIWorkflowAutomation = () => {
         {
             category: "HR & Recruitment",
             icon: Users,
-            solutions: [
+            solutions[
                 "Resume screening automation",
                 "Interview scheduling",
                 "Onboarding workflows",
@@ -309,6 +309,5 @@ const AIWorkflowAutomation = () => {
           </div>
         </motion.div>
       </div>
-    </div>);
-};
+    </div>)};
 export default AIWorkflowAutomation;

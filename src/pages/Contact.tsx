@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const Contact: React.FC = () => {
+const Contact: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    comp: '',
     phone: '',
     service: '',
     message: '',
@@ -16,14 +16,13 @@ const Contact: React.FC = () => {
     timeline: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
@@ -31,14 +30,13 @@ const Contact: React.FC = () => {
     setFormData({
       name: '',
       email: '',
-      company: '',
+      comp: '',
       phone: '',
       service: '',
       message: '',
       budget: '',
       timeline: ''
-    });
-  };
+    })};
 
   const contactMethods = [
     {
@@ -78,7 +76,7 @@ const Contact: React.FC = () => {
   const serviceCategories = [
     {
       name: 'AI-Powered Micro SAAS',
-      services: [
+      services[
         'AI Code Review & Security',
         'AI Customer Experience Analytics',
         'AI DevOps Automation Platform',
@@ -87,7 +85,7 @@ const Contact: React.FC = () => {
     },
     {
       name: 'Cloud & Infrastructure',
-      services: [
+      services[
         'Cloud DevOps',
         'IT Infrastructure',
         'Digital Twin'
@@ -95,7 +93,7 @@ const Contact: React.FC = () => {
     },
     {
       name: 'Data & Analytics',
-      services: [
+      services[
         'Data Analytics',
         'AI Business Intelligence',
         'IoT Edge Computing'
@@ -103,7 +101,7 @@ const Contact: React.FC = () => {
     },
     {
       name: 'Security & Compliance',
-      services: [
+      services[
         'Zero Trust Network Architecture',
         'AI Cybersecurity Suite',
         'AI Compliance Assistant'
@@ -177,13 +175,13 @@ const Contact: React.FC = () => {
                 Multiple Ways to Reach Us
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the contact method that works best for you. We're here to help with any questions 
+                Choose the contact method that works best for you. We're here to help with  questions 
                 about our services or to get you started with a consultation.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {contactMethods.map((method, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index)  => (
                 <motion.div
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -293,11 +291,11 @@ const Contact: React.FC = () => {
                       <label className="block text-white font-medium mb-2">Company</label>
                       <input
                         type="text"
-                        name="company"
-                        value={formData.company}
+                        name="comp"
+                        value={formData.comp}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Your company name"
+                        placeholder="Your comp name"
                       />
                     </div>
                     <div>
@@ -505,7 +503,6 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default Contact;

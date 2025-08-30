@@ -96,5 +96,4 @@ export function StatsSection() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

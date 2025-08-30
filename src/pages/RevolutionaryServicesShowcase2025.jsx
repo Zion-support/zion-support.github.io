@@ -25,8 +25,7 @@ const RevolutionaryServicesShowcase2025 = () => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
@@ -232,6 +231,5 @@ const RevolutionaryServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default RevolutionaryServicesShowcase2025;

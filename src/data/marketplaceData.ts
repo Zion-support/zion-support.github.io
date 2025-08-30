@@ -1,4 +1,5 @@
 export interface MarketplaceItem {
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -11,16 +12,14 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-  seller: {
+seller: {
     name: string;
     rating: number;
-    verified: boolean;
-  };
+    verified: boolean};
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
-  warranty: string;
-}
+  warranty: string}
 
 export const marketplaceItems: MarketplaceItem[] = [
   {
@@ -34,7 +33,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 2847,
     likes: 156,
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
+    tags['AI', 'High Performance', 'Scalable', 'GPU'],
     featured: true,
     seller: {
       name: 'TechCorp Solutions',
@@ -57,7 +56,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Security', 'Expert', 'Certified', 'Compliance'],
+    tags['Security', 'Expert', 'Certified', 'Compliance'],
     featured: true,
     seller: {
       name: 'SecureNet Professionals',
@@ -80,7 +79,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Quantum', 'Research', 'Advanced', 'Experimental'],
+    tags['Quantum', 'Research', 'Advanced', 'Experimental'],
     featured: false,
     seller: {
       name: 'QuantumTech Labs',
@@ -103,7 +102,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 4567,
     likes: 278,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Cloud', 'Migration', 'Enterprise', 'AWS'],
+    tags['Cloud', 'Migration', 'Enterprise', 'AWS'],
     featured: true,
     seller: {
       name: 'CloudMasters Inc',
@@ -126,7 +125,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 1890,
     likes: 112,
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
+    tags['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
     featured: false,
     seller: {
       name: 'IoT Solutions Pro',
@@ -149,7 +148,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 3120,
     likes: 167,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Data Science', 'Machine Learning', 'Python', 'Statistics'],
+    tags['Data Science', 'Machine Learning', 'Python', 'Statistics'],
     featured: false,
     seller: {
       name: 'DataGenius Consulting',
@@ -168,25 +167,25 @@ export const marketplaceCategories = [
     id: 'products',
     name: 'Products',
     description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item => item.category === 'products').length
+    count: marketplaceItems.filter(item  => item.category === 'products').length
   },
   {
     id: 'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item => item.category === 'talent').length
+    count: marketplaceItems.filter(item  => item.category === 'talent').length
   },
   {
     id: 'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item => item.category === 'equipment').length
+    count: marketplaceItems.filter(item  => item.category === 'equipment').length
   },
   {
     id: 'services',
     name: 'Services',
     description: 'Professional services and consulting',
-    count: marketplaceItems.filter(item => item.category === 'services').length
+    count: marketplaceItems.filter(item  => item.category === 'services').length
   }
 ];
 
@@ -195,7 +194,7 @@ export const marketplaceFilters = [
     title: 'Category',
     key: 'category',
     type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat => ({
+    options: marketplaceCategories.map(cat  => ({
       value: cat.id,
       label: cat.name,
       count: cat.count
@@ -205,7 +204,7 @@ export const marketplaceFilters = [
     title: 'Price Range',
     key: 'priceRange',
     type: 'radio' as const,
-    options: [
+    options[
       { value: '0-1000', label: 'Under $1,000' },
       { value: '1000-5000', label: '$1,000 - $5,000' },
       { value: '5000-10000', label: '$5,000 - $10,000' },
@@ -216,7 +215,7 @@ export const marketplaceFilters = [
     title: 'Rating',
     key: 'rating',
     type: 'checkbox' as const,
-    options: [
+    options[
       { value: '4.5+', label: '4.5+ Stars' },
       { value: '4.0+', label: '4.0+ Stars' },
       { value: '3.5+', label: '3.5+ Stars' }
@@ -226,7 +225,7 @@ export const marketplaceFilters = [
     title: 'Availability',
     key: 'availability',
     type: 'checkbox' as const,
-    options: [
+    options[
       { value: 'available', label: 'Available' },
       { value: 'limited', label: 'Limited' },
       { value: 'out-of-stock', label: 'Out of Stock' }

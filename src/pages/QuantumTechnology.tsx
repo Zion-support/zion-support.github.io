@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Atom, 
   Cpu, 
   Zap, 
   Brain, 
@@ -24,9 +23,9 @@ import {
   Cloud,
   Lock,
   Eye
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function QuantumTechnology() {
+export default function QuantumTechnology(...args[]):  {
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -35,42 +34,42 @@ export default function QuantumTechnology() {
       icon: Atom,
       title: "Quantum Computing",
       description: "Leverage quantum algorithms for complex computational problems",
-      features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
+      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
       color: "from-zion-cyan to-zion-blue"
     },
     {
       icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution",
-      features: ["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
+      features["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Quantum Networks",
       description: "Quantum internet infrastructure for secure data transmission",
-      features: ["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
+      features["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Brain,
       title: "Quantum Machine Learning",
       description: "AI algorithms enhanced with quantum computing capabilities",
-      features: ["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
+      features["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Database,
       title: "Quantum Databases",
       description: "Quantum-enhanced data storage and retrieval systems",
-      features: ["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
+      features["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
       color: "from-zion-red to-zion-pink"
     },
     {
       icon: Zap,
       title: "Quantum Sensors",
       description: "Ultra-sensitive detection using quantum phenomena",
-      features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
+      features["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
       color: "from-zion-indigo to-zion-purple"
     }
   ];
@@ -89,42 +88,42 @@ export default function QuantumTechnology() {
       title: "Portfolio Optimization",
       description: "Quantum algorithms for optimal investment portfolio management",
       category: "finance",
-      benefits: ["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
+      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
       icon: BarChart3
     },
     {
       title: "Drug Discovery",
       description: "Quantum simulation for molecular modeling and drug development",
       category: "healthcare",
-      benefits: ["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
+      benefits["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
       icon: Monitor
     },
     {
       title: "Supply Chain Optimization",
       description: "Quantum optimization for logistics and supply chain management",
       category: "logistics",
-      benefits: ["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
+      benefits["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
       icon: Network
     },
     {
       title: "Cryptographic Security",
       description: "Quantum-resistant encryption and secure communication",
       category: "cybersecurity",
-      benefits: ["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
+      benefits["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
       icon: Shield
     },
     {
       title: "Climate Modeling",
       description: "Quantum computing for complex climate simulations",
       category: "research",
-      benefits: ["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
+      benefits["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
       icon: Lightbulb
     },
     {
       title: "AI Training",
       description: "Quantum-enhanced machine learning and neural networks",
       category: "research",
-      benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
+      benefits["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
       icon: Brain
     }
   ];
@@ -133,37 +132,37 @@ export default function QuantumTechnology() {
     {
       name: "Superconducting Qubits",
       description: "Quantum bits using superconducting circuits for computation",
-      advantages: ["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
+      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
       icon: Cpu
     },
     {
       name: "Trapped Ions",
       description: "Quantum bits using individual ions for precise control",
-      advantages: ["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
+      advantages["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
       icon: Atom
     },
     {
       name: "Topological Qubits",
       description: "Quantum bits with inherent error protection",
-      advantages: ["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
+      advantages["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
       icon: Shield
     },
     {
       name: "Photonic Qubits",
       description: "Quantum bits using light particles for communication",
-      advantages: ["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
+      advantages["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
       icon: Network
     },
     {
       name: "Silicon Qubits",
       description: "Quantum bits using semiconductor technology",
-      advantages: ["Manufacturing", "Scalability", "Integration", "Cost Effective"],
+      advantages["Manufacturing", "Scalability", "Integration", "Cost Effective"],
       icon: Server
     },
     {
       name: "Neutral Atoms",
       description: "Quantum bits using neutral atoms for computation",
-      advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
+      advantages["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
       icon: Atom
     }
   ];
@@ -195,8 +194,7 @@ export default function QuantumTechnology() {
   };
 
   const filteredApplications = selectedApplication === 'all' 
-    ? quantumApplications 
-    : quantumApplications.filter(app => app.category === selectedApplication);
+    ? quantumApplications: quantumApplications.filter(app  => app.category === selectedApplication);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -272,7 +270,7 @@ export default function QuantumTechnology() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {quantumServices.map((service, index) => (
+            {quantumServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -327,7 +325,7 @@ export default function QuantumTechnology() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {applications.map((app) => {
+            {applications.map((app)  => {
               const Icon = app.icon;
               return (
                 <button
@@ -342,8 +340,7 @@ export default function QuantumTechnology() {
                   <Icon className="w-5 h-5" />
                   {app.name}
                 </button>
-              );
-            })}
+              )})}
           </motion.div>
 
           {/* Applications Grid */}
@@ -354,7 +351,7 @@ export default function QuantumTechnology() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredApplications.map((app, index) => (
+            {filteredApplications.map((app, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -413,7 +410,7 @@ export default function QuantumTechnology() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {quantumTechnologies.map((tech, index) => (
+            {quantumTechnologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -470,7 +467,7 @@ export default function QuantumTechnology() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map((advantage, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -538,7 +535,7 @@ export default function QuantumTechnology() {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
               }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div 
                 key={index}
                 className="relative"
@@ -597,5 +594,4 @@ export default function QuantumTechnology() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

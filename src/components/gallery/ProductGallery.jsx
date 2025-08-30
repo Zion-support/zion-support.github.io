@@ -39,5 +39,4 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
             </Suspense>
           </AspectRatio>
         </TabsContent>)}
-    </Tabs>);
-}
+    </Tabs>)}

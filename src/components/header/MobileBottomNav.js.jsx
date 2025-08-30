@@ -70,5 +70,4 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             <span className="text-xs font-medium">{item.name}</span>
           </Link>))}
       </div>
-    </nav>);
-}
+    </nav>)}

@@ -9,7 +9,7 @@ const steps = [
     description: "Browse our comprehensive catalog of services, talent, and solutions",
     color: "from-zion-cyan to-zion-cyan-dark",
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    details: [
+    details[
       "AI-powered search and filtering",
       "Curated service categories",
       "Expert talent matching",
@@ -24,7 +24,7 @@ const steps = [
     description: "Get matched with the perfect team or service for your project",
     color: "from-zion-purple to-zion-purple-dark",
     bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    details: [
+    details[
       "Smart matching algorithm",
       "Profile verification",
       "Portfolio review",
@@ -39,7 +39,7 @@ const steps = [
     description: "Collaborate on project requirements, timeline, and deliverables",
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: [
+    details[
       "Interactive project planning",
       "Timeline optimization",
       "Resource allocation",
@@ -54,7 +54,7 @@ const steps = [
     description: "Watch your vision come to life with our expert execution",
     color: "from-zion-cyan-light to-zion-cyan",
     bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: [
+    details[
       "Agile development process",
       "Regular progress updates",
       "Quality assurance",
@@ -69,7 +69,7 @@ const steps = [
     description: "Receive your completed project with ongoing support and maintenance",
     color: "from-zion-purple-light to-zion-purple",
     bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: [
+    details[
       "Comprehensive testing",
       "Documentation delivery",
       "Training and handover",
@@ -283,5 +283,4 @@ export function HowItWorksSection() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

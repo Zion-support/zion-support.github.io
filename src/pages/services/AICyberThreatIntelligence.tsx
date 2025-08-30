@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   Eye, 
   Clock, 
@@ -16,8 +15,8 @@ import {
   Activity,
   BarChart3,
   Lock
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
 const AICyberThreatIntelligence = () => {
   const features = [
@@ -29,7 +28,7 @@ const AICyberThreatIntelligence = () => {
     {
       icon: Eye,
       title: "24/7 Monitoring",
-      description: "Continuous surveillance of your digital infrastructure with instant alerts for any suspicious activity"
+      description: "Continuous surveillance of your digital infrastructure with instant alerts for  suspicious activity"
     },
     {
       icon: Shield,
@@ -58,7 +57,7 @@ const AICyberThreatIntelligence = () => {
       name: "Basic Protection",
       price: "$4,999",
       period: "/month",
-      features: [
+      features[
         "Core threat detection",
         "Basic AI analytics",
         "Standard monitoring",
@@ -71,7 +70,7 @@ const AICyberThreatIntelligence = () => {
       name: "Professional Security",
       price: "$12,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI algorithms",
         "Predictive threat modeling",
         "Priority support",
@@ -85,7 +84,7 @@ const AICyberThreatIntelligence = () => {
       name: "Enterprise Defense",
       price: "$29,999",
       period: "/month",
-      features: [
+      features[
         "Full AI security suite",
         "Unlimited endpoints",
         "Custom development",
@@ -101,22 +100,22 @@ const AICyberThreatIntelligence = () => {
     {
       industry: "Financial Services",
       description: "Protect sensitive financial data and transactions with AI-powered threat detection and compliance monitoring",
-      benefits: ["99.9% threat detection", "Real-time compliance", "Reduced false positives"]
+      benefits["99.9% threat detection", "Real-time compliance", "Reduced false positives"]
     },
     {
       industry: "Healthcare",
       description: "Secure patient data and medical systems with HIPAA-compliant AI threat intelligence",
-      benefits: ["HIPAA compliance", "Patient data protection", "Medical device security"]
+      benefits["HIPAA compliance", "Patient data protection", "Medical device security"]
     },
     {
       industry: "Government",
       description: "Defend critical infrastructure and government systems against nation-state threats",
-      benefits: ["National security", "Infrastructure protection", "Threat intelligence sharing"]
+      benefits["National security", "Infrastructure protection", "Threat intelligence sharing"]
     },
     {
       industry: "Manufacturing",
       description: "Protect industrial control systems and intellectual property from cyber espionage",
-      benefits: ["OT security", "IP protection", "Supply chain security"]
+      benefits["OT security", "IP protection", "Supply chain security"]
     }
   ];
 
@@ -189,8 +188,8 @@ const AICyberThreatIntelligence = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +227,8 @@ const AICyberThreatIntelligence = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,8 +301,8 @@ const AICyberThreatIntelligence = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -349,8 +348,8 @@ const AICyberThreatIntelligence = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -427,7 +426,6 @@ const AICyberThreatIntelligence = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICyberThreatIntelligence;

@@ -17,8 +17,7 @@ const EnhancedServicesShowcase = () => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -159,8 +158,7 @@ const EnhancedServicesShowcase = () => {
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button onClick={() => {
                 setSelectedCategory('all');
-                setSearchTerm('');
-            }} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                setSearchTerm('')}} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 View All Services
               </button>
             </motion.div>)}
@@ -215,6 +213,5 @@ const EnhancedServicesShowcase = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default EnhancedServicesShowcase;

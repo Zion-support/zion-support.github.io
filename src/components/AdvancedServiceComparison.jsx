@@ -26,10 +26,10 @@ export const AdvancedServiceComparison = () => {
             category: 'ai',
             price: '$5,000/month',
             duration: '3-6 months',
-            features: ['Basic AI insights', 'Customer segmentation', 'Email automation'],
-            benefits: ['Improved customer retention', 'Automated workflows', 'Basic analytics'],
-            technology: ['AI/ML', 'CRM', 'Automation'],
-            targetAudience: ['Small Business', 'Startups'],
+            features['Basic AI insights', 'Customer segmentation', 'Email automation'],
+            benefits['Improved customer retention', 'Automated workflows', 'Basic analytics'],
+            technology['AI/ML', 'CRM', 'Automation'],
+            targetAudience['Small Business', 'Startups'],
             rating: 4.2,
             complexity: 'Basic',
             popularity: 'Medium',
@@ -43,10 +43,10 @@ export const AdvancedServiceComparison = () => {
             category: 'ai',
             price: '$25,000/month',
             duration: '12-18 months',
-            features: ['Advanced AI insights', 'Predictive analytics', 'Multi-channel integration', 'Custom AI models'],
-            benefits: ['Predictive customer behavior', 'Advanced automation', 'Enterprise scalability'],
-            technology: ['AI/ML', 'Big Data', 'Predictive Analytics', 'Enterprise Integration'],
-            targetAudience: ['Enterprise', 'Large Corporations'],
+            features['Advanced AI insights', 'Predictive analytics', 'Multi-channel integration', 'Custom AI models'],
+            benefits['Predictive customer behavior', 'Advanced automation', 'Enterprise scalability'],
+            technology['AI/ML', 'Big Data', 'Predictive Analytics', 'Enterprise Integration'],
+            targetAudience['Enterprise', 'Large Corporations'],
             rating: 4.8,
             complexity: 'Enterprise',
             popularity: 'High',
@@ -60,10 +60,10 @@ export const AdvancedServiceComparison = () => {
             category: 'quantum',
             price: '$50,000/month',
             duration: '6-12 months',
-            features: ['Basic quantum algorithms', 'Cloud access', 'Documentation'],
-            benefits: ['Quantum computing access', 'Algorithm development', 'Research capabilities'],
-            technology: ['Quantum Computing', 'Cloud Platform', 'Basic Algorithms'],
-            targetAudience: ['Research Institutions', 'Universities'],
+            features['Basic quantum algorithms', 'Cloud access', 'Documentation'],
+            benefits['Quantum computing access', 'Algorithm development', 'Research capabilities'],
+            technology['Quantum Computing', 'Cloud Platform', 'Basic Algorithms'],
+            targetAudience['Research Institutions', 'Universities'],
             rating: 4.5,
             complexity: 'Intermediate',
             popularity: 'Medium',
@@ -77,10 +77,10 @@ export const AdvancedServiceComparison = () => {
             category: 'quantum',
             price: '$200,000/month',
             duration: '18-24 months',
-            features: ['Custom quantum algorithms', 'Dedicated processors', '24/7 support', 'Custom development'],
-            benefits: ['Competitive advantage', 'Custom solutions', 'Priority access', 'Expert support'],
-            technology: ['Quantum Computing', 'Custom Algorithms', 'Dedicated Hardware', 'Advanced Support'],
-            targetAudience: ['Large Corporations', 'Government', 'Financial Services'],
+            features['Custom quantum algorithms', 'Dedicated processors', '24/7 support', 'Custom development'],
+            benefits['Competitive advantage', 'Custom solutions', 'Priority access', 'Expert support'],
+            technology['Quantum Computing', 'Custom Algorithms', 'Dedicated Hardware', 'Advanced Support'],
+            targetAudience['Large Corporations', 'Government', 'Financial Services'],
             rating: 4.9,
             complexity: 'Enterprise',
             popularity: 'Trending',
@@ -95,22 +95,18 @@ export const AdvancedServiceComparison = () => {
             const matchesComplexity = filters.complexity === 'all' || service.complexity === filters.complexity;
             const matchesTechnology = filters.technology === 'all' || service.technology.includes(filters.technology);
             const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
-            return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch;
-        });
-    }, [filters, searchTerm]);
+            return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch})}, [filters, searchTerm]);
     const toggleServiceSelection = (serviceId) => {
         setSelectedServices(prev => prev.includes(serviceId)
             ? prev.filter(id => id !== serviceId)
-            : [...prev, serviceId]);
-    };
+            [...prev, serviceId])};
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getPopularityIcon = (popularity) => {
         switch (popularity) {
@@ -118,8 +114,7 @@ export const AdvancedServiceComparison = () => {
             case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;
             case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;
             case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;
-            default: return <Users className="w-4 h-4 text-gray-500"/>;
-        }
+            default: return <Users className="w-4 h-4 text-gray-500"/>}
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -326,6 +321,5 @@ export const AdvancedServiceComparison = () => {
           </div>
         </div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default AdvancedServiceComparison;

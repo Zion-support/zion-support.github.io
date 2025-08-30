@@ -20,12 +20,9 @@ export function LoginContent() {
 
     try {
       await login(email, password);
-      navigate('/dashboard');
-    } catch (err) {
-      setError('Login failed. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+      navigate('/dashboard')} catch (err) {
+      setError('Login failed. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
   return (
@@ -215,5 +212,4 @@ export function LoginContent() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

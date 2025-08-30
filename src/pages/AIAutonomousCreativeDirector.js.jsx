@@ -152,6 +152,5 @@ const AIAutonomousCreativeDirector = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousCreativeDirector;

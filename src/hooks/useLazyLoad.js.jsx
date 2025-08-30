@@ -7,8 +7,7 @@ export const useLazyLoad = (options = {}) => {
     const load = useCallback(() => {
         if (!isLoaded) {
             setIsLoaded(true);
-            setIsVisible(true);
-        }
+            setIsVisible(true)}
     }, [isLoaded]);
     useEffect(() => {
         const element = ref.current;
@@ -17,20 +16,15 @@ export const useLazyLoad = (options = {}) => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    load();
-                }
-            });
-        }, {
+                    load()}
+            })}, {
             threshold,
             rootMargin: preload ? `${preloadDistance}px` : rootMargin
         });
         observer.observe(element);
         return () => {
-            observer.unobserve(element);
-        };
-    }, [threshold, rootMargin, preload, preloadDistance, load]);
-    return { isVisible, ref, load };
-};
+            observer.unobserve(element)}}, [threshold, rootMargin, preload, preloadDistance, load]);
+    return { isVisible, ref, load }};
 // Enhanced lazy loading for images
 export const useLazyImage = (src, options = {}) => {
     const { isVisible, ref } = useLazyLoad(options);
@@ -39,11 +33,9 @@ export const useLazyImage = (src, options = {}) => {
         if (isVisible && src) {
             const img = new Image();
             img.onload = () => setImageSrc(src);
-            img.src = src;
-        }
+            img.src = src}
     }, [isVisible, src]);
-    return { imageSrc, ref, isVisible };
-};
+    return { imageSrc, ref, isVisible }};
 // Enhanced lazy loading for components
 export const useLazyComponent = (importFn, options = {}) => {
     const { isVisible, ref } = useLazyLoad(options);
@@ -54,15 +46,10 @@ export const useLazyComponent = (importFn, options = {}) => {
             setIsLoading(true);
             importFn()
                 .then((module) => {
-                setComponent(() => module.default);
-            })
+                setComponent(() => module.default)})
                 .catch((error) => {
-                console.error('Failed to load lazy component:', error);
-            })
+                console.error('Failed to load lazy component:', error)})
                 .finally(() => {
-                setIsLoading(false);
-            });
-        }
+                setIsLoading(false)})}
     }, [isVisible, Component, isLoading, importFn]);
-    return { Component, ref, isVisible, isLoading };
-};
+    return { Component, ref, isVisible, isLoading }};

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Users, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Users, 
   BarChart3, 
   Brain, 
   Zap, 
@@ -24,45 +23,45 @@ import {
   Cpu,
   PieChart,
   LineChart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AICustomerExperienceAnalytics(...args[]):  {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
       description: 'Advanced natural language processing that analyzes customer feedback and sentiment across all channels.',
-      benefits: ['Real-time sentiment tracking', 'Multi-language support', 'Emotion detection', 'Trend analysis']
+      benefits['Real-time sentiment tracking', 'Multi-language support', 'Emotion detection', 'Trend analysis']
     },
     {
       icon: Eye,
       title: 'Customer Journey Mapping',
       description: 'Visualize and analyze customer touchpoints across the entire customer lifecycle with AI insights.',
-      benefits: ['Journey visualization', 'Touchpoint analysis', 'Conversion tracking', 'Optimization insights']
+      benefits['Journey visualization', 'Touchpoint analysis', 'Conversion tracking', 'Optimization insights']
     },
     {
       icon: Activity,
       title: 'Predictive Analytics',
       description: 'Forecast customer behavior, churn risk, and lifetime value using machine learning algorithms.',
-      benefits: ['Churn prediction', 'LTV forecasting', 'Behavior modeling', 'Risk assessment']
+      benefits['Churn prediction', 'LTV forecasting', 'Behavior modeling', 'Risk assessment']
     },
     {
       icon: MessageSquare,
       title: 'Voice of Customer Analytics',
       description: 'Extract actionable insights from customer conversations, surveys, and feedback across all channels.',
-      benefits: ['Feedback analysis', 'Survey insights', 'Conversation mining', 'Actionable recommendations']
+      benefits['Feedback analysis', 'Survey insights', 'Conversation mining', 'Actionable recommendations']
     },
     {
       icon: Heart,
       title: 'Customer Satisfaction Metrics',
       description: 'Track and analyze key customer experience metrics with real-time dashboards and reporting.',
-      benefits: ['NPS tracking', 'CSAT monitoring', 'CES measurement', 'Performance analytics']
+      benefits['NPS tracking', 'CSAT monitoring', 'CES measurement', 'Performance analytics']
     },
     {
       icon: BarChart3,
       title: 'Advanced Reporting',
       description: 'Comprehensive analytics dashboard with customizable reports and automated insights delivery.',
-      benefits: ['Custom dashboards', 'Automated reporting', 'KPI tracking', 'Performance optimization']
+      benefits['Custom dashboards', 'Automated reporting', 'KPI tracking', 'Performance optimization']
     }
   ];
 
@@ -71,25 +70,25 @@ export default function AICustomerExperienceAnalytics() {
       industry: 'E-commerce & Retail',
       title: 'Customer Journey Optimization',
       description: 'Optimize the online shopping experience with AI-powered customer journey analysis and personalization.',
-      metrics: ['25% increase in conversion rates', '30% improvement in customer satisfaction', '20% reduction in cart abandonment']
+      metrics['25% increase in conversion rates', '30% improvement in customer satisfaction', '20% reduction in cart abandonment']
     },
     {
       industry: 'Financial Services',
       title: 'Customer Experience Enhancement',
       description: 'Improve customer satisfaction and loyalty with AI-driven insights and personalized service recommendations.',
-      metrics: ['35% improvement in customer retention', '40% increase in customer lifetime value', '25% reduction in complaints']
+      metrics['35% improvement in customer retention', '40% increase in customer lifetime value', '25% reduction in complaints']
     },
     {
       industry: 'Healthcare',
       title: 'Patient Experience Analytics',
       description: 'Enhance patient satisfaction and care quality with AI-powered experience analytics and feedback analysis.',
-      metrics: ['30% improvement in patient satisfaction', '25% reduction in wait times', '20% increase in care quality scores']
+      metrics['30% improvement in patient satisfaction', '25% reduction in wait times', '20% increase in care quality scores']
     },
     {
       industry: 'Telecommunications',
       title: 'Service Quality Monitoring',
       description: 'Monitor and improve service quality with real-time customer experience analytics and predictive insights.',
-      metrics: ['40% reduction in customer churn', '35% improvement in service quality', '30% increase in customer loyalty']
+      metrics['40% reduction in customer churn', '35% improvement in service quality', '30% increase in customer loyalty']
     }
   ];
 
@@ -141,7 +140,7 @@ export default function AICustomerExperienceAnalytics() {
       price: '$129',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'Basic sentiment analysis',
         'Customer journey mapping',
         'Basic analytics dashboard',
@@ -157,7 +156,7 @@ export default function AICustomerExperienceAnalytics() {
       price: '$349',
       period: '/month',
       description: 'Ideal for growing businesses and enterprises',
-      features: [
+      features[
         'Advanced AI analytics',
         'Predictive analytics',
         'Multi-channel integration',
@@ -175,7 +174,7 @@ export default function AICustomerExperienceAnalytics() {
       price: '$899',
       period: '/month',
       description: 'For large organizations with complex customer experience needs',
-      features: [
+      features[
         'Full AI analytics suite',
         'Custom AI models',
         'Dedicated support team',
@@ -285,8 +284,8 @@ export default function AICustomerExperienceAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -333,8 +332,8 @@ export default function AICustomerExperienceAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -350,8 +349,8 @@ export default function AICustomerExperienceAnalytics() {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results:</h4>
-                  {useCase.metrics.map((metric, idx) => (
+                  <h4 className="text-white font-semibold">Key Results: any</h4>
+                  {useCase.metrics.map((metric, idx)  => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                       <span className="text-slate-300">{metric}</span>
@@ -384,8 +383,8 @@ export default function AICustomerExperienceAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -425,8 +424,8 @@ export default function AICustomerExperienceAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -461,8 +460,8 @@ export default function AICustomerExperienceAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -558,5 +557,4 @@ export default function AICustomerExperienceAnalytics() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

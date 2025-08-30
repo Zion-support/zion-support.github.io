@@ -20,6 +20,5 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
-    </div>);
-};
+    </div>)};
 export default EmptyState;

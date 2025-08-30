@@ -1,21 +1,20 @@
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { realMarketServices } from '../data/real-market-services';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realOperationalServices } from '../data/real-operational-services';
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import { professionalServices } from '../data/professional-services';
-export type ServiceRecord = any;
-const allServiceArrays: ServiceRecord[][] = [
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices  } from '../data/additional-real-services';
+import { innovativeMicroSaasServices  } from '../data/innovative-micro-saas-services';
+import { innovativeAIServices  } from '../data/innovative-ai-services';
+import { enterpriseITServices  } from '../data/enterprise-it-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices  } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions  } from '../data/comprehensive-it-solutions';
+import { realMarketServices  } from '../data/real-market-services';
+import { serviceExpansions2025  } from '../data/service-expansions-2025';
+import { verifiedRealServices2025Batch2  } from '../data/verified-real-services-2025-batch2';
+import { realOperationalServices  } from '../data/real-operational-services';
+import { newOperationalServices2025  } from '../data/new-operational-services-2025';
+import { innovative2025Services  } from '../data/innovative-2025-services';
+import { emergingTech2025Services  } from '../data/emerging-tech-2025-services';
+import { professionalServices  } from '../data/professional-services';
+export type ServiceRecord = ;const allServiceArrays: ServiceRecord[][] = [
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
 	additionalEnhancedServices,
@@ -35,7 +34,7 @@ const allServiceArrays: ServiceRecord[][] = [
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
-		const hit = arr.find((s: any) => {
+		const hit = arr.find((s: )  => {
 			if (!s) return false;
 			if (s.id && s.id === slug) return true;
 			if (s.link && typeof s.link === 'string') {

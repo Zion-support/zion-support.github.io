@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   AlertTriangle, 
@@ -25,10 +24,10 @@ import {
   Bot,
   Sparkles,
   Clock
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const CybersecurityServicesPage: React.FC = () => {
+const CybersecurityServicesPage: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const securityServices = [
@@ -37,7 +36,7 @@ const CybersecurityServicesPage: React.FC = () => {
       title: 'AI-Powered Threat Detection',
       description: 'Advanced threat detection using machine learning and behavioral analysis',
       price: '$2,500/month',
-      features: ['Real-time monitoring', 'AI threat analysis', 'Automated response', '24/7 SOC support'],
+      features['Real-time monitoring', 'AI threat analysis', 'Automated response', '24/7 SOC support'],
       icon: Eye,
       category: 'threat-detection'
     },
@@ -46,7 +45,7 @@ const CybersecurityServicesPage: React.FC = () => {
       title: 'Zero Trust Security Framework',
       description: 'Implement comprehensive zero trust architecture for your organization',
       price: '$3,200/month',
-      features: ['Identity verification', 'Access management', 'Network segmentation', 'Continuous monitoring'],
+      features['Identity verification', 'Access management', 'Network segmentation', 'Continuous monitoring'],
       icon: Lock,
       category: 'zero-trust'
     },
@@ -55,7 +54,7 @@ const CybersecurityServicesPage: React.FC = () => {
       title: 'Compliance & Governance',
       description: 'Meet regulatory requirements with our compliance management platform',
       price: '$1,800/month',
-      features: ['SOC2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit trails'],
+      features['SOC2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit trails'],
       icon: Shield,
       category: 'compliance'
     },
@@ -64,7 +63,7 @@ const CybersecurityServicesPage: React.FC = () => {
       title: 'Incident Response & Recovery',
       description: 'Rapid response and recovery services for security incidents',
       price: '$4,500/incident',
-      features: ['24/7 response team', 'Forensic analysis', 'Recovery planning', 'Post-incident review'],
+      features['24/7 response team', 'Forensic analysis', 'Recovery planning', 'Post-incident review'],
       icon: AlertTriangle,
       category: 'incident-response'
     }
@@ -79,8 +78,7 @@ const CybersecurityServicesPage: React.FC = () => {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? securityServices 
-    : securityServices.filter(service => service.category === selectedCategory);
+    ? securityServices: securityServices.filter(service  => service.category === selectedCategory);
 
   return (
     <>
@@ -150,8 +148,8 @@ const CybersecurityServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -294,7 +292,6 @@ const CybersecurityServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default CybersecurityServicesPage;

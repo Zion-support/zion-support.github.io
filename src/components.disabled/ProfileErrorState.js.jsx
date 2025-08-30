@@ -35,5 +35,4 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
           </div>
         </CardContent>
       </Card>
-    </div>);
-};
+    </div>)};

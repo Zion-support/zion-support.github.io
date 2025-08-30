@@ -24,8 +24,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
     useEffect(() => {
         if (!formData.serviceType) {
             setListings([]);
-            return;
-        }
+            return}
         const fetchServices = async () => {
             setLoading(true);
             setError(null);
@@ -43,51 +42,41 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setListings(parsed.data);
                     setError(null);
                     setLoading(false);
-                    return;
-                }
+                    return}
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            console.error('Failed to load services:', err);
-                        }
+                            console.error('Failed to load services:', err)}
                         else {
-                            captureException(err);
-                        }
+                            captureException(err)}
                         setListings([]);
                         setError('Failed to load services');
-                        setLoading(false);
-                    }
+                        setLoading(false)}
                     else {
-                        await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-                    }
+                        await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
         };
-        fetchServices();
-    }, [formData.serviceType, debouncedQuery]);
+        fetchServices()}, [formData.serviceType, debouncedQuery]);
     const handleTypeSelect = (type) => {
-        updateFormData({ serviceType: type });
-    };
+        updateFormData({ serviceType: type })};
     const handleItemSelect = (item) => {
         updateFormData({
             specificItem: item,
             serviceCategory: item.category,
             serviceType: item.category.toLowerCase()
-        });
-    };
+        })};
     const sourceListings = listings;
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected
         if (formData.serviceType !== "") {
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
-                return false;
-        }
+                return false}
         if (searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.category.toLowerCase().includes(searchQuery.toLowerCase());
-    });
+            item.category.toLowerCase().includes(searchQuery.toLowerCase())});
     return (<div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
@@ -137,5 +126,4 @@ export function ServiceTypeStep({ formData, updateFormData }) {
               </div>)}
           </div>
         </div>)}
-    </div>);
-}
+    </div>)}

@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function AISalesAssistant() {
+export default function AISalesAssistant(...args[]):  {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -28,6 +28,5 @@ export default function AISalesAssistant() {
         </div>
       </main>
     </div>
-  );
-}
+  )}
 

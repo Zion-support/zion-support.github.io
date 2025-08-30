@@ -1,7 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   keywords?: string;
@@ -9,8 +10,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
-}
+  structuredData?: object}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -38,7 +38,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "contactType": "customer service",
       "availableLanguage": "English"
     },
-    "sameAs": [
+    "sameAs"[
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://facebook.com/ziontechgroup"
@@ -89,5 +89,4 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )};

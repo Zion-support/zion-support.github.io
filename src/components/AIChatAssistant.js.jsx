@@ -24,11 +24,9 @@ export function AIChatAssistant() {
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
+        scrollToBottom()}, [messages]);
     const handleSendMessage = async () => {
         if (!inputValue.trim())
             return;
@@ -51,9 +49,7 @@ export function AIChatAssistant() {
                 timestamp: new Date()
             };
             setMessages(prev => [...prev, aiMessage]);
-            setIsTyping(false);
-        }, 1500 + Math.random() * 1000);
-    };
+            setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = () => {
         if (!isListening) {
             setIsListening(true);
@@ -61,34 +57,27 @@ export function AIChatAssistant() {
             setTimeout(() => {
                 const voiceText = "I'm interested in your AI development services";
                 setInputValue(voiceText);
-                setIsListening(false);
-            }, 2000);
-        }
+                setIsListening(false)}, 2000)}
         else {
-            setIsListening(false);
-        }
+            setIsListening(false)}
     };
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-            handleSendMessage();
-        }
+            handleSendMessage()}
     };
     const toggleChat = () => {
         if (isOpen) {
-            setIsMinimized(!isMinimized);
-        }
+            setIsMinimized(!isMinimized)}
         else {
             setIsOpen(true);
-            setIsMinimized(false);
-        }
+            setIsMinimized(false)}
     };
     if (!isOpen) {
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">
         <MessageCircle className="w-6 h-6"/>
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -100,8 +89,7 @@ export function AIChatAssistant() {
             </button>
           </div>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
@@ -186,5 +174,4 @@ export function AIChatAssistant() {
           <span>Powered by Zion AI • Always learning</span>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

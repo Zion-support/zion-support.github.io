@@ -39,22 +39,22 @@ const FiveGEnterpriseSolutions = () => {
         {
             title: "Smart Manufacturing",
             description: "Enable Industry 4.0 with real-time monitoring and automation",
-            applications: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
+            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
         },
         {
             title: "Healthcare Innovation",
             description: "Transform healthcare delivery with connected medical devices",
-            applications: ["Remote Monitoring", "Telemedicine", "Medical IoT"]
+            applications["Remote Monitoring", "Telemedicine", "Medical IoT"]
         },
         {
             title: "Autonomous Vehicles",
             description: "Power the future of transportation with reliable connectivity",
-            applications: ["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
+            applications["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
         },
         {
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
-            applications: ["Traffic Management", "Energy Grids", "Public Safety"]
+            applications["Traffic Management", "Energy Grids", "Public Safety"]
         }
     ];
     const benefits = [
@@ -260,6 +260,5 @@ const FiveGEnterpriseSolutions = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default FiveGEnterpriseSolutions;

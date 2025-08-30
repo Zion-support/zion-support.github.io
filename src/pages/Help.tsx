@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
   HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -22,9 +21,9 @@ import {
   Video,
   Download,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Help() {
+export default function Help(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -34,7 +33,7 @@ export default function Help() {
       name: 'Account & Billing',
       icon: Users,
       description: 'Account management, billing, and subscription questions',
-      articles: [
+      articles[
         { title: 'How to update billing information', readTime: '3 min', difficulty: 'Beginner' },
         { title: 'Changing subscription plans', readTime: '5 min', difficulty: 'Beginner' },
         { title: 'Account security settings', readTime: '4 min', difficulty: 'Beginner' },
@@ -46,7 +45,7 @@ export default function Help() {
       name: 'AI Services',
       icon: Brain,
       description: 'AI and machine learning service support',
-      articles: [
+      articles[
         { title: 'Setting up AI Business Intelligence', readTime: '8 min', difficulty: 'Intermediate' },
         { title: 'Training custom ML models', readTime: '12 min', difficulty: 'Advanced' },
         { title: 'AI compliance assistant usage', readTime: '6 min', difficulty: 'Intermediate' },
@@ -58,7 +57,7 @@ export default function Help() {
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Cloud infrastructure and DevOps support',
-      articles: [
+      articles[
         { title: 'Cloud migration troubleshooting', readTime: '15 min', difficulty: 'Advanced' },
         { title: 'DevOps pipeline configuration', readTime: '10 min', difficulty: 'Intermediate' },
         { title: 'Container deployment issues', readTime: '8 min', difficulty: 'Intermediate' },
@@ -70,7 +69,7 @@ export default function Help() {
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security features and compliance requirements',
-      articles: [
+      articles[
         { title: 'Zero Trust implementation guide', readTime: '20 min', difficulty: 'Advanced' },
         { title: 'Security audit preparation', readTime: '15 min', difficulty: 'Intermediate' },
         { title: 'Compliance documentation', readTime: '10 min', difficulty: 'Intermediate' },
@@ -82,7 +81,7 @@ export default function Help() {
       name: 'Technical Support',
       icon: Zap,
       description: 'Technical issues and troubleshooting',
-      articles: [
+      articles[
         { title: 'API integration problems', readTime: '8 min', difficulty: 'Intermediate' },
         { title: 'SDK installation issues', readTime: '5 min', difficulty: 'Beginner' },
         { title: 'Performance troubleshooting', readTime: '10 min', difficulty: 'Intermediate' },
@@ -94,7 +93,7 @@ export default function Help() {
       name: 'Getting Started',
       icon: Rocket,
       description: 'New user onboarding and basics',
-      articles: [
+      articles[
         { title: 'First-time setup guide', readTime: '10 min', difficulty: 'Beginner' },
         { title: 'Dashboard navigation', readTime: '5 min', difficulty: 'Beginner' },
         { title: 'Creating your first project', readTime: '8 min', difficulty: 'Beginner' },
@@ -150,11 +149,10 @@ export default function Help() {
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
         ).map(article => ({ ...category, article }))
       )
-    : [];
+    [];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
-    : helpCategories.filter(category => category.id === selectedCategory);
+    ? helpCategories: helpCategories.filter(category  => category.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -230,8 +228,8 @@ export default function Help() {
             <p className="text-slate-300">Get help immediately with these options</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickActions.map((action, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickActions.map((action, index)  => (
               <motion.div
                 key={action.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -353,8 +351,8 @@ export default function Help() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCategories.map((category, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCategories.map((category, index)  => (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -537,30 +535,30 @@ export default function Help() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 title: 'Documentation',
                 description: 'Comprehensive guides and API references',
                 icon: BookOpen,
                 href: '/documentation',
-                features: ['User guides', 'API docs', 'Code examples', 'Best practices']
+                features['User guides', 'API docs', 'Code examples', 'Best practices']
               },
               {
                 title: 'Video Tutorials',
                 description: 'Step-by-step video guides and walkthroughs',
                 icon: Video,
                 href: '/tutorials',
-                features: ['Getting started', 'Advanced topics', 'Troubleshooting', 'Feature demos']
+                features['Getting started', 'Advanced topics', 'Troubleshooting', 'Feature demos']
               },
               {
                 title: 'Community Forum',
                 description: 'Connect with other users and developers',
                 icon: Users,
                 href: '/community',
-                features: ['User discussions', 'Expert answers', 'Tips & tricks', 'Showcase projects']
+                features['User discussions', 'Expert answers', 'Tips & tricks', 'Showcase projects']
               }
-            ].map((resource, index) => (
+            ].map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -647,5 +645,4 @@ export default function Help() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -168,6 +168,5 @@ const AIAutonomousInvention = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousInvention;

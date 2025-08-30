@@ -1,5 +1,5 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return (
@@ -43,7 +43,6 @@ const MicroSAASServicesPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default MicroSAASServicesPage;

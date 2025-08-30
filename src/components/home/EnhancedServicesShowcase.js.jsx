@@ -85,8 +85,7 @@ export function EnhancedServicesShowcase() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Service Categories Overview */}
@@ -193,5 +192,4 @@ export function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

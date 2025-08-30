@@ -1,8 +1,8 @@
-import { loadStripe, Stripe } from '@stripe/stripe-js';
+import { loadStripe, Stripe  } from '@stripe/stripe-js';
 
-let stripePromise: Promise<Stripe | null>;
+let stripePromise: Promise<any>;
 
-export function getStripe() {
+export function getStripe(...args: []):  {
   if (!stripePromise) {
     const key =
       import.meta.env.PROD

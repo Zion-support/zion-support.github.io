@@ -9,7 +9,7 @@ export const ServiceProcessSteps = () => {
       description: 'We begin by understanding your current IT infrastructure, business needs, and objectives.',
       icon: Search,
       color: 'blue',
-      details: [
+      details[
         'Infrastructure audit and documentation review',
         'Business requirements gathering',
         'Current pain points identification',
@@ -25,7 +25,7 @@ export const ServiceProcessSteps = () => {
       description: 'Our team creates a comprehensive solution design tailored to your specific needs.',
       icon: ClipboardList,
       color: 'green',
-      details: [
+      details[
         'Solution architecture design',
         'Technology stack selection',
         'Implementation timeline planning',
@@ -41,7 +41,7 @@ export const ServiceProcessSteps = () => {
       description: 'Expert engineers execute the planned solution with precision and attention to detail.',
       icon: Settings,
       color: 'purple',
-      details: [
+      details[
         'Infrastructure setup and configuration',
         'Security implementation',
         'Integration and testing',
@@ -57,7 +57,7 @@ export const ServiceProcessSteps = () => {
       description: 'Rigorous testing ensures everything works perfectly before going live.',
       icon: CheckCircle,
       color: 'orange',
-      details: [
+      details[
         'Functional testing and validation',
         'Performance and load testing',
         'Security penetration testing',
@@ -73,7 +73,7 @@ export const ServiceProcessSteps = () => {
       description: 'Carefully managed deployment ensures smooth transition to the new system.',
       icon: Users,
       color: 'red',
-      details: [
+      details[
         'Production deployment',
         'Data migration and verification',
         'User training and onboarding',
@@ -89,7 +89,7 @@ export const ServiceProcessSteps = () => {
       description: 'Ongoing support and maintenance ensure your system continues to perform optimally.',
       icon: Headphones,
       color: 'indigo',
-      details: [
+      details[
         '24/7 technical support',
         'Regular maintenance and updates',
         'Performance optimization',
@@ -110,8 +110,7 @@ export const ServiceProcessSteps = () => {
       red: 'bg-red-100 text-red-600 border-red-200',
       indigo: 'bg-indigo-100 text-indigo-600 border-indigo-200'
     };
-    return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200';
-  };
+    return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200'};
 
   const getGradientClasses = (color) => {
     const gradientMap = {
@@ -122,8 +121,7 @@ export const ServiceProcessSteps = () => {
       red: 'from-red-500 to-red-600',
       indigo: 'from-indigo-500 to-indigo-600'
     };
-    return gradientMap[color] || 'from-gray-500 to-gray-600';
-  };
+    return gradientMap[color] || 'from-gray-500 to-gray-600'};
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -300,5 +298,4 @@ export const ServiceProcessSteps = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

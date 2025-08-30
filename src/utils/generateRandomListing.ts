@@ -1,4 +1,4 @@
-import { MarketplaceItem } from '@/data/marketplaceData';
+import { MarketplaceItem  } from '@/data/marketplaceData';
 
 const sampleTitles = [
   'AI-Powered Analytics Platform',
@@ -48,7 +48,7 @@ const sampleImages = [
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
 ];
 
-const categories: Array<'products' | 'talent' | 'equipment' | 'services'> = [
+const categories: Array<any> = [
   'products', 'talent', 'equipment', 'services'
 ];
 

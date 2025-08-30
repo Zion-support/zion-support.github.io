@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Grid3X3, 
   List, 
@@ -60,37 +59,33 @@ import {
   Info,
   AlertTriangle,
   Zap
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_PRICING,
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing 
-} from '@/data/expandedServicesPricing2027';
+ } from '@/data/expandedServicesPricing2027';
 
-const ExpandedServicesPricingGuide2027: React.FC = () => {
+const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredPricing, setFilteredPricing] = useState<any>(ALL_EXPANDED_SERVICES_PRICING);
 
   const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
 
   useEffect(() => {
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (selectedCategory !== 'All') {
-      pricing = pricing.filter(p => p.category === selectedCategory);
-    }
+      pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
       pricing = pricing.filter(p => 
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-    setFilteredPricing(pricing);
-  }, [selectedCategory, searchQuery]);
+      )}
+    setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -105,11 +100,10 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
-        return Rocket;
-    }
+        return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -124,11 +118,10 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
-        return 'from-gray-500 to-slate-600';
-    }
+        return 'from-gray-500 to-slate-600'}
   };
 
-  const getMarketPositionColor = (position: string) => {
+  const getMarketPositionColor = (position: string)  => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';
@@ -139,11 +132,10 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'emerging':
         return 'bg-yellow-100 text-yellow-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {
+  const renderPricingCard = (pricing: ExpandedServicePricing)  => {
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
@@ -435,8 +427,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
           </div>
         </div>
       </motion.div>
-    );
-  };
+    )};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -531,9 +522,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category) => (
+                {categories.map((category)  => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -552,8 +543,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredPricing.map((pricing) => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -597,7 +588,6 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesPricingGuide2027;

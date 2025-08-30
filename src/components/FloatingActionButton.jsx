@@ -47,6 +47,5 @@ const FloatingActionButton = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>
       </motion.button>
-    </div>);
-};
+    </div>)};
 export default FloatingActionButton;

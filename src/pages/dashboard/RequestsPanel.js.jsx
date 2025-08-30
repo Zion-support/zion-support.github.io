@@ -16,8 +16,7 @@ export default function RequestsPanel() {
         setShowDetails(true);
         // If status is new, mark as viewed
         if (quote.status === 'new') {
-            markAsViewed(quote.id);
-        }
+            markAsViewed(quote.id)}
     };
     // Filter quotes by archive status
     const activeQuotes = quotes.filter(q => !q.is_archived);
@@ -50,10 +49,8 @@ export default function RequestsPanel() {
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-        }}/>
+            setSelectedQuote(null)}}/>
         
         
       </div>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

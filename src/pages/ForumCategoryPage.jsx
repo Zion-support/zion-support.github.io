@@ -107,14 +107,12 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
-    </div>);
-}
+    </div>)}
 export default function ForumCategoryPage() {
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
-        return <NotFound />;
-    }
+        return <NotFound />}
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
@@ -123,5 +121,4 @@ export default function ForumCategoryPage() {
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
-    </>);
-}
+    </>)}

@@ -15,9 +15,9 @@ const ServiceCard = ({ service, index, isVisible }) => {
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate={{
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
-                opacity: [0.6, 0.2, 0.6],
+                x[0, Math.random() * 100 - 50],
+                y[0, Math.random() * 100 - 50],
+                opacity[0.6, 0.2, 0.6],
             }} transition={{
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
@@ -129,8 +129,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/>
         </div>
       </div>
-    </motion.div>);
-};
+    </motion.div>)};
 export const FuturisticServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -141,13 +140,11 @@ export const FuturisticServicesShowcase = () => {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX
     useEffect(() => {
         const allIndices = new Set(filteredServices.map((_, index) => index));
-        setVisibleServices(allIndices);
-    }, [filteredServices]);
+        setVisibleServices(allIndices)}, [filteredServices]);
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -220,5 +217,4 @@ export const FuturisticServicesShowcase = () => {
           </div>
         </motion.div>
       </div>
-    </div>);
-};
+    </div>)};

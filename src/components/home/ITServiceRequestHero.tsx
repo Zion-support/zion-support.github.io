@@ -1,26 +1,24 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
+import React, { useState } from 'react.ts';
+import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useNavigate  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
 
-export function ITServiceRequestHero() {
+export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
-        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-      }, 1000);
-    }
+        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
   };
 
   const containerVariants = {
@@ -83,7 +81,7 @@ export function ITServiceRequestHero() {
             </GradientHeading>
             
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
-              Get professional IT technicians anywhere in the world, anytime you need them. 
+              Get professional IT technicians where in the world, time you need them. 
               From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 
@@ -212,5 +210,4 @@ export function ITServiceRequestHero() {
         </div>
       </motion.div>
     </section>
-  );
-}
+  )}

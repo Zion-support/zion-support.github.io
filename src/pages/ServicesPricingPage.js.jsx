@@ -11,10 +11,8 @@ export default function ServicesPricingPage() {
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
         const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
-            acc[category] = categoryServices;
-        }
-        return acc;
-    }, {});
+            acc[category] = categoryServices}
+        return acc}, {});
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
 
@@ -232,5 +230,4 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
-    // useParams is typed as `any` in this environment due to missing type
+    // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { profileId } = useParams();
     const [profileData, setProfileData] = useState(null);
@@ -22,51 +22,41 @@ export default function ProfileDetail() {
             try {
                 if (!profileId) {
                     setError("Profile ID is missing.");
-                    return;
-                }
+                    return}
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single();
                 if (error) {
-                    throw new Error(error.message);
-                }
+                    throw new Error(error.message)}
                 if (!data) {
                     setError("Profile not found.");
-                    return;
-                }
-                setProfileData(data);
-            }
+                    return}
+                setProfileData(data)}
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
-                });
-            }
+                })}
             finally {
-                setIsLoading(false);
-            }
+                setIsLoading(false)}
         };
-        fetchProfile();
-    }, [profileId]);
+        fetchProfile()}, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-      </div>);
-    }
+      </div>)}
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
-      </div>);
-    }
+      </div>)}
     if (!profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
-      </div>);
-    }
+      </div>)}
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       
@@ -138,7 +128,7 @@ export default function ProfileDetail() {
               <CardContent>
                 {profileData.experience ? (profileData.experience.map((exp, index) => (<div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
-                      <p className="text-zion-cyan">{exp.company}</p>
+                      <p className="text-zion-cyan">{exp.comp}</p>
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
                     </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}
@@ -212,5 +202,4 @@ export default function ProfileDetail() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

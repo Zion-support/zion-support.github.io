@@ -14,8 +14,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [seoAnalysis, setSeoAnalysis] = useState({
         score: 0,
-        issues: [],
-        suggestions: [],
+        issues[],
+        suggestions[],
         metaTags: {
             title: false,
             description: false,
@@ -27,7 +27,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
-        issues: [],
+        issues[],
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0
@@ -48,8 +48,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
         };
         setMetrics(mockMetrics);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Analyze SEO
     const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
@@ -57,12 +56,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         // Mock SEO analysis
         const mockSEO = {
             score: Math.floor(Math.random() * 40) + 60, // 60-100
-            issues: [
+            issues[
                 'Missing meta description on some pages',
                 'Some images lack alt text',
                 'Heading structure could be improved'
             ],
-            suggestions: [
+            suggestions[
                 'Add structured data markup',
                 'Optimize page titles for better CTR',
                 'Improve internal linking structure'
@@ -77,8 +76,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             }
         };
         setSeoAnalysis(mockSEO);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Analyze accessibility
     const analyzeAccessibility = useCallback(async () => {
         setIsAnalyzing(true);
@@ -86,7 +84,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         // Mock accessibility analysis
         const mockAccessibility = {
             score: Math.floor(Math.random() * 30) + 70, // 70-100
-            issues: [
+            issues[
                 'Some form controls lack proper labels',
                 'Color contrast could be improved',
                 'Keyboard navigation needs enhancement'
@@ -96,36 +94,31 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             warnings: Math.floor(Math.random() * 5) + 1
         };
         setAccessibilityReport(mockAccessibility);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Run comprehensive analysis
     const runFullAnalysis = useCallback(async () => {
         await Promise.all([
             analyzePerformance(),
             analyzeSEO(),
             analyzeAccessibility()
-        ]);
-    }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
+        ])}, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
     // Get performance grade
     const getPerformanceGrade = (metric, thresholds) => {
         if (metric <= thresholds.good)
             return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
         if (metric <= thresholds.needsImprovement)
             return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
-        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
-    };
+        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' }};
     // Get trend indicator
     const getTrendIndicator = (value, previousValue) => {
         if (value < previousValue)
             return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
         if (value > previousValue)
             return { icon: ArrowDownIcon, color: 'text-red-600', text: 'Declining' };
-        return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' };
-    };
+        return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' }};
     useEffect(() => {
         if (showOnLoad) {
-            runFullAnalysis();
-        }
+            runFullAnalysis()}
     }, [showOnLoad, runFullAnalysis]);
     return (<>
       {/* Dashboard Toggle Button */}
@@ -281,8 +274,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                           <div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>
                             {grade.grade}
                           </div>
-                        </div>);
-                })}
+                        </div>)})}
                   </div>
                 </div>)}
 
@@ -466,6 +458,5 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </>)};
 export default WebsiteImprovementDashboard;

@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  Mail,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { Mail,
   Lock,
   Eye,
   EyeOff,
@@ -12,9 +11,9 @@ import {
   Cloud,
   Zap,
   ArrowRight
-} from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Login() {
+export default function Login(...args[]):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -22,9 +21,9 @@ export default function Login() {
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, any>>({})
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -34,7 +33,7 @@ export default function Login() {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, any> = {}
 
     if (!formData.email.trim()) newErrors.email = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
@@ -45,7 +44,7 @@ export default function Login() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault()
     
     if (!validateForm()) return

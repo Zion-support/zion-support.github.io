@@ -8,11 +8,9 @@ export default function FuturisticHero() {
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
     useEffect(() => {
         const handleMouseMove = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-        };
+            setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+        return () => window.removeEventListener('mousemove', handleMouseMove)}, []);
     const floatingIcons = [
         { icon: <Star className="w-6 h-6"/>, delay: 0, color: 'text-yellow-400' },
         { icon: <Zap className="w-6 h-6"/>, delay: 0.5, color: 'text-cyan-400' },
@@ -111,8 +109,8 @@ export default function FuturisticHero() {
 
         {/* Scroll Indicator */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-            <motion.div animate={{ y: [0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
+          <motion.div animate={{ y[0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
+            <motion.div animate={{ y[0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
           </motion.div>
         </motion.div>
       </div>
@@ -124,13 +122,12 @@ export default function FuturisticHero() {
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
             }} animate={{
-                y: [0, -100],
-                opacity: [0, 1, 0],
+                y[0, -100],
+                opacity[0, 1, 0],
             }} transition={{
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
             }}/>))}
       </div>
-    </section>);
-}
+    </section>)}

@@ -11,9 +11,7 @@ export interface NextGenAi2026Service {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",
@@ -21,7 +19,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     tagline: "Next-generation AI for 2026",
     price: "$299/month",
     description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
-    features: [
+    features[
       "Next-gen AI capabilities",
       "Advanced algorithms",
       "Future-ready features",

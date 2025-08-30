@@ -56,5 +56,4 @@ export const AppTestimonials = () => {
             </Card>))}
         </div>
       </div>
-    </section>);
-};
+    </section>)};

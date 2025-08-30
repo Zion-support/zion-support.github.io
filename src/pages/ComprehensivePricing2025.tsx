@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Download, 
   Play, 
   Phone, 
@@ -19,15 +18,15 @@ import {
   Lock,
   Globe,
   Rocket
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensivePricing2025: React.FC = () => {
+const ComprehensivePricing2025: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [sortBy, setSortBy] = useState('price');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
 
   const categories = ['all', 'AI Services', 'IT Solutions', 'Cybersecurity', 'Cloud Services', 'Data Analytics'];
   const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Technology'];
@@ -42,7 +41,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 1200,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Process automation',
         'AI decision making',
         'Integration APIs',
@@ -64,7 +63,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 2500,
       period: 'per month',
       annualDiscount: 15,
-      features: [
+      features[
         'Customer segmentation',
         'Predictive analytics',
         'Omnichannel support',
@@ -86,7 +85,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 3800,
       period: 'per month',
       annualDiscount: 25,
-      features: [
+      features[
         'Demand forecasting',
         'Inventory optimization',
         'Route planning',
@@ -108,7 +107,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 2200,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Threat detection',
         'Behavioral analysis',
         'Incident response',
@@ -130,7 +129,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 1800,
       period: 'per month',
       annualDiscount: 15,
-      features: [
+      features[
         'Cloud migration',
         'CI/CD pipelines',
         'Monitoring',
@@ -152,7 +151,7 @@ const ComprehensivePricing2025: React.FC = () => {
       price: 1500,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Data classification',
         'Privacy controls',
         'Audit trails',
@@ -173,8 +172,7 @@ const ComprehensivePricing2025: React.FC = () => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    return matchesCategory && matchesIndustry && matchesSearch;
-  }).sort((a, b) => {
+    return matchesCategory && matchesIndustry && matchesSearch}).sort((a, b) => {
     switch (sortBy) {
       case 'price':
         return a.price - b.price;
@@ -185,13 +183,11 @@ const ComprehensivePricing2025: React.FC = () => {
       case 'delivery':
         return parseInt(a.delivery) - parseInt(b.delivery);
       default:
-        return 0;
-    }
+        return 0}
   });
 
-  const getDiscountedPrice = (price: number, discount: number) => {
-    return Math.round(price * (1 - discount / 100));
-  };
+  const getDiscountedPrice = (price: number, discount: number)  => {
+    return Math.round(price * (1 - discount / 100))};
 
   const totalValue = filteredServices.reduce((sum, service) => sum + service.price, 0);
   const totalROI = filteredServices.reduce((sum, service) => sum + parseInt(service.roi), 0);
@@ -306,9 +302,9 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedCategory} 
                 onChange={(e) => setSelectedCategory(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-green-400"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -317,9 +313,9 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedIndustry} 
                 onChange={(e) => setSelectedIndustry(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-green-400"
               >
-                {industries.map(industry => (
+                {industries.map(industry  => (
                   <option key={industry} value={industry} className="bg-slate-800 text-white">
                     {industry === 'all' ? 'All Industries' : industry}
                   </option>
@@ -342,8 +338,8 @@ const ComprehensivePricing2025: React.FC = () => {
         {/* Pricing Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -477,7 +473,6 @@ const ComprehensivePricing2025: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensivePricing2025;

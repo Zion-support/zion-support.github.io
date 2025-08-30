@@ -84,40 +84,33 @@ export default function ComprehensiveServicesOverview() {
             const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
+                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+            filtered = filtered.filter(service => service.category === selectedCategory)}
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
                 case 'low':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000;
-                    });
+                        return price <= 1000});
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000;
-                    });
+                        return price > 1000 && price <= 3000});
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000;
-                    });
-                    break;
-            }
+                        return price > 3000});
+                    break}
         }
     });
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
-            return service.price;
-        }
+            return service.price}
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
@@ -380,5 +373,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>)}

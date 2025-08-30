@@ -100,8 +100,7 @@ const AdvancedAnalyticsDashboard = () => {
             case 'declining':
                 return <TrendingDown className="w-4 h-4 text-red-500"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+                return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -112,8 +111,7 @@ const AdvancedAnalyticsDashboard = () => {
             case 'declining':
                 return 'bg-red-100 text-red-800';
             default:
-                return 'bg-gray-100 text-gray-800';
-        }
+                return 'bg-gray-100 text-gray-800'}
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -291,7 +289,7 @@ const AdvancedAnalyticsDashboard = () => {
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Satisfaction Score</h4>
                   <p className="text-sm text-zion-slate-light">
-                    Client satisfaction reached 4.8/5, highest in company history
+                    Client satisfaction reached 4.8/5, highest in comp history
                   </p>
                 </div>
               </div>
@@ -320,6 +318,5 @@ const AdvancedAnalyticsDashboard = () => {
           </div>
         </div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default AdvancedAnalyticsDashboard;

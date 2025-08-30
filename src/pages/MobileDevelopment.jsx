@@ -52,7 +52,7 @@ const mobileDevelopmentSolutions = [
     title: "Native iOS Development",
     description: "Custom iOS applications built with Swift and SwiftUI for optimal performance and user experience.",
     icon: Smartphone,
-    features: [
+    features[
       "Swift/SwiftUI development",
       "iOS app store optimization",
       "Device-specific features",
@@ -61,14 +61,14 @@ const mobileDevelopmentSolutions = [
     price: "From $25,000",
     timeline: "12-24 weeks",
     category: "iOS",
-    technologies: ["Swift", "SwiftUI", "Core Data", "iOS SDK"]
+    technologies["Swift", "SwiftUI", "Core Data", "iOS SDK"]
   },
   {
     id: 2,
     title: "Native Android Development",
     description: "Custom Android applications built with Kotlin and Jetpack Compose for modern Android development.",
     icon: Smartphone,
-    features: [
+    features[
       "Kotlin/Jetpack Compose",
       "Material Design 3",
       "Android-specific features",
@@ -77,14 +77,14 @@ const mobileDevelopmentSolutions = [
     price: "From $25,000",
     timeline: "12-24 weeks",
     category: "Android",
-    technologies: ["Kotlin", "Jetpack Compose", "Room Database", "Android SDK"]
+    technologies["Kotlin", "Jetpack Compose", "Room Database", "Android SDK"]
   },
   {
     id: 3,
     title: "Cross-Platform Development",
     description: "Multi-platform applications using React Native, Flutter, or Xamarin for cost-effective development.",
     icon: AppWindow,
-    features: [
+    features[
       "Single codebase",
       "Multiple platforms",
       "Native performance",
@@ -93,14 +93,14 @@ const mobileDevelopmentSolutions = [
     price: "From $35,000",
     timeline: "16-28 weeks",
     category: "Cross-Platform",
-    technologies: ["React Native", "Flutter", "Xamarin", "Native Modules"]
+    technologies["React Native", "Flutter", "Xamarin", "Native Modules"]
   },
   {
     id: 4,
     title: "Progressive Web Apps (PWA)",
     description: "Web applications that provide native app-like experience across all devices and platforms.",
     icon: Globe,
-    features: [
+    features[
       "Offline functionality",
       "Push notifications",
       "App-like experience",
@@ -109,14 +109,14 @@ const mobileDevelopmentSolutions = [
     price: "From $20,000",
     timeline: "10-18 weeks",
     category: "PWA",
-    technologies: ["Service Workers", "Web App Manifest", "PWA APIs", "Responsive Design"]
+    technologies["Service Workers", "Web App Manifest", "PWA APIs", "Responsive Design"]
   },
   {
     id: 5,
     title: "Enterprise Mobile Solutions",
     description: "Business-focused mobile applications with enterprise-grade security and integration capabilities.",
     icon: Building,
-    features: [
+    features[
       "Enterprise security",
       "Backend integration",
       "User management",
@@ -125,14 +125,14 @@ const mobileDevelopmentSolutions = [
     price: "From $50,000",
     timeline: "20-36 weeks",
     category: "Enterprise",
-    technologies: ["Enterprise Security", "API Integration", "User Management", "Analytics"]
+    technologies["Enterprise Security", "API Integration", "User Management", "Analytics"]
   },
   {
     id: 6,
     title: "Mobile App Maintenance",
     description: "Ongoing support, updates, and maintenance services for existing mobile applications.",
     icon: Settings,
-    features: [
+    features[
       "Bug fixes & updates",
       "Performance optimization",
       "Feature enhancements",
@@ -141,7 +141,7 @@ const mobileDevelopmentSolutions = [
     price: "From $5,000/month",
     timeline: "Ongoing",
     category: "Maintenance",
-    technologies: ["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
+    technologies["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
   }
 ];
 
@@ -179,7 +179,7 @@ const mobileTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Startup",
+    comp: "E-commerce Startup",
     industry: "Retail",
     challenge: "Needed mobile app for iOS and Android to compete with larger retailers",
     solution: "Built cross-platform React Native app with modern UI/UX and e-commerce features",
@@ -188,7 +188,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Provider",
+    comp: "Healthcare Provider",
     industry: "Healthcare",
     challenge: "Required secure mobile app for patient management and telemedicine",
     solution: "Developed native iOS and Android apps with HIPAA compliance and telemedicine features",
@@ -197,7 +197,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Company",
+    comp: "Logistics Comp",
     industry: "Transportation",
     challenge: "Needed enterprise mobile solution for fleet management and driver tracking",
     solution: "Built enterprise mobile app with real-time tracking, route optimization, and driver management",
@@ -242,25 +242,25 @@ const mobileBenefits = [
     title: "Enhanced User Experience",
     description: "Native mobile apps provide superior user experience and performance",
     icon: Users,
-    examples: ["Smooth animations", "Fast performance", "Native features", "Intuitive UI"]
+    examples["Smooth animations", "Fast performance", "Native features", "Intuitive UI"]
   },
   {
     title: "Offline Functionality",
     description: "Mobile apps can work offline and sync when connectivity is restored",
     icon: Cloud,
-    examples: ["Offline access", "Data synchronization", "Cached content", "Background sync"]
+    examples["Offline access", "Data synchronization", "Cached content", "Background sync"]
   },
   {
     title: "Device Integration",
     description: "Access to device features like camera, GPS, and sensors",
     icon: Smartphone,
-    examples: ["Camera access", "GPS location", "Push notifications", "Biometric auth"]
+    examples["Camera access", "GPS location", "Push notifications", "Biometric auth"]
   },
   {
     title: "App Store Presence",
     description: "Visibility in app stores and potential for monetization",
     icon: Award,
-    examples: ["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
+    examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
   }
 ];
 
@@ -583,7 +583,7 @@ export default function MobileDevelopment() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -648,5 +648,4 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

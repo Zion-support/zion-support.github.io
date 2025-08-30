@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code, 
   Database, 
   Cloud, 
   Shield, 
@@ -11,14 +10,14 @@ import {
   Server,
   Cpu,
   Network
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const TechnologyStackSection: React.FC = () => {
+export const TechnologyStackSection: React.FC = (): JSX.Element => {
   const techCategories = [
     {
       icon: Brain,
       title: 'AI & Machine Learning',
-      technologies: [
+      technologies[
         'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Hugging Face',
         'Keras', 'Pandas', 'NumPy', 'Jupyter', 'MLflow'
       ],
@@ -27,7 +26,7 @@ export const TechnologyStackSection: React.FC = () => {
     {
       icon: Code,
       title: 'Frontend Development',
-      technologies: [
+      technologies[
         'React', 'Vue.js', 'Angular', 'TypeScript', 'Next.js',
         'Tailwind CSS', 'Material-UI', 'Redux', 'GraphQL', 'Webpack'
       ],
@@ -36,7 +35,7 @@ export const TechnologyStackSection: React.FC = () => {
     {
       icon: Server,
       title: 'Backend Development',
-      technologies: [
+      technologies[
         'Node.js', 'Python', 'Java', 'Go', 'C#',
         'Express.js', 'Django', 'Spring Boot', 'FastAPI', 'ASP.NET Core'
       ],
@@ -45,7 +44,7 @@ export const TechnologyStackSection: React.FC = () => {
     {
       icon: Database,
       title: 'Databases & Storage',
-      technologies: [
+      technologies[
         'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch',
         'AWS RDS', 'Azure SQL', 'Google Cloud SQL', 'DynamoDB', 'Cassandra'
       ],
@@ -54,7 +53,7 @@ export const TechnologyStackSection: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud & DevOps',
-      technologies: [
+      technologies[
         'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes',
         'Terraform', 'Jenkins', 'GitLab CI/CD', 'Ansible', 'Prometheus'
       ],
@@ -63,7 +62,7 @@ export const TechnologyStackSection: React.FC = () => {
     {
       icon: Shield,
       title: 'Security & Compliance',
-      technologies: [
+      technologies[
         'OAuth 2.0', 'JWT', 'SAML', 'LDAP', 'MFA',
         'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
       ],
@@ -97,8 +96,8 @@ export const TechnologyStackSection: React.FC = () => {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {techCategories.map((category, index) => {
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {techCategories.map((category, index)  => {
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -126,8 +125,7 @@ export const TechnologyStackSection: React.FC = () => {
                   ))}
                 </div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* Emerging Technologies */}
@@ -140,8 +138,8 @@ export const TechnologyStackSection: React.FC = () => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Emerging Technologies
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {emergingTech.map((tech, index) => {
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTech.map((tech, index)  => {
               const IconComponent = tech.icon;
               return (
                 <div key={tech.name} className="text-center">
@@ -153,8 +151,7 @@ export const TechnologyStackSection: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
                   <p className="text-sm text-gray-400">{tech.status}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </motion.div>
 
@@ -187,7 +184,6 @@ export const TechnologyStackSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default TechnologyStackSection;

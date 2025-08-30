@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react.ts';
 
-export default function Products() {
+export default function Products(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -25,7 +25,7 @@ export default function Products() {
       rating: 4.8,
       reviews: 124,
       image: 'https://via.placeholder.com/300x200/6366f1/ffffff?text=AI+Analytics',
-      features: ['Machine Learning', 'Real-time Data', 'Custom Dashboards']
+      features['Machine Learning', 'Real-time Data', 'Custom Dashboards']
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ export default function Products() {
       rating: 4.9,
       reviews: 89,
       image: 'https://via.placeholder.com/300x200/dc2626/ffffff?text=Security+Bundle',
-      features: ['Threat Detection', '24/7 Monitoring', 'Compliance Ready']
+      features['Threat Detection', '24/7 Monitoring', 'Compliance Ready']
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ export default function Products() {
       rating: 4.7,
       reviews: 156,
       image: 'https://via.placeholder.com/300x200/059669/ffffff?text=Cloud+Infra',
-      features: ['Auto-scaling', '99.9% Uptime', 'Global CDN']
+      features['Auto-scaling', '99.9% Uptime', 'Global CDN']
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function Products() {
       rating: 4.6,
       reviews: 67,
       image: 'https://via.placeholder.com/300x200/ea580c/ffffff?text=Server',
-      features: ['64GB RAM', '2TB SSD', 'Dual CPU']
+      features['64GB RAM', '2TB SSD', 'Dual CPU']
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ export default function Products() {
       rating: 4.8,
       reviews: 203,
       image: 'https://via.placeholder.com/300x200/7c3aed/ffffff?text=Data+Platform',
-      features: ['Data Integration', 'ETL Tools', 'Visualization']
+      features['Data Integration', 'ETL Tools', 'Visualization']
     },
     {
       id: 6,
@@ -80,7 +80,7 @@ export default function Products() {
       rating: 4.5,
       reviews: 78,
       image: 'https://via.placeholder.com/300x200/0891b2/ffffff?text=IoT+Kit',
-      features: ['Sensors', 'Gateway', 'Cloud API']
+      features['Sensors', 'Gateway', 'Cloud API']
     }
   ];
 
@@ -88,8 +88,7 @@ export default function Products() {
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -165,8 +164,8 @@ export default function Products() {
           </motion.div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.map((product, index)  => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -247,8 +246,7 @@ export default function Products() {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSearchQuery('');
-                }}
+                  setSearchQuery('')}}
                 className="text-zion-cyan hover:text-white transition-colors duration-300"
               >
                 Clear filters and try again
@@ -289,5 +287,4 @@ export default function Products() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

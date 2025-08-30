@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2030 } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030 } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { innovativeMicroSaasServices2030  } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030  } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030  } from '../data/comprehensiveAIServices2030';
 
-const ComprehensivePricingGuide2030: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
+  const [activeTab, setActiveTab] = useState<any>('microsaas');
+  const [priceRange, setPriceRange] = useState<any>([0, 5000]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: any[] = [];
+    let services[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -21,28 +21,23 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-        break;
-    }
+        break}
 
     // Filter by price range
     services = services.filter(service => {
       if (activeTab === 'it') {
-        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1];
-      } else {
-        return service.price >= priceRange[0] && service.price <= priceRange[1];
-      }
+        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {
+        return service.price >= priceRange[0] && service.price <= priceRange[1]}
     });
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory);
-    }
+      services = services.filter(service => service.category === selectedCategory)}
 
-    return services;
-  };
+    return services};
 
   const getCategories = () => {
-    let services: any[] = [];
+    let services[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -53,15 +48,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-        break;
-    }
+        break}
 
     const categories = [...new Set(services.map(service => service.category))];
-    return categories;
-  };
+    return categories};
 
   const getPriceRange = () => {
-    let services: any[] = [];
+    let services[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -72,21 +65,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-        break;
-    }
+        break}
 
     if (activeTab === 'it') {
       const min = Math.min(...services.map(s => s.hourlyRate));
       const max = Math.max(...services.map(s => s.hourlyRate));
-      return [min, max];
-    } else {
+      return [min, max]} else {
       const min = Math.min(...services.map(s => s.price));
       const max = Math.max(...services.map(s => s.price));
-      return [min, max];
-    }
+      return [min, max]}
   };
 
-  const renderPricingCard = (service: any) => {
+  const renderPricingCard = (service)  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -109,7 +99,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -162,8 +152,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </div>
           </div>
         </div>
-      );
-    } else if (activeTab === 'it') {
+      )} else if (activeTab === 'it') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -193,7 +182,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -246,8 +235,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </div>
           </div>
         </div>
-      );
-    } else {
+      )} else {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -277,7 +265,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}
@@ -330,8 +318,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
   };
 
   const priceRangeData = getPriceRange();
@@ -496,8 +483,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <button
                   onClick={() => {
                     setPriceRange([priceRangeData[0], priceRangeData[1]]);
-                    setSelectedCategory('all');
-                  }}
+                    setSelectedCategory('all')}}
                   className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
                 >
                   Reset Filters
@@ -545,8 +531,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <button
                 onClick={() => {
                   setPriceRange([priceRangeData[0], priceRangeData[1]]);
-                  setSelectedCategory('all');
-                }}
+                  setSelectedCategory('all')}}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
@@ -621,7 +606,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2030;

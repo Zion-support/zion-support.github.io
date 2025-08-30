@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { TrendingUp, Award, Users, Clock } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useInView  } from 'framer-motion.ts';
+import { useRef  } from 'react.ts';
+import { TrendingUp, Award, Users, Clock  } from 'lucide-react.ts';
 
 interface Stat {
+
   number: string;
   label: string;
   description: string;
   avatar: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-}
+icon: React.ComponentType<{ className?: string}>;
+  color: string}
 
-interface StatsSectionProps {
-  stats: Stat[];
-}
+interface StatsSectionProps extends React.PropsWithChildren<{}> {
+
+  stats: Stat[]}
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [counts, setCounts] = useState<{ [key: string]: number }>({});
+  const [counts, setCounts] = useState<any>({});
 
-  useEffect(() => {
+  useEffect(()  => {
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
@@ -35,19 +35,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             current += increment;
             if (current >= targetNumber) {
               current = targetNumber;
-              clearInterval(countTimer);
-            }
+              clearInterval(countTimer)}
             
             setCounts(prev => ({
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            }))}, 50)})}, 500);
 
-      return () => clearTimeout(timer);
-    }
+      return () => clearTimeout(timer)}
   }, [isInView, stats]);
 
   return (
@@ -68,8 +63,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+        <div ref={ref} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
@@ -119,7 +114,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default StatsSection;

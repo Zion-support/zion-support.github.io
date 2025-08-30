@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
   Brain, 
   Zap, 
   Globe, 
@@ -32,9 +31,9 @@ import {
   BarChart3,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const InnovativeServicesHub: React.FC = () => {
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       id: 'ultimate-2025',
@@ -43,7 +42,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Rocket,
       color: 'from-blue-600 to-purple-600',
       route: '/ultimate-services-2025',
-      features: ['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
+      features['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
     {
@@ -53,7 +52,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       route: '/advanced-services-2026',
-      features: ['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
+      features['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
     {
@@ -63,7 +62,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Server,
       color: 'from-green-600 to-teal-600',
       route: '/services',
-      features: ['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
+      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
@@ -73,7 +72,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Globe,
       color: 'from-emerald-600 to-green-600',
       route: '/green-it',
-      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
+      features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
     }
   ];
@@ -218,8 +217,8 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {serviceCategories.map((category) => {
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+          {serviceCategories.map((category)  => {
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -279,8 +278,7 @@ const InnovativeServicesHub: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       </motion.div>
 
@@ -300,8 +298,8 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+          {featuredServices.map((service, index)  => (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
@@ -407,7 +405,6 @@ const InnovativeServicesHub: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )};
 
 export default InnovativeServicesHub;

@@ -12,5 +12,4 @@ export default function Terms() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

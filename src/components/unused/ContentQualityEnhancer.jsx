@@ -36,8 +36,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'seo'
                 });
                 seoScore -= 10;
-                engagementScore -= 10;
-            }
+                engagementScore -= 10}
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
                 issues.push({
@@ -52,8 +51,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'engagement'
                 });
                 engagementScore -= 5;
-                seoScore -= 3;
-            }
+                seoScore -= 3}
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
                 issues.push({
@@ -68,8 +66,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'readability'
                 });
                 readabilityScore -= 5;
-                engagementScore -= 3;
-            }
+                engagementScore -= 3}
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
                 const level = parseInt(element.tagName.charAt(1));
@@ -88,16 +85,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Ensure heading levels follow logical sequence',
                             impact: 'accessibility'
                         });
-                        seoScore -= 3;
-                    }
+                        seoScore -= 3}
                 }
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {};
             commonWords.forEach(word => {
-                wordFrequency[word] = (wordFrequency[word] || 0) + 1;
-            });
+                wordFrequency[word] = (wordFrequency[word] || 0) + 1});
             Object.entries(wordFrequency).forEach(([word, count]) => {
                 if (count > 5 && word.length > 3) {
                     const density = (count / commonWords.length) * 100;
@@ -113,8 +108,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Reduce keyword density for more natural content',
                             impact: 'seo'
                         });
-                        seoScore -= 5;
-                    }
+                        seoScore -= 5}
                 }
             });
             // Check for proper meta descriptions
@@ -132,8 +126,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
-                    seoScore -= 5;
-                }
+                    seoScore -= 5}
                 else if (content.length > 160) {
                     issues.push({
                         id: `long-meta-${index}`,
@@ -146,8 +139,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
-                    seoScore -= 2;
-                }
+                    seoScore -= 2}
             }
             // Check for broken links
             if (element.tagName === 'A') {
@@ -164,8 +156,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Ensure link points to valid URL or page section',
                         impact: 'engagement'
                     });
-                    engagementScore -= 3;
-                }
+                    engagementScore -= 3}
             }
             // Check for images without alt text
             if (element.tagName === 'IMG') {
@@ -183,8 +174,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'accessibility'
                     });
                     seoScore -= 8;
-                    engagementScore -= 5;
-                }
+                    engagementScore -= 5}
             }
         });
         // Generate suggestions based on analysis
@@ -197,8 +187,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
-            });
-        }
+            })}
         if (readabilityScore < 80) {
             suggestions.push({
                 id: 'improve-readability',
@@ -208,8 +197,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
-            });
-        }
+            })}
         if (seoScore < 80) {
             suggestions.push({
                 id: 'seo-optimization',
@@ -219,8 +207,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
-            });
-        }
+            })}
         if (engagementScore < 80) {
             suggestions.push({
                 id: 'engagement-improvement',
@@ -230,8 +217,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
-            });
-        }
+            })}
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
@@ -244,8 +230,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             overallScore: Math.max(0, Math.min(100, overallScore))
         };
         setAnalysis(analysisResult);
-        setIsAnalyzing(false);
-    }, [targetElements]);
+        setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
         if (!analysis)
@@ -258,16 +243,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     case 'empty-content':
                         if (issue.element.textContent?.trim() === '') {
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
-                            fixedCount++;
-                        }
+                            fixedCount++}
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
                             const img = issue.element;
                             if (!img.alt) {
                                 img.alt = 'Image';
-                                fixedCount++;
-                            }
+                                fixedCount++}
                         }
                         break;
                     case 'short-meta':
@@ -276,22 +259,18 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         break;
                     case 'broken-link':
                         // These would require more complex logic to fix
-                        break;
-                }
+                        break}
             }
         });
         if (fixedCount > 0) {
             // Re-analyze content after fixes
-            setTimeout(analyzeContent, 500);
-        }
-        return fixedCount;
-    }, [analysis, analyzeContent]);
+            setTimeout(analyzeContent, 500)}
+        return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page
     const highlightElement = useCallback((element) => {
         // Remove previous highlights
         document.querySelectorAll('.content-highlight').forEach(el => {
-            el.classList.remove('content-highlight');
-        });
+            el.classList.remove('content-highlight')});
         // Add highlight to selected element
         element.classList.add('content-highlight');
         setSelectedElement(element);
@@ -300,15 +279,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         // Remove highlight after 3 seconds
         setTimeout(() => {
             element.classList.remove('content-highlight');
-            setSelectedElement(null);
-        }, 3000);
-    }, []);
+            setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
         if (autoAnalyze) {
             const timer = setTimeout(analyzeContent, 3000);
-            return () => clearTimeout(timer);
-        }
+            return () => clearTimeout(timer)}
     }, [autoAnalyze, analyzeContent]);
     // Get score color
     const getScoreColor = (score) => {
@@ -316,24 +292,21 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             return 'text-green-600';
         if (score >= 60)
             return 'text-yellow-600';
-        return 'text-red-600';
-    };
+        return 'text-red-600'};
     // Get score background color
     const getScoreBgColor = (score) => {
         if (score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
         if (score >= 60)
             return 'bg-yellow-100 dark:bg-yellow-900/20';
-        return 'bg-red-100 dark:bg-red-900/20';
-    };
+        return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -341,8 +314,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     return (<>
       {/* Content Quality Toggle Button */}
@@ -562,8 +534,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         a.href = url;
                         a.download = 'content-quality-report.json';
                         a.click();
-                        URL.revokeObjectURL(url);
-                    }} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
+                        URL.revokeObjectURL(url)}} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
                 </div>)}
@@ -577,9 +548,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           outline: 3px solid #8b5cf6 !important;
           outline-offset: 2px !important;
           background-color: rgba(139, 92, 246, 0.1) !important;
-          transition: all 0.3s ease !important;
-        }
+          transition: all 0.3s ease !important}
       `}</style>
-    </>);
-};
+    </>)};
 export default ContentQualityEnhancer;

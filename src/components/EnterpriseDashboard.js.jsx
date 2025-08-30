@@ -103,7 +103,7 @@ export const EnterpriseDashboard = () => {
             description: 'Multiple login attempts from different locations within short time frame',
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
             status: 'investigating',
-            affected: ['user-123', 'user-456'],
+            affected['user-123', 'user-456'],
             source: 'Security Monitoring System'
         },
         {
@@ -114,7 +114,7 @@ export const EnterpriseDashboard = () => {
             description: 'User attempted to access restricted resource without proper permissions',
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
             status: 'resolved',
-            affected: ['user-789'],
+            affected['user-789'],
             source: 'Access Control System'
         }
     ]);
@@ -154,45 +154,36 @@ export const EnterpriseDashboard = () => {
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange
-            });
-        }
+            })}
         catch (error) {
             console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
-            });
-        }
+            })}
         finally {
-            setIsRefreshing(false);
-        }
+            setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
         const interval = setInterval(refreshData, refreshInterval);
-        return () => clearInterval(interval);
-    }, [refreshInterval, refreshData]);
+        return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data
     const filteredSecurityAlerts = useMemo(() => {
         let filtered = securityAlerts;
         if (filterStatus !== 'all') {
-            filtered = filtered.filter(alert => alert.status === filterStatus);
-        }
+            filtered = filtered.filter(alert => alert.status === filterStatus)}
         if (searchQuery) {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
-        return filtered;
-    }, [securityAlerts, filterStatus, searchQuery]);
+                alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
+        return filtered}, [securityAlerts, filterStatus, searchQuery]);
     const filteredUserActivities = useMemo(() => {
         let filtered = userActivities;
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                activity.resource.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
-        return filtered;
-    }, [userActivities, searchQuery]);
+                activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
+        return filtered}, [userActivities, searchQuery]);
     // Get status color
     const getStatusColor = (status) => {
         switch (status) {
@@ -211,8 +202,7 @@ export const EnterpriseDashboard = () => {
             case 'maintenance':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
     };
     // Get severity color
     const getSeverityColor = (severity) => {
@@ -226,8 +216,7 @@ export const EnterpriseDashboard = () => {
             case 'low':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
     };
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -629,5 +618,4 @@ export const EnterpriseDashboard = () => {
             </motion.div>)}
         </AnimatePresence>
       </div>
-    </div>);
-};
+    </div>)};

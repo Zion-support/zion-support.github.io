@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink  } from 'lucide-react.ts';
 
-export default function SystemStatus() {
+export default function SystemStatus(...args[]):  {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -88,8 +88,8 @@ export default function SystemStatus() {
       severity: 'maintenance',
       startTime: '2025-01-15T02:00:00Z',
       endTime: '2025-01-15T04:00:00Z',
-      affectedServices: ['AI Services'],
-      updates: [
+      affectedServices['AI Services'],
+      updates[
         {
           time: '2025-01-15T02:00:00Z',
           message: 'Maintenance started as scheduled'
@@ -112,8 +112,8 @@ export default function SystemStatus() {
       severity: 'minor',
       startTime: '2025-01-10T14:20:00Z',
       endTime: '2025-01-10T16:45:00Z',
-      affectedServices: ['API Gateway', 'Core Platform'],
-      updates: [
+      affectedServices['API Gateway', 'Core Platform'],
+      updates[
         {
           time: '2025-01-10T14:20:00Z',
           message: 'Investigating increased API response times'
@@ -130,7 +130,7 @@ export default function SystemStatus() {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -141,11 +141,10 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'text-blue-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500'}
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string)  => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -156,11 +155,10 @@ export default function SystemStatus() {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (severity: string)  => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500';
@@ -171,32 +169,28 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'bg-blue-500';
       default:
-        return 'bg-gray-500';
-    }
+        return 'bg-gray-500'}
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    });
-  };
+    })};
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false);
-  };
+    setIsRefreshing(false)};
 
   useEffect(() => {
     const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -266,8 +260,8 @@ export default function SystemStatus() {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index)  => (
                 <div
                   key={index}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -405,5 +399,4 @@ export default function SystemStatus() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

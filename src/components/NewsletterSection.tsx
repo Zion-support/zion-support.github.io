@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react.ts';
 
-const NewsletterSection: React.FC = () => {
+const NewsletterSection: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!email) return;
 
@@ -17,9 +17,7 @@ const NewsletterSection: React.FC = () => {
     setTimeout(() => {
       setIsSubscribed(true);
       setIsLoading(false);
-      setEmail('');
-    }, 1500);
-  };
+      setEmail('')}, 1500)};
 
   const benefits = [
     {
@@ -66,8 +64,7 @@ const NewsletterSection: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    );
-  }
+    )}
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -109,7 +106,7 @@ const NewsletterSection: React.FC = () => {
 
             <div className="flex items-center text-sm text-gray-400">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at any time</span>
+              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 
@@ -180,7 +177,6 @@ const NewsletterSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default NewsletterSection;

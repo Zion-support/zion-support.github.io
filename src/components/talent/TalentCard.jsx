@@ -10,18 +10,15 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         e.preventDefault();
         e.stopPropagation();
         if (onMessage) {
-            onMessage(talent);
-        }
+            onMessage(talent)}
         else {
-            navigate(`/messages?talentId=${talent.id}`);
-        }
+            navigate(`/messages?talentId=${talent.id}`)}
     };
     const handleBook = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onBook) {
-            onBook(talent);
-        }
+            onBook(talent)}
     };
     // Extract skills - limit to 5 for display
     const skills = talent.skills?.slice(0, 5) || [];
@@ -93,7 +90,6 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
           </div>
         </div>
       </div>
-    </Card>);
-};
+    </Card>)};
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';

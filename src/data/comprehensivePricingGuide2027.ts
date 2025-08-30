@@ -1,47 +1,41 @@
 export interface ComprehensivePricingItem2027 {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
-    starter: {
+pricing: {
+starter: {
       price: string;
       billing: string;
       features: string[];
-      limitations: string[];
-    };
+      limitations: string[]};
     professional: {
       price: string;
       billing: string;
       features: string[];
-      limitations: string[];
-    };
+      limitations: string[]};
     enterprise: {
       price: string;
       billing: string;
       features: string[];
-      limitations: string[];
-    };
+      limitations: string[]};
     custom: {
       description: string;
       features: string[];
-      contact: string;
-    };
-  };
+      contact: string}};
   marketInfo: {
     marketSize: string;
     growthRate: string;
     averageMarketPrice: string;
     competitors: string[];
     roi: string;
-    setupTime: string;
-  };
+    setupTime: string};
   features: {
     core: string[];
     advanced: string[];
-    enterprise: string[];
-  };
+    enterprise: string[]};
   benefits: string[];
   targetAudience: string[];
   useCases: string[];
@@ -52,15 +46,12 @@ export interface ComprehensivePricingItem2027 {
     phone: boolean;
     chat: boolean;
     dedicated: boolean;
-    sla: string;
-  };
+    sla: string};
   contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
-}
+    address: string}}
 export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
   // Web3 & Metaverse Solutions
   {
@@ -73,7 +64,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       starter: {
         price: '$2,500/month',
         billing: 'monthly',
-        features: [
+        features[
           'Basic 3D virtual storefront',
           'NFT marketplace (up to 1,000 items)',
           'Basic VR/AR shopping experience',
@@ -81,7 +72,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Basic analytics dashboard',
           'Email support'
         ],
-        limitations: [
+        limitations[
           'Limited customization options',
           'Basic payment methods only',
           'Standard hosting',
@@ -91,7 +82,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       professional: {
         price: '$5,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Advanced 3D virtual storefronts',
           'NFT marketplace (up to 10,000 items)',
           'Advanced VR/AR experiences',
@@ -101,7 +92,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Priority support',
           'Custom branding'
         ],
-        limitations: [
+        limitations[
           'Limited API access',
           'Standard SLA',
           'No dedicated account manager'
@@ -110,7 +101,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       enterprise: {
         price: '$15,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Unlimited virtual storefronts',
           'Unlimited NFT marketplace',
           'Custom VR/AR development',
@@ -122,14 +113,14 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom integrations',
           'Advanced security features'
         ],
-        limitations: [
+        limitations[
           'Custom development time required',
           'Minimum 12-month contract'
         ]
       },
       custom: {
         description: 'Fully customized metaverse commerce solution for large enterprises',
-        features: [
+        features[
           'Custom development',
           'Dedicated infrastructure',
           'Custom AI models',
@@ -144,12 +135,12 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       marketSize: '$800B by 2028',
       growthRate: '45% CAGR',
       averageMarketPrice: '$3,500/month',
-      competitors: ['Meta', 'Roblox', 'Decentraland', 'Spatial'],
+      competitors['Meta', 'Roblox', 'Decentraland', 'Spatial'],
       roi: '300-500% within 18 months',
       setupTime: '4-6 weeks'
     },
     features: {
-      core: [
+      core[
         '3D virtual storefronts',
         'NFT marketplace integration',
         'VR/AR shopping experiences',
@@ -157,7 +148,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Real-time analytics',
         'Multi-currency support'
       ],
-      advanced: [
+      advanced[
         'AI-powered recommendations',
         'Social commerce features',
         'Advanced customization',
@@ -165,7 +156,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Advanced security',
         'API access'
       ],
-      enterprise: [
+      enterprise[
         'Custom development',
         'White-label solution',
         'Advanced AI/ML',
@@ -174,7 +165,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Compliance features'
       ]
     },
-    benefits: [
+    benefits[
       'Tap into $800B+ metaverse economy',
       'Increase customer engagement by 300%',
       'Reduce physical retail costs',
@@ -182,7 +173,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Enhanced customer experience',
       'New revenue streams'
     ],
-    targetAudience: [
+    targetAudience[
       'E-commerce businesses',
       'Retail brands',
       'Fashion companies',
@@ -190,7 +181,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Gaming companies',
       'Entertainment companies'
     ],
-    useCases: [
+    useCases[
       'Virtual retail stores',
       'Digital fashion shows',
       'Virtual events and conferences',
@@ -198,7 +189,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Virtual real estate',
       'Educational experiences'
     ],
-    integrations: [
+    integrations[
       'Shopify',
       'WooCommerce',
       'Stripe',
@@ -208,7 +199,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Social media platforms',
       'Analytics tools'
     ],
-    compliance: ['GDPR', 'CCPA', 'SOC2', 'PCI DSS', 'Data privacy regulations'],
+    compliance['GDPR', 'CCPA', 'SOC2', 'PCI DSS', 'Data privacy regulations'],
     support: {
       email: true,
       phone: true,
@@ -234,7 +225,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       starter: {
         price: '$199/month',
         billing: 'monthly',
-        features: [
+        features[
           'Basic yield optimization',
           'Up to 5 strategies',
           'Basic risk assessment',
@@ -242,7 +233,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Email alerts',
           'Basic analytics'
         ],
-        limitations: [
+        limitations[
           'Limited strategy options',
           'Basic risk management',
           'No advanced features',
@@ -252,7 +243,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       professional: {
         price: '$499/month',
         billing: 'monthly',
-        features: [
+        features[
           'Advanced yield optimization',
           'Up to 20 strategies',
           'Advanced risk management',
@@ -262,7 +253,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Mobile app access',
           'API access'
         ],
-        limitations: [
+        limitations[
           'Limited custom strategies',
           'Standard SLA',
           'No dedicated support'
@@ -271,7 +262,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       enterprise: {
         price: '$1,999/month',
         billing: 'monthly',
-        features: [
+        features[
           'Unlimited strategies',
           'Custom strategy development',
           'Advanced risk management',
@@ -282,14 +273,14 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Advanced reporting',
           'Compliance features'
         ],
-        limitations: [
+        limitations[
           'Minimum 6-month contract',
           'Custom development time required'
         ]
       },
       custom: {
         description: 'Custom DeFi solutions for institutional clients',
-        features: [
+        features[
           'Custom strategy development',
           'Dedicated infrastructure',
           'Advanced risk models',
@@ -304,12 +295,12 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       marketSize: '$50B+ DeFi market',
       growthRate: '60% CAGR',
       averageMarketPrice: '$300/month',
-      competitors: ['Yearn Finance', 'Beefy Finance', 'Harvest Finance', 'Convex Finance'],
+      competitors['Yearn Finance', 'Beefy Finance', 'Harvest Finance', 'Convex Finance'],
       roi: '200-400% annually',
       setupTime: '1-2 weeks'
     },
     features: {
-      core: [
+      core[
         'Multi-chain yield farming',
         'AI strategy optimization',
         'Risk assessment algorithms',
@@ -317,7 +308,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Real-time alerts',
         'Basic analytics'
       ],
-      advanced: [
+      advanced[
         'Automated rebalancing',
         'Advanced risk management',
         'Strategy backtesting',
@@ -325,7 +316,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Mobile app support',
         'API access'
       ],
-      enterprise: [
+      enterprise[
         'Custom strategies',
         'Institutional features',
         'Advanced compliance',
@@ -334,7 +325,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Advanced reporting'
       ]
     },
-    benefits: [
+    benefits[
       'Optimize yields by 25-40%',
       'Reduce impermanent loss',
       'Automated portfolio management',
@@ -342,7 +333,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Risk management',
       'Time savings'
     ],
-    targetAudience: [
+    targetAudience[
       'DeFi users',
       'Crypto investors',
       'Institutional investors',
@@ -350,7 +341,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Crypto funds',
       'Individual traders'
     ],
-    useCases: [
+    useCases[
       'Yield farming optimization',
       'Portfolio management',
       'Risk management',
@@ -358,7 +349,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Strategy development',
       'Performance tracking'
     ],
-    integrations: [
+    integrations[
       'MetaMask',
       'WalletConnect',
       'Ledger',
@@ -368,7 +359,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Analytics platforms',
       'Trading tools'
     ],
-    compliance: ['KYC/AML', 'Regulatory reporting', 'Tax compliance', 'Data privacy'],
+    compliance['KYC/AML', 'Regulatory reporting', 'Tax compliance', 'Data privacy'],
     support: {
       email: true,
       phone: true,
@@ -394,7 +385,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       starter: {
         price: '$299/month',
         billing: 'monthly',
-        features: [
+        features[
           'Basic cloud hosting',
           'Renewable energy powered',
           'Carbon offset tracking',
@@ -402,7 +393,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Email support',
           'Standard SLA'
         ],
-        limitations: [
+        limitations[
           'Limited resources',
           'Basic features only',
           'Standard performance',
@@ -412,7 +403,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       professional: {
         price: '$799/month',
         billing: 'monthly',
-        features: [
+        features[
           'Advanced cloud hosting',
           'Green computing algorithms',
           'Advanced sustainability reporting',
@@ -422,7 +413,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom configurations',
           'API access'
         ],
-        limitations: [
+        limitations[
           'Limited customization',
           'Standard SLA',
           'No dedicated support'
@@ -431,7 +422,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       enterprise: {
         price: '$2,999/month',
         billing: 'monthly',
-        features: [
+        features[
           'Enterprise cloud infrastructure',
           'Custom green computing',
           'Advanced carbon tracking',
@@ -442,14 +433,14 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Compliance features',
           'Dedicated account manager'
         ],
-        limitations: [
+        limitations[
           'Minimum 12-month contract',
           'Custom setup time required'
         ]
       },
       custom: {
         description: 'Custom sustainable cloud solutions for large enterprises',
-        features: [
+        features[
           'Custom infrastructure design',
           'Advanced sustainability features',
           'Custom compliance',
@@ -464,12 +455,12 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       marketSize: '$500B+ cloud market',
       growthRate: '35% CAGR',
       averageMarketPrice: '$500/month',
-      competitors: ['Google Cloud', 'AWS', 'Microsoft Azure', 'DigitalOcean'],
+      competitors['Google Cloud', 'AWS', 'Microsoft Azure', 'DigitalOcean'],
       roi: '20-40% cost savings + ESG benefits',
       setupTime: '2-4 weeks'
     },
     features: {
-      core: [
+      core[
         'Renewable energy powered',
         'Carbon offset tracking',
         'Green computing algorithms',
@@ -477,7 +468,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Basic sustainability reporting',
         'Standard cloud features'
       ],
-      advanced: [
+      advanced[
         'Advanced sustainability metrics',
         'Carbon credit marketplace',
         'Green hosting options',
@@ -485,7 +476,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Advanced analytics',
         'Custom configurations'
       ],
-      enterprise: [
+      enterprise[
         'Custom sustainability features',
         'Advanced compliance',
         'Dedicated infrastructure',
@@ -494,7 +485,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Dedicated support'
       ]
     },
-    benefits: [
+    benefits[
       'Reduce carbon footprint by 90%',
       'Meet ESG compliance requirements',
       'Attract environmentally conscious customers',
@@ -502,7 +493,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Improved brand reputation',
       'Cost savings'
     ],
-    targetAudience: [
+    targetAudience[
       'Tech companies',
       'Enterprises',
       'Startups',
@@ -510,7 +501,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Educational institutions',
       'Non-profit organizations'
     ],
-    useCases: [
+    useCases[
       'Web hosting',
       'Application deployment',
       'Data storage',
@@ -518,7 +509,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Development environments',
       'Testing and staging'
     ],
-    integrations: [
+    integrations[
       'Kubernetes',
       'Docker',
       'Terraform',
@@ -528,7 +519,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Analytics platforms',
       'Security tools'
     ],
-    compliance: ['ISO 14001', 'Carbon Trust', 'ESG standards', 'SOC2', 'ISO 27001'],
+    compliance['ISO 14001', 'Carbon Trust', 'ESG standards', 'SOC2', 'ISO 27001'],
     support: {
       email: true,
       phone: true,
@@ -554,7 +545,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       starter: {
         price: '$5,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Basic BCI hardware',
           'Standard EEG processing',
           'Basic brain signal analysis',
@@ -562,7 +553,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Email support',
           'Basic documentation'
         ],
-        limitations: [
+        limitations[
           'Limited processing power',
           'Basic algorithms only',
           'Standard accuracy',
@@ -572,7 +563,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       professional: {
         price: '$15,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Advanced BCI hardware',
           'High-resolution EEG processing',
           'Advanced signal analysis',
@@ -582,7 +573,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Advanced documentation',
           'Training materials'
         ],
-        limitations: [
+        limitations[
           'Limited customization',
           'Standard SLA',
           'No dedicated support'
@@ -591,7 +582,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       enterprise: {
         price: '$50,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Enterprise BCI platform',
           'Custom hardware integration',
           'Advanced AI algorithms',
@@ -602,14 +593,14 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Advanced compliance',
           'Dedicated account manager'
         ],
-        limitations: [
+        limitations[
           'Minimum 24-month contract',
           'Custom development time required'
         ]
       },
       custom: {
         description: 'Custom BCI solutions for research institutions and medical facilities',
-        features: [
+        features[
           'Custom hardware development',
           'Advanced research tools',
           'Custom AI algorithms',
@@ -624,12 +615,12 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       marketSize: '$2B+ BCI market',
       growthRate: '55% CAGR',
       averageMarketPrice: '$20,000/month',
-      competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI'],
+      competitors['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI'],
       roi: 'Research and humanitarian impact',
       setupTime: '3-6 months'
     },
     features: {
-      core: [
+      core[
         'High-resolution EEG processing',
         'Real-time brain signal analysis',
         'Basic machine learning',
@@ -637,7 +628,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Patient monitoring',
         'Basic compliance'
       ],
-      advanced: [
+      advanced[
         'Advanced AI algorithms',
         'Custom research tools',
         'Advanced analytics',
@@ -645,7 +636,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Advanced compliance',
         'Custom integrations'
       ],
-      enterprise: [
+      enterprise[
         'Custom hardware integration',
         'Advanced AI research',
         'Custom compliance',
@@ -654,7 +645,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Research partnerships'
       ]
     },
-    benefits: [
+    benefits[
       'Enable communication for paralyzed patients',
       'Advance neuroscience research',
       'Improve accessibility technology',
@@ -662,7 +653,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Medical breakthroughs',
       'Research advancement'
     ],
-    targetAudience: [
+    targetAudience[
       'Medical institutions',
       'Research universities',
       'Healthcare companies',
@@ -670,7 +661,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Government research agencies',
       'Pharmaceutical companies'
     ],
-    useCases: [
+    useCases[
       'Medical research',
       'Patient communication',
       'Accessibility solutions',
@@ -678,7 +669,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Neuroscience research',
       'Medical diagnostics'
     ],
-    integrations: [
+    integrations[
       'Medical devices',
       'Research platforms',
       'Analytics tools',
@@ -688,7 +679,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'AI platforms',
       'Security systems'
     ],
-    compliance: ['FDA', 'CE marking', 'Medical device regulations', 'HIPAA', 'Research ethics'],
+    compliance['FDA', 'CE marking', 'Medical device regulations', 'HIPAA', 'Research ethics'],
     support: {
       email: true,
       phone: true,
@@ -714,7 +705,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       starter: {
         price: '$10,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Basic plasma simulation',
           'Standard reactor models',
           'Basic research tools',
@@ -722,7 +713,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Basic documentation',
           'Standard compute resources'
         ],
-        limitations: [
+        limitations[
           'Limited simulation complexity',
           'Basic models only',
           'Standard performance',
@@ -732,7 +723,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       professional: {
         price: '$25,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Advanced plasma simulation',
           'Advanced reactor models',
           '3D visualization',
@@ -742,7 +733,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Advanced documentation',
           'Training materials'
         ],
-        limitations: [
+        limitations[
           'Limited customization',
           'Standard SLA',
           'No dedicated support'
@@ -751,7 +742,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       enterprise: {
         price: '$100,000/month',
         billing: 'monthly',
-        features: [
+        features[
           'Enterprise simulation platform',
           'Custom simulation models',
           'Advanced visualization',
@@ -762,14 +753,14 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Advanced compliance',
           'Dedicated account manager'
         ],
-        limitations: [
+        limitations[
           'Minimum 36-month contract',
           'Custom development time required'
         ]
       },
       custom: {
         description: 'Custom fusion research solutions for government and research institutions',
-        features: [
+        features[
           'Custom simulation development',
           'Advanced research tools',
           'Custom hardware integration',
@@ -784,12 +775,12 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       marketSize: '$50B+ fusion energy market',
       growthRate: '70% CAGR',
       averageMarketPrice: '$50,000/month',
-      competitors: ['ITER', 'Commonwealth Fusion', 'General Fusion', 'TAE Technologies'],
+      competitors['ITER', 'Commonwealth Fusion', 'General Fusion', 'TAE Technologies'],
       roi: 'Research advancement and energy innovation',
       setupTime: '6-12 months'
     },
     features: {
-      core: [
+      core[
         'Plasma physics simulation',
         'Basic reactor design tools',
         '3D visualization',
@@ -797,7 +788,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Basic analytics',
         'Standard compliance'
       ],
-      advanced: [
+      advanced[
         'Advanced simulation models',
         'Performance optimization',
         'Advanced analytics',
@@ -805,7 +796,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Custom models',
         'Advanced compliance'
       ],
-      enterprise: [
+      enterprise[
         'Custom simulation development',
         'Advanced research tools',
         'Custom hardware integration',
@@ -814,7 +805,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
         'Research partnerships'
       ]
     },
-    benefits: [
+    benefits[
       'Accelerate fusion research',
       'Reduce experimental costs',
       'Improve reactor designs',
@@ -822,7 +813,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Energy innovation',
       'Research collaboration'
     ],
-    targetAudience: [
+    targetAudience[
       'Research institutions',
       'Energy companies',
       'Government agencies',
@@ -830,7 +821,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Defense contractors',
       'International organizations'
     ],
-    useCases: [
+    useCases[
       'Fusion research',
       'Reactor design',
       'Plasma physics',
@@ -838,7 +829,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'Scientific research',
       'Educational purposes'
     ],
-    integrations: [
+    integrations[
       'Research platforms',
       'Scientific computing tools',
       'Data analysis software',
@@ -848,7 +839,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       'AI platforms',
       'Security systems'
     ],
-    compliance: ['Research standards', 'Data security', 'International collaboration', 'Export controls'],
+    compliance['Research standards', 'Data security', 'International collaboration', 'Export controls'],
     support: {
       email: true,
       phone: true,
@@ -865,9 +856,9 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
   }
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string) => 
+export const getComprehensivePricingGuide2027ByCategory = (category: string)  => 
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string) => 
+export const getComprehensivePricingGuide2027ById = (id: string)  => 
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [
   'Metaverse Solutions',
@@ -877,9 +868,9 @@ export const pricingCategories2027 = [
   'Fusion Energy Solutions'
 ];
 export const pricingSubcategories2027 = {
-  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
-  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
-  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
-  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
-  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
+  'Metaverse Solutions'['E-commerce', 'Gaming', 'Social', 'Education'],
+  'Web3 Solutions'['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
+  'Sustainable Tech'['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
+  'NeuroTech Solutions'['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
+  'Fusion Energy Solutions'['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
 };

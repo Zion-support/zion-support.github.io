@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   TrendingUp, 
   BarChart3, 
   Zap, 
@@ -16,8 +15,8 @@ import {
   Activity,
   DollarSign,
   BarChart
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
 const AIQuantumFinancialTrading = () => {
   const features = [
@@ -58,7 +57,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Starter Plan",
       price: "$4,999",
       period: "/month",
-      features: [
+      features[
         "Basic AI trading signals",
         "Portfolio optimization",
         "Risk management tools",
@@ -71,7 +70,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Professional Plan",
       price: "$12,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI algorithms",
         "Quantum computing access",
         "Custom strategy development",
@@ -85,7 +84,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Enterprise Plan",
       price: "$29,999",
       period: "/month",
-      features: [
+      features[
         "Full quantum AI suite",
         "Unlimited strategies",
         "Custom development",
@@ -101,22 +100,22 @@ const AIQuantumFinancialTrading = () => {
     {
       industry: "Hedge Funds",
       description: "Optimize portfolio allocation and execute complex trading strategies with AI-driven insights and quantum computing power",
-      benefits: ["35% improvement in Sharpe ratio", "40% faster execution", "25% reduction in risk"]
+      benefits["35% improvement in Sharpe ratio", "40% faster execution", "25% reduction in risk"]
     },
     {
       industry: "Investment Banks",
       description: "Enhance trading desk performance with real-time market analysis and automated risk management",
-      benefits: ["30% increase in trading volume", "50% faster decision making", "Improved compliance"]
+      benefits["30% increase in trading volume", "50% faster decision making", "Improved compliance"]
     },
     {
       industry: "Asset Managers",
       description: "Optimize portfolio performance and manage risk across multiple asset classes with AI assistance",
-      benefits: ["Better asset allocation", "Reduced volatility", "Enhanced returns"]
+      benefits["Better asset allocation", "Reduced volatility", "Enhanced returns"]
     },
     {
       industry: "Retail Traders",
       description: "Access institutional-grade trading tools and AI insights previously available only to large firms",
-      benefits: ["Professional-grade tools", "AI-powered insights", "Risk management"]
+      benefits["Professional-grade tools", "AI-powered insights", "Risk management"]
     }
   ];
 
@@ -189,8 +188,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +227,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,8 +301,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -349,8 +348,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -427,7 +426,6 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIQuantumFinancialTrading;

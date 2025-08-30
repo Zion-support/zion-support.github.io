@@ -1,4 +1,4 @@
-export const quantumSpaceTechServices2026 = [] as any[];
+export const quantumSpaceTechServices2026 = [] as [];
 export interface QuantumSpaceTechService2026 {
   id: string;
   name: string;
@@ -12,9 +12,7 @@ export interface QuantumSpaceTechService2026 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",
@@ -22,7 +20,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     tagline: "Quantum computing meets space technology",
     price: "$599/month",
     description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
-    features: [
+    features[
       "Quantum computing",
       "Space technology",
       "Advanced algorithms",

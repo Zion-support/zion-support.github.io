@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const MlopsPipeline: React.FC = () => (
+const MlopsPipeline: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="MLOps Pipeline - Zion Tech Group" description="Automated training, evaluation, deployment, and monitoring for ML models." />
     <section className="container mx-auto px-4 py-12">

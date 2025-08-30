@@ -26,8 +26,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
-      </div>);
-    }
+      </div>)}
     const active = isWishlisted(product.id);
     const dispatch = useDispatch();
     // Title is now guaranteed to be a non-empty string by the check above.
@@ -38,8 +37,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             title: productTitle,
             price: product.price ?? 0,
             image: imageUrl || undefined,
-        }));
-    };
+        }))};
     const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
     const imageAltText = productTitle;
     const handleImageError = (error) => {
@@ -48,8 +46,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             captureException(error, {
                 product: product.id,
                 imageUrl,
-            });
-        }
+            })}
     };
     const isMobile = useMediaQuery('(max-width: 768px)');
     const isTablet = useMediaQuery('(max-width: 1200px)');
@@ -83,8 +80,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
               <TooltipTrigger asChild>
                 <Button onClick={(e) => {
                 e.stopPropagation();
-                onBuy();
-            }} size="sm" variant="outline" className="flex-1" data-testid="buy-now-button" disabled={!isAuthenticated || buyDisabled}>
+                onBuy()}} size="sm" variant="outline" className="flex-1" data-testid="buy-now-button" disabled={!isAuthenticated || buyDisabled}>
                   Buy Now
                 </Button>
               </TooltipTrigger>
@@ -92,5 +88,4 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             </Tooltip>
           </TooltipProvider>)}
       </div>
-    </div>);
-}
+    </div>)}

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -50,26 +49,26 @@ import {
   Gauge,
   ShieldCheck,
   X
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 // Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices2026';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
+import { ALL_REVOLUTIONARY_SERVICES_2026  } from '../data/comprehensiveServices2026';
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  };
+    billingCycle: string};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -80,15 +79,13 @@ interface Service {
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 
-const ComprehensiveServicesShowcase2027: React.FC = () => {
+const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [sortBy, setSortBy] = useState<any>('name');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
@@ -118,11 +115,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
     // Add services from ALL_REVOLUTIONARY_SERVICES_2026
-    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service => {
+    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service  => {
       services.push({
         id: service.id,
         name: service.name,
@@ -145,16 +141,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
-    return services;
-  }, []);
+    return services}, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+    return cats.sort()}, [allServices]);
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
@@ -162,8 +155,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -178,13 +170,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
-    }
+        break}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -207,11 +197,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
-        return <Lightbulb className="w-6 h-6" />;
-    }
+        return <Lightbulb className="w-6 h-6" />}
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';
@@ -222,8 +211,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
   return (
@@ -290,9 +278,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -302,7 +290,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
@@ -317,9 +305,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -600,7 +588,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveServicesShowcase2027;

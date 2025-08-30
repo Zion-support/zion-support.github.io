@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { AlertTriangle, 
   Clock, 
   TrendingUp, 
   Shield, 
@@ -25,10 +24,10 @@ import {
   Mail,
   MapPin,
   Server
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
-export default function AIIncidentPostmortems() {
+export default function AIIncidentPostmortems(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -84,7 +83,7 @@ export default function AIIncidentPostmortems() {
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: [
+      features[
         'Up to 10 incidents per month',
         'Basic AI analysis',
         'Email support',
@@ -100,7 +99,7 @@ export default function AIIncidentPostmortems() {
       price: '$599',
       period: '/month',
       description: 'Ideal for growing organizations',
-      features: [
+      features[
         'Up to 50 incidents per month',
         'Advanced AI analysis',
         'Priority support',
@@ -118,7 +117,7 @@ export default function AIIncidentPostmortems() {
       price: '$1,299',
       period: '/month',
       description: 'For large enterprises with complex needs',
-      features: [
+      features[
         'Unlimited incidents',
         'Premium AI analysis',
         '24/7 dedicated support',
@@ -221,8 +220,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -260,8 +259,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -296,8 +295,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -367,8 +366,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -414,7 +413,7 @@ export default function AIIncidentPostmortems() {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -433,7 +432,7 @@ export default function AIIncidentPostmortems() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team is here to help you get started and answer any questions
+              Our team is here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -465,6 +464,5 @@ export default function AIIncidentPostmortems() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

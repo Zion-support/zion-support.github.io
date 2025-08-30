@@ -46,7 +46,7 @@ const mockChatMessages = [
         message: 'Welcome everyone to our quarterly review meeting!',
         timestamp: '2024-01-15T10:00:00.000Z',
         type: 'text',
-        reactions: []
+        reactions[]
     },
     {
         id: '2',
@@ -55,7 +55,7 @@ const mockChatMessages = [
         message: 'Thanks Sarah! I have some questions about the Q4 metrics.',
         timestamp: '2024-01-15T10:01:00.000Z',
         type: 'text',
-        reactions: [{ emoji: '👍', count: 2 }]
+        reactions[{ emoji: '👍', count: 2 }]
     },
     {
         id: '3',
@@ -64,7 +64,7 @@ const mockChatMessages = [
         message: 'Perfect! I\'ll share the presentation now.',
         timestamp: '2024-01-15T10:02:00.000Z',
         type: 'text',
-        reactions: []
+        reactions[]
     }
 ];
 const mockDocuments = [
@@ -119,19 +119,15 @@ export function AdvancedCollaborationPlatform() {
     const containerRef = useRef(null);
     const toggleMute = () => {
         setIsMuted(!isMuted);
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p));
-    };
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p))};
     const toggleVideo = () => {
         setIsVideoOff(!isVideoOff);
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p));
-    };
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p))};
     const toggleScreenShare = () => {
         setIsScreenSharing(!isScreenSharing);
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p));
-    };
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
     const toggleRecording = () => {
-        setIsRecording(!isRecording);
-    };
+        setIsRecording(!isRecording)};
     const sendChatMessage = () => {
         if (chatMessage.trim()) {
             const newMessage = {
@@ -141,22 +137,19 @@ export function AdvancedCollaborationPlatform() {
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
                 type: 'text',
-                reactions: []
+                reactions[]
             };
             setChatMessages(prev => [...prev, newMessage]);
-            setChatMessage('');
-        }
+            setChatMessage('')}
     };
     const raiseHand = () => {
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p));
-    };
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
     const filteredParticipants = participants.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
     const filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">
         <Users className="w-6 h-6"/>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -166,8 +159,7 @@ export function AdvancedCollaborationPlatform() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 flex items-center justify-between">
@@ -279,8 +271,7 @@ export function AdvancedCollaborationPlatform() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
                       <Icon className="w-4 h-4"/>
                       {tab.label}
-                    </button>);
-        })}
+                    </button>)})}
               </div>
 
               {/* Tab Content */}
@@ -409,5 +400,4 @@ export function AdvancedCollaborationPlatform() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

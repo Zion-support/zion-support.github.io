@@ -22,15 +22,13 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             return 'text-green-500';
         if (score >= 70)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     const getScoreEmoji = (score) => {
         if (score >= 90)
             return '🚀';
         if (score >= 70)
             return '⚠️';
-        return '🐌';
-    };
+        return '🐌'};
     const getMetricIcon = (metricName) => {
         const icons = {
             FCP: <Eye className="w-4 h-4"/>,
@@ -41,8 +39,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             DOMLOAD: <Activity className="w-4 h-4"/>,
             WINDOWLOAD: <Activity className="w-4 h-4"/>
         };
-        return icons[metricName] || <Activity className="w-4 h-4"/>;
-    };
+        return icons[metricName] || <Activity className="w-4 h-4"/>};
     const getMetricDescription = (metricName) => {
         const descriptions = {
             FCP: 'First Contentful Paint - Time to first content',
@@ -53,15 +50,13 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             DOMLOAD: 'DOM Content Loaded - DOM ready time',
             WINDOWLOAD: 'Window Load - Full page load time'
         };
-        return descriptions[metricName] || 'Performance metric';
-    };
+        return descriptions[metricName] || 'Performance metric'};
     const formatMetricValue = (metricName, value) => {
         if (metricName === 'CLS')
             return value.toFixed(3);
         if (metricName === 'FID')
             return `${value.toFixed(0)}ms`;
-        return `${value.toFixed(0)}ms`;
-    };
+        return `${value.toFixed(0)}ms`};
     return (<motion.div className={cn('fixed bottom-4 right-4 z-50 max-w-sm', className)} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
       <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
         <CardHeader className="pb-3">
@@ -142,8 +137,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             </motion.div>)}
         </AnimatePresence>
       </Card>
-    </motion.div>);
-}
+    </motion.div>)}
 // Compact performance indicator
 export function PerformanceIndicator({ className }) {
     const { performanceScore } = usePerformance();
@@ -153,5 +147,4 @@ export function PerformanceIndicator({ className }) {
       <span className="text-xs text-zion-slate-light">
         {performanceScore}/100
       </span>
-    </div>);
-}
+    </div>)}

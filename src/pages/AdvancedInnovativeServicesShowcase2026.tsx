@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Zap, 
   Globe, 
   Shield, 
@@ -22,26 +21,24 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
+ } from 'lucide-react.ts';
+import { ADVANCED_INNOVATIVE_SERVICES_2026  } from '../data/advancedInnovativeServices2026';
 
-const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
+const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
   const categories = useMemo(() => {
     const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)];
-  }, []);
+    return ['all', ...Array.from(cats)]}, []);
 
   const filteredServices = useMemo(() => {
     let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     // Filter by search term
     if (searchTerm) {
@@ -49,8 +46,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+      )}
 
     // Sort services
     filtered.sort((a, b) => {
@@ -64,12 +60,10 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         case 'delivery':
           return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default:
-          return 0;
-      }
+          return 0}
     });
 
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -168,9 +162,9 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </option>
@@ -203,8 +197,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredServices.map((service)  => (
             <motion.div
               key={service.id}
               className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -373,7 +367,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedInnovativeServicesShowcase2026;

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   TrendingUp, 
@@ -28,13 +27,14 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
-import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025  } from '../data/innovativeITInfrastructure2025';
+import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025  } from '../data/innovativeBlockchainWeb3Services2025';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -53,27 +53,24 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
-const InnovativeServicesShowcase2025: React.FC = () => {
+const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('name');
 
   // Combine all services
   const allServices: Service[] = useMemo(() => {
@@ -81,8 +78,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       ...ADVANCED_AI_SERVICES_2025,
       ...INNOVATIVE_IT_INFRASTRUCTURE_2025,
       ...INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025
-    ];
-  }, []);
+    ]}, []);
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -94,8 +90,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
       
-      return matchesSearch && matchesCategory && matchesInnovation;
-    });
+      return matchesSearch && matchesCategory && matchesInnovation});
 
     // Sort services
     switch (sortBy) {
@@ -111,17 +106,14 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       case 'delivery':
         filtered.sort((a, b) => parseInt(a.estimatedDelivery.split('-')[0]) - parseInt(b.estimatedDelivery.split('-')[0]));
         break;
-      default:
-        filtered.sort((a, b) => a.title.localeCompare(b.title));
-    }
+      default: filtered.sort((a, b)  => a.title.localeCompare(b.title))}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedInnovationLevel, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, selectedInnovationLevel, sortBy]);
 
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -134,17 +126,15 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       case 'Data Center Management': return <Server className="w-5 h-5" />;
       case 'Network Infrastructure': return <Network className="w-5 h-5" />;
       case 'Blockchain & Web3': return <Layers className="w-5 h-5" />;
-      default: return <Target className="w-5 h-5" />;
-    }
+      default: return <Target className="w-5 h-5" />}
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gradient-to-r from-gray-600 to-slate-600';
-    }
+      default: return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
 
   return (
@@ -215,9 +205,9 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
             >
-              {categories.map(category => (
+              {categories.map(category  => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -228,9 +218,9 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             <select
               value={selectedInnovationLevel}
               onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
             >
-              {innovationLevels.map(level => (
+              {innovationLevels.map(level  => (
                 <option key={level} value={level} className="bg-slate-800 text-white">
                   {level === 'all' ? 'All Innovation Levels' : level}
                 </option>
@@ -255,8 +245,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+        <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -409,8 +399,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedInnovationLevel('all');
-              }}
+                setSelectedInnovationLevel('all')}}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Clear Filters
@@ -461,7 +450,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default InnovativeServicesShowcase2025;

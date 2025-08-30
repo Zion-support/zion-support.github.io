@@ -30,15 +30,13 @@ export interface PracticalBusinessSolution2029 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
@@ -48,7 +46,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-    features: [
+    features[
       'Real-time data analytics',
       'Predictive business modeling',
       'Automated report generation',
@@ -71,11 +69,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '2-3 weeks',
     category: 'AI Business Intelligence',
     realService: true,
-    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'],
-    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'],
-    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'],
+    technology['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'],
+    integrations['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'],
+    useCases['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'],
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
+    competitors['Tableau, Power BI, Qlik, Looker, Domo'],
     marketSize: '$18B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +98,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$1,899',
     period: '/month',
     description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
-    features: [
+    features[
       'AI-powered personalization',
       'Customer journey mapping',
       'Real-time optimization',
@@ -123,11 +121,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '1-2 weeks',
     category: 'Customer Experience',
     realService: true,
-    technology: ['AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis'],
-    integrations: ['E-commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms'],
-    useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],
+    technology['AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis'],
+    integrations['E-commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms'],
+    useCases['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.',
-    competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
+    competitors['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
     marketSize: '$22B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -152,7 +150,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$3,999',
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.',
-    features: [
+    features[
       'AI demand forecasting',
       'Inventory optimization',
       'Supply chain risk management',
@@ -175,11 +173,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '3-4 weeks',
     category: 'Supply Chain Management',
     realService: true,
-    technology: ['AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms'],
-    integrations: ['ERP systems, WMS platforms, TMS systems, Supplier portals, Financial systems'],
-    useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'],
+    technology['AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms'],
+    integrations['ERP systems, WMS platforms, TMS systems, Supplier portals, Financial systems'],
+    useCases['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'],
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.',
-    competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
+    competitors['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
     marketSize: '$28B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +202,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$1,599',
     period: '/month',
     description: 'Next-generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data-driven HR strategies that drive business success.',
-    features: [
+    features[
       'AI-powered recruitment',
       'Employee engagement analytics',
       'Turnover prediction',
@@ -227,11 +225,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '2-3 weeks',
     category: 'Human Resources',
     realService: true,
-    technology: ['AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis'],
-    integrations: ['ATS platforms, Payroll systems, Learning management systems, Performance tools, Communication platforms'],
-    useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'],
+    technology['AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis'],
+    integrations['ATS platforms, Payroll systems, Learning management systems, Performance tools, Communication platforms'],
+    useCases['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'],
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.',
-    competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'],
+    competitors['Workday, BambooHR, ADP, Gusto, Zenefits'],
     marketSize: '$15B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +254,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$2,999',
     period: '/month',
     description: 'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real-time financial insights for better business decisions.',
-    features: [
+    features[
       'AI cash flow optimization',
       'Financial risk prediction',
       'Automated accounting',
@@ -279,11 +277,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '2-4 weeks',
     category: 'Financial Management',
     realService: true,
-    technology: ['AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation'],
-    integrations: ['Accounting software, Banking systems, Payment processors, Tax software, ERP systems'],
-    useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'],
+    technology['AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation'],
+    integrations['Accounting software, Banking systems, Payment processors, Tax software, ERP systems'],
+    useCases['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'],
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.',
-    competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'],
+    competitors['QuickBooks, Xero, FreshBooks, Wave, Sage'],
     marketSize: '$20B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -308,7 +306,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.',
-    features: [
+    features[
       'AI campaign optimization',
       'Content personalization',
       'Customer behavior prediction',
@@ -331,11 +329,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '1-2 weeks',
     category: 'Marketing Automation',
     realService: true,
-    technology: ['AI marketing, Machine learning, Marketing analytics, Automation, Personalization'],
-    integrations: ['CRM systems, Email platforms, Social media, Advertising platforms, Analytics tools'],
-    useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'],
+    technology['AI marketing, Machine learning, Marketing analytics, Automation, Personalization'],
+    integrations['CRM systems, Email platforms, Social media, Advertising platforms, Analytics tools'],
+    useCases['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'],
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.',
-    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
+    competitors['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
     marketSize: '$25B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -360,7 +358,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$899',
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
-    features: [
+    features[
       'AI workflow optimization',
       'Project risk prediction',
       'Task automation',
@@ -383,11 +381,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '1-2 weeks',
     category: 'Project Management',
     realService: true,
-    technology: ['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'],
-    integrations: ['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'],
-    useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'],
+    technology['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'],
+    integrations['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'],
+    useCases['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'],
     roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.',
-    competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
+    competitors['Asana, Monday.com, Trello, Jira, Basecamp'],
     marketSize: '$12B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -412,7 +410,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     price: '$1,799',
     period: '/month',
     description: 'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.',
-    features: [
+    features[
       'AI lead scoring',
       'Customer behavior prediction',
       'Sales process optimization',
@@ -435,11 +433,11 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setupTime: '2-3 weeks',
     category: 'Sales Optimization',
     realService: true,
-    technology: ['AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation'],
-    integrations: ['CRM systems, Email platforms, Communication tools, Analytics platforms, Marketing tools'],
-    useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'],
+    technology['AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation'],
+    integrations['CRM systems, Email platforms, Communication tools, Analytics platforms, Marketing tools'],
+    useCases['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'],
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.',
-    competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
+    competitors['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
     marketSize: '$18B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -458,14 +456,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular);
-};
+  return practicalBusinessSolutions2029.filter(service => service.popular)};
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category);
-};
+  return practicalBusinessSolutions2029.filter(service => service.category === category)};
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    return price >= minPrice && price <= maxPrice})};

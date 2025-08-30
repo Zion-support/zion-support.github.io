@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   CheckCircle, 
   AlertTriangle, 
@@ -11,33 +10,33 @@ import {
   Globe,
   Server,
   Eye
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const SecurityComplianceSection: React.FC = () => {
+export const SecurityComplianceSection: React.FC = (): JSX.Element => {
   const securityFeatures = [
     {
       icon: Shield,
       title: 'Zero Trust Security',
       description: 'Implement comprehensive zero-trust architecture with continuous verification.',
-      benefits: ['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
+      benefits['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
     },
     {
       icon: Lock,
       title: 'Data Encryption',
       description: 'End-to-end encryption for data at rest and in transit.',
-      benefits: ['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
+      benefits['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
     },
     {
       icon: Users,
       title: 'Identity & Access Management',
       description: 'Robust IAM solutions with multi-factor authentication.',
-      benefits: ['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
+      benefits['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
     },
     {
       icon: Server,
       title: 'Network Security',
       description: 'Advanced network protection with intrusion detection and prevention.',
-      benefits: ['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
+      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
     }
   ];
 
@@ -80,9 +79,9 @@ export const SecurityComplianceSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {securityMetrics.map((metric, index) => {
+          {securityMetrics.map((metric, index)  => {
             const IconComponent = metric.icon;
             return (
               <div key={metric.label} className="text-center">
@@ -96,13 +95,12 @@ export const SecurityComplianceSection: React.FC = () => {
                 </div>
                 <div className="text-gray-300">{metric.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Security Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {securityFeatures.map((feature, index) => {
+        <div className="grid md: grid-cols-2 gap-8 mb-16">
+          {securityFeatures.map((feature, index)  => {
             const IconComponent = feature.icon;
             return (
               <motion.div
@@ -134,8 +132,7 @@ export const SecurityComplianceSection: React.FC = () => {
                   ))}
                 </ul>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* Compliance Frameworks */}
@@ -148,8 +145,8 @@ export const SecurityComplianceSection: React.FC = () => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFrameworks.map((framework, index) => {
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceFrameworks.map((framework, index)  => {
               const IconComponent = framework.icon;
               return (
                 <div key={framework.name} className="bg-gray-800 rounded-xl p-6 text-center">
@@ -159,8 +156,7 @@ export const SecurityComplianceSection: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-2">{framework.name}</h4>
                   <p className="text-sm text-gray-400">{framework.status}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </motion.div>
 
@@ -193,7 +189,6 @@ export const SecurityComplianceSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default SecurityComplianceSection;

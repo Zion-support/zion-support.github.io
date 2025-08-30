@@ -98,5 +98,4 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

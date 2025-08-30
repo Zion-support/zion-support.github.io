@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
   BookOpen, 
   Code, 
   FileText, 
@@ -19,9 +18,9 @@ import {
   Cloud,
   Shield,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Documentation() {
+export default function Documentation(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -31,7 +30,7 @@ export default function Documentation() {
       name: 'Getting Started',
       icon: Rocket,
       description: 'Quick start guides and basic setup',
-      articles: [
+      articles[
         { title: 'Welcome to Zion Tech Group', readTime: '5 min', difficulty: 'Beginner' },
         { title: 'Account Setup Guide', readTime: '10 min', difficulty: 'Beginner' },
         { title: 'First Project Setup', readTime: '15 min', difficulty: 'Beginner' },
@@ -43,7 +42,7 @@ export default function Documentation() {
       name: 'AI Services',
       icon: Brain,
       description: 'AI and machine learning documentation',
-      articles: [
+      articles[
         { title: 'AI Business Intelligence Setup', readTime: '20 min', difficulty: 'Intermediate' },
         { title: 'Machine Learning Model Training', readTime: '30 min', difficulty: 'Advanced' },
         { title: 'AI Compliance Assistant', readTime: '15 min', difficulty: 'Intermediate' },
@@ -55,7 +54,7 @@ export default function Documentation() {
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Cloud infrastructure and DevOps guides',
-      articles: [
+      articles[
         { title: 'Cloud Migration Guide', readTime: '45 min', difficulty: 'Advanced' },
         { title: 'DevOps Pipeline Setup', readTime: '30 min', difficulty: 'Intermediate' },
         { title: 'Container Orchestration', readTime: '25 min', difficulty: 'Advanced' },
@@ -67,7 +66,7 @@ export default function Documentation() {
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security best practices and compliance',
-      articles: [
+      articles[
         { title: 'Zero Trust Implementation', readTime: '35 min', difficulty: 'Advanced' },
         { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
         { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
@@ -143,8 +142,7 @@ export default function Documentation() {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories 
-    : docCategories.filter(category => category.id === selectedCategory);
+    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -152,7 +150,7 @@ export default function Documentation() {
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
         ).map(article => ({ ...category, article }))
       )
-    : [];
+    [];
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -298,8 +296,8 @@ export default function Documentation() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {filteredCategories.map((category, index) => (
+            <div className="grid md: grid-cols-2 gap-8">
+              {filteredCategories.map((category, index)  => (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -366,8 +364,8 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {apiDocs.map((api, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {apiDocs.map((api, index)  => (
               <motion.div
                 key={api.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -430,8 +428,8 @@ export default function Documentation() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              {popularGuides.map((guide, index) => (
+            <div className="grid md: grid-cols-2 gap-8">
+              {popularGuides.map((guide, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -494,7 +492,7 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 title: 'Video Tutorials',
@@ -517,7 +515,7 @@ export default function Documentation() {
                 count: '25+ downloads',
                 href: '/downloads'
               }
-            ].map((resource, index) => (
+            ].map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -593,5 +591,4 @@ export default function Documentation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

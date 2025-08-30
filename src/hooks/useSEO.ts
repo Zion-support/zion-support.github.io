@@ -1,6 +1,7 @@
-import { useEffect, useCallback, useMemo } from 'react';
+import { useEffect, useCallback, useMemo  } from 'react.ts';
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords?: string;
@@ -9,15 +10,14 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: object;
-}
+  structuredData?: object}
 
 interface UseSEOOptions {
+
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean;
-}
+  enableAnalytics?: boolean}
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   const {
@@ -30,26 +30,22 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   // Memoize the full title
   const fullTitle = useMemo(() => {
     const siteName = 'Zion Tech Group';
-    return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`;
-  }, [seoData.title]);
+    return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
   // Memoize the canonical URL
   const canonicalUrl = useMemo(() => {
     if (seoData.canonical) {
-      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
-    }
-    return typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com';
-  }, [seoData.canonical]);
+      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
+    return typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: string) => {
+  const updateTitle = useCallback((title: string)  => {
     if (typeof document !== 'undefined') {
-      document.title = title;
-    }
+      document.title = title}
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {
+  const updateMetaTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     // Update or create meta description
@@ -57,8 +53,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
-    }
+      document.head.appendChild(metaDesc)}
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords
@@ -67,18 +62,15 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', data.keywords);
-    }
+        document.head.appendChild(metaKeywords)}
+      metaKeywords.setAttribute('content', data.keywords)}
 
     // Update or create canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
+      document.head.appendChild(canonicalLink)}
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag
@@ -87,14 +79,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       if (!robotsMeta) {
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name', 'robots');
-        document.head.appendChild(robotsMeta);
-      }
-      robotsMeta.setAttribute('content', 'noindex, nofollow');
-    }
+        document.head.appendChild(robotsMeta)}
+      robotsMeta.setAttribute('content', 'noindex, nofollow')}
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: SEOData) => {
+  const updateOpenGraphTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     const ogTags = [
@@ -107,19 +97,16 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       { property: 'og:locale', content: 'en_US' }
     ];
 
-    ogTags.forEach(({ property, content }) => {
+    ogTags.forEach(({ property, content })  => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag);
-      }
-      ogTag.setAttribute('content', content);
-    });
-  }, [fullTitle, canonicalUrl]);
+        document.head.appendChild(ogTag)}
+      ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: SEOData) => {
+  const updateTwitterCardTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     const twitterTags = [
@@ -130,35 +117,30 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       { name: 'twitter:site', content: '@ziontechgroup' }
     ];
 
-    twitterTags.forEach(({ name, content }) => {
+    twitterTags.forEach(({ name, content })  => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
-        document.head.appendChild(twitterTag);
-      }
-      twitterTag.setAttribute('content', content);
-    });
-  }, [fullTitle]);
+        document.head.appendChild(twitterTag)}
+      twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
   // Add structured data
-  const addStructuredData = useCallback((data: object) => {
+  const addStructuredData = useCallback((data: object)  => {
     if (!enableStructuredData || typeof document === 'undefined') return;
 
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => {
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove();
-      }
+        script.remove()}
     });
 
     // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  }, [enableStructuredData]);
+    document.head.appendChild(script)}, [enableStructuredData]);
 
   // Default organization structured data
   const defaultStructuredData = useMemo(() => ({
@@ -182,7 +164,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-    sameAs: [
+    sameAs[
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://www.facebook.com/ziontechgroup'
@@ -190,7 +172,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {
+  const trackPageView = useCallback((pageData: SEOData)  => {
     if (!enableAnalytics || typeof window === 'undefined') return;
 
     // Google Analytics
@@ -199,8 +181,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
         page_title: pageData.title,
         page_location: canonicalUrl,
         page_path: window.location.pathname
-      });
-    }
+      })}
 
     // Custom analytics
     if (window.dataLayer) {
@@ -209,8 +190,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
         page_title: pageData.title,
         page_url: canonicalUrl,
         page_type: pageData.ogType || 'website'
-      });
-    }
+      })}
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics
@@ -219,10 +199,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
     // Wait for page load
     if (document.readyState === 'complete') {
-      measureAndTrackPerformance();
-    } else {
-      window.addEventListener('load', measureAndTrackPerformance);
-    }
+      measureAndTrackPerformance()} else {
+      window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
@@ -232,8 +210,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      console.log('Web Vitals available');
-    }
+      console.log('Web Vitals available')}
 
     // Navigation Timing API
     if ('performance' in window) {
@@ -249,24 +226,21 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value]) => {
+          Object.entries(metrics).forEach(([key, value])  => {
             window.gtag('event', 'performance_metric', {
               event_category: 'performance',
               event_label: key,
               value: Math.round(value)
-            });
-          });
-        }
+            })})}
       }
     }
   }, []);
 
   // Initialize SEO
-  useEffect(() => {
+  useEffect(()  => {
     // Update document title
     if (enableAutoTitle) {
-      updateTitle(fullTitle);
-    }
+      updateTitle(fullTitle)}
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -281,19 +255,16 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if (enableStructuredData) {
       addStructuredData(defaultStructuredData);
       if (seoData.structuredData) {
-        addStructuredData(seoData.structuredData);
-      }
+        addStructuredData(seoData.structuredData)}
     }
 
     // Track page view
     if (enableAnalytics) {
-      trackPageView(seoData);
-    }
+      trackPageView(seoData)}
 
     // Track performance
     if (enablePerformanceTracking) {
-      trackPerformance();
-    }
+      trackPerformance()}
   }, [
     seoData,
     fullTitle,
@@ -322,13 +293,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     addStructuredData,
     trackPageView,
     trackPerformance
-  };
-};
+  }};
 
 // Type declarations
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
-  }
+
+    gtag?: (...args[])  => void;
+    dataLayer?[]}
 }

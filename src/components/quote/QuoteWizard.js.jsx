@@ -17,8 +17,7 @@ function StepIndicator({ step }) {
       <div className="h-1 bg-zion-blue-light rounded">
         <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
       </div>
-    </div>);
-}
+    </div>)}
 export function QuoteWizard({ category }) {
     const [step, setStep] = useState(1);
     const [selectedItemId, setSelectedItemId] = useState(null);
@@ -32,20 +31,17 @@ export function QuoteWizard({ category }) {
             toast({
                 title: 'Unable to load services',
                 variant: 'destructive'
-            });
-        }
+            })}
     }, [delayedError, toast]);
     // Use isLoading from SWR for a more direct loading state
     const loading = isLoading;
     const selectedItem = useMemo(() => {
         if (!data || !selectedItemId)
             return null;
-        return data.find(item => item.id === selectedItemId);
-    }, [data, selectedItemId]);
+        return data.find(item => item.id === selectedItemId)}, [data, selectedItemId]);
     const handleSelect = (id) => {
         setSelectedItemId(id);
-        setStep(2);
-    };
+        setStep(2)};
     const handleContinue = () => {
         if (!selectedItemId) {
             setSelectionError(`Please choose a ${category === 'services'
@@ -53,11 +49,9 @@ export function QuoteWizard({ category }) {
                 : category === 'talent'
                     ? 'talent'
                     : 'item'} to continue.`);
-            return;
-        }
+            return}
         setSelectionError('');
-        setStep(2);
-    };
+        setStep(2)};
     const handleSubmit = async () => {
         if (!selectedItemId)
             return;
@@ -78,15 +72,13 @@ export function QuoteWizard({ category }) {
                 break;
             default:
                 payload.item_id = selectedItemId;
-                payload.category = category;
-        }
+                payload.category = category}
         await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
-        setStep(3);
-    };
+        setStep(3)};
     if (step === 1) {
         return (<div className="space-y-6">
         <StepIndicator step={step}/>
@@ -114,8 +106,7 @@ export function QuoteWizard({ category }) {
             {data.map((item) => (<Card data-testid={`item-card-${item.id}`} key={item.id} className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`} onClick={() => setSelectedItemId(item.id)} tabIndex={0} onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
-                            setSelectedItemId(item.id);
-                        }
+                            setSelectedItemId(item.id)}
                     }}>
                 <div className="font-semibold text-lg">{item.name}</div>
                 {/* Display other relevant info like price if available */}
@@ -123,7 +114,7 @@ export function QuoteWizard({ category }) {
                     Price: ${item.price.toFixed(2)}
                   </div>)}
                 {/* item.slug might not be directly displayable but useful for links if needed later */}
-                <Button size="sm" variant="outline" data-testid={`select-item-${item.id}`} onClick={(e) => { e.stopPropagation(); handleSelect(item.id); }} className="w-full mt-2">
+                <Button size="sm" variant="outline" data-testid={`select-item-${item.id}`} onClick={(e) => { e.stopPropagation(); handleSelect(item.id)}} className="w-full mt-2">
                   Select this {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}
                 </Button>
               </Card>))}
@@ -135,8 +126,7 @@ export function QuoteWizard({ category }) {
         <Button onClick={handleContinue} disabled={loading || !!delayedError || !selectedItemId} className="mt-6">
           Continue
         </Button>
-      </div>);
-    }
+      </div>)}
     if (step === 2) {
         return (<div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}/>
@@ -151,8 +141,7 @@ export function QuoteWizard({ category }) {
           <Button variant="outline" onClick={() => setStep(1)}>Back</Button>
           <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
         </div>
-      </div>);
-    }
+      </div>)}
     if (step === 3) {
         return (<div data-testid="success-step" className="space-y-4 text-center py-12">
         <StepIndicator step={step}/>
@@ -163,11 +152,8 @@ export function QuoteWizard({ category }) {
         <Button onClick={() => {
                 setStep(1);
                 setSelectedItemId(null);
-                setMessage('');
-            }}>
+                setMessage('')}}>
           Request Another Quote
         </Button>
-      </div>);
-    }
-    return null;
-}
+      </div>)}
+    return null}

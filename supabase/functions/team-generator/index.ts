@@ -14,9 +14,9 @@ async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIAp
   if (projectBrief.lockTimeline && projectBrief.lockBudget) {
     optimizationInstructions = "The project timeline and budget are strictly fixed. Please propose a team structure that adheres to both constraints, potentially by adjusting role seniority, scope, or weekly hours. Clearly state if trade-offs are necessary.";
   } else if (projectBrief.lockTimeline) {
-    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight any potential budget impacts.";
+    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight  potential budget impacts.";
   } else if (projectBrief.lockBudget) {
-    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight any potential timeline impacts.";
+    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight  potential timeline impacts.";
   }
 
   const prompt = `
@@ -45,7 +45,7 @@ Important Constraints: ${optimizationInstructions}
       "weeklyHours": 40
     }
 
-    Ensure the entire output is a single valid JSON object. Do not include any text before or after the JSON.
+    Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.
   `;
 
   // Using OpenAI API directly, similar to zion-gpt function for more control
@@ -142,7 +142,7 @@ async function findMatchingTalent(
     }
   }
 
-  query = query.limit(10); // Fetch a bit more before client-side limit, to allow diverse results if many match a broad skill
+  query = query.limit(10); // Fetch a bit more before client-side limit, to allow diverse results if m match a broad skill
 
   try {
     const { data, error } = await query;

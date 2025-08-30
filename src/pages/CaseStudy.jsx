@@ -11,8 +11,7 @@ export default function CaseStudy() {
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-      </div>);
-    }
+      </div>)}
     return (<>
       <SEO title={study.title} description={study.excerpt}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -22,12 +21,11 @@ export default function CaseStudy() {
               <ArrowLeft className="mr-2 h-4 w-4"/> Back to Case Studies
             </Link>
           </Button>
-          <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-12 mb-4"/>
+          <img loading="lazy" src={study.compLogo} alt={`${study.comp} logo`} className="h-12 mb-4"/>
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: study.content }}/>
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>
-    </>);
-}
+    </>)}

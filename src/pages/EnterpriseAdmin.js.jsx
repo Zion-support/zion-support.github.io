@@ -9,8 +9,7 @@ export default function EnterpriseAdmin() {
     // Check if user has enterprise admin role
     const isEnterpriseAdmin = user?.role === "enterprise_admin";
     if (!isEnterpriseAdmin) {
-        return <Navigate to="/unauthorized"/>;
-    }
+        return <Navigate to="/unauthorized"/>}
     return (<ProtectedRoute>
       <SEO title="Enterprise Admin - Zion AI Marketplace" description="Manage your team's access, roles, and usage on the Zion AI Marketplace."/>
       
@@ -18,5 +17,4 @@ export default function EnterpriseAdmin() {
         <AdminDashboard />
       </main>
       
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}
