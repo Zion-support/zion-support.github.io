@@ -53,78 +53,52 @@ import {
   CreditCard,
   Phone,
   Mail,
-  MapPin,
-  TrendingDown,
-  LineChart,
-  PieChart,
-  BarChart,
-  Target,
-  Heart,
-  Lock,
-  Globe2,
-  Leaf,
-  Satellite,
-  Atom,
-  Code,
-  FileText,
-  GraduationCap,
-  Building,
-  Briefcase,
-  Lightbulb,
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Heart,
-  Lock,
-  Cloud
+  MapPin
 } from 'lucide-react';
 
-export default function QuantumAITradingPlatform() {
+export default function AIEnterpriseAutomationPlatform() {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [selectedPlan, setSelectedPlan] = React.useState('professional');
 
   const features = [
     {
-      category: 'Quantum Computing',
+      category: 'Core Automation',
       items: [
-        'Quantum algorithm optimization',
-        'Quantum machine learning models',
-        'Quantum random number generation',
-        'Quantum error correction',
-        'Hybrid quantum-classical computing'
+        'Multi-agent AI coordination',
+        'Intelligent workflow orchestration',
+        'Process mining & optimization',
+        'Real-time decision automation',
+        'Cross-platform integration'
       ]
     },
     {
-      category: 'AI Trading',
+      category: 'AI Capabilities',
       items: [
-        'Predictive market analysis',
-        'Sentiment analysis',
-        'Pattern recognition',
-        'Risk assessment models',
-        'Portfolio optimization'
+        'Natural language processing',
+        'Predictive analytics',
+        'Machine learning models',
+        'Computer vision integration',
+        'Sentiment analysis'
       ]
     },
     {
-      category: 'Trading Capabilities',
+      category: 'Enterprise Features',
       items: [
-        'Multi-asset trading',
-        'Algorithmic trading',
-        'High-frequency trading',
-        'Options & derivatives',
-        'Cryptocurrency trading'
+        'Role-based access control',
+        'Audit trails & compliance',
+        'Multi-tenant architecture',
+        'API-first design',
+        'Custom branding'
       ]
     },
     {
-      category: 'Risk Management',
+      category: 'Integration & Security',
       items: [
-        'Real-time risk monitoring',
-        'Portfolio stress testing',
-        'VaR calculations',
-        'Stop-loss automation',
-        'Compliance monitoring'
+        'SSO & LDAP support',
+        'End-to-end encryption',
+        'GDPR compliance',
+        'SOC 2 Type II certified',
+        'Real-time monitoring'
       ]
     }
   ];
@@ -132,13 +106,13 @@ export default function QuantumAITradingPlatform() {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$999',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for individual traders and small portfolios',
+      description: 'Perfect for small teams getting started with automation',
       features: [
-        'Up to $100K portfolio',
-        'Basic quantum algorithms',
-        'Standard AI models',
+        'Up to 10 automation workflows',
+        'Basic AI models',
+        'Standard integrations',
         'Email support',
         'Basic analytics'
       ],
@@ -147,16 +121,16 @@ export default function QuantumAITradingPlatform() {
     },
     {
       name: 'Professional',
-      price: '$2,999',
+      price: '$799',
       period: '/month',
-      description: 'Ideal for active traders and growing portfolios',
+      description: 'Ideal for growing businesses with advanced automation needs',
       features: [
-        'Up to $1M portfolio',
-        'Advanced quantum algorithms',
-        'Premium AI models',
+        'Up to 50 automation workflows',
+        'Advanced AI models',
+        'Premium integrations',
         'Priority support',
         'Advanced analytics',
-        'Custom strategies',
+        'Custom workflows',
         'API access'
       ],
       cta: 'Start Free Trial',
@@ -164,18 +138,18 @@ export default function QuantumAITradingPlatform() {
     },
     {
       name: 'Enterprise',
-      price: '$9,999',
+      price: '$2,499',
       period: '/month',
-      description: 'Full-scale institutional trading platform',
+      description: 'Full-scale enterprise automation with custom solutions',
       features: [
-        'Unlimited portfolio size',
-        'Custom quantum algorithms',
-        'Dedicated AI engineers',
-        'All trading instruments',
+        'Unlimited automation workflows',
+        'Custom AI model training',
+        'All integrations',
+        '24/7 dedicated support',
+        'Custom analytics',
         'White-label solution',
         'On-premise deployment',
-        'Custom SLA',
-        'Dedicated support team'
+        'Custom SLA'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -184,100 +158,77 @@ export default function QuantumAITradingPlatform() {
 
   const benefits = [
     {
-      icon: Atom,
-      title: 'Quantum Advantage',
-      description: 'Leverage quantum computing for superior trading performance'
+      icon: Zap,
+      title: '10x Faster Operations',
+      description: 'Automate repetitive tasks and reduce manual work by 90%'
     },
     {
-      icon: Brain,
-      title: 'AI Intelligence',
-      description: 'Advanced machine learning for market prediction and analysis'
+      icon: DollarSign,
+      title: '30% Cost Reduction',
+      description: 'Lower operational costs through intelligent automation'
     },
     {
       icon: TrendingUp,
-      title: 'Higher Returns',
-      description: 'Quantum algorithms identify opportunities humans miss'
+      title: 'Improved Accuracy',
+      description: 'Eliminate human errors with AI-powered precision'
     },
     {
-      icon: Shield,
-      title: 'Risk Mitigation',
-      description: 'Advanced risk management with quantum precision'
+      icon: Users,
+      title: 'Enhanced Productivity',
+      description: 'Focus your team on high-value strategic work'
     }
   ];
 
-  const tradingInstruments = [
+  const useCases = [
     {
-      category: 'Equities',
+      industry: 'Finance',
       examples: [
-        'Stock trading',
-        'ETF trading',
-        'Options trading',
-        'Futures contracts'
+        'Automated loan processing',
+        'Fraud detection systems',
+        'Compliance reporting',
+        'Customer onboarding'
       ]
     },
     {
-      category: 'Forex',
+      industry: 'Healthcare',
       examples: [
-        'Currency pairs',
-        'Spot trading',
-        'Forward contracts',
-        'Currency options'
+        'Patient scheduling automation',
+        'Medical record processing',
+        'Insurance claim handling',
+        'Appointment reminders'
       ]
     },
     {
-      category: 'Commodities',
+      industry: 'Manufacturing',
       examples: [
-        'Gold & silver',
-        'Oil & gas',
-        'Agricultural products',
-        'Industrial metals'
+        'Quality control automation',
+        'Supply chain optimization',
+        'Predictive maintenance',
+        'Inventory management'
       ]
     },
     {
-      category: 'Cryptocurrency',
+      industry: 'Retail',
       examples: [
-        'Bitcoin & Ethereum',
-        'Altcoins',
-        'DeFi tokens',
-        'NFT trading'
+        'Order processing automation',
+        'Customer service chatbots',
+        'Inventory forecasting',
+        'Personalized marketing'
       ]
-    }
-  ];
-
-  const quantumAlgorithms = [
-    {
-      name: 'Quantum Fourier Transform',
-      description: 'Advanced signal processing for market analysis',
-      applications: ['Pattern recognition', 'Trend analysis', 'Volatility prediction']
-    },
-    {
-      name: 'Quantum Machine Learning',
-      description: 'AI models trained on quantum computers',
-      applications: ['Market prediction', 'Risk assessment', 'Portfolio optimization']
-    },
-    {
-      name: 'Quantum Optimization',
-      description: 'Solve complex optimization problems instantly',
-      applications: ['Portfolio allocation', 'Risk management', 'Strategy optimization']
-    },
-    {
-      name: 'Quantum Random Generation',
-      description: 'True randomness for secure trading',
-      applications: ['Encryption', 'Monte Carlo simulations', 'Risk modeling']
     }
   ];
 
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO 
-        title="Quantum AI Trading Platform | Zion Tech Group"
-        description="Revolutionary quantum AI trading platform combining quantum computing with artificial intelligence for superior trading performance and risk management."
-        keywords="quantum trading, AI trading platform, quantum computing, algorithmic trading, financial technology, quantum algorithms"
+        title="AI Enterprise Automation Platform | Zion Tech Group"
+        description="Transform your business operations with our AI-powered enterprise automation platform. Streamline workflows, reduce costs, and boost productivity."
+        keywords="AI automation, enterprise automation, workflow automation, business process automation, AI platform"
       />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-zion-blue to-cyan-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/20 via-zion-blue to-zion-cyan/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -285,23 +236,23 @@ export default function QuantumAITradingPlatform() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum AI Trading Platform
+              <div className="inline-flex items-center px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Enterprise Automation
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Quantum AI
-                <span className="block text-purple-400">Trading Platform</span>
+                AI Enterprise Automation
+                <span className="block text-zion-cyan">Platform</span>
               </h1>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Experience the future of trading with our quantum AI platform. Combine the power of quantum computing 
-                with artificial intelligence for unprecedented trading performance and risk management.
+                Transform your business operations with intelligent automation. Our AI platform orchestrates complex workflows, 
+                eliminates manual processes, and delivers unprecedented efficiency gains.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
+                <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
-                <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+                <button className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
@@ -315,10 +266,10 @@ export default function QuantumAITradingPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Trading Technology
+              Powerful Features for Enterprise Automation
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Cutting-edge quantum computing meets advanced artificial intelligence
+              Everything you need to automate complex business processes with AI intelligence
             </p>
           </div>
           
@@ -329,13 +280,13 @@ export default function QuantumAITradingPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue border border-zion-purple/30 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-zion-blue border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-purple-400 mb-4">{category.category}</h3>
+                <h3 className="text-xl font-semibold text-zion-cyan mb-4">{category.category}</h3>
                 <ul className="space-y-3">
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       <span className="text-sm">{item}</span>
                     </li>
                   ))}
@@ -351,10 +302,10 @@ export default function QuantumAITradingPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Quantum AI Trading?
+              Transform Your Business Operations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Unlock the power of quantum computing for superior trading performance
+              See measurable results in weeks, not months
             </p>
           </div>
           
@@ -367,7 +318,7 @@ export default function QuantumAITradingPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
@@ -378,32 +329,32 @@ export default function QuantumAITradingPlatform() {
         </div>
       </section>
 
-      {/* Trading Instruments Section */}
+      {/* Use Cases Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Trading Instruments
+              Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Trade across all major asset classes with quantum precision
+              Tailored automation solutions for your industry
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tradingInstruments.map((instrument, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
-                key={instrument.category}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue border border-zion-purple/30 rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold text-purple-400 mb-4">{instrument.category}</h3>
+                <h3 className="text-xl font-semibold text-zion-cyan mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
-                  {instrument.examples.map((example, exampleIndex) => (
+                  {useCase.examples.map((example, exampleIndex) => (
                     <li key={exampleIndex} className="text-zion-slate-light text-sm flex items-center">
-                      <ArrowRight className="w-3 h-3 text-purple-400 mr-2 flex-shrink-0" />
+                      <ArrowRight className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
                       {example}
                     </li>
                   ))}
@@ -414,53 +365,15 @@ export default function QuantumAITradingPlatform() {
         </div>
       </section>
 
-      {/* Quantum Algorithms Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-zion-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Quantum Algorithms
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Revolutionary algorithms that give you the quantum advantage
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumAlgorithms.map((algorithm, index) => (
-              <motion.div
-                key={algorithm.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark border border-zion-purple/30 rounded-xl p-8"
-              >
-                <h3 className="text-2xl font-semibold text-purple-400 mb-4">{algorithm.name}</h3>
-                <p className="text-zion-slate-light mb-6">{algorithm.description}</p>
-                <h4 className="text-lg font-semibold text-white mb-3">Applications:</h4>
-                <ul className="space-y-2">
-                  {algorithm.applications.map((application, appIndex) => (
-                    <li key={appIndex} className="text-zion-slate-light text-sm flex items-center">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
-                      {application}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Trading Pricing
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Access to quantum computing power at competitive rates
+              Choose the plan that fits your automation needs
             </p>
           </div>
           
@@ -471,15 +384,15 @@ export default function QuantumAITradingPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-zion-blue border rounded-xl p-8 ${
+                className={`relative bg-zion-blue-dark border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-purple-400 shadow-lg shadow-purple-400/20' 
+                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
                     : 'border-zion-purple/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -488,7 +401,7 @@ export default function QuantumAITradingPlatform() {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
                     <span className="text-zion-slate-light">{plan.period}</span>
                   </div>
                   <p className="text-zion-slate-light">{plan.description}</p>
@@ -497,7 +410,7 @@ export default function QuantumAITradingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -505,8 +418,8 @@ export default function QuantumAITradingPlatform() {
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
-                    : 'bg-zion-blue border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-dark hover:to-zion-purple-dark'
+                    : 'bg-zion-blue border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                 }`}>
                   {plan.cta}
                 </button>
@@ -517,19 +430,19 @@ export default function QuantumAITradingPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Trade with Quantum AI?
+            Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join the elite traders using quantum computing for superior performance
+            Join thousands of companies that have transformed their operations with AI automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+            <button className="px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
               Start Free Trial
             </button>
-            <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
+            <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-all duration-300">
               Schedule Demo
             </button>
           </div>
@@ -539,23 +452,23 @@ export default function QuantumAITradingPlatform() {
       {/* Contact Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-6">Need Trading Expertise?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Need Help Getting Started?</h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Our quantum trading experts are here to help you succeed
+            Our automation experts are here to help you succeed
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
+              <Phone className="w-8 h-8 text-zion-cyan mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-zion-slate-light">+1 302 464 0950</p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
+              <Mail className="w-8 h-8 text-zion-cyan mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />
+              <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>

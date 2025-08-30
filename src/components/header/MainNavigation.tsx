@@ -127,16 +127,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Atom className="w-4 h-4 mr-2"/>
+                    Quantum Computing
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link to="/services/quantum-ai-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI Trading</Link></li>
+                    <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Solutions</Link></li>
+                    <li><Link to="/services/quantum-ai-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI Platform</Link></li>
+                    <li><Link to="/services/quantum-computing-as-a-service" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum as a Service</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Brain className="w-4 h-4 mr-2"/>
                     AI Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
                     <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
-                    <li><Link to="/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
-                    <li><Link to="/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
-                    <li><Link to="/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
-                    <li><Link to="/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
+                    <li><Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Enterprise Automation</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-threat-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Threat Intelligence</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
+                    <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
+                    <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
+                    <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
                   </ul>
                 </div>
               </div>

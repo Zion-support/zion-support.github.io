@@ -52,34 +52,34 @@ export default function Home() {
 
   const featuredServices = [
     {
-      name: 'AI Enterprise Orchestrator',
-      description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
+      name: 'AI Enterprise Automation Platform',
+      description: 'Transform business operations with intelligent automation and AI coordination',
       icon: Brain,
-      href: '/services/ai-enterprise-orchestrator',
+      href: '/services/ai-enterprise-automation-platform',
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
+      features: ['Multi-agent coordination', 'Workflow automation', 'Process optimization']
     },
     {
-      name: 'AI Cybersecurity Suite',
-      description: 'AI-powered threat detection and response for comprehensive security',
+      name: 'AI Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection with AI precision and real-time response',
       icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
+      href: '/services/ai-cybersecurity-threat-intelligence',
       color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
+      features: ['Threat detection', 'AI-powered analysis', 'Automated response']
     },
     {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
+      name: 'Quantum AI Trading Platform',
+      description: 'Revolutionary trading with quantum computing power and AI intelligence',
       icon: Atom,
-      href: '/services/quantum-ai-platform',
+      href: '/services/quantum-ai-trading-platform',
       color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
+      features: ['Quantum algorithms', 'AI prediction', 'High-frequency trading']
     },
     {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
+      name: 'AI Healthcare Analytics Platform',
+      description: 'Predictive healthcare with AI insights and diagnostic support',
       icon: Heart,
-      href: '/services/ai-healthcare-analytics',
+      href: '/services/ai-healthcare-analytics-platform',
       color: 'from-green-600 to-emerald-600',
       features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
@@ -350,6 +350,140 @@ export default function Home() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* New Services Showcase Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Latest Innovative Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge solutions for 2025 and beyond
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI Enterprise Automation Platform</h3>
+              <p className="text-gray-300 mb-6">
+                Transform your business operations with intelligent automation. Multi-agent AI coordination, 
+                workflow orchestration, and process optimization.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Multi-agent AI coordination
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Intelligent workflow orchestration
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Process mining & optimization
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-400 font-semibold">From $299/month</span>
+                <Link
+                  to="/services/ai-enterprise-automation-platform"
+                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI Cybersecurity Threat Intelligence</h3>
+              <p className="text-gray-300 mb-6">
+                Stay ahead of cyber threats with AI-powered intelligence. Real-time detection, 
+                automated response, and predictive security analytics.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Real-time threat monitoring
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  AI-powered detection
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Automated incident response
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-400 font-semibold">From $499/month</span>
+                <Link
+                  to="/services/ai-cybersecurity-threat-intelligence"
+                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                <Atom className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Quantum AI Trading Platform</h3>
+              <p className="text-gray-300 mb-6">
+                Experience the future of trading with quantum computing power. AI market prediction, 
+                quantum algorithms, and high-frequency trading capabilities.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  Quantum algorithm optimization
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  AI market prediction
+                </div>
+                <div className="flex items-center text-gray-300 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                  High-frequency trading
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-400 font-semibold">From $999/month</span>
+                <Link
+                  to="/services/quantum-ai-trading-platform"
+                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
