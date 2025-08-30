@@ -29,17 +29,14 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -52,7 +49,7 @@ export function AppHeader() {
       name: 'Services', 
       path: '/services', 
       icon: null,
-      dropdown: [
+      dropdown[
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
         { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
         { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },
@@ -69,10 +66,8 @@ export function AppHeader() {
 
   const isActiveRoute = (path) => {
     if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
-  };
+      return location.pathname === '/'}
+    return location.pathname.startsWith(path)};
 
   return (
     <motion.header 
@@ -261,5 +256,4 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-}
+  )}

@@ -34,7 +34,7 @@ import { Brain,
   Lightbulb
  } from 'lucide-react.ts';
 
-export default function AIEducationPlatform(...args: []):  {
+export default function AIEducationPlatform(...args[]):  {
   const features = [
     "AI-powered personalized learning paths",
     "Intelligent content recommendation",
@@ -75,7 +75,7 @@ export default function AIEducationPlatform(...args: []):  {
       price: "$299",
       period: "/month",
       description: "Perfect for individual schools and small districts",
-      features: [
+      features[
         "AI learning paths (up to 500 students)",
         "Basic content recommendation",
         "Assessment tools",
@@ -91,7 +91,7 @@ export default function AIEducationPlatform(...args: []):  {
       price: "$799",
       period: "/month",
       description: "Ideal for school districts and larger institutions",
-      features: [
+      features[
         "AI learning paths (unlimited students)",
         "Advanced content recommendation",
         "Comprehensive analytics",
@@ -108,7 +108,7 @@ export default function AIEducationPlatform(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For large educational organizations and corporations",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -403,5 +403,4 @@ export default function AIEducationPlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

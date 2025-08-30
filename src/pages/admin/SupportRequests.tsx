@@ -91,7 +91,7 @@ const MOCK_SUPPORT_REQUESTS = [
   }
 ];
 
-export default function SupportRequests(...args: []):  {
+export default function SupportRequests(...args[]):  {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<any>(null);
   const [priorityFilter, setPriorityFilter] = useState<any>(null);
@@ -104,26 +104,21 @@ export default function SupportRequests(...args: []):  {
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
-    }
+      return false}
     
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
-      return false;
-    }
+      return false}
     
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
-      return false;
-    }
+      return false}
     
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false;
-    }
+      return false}
     
-    return true;
-  });
+    return true});
   
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
@@ -135,8 +130,7 @@ export default function SupportRequests(...args: []):  {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setCategoryFilter(null)};
   
   return (
     
@@ -209,7 +203,7 @@ export default function SupportRequests(...args: []):  {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: )  => setSearchQuery(e.target.value)}
+                  onChange={(e)  => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
@@ -347,5 +341,4 @@ export default function SupportRequests(...args: []):  {
         </Tabs>
       </div>
     
-  );
-}
+  )}

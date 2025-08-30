@@ -277,5 +277,4 @@ const QuickAccess: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};

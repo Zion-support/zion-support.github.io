@@ -53,15 +53,15 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
   const testingAreas = [
     {
       category: "Visual Accessibility",
-      items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+      items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
     },
     {
       category: "Content Accessibility",
-      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+      items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
     },
     {
       category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+      items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
     }
   ];
 
@@ -246,7 +246,6 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AccessibilityAuditor;

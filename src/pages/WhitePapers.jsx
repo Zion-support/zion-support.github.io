@@ -20,7 +20,7 @@ const WhitePapers = () => {
       date: "2025-01-10",
       author: "Dr. Sarah Chen",
       description: "This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.",
-      topics: ["AI Strategy", "Digital Transformation", "Enterprise Leadership", "ROI Measurement"],
+      topics["AI Strategy", "Digital Transformation", "Enterprise Leadership", "ROI Measurement"],
       downloadUrl: "#",
       isPremium: false,
       readTime: "45 min read",
@@ -32,7 +32,7 @@ const WhitePapers = () => {
       date: "2024-12-15",
       author: "Dr. James Wilson",
       description: "Explore how quantum computing is transforming cybersecurity, from quantum-resistant cryptography to advanced threat detection algorithms.",
-      topics: ["Quantum Computing", "Cybersecurity", "Cryptography", "Threat Detection"],
+      topics["Quantum Computing", "Cybersecurity", "Cryptography", "Threat Detection"],
       downloadUrl: "#",
       isPremium: true,
       readTime: "60 min read",
@@ -44,7 +44,7 @@ const WhitePapers = () => {
       date: "2024-11-20",
       author: "Dr. Emily Watson",
       description: "A deep dive into the ethical considerations surrounding autonomous AI systems, with practical guidelines for responsible implementation.",
-      topics: ["AI Ethics", "Autonomous Systems", "Responsible AI", "Implementation"],
+      topics["AI Ethics", "Autonomous Systems", "Responsible AI", "Implementation"],
       downloadUrl: "#",
       isPremium: false,
       readTime: "40 min read",
@@ -56,7 +56,7 @@ const WhitePapers = () => {
       date: "2024-10-25",
       author: "David Kim",
       description: "Learn the principles of cloud-native architecture and how to design systems that are scalable, resilient, and cost-effective.",
-      topics: ["Cloud Architecture", "Scalability", "Resilience", "Cost Optimization"],
+      topics["Cloud Architecture", "Scalability", "Resilience", "Cost Optimization"],
       downloadUrl: "#",
       isPremium: false,
       readTime: "35 min read",
@@ -68,7 +68,7 @@ const WhitePapers = () => {
       date: "2024-09-30",
       author: "Marcus Rodriguez",
       description: "Comprehensive guide to MLOps, covering model deployment, monitoring, and maintenance in production environments.",
-      topics: ["MLOps", "Model Deployment", "Production AI", "Monitoring"],
+      topics["MLOps", "Model Deployment", "Production AI", "Monitoring"],
       downloadUrl: "#",
       isPremium: true,
       readTime: "50 min read",
@@ -80,7 +80,7 @@ const WhitePapers = () => {
       date: "2024-08-15",
       author: "Alex Thompson",
       description: "Detailed implementation guide for zero-trust security architecture, including practical examples and best practices.",
-      topics: ["Zero-Trust", "Security Architecture", "Implementation", "Best Practices"],
+      topics["Zero-Trust", "Security Architecture", "Implementation", "Best Practices"],
       downloadUrl: "#",
       isPremium: false,
       readTime: "30 min read",
@@ -102,7 +102,7 @@ const WhitePapers = () => {
       date: "December 2024",
       category: "Artificial Intelligence",
       downloads: "2,847",
-      tags: ["AI", "Digital Transformation", "Business Strategy"],
+      tags["AI", "Digital Transformation", "Business Strategy"],
       pdfUrl: "#"
     },
     {title}: "Quantum Computing in Enterprise: Opportunities and Challenges",
@@ -111,7 +111,7 @@ const WhitePapers = () => {
       date: "November 2024",
       category: "Quantum Computing",
       downloads: "1,923",
-      tags: ["Quantum Computing", "Enterprise", "Technology"],
+      tags["Quantum Computing", "Enterprise", "Technology"],
       pdfUrl: "#"
     },
     {title}: "Cybersecurity in the Age of AI: Threats and Defenses",
@@ -120,7 +120,7 @@ const WhitePapers = () => {
       date: "October 2024",
       category: "Cybersecurity",
       downloads: "3,156",
-      tags: ["Cybersecurity", "AI", "Threat Defense"],
+      tags["Cybersecurity", "AI", "Threat Defense"],
       pdfUrl: "#"
     },
     {title}: "Edge Computing and IoT: Building the Connected Future",
@@ -129,7 +129,7 @@ const WhitePapers = () => {
       date: "September 2024",
       category: "Edge Computing",
       downloads: "1,654",
-      tags: ["Edge Computing", "IoT", "Smart Cities"],
+      tags["Edge Computing", "IoT", "Smart Cities"],
       pdfUrl: "#"
     },
     {title}: "Blockchain Technology: Beyond Cryptocurrency",
@@ -138,7 +138,7 @@ const WhitePapers = () => {
       date: "August 2024",
       category: "Blockchain",
       downloads: "2,341",
-      tags: ["Blockchain", "Supply Chain", "Enterprise"],
+      tags["Blockchain", "Supply Chain", "Enterprise"],
       pdfUrl: "#"
     },
     {title}: "Green IT: Sustainable Technology Solutions",
@@ -147,7 +147,7 @@ const WhitePapers = () => {
       date: "July 2024",
       category: "Green IT",
       downloads: "1,789",
-      tags: ["Sustainability", "Green Technology", "Business"],
+      tags["Sustainability", "Green Technology", "Business"],
       pdfUrl: "#"
     }
   ];
@@ -172,8 +172,7 @@ const WhitePapers = () => {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -462,8 +461,7 @@ const WhitePapers = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default WhitePapers;
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -478,12 +476,9 @@ export default WhitePapers;
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default $page;
-                    </></>))}</></></></></></></></></></>);
-            }
+                    </></>))}</></></></></></></></></></>)}
         }
-    ];
-};
+    ]};

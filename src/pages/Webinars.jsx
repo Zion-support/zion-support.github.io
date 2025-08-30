@@ -125,5 +125,4 @@ export default function Webinars() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

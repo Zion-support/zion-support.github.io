@@ -16,9 +16,7 @@ export function ITServiceRequestHero() {
             // Simulate API call
             setTimeout(() => {
                 setIsSubmitting(false);
-                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-            }, 1000);
-        }
+                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
     };
     const containerVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -160,5 +158,4 @@ export function ITServiceRequestHero() {
           </motion.div>
         </div>
       </motion.div>
-    </section>);
-}
+    </section>)}

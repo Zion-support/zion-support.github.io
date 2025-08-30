@@ -18,25 +18,25 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
       icon: Shield,
       title: 'Zero Trust Security',
       description: 'Implement comprehensive zero-trust architecture with continuous verification.',
-      benefits: ['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
+      benefits['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
     },
     {
       icon: Lock,
       title: 'Data Encryption',
       description: 'End-to-end encryption for data at rest and in transit.',
-      benefits: ['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
+      benefits['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
     },
     {
       icon: Users,
       title: 'Identity & Access Management',
       description: 'Robust IAM solutions with multi-factor authentication.',
-      benefits: ['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
+      benefits['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
     },
     {
       icon: Server,
       title: 'Network Security',
       description: 'Advanced network protection with intrusion detection and prevention.',
-      benefits: ['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
+      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
     }
   ];
 
@@ -95,8 +95,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
                 </div>
                 <div className="text-gray-300">{metric.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Security Features Grid */}
@@ -133,8 +132,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
                   ))}
                 </ul>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* Compliance Frameworks */}
@@ -158,8 +156,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
                   <h4 className="text-lg font-semibold mb-2">{framework.name}</h4>
                   <p className="text-sm text-gray-400">{framework.status}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </motion.div>
 
@@ -192,7 +189,6 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default SecurityComplianceSection;

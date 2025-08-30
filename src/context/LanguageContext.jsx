@@ -17,17 +17,13 @@ export function LanguageProvider({ children }) {
         }
     };
     const t = (key) => {
-        return translations[language]?.[key] || key;
-    };
+        return translations[language]?.[key] || key};
     const isRTL = language === 'ar' || language === 'he';
     return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
-    </LanguageContext.Provider>);
-}
+    </LanguageContext.Provider>)}
 export function useLanguage() {
     const context = useContext(LanguageContext);
     if (!context) {
-        throw new Error('useLanguage must be used within a LanguageProvider');
-    }
-    return context;
-}
+        throw new Error('useLanguage must be used within a LanguageProvider')}
+    return context}

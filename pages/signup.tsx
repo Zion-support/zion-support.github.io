@@ -17,7 +17,7 @@ import { User,
   Cloud
  } from 'lucide-react.ts'
 
-export default function Signup(...args: []):  {
+export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

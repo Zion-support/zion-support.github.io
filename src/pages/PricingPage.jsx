@@ -17,14 +17,14 @@ const categoryIcons = {
     'EdTech': GraduationCap
 };
 const pricingFeatures = {
-    basic: [
+    basic[
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
         "Community documentation",
         "Email support"
     ],
-    professional: [
+    professional[
         "All Basic features",
         "Advanced analytics",
         "Priority support (12/7)",
@@ -33,7 +33,7 @@ const pricingFeatures = {
         "Dedicated account manager",
         "Training sessions"
     ],
-    enterprise: [
+    enterprise[
         "All Professional features",
         "Custom development",
         "24/7 dedicated support",
@@ -65,8 +65,7 @@ export default function PricingPage() {
         ? MICRO_SAAS_SERVICES
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getDiscountedPrice = (price) => {
-        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price;
-    };
+        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price};
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
@@ -159,8 +158,7 @@ export default function PricingPage() {
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>);
-        })}
+                  </TabsTrigger>)})}
             </TabsList>
             
             <TabsContent value={selectedCategory} className="mt-8">
@@ -396,5 +394,4 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

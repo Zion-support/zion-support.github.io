@@ -37,5 +37,4 @@ export default function ForumCategories() {
             {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)}
           </div>
         </div>))}
-    </div>);
-}
+    </div>)}

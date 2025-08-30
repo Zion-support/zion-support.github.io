@@ -10,7 +10,7 @@ export const innovativeServices2028 = [
     price: 2999,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "Real-time data processing",
       "Predictive analytics engine",
       "Natural language querying",
@@ -20,7 +20,7 @@ export const innovativeServices2028 = [
       "Data visualization",
       "API integrations"
     ],
-    benefits: [
+    benefits[
       "500% ROI within 6 months",
       "Real-time business insights",
       "Automated decision support",
@@ -28,8 +28,8 @@ export const innovativeServices2028 = [
       "Cost reduction through automation",
       "Improved customer experience"
     ],
-    targetAudience: ["Enterprise companies", "Data-driven organizations", "C-level executives", "Business analysts"],
-    tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Predictive Analytics"],
+    targetAudience["Enterprise companies", "Data-driven organizations", "C-level executives", "Business analysts"],
+    tags["AI", "Business Intelligence", "Analytics", "Machine Learning", "Predictive Analytics"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -37,10 +37,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$2,999-5,999/month",
-    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+    competitors["Tableau", "Power BI", "Qlik", "Looker"],
     roi: "500% within 6 months",
     setupTime: "2-4 weeks",
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure", "Snowflake"],
+    integrations["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure", "Snowflake"],
     freeTier: false,
     trialPeriod: "30 days"
   },
@@ -55,7 +55,7 @@ export const innovativeServices2028 = [
     price: 4999,
     pricingModel: "monthly",
     userLimit: "Research teams up to 50",
-    features: [
+    features[
       "Autonomous research execution",
       "Cross-domain knowledge synthesis",
       "Hypothesis generation",
@@ -65,7 +65,7 @@ export const innovativeServices2028 = [
       "Collaborative research tools",
       "Advanced NLP capabilities"
     ],
-    benefits: [
+    benefits[
       "10x faster research cycles",
       "Novel discovery generation",
       "Cross-disciplinary insights",
@@ -73,8 +73,8 @@ export const innovativeServices2028 = [
       "24/7 research capability",
       "Accelerated innovation"
     ],
-    targetAudience: ["Research institutions", "Pharmaceutical companies", "Universities", "R&D departments"],
-    tags: ["AI Research", "Autonomous Systems", "Scientific Discovery", "Machine Learning", "Research Automation"],
+    targetAudience["Research institutions", "Pharmaceutical companies", "Universities", "R&D departments"],
+    tags["AI Research", "Autonomous Systems", "Scientific Discovery", "Machine Learning", "Research Automation"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -82,10 +82,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$4,999-8,999/month",
-    competitors: ["IBM Watson", "Google Research", "OpenAI Research", "Anthropic"],
+    competitors["IBM Watson", "Google Research", "OpenAI Research", "Anthropic"],
     roi: "1000% within 12 months",
     setupTime: "4-6 weeks",
-    integrations: ["PubMed", "arXiv", "Research databases", "Cloud computing platforms"],
+    integrations["PubMed", "arXiv", "Research databases", "Cloud computing platforms"],
     freeTier: false,
     trialPeriod: "60 days"
   },
@@ -100,7 +100,7 @@ export const innovativeServices2028 = [
     price: 7999,
     pricingModel: "monthly",
     userLimit: "Enterprise access",
-    features: [
+    features[
       "Quantum algorithm development",
       "Optimization problem solving",
       "Quantum cryptography",
@@ -110,7 +110,7 @@ export const innovativeServices2028 = [
       "Expert consultation",
       "Training programs"
     ],
-    benefits: [
+    benefits[
       "Exponential speed improvements",
       "Unbreakable encryption",
       "Complex optimization solutions",
@@ -118,8 +118,8 @@ export const innovativeServices2028 = [
       "Future-proof technology",
       "Innovation leadership"
     ],
-    targetAudience: ["Financial institutions", "Pharmaceutical companies", "Logistics companies", "Government agencies"],
-    tags: ["Quantum Computing", "Optimization", "Cryptography", "Machine Learning", "Innovation"],
+    targetAudience["Financial institutions", "Pharmaceutical companies", "Logistics companies", "Government agencies"],
+    tags["Quantum Computing", "Optimization", "Cryptography", "Machine Learning", "Innovation"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -127,10 +127,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$7,999-15,999/month",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
+    competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
     roi: "2000% within 18 months",
     setupTime: "8-12 weeks",
-    integrations: ["Cloud quantum platforms", "Traditional computing systems", "Industry-specific software"],
+    integrations["Cloud quantum platforms", "Traditional computing systems", "Industry-specific software"],
     freeTier: false,
     trialPeriod: "90 days"
   },
@@ -145,7 +145,7 @@ export const innovativeServices2028 = [
     price: 3999,
     pricingModel: "monthly",
     userLimit: "Project-based",
-    features: [
+    features[
       "Smart contract development",
       "DeFi platform creation",
       "NFT marketplace development",
@@ -155,7 +155,7 @@ export const innovativeServices2028 = [
       "DApp development",
       "Cross-chain solutions"
     ],
-    benefits: [
+    benefits[
       "Transparent transactions",
       "Reduced intermediaries",
       "Enhanced security",
@@ -163,8 +163,8 @@ export const innovativeServices2028 = [
       "Innovation opportunities",
       "Cost reduction"
     ],
-    targetAudience: ["Startups", "Financial institutions", "Gaming companies", "Art organizations"],
-    tags: ["Blockchain", "Web3", "DeFi", "NFTs", "Smart Contracts", "DApps"],
+    targetAudience["Startups", "Financial institutions", "Gaming companies", "Art organizations"],
+    tags["Blockchain", "Web3", "DeFi", "NFTs", "Smart Contracts", "DApps"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -172,10 +172,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$3,999-12,999/month",
-    competitors: ["Consensys", "Chainlink", "Alchemy", "Infura"],
+    competitors["Consensys", "Chainlink", "Alchemy", "Infura"],
     roi: "800% within 12 months",
     setupTime: "6-10 weeks",
-    integrations: ["Ethereum", "Polygon", "Solana", "Binance Smart Chain", "Traditional systems"],
+    integrations["Ethereum", "Polygon", "Solana", "Binance Smart Chain", "Traditional systems"],
     freeTier: false,
     trialPeriod: "45 days"
   },
@@ -190,7 +190,7 @@ export const innovativeServices2028 = [
     price: 1999,
     pricingModel: "monthly",
     userLimit: "Up to 10,000 devices",
-    features: [
+    features[
       "Device management",
       "Real-time analytics",
       "Edge computing processing",
@@ -200,7 +200,7 @@ export const innovativeServices2028 = [
       "API management",
       "Scalable infrastructure"
     ],
-    benefits: [
+    benefits[
       "Real-time insights",
       "Reduced latency",
       "Lower bandwidth costs",
@@ -208,8 +208,8 @@ export const innovativeServices2028 = [
       "Scalable operations",
       "Predictive capabilities"
     ],
-    targetAudience: ["Manufacturing companies", "Smart cities", "Healthcare providers", "Retail chains"],
-    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Predictive Maintenance"],
+    targetAudience["Manufacturing companies", "Smart cities", "Healthcare providers", "Retail chains"],
+    tags["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Predictive Maintenance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -217,10 +217,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$1,999-4,999/month",
-    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    competitors["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
     roi: "400% within 9 months",
     setupTime: "3-6 weeks",
-    integrations: ["Cloud platforms", "Legacy systems", "Mobile apps", "Analytics tools"],
+    integrations["Cloud platforms", "Legacy systems", "Mobile apps", "Analytics tools"],
     freeTier: true,
     trialPeriod: "30 days"
   },
@@ -235,7 +235,7 @@ export const innovativeServices2028 = [
     price: 3499,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "Zero trust architecture",
       "Advanced threat detection",
       "Automated incident response",
@@ -245,7 +245,7 @@ export const innovativeServices2028 = [
       "Penetration testing",
       "24/7 monitoring"
     ],
-    benefits: [
+    benefits[
       "Enhanced security posture",
       "Reduced breach risk",
       "Compliance automation",
@@ -253,8 +253,8 @@ export const innovativeServices2028 = [
       "Peace of mind",
       "Competitive advantage"
     ],
-    targetAudience: ["Financial institutions", "Healthcare providers", "Government agencies", "Enterprise companies"],
-    tags: ["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
+    targetAudience["Financial institutions", "Healthcare providers", "Government agencies", "Enterprise companies"],
+    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -262,10 +262,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$3,499-6,999/month",
-    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
+    competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
     roi: "600% within 12 months",
     setupTime: "4-8 weeks",
-    integrations: ["SIEM systems", "EDR solutions", "Identity providers", "Cloud platforms"],
+    integrations["SIEM systems", "EDR solutions", "Identity providers", "Cloud platforms"],
     freeTier: false,
     trialPeriod: "30 days"
   },
@@ -280,7 +280,7 @@ export const innovativeServices2028 = [
     price: 2499,
     pricingModel: "monthly",
     userLimit: "Project-based",
-    features: [
+    features[
       "3D modeling tools",
       "Interactive development",
       "Multi-platform support",
@@ -290,7 +290,7 @@ export const innovativeServices2028 = [
       "Performance optimization",
       "Deployment tools"
     ],
-    benefits: [
+    benefits[
       "Immersive experiences",
       "Enhanced training",
       "Increased engagement",
@@ -298,8 +298,8 @@ export const innovativeServices2028 = [
       "Innovation leadership",
       "New revenue streams"
     ],
-    targetAudience: ["Gaming companies", "Training organizations", "Real estate", "Healthcare providers"],
-    tags: ["AR/VR", "3D Modeling", "Interactive Design", "Immersive Technology", "Virtual Training"],
+    targetAudience["Gaming companies", "Training organizations", "Real estate", "Healthcare providers"],
+    tags["AR/VR", "3D Modeling", "Interactive Design", "Immersive Technology", "Virtual Training"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -307,10 +307,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$2,499-7,999/month",
-    competitors: ["Unity", "Unreal Engine", "Vuforia", "ARKit"],
+    competitors["Unity", "Unreal Engine", "Vuforia", "ARKit"],
     roi: "700% within 15 months",
     setupTime: "8-16 weeks",
-    integrations: ["VR headsets", "Mobile devices", "Web browsers", "Cloud platforms"],
+    integrations["VR headsets", "Mobile devices", "Web browsers", "Cloud platforms"],
     freeTier: true,
     trialPeriod: "45 days"
   },
@@ -325,7 +325,7 @@ export const innovativeServices2028 = [
     price: 4499,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "Payment processing",
       "Lending automation",
       "Investment management",
@@ -335,7 +335,7 @@ export const innovativeServices2028 = [
       "API integrations",
       "Multi-currency support"
     ],
-    benefits: [
+    benefits[
       "Streamlined operations",
       "Enhanced customer experience",
       "Reduced costs",
@@ -343,8 +343,8 @@ export const innovativeServices2028 = [
       "Data-driven insights",
       "Competitive advantage"
     ],
-    targetAudience: ["Banks", "Credit unions", "Investment firms", "FinTech startups"],
-    tags: ["FinTech", "Payments", "Lending", "Investments", "Financial Analytics"],
+    targetAudience["Banks", "Credit unions", "Investment firms", "FinTech startups"],
+    tags["FinTech", "Payments", "Lending", "Investments", "Financial Analytics"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -352,10 +352,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$4,499-9,999/month",
-    competitors: ["Stripe", "Square", "Plaid", "Adyen"],
+    competitors["Stripe", "Square", "Plaid", "Adyen"],
     roi: "900% within 18 months",
     setupTime: "6-12 weeks",
-    integrations: ["Banking systems", "Payment gateways", "Accounting software", "CRM systems"],
+    integrations["Banking systems", "Payment gateways", "Accounting software", "CRM systems"],
     freeTier: false,
     trialPeriod: "60 days"
   },
@@ -370,7 +370,7 @@ export const innovativeServices2028 = [
     price: 2999,
     pricingModel: "monthly",
     userLimit: "Organization-wide",
-    features: [
+    features[
       "Energy monitoring",
       "Carbon footprint tracking",
       "Sustainability reporting",
@@ -380,7 +380,7 @@ export const innovativeServices2028 = [
       "Environmental compliance",
       "Impact analytics"
     ],
-    benefits: [
+    benefits[
       "Reduced environmental impact",
       "Cost savings",
       "Regulatory compliance",
@@ -388,8 +388,8 @@ export const innovativeServices2028 = [
       "Sustainability leadership",
       "Stakeholder satisfaction"
     ],
-    targetAudience: ["Manufacturing companies", "Energy providers", "Retail chains", "Government agencies"],
-    tags: ["Green Technology", "Sustainability", "Energy Optimization", "Carbon Tracking", "Environmental Impact"],
+    targetAudience["Manufacturing companies", "Energy providers", "Retail chains", "Government agencies"],
+    tags["Green Technology", "Sustainability", "Energy Optimization", "Carbon Tracking", "Environmental Impact"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -397,10 +397,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$2,999-6,999/month",
-    competitors: ["Carbon Trust", "EcoAct", "South Pole", "ClimatePartner"],
+    competitors["Carbon Trust", "EcoAct", "South Pole", "ClimatePartner"],
     roi: "500% within 12 months",
     setupTime: "4-8 weeks",
-    integrations: ["Energy management systems", "ERP systems", "IoT devices", "Reporting platforms"],
+    integrations["Energy management systems", "ERP systems", "IoT devices", "Reporting platforms"],
     freeTier: true,
     trialPeriod: "30 days"
   },
@@ -415,7 +415,7 @@ export const innovativeServices2028 = [
     price: 5999,
     pricingModel: "monthly",
     userLimit: "Network-wide",
-    features: [
+    features[
       "Network performance optimization",
       "Coverage analysis",
       "Capacity planning",
@@ -425,7 +425,7 @@ export const innovativeServices2028 = [
       "Real-time monitoring",
       "Predictive maintenance"
     ],
-    benefits: [
+    benefits[
       "Improved network performance",
       "Enhanced user experience",
       "Reduced operational costs",
@@ -433,8 +433,8 @@ export const innovativeServices2028 = [
       "Better coverage",
       "Future-ready infrastructure"
     ],
-    targetAudience: ["Telecom companies", "Enterprises", "Smart cities", "Industrial facilities"],
-    tags: ["5G", "Network Optimization", "Telecommunications", "Smart Cities", "Network Performance"],
+    targetAudience["Telecom companies", "Enterprises", "Smart cities", "Industrial facilities"],
+    tags["5G", "Network Optimization", "Telecommunications", "Smart Cities", "Network Performance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -442,10 +442,10 @@ export const innovativeServices2028 = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$5,999-12,999/month",
-    competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
+    competitors["Ericsson", "Nokia", "Huawei", "Cisco"],
     roi: "1200% within 24 months",
     setupTime: "12-20 weeks",
-    integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
+    integrations["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
     freeTier: false,
     trialPeriod: "90 days"
   }
@@ -459,7 +459,7 @@ export const serviceCategories = [
     description: "Cutting-edge artificial intelligence and machine learning solutions",
     icon: "Brain",
     color: "from-purple-500 to-pink-500",
-    services: [1, 2]
+    services[1, 2]
   },
   {
     id: "quantum",
@@ -467,7 +467,7 @@ export const serviceCategories = [
     description: "Next-generation quantum computing solutions",
     icon: "Zap",
     color: "from-blue-500 to-cyan-500",
-    services: [3]
+    services[3]
   },
   {
     id: "blockchain",
@@ -475,7 +475,7 @@ export const serviceCategories = [
     description: "Decentralized solutions and blockchain technology",
     icon: "Lock",
     color: "from-green-500 to-emerald-500",
-    services: [4]
+    services[4]
   },
   {
     id: "iot",
@@ -483,7 +483,7 @@ export const serviceCategories = [
     description: "Internet of Things and edge computing solutions",
     icon: "Cloud",
     color: "from-orange-500 to-red-500",
-    services: [5]
+    services[5]
   },
   {
     id: "cybersecurity",
@@ -491,7 +491,7 @@ export const serviceCategories = [
     description: "Advanced security and zero-trust solutions",
     icon: "Shield",
     color: "from-red-500 to-pink-500",
-    services: [6]
+    services[6]
   },
   {
     id: "ar-vr",
@@ -499,7 +499,7 @@ export const serviceCategories = [
     description: "Immersive technology and virtual experiences",
     icon: "Users",
     color: "from-indigo-500 to-purple-500",
-    services: [7]
+    services[7]
   },
   {
     id: "fintech",
@@ -507,7 +507,7 @@ export const serviceCategories = [
     description: "Financial technology and digital banking",
     icon: "Database",
     color: "from-yellow-500 to-orange-500",
-    services: [8]
+    services[8]
   },
   {
     id: "green-tech",
@@ -515,7 +515,7 @@ export const serviceCategories = [
     description: "Sustainable and environmental solutions",
     icon: "Shield",
     color: "from-green-400 to-teal-500",
-    services: [9]
+    services[9]
   },
   {
     id: "5g-networking",
@@ -523,7 +523,7 @@ export const serviceCategories = [
     description: "Next-generation network optimization",
     icon: "Network",
     color: "from-blue-600 to-indigo-600",
-    services: [10]
+    services[10]
   }
 ];
 
@@ -534,7 +534,7 @@ export const pricingTiers = [
     price: "$999",
     period: "month",
     description: "Perfect for small businesses and startups",
-    features: [
+    features[
       "Basic features",
       "Email support",
       "Standard integrations",
@@ -547,7 +547,7 @@ export const pricingTiers = [
     price: "$2,999",
     period: "month",
     description: "Ideal for growing businesses",
-    features: [
+    features[
       "Advanced features",
       "Priority support",
       "Custom integrations",
@@ -561,7 +561,7 @@ export const pricingTiers = [
     price: "Custom",
     period: "month",
     description: "For large organizations with complex needs",
-    features: [
+    features[
       "All features",
       "24/7 support",
       "Custom development",

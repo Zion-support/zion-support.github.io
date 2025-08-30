@@ -9,10 +9,7 @@ interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
   projectBriefBudget: string; // e.g., "$10,000 - $15,000", "< $20000", "Approx $30k"
 estimatedCost: { // From TeamRecommendation;
     min: number;
-    max: number;
-  
-};
-}
+    max: number}}
 
 // Helper to parse budget string (very basic, needs improvement for production)
 const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
@@ -28,9 +25,7 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
     min = parseFloat(parts[0].replace(/[$,\s]/g, ''));
     max = parseFloat(parts[1].replace(/[$,\s]/g, ''));
     if (parts[0].includes('k')) min = kTo1000(parts[0]);
-    if (parts[1].includes('k')) max = kTo1000(parts[1]);
-
-  } else if (budgetString.startsWith('<') || budgetString.startsWith('under')) {
+    if (parts[1].includes('k')) max = kTo1000(parts[1])} else if (budgetString.startsWith('<') || budgetString.startsWith('under')) {
     max = parseFloat(budgetString.replace(/[<$,\sunderk]/g, ''));
     if (budgetString.includes('k')) max = kTo1000(budgetString);
     min = 0; // Assuming no minimum if it's "under X"
@@ -47,8 +42,7 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
   if (isNaN(min as number)) min = null;
   if (isNaN(max as number)) max = null;
 
-  return { min, max };
-};
+  return { min, max }};
 
 
 export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {
@@ -73,25 +67,21 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
       status = 'danger';
       message = "The estimated cost exceeds your specified maximum budget.";
       // Calculate overflow for progress bar visualization if needed, e.g. how much over
-      progressValue = 100;
-    }
+      progressValue = 100}
   } else if (userBudget.min !== null) { // Only min budget specified (e.g. "> $10k")
     if (estimatedAvgCost >= userBudget.min) {
       status = 'good';
       message = "The estimated cost is above your specified minimum budget.";
       // Progress could be relative to min, e.g. 100 * estimated / (min * 1.5 or 2)
-      progressValue = Math.min((estimatedAvgCost / (userBudget.min * 1.5)) * 100, 100);
-    } else {
+      progressValue = Math.min((estimatedAvgCost / (userBudget.min * 1.5)) * 100, 100)} else {
       status = 'warning';
       message = "The estimated cost is below your specified minimum budget.";
-      progressValue = (estimatedAvgCost / userBudget.min) * 100;
-    }
+      progressValue = (estimatedAvgCost / userBudget.min) * 100}
   } else {
     status = 'info';
     message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
     // No clear target for progress bar, maybe show 50% or hide it
-    progressValue = 50;
-  }
+    progressValue = 50}
 
   const getAlertVariant = () => {
     if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark:bg-green-900/30 dark:text-green-300";
@@ -104,15 +94,13 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500" />;
     if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
     if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500" />; // Or AlertTriangle
-    return <Info className="h-5 w-5 text-blue-500" />;
-  };
+    return <Info className="h-5 w-5 text-blue-500" />};
 
   const getProgressColor = () => {
     if (status === 'good') return "bg-green-500";
     if (status === 'warning') return "bg-yellow-500";
     if (status === 'danger') return "bg-red-500";
-    return "bg-blue-500";
-  }
+    return "bg-blue-500"}
 
   return (
     <Card className="p-4 shadow-sm">
@@ -137,5 +125,4 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
          <p className="text-xs text-muted-foreground mt-1">Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
        )}
     </Card>
-  );
-};
+  )};

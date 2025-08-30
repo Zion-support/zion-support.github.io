@@ -47,9 +47,7 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
-  avatar: string;
-
-}
+  avatar: string}
 
 interface NotificationSettings {
 
@@ -58,9 +56,7 @@ interface NotificationSettings {
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-  weeklyReports: boolean;
-
-}
+  weeklyReports: boolean}
 
 interface SecuritySettings {
 
@@ -68,8 +64,7 @@ interface SecuritySettings {
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-loginHistory: Array<any>;
-}
+loginHistory: Array<any>}
 
 const Profile: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState<any>('profile');
@@ -106,7 +101,7 @@ const Profile: React.FC = (): JSX.Element => {
     sessionTimeout: 30,
     passwordLastChanged: '2024-01-15',
     lastLogin: '2024-01-20 14:30:00',
-    loginHistory: [
+    loginHistory[
       { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
       { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
       { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
@@ -145,27 +140,21 @@ const Profile: React.FC = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setSuccess('Profile updated successfully!');
-      setIsEditing(false);
-    } catch (err) {
-      setError('Failed to update profile. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+      setIsEditing(false)} catch (err) {
+      setError('Failed to update profile. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
   const handlePasswordChange = async () => {
     if (!currentPassword || !newPassword || !confirmPassword) {
       setError('Please fill in all password fields');
-      return;
-    }
+      return}
     if (newPassword.length < 8) {
       setError('New password must be at least 8 characters long');
-      return;
-    }
+      return}
     if (newPassword !== confirmPassword) {
       setError('New passwords do not match');
-      return;
-    }
+      return}
 
     setIsLoading(true);
     setError('');
@@ -178,28 +167,23 @@ const Profile: React.FC = (): JSX.Element => {
       setSuccess('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
-      setConfirmPassword('');
-    } catch (err) {
-      setError('Failed to change password. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+      setConfirmPassword('')} catch (err) {
+      setError('Failed to change password. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
   const handleNotificationToggle = (key: keyof NotificationSettings)  => {
     setNotifications(prev => ({
       ...prev,
       [key]: !prev[key]
-    }));
-  };
+    }))};
 
   const getPasswordStrength = (password: string)  => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
     if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
-    return { score: 4, label: 'Strong', color: 'text-green-400' };
-  };
+    return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
   const passwordStrength = getPasswordStrength(newPassword);
 
@@ -862,7 +846,6 @@ const Profile: React.FC = (): JSX.Element => {
         {activeTab === 'preferences' && renderPreferencesTab()}
       </div>
     </div>
-  );
-};
+  )};
 
 export default Profile;

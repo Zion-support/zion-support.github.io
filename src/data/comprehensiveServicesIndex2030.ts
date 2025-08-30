@@ -70,20 +70,16 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
   const roi = service.roi;
   if (typeof roi === 'string') {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-    return roiNumber > 500;
-  }
-  return false;
-});
+    return roiNumber > 500}
+  return false});
 
 // Quick Setup Services (< 8 weeks)
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
   const setupTime = service.setupTime;
   if (typeof setupTime === 'string') {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-    return weeks < 8;
-  }
-  return false;
-});
+    return weeks < 8}
+  return false});
 
 // Export individual service arrays for specific use cases
 export {

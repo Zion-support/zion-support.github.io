@@ -63,14 +63,12 @@ interface Service {
   description: string;
   features: string[];
   benefits: string[];
-pricing: {;
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  
-};
+    billingCycle: string};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -81,9 +79,7 @@ pricing: {;
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 
 const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -119,8 +115,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
     // Add services from ALL_REVOLUTIONARY_SERVICES_2026
     ALL_REVOLUTIONARY_SERVICES_2026.forEach(service  => {
@@ -146,16 +141,13 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
-    return services;
-  }, []);
+    return services}, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+    return cats.sort()}, [allServices]);
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
@@ -163,8 +155,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -179,11 +170,9 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
         break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
-    }
+        break}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -208,8 +197,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
-        return <Lightbulb className="w-6 h-6" />;
-    }
+        return <Lightbulb className="w-6 h-6" />}
   };
 
   const getStatusColor = (status: string)  => {
@@ -223,8 +211,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
   return (
@@ -601,7 +588,6 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveServicesShowcase2027;

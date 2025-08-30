@@ -57,7 +57,7 @@ const AIEnterpriseResourcePlanning = () => {
       name: "Starter Plan",
       price: "$2,999",
       period: "/month",
-      features: [
+      features[
         "Core ERP modules",
         "AI-powered analytics",
         "Basic automation",
@@ -70,7 +70,7 @@ const AIEnterpriseResourcePlanning = () => {
       name: "Professional Plan",
       price: "$5,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI capabilities",
         "Custom integrations",
         "Advanced automation",
@@ -84,7 +84,7 @@ const AIEnterpriseResourcePlanning = () => {
       name: "Enterprise Plan",
       price: "$12,999",
       period: "/month",
-      features: [
+      features[
         "Full AI suite",
         "Unlimited users",
         "Custom development",
@@ -100,22 +100,22 @@ const AIEnterpriseResourcePlanning = () => {
     {
       industry: "Manufacturing",
       description: "Optimize production planning, inventory management, and supply chain operations with AI-driven insights",
-      benefits: ["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"]
+      benefits["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"]
     },
     {
       industry: "Retail",
       description: "Streamline operations from procurement to customer service with intelligent automation and analytics",
-      benefits: ["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"]
+      benefits["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"]
     },
     {
       industry: "Healthcare",
       description: "Enhance patient care coordination, resource management, and administrative efficiency",
-      benefits: ["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"]
+      benefits["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"]
     },
     {
       industry: "Financial Services",
       description: "Optimize risk management, compliance, and customer relationship management",
-      benefits: ["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]
+      benefits["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]
     }
   ];
 
@@ -426,7 +426,6 @@ const AIEnterpriseResourcePlanning = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIEnterpriseResourcePlanning;

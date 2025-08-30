@@ -30,5 +30,4 @@ export function ProfileProjects({ projects }) {
             </CardContent>
           </Card>))}
       </div>
-    </div>);
-}
+    </div>)}

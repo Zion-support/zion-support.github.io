@@ -45,8 +45,7 @@ export const AppTestimonials = () => {
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
         }`}
       />
-    ));
-  };
+    ))};
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-slate-900">
@@ -106,5 +105,4 @@ export const AppTestimonials = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

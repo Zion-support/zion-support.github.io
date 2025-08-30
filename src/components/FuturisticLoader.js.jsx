@@ -93,8 +93,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
                 return (<div className={`${sizeClasses[size]} relative`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
             <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '2s' }}></div>
-          </div>);
-        }
+          </div>)}
     };
     return (<div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}
@@ -106,6 +105,5 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-400"></div>
           </div>
         </div>)}
-    </div>);
-};
+    </div>)};
 export default FuturisticLoader;

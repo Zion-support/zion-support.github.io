@@ -13,7 +13,7 @@ import { Mail,
   Users,
   CheckCircle
  } from 'lucide-react.ts';
-export default function Signup(...args: []):  {
+export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -30,25 +30,21 @@ export default function Signup(...args: []):  {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
   const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');
-      return;
-    }
+      return}
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
-    }
+      return}
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
     console.log('Signup attempt:', formData);
-    setIsLoading(false);
-  };
+    setIsLoading(false)};
   const features = [
     {
       icon: <Shield className="h-6 w-6 text-zion-cyan" />,
@@ -394,5 +390,4 @@ export default function Signup(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

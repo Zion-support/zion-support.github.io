@@ -11,5 +11,4 @@ export default function CodeBlock({ children, code, language = 'text', className
       <pre className="text-sm text-gray-100">
         <code>{content}</code>
       </pre>
-    </div>);
-}
+    </div>)}

@@ -21,19 +21,16 @@ async function runConsoleErrorFixer() {
     console.log('🏗️ Building project for console error detection...');
     try {
       execSync('npm run build', { stdio: 'inherit', cwd: process.cwd() });
-      console.log('✅ Build completed');
-    } catch (error) {
+      console.log('✅ Build completed')} catch (error) {
       console.log('⚠️  Build failed but continuing...');
       console.log('Build error:', error.message);
-      return;
-    }
+      return}
     
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
       console.log('⚠️  Build verification failed: dist folder not found');
-      return;
-    }
+      return}
     
     // Scan for console statements in source code
     console.log('🔍 Scanning for console statements in source code...');
@@ -41,11 +38,8 @@ async function runConsoleErrorFixer() {
     if (consoleStatements.length > 0) {
       console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
       consoleStatements.forEach(stmt => {
-        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
-      });
-    } else {
-      console.log('✅ No console statements found in source code');
-    }
+        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
+      console.log('✅ No console statements found in source code')}
     
     // Check for console statements in build output
     console.log('🔍 Checking build output for console statements...');
@@ -53,11 +47,8 @@ async function runConsoleErrorFixer() {
     if (buildConsoleStatements.length > 0) {
       console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
       buildConsoleStatements.forEach(stmt => {
-        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
-      });
-    } else {
-      console.log('✅ No console statements found in build output');
-    }
+        console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
+      console.log('✅ No console statements found in build output')}
     
     // Check for potential error patterns
     console.log('🔍 Checking for potential error patterns...');
@@ -65,23 +56,18 @@ async function runConsoleErrorFixer() {
     if (errorPatterns.length > 0) {
       console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
       errorPatterns.forEach(pattern => {
-        console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`);
-      });
-    } else {
-      console.log('✅ No potential error patterns found');
-    }
+        console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`)})} else {
+      console.log('✅ No potential error patterns found')}
     
     // Run linting to catch console errors
     console.log('🔍 Running linting for console errors...');
     try {
       execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ Linting completed - no console errors found');
-    } catch (error) {
+      console.log('✅ Linting completed - no console errors found')} catch (error) {
       console.log('⚠️  Linting found issues, checking for console errors...');
       const lintOutput = error.message;
       if (lintOutput.includes('console.')) {
-        console.log('⚠️  Console statements detected in linting output');
-      }
+        console.log('⚠️  Console statements detected in linting output')}
     }
     
     // Generate console error fixer report
@@ -99,9 +85,7 @@ async function runConsoleErrorFixer() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Console error fixer report saved to ${reportPath}`);
     
-    console.log('✅ Continuous console error fixer completed successfully');
-    
-  } catch (error) {
+    console.log('✅ Continuous console error fixer completed successfully')} catch (error) {
     console.error('❌ Continuous console error fixer failed:', error.message);
     // Don't exit, just log the error and continue
   }
@@ -119,8 +103,7 @@ function findConsoleStatements(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
             const lines = content.split('\n');
@@ -133,11 +116,9 @@ function findConsoleStatements(dir) {
                     file: path.relative(process.cwd(), fullPath),
                     line: index + 1,
                     statement: match[0]
-                  });
-                }
+                  })}
               }
-            });
-          } catch (error) {
+            })} catch (error) {
             // Skip files that can't be read
           }
         }
@@ -148,8 +129,7 @@ function findConsoleStatements(dir) {
   }
   
   scanDirectory(dir);
-  return consoleStatements;
-}
+  return consoleStatements}
 
 function findErrorPatterns(dir) {
   const errorPatterns = [];
@@ -163,8 +143,7 @@ function findErrorPatterns(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
             const lines = content.split('\n');
@@ -188,11 +167,8 @@ function findErrorPatterns(dir) {
                     file: path.relative(process.cwd(), fullPath),
                     line: index + 1,
                     pattern: pattern
-                  });
-                }
-              });
-            });
-          } catch (error) {
+                  })}
+              })})} catch (error) {
             // Skip files that can't be read
           }
         }
@@ -203,8 +179,7 @@ function findErrorPatterns(dir) {
   }
   
   scanDirectory(dir);
-  return errorPatterns;
-}
+  return errorPatterns}
 
 // Main continuous loop
 async function runContinuous() {
@@ -215,25 +190,20 @@ async function runContinuous() {
   
   // Set up continuous execution
   setInterval(async () => {
-    await runConsoleErrorFixer();
-  }, AUTOMATION_INTERVAL);
+    await runConsoleErrorFixer()}, AUTOMATION_INTERVAL);
   
-  console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Start the continuous console error fixer
 runContinuous().catch(error => {
   console.error('❌ Failed to start continuous console error fixer:', error);
-  process.exit(1);
-});
+  process.exit(1)});

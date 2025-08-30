@@ -36,19 +36,16 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+          setIsVisible(true)}
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)}
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()}, []);
 
   // Combine all services
   const allServices = [
@@ -82,8 +79,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
 
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice});
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -95,8 +91,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       case 'category':
         return a.category.localeCompare(b.category);
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
@@ -112,8 +107,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
-    return 'High';
-  };
+    return 'High'};
 
   const getPriceColor = (price: string)  => {
     const range = getPriceRange(price);
@@ -121,8 +115,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       case 'Low': return 'text-green-400';
       case 'Medium': return 'text-yellow-400';
       case 'High': return 'text-red-400';
-      default: return 'text-white';
-    }
+      default: return 'text-white'}
   };
 
   const getCategoryIcon = (category: string)  => {
@@ -148,8 +141,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       'Real Estate Tech': Home,
       'Supply Chain Solutions': Truck
     };
-    return iconMap[category] || Target;
-  };
+    return iconMap[category] || Target};
 
   return (
     <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -410,5 +402,4 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};

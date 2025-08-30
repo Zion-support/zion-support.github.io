@@ -44,7 +44,6 @@ export const EnhancedInnovativeServicesShowcase = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default EnhancedInnovativeServicesShowcase;

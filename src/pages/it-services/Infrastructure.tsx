@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react.ts';
 
-export default function Infrastructure(...args: []):  {
+export default function Infrastructure(...args[]):  {
   const features = [
     {
       icon: Server,
@@ -202,5 +202,4 @@ export default function Infrastructure(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

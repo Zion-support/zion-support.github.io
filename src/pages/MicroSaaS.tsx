@@ -154,8 +154,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default MicroSaaS;
 

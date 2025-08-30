@@ -95,8 +95,7 @@ const createInstance = async () => {
         size: 'medium',
         region: 'us-east-1'
     });
-    return response.data;
-};`,
+    return response.data};`,
     category: 'Cloud & DevOps'
   },
   {
@@ -119,7 +118,7 @@ def check_threat(ip_address):
   }
 ];
 
-export default function API(...args: []):  {
+export default function API(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -350,5 +349,4 @@ export default function API(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

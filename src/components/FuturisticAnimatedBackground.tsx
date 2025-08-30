@@ -9,7 +9,6 @@ export const FuturisticAnimatedBackground = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default FuturisticAnimatedBackground;

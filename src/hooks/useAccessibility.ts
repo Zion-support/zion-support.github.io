@@ -7,18 +7,14 @@ interface UseAccessibilityOptions {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
-  enableLargeText?: boolean;
-
-}
+  enableLargeText?: boolean}
 
 interface AccessibilityFeatures {
 
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
-  isScreenReader: boolean;
-
-}
+  isScreenReader: boolean}
 
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const {
@@ -42,8 +38,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         isReducedMotion: false,
         isLargeText: false,
         isScreenReader: false
-      };
-    }
+      }}
 
     const mediaQueries = {
       highContrast: window.matchMedia('(prefers-contrast: high)'),
@@ -56,8 +51,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       isReducedMotion: mediaQueries.reducedMotion.matches,
       isLargeText: false, // Would need to check font size preferences
       isScreenReader: false // Would need to detect screen reader usage
-    };
-  }, []);
+    }}, []);
 
   // Keyboard navigation
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent)  => {
@@ -72,12 +66,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         if (shiftKey) {
           // Shift + Tab: navigate backwards
           event.preventDefault();
-          navigateFocus('backward', currentElement);
-        } else {
+          navigateFocus('backward', currentElement)} else {
           // Tab: navigate forwards
           event.preventDefault();
-          navigateFocus('forward', currentElement);
-        }
+          navigateFocus('forward', currentElement)}
         break;
 
       case 'Escape':
@@ -90,8 +82,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         // Activate buttons, links, etc.
         if (currentElement.tagName === 'BUTTON' || currentElement.tagName === 'A') {
           event.preventDefault();
-          currentElement.click();
-        }
+          currentElement.click()}
         break;
 
       case 'ArrowUp':
@@ -104,8 +95,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       case 'ArrowRight':
         // Navigate through horizontal lists, tabs, etc.
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
-        break;
-    }
+        break}
   }, [enableKeyboardNavigation]);
 
   // Focus management
@@ -114,8 +104,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Store last focused element
     if (document.activeElement instanceof HTMLElement) {
-      lastFocusedElementRef.current = document.activeElement;
-    }
+      lastFocusedElementRef.current = document.activeElement}
 
     // Focus the new element
     element.focus();
@@ -125,9 +114,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     
     // Remove focus indicator after animation
     setTimeout(() => {
-      element.classList.remove('focus-visible');
-    }, 2000);
-  }, [enableFocusManagement]);
+      element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
   const createFocusTrap = useCallback((container: HTMLElement)  => {
@@ -137,20 +124,17 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     const focusableElements = getFocusableElements(container);
     
     if (focusableElements.length > 0) {
-      focusableElements[0].focus();
-    }
+      focusableElements[0].focus()}
 
     // Store focusable elements
-    focusableElementsRef.current = focusableElements;
-  }, [enableFocusManagement]);
+    focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
 
   // Remove focus trap
   const removeFocusTrap = useCallback(() => {
     if (focusTrapRef.current && lastFocusedElementRef.current) {
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
-      focusableElementsRef.current = [];
-    }
+      focusableElementsRef.current = []}
   }, []);
 
   // Get all focusable elements
@@ -165,8 +149,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       '[contenteditable="true"]'
     ].join(', ');
 
-    return Array.from(container.querySelectorAll(selector)) as HTMLElement[];
-  }, []);
+    return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 
   // Navigate focus
   const navigateFocus = useCallback((direction: 'forward' | 'backward', currentElement: HTMLElement)  => {
@@ -179,13 +162,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     let nextIndex: number;
 
     if (direction === 'forward') {
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-    } else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    }
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
-    manageFocus(focusableElements[nextIndex]);
-  }, [getFocusableElements, manageFocus]);
+    manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
 
   // Vertical navigation
   const navigateVertical = useCallback((direction: 'up' | 'down', currentElement: HTMLElement)  => {
@@ -200,15 +180,12 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     let nextIndex: number;
     if (direction === 'up') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
-      manageFocus(nextElement);
-    }
+      manageFocus(nextElement)}
   }, [manageFocus]);
 
   // Horizontal navigation
@@ -224,15 +201,12 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     let nextIndex: number;
     if (direction === 'left') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
-      manageFocus(nextElement);
-    }
+      manageFocus(nextElement)}
   }, [manageFocus]);
 
   // Close active elements
@@ -240,12 +214,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Close modals, dropdowns, etc.
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
     activeElements.forEach(element => {
-      element.classList.remove('active');
-    });
+      element.classList.remove('active')});
 
     // Remove focus trap
-    removeFocusTrap();
-  }, [removeFocusTrap]);
+    removeFocusTrap()}, [removeFocusTrap]);
 
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
@@ -261,9 +233,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Remove after announcement
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [enableScreenReaderSupport]);
+      document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
 
   // High contrast mode
   const toggleHighContrast = useCallback(() => {
@@ -276,8 +246,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
     
     // Save preference
-    localStorage.setItem('highContrast', isEnabled.toString());
-  }, [enableHighContrast, announceToScreenReader]);
+    localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
 
   // Reduced motion mode
   const toggleReducedMotion = useCallback(() => {
@@ -290,8 +259,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
     
     // Save preference
-    localStorage.setItem('reducedMotion', isEnabled.toString());
-  }, [enableReducedMotion, announceToScreenReader]);
+    localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
 
   // Large text mode
   const toggleLargeText = useCallback(() => {
@@ -304,8 +272,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
     
     // Save preference
-    localStorage.setItem('largeText', isEnabled.toString());
-  }, [enableLargeText, announceToScreenReader]);
+    localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]);
 
   // Initialize accessibility features
   useEffect(() => {
@@ -320,14 +287,11 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Add keyboard event listener
     if (enableKeyboardNavigation) {
-      document.addEventListener('keydown', handleKeyboardNavigation);
-    }
+      document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup
     return () => {
-      document.removeEventListener('keydown', handleKeyboardNavigation);
-    };
-  }, [enableKeyboardNavigation, handleKeyboardNavigation]);
+      document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {
     accessibilityFeatures,
@@ -342,5 +306,4 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     navigateFocus,
     navigateVertical,
     navigateHorizontal
-  };
-};
+  }};

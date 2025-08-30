@@ -30,7 +30,7 @@ import { Search,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function EnhancedServicesPage(...args: []):  {
+export default function EnhancedServicesPage(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -49,8 +49,7 @@ export default function EnhancedServicesPage(...args: []):  {
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
                         (selectedPriceRange === 'premium' && service.price > 25000);
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice});
 
   const getCategoryIcon = (category: string)  => {
     switch (category.toLowerCase()) {
@@ -82,16 +81,14 @@ export default function EnhancedServicesPage(...args: []):  {
       case 'quantum computing':
         return <Zap className="w-5 h-5" />;
       default:
-        return <Code className="w-5 h-5" />;
-    }
+        return <Code className="w-5 h-5" />}
   };
 
   const getPriceRange = (price: number)  => {
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
-    return 'premium';
-  };
+    return 'premium'};
 
   return (
     <div className="min-h-screen bg-background">
@@ -551,5 +548,4 @@ export default function EnhancedServicesPage(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

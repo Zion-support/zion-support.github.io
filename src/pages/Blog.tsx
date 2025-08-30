@@ -16,7 +16,7 @@ import { Search,
   Rocket
  } from 'lucide-react.ts';
 
-export default function Blog(...args: []):  {
+export default function Blog(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -137,7 +137,7 @@ export default function Blog(...args: []):  {
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : [];
+    [];
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -468,5 +468,4 @@ export default function Blog(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

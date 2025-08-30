@@ -17,9 +17,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
     setTimeout(() => {
       setIsSubscribed(true);
       setIsLoading(false);
-      setEmail('');
-    }, 1500);
-  };
+      setEmail('')}, 1500)};
 
   const benefits = [
     {
@@ -66,8 +64,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-    );
-  }
+    )}
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -180,7 +177,6 @@ const NewsletterSection: React.FC = (): JSX.Element => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default NewsletterSection;

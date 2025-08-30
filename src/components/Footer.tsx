@@ -35,10 +35,9 @@ import { Twitter,
   GraduationCap
  } from 'lucide-react.ts';
 
-export function Footer(...args: []):  {
+export function Footer(...args[]):  {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
   const currentYear = new Date().getFullYear();
 
@@ -46,7 +45,7 @@ export function Footer(...args: []):  {
     {
       title: 'Comp',
       icon: Globe,
-      links: [
+      links[
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
@@ -57,7 +56,7 @@ export function Footer(...args: []):  {
     {
       title: 'Services',
       icon: Zap,
-      links: [
+      links[
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
@@ -78,7 +77,7 @@ export function Footer(...args: []):  {
     {
       title: 'Resources',
       icon: FileText,
-      links: [
+      links[
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Request a Quote', path: '/request-quote', icon: FileText },
@@ -88,7 +87,7 @@ export function Footer(...args: []):  {
     {
       title: 'Support',
       icon: Shield,
-      links: [
+      links[
         { name: 'Contact Us', path: '/contact', icon: Phone }, 
         { name: 'Dashboard', path: '/dashboard', icon: Activity },
         { name: 'Login', path: '/login', icon: HelpCircle },
@@ -275,5 +274,4 @@ export function Footer(...args: []):  {
         </motion.button>
       </div>
     </footer>
-  );
-}
+  )}

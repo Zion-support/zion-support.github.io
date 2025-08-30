@@ -78,7 +78,7 @@ const customerExperienceSolutions = [
     title: "User Experience Design",
     description: "Comprehensive UX design services for web, mobile, and desktop applications.",
     icon: Palette,
-    features: [
+    features[
       "User research & personas",
       "Information architecture",
       "Wireframing & prototyping",
@@ -87,14 +87,14 @@ const customerExperienceSolutions = [
     price: "From $30,000",
     timeline: "8-16 weeks",
     category: "UX Design",
-    technologies: ["Figma", "Adobe XD", "Sketch", "InVision"]
+    technologies["Figma", "Adobe XD", "Sketch", "InVision"]
   },
   {
     id: 2,
     title: "Customer Journey Mapping",
     description: "Visual representation of customer interactions and touchpoints across all channels.",
     icon: MapPin,
-    features: [
+    features[
       "Journey mapping",
       "Touchpoint analysis",
       "Pain point identification",
@@ -103,14 +103,14 @@ const customerExperienceSolutions = [
     price: "From $25,000",
     timeline: "6-12 weeks",
     category: "Journey Mapping",
-    technologies: ["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
+    technologies["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
   },
   {
     id: 3,
     title: "Customer Feedback Systems",
     description: "Comprehensive feedback collection and analysis systems for continuous improvement.",
     icon: MessageCircle,
-    features: [
+    features[
       "Feedback collection",
       "Sentiment analysis",
       "Real-time monitoring",
@@ -119,14 +119,14 @@ const customerExperienceSolutions = [
     price: "From $20,000",
     timeline: "4-10 weeks",
     category: "Feedback Systems",
-    technologies: ["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
+    technologies["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
   },
   {
     id: 4,
     title: "Personalization Engines",
     description: "AI-powered personalization systems for tailored customer experiences.",
     icon: Brain,
-    features: [
+    features[
       "User behavior analysis",
       "Content personalization",
       "Recommendation engines",
@@ -135,14 +135,14 @@ const customerExperienceSolutions = [
     price: "From $40,000",
     timeline: "12-20 weeks",
     category: "Personalization",
-    technologies: ["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
+    technologies["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
   },
   {
     id: 5,
     title: "Customer Support Platforms",
     description: "Integrated customer support and helpdesk solutions for seamless service delivery.",
     icon: Headphones,
-    features: [
+    features[
       "Multi-channel support",
       "Ticket management",
       "Knowledge base",
@@ -151,14 +151,14 @@ const customerExperienceSolutions = [
     price: "From $35,000",
     timeline: "10-18 weeks",
     category: "Support Platforms",
-    technologies: ["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
+    technologies["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
   },
   {
     id: 6,
     title: "Customer Analytics & Insights",
     description: "Advanced analytics and reporting systems for customer behavior and satisfaction metrics.",
     icon: BarChart3,
-    features: [
+    features[
       "Customer analytics",
       "Satisfaction metrics",
       "Behavior tracking",
@@ -167,7 +167,7 @@ const customerExperienceSolutions = [
     price: "From $30,000",
     timeline: "8-16 weeks",
     category: "Analytics",
-    technologies: ["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
+    technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
   }
 ];
 
@@ -268,25 +268,25 @@ const customerExperienceBenefits = [
     title: "Improved Customer Satisfaction",
     description: "Better experiences lead to higher customer satisfaction and loyalty",
     icon: Heart,
-    examples: ["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]
+    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]
   },
   {
     title: "Increased Conversion Rates",
     description: "Optimized experiences drive better business outcomes",
     icon: TrendingUp,
-    examples: ["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]
+    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]
   },
   {
     title: "Reduced Support Costs",
     description: "Better experiences reduce the need for customer support",
     icon: Headphones,
-    examples: ["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]
+    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]
   },
   {
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
-    examples: ["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
+    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
   }
 ];
 
@@ -674,5 +674,4 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

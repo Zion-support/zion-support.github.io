@@ -30,15 +30,13 @@ export interface InnovativeAgricultureService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -53,7 +51,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     price: '$1,899',
     period: '/month',
     description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
-    features: [
+    features[
       'AI-powered crop monitoring',
       'Irrigation optimization',
       'Yield prediction',
@@ -75,11 +73,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning'],
-    integrations: ['IoT devices, Weather stations, Soil sensors, Analytics platforms'],
-    useCases: ['Crop monitoring, Irrigation optimization, Yield prediction, Resource management'],
+    technology['AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning'],
+    integrations['IoT devices, Weather stations, Soil sensors, Analytics platforms'],
+    useCases['Crop monitoring, Irrigation optimization, Yield prediction, Resource management'],
     roi: 'Increase crop yields by 25% and reduce water usage by 30%',
-    competitors: ['John Deere, Trimble, Raven Industries, AGCO'],
+    competitors['John Deere, Trimble, Raven Industries, AGCO'],
     marketSize: '$12.8B+ precision agriculture market',
     growthRate: '200% YoY',
     variant: 'ai-futuristic',
@@ -98,7 +96,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
-    features: [
+    features[
       'Quantum optimization algorithms',
       'Crop planning optimization',
       'Resource allocation',
@@ -120,11 +118,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 months',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python'],
-    integrations: ['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'],
-    useCases: ['Crop planning, Resource allocation, Efficiency optimization, Cost reduction'],
+    technology['Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python'],
+    integrations['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'],
+    useCases['Crop planning, Resource allocation, Efficiency optimization, Cost reduction'],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
-    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+    competitors['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
     marketSize: '$9.8B+ quantum agriculture market',
     growthRate: '380% YoY',
     variant: 'quantum',
@@ -143,7 +141,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     price: '$1,599',
     period: '/month',
     description: 'Advanced food safety monitoring platform that uses AI to detect contamination, monitor quality, and ensure food safety compliance for food producers and processors.',
-    features: [
+    features[
       'AI-powered contamination detection',
       'Quality monitoring',
       'Safety compliance',
@@ -165,11 +163,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Food safety, Contamination detection, Quality monitoring, Machine learning'],
-    integrations: ['Food safety systems, Quality control tools, Compliance databases, Analytics platforms'],
-    useCases: ['Contamination detection, Quality monitoring, Safety compliance, Risk assessment'],
+    technology['AI/ML, Food safety, Contamination detection, Quality monitoring, Machine learning'],
+    integrations['Food safety systems, Quality control tools, Compliance databases, Analytics platforms'],
+    useCases['Contamination detection, Quality monitoring, Safety compliance, Risk assessment'],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
-    competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+    competitors['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
     marketSize: '$15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
@@ -188,7 +186,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     price: '$1,799',
     period: '/month',
     description: 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
-    features: [
+    features[
       'Blockchain-based tracking',
       'Supply chain transparency',
       'Product authentication',
@@ -210,11 +208,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['Blockchain, Supply chain tracking, Product authentication, IoT, Web3'],
-    integrations: ['Supply chain systems, IoT devices, QR codes, Payment platforms'],
-    useCases: ['Food tracking, Supply chain transparency, Product authentication, Compliance management'],
+    technology['Blockchain, Supply chain tracking, Product authentication, IoT, Web3'],
+    integrations['Supply chain systems, IoT devices, QR codes, Payment platforms'],
+    useCases['Food tracking, Supply chain transparency, Product authentication, Compliance management'],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
-    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+    competitors['IBM Food Trust, VeChain, OriginTrail, Provenance'],
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
     variant: 'default',
@@ -233,7 +231,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     price: '$2,299',
     period: '/month',
     description: 'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
-    features: [
+    features[
       'AI-powered climate control',
       'Crop growth monitoring',
       'Environmental optimization',
@@ -255,11 +253,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '1 month',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'],
-    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'],
-    useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'],
+    technology['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'],
+    integrations['Climate control systems, IoT devices, Lighting systems, Analytics platforms'],
+    useCases['Climate control, Crop monitoring, Environmental optimization, Yield maximization'],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+    competitors['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
     marketSize: '$9.3B+ vertical farming market',
     growthRate: '280% YoY',
     variant: 'ai-futuristic',

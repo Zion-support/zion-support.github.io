@@ -21,66 +21,54 @@ export default function Marketplace() {
     // Automatically append a new listing every 2 minutes
     useEffect(() => {
         const interval = setInterval(() => {
-            setListings(prev => [...prev, generateRandomListing()]);
-        }, 120000); // 2 minutes
-        return () => clearInterval(interval);
-    }, []);
+            setListings(prev => [...prev, generateRandomListing()])}, 120000); // 2 minutes
+        return () => clearInterval(interval)}, []);
     // Filter options are now imported from marketplaceData
     useEffect(() => {
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
-        return () => clearTimeout(timeout);
-    }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+        return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {
-        localStorage.setItem('marketplaceView', view);
-    }, [view]);
+        localStorage.setItem('marketplaceView', view)}, [view]);
     // Filter listings based on selected filters
     const filteredListings = listings.filter(listing => {
         // Search filter
         if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
-            return false;
-        }
+            return false}
         // Product type filter
         if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-            return false;
-        }
+            return false}
         // Location filter
         if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
-            return false;
-        }
+            return false}
         // Availability filter
         if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
-            return false;
-        }
+            return false}
         // Rating filter
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
-            return false;
-        }
-        return true;
-    });
+            return false}
+        return true});
     const handleFilterChange = (filterType, value) => {
         console.log(`Filter changed: ${filterType} = ${value}`);
         switch (filterType) {
             case 'productTypes':
-                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;
             case 'locations':
-                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;
             case 'availability':
-                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
-                break;
-        }
+                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                break}
     };
     const clearAllFilters = () => {
         setSearchQuery("");
         setSelectedProductTypes([]);
         setSelectedLocations([]);
         setSelectedAvailability([]);
-        setSelectedRating(null);
-    };
+        setSelectedRating(null)};
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
         const listing = listings.find(item => item.id === listingId);
@@ -98,8 +86,7 @@ export default function Marketplace() {
                         image: listing.images?.[0]
                     }
                 }
-            });
-        }
+            })}
     };
     return (<main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
@@ -163,5 +150,4 @@ export default function Marketplace() {
               </div>)}
           </div>
         </div>
-      </main>);
-}
+      </main>)}

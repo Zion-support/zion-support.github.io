@@ -34,7 +34,7 @@ const onsiteServices = [
     title: "Network Infrastructure Setup",
     description: "Complete network design, installation, and configuration for businesses of all sizes.",
     icon: Network,
-    features: [
+    features[
       "Network design & planning",
       "Hardware installation",
       "Configuration & optimization",
@@ -43,14 +43,14 @@ const onsiteServices = [
     price: "From $5,000",
     timeline: "3-7 days",
     category: "Infrastructure",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 2,
     title: "Server Installation & Configuration",
     description: "Professional server setup, configuration, and optimization for optimal performance.",
     icon: Server,
-    features: [
+    features[
       "Hardware installation",
       "OS configuration",
       "Security hardening",
@@ -59,14 +59,14 @@ const onsiteServices = [
     price: "From $3,000",
     timeline: "2-5 days",
     category: "Servers",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 3,
     title: "Cybersecurity Assessment",
     description: "Comprehensive security audit and vulnerability assessment of your IT infrastructure.",
     icon: Shield,
-    features: [
+    features[
       "Security audit",
       "Vulnerability scanning",
       "Penetration testing",
@@ -75,14 +75,14 @@ const onsiteServices = [
     price: "From $4,000",
     timeline: "3-6 days",
     category: "Security",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 4,
     title: "Data Center Setup",
     description: "Complete data center design, construction, and equipment installation.",
     icon: Database,
-    features: [
+    features[
       "Facility design",
       "Equipment installation",
       "Power & cooling setup",
@@ -91,14 +91,14 @@ const onsiteServices = [
     price: "From $25,000",
     timeline: "2-4 weeks",
     category: "Data Centers",
-    coverage: ["Regional", "National"]
+    coverage["Regional", "National"]
   },
   {
     id: 5,
     title: "Workstation Deployment",
     description: "Bulk workstation setup, configuration, and deployment for enterprise environments.",
     icon: Monitor,
-    features: [
+    features[
       "Hardware setup",
       "Software installation",
       "User configuration",
@@ -107,14 +107,14 @@ const onsiteServices = [
     price: "From $150/unit",
     timeline: "1-3 days",
     category: "Workstations",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   },
   {
     id: 6,
     title: "Emergency IT Support",
     description: "24/7 emergency on-site IT support for critical system failures and issues.",
     icon: Activity,
-    features: [
+    features[
       "24/7 availability",
       "Rapid response",
       "Critical issue resolution",
@@ -123,7 +123,7 @@ const onsiteServices = [
     price: "From $200/hour",
     timeline: "2-8 hours",
     category: "Emergency Support",
-    coverage: ["Local", "Regional", "National"]
+    coverage["Local", "Regional", "National"]
   }
 ];
 
@@ -548,5 +548,4 @@ export default function ITOnsiteServices() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

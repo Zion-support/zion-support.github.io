@@ -36,7 +36,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
       title: 'AI-Powered Threat Detection',
       description: 'Advanced threat detection using machine learning and behavioral analysis',
       price: '$2,500/month',
-      features: ['Real-time monitoring', 'AI threat analysis', 'Automated response', '24/7 SOC support'],
+      features['Real-time monitoring', 'AI threat analysis', 'Automated response', '24/7 SOC support'],
       icon: Eye,
       category: 'threat-detection'
     },
@@ -45,7 +45,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
       title: 'Zero Trust Security Framework',
       description: 'Implement comprehensive zero trust architecture for your organization',
       price: '$3,200/month',
-      features: ['Identity verification', 'Access management', 'Network segmentation', 'Continuous monitoring'],
+      features['Identity verification', 'Access management', 'Network segmentation', 'Continuous monitoring'],
       icon: Lock,
       category: 'zero-trust'
     },
@@ -54,7 +54,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
       title: 'Compliance & Governance',
       description: 'Meet regulatory requirements with our compliance management platform',
       price: '$1,800/month',
-      features: ['SOC2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit trails'],
+      features['SOC2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit trails'],
       icon: Shield,
       category: 'compliance'
     },
@@ -63,7 +63,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
       title: 'Incident Response & Recovery',
       description: 'Rapid response and recovery services for security incidents',
       price: '$4,500/incident',
-      features: ['24/7 response team', 'Forensic analysis', 'Recovery planning', 'Post-incident review'],
+      features['24/7 response team', 'Forensic analysis', 'Recovery planning', 'Post-incident review'],
       icon: AlertTriangle,
       category: 'incident-response'
     }
@@ -292,7 +292,6 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default CybersecurityServicesPage;

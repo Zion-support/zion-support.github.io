@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIContentGenerator(...args: []):  {
+export default function AIContentGenerator(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -77,7 +77,7 @@ export default function AIContentGenerator(...args: []):  {
       price: "$39",
       period: "/month",
       description: "Perfect for individual creators and small businesses",
-      features: [
+      features[
         "Up to 100 content pieces/month",
         "Basic AI writing tools",
         "5 content templates",
@@ -92,7 +92,7 @@ export default function AIContentGenerator(...args: []):  {
       price: "$99",
       period: "/month",
       description: "Ideal for growing businesses and content teams",
-      features: [
+      features[
         "Up to 500 content pieces/month",
         "Advanced AI capabilities",
         "Unlimited templates",
@@ -108,7 +108,7 @@ export default function AIContentGenerator(...args: []):  {
       price: "$299",
       period: "/month",
       description: "For large organizations with high-volume content needs",
-      features: [
+      features[
         "Unlimited content generation",
         "Custom AI models",
         "White-label solutions",
@@ -454,5 +454,4 @@ export default function AIContentGenerator(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

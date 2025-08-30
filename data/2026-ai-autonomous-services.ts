@@ -12,9 +12,7 @@ export interface AiAutonomousService2026 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",
@@ -22,7 +20,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
     tagline: "Fully autonomous AI systems",
     price: "$499/month",
     description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-    features: [
+    features[
       "Autonomous operation",
       "Self-learning capabilities",
       "Independent decision making",

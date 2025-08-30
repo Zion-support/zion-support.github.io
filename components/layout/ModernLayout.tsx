@@ -9,9 +9,7 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-
-}
+  canonical?: string}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({ 
   children, 
@@ -81,7 +79,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": [
+              "sameAs"[
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
@@ -99,7 +97,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernFooter />
       </div>
     </>
-  );
-};
+  )};
 
 export default ModernLayout;

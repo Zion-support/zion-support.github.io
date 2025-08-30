@@ -13,17 +13,13 @@ interface SearchResult {
   type: 'service' | 'page' | 'blog' | 'case-study';
   category: string;
   tags: string[];
-  relevance: number;
-
-}
+  relevance: number}
 
 interface SearchFilter {
 
   type: string[];
   category: string[];
-  tags: string[];
-
-}
+  tags: string[]}
 
 const searchData: SearchResult[] = [
   // Services
@@ -34,7 +30,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-business-intelligence',
     type: 'service',
     category: 'AI Solutions',
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
+    tags['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
     relevance: 95
   },
   {
@@ -44,7 +40,7 @@ const searchData: SearchResult[] = [
     url: '/services/cloud-devops',
     type: 'service',
     category: 'Cloud & DevOps',
-    tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
+    tags['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
     relevance: 90
   },
   {
@@ -54,7 +50,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-cybersecurity-suite',
     type: 'service',
     category: 'Cybersecurity',
-    tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],
+    tags['Security', 'AI', 'Cybersecurity', 'Enterprise'],
     relevance: 88
   },
   // Pages
@@ -65,7 +61,7 @@ const searchData: SearchResult[] = [
     url: '/about',
     type: 'page',
     category: 'Comp',
-    tags: ['About', 'Comp', 'Mission', 'Values'],
+    tags['About', 'Comp', 'Mission', 'Values'],
     relevance: 85
   },
   {
@@ -75,7 +71,7 @@ const searchData: SearchResult[] = [
     url: '/contact',
     type: 'page',
     category: 'Support',
-    tags: ['Contact', 'Support', 'Consultation', 'Help'],
+    tags['Contact', 'Support', 'Consultation', 'Help'],
     relevance: 80
   },
   // Blog posts (example)
@@ -86,7 +82,7 @@ const searchData: SearchResult[] = [
     url: '/blog/ai-trends-2025',
     type: 'blog',
     category: 'AI Insights',
-    tags: ['AI', 'Trends', '2025', 'Business'],
+    tags['AI', 'Trends', '2025', 'Business'],
     relevance: 75
   }
 ];
@@ -104,9 +100,9 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
   const [results, setResults] = useState<any>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [filters, setFilters] = useState<any>({
-    type: [],
-    category: [],
-    tags: []
+    type[],
+    category[],
+    tags[]
   });
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState<any>([]);
@@ -123,16 +119,14 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
   useEffect(() => {
     const saved = localStorage.getItem('zion-recent-searches');
     if (saved) {
-      setRecentSearches(JSON.parse(saved));
-    }
+      setRecentSearches(JSON.parse(saved))}
   }, []);
 
   // Search functionality
   useEffect(() => {
     if (debouncedQuery.trim().length < 2) {
       setResults([]);
-      return;
-    }
+      return}
 
     const searchResults = searchData
       .filter(item => {
@@ -144,41 +138,34 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
                               filters.category.length === 0 || filters.category.includes(item.category) &&
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
         
-        return matchesQuery && matchesFilters;
-      })
+        return matchesQuery && matchesFilters})
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, 10);
 
-    setResults(searchResults);
-  }, [debouncedQuery, filters]);
+    setResults(searchResults)}, [debouncedQuery, filters]);
 
   // Handle click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent)  => {
       if (event.key === 'Escape') {
-        setIsOpen(false);
-      } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         setIsOpen(true);
-        inputRef.current?.focus();
-      }
+        inputRef.current?.focus()}
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   const handleSearch = useCallback((searchQuery: string)  => {
     if (searchQuery.trim()) {
@@ -189,29 +176,25 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
       
       // Navigate to search results or close search
       setIsOpen(false);
-      setQuery('');
-    }
+      setQuery('')}
   }, [recentSearches]);
 
   const handleResultClick = (result: SearchResult)  => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
-    setQuery('');
-  };
+    setQuery('')};
 
   const toggleFilter = (filterType: keyof SearchFilter, value: string)  => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
         ? prev[filterType].filter(v => v !== value)
-        : [...prev[filterType], value]
-    }));
-  };
+        [...prev[filterType], value]
+    }))};
 
   const clearFilters = () => {
-    setFilters({ type: [], category: [], tags: [] });
-  };
+    setFilters({ type[], category[], tags[] })};
 
   const getTypeIcon = (type: string)  => {
     switch (type) {
@@ -219,8 +202,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
       case 'page': return <Globe className="h-4 w-4" />;
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
-      default: return <Search className="h-4 w-4" />;
-    }
+      default: return <Search className="h-4 w-4" />}
   };
 
   return (
@@ -440,5 +422,4 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};

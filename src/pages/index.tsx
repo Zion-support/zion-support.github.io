@@ -29,7 +29,7 @@ import { ArrowRight,
   Smartphone
  } from 'lucide-react.ts';
 
-export default function Index(...args: []):  {
+export default function Index(...args[]):  {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   
@@ -142,5 +142,4 @@ export default function Index(...args: []):  {
       <FloatingCTA />
       <Footer />
     </div>
-  );
-}
+  )}

@@ -9,18 +9,14 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string;
-
-}
+  updatedAt?: string}
 
 interface AuthTokens {
 
   accessToken: string | null;
-  refreshToken: string | null;
+  refreshToken: string | null}
 
-}
-
-export const useAuthState: [, React.Dispatch<React.SetStateAction<any>>] = () => {
+export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
@@ -42,19 +38,15 @@ export const useAuthState: [, React.Dispatch<React.SetStateAction<any>>] = () =>
               setTokens({
                 accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
-              });
-            }
+              })}
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error);
-      } finally {
-        setIsLoading(false);
-      }
+        console.error('Error checking auth state:', error)} finally {
+        setIsLoading(false)}
     };
 
-    checkAuthState();
-  }, []);
+    checkAuthState()}, []);
 
   return {
     user,
@@ -65,5 +57,4 @@ export const useAuthState: [, React.Dispatch<React.SetStateAction<any>>] = () =>
     setOnboardingStep,
     tokens,
     setTokens
-  };
-};
+  }};

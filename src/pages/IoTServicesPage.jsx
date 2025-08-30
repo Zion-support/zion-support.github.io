@@ -13,7 +13,7 @@ const iotServices = [
         price: 1200,
         currency: "$",
         period: "/month",
-        features: [
+        features[
             "Device provisioning & onboarding",
             "Real-time monitoring",
             "Data collection & storage",
@@ -34,7 +34,7 @@ const iotServices = [
         price: 800,
         currency: "$",
         period: "/month",
-        features: [
+        features[
             "Real-time data processing",
             "Machine learning models",
             "Predictive maintenance",
@@ -55,7 +55,7 @@ const iotServices = [
         price: 1500,
         currency: "$",
         period: "/month",
-        features: [
+        features[
             "Device authentication",
             "Data encryption",
             "Threat detection",
@@ -76,7 +76,7 @@ const iotServices = [
         price: 2000,
         currency: "$",
         period: "/month",
-        features: [
+        features[
             "Edge node deployment",
             "Local data processing",
             "Real-time analytics",
@@ -97,7 +97,7 @@ const iotServices = [
         price: 3000,
         currency: "$",
         period: "/project",
-        features: [
+        features[
             "System integration",
             "API development",
             "Data mapping",
@@ -118,7 +118,7 @@ const iotServices = [
         price: 2500,
         currency: "$",
         period: "/app",
-        features: [
+        features[
             "Cross-platform development",
             "Real-time monitoring",
             "Push notifications",
@@ -347,5 +347,4 @@ export default function IoTServicesPage() {
       </section>
 
       <TrustedBySection />
-    </div>);
-}
+    </div>)}

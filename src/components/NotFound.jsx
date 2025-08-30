@@ -20,7 +20,7 @@ const NotFound = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
       <motion.div className="max-w-4xl mx-auto text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}
-        <motion.div className="mb-8" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+        <motion.div className="mb-8" animate={{ scale[1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
             <AlertTriangle className="w-16 h-16 text-white"/>
           </div>
@@ -110,6 +110,5 @@ const NotFound = () => {
           </a>
         </motion.p>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default NotFound;

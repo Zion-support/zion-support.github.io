@@ -62,23 +62,18 @@ const LaunchToolkitPage = () => {
                     console.error(`Failed to fetch asset: ${assetPath}`);
                     // Optionally, decide if one failed asset should stop the whole process
                     // or if it should be skipped. For now, we'll log and continue.
-                    continue;
-                }
+                    continue}
                 const blob = await response.blob();
                 // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip
                 const pathInZip = assetPath.replace(/^toolkit_assets\//, 'Zion_Launch_Toolkit/');
-                zip.file(pathInZip, blob);
-            }
+                zip.file(pathInZip, blob)}
             const zipBlob = await zip.generateAsync({ type: 'blob' });
-            saveAs(zipBlob, 'Zion_Launch_Toolkit.zip');
-        }
+            saveAs(zipBlob, 'Zion_Launch_Toolkit.zip')}
         catch (error) {
             console.error("Error creating ZIP:", error);
-            setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
-        }
+            setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.')}
         finally {
-            setIsZipping(false);
-        }
+            setIsZipping(false)}
     };
     React.useEffect(() => {
         const fetchExplainerCopy = async () => {
@@ -87,22 +82,17 @@ const LaunchToolkitPage = () => {
             try {
                 const response = await fetch('/toolkit_assets/social_media_kit/copy_blocks/explainer_copy_1.txt');
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch explainer copy: ${response.statusText}`);
-                }
+                    throw new Error(`Failed to fetch explainer copy: ${response.statusText}`)}
                 const text = await response.text();
-                setExplainerCopy(text);
-            }
+                setExplainerCopy(text)}
             catch (error) {
                 console.error("Error loading explainer copy:", error);
                 setExplainerCopy('Could not load explainer copy.');
-                setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.');
-            }
+                setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.')}
             finally {
-                setIsLoadingCopy(false);
-            }
+                setIsLoadingCopy(false)}
         };
-        fetchExplainerCopy();
-    }, []); // Empty dependency array means this runs once on mount
+        fetchExplainerCopy()}, []); // Empty dependency array means this runs once on mount
     const loadTemplate = async (url) => {
         setSelectedTemplateUrl(url);
         setSelectedTemplateContent(''); // Clear previous template content
@@ -112,30 +102,23 @@ const LaunchToolkitPage = () => {
         try {
             const response = await fetch(url);
             if (!response.ok) {
-                throw new Error(`Failed to fetch template: ${response.statusText}`);
-            }
+                throw new Error(`Failed to fetch template: ${response.statusText}`)}
             const text = await response.text();
-            setSelectedTemplateContent(text);
-        }
+            setSelectedTemplateContent(text)}
         catch (error) {
             console.error("Error loading template:", error);
             setSelectedTemplateContent('');
-            setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.');
-        }
+            setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.')}
         finally {
-            setIsLoadingTemplate(false);
-        }
+            setIsLoadingTemplate(false)}
     };
     const generateWithDate = () => {
         if (selectedTemplateContent && customDate) {
-            setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate));
-        }
+            setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate))}
         else if (!selectedTemplateContent) {
-            setGeneratedPressRelease('Please load a template first.');
-        }
+            setGeneratedPressRelease('Please load a template first.')}
         else {
-            setGeneratedPressRelease('Please enter a date.');
-        }
+            setGeneratedPressRelease('Please enter a date.')}
     };
     return (<AppLayout>
       <NextSeo title="Launch Operations Toolkit" description="Your complete toolkit for the Zion platform public release."/>
@@ -386,6 +369,5 @@ const LaunchToolkitPage = () => {
           </div>
         </section>
       </div>
-    </AppLayout>);
-};
+    </AppLayout>)};
 export default LaunchToolkitPage;

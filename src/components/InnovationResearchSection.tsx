@@ -18,7 +18,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: Brain,
       title: 'Artificial Intelligence',
       description: 'Advancing the frontiers of machine learning, neural networks, and cognitive computing.',
-      focus: ['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'AI Ethics'],
+      focus['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'AI Ethics'],
       publications: '25+',
       patents: '8'
     },
@@ -26,7 +26,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: TestTube,
       title: 'Quantum Computing',
       description: 'Exploring quantum algorithms and quantum-classical hybrid systems.',
-      focus: ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Machine Learning', 'Error Correction'],
+      focus['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Machine Learning', 'Error Correction'],
       publications: '15+',
       patents: '5'
     },
@@ -34,7 +34,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: Rocket,
       title: 'Space Technology',
       description: 'Developing next-generation space exploration and satellite technologies.',
-      focus: ['Satellite Systems', 'Space Robotics', 'Propulsion Systems', 'Space Mining'],
+      focus['Satellite Systems', 'Space Robotics', 'Propulsion Systems', 'Space Mining'],
       publications: '20+',
       patents: '12'
     },
@@ -42,7 +42,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: Target,
       title: 'Biotechnology',
       description: 'Revolutionizing healthcare through genetic engineering and bioinformatics.',
-      focus: ['CRISPR Technology', 'Drug Discovery', 'Personalized Medicine', 'Bioinformatics'],
+      focus['CRISPR Technology', 'Drug Discovery', 'Personalized Medicine', 'Bioinformatics'],
       publications: '30+',
       patents: '15'
     },
@@ -50,7 +50,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: Microscope,
       title: 'Nanotechnology',
       description: 'Engineering materials and devices at the molecular and atomic scale.',
-      focus: ['Nano Materials', 'Molecular Electronics', 'Nano Medicine', 'Quantum Dots'],
+      focus['Nano Materials', 'Molecular Electronics', 'Nano Medicine', 'Quantum Dots'],
       publications: '18+',
       patents: '9'
     },
@@ -58,7 +58,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       icon: TrendingUp,
       title: 'Sustainable Energy',
       description: 'Creating clean energy solutions for a sustainable future.',
-      focus: ['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
+      focus['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
       publications: '22+',
       patents: '11'
     }
@@ -110,8 +110,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Research Areas Grid */}
@@ -162,8 +161,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
                   </div>
                 </div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* CTA Section */}
@@ -195,7 +193,6 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default InnovationResearchSection;

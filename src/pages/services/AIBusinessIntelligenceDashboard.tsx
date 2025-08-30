@@ -46,7 +46,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses getting started with BI",
-      features: [
+      features[
         "Up to 5 users",
         "10 data sources",
         "Basic AI insights",
@@ -61,7 +61,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses with advanced BI needs",
-      features: [
+      features[
         "Up to 25 users",
         "Unlimited data sources",
         "Advanced AI insights",
@@ -78,7 +78,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       price: "$1,999",
       period: "/month",
       description: "For large enterprises requiring maximum scalability",
-      features: [
+      features[
         "Unlimited users",
         "Unlimited data sources",
         "Premium AI insights",
@@ -274,7 +274,6 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AIBusinessIntelligenceDashboard;

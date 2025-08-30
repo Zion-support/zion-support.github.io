@@ -36,23 +36,18 @@ interface ChatMessage {
   timestamp: Date;
   type: 'text' | 'image' | 'file' | 'system';
   status: 'sending' | 'sent' | 'error';
-metadata?: {;
+metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-    estimatedResponseTime?: number;
-  
-};
-}
+    estimatedResponseTime?: number}}
 
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
 
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
-  autoScroll?: boolean;
-
-}
+  autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
@@ -88,20 +83,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         status: 'sent',
         metadata: {
           confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          suggestions['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          relatedServices['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
           estimatedResponseTime: 2
         }
       };
-      setMessages([welcomeMessage]);
-    }
+      setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
   useEffect(()  => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response
@@ -114,23 +107,23 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     const responses = [
       {
         content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about  particular service?",
-        suggestions: ['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
-        relatedServices: ['AI Consulting', 'Machine Learning', 'Data Analytics']
+        suggestions['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
+        relatedServices['AI Consulting', 'Machine Learning', 'Data Analytics']
       },
       {
         content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
-        suggestions: ['Cloud Migration timeline', 'Infrastructure assessment', 'Implementation process', 'Ongoing support'],
-        relatedServices: ['Cloud Migration', 'Infrastructure Modernization', 'DevOps Services']
+        suggestions['Cloud Migration timeline', 'Infrastructure assessment', 'Implementation process', 'Ongoing support'],
+        relatedServices['Cloud Migration', 'Infrastructure Modernization', 'DevOps Services']
       },
       {
         content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
-        suggestions: ['Threat detection', 'Incident response', 'Security audits', 'Employee training'],
-        relatedServices: ['Cybersecurity', 'Threat Detection', 'Security Training']
+        suggestions['Threat detection', 'Incident response', 'Security audits', 'Employee training'],
+        relatedServices['Cybersecurity', 'Threat Detection', 'Security Training']
       },
       {
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
+        suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
       }
     ];
     
@@ -152,8 +145,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     };
     
     setMessages(prev  => [...prev, botMessage]);
-    setIsTyping(false);
-  };
+    setIsTyping(false)};
 
   // Handle message submission
   const handleSubmit = async (e: React.FormEvent)  => {
@@ -173,8 +165,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     setInputValue('');
     
     // Generate AI response
-    await simulateAIResponse(inputValue);
-  };
+    await simulateAIResponse(inputValue)};
 
   // Handle voice input
   const toggleVoiceInput = () => {
@@ -194,14 +185,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         type: 'file',
         status: 'sent'
       };
-      setMessages(prev  => [...prev, fileMessage]);
-    }
+      setMessages(prev  => [...prev, fileMessage])}
   };
 
   // Handle suggestion click
   const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {
-    setInputValue(suggestion);
-  };
+    setInputValue(suggestion)};
 
   // Rate response
   const rateResponse = (messageId: string, rating: 'positive' | 'negative')  => {
@@ -209,14 +198,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       msg.id === messageId 
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
         : msg
-    ));
-  };
+    ))};
 
   // Clear chat
   const clearChat = () => {
     setMessages([]);
-    setChatHistory([]);
-  };
+    setChatHistory([])};
 
   return (
     <>
@@ -512,5 +499,4 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};

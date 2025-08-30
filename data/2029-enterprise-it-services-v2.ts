@@ -36,17 +36,15 @@ export interface EnterpriseITService2029V2 {
     mobile: string;
     email: string;
     website: string;
-    address: string;
-  };
-}
+    address: string}}
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description: 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.',
-    category: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring'],
+    category['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring'],
     price: '$6,999/month',
-    features: [
+    features[
       'Autonomous infrastructure management',
       'Self-healing systems',
       'Automated deployment pipelines',
@@ -56,7 +54,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Cost optimization',
       'Predictive maintenance'
     ],
-    benefits: [
+    benefits[
       'Reduce operational costs by 90%',
       'Improve system reliability by 99.9%',
       'Accelerate deployment cycles by 10x',
@@ -64,7 +62,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Enhance security posture',
       'Optimize resource utilization'
     ],
-    useCases: [
+    useCases[
       'Enterprise DevOps transformation',
       'Cloud infrastructure management',
       'Microservices deployment',
@@ -73,11 +71,11 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Performance optimization'
     ],
     marketSize: '$25.8B by 2029',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
-    technology: ['AI/ML', 'Kubernetes', 'Terraform', 'Monitoring Tools'],
-    integration: ['Cloud platforms', 'CI/CD tools', 'Monitoring systems'],
-    support: ['24/7 enterprise support', 'DevOps experts', 'Implementation team'],
-    compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'HIPAA'],
+    competitors['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
+    technology['AI/ML', 'Kubernetes', 'Terraform', 'Monitoring Tools'],
+    integration['Cloud platforms', 'CI/CD tools', 'Monitoring systems'],
+    support['24/7 enterprise support', 'DevOps experts', 'Implementation team'],
+    compliance['SOC 2', 'ISO 27001', 'FedRAMP', 'HIPAA'],
     scalability: 'Enterprise-grade, multi-cloud support',
     roi: '500% within 12 months',
     deployment: 'Cloud-native, hybrid options',
@@ -108,9 +106,9 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     description: 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.',
-    category: ['Cloud Computing', 'Quantum Computing', 'Infrastructure', 'Security', 'Performance'],
+    category['Cloud Computing', 'Quantum Computing', 'Infrastructure', 'Security', 'Performance'],
     price: '$18,999/month',
-    features: [
+    features[
       'Quantum computing resources',
       'Quantum-safe encryption',
       'Hybrid quantum-classical computing',
@@ -120,7 +118,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Performance optimization',
       'Scalable quantum resources'
     ],
-    benefits: [
+    benefits[
       'Quantum computing capabilities',
       'Unbreakable security',
       'Exponential performance gains',
@@ -128,7 +126,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Competitive advantage',
       'Long-term investment value'
     ],
-    useCases: [
+    useCases[
       'Scientific computing',
       'Financial modeling',
       'Cryptography research',
@@ -137,11 +135,11 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Research and development'
     ],
     marketSize: '$35.2B by 2029',
-    competitors: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud'],
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Security', 'Hybrid Computing'],
-    integration: ['Existing cloud platforms', 'Quantum applications', 'Enterprise systems'],
-    support: ['24/7 quantum support', 'Quantum experts', 'Implementation team'],
-    compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Quantum standards'],
+    competitors['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud'],
+    technology['Quantum Computing', 'Cloud Infrastructure', 'Quantum Security', 'Hybrid Computing'],
+    integration['Existing cloud platforms', 'Quantum applications', 'Enterprise systems'],
+    support['24/7 quantum support', 'Quantum experts', 'Implementation team'],
+    compliance['SOC 2', 'ISO 27001', 'FedRAMP', 'Quantum standards'],
     scalability: 'Enterprise-grade, global quantum network',
     roi: '700% within 24 months',
     deployment: 'Cloud-native, quantum-ready',
@@ -172,9 +170,9 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
     description: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',
-    category: ['Cybersecurity', 'AI', 'Enterprise Security', 'Threat Detection', 'Automation'],
+    category['Cybersecurity', 'AI', 'Enterprise Security', 'Threat Detection', 'Automation'],
     price: '$9,999/month',
-    features: [
+    features[
       'AI-powered threat detection',
       'Real-time security monitoring',
       'Automated incident response',
@@ -184,7 +182,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Security automation',
       'Compliance management'
     ],
-    benefits: [
+    benefits[
       'Detect threats 10x faster',
       'Reduce false positives by 80%',
       'Automate security responses',
@@ -192,7 +190,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Enhance compliance posture',
       'Reduce security team workload'
     ],
-    useCases: [
+    useCases[
       'Enterprise security operations',
       'Threat intelligence',
       'Incident response',
@@ -201,11 +199,11 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Risk assessment'
     ],
     marketSize: '$38.7B by 2029',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
-    technology: ['AI/ML', 'Machine Learning', 'Behavioral Analysis', 'Security'],
-    integration: ['SIEM systems', 'EDR platforms', 'Security tools'],
-    support: ['24/7 security support', 'Security experts', 'Implementation team'],
-    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],
+    competitors['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
+    technology['AI/ML', 'Machine Learning', 'Behavioral Analysis', 'Security'],
+    integration['SIEM systems', 'EDR platforms', 'Security tools'],
+    support['24/7 security support', 'Security experts', 'Implementation team'],
+    compliance['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],
     scalability: 'Enterprise-grade, global deployment',
     roi: '600% within 15 months',
     deployment: 'Cloud-native, on-premise options',
@@ -236,9 +234,9 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
     description: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
-    category: ['IT Operations', 'Automation', 'Infrastructure', 'Monitoring', 'Management'],
+    category['IT Operations', 'Automation', 'Infrastructure', 'Monitoring', 'Management'],
     price: '$14,999/month',
-    features: [
+    features[
       'Autonomous infrastructure management',
       'Self-healing systems',
       'Predictive maintenance',
@@ -248,7 +246,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Intelligent resource allocation',
       'Continuous optimization'
     ],
-    benefits: [
+    benefits[
       'Achieve 99.99% uptime',
       'Reduce operational costs by 85%',
       'Eliminate manual interventions',
@@ -256,7 +254,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Enhance user experience',
       'Optimize resource utilization'
     ],
-    useCases: [
+    useCases[
       'Enterprise IT operations',
       'Data center management',
       'Application performance management',
@@ -265,11 +263,11 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'IT service management'
     ],
     marketSize: '$28.9B by 2029',
-    competitors: ['ServiceNow', 'BMC', 'Micro Focus', 'Ivanti'],
-    technology: ['AI/ML', 'Automation', 'Monitoring', 'ITSM'],
-    integration: ['ITSM platforms', 'Monitoring tools', 'Enterprise systems'],
-    support: ['24/7 operations support', 'IT experts', 'Implementation team'],
-    compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],
+    competitors['ServiceNow', 'BMC', 'Micro Focus', 'Ivanti'],
+    technology['AI/ML', 'Automation', 'Monitoring', 'ITSM'],
+    integration['ITSM platforms', 'Monitoring tools', 'Enterprise systems'],
+    support['24/7 operations support', 'IT experts', 'Implementation team'],
+    compliance['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],
     scalability: 'Enterprise-grade, multi-tenant support',
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options',

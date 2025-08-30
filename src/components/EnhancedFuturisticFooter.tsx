@@ -68,7 +68,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      links: [
+      links[
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
@@ -84,7 +84,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
-      links: [
+      links[
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
@@ -97,7 +97,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Edge & IoT Services',
       icon: Server,
       color: 'from-blue-600 to-cyan-600',
-      links: [
+      links[
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
@@ -113,7 +113,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Quantum & Emerging Tech',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
-      links: [
+      links[
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
@@ -175,8 +175,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       >
         {name}
       </Link>
-    );
-  };
+    )};
 
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
@@ -478,5 +477,4 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
       </div>
     </footer>
-  );
-};
+  )};

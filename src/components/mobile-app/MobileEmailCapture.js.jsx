@@ -19,16 +19,12 @@ export const MobileEmailCapture = () => {
             setIsSuccess(true);
             setEmail("");
             setTimeout(() => {
-                setIsSuccess(false);
-            }, 5000);
-        }
+                setIsSuccess(false)}, 5000)}
         catch (error) {
             console.error("Error subscribing:", error);
-            enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
-        }
+            enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' })}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     };
     return (<section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
@@ -52,5 +48,4 @@ export const MobileEmailCapture = () => {
           </p>
         </div>
       </div>
-    </section>);
-};
+    </section>)};

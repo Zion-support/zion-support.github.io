@@ -63,7 +63,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'ai-services',
       pricing: 'monthly',
       price: '$1,200',
-      features: ['Process automation', 'AI decision making', 'Integration APIs', 'Analytics dashboard'],
+      features['Process automation', 'AI decision making', 'Integration APIs', 'Analytics dashboard'],
       icon: Brain,
       rating: 4.9,
       reviewCount: 127
@@ -75,7 +75,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'ai-services',
       pricing: 'monthly',
       price: '$2,500',
-      features: ['Customer segmentation', 'Predictive analytics', 'Omnichannel support', 'Real-time insights'],
+      features['Customer segmentation', 'Predictive analytics', 'Omnichannel support', 'Real-time insights'],
       icon: Users,
       rating: 4.8,
       reviewCount: 89
@@ -87,7 +87,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'ai-services',
       pricing: 'monthly',
       price: '$3,800',
-      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Risk management'],
+      features['Demand forecasting', 'Inventory optimization', 'Route planning', 'Risk management'],
       icon: Network,
       rating: 4.7,
       reviewCount: 156
@@ -99,7 +99,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'cybersecurity',
       pricing: 'monthly',
       price: '$2,200',
-      features: ['Threat detection', 'Behavioral analysis', 'Incident response', 'Compliance reporting'],
+      features['Threat detection', 'Behavioral analysis', 'Incident response', 'Compliance reporting'],
       icon: Shield,
       rating: 4.9,
       reviewCount: 203
@@ -111,7 +111,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'it-services',
       pricing: 'monthly',
       price: '$1,800',
-      features: ['Cloud migration', 'CI/CD pipelines', 'Monitoring', 'Auto-scaling'],
+      features['Cloud migration', 'CI/CD pipelines', 'Monitoring', 'Auto-scaling'],
       icon: Cloud,
       rating: 4.6,
       reviewCount: 94
@@ -123,7 +123,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
       category: 'ai-services',
       pricing: 'monthly',
       price: '$1,500',
-      features: ['Data classification', 'Privacy controls', 'Audit trails', 'GDPR compliance'],
+      features['Data classification', 'Privacy controls', 'Audit trails', 'GDPR compliance'],
       icon: Database,
       rating: 4.5,
       reviewCount: 67
@@ -136,8 +136,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     
-    return matchesCategory && matchesPricing && matchesSearch;
-  });
+    return matchesCategory && matchesPricing && matchesSearch});
 
   return (
     <>
@@ -276,8 +275,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
                   onClick={() => {
                     setSelectedCategory('all');
                     setSelectedPricing('all');
-                    setSearchQuery('');
-                  }}
+                    setSearchQuery('')}}
                   className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
                 >
                   Clear Filters
@@ -346,7 +344,6 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensiveServicesOverview;

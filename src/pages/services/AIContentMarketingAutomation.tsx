@@ -27,7 +27,7 @@ import { Brain,
   Rocket
  } from 'lucide-react.ts';
 
-export default function AIContentMarketingAutomation(...args: []):  {
+export default function AIContentMarketingAutomation(...args[]):  {
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",
@@ -68,7 +68,7 @@ export default function AIContentMarketingAutomation(...args: []):  {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI content generation (50 pieces/month)",
         "Basic social media automation",
         "Email campaign templates",
@@ -83,7 +83,7 @@ export default function AIContentMarketingAutomation(...args: []):  {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features: [
+      features[
         "AI content generation (200 pieces/month)",
         "Advanced social media automation",
         "Multi-channel distribution",
@@ -99,7 +99,7 @@ export default function AIContentMarketingAutomation(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex needs",
-      features: [
+      features[
         "Unlimited AI content generation",
         "Custom AI model training",
         "Advanced audience targeting",
@@ -394,5 +394,4 @@ export default function AIContentMarketingAutomation(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

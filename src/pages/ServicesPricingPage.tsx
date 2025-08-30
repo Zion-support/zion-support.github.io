@@ -28,11 +28,9 @@ import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/d
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
-    acc[service.category] = [];
-  }
+    acc[service.category] = []}
   acc[service.category].push(service);
-  return acc;
-}, {} as { [key: string]: typeof EXPANDED_SERVICES });
+  return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
@@ -44,7 +42,7 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args: []):  {
+export default function ServicesPricingPage(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all' 
@@ -73,8 +71,7 @@ export default function ServicesPricingPage(...args: []):  {
       'Education Technology': <GraduationCap className="h-5 w-5" />,
       'Supply Chain': <Truck className="h-5 w-5" />
     };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />;
-  };
+    return categoryIcons[category] || <Zap className="h-5 w-5" />};
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -354,5 +351,4 @@ export default function ServicesPricingPage(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

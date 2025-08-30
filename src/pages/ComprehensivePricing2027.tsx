@@ -8,7 +8,7 @@ import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 
-export default function ComprehensivePricing2027(...args: []):  {
+export default function ComprehensivePricing2027(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState<any>('price');
@@ -30,8 +30,7 @@ export default function ComprehensivePricing2027(...args: []):  {
     .sort((a, b) => {
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
-      return b.rating - a.rating;
-    });
+      return b.rating - a.rating});
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -78,14 +77,12 @@ export default function ComprehensivePricing2027(...args: []):  {
   const getPriceColor = (price: number)  => {
     if (price < 1000) return 'text-green-400';
     if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
   const getPriceTier = (price: number)  => {
     if (price < 1000) return 'Starter';
     if (price < 2500) return 'Professional';
-    return 'Enterprise';
-  };
+    return 'Enterprise'};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -493,5 +490,4 @@ export default function ComprehensivePricing2027(...args: []):  {
         </div>
       </motion.section>
     </div>
-  );
-}
+  )}

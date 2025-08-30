@@ -33,7 +33,7 @@ import { Brain,
   Building
  } from 'lucide-react.ts';
 
-export default function AIHRPlatform(...args: []):  {
+export default function AIHRPlatform(...args[]):  {
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -74,7 +74,7 @@ export default function AIHRPlatform(...args: []):  {
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI candidate screening (up to 100/month)",
         "Basic resume parsing",
         "Interview scheduling",
@@ -90,7 +90,7 @@ export default function AIHRPlatform(...args: []):  {
       price: "$899",
       period: "/month",
       description: "Ideal for growing companies and HR teams",
-      features: [
+      features[
         "AI candidate screening (unlimited)",
         "Advanced resume parsing",
         "Performance analytics",
@@ -107,7 +107,7 @@ export default function AIHRPlatform(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex HR needs",
-      features: [
+      features[
         "Custom AI model training",
         "Advanced workforce planning",
         "White-label solutions",
@@ -401,5 +401,4 @@ export default function AIHRPlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

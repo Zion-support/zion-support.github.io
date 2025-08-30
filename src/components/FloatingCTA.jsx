@@ -7,14 +7,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     const [showScrollTop, setShowScrollTop] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 400);
-        };
+            setShowScrollTop(window.scrollY > 400)};
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll)}, []);
     const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        window.scrollTo({ top: 0, behavior: 'smooth' })};
     const getPositionClasses = () => {
         switch (position) {
             case 'bottom-left':
@@ -24,8 +21,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':
                 return 'top-6 left-6';
             default:
-                return 'bottom-6 right-6';
-        }
+                return 'bottom-6 right-6'}
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -36,16 +32,14 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':
                 return 'top-6 left-6';
             default:
-                return 'bottom-6 right-6';
-        }
+                return 'bottom-6 right-6'}
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>
         {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`} initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
-      </AnimatePresence>);
-    }
+      </AnimatePresence>)}
     if (variant === 'featured') {
         return (<div className={`fixed ${getPositionClasses()} z-40`}>
         <AnimatePresence>
@@ -101,8 +95,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
               </div>
             </motion.div>)}
         </AnimatePresence>
-      </div>);
-    }
+      </div>)}
     // Default variant
     return (<div className={`fixed ${getPositionClasses()} z-40`}>
       <AnimatePresence>
@@ -148,5 +141,4 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}

@@ -32,7 +32,7 @@ import { Code,
   Lightbulb
  } from 'lucide-react.ts';
 
-const DeveloperPortal: [, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const apiFeatures = [
@@ -433,7 +433,6 @@ print(data)`,
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default DeveloperPortal;

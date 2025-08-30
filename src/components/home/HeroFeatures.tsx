@@ -3,18 +3,14 @@ import { motion  } from 'framer-motion.ts';
 
 interface HeroFeature {
 
-icon: React.ComponentType<{ className?: string;
-}>;
+icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;
-  gradient: string;
-}
+  gradient: string}
 
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
 
-  features: HeroFeature[];
-
-}
+  features: HeroFeature[]}
 
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   return (
@@ -61,7 +57,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
         </motion.div>
       ))}
     </motion.div>
-  );
-};
+  )};
 
 export default HeroFeatures;

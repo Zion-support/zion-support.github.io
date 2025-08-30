@@ -104,11 +104,9 @@ const FloatingCTA: React.FC = (): JSX.Element => {
   useEffect(() => {
     // Show CTA after 5 seconds
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+      setIsVisible(true)}, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
   const contactMethods = [
     {
@@ -267,7 +265,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 
 export default FloatingCTA;

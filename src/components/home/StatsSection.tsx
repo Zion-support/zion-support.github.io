@@ -9,16 +9,12 @@ interface Stat {
   label: string;
   description: string;
   avatar: string;
-icon: React.ComponentType<{ className?: string;
-}>;
-  color: string;
-}
+icon: React.ComponentType<{ className?: string}>;
+  color: string}
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
-  stats: Stat[];
-
-}
+  stats: Stat[]}
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
@@ -39,19 +35,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             current += increment;
             if (current >= targetNumber) {
               current = targetNumber;
-              clearInterval(countTimer);
-            }
+              clearInterval(countTimer)}
             
             setCounts(prev => ({
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            }))}, 50)})}, 500);
 
-      return () => clearTimeout(timer);
-    }
+      return () => clearTimeout(timer)}
   }, [isInView, stats]);
 
   return (
@@ -123,7 +114,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default StatsSection;

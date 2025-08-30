@@ -216,5 +216,4 @@ export const CommunityTrust = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

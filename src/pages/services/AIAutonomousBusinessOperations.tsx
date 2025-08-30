@@ -177,69 +177,69 @@ const AIAutonomousBusinessOperations = () => {
       icon: Brain,
       title: "AI-Powered Decision Making",
       description: "Advanced machine learning algorithms that make intelligent business decisions in real-time",
-      benefits: ["Automated risk assessment", "Predictive analytics", "Intelligent resource allocation", "Market trend analysis"]
+      benefits["Automated risk assessment", "Predictive analytics", "Intelligent resource allocation", "Market trend analysis"]
     },
     {
       icon: Zap,
       title: "Process Automation",
       description: "End-to-end automation of complex business processes and workflows",
-      benefits: ["Reduced manual errors", "Increased efficiency", "24/7 operation", "Scalable processes"]
+      benefits["Reduced manual errors", "Increased efficiency", "24/7 operation", "Scalable processes"]
     },
     {
       icon: TrendingUp,
       title: "Performance Optimization",
       description: "Continuous monitoring and optimization of business performance metrics",
-      benefits: ["Real-time insights", "Proactive improvements", "Cost optimization", "Revenue enhancement"]
+      benefits["Real-time insights", "Proactive improvements", "Cost optimization", "Revenue enhancement"]
     },
     {
       icon: Shield,
       title: "Intelligent Security",
       description: "AI-driven security monitoring and threat detection",
-      benefits: ["Advanced threat detection", "Automated response", "Compliance monitoring", "Risk mitigation"]
+      benefits["Advanced threat detection", "Automated response", "Compliance monitoring", "Risk mitigation"]
     },
     {
       icon: Users,
       title: "Team Collaboration",
       description: "Enhanced collaboration tools with AI-powered insights",
-      benefits: ["Smart task allocation", "Performance tracking", "Communication optimization", "Knowledge sharing"]
+      benefits["Smart task allocation", "Performance tracking", "Communication optimization", "Knowledge sharing"]
     },
     {
       icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence and reporting",
-      benefits: ["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
+      benefits["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
     }
   ];
 
   const useCases = [
     {
       industry: "Financial Services",
-      applications: ["Risk management", "Fraud detection", "Portfolio optimization", "Compliance automation"],
+      applications["Risk management", "Fraud detection", "Portfolio optimization", "Compliance automation"],
       icon: DollarSign
     },
     {
       industry: "Healthcare",
-      applications: ["Patient care optimization", "Resource management", "Clinical decision support", "Administrative automation"],
+      applications["Patient care optimization", "Resource management", "Clinical decision support", "Administrative automation"],
       icon: Heart
     },
     {
       industry: "Manufacturing",
-      applications: ["Supply chain optimization", "Quality control", "Predictive maintenance", "Production planning"],
+      applications["Supply chain optimization", "Quality control", "Predictive maintenance", "Production planning"],
       icon: Cog
     },
     {
       industry: "Retail",
-      applications: ["Inventory management", "Customer behavior analysis", "Pricing optimization", "Supply chain management"],
+      applications["Inventory management", "Customer behavior analysis", "Pricing optimization", "Supply chain management"],
       icon: ShoppingCart
     },
     {
       industry: "Technology",
-      applications: ["DevOps automation", "Performance monitoring", "Security operations", "Customer support"],
+      applications["DevOps automation", "Performance monitoring", "Security operations", "Customer support"],
       icon: Cpu
     },
     {
       industry: "Consulting",
-      applications: ["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
+      applications["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
       icon: Briefcase
     }
   ];
@@ -250,7 +250,7 @@ const AIAutonomousBusinessOperations = () => {
       price: "$2,500",
       period: "/month",
       description: "Perfect for small businesses starting their automation journey",
-      features: [
+      features[
         "Basic AI decision making",
         "Process automation (up to 10 workflows)",
         "Standard analytics dashboard",
@@ -264,7 +264,7 @@ const AIAutonomousBusinessOperations = () => {
       price: "$8,500",
       period: "/month",
       description: "Ideal for growing businesses with complex operations",
-      features: [
+      features[
         "Advanced AI decision making",
         "Unlimited process automation",
         "Custom analytics dashboards",
@@ -280,7 +280,7 @@ const AIAutonomousBusinessOperations = () => {
       price: "$25,000",
       period: "/month",
       description: "Comprehensive solution for large enterprises",
-      features: [
+      features[
         "Full AI autonomy",
         "Enterprise-grade automation",
         "Custom AI models",
@@ -703,7 +703,6 @@ const AIAutonomousBusinessOperations = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousBusinessOperations;

@@ -30,15 +30,13 @@ export interface Revolutionary2026Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -48,7 +46,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$299',
     period: '/month',
     description: 'Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.',
-    features: [
+    features[
       'AI-powered predictive analytics',
       'Natural language data querying',
       'Real-time data visualization',
@@ -71,11 +69,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '2 hours',
     category: 'AI & Analytics',
     realService: true,
-    technology: ['OpenAI GPT-4', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Slack', 'Microsoft Teams', 'Zapier', 'Tableau'],
-    useCases: ['Sales performance analysis', 'Customer behavior insights', 'Market trend prediction', 'Operational efficiency optimization', 'Financial forecasting', 'Risk assessment'],
+    technology['OpenAI GPT-4', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Salesforce', 'HubSpot', 'Google Analytics', 'Slack', 'Microsoft Teams', 'Zapier', 'Tableau'],
+    useCases['Sales performance analysis', 'Customer behavior insights', 'Market trend prediction', 'Operational efficiency optimization', 'Financial forecasting', 'Risk assessment'],
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Domo'],
+    competitors['Tableau', 'Power BI', 'Looker', 'Qlik', 'Domo'],
     marketSize: '$29.5B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +98,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$199',
     period: '/month',
     description: 'Advanced AI-powered legal document automation platform that streamlines contract creation, legal research, compliance monitoring, and document review processes. Features natural language processing, legal precedent analysis, and automated compliance checking.',
-    features: [
+    features[
       'AI-powered contract generation',
       'Legal document templates (500+ templates)',
       'Automated compliance checking',
@@ -123,11 +121,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '1 hour',
     category: 'AI & Legal Tech',
     realService: true,
-    technology: ['OpenAI GPT-4', 'BERT Legal', 'React', 'Node.js', 'PostgreSQL', 'Elasticsearch', 'AWS', 'Kubernetes'],
-    integrations: ['DocuSign', 'Salesforce', 'Microsoft Office', 'Google Workspace', 'Slack', 'Zoom', 'Clio'],
-    useCases: ['Contract generation and review', 'Legal research automation', 'Compliance monitoring', 'Document comparison', 'Risk assessment', 'Legal workflow automation'],
+    technology['OpenAI GPT-4', 'BERT Legal', 'React', 'Node.js', 'PostgreSQL', 'Elasticsearch', 'AWS', 'Kubernetes'],
+    integrations['DocuSign', 'Salesforce', 'Microsoft Office', 'Google Workspace', 'Slack', 'Zoom', 'Clio'],
+    useCases['Contract generation and review', 'Legal research automation', 'Compliance monitoring', 'Document comparison', 'Risk assessment', 'Legal workflow automation'],
     roi: 'Average customer saves 60% time on document creation and sees 300% ROI through efficiency gains.',
-    competitors: ['DocuSign', 'PandaDoc', 'ContractPodAi', 'Ironclad', 'Evisort'],
+    competitors['DocuSign', 'PandaDoc', 'ContractPodAi', 'Ironclad', 'Evisort'],
     marketSize: '$15.8B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -152,7 +150,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$799',
     period: '/month',
     description: 'Cutting-edge AI healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient care optimization. Features advanced medical imaging analysis, symptom assessment, and predictive health analytics.',
-    features: [
+    features[
       'AI-powered medical imaging analysis',
       'Symptom assessment and diagnosis',
       'Treatment recommendation engine',
@@ -175,11 +173,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '4 hours',
     category: 'AI & Healthcare',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'OpenCV', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'DICOM support'],
-    integrations: ['Epic', 'Cerner', 'Athenahealth', 'Zoom', 'Doximity', 'Practice Fusion', 'Kareo'],
-    useCases: ['Medical imaging analysis', 'Patient diagnosis', 'Treatment planning', 'Risk assessment', 'Clinical research', 'Telemedicine support'],
+    technology['TensorFlow', 'PyTorch', 'OpenCV', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'DICOM support'],
+    integrations['Epic', 'Cerner', 'Athenahealth', 'Zoom', 'Doximity', 'Practice Fusion', 'Kareo'],
+    useCases['Medical imaging analysis', 'Patient diagnosis', 'Treatment planning', 'Risk assessment', 'Clinical research', 'Telemedicine support'],
     roi: 'Average healthcare provider sees 400% ROI through improved diagnostic accuracy and patient outcomes.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare Bot', 'Enlitic', 'Zebra Medical'],
+    competitors['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare Bot', 'Enlitic', 'Zebra Medical'],
     marketSize: '$45.2B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +202,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$499',
     period: '/month',
     description: 'Revolutionary AI-powered metaverse development platform that enables creators to build immersive virtual worlds, interactive experiences, and AI-driven avatars. Features 3D world generation, AI NPCs, and cross-platform compatibility.',
-    features: [
+    features[
       'AI-powered 3D world generation',
       'Intelligent NPC creation',
       'Cross-platform compatibility',
@@ -227,11 +225,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '2 hours',
     category: 'AI & Metaverse',
     realService: true,
-    technology: ['Unity', 'Unreal Engine', 'Three.js', 'React', 'Node.js', 'WebGL', 'WebRTC', 'AWS', 'Blockchain'],
-    integrations: ['Meta Quest', 'HTC Vive', 'Steam VR', 'Discord', 'Twitch', 'YouTube', 'TikTok'],
-    useCases: ['Virtual world creation', 'AI-powered gaming', 'Virtual events', 'Educational simulations', 'Brand experiences', 'Social platforms'],
+    technology['Unity', 'Unreal Engine', 'Three.js', 'React', 'Node.js', 'WebGL', 'WebRTC', 'AWS', 'Blockchain'],
+    integrations['Meta Quest', 'HTC Vive', 'Steam VR', 'Discord', 'Twitch', 'YouTube', 'TikTok'],
+    useCases['Virtual world creation', 'AI-powered gaming', 'Virtual events', 'Educational simulations', 'Brand experiences', 'Social platforms'],
     roi: 'Average creator sees 500% ROI through monetization and engagement improvements.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland', 'The Sandbox'],
+    competitors['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland', 'The Sandbox'],
     marketSize: '$74.4B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +254,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$599',
     period: '/month',
     description: 'Next-generation quantum-secure communication platform that provides unbreakable encryption using quantum key distribution and post-quantum cryptography. Features quantum-resistant algorithms, secure key exchange, and enterprise-grade security.',
-    features: [
+    features[
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'End-to-end encryption',
@@ -279,11 +277,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '6 hours',
     category: 'Quantum & Security',
     realService: true,
-    technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Quantum Simulators'],
-    integrations: ['Slack', 'Microsoft Teams', 'Zoom', 'Cisco', 'Juniper', 'Fortinet', 'Palo Alto'],
-    useCases: ['Secure communications', 'Financial transactions', 'Government communications', 'Healthcare data protection', 'Military communications', 'Critical infrastructure'],
+    technology['Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Quantum Simulators'],
+    integrations['Slack', 'Microsoft Teams', 'Zoom', 'Cisco', 'Juniper', 'Fortinet', 'Palo Alto'],
+    useCases['Secure communications', 'Financial transactions', 'Government communications', 'Healthcare data protection', 'Military communications', 'Critical infrastructure'],
     roi: 'Average enterprise sees 600% ROI through enhanced security and compliance benefits.',
-    competitors: ['Quantum Xchange', 'ID Quantique', 'Toshiba Quantum', 'Qrypt', 'Quantum Machines'],
+    competitors['Quantum Xchange', 'ID Quantique', 'Toshiba Quantum', 'Qrypt', 'Quantum Machines'],
     marketSize: '$12.8B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -308,7 +306,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$999',
     period: '/month',
     description: 'Revolutionary quantum-powered financial trading platform that leverages quantum computing for market analysis, risk assessment, and algorithmic trading. Features quantum portfolio optimization, real-time market prediction, and advanced risk management.',
-    features: [
+    features[
       'Quantum portfolio optimization',
       'Real-time market prediction',
       'Advanced risk management',
@@ -331,11 +329,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '8 hours',
     category: 'Quantum & Finance',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Financial APIs'],
-    integrations: ['Bloomberg', 'Reuters', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Robinhood', 'Coinbase'],
-    useCases: ['Portfolio optimization', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Trading automation', 'Compliance monitoring'],
+    technology['Quantum Computing', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Financial APIs'],
+    integrations['Bloomberg', 'Reuters', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Robinhood', 'Coinbase'],
+    useCases['Portfolio optimization', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Trading automation', 'Compliance monitoring'],
     roi: 'Average trading firm sees 800% ROI through improved trading performance and risk management.',
-    competitors: ['Bloomberg Terminal', 'Thomson Reuters Eikon', 'Interactive Brokers Pro', 'Alpaca', 'QuantConnect'],
+    competitors['Bloomberg Terminal', 'Thomson Reuters Eikon', 'Interactive Brokers Pro', 'Alpaca', 'QuantConnect'],
     marketSize: '$28.9B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -360,7 +358,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$1,499',
     period: '/month',
     description: 'Cutting-edge neuromorphic computing platform that mimics the human brain\'s neural architecture for advanced AI applications. Features spiking neural networks, energy-efficient processing, and real-time learning capabilities.',
-    features: [
+    features[
       'Spiking neural networks',
       'Energy-efficient processing',
       'Real-time learning',
@@ -383,11 +381,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '12 hours',
     category: 'Emerging Tech & AI',
     realService: true,
-    technology: ['Neuromorphic Computing', 'Spiking Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Custom Hardware'],
-    integrations: ['ROS', 'TensorFlow', 'PyTorch', 'OpenCV', 'CUDA', 'Intel Loihi', 'BrainChip'],
-    useCases: ['Robotics control', 'IoT optimization', 'Autonomous systems', 'Medical diagnostics', 'Pattern recognition', 'Edge AI processing'],
+    technology['Neuromorphic Computing', 'Spiking Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Custom Hardware'],
+    integrations['ROS', 'TensorFlow', 'PyTorch', 'OpenCV', 'CUDA', 'Intel Loihi', 'BrainChip'],
+    useCases['Robotics control', 'IoT optimization', 'Autonomous systems', 'Medical diagnostics', 'Pattern recognition', 'Edge AI processing'],
     roi: 'Average research institution sees 400% ROI through improved AI performance and energy efficiency.',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'Applied Brain Research'],
+    competitors['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'Applied Brain Research'],
     marketSize: '$8.2B market',
     growthRate: '350% annual growth',
     variant: 'emerging-tech',
@@ -412,7 +410,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary DNA computing platform that leverages molecular biology for solving complex computational problems. Features DNA sequence optimization, molecular programming, and biological algorithm design.',
-    features: [
+    features[
       'DNA sequence optimization',
       'Molecular programming tools',
       'Biological algorithm design',
@@ -435,11 +433,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '24 hours',
     category: 'Emerging Tech & Biotech',
     realService: true,
-    technology: ['DNA Computing', 'Molecular Biology', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Laboratory Integration'],
-    integrations: ['NCBI', 'Ensembl', 'UCSC Genome Browser', 'BLAST', 'Geneious', 'SnapGene', 'LabWare'],
-    useCases: ['Drug discovery', 'Genetic research', 'Disease diagnosis', 'Agricultural optimization', 'Environmental monitoring', 'Data storage'],
+    technology['DNA Computing', 'Molecular Biology', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Laboratory Integration'],
+    integrations['NCBI', 'Ensembl', 'UCSC Genome Browser', 'BLAST', 'Geneious', 'SnapGene', 'LabWare'],
+    useCases['Drug discovery', 'Genetic research', 'Disease diagnosis', 'Agricultural optimization', 'Environmental monitoring', 'Data storage'],
     roi: 'Average biotech comp sees 600% ROI through improved research efficiency and discovery rates.',
-    competitors: ['Microsoft DNA Storage', 'Catalog DNA', 'Twist Bioscience', 'Helixworks', 'Molecular Assemblies'],
+    competitors['Microsoft DNA Storage', 'Catalog DNA', 'Twist Bioscience', 'Helixworks', 'Molecular Assemblies'],
     marketSize: '$15.6B market',
     growthRate: '400% annual growth',
     variant: 'emerging-tech',
@@ -464,7 +462,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$1,999',
     period: '/month',
     description: 'Advanced photonic computing platform that uses light-based processing for ultra-fast computational tasks. Features optical neural networks, photonic memory, and quantum photonic integration.',
-    features: [
+    features[
       'Optical neural networks',
       'Photonic memory systems',
       'Quantum photonic integration',
@@ -487,11 +485,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '16 hours',
     category: 'Emerging Tech & Computing',
     realService: true,
-    technology: ['Photonic Computing', 'Optical Neural Networks', 'Quantum Photonics', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Optical Hardware'],
-    integrations: ['CUDA', 'OpenCL', 'TensorFlow', 'PyTorch', 'Optical Networks', 'Quantum Simulators'],
-    useCases: ['High-speed computing', 'Optical networking', 'Quantum communication', 'AI acceleration', 'Data processing', 'Scientific computing'],
+    technology['Photonic Computing', 'Optical Neural Networks', 'Quantum Photonics', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Optical Hardware'],
+    integrations['CUDA', 'OpenCL', 'TensorFlow', 'PyTorch', 'Optical Networks', 'Quantum Simulators'],
+    useCases['High-speed computing', 'Optical networking', 'Quantum communication', 'AI acceleration', 'Data processing', 'Scientific computing'],
     roi: 'Average data center sees 500% ROI through improved processing speed and energy efficiency.',
-    competitors: ['Lightmatter', 'PsiQuantum', 'Xanadu', 'PicoQuant', 'ID Quantique'],
+    competitors['Lightmatter', 'PsiQuantum', 'Xanadu', 'PicoQuant', 'ID Quantique'],
     marketSize: '$12.4B market',
     growthRate: '380% annual growth',
     variant: 'emerging-tech',
@@ -516,7 +514,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$699',
     period: '/month',
     description: 'Revolutionary holographic display platform that creates immersive 3D visualizations and interactive experiences. Features real-time hologram generation, gesture recognition, and multi-user collaboration.',
-    features: [
+    features[
       'Real-time hologram generation',
       'Gesture recognition',
       'Multi-user collaboration',
@@ -539,11 +537,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '4 hours',
     category: 'Emerging Tech & Visualization',
     realService: true,
-    technology: ['Holographic Display', 'Computer Vision', '3D Rendering', 'React', 'Node.js', 'WebGL', 'WebRTC', 'AWS'],
-    integrations: ['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'SketchUp', 'VR Headsets'],
-    useCases: ['Virtual events', 'Product demonstrations', 'Educational content', 'Medical visualization', 'Architectural walkthroughs', 'Entertainment experiences'],
+    technology['Holographic Display', 'Computer Vision', '3D Rendering', 'React', 'Node.js', 'WebGL', 'WebRTC', 'AWS'],
+    integrations['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'SketchUp', 'VR Headsets'],
+    useCases['Virtual events', 'Product demonstrations', 'Educational content', 'Medical visualization', 'Architectural walkthroughs', 'Entertainment experiences'],
     roi: 'Average entertainment comp sees 400% ROI through enhanced audience engagement and new revenue streams.',
-    competitors: ['Microsoft HoloLens', 'Magic Leap', 'Looking Glass', 'RealView', 'Leia'],
+    competitors['Microsoft HoloLens', 'Magic Leap', 'Looking Glass', 'RealView', 'Leia'],
     marketSize: '$18.7B market',
     growthRate: '320% annual growth',
     variant: 'emerging-tech',
@@ -568,7 +566,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$399',
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, and automate logistics operations. Features predictive analytics, real-time monitoring, and autonomous decision-making.',
-    features: [
+    features[
       'AI demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -591,11 +589,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '3 hours',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'IoT Integration'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'FedEx', 'UPS', 'DHL'],
-    useCases: ['Demand forecasting', 'Inventory management', 'Route optimization', 'Supplier optimization', 'Cost reduction', 'Risk mitigation'],
+    technology['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'IoT Integration'],
+    integrations['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'FedEx', 'UPS', 'DHL'],
+    useCases['Demand forecasting', 'Inventory management', 'Route optimization', 'Supplier optimization', 'Cost reduction', 'Risk mitigation'],
     roi: 'Average comp sees 350% ROI through reduced costs and improved efficiency.',
-    competitors: ['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
+    competitors['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
     marketSize: '$22.8B market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -620,7 +618,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$599',
     period: '/month',
     description: 'Advanced AI-powered manufacturing platform that automates production processes, optimizes quality control, and predicts maintenance needs. Features computer vision, predictive analytics, and robotic process automation.',
-    features: [
+    features[
       'Computer vision quality control',
       'Predictive maintenance',
       'Production optimization',
@@ -643,11 +641,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '6 hours',
     category: 'AI & Manufacturing',
     realService: true,
-    technology: ['Computer Vision', 'Machine Learning', 'IoT', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Robotics Integration'],
-    integrations: ['Siemens', 'GE', 'PTC', 'Rockwell Automation', 'ABB', 'KUKA', 'Fanuc'],
-    useCases: ['Quality control', 'Predictive maintenance', 'Production optimization', 'Energy management', 'Safety monitoring', 'Process automation'],
+    technology['Computer Vision', 'Machine Learning', 'IoT', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Robotics Integration'],
+    integrations['Siemens', 'GE', 'PTC', 'Rockwell Automation', 'ABB', 'KUKA', 'Fanuc'],
+    useCases['Quality control', 'Predictive maintenance', 'Production optimization', 'Energy management', 'Safety monitoring', 'Process automation'],
     roi: 'Average manufacturer sees 450% ROI through improved efficiency and reduced downtime.',
-    competitors: ['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'SAP Leonardo', 'IBM Watson IoT'],
+    competitors['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'SAP Leonardo', 'IBM Watson IoT'],
     marketSize: '$35.6B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -672,7 +670,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$899',
     period: '/month',
     description: 'Revolutionary swarm robotics platform that coordinates multiple robots for complex tasks and operations. Features autonomous coordination, task distribution, and intelligent swarm behavior.',
-    features: [
+    features[
       'Autonomous coordination',
       'Task distribution algorithms',
       'Swarm intelligence',
@@ -695,11 +693,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '12 hours',
     category: 'AI & Robotics',
     realService: true,
-    technology: ['Swarm Robotics', 'Multi-Agent Systems', 'Computer Vision', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'ROS Integration'],
-    integrations: ['ROS', 'Gazebo', 'Unity', 'Unreal Engine', 'Custom Robots', 'IoT Sensors'],
-    useCases: ['Warehouse automation', 'Agricultural automation', 'Search and rescue', 'Military operations', 'Research applications', 'Manufacturing automation'],
+    technology['Swarm Robotics', 'Multi-Agent Systems', 'Computer Vision', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'ROS Integration'],
+    integrations['ROS', 'Gazebo', 'Unity', 'Unreal Engine', 'Custom Robots', 'IoT Sensors'],
+    useCases['Warehouse automation', 'Agricultural automation', 'Search and rescue', 'Military operations', 'Research applications', 'Manufacturing automation'],
     roi: 'Average warehouse sees 500% ROI through improved efficiency and reduced labor costs.',
-    competitors: ['Boston Dynamics', 'KUKA', 'ABB', 'Fanuc', 'Yaskawa'],
+    competitors['Boston Dynamics', 'KUKA', 'ABB', 'Fanuc', 'Yaskawa'],
     marketSize: '$18.9B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -724,7 +722,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     price: '$1,299',
     period: '/month',
     description: 'Cutting-edge quantum-powered space mining platform that optimizes resource exploration, extraction, and logistics in space. Features quantum computing optimization, autonomous spacecraft coordination, and resource mapping.',
-    features: [
+    features[
       'Quantum resource optimization',
       'Autonomous spacecraft coordination',
       'Resource mapping AI',
@@ -747,11 +745,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     setupTime: '24 hours',
     category: 'Quantum & Space',
     realService: true,
-    technology: ['Quantum Computing', 'Space Technology', 'AI', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Satellite Integration'],
-    integrations: ['NASA APIs', 'ESA Data', 'SpaceX', 'Blue Origin', 'Satellite Networks', 'Ground Stations'],
-    useCases: ['Asteroid mining', 'Lunar resource extraction', 'Space logistics', 'Resource mapping', 'Mission planning', 'Environmental monitoring'],
+    technology['Quantum Computing', 'Space Technology', 'AI', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Satellite Integration'],
+    integrations['NASA APIs', 'ESA Data', 'SpaceX', 'Blue Origin', 'Satellite Networks', 'Ground Stations'],
+    useCases['Asteroid mining', 'Lunar resource extraction', 'Space logistics', 'Resource mapping', 'Mission planning', 'Environmental monitoring'],
     roi: 'Average space comp sees 800% ROI through improved resource discovery and extraction efficiency.',
-    competitors: ['Planetary Resources', 'Deep Space Industries', 'Astroscale', 'iSpace', 'Moon Express'],
+    competitors['Planetary Resources', 'Deep Space Industries', 'Astroscale', 'iSpace', 'Moon Express'],
     marketSize: '$3.8B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',

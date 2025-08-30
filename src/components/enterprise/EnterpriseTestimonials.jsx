@@ -64,5 +64,4 @@ export function EnterpriseTestimonials() {
           </div>
         </Carousel>
       </div>
-    </section>);
-}
+    </section>)}

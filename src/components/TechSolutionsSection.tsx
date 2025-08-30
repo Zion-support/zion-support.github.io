@@ -21,42 +21,42 @@ export const TechSolutionsSection: React.FC = (): JSX.Element => {
       icon: Brain,
       title: 'AI & Machine Learning',
       description: 'Advanced AI solutions for automation, prediction, and intelligent decision-making.',
-      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Deep Learning'],
+      features['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Deep Learning'],
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      features: ['Threat Detection', 'Zero Trust Security', 'Compliance Management', 'Incident Response'],
+      features['Threat Detection', 'Zero Trust Security', 'Compliance Management', 'Incident Response'],
       color: 'from-red-500 to-orange-500'
     },
     {
       icon: Cloud,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Serverless Architecture'],
+      features['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Serverless Architecture'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your business operations.',
-      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
+      features['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Globe,
       title: 'Web & Mobile',
       description: 'Modern web and mobile applications built with cutting-edge technologies.',
-      features: ['Progressive Web Apps', 'Native Mobile Apps', 'Responsive Design', 'Performance Optimization'],
+      features['Progressive Web Apps', 'Native Mobile Apps', 'Responsive Design', 'Performance Optimization'],
       color: 'from-green-500 to-teal-500'
     },
     {
       icon: Rocket,
       title: 'Innovation Lab',
       description: 'Research and development of next-generation technologies and solutions.',
-      features: ['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
+      features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -120,8 +120,7 @@ export const TechSolutionsSection: React.FC = (): JSX.Element => {
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         <motion.div
@@ -158,7 +157,6 @@ export const TechSolutionsSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default TechSolutionsSection;

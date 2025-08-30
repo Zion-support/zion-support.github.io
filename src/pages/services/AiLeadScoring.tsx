@@ -80,8 +80,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AiLeadScoring;
 

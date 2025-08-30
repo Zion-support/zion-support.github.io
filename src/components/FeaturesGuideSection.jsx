@@ -39,5 +39,4 @@ export function FeaturesGuideSection() {
             </div>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

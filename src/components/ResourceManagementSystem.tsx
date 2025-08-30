@@ -58,9 +58,7 @@ interface Resource {
   tags: string[];
   description: string;
   manager: string;
-  utilization: number;
-
-}
+  utilization: number}
 
 interface ResourceStats {
 
@@ -71,17 +69,14 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<any>;
-}
+  topDepartments: Array<any>}
 
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
 
   showStats?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
-  maxResources?: number;
-
-}
+  maxResources?: number}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
   showStats = true,
@@ -115,7 +110,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 250000,
         lastUpdated: '2024-01-15',
-        tags: ['AI', 'Machine Learning', 'Development'],
+        tags['AI', 'Machine Learning', 'Development'],
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
         utilization: 80
@@ -133,7 +128,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'IT Operations',
         cost: 50000,
         lastUpdated: '2024-01-14',
-        tags: ['Cloud', 'AWS', 'Infrastructure'],
+        tags['Cloud', 'AWS', 'Infrastructure'],
         description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
         utilization: 75
@@ -151,7 +146,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Security',
         cost: 75000,
         lastUpdated: '2024-01-13',
-        tags: ['Security', 'Threat Detection', 'Monitoring'],
+        tags['Security', 'Threat Detection', 'Monitoring'],
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
         utilization: 85
@@ -169,7 +164,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Facilities',
         cost: 2000000,
         lastUpdated: '2024-01-12',
-        tags: ['Data Center', 'Facility', 'Infrastructure'],
+        tags['Data Center', 'Facility', 'Infrastructure'],
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
         utilization: 0
@@ -187,7 +182,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 30000,
         lastUpdated: '2024-01-11',
-        tags: ['DevOps', 'CI/CD', 'Automation'],
+        tags['DevOps', 'CI/CD', 'Automation'],
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
         utilization: 90
@@ -195,24 +190,20 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     ];
 
     setResources(sampleResources);
-    setFilteredResources(sampleResources);
-  }, []);
+    setFilteredResources(sampleResources)}, []);
 
   // Filter resources
   useEffect(()  => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
-    }
+      filtered = filtered.filter(r => r.type === selectedType)}
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus);
-    }
+      filtered = filtered.filter(r => r.status === selectedStatus)}
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(r => r.priority === selectedPriority);
-    }
+      filtered = filtered.filter(r => r.priority === selectedPriority)}
 
     if (searchQuery) {
       filtered = filtered.filter(r => 
@@ -220,11 +211,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
+      )}
 
-    setFilteredResources(filtered.slice(0, maxResources));
-  }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
+    setFilteredResources(filtered.slice(0, maxResources))}, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
 
   // Calculate resource stats
   const resourceStats = {
@@ -238,8 +227,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     topDepartments: (()  => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
-        return acc;
-      }, {} as Record<string, any>);
+        return acc}, {} as Record<string, any>);
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
@@ -248,8 +236,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           percentage: (count / resources.length) * 100
         }))
         .sort((a, b)  => b.count - a.count)
-        .slice(0, 5);
-    })()
+        .slice(0, 5)})()
   };
 
   // Get status color and icon
@@ -264,8 +251,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'unavailable':
         return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
       default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
-    }
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> }}
   };
 
   // Get type icon
@@ -276,8 +262,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'software': return <Database className="w-5 h-5" />;
       case 'equipment': return <Briefcase className="w-5 h-5" />;
       case 'facility': return <Building className="w-5 h-5" />;
-      default: return <Globe className="w-5 h-5" />;
-    }
+      default: return <Globe className="w-5 h-5" />}
   };
 
   // Get priority color
@@ -287,8 +272,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+      default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Format currency
@@ -298,16 +282,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
-    }).format(amount);
-  };
+    }).format(amount)};
 
   // Get utilization color
   const getUtilizationColor = (utilization: number)  => {
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';
-    return 'text-green-400';
-  };
+    return 'text-green-400'};
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -667,5 +649,4 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         </motion.div>
       )}
     </div>
-  );
-};
+  )};

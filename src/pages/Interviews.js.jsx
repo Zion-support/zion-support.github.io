@@ -12,10 +12,8 @@ function InterviewsContent() {
     useEffect(() => {
         // Modified to handle Promise<Interview[]> return type
         const loadInterviews = async () => {
-            await fetchInterviews();
-        };
-        loadInterviews();
-    }, []);
+            await fetchInterviews()};
+        loadInterviews()}, []);
     // Filter interviews based on status and date
     const now = new Date();
     const today = startOfDay(now);
@@ -23,27 +21,22 @@ function InterviewsContent() {
         .filter((interview) => {
         const interviewDate = parseISO(interview.scheduled_date);
         return isAfter(interviewDate, now) &&
-            ['confirmed', 'requested'].includes(interview.status);
-    })
+            ['confirmed', 'requested'].includes(interview.status)})
         .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime());
     const pendingInterviews = interviews.filter(interview => interview.status === 'requested');
     const pastInterviews = interviews.filter(interview => {
         const interviewDate = parseISO(interview.scheduled_date);
         return !isAfter(interviewDate, now) ||
-            ['completed', 'declined', 'cancelled'].includes(interview.status);
-    });
+            ['completed', 'declined', 'cancelled'].includes(interview.status)});
     // Group interviews by date
     const groupInterviewsByDate = (interviews) => {
         const grouped = {};
         interviews.forEach((interview) => {
             const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
             if (!grouped[dateKey]) {
-                grouped[dateKey] = [];
-            }
-            grouped[dateKey].push(interview);
-        });
-        return grouped;
-    };
+                grouped[dateKey] = []}
+            grouped[dateKey].push(interview)});
+        return grouped};
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
     const pendingGrouped = groupInterviewsByDate(pendingInterviews);
     const pastGrouped = groupInterviewsByDate(pastInterviews);
@@ -57,11 +50,9 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (<InterviewCard key={interview.id} interview={interview} onRefresh={async () => {
-                    await fetchInterviews();
-                }}/>))}
+                    await fetchInterviews()}}/>))}
           </div>
-        </div>));
-    };
+        </div>))};
     return (<>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
       
@@ -123,10 +114,8 @@ function InterviewsContent() {
         </Tabs>
       </main>
       
-    </>);
-}
+    </>)}
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

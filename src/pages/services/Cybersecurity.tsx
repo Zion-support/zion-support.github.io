@@ -20,13 +20,13 @@ import { Shield,
   Monitor,
   CreditCard
  } from 'lucide-react.ts';
-export default function CybersecurityServices(...args: []):  {
+export default function CybersecurityServices(...args[]):  {
   const cyberServices = [
     {
       name: "Security Assessment & Auditing",
       description: "Comprehensive security evaluation and compliance auditing",
       icon: Eye,
-      features: [
+      features[
         "Vulnerability assessments",
         "Penetration testing",
         "Security audits and compliance",
@@ -39,7 +39,7 @@ export default function CybersecurityServices(...args: []):  {
       name: "Threat Detection & Response",
       description: "Advanced threat monitoring and incident response",
       icon: AlertTriangle,
-      features: [
+      features[
         "24/7 security monitoring",
         "Threat intelligence",
         "Incident response planning",
@@ -52,7 +52,7 @@ export default function CybersecurityServices(...args: []):  {
       name: "Identity & Access Management",
       description: "Secure user authentication and authorization systems",
       icon: Key,
-      features: [
+      features[
         "Single sign-on (SSO)",
         "Multi-factor authentication",
         "Role-based access control",
@@ -65,7 +65,7 @@ export default function CybersecurityServices(...args: []):  {
       name: "Data Protection & Encryption",
       description: "Comprehensive data security and encryption solutions",
       icon: Lock,
-      features: [
+      features[
         "Data encryption at rest and in transit",
         "Data loss prevention",
         "Backup and recovery",
@@ -293,5 +293,4 @@ export default function CybersecurityServices(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

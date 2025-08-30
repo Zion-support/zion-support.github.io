@@ -20,7 +20,7 @@ import { SEO  } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030  } from '../data/comprehensiveServicesIndex2030';
 import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030  } from '../data/comprehensivePricingGuide2030';
 
-export default function ComprehensiveServicesLanding2030(...args: []):  {
+export default function ComprehensiveServicesLanding2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -38,8 +38,7 @@ export default function ComprehensiveServicesLanding2030(...args: []):  {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
-    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore;
-  });
+    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore});
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -51,8 +50,7 @@ export default function ComprehensiveServicesLanding2030(...args: []):  {
       case 'aiScore':
         return b.aiScore - a.aiScore;
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const getCategoryIcon = (category: string)  => {
@@ -77,8 +75,7 @@ export default function ComprehensiveServicesLanding2030(...args: []):  {
       'Space Technology': <Rocket className="w-6 h-6" />,
       'Sustainable Technology': <Heart className="w-6 h-6" />
     };
-    return icons[category] || <Rocket className="w-6 h-6" />;
-  };
+    return icons[category] || <Rocket className="w-6 h-6" />};
 
   const getCategoryColor = (category: string)  => {
     const colors: { [key: string]: string } = {
@@ -102,26 +99,22 @@ export default function ComprehensiveServicesLanding2030(...args: []):  {
       'Space Technology': 'from-purple-500 to-pink-500',
       'Sustainable Technology': 'from-green-500 to-teal-500'
     };
-    return colors[category] || 'from-gray-500 to-slate-500';
-  };
+    return colors[category] || 'from-gray-500 to-slate-500'};
 
   const resetFilters = () => {
     setActiveCategory('all');
     setSearchTerm('');
     setSortBy('rating');
     setPriceRange([0, 50000]);
-    setAiScoreRange([80, 100]);
-  };
+    setAiScoreRange([80, 100])};
 
-  const openServiceModal = (service: )  => {
+  const openServiceModal = (service)  => {
     setSelectedService(service);
-    setShowModal(true);
-  };
+    setShowModal(true)};
 
   const closeServiceModal = () => {
     setShowModal(false);
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   return (
     <>
@@ -643,5 +636,4 @@ export default function ComprehensiveServicesLanding2030(...args: []):  {
         )}
       </div>
     </>
-  );
-}
+  )}

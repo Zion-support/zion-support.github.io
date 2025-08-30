@@ -5,7 +5,7 @@ import { ThemeToggle  } from '../components/ThemeToggle';
 import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-export function AppHeader(...args: []):  {
+export function AppHeader(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -14,12 +14,10 @@ export function AppHeader(...args: []):  {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+      setScrolled(window.scrollY > 10)};
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const handleSearch = async (e: React.FormEvent)  => {
     e.preventDefault();
@@ -27,10 +25,8 @@ export function AppHeader(...args: []):  {
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-      } finally {
-        setIsSearching(false);
-      }
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
+        setIsSearching(false)}
     }
   };
 
@@ -70,7 +66,7 @@ export function AppHeader(...args: []):  {
       name: 'Core Services',
       icon: Settings,
       color: 'from-blue-600 to-cyan-600',
-      services: [
+      services[
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
@@ -81,7 +77,7 @@ export function AppHeader(...args: []):  {
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      services: [
+      services[
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
@@ -95,7 +91,7 @@ export function AppHeader(...args: []):  {
       name: 'Cloud & DevOps',
       icon: Cloud,
       color: 'from-green-600 to-emerald-600',
-      services: [
+      services[
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
@@ -105,7 +101,7 @@ export function AppHeader(...args: []):  {
       name: 'Edge & IoT',
       icon: Server,
       color: 'from-blue-600 to-cyan-600',
-      services: [
+      services[
         { name: 'IoT & Edge Computing', href: '/services/iot-edge', description: 'Smart Devices & Networks' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Ultra-Low Latency Processing' },
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' }
@@ -115,7 +111,7 @@ export function AppHeader(...args: []):  {
       name: 'Digital Solutions',
       icon: Rocket,
       color: 'from-orange-600 to-red-600',
-      services: [
+      services[
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
@@ -125,7 +121,7 @@ export function AppHeader(...args: []):  {
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-indigo-600 to-purple-600',
-      services: [
+      services[
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
       ]
@@ -137,7 +133,7 @@ export function AppHeader(...args: []):  {
       name: 'AI Solutions',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      solutions: [
+      solutions[
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
@@ -148,7 +144,7 @@ export function AppHeader(...args: []):  {
       name: 'Quantum & Emerging',
       icon: Star,
       color: 'from-indigo-600 to-purple-600',
-      solutions: [
+      solutions[
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
@@ -158,7 +154,7 @@ export function AppHeader(...args: []):  {
       name: 'Innovation Showcase',
       icon: TrendingUp,
       color: 'from-green-600 to-emerald-600',
-      solutions: [
+      solutions[
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
         { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
@@ -178,7 +174,7 @@ export function AppHeader(...args: []):  {
       name: 'About Us',
       icon: Building,
       color: 'from-blue-600 to-cyan-600',
-      items: [
+      items[
         { name: 'About Us', href: '/about', description: 'Our story and mission' },
         { name: 'Team', href: '/team', description: 'Meet our experts' },
         { name: 'Careers', href: '/careers', description: 'Join our team' },
@@ -189,7 +185,7 @@ export function AppHeader(...args: []):  {
       name: 'Resources',
       icon: BookOpen,
       color: 'from-green-600 to-emerald-600',
-      items: [
+      items[
         { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
         { name: 'Press', href: '/press', description: 'Media resources' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
@@ -203,7 +199,7 @@ export function AppHeader(...args: []):  {
       name: 'Help & Support',
       icon: HelpCircle,
       color: 'from-blue-600 to-cyan-600',
-      items: [
+      items[
         { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
         { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
         { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
@@ -214,7 +210,7 @@ export function AppHeader(...args: []):  {
       name: 'Resources',
       icon: BookOpen,
       color: 'from-green-600 to-emerald-600',
-      items: [
+      items[
         { name: 'Documentation', href: '/docs', description: 'Technical guides' },
         { name: 'Training', href: '/training', description: 'Learning resources' },
         { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
@@ -509,5 +505,4 @@ export function AppHeader(...args: []):  {
         )}
       </AnimatePresence>
     </>
-  );
-}
+  )}

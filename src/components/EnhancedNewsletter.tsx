@@ -7,9 +7,7 @@ interface NewsletterFormData {
   email: string;
   firstName: string;
   interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly';
-
-}
+  frequency: 'weekly' | 'monthly' | 'quarterly'}
 
 const interests = [
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },
@@ -30,7 +28,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
     email: '',
     firstName: '',
-    interests: [],
+    interests[],
     frequency: 'monthly'
   });
   
@@ -41,29 +39,23 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     const newErrors: Partial<NewsletterFormData> = {};
 
     if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
+      newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
 
     if (!formData.firstName) {
-      newErrors.firstName = 'First name is required';
-    }
+      newErrors.firstName = 'First name is required'}
 
     if (formData.interests.length === 0) {
-      newErrors.interests = 'Please select at least one interest';
-    }
+      newErrors.interests = 'Please select at least one interest'}
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
 
   const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     
     if (!validateForm()) {
-      return;
-    }
+      return}
 
     setStatus('loading');
 
@@ -81,16 +73,12 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         setFormData({
           email: '',
           firstName: '',
-          interests: [],
+          interests[],
           frequency: 'monthly'
         });
-        setStatus('idle');
-      }, 3000);
-      
-    } catch (error) {
+        setStatus('idle')}, 3000)} catch (error) {
       setStatus('error');
-      console.error('Newsletter subscription error:', error);
-    }
+      console.error('Newsletter subscription error:', error)}
   };
 
   const handleInterestToggle = (interestId: string)  => {
@@ -98,13 +86,12 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       ...prev,
       interests: prev.interests.includes(interestId)
         ? prev.interests.filter(id  => id !== interestId)
-        : [...prev.interests, interestId]
+        [...prev.interests, interestId]
     }));
     
     // Clear error when user selects an interest
     if (errors.interests) {
-      setErrors(prev => ({ ...prev, interests: undefined }));
-    }
+      setErrors(prev => ({ ...prev, interests: undefined }))}
   };
 
   const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {
@@ -112,8 +99,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
-    }
+      setErrors(prev => ({ ...prev, [field]: undefined }))}
   };
 
   if (status === 'success') {
@@ -135,8 +121,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <span>Check your email for a confirmation message</span>
         </div>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
@@ -253,8 +238,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />
                   <span className="text-sm font-medium">{interest.label}</span>
                 </motion.button>
-              );
-            })}
+              )})}
           </div>
           {errors.interests && (
             <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
@@ -352,5 +336,4 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         </p>
       </motion.form>
     </div>
-  );
-};
+  )};

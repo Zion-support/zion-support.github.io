@@ -229,7 +229,6 @@ const AIPoweredITAssetManagement = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIPoweredITAssetManagement;

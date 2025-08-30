@@ -18,11 +18,9 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
+  focusIndicator: boolean}
 
-}
-
-export function AccessibilityEnhancer(...args: []):  {
+export function AccessibilityEnhancer(...args[]):  {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
     highContrast: false,
@@ -37,53 +35,41 @@ export function AccessibilityEnhancer(...args: []):  {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
+      setSettings(JSON.parse(savedSettings))}
 
     // Apply settings to document
-    applyAccessibilitySettings(settings);
-  }, []);
+    applyAccessibilitySettings(settings)}, []);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 
     // Large text
     if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
+      root.classList.add('large-text')} else {
+      root.classList.remove('large-text')}
 
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      root.classList.add('reduced-motion')} else {
+      root.classList.remove('reduced-motion')}
 
     // Focus indicator
     if (newSettings.focusIndicator) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
+      root.classList.add('focus-visible')} else {
+      root.classList.remove('focus-visible')}
 
     // Save settings
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  };
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
 
   const toggleSetting = (key: keyof AccessibilitySettings)  => {
     const newSettings = { ...settings, [key]: !settings[key] };
     setSettings(newSettings);
-    applyAccessibilitySettings(newSettings);
-  };
+    applyAccessibilitySettings(newSettings)};
 
   const announceToScreenReader = (message: string)  => {
     if (settings.screenReader) {
@@ -95,9 +81,7 @@ export function AccessibilityEnhancer(...args: []):  {
       document.body.appendChild(announcement);
       
       setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-    }
+        document.body.removeChild(announcement)}, 1000)}
   };
 
   // Keyboard navigation support
@@ -116,11 +100,9 @@ export function AccessibilityEnhancer(...args: []):  {
 
           if (event.shiftKey && document.activeElement === firstElement) {
             event.preventDefault();
-            lastElement.focus();
-          } else if (!event.shiftKey && document.activeElement === lastElement) {
+            lastElement.focus()} else if (!event.shiftKey && document.activeElement === lastElement) {
             event.preventDefault();
-            firstElement.focus();
-          }
+            firstElement.focus()}
           break;
 
         case 'Escape':
@@ -131,36 +113,29 @@ export function AccessibilityEnhancer(...args: []):  {
         case 'H':
           if (event.ctrlKey) {
             event.preventDefault();
-            document.querySelector('a[href="/"]')?.click();
-          }
+            document.querySelector('a[href="/"]')?.click()}
           break;
 
         case 's':
         case 'S':
           if (event.ctrlKey) {
             event.preventDefault();
-            document.querySelector('a[href="/services"]')?.click();
-          }
+            document.querySelector('a[href="/services"]')?.click()}
           break;
 
         case 'c':
         case 'C':
           if (event.ctrlKey) {
             event.preventDefault();
-            document.querySelector('a[href="/contact"]')?.click();
-          }
-          break;
-      }
+            document.querySelector('a[href="/contact"]')?.click()}
+          break}
     };
 
     if (settings.keyboardNavigation) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
+      document.addEventListener('keydown', handleKeyDown)}
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [settings.keyboardNavigation]);
+      document.removeEventListener('keydown', handleKeyDown)}}, [settings.keyboardNavigation]);
 
   // Skip to main content link
   useEffect(() => {
@@ -173,10 +148,8 @@ export function AccessibilityEnhancer(...args: []):  {
     
     return ()  => {
       if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink);
-      }
-    };
-  }, []);
+        document.body.removeChild(skipLink)}
+    }}, []);
 
   return (
     <>
@@ -369,5 +342,4 @@ export function AccessibilityEnhancer(...args: []):  {
         )}
       </AnimatePresence>
     </>
-  );
-}
+  )}

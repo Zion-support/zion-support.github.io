@@ -33,7 +33,7 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export default function ServicesPage(...args: []):  {
+export default function ServicesPage(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -83,8 +83,7 @@ export default function ServicesPage(...args: []):  {
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice});
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -96,19 +95,16 @@ export default function ServicesPage(...args: []):  {
       case 'newest':
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
   const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   return (
     <>
@@ -290,8 +286,7 @@ export default function ServicesPage(...args: []):  {
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
                           {(() => {
                             const IconComponent = getCategoryIcon(service.category);
-                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null;
-                          })()}
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null})()}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
@@ -387,8 +382,7 @@ export default function ServicesPage(...args: []):  {
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedCategory('all');
-                    setSelectedPriceRange('all');
-                  }}
+                    setSelectedPriceRange('all')}}
                   className="btn-futuristic px-6 py-3"
                 >
                   View All Services
@@ -497,5 +491,4 @@ export default function ServicesPage(...args: []):  {
         </div>
       </section>
     </>
-  );
-}
+  )}

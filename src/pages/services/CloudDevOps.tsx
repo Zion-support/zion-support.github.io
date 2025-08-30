@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Docker, Kubernetes, Aws, Azure, Gcp, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp  } from 'lucide-react.ts';
 
-export default function CloudDevOps(...args: []):  {
+export default function CloudDevOps(...args[]):  {
   const features = [
     {
       icon: Cloud,
@@ -48,25 +48,25 @@ export default function CloudDevOps(...args: []):  {
       title: 'Cloud Migration',
       description: 'Seamless migration from on-premises to cloud infrastructure',
       price: 'From $5,000',
-      features: ['Infrastructure assessment', 'Migration planning', 'Data migration', 'Testing & validation']
+      features['Infrastructure assessment', 'Migration planning', 'Data migration', 'Testing & validation']
     },
     {
       title: 'DevOps Implementation',
       description: 'Complete DevOps transformation with modern tools and practices',
       price: 'From $8,000',
-      features: ['CI/CD setup', 'Infrastructure as Code', 'Monitoring & logging', 'Team training']
+      features['CI/CD setup', 'Infrastructure as Code', 'Monitoring & logging', 'Team training']
     },
     {
       title: 'Cloud Optimization',
       description: 'Cost optimization and performance tuning for existing cloud infrastructure',
       price: 'From $3,000',
-      features: ['Cost analysis', 'Performance optimization', 'Resource scaling', 'Best practices']
+      features['Cost analysis', 'Performance optimization', 'Resource scaling', 'Best practices']
     },
     {
       title: '24/7 Managed Services',
       description: 'Round-the-clock monitoring, maintenance, and support',
       price: 'From $2,500/month',
-      features: ['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports']
+      features['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports']
     }
   ];
 
@@ -291,5 +291,4 @@ export default function CloudDevOps(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

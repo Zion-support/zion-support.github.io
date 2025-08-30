@@ -7,7 +7,7 @@ export function MainSidebar() {
     const sidebarSections = [
         {
             title: 'Main',
-            items: [
+            items[
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
@@ -17,7 +17,7 @@ export function MainSidebar() {
         },
         {
             title: 'Comp',
-            items: [
+            items[
                 { key: 'about', href: '/about', icon: <Building className="w-4 h-4"/>, label: 'About Us' },
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },
                 { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
@@ -26,7 +26,7 @@ export function MainSidebar() {
         },
         {
             title: 'Resources',
-            items: [
+            items[
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
                 { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },
                 { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },
@@ -35,7 +35,7 @@ export function MainSidebar() {
         },
         {
             title: 'Support',
-            items: [
+            items[
                 { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4"/>, label: 'Help Center' },
                 { key: 'developers', href: '/developers', icon: <Code className="w-4 h-4"/>, label: 'Developer Portal' },
                 { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },
@@ -45,10 +45,8 @@ export function MainSidebar() {
     ];
     const isActive = (href) => {
         if (href === '/') {
-            return location.pathname === '/';
-        }
-        return location.pathname.startsWith(href);
-    };
+            return location.pathname === '/'}
+        return location.pathname.startsWith(href)};
     return (<aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
       <div className="mb-8">
         <Link to="/" className="flex items-center space-x-2">
@@ -87,5 +85,4 @@ export function MainSidebar() {
           </Link>
         </div>
       </div>
-    </aside>);
-}
+    </aside>)}

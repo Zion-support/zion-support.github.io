@@ -1,13 +1,13 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
-export default function PricingPage(...args: []):  {
+export default function PricingPage(...args[]):  {
   const pricingTiers = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: '$99',
       period: '/month',
-      features: [
+      features[
         'AI-Powered Analytics Dashboard',
         'Basic Cloud Infrastructure',
         'Email Support',
@@ -24,7 +24,7 @@ export default function PricingPage(...args: []):  {
       description: 'Ideal for growing businesses and teams',
       price: '$299',
       period: '/month',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI Decision Engine',
         'Priority Support',
@@ -43,7 +43,7 @@ export default function PricingPage(...args: []):  {
       description: 'For large organizations with complex needs',
       price: 'Custom',
       period: '',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI Solutions',
         '24/7 Dedicated Support',
@@ -65,25 +65,25 @@ export default function PricingPage(...args: []):  {
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      features['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
     },
     {
       name: 'Quantum Computing Access',
       description: 'Access to quantum computing resources',
       price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      features['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
     },
     {
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment',
       price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+      features['Architecture Design', 'Data Migration', 'Performance Optimization']
     }
   ];
   const faqs = [
@@ -279,5 +279,4 @@ export default function PricingPage(...args: []):  {
         </section>
       </main>
     </>
-  );
-}
+  )}

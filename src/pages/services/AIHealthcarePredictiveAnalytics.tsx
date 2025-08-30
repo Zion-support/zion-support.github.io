@@ -44,7 +44,7 @@ import { Heart,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIHealthcarePredictiveAnalytics(...args: []):  {
+export default function AIHealthcarePredictiveAnalytics(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -100,7 +100,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: []):  {
       price: '$899',
       period: '/month',
       description: 'Perfect for small clinics and practices',
-      features: [
+      features[
         'Up to 1,000 patients',
         'Basic predictive analytics',
         'Standard risk scoring',
@@ -117,7 +117,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: []):  {
       price: '$1,799',
       period: '/month',
       description: 'Ideal for growing healthcare organizations',
-      features: [
+      features[
         'Up to 10,000 patients',
         'Advanced AI analytics',
         'Real-time monitoring',
@@ -137,7 +137,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: []):  {
       price: '$4,999',
       period: '/month',
       description: 'For large healthcare systems with complex needs',
-      features: [
+      features[
         'Unlimited patients',
         'Premium AI analytics',
         '24/7 dedicated support',
@@ -603,5 +603,4 @@ export default function AIHealthcarePredictiveAnalytics(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

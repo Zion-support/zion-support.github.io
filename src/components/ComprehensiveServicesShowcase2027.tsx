@@ -102,7 +102,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-export function ComprehensiveServicesShowcase2027(...args: []):  {
+export function ComprehensiveServicesShowcase2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
 
@@ -119,8 +119,7 @@ export function ComprehensiveServicesShowcase2027(...args: []):  {
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
 
@@ -395,7 +394,6 @@ export function ComprehensiveServicesShowcase2027(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}
 
 export default ComprehensiveServicesShowcase2027;

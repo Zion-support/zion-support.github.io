@@ -20,7 +20,7 @@ import { useTranslation  } from 'react-i18next.ts';
 import { useSelector  } from 'react-redux.ts';
 import type { RootState } from '@/store';
 
-export function PrimaryNav(...args: []):  {
+export function PrimaryNav(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
@@ -33,8 +33,7 @@ export function PrimaryNav(...args: []):  {
   let unreadCount = 0;
   try {
     const messaging = useMessaging();
-    unreadCount = messaging.unreadCount;
-  } catch {
+    unreadCount = messaging.unreadCount} catch {
     // context not available
   }
 
@@ -47,8 +46,7 @@ export function PrimaryNav(...args: []):  {
     if (query.trim()) {
       console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
-      setQuery('');
-    }
+      setQuery('')}
   };
 
   return (
@@ -79,17 +77,13 @@ export function PrimaryNav(...args: []):  {
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`);
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    router.push(`/marketplace/listing/${sugg.id}`)} else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug);
-                  } else if (sugg.type === 'blog' && sugg.slug) {
+                    router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`);
-                  } else {
+                    router.push(`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-                  }
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
                   setQuery('');
                   
                   // Track analytics event
@@ -98,8 +92,7 @@ export function PrimaryNav(...args: []):  {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
-                    });
-                  }
+                    })}
                 }}
                 searchSuggestions={suggestions}
               />
@@ -192,5 +185,4 @@ export function PrimaryNav(...args: []):  {
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-  );
-}
+  )}

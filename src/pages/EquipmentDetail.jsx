@@ -30,8 +30,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-      </>);
-    }
+      </>)}
     const handleAddToCart = () => {
         setIsAdding(true);
         // Simulate API call
@@ -40,14 +39,11 @@ export default function EquipmentDetail() {
             toast({
                 title: "Added to cart",
                 description: `${quantity}x ${equipment.name} added to your cart.`,
-            });
-        }, 800);
-    };
+            })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
             navigate(`/login?next=/equipment/${equipmentId}`);
-            return;
-        }
+            return}
         setIsAdding(true);
         try {
             const response = await fetch('/checkout/create-session', {
@@ -57,15 +53,12 @@ export default function EquipmentDetail() {
             });
             const { url } = await response.json();
             if (url) {
-                window.location.href = url;
-            }
+                window.location.href = url}
         }
         catch (err) {
-            toast({ title: 'Payment error', description: 'Could not start checkout.' });
-        }
+            toast({ title: 'Payment error', description: 'Could not start checkout.' })}
         finally {
-            setIsAdding(false);
-        }
+            setIsAdding(false)}
     };
     return (<>
       <Header />
@@ -231,5 +224,4 @@ export default function EquipmentDetail() {
         </div>
       </div>
       <Footer />
-    </>);
-}
+    </>)}

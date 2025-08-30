@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react.ts';
 import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react.ts';
 import { useSearchParams  } from 'react-router-dom.ts';
 
-export default function Search(...args: []):  {
+export default function Search(...args[]):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -39,7 +39,7 @@ export default function Search(...args: []):  {
       price: '$2,500/month',
       location: 'Remote',
       comp: 'Zion Tech Group',
-      tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
+      tags['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
       featured: true
     },
     {
@@ -53,7 +53,7 @@ export default function Search(...args: []):  {
       price: '$150/hour',
       location: 'San Francisco, CA',
       comp: 'Tech Solutions Inc',
-      tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
+      tags['AI', 'Machine Learning', 'Python', 'TensorFlow'],
       featured: false
     },
     {
@@ -67,7 +67,7 @@ export default function Search(...args: []):  {
       price: '$15,000/month',
       location: 'New York, NY',
       comp: 'Cloud Computing Corp',
-      tags: ['GPU', 'AI Training', 'High Performance', 'Enterprise'],
+      tags['GPU', 'AI Training', 'High Performance', 'Enterprise'],
       featured: true
     },
     {
@@ -81,15 +81,14 @@ export default function Search(...args: []):  {
       price: '$300/hour',
       location: 'Remote',
       comp: 'Zion Tech Group',
-      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
+      tags['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
   ];
 
   useEffect(()  => {
     if (searchQuery) {
-      performSearch();
-    }
+      performSearch()}
   }, [searchQuery, activeCategory, sortBy]);
 
   const performSearch = async () => {
@@ -105,8 +104,7 @@ export default function Search(...args: []):  {
       
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
       
-      return matchesQuery && matchesCategory;
-    });
+      return matchesQuery && matchesCategory});
 
     // Sort results
     filteredResults.sort((a, b) => {
@@ -120,19 +118,16 @@ export default function Search(...args: []):  {
         case 'price-high':
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
         default:
-          return 0;
-      }
+          return 0}
     });
 
     setResults(filteredResults);
-    setLoading(false);
-  };
+    setLoading(false)};
 
   const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
-    }
+      setSearchParams({ q: searchQuery.trim() })}
   };
 
   const getTypeIcon = (type: string)  => {
@@ -144,8 +139,7 @@ export default function Search(...args: []):  {
       case 'equipment':
         return <Building className="w-5 h-5 text-zion-orange" />;
       default:
-        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
-    }
+        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />}
   };
 
   const getTypeLabel = (type: string)  => {
@@ -157,8 +151,7 @@ export default function Search(...args: []):  {
       case 'equipment':
         return 'Equipment';
       default:
-        return 'Unknown';
-    }
+        return 'Unknown'}
   };
 
   return (
@@ -335,5 +328,4 @@ export default function Search(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

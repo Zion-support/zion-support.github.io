@@ -14,7 +14,7 @@ import { Handshake,
   Rocket
  } from 'lucide-react.ts'
 
-export default function Partners(...args: []):  {
+export default function Partners(...args[]):  {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -23,7 +23,7 @@ export default function Partners(...args: []):  {
       icon: Cloud,
       title: 'Cloud & Infrastructure',
       description: 'Strategic partnerships with leading cloud providers and infrastructure companies.',
-      partners: [
+      partners[
         { name: 'AWS', description: 'Amazon Web Services', logo: '☁️', tier: 'Platinum' },
         { name: 'Microsoft Azure', description: 'Cloud computing platform', logo: '🔷', tier: 'Platinum' },
         { name: 'Google Cloud', description: 'Cloud infrastructure services', logo: '🔵', tier: 'Gold' },
@@ -34,7 +34,7 @@ export default function Partners(...args: []):  {
       icon: Brain,
       title: 'AI & Machine Learning',
       description: 'Partnerships with cutting-edge AI research and development organizations.',
-      partners: [
+      partners[
         { name: 'OpenAI', description: 'Advanced AI research', logo: '🤖', tier: 'Gold' },
         { name: 'Anthropic', description: 'AI safety and research', logo: '🧠', tier: 'Gold' },
         { name: 'Hugging Face', description: 'Machine learning platform', logo: '🤗', tier: 'Silver' },
@@ -45,7 +45,7 @@ export default function Partners(...args: []):  {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Collaborations with security experts and compliance organizations.',
-      partners: [
+      partners[
         { name: 'CrowdStrike', description: 'Cybersecurity solutions', logo: '🦅', tier: 'Gold' },
         { name: 'Palo Alto Networks', description: 'Network security', logo: '🌲', tier: 'Gold' },
         { name: 'Rapid7', description: 'Security analytics', logo: '⚡', tier: 'Silver' },
@@ -56,7 +56,7 @@ export default function Partners(...args: []):  {
       icon: Database,
       title: 'Data & Analytics',
       description: 'Partnerships with data management and analytics solution providers.',
-      partners: [
+      partners[
         { name: 'Snowflake', description: 'Data cloud platform', logo: '❄️', tier: 'Gold' },
         { name: 'Tableau', description: 'Data visualization', logo: '📈', tier: 'Silver' },
         { name: 'MongoDB', description: 'Database platform', logo: '🍃', tier: 'Silver' },
@@ -92,19 +92,19 @@ export default function Partners(...args: []):  {
     {
       name: 'Platinum',
       description: 'Strategic partnerships with deep integration and joint go-to-market initiatives.',
-      benefits: ['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
+      benefits['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
       color: 'from-purple-600 to-pink-600'
     },
     {
       name: 'Gold',
       description: 'Preferred partnerships with significant collaboration and mutual benefits.',
-      benefits: ['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
+      benefits['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       name: 'Silver',
       description: 'Standard partnerships with basic collaboration and referral programs.',
-      benefits: ['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
+      benefits['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
       color: 'from-gray-400 to-gray-600'
     }
   ]

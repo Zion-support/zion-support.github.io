@@ -17,7 +17,7 @@ import { BarChart3,
   ArrowRight
  } from 'lucide-react.ts';
 
-export default function Dashboard(...args: []):  {
+export default function Dashboard(...args[]):  {
   const stats = [
     {
       title: "Total Revenue",
@@ -144,8 +144,7 @@ export default function Dashboard(...args: []):  {
       case "Planning":
         return "bg-yellow-100 text-yellow-800";
       default:
-        return "bg-gray-100 text-gray-800";
-    }
+        return "bg-gray-100 text-gray-800"}
   };
 
   const getPriorityColor = (priority: string)  => {
@@ -157,8 +156,7 @@ export default function Dashboard(...args: []):  {
       case "Low":
         return "bg-green-100 text-green-800";
       default:
-        return "bg-gray-100 text-gray-800";
-    }
+        return "bg-gray-100 text-gray-800"}
   };
 
   return (
@@ -349,5 +347,4 @@ export default function Dashboard(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

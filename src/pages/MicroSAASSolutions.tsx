@@ -23,37 +23,37 @@ import { Code,
   Brain
  } from 'lucide-react.ts';
 
-export default function MicroSAASSolutions(...args: []):  {
+export default function MicroSAASSolutions(...args[]):  {
   const services = [
     {
       title: "Custom SAAS Development",
       description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
       icon: Code,
-      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+      features["Custom workflows", "API integration", "User management", "Scalable architecture"]
     },
     {
       title: "Multi-tenant Architecture",
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,
-      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
+      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
     },
     {
       title: "Subscription Management",
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,
-      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
+      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
     },
     {
       title: "API Development & Integration",
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,
-      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
       title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     }
   ];
 
@@ -350,5 +350,4 @@ export default function MicroSAASSolutions(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

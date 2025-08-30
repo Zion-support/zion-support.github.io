@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom.ts';
 import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react.ts';
 
-export default function News(...args: []):  {
+export default function News(...args[]):  {
   const newsArticles = [
     {
       id: 1,
@@ -12,7 +12,7 @@ export default function News(...args: []):  {
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'Product Launch',
-      tags: ['AI', 'Cybersecurity', 'Innovation'],
+      tags['AI', 'Cybersecurity', 'Innovation'],
       featured: true,
       image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&h=400'
     },
@@ -25,7 +25,7 @@ export default function News(...args: []):  {
       date: '2024-01-10',
       readTime: '3 min read',
       category: 'Comp News',
-      tags: ['Expansion', 'Global', 'Europe'],
+      tags['Expansion', 'Global', 'Europe'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=400'
     },
@@ -38,7 +38,7 @@ export default function News(...args: []):  {
       date: '2024-01-05',
       readTime: '7 min read',
       category: 'Research',
-      tags: ['Quantum Computing', 'Research', 'Innovation'],
+      tags['Quantum Computing', 'Research', 'Innovation'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=400'
     },
@@ -51,7 +51,7 @@ export default function News(...args: []):  {
       date: '2023-12-28',
       readTime: '4 min read',
       category: 'Awards',
-      tags: ['Awards', 'AI', 'Recognition'],
+      tags['Awards', 'AI', 'Recognition'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=400'
     },
@@ -64,7 +64,7 @@ export default function News(...args: []):  {
       date: '2023-12-20',
       readTime: '6 min read',
       category: 'Partnerships',
-      tags: ['Partnership', 'Cloud', 'Enterprise'],
+      tags['Partnership', 'Cloud', 'Enterprise'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=400'
     },
@@ -77,7 +77,7 @@ export default function News(...args: []):  {
       date: '2023-12-15',
       readTime: '5 min read',
       category: 'Sustainability',
-      tags: ['Sustainability', 'Green Tech', 'Environment'],
+      tags['Sustainability', 'Green Tech', 'Environment'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400'
     }
@@ -99,8 +99,7 @@ export default function News(...args: []):  {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })};
 
   return (
     <div className="min-h-screen bg-white">
@@ -358,5 +357,4 @@ export default function News(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

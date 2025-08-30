@@ -30,7 +30,7 @@ import { Brain,
   ExternalLink
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES  } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026(...args: []):  {
+export default function InnovativeServicesShowcase2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
@@ -47,8 +47,7 @@ export default function InnovativeServicesShowcase2026(...args: []):  {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -58,8 +57,7 @@ export default function InnovativeServicesShowcase2026(...args: []):  {
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default:
-        return 0;
-    }
+        return 0}
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -318,5 +316,4 @@ export default function InnovativeServicesShowcase2026(...args: []):  {
         </div>
       </motion.div>
     </div>
-  );
-}
+  )}

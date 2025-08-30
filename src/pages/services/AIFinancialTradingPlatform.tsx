@@ -35,7 +35,7 @@ import { Brain,
   AlertTriangle
  } from 'lucide-react.ts';
 
-export default function AIFinancialTradingPlatform(...args: []):  {
+export default function AIFinancialTradingPlatform(...args[]):  {
   const features = [
     "AI-powered market analysis and prediction",
     "Real-time algorithmic trading execution",
@@ -76,7 +76,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       price: "$199",
       period: "/month",
       description: "Perfect for individual traders and beginners",
-      features: [
+      features[
         "AI market analysis (5 strategies)",
         "Basic algorithmic trading",
         "Real-time market data",
@@ -92,7 +92,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       price: "$599",
       period: "/month",
       description: "Ideal for active traders and professionals",
-      features: [
+      features[
         "AI market analysis (unlimited strategies)",
         "Advanced algorithmic trading",
         "Multi-asset class trading",
@@ -109,7 +109,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For institutional investors and hedge funds",
-      features: [
+      features[
         "Custom AI model development",
         "High-frequency trading",
         "White-label solutions",
@@ -404,5 +404,4 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

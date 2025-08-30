@@ -66,8 +66,7 @@ const ITServices: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ITServices;
 

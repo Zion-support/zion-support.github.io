@@ -74,10 +74,8 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
   useEffect(() => {
     let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
-      services = searchExpandedServices(searchQuery);
-    }
-    setFilteredServices(services);
-  }, [selectedCategory, searchQuery]);
+      services = searchExpandedServices(searchQuery)}
+    setFilteredServices(services)}, [selectedCategory, searchQuery]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -94,8 +92,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
-        return Rocket;
-    }
+        return Rocket}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -113,16 +110,13 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
-        return 'from-gray-500 to-slate-600';
-    }
+        return 'from-gray-500 to-slate-600'}
   };
 
   const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
     if (pricing.model === 'Transaction Fees + Governance') {
-      return 'Free + Transaction Fees';
-    }
-    return `$${pricing.basePrice.toLocaleString()}/month`;
-  };
+      return 'Free + Transaction Fees'}
+    return `$${pricing.basePrice.toLocaleString()}/month`};
 
   const renderServiceCard = (service: ExpandedService2027)  => {
     const CategoryIcon = getCategoryIcon(service.category);
@@ -300,8 +294,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
           </div>
         </div>
       </motion.div>
-    );
-  };
+    )};
 
   const renderServiceList = (service: ExpandedService2027)  => {
     const CategoryIcon = getCategoryIcon(service.category);
@@ -387,8 +380,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
           </div>
         </div>
       </motion.div>
-    );
-  };
+    )};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -575,7 +567,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesShowcase2027;

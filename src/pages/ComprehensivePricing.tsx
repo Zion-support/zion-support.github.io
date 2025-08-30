@@ -20,7 +20,7 @@ const pricingTiers = [
     price: '$999',
     period: '/month',
     description: 'Perfect for small businesses and startups',
-    features: [
+    features[
       'Basic AI automation',
       'Standard support',
       'Core integrations',
@@ -34,7 +34,7 @@ const pricingTiers = [
     price: '$2,999',
     period: '/month',
     description: 'Ideal for growing businesses',
-    features: [
+    features[
       'Advanced AI features',
       'Priority support',
       'Custom integrations',
@@ -49,7 +49,7 @@ const pricingTiers = [
     price: '$7,999',
     period: '/month',
     description: 'For large organizations',
-    features: [
+    features[
       'Full AI suite',
       '24/7 dedicated support',
       'Custom development',
@@ -62,7 +62,7 @@ const pricingTiers = [
   }
 ];
 
-export default function ComprehensivePricing(...args: []):  {
+export default function ComprehensivePricing(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
@@ -91,12 +91,10 @@ export default function ComprehensivePricing(...args: []):  {
           break;
         case 'over-5000':
           matchesPrice = price >= 5000;
-          break;
-      }
+          break}
     }
     
-    return matchesCategory && matchesPrice;
-  });
+    return matchesCategory && matchesPrice});
 
   const getPriceRangeLabel = (range: string)  => {
     switch (range) {
@@ -104,8 +102,7 @@ export default function ComprehensivePricing(...args: []):  {
       case '1000-3000': return '$1,000 - $3,000';
       case '3000-5000': return '$3,000 - $5,000';
       case 'over-5000': return 'Over $5,000';
-      default: return 'All Prices';
-    }
+      default: return 'All Prices'}
   };
 
   return (
@@ -311,8 +308,7 @@ export default function ComprehensivePricing(...args: []):  {
               <Button 
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}
+                  setSelectedPriceRange('all')}}
                 className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
               >
                 Clear Filters
@@ -393,5 +389,4 @@ export default function ComprehensivePricing(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

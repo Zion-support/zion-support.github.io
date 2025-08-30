@@ -20,15 +20,12 @@ import { BarChart3,
 interface ChartData {
 
   labels: string[];
-datasets: {;
+datasets: {
     label: string;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-    borderWidth: number;
-  
-}[];
-}
+    borderWidth: number}[]}
 
 interface MetricCard {
 
@@ -37,18 +34,14 @@ interface MetricCard {
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-  color: string;
-
-}
+  color: string}
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
-  showActions?: boolean;
-
-}
+  showActions?: boolean}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",
@@ -62,12 +55,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{
+    labels['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets[{
       label: 'Revenue',
-      data: [65, 59, 80, 81, 56, 55],
-      backgroundColor: ['rgba(34, 221, 210, 0.2)'],
-      borderColor: ['rgba(34, 221, 210, 1)'],
+      data[65, 59, 80, 81, 56, 55],
+      backgroundColor['rgba(34, 221, 210, 0.2)'],
+      borderColor['rgba(34, 221, 210, 1)'],
       borderWidth: 2
     }]
   });
@@ -116,7 +109,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: [{
+      datasets[{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
@@ -132,8 +125,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
 
-    setIsLoading(false);
-  };
+    setIsLoading(false)};
 
   // Get change icon and color
   const getChangeDisplay = (change: number, changeType: string)  => {
@@ -145,22 +137,21 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                   changeType === 'decrease' ? 'text-red-400' :
                   'text-zinc-400';
     
-    return { icon, color };
-  };
+    return { icon, color }};
 
   // Generate pie chart data
   const pieChartData = {
-    labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
-    datasets: [{
-      data: [35, 25, 20, 15, 5],
-      backgroundColor: [
+    labels['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
+    datasets[{
+      data[35, 25, 20, 15, 5],
+      backgroundColor[
         'rgba(34, 221, 210, 0.8)',
         'rgba(140, 21, 233, 0.8)',
         'rgba(239, 68, 68, 0.8)',
         'rgba(16, 185, 129, 0.8)',
         'rgba(245, 158, 11, 0.8)'
       ],
-      borderColor: [
+      borderColor[
         'rgba(34, 221, 210, 1)',
         'rgba(140, 21, 233, 1)',
         'rgba(239, 68, 68, 1)',
@@ -173,10 +164,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
   // Generate line chart data
   const lineChartData = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
+    labels['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    datasets[{
       label: 'Weekly Performance',
-      data: [65, 59, 80, 81, 56, 55, 70],
+      data[65, 59, 80, 81, 56, 55, 70],
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
       borderColor: 'rgba(34, 221, 210, 1)',
       borderWidth: 3,
@@ -260,8 +251,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
                 <p className="text-zinc-400 text-sm">{metric.title}</p>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       )}
 
@@ -363,8 +353,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                               stroke={pieChartData.datasets[0].borderColor[index]}
                               strokeWidth="2"
                             />
-                          );
-                        })}
+                          )})}
                       </svg>
                       
                       {/* Legend */}
@@ -487,5 +476,4 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )};

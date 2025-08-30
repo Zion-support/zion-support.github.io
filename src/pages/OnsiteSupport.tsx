@@ -19,43 +19,43 @@ import { Wrench,
   Router
  } from 'lucide-react.ts';
 
-export default function OnsiteSupport(...args: []):  {
+export default function OnsiteSupport(...args[]):  {
   const services = [
     {
       icon: Server,
       title: 'Server Maintenance',
       description: 'Proactive server monitoring, updates, and optimization',
-      features: ['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
+      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
     },
     {
       icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
-      features: ['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
+      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
     },
     {
       icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
-      features: ['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
+      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
     },
     {
       icon: Monitor,
       title: 'Workstation Support',
       description: 'Desktop and laptop setup, maintenance, and troubleshooting',
-      features: ['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
+      features['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
     },
     {
       icon: HardDrive,
       title: 'Storage Solutions',
       description: 'Storage system design, implementation, and maintenance',
-      features: ['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
+      features['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
     },
     {
       icon: Router,
       title: 'Security Implementation',
       description: 'Comprehensive security setup and monitoring',
-      features: ['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
+      features['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
     }
   ];
 
@@ -294,5 +294,4 @@ export default function OnsiteSupport(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

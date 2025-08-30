@@ -43,5 +43,4 @@ export function FaqSection() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

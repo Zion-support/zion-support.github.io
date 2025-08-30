@@ -83,31 +83,25 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
   ];
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
 
   const previousTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
   const goToTestimonial = (index: number)  => {
-    setCurrentIndex(index);
-  };
+    setCurrentIndex(index)};
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+    setIsPlaying(!isPlaying)};
 
   // Auto-advance testimonials
   React.useEffect(() => {
     if (!isPlaying) return;
     
     const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
+      nextTestimonial()}, 5000);
 
-    return () => clearInterval(interval);
-  }, [isPlaying, currentIndex]);
+    return () => clearInterval(interval)}, [isPlaying, currentIndex]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -265,7 +259,6 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default InteractiveTestimonials;

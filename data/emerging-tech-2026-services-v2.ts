@@ -11,9 +11,7 @@ export interface EmergingTech2026ServiceV2 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: "2026-emerging-tech-v2",
@@ -21,7 +19,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     tagline: "Enhanced emerging technologies",
     price: "$349/month",
     description: "Enhanced version of the 2026 emerging tech platform with additional capabilities and features.",
-    features: [
+    features[
       "Enhanced emerging tech",
       "Advanced capabilities",
       "Improved platform",

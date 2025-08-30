@@ -17,8 +17,7 @@ export default function TokenManager() {
     const isAdmin = user?.userType === 'admin';
     useEffect(() => {
         if (isAdmin)
-            fetchTransactions();
-    }, [isAdmin]);
+            fetchTransactions()}, [isAdmin]);
     const fetchTransactions = async () => {
         const { data, error } = await supabase
             .from('token_transactions')
@@ -26,8 +25,7 @@ export default function TokenManager() {
             .order('created_at', { ascending: false })
             .limit(100);
         if (!error)
-            setTransactions(data || []);
-    };
+            setTransactions(data || [])};
     const handleIssue = async (type) => {
         if (!userId || amount <= 0)
             return;
@@ -41,16 +39,14 @@ export default function TokenManager() {
                 title: 'Success',
                 description: 'Transaction processed'
             });
-            fetchTransactions();
-        }
+            fetchTransactions()}
         else {
             const err = await res.json();
             toast({
                 title: 'Error',
                 description: err.error || 'Failed',
                 variant: 'destructive'
-            });
-        }
+            })}
     };
     return (<ProtectedRoute adminOnly>
       <div>
@@ -89,5 +85,4 @@ export default function TokenManager() {
         </div>
         
       </div>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

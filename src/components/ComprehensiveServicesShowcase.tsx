@@ -49,20 +49,16 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  
-};
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
-}
+    security: string[]}}
 const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
@@ -75,13 +71,11 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
   // Get unique categories
   const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    return cats;
-  }, [allServices]);
+    return cats}, [allServices]);
   // Get unique innovation levels
   const innovationLevels = useMemo(() => {
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
-    return levels;
-  }, [allServices]);
+    return levels}, [allServices]);
   // Filter services
   const filteredServices = useMemo(() => {
     return allServices.filter(service => {
@@ -90,9 +84,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch;
-    });
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
@@ -131,8 +123,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       case 'Autonomous Vehicles & Fleet Management':
         return <Rocket className="h-6 w-6" />;
       default:
-        return <Star className="h-6 w-6" />;
-    }
+        return <Star className="h-6 w-6" />}
   };
   const getInnovationLevelColor = (level: string)  => {
     switch (level) {
@@ -143,8 +134,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       case 'Professional':
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default:
-        return 'bg-gradient-to-r from-gray-600 to-slate-600';
-    }
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
@@ -388,8 +378,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
                 onClick={() => {
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
-                  setSearchTerm('');
-                }}
+                  setSearchTerm('')}}
                 className="text-zion-cyan hover:text-zion-cyan-light font-medium"
               >
                 Clear all filters
@@ -427,6 +416,5 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 export default ComprehensiveServicesShowcase;

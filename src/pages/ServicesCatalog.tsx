@@ -6,8 +6,7 @@ type Service = {
   path: string;
   summary: string;
   price: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions';
-};
+  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'};
 
 const services: Service[] = [
   { name: 'Website AI Chatbot', path: '/services/website-ai-chatbot', summary: '24/7 on-site AI that answers, qualifies, and books meetings.', price: '$299–$899/mo', category: 'Micro SaaS' },
@@ -44,8 +43,7 @@ const services: Service[] = [
 
 const groupByCategory = (items: Service[])  => items.reduce<Record<string, any>>((acc, s) => {
   (acc[s.category] = acc[s.category] || []).push(s);
-  return acc;
-}, {});
+  return acc}, {});
 
 const ServicesCatalog: React.FC = (): JSX.Element => {
   const grouped = groupByCategory(services);
@@ -83,8 +81,7 @@ const ServicesCatalog: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ServicesCatalog;
 

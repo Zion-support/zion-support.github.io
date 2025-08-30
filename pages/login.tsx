@@ -13,7 +13,7 @@ import { Mail,
   ArrowRight
  } from 'lucide-react.ts'
 
-export default function Login(...args: []):  {
+export default function Login(...args[]):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''

@@ -32,22 +32,18 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+      )}
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     // Filter by price range
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (priceRange === '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000);
-      } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max);
-      }
+        filtered = filtered.filter(service => service.price >= 3000)} else {
+        filtered = filtered.filter(service => service.price >= min && service.price <= max)}
     }
 
     // Sort services
@@ -63,11 +59,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
         break;
       case 'launchDate':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
-    }
+        break}
 
-    return filtered;
-  }, [searchTerm, selectedCategory, priceRange, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
@@ -287,7 +281,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default InnovativeServicesShowcase;

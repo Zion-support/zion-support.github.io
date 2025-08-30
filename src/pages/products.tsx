@@ -29,7 +29,6 @@ const Products: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Products;

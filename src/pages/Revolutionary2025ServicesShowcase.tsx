@@ -105,31 +105,23 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+      )}
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPriceRange !== 'all') {
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {
-          return price >= min && price <= max;
-        }
-        return price >= min;
-      });
-    }
+          return price >= min && price <= max}
+        return price >= min})}
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
-          return roi >= min && roi <= max;
-        }
-        return roi >= min;
-      });
-    }
+          return roi >= min && roi <= max}
+        return roi >= min})}
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -140,19 +132,16 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         case 'customers':
           return b.customers - a.customers;
         default:
-          return a.name.localeCompare(b.name);
-      }
+          return a.name.localeCompare(b.name)}
     });
-    setServices(filtered);
-  }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
+    setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
   const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
-  };
+        [...prev, serviceId]
+    )};
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -1617,8 +1606,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

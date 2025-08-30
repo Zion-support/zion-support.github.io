@@ -112,5 +112,4 @@ export default function Cookies() {
         </div>
       </main>
     </div>
-  );
-}
+  )}

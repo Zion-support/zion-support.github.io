@@ -39,12 +39,10 @@ export function NewsletterSection() {
         // Here you would typically send the email to your newsletter service
         console.log('Newsletter subscription:', email);
         setIsSubscribed(true);
-        setEmail('');
-    };
+        setEmail('')};
     const handleUnsubscribe = () => {
         setIsSubscribed(false);
-        setEmail('');
-    };
+        setEmail('')};
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -58,7 +56,7 @@ export function NewsletterSection() {
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
+        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale[1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -166,5 +164,4 @@ export function NewsletterSection() {
           </motion.div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

@@ -12,17 +12,14 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   // Get unique categories and subcategories
   const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-    return cats;
-  }, []);
+    return cats}, []);
 
   const subcategories = useMemo(() => {
     if (selectedCategory === 'all') {
       const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
-      return subcats;
-    }
+      return subcats}
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
@@ -35,15 +32,12 @@ const ExpandedServicesShowcase2027: NextPage = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
   const resetFilters = () => {
     setSearchTerm('');
     setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSelectedSubcategory('all')};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -104,8 +98,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               value={selectedCategory}
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
+                setSelectedSubcategory('all')}}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => (
@@ -266,7 +259,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesShowcase2027;

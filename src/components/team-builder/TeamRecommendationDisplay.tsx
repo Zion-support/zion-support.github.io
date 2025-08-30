@@ -76,8 +76,7 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
         </Alert>
       )}
     </div>
-  );
-};
+  )};
 
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => (

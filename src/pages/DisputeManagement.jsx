@@ -282,5 +282,4 @@ export default function DisputeManagement() {
             </div>)}
         </div>
       </main>
-    </>);
-}
+    </>)}

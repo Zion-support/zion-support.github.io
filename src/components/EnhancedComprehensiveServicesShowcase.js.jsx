@@ -22,19 +22,16 @@ const EnhancedComprehensiveServicesShowcase = () => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     const categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
         { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },
         { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
     ];
     const handleServiceClick = (service) => {
-        setSelectedService(service);
-    };
+        setSelectedService(service)};
     const closeModal = () => {
-        setSelectedService(null);
-    };
+        setSelectedService(null)};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -293,6 +290,5 @@ const EnhancedComprehensiveServicesShowcase = () => {
             </div>
           </div>
         </div>)}
-    </div>);
-};
+    </div>)};
 export default EnhancedComprehensiveServicesShowcase;

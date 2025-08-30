@@ -8,32 +8,32 @@ const AIMarketingAutomation = () => {
             icon: Brain,
             title: "AI-Powered Campaign Optimization",
             description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI",
-            benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
+            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
         },
         {
             icon: Users,
             title: "Intelligent Customer Segmentation",
             description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns",
-            benefits: ["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
+            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
         },
         {
             icon: BarChart3,
             title: "Predictive Analytics",
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
-            benefits: ["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
+            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
         },
         {
             icon: Zap,
             title: "Automated Workflows",
             description: "Intelligent automation of marketing processes, from lead generation to customer retention",
-            benefits: ["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
+            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
         }
     ];
     const solutions = [
         {
             category: "Email Marketing",
             icon: Mail,
-            solutions: [
+            solutions[
                 "AI-powered email personalization",
                 "Send time optimization",
                 "Subject line optimization",
@@ -44,7 +44,7 @@ const AIMarketingAutomation = () => {
         {
             category: "Social Media Marketing",
             icon: MessageSquare,
-            solutions: [
+            solutions[
                 "Content performance prediction",
                 "Optimal posting times",
                 "Audience engagement analysis",
@@ -55,7 +55,7 @@ const AIMarketingAutomation = () => {
         {
             category: "Search & Display Advertising",
             icon: Target,
-            solutions: [
+            solutions[
                 "Bid optimization",
                 "Audience targeting",
                 "Ad creative optimization",
@@ -66,7 +66,7 @@ const AIMarketingAutomation = () => {
         {
             category: "Content Marketing",
             icon: TrendingUp,
-            solutions: [
+            solutions[
                 "Content performance analysis",
                 "Topic recommendations",
                 "SEO optimization",
@@ -309,6 +309,5 @@ const AIMarketingAutomation = () => {
           </div>
         </motion.div>
       </div>
-    </div>);
-};
+    </div>)};
 export default AIMarketingAutomation;

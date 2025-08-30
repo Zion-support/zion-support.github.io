@@ -110,9 +110,7 @@ const AdvancedServicePortfolioDashboard = () => {
             const matchesStatus = selectedStatus === 'all' || service.status === selectedStatus;
             const matchesComplexity = selectedComplexity === 'all' || service.complexity === selectedComplexity;
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
-            return matchesCategory && matchesStatus && matchesComplexity && matchesSearch;
-        });
-    }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
+            return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
     const portfolioMetrics = useMemo(() => {
         const activeServices = portfolioData.filter(s => s.status === 'Active');
         const totalRevenue = portfolioData.reduce((sum, s) => sum + s.revenue, 0);
@@ -130,16 +128,14 @@ const AdvancedServicePortfolioDashboard = () => {
             averagePerformance: Math.round(avgPerformance),
             portfolioGrowth: Math.round(portfolioGrowth),
             marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
-        };
-    }, [portfolioData]);
+        }}, [portfolioData]);
     const getStatusColor = (status) => {
         switch (status) {
             case 'Active': return 'bg-green-100 text-green-800';
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -147,8 +143,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getMarketDemandColor = (demand) => {
         switch (demand) {
@@ -156,8 +151,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
@@ -165,8 +159,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length },
@@ -343,8 +336,7 @@ const AdvancedServicePortfolioDashboard = () => {
             setSelectedCategory('all');
             setSelectedStatus('all');
             setSelectedComplexity('all');
-            setSearchTerm('');
-        }}>
+            setSearchTerm('')}}>
               <Filter className="w-4 h-4 mr-2"/>
               Clear Filters
             </Button>
@@ -533,6 +525,5 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default AdvancedServicePortfolioDashboard;

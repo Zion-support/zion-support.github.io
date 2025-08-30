@@ -10,9 +10,7 @@ interface SEOProps extends React.PropsWithChildren<{}> {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
-
-}
+  structuredData?: object}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -40,7 +38,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "contactType": "customer service",
       "availableLanguage": "English"
     },
-    "sameAs": [
+    "sameAs"[
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://facebook.com/ziontechgroup"
@@ -91,5 +89,4 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )};

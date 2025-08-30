@@ -9,15 +9,15 @@ const PricingComparison: React.FC = (): JSX.Element => {
   const pricingData = [
     {
       category: "AI-Powered Micro SAAS Services",
-      services: [
+      services[
         {
           name: "AI Code Review & Security",
           description: "Advanced vulnerability detection with AI-powered analysis",
-          plans: [
+          plans[
             {
               name: "Starter",
               price: { monthly: 49, yearly: 39 },
-              features: [
+              features[
                 "Up to 10,000 lines/month",
                 "Basic vulnerability detection",
                 "5 programming languages",
@@ -29,7 +29,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Professional",
               price: { monthly: 199, yearly: 159 },
-              features: [
+              features[
                 "Up to 100,000 lines/month",
                 "Advanced vulnerability detection",
                 "25 programming languages",
@@ -43,7 +43,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Enterprise",
               price: { monthly: 799, yearly: 639 },
-              features: [
+              features[
                 "Unlimited lines/month",
                 "Enterprise-grade security",
                 "50+ programming languages",
@@ -59,11 +59,11 @@ const PricingComparison: React.FC = (): JSX.Element => {
         {
           name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence",
-          plans: [
+          plans[
             {
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
-              features: [
+              features[
                 "Up to 10,000 interactions/month",
                 "Basic sentiment analysis",
                 "Customer journey mapping",
@@ -75,7 +75,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Advanced",
               price: { monthly: 799, yearly: 639 },
-              features: [
+              features[
                 "Up to 100,000 interactions/month",
                 "Advanced sentiment analysis",
                 "Predictive analytics",
@@ -89,7 +89,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Enterprise",
               price: { monthly: 1999, yearly: 1599 },
-              features: [
+              features[
                 "Unlimited interactions/month",
                 "AI-powered insights",
                 "Custom ML models",
@@ -105,11 +105,11 @@ const PricingComparison: React.FC = (): JSX.Element => {
         {
           name: "AI DevOps Automation Platform",
           description: "Revolutionize DevOps workflow with AI-powered automation",
-          plans: [
+          plans[
             {
               name: "Starter",
               price: { monthly: 199, yearly: 159 },
-              features: [
+              features[
                 "Up to 5 projects",
                 "Basic CI/CD pipelines",
                 "Git integration",
@@ -121,7 +121,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Professional",
               price: { monthly: 599, yearly: 479 },
-              features: [
+              features[
                 "Up to 25 projects",
                 "Advanced CI/CD pipelines",
                 "AI pipeline optimization",
@@ -135,7 +135,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Enterprise",
               price: { monthly: 1499, yearly: 1199 },
-              features: [
+              features[
                 "Unlimited projects",
                 "Enterprise automation",
                 "Custom AI models",
@@ -151,11 +151,11 @@ const PricingComparison: React.FC = (): JSX.Element => {
         {
           name: "AI IoT Edge Computing Platform",
           description: "Revolutionize IoT with AI-powered edge computing",
-          plans: [
+          plans[
             {
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
-              features: [
+              features[
                 "Up to 100 devices",
                 "Basic edge processing",
                 "Standard protocols",
@@ -167,7 +167,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Professional",
               price: { monthly: 999, yearly: 799 },
-              features: [
+              features[
                 "Up to 1,000 devices",
                 "Advanced edge AI",
                 "Real-time processing",
@@ -181,7 +181,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Enterprise",
               price: { monthly: 2499, yearly: 1999 },
-              features: [
+              features[
                 "Unlimited devices",
                 "Enterprise edge AI",
                 "Custom ML models",
@@ -198,15 +198,15 @@ const PricingComparison: React.FC = (): JSX.Element => {
     },
     {
       category: "Enterprise Services",
-      services: [
+      services[
         {
           name: "Cloud & Infrastructure",
           description: "Enterprise-grade cloud and infrastructure solutions",
-          plans: [
+          plans[
             {
               name: "Consultation",
               price: { monthly: 5000, yearly: 50000 },
-              features: [
+              features[
                 "Infrastructure assessment",
                 "Migration planning",
                 "Cost optimization",
@@ -218,7 +218,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Implementation",
               price: { monthly: 15000, yearly: 150000 },
-              features: [
+              features[
                 "Full infrastructure setup",
                 "Migration execution",
                 "Training & documentation",
@@ -230,7 +230,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Managed Services",
               price: { monthly: 25000, yearly: 250000 },
-              features: [
+              features[
                 "24/7 monitoring",
                 "Proactive maintenance",
                 "Security updates",
@@ -244,11 +244,11 @@ const PricingComparison: React.FC = (): JSX.Element => {
         {
           name: "Data & Analytics",
           description: "Comprehensive data analytics and business intelligence",
-          plans: [
+          plans[
             {
               name: "Assessment",
               price: { monthly: 3000, yearly: 30000 },
-              features: [
+              features[
                 "Data audit",
                 "Requirements analysis",
                 "Technology selection",
@@ -260,7 +260,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Implementation",
               price: { monthly: 10000, yearly: 100000 },
-              features: [
+              features[
                 "Data platform setup",
                 "ETL development",
                 "Dashboard creation",
@@ -272,7 +272,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Managed Analytics",
               price: { monthly: 20000, yearly: 200000 },
-              features: [
+              features[
                 "Continuous optimization",
                 "New insights delivery",
                 "Performance monitoring",
@@ -286,11 +286,11 @@ const PricingComparison: React.FC = (): JSX.Element => {
         {
           name: "Security & Compliance",
           description: "Enterprise-grade security and compliance solutions",
-          plans: [
+          plans[
             {
               name: "Assessment",
               price: { monthly: 4000, yearly: 40000 },
-              features: [
+              features[
                 "Security audit",
                 "Vulnerability assessment",
                 "Compliance review",
@@ -302,7 +302,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Implementation",
               price: { monthly: 12000, yearly: 120000 },
-              features: [
+              features[
                 "Security implementation",
                 "Compliance setup",
                 "Policy development",
@@ -314,7 +314,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
             {
               name: "Managed Security",
               price: { monthly: 25000, yearly: 250000 },
-              features: [
+              features[
                 "24/7 monitoring",
                 "Threat response",
                 "Regular assessments",
@@ -334,8 +334,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
     const yearlyTotal = yearlyPrice * 12;
     const savings = monthlyTotal - yearlyTotal;
     const savingsPercent = Math.round((savings / monthlyTotal) * 100);
-    return { savings, savingsPercent };
-  };
+    return { savings, savingsPercent }};
 
   return (
     <>
@@ -494,8 +493,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
                                 </Link>
                               </div>
                             </motion.div>
-                          );
-                        })}
+                          )})}
                       </div>
                     </motion.div>
                   ))}
@@ -605,7 +603,6 @@ const PricingComparison: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default PricingComparison;

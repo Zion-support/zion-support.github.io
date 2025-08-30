@@ -59,11 +59,9 @@ const specialServices = [
 
 interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
 
-  showTitle?: boolean;
+  showTitle?: boolean}
 
-}
-
-export function CategoriesSection(...args: []):  {
+export function CategoriesSection(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -214,5 +212,4 @@ export function CategoriesSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

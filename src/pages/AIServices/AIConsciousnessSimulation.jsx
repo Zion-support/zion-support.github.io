@@ -97,8 +97,7 @@ export default function AIConsciousnessSimulation() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
-                </motion.div>);
-        })}
+                </motion.div>)})}
           </div>
         </div>
       </section>
@@ -147,5 +146,4 @@ export default function AIConsciousnessSimulation() {
           </motion.div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

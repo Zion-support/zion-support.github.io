@@ -38,6 +38,5 @@ const GreenIT = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 export default GreenIT;

@@ -16,7 +16,7 @@ const Cookies: React.FC = (): JSX.Element => {
     {
       type: 'Essential Cookies',
       description: 'Required for the website to function properly',
-      examples: ['Authentication', 'Security', 'Session management'],
+      examples['Authentication', 'Security', 'Session management'],
       necessary: true,
       icon: Shield,
       color: 'from-red-500 to-orange-500'
@@ -24,7 +24,7 @@ const Cookies: React.FC = (): JSX.Element => {
     {
       type: 'Performance Cookies',
       description: 'Help us understand how visitors interact with our website',
-      examples: ['Analytics', 'Error tracking', 'Performance monitoring'],
+      examples['Analytics', 'Error tracking', 'Performance monitoring'],
       necessary: false,
       icon: BarChart3,
       color: 'from-blue-500 to-cyan-500'
@@ -32,7 +32,7 @@ const Cookies: React.FC = (): JSX.Element => {
     {
       type: 'Functional Cookies',
       description: 'Remember your preferences and settings',
-      examples: ['Language settings', 'Theme preferences', 'Form data'],
+      examples['Language settings', 'Theme preferences', 'Form data'],
       necessary: false,
       icon: Settings,
       color: 'from-green-500 to-emerald-500'
@@ -40,7 +40,7 @@ const Cookies: React.FC = (): JSX.Element => {
     {
       type: 'Marketing Cookies',
       description: 'Deliver relevant advertisements and content',
-      examples: ['Ad targeting', 'Social media integration', 'Remarketing'],
+      examples['Ad targeting', 'Social media integration', 'Remarketing'],
       necessary: false,
       icon: Eye,
       color: 'from-purple-500 to-pink-500'
@@ -330,7 +330,6 @@ const Cookies: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default Cookies;

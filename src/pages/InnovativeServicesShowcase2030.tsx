@@ -37,8 +37,7 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
@@ -276,8 +275,7 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
               <button
                 onClick={() => {
                   setSearchTerm('');
-                  setActiveCategory('all');
-                }}
+                  setActiveCategory('all')}}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
               >
                 Clear Filters
@@ -430,7 +428,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default InnovativeServicesShowcase2030;

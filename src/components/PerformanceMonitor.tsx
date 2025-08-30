@@ -20,16 +20,12 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
   domLoad: number | null;
-  windowLoad: number | null;
-
-}
+  windowLoad: number | null}
 interface PerformanceScore {
 
   score: number;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
-  color: string;
-
-}
+  color: string}
 export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [metrics, setMetrics] = useState<any>({
@@ -49,8 +45,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
     if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
-    return { score: 20, grade: 'F', color: 'text-red-600' };
-  }, []);
+    return { score: 20, grade: 'F', color: 'text-red-600' }}, []);
   const updateMetrics = useCallback(() => {
     if ('performance' in window) {
       const perf = performance;
@@ -91,8 +86,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
       if (issues.length > 0) {
         setAlertMessage(issues.join(', '));
         setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 5000);
-      }
+        setTimeout(() => setShowAlert(false), 5000)}
     }
   };
   useEffect(() => {
@@ -105,26 +99,21 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           if (entry.entryType === 'largest-contentful-paint' || 
               entry.entryType === 'first-input-delay' || 
               entry.entryType === 'layout-shift') {
-            updateMetrics();
-          }
+            updateMetrics()}
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
-      return ()  => observer.disconnect();
-    }
+      observer.observe({ entryTypes['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      return ()  => observer.disconnect()}
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 10000);
-    return () => clearInterval(interval);
-  }, [updateMetrics]);
+    return () => clearInterval(interval)}, [updateMetrics]);
   const formatMetric = (value: number | null, unit: string = 'ms'): string => {
     if (value === null) return 'N/A';
     if (unit === 'ms') return `${Math.round(value)}ms`;
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
-    return value.toFixed(3);
-  };
+    return value.toFixed(3)};
   const getMetricColor = (score: PerformanceScore): string  => {
-    return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
-  };
+    return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700')};
   return (
     <>
       {/* Performance Toggle Button */}
@@ -320,8 +309,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 // Simple refresh icon component
 const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -382,7 +382,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveServicesShowcase2025;

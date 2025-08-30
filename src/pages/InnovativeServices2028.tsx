@@ -28,7 +28,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
 
-export default function InnovativeServices2028(...args: []):  {
+export default function InnovativeServices2028(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
@@ -40,8 +40,7 @@ export default function InnovativeServices2028(...args: []):  {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -52,15 +51,14 @@ export default function InnovativeServices2028(...args: []):  {
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const getCategoryIcon = (categoryName: string)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
-    const iconMap: { [key: string]:  } = {
+    const iconMap: { [key: string]} = {
       'Brain': Brain,
       'Zap': Zap,
       'Lock': Lock,
@@ -71,13 +69,11 @@ export default function InnovativeServices2028(...args: []):  {
       'Network': Network
     };
     
-    return iconMap[category.icon] || Brain;
-  };
+    return iconMap[category.icon] || Brain};
 
   const getCategoryColor = (categoryName: string)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
-    return category?.color || 'from-purple-500 to-pink-500';
-  };
+    return category?.color || 'from-purple-500 to-pink-500'};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
@@ -457,5 +453,4 @@ export default function InnovativeServices2028(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

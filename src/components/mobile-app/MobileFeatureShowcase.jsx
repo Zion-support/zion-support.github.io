@@ -88,5 +88,4 @@ export const MobileFeatureShowcase = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

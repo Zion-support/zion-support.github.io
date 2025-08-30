@@ -11,9 +11,7 @@ export interface InnovativeMicroSaasService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {
     id: "smart-project-manager",
@@ -21,7 +19,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     tagline: "AI-powered project management and collaboration",
     price: "$39/month",
     description: "Intelligent project management platform that uses AI to optimize workflows and team collaboration.",
-    features: [
+    features[
       "AI task prioritization",
       "Team collaboration tools",
       "Progress tracking",

@@ -15,25 +15,25 @@ export default function Partners() {
       title: 'Technology Partners',
       description: 'Collaborate with leading tech companies to deliver cutting-edge solutions',
       icon: '🔧',
-      benefits: ['Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']
+      benefits['Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']
     },
     {
       title: 'Channel Partners',
       description: 'Expand your reach through our global network of resellers and distributors',
       icon: '🌐',
-      benefits: ['Increased market presence', 'Revenue sharing programs', 'Training and certification']
+      benefits['Increased market presence', 'Revenue sharing programs', 'Training and certification']
     },
     {
       title: 'Strategic Partners',
       description: 'Form long-term alliances for mutual growth and market expansion',
       icon: '🤝',
-      benefits: ['Joint ventures', 'Market expansion support', 'Shared R&D initiatives']
+      benefits['Joint ventures', 'Market expansion support', 'Shared R&D initiatives']
     },
     {
       title: 'Academic Partners',
       description: 'Partner with universities and research institutions for innovation',
       icon: '🎓',
-      benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
+      benefits['Research collaboration', 'Talent pipeline', 'Innovation programs']
     }
   ];
   const existingPartners = [
@@ -268,5 +268,4 @@ export default function Partners() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

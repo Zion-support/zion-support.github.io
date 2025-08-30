@@ -23,13 +23,13 @@ import { Brain,
   ShoppingCart
  } from 'lucide-react.ts';
 
-export default function AIServices(...args: []):  {
+export default function AIServices(...args[]):  {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
-      features: [
+      features[
         "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
@@ -42,7 +42,7 @@ export default function AIServices(...args: []):  {
       name: "Machine Learning Development",
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
-      features: [
+      features[
         "Custom model development",
         "Data preprocessing and feature engineering",
         "Model training and optimization",
@@ -55,7 +55,7 @@ export default function AIServices(...args: []):  {
       name: "AI-Powered Applications",
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
-      features: [
+      features[
         "Chatbot and virtual assistant development",
         "Predictive analytics applications",
         "Computer vision solutions",
@@ -68,7 +68,7 @@ export default function AIServices(...args: []):  {
       name: "AI Infrastructure & MLOps",
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
-      features: [
+      features[
         "ML pipeline automation",
         "Model versioning and deployment",
         "Scalable training infrastructure",
@@ -91,22 +91,22 @@ export default function AIServices(...args: []):  {
   const useCases = [
     {
       industry: "Healthcare",
-      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
+      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
     },
     {
       industry: "Finance",
-      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
+      applications["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
     },
     {
       industry: "Manufacturing",
-      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
+      applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
     {
       industry: "Retail",
-      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
     }
   ];
@@ -300,5 +300,4 @@ export default function AIServices(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

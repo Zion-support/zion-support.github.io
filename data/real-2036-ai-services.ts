@@ -6,7 +6,7 @@ export const real2036AIServices = [
     description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
     period: 'month',
-    features: [
+    features[
       'Emotion recognition',
       'Sentiment analysis',
       'Emotional response generation',
@@ -18,13 +18,13 @@ export const real2036AIServices = [
     category: 'Emotional AI',
     icon: '😊🤖',
     marketPrice: '$5,000-8,000/month',
-    benefits: [
+    benefits[
       'Enhanced customer experience',
       'Better emotional understanding',
       'Improved human-AI interaction',
       'Emotional intelligence development'
     ],
-    useCases: [
+    useCases[
       'Customer service',
       'Mental health support',
       'Education technology',
@@ -38,7 +38,7 @@ export const real2036AIServices = [
     description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
     price: '$2,999',
     period: 'month',
-    features: [
+    features[
       'Creative idea generation',
       'Workflow orchestration',
       'Artistic collaboration tools',
@@ -50,13 +50,13 @@ export const real2036AIServices = [
     category: 'Creative AI',
     icon: '🎨🤖',
     marketPrice: '$4,000-7,000/month',
-    benefits: [
+    benefits[
       'Enhanced creativity',
       'Faster innovation cycles',
       'Better collaboration',
       'Creative process optimization'
     ],
-    useCases: [
+    useCases[
       'Marketing campaigns',
       'Product design',
       'Content creation',
@@ -70,7 +70,7 @@ export const real2036AIServices = [
     description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
     price: '$1,999',
     period: 'month',
-    features: [
+    features[
       'Dream pattern analysis',
       'Psychological interpretation',
       'Symbolic analysis',
@@ -82,13 +82,13 @@ export const real2036AIServices = [
     category: 'Psychological AI',
     icon: '💭🤖',
     marketPrice: '$3,000-5,000/month',
-    benefits: [
+    benefits[
       'Dream understanding',
       'Psychological insights',
       'Self-reflection tools',
       'Mental health awareness'
     ],
-    useCases: [
+    useCases[
       'Mental health support',
       'Psychological research',
       'Personal development',
@@ -102,7 +102,7 @@ export const real2036AIServices = [
     description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',
     price: '$4,999',
     period: 'month',
-    features: [
+    features[
       'Multi-format content creation',
       'Brand voice consistency',
       'Content optimization',
@@ -114,13 +114,13 @@ export const real2036AIServices = [
     category: 'Content AI',
     icon: '📝🤖',
     marketPrice: '$6,000-10,000/month',
-    benefits: [
+    benefits[
       '10x faster content creation',
       'Consistent brand voice',
       'SEO-optimized content',
       'Scalable content production'
     ],
-    useCases: [
+    useCases[
       'Marketing content',
       'Blog writing',
       'Social media content',
@@ -134,7 +134,7 @@ export const real2036AIServices = [
     description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
     price: '$5,999',
     period: 'month',
-    features: [
+    features[
       'Customer journey mapping',
       'Predictive analytics',
       'Personalized recommendations',
@@ -146,13 +146,13 @@ export const real2036AIServices = [
     category: 'Customer AI',
     icon: '👥🤖',
     marketPrice: '$7,000-12,000/month',
-    benefits: [
+    benefits[
       'Deep customer insights',
       'Predictive customer behavior',
       'Personalized experiences',
       'Improved customer retention'
     ],
-    useCases: [
+    useCases[
       'E-commerce optimization',
       'Customer service',
       'Marketing campaigns',
@@ -166,7 +166,7 @@ export const real2036AIServices = [
     description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',
     price: '$6,999',
     period: 'month',
-    features: [
+    features[
       'Autonomous campaign management',
       'Real-time optimization',
       'Predictive marketing strategies',
@@ -178,13 +178,13 @@ export const real2036AIServices = [
     category: 'Marketing AI',
     icon: '📈🤖',
     marketPrice: '$8,000-15,000/month',
-    benefits: [
+    benefits[
       'Autonomous marketing operations',
       'Maximum ROI optimization',
       'Real-time performance improvement',
       'Scalable marketing automation'
     ],
-    useCases: [
+    useCases[
       'Digital advertising',
       'Email marketing',
       'Social media marketing',
@@ -198,7 +198,7 @@ export const real2036AIServices = [
     description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
     price: '$3,499',
     period: 'month',
-    features: [
+    features[
       'Automated research workflows',
       'Data analysis',
       'Insight generation',
@@ -210,13 +210,13 @@ export const real2036AIServices = [
     category: 'Research AI',
     icon: '🔬🤖',
     marketPrice: '$4,500-7,000/month',
-    benefits: [
+    benefits[
       'Automated research processes',
       'Faster insight generation',
       'Comprehensive data analysis',
       'Scalable research operations'
     ],
-    useCases: [
+    useCases[
       'Market research',
       'Academic research',
       'Business intelligence',
@@ -230,7 +230,7 @@ export const real2036AIServices = [
     description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
     price: '$7,999',
     period: 'month',
-    features: [
+    features[
       'Decision automation',
       'Risk assessment',
       'Outcome prediction',
@@ -242,13 +242,13 @@ export const real2036AIServices = [
     category: 'Decision AI',
     icon: '🎯🤖',
     marketPrice: '$10,000-18,000/month',
-    benefits: [
+    benefits[
       'Automated decision making',
       'Risk reduction',
       'Faster decision cycles',
       'Data-driven decisions'
     ],
-    useCases: [
+    useCases[
       'Financial decisions',
       'Operational decisions',
       'Strategic planning',
@@ -262,7 +262,7 @@ export const real2036AIServices = [
     description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
     price: '$8,999',
     period: 'month',
-    features: [
+    features[
       'Ecosystem mapping',
       'Relationship management',
       'Autonomous optimization',
@@ -274,13 +274,13 @@ export const real2036AIServices = [
     category: 'Ecosystem AI',
     icon: '🌐🤖',
     marketPrice: '$12,000-20,000/month',
-    benefits: [
+    benefits[
       'Ecosystem optimization',
       'Partnership maximization',
       'Integration efficiency',
       'Scalable ecosystem management'
     ],
-    useCases: [
+    useCases[
       'Business partnerships',
       'Platform ecosystems',
       'Supply chain management',
@@ -294,7 +294,7 @@ export const real2036AIServices = [
     description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',
     price: '$9,999',
     period: 'month',
-    features: [
+    features[
       'Autonomous navigation',
       'Safety monitoring',
       'Traffic management',
@@ -306,13 +306,13 @@ export const real2036AIServices = [
     category: 'Vehicle AI',
     icon: '🚗🤖',
     marketPrice: '$15,000-25,000/month',
-    benefits: [
+    benefits[
       'Enhanced vehicle safety',
       'Autonomous operation',
       'Traffic optimization',
       'Predictive maintenance'
     ],
-    useCases: [
+    useCases[
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',

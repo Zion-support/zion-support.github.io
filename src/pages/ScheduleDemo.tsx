@@ -14,9 +14,7 @@ interface DemoFormData {
   preferredTime: string;
   attendees: string;
   services: string[];
-  message: string;
-
-}
+  message: string}
 
 const ScheduleDemo: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
@@ -28,7 +26,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     preferredDate: '',
     preferredTime: '',
     attendees: '1-5',
-    services: [],
+    services[],
     message: ''
   });
 
@@ -56,9 +54,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
       ...prev,
       services: prev.services.includes(serviceId)
         ? prev.services.filter(id  => id !== serviceId)
-        : [...prev.services, serviceId]
-    }));
-  };
+        [...prev.services, serviceId]
+    }))};
 
   const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
@@ -67,12 +64,9 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      setIsSubmitted(true)} catch (error) {
+      console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubmitted) {
@@ -133,8 +127,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -455,7 +448,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ScheduleDemo;

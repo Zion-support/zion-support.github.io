@@ -228,27 +228,22 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
   const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
   };
 
   const toggleDropdown = (dropdown: string)  => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 
   const navigationItems = [
     {
@@ -263,7 +258,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/ai-services',
       icon: Brain,
       color: 'from-zion-purple to-zion-pink',
-      dropdown: [
+      dropdown[
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
@@ -277,7 +272,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/micro-saas',
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
         { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
         { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
@@ -293,7 +288,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
         { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
@@ -307,7 +302,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/emerging-tech',
       icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
         { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
         { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
@@ -321,7 +316,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/marketplace',
       icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
         { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
         { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
@@ -335,7 +330,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/services-overview',
       icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
-      dropdown: [
+      dropdown[
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
         { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
@@ -629,5 +624,4 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
-};
+  )};

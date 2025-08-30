@@ -24,11 +24,9 @@ interface NavigationLink {
   href: string;
   name: string;
   matches: (path: string)  => boolean;
-  children?: NavigationLink[];
+  children?: NavigationLink[]}
 
-}
-
-export function MainNavigation(...args: []):  {
+export function MainNavigation(...args[]):  {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompOpen, setIsCompOpen] = useState(false);
@@ -42,13 +40,11 @@ export function MainNavigation(...args: []):  {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
         setIsCompOpen(false);
-        setActiveDropdown(null);
-      }
+        setActiveDropdown(null)}
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   const baseLinks: NavigationLink[] = [
     {
@@ -62,7 +58,7 @@ export function MainNavigation(...args: []):  {
       href: '/services',
       name: 'Services',
       matches: (path: string)  => path.startsWith('/services'),
-      children: [
+      children[
         {
           key: 'ai-services',
           href: '/services/ai',
@@ -203,8 +199,7 @@ export function MainNavigation(...args: []):  {
           )}
         </AnimatePresence>
       </div>
-    );
-  };
+    )};
 
   return (
     <nav className={`${className}`}>
@@ -318,5 +313,4 @@ export function MainNavigation(...args: []):  {
         )}
       </AnimatePresence>
     </nav>
-  );
-}
+  )}

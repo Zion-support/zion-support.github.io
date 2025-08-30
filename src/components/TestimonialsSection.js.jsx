@@ -103,5 +103,4 @@ export const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </section>);
-};
+    </section>)};

@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react.ts';
-export function ContactSection(...args: []):  {
+export function ContactSection(...args[]):  {
   const contactInfo = [
     {
       icon: Phone,
@@ -78,6 +78,5 @@ export function ContactSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}
 export default ContactSection;

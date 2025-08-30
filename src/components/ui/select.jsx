@@ -5,8 +5,7 @@ export function Select({ children, className = '', value, onValueChange }) {
     <div className={`relative ${className}`}>
       {children}
     </div>
-  );
-}
+  )}
 
 export function SelectTrigger({ children, className = '', ...props }) {
   return (
@@ -16,12 +15,10 @@ export function SelectTrigger({ children, className = '', ...props }) {
     >
       {children}
     </button>
-  );
-}
+  )}
 
 export function SelectValue({ placeholder }) {
-  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
+  return <span className="text-sm">{placeholder || 'Select an option'}</span>}
 
 export function SelectContent({ children, className = '' }) {
   return (
@@ -32,8 +29,7 @@ export function SelectContent({ children, className = '' }) {
     `}>
       {children}
     </div>
-  );
-}
+  )}
 
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
@@ -46,5 +42,4 @@ export function SelectItem({ children, className = '', value, ...props }) {
     `} data-value={value} {...props}>
       {children}
     </div>
-  );
-}
+  )}

@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react.ts'
 
 
-export default function Contact(...args: []):  {
+export default function Contact(...args[]):  {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',

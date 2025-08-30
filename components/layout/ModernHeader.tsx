@@ -10,11 +10,9 @@ const ModernHeader: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const serviceCategories = [
     { name: 'AI Services', icon: Cpu, href: '/services/ai' },
@@ -187,7 +185,6 @@ const ModernHeader: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-};
+  )};
 
 export default ModernHeader;

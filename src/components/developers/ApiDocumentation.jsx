@@ -71,13 +71,13 @@ data = response.json()
 print(data)`
         }} responseExamples={{
             success: `{
-  "data": [
+  "data"[
     {
       "id": "job_abc123",
       "title": "Senior React Developer",
       "description": "We need an experienced React developer...",
       "category": "development",
-      "skills": ["react", "typescript", "node.js"],
+      "skills"["react", "typescript", "node.js"],
       "budget": {
         "min": 5000,
         "max": 10000,
@@ -136,7 +136,7 @@ print(data)`
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "skills"["react", "typescript", "node.js"],
     "budget": {
       "min": 5000,
       "max": 10000,
@@ -168,7 +168,7 @@ print(data)`
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "skills"["react", "typescript", "node.js"],
     "budget": {
       "min": 5000,
       "max": 10000,
@@ -186,7 +186,7 @@ print(data)`
     title: 'Senior React Developer',
     description: 'We need an experienced React developer...',
     category: 'development',
-    skills: ['react', 'typescript', 'node.js'],
+    skills['react', 'typescript', 'node.js'],
     budget: {
       min: 5000,
       max: 10000,
@@ -210,7 +210,7 @@ payload = {
     'title': 'Senior React Developer',
     'description': 'We need an experienced React developer...',
     'category': 'development',
-    'skills': ['react', 'typescript', 'node.js'],
+    'skills'['react', 'typescript', 'node.js'],
     'budget': {
         'min': 5000,
         'max': 10000,
@@ -234,7 +234,7 @@ print(data)`
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "skills"["react", "typescript", "node.js"],
     "budget": {
       "min": 5000,
       "max": 10000,
@@ -286,12 +286,12 @@ data = response.json()
 print(data)`
         }} responseExamples={{
             success: `{
-  "data": [
+  "data"[
     {
       "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
-      "skills": ["react", "typescript", "javascript"],
+      "skills"["react", "typescript", "javascript"],
       "availability": "available",
       "average_rating": 4.8,
       "rating_count": 15
@@ -345,20 +345,20 @@ print(data)`
     "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
     "bio": "10+ years of experience in frontend development...",
-    "skills": ["react", "typescript", "javascript", "css", "html"],
+    "skills"["react", "typescript", "javascript", "css", "html"],
     "availability": "available",
     "average_rating": 4.8,
     "rating_count": 15,
-    "portfolio": [
+    "portfolio"[
       {
         "id": "proj_123",
         "title": "E-commerce Platform",
         "description": "Built a modern e-commerce platform using React...",
-        "technologies": ["react", "redux", "node.js"],
+        "technologies"["react", "redux", "node.js"],
         "image_url": "https://example.com/portfolio/123.jpg"
       }
     ],
-    "certifications": [
+    "certifications"[
       {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
@@ -500,7 +500,7 @@ data = response.json()
 print(data)`
         }} responseExamples={{
             success: `{
-  "data": [
+  "data"[
     {
       "id": "quote_def456",
       "talent_id": "talent_abc123",
@@ -548,8 +548,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
-  );
-}
+  )}
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
@@ -558,16 +557,14 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const webhookSecret = process.env.WEBHOOK_SECRET;
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
-    return res.status(401).send('Invalid signature');
-  }
+    return res.status(401).send('Invalid signature')}
   
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   
   // Respond to acknowledge receipt
-  res.status(200).send('Webhook received');
-});`} language="javascript" showLineNumbers={true}/>
+  res.status(200).send('Webhook received')});`} language="javascript" showLineNumbers={true}/>
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
               <table className="w-full border-collapse mt-2">
@@ -683,7 +680,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   "error": {
     "code": "invalid_request",
     "message": "The request was invalid",
-    "details": [
+    "details"[
       {
         "field": "project_name",
         "message": "Project name is required"
@@ -712,8 +709,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
           </TabsContent>
         </Tabs>
       </CardContent>
-    </Card>);
-}
+    </Card>)}
 // Helper component for API endpoint documentation
 function EndpointSection({ method, endpoint, description, note, params = [], codeExamples, responseExamples }) {
     const [activeTab, setActiveTab] = useState("curl");
@@ -779,5 +775,4 @@ function EndpointSection({ method, endpoint, description, note, params = [], cod
           <h4 className="font-medium mb-2">Response</h4>
           <CodeBlock code={responseExamples.success} language="json"/>
         </div>)}
-    </div>);
-}
+    </div>)}

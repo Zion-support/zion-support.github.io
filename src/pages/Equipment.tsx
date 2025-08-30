@@ -8,7 +8,6 @@ const Equipment: React.FC = (): JSX.Element => {
         <p className="text-lg text-gray-300">Browse and request enterprise-grade IT equipment.</p>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Equipment;

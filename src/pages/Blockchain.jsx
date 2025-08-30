@@ -43,7 +43,7 @@ const blockchainSolutions = [
     title: "Smart Contract Development",
     description: "Custom smart contracts for automated business logic and decentralized applications.",
     icon: Code,
-    features: [
+    features[
       "Custom contract development",
       "Security auditing",
       "Gas optimization",
@@ -52,14 +52,14 @@ const blockchainSolutions = [
     price: "From $25,000",
     timeline: "8-16 weeks",
     category: "Development",
-    technologies: ["Solidity", "Rust", "Vyper", "Move"]
+    technologies["Solidity", "Rust", "Vyper", "Move"]
   },
   {
     id: 2,
     title: "DeFi Platform Development",
     description: "Decentralized finance platforms for lending, trading, and yield farming.",
     icon: TrendingUp,
-    features: [
+    features[
       "Lending protocols",
       "DEX development",
       "Yield farming",
@@ -68,14 +68,14 @@ const blockchainSolutions = [
     price: "From $80,000",
     timeline: "20-32 weeks",
     category: "DeFi",
-    technologies: ["Ethereum", "Polygon", "BSC", "Layer 2"]
+    technologies["Ethereum", "Polygon", "BSC", "Layer 2"]
   },
   {
     id: 3,
     title: "NFT Marketplace",
     description: "Non-fungible token marketplaces for digital art, collectibles, and gaming assets.",
     icon: Building,
-    features: [
+    features[
       "Marketplace infrastructure",
       "NFT minting",
       "Trading mechanisms",
@@ -84,14 +84,14 @@ const blockchainSolutions = [
     price: "From $60,000",
     timeline: "16-24 weeks",
     category: "NFT",
-    technologies: ["ERC-721", "ERC-1155", "IPFS", "MetaMask"]
+    technologies["ERC-721", "ERC-1155", "IPFS", "MetaMask"]
   },
   {
     id: 4,
     title: "Supply Chain Tracking",
     description: "Blockchain-based supply chain solutions for transparency and traceability.",
     icon: Truck,
-    features: [
+    features[
       "Product tracking",
       "Authenticity verification",
       "Compliance reporting",
@@ -100,14 +100,14 @@ const blockchainSolutions = [
     price: "From $100,000",
     timeline: "24-36 weeks",
     category: "Supply Chain",
-    technologies: ["Hyperledger", "Ethereum", "IoT Integration", "QR Codes"]
+    technologies["Hyperledger", "Ethereum", "IoT Integration", "QR Codes"]
   },
   {
     id: 5,
     title: "Identity Management",
     description: "Decentralized identity solutions for secure and privacy-preserving authentication.",
     icon: Key,
-    features: [
+    features[
       "Self-sovereign identity",
       "Zero-knowledge proofs",
       "Credential verification",
@@ -116,14 +116,14 @@ const blockchainSolutions = [
     price: "From $70,000",
     timeline: "20-28 weeks",
     category: "Identity",
-    technologies: ["DID", "Verifiable Credentials", "ZK-SNARKs", "IPFS"]
+    technologies["DID", "Verifiable Credentials", "ZK-SNARKs", "IPFS"]
   },
   {
     id: 6,
     title: "Cross-Chain Solutions",
     description: "Interoperability solutions for seamless communication between different blockchains.",
     icon: Network,
-    features: [
+    features[
       "Cross-chain bridges",
       "Asset transfers",
       "Data sharing",
@@ -132,7 +132,7 @@ const blockchainSolutions = [
     price: "From $120,000",
     timeline: "28-40 weeks",
     category: "Interoperability",
-    technologies: ["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
+    technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
   }
 ];
 
@@ -233,25 +233,25 @@ const blockchainBenefits = [
     title: "Transparency",
     description: "All transactions are visible and verifiable on the blockchain",
     icon: Eye,
-    examples: ["Public ledgers", "Audit trails", "Real-time tracking"]
+    examples["Public ledgers", "Audit trails", "Real-time tracking"]
   },
   {
     title: "Security",
     description: "Cryptographic security ensures data integrity and immutability",
     icon: Shield,
-    examples: ["Cryptographic hashing", "Digital signatures", "Consensus mechanisms"]
+    examples["Cryptographic hashing", "Digital signatures", "Consensus mechanisms"]
   },
   {
     title: "Decentralization",
     description: "No single point of failure or central authority",
     icon: Network,
-    examples: ["Distributed nodes", "Peer-to-peer", "Community governance"]
+    examples["Distributed nodes", "Peer-to-peer", "Community governance"]
   },
   {
     title: "Automation",
     description: "Smart contracts execute automatically based on predefined conditions",
     icon: Zap,
-    examples: ["Automated payments", "Conditional logic", "Business process automation"]
+    examples["Automated payments", "Conditional logic", "Business process automation"]
   }
 ];
 
@@ -639,5 +639,4 @@ export default function Blockchain() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

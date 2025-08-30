@@ -28,20 +28,19 @@ function generateInnovationListing(index) {
         category: "Innovation",
         price,
         currency: "$",
-        tags: ["innovation", "ai", "service"],
+        tags["innovation", "ai", "service"],
         author: {
             name: "AutoGen Solutions",
             id: "autogen"
         },
-        images: ["https://source.unsplash.com/random/800x500?technology"],
+        images["https://source.unsplash.com/random/800x500?technology"],
         createdAt: new Date().toISOString(),
         rating,
         reviewCount,
         location: "Global",
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
-    };
-}
+    }}
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -139,20 +138,19 @@ export default function CategoryDetail() {
                 category: currentCategory.title,
                 price: Math.floor(Math.random() * 500) + 50,
                 currency: "$",
-                tags: [`${slug}`, "ai", "tool"],
+                tags[`${slug}`, "ai", "tool"],
                 author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
                     avatarUrl: undefined
                 },
-                images: [`/placeholder.svg`],
+                images[`/placeholder.svg`],
                 createdAt: new Date().toISOString(),
                 rating: Math.floor(Math.random() * 5) + 1,
                 reviewCount: Math.floor(Math.random() * 100)
             }));
         setListings(listingsToShow);
-        setIsLoading(false);
-    }, [slug]);
+        setIsLoading(false)}, [slug]);
     useEffect(() => {
         if (slug !== 'innovation')
             return;
@@ -161,10 +159,8 @@ export default function CategoryDetail() {
             setListings((prev) => [
                 generateInnovationListing(innovationCounterRef.current),
                 ...prev,
-            ]);
-        }, 120000); // every 2 minutes
-        return () => clearInterval(interval);
-    }, [slug]);
+            ])}, 120000); // every 2 minutes
+        return () => clearInterval(interval)}, [slug]);
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
         const listing = listings.find(item => item.id === listingId);
@@ -184,8 +180,7 @@ export default function CategoryDetail() {
                         image: listing.images?.[0]
                     }
                 }
-            });
-        }
+            })}
     };
     return (<>
       
@@ -219,5 +214,4 @@ export default function CategoryDetail() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

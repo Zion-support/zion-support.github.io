@@ -192,5 +192,4 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

@@ -21,14 +21,11 @@ export default function PricingGuide() {
             'Emerging Tech': <Globe className="w-6 h-6"/>,
             'Managed Services': <Lock className="w-6 h-6"/>
         };
-        return icons[category] || <Star className="w-6 h-6"/>;
-    };
+        return icons[category] || <Star className="w-6 h-6"/>};
     const formatPrice = (price) => {
         if (price >= 1000) {
-            return `$${(price / 1000).toFixed(0)}K`;
-        }
-        return `$${price}`;
-    };
+            return `$${(price / 1000).toFixed(0)}K`}
+        return `$${price}`};
     const getMarketComparison = (price, category) => {
         const comparisons = {
             'AI Development': { avg: price * 1.3, savings: 23 },
@@ -40,8 +37,7 @@ export default function PricingGuide() {
             'Emerging Tech': { avg: price * 1.5, savings: 33 },
             'Managed Services': { avg: price * 1.2, savings: 17 }
         };
-        return comparisons[category] || { avg: price * 1.3, savings: 23 };
-    };
+        return comparisons[category] || { avg: price * 1.3, savings: 23 }};
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
 
@@ -225,8 +221,7 @@ export default function PricingGuide() {
                       </Button>
                     </div>
                   </CardContent>
-                </Card>);
-        })}
+                </Card>)})}
           </div>
 
           {filteredServices.length === 0 && (<div className="text-center py-16">
@@ -332,5 +327,4 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

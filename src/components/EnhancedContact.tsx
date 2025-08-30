@@ -19,17 +19,13 @@ interface ContactFormData {
   phone: string;
   comp: string;
   service: string;
-  message: string;
-
-}
+  message: string}
 
 interface ContactFormErrors {
 
-  [key: string]: string;
+  [key: string]: string}
 
-}
-
-export function EnhancedContact(...args: []):  {
+export function EnhancedContact(...args[]):  {
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -58,40 +54,32 @@ export function EnhancedContact(...args: []):  {
     const newErrors: ContactFormErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
+      newErrors.name = 'Name is required'}
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
+      newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
-    }
+      newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long'}
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
 
   const handleInputChange = (field: keyof ContactFormData, value: string)  => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
-    }
+      setErrors(prev => ({ ...prev, [field]: '' }))}
   };
 
   const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     
     if (!validateForm()) {
-      return;
-    }
+      return}
 
     setIsSubmitting(true);
 
@@ -107,12 +95,9 @@ export function EnhancedContact(...args: []):  {
         comp: '',
         service: 'general',
         message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch (error) {
+      console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
   };
 
   const contactInfo = [
@@ -188,8 +173,7 @@ export function EnhancedContact(...args: []):  {
           </motion.button>
         </div>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -447,5 +431,4 @@ export function EnhancedContact(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

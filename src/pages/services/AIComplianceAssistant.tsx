@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight  } from 'lucide-react.ts';
 
-export default function AIComplianceAssistant(...args: []):  {
+export default function AIComplianceAssistant(...args[]):  {
   const frameworks = [
     'SOC 2',
     'ISO 27001',
@@ -105,6 +105,5 @@ export default function AIComplianceAssistant(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

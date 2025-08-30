@@ -40,7 +40,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2024-2026',
       team: '12 researchers',
       funding: '$2.5M',
-      outcomes: [
+      outcomes[
         'Quantum advantage in optimization problems',
         'Improved machine learning algorithms',
         'Novel quantum computing architectures'
@@ -55,7 +55,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2023-2025',
       team: '8 researchers',
       funding: '$1.8M',
-      outcomes: [
+      outcomes[
         'Faster drug candidate identification',
         'Reduced research costs',
         'Improved success rates in clinical trials'
@@ -70,7 +70,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2022-2024',
       team: '15 researchers',
       funding: '$3.2M',
-      outcomes: [
+      outcomes[
         'Enhanced threat detection capabilities',
         'Improved compliance frameworks',
         'Industry-standard security protocols'
@@ -85,7 +85,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2025-2028',
       team: '20 researchers',
       funding: '$5.0M',
-      outcomes: [
+      outcomes[
         'Global low-latency connectivity',
         'Space-based data centers',
         'Satellite computing networks'
@@ -100,7 +100,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2023-2026',
       team: '10 researchers',
       funding: '$2.0M',
-      outcomes: [
+      outcomes[
         'Improved language understanding',
         'Better translation accuracy',
         'Enhanced conversational AI'
@@ -115,7 +115,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       timeline: '2024-2027',
       team: '18 researchers',
       funding: '$4.1M',
-      outcomes: [
+      outcomes[
         'Reduced energy consumption',
         'Green computing standards',
         'Sustainable technology practices'
@@ -468,7 +468,6 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ResearchDevelopment;

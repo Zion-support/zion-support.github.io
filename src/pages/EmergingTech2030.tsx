@@ -31,7 +31,7 @@ import { Brain,
 import { SEO  } from '../components/SEO';
 import { emergingTechServices2030  } from '../data/emergingTechServices2030';
 
-export default function EmergingTech2030(...args: []):  {
+export default function EmergingTech2030(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -208,8 +208,7 @@ export default function EmergingTech2030(...args: []):  {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </motion.div>
-                );
-              })}
+                )})}
             </div>
           </motion.div>
         </section>
@@ -338,5 +337,4 @@ export default function EmergingTech2030(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

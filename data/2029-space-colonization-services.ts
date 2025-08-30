@@ -30,15 +30,13 @@ export interface SpaceColonization2029Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {
@@ -48,7 +46,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$99,999',
     period: '/month',
     description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
-    features: [
+    features[
       'Autonomous habitat construction',
       'AI-powered resource management',
       'Life support system automation',
@@ -71,11 +69,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '6-12 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['AI & Robotics', 'Space Technology', 'Autonomous Systems', '3D Printing', 'Life Support Systems', 'Satellite Communication'],
-    integrations: ['NASA systems', 'SpaceX platforms', 'Satellite networks', 'Ground control systems', 'Research databases', 'Space monitoring tools'],
-    useCases: ['Mars colonization', 'Space habitat construction', 'Resource extraction', 'Life support management', 'Colony expansion', 'Space research'],
+    technology['AI & Robotics', 'Space Technology', 'Autonomous Systems', '3D Printing', 'Life Support Systems', 'Satellite Communication'],
+    integrations['NASA systems', 'SpaceX platforms', 'Satellite networks', 'Ground control systems', 'Research databases', 'Space monitoring tools'],
+    useCases['Mars colonization', 'Space habitat construction', 'Resource extraction', 'Life support management', 'Colony expansion', 'Space research'],
     roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.',
-    competitors: ['Space infrastructure platforms', 'Space research tools', 'Government space programs'],
+    competitors['Space infrastructure platforms', 'Space research tools', 'Government space programs'],
     marketSize: '$100B space economy market',
     growthRate: '500% annual growth',
     variant: 'space-futuristic',
@@ -99,7 +97,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$75,999',
     period: '/month',
     description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',
-    features: [
+    features[
       'Real-time interplanetary communication',
       'Quantum communication protocols',
       'AI-powered routing optimization',
@@ -122,11 +120,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '4-8 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['Quantum Communication', 'Satellite Technology', 'AI Routing', 'Network Management', 'Space Communication', 'Advanced Encryption'],
-    integrations: ['Satellite systems', 'Ground stations', 'Spacecraft communication', 'Research platforms', 'Government networks', 'Commercial platforms'],
-    useCases: ['Interplanetary communication', 'Satellite network management', 'Space mission communication', 'Research collaboration', 'Commercial space operations', 'Emergency communications'],
+    technology['Quantum Communication', 'Satellite Technology', 'AI Routing', 'Network Management', 'Space Communication', 'Advanced Encryption'],
+    integrations['Satellite systems', 'Ground stations', 'Spacecraft communication', 'Research platforms', 'Government networks', 'Commercial platforms'],
+    useCases['Interplanetary communication', 'Satellite network management', 'Space mission communication', 'Research collaboration', 'Commercial space operations', 'Emergency communications'],
     roi: 'Space agencies report 1200% ROI through improved mission communication. Commercial companies see 800% ROI in space operations efficiency.',
-    competitors: ['Satellite communication networks', 'Space communication platforms', 'Government space networks'],
+    competitors['Satellite communication networks', 'Space communication platforms', 'Government space networks'],
     marketSize: '$80B satellite communication market',
     growthRate: '400% annual growth',
     variant: 'space-futuristic',
@@ -150,7 +148,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$65,999',
     period: '/month',
     description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',
-    features: [
+    features[
       'Autonomous mining operations',
       'AI-powered resource detection',
       'Robotic mining equipment',
@@ -173,11 +171,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '5-10 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['AI & Robotics', 'Mining Technology', 'Space Equipment', 'Resource Processing', 'Autonomous Systems', 'Satellite Technology'],
-    integrations: ['Mining equipment', 'Satellite systems', 'Processing facilities', 'Transport systems', 'Research platforms', 'Analytics tools'],
-    useCases: ['Asteroid mining', 'Lunar resource extraction', 'Space resource processing', 'Mining fleet management', 'Resource optimization', 'Safety monitoring'],
+    technology['AI & Robotics', 'Mining Technology', 'Space Equipment', 'Resource Processing', 'Autonomous Systems', 'Satellite Technology'],
+    integrations['Mining equipment', 'Satellite systems', 'Processing facilities', 'Transport systems', 'Research platforms', 'Analytics tools'],
+    useCases['Asteroid mining', 'Lunar resource extraction', 'Space resource processing', 'Mining fleet management', 'Resource optimization', 'Safety monitoring'],
     roi: 'Mining companies report 1000% ROI through automated operations. Investment firms see 800% ROI in space resource development.',
-    competitors: ['Terrestrial mining platforms', 'Space research tools', 'Resource extraction platforms'],
+    competitors['Terrestrial mining platforms', 'Space research tools', 'Resource extraction platforms'],
     marketSize: '$60B space mining market',
     growthRate: '600% annual growth',
     variant: 'space-futuristic',
@@ -202,7 +200,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$45,999',
     period: '/month',
     description: 'Advanced platform for designing and planning space habitats optimized for  planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
-    features: [
+    features[
       'AI-powered habitat design',
       'Environmental simulation tools',
       'Material optimization AI',
@@ -225,11 +223,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '3-6 months',
     category: 'Space Architecture & Energy',
     realService: true,
-    technology: ['AI Design', '3D Modeling', 'Environmental Simulation', 'Material Science', 'Structural Analysis', 'Space Technology'],
-    integrations: ['Design software', '3D modeling tools', 'Simulation platforms', 'Engineering tools', 'Construction platforms', 'Research databases'],
-    useCases: ['Space habitat design', 'Planetary architecture', 'Environmental optimization', 'Material selection', 'Structural planning', 'Habitat expansion'],
+    technology['AI Design', '3D Modeling', 'Environmental Simulation', 'Material Science', 'Structural Analysis', 'Space Technology'],
+    integrations['Design software', '3D modeling tools', 'Simulation platforms', 'Engineering tools', 'Construction platforms', 'Research databases'],
+    useCases['Space habitat design', 'Planetary architecture', 'Environmental optimization', 'Material selection', 'Structural planning', 'Habitat expansion'],
     roi: 'Architecture firms report 600% ROI through space design projects. Engineering companies see 500% ROI in space construction planning.',
-    competitors: ['Architectural design platforms', 'Engineering design tools', 'Space research platforms'],
+    competitors['Architectural design platforms', 'Engineering design tools', 'Space research platforms'],
     marketSize: '$45B architectural design market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
@@ -253,7 +251,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$55,999',
     period: '/month',
     description: 'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',
-    features: [
+    features[
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
       'Advanced energy storage',
@@ -276,11 +274,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '4-8 months',
     category: 'Space Architecture & Energy',
     realService: true,
-    technology: ['Energy Harvesting', 'Solar Technology', 'Energy Storage', 'AI Optimization', 'Power Systems', 'Space Technology'],
-    integrations: ['Solar panels', 'Energy storage systems', 'Power distribution', 'Monitoring systems', 'Research platforms', 'Analytics tools'],
-    useCases: ['Space power generation', 'Energy optimization', 'Power distribution', 'Energy storage', 'Grid management', 'Backup power systems'],
+    technology['Energy Harvesting', 'Solar Technology', 'Energy Storage', 'AI Optimization', 'Power Systems', 'Space Technology'],
+    integrations['Solar panels', 'Energy storage systems', 'Power distribution', 'Monitoring systems', 'Research platforms', 'Analytics tools'],
+    useCases['Space power generation', 'Energy optimization', 'Power distribution', 'Energy storage', 'Grid management', 'Backup power systems'],
     roi: 'Energy companies report 800% ROI through space energy harvesting. Space agencies see 600% ROI in mission power efficiency.',
-    competitors: ['Renewable energy platforms', 'Power management systems', 'Space research platforms'],
+    competitors['Renewable energy platforms', 'Power management systems', 'Space research platforms'],
     marketSize: '$70B renewable energy market',
     growthRate: '350% annual growth',
     variant: 'space-futuristic',

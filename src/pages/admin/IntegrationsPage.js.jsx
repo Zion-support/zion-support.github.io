@@ -10,5 +10,4 @@ export default function IntegrationsPage() {
         <IntegrationsHub />
       </main>
       
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

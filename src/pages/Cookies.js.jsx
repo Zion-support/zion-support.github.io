@@ -116,7 +116,6 @@ const Cookies: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default Cookies;

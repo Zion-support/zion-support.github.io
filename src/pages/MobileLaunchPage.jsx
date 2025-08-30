@@ -30,5 +30,4 @@ export const MobileLaunchPage = () => {
       </main>
       <Footer />
     </>
-  );
-};
+  )};

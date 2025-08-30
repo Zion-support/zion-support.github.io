@@ -44,10 +44,8 @@ export function KanbanBoard({ jobId }) {
             // Group applications by status
             const groupedApplications = COLUMNS.reduce((acc, column) => {
                 acc[column.id] = applications.filter(app => app.status === column.id);
-                return acc;
-            }, {});
-            setColumns(groupedApplications);
-        }
+                return acc}, {});
+            setColumns(groupedApplications)}
     }, [applications]);
     // Handle drag end event to update the application status
     const handleDragEnd = async (result) => {
@@ -56,8 +54,7 @@ export function KanbanBoard({ jobId }) {
         if (!destination ||
             (destination.droppableId === source.droppableId &&
                 destination.index === source.index)) {
-            return;
-        }
+            return}
         // Get the application that was dragged
         const application = applications.find(app => app.id === draggableId);
         if (!application)
@@ -80,16 +77,14 @@ export function KanbanBoard({ jobId }) {
             toast({
                 title: "Status updated",
                 description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`,
-            });
-        }
+            })}
         catch (error) {
             // Revert the UI changes if the database update fails
             toast({
                 title: "Failed to update status",
                 description: "Please try again",
                 variant: "destructive",
-            });
-        }
+            })}
     };
     if (isLoading) {
         return (<div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -101,8 +96,7 @@ export function KanbanBoard({ jobId }) {
               <Skeleton className="h-[400px] w-full"/>
             </CardContent>
           </Card>))}
-      </div>);
-    }
+      </div>)}
     if (!applications || applications.length === 0) {
         return (<Card className="text-center py-16">
         <CardContent>
@@ -111,11 +105,9 @@ export function KanbanBoard({ jobId }) {
             You haven't received  applications for this job yet.
           </p>
         </CardContent>
-      </Card>);
-    }
+      </Card>)}
     return (<DragDropContext onDragEnd={handleDragEnd}>
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
         {COLUMNS.map(column => (<KanbanColumn key={column.id} id={column.id} title={column.title} description={column.description} applications={columns[column.id] || []} count={columns[column.id]?.length || 0}/>))}
       </div>
-    </DragDropContext>);
-}
+    </DragDropContext>)}

@@ -6,16 +6,12 @@ export interface Message {
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean;
-
-}
+  read?: boolean}
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
   isOpen?: boolean;
-  onClose?: ()  => void;
-
-}
-export function ChatAssistant(...args: []):  {
+  onClose?: ()  => void}
+export function ChatAssistant(...args[]):  {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
@@ -38,20 +34,15 @@ export function ChatAssistant(...args: []):  {
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),
       };
-      setMessages(prev  => [...prev, aiMessage]);
-    }, 1000);
-  };
+      setMessages(prev  => [...prev, aiMessage])}, 1000)};
   const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
-    handleSendMessage(inputMessage);
-  };
+    handleSendMessage(inputMessage)};
   const toggleChat = () => {
-    setIsChatOpen(!isChatOpen);
-  };
+    setIsChatOpen(!isChatOpen)};
   const closeChat = () => {
     setIsChatOpen(false);
-    if (onClose) onClose();
-  };
+    if (onClose) onClose()};
   if (!isChatOpen) {
     return (
       <button
@@ -63,8 +54,7 @@ export function ChatAssistant(...args: []):  {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
       </button>
-    );
-  }
+    )}
   return (
     <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}
@@ -125,5 +115,4 @@ export function ChatAssistant(...args: []):  {
         </div>
       </form>
     </div>
-  );
-}
+  )}

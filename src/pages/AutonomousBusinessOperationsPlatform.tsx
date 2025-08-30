@@ -393,7 +393,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AutonomousBusinessOperationsPlatform;

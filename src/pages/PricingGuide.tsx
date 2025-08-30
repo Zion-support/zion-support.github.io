@@ -28,7 +28,7 @@ import { Calculator,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function PricingGuide(...args: []):  {
+export default function PricingGuide(...args[]):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
@@ -44,14 +44,14 @@ export default function PricingGuide(...args: []):  {
       icon: Zap,
       description: "Perfect for small businesses getting started with AI",
       price: { monthly: 299, yearly: 2990 },
-      features: [
+      features[
         "AI Business Intelligence Basic",
         "Cloud Infrastructure (10GB)",
         "Basic Support (Email)",
         "Monthly Reports",
         "2 User Licenses"
       ],
-      notIncluded: [
+      notIncluded[
         "Advanced Analytics",
         "Custom AI Models",
         "Priority Support",
@@ -65,7 +65,7 @@ export default function PricingGuide(...args: []):  {
       icon: Brain,
       description: "Ideal for growing companies with advanced needs",
       price: { monthly: 799, yearly: 7990 },
-      features: [
+      features[
         "Everything in Starter",
         "Advanced AI Analytics",
         "Custom AI Model Training",
@@ -75,7 +75,7 @@ export default function PricingGuide(...args: []):  {
         "10 User Licenses",
         "Quarterly Strategy Sessions"
       ],
-      notIncluded: [
+      notIncluded[
         "Enterprise Security",
         "Custom Development",
         "Dedicated Account Manager"
@@ -88,7 +88,7 @@ export default function PricingGuide(...args: []):  {
       icon: Rocket,
       description: "Full-scale solutions for large organizations",
       price: { monthly: 2499, yearly: 24990 },
-      features: [
+      features[
         "Everything in Professional",
         "Enterprise Security Suite",
         "Custom Development",
@@ -100,7 +100,7 @@ export default function PricingGuide(...args: []):  {
         "Custom Integration",
         "SLA Guarantees"
       ],
-      notIncluded: [],
+      notIncluded[],
       cta: "Contact Sales",
       popular: false
     }
@@ -110,7 +110,7 @@ export default function PricingGuide(...args: []):  {
     {
       category: "AI & Machine Learning",
       icon: Brain,
-      services: [
+      services[
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },
@@ -120,7 +120,7 @@ export default function PricingGuide(...args: []):  {
     {
       category: "Cloud & DevOps",
       icon: Cloud,
-      services: [
+      services[
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
@@ -129,7 +129,7 @@ export default function PricingGuide(...args: []):  {
     {
       category: "Cybersecurity",
       icon: Shield,
-      services: [
+      services[
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
@@ -138,7 +138,7 @@ export default function PricingGuide(...args: []):  {
     {
       category: "IT Infrastructure",
       icon: Cpu,
-      services: [
+      services[
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
@@ -151,8 +151,7 @@ export default function PricingGuide(...args: []):  {
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
     const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
-    return `${symbol}${Math.round(adjustedPrice * rate)}`;
-  };
+    return `${symbol}${Math.round(adjustedPrice * rate)}`};
 
   const savings = selectedPeriod === 'yearly' ? 10 : 0;
 
@@ -378,5 +377,4 @@ export default function PricingGuide(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

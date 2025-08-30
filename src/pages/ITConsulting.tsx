@@ -16,31 +16,31 @@ import { Lightbulb,
   MessageSquare
  } from 'lucide-react.ts';
 
-export default function ITConsulting(...args: []):  {
+export default function ITConsulting(...args[]):  {
   const consultingServices = [
     {
       icon: Target,
       title: "Strategic Planning",
       description: "Develop comprehensive technology roadmaps aligned with your business objectives",
-      features: ["Technology Assessment", "Digital Transformation Strategy", "Innovation Roadmap", "ROI Analysis"]
+      features["Technology Assessment", "Digital Transformation Strategy", "Innovation Roadmap", "ROI Analysis"]
     },
     {
       icon: TrendingUp,
       title: "Process Optimization",
       description: "Streamline operations and improve efficiency through technology-driven solutions",
-      features: ["Workflow Analysis", "Automation Strategy", "Performance Metrics", "Continuous Improvement"]
+      features["Workflow Analysis", "Automation Strategy", "Performance Metrics", "Continuous Improvement"]
     },
     {
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Protect your business with comprehensive security assessments and strategies",
-      features: ["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
+      features["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
     },
     {
       icon: Zap,
       title: "Technology Implementation",
       description: "Expert guidance for successful technology adoption and integration",
-      features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
+      features["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
     }
   ];
 
@@ -313,5 +313,4 @@ export default function ITConsulting(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

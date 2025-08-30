@@ -15,7 +15,7 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
  } from 'lucide-react.ts';
 
 const pricingData2028 = {
-  aiServices: [
+  aiServices[
     {
       name: 'Quantum Consciousness AI',
       price: '$25,999',
@@ -26,7 +26,7 @@ const pricingData2028 = {
       roi: '800%',
       setupTime: '4-6 weeks',
       trialDays: 30,
-      features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
+      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies, Ethics committees'
     },
     {
@@ -39,7 +39,7 @@ const pricingData2028 = {
       roi: '600%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features: ['Quantum market analysis', 'Predictive trading', 'Risk management'],
+      features['Quantum market analysis', 'Predictive trading', 'Risk management'],
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
     {
@@ -52,11 +52,11 @@ const pricingData2028 = {
       roi: '450%',
       setupTime: '3-4 weeks',
       trialDays: 21,
-      features: ['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
+      features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
     }
   ],
-  microSAAS: [
+  microSAAS[
     {
       name: 'AI Content Creator Pro',
       price: '$299',
@@ -67,7 +67,7 @@ const pricingData2028 = {
       roi: '300%',
       setupTime: '1-2 days',
       trialDays: 14,
-      features: ['AI article generation', 'Content optimization', 'Multi-language support'],
+      features['AI article generation', 'Content optimization', 'Multi-language support'],
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
     {
@@ -80,7 +80,7 @@ const pricingData2028 = {
       roi: '400%',
       setupTime: '1 day',
       trialDays: 7,
-      features: ['High-resolution generation', 'Brand customization', 'Commercial rights'],
+      features['High-resolution generation', 'Brand customization', 'Commercial rights'],
       targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
     },
     {
@@ -93,11 +93,11 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 days',
       trialDays: 21,
-      features: ['Multi-language support', 'Bug detection', 'Code optimization'],
+      features['Multi-language support', 'Bug detection', 'Code optimization'],
       targetAudience: 'Software developers, Development teams, Tech companies'
     }
   ],
-  itServices: [
+  itServices[
     {
       name: 'Quantum Cloud Infrastructure',
       price: '$45,999',
@@ -108,7 +108,7 @@ const pricingData2028 = {
       roi: '700%',
       setupTime: '6-8 weeks',
       trialDays: 30,
-      features: ['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
+      features['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
     {
@@ -121,7 +121,7 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features: ['AI threat detection', 'Zero-trust architecture', 'Automated response'],
+      features['AI threat detection', 'Zero-trust architecture', 'Automated response'],
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
     {
@@ -134,7 +134,7 @@ const pricingData2028 = {
       roi: '600%',
       setupTime: '4-5 weeks',
       trialDays: 21,
-      features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
+      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
       targetAudience: 'Development teams, DevOps engineers, Technology companies'
     }
   ]
@@ -163,8 +163,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
       ...pricingData2028.microSAAS.map(service  => ({ ...service, type: 'Micro SAAS' })),
       ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }))
-    ];
-  };
+    ]};
 
   const filteredServices = getAllServices().filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -176,12 +175,10 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
     else if (priceRange === 'high') matchesPrice = price > 10000;
     
-    return matchesCategory && matchesPrice;
-  });
+    return matchesCategory && matchesPrice});
 
   const calculateROI = (roi: string)  => {
-    return parseInt(roi.replace('%', ''));
-  };
+    return parseInt(roi.replace('%', ''))};
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
@@ -525,7 +522,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2028;

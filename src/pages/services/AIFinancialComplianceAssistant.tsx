@@ -34,7 +34,7 @@ import { Shield,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIFinancialComplianceAssistant(...args: []):  {
+export default function AIFinancialComplianceAssistant(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -90,7 +90,7 @@ export default function AIFinancialComplianceAssistant(...args: []):  {
       price: '$499',
       period: '/month',
       description: 'Perfect for small financial institutions',
-      features: [
+      features[
         'Up to 1,000 transactions/month',
         'Basic compliance monitoring',
         'Standard regulatory updates',
@@ -107,7 +107,7 @@ export default function AIFinancialComplianceAssistant(...args: []):  {
       price: '$999',
       period: '/month',
       description: 'Ideal for growing financial organizations',
-      features: [
+      features[
         'Up to 10,000 transactions/month',
         'Advanced AI compliance monitoring',
         'Real-time regulatory updates',
@@ -127,7 +127,7 @@ export default function AIFinancialComplianceAssistant(...args: []):  {
       price: '$2,499',
       period: '/month',
       description: 'For large financial institutions with complex needs',
-      features: [
+      features[
         'Unlimited transactions',
         'Premium AI compliance monitoring',
         '24/7 dedicated support',
@@ -548,5 +548,4 @@ export default function AIFinancialComplianceAssistant(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

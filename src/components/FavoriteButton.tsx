@@ -5,11 +5,9 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string;
+  className?: string}
 
-}
-
-export function FavoriteButton(...args: []):  {
+export function FavoriteButton(...args[]):  {
   const [isFavorited, setIsFavorited] = useState(false);
 
   const handleToggleFavorite = (e: React.MouseEvent)  => {
@@ -19,11 +17,9 @@ export function FavoriteButton(...args: []):  {
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
-      console.log(`Removed ${itemType} ${itemId} from favorites`);
-    } else {
+      console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
       // Add to favorites
-      console.log(`Added ${itemType} ${itemId} to favorites`);
-    }
+      console.log(`Added ${itemType} ${itemId} to favorites`)}
   };
 
   return (
@@ -42,5 +38,4 @@ export function FavoriteButton(...args: []):  {
         }`} 
       />
     </button>
-  );
-}
+  )}

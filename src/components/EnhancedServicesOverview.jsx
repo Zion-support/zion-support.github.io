@@ -23,8 +23,7 @@ const ServiceCategory = ({ category, services }) => {
             'Real Estate & Property': <Home className="w-6 h-6"/>,
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
         };
-        return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>;
-    };
+        return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>};
     const getCategoryColor = (categoryName) => {
         const colorMap = {
             'AI & Machine Learning': 'from-purple-500 to-indigo-600',
@@ -39,8 +38,7 @@ const ServiceCategory = ({ category, services }) => {
             'Real Estate & Property': 'from-amber-500 to-yellow-600',
             'Legal & Compliance': 'from-slate-500 to-gray-600',
         };
-        return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
-    };
+        return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
     return (<div className="space-y-6">
       <div className="flex items-center space-x-3 mb-6">
         <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`}>
@@ -122,8 +120,7 @@ const ServiceCategory = ({ category, services }) => {
             </CardContent>
           </Card>))}
       </div>
-    </div>);
-};
+    </div>)};
 const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
@@ -291,5 +288,4 @@ export default function EnhancedServicesOverview() {
 
       {/* Contact Section */}
       <ContactSection />
-    </div>);
-}
+    </div>)}

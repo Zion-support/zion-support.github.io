@@ -63,5 +63,4 @@ export function ITServiceRequestHero() {
             </div>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

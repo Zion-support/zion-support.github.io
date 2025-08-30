@@ -18,7 +18,7 @@ import { Check,
   Lock
  } from 'lucide-react.ts';
 
-export default function Pricing(...args: []):  {
+export default function Pricing(...args[]):  {
   const [billingCycle, setBillingCycle] = useState<any>('annual');
 
   const pricingTiers = [
@@ -27,7 +27,7 @@ export default function Pricing(...args: []):  {
       icon: Zap,
       price: { monthly: 299, annual: 249 },
       description: 'Perfect for small businesses getting started with technology',
-      features: [
+      features[
         'AI Business Intelligence Basic',
         'Cloud Infrastructure Setup',
         'Basic Security Monitoring',
@@ -43,7 +43,7 @@ export default function Pricing(...args: []):  {
       icon: Star,
       price: { monthly: 799, annual: 649 },
       description: 'Ideal for growing companies with advanced technology needs',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI Analytics',
         'Full Cloud DevOps Suite',
@@ -61,7 +61,7 @@ export default function Pricing(...args: []):  {
       icon: Crown,
       price: { monthly: 1999, annual: 1599 },
       description: 'Comprehensive solutions for large enterprises',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI Solutions',
         'Full Digital Transformation',
@@ -403,5 +403,4 @@ export default function Pricing(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

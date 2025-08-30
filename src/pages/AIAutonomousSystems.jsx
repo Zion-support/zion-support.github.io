@@ -584,7 +584,7 @@ const autonomousSystemsSolutions = [
     title: "Autonomous Vehicles",
     description: "Self-driving vehicle systems with advanced AI and sensor fusion technology.",
     icon: Car,
-    features: [
+    features[
       "Computer vision",
       "Sensor fusion",
       "Path planning",
@@ -593,14 +593,14 @@ const autonomousSystemsSolutions = [
     price: "From $500,000",
     timeline: "24-48 weeks",
     category: "Vehicles",
-    technologies: ["LiDAR", "Computer Vision", "Machine Learning", "Sensor Fusion"]
+    technologies["LiDAR", "Computer Vision", "Machine Learning", "Sensor Fusion"]
   },
   {
     id: 2,
     title: "Industrial Robotics",
     description: "AI-powered industrial robots for manufacturing and automation.",
     icon: Factory,
-    features: [
+    features[
       "Robotic arms",
       "Computer vision",
       "Path planning",
@@ -609,14 +609,14 @@ const autonomousSystemsSolutions = [
     price: "From $200,000",
     timeline: "16-32 weeks",
     category: "Robotics",
-    technologies: ["ROS", "Computer Vision", "Motion Planning", "Safety Systems"]
+    technologies["ROS", "Computer Vision", "Motion Planning", "Safety Systems"]
   },
   {
     id: 3,
     title: "Drone Systems",
     description: "Autonomous drone systems for surveillance, delivery, and inspection.",
     icon: Plane,
-    features: [
+    features[
       "Autonomous flight",
       "Computer vision",
       "Path planning",
@@ -625,14 +625,14 @@ const autonomousSystemsSolutions = [
     price: "From $100,000",
     timeline: "12-24 weeks",
     category: "Drones",
-    technologies: ["Flight Control", "Computer Vision", "GPS", "Obstacle Detection"]
+    technologies["Flight Control", "Computer Vision", "GPS", "Obstacle Detection"]
   },
   {
     id: 4,
     title: "Smart Home Systems",
     description: "AI-powered home automation with autonomous decision making.",
     icon: Building,
-    features: [
+    features[
       "Smart devices",
       "AI decision making",
       "Learning algorithms",
@@ -641,14 +641,14 @@ const autonomousSystemsSolutions = [
     price: "From $50,000",
     timeline: "8-16 weeks",
     category: "Smart Home",
-    technologies: ["IoT", "Machine Learning", "Voice Recognition", "Automation"]
+    technologies["IoT", "Machine Learning", "Voice Recognition", "Automation"]
   },
   {
     id: 5,
     title: "Agricultural Robots",
     description: "Autonomous farming robots for precision agriculture and crop management.",
     icon: Globe,
-    features: [
+    features[
       "Crop monitoring",
       "Precision spraying",
       "Harvesting automation",
@@ -657,14 +657,14 @@ const autonomousSystemsSolutions = [
     price: "From $150,000",
     timeline: "20-36 weeks",
     category: "Agriculture",
-    technologies: ["Computer Vision", "GPS", "Sensors", "Robotics"]
+    technologies["Computer Vision", "GPS", "Sensors", "Robotics"]
   },
   {
     id: 6,
     title: "Medical Robotics",
     description: "AI-powered medical robots for surgery and patient care.",
     icon: Users,
-    features: [
+    features[
       "Surgical assistance",
       "Patient monitoring",
       "Rehabilitation support",
@@ -673,7 +673,7 @@ const autonomousSystemsSolutions = [
     price: "From $1,000,000",
     timeline: "32-64 weeks",
     category: "Medical",
-    technologies: ["Computer Vision", "Robotics", "AI", "Medical Imaging"]
+    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
   }
 ];
 
@@ -774,25 +774,25 @@ const autonomousBenefits = [
     title: "Increased Efficiency",
     description: "24/7 operation with consistent performance and reduced human error",
     icon: Zap,
-    examples: ["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]
+    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]
   },
   {
     title: "Enhanced Safety",
     description: "Advanced safety systems and risk mitigation capabilities",
     icon: Shield,
-    examples: ["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]
   },
   {
     title: "Cost Reduction",
     description: "Lower operational costs and improved resource utilization",
     icon: TrendingUp,
-    examples: ["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]
   },
   {
     title: "Scalability",
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
-    examples: ["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]
   }
 ];
 
@@ -1180,5 +1180,4 @@ export default function AIAutonomousSystems() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

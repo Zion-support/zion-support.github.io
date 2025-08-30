@@ -57,7 +57,7 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
-export default function ComprehensiveServicesLanding2028(...args: []):  {
+export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
@@ -114,8 +114,7 @@ export default function ComprehensiveServicesLanding2028(...args: []):  {
       case 'Cloud Computing': return Cloud;
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
-      default: return Rocket;
-    }
+      default: return Rocket}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -129,16 +128,13 @@ export default function ComprehensiveServicesLanding2028(...args: []):  {
       'from-teal-600 to-blue-600',
       'from-pink-600 to-red-600'
     ];
-    return colors[Math.abs(category.length) % colors.length];
-  };
+    return colors[Math.abs(category.length) % colors.length]};
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)};
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -736,5 +732,4 @@ export default function ComprehensiveServicesLanding2028(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

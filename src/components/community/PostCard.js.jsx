@@ -17,5 +17,4 @@ export default function PostCard({ post }) {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

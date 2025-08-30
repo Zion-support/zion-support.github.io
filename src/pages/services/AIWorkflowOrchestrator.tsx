@@ -76,7 +76,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       price: "$299",
       period: "/month",
       description: "Perfect for small teams getting started with workflow automation",
-      features: [
+      features[
         "Up to 10 workflows",
         "Basic AI process discovery",
         "Standard templates",
@@ -92,7 +92,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses with complex workflow needs",
-      features: [
+      features[
         "Up to 50 workflows",
         "Advanced AI orchestration",
         "Custom integrations",
@@ -110,7 +110,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       price: "$2,499",
       period: "/month",
       description: "For large organizations requiring enterprise-grade workflow management",
-      features: [
+      features[
         "Unlimited workflows",
         "AI-powered optimization",
         "Custom AI models",
@@ -424,7 +424,6 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIWorkflowOrchestrator;

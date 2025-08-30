@@ -11,9 +11,7 @@ export interface Revolutionary2027Service {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const revolutionary2027Services: Revolutionary2027Service[] = [
   {
     id: "2027-revolutionary-service",
@@ -21,7 +19,7 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     tagline: "Revolutionary services for 2027",
     price: "$299/month",
     description: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    features: [
+    features[
       "Revolutionary services",
       "Transformative capabilities",
       "Advanced technology",

@@ -16,16 +16,13 @@ export default function CheckoutPage() {
     useEffect(() => {
         if (sku) {
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-            return;
-        }
+            return}
         const stored = safeStorage.getItem(getCartKey(user?.id));
         if (stored) {
             try {
-                setItems(JSON.parse(stored));
-            }
+                setItems(JSON.parse(stored))}
             catch {
-                setItems([]);
-            }
+                setItems([])}
         }
     }, [sku]);
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -55,19 +52,15 @@ export default function CheckoutPage() {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
-                        });
-                    }
+                        })}
                     catch (e) {
-                        console.error('Failed to add points', e);
-                    }
+                        console.error('Failed to add points', e)}
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
-                navigate(`/orders/${result.id}`);
-            }
+                navigate(`/orders/${result.id}`)}
         }
         catch (err) {
-            console.error('Payment failed', err);
-        }
+            console.error('Payment failed', err)}
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
@@ -99,5 +92,4 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

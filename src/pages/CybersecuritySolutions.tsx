@@ -26,7 +26,7 @@ import { Shield,
   CreditCard
  } from 'lucide-react.ts';
 
-export default function CybersecuritySolutions(...args: []):  {
+export default function CybersecuritySolutions(...args[]):  {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
@@ -35,42 +35,42 @@ export default function CybersecuritySolutions(...args: []):  {
       icon: Shield,
       title: "Threat Detection & Response",
       description: "Advanced security monitoring and incident response to protect against cyber threats",
-      features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
+      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
       color: "from-zion-red to-zion-orange"
     },
     {
       icon: Lock,
       title: "Identity & Access Management",
       description: "Secure authentication and authorization systems for your organization",
-      features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
+      features["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
       color: "from-zion-blue to-zion-cyan"
     },
     {
       icon: Eye,
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance management",
-      features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
+      features["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Network Security",
       description: "Protect your network infrastructure with advanced security measures",
-      features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
+      features["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Database,
       title: "Data Protection",
       description: "Safeguard sensitive data with encryption and backup solutions",
-      features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
+      features["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Cloud,
       title: "Cloud Security",
       description: "Secure your cloud infrastructure and applications",
-      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
+      features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
       color: "from-zion-indigo to-zion-purple"
     }
   ];
@@ -90,7 +90,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Sophisticated, long-term cyber attacks targeting specific organizations",
       type: "malware",
       impact: "High",
-      solutions: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
+      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
       icon: Target
     },
     {
@@ -98,7 +98,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Malicious software that encrypts data and demands payment for decryption",
       type: "ransomware",
       impact: "Critical",
-      solutions: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
+      solutions["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
       icon: Lock
     },
     {
@@ -106,7 +106,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Manipulation tactics to trick users into revealing sensitive information",
       type: "phishing",
       impact: "Medium",
-      solutions: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
+      solutions["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
       icon: Users
     },
     {
@@ -114,7 +114,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Overwhelming systems with traffic to disrupt services",
       type: "ddos",
       impact: "Medium",
-      solutions: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
+      solutions["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
       icon: Network
     },
     {
@@ -122,7 +122,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Security risks from employees or contractors with access to systems",
       type: "insider",
       impact: "High",
-      solutions: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
+      solutions["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
       icon: Shield
     },
     {
@@ -130,7 +130,7 @@ export default function CybersecuritySolutions(...args: []):  {
       description: "Unknown vulnerabilities exploited before security patches are available",
       type: "malware",
       impact: "Critical",
-      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
+      solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
       icon: Bug
     }
   ];
@@ -139,37 +139,37 @@ export default function CybersecuritySolutions(...args: []):  {
     {
       name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for data security",
-      requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
+      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
       icon: ShieldCheck
     },
     {
       name: "ISO 27001",
       description: "International standard for information security management",
-      requirements: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
+      requirements["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
       icon: CheckCircle
     },
     {
       name: "GDPR",
       description: "General Data Protection Regulation for EU data privacy",
-      requirements: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
+      requirements["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
       icon: Lock
     },
     {
       name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
-      requirements: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
+      requirements["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
       icon: Database
     },
     {
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
-      requirements: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
+      requirements["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
       icon: CreditCard
     },
     {
       name: "NIST Cybersecurity Framework",
       description: "U.S. government framework for cybersecurity risk management",
-      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
+      requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
     }
   ];
@@ -347,8 +347,7 @@ export default function CybersecuritySolutions(...args: []):  {
                   <Icon className="w-5 h-5" />
                   {threat.name}
                 </button>
-              );
-            })}
+              )})}
           </motion.div>
 
           {/* Threats Grid */}
@@ -611,5 +610,4 @@ export default function CybersecuritySolutions(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

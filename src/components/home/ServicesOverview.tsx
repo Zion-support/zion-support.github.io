@@ -6,18 +6,14 @@ import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react.ts';
 interface Service {
 
   category: string;
-icon: React.ComponentType<{ className?: string;
-}>;
+icon: React.ComponentType<{ className?: string}>;
   color: string;
   items: string[];
-  description?: string;
-}
+  description?: string}
 
 interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
 
-  services: Service[];
-
-}
+  services: Service[]}
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
@@ -110,7 +106,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default ServicesOverview;

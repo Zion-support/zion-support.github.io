@@ -98,8 +98,7 @@ export const EnhancedContact = () => {
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -117,9 +116,7 @@ export const EnhancedContact = () => {
                 phone: '',
                 service: '',
                 message: ''
-            });
-        }, 3000);
-    };
+            })}, 3000)};
     if (isSubmitted) {
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
         <div className="text-center max-w-md mx-auto px-4">
@@ -132,8 +129,7 @@ export const EnhancedContact = () => {
             Send Another Message
           </Button>
         </div>
-      </motion.div>);
-    }
+      </motion.div>)}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -286,5 +282,4 @@ export const EnhancedContact = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};

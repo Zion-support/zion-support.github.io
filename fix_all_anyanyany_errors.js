@@ -11,14 +11,11 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      results = results.concat(findFiles(filePath, extensions));
-    } else if (extensions.some(ext => file.endsWith(ext))) {
-      results.push(filePath);
-    }
+      results = results.concat(findFiles(filePath, extensions))} else if (extensions.some(ext => file.endsWith(ext))) {
+      results.push(filePath)}
   });
   
-  return results;
-}
+  return results}
 
 // Function to fix  errors in a file
 function fixFile(filePath) {
@@ -52,21 +49,17 @@ function fixFile(filePath) {
     patterns.forEach(pattern => {
       if (pattern.from.test(content)) {
         content = content.replace(pattern.from, pattern.to);
-        fixed = true;
-      }
+        fixed = true}
     });
     
     if (fixed) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main execution
@@ -76,8 +69,7 @@ let totalFixed = 0;
 
 files.forEach(file => {
   if (fixFile(file)) {
-    totalFixed++;
-  }
+    totalFixed++}
 });
 
 console.log(`\nCompleted! Fixed ${totalFixed} files.`);

@@ -22,8 +22,7 @@ export default function JobDetails() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>);
-    }
+      </div>)}
     if (error || !job) {
         return (<>
         
@@ -33,29 +32,23 @@ export default function JobDetails() {
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>);
-    }
+      </>)}
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-            return;
-        }
+            return}
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
             toast.error("Only job seekers can apply for jobs");
-            return;
-        }
-        setIsApplyModalOpen(true);
-    };
+            return}
+        setIsApplyModalOpen(true)};
     const handleApplySuccess = async (appliedJobId) => {
         toast.success("Application submitted successfully!");
-        setIsApplyModalOpen(false);
-    };
+        setIsApplyModalOpen(false)};
     const formatBudget = (budget) => {
         if (!budget)
             return "Not specified";
-        return `$${budget.min} - $${budget.max}`;
-    };
+        return `$${budget.min} - $${budget.max}`};
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
@@ -154,5 +147,4 @@ export default function JobDetails() {
                 budget: job.budget,
                 client_id: job.client_id
             }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>);
-}
+    </>)}

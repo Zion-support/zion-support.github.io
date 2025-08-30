@@ -23,7 +23,7 @@ const itServices2028 = [
     price: '$45,999',
     period: '/month',
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features: [
+    features[
       'Quantum-ready computing nodes',
       'Advanced AI optimization',
       'Zero-latency networking',
@@ -53,7 +53,7 @@ const itServices2028 = [
     price: '$32,999',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
-    features: [
+    features[
       'AI threat detection',
       'Behavioral analysis',
       'Zero-trust architecture',
@@ -83,7 +83,7 @@ const itServices2028 = [
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
-    features: [
+    features[
       'Quantum query optimization',
       'Real-time data processing',
       'Advanced encryption',
@@ -113,7 +113,7 @@ const itServices2028 = [
     price: '$22,999',
     period: '/month',
     description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
-    features: [
+    features[
       'AI network monitoring',
       'Automatic optimization',
       'Traffic analysis',
@@ -143,7 +143,7 @@ const itServices2028 = [
     price: '$35,999',
     period: '/month',
     description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
-    features: [
+    features[
       'AI-powered CI/CD',
       'Automated testing',
       'Deployment automation',
@@ -173,7 +173,7 @@ const itServices2028 = [
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
-    features: [
+    features[
       'Real-time data processing',
       'AI-powered insights',
       'Predictive analytics',
@@ -217,8 +217,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -436,7 +435,6 @@ const ITServices2028: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ITServices2028;

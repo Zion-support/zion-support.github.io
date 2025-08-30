@@ -3,7 +3,7 @@ import Head from 'next/head.ts';
 
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react.ts';
 import Link from 'next/link.ts';
-export default function ServicesAdvertisingPage(...args: []):  {
+export default function ServicesAdvertisingPage(...args[]):  {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -22,10 +22,10 @@ export default function ServicesAdvertisingPage(...args: []):  {
     'Flexible deployment: SaaS or self-hosted options'
   ];
   const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
-    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
-    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
+    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
   ];
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
@@ -38,7 +38,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
   const pricingRefs = [
     {
       title: 'AI Platforms',
-      links: [
+      links[
         { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
         { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
         { name: 'Google Vertex AI', href: 'https://cloud.google.com/vertex-ai/pricing' },
@@ -53,7 +53,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Security & Compliance',
-      links: [
+      links[
         { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
         { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
         { name: 'HashiCorp Vault', href: 'https://www.hashicorp.com/products/vault/pricing' },
@@ -65,7 +65,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Vector & Search',
-      links: [
+      links[
         { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
         { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
         { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' },
@@ -76,7 +76,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Cloud & Edge',
-      links: [
+      links[
         { name: 'AWS Calculator', href: 'https://calculator.aws' },
         { name: 'Azure', href: 'https://azure.microsoft.com/pricing' },
         { name: 'Google Cloud', href: 'https://cloud.google.com/pricing' },
@@ -88,7 +88,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Product Analytics',
-      links: [
+      links[
         { name: 'Mixpanel', href: 'https://mixpanel.com/pricing/' },
         { name: 'Amplitude', href: 'https://amplitude.com/pricing' },
         { name: 'PostHog', href: 'https://posthog.com/pricing' }
@@ -97,7 +97,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Incident & On‑Call',
-      links: [
+      links[
         { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' },
         { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' },
         { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
@@ -106,7 +106,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Email & Deliverability',
-      links: [
+      links[
         { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
         { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
         { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
@@ -115,7 +115,7 @@ export default function ServicesAdvertisingPage(...args: []):  {
     },
     {
       title: 'Observability & APM',
-      links: [
+      links[
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
         { name: 'New Relic', href: 'https://newrelic.com/pricing' },
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
@@ -124,27 +124,26 @@ export default function ServicesAdvertisingPage(...args: []):  {
     }
   ];
   const external = {
-    privacy: [
+    privacy[
       { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
     ],
-    finops: [
+    finops[
       { name: 'CloudZero', href: 'https://www.cloudzero.com/pricing' },
       { name: 'Vantage', href: 'https://www.vantage.sh/pricing' }
     ],
-    devex: [
+    devex[
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
     ],
-    seo: [
+    seo[
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
     ]
   } as const;
-  function ext(...args: []):  {
+  function ext(...args[]):  {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    );
-  }
+    )}
   return (
     <div className="min-h-screen bg-black">
       <Head>
@@ -540,5 +539,4 @@ export default function ServicesAdvertisingPage(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -16,7 +16,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             status: 'sent',
             metadata: {
                 confidence: 0.95,
-                suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
+                suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
             }
         }
     ]);
@@ -26,25 +26,20 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     const inputRef = useRef(null);
     // Auto-scroll to bottom
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
+        scrollToBottom()}, [messages]);
     // Focus input when opened
     useEffect(() => {
         if (isOpen && !isMinimized) {
-            inputRef.current?.focus();
-        }
+            inputRef.current?.focus()}
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
         if (isTyping) {
             const timer = setTimeout(() => {
-                setIsTyping(false);
-            }, 2000);
-            return () => clearTimeout(timer);
-        }
+                setIsTyping(false)}, 2000);
+            return () => clearTimeout(timer)}
     }, [isTyping]);
     // Generate AI response
     const generateAIResponse = (_userMessage) => {
@@ -55,19 +50,19 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             const responses = [
                 {
                     content: "That's a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
-                    suggestions: ['Tell me more about AI pricing', 'What industries do you serve?', 'Can you provide a demo?']
+                    suggestions['Tell me more about AI pricing', 'What industries do you serve?', 'Can you provide a demo?']
                 },
                 {
                     content: "Our cloud solutions are designed for scalability and security. We offer AWS, Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
-                    suggestions: ['What about security?', 'How long does migration take?', 'Do you provide 24/7 support?']
+                    suggestions['What about security?', 'How long does migration take?', 'Do you provide 24/7 support?']
                 },
                 {
                     content: "Cybersecurity is our top priority. We implement enterprise-grade security measures including threat detection, data encryption, and compliance management.",
-                    suggestions: ['What compliance standards?', 'How do you handle breaches?', 'Security audit process?']
+                    suggestions['What compliance standards?', 'How do you handle breaches?', 'Security audit process?']
                 },
                 {
                     content: "Getting started is easy! We begin with a free consultation to understand your needs, then create a customized roadmap for your digital transformation journey.",
-                    suggestions: ['Schedule consultation', 'View case studies', 'Meet the team']
+                    suggestions['Schedule consultation', 'View case studies', 'Meet the team']
                 }
             ];
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
@@ -84,10 +79,8 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
-            onAssistantResponse?.(aiMessage.content);
-        }, 1500 + Math.random() * 1000);
-        return () => clearTimeout(timer);
-    };
+            onAssistantResponse?.(aiMessage.content)}, 1500 + Math.random() * 1000);
+        return () => clearTimeout(timer)};
     // Send message
     const sendMessage = async () => {
         if (!inputValue.trim() || isTyping)
@@ -102,14 +95,12 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         setMessages(prev => [...prev, userMessage]);
         onMessageSend?.(userMessage.content);
         // Generate AI response
-        generateAIResponse(userMessage.content);
-    };
+        generateAIResponse(userMessage.content)};
     // Handle enter key
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-            sendMessage();
-        }
+            sendMessage()}
     };
     // Toggle voice input
     const toggleVoiceInput = () => {
@@ -119,8 +110,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
         setInputValue(suggestion);
-        inputRef.current?.focus();
-    }, []);
+        inputRef.current?.focus()}, []);
     // Clear chat
     const clearChat = () => {
         setMessages([messages[0]]); // Keep welcome message
@@ -287,5 +277,4 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}

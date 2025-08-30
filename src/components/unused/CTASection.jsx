@@ -123,5 +123,4 @@ export function CTASection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

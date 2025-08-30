@@ -25,25 +25,25 @@ const AISalesCopilot = () => {
       icon: Brain,
       title: "AI-Powered Lead Scoring",
       description: "Advanced machine learning algorithms analyze customer behavior, engagement patterns, and buying signals to automatically score and prioritize leads.",
-      benefits: ["Increase conversion rates by 35%", "Focus on high-value prospects", "Reduce sales cycle time"]
+      benefits["Increase conversion rates by 35%", "Focus on high-value prospects", "Reduce sales cycle time"]
     },
     {
       icon: MessageSquare,
       title: "Automated Follow-up Sequences",
       description: "Intelligent follow-up campaigns that adapt based on customer responses, ensuring no lead falls through the cracks.",
-      benefits: ["Reduce follow-up time by 80%", "Personalized communication", "24/7 lead nurturing"]
+      benefits["Reduce follow-up time by 80%", "Personalized communication", "24/7 lead nurturing"]
     },
     {
       icon: Phone,
       title: "Sales Call Transcription & Analysis",
       description: "Real-time call transcription with AI-powered sentiment analysis, key point extraction, and actionable insights.",
-      benefits: ["Improve call quality", "Identify training opportunities", "Track deal progress"]
+      benefits["Improve call quality", "Identify training opportunities", "Track deal progress"]
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast sales outcomes, identify at-risk deals, and recommend optimal actions based on historical data and current trends.",
-      benefits: ["Better forecasting accuracy", "Proactive risk management", "Data-driven decisions"]
+      benefits["Better forecasting accuracy", "Proactive risk management", "Data-driven decisions"]
     }
   ];
 
@@ -62,7 +62,7 @@ const AISalesCopilot = () => {
       price: 199,
       period: "month",
       description: "Perfect for small sales teams",
-      features: [
+      features[
         "Up to 5 users",
         "AI lead scoring",
         "Basic follow-up automation",
@@ -77,7 +77,7 @@ const AISalesCopilot = () => {
       price: 399,
       period: "month",
       description: "Ideal for growing sales organizations",
-      features: [
+      features[
         "Up to 25 users",
         "Advanced AI features",
         "Call transcription & analysis",
@@ -93,7 +93,7 @@ const AISalesCopilot = () => {
       price: 799,
       period: "month",
       description: "For large sales teams with complex needs",
-      features: [
+      features[
         "Unlimited users",
         "Custom AI models",
         "Advanced analytics",
@@ -354,8 +354,7 @@ const AISalesCopilot = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AISalesCopilot;
 

@@ -73,21 +73,21 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       plan: "Starter",
       price: "$399",
       period: "/month",
-      features: ["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
+      features["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
       popular: false
     },
     {
       plan: "Professional",
       price: "$899",
       period: "/month",
-      features: ["Up to 200 active jobs", "Advanced AI models", "Predictive analytics", "Priority support", "API access"],
+      features["Up to 200 active jobs", "Advanced AI models", "Predictive analytics", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -427,7 +427,6 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHRTalentAcquisition;

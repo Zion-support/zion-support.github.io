@@ -19,15 +19,12 @@ const InnovativeServicesShowcase = () => {
             case 'ai':
                 return innovativeAIServices2025;
             default:
-                return [];
-        }
+                return []}
     };
     const handleServiceClick = (service) => {
-        setSelectedService(service);
-    };
+        setSelectedService(service)};
     const closeModal = () => {
-        setSelectedService(null);
-    };
+        setSelectedService(null)};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -279,6 +276,5 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesShowcase;

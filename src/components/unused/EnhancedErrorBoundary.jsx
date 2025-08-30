@@ -10,29 +10,24 @@ class EnhancedErrorBoundary extends Component {
             errorInfo: null,
             errorId: null,
             showStackTrace: false
-        };
-    }
+        }}
     static getDerivedStateFromError(error) {
         return {
             hasError: true,
             error,
             errorId: this.generateErrorId()
-        };
-    }
+        }}
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo });
         // Log error to console
         console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
-            this.props.onError(error, errorInfo);
-        }
+            this.props.onError(error, errorInfo)}
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo);
-    }
+        this.reportError(error, errorInfo)}
     static generateErrorId() {
-        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
+        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     reportError(error, errorInfo) {
         // In a real application, you would send this to your error reporting service
         // For example: Sentry, LogRocket, Bugsnag, etc.
@@ -59,11 +54,9 @@ class EnhancedErrorBoundary extends Component {
             console.group('Error Report');
             console.log('Error ID:', errorReport.id);
             console.log('Error Details:', errorReport);
-            console.groupEnd();
-        }
+            console.groupEnd()}
         // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport });
-    }
+        // Example: Sentry.captureException(error, { extra: errorReport })}
     handleRetry = () => {
         this.setState({
             hasError: false,
@@ -71,11 +64,9 @@ class EnhancedErrorBoundary extends Component {
             errorInfo: null,
             errorId: null,
             showStackTrace: false
-        });
-    };
+        })};
     handleGoHome = () => {
-        window.location.href = '/';
-    };
+        window.location.href = '/'};
     handleReportIssue = () => {
         const error = this.state.error;
         const errorInfo = this.state.errorInfo;
@@ -116,18 +107,15 @@ ${errorInfo.componentStack}
 
       `.trim();
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
-            window.open(issueUrl, '_blank');
-        }
+            window.open(issueUrl, '_blank')}
     };
     toggleStackTrace = () => {
-        this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
-    };
+        this.setState(prev => ({ showStackTrace: !prev.showStackTrace }))};
     render() {
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
-                return this.props.fallback;
-            }
+                return this.props.fallback}
             // Default error UI
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
@@ -222,9 +210,7 @@ ${errorInfo.componentStack}
               </div>
             </div>
           </motion.div>
-        </div>);
-        }
-        return this.props.children;
-    }
+        </div>)}
+        return this.props.children}
 }
 export default EnhancedErrorBoundary;

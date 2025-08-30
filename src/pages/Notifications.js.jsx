@@ -24,8 +24,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
         case 'system':
             return <AlertCircle className={cn(className, "text-yellow-500")}/>;
         default:
-            return <Bell className={cn(className, "text-gray-500")}/>;
-    }
+            return <Bell className={cn(className, "text-gray-500")}/>}
 };
 const getNotificationTypeBadge = (type) => {
     switch (type) {
@@ -42,18 +41,15 @@ const getNotificationTypeBadge = (type) => {
         case 'system':
             return <Badge className="bg-yellow-500">System</Badge>;
         default:
-            return <Badge variant="outline">Notification</Badge>;
-    }
+            return <Badge variant="outline">Notification</Badge>}
 };
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
         if (!notification.read) {
-            onMarkAsRead(notification.id);
-        }
+            onMarkAsRead(notification.id)}
         if (notification.action_url) {
-            navigate(notification.action_url);
-        }
+            navigate(notification.action_url)}
     };
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
@@ -93,8 +89,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
             </Button>)}
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
@@ -144,5 +139,4 @@ export default function NotificationsPage() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}

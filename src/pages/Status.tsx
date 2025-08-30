@@ -97,8 +97,7 @@ const Status: React.FC = (): JSX.Element => {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
   const getStatusColor = (status: string)  => {
@@ -110,8 +109,7 @@ const Status: React.FC = (): JSX.Element => {
       case 'outage':
         return 'text-red-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500'}
   };
 
   return (
@@ -262,7 +260,6 @@ const Status: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Status;

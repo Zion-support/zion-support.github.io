@@ -31,25 +31,25 @@ const AIHealthcareAnalytics = () => {
       icon: Brain,
       title: "Predictive Diagnostics",
       description: "AI-powered diagnostic tools that analyze patient data to predict diseases and conditions before they become critical.",
-      benefits: ["Early disease detection", "Improved patient outcomes", "Reduced healthcare costs", "Preventive care optimization"]
+      benefits["Early disease detection", "Improved patient outcomes", "Reduced healthcare costs", "Preventive care optimization"]
     },
     {
       icon: BarChart3,
       title: "Patient Data Analysis",
       description: "Comprehensive analysis of patient records, lab results, and medical history to identify patterns and trends.",
-      benefits: ["Data-driven insights", "Personalized treatment plans", "Risk assessment", "Population health insights"]
+      benefits["Data-driven insights", "Personalized treatment plans", "Risk assessment", "Population health insights"]
     },
     {
       icon: Target,
       title: "Treatment Optimization",
       description: "AI algorithms that recommend optimal treatment plans based on patient data, medical research, and outcomes.",
-      benefits: ["Better treatment efficacy", "Reduced side effects", "Faster recovery", "Cost optimization"]
+      benefits["Better treatment efficacy", "Reduced side effects", "Faster recovery", "Cost optimization"]
     },
     {
       icon: Users,
       title: "Population Health Analytics",
       description: "Large-scale analysis of population health data to identify trends, risk factors, and public health opportunities.",
-      benefits: ["Public health insights", "Epidemic prediction", "Resource allocation", "Preventive programs"]
+      benefits["Public health insights", "Epidemic prediction", "Resource allocation", "Preventive programs"]
     }
   ];
 
@@ -58,37 +58,37 @@ const AIHealthcareAnalytics = () => {
       name: "Clinical Decision Support",
       description: "AI-powered clinical decision support system for physicians and healthcare providers",
       icon: Brain,
-      features: ["Diagnostic assistance", "Treatment recommendations", "Drug interaction alerts", "Clinical guidelines"]
+      features["Diagnostic assistance", "Treatment recommendations", "Drug interaction alerts", "Clinical guidelines"]
     },
     {
       name: "Medical Imaging Analysis",
       description: "Advanced AI analysis of X-rays, MRIs, CT scans, and other medical imaging",
       icon: Eye,
-      features: ["Automated detection", "Image enhancement", "Comparative analysis", "Radiology support"]
+      features["Automated detection", "Image enhancement", "Comparative analysis", "Radiology support"]
     },
     {
       name: "Electronic Health Records",
       description: "Intelligent EHR management with AI-powered data extraction and analysis",
       icon: Database,
-      features: ["Data mining", "Natural language processing", "Automated coding", "Quality metrics"]
+      features["Data mining", "Natural language processing", "Automated coding", "Quality metrics"]
     },
     {
       name: "Telemedicine Platform",
       description: "AI-enhanced telemedicine with symptom analysis and remote monitoring",
       icon: Network,
-      features: ["Symptom assessment", "Remote monitoring", "Virtual consultations", "Health tracking"]
+      features["Symptom assessment", "Remote monitoring", "Virtual consultations", "Health tracking"]
     },
     {
       name: "Drug Discovery Support",
       description: "AI-powered drug discovery and pharmaceutical research assistance",
       icon: Activity,
-      features: ["Molecular modeling", "Drug repurposing", "Clinical trial optimization", "Safety prediction"]
+      features["Molecular modeling", "Drug repurposing", "Clinical trial optimization", "Safety prediction"]
     },
     {
       name: "Healthcare Operations",
       description: "AI optimization of healthcare operations and resource management",
       icon: TrendingUp,
-      features: ["Resource optimization", "Staff scheduling", "Inventory management", "Cost analysis"]
+      features["Resource optimization", "Staff scheduling", "Inventory management", "Cost analysis"]
     }
   ];
 
@@ -98,7 +98,7 @@ const AIHealthcareAnalytics = () => {
       price: 599,
       period: "month",
       description: "For individual clinics and small practices",
-      features: [
+      features[
         "Up to 1000 patients",
         "Basic AI diagnostics",
         "Clinical decision support",
@@ -114,7 +114,7 @@ const AIHealthcareAnalytics = () => {
       price: 1499,
       period: "month",
       description: "For hospitals and larger healthcare organizations",
-      features: [
+      features[
         "Up to 10,000 patients",
         "Advanced AI features",
         "Medical imaging analysis",
@@ -131,7 +131,7 @@ const AIHealthcareAnalytics = () => {
       price: 2999,
       period: "month",
       description: "For large healthcare systems and research institutions",
-      features: [
+      features[
         "Unlimited patients",
         "Custom AI models",
         "Research tools",
@@ -183,19 +183,19 @@ const AIHealthcareAnalytics = () => {
   const useCases = [
     {
       category: "Diagnostics",
-      examples: ["Early cancer detection", "Cardiovascular risk assessment", "Neurological disorder prediction", "Infectious disease screening"]
+      examples["Early cancer detection", "Cardiovascular risk assessment", "Neurological disorder prediction", "Infectious disease screening"]
     },
     {
       category: "Treatment",
-      examples: ["Personalized medicine", "Drug response prediction", "Treatment outcome forecasting", "Side effect minimization"]
+      examples["Personalized medicine", "Drug response prediction", "Treatment outcome forecasting", "Side effect minimization"]
     },
     {
       category: "Operations",
-      examples: ["Resource optimization", "Staff scheduling", "Inventory management", "Cost reduction"]
+      examples["Resource optimization", "Staff scheduling", "Inventory management", "Cost reduction"]
     },
     {
       category: "Research",
-      examples: ["Clinical trial optimization", "Drug discovery", "Epidemiological studies", "Public health research"]
+      examples["Clinical trial optimization", "Drug discovery", "Epidemiological studies", "Public health research"]
     }
   ];
 
@@ -480,7 +480,6 @@ const AIHealthcareAnalytics = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcareAnalytics;

@@ -18,6 +18,5 @@ const LoadingSpinner = ({ size = 'md', color = 'blue', text, className = '' }) =
         </svg>
       </div>
       {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
-    </div>);
-};
+    </div>)};
 export default LoadingSpinner;

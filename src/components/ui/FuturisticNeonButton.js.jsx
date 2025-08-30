@@ -45,8 +45,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(239,68,68,${Math.min(multiplier + 0.3, 1)})]`
             }
         };
-        return baseStyles[variant];
-    };
+        return baseStyles[variant]};
     const getSizeStyles = () => {
         const sizeStyles = {
             sm: 'px-3 py-1.5 text-sm',
@@ -54,8 +53,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
             lg: 'px-6 py-3 text-lg',
             xl: 'px-8 py-4 text-xl'
         };
-        return sizeStyles[size];
-    };
+        return sizeStyles[size]};
     const styles = getVariantStyles();
     const sizeStyles = getSizeStyles();
     return (<motion.button type={type} onClick={onClick} disabled={disabled || loading} className={`
@@ -83,6 +81,5 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
       <div className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
         <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
       </div>
-    </motion.button>);
-};
+    </motion.button>)};
 export default FuturisticNeonButton;

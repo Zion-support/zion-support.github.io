@@ -58,7 +58,7 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function UltimateInnovativeServices2026(...args: []):  {
+export default function UltimateInnovativeServices2026(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -97,13 +97,11 @@ export default function UltimateInnovativeServices2026(...args: []):  {
 
   const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
   const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -117,8 +115,7 @@ export default function UltimateInnovativeServices2026(...args: []):  {
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
                         (selectedPriceRange === 'over-20k' && service.price > 20000);
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -135,13 +132,11 @@ export default function UltimateInnovativeServices2026(...args: []):  {
         const bROI = parseInt(b.roi.split('-')[0]);
         return bROI - aROI;
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const toggleServiceExpansion = (serviceId: string)  => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -448,8 +443,7 @@ export default function UltimateInnovativeServices2026(...args: []):  {
                 onClick={() => {
                   setSearchQuery('');
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}
+                  setSelectedPriceRange('all')}}
                 className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
               >
                 Clear Filters
@@ -499,5 +493,4 @@ export default function UltimateInnovativeServices2026(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

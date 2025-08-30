@@ -29,15 +29,13 @@ export interface SpecializedIndustrySolution {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
@@ -47,7 +45,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$3,499',
     period: '/month',
     description: 'Revolutionary manufacturing optimization platform that autonomously manages production lines, predicts maintenance needs, and optimizes resource allocation for maximum efficiency and zero downtime.',
-    features: [
+    features[
       'Autonomous production management',
       'Predictive maintenance',
       'Quality control automation',
@@ -71,11 +69,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Manufacturing & Industrial',
     industry: 'Manufacturing',
     realService: true,
-    technology: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Edge Computing'],
-    integrations: ['ERP Systems', 'MES Platforms', 'SCADA Systems', 'Quality Management', 'Supply Chain'],
-    useCases: ['Production optimization', 'Quality control', 'Maintenance prediction', 'Resource management'],
+    technology['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Edge Computing'],
+    integrations['ERP Systems', 'MES Platforms', 'SCADA Systems', 'Quality Management', 'Supply Chain'],
+    useCases['Production optimization', 'Quality control', 'Maintenance prediction', 'Resource management'],
     roi: '400% ROI with 30% production increase and 50% downtime reduction',
-    competitors: ['Traditional MES systems', 'Manual optimization'],
+    competitors['Traditional MES systems', 'Manual optimization'],
     marketSize: '$200B manufacturing software market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -99,7 +97,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced clinical decision support system that uses AI to analyze patient data, medical literature, and clinical guidelines to provide evidence-based treatment recommendations.',
-    features: [
+    features[
       'AI-powered diagnosis support',
       'Evidence-based recommendations',
       'Medical literature analysis',
@@ -123,11 +121,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Healthcare & Medical',
     industry: 'Healthcare',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Medical Imaging', 'Predictive Analytics', 'Blockchain'],
-    integrations: ['EHR Systems', 'PACS Systems', 'Lab Information Systems', 'Pharmacy Systems', 'Telemedicine'],
-    useCases: ['Clinical decision support', 'Treatment planning', 'Risk assessment', 'Research analysis'],
+    technology['AI/ML', 'Natural Language Processing', 'Medical Imaging', 'Predictive Analytics', 'Blockchain'],
+    integrations['EHR Systems', 'PACS Systems', 'Lab Information Systems', 'Pharmacy Systems', 'Telemedicine'],
+    useCases['Clinical decision support', 'Treatment planning', 'Risk assessment', 'Research analysis'],
     roi: '500% ROI with 40% improvement in treatment outcomes',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Traditional CDS systems'],
+    competitors['IBM Watson Health', 'Google Health AI', 'Traditional CDS systems'],
     marketSize: '$45B clinical decision support market',
     growthRate: '220% annual growth',
     contactInfo: {
@@ -151,7 +149,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary financial risk management platform that autonomously monitors, analyzes, and mitigates financial risks in real-time across multiple asset classes and markets.',
-    features: [
+    features[
       'Autonomous risk monitoring',
       'Real-time risk assessment',
       'Multi-asset risk analysis',
@@ -175,11 +173,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Financial Services',
     industry: 'Finance',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Blockchain', 'Quantum Computing'],
-    integrations: ['Trading Platforms', 'Risk Management Systems', 'Compliance Tools', 'Data Feeds', 'Reporting Systems'],
-    useCases: ['Risk management', 'Portfolio optimization', 'Compliance monitoring', 'Performance analysis'],
+    technology['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Blockchain', 'Quantum Computing'],
+    integrations['Trading Platforms', 'Risk Management Systems', 'Compliance Tools', 'Data Feeds', 'Reporting Systems'],
+    useCases['Risk management', 'Portfolio optimization', 'Compliance monitoring', 'Performance analysis'],
     roi: '600% ROI with 80% reduction in risk incidents',
-    competitors: ['Traditional risk management', 'Manual monitoring systems'],
+    competitors['Traditional risk management', 'Manual monitoring systems'],
     marketSize: '$35B risk management market',
     growthRate: '250% annual growth',
     contactInfo: {
@@ -203,7 +201,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$1,999',
     period: '/month',
     description: 'Advanced retail optimization platform that uses AI to personalize customer experiences, optimize inventory management, and maximize sales through intelligent recommendations and automation.',
-    features: [
+    features[
       'AI-powered personalization',
       'Inventory optimization',
       'Demand forecasting',
@@ -227,11 +225,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Retail & E-commerce',
     industry: 'Retail',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Big Data', 'Cloud Computing'],
-    integrations: ['POS Systems', 'E-commerce Platforms', 'CRM Systems', 'Inventory Management', 'Marketing Tools'],
-    useCases: ['Customer personalization', 'Inventory optimization', 'Demand forecasting', 'Marketing optimization'],
+    technology['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Big Data', 'Cloud Computing'],
+    integrations['POS Systems', 'E-commerce Platforms', 'CRM Systems', 'Inventory Management', 'Marketing Tools'],
+    useCases['Customer personalization', 'Inventory optimization', 'Demand forecasting', 'Marketing optimization'],
     roi: '300% ROI with 35% increase in sales and 25% reduction in inventory costs',
-    competitors: ['Traditional retail systems', 'Basic analytics platforms'],
+    competitors['Traditional retail systems', 'Basic analytics platforms'],
     marketSize: '$25B retail technology market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -255,7 +253,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$899',
     period: '/month',
     description: 'Revolutionary adaptive learning platform that uses AI to personalize educational content, track student progress, and optimize learning outcomes through intelligent adaptation.',
-    features: [
+    features[
       'AI-powered personalization',
       'Adaptive content delivery',
       'Progress tracking',
@@ -279,11 +277,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Education & Learning',
     industry: 'Education',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Predictive Analytics', 'Machine Learning', 'Cloud Computing'],
-    integrations: ['LMS Systems', 'Student Information Systems', 'Content Management', 'Assessment Tools', 'Analytics Platforms'],
-    useCases: ['Personalized learning', 'Progress tracking', 'Content optimization', 'Performance analysis'],
+    technology['AI/ML', 'Natural Language Processing', 'Predictive Analytics', 'Machine Learning', 'Cloud Computing'],
+    integrations['LMS Systems', 'Student Information Systems', 'Content Management', 'Assessment Tools', 'Analytics Platforms'],
+    useCases['Personalized learning', 'Progress tracking', 'Content optimization', 'Performance analysis'],
     roi: '250% ROI with 40% improvement in learning outcomes',
-    competitors: ['Traditional LMS', 'Basic learning platforms'],
+    competitors['Traditional LMS', 'Basic learning platforms'],
     marketSize: '$15B adaptive learning market',
     growthRate: '200% annual growth',
     contactInfo: {
@@ -307,7 +305,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary logistics optimization platform that autonomously manages supply chains, optimizes routes, and reduces costs through intelligent automation and predictive analytics.',
-    features: [
+    features[
       'Autonomous route optimization',
       'Supply chain management',
       'Predictive analytics',
@@ -331,11 +329,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Transportation & Logistics',
     industry: 'Logistics',
     realService: true,
-    technology: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Blockchain'],
-    integrations: ['TMS Systems', 'WMS Platforms', 'GPS Tracking', 'Inventory Systems', 'Financial Systems'],
-    useCases: ['Route optimization', 'Supply chain management', 'Cost reduction', 'Performance monitoring'],
+    technology['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Blockchain'],
+    integrations['TMS Systems', 'WMS Platforms', 'GPS Tracking', 'Inventory Systems', 'Financial Systems'],
+    useCases['Route optimization', 'Supply chain management', 'Cost reduction', 'Performance monitoring'],
     roi: '350% ROI with 30% cost reduction and 25% efficiency improvement',
-    competitors: ['Traditional TMS', 'Manual optimization'],
+    competitors['Traditional TMS', 'Manual optimization'],
     marketSize: '$30B logistics technology market',
     growthRate: '160% annual growth',
     contactInfo: {
@@ -359,7 +357,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     price: '$1,999',
     period: '/month',
     description: 'Advanced energy optimization platform that uses AI to manage energy consumption, optimize renewable energy usage, and reduce costs through intelligent automation and predictive analytics.',
-    features: [
+    features[
       'AI-powered energy management',
       'Renewable energy optimization',
       'Predictive analytics',
@@ -383,11 +381,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Energy & Utilities',
     industry: 'Energy',
     realService: true,
-    technology: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Smart Grid'],
-    integrations: ['SCADA Systems', 'Energy Management', 'Building Automation', 'Smart Meters', 'Renewable Systems'],
-    useCases: ['Energy optimization', 'Cost reduction', 'Sustainability', 'Grid management'],
+    technology['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Smart Grid'],
+    integrations['SCADA Systems', 'Energy Management', 'Building Automation', 'Smart Meters', 'Renewable Systems'],
+    useCases['Energy optimization', 'Cost reduction', 'Sustainability', 'Grid management'],
     roi: '300% ROI with 25% cost reduction and 20% efficiency improvement',
-    competitors: ['Traditional energy management', 'Basic monitoring systems'],
+    competitors['Traditional energy management', 'Basic monitoring systems'],
     marketSize: '$20B energy management market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -413,12 +411,10 @@ export const industryCategories2025: string[] = Array.from(
 ).sort();
 export const getSolutionsByIndustry = (industry: string) => {
   if (!industry || industry === 'All') return specializedIndustrySolutions2025;
-  return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
-};
+  return specializedIndustrySolutions2025.filter((s) => s.industry === industry)};
 export const getSolutionsByCategory = (category: string) => {
   if (!category || category === 'All') return specializedIndustrySolutions2025;
-  return specializedIndustrySolutions2025.filter((s) => s.category === category);
-};
+  return specializedIndustrySolutions2025.filter((s) => s.category === category)};
 export const getPopularIndustrySolutions = () =>
   specializedIndustrySolutions2025
     .filter((s) => !!s.popular)

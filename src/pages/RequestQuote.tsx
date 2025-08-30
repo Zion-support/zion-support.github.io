@@ -70,9 +70,7 @@ interface QuoteForm {
   teamSize: string;
   existingPartners: string;
   successMetrics: string;
-  additionalNotes: string;
-
-}
+  additionalNotes: string}
 
 const industries = [
   'Technology',
@@ -153,7 +151,7 @@ const teamSizes = [
   '100+ people'
 ];
 
-export default function RequestQuote(...args: []):  {
+export default function RequestQuote(...args[]):  {
   const [formData, setFormData] = useState<any>({
     compName: '',
     industry: '',
@@ -167,7 +165,7 @@ export default function RequestQuote(...args: []):  {
     projectTitle: '',
     projectDescription: '',
     projectType: '',
-    services: [],
+    services[],
     budget: '',
     timeline: '',
     urgency: '',
@@ -193,32 +191,27 @@ export default function RequestQuote(...args: []):  {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleServiceToggle = (service: string)  => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(service)
         ? prev.services.filter(s  => s !== service)
-        : [...prev.services, service]
-    }));
-  };
+        [...prev.services, service]
+    }))};
 
   const toggleSection = (section: string)  => {
-    setExpandedSection(expandedSection === section ? null : section);
-  };
+    setExpandedSection(expandedSection === section ? null : section)};
 
   const nextStep = () => {
     if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
-    }
+      setCurrentStep(currentStep + 1)}
   };
 
   const prevStep = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
+      setCurrentStep(currentStep - 1)}
   };
 
   const handleSubmit = async (e: React.FormEvent)  => {
@@ -246,7 +239,7 @@ export default function RequestQuote(...args: []):  {
           projectTitle: '',
           projectDescription: '',
           projectType: '',
-          services: [],
+          services[],
           budget: '',
           timeline: '',
           urgency: '',
@@ -259,10 +252,7 @@ export default function RequestQuote(...args: []):  {
           successMetrics: '',
           additionalNotes: ''
         });
-        setCurrentStep(1);
-      }, 3000);
-    }, 2000);
-  };
+        setCurrentStep(1)}, 3000)}, 2000)};
 
   const isStepValid = (step: number)  => {
     switch (step) {
@@ -275,8 +265,7 @@ export default function RequestQuote(...args: []):  {
       case 4:
         return true; // Additional info is optional
       default:
-        return false;
-    }
+        return false}
   };
 
   const getStepIcon = (step: number)  => {
@@ -285,8 +274,7 @@ export default function RequestQuote(...args: []):  {
       case 2: return <Target className="h-5 w-5" />;
       case 3: return <Calculator className="h-5 w-5" />;
       case 4: return <FileText className="h-5 w-5" />;
-      default: return <CheckCircle className="h-5 w-5" />;
-    }
+      default: return <CheckCircle className="h-5 w-5" />}
   };
 
   const getStepTitle = (step: number)  => {
@@ -295,8 +283,7 @@ export default function RequestQuote(...args: []):  {
       case 2: return 'Project Details';
       case 3: return 'Budget & Timeline';
       case 4: return 'Additional Info';
-      default: return 'Complete';
-    }
+      default: return 'Complete'}
   };
 
   return (
@@ -943,5 +930,4 @@ export default function RequestQuote(...args: []):  {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}

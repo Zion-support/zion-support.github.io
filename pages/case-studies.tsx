@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
 
 
-export default function CaseStudies(...args: []):  {
+export default function CaseStudies(...args[]):  {
 	const caseStudies = [
 		{
 			id: 1,
@@ -12,7 +12,7 @@ export default function CaseStudies(...args: []):  {
 			industry: 'Technology',
 			challenge: 'Manual processes were slowing down operations and causing errors in customer service.',
 			solution: 'Implemented AI-powered multi-agent system for customer service and sales operations.',
-			results: [
+			results[
 				'300% increase in operational efficiency',
 				'90% reduction in response time',
 				'$2.5M annual cost savings',
@@ -29,7 +29,7 @@ export default function CaseStudies(...args: []):  {
 			industry: 'Healthcare',
 			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.',
 			solution: 'Migrated to secure cloud infrastructure with HIPAA compliance and disaster recovery.',
-			results: [
+			results[
 				'40% reduction in infrastructure costs',
 				'99.9% uptime achieved',
 				'Full HIPAA compliance',
@@ -46,7 +46,7 @@ export default function CaseStudies(...args: []):  {
 			industry: 'Manufacturing',
 			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.',
 			solution: 'Deployed IoT sensors and AI analytics for predictive maintenance and optimization.',
-			results: [
+			results[
 				'25% increase in production output',
 				'60% reduction in downtime',
 				'Predictive maintenance alerts',
@@ -63,7 +63,7 @@ export default function CaseStudies(...args: []):  {
 			industry: 'Financial Services',
 			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.',
 			solution: 'Built custom micro SaaS platform with automated workflows and AI-powered insights.',
-			results: [
+			results[
 				'50% faster service delivery',
 				'Automated compliance reporting',
 				'Scalable architecture',

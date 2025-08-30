@@ -20,7 +20,7 @@ const highlights = [
     icon: Brain,
     title: 'AI-Powered Intelligence',
     description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
+    features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
     color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'bg-zion-purple/10',
     borderColor: 'border-zion-purple/20'
@@ -29,7 +29,7 @@ const highlights = [
     icon: Globe,
     title: 'Global Network',
     description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-    features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
+    features['Multi-language Support', 'Local Expertise', '24/7 Availability'],
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'bg-zion-cyan/10',
     borderColor: 'border-zion-cyan/20'
@@ -38,7 +38,7 @@ const highlights = [
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-    features: ['Data Protection', 'Access Control', 'Audit Trails'],
+    features['Data Protection', 'Access Control', 'Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
     borderColor: 'border-zion-blue/20'
@@ -107,7 +107,7 @@ const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
 
-export function FeatureHighlights(...args: []):  {
+export function FeatureHighlights(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -358,5 +358,4 @@ export function FeatureHighlights(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

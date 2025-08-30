@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export function Header(...args: []):  {
+export function Header(...args[]):  {
 	return (
 		<header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
 			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,5 +18,4 @@ export function Header(...args: []):  {
 				</div>
 			</nav>
 		</header>
-	);
-}
+	)}

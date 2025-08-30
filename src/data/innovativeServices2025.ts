@@ -18,22 +18,18 @@ export interface InnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  
-};
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -46,7 +42,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 2999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered data analysis",
       "Automated insight generation",
       "Natural language queries",
@@ -58,28 +54,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Automated reporting",
       "Mobile app access"
     ],
-    benefits: [
+    benefits[
       "Reduce analysis time by 80%",
       "Improve decision accuracy by 60%",
       "Automated insight discovery",
       "Real-time business monitoring",
       "Scalable analytics infrastructure"
     ],
-    useCases: [
+    useCases[
       "Sales performance analysis",
       "Customer behavior insights",
       "Financial reporting automation",
       "Operational efficiency tracking",
       "Market trend analysis"
     ],
-    targetAudience: [
+    targetAudience[
       "Business analysts",
       "Data scientists",
       "Executives",
       "Marketing teams",
       "Sales teams"
     ],
-    tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
+    tags["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,999 - $8,999/month",
@@ -91,13 +87,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
+      security["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
     },
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+    competitors["Tableau", "Power BI", "Looker", "Qlik"],
     marketSize: "$29.9 billion by 2025"
   },
 
@@ -111,7 +107,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 1499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered lead scoring",
       "Real-time sales coaching",
       "Automated follow-up sequences",
@@ -123,28 +119,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Multi-channel communication",
       "Advanced reporting"
     ],
-    benefits: [
+    benefits[
       "Increase sales productivity by 40%",
       "Improve conversion rates by 25%",
       "Reduce manual data entry by 70%",
       "Better lead qualification",
       "Enhanced sales team performance"
     ],
-    useCases: [
+    useCases[
       "B2B sales automation",
       "Lead qualification",
       "Sales coaching",
       "Pipeline management",
       "Performance optimization"
     ],
-    targetAudience: [
+    targetAudience[
       "Sales teams",
       "Sales managers",
       "Business development",
       "Startups",
       "Enterprise sales"
     ],
-    tags: ["AI", "Sales", "Automation", "CRM", "Lead Generation"],
+    tags["AI", "Sales", "Automation", "CRM", "Lead Generation"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$1,499 - $3,999/month",
@@ -167,7 +163,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 2499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered cost analysis",
       "Automated resource optimization",
       "Real-time cost monitoring",
@@ -179,28 +175,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Waste detection",
       "ROI analysis"
     ],
-    benefits: [
+    benefits[
       "Reduce cloud costs by 30-50%",
       "Improve resource utilization",
       "Better budget planning",
       "Automated cost optimization",
       "Enhanced financial visibility"
     ],
-    useCases: [
+    useCases[
       "Cloud cost management",
       "Resource optimization",
       "Budget planning",
       "Multi-cloud management",
       "DevOps cost control"
     ],
-    targetAudience: [
+    targetAudience[
       "DevOps teams",
       "Cloud architects",
       "Financial officers",
       "IT managers",
       "Startups"
     ],
-    tags: ["Cloud", "FinOps", "Cost Optimization", "DevOps", "AWS", "Azure", "GCP"],
+    tags["Cloud", "FinOps", "Cost Optimization", "DevOps", "AWS", "Azure", "GCP"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $6,999/month",
@@ -223,7 +219,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered compliance monitoring",
       "Automated regulatory reporting",
       "Real-time risk assessment",
@@ -235,28 +231,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Compliance scoring",
       "Multi-regulation support"
     ],
-    benefits: [
+    benefits[
       "Reduce compliance costs by 40%",
       "Improve audit success rates",
       "Automated compliance monitoring",
       "Real-time risk visibility",
       "Enhanced regulatory reporting"
     ],
-    useCases: [
+    useCases[
       "SOC 2 compliance",
       "GDPR compliance",
       "HIPAA compliance",
       "Financial regulations",
       "Industry standards"
     ],
-    targetAudience: [
+    targetAudience[
       "Compliance officers",
       "Legal teams",
       "IT security",
       "Healthcare organizations",
       "Financial institutions"
     ],
-    tags: ["AI", "Compliance", "Security", "Regulations", "Risk Management"],
+    tags["AI", "Compliance", "Security", "Regulations", "Risk Management"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $9,999/month",
@@ -279,7 +275,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered email understanding",
       "Personalized response generation",
       "Automated workflow management",
@@ -291,28 +287,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Performance analytics",
       "Mobile app access"
     ],
-    benefits: [
+    benefits[
       "Reduce email response time by 80%",
       "Improve customer satisfaction",
       "Automated email management",
       "Better workflow efficiency",
       "Enhanced communication quality"
     ],
-    useCases: [
+    useCases[
       "Customer service automation",
       "Sales follow-up",
       "Support ticket management",
       "Internal communication",
       "Marketing automation"
     ],
-    targetAudience: [
+    targetAudience[
       "Customer service teams",
       "Sales teams",
       "Support teams",
       "Small businesses",
       "Enterprise organizations"
     ],
-    tags: ["AI", "Email", "Automation", "Communication", "Customer Service"],
+    tags["AI", "Email", "Automation", "Communication", "Customer Service"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "standard",
     marketPrice: "$899 - $2,499/month",
@@ -335,7 +331,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 699,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered survey creation",
       "Sentiment analysis",
       "Real-time feedback collection",
@@ -347,28 +343,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Automated insights",
       "Action planning tools"
     ],
-    benefits: [
+    benefits[
       "Improve customer satisfaction scores",
       "Better product development insights",
       "Automated feedback analysis",
       "Real-time customer insights",
       "Enhanced decision-making"
     ],
-    useCases: [
+    useCases[
       "Customer satisfaction surveys",
       "Product feedback collection",
       "Service quality assessment",
       "Employee feedback",
       "Market research"
     ],
-    targetAudience: [
+    targetAudience[
       "Product managers",
       "Customer success teams",
       "Marketing teams",
       "Business owners",
       "Research teams"
     ],
-    tags: ["AI", "Customer Experience", "Feedback", "Surveys", "Analytics"],
+    tags["AI", "Customer Experience", "Feedback", "Surveys", "Analytics"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "standard",
     marketPrice: "$699 - $1,999/month",
@@ -391,7 +387,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 1999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered content generation",
       "Multi-format support",
       "SEO optimization",
@@ -403,28 +399,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Integration capabilities",
       "Content templates"
     ],
-    benefits: [
+    benefits[
       "Increase content production by 500%",
       "Improve SEO rankings",
       "Reduce content creation costs",
       "Consistent brand voice",
       "Multi-language content"
     ],
-    useCases: [
+    useCases[
       "Blog content creation",
       "Marketing copy",
       "Product descriptions",
       "Social media content",
       "Technical documentation"
     ],
-    targetAudience: [
+    targetAudience[
       "Content marketers",
       "SEO specialists",
       "Business owners",
       "Agencies",
       "E-commerce businesses"
     ],
-    tags: ["AI", "Content Generation", "LLM", "SEO", "Marketing"],
+    tags["AI", "Content Generation", "LLM", "SEO", "Marketing"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
     marketPrice: "$1,999 - $4,999/month",
@@ -447,7 +443,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 3499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered financial analysis",
       "Real-time performance monitoring",
       "Automated reporting",
@@ -459,28 +455,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Integration capabilities",
       "Custom dashboards"
     ],
-    benefits: [
+    benefits[
       "Improve financial visibility by 60%",
       "Reduce financial reporting time by 70%",
       "Better budget optimization",
       "Enhanced decision-making",
       "Automated financial processes"
     ],
-    useCases: [
+    useCases[
       "Financial planning",
       "Budget management",
       "Performance tracking",
       "Cost optimization",
       "Financial reporting"
     ],
-    targetAudience: [
+    targetAudience[
       "CFOs",
       "Financial analysts",
       "Business owners",
       "Finance teams",
       "Startups"
     ],
-    tags: ["AI", "Finance", "FinOps", "Analytics", "Budgeting"],
+    tags["AI", "Finance", "FinOps", "Analytics", "Budgeting"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $7,999/month",
@@ -503,7 +499,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 5999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Real-time system monitoring",
       "Predictive maintenance",
       "3D visualization",
@@ -515,28 +511,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Custom modeling",
       "API access"
     ],
-    benefits: [
+    benefits[
       "Reduce maintenance costs by 40%",
       "Improve system uptime by 25%",
       "Better resource optimization",
       "Predictive insights",
       "Enhanced operational efficiency"
     ],
-    useCases: [
+    useCases[
       "Manufacturing optimization",
       "Infrastructure monitoring",
       "Energy management",
       "Healthcare systems",
       "Smart cities"
     ],
-    targetAudience: [
+    targetAudience[
       "Manufacturing companies",
       "Infrastructure managers",
       "Energy companies",
       "Healthcare organizations",
       "Government agencies"
     ],
-    tags: ["Digital Twin", "IoT", "Monitoring", "Predictive Maintenance", "3D Visualization"],
+    tags["Digital Twin", "IoT", "Monitoring", "Predictive Maintenance", "3D Visualization"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,999 - $15,999/month",
@@ -559,7 +555,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     price: 9999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Quantum algorithm development",
       "Optimization problem solving",
       "Cryptography services",
@@ -571,28 +567,28 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
       "Custom solutions",
       "Performance monitoring"
     ],
-    benefits: [
+    benefits[
       "Solve previously unsolvable problems",
       "Exponential speed improvements",
       "Advanced cryptography",
       "Research breakthroughs",
       "Competitive advantage"
     ],
-    useCases: [
+    useCases[
       "Financial modeling",
       "Drug discovery",
       "Logistics optimization",
       "Cryptography",
       "Scientific research"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Financial services",
       "Pharmaceutical companies",
       "Government agencies",
       "Technology companies"
     ],
-    tags: ["Quantum Computing", "Optimization", "Cryptography", "Research", "Advanced Technology"],
+    tags["Quantum Computing", "Optimization", "Cryptography", "Research", "Advanced Technology"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$9,999 - $25,999/month",
@@ -608,19 +604,15 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
 
 // Helper functions
 export const getServicesByCategory = (category: string): InnovativeService[]  => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
-};
+  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category)};
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService[]  => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
-};
+  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice)};
 
 export const getTopRatedServices = (limit: number = 5): InnovativeService[] => {
   return INNOVATIVE_SERVICES_2025
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
-};
+    .slice(0, limit)};
 
 export const getServicesByAIScore = (minScore: number): InnovativeService[]  => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};
+  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore)};

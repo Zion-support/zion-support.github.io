@@ -47,7 +47,7 @@ import { ArrowRight,
 import { SEO  } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030  } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServicesShowcase2030(...args: []):  {
+export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -67,8 +67,7 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     let comparison = 0;
@@ -96,10 +95,8 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
         comparison = timeA - timeB;
         break;
       default:
-        comparison = 0;
-    }
-    return sortOrder === 'asc' ? comparison : -comparison;
-  });
+        comparison = 0}
+    return sortOrder === 'asc' ? comparison : -comparison});
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -108,16 +105,13 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
 
   const handlePageChange = (page: number)  => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
-  const handleServiceSelect = (service: )  => {
-    setSelectedService(service);
-  };
+  const handleServiceSelect = (service)  => {
+    setSelectedService(service)};
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -151,8 +145,7 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
       'IT Infrastructure': <Server className="w-6 h-6" />,
       'Emerging Technology': <Lightbulb className="w-6 h-6" />
     };
-    return iconMap[category] || <Rocket className="w-6 h-6" />;
-  };
+    return iconMap[category] || <Rocket className="w-6 h-6" />};
 
   const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
@@ -186,23 +179,20 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
       'IT Infrastructure': 'from-slate-500 to-gray-500',
       'Emerging Technology': 'from-violet-500 to-purple-500'
     };
-    return colorMap[category] || 'from-gray-500 to-slate-500';
-  };
+    return colorMap[category] || 'from-gray-500 to-slate-500'};
 
   const getROIColor = (roi: string)  => {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     if (roiNumber >= 800) return 'text-green-400';
     if (roiNumber >= 500) return 'text-blue-400';
     if (roiNumber >= 300) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
   const getSetupTimeColor = (setupTime: string)  => {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     if (weeks <= 8) return 'text-green-400';
     if (weeks <= 16) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
   // Calculate statistics
   const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0);
@@ -210,10 +200,8 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
     const roi = service.roi;
     if (typeof roi === 'string') {
       const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-      return sum + roiNumber;
-    }
-    return sum;
-  }, 0) / REVOLUTIONARY_SERVICES_2030.length;
+      return sum + roiNumber}
+    return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
 
   return (
     <>
@@ -759,5 +747,4 @@ export default function RevolutionaryServicesShowcase2030(...args: []):  {
         </div>
       )}
     </>
-  );
-}
+  )}

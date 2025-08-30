@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
 
-export default function Index(...args: []):  {
+export default function Index(...args[]):  {
 	const features = [
 		{
 			icon: Brain,

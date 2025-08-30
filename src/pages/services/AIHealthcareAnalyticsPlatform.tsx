@@ -49,7 +49,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
       price: '$1,499',
       period: '/month',
       description: 'Perfect for small to medium healthcare facilities',
-      features: [
+      features[
         'Up to 500 patient beds',
         'Basic predictive analytics',
         'Patient risk scoring',
@@ -65,7 +65,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
       price: '$3,999',
       period: '/month',
       description: 'Ideal for growing healthcare networks',
-      features: [
+      features[
         'Up to 2,000 patient beds',
         'Advanced AI algorithms',
         'Population health analytics',
@@ -82,7 +82,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
       price: '$8,999',
       period: '/month',
       description: 'For large healthcare systems and research institutions',
-      features: [
+      features[
         'Unlimited patient capacity',
         'Custom AI models',
         'Research analytics tools',
@@ -100,17 +100,17 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
     {
       title: 'Hospitals & Health Systems',
       description: 'Optimize patient care, reduce readmissions, and improve operational efficiency across multiple facilities',
-      metrics: ['Reduce readmissions by 25%', 'Improve patient outcomes by 30%', 'Cut operational costs by 20%']
+      metrics['Reduce readmissions by 25%', 'Improve patient outcomes by 30%', 'Cut operational costs by 20%']
     },
     {
       title: 'Primary Care Practices',
       description: 'Preventive care strategies, chronic disease management, and population health optimization',
-      metrics: ['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
+      metrics['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
     },
     {
       title: 'Specialty Clinics',
       description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',
-      metrics: ['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
+      metrics['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
     }
   ];
 
@@ -525,7 +525,6 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcareAnalyticsPlatform;

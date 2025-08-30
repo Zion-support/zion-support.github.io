@@ -29,7 +29,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export function ServicesOverview(...args: []):  {
+export function ServicesOverview(...args[]):  {
   const serviceCategories = [
     {
       id: 'ai-analytics',
@@ -350,5 +350,4 @@ export function ServicesOverview(...args: []):  {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}

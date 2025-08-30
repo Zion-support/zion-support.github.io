@@ -46,7 +46,7 @@ import { ArrowRight,
 import { SEO  } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030(...args: []):  {
+export default function RevolutionaryServices2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -60,8 +60,7 @@ export default function RevolutionaryServices2030(...args: []):  {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -74,8 +73,7 @@ export default function RevolutionaryServices2030(...args: []):  {
       case 'aiScore':
         return b.aiScore - a.aiScore;
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
@@ -85,16 +83,13 @@ export default function RevolutionaryServices2030(...args: []):  {
 
   const handlePageChange = (page: number)  => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
-  const handleServiceSelect = (service: )  => {
-    setSelectedService(service);
-  };
+  const handleServiceSelect = (service)  => {
+    setSelectedService(service)};
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -116,8 +111,7 @@ export default function RevolutionaryServices2030(...args: []):  {
       'IT Infrastructure': <Server className="w-6 h-6" />,
       'Emerging Technology': <Lightbulb className="w-6 h-6" />
     };
-    return iconMap[category] || <Rocket className="w-6 h-6" />;
-  };
+    return iconMap[category] || <Rocket className="w-6 h-6" />};
 
   const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
@@ -139,8 +133,7 @@ export default function RevolutionaryServices2030(...args: []):  {
       'IT Infrastructure': 'from-slate-500 to-gray-500',
       'Emerging Technology': 'from-violet-500 to-purple-500'
     };
-    return colorMap[category] || 'from-gray-500 to-slate-500';
-  };
+    return colorMap[category] || 'from-gray-500 to-slate-500'};
 
   return (
     <>
@@ -716,5 +709,4 @@ export default function RevolutionaryServices2030(...args: []):  {
         </div>
       )}
     </>
-  );
-}
+  )}

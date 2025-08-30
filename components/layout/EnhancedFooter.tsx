@@ -26,7 +26,7 @@ import { Twitter,
 const footerNavigation = {
 	services: {
 		title: 'Services',
-		items: [
+		items[
 			{ name: 'AI Solutions', href: '/services/ai-solutions' },
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -37,7 +37,7 @@ const footerNavigation = {
 	},
 	solutions: {
 		title: 'Solutions',
-		items: [
+		items[
 			{ name: 'Enterprise', href: '/solutions/enterprise' },
 			{ name: 'SMB', href: '/solutions/smb' },
 			{ name: 'Startup', href: '/solutions/startup' },
@@ -48,7 +48,7 @@ const footerNavigation = {
 	},
 	comp: {
 		title: 'Comp',
-		items: [
+		items[
 			{ name: 'About Us', href: '/about' },
 			{ name: 'Partners', href: '/partners' },
 			{ name: 'Careers', href: '/careers' },
@@ -59,7 +59,7 @@ const footerNavigation = {
 	},
 	support: {
 		title: 'Support & Resources',
-		items: [
+		items[
 			{ name: 'Help Center', href: '/help' },
 			{ name: 'Contact Support', href: '/contact' },
 			{ name: 'Documentation', href: '/docs' },
@@ -87,8 +87,7 @@ const quickLinks = [
 
 const EnhancedFooter: React.FC = (): JSX.Element => {
 	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
+		window.scrollTo({ top: 0, behavior: 'smooth' })};
 
 	return (
 		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -266,7 +265,6 @@ const EnhancedFooter: React.FC = (): JSX.Element => {
 				<ArrowUp className="w-5 h-5" />
 			</button>
 		</footer>
-	);
-};
+	)};
 
 export default EnhancedFooter;

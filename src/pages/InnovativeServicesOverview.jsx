@@ -34,19 +34,18 @@ const InnovativeServicesOverview = () => {
             if (!category)
                 return true;
             const categoryMappings = {
-                'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
-                'quantum-computing': ['Quantum'],
-                'blockchain': ['Blockchain', 'Web3'],
-                'enterprise-it': ['Enterprise'],
-                'emerging-tech': ['Space', 'Robotics', 'Metaverse', 'Virtual Reality', 'Autonomous'],
-                'cybersecurity': ['Security', 'Cybersecurity'],
-                'healthcare': ['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],
-                'finance': ['Finance', 'Trading'],
-                'sustainability': ['Energy', 'Climate', 'Sustainability', 'Green Tech']
+                'ai-services'['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
+                'quantum-computing'['Quantum'],
+                'blockchain'['Blockchain', 'Web3'],
+                'enterprise-it'['Enterprise'],
+                'emerging-tech'['Space', 'Robotics', 'Metaverse', 'Virtual Reality', 'Autonomous'],
+                'cybersecurity'['Security', 'Cybersecurity'],
+                'healthcare'['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],
+                'finance'['Finance', 'Trading'],
+                'sustainability'['Energy', 'Climate', 'Sustainability', 'Green Tech']
             };
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()));
-        });
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
     const fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
@@ -291,6 +290,5 @@ const InnovativeServicesOverview = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesOverview;

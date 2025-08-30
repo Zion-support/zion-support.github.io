@@ -70,5 +70,4 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           <a href={ctaLink}>{ctaText}</a>
         </Button>
       </section>
-    </div>);
-};
+    </div>)};

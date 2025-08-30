@@ -541,7 +541,6 @@ const TermsOfService: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default TermsOfService;

@@ -126,7 +126,7 @@ const contactFormFields = [
     label: 'Service Interest',
     type: 'select',
     required: true,
-    options: [
+    options[
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -157,8 +157,7 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -181,9 +180,7 @@ export default function Contact() {
         comp: '',
         service: '',
         message: ''
-      });
-    }, 3000);
-  };
+      })}, 3000)};
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -503,5 +500,4 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

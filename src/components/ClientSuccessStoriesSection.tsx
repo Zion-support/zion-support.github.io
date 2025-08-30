@@ -19,7 +19,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       avatar: '👩‍💼',
       rating: 5,
       quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
-      metrics: ['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
+      metrics['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
     },
     {
       name: 'Michael Chen',
@@ -28,7 +28,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       avatar: '👨‍💼',
       rating: 5,
       quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
-      metrics: ['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
+      metrics['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
     },
     {
       name: 'Emily Rodriguez',
@@ -37,7 +37,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       avatar: '👩‍⚕️',
       rating: 5,
       quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
-      metrics: ['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
+      metrics['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
     },
     {
       name: 'David Thompson',
@@ -46,7 +46,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       avatar: '👨‍💻',
       rating: 5,
       quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
-      metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
+      metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
     }
   ];
 
@@ -96,8 +96,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
                 </div>
                 <div className="text-gray-600">{metric.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Testimonials Grid */}
@@ -174,7 +173,6 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default ClientSuccessStoriesSection;

@@ -11,9 +11,7 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  industry: string;
-
-}
+  industry: string}
 
 const Testimonials: React.FC = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,16 +60,13 @@ const Testimonials: React.FC = (): JSX.Element => {
   ];
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
   const goToTestimonial = (index: number)  => {
-    setCurrentIndex(index);
-  };
+    setCurrentIndex(index)};
 
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
@@ -209,7 +204,6 @@ const Testimonials: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default Testimonials;

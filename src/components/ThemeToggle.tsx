@@ -3,7 +3,7 @@ import { Sun, Moon, Monitor  } from 'lucide-react.ts';
 
 type Theme = 'dark' | 'light' | 'system';
 
-export function ThemeToggle(...args: []):  {
+export function ThemeToggle(...args[]):  {
   const [theme, setTheme] = useState<any>('system');
   const [mounted, setMounted] = useState(false);
 
@@ -11,8 +11,7 @@ export function ThemeToggle(...args: []):  {
     setMounted(true);
     const savedTheme = localStorage.getItem('zion-theme') as Theme;
     if (savedTheme) {
-      setTheme(savedTheme);
-    }
+      setTheme(savedTheme)}
   }, []);
 
   useEffect(() => {
@@ -23,16 +22,12 @@ export function ThemeToggle(...args: []):  {
 
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-    localStorage.setItem('zion-theme', theme);
-  }, [theme, mounted]);
+      root.classList.add(systemTheme)} else {
+      root.classList.add(theme)}
+    localStorage.setItem('zion-theme', theme)}, [theme, mounted]);
 
   const toggleTheme = (newTheme: Theme)  => {
-    setTheme(newTheme);
-  };
+    setTheme(newTheme)};
 
   if (!mounted) return null;
 
@@ -60,5 +55,4 @@ export function ThemeToggle(...args: []):  {
         <Monitor className="h-5 w-5" />
       </button>
     </div>
-  );
-}
+  )}

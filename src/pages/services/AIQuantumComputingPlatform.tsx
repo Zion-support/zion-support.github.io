@@ -57,7 +57,7 @@ const AIQuantumComputingPlatform = () => {
       name: "Quantum Starter",
       price: "$8,999",
       period: "/month",
-      features: [
+      features[
         "Basic quantum access",
         "AI-quantum integration",
         "Standard support",
@@ -70,7 +70,7 @@ const AIQuantumComputingPlatform = () => {
       name: "Quantum Professional",
       price: "$19,999",
       period: "/month",
-      features: [
+      features[
         "Advanced quantum algorithms",
         "Custom AI models",
         "Priority support",
@@ -84,7 +84,7 @@ const AIQuantumComputingPlatform = () => {
       name: "Quantum Enterprise",
       price: "$49,999",
       period: "/month",
-      features: [
+      features[
         "Full quantum platform",
         "Unlimited qubits",
         "Custom development",
@@ -100,22 +100,22 @@ const AIQuantumComputingPlatform = () => {
     {
       industry: "Financial Services",
       description: "Solve complex portfolio optimization, risk assessment, and trading algorithms with quantum speed",
-      benefits: ["1000x faster optimization", "Real-time risk analysis", "Advanced trading strategies"]
+      benefits["1000x faster optimization", "Real-time risk analysis", "Advanced trading strategies"]
     },
     {
       industry: "Pharmaceuticals",
       description: "Accelerate drug discovery and molecular modeling with quantum computational chemistry",
-      benefits: ["Faster drug discovery", "Accurate molecular modeling", "Reduced R&D costs"]
+      benefits["Faster drug discovery", "Accurate molecular modeling", "Reduced R&D costs"]
     },
     {
       industry: "Logistics & Supply Chain",
       description: "Optimize complex routing, scheduling, and resource allocation problems in real-time",
-      benefits: ["Optimal route planning", "Real-time optimization", "Cost reduction"]
+      benefits["Optimal route planning", "Real-time optimization", "Cost reduction"]
     },
     {
       industry: "Climate Science",
       description: "Model complex climate systems and predict environmental changes with quantum accuracy",
-      benefits: ["Accurate climate modeling", "Faster predictions", "Better policy decisions"]
+      benefits["Accurate climate modeling", "Faster predictions", "Better policy decisions"]
     }
   ];
 
@@ -426,7 +426,6 @@ const AIQuantumComputingPlatform = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIQuantumComputingPlatform;

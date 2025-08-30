@@ -27,7 +27,7 @@ import { Truck,
   RefreshCw
  } from 'lucide-react.ts';
 
-export default function AISupplyChainOptimization(...args: []):  {
+export default function AISupplyChainOptimization(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -72,25 +72,25 @@ export default function AISupplyChainOptimization(...args: []):  {
       title: 'Supply Chain Assessment',
       description: 'Comprehensive analysis of current supply chain operations and optimization opportunities',
       price: 'From $5,500',
-      features: ['Process mapping', 'Bottleneck identification', 'Cost analysis', 'Optimization roadmap']
+      features['Process mapping', 'Bottleneck identification', 'Cost analysis', 'Optimization roadmap']
     },
     {
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered supply chain optimization platform',
       price: 'From $15,000',
-      features: ['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
+      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
     {
       title: 'Ongoing Optimization',
       description: 'Continuous improvement and optimization of supply chain operations',
       price: 'From $4,500/month',
-      features: ['Performance monitoring', 'AI model updates', 'Process optimization', 'Analytics reports']
+      features['Performance monitoring', 'AI model updates', 'Process optimization', 'Analytics reports']
     },
     {
       title: 'Enterprise Supply Chain Suite',
       description: 'Complete enterprise supply chain management with advanced AI capabilities',
       price: 'From $25,000',
-      features: ['Multi-location management', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      features['Multi-location management', 'Advanced AI models', 'Custom integrations', '24/7 support']
     }
   ];
 
@@ -98,22 +98,22 @@ export default function AISupplyChainOptimization(...args: []):  {
     {
       title: 'Manufacturing Optimization',
       description: 'Streamline production processes and reduce lead times',
-      benefits: ['Reduce lead times by 40%', 'Improve production efficiency', 'Lower operational costs']
+      benefits['Reduce lead times by 40%', 'Improve production efficiency', 'Lower operational costs']
     },
     {
       title: 'Retail Inventory Management',
       description: 'Optimize stock levels and reduce inventory carrying costs',
-      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow']
+      benefits['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow']
     },
     {
       title: 'Logistics Optimization',
       description: 'Optimize transportation routes and reduce delivery costs',
-      benefits: ['Reduce transportation costs by 30%', 'Improve delivery times', 'Enhance customer satisfaction']
+      benefits['Reduce transportation costs by 30%', 'Improve delivery times', 'Enhance customer satisfaction']
     },
     {
       title: 'Supplier Management',
       description: 'Intelligent supplier selection and performance monitoring',
-      benefits: ['Improve supplier performance', 'Reduce supply chain risks', 'Optimize procurement costs']
+      benefits['Improve supplier performance', 'Reduce supply chain risks', 'Optimize procurement costs']
     }
   ];
 
@@ -455,5 +455,4 @@ export default function AISupplyChainOptimization(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

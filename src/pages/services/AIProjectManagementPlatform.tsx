@@ -33,7 +33,7 @@ import { Brain,
   Activity
  } from 'lucide-react.ts';
 
-export default function AIProjectManagementPlatform(...args: []):  {
+export default function AIProjectManagementPlatform(...args[]):  {
   const features = [
     "AI-powered project planning and scheduling",
     "Intelligent resource allocation and optimization",
@@ -74,7 +74,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       price: "$299",
       period: "/month",
       description: "Perfect for small teams and startups",
-      features: [
+      features[
         "AI project planning (up to 10 projects)",
         "Basic resource management",
         "Task tracking and collaboration",
@@ -90,7 +90,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and project teams",
-      features: [
+      features[
         "AI project planning (unlimited projects)",
         "Advanced resource optimization",
         "Risk management tools",
@@ -107,7 +107,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex project portfolios",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -402,5 +402,4 @@ export default function AIProjectManagementPlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

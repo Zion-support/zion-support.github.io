@@ -10,13 +10,12 @@ export default function SearchResultsPage() {
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
-        queryKey: ["search", query],
+        queryKey["search", query],
         queryFn: async ({ pageParam = 1 }) => {
             const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`);
             if (!res.ok)
                 throw new Error("Failed to fetch");
-            return (await res.json());
-        },
+            return (await res.json())},
         enabled: !!query,
         initialPageParam: 1,
         getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? undefined : pages.length + 1
@@ -25,8 +24,7 @@ export default function SearchResultsPage() {
     useEffect(() => {
         if (initialQuery !== query) {
             setQuery(initialQuery);
-            refetch();
-        }
+            refetch()}
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
@@ -36,12 +34,10 @@ export default function SearchResultsPage() {
             return;
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
-                fetchNextPage();
-            }
+                fetchNextPage()}
         });
         observer.observe(el);
-        return () => observer.disconnect();
-    }, [loader.current, hasNextPage, isFetchingNextPage]);
+        return () => observer.disconnect()}, [loader.current, hasNextPage, isFetchingNextPage]);
     const suggestions = generateSearchSuggestions().slice(0, 5);
     return (<main className="container mx-auto px-4 py-8">
       <div className="mb-6">
@@ -62,5 +58,4 @@ export default function SearchResultsPage() {
         </div>)}
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
-    </main>);
-}
+    </main>)}

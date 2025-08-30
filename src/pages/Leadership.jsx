@@ -10,8 +10,8 @@ const Leadership = () => {
             bio: "Dr. Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation. She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.",
             experience: "15+ years in technology leadership",
             education: "Ph.D. in Computer Science, Stanford University",
-            expertise: ["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
-            achievements: [
+            expertise["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
+            achievements[
                 "Led comp to 300% growth in 3 years",
                 "Named Top 50 Women in Tech by Forbes",
                 "Published 25+ research papers",
@@ -28,8 +28,8 @@ const Leadership = () => {
             bio: "Michael Rodriguez is a technology expert with deep expertise in AI, cloud architecture, and emerging technologies. He has architected solutions for Fortune 500 companies and is passionate about using technology to solve complex business challenges.",
             experience: "18+ years in technology architecture",
             education: "M.S. in Computer Science, MIT",
-            expertise: ["AI/ML", "Cloud Architecture", "Technology Strategy", "System Design"],
-            achievements: [
+            expertise["AI/ML", "Cloud Architecture", "Technology Strategy", "System Design"],
+            achievements[
                 "Architected solutions for 50+ enterprise clients",
                 "Led cloud migration projects worth $100M+",
                 "Named Top 100 Technology Leaders",
@@ -46,8 +46,8 @@ const Leadership = () => {
             bio: "Dr. Emily Watson is a leading researcher in quantum computing, AI consciousness, and advanced algorithms. She has published over 100 research papers and holds multiple patents in quantum computing applications.",
             experience: "20+ years in research and development",
             education: "Ph.D. in Quantum Physics, Caltech",
-            expertise: ["Quantum Computing", "AI Research", "Algorithm Development", "Research Strategy"],
-            achievements: [
+            expertise["Quantum Computing", "AI Research", "Algorithm Development", "Research Strategy"],
+            achievements[
                 "Published 100+ research papers",
                 "Holds 15 patents in quantum computing",
                 "Led $50M research initiatives",
@@ -64,8 +64,8 @@ const Leadership = () => {
             bio: "David Kim is a cybersecurity expert with extensive experience in threat detection and security architecture. He has helped organizations build robust security frameworks and maintain compliance with industry standards.",
             experience: "16+ years in cybersecurity",
             education: "M.S. in Information Security, Carnegie Mellon",
-            expertise: ["Cybersecurity", "Threat Intelligence", "Security Architecture", "Compliance"],
-            achievements: [
+            expertise["Cybersecurity", "Threat Intelligence", "Security Architecture", "Compliance"],
+            achievements[
                 "Secured 100+ enterprise organizations",
                 "Zero security breaches in 10 years",
                 "Expert witness in cybersecurity cases",
@@ -82,8 +82,8 @@ const Leadership = () => {
             bio: "Lisa Thompson is an engineering leader focused on building scalable solutions and developing high-performing teams. She has led engineering organizations of 100+ developers and delivered complex projects on time and budget.",
             experience: "14+ years in software engineering",
             education: "B.S. in Computer Science, UC Berkeley",
-            expertise: ["Software Engineering", "Team Leadership", "System Architecture", "Agile Development"],
-            achievements: [
+            expertise["Software Engineering", "Team Leadership", "System Architecture", "Agile Development"],
+            achievements[
                 "Led teams of 100+ engineers",
                 "Delivered 50+ major projects",
                 "Reduced deployment time by 80%",
@@ -100,8 +100,8 @@ const Leadership = () => {
             bio: "James Wilson is a business strategist with expertise in partnerships and market expansion. He has helped companies enter new markets and build strategic relationships that drive growth and innovation.",
             experience: "12+ years in business development",
             education: "MBA, Harvard Business School",
-            expertise: ["Business Strategy", "Partnerships", "Market Analysis", "Growth Strategy"],
-            achievements: [
+            expertise["Business Strategy", "Partnerships", "Market Analysis", "Growth Strategy"],
+            achievements[
                 "Generated $200M+ in new business",
                 "Established 50+ strategic partnerships",
                 "Expanded to 15 new markets",
@@ -137,7 +137,7 @@ const Leadership = () => {
     const vision = {
         title: "Our Vision",
         description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
-        goals: [
+        goals[
             "Advance AI consciousness and autonomous systems",
             "Democratize quantum computing access",
             "Create sustainable technology solutions",
@@ -310,6 +310,5 @@ const Leadership = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default Leadership;

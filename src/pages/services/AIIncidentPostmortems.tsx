@@ -27,7 +27,7 @@ import { AlertTriangle,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIIncidentPostmortems(...args: []):  {
+export default function AIIncidentPostmortems(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -83,7 +83,7 @@ export default function AIIncidentPostmortems(...args: []):  {
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: [
+      features[
         'Up to 10 incidents per month',
         'Basic AI analysis',
         'Email support',
@@ -99,7 +99,7 @@ export default function AIIncidentPostmortems(...args: []):  {
       price: '$599',
       period: '/month',
       description: 'Ideal for growing organizations',
-      features: [
+      features[
         'Up to 50 incidents per month',
         'Advanced AI analysis',
         'Priority support',
@@ -117,7 +117,7 @@ export default function AIIncidentPostmortems(...args: []):  {
       price: '$1,299',
       period: '/month',
       description: 'For large enterprises with complex needs',
-      features: [
+      features[
         'Unlimited incidents',
         'Premium AI analysis',
         '24/7 dedicated support',
@@ -464,6 +464,5 @@ export default function AIIncidentPostmortems(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

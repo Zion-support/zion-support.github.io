@@ -29,6 +29,5 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default LoginErrorFallback;

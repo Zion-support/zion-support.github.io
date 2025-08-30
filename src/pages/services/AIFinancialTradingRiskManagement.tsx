@@ -21,7 +21,7 @@ import { TrendingUp,
   Target
  } from 'lucide-react.ts';
 
-export default function AIFinancialTradingRiskManagement(...args: []):  {
+export default function AIFinancialTradingRiskManagement(...args[]):  {
   const features = [
     {
       icon: TrendingUp,
@@ -59,7 +59,7 @@ export default function AIFinancialTradingRiskManagement(...args: []):  {
     {
       name: "AI Trading Platform",
       price: "From $4,999/month",
-      features: [
+      features[
         "Advanced trading algorithms",
         "Real-time market data",
         "Portfolio optimization",
@@ -71,7 +71,7 @@ export default function AIFinancialTradingRiskManagement(...args: []):  {
     {
       name: "Risk Management Suite",
       price: "From $2,999/month",
-      features: [
+      features[
         "Portfolio risk analysis",
         "VaR calculations",
         "Stress testing",
@@ -83,7 +83,7 @@ export default function AIFinancialTradingRiskManagement(...args: []):  {
     {
       name: "Market Analysis Engine",
       price: "From $3,999/month",
-      features: [
+      features[
         "AI market predictions",
         "Sentiment analysis",
         "Technical indicators",
@@ -95,7 +95,7 @@ export default function AIFinancialTradingRiskManagement(...args: []):  {
     {
       name: "Quantitative Research",
       price: "From $5,999/month",
-      features: [
+      features[
         "Custom strategy development",
         "Advanced modeling",
         "Performance analytics",
@@ -489,5 +489,4 @@ export default function AIFinancialTradingRiskManagement(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

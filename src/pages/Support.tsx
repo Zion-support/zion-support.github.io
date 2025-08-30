@@ -24,7 +24,7 @@ import { HelpCircle,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Support(...args: []):  {
+export default function Support(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -88,7 +88,7 @@ export default function Support(...args: []):  {
       color: 'from-cyan-500 to-blue-600',
       availability: '24/7',
       responseTime: '< 2 minutes',
-      features: ['AI-powered responses', 'Human escalation', 'File sharing', 'Screen sharing']
+      features['AI-powered responses', 'Human escalation', 'File sharing', 'Screen sharing']
     },
     {
       title: 'Phone Support',
@@ -97,7 +97,7 @@ export default function Support(...args: []):  {
       color: 'from-green-500 to-emerald-600',
       availability: 'Mon-Fri 9AM-6PM EST',
       responseTime: 'Immediate',
-      features: ['Direct expert access', 'Complex issue resolution', 'Training support', 'Emergency response']
+      features['Direct expert access', 'Complex issue resolution', 'Training support', 'Emergency response']
     },
     {
       title: 'Email Support',
@@ -106,7 +106,7 @@ export default function Support(...args: []):  {
       color: 'from-purple-500 to-pink-600',
       availability: '24/7',
       responseTime: '< 4 hours',
-      features: ['Detailed documentation', 'Screenshot support', 'Code review', 'Long-form solutions']
+      features['Detailed documentation', 'Screenshot support', 'Code review', 'Long-form solutions']
     }
   ];
 
@@ -396,5 +396,4 @@ export default function Support(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

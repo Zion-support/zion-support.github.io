@@ -89,7 +89,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$499",
       period: "/month",
       description: "Essential data governance for small to medium organizations",
-      features: [
+      features[
         "Up to 10TB data management",
         "Basic AI classification",
         "Standard access controls",
@@ -106,7 +106,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$1,299",
       period: "/month",
       description: "Advanced data governance for growing enterprises",
-      features: [
+      features[
         "Up to 100TB data management",
         "Advanced AI classification",
         "Custom access policies",
@@ -125,7 +125,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$3,999",
       period: "/month",
       description: "Comprehensive data governance for large organizations",
-      features: [
+      features[
         "Unlimited data management",
         "Custom AI models",
         "Advanced security features",
@@ -512,7 +512,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIDataGovernance;

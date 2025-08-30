@@ -185,30 +185,25 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
   const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
   const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
   };
   const toggleDropdown = (dropdown: string)  => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
-      dropdown: [
+      dropdown[
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
@@ -222,7 +217,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
     {
       name: "Micro SAAS Solutions",
       icon: Cloud,
-      services: [
+      services[
         { name: "Micro SAAS Services", href: "/micro-saas" },
         { name: "Business Tools", href: "/micro-saas/business-tools" },
         { name: "Productivity Apps", href: "/micro-saas/productivity" },
@@ -234,7 +229,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
     {
       name: "IT Infrastructure",
       icon: Server,
-      services: [
+      services[
         { name: "IT Services", href: "/it-services" },
         { name: "Cloud Solutions", href: "/it-services/cloud" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
@@ -246,7 +241,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
     {
       name: "Emerging Technologies",
       icon: Rocket,
-      services: [
+      services[
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -260,7 +255,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
@@ -441,5 +436,4 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
         </div>
       </header>
     </>
-  );
-};
+  )};

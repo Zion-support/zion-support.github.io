@@ -17,7 +17,7 @@ import { FileText,
   Lock
  } from 'lucide-react.ts';
 
-export default function AILegalDocumentAutomation(...args: []):  {
+export default function AILegalDocumentAutomation(...args[]):  {
   const features = [
     {
       icon: FileText,
@@ -55,7 +55,7 @@ export default function AILegalDocumentAutomation(...args: []):  {
     {
       name: "Contract Generation",
       price: "From $299/month",
-      features: [
+      features[
         "AI-powered contract templates",
         "Automated compliance checks",
         "Custom clause generation",
@@ -67,7 +67,7 @@ export default function AILegalDocumentAutomation(...args: []):  {
     {
       name: "Legal Research Assistant",
       price: "From $199/month",
-      features: [
+      features[
         "Case law analysis",
         "Precedent tracking",
         "Regulatory updates",
@@ -79,7 +79,7 @@ export default function AILegalDocumentAutomation(...args: []):  {
     {
       name: "Document Review & Analysis",
       price: "From $399/month",
-      features: [
+      features[
         "Automated risk assessment",
         "Compliance validation",
         "Legal precedent analysis",
@@ -91,7 +91,7 @@ export default function AILegalDocumentAutomation(...args: []):  {
     {
       name: "Legal Workflow Automation",
       price: "From $599/month",
-      features: [
+      features[
         "End-to-end workflow automation",
         "Task assignment and tracking",
         "Deadline management",
@@ -485,5 +485,4 @@ export default function AILegalDocumentAutomation(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

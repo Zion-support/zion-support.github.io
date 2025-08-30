@@ -17,7 +17,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
       industry: 'Financial Services',
       challenge: 'Legacy system modernization and digital transformation',
       solution: 'Implemented AI-powered automation and cloud migration',
-      results: [
+      results[
         '40% reduction in operational costs',
         '60% improvement in customer satisfaction',
         '3x faster transaction processing'
@@ -30,7 +30,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
       industry: 'Manufacturing',
       challenge: 'Supply chain optimization and predictive maintenance',
       solution: 'IoT sensors and AI-powered analytics platform',
-      results: [
+      results[
         '25% reduction in downtime',
         '30% improvement in supply chain efficiency',
         '$2M annual cost savings'
@@ -43,7 +43,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
       industry: 'Healthcare',
       challenge: 'Patient data security and compliance management',
       solution: 'Zero-trust security framework and automated compliance',
-      results: [
+      results[
         '99.9% security compliance rate',
         '50% reduction in audit preparation time',
         'Enhanced patient data protection'
@@ -165,7 +165,6 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default CaseStudiesSection;

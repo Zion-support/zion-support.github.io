@@ -41,7 +41,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 1200,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Process automation',
         'AI decision making',
         'Integration APIs',
@@ -63,7 +63,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 2500,
       period: 'per month',
       annualDiscount: 15,
-      features: [
+      features[
         'Customer segmentation',
         'Predictive analytics',
         'Omnichannel support',
@@ -85,7 +85,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 3800,
       period: 'per month',
       annualDiscount: 25,
-      features: [
+      features[
         'Demand forecasting',
         'Inventory optimization',
         'Route planning',
@@ -107,7 +107,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 2200,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Threat detection',
         'Behavioral analysis',
         'Incident response',
@@ -129,7 +129,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 1800,
       period: 'per month',
       annualDiscount: 15,
-      features: [
+      features[
         'Cloud migration',
         'CI/CD pipelines',
         'Monitoring',
@@ -151,7 +151,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       price: 1500,
       period: 'per month',
       annualDiscount: 20,
-      features: [
+      features[
         'Data classification',
         'Privacy controls',
         'Audit trails',
@@ -172,8 +172,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    return matchesCategory && matchesIndustry && matchesSearch;
-  }).sort((a, b) => {
+    return matchesCategory && matchesIndustry && matchesSearch}).sort((a, b) => {
     switch (sortBy) {
       case 'price':
         return a.price - b.price;
@@ -184,13 +183,11 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
       case 'delivery':
         return parseInt(a.delivery) - parseInt(b.delivery);
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const getDiscountedPrice = (price: number, discount: number)  => {
-    return Math.round(price * (1 - discount / 100));
-  };
+    return Math.round(price * (1 - discount / 100))};
 
   const totalValue = filteredServices.reduce((sum, service) => sum + service.price, 0);
   const totalROI = filteredServices.reduce((sum, service) => sum + parseInt(service.roi), 0);
@@ -476,7 +473,6 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensivePricing2025;

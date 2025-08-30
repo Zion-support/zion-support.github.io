@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink  } from 'lucide-react.ts';
 
-export default function SystemStatus(...args: []):  {
+export default function SystemStatus(...args[]):  {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -88,8 +88,8 @@ export default function SystemStatus(...args: []):  {
       severity: 'maintenance',
       startTime: '2025-01-15T02:00:00Z',
       endTime: '2025-01-15T04:00:00Z',
-      affectedServices: ['AI Services'],
-      updates: [
+      affectedServices['AI Services'],
+      updates[
         {
           time: '2025-01-15T02:00:00Z',
           message: 'Maintenance started as scheduled'
@@ -112,8 +112,8 @@ export default function SystemStatus(...args: []):  {
       severity: 'minor',
       startTime: '2025-01-10T14:20:00Z',
       endTime: '2025-01-10T16:45:00Z',
-      affectedServices: ['API Gateway', 'Core Platform'],
-      updates: [
+      affectedServices['API Gateway', 'Core Platform'],
+      updates[
         {
           time: '2025-01-10T14:20:00Z',
           message: 'Investigating increased API response times'
@@ -141,8 +141,7 @@ export default function SystemStatus(...args: []):  {
       case 'maintenance':
         return 'text-blue-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500'}
   };
 
   const getStatusIcon = (status: string)  => {
@@ -156,8 +155,7 @@ export default function SystemStatus(...args: []):  {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
   const getSeverityColor = (severity: string)  => {
@@ -171,8 +169,7 @@ export default function SystemStatus(...args: []):  {
       case 'maintenance':
         return 'bg-blue-500';
       default:
-        return 'bg-gray-500';
-    }
+        return 'bg-gray-500'}
   };
 
   const formatDate = (dateString: string)  => {
@@ -182,21 +179,18 @@ export default function SystemStatus(...args: []):  {
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    });
-  };
+    })};
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false);
-  };
+    setIsRefreshing(false)};
 
   useEffect(() => {
     const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -405,5 +399,4 @@ export default function SystemStatus(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

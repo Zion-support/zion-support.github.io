@@ -11,37 +11,28 @@ export interface Notification {
   title: string;
   message: string;
   duration?: number;
-action?: {;
+action?: {
     label: string;
-    onClick: ()  => void;
-  
-};
-}
+    onClick: ()  => void}}
 
 interface NotificationContextType {
 
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>)  => void;
   removeNotification: (id: string)  => void;
-  clearAll: ()  => void;
-
-}
+  clearAll: ()  => void}
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
-  }
-  return context;
-};
+    throw new Error('useNotifications must be used within a NotificationProvider')}
+  return context};
 
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
 
-  children: React.ReactNode;
-
-}
+  children: React.ReactNode}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<any>([]);
@@ -54,26 +45,21 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     // Auto-remove after duration
     if (notification.duration !== 0) {
       setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
-    }
+        removeNotification(id)}, notification.duration || 5000)}
   };
 
   const removeNotification = (id: string)  => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  };
+    setNotifications(prev => prev.filter(n => n.id !== id))};
 
   const clearAll = () => {
-    setNotifications([]);
-  };
+    setNotifications([])};
 
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification, clearAll }}>
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
-  );
-};
+  )};
 
 const NotificationContainer: React.FC = (): JSX.Element => {
   const { notifications, removeNotification, clearAll } = useNotifications();
@@ -114,15 +100,12 @@ const NotificationContainer: React.FC = (): JSX.Element => {
         </motion.button>
       )}
     </div>
-  );
-};
+  )};
 
 interface NotificationItemProps extends React.PropsWithChildren<{}> {
 
   notification: Notification;
-  onRemove: (id: string)  => void;
-
-}
+  onRemove: (id: string)  => void}
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
   const getIcon = (type: NotificationType)  => {
@@ -134,8 +117,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       case 'warning':
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-400" />;
-    }
+        return <Info className="w-5 h-5 text-blue-400" />}
   };
 
   const getBorderColor = (type: NotificationType)  => {
@@ -147,8 +129,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       case 'warning':
         return 'border-yellow-500/30';
       case 'info':
-        return 'border-blue-500/30';
-    }
+        return 'border-blue-500/30'}
   };
 
   const getBackgroundColor = (type: NotificationType)  => {
@@ -160,8 +141,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       case 'warning':
         return 'bg-yellow-500/10';
       case 'info':
-        return 'bg-blue-500/10';
-    }
+        return 'bg-blue-500/10'}
   };
 
   return (
@@ -200,22 +180,17 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         </button>
       </div>
     </motion.div>
-  );
-};
+  )};
 
 // Utility functions for easy notification creation
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>)  => {
     // This would be used with the context
-    console.log('Success notification: ', { title, message, ...options });
-  },
+    console.log('Success notification: ', { title, message, ...options })},
   error: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Error notification: ', { title, message, ...options });
-  },
+    console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Warning notification: ', { title, message, ...options });
-  },
+    console.log('Warning notification: ', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Info notification:', { title, message, ...options });
-  }
+    console.log('Info notification:', { title, message, ...options })}
 };

@@ -26,10 +26,10 @@ const mockPost = {
     authorId: "user1",
     category: "ai-tools",
     categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
+    tags["machine-learning", "fine-tuning", "gpt"],
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
-    replies: [],
+    replies[],
     likes: 48,
     views: 120,
     upvotes: 48,
@@ -129,44 +129,38 @@ export default function ForumPostPage() {
         <Button asChild className="mt-4">
           <Link to="/community">Back to Community</Link>
         </Button>
-      </div>);
-    }
+      </div>)}
     const handleUpvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
                 description: "Please sign in to vote on posts",
             });
-            return;
-        }
+            return}
         setPost({ ...post, upvotes: post.upvotes + 1 });
         toast({
             title: "Vote recorded",
             description: "You upvoted this post",
-        });
-    };
+        })};
     const handleDownvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
                 description: "Please sign in to vote on posts",
             });
-            return;
-        }
+            return}
         setPost({ ...post, downvotes: post.downvotes + 1 });
         toast({
             title: "Vote recorded",
             description: "You downvoted this post",
-        });
-    };
+        })};
     const handleSubmitReply = async (content) => {
         if (!user) {
             toast({
                 title: "Authentication required",
                 description: "Please sign in to reply",
             });
-            return;
-        }
+            return}
         // Create a new reply
         const newReply = {
             id: `reply${Date.now()}`,
@@ -189,8 +183,7 @@ export default function ForumPostPage() {
         toast({
             title: "Reply posted",
             description: "Your reply has been added to the discussion",
-        });
-    };
+        })};
     const handleMarkAsAnswer = (replyId) => {
         // Only post author or admin can mark an answer
         if (!isAuthor && !isAdminOrMod) {
@@ -199,8 +192,7 @@ export default function ForumPostPage() {
                 description: "Only the original poster or moderators can mark answers",
                 variant: "destructive"
             });
-            return;
-        }
+            return}
         // Update the replies
         const updatedReplies = replies.map(reply => ({
             ...reply,
@@ -211,21 +203,18 @@ export default function ForumPostPage() {
         toast({
             title: "Answer marked",
             description: "The reply has been marked as the accepted answer",
-        });
-    };
+        })};
     const handleReportPost = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
                 description: "Please sign in to report content",
             });
-            return;
-        }
+            return}
         toast({
             title: "Report submitted",
             description: "A moderator will review this content",
-        });
-    };
+        })};
     const handlePinPost = () => {
         if (!isAdminOrMod)
             return;
@@ -233,8 +222,7 @@ export default function ForumPostPage() {
         toast({
             title: post.isPinned ? "Post unpinned" : "Post pinned",
             description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
-        });
-    };
+        })};
     const handleLockPost = () => {
         if (!isAdminOrMod)
             return;
@@ -242,8 +230,7 @@ export default function ForumPostPage() {
         toast({
             title: post.isLocked ? "Post unlocked" : "Post locked",
             description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
-        });
-    };
+        })};
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
     return (<>
@@ -372,5 +359,4 @@ export default function ForumPostPage() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>)}

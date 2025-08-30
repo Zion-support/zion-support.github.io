@@ -9,23 +9,20 @@ export const ScreenshotManager = ({ platform }) => {
     const fileInputRef = useRef(null);
     const handleFileSelect = (e) => {
         if (e.target.files) {
-            addScreenshots(Array.from(e.target.files));
-        }
+            addScreenshots(Array.from(e.target.files))}
     };
     const addScreenshots = (files) => {
         // Filter for image files only
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
             toast.error("Please select valid image files");
-            return;
-        }
+            return}
         // Limit the number of screenshots
         const maxScreenshots = platform === "ios" ? 10 : 8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-            return;
-        }
+            return}
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({
             id: Math.random().toString(36).substring(2, 9),
@@ -34,8 +31,7 @@ export const ScreenshotManager = ({ platform }) => {
         }));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
-            toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-        }
+            toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
     };
     const removeScreenshot = (id) => {
         setScreenshots(prev => {
@@ -43,24 +39,18 @@ export const ScreenshotManager = ({ platform }) => {
             // Revoke object URL to avoid memory leaks
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {
-                URL.revokeObjectURL(removed.url);
-            }
-            return filtered;
-        });
-    };
+                URL.revokeObjectURL(removed.url)}
+            return filtered})};
     const handleDragOver = (e) => {
         e.preventDefault();
-        setIsDragging(true);
-    };
+        setIsDragging(true)};
     const handleDragLeave = () => {
-        setIsDragging(false);
-    };
+        setIsDragging(false)};
     const handleDrop = (e) => {
         e.preventDefault();
         setIsDragging(false);
         if (e.dataTransfer.files) {
-            addScreenshots(Array.from(e.dataTransfer.files));
-        }
+            addScreenshots(Array.from(e.dataTransfer.files))}
     };
     return (<Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -94,5 +84,4 @@ export const ScreenshotManager = ({ platform }) => {
             </div>))}
         </div>
       </CardContent>
-    </Card>);
-};
+    </Card>)};

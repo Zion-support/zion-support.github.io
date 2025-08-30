@@ -15,7 +15,7 @@ import { Calendar,
   ArrowRight
  } from 'lucide-react.ts';
 
-function BlogPost(...args: []):  {
+function BlogPost(...args[]):  {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
@@ -49,8 +49,8 @@ function BlogPost(...args: []):  {
     likes: "156",
     comments: "23",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-    tags: ["AI", "Business", "Technology", "Innovation"],
-    relatedPosts: [
+    tags["AI", "Business", "Technology", "Innovation"],
+    relatedPosts[
       {
         id: "2",
         title: "AI-Powered Cybersecurity: Protecting Your Business",
@@ -78,8 +78,7 @@ function BlogPost(...args: []):  {
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    })};
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
@@ -299,7 +298,6 @@ function BlogPost(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 
 export default BlogPost;

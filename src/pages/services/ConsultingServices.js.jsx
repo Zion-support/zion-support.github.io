@@ -27,6 +27,5 @@ const ConsultingServices = () => {
           </Link>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ConsultingServices;

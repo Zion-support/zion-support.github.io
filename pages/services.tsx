@@ -4,7 +4,7 @@ import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart
 
 import { additionalEnhancedServices  } from '../data/additional-real-services'
 
-export default function Services(...args: []):  {
+export default function Services(...args[]):  {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')

@@ -39,7 +39,7 @@ import { Shield,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Compliance(...args: []):  {
+export default function Compliance(...args[]):  {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',
@@ -51,7 +51,7 @@ export default function Compliance(...args: []):  {
       scope: 'Information security management system',
       lastAudit: 'December 2024',
       nextAudit: 'December 2025',
-      benefits: [
+      benefits[
         'Systematic approach to information security',
         'Risk assessment and management',
         'Continuous improvement process',
@@ -68,7 +68,7 @@ export default function Compliance(...args: []):  {
       scope: 'Security, availability, processing integrity, confidentiality, privacy',
       lastAudit: 'November 2024',
       nextAudit: 'November 2025',
-      benefits: [
+      benefits[
         'Independent third-party validation',
         'Trust services criteria compliance',
         'Customer confidence and trust',
@@ -85,7 +85,7 @@ export default function Compliance(...args: []):  {
       scope: 'Personal data processing and protection',
       lastAudit: 'Ongoing',
       nextAudit: 'Continuous monitoring',
-      benefits: [
+      benefits[
         'EU market access',
         'Enhanced data protection',
         'Customer privacy rights',
@@ -102,7 +102,7 @@ export default function Compliance(...args: []):  {
       scope: 'Protected health information (PHI)',
       lastAudit: 'October 2024',
       nextAudit: 'October 2025',
-      benefits: [
+      benefits[
         'Healthcare industry compliance',
         'Patient data protection',
         'Business associate agreements',
@@ -116,7 +116,7 @@ export default function Compliance(...args: []):  {
       industry: 'Financial Services',
       icon: Building,
       color: 'from-blue-500 to-cyan-600',
-      regulations: [
+      regulations[
         'PCI DSS (Payment Card Industry Data Security Standard)',
         'SOX (Sarbanes-Oxley Act)',
         'GLBA (Gramm-Leach-Bliley Act)',
@@ -128,7 +128,7 @@ export default function Compliance(...args: []):  {
       industry: 'Healthcare',
       icon: Heart,
       color: 'from-green-500 to-emerald-600',
-      regulations: [
+      regulations[
         'HIPAA (Health Insurance Portability and Accountability Act)',
         'HITECH Act',
         'FDA Cybersecurity Guidelines',
@@ -140,7 +140,7 @@ export default function Compliance(...args: []):  {
       industry: 'Government',
       icon: Shield,
       color: 'from-purple-500 to-pink-600',
-      regulations: [
+      regulations[
         'FedRAMP (Federal Risk and Authorization Management Program)',
         'FISMA (Federal Information Security Management Act)',
         'CJIS (Criminal Justice Information Services)',
@@ -152,7 +152,7 @@ export default function Compliance(...args: []):  {
       industry: 'Manufacturing',
       icon: Cpu,
       color: 'from-orange-500 to-red-600',
-      regulations: [
+      regulations[
         'NIST Cybersecurity Framework',
         'ISO 27001/27002',
         'Industry-specific standards',
@@ -168,56 +168,56 @@ export default function Compliance(...args: []):  {
       description: 'Comprehensive compliance gap analysis',
       icon: Eye,
       color: 'from-blue-500 to-cyan-600',
-      activities: [
+      activities[
         'Regulatory requirement analysis',
         'Current state assessment',
         'Gap identification',
         'Risk assessment'
       ],
       duration: '2-4 weeks',
-      deliverables: ['Gap analysis report', 'Risk assessment', 'Compliance roadmap']
+      deliverables['Gap analysis report', 'Risk assessment', 'Compliance roadmap']
     },
     {
       phase: 'Implementation',
       description: 'Systematic implementation of controls',
       icon: Zap,
       color: 'from-green-500 to-emerald-600',
-      activities: [
+      activities[
         'Control design and implementation',
         'Policy and procedure development',
         'Training and awareness',
         'Technology deployment'
       ],
       duration: '8-16 weeks',
-      deliverables: ['Implemented controls', 'Policies and procedures', 'Training materials']
+      deliverables['Implemented controls', 'Policies and procedures', 'Training materials']
     },
     {
       phase: 'Testing',
       description: 'Validation and testing of controls',
       icon: ShieldCheck,
       color: 'from-purple-500 to-pink-600',
-      activities: [
+      activities[
         'Control testing and validation',
         'Internal audit preparation',
         'Remediation of findings',
         'Documentation review'
       ],
       duration: '4-6 weeks',
-      deliverables: ['Test results', 'Remediation plan', 'Audit readiness']
+      deliverables['Test results', 'Remediation plan', 'Audit readiness']
     },
     {
       phase: 'Certification',
       description: 'External audit and certification',
       icon: Award,
       color: 'from-orange-500 to-red-600',
-      activities: [
+      activities[
         'External audit engagement',
         'Evidence collection and presentation',
         'Audit findings resolution',
         'Certification achievement'
       ],
       duration: '6-8 weeks',
-      deliverables: ['Compliance certificate', 'Audit report', 'Ongoing maintenance plan']
+      deliverables['Compliance certificate', 'Audit report', 'Ongoing maintenance plan']
     }
   ];
 
@@ -266,7 +266,7 @@ export default function Compliance(...args: []):  {
       description: 'Centralized compliance tracking and management',
       icon: Monitor,
       color: 'from-blue-500 to-cyan-600',
-      features: [
+      features[
         'Automated compliance monitoring',
         'Real-time dashboards',
         'Automated reporting',
@@ -278,7 +278,7 @@ export default function Compliance(...args: []):  {
       description: 'Automated policy creation, distribution, and tracking',
       icon: FileText,
       color: 'from-green-500 to-emerald-600',
-      features: [
+      features[
         'Policy lifecycle management',
         'Automated distribution',
         'Acknowledgment tracking',
@@ -290,7 +290,7 @@ export default function Compliance(...args: []):  {
       description: 'Comprehensive risk assessment and management',
       icon: AlertTriangle,
       color: 'from-purple-500 to-pink-600',
-      features: [
+      features[
         'Risk identification and assessment',
         'Mitigation planning',
         'Risk monitoring and reporting',
@@ -302,7 +302,7 @@ export default function Compliance(...args: []):  {
       description: 'Streamlined audit planning and execution',
       icon: ShieldCheck,
       color: 'from-orange-500 to-red-600',
-      features: [
+      features[
         'Audit planning and scheduling',
         'Evidence collection',
         'Finding management',
@@ -671,5 +671,4 @@ export default function Compliance(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}

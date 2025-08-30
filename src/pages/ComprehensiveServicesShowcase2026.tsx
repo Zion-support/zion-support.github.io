@@ -38,16 +38,12 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-      );
-    }
+      )}
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedInnovationLevel !== 'all') {
-      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
-    }
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel)}
+    return filtered}, [searchTerm, selectedCategory, selectedInnovationLevel]);
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
@@ -57,16 +53,14 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
       case 'Edge Computing': return <Network className="w-5 h-5" />;
       case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
       case 'Quantum AI': return <Zap className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
-    }
+      default: return <Zap className="w-5 h-5" />}
   };
   const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
+      default: return 'bg-gray-600'}
   };
   return (
     <>
@@ -291,8 +285,7 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
-                    setSelectedInnovationLevel('all');
-                  }}
+                    setSelectedInnovationLevel('all')}}
                   className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Clear Filters
@@ -342,6 +335,5 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 export default ComprehensiveServicesShowcase2026;

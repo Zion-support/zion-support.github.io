@@ -24,8 +24,7 @@ export default function ITOnsiteServicesPage() {
             toast({
                 title: "Payment Successful",
                 description: "Your IT onsite service request has been received. Our team will contact you shortly.",
-            });
-        }
+            })}
     }, [success]);
     // Popular countries for the featured cards
     const popularCountries = ["United States", "United Kingdom", "Canada", "Germ", "Japan", "Singapore"];
@@ -41,15 +40,12 @@ export default function ITOnsiteServicesPage() {
         if (!aIsPopular && bIsPopular)
             return 1;
         // Then sort alphabetically
-        return a.country.localeCompare(b.country);
-    });
+        return a.country.localeCompare(b.country)});
     const handleCountrySelect = (country) => {
         setSelectedCountry(country);
         // Scroll to the service details section
         setTimeout(() => {
-            document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-    };
+            document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)};
     return (<section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section with Features */}
@@ -90,5 +86,4 @@ export default function ITOnsiteServicesPage() {
                 ,
                     <TrustedBySection />
                         ,
-                            <QuoteFormSection />);
-}
+                            <QuoteFormSection />)}

@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react.ts'
 
 
-export default function Events(...args: []):  {
+export default function Events(...args[]):  {
 	const upcomingEvents = [
 		{
 			id: 1,

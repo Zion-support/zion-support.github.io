@@ -84,7 +84,7 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function ComprehensiveServicesOverview2026(...args: []):  {
+export default function ComprehensiveServicesOverview2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
 
@@ -216,8 +216,7 @@ export default function ComprehensiveServicesOverview2026(...args: []):  {
     ? serviceCategories: serviceCategories.filter(cat  => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: string)  => {
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
-  };
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId)};
 
   const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
   const totalMarketSize = '$3.2+ trillion';
@@ -528,5 +527,4 @@ export default function ComprehensiveServicesOverview2026(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -22,8 +22,7 @@ import { Brain,
 
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
-    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
 
   return (
     <>
@@ -446,7 +445,6 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default InnovativeServicesShowcase2031;

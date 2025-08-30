@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react.ts'
 
 
-export default function Terms(...args: []):  {
+export default function Terms(...args[]):  {
 	return (
 		<>
 			{/* Hero Section */}

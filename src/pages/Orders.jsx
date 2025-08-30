@@ -54,5 +54,4 @@ export default function OrdersPage() {
               </TableRow>))}
           </TableBody>
         </Table>)}
-    </div>);
-}
+    </div>)}

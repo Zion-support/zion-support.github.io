@@ -14,5 +14,4 @@ export function TrustedBySection() {
             </div>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

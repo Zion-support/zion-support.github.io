@@ -45,8 +45,6 @@ function ProjectsContent() {
           </div>)}
       </main>
       
-    </>);
-}
+    </>)}
 export default function Projects() {
-    return <ProjectsContent />;
-}
+    return <ProjectsContent />}

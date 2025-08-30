@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
 import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react.ts';
 
-export default function Training(...args: []):  {
+export default function Training(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');
@@ -52,15 +52,15 @@ export default function Training(...args: []):  {
       students: 156,
       featured: true,
       certification: 'AI Business Leadership Certificate',
-      tags: ['AI', 'Leadership', 'Digital Transformation', 'Strategy'],
-      modules: [
+      tags['AI', 'Leadership', 'Digital Transformation', 'Strategy'],
+      modules[
         'AI Fundamentals and Business Impact',
         'Machine Learning Applications',
         'AI Strategy Development',
         'Implementation Roadmap',
         'ROI Measurement and KPIs'
       ],
-      skills: ['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
+      skills['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
     },
     {
       id: 2,
@@ -79,15 +79,15 @@ export default function Training(...args: []):  {
       students: 89,
       featured: true,
       certification: 'Cybersecurity Architecture Professional',
-      tags: ['Cybersecurity', 'Architecture', 'Enterprise', 'Security Design'],
-      modules: [
+      tags['Cybersecurity', 'Architecture', 'Enterprise', 'Security Design'],
+      modules[
         'Security Architecture Principles',
         'Threat Modeling and Risk Assessment',
         'Identity and Access Management',
         'Network Security Design',
         'Incident Response Planning'
       ],
-      skills: ['Security Architecture', 'Risk Assessment', 'IAM', 'Network Security', 'Incident Response']
+      skills['Security Architecture', 'Risk Assessment', 'IAM', 'Network Security', 'Incident Response']
     },
     {
       id: 3,
@@ -106,15 +106,15 @@ export default function Training(...args: []):  {
       students: 234,
       featured: false,
       certification: 'Cloud-Native Developer',
-      tags: ['Cloud Computing', 'Application Development', 'Microservices', 'DevOps'],
-      modules: [
+      tags['Cloud Computing', 'Application Development', 'Microservices', 'DevOps'],
+      modules[
         'Cloud-Native Principles',
         'Container Technologies (Docker, Kubernetes)',
         'Microservices Architecture',
         'CI/CD Pipelines',
         'Monitoring and Observability'
       ],
-      skills: ['Docker', 'Kubernetes', 'Microservices', 'CI/CD', 'Cloud Platforms']
+      skills['Docker', 'Kubernetes', 'Microservices', 'CI/CD', 'Cloud Platforms']
     },
     {
       id: 4,
@@ -133,15 +133,15 @@ export default function Training(...args: []):  {
       students: 178,
       featured: false,
       certification: 'Data Science Professional',
-      tags: ['Data Science', 'Business Intelligence', 'Analytics', 'Visualization'],
-      modules: [
+      tags['Data Science', 'Business Intelligence', 'Analytics', 'Visualization'],
+      modules[
         'Data Analysis Fundamentals',
         'Statistical Methods and Modeling',
         'Machine Learning for Business',
         'Data Visualization and Storytelling',
         'Business Intelligence Tools'
       ],
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Statistical Analysis', 'Machine Learning']
+      skills['Python', 'R', 'SQL', 'Tableau', 'Statistical Analysis', 'Machine Learning']
     },
     {
       id: 5,
@@ -160,15 +160,15 @@ export default function Training(...args: []):  {
       students: 67,
       featured: true,
       certification: 'Quantum Computing Fundamentals',
-      tags: ['Quantum Computing', 'Emerging Tech', 'Future Computing', 'Innovation'],
-      modules: [
+      tags['Quantum Computing', 'Emerging Tech', 'Future Computing', 'Innovation'],
+      modules[
         'Quantum Mechanics Basics',
         'Qubits and Quantum Gates',
         'Quantum Algorithms',
         'Quantum Applications',
         'Future of Quantum Computing'
       ],
-      skills: ['Quantum Mechanics', 'Quantum Algorithms', 'Innovation Strategy', 'Technology Trends']
+      skills['Quantum Mechanics', 'Quantum Algorithms', 'Innovation Strategy', 'Technology Trends']
     },
     {
       id: 6,
@@ -187,30 +187,27 @@ export default function Training(...args: []):  {
       students: 45,
       featured: false,
       certification: 'Digital Transformation Leader',
-      tags: ['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
-      modules: [
+      tags['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
+      modules[
         'Digital Strategy Development',
         'Change Management and Culture',
         'Technology Selection and Implementation',
         'Stakeholder Management',
         'Success Measurement'
       ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
+      skills['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
     }
   ];
 
   // Update counts
   categories.forEach(cat  => {
-    cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
-  });
+    cat.count = trainingPrograms.filter(p => p.category === cat.id).length});
 
   levels.forEach(level => {
-    level.count = trainingPrograms.filter(p => p.level === level.id).length;
-  });
+    level.count = trainingPrograms.filter(p => p.level === level.id).length});
 
   formats.forEach(format => {
-    format.count = trainingPrograms.filter(p => p.format === format.id).length;
-  });
+    format.count = trainingPrograms.filter(p => p.format === format.id).length});
 
   const filteredPrograms = trainingPrograms.filter(program => {
     const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -221,12 +218,10 @@ export default function Training(...args: []):  {
     const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
     
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
-  });
+    return matchesSearch && matchesCategory && matchesLevel && matchesFormat});
 
   const getCategoryIcon = (categoryId: string)  => {
-    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
-  };
+    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />};
 
   const getLevelColor = (level: string)  => {
     switch (level) {
@@ -234,8 +229,7 @@ export default function Training(...args: []):  {
       case 'intermediate': return 'text-yellow-400';
       case 'advanced': return 'text-orange-400';
       case 'expert': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
   const getFormatIcon = (format: string)  => {
@@ -244,8 +238,7 @@ export default function Training(...args: []):  {
       case 'in-person': return <MapPin className="w-4 h-4" />;
       case 'hybrid': return <Users className="w-4 h-4" />;
       case 'self-paced': return <Clock className="w-4 h-5" />;
-      default: return <BookOpen className="w-4 h-4" />;
-    }
+      default: return <BookOpen className="w-4 h-4" />}
   };
 
   const formatDate = (dateString: string)  => {
@@ -253,8 +246,7 @@ export default function Training(...args: []):  {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -565,5 +557,4 @@ export default function Training(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

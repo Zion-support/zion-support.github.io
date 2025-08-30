@@ -158,7 +158,7 @@ const aiServices = [
     title: "AI Business Intelligence",
     description: "Transform your data into actionable insights with our advanced AI analytics platform.",
     path: "/services/ai-business-intelligence",
-    features: [
+    features[
       "Predictive Analytics",
       "Real-time Dashboards",
       "Automated Reporting",
@@ -170,7 +170,7 @@ const aiServices = [
     title: "Cloud DevOps",
     description: "Streamline your development pipeline with automated cloud infrastructure.",
     path: "/services/cloud-devops",
-    features: [
+    features[
       "CI/CD Automation",
       "Infrastructure as Code",
       "Container Orchestration",
@@ -182,7 +182,7 @@ const aiServices = [
     title: "AI Cybersecurity",
     description: "Protect your business with intelligent threat detection and response systems.",
     path: "/services/ai-cybersecurity-suite",
-    features: [
+    features[
       "Threat Intelligence",
       "Automated Response",
       "Zero Trust Architecture",
@@ -239,12 +239,11 @@ const trustSignals = [
   }
 ];
 
-export default function Home(...args: []):  {
+export default function Home(...args[]):  {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
 
   return (
@@ -525,5 +524,4 @@ export default function Home(...args: []):  {
         <FloatingCTA />
       </Suspense>
     </div>
-  );
-}
+  )}

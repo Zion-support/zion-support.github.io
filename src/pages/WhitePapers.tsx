@@ -24,7 +24,7 @@ import { FileText,
   Tag
  } from 'lucide-react.ts';
 
-export default function WhitePapers(...args: []):  {
+export default function WhitePapers(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -49,7 +49,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 2847,
       views: 12500,
       summary: 'Explore how artificial intelligence is revolutionizing business intelligence, from predictive analytics to automated decision-making systems.',
-      tags: ['AI', 'Business Intelligence', 'Machine Learning', 'Analytics'],
+      tags['AI', 'Business Intelligence', 'Machine Learning', 'Analytics'],
       fileSize: '2.4 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/ai-powered-business-intelligence-2024.pdf',
@@ -64,7 +64,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1956,
       views: 8900,
       summary: 'Comprehensive guide to implementing zero trust security architecture in enterprise environments.',
-      tags: ['Cybersecurity', 'Zero Trust', 'Network Security', 'Enterprise'],
+      tags['Cybersecurity', 'Zero Trust', 'Network Security', 'Enterprise'],
       fileSize: '3.1 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/zero-trust-security-architecture-2023.pdf',
@@ -79,7 +79,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1678,
       views: 7200,
       summary: 'Learn how to implement FinOps practices to optimize cloud spending and improve operational efficiency.',
-      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'DevOps'],
+      tags['Cloud Computing', 'FinOps', 'Cost Optimization', 'DevOps'],
       fileSize: '2.8 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/cloud-finops-optimization-2023.pdf',
@@ -94,7 +94,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1432,
       views: 6500,
       summary: 'Discover how digital twin technology is revolutionizing manufacturing, healthcare, and infrastructure management.',
-      tags: ['Digital Twin', 'Manufacturing', 'IoT', 'Digital Transformation'],
+      tags['Digital Twin', 'Manufacturing', 'IoT', 'Digital Transformation'],
       fileSize: '3.5 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/digital-twin-technology-2023.pdf',
@@ -109,7 +109,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1890,
       views: 8200,
       summary: 'Comprehensive analysis of AI applications in healthcare, including ethical considerations and regulatory compliance.',
-      tags: ['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
+      tags['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
       fileSize: '2.9 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/ai-healthcare-ethics-2023.pdf',
@@ -124,7 +124,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 2341,
       views: 10500,
       summary: 'Explore the intersection of quantum computing, artificial intelligence, and cryptography.',
-      tags: ['Quantum Computing', 'AI', 'Cryptography', 'Future Technology'],
+      tags['Quantum Computing', 'AI', 'Cryptography', 'Future Technology'],
       fileSize: '4.2 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/quantum-computing-ai-cryptography-2023.pdf',
@@ -139,7 +139,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1123,
       views: 5800,
       summary: 'Learn how to implement sustainable technology practices and reduce your organization\'s environmental impact.',
-      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Enterprise'],
+      tags['Sustainability', 'Green IT', 'Environmental Impact', 'Enterprise'],
       fileSize: '2.6 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/sustainable-technology-green-it-2023.pdf',
@@ -154,7 +154,7 @@ export default function WhitePapers(...args: []):  {
       downloads: 1567,
       views: 7100,
       summary: 'Comprehensive guide to edge computing and IoT implementation strategies for enterprise environments.',
-      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
+      tags['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
       fileSize: '3.3 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/edge-computing-iot-enterprise-2023.pdf',
@@ -167,8 +167,7 @@ export default function WhitePapers(...args: []):  {
     const categoryCounts = categories.map(cat => ({
       ...cat,
       count: cat.id === 'all' ? whitePapers.length: whitePapers.filter(wp  => wp.category === cat.id).length
-    }));
-  }, []);
+    }))}, []);
 
   const filteredWhitePapers = whitePapers.filter(paper => {
     const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
@@ -176,8 +175,7 @@ export default function WhitePapers(...args: []):  {
                          paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const stats = [
     { label: 'White Papers Published', value: '25+', icon: FileText },
@@ -458,5 +456,4 @@ export default function WhitePapers(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

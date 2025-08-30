@@ -73,7 +73,7 @@ const supplyChainSolutions = [
     title: "Supply Chain Visibility",
     description: "Real-time tracking and monitoring of goods across the entire supply chain network.",
     icon: Eye,
-    features: [
+    features[
       "End-to-end tracking",
       "Real-time monitoring",
       "Status updates",
@@ -82,14 +82,14 @@ const supplyChainSolutions = [
     price: "From $100,000",
     timeline: "20-32 weeks",
     category: "Visibility",
-    technologies: ["IoT Sensors", "GPS Tracking", "Real-time Analytics", "Cloud Platforms"]
+    technologies["IoT Sensors", "GPS Tracking", "Real-time Analytics", "Cloud Platforms"]
   },
   {
     id: 2,
     title: "Inventory Management",
     description: "Intelligent inventory optimization and demand forecasting systems.",
     icon: Warehouse,
-    features: [
+    features[
       "Demand forecasting",
       "Stock optimization",
       "Automated reordering",
@@ -98,14 +98,14 @@ const supplyChainSolutions = [
     price: "From $80,000",
     timeline: "16-24 weeks",
     category: "Inventory",
-    technologies: ["AI/ML", "Predictive Analytics", "ERP Integration", "Real-time Data"]
+    technologies["AI/ML", "Predictive Analytics", "ERP Integration", "Real-time Data"]
   },
   {
     id: 3,
     title: "Route Optimization",
     description: "AI-powered route planning and optimization for transportation and delivery.",
     icon: Route,
-    features: [
+    features[
       "Dynamic routing",
       "Traffic optimization",
       "Fuel efficiency",
@@ -114,14 +114,14 @@ const supplyChainSolutions = [
     price: "From $60,000",
     timeline: "12-20 weeks",
     category: "Routing",
-    technologies: ["AI Algorithms", "GPS Integration", "Traffic Data", "Optimization Engines"]
+    technologies["AI Algorithms", "GPS Integration", "Traffic Data", "Optimization Engines"]
   },
   {
     id: 4,
     title: "Warehouse Management",
     description: "Automated warehouse operations and inventory control systems.",
     icon: Building,
-    features: [
+    features[
       "Automated picking",
       "Space optimization",
       "Order fulfillment",
@@ -130,14 +130,14 @@ const supplyChainSolutions = [
     price: "From $120,000",
     timeline: "24-36 weeks",
     category: "Warehouse",
-    technologies: ["WMS", "Automation", "IoT Sensors", "Robotics Integration"]
+    technologies["WMS", "Automation", "IoT Sensors", "Robotics Integration"]
   },
   {
     id: 5,
     title: "Supplier Management",
     description: "Comprehensive supplier relationship and performance management platforms.",
     icon: Users,
-    features: [
+    features[
       "Supplier onboarding",
       "Performance tracking",
       "Risk assessment",
@@ -146,14 +146,14 @@ const supplyChainSolutions = [
     price: "From $70,000",
     timeline: "16-24 weeks",
     category: "Supplier Management",
-    technologies: ["SRM Platforms", "Analytics", "Risk Management", "Compliance Tools"]
+    technologies["SRM Platforms", "Analytics", "Risk Management", "Compliance Tools"]
   },
   {
     id: 6,
     title: "Logistics Analytics",
     description: "Advanced analytics and reporting for supply chain performance optimization.",
     icon: BarChart3,
-    features: [
+    features[
       "Performance metrics",
       "Cost analysis",
       "Trend identification",
@@ -162,7 +162,7 @@ const supplyChainSolutions = [
     price: "From $50,000",
     timeline: "12-20 weeks",
     category: "Analytics",
-    technologies: ["Business Intelligence", "Data Analytics", "Machine Learning", "Reporting Tools"]
+    technologies["Business Intelligence", "Data Analytics", "Machine Learning", "Reporting Tools"]
   }
 ];
 
@@ -263,25 +263,25 @@ const supplyChainBenefits = [
     title: "Cost Reduction",
     description: "Significant reduction in operational costs and inefficiencies",
     icon: TrendingUp,
-    examples: ["Lower transportation costs", "Reduced inventory costs", "Improved efficiency", "Better resource utilization"]
+    examples["Lower transportation costs", "Reduced inventory costs", "Improved efficiency", "Better resource utilization"]
   },
   {
     title: "Enhanced Visibility",
     description: "Real-time visibility across the entire supply chain network",
     icon: Eye,
-    examples: ["End-to-end tracking", "Real-time monitoring", "Exception alerts", "Proactive management"]
+    examples["End-to-end tracking", "Real-time monitoring", "Exception alerts", "Proactive management"]
   },
   {
     title: "Improved Efficiency",
     description: "Streamlined operations and optimized processes",
     icon: Zap,
-    examples: ["Faster delivery times", "Reduced lead times", "Better resource allocation", "Automated processes"]
+    examples["Faster delivery times", "Reduced lead times", "Better resource allocation", "Automated processes"]
   },
   {
     title: "Risk Mitigation",
     description: "Better risk management and contingency planning",
     icon: Shield,
-    examples: ["Supply chain resilience", "Risk assessment", "Contingency planning", "Compliance monitoring"]
+    examples["Supply chain resilience", "Risk assessment", "Contingency planning", "Compliance monitoring"]
   }
 ];
 
@@ -669,5 +669,4 @@ export default function SupplyChain() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

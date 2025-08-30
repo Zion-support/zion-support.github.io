@@ -25,43 +25,43 @@ import { Shield,
   Fingerprint
  } from 'lucide-react.ts';
 
-export default function AICybersecurityThreatIntelligence(...args: []):  {
+export default function AICybersecurityThreatIntelligence(...args[]):  {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that identify and analyze cyber threats in real-time with 99.9% accuracy.',
-      benefits: ['Real-time threat detection', 'Behavioral analysis', 'Anomaly identification', 'Predictive threat modeling']
+      benefits['Real-time threat detection', 'Behavioral analysis', 'Anomaly identification', 'Predictive threat modeling']
     },
     {
       icon: Eye,
       title: 'Continuous Monitoring',
       description: '24/7 surveillance of your digital infrastructure with automated threat hunting and response capabilities.',
-      benefits: ['Round-the-clock monitoring', 'Automated response', 'Threat hunting', 'Incident tracking']
+      benefits['Round-the-clock monitoring', 'Automated response', 'Threat hunting', 'Incident tracking']
     },
     {
       icon: Search,
       title: 'Threat Intelligence',
       description: 'Comprehensive threat intelligence feeds and analysis from global security sources and dark web monitoring.',
-      benefits: ['Global threat feeds', 'Dark web monitoring', 'IOC sharing', 'Threat attribution']
+      benefits['Global threat feeds', 'Dark web monitoring', 'IOC sharing', 'Threat attribution']
     },
     {
       icon: Activity,
       title: 'Behavioral Analytics',
       description: 'User and entity behavior analytics (UEBA) to detect insider threats and compromised accounts.',
-      benefits: ['User behavior analysis', 'Insider threat detection', 'Account compromise detection', 'Risk scoring']
+      benefits['User behavior analysis', 'Insider threat detection', 'Account compromise detection', 'Risk scoring']
     },
     {
       icon: Network,
       title: 'Network Security',
       description: 'Advanced network traffic analysis and intrusion detection with AI-powered pattern recognition.',
-      benefits: ['Traffic analysis', 'Intrusion detection', 'DDoS protection', 'Network segmentation']
+      benefits['Traffic analysis', 'Intrusion detection', 'DDoS protection', 'Network segmentation']
     },
     {
       icon: Database,
       title: 'Data Protection',
       description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',
-      benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
+      benefits['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
     }
   ];
 
@@ -70,25 +70,25 @@ export default function AICybersecurityThreatIntelligence(...args: []):  {
       industry: 'Financial Services',
       title: 'Fraud Detection & Prevention',
       description: 'Protect financial transactions and customer data with AI-powered fraud detection and real-time threat response.',
-      metrics: ['99.9% fraud detection accuracy', '60% reduction in false positives', 'Real-time response in <100ms']
+      metrics['99.9% fraud detection accuracy', '60% reduction in false positives', 'Real-time response in <100ms']
     },
     {
       industry: 'Healthcare',
       title: 'Patient Data Security',
       description: 'Secure patient records and medical systems with HIPAA-compliant cybersecurity and threat intelligence.',
-      metrics: ['100% HIPAA compliance', 'Zero data breaches', '24/7 threat monitoring']
+      metrics['100% HIPAA compliance', 'Zero data breaches', '24/7 threat monitoring']
     },
     {
       industry: 'Manufacturing',
       title: 'Industrial Control Security',
       description: 'Protect critical infrastructure and industrial control systems from cyber attacks and espionage.',
-      metrics: ['99.99% uptime protection', 'Zero successful attacks', 'Real-time threat response']
+      metrics['99.99% uptime protection', 'Zero successful attacks', 'Real-time threat response']
     },
     {
       industry: 'E-commerce',
       title: 'Customer Data Protection',
       description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',
-      metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
+      metrics['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
     }
   ];
 
@@ -140,7 +140,7 @@ export default function AICybersecurityThreatIntelligence(...args: []):  {
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'Basic threat detection',
         'Email security',
         'Firewall protection',
@@ -156,7 +156,7 @@ export default function AICybersecurityThreatIntelligence(...args: []):  {
       price: '$499',
       period: '/month',
       description: 'Ideal for growing businesses and enterprises',
-      features: [
+      features[
         'Advanced AI threat detection',
         'Real-time monitoring',
         'Threat intelligence feeds',
@@ -174,7 +174,7 @@ export default function AICybersecurityThreatIntelligence(...args: []):  {
       price: '$1,299',
       period: '/month',
       description: 'For large organizations with complex security needs',
-      features: [
+      features[
         'Full AI cybersecurity suite',
         'Custom threat models',
         'Dedicated security team',
@@ -557,5 +557,4 @@ export default function AICybersecurityThreatIntelligence(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

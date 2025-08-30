@@ -19,9 +19,7 @@ interface Stat {
   label: string;
   description: string;
   color: string;
-  gradient: string;
-
-}
+  gradient: string}
 
 const stats: Stat[] = [
   {
@@ -80,7 +78,7 @@ const stats: Stat[] = [
   }
 ];
 
-export default function EnhancedStatsSection(...args: []):  {
+export default function EnhancedStatsSection(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -90,8 +88,7 @@ export default function EnhancedStatsSection(...args: []):  {
 
   useEffect(()  => {
     if (inView) {
-      controls.start('visible');
-    }
+      controls.start('visible')}
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {
@@ -104,26 +101,20 @@ export default function EnhancedStatsSection(...args: []):  {
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
-        clearInterval(timer);
-      }
+        clearInterval(timer)}
       setCountedValues(prev => ({
         ...prev,
         [target]: Math.floor(current)
-      }));
-    }, 16);
+      }))}, 16);
 
-    return timer;
-  };
+    return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
         const timer = setTimeout(() => {
-          animateCount(stat.value);
-        }, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer);
-      });
-    }
+          animateCount(stat.value)}, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer)})}
   }, [inView]);
 
   return (
@@ -287,5 +278,4 @@ export default function EnhancedStatsSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

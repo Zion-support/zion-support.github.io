@@ -47,15 +47,13 @@ const AllServices2027: React.FC = (): JSX.Element => {
               count: innovativeServices2027.length,
       avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
       avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
-      };
-    }
+      }}
     const services = innovativeServices2027.filter(s => s.category === categoryId);
           return {
         count: services.length,
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
-      };
-  };
+      }};
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -186,8 +184,7 @@ const AllServices2027: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -402,11 +399,10 @@ const AllServices2027: React.FC = (): JSX.Element => {
         </div>
       </section>
     </>
-  );
-};
+  )};
 
 // Service Card Component
-const ServiceCard: React.FC<{ service:  }> = ({ service }) => {
+const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Services':
@@ -420,8 +416,7 @@ const ServiceCard: React.FC<{ service:  }> = ({ service }) => {
       case 'Telecommunications':
         return <Signal className="w-5 h-5" />;
       default:
-        return <Users className="w-5 h-5" />;
-    }
+        return <Users className="w-5 h-5" />}
   };
 
   return (
@@ -499,6 +494,5 @@ const ServiceCard: React.FC<{ service:  }> = ({ service }) => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )};
 export default AllServices2027;

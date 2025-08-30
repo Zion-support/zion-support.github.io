@@ -19,12 +19,12 @@ import { Users,
   Star
  } from 'lucide-react.ts';
 
-export default function Team(...args: []):  {
+export default function Team(...args[]):  {
   const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Chief Technology Officer',
-      expertise: ['AI & Machine Learning', 'Cloud Architecture', 'Digital Transformation'],
+      expertise['AI & Machine Learning', 'Cloud Architecture', 'Digital Transformation'],
       bio: 'Visionary leader with over 15 years of experience in cutting-edge technology solutions. Passionate about leveraging AI to solve complex business challenges.',
       avatar: '/avatars/kleber-santos.jpg',
       linkedin: 'https://linkedin.com/in/kleber-santos',
@@ -34,7 +34,7 @@ export default function Team(...args: []):  {
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Scientist',
-      expertise: ['Machine Learning', 'Neural Networks', 'Quantum Computing'],
+      expertise['Machine Learning', 'Neural Networks', 'Quantum Computing'],
       bio: 'PhD in Computer Science from MIT, specializing in advanced AI algorithms and quantum machine learning applications.',
       avatar: '/avatars/sarah-chen.jpg',
       linkedin: 'https://linkedin.com/in/sarah-chen',
@@ -44,7 +44,7 @@ export default function Team(...args: []):  {
     {
       name: 'Marcus Rodriguez',
       role: 'Head of Cybersecurity',
-      expertise: ['Zero Trust Architecture', 'Threat Intelligence', 'Compliance'],
+      expertise['Zero Trust Architecture', 'Threat Intelligence', 'Compliance'],
       bio: 'Former cybersecurity consultant with expertise in building enterprise-grade security solutions for Fortune 500 companies.',
       avatar: '/avatars/marcus-rodriguez.jpg',
       linkedin: 'https://linkedin.com/in/marcus-rodriguez',
@@ -54,7 +54,7 @@ export default function Team(...args: []):  {
     {
       name: 'Dr. Emily Watson',
       role: 'VP of Healthcare Technology',
-      expertise: ['Healthcare AI', 'Medical Informatics', 'Regulatory Compliance'],
+      expertise['Healthcare AI', 'Medical Informatics', 'Regulatory Compliance'],
       bio: 'Medical doctor turned technologist, leading our healthcare AI initiatives with deep understanding of clinical workflows.',
       avatar: '/avatars/emily-watson.jpg',
       linkedin: 'https://linkedin.com/in/emily-watson',
@@ -64,7 +64,7 @@ export default function Team(...args: []):  {
     {
       name: 'Alex Thompson',
       role: 'Director of Cloud Operations',
-      expertise: ['DevOps', 'FinOps', 'Multi-Cloud Strategy'],
+      expertise['DevOps', 'FinOps', 'Multi-Cloud Strategy'],
       bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and GCP. Specializes in cost optimization and automation.',
       avatar: '/avatars/alex-thompson.jpg',
       linkedin: 'https://linkedin.com/in/alex-thompson',
@@ -74,7 +74,7 @@ export default function Team(...args: []):  {
     {
       name: 'Priya Patel',
       role: 'Head of Data Science',
-      expertise: ['Big Data Analytics', 'Predictive Modeling', 'Data Governance'],
+      expertise['Big Data Analytics', 'Predictive Modeling', 'Data Governance'],
       bio: 'Data science leader with experience in building scalable analytics platforms for enterprise clients.',
       avatar: '/avatars/priya-patel.jpg',
       linkedin: 'https://linkedin.com/in/priya-patel',
@@ -364,5 +364,4 @@ export default function Team(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

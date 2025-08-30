@@ -272,7 +272,7 @@ const blockchainSolutions = [
     title: "Enterprise Blockchain Platform",
     description: "Custom blockchain platform designed for enterprise use cases and requirements.",
     icon: Building,
-    features: [
+    features[
       "Custom blockchain",
       "Smart contracts",
       "Consensus mechanisms",
@@ -281,14 +281,14 @@ const blockchainSolutions = [
     price: "From $500,000",
     timeline: "32-48 weeks",
     category: "Platform",
-    technologies: ["Blockchain", "Smart Contracts", "Consensus", "Scalability"]
+    technologies["Blockchain", "Smart Contracts", "Consensus", "Scalability"]
   },
   {
     id: 2,
     title: "Supply Chain Blockchain",
     description: "Transparent and traceable supply chain solutions using blockchain technology.",
     icon: Package,
-    features: [
+    features[
       "Supply chain tracking",
       "Product verification",
       "Transparency",
@@ -297,14 +297,14 @@ const blockchainSolutions = [
     price: "From $300,000",
     timeline: "24-36 weeks",
     category: "Supply Chain",
-    technologies: ["Blockchain", "IoT", "Supply Chain", "Compliance"]
+    technologies["Blockchain", "IoT", "Supply Chain", "Compliance"]
   },
   {
     id: 3,
     title: "Financial Blockchain Solutions",
     description: "Blockchain-based financial services and payment solutions.",
     icon: DollarSign,
-    features: [
+    features[
       "Digital payments",
       "Cross-border transfers",
       "Asset tokenization",
@@ -313,14 +313,14 @@ const blockchainSolutions = [
     price: "From $400,000",
     timeline: "28-40 weeks",
     category: "Financial",
-    technologies: ["Blockchain", "Fintech", "Payments", "Compliance"]
+    technologies["Blockchain", "Fintech", "Payments", "Compliance"]
   },
   {
     id: 4,
     title: "Identity Management Blockchain",
     description: "Decentralized identity management and verification systems.",
     icon: Shield,
-    features: [
+    features[
       "Digital identity",
       "Verification",
       "Privacy protection",
@@ -329,14 +329,14 @@ const blockchainSolutions = [
     price: "From $250,000",
     timeline: "20-32 weeks",
     category: "Identity",
-    technologies: ["Blockchain", "Identity", "Security", "Privacy"]
+    technologies["Blockchain", "Identity", "Security", "Privacy"]
   },
   {
     id: 5,
     title: "Smart Contract Development",
     description: "Custom smart contract development for business automation.",
     icon: Code,
-    features: [
+    features[
       "Smart contracts",
       "Business logic",
       "Automation",
@@ -345,14 +345,14 @@ const blockchainSolutions = [
     price: "From $150,000",
     timeline: "16-28 weeks",
     category: "Smart Contracts",
-    technologies: ["Smart Contracts", "Blockchain", "Automation", "Security"]
+    technologies["Smart Contracts", "Blockchain", "Automation", "Security"]
   },
   {
     id: 6,
     title: "Blockchain Integration Services",
     description: "Integration services for existing enterprise systems with blockchain.",
     icon: Wrench,
-    features: [
+    features[
       "System integration",
       "API development",
       "Data migration",
@@ -361,7 +361,7 @@ const blockchainSolutions = [
     price: "From $200,000",
     timeline: "18-30 weeks",
     category: "Integration",
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
+    technologies["Integration", "APIs", "Migration", "Legacy Systems"]
   }
 ];
 
@@ -462,29 +462,29 @@ const blockchainBenefits = [
     title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,
-    examples: ["Immutable records", "Transparent transactions", "Audit trails", "Trust building"]
+    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"]
   },
   {
     title: "Security & Privacy",
     description: "Advanced cryptography ensures data security and privacy protection",
     icon: Shield,
-    examples: ["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]
   },
   {
     title: "Automation & Efficiency",
     description: "Smart contracts automate business processes and reduce manual effort",
     icon: Zap,
-    examples: ["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
   {
     title: "Cost Reduction",
     description: "Blockchain eliminates intermediaries and reduces operational costs",
     icon: TrendingUp,
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
   }
 ];
 
-export default function BlockchainEnterpriseSolutions(...args: []):  {
+export default function BlockchainEnterpriseSolutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -867,5 +867,4 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

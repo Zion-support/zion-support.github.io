@@ -29,8 +29,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
 
     const categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
@@ -39,12 +38,10 @@ const EnhancedComprehensiveServicesShowcase = () => {
     ];
 
     const handleServiceClick = (service) => {
-        setSelectedService(service);
-    };
+        setSelectedService(service)};
 
     const closeModal = () => {
-        setSelectedService(null);
-    };
+        setSelectedService(null)};
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -316,7 +313,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                 </div>
             )}
         </div>
-    );
-};
+    )};
 
 export default EnhancedComprehensiveServicesShowcase;

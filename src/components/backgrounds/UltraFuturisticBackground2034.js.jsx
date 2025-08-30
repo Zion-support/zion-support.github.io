@@ -13,9 +13,9 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {
-            quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
-            neon: ['#ff0080', '#8000ff', '#00ffff', '#ffff00'],
-            holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4']
+            quantum['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
+            neon['#ff0080', '#8000ff', '#00ffff', '#ffff00'],
+            holographic['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4']
         };
         const selectedColors = colors[theme];
         // Create particles
@@ -28,8 +28,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 size: Math.random() * 3 + 1,
                 opacity: Math.random() * 0.5 + 0.3,
                 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
-            });
-        }
+            })}
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles
@@ -62,10 +61,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineTo(otherParticle.x, otherParticle.y);
                         ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, '0')}`;
                         ctx.lineWidth = 1;
-                        ctx.stroke();
-                    }
-                });
-            });
+                        ctx.stroke()}
+                })});
             // Add quantum effects
             if (theme === 'quantum') {
                 ctx.save();
@@ -78,10 +75,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     ctx.arc(canvas.width / 2, canvas.height / 2, 100 + wave, 0, Math.PI * 2);
                     ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 2;
-                    ctx.stroke();
-                }
-                ctx.restore();
-            }
+                    ctx.stroke()}
+                ctx.restore()}
             // Add neon effects
             if (theme === 'neon') {
                 ctx.save();
@@ -93,11 +88,9 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
                         ctx.strokeStyle = particle.color;
                         ctx.lineWidth = 1;
-                        ctx.stroke();
-                    }
+                        ctx.stroke()}
                 });
-                ctx.restore();
-            }
+                ctx.restore()}
             // Add holographic effects
             if (theme === 'holographic') {
                 ctx.save();
@@ -110,36 +103,27 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     ctx.lineTo(x, canvas.height);
                     ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
+                    ctx.stroke()}
                 for (let y = 0; y < canvas.height; y += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(canvas.width, y);
                     ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-                ctx.restore();
-            }
-            animationRef.current = requestAnimationFrame(animate);
-        };
+                    ctx.stroke()}
+                ctx.restore()}
+            animationRef.current = requestAnimationFrame(animate)};
         animate();
         const handleResize = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+            canvas.height = window.innerHeight};
         window.addEventListener('resize', handleResize);
         return () => {
             if (animationRef.current) {
-                cancelAnimationFrame(animationRef.current);
-            }
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [intensity, theme]);
+                cancelAnimationFrame(animationRef.current)}
+            window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{
             opacity: intensity,
             filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
-        }}/>);
-};
+        }}/>)};
 export default UltraFuturisticBackground2034;

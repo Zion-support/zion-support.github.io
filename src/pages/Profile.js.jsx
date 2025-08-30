@@ -10,8 +10,7 @@ export default function Profile() {
     useEffect(() => {
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
-            navigate("/login?redirect=/profile");
-        }
+            navigate("/login?redirect=/profile")}
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
@@ -20,8 +19,7 @@ export default function Profile() {
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>);
-    }
+      </>)}
     if (!user) {
         return (<>
         
@@ -35,8 +33,7 @@ export default function Profile() {
           </div>
         </div>
         
-      </>);
-    }
+      </>)}
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
@@ -54,8 +51,7 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button onClick={() => {
             logout();
-            navigate("/");
-        }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+            navigate("/")}} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
                   Logout
                 </Button>
               </div>
@@ -64,7 +60,6 @@ export default function Profile() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}
 ;
 export default Profile;

@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight  } from 'lucide-react.ts';
 
-export default function CloudFinOpsOptimizer(...args: []):  {
+export default function CloudFinOpsOptimizer(...args[]):  {
   const capabilities = [
     'Multi-cloud cost visibility (AWS, Azure, GCP)',
     'Idle/underutilized resource detection and rightsizing',
@@ -114,6 +114,5 @@ export default function CloudFinOpsOptimizer(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

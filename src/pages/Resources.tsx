@@ -59,7 +59,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 2540,
       rating: 4.9,
       image: '/resources/ai-business-transformation.jpg',
-      tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
+      tags['AI', 'Business Transformation', 'Guide', 'Strategy'],
       featured: true,
       fileSize: '2.4 MB',
       fileType: 'PDF',
@@ -77,7 +77,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 1890,
       rating: 4.8,
       image: '/resources/quantum-financial-case.jpg',
-      tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
+      tags['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
       featured: true,
       fileSize: '1.8 MB',
       fileType: 'PDF',
@@ -95,7 +95,7 @@ const Resources: React.FC = (): JSX.Element => {
       views: 3200,
       rating: 4.7,
       image: '/resources/cybersecurity-ai-webinar.jpg',
-      tags: ['Cybersecurity', 'AI', 'Webinar', 'Security'],
+      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],
       featured: false,
       fileSize: '450 MB',
       fileType: 'MP4',
@@ -113,7 +113,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 1560,
       rating: 4.6,
       image: '/resources/blockchain-supply-chain.jpg',
-      tags: ['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],
+      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],
       featured: false,
       fileSize: '2.1 MB',
       fileType: 'PDF',
@@ -131,7 +131,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 2100,
       rating: 4.8,
       image: '/resources/iot-edge-computing.jpg',
-      tags: ['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],
+      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],
       featured: false,
       fileSize: '3.2 MB',
       fileType: 'PDF',
@@ -149,7 +149,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 3200,
       rating: 4.9,
       image: '/resources/ai-consciousness-research.jpg',
-      tags: ['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],
+      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],
       featured: false,
       fileSize: '4.1 MB',
       fileType: 'PDF',
@@ -167,7 +167,7 @@ const Resources: React.FC = (): JSX.Element => {
       views: 2800,
       rating: 4.7,
       image: '/resources/digital-transformation-workshop.jpg',
-      tags: ['Digital Transformation', 'Workshop', 'Implementation', 'Guide'],
+      tags['Digital Transformation', 'Workshop', 'Implementation', 'Guide'],
       featured: false,
       fileSize: '680 MB',
       fileType: 'MP4',
@@ -185,7 +185,7 @@ const Resources: React.FC = (): JSX.Element => {
       downloads: 1890,
       rating: 4.8,
       image: '/resources/healthcare-ai-case.jpg',
-      tags: ['Healthcare', 'AI', 'Patient Outcomes', 'Diagnostics'],
+      tags['Healthcare', 'AI', 'Patient Outcomes', 'Diagnostics'],
       featured: false,
       fileSize: '2.8 MB',
       fileType: 'PDF',
@@ -198,8 +198,7 @@ const Resources: React.FC = (): JSX.Element => {
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
@@ -210,8 +209,7 @@ const Resources: React.FC = (): JSX.Element => {
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    })};
 
   const getResourceIcon = (type: string)  => {
     switch (type) {
@@ -224,8 +222,7 @@ const Resources: React.FC = (): JSX.Element => {
       case 'Workshop Recording':
         return Video;
       default:
-        return FileText;
-    }
+        return FileText}
   };
 
   return (
@@ -392,8 +389,7 @@ const Resources: React.FC = (): JSX.Element => {
                       </div>
                     </div>
                   </motion.article>
-                );
-              })}
+                )})}
             </div>
           </div>
         </section>
@@ -477,8 +473,7 @@ const Resources: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.article>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -566,7 +561,6 @@ const Resources: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Resources;

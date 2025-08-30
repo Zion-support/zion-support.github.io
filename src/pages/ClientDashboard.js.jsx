@@ -22,13 +22,11 @@ function ClientDashboardContent() {
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);
-            setSelectedJobTitle(jobs[0].title);
-        }
+            setSelectedJobTitle(jobs[0].title)}
     }, [jobs, selectedJobId]);
     const handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
-        setSelectedJobTitle(jobTitle);
-    };
+        setSelectedJobTitle(jobTitle)};
     return (<>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
@@ -112,10 +110,8 @@ function ClientDashboardContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

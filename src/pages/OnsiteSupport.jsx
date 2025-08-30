@@ -25,7 +25,7 @@ const onsiteSupportSolutions = [
     title: "Hardware Support & Maintenance",
     description: "Comprehensive hardware support including installation, repair, and preventive maintenance.",
     icon: Cpu,
-    features: [
+    features[
       "Hardware installation",
       "Repair services",
       "Preventive maintenance",
@@ -34,14 +34,14 @@ const onsiteSupportSolutions = [
     price: "From $150/hour",
     timeline: "Same day - 24 hours",
     category: "Hardware",
-    technologies: ["Desktop PCs", "Laptops", "Servers", "Network Equipment"]
+    technologies["Desktop PCs", "Laptops", "Servers", "Network Equipment"]
   },
   {
     id: 2,
     title: "Network Infrastructure Support",
     description: "Onsite network troubleshooting, installation, and optimization services.",
     icon: Network,
-    features: [
+    features[
       "Network troubleshooting",
       "Cable installation",
       "WiFi optimization",
@@ -50,14 +50,14 @@ const onsiteSupportSolutions = [
     price: "From $200/hour",
     timeline: "Same day - 48 hours",
     category: "Networking",
-    technologies: ["Cisco", "Juniper", "WiFi", "Cabling"]
+    technologies["Cisco", "Juniper", "WiFi", "Cabling"]
   },
   {
     id: 3,
     title: "Software Installation & Support",
     description: "Software installation, configuration, and troubleshooting services.",
     icon: Code,
-    features: [
+    features[
       "Software installation",
       "Configuration setup",
       "Troubleshooting",
@@ -66,14 +66,14 @@ const onsiteSupportSolutions = [
     price: "From $125/hour",
     timeline: "Same day - 24 hours",
     category: "Software",
-    technologies: ["Windows", "Linux", "Business Apps", "Security Software"]
+    technologies["Windows", "Linux", "Business Apps", "Security Software"]
   },
   {
     id: 4,
     title: "Data Recovery & Backup",
     description: "Onsite data recovery services and backup system implementation.",
     icon: HardDrive,
-    features: [
+    features[
       "Data recovery",
       "Backup systems",
       "Data migration",
@@ -82,14 +82,14 @@ const onsiteSupportSolutions = [
     price: "From $300/hour",
     timeline: "24-72 hours",
     category: "Data",
-    technologies: ["Recovery Tools", "Backup Software", "Storage Systems", "Cloud Backup"]
+    technologies["Recovery Tools", "Backup Software", "Storage Systems", "Cloud Backup"]
   },
   {
     id: 5,
     title: "Security Assessment & Implementation",
     description: "Onsite security audits and security system implementation.",
     icon: Shield,
-    features: [
+    features[
       "Security audits",
       "System hardening",
       "Access control",
@@ -98,14 +98,14 @@ const onsiteSupportSolutions = [
     price: "From $250/hour",
     timeline: "24-48 hours",
     category: "Security",
-    technologies: ["Firewalls", "Antivirus", "Access Control", "Monitoring"]
+    technologies["Firewalls", "Antivirus", "Access Control", "Monitoring"]
   },
   {
     id: 6,
     title: "Emergency Response Support",
     description: "24/7 emergency onsite support for critical system failures.",
     icon: AlertTriangle,
-    features: [
+    features[
       "24/7 availability",
       "Emergency response",
       "Critical system repair",
@@ -114,7 +114,7 @@ const onsiteSupportSolutions = [
     price: "From $400/hour",
     timeline: "2-8 hours",
     category: "Emergency",
-    technologies: ["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
+    technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
 ];
 
@@ -215,25 +215,25 @@ const supportBenefits = [
     title: "Rapid Response",
     description: "Quick onsite response minimizes downtime and business impact",
     icon: Zap,
-    examples: ["Same-day service", "Emergency response", "Minimal downtime", "Business continuity"]
+    examples["Same-day service", "Emergency response", "Minimal downtime", "Business continuity"]
   },
   {
     title: "Expert Technicians",
     description: "Certified technicians with specialized knowledge and tools",
     icon: Users,
-    examples: ["Certified professionals", "Specialized tools", "Experience", "Training"]
+    examples["Certified professionals", "Specialized tools", "Experience", "Training"]
   },
   {
     title: "Comprehensive Support",
     description: "Full-spectrum support from hardware to software and networking",
     icon: Wrench,
-    examples: ["Hardware support", "Software support", "Network support", "Security support"]
+    examples["Hardware support", "Software support", "Network support", "Security support"]
   },
   {
     title: "Preventive Maintenance",
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
-    examples: ["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
+    examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
 ];
 
@@ -621,5 +621,4 @@ export default function OnsiteSupport() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

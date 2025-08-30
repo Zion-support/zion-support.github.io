@@ -584,7 +584,7 @@ const businessPlatformSolutions = [
     title: "AI Business Intelligence Platform",
     description: "Comprehensive business intelligence platform powered by artificial intelligence.",
     icon: BarChart3,
-    features: [
+    features[
       "Predictive analytics",
       "Data visualization",
       "Real-time insights",
@@ -593,14 +593,14 @@ const businessPlatformSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Analytics",
-    technologies: ["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
+    technologies["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
   },
   {
     id: 2,
     title: "Autonomous Business Process Platform",
     description: "AI-powered platform for automating and optimizing business processes.",
     icon: Cog,
-    features: [
+    features[
       "Process optimization",
       "Workflow automation",
       "Decision automation",
@@ -609,14 +609,14 @@ const businessPlatformSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Automation",
-    technologies: ["RPA", "AI", "Workflow Engines", "Process Mining"]
+    technologies["RPA", "AI", "Workflow Engines", "Process Mining"]
   },
   {
     id: 3,
     title: "Smart Resource Management Platform",
     description: "Intelligent platform for managing and optimizing business resources.",
     icon: Users,
-    features: [
+    features[
       "Resource optimization",
       "Capacity planning",
       "Cost optimization",
@@ -625,14 +625,14 @@ const businessPlatformSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Resource Management",
-    technologies: ["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
+    technologies["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
   },
   {
     id: 4,
     title: "Predictive Business Planning Platform",
     description: "AI-driven platform for strategic business planning and forecasting.",
     icon: Target,
-    features: [
+    features[
       "Market forecasting",
       "Trend analysis",
       "Risk assessment",
@@ -641,14 +641,14 @@ const businessPlatformSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Planning",
-    technologies: ["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
+    technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
   },
   {
     id: 5,
     title: "Intelligent Customer Management Platform",
     description: "AI-powered platform for customer relationship and experience management.",
     icon: Users,
-    features: [
+    features[
       "Customer insights",
       "Personalization",
       "Predictive marketing",
@@ -657,14 +657,14 @@ const businessPlatformSolutions = [
     price: "From $220,000",
     timeline: "26-38 weeks",
     category: "Customer Management",
-    technologies: ["AI", "CRM", "Machine Learning", "Customer Analytics"]
+    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"]
   },
   {
     id: 6,
     title: "Autonomous Financial Management Platform",
     description: "AI-driven platform for financial planning, analysis, and decision making.",
     icon: TrendingUp,
-    features: [
+    features[
       "Financial forecasting",
       "Risk management",
       "Investment analysis",
@@ -673,7 +673,7 @@ const businessPlatformSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Financial",
-    technologies: ["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
+    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
 
@@ -774,25 +774,25 @@ const platformBenefits = [
     title: "Intelligent Decision Making",
     description: "AI-powered platform insights enable better, data-driven business decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples: ["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
   },
   {
     title: "Cost Optimization",
     description: "AI platform identifies cost-saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples: ["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
   },
   {
     title: "Competitive Advantage",
     description: "AI platform capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-    examples: ["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
   }
 ];
 
@@ -1180,5 +1180,4 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

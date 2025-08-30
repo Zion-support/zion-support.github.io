@@ -27,22 +27,22 @@ const AdvancedCybersecuritySuite = () => {
         {
             title: "Network Security",
             description: "Advanced firewall, intrusion detection, and network monitoring",
-            features: ["Next-gen firewall", "IDS/IPS", "Network segmentation", "Traffic analysis"]
+            features["Next-gen firewall", "IDS/IPS", "Network segmentation", "Traffic analysis"]
         },
         {
             title: "Endpoint Protection",
             description: "Comprehensive endpoint security and device management",
-            features: ["Antivirus", "EDR", "Device control", "Application whitelisting"]
+            features["Antivirus", "EDR", "Device control", "Application whitelisting"]
         },
         {
             title: "Cloud Security",
             description: "Multi-cloud security and compliance management",
-            features: ["CSPM", "Cloud DLP", "Identity management", "API security"]
+            features["CSPM", "Cloud DLP", "Identity management", "API security"]
         },
         {
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
-            features: ["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
+            features["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
         }
     ];
     const complianceFrameworks = [
@@ -247,6 +247,5 @@ const AdvancedCybersecuritySuite = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AdvancedCybersecuritySuite;

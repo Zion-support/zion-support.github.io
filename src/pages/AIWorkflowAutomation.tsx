@@ -272,7 +272,7 @@ const workflowSolutions = [
     title: "AI Process Automation",
     description: "Intelligent automation of business processes using AI and machine learning.",
     icon: Cog,
-    features: [
+    features[
       "Process automation",
       "AI decision making",
       "Workflow optimization",
@@ -281,14 +281,14 @@ const workflowSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Process Automation",
-    technologies: ["AI", "RPA", "Workflow Engines", "Machine Learning"]
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"]
   },
   {
     id: 2,
     title: "Intelligent Document Processing",
     description: "AI-powered document processing and workflow automation.",
     icon: FileText,
-    features: [
+    features[
       "Document processing",
       "Data extraction",
       "Workflow automation",
@@ -297,14 +297,14 @@ const workflowSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Document Processing",
-    technologies: ["AI", "OCR", "Document Processing", "Workflow"]
+    technologies["AI", "OCR", "Document Processing", "Workflow"]
   },
   {
     id: 3,
     title: "Smart Workflow Orchestration",
     description: "Intelligent orchestration and management of complex workflows.",
     icon: Network,
-    features: [
+    features[
       "Workflow orchestration",
       "Process management",
       "Resource optimization",
@@ -313,14 +313,14 @@ const workflowSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Workflow Orchestration",
-    technologies: ["AI", "Workflow Management", "Orchestration", "Analytics"]
+    technologies["AI", "Workflow Management", "Orchestration", "Analytics"]
   },
   {
     id: 4,
     title: "AI Decision Automation",
     description: "Automated decision making using AI algorithms and business rules.",
     icon: Brain,
-    features: [
+    features[
       "Decision automation",
       "Business rules",
       "AI algorithms",
@@ -329,14 +329,14 @@ const workflowSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Decision Automation",
-    technologies: ["AI", "Decision Trees", "Machine Learning", "Risk Models"]
+    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"]
   },
   {
     id: 5,
     title: "Predictive Workflow Analytics",
     description: "AI-powered analytics for workflow optimization and prediction.",
     icon: BarChart3,
-    features: [
+    features[
       "Predictive analytics",
       "Workflow optimization",
       "Performance insights",
@@ -345,14 +345,14 @@ const workflowSolutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Analytics",
-    technologies: ["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
+    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
   },
   {
     id: 6,
     title: "Intelligent Task Management",
     description: "AI-powered task management and workflow optimization.",
     icon: Target,
-    features: [
+    features[
       "Task management",
       "Priority optimization",
       "Resource allocation",
@@ -361,7 +361,7 @@ const workflowSolutions = [
     price: "From $100,000",
     timeline: "16-28 weeks",
     category: "Task Management",
-    technologies: ["AI", "Task Management", "Optimization", "Analytics"]
+    technologies["AI", "Task Management", "Optimization", "Analytics"]
   }
 ];
 
@@ -462,29 +462,29 @@ const workflowBenefits = [
     title: "Increased Efficiency",
     description: "AI automation significantly improves workflow efficiency and productivity",
     icon: Zap,
-    examples: ["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
+    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
   },
   {
     title: "Cost Reduction",
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,
-    examples: ["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
+    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
   },
   {
     title: "Better Decision Making",
     description: "AI-powered insights enable better, data-driven decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
     title: "Scalability",
     description: "AI workflows scale efficiently with business growth",
     icon: Rocket,
-    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
+    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
   }
 ];
 
-export default function AIWorkflowAutomation(...args: []):  {
+export default function AIWorkflowAutomation(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -867,5 +867,4 @@ export default function AIWorkflowAutomation(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

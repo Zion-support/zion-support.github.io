@@ -4,9 +4,7 @@ import { Plus, MessageCircle, Phone, Mail, ArrowUp, X  } from 'lucide-react.ts';
 
 interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
 
-  className?: string;
-
-}
+  className?: string}
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,8 +34,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
   return (
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
@@ -116,5 +113,4 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};

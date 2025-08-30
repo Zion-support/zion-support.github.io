@@ -17,16 +17,14 @@ export default function Login() {
     if (token) {
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing
-      navigate(location.pathname, { replace: true });
-    }
+      navigate(location.pathname, { replace: true })}
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      navigate(next, { replace: true });
-    }
+      navigate(next, { replace: true })}
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
   // Render LoginContent if not authenticated and auth is not loading
@@ -35,8 +33,7 @@ export default function Login() {
       <ErrorBoundary FallbackComponent={LoginErrorFallback}>
         <LoginContent />
       </ErrorBoundary>
-    );
-  }
+    )}
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
@@ -45,5 +42,4 @@ export default function Login() {
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null;
-}
+  return null}

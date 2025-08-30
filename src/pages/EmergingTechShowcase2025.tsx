@@ -57,21 +57,17 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
   useEffect(() => {
     if (autoPlay) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
+        setCurrentSlide((prev) => (prev + 1) % filteredServices.length)}, 5000);
+      return () => clearInterval(interval)}
   }, [autoPlay, filteredServices.length]);
 
   const getCategoryIcon = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
+    return categoryData ? categoryData.icon : Globe};
 
   const getCategoryColor = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.color : 'from-blue-500 to-purple-600';
-  };
+    return categoryData ? categoryData.color : 'from-blue-500 to-purple-600'};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -467,14 +463,12 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
                       </motion.button>
                     </div>
                   </div>
-                );
-              })()}
+                )})()}
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 export default EmergingTechShowcase2025;

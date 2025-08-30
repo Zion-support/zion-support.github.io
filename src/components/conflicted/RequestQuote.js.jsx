@@ -56,8 +56,7 @@ export default function RequestQuote() {
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmissionStatus('submitting');
@@ -78,10 +77,7 @@ export default function RequestQuote() {
                     description: '',
                     urgency: 'medium'
                 });
-                setSubmissionStatus('idle');
-            }, 3000);
-        }, 2000);
-    };
+                setSubmissionStatus('idle')}, 3000)}, 2000)};
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -349,5 +345,4 @@ export default function RequestQuote() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

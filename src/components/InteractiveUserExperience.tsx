@@ -28,9 +28,7 @@ interface UserPreference {
   type: 'boolean' | 'string' | 'number' | 'select';
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
-  description: string;
-
-}
+  description: string}
 
 interface UserActivity {
 
@@ -39,9 +37,7 @@ interface UserActivity {
   timestamp: Date;
   duration?: number;
   success: boolean;
-  category: 'navigation' | 'interaction' | 'search' | 'purchase';
-
-}
+  category: 'navigation' | 'interaction' | 'search' | 'purchase'}
 
 interface AccessibilityFeature {
 
@@ -49,9 +45,7 @@ interface AccessibilityFeature {
   name: string;
   enabled: boolean;
   description: string;
-  impact: 'high' | 'medium' | 'low';
-
-}
+  impact: 'high' | 'medium' | 'low'}
 
 const InteractiveUserExperience: React.FC = (): JSX.Element => {
   const [preferences, setPreferences] = useState<any>([]);
@@ -70,7 +64,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         name: 'Theme',
         value: 'light',
         type: 'select',
-        options: ['light', 'dark', 'auto'],
+        options['light', 'dark', 'auto'],
         category: 'appearance',
         description: 'Choose your preferred color theme'
       },
@@ -103,7 +97,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         name: 'Language',
         value: 'en',
         type: 'select',
-        options: ['en', 'es', 'fr', 'de', 'zh'],
+        options['en', 'es', 'fr', 'de', 'zh'],
         category: 'language',
         description: 'Select your preferred language'
       },
@@ -117,8 +111,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       }
     ];
 
-    setPreferences(initialPreferences);
-  }, []);
+    setPreferences(initialPreferences)}, []);
 
   // Initialize accessibility features
   useEffect(()  => {
@@ -160,8 +153,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       }
     ];
 
-    setAccessibilityFeatures(features);
-  }, []);
+    setAccessibilityFeatures(features)}, []);
 
   // Simulate user activities
   useEffect(()  => {
@@ -200,8 +192,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       }
     ];
 
-    setUserActivities(activities);
-  }, []);
+    setUserActivities(activities)}, []);
 
   const updatePreference = useCallback((id: string, value: string | boolean | number)  => {
     setPreferences(prev => prev.map(pref => 
@@ -227,16 +218,14 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         case 'Language':
           setLanguage(value as string);
           // Here you would typically change the app language
-          break;
-      }
+          break}
     }
   }, [preferences]);
 
   const toggleAccessibilityFeature = useCallback((id: string)  => {
     setAccessibilityFeatures(prev => prev.map(feature => 
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
-    ));
-  }, []);
+    ))}, []);
 
   const getActivityIcon = (category: UserActivity['category'])  => {
     switch (category) {
@@ -244,8 +233,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       case 'interaction': return <User className="h-4 w-4" />;
       case 'search': return <Eye className="h-4 w-4" />;
       case 'purchase': return <Heart className="h-4 w-4" />;
-      default: return <User className="h-4 w-4" />;
-    }
+      default: return <User className="h-4 w-4" />}
   };
 
   const getImpactColor = (impact: AccessibilityFeature['impact'])  => {
@@ -253,15 +241,13 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
-    }
+      default: return 'bg-gray-500'}
   };
 
   const getSuccessRate = () => {
     const total = userActivities.length;
     const successful = userActivities.filter(activity => activity.success).length;
-    return total > 0 ? (successful / total) * 100 : 0;
-  };
+    return total > 0 ? (successful / total) * 100 : 0};
 
   const getAverageDuration = () => {
     const activitiesWithDuration = userActivities.filter(activity => activity.duration);
@@ -270,8 +256,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     const totalDuration = activitiesWithDuration.reduce((sum, activity) => 
       sum + (activity.duration || 0), 0
     );
-    return totalDuration / activitiesWithDuration.length;
-  };
+    return totalDuration / activitiesWithDuration.length};
 
   return (
     <div className="space-y-6">
@@ -554,8 +539,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         </TabsContent>
       </Tabs>
     </div>
-  );
-};
+  )};
 
 // Add missing Tablet icon component
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (

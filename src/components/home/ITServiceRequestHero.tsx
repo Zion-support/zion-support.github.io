@@ -6,7 +6,7 @@ import { useNavigate  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
 
-export function ITServiceRequestHero(...args: []):  {
+export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -18,9 +18,7 @@ export function ITServiceRequestHero(...args: []):  {
       // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
-        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-      }, 1000);
-    }
+        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
   };
 
   const containerVariants = {
@@ -212,5 +210,4 @@ export function ITServiceRequestHero(...args: []):  {
         </div>
       </motion.div>
     </section>
-  );
-}
+  )}

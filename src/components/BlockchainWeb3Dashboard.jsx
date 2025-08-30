@@ -25,11 +25,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const handleConnectWallet = useCallback(async () => {
         try {
             await connectWallet();
-            trackEvent('blockchain', 'dashboard', 'wallet_connected');
-        }
+            trackEvent('blockchain', 'dashboard', 'wallet_connected')}
         catch (error) {
-            console.error('Failed to connect wallet:', error);
-        }
+            console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
         if (nftForm.name.trim() && wallet) {
@@ -42,11 +40,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 await mintNFT(contracts[1]?.address || '', metadata);
                 setNftForm({ name: '', description: '', image: '' });
                 setShowMintNFT(false);
-                trackEvent('blockchain', 'dashboard', 'nft_minted');
-            }
+                trackEvent('blockchain', 'dashboard', 'nft_minted')}
             catch (error) {
-                console.error('Failed to mint NFT:', error);
-            }
+                console.error('Failed to mint NFT:', error)}
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
     const handleSendTransaction = useCallback(async () => {
@@ -55,11 +51,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || undefined);
                 setTransactionForm({ to: '', value: '', data: '' });
                 setShowSendTransaction(false);
-                trackEvent('blockchain', 'dashboard', 'transaction_sent');
-            }
+                trackEvent('blockchain', 'dashboard', 'transaction_sent')}
             catch (error) {
-                console.error('Failed to send transaction:', error);
-            }
+                console.error('Failed to send transaction:', error)}
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]);
     const getStatusColor = (status) => {
@@ -67,8 +61,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             case 'confirmed': return 'text-green-600 bg-green-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';
             case 'failed': return 'text-red-600 bg-red-100';
-            default: return 'text-gray-600 bg-gray-100';
-        }
+            default: return 'text-gray-600 bg-gray-100'}
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -305,9 +298,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 name: 'New Contract',
                 address: '0x' + Math.random().toString(36).substr(2, 40),
                 network: 'ethereum',
-                abi: [],
-                functions: ['function1', 'function2'],
-                events: ['Event1', 'Event2']
+                abi[],
+                functions['function1', 'function2'],
+                events['Event1', 'Event2']
             })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                   <Plus className="w-4 h-4 inline mr-2"/>
                   Add Contract
@@ -617,5 +610,4 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-};
+    </div>)};

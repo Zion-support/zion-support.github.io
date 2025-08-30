@@ -56,7 +56,7 @@ import { revolutionaryMicroSaasServices2028,
   revolutionaryAIServices2028 
  } from '@/data/innovativeMicroSaasServices2028';
 
-export default function InnovativeServicesShowcase2028(...args: []):  {
+export default function InnovativeServicesShowcase2028(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
 
@@ -89,8 +89,7 @@ export default function InnovativeServicesShowcase2028(...args: []):  {
       case 'Cloud Computing': return Cloud;
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
-      default: return Rocket;
-    }
+      default: return Rocket}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -104,8 +103,7 @@ export default function InnovativeServicesShowcase2028(...args: []):  {
       'from-teal-600 to-blue-600',
       'from-pink-600 to-red-600'
     ];
-    return colors[Math.abs(category.length) % colors.length];
-  };
+    return colors[Math.abs(category.length) % colors.length]};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -589,5 +587,4 @@ export default function InnovativeServicesShowcase2028(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

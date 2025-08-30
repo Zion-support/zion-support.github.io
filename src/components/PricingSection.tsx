@@ -10,7 +10,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'AI-powered content generation',
         'Basic SEO optimization',
         'Email support',
@@ -25,7 +25,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI models',
         'Priority support',
@@ -42,7 +42,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
       price: '$799',
       period: '/month',
       description: 'For large organizations with complex needs',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI training',
         'Dedicated account manager',
@@ -135,8 +135,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
                   Get Started
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         <motion.div
@@ -158,7 +157,6 @@ export const PricingSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default PricingSection;

@@ -166,8 +166,7 @@ const AIServices: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIServices;
 

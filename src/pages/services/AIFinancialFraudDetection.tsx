@@ -72,21 +72,21 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       plan: "Starter",
       price: "$799",
       period: "/month",
-      features: ["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
+      features["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
       popular: false
     },
     {
       plan: "Professional",
       price: "$1,999",
       period: "/month",
-      features: ["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
+      features["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -426,7 +426,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIFinancialFraudDetection;

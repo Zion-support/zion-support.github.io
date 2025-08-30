@@ -81,31 +81,22 @@ export function InteractiveTestimonials() {
         if (!isAutoPlaying)
             return;
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [isAutoPlaying, filteredTestimonials.length]);
+            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 5000);
+        return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]);
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
     const toggleLike = (testimonialId) => {
         setLikedTestimonials(prev => {
             const newSet = new Set(prev);
             if (newSet.has(testimonialId)) {
-                newSet.delete(testimonialId);
-            }
+                newSet.delete(testimonialId)}
             else {
-                newSet.add(testimonialId);
-            }
-            return newSet;
-        });
-    };
+                newSet.add(testimonialId)}
+            return newSet})};
     const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>));
-    };
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -321,5 +312,4 @@ export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

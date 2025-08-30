@@ -33,7 +33,7 @@ import { Brain,
   Award
  } from 'lucide-react.ts';
 
-export default function AILegalResearchPlatform(...args: []):  {
+export default function AILegalResearchPlatform(...args[]):  {
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",
@@ -74,7 +74,7 @@ export default function AILegalResearchPlatform(...args: []):  {
       price: "$299",
       period: "/month",
       description: "Perfect for individual attorneys and small law firms",
-      features: [
+      features[
         "AI legal research (up to 100 queries/month)",
         "Basic document analysis",
         "Case law database access",
@@ -90,7 +90,7 @@ export default function AILegalResearchPlatform(...args: []):  {
       price: "$799",
       period: "/month",
       description: "Ideal for growing law firms and legal teams",
-      features: [
+      features[
         "AI legal research (unlimited queries)",
         "Advanced document analysis",
         "Multi-jurisdiction research",
@@ -107,7 +107,7 @@ export default function AILegalResearchPlatform(...args: []):  {
       price: "$1,999",
       period: "/month",
       description: "For large law firms and corporate legal departments",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced analytics and reporting",
@@ -402,5 +402,4 @@ export default function AILegalResearchPlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

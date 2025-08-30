@@ -30,5 +30,4 @@ export function TokenDisplay() {
             </div>
           </div>)}
       </CardContent>
-    </Card>);
-}
+    </Card>)}

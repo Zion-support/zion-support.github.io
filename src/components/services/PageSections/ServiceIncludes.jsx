@@ -8,7 +8,7 @@ export const ServiceIncludes = () => {
       description: 'Essential IT services for small businesses',
       price: 'Starting at $299/month',
       popular: false,
-      includes: [
+      includes[
         '24/7 Help Desk Support',
         'Remote Troubleshooting',
         'Basic Network Monitoring',
@@ -18,7 +18,7 @@ export const ServiceIncludes = () => {
         'Basic Security Monitoring',
         'Backup Verification'
       ],
-      notIncluded: [
+      notIncluded[
         'On-site Visits',
         'Hardware Installation',
         'Advanced Security Features',
@@ -26,7 +26,7 @@ export const ServiceIncludes = () => {
         'Custom Reporting',
         'Strategic IT Planning'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '4-8 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Basic', icon: Shield },
@@ -38,7 +38,7 @@ export const ServiceIncludes = () => {
       description: 'Comprehensive IT services for growing businesses',
       price: 'Starting at $599/month',
       popular: true,
-      includes: [
+      includes[
         'Everything in Basic Package',
         'On-site Support (2 visits/month)',
         'Hardware Installation & Setup',
@@ -52,14 +52,14 @@ export const ServiceIncludes = () => {
         'User Training Sessions',
         'Strategic IT Consulting'
       ],
-      notIncluded: [
+      notIncluded[
         'Unlimited On-site Visits',
         'Dedicated IT Manager',
         'Custom Software Development',
         'Hardware Procurement',
         'Advanced Analytics'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '2-4 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Advanced', icon: Shield },
@@ -71,7 +71,7 @@ export const ServiceIncludes = () => {
       description: 'Full-service IT management for large organizations',
       price: 'Starting at $1,299/month',
       popular: false,
-      includes: [
+      includes[
         'Everything in Professional Package',
         'Unlimited On-site Support',
         'Dedicated IT Manager',
@@ -88,13 +88,13 @@ export const ServiceIncludes = () => {
         'Vendor Management',
         'Technology Roadmap Planning'
       ],
-      notIncluded: [
+      notIncluded[
         'Custom Hardware Development',
         'Third-party Software Licensing',
         'Legal Compliance Services',
         'Insurance Requirements'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '1-2 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
@@ -332,5 +332,4 @@ export const ServiceIncludes = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

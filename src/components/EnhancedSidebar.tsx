@@ -51,12 +51,9 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
 
   const isActive = (path: string)  => location.pathname === path;
 
@@ -64,7 +61,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     {
       title: "Main",
       icon: Home,
-      items: [
+      items[
         { name: "Home", href: "/", icon: Home },
         { name: "Services", href: "/services", icon: Zap },
         { name: "Pricing", href: "/pricing", icon: DollarSign },
@@ -78,7 +75,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     {
       title: "Service Areas",
       icon: Zap,
-      items: [
+      items[
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
         { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
@@ -89,7 +86,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     {
       title: "Resources",
       icon: BookOpen,
-      items: [
+      items[
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
         { name: "Help Center", href: "/help", icon: HelpCircle },
@@ -250,5 +247,4 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </aside>
-  );
-};
+  )};

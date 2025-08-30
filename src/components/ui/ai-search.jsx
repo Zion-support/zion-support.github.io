@@ -12,10 +12,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const [searchHistory, setSearchHistory] = useState([]);
     const [savedSearches, setSavedSearches] = useState([]);
     const [filters, setFilters] = useState({
-        category: [],
-        priceRange: [0, 10000],
+        category[],
+        priceRange[0, 10000],
         rating: 0,
-        location: [],
+        location[],
         verified: false,
         featured: false
     });
@@ -41,20 +41,17 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         ];
         return baseSuggestions
             .filter(suggestion => suggestion.toLowerCase().includes(searchQuery.toLowerCase()))
-            .slice(0, 5);
-    }, []);
+            .slice(0, 5)}, []);
     // Handle search input
     const handleSearchInput = useCallback((value) => {
         setQuery(value);
         if (value.trim()) {
             const newSuggestions = generateSuggestions(value);
             setSuggestions(newSuggestions);
-            setIsOpen(true);
-        }
+            setIsOpen(true)}
         else {
             setSuggestions([]);
-            setIsOpen(false);
-        }
+            setIsOpen(false)}
     }, [generateSuggestions]);
     // Perform search
     const performSearch = useCallback(async (searchQuery, searchFilters) => {
@@ -66,7 +63,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'AI-Powered Business Intelligence Platform',
                 description: 'Advanced analytics and insights powered by machine learning algorithms',
                 category: 'AI & Analytics',
-                tags: ['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],
+                tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],
                 relevance: 0.95,
                 rating: 4.8,
                 reviews: 1247,
@@ -83,7 +80,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'Senior AI Engineer - Remote',
                 description: 'Experienced AI engineer specializing in deep learning and NLP',
                 category: 'Talent',
-                tags: ['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],
+                tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],
                 relevance: 0.92,
                 rating: 4.9,
                 reviews: 89,
@@ -100,7 +97,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'Quantum Computing Solutions Inc.',
                 description: 'Leading provider of quantum computing services and consulting',
                 category: 'Quantum Technology',
-                tags: ['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],
+                tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],
                 relevance: 0.88,
                 rating: 4.7,
                 reviews: 456,
@@ -124,23 +121,19 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 searchFilters.category.includes(result.category);
             const matchesRating = result.rating >= searchFilters.rating;
             const matchesVerified = !searchFilters.verified || result.metadata.verified;
-            return matchesQuery && matchesCategory && matchesRating && matchesVerified;
-        });
+            return matchesQuery && matchesCategory && matchesRating && matchesVerified});
         // Sort by relevance
         filteredResults.sort((a, b) => b.relevance - a.relevance);
         setResults(filteredResults);
         setIsSearching(false);
         // Add to search history
         if (searchQuery.trim() && !searchHistory.includes(searchQuery.trim())) {
-            setSearchHistory(prev => [searchQuery.trim(), ...prev.slice(0, 9)]);
-        }
-        onSearch?.(searchQuery, searchFilters);
-    }, [searchHistory, onSearch]);
+            setSearchHistory(prev => [searchQuery.trim(), ...prev.slice(0, 9)])}
+        onSearch?.(searchQuery, searchFilters)}, [searchHistory, onSearch]);
     // Handle search submission
     const handleSearch = useCallback(() => {
         if (query.trim()) {
-            performSearch(query, filters);
-        }
+            performSearch(query, filters)}
     }, [query, filters, performSearch]);
     // Handle voice input
     const toggleVoiceInput = useCallback(() => {
@@ -152,15 +145,12 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 const voiceQuery = 'AI machine learning services';
                 setQuery(voiceQuery);
                 handleSearchInput(voiceQuery);
-                setIsVoiceActive(false);
-            }, 2000);
-        }
+                setIsVoiceActive(false)}, 2000)}
     }, [isVoiceActive, handleSearchInput]);
     // Save search
     const saveSearch = useCallback((searchQuery) => {
         if (!savedSearches.includes(searchQuery)) {
-            setSavedSearches(prev => [...prev, searchQuery]);
-        }
+            setSavedSearches(prev => [...prev, searchQuery])}
     }, [savedSearches]);
     // Share search results
     const shareResults = useCallback(() => {
@@ -169,44 +159,36 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 title: 'Search Results from Zion Tech Group',
                 text: `Check out these results for "${query}"`,
                 url: window.location.href
-            });
-        }
+            })}
         else {
             // Fallback to copying to clipboard
-            navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`);
-        }
+            navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`)}
     }, [query]);
     // Handle keyboard navigation
     const handleKeyDown = useCallback((e) => {
         if (e.key === 'Enter') {
-            handleSearch();
-        }
+            handleSearch()}
         else if (e.key === 'Escape') {
             setIsOpen(false);
-            setQuery('');
-        }
+            setQuery('')}
     }, [handleSearch]);
     // Handle result selection
     const handleResultClick = useCallback((result) => {
         setSelectedResult(result);
         onResultClick?.(result);
-        setIsOpen(false);
-    }, [onResultClick]);
+        setIsOpen(false)}, [onResultClick]);
     // Close search when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setIsOpen(false);
-            }
+                setIsOpen(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     // Focus input when opened
     useEffect(() => {
         if (isOpen && inputRef.current) {
-            inputRef.current.focus();
-        }
+            inputRef.current.focus()}
     }, [isOpen]);
     if (!enabled)
         return null;
@@ -235,8 +217,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 setQuery('');
                 setResults([]);
                 setSuggestions([]);
-                setIsOpen(false);
-            }} className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-400 hover:text-white hover:bg-zion-blue/20 rounded-lg transition-all duration-200">
+                setIsOpen(false)}} className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-400 hover:text-white hover:bg-zion-blue/20 rounded-lg transition-all duration-200">
             <X className="w-4 h-4"/>
           </motion.button>)}
       </div>
@@ -274,8 +255,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <label className="text-zinc-300 text-sm font-medium">Category</label>
                       <select multiple value={filters.category} onChange={(e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, category: selected }));
-                }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                    setFilters(prev => ({ ...prev, category: selected }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value="AI & Analytics">AI & Analytics</option>
                         <option value="Cybersecurity">Cybersecurity</option>
                         <option value="Cloud Solutions">Cloud Solutions</option>
@@ -322,8 +302,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   <div className="space-y-2">
                     {searchHistory.map((search, index) => (<button key={index} onClick={() => {
                         setQuery(search);
-                        performSearch(search, filters);
-                    }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
+                        performSearch(search, filters)}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
                         {search}
                       </button>))}
                   </div>
@@ -338,8 +317,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   <div className="space-y-2">
                     {suggestions.map((suggestion, index) => (<button key={index} onClick={() => {
                         setQuery(suggestion);
-                        performSearch(suggestion, filters);
-                    }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
+                        performSearch(suggestion, filters)}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
                         <span>{suggestion}</span>
                         <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"/>
                       </button>))}
@@ -416,5 +394,4 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}

@@ -53,7 +53,7 @@ const testimonials = [
     project: "Cloud Migration & Optimization"
   }
 ];
-export function TestimonialsSection(...args: []):  {
+export function TestimonialsSection(...args[]):  {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -145,5 +145,4 @@ export function TestimonialsSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

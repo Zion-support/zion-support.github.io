@@ -16,31 +16,31 @@ import { Cloud,
   Users
  } from 'lucide-react.ts';
 
-export default function CloudSolutions(...args: []):  {
+export default function CloudSolutions(...args[]):  {
   const cloudServices = [
     {
       icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
-      features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
+      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
     },
     {
       icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
-      features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
+      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
       icon: Zap,
       title: "DevOps Automation",
       description: "Streamline your development and deployment processes with automation",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
     }
   ];
 
@@ -316,5 +316,4 @@ export default function CloudSolutions(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

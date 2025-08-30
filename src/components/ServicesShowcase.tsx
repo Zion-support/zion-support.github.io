@@ -35,11 +35,9 @@ import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025 
 
 interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
 
-  className?: string;
+  className?: string}
 
-}
-
-export function ServicesShowcase(...args: []):  {
+export function ServicesShowcase(...args[]):  {
   const [expandedCategories, setExpandedCategories] = useState<any>([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -49,11 +47,9 @@ export function ServicesShowcase(...args: []):  {
   const servicesByCategory = allServices.reduce((acc, service) => {
     const category = service.category;
     if (!acc[category]) {
-      acc[category] = [];
-    }
+      acc[category] = []}
     acc[category].push(service);
-    return acc;
-  }, {} as Record<string, any>);
+    return acc}, {} as Record<string, any>);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue', count: allServices.length },
@@ -72,19 +68,16 @@ export function ServicesShowcase(...args: []):  {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
-  };
+        [...prev, category]
+    )};
 
   const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
   const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices: allServices.filter(service  => 
@@ -351,5 +344,4 @@ export function ServicesShowcase(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

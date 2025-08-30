@@ -236,17 +236,15 @@ import { Home,
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
   isOpen: boolean;
-  onClose: ()  => void;
+  onClose: ()  => void}
 
-}
-
-export function MainSidebar(...args: []):  {
+export function MainSidebar(...args[]):  {
   const location = useLocation();
 
   const navigationItems = [
     {
       title: 'Main',
-      items: [
+      items[
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Building },
         { name: 'Services', href: '/services', icon: Briefcase },
@@ -256,7 +254,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'AI & Innovation Services',
-      items: [
+      items[
         { name: 'AI & Automation', href: '/services/ai-automation', icon: Brain },
         { name: 'AI & Healthcare', href: '/services/ai-healthcare', icon: BrainIcon },
         { name: 'AI & Content', href: '/services/ai-content', icon: FileText },
@@ -267,7 +265,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Quantum & Advanced Computing',
-      items: [
+      items[
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Edge Computing', href: '/services/edge-computing', icon: Server },
         { name: 'High Performance Computing', href: '/services/hpc', icon: Chip },
@@ -277,7 +275,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Blockchain & Security',
-      items: [
+      items[
         { name: 'Blockchain Solutions', href: '/services/blockchain', icon: LinkIcon },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { name: 'Zero Trust Security', href: '/services/zero-trust', icon: Lock },
@@ -288,7 +286,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Emerging Technologies',
-      items: [
+      items[
         { name: 'Metaverse Solutions', href: '/services/metaverse', icon: Globe },
         { name: 'IoT Platforms', href: '/services/iot', icon: Wifi },
         { name: 'AR/VR Applications', href: '/services/ar-vr', icon: Eye },
@@ -299,7 +297,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Enterprise Solutions',
-      items: [
+      items[
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Cloud Infrastructure', href: '/services/cloud', icon: Cloud },
         { name: 'DevOps & CI/CD', href: '/services/devops', icon: Code },
@@ -310,7 +308,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Hardware & Equipment',
-      items: [
+      items[
         { name: 'Computers & Laptops', href: '/equipment/computers', icon: Laptop },
         { name: 'Mobile Devices', href: '/equipment/mobile', icon: Smartphone },
         { name: 'Networking Equipment', href: '/equipment/networking', icon: Router },
@@ -321,7 +319,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Talent & Community',
-      items: [
+      items[
         { name: 'Find Talent', href: '/talent', icon: Users },
         { name: 'AI Hiring Platform', href: '/zion-hire-ai', icon: Brain },
         { name: 'Community Forum', href: '/community', icon: MessageSquare },
@@ -332,7 +330,7 @@ export function MainSidebar(...args: []):  {
     },
     {
       title: 'Resources & Support',
-      items: [
+      items[
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Developer Portal', href: '/developers', icon: Code },
         { name: 'API Documentation', href: '/api-docs', icon: FileText },
@@ -454,8 +452,7 @@ export function MainSidebar(...args: []):  {
                           {item.name}
                         </Link>
                       </li>
-                    );
-                  })}
+                    )})}
                 </ul>
               </div>
             ))}
@@ -490,8 +487,7 @@ export function MainSidebar(...args: []):  {
                       </div>
                     </div>
                   </a>
-                );
-              })}
+                )})}
             </div>
             
             {/* Website Link */}
@@ -510,5 +506,4 @@ export function MainSidebar(...args: []):  {
         </div>
       </div>
     </>
-  );
-}
+  )}

@@ -117,7 +117,7 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-export default function ComprehensiveServicesOverview2027(...args: []):  {
+export default function ComprehensiveServicesOverview2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -128,11 +128,9 @@ export default function ComprehensiveServicesOverview2027(...args: []):  {
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
-    }
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing)}
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(service =>
@@ -140,8 +138,7 @@ export default function ComprehensiveServicesOverview2027(...args: []):  {
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
-      );
-    }
+      )}
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -153,12 +150,10 @@ export default function ComprehensiveServicesOverview2027(...args: []):  {
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         default:
-          return 0;
-      }
+          return 0}
     });
-    setFilteredServices(filtered);
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service: })  => (
+    setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+  const ServiceCard = ({ service }: { service})  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -441,8 +436,7 @@ export default function ComprehensiveServicesOverview2027(...args: []):  {
                 onClick={() => {
                   setSelectedCategory('all');
                   setSelectedPricing('all');
-                  setSearchQuery('');
-                }}
+                  setSearchQuery('')}}
                 className="bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 Clear Filters
@@ -477,5 +471,4 @@ export default function ComprehensiveServicesOverview2027(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -11,9 +11,7 @@ export interface EmergingTechService2025 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",
@@ -21,7 +19,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
     tagline: "Create immersive virtual experiences",
     price: "$249/month",
     description: "Advanced metaverse development platform for building virtual worlds and experiences.",
-    features: [
+    features[
       "3D world building",
       "Avatar customization",
       "Virtual commerce",

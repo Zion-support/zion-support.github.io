@@ -76,9 +76,7 @@ interface TeamMember {
   lastSeen: string;
   skills: string[];
   projects: string[];
-  availability: 'available' | 'busy' | 'unavailable';
-
-}
+  availability: 'available' | 'busy' | 'unavailable'}
 
 interface Project {
 
@@ -94,9 +92,7 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-  tags: string[];
-
-}
+  tags: string[]}
 
 interface Task {
 
@@ -111,9 +107,7 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-  comments: Comment[];
-
-}
+  comments: Comment[]}
 
 interface Comment {
 
@@ -122,9 +116,7 @@ interface Comment {
   content: string;
   timestamp: string;
   likes: number;
-  replies: Comment[];
-
-}
+  replies: Comment[]}
 
 interface Message {
 
@@ -136,8 +128,7 @@ interface Message {
   attachments?: string[];
   reactions: { type: string; count: number 
 }[];
-  isRead: boolean;
-}
+  isRead: boolean}
 
 interface FileItem {
 
@@ -151,9 +142,7 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-  version: string;
-
-}
+  version: string}
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
@@ -161,9 +150,7 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showProjects?: boolean;
   showCommunication?: boolean;
   showFileSharing?: boolean;
-  maxItems?: number;
-
-}
+  maxItems?: number}
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
@@ -195,8 +182,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         avatar: 'SJ',
         status: 'online',
         lastSeen: '2 minutes ago',
-        skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'],
-        projects: ['AI Platform Development', 'ML Model Optimization'],
+        skills['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'],
+        projects['AI Platform Development', 'ML Model Optimization'],
         availability: 'available'
       },
       {
@@ -207,8 +194,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         avatar: 'MC',
         status: 'busy',
         lastSeen: '15 minutes ago',
-        skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'],
-        projects: ['Cloud Migration', 'Infrastructure Modernization'],
+        skills['AWS', 'Azure', 'Kubernetes', 'DevOps'],
+        projects['Cloud Migration', 'Infrastructure Modernization'],
         availability: 'busy'
       },
       {
@@ -219,8 +206,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         avatar: 'DK',
         status: 'online',
         lastSeen: '1 minute ago',
-        skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'],
-        projects: ['Security Audit', 'Threat Intelligence'],
+        skills['Penetration Testing', 'Threat Detection', 'Incident Response'],
+        projects['Security Audit', 'Threat Intelligence'],
         availability: 'available'
       },
       {
@@ -231,8 +218,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         avatar: 'LT',
         status: 'away',
         lastSeen: '1 hour ago',
-        skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'],
-        projects: ['Digital Transformation', 'Process Optimization'],
+        skills['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'],
+        projects['Digital Transformation', 'Process Optimization'],
         availability: 'unavailable'
       },
       {
@@ -243,8 +230,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         avatar: 'AW',
         status: 'online',
         lastSeen: '5 minutes ago',
-        skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'],
-        projects: ['CI/CD Pipeline', 'Infrastructure as Code'],
+        skills['Docker', 'Jenkins', 'Terraform', 'Monitoring'],
+        projects['CI/CD Pipeline', 'Infrastructure as Code'],
         availability: 'available'
       }
     ];
@@ -259,11 +246,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         progress: 65,
         startDate: '2024-01-01',
         endDate: '2024-06-30',
-        teamMembers: ['Sarah Johnson', 'Alex Wong'],
-        tasks: [],
+        teamMembers['Sarah Johnson', 'Alex Wong'],
+        tasks[],
         budget: 500000,
         client: 'TechCorp Inc.',
-        tags: ['AI', 'Machine Learning', 'Platform']
+        tags['AI', 'Machine Learning', 'Platform']
       },
       {
         id: '2',
@@ -274,11 +261,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         progress: 45,
         startDate: '2024-02-01',
         endDate: '2024-08-31',
-        teamMembers: ['Michael Chen', 'Alex Wong'],
-        tasks: [],
+        teamMembers['Michael Chen', 'Alex Wong'],
+        tasks[],
         budget: 750000,
         client: 'Global Enterprises',
-        tags: ['Cloud', 'Migration', 'Infrastructure']
+        tags['Cloud', 'Migration', 'Infrastructure']
       },
       {
         id: '3',
@@ -289,11 +276,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         progress: 90,
         startDate: '2024-01-15',
         endDate: '2024-03-15',
-        teamMembers: ['David Kim'],
-        tasks: [],
+        teamMembers['David Kim'],
+        tasks[],
         budget: 150000,
         client: 'SecureBank',
-        tags: ['Security', 'Audit', 'Compliance']
+        tags['Security', 'Audit', 'Compliance']
       }
     ];
 
@@ -304,7 +291,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         content: 'Great progress on the AI model training! The accuracy has improved significantly.',
         timestamp: '2 minutes ago',
         type: 'text',
-        reactions: [{ type: 'thumbsUp', count: 3 }],
+        reactions[{ type: 'thumbsUp', count: 3 }],
         isRead: true
       },
       {
@@ -313,7 +300,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',
         timestamp: '15 minutes ago',
         type: 'text',
-        reactions: [{ type: 'check', count: 2 }],
+        reactions[{ type: 'check', count: 2 }],
         isRead: false
       },
       {
@@ -322,7 +309,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         content: 'Security vulnerabilities identified and patched. Report ready for review.',
         timestamp: '1 hour ago',
         type: 'text',
-        reactions: [{ type: 'star', count: 1 }],
+        reactions[{ type: 'star', count: 1 }],
         isRead: true
       }
     ];
@@ -336,8 +323,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'Sarah Johnson',
         uploadDate: '2024-01-15',
         lastModified: '2024-01-15',
-        tags: ['Architecture', 'AI', 'Documentation'],
-        sharedWith: ['Michael Chen', 'Alex Wong'],
+        tags['Architecture', 'AI', 'Documentation'],
+        sharedWith['Michael Chen', 'Alex Wong'],
         permissions: 'edit',
         version: '1.2'
       },
@@ -349,8 +336,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'Michael Chen',
         uploadDate: '2024-01-14',
         lastModified: '2024-01-14',
-        tags: ['Migration', 'Cloud', 'Planning'],
-        sharedWith: ['Sarah Johnson', 'David Kim'],
+        tags['Migration', 'Cloud', 'Planning'],
+        sharedWith['Sarah Johnson', 'David Kim'],
         permissions: 'view',
         version: '2.1'
       },
@@ -362,8 +349,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         uploadedBy: 'David Kim',
         uploadDate: '2024-01-13',
         lastModified: '2024-01-13',
-        tags: ['Security', 'Audit', 'Report'],
-        sharedWith: ['Lisa Thompson'],
+        tags['Security', 'Audit', 'Report'],
+        sharedWith['Lisa Thompson'],
         permissions: 'view',
         version: '1.0'
       }
@@ -372,8 +359,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setTeamMembers(sampleTeamMembers);
     setProjects(sampleProjects);
     setMessages(sampleMessages);
-    setFiles(sampleFiles);
-  }, []);
+    setFiles(sampleFiles)}, []);
 
   // Get status color and icon
   const getStatusDisplay = (status: string)  => {
@@ -382,8 +368,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
       case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
       case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-    }
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}
   };
 
   // Get project status color
@@ -394,8 +379,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'review': return 'text-yellow-400 bg-yellow-400/20';
       case 'completed': return 'text-purple-400 bg-purple-400/20';
       case 'on-hold': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+      default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get priority color
@@ -405,8 +389,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+      default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get file type icon
@@ -417,21 +400,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'video': return <Video className="w-5 h-5" />;
       case 'audio': return <File className="w-5 h-5" />;
       case 'archive': return <Folder className="w-5 h-5" />;
-      default: return <File className="w-5 h-5" />;
-    }
+      default: return <File className="w-5 h-5" />}
   };
 
   // Format file size
   const formatFileSize = (size: number)  => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
-    return `${(size / 1024).toFixed(1)} GB`;
-  };
+    return `${(size / 1024).toFixed(1)} GB`};
 
   // Handle project selection
   const handleProjectSelect = (project: Project)  => {
-    setSelectedProject(project);
-  };
+    setSelectedProject(project)};
 
   // Handle message reactions
   const handleMessageReaction = (messageId: string, reactionType: string)  => {
@@ -439,14 +419,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
         if (existingReaction) {
-          existingReaction.count += 1;
-        } else {
-          msg.reactions.push({ type: reactionType, count: 1 });
-        }
+          existingReaction.count += 1} else {
+          msg.reactions.push({ type: reactionType, count: 1 })}
       }
-      return msg;
-    }));
-  };
+      return msg}))};
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -1046,5 +1022,4 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         </motion.div>
       )}
     </div>
-  );
-};
+  )};

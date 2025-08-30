@@ -83,8 +83,7 @@ export function EmptyState({ type, title, description, action, icon }) {
             .
           </p>
         </div>)}
-    </div>);
-}
+    </div>)}
 // Specific empty state variants for quick use
 export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {
     const action = onAddProduct
@@ -98,23 +97,16 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
     const customDescription = isAuthenticated
         ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
         : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-    return (<EmptyState type="products" action={action} description={customDescription}/>);
-}
+    return (<EmptyState type="products" action={action} description={customDescription}/>)}
 export function CategoriesEmptyState({ onRetry }) {
-    return (<EmptyState type="categories" action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="categories" action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}/>)}
 export function TalentEmptyState({ onRetry }) {
-    return (<EmptyState type="talent" action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="talent" action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}/>)}
 export function EquipmentEmptyState({ onRetry }) {
-    return (<EmptyState type="equipment" action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="equipment" action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}/>)}
 export function SearchEmptyState({ onRetry }) {
-    return (<EmptyState type="search" action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="search" action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}/>)}
 export function NetworkErrorState({ onRetry }) {
-    return (<EmptyState type="network" action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="network" action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}/>)}
 export function ServerErrorState({ onRetry }) {
-    return (<EmptyState type="error" action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}/>);
-}
+    return (<EmptyState type="error" action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}/>)}

@@ -25,7 +25,7 @@ import { Link,
   Check
  } from 'lucide-react.ts';
 
-const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = () => {
+const BlockchainServicesPage[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
@@ -36,7 +36,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 3500,
       currency: "$",
       period: "/project",
-      features: [
+      features[
         "Custom smart contract development",
         "Security auditing & testing",
         "Gas optimization",
@@ -56,7 +56,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 15000,
       currency: "$",
       period: "/platform",
-      features: [
+      features[
         "DEX development",
         "Lending protocols",
         "Yield farming",
@@ -76,7 +76,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 8000,
       currency: "$",
       period: "/marketplace",
-      features: [
+      features[
         "NFT minting & trading",
         "Auction system",
         "Royalty distribution",
@@ -96,7 +96,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 25000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Private blockchain setup",
         "Consensus mechanisms",
         "Identity management",
@@ -116,7 +116,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 5000,
       currency: "$",
       period: "/audit",
-      features: [
+      features[
         "Smart contract auditing",
         "Penetration testing",
         "Vulnerability assessment",
@@ -136,7 +136,7 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
       price: 12000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Bridge development",
         "Cross-chain messaging",
         "Asset interoperability",
@@ -407,7 +407,6 @@ const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = ()
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default BlockchainServicesPage;

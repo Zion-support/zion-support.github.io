@@ -26,9 +26,7 @@ interface SecurityThreat {
   description: string;
   location: string;
   timestamp: Date;
-  status: 'active' | 'mitigated' | 'resolved';
-
-}
+  status: 'active' | 'mitigated' | 'resolved'}
 
 interface SecurityMetrics {
 
@@ -37,9 +35,7 @@ interface SecurityMetrics {
   threatsBlocked: number;
   lastScan: Date;
   complianceScore: number;
-  encryptionStrength: number;
-
-}
+  encryptionStrength: number}
 
 interface SecurityCheck {
 
@@ -48,9 +44,7 @@ interface SecurityCheck {
   status: 'pass' | 'fail' | 'warning';
   description: string;
   recommendation: string;
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-
-}
+  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance'}
 
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
@@ -99,8 +93,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       }
     ];
 
-    setThreats(sampleThreats);
-  }, []);
+    setThreats(sampleThreats)}, []);
 
   // Generate security checks
   useEffect(()  => {
@@ -147,8 +140,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       }
     ];
 
-    setSecurityChecks(checks);
-  }, []);
+    setSecurityChecks(checks)}, []);
 
   const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
@@ -165,24 +157,21 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       lastScan: new Date()
     }));
 
-    setIsScanning(false);
-  }, []);
+    setIsScanning(false)}, []);
 
   const mitigateThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const }
         : threat
-    ));
-  }, []);
+    ))}, []);
 
   const resolveThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const }
         : threat
-    ));
-  }, []);
+    ))}, []);
 
   const getThreatIcon = (type: SecurityThreat['type'])  => {
     switch (type) {
@@ -192,8 +181,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       case 'authentication': return <Lock className="h-4 w-4" />;
       case 'authorization': return <Shield className="h-4 w-4" />;
       case 'data-leak': return <Eye className="h-4 w-4" />;
-      default: return <AlertTriangle className="h-4 w-4" />;
-    }
+      default: return <AlertTriangle className="h-4 w-4" />}
   };
 
   const getSeverityColor = (severity: SecurityThreat['severity'])  => {
@@ -202,8 +190,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       case 'high': return 'bg-orange-500';
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
-    }
+      default: return 'bg-gray-500'}
   };
 
   const getStatusColor = (status: SecurityThreat['status'])  => {
@@ -211,8 +198,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       case 'active': return 'bg-red-100 text-red-800';
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
       case 'resolved': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+      default: return 'bg-gray-100 text-gray-800'}
   };
 
   const getCheckStatusIcon = (status: SecurityCheck['status'])  => {
@@ -220,16 +206,14 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
       case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
-    }
+      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />}
   };
 
   const getSecurityScoreColor = (score: number)  => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   return (
     <div className="space-y-6">
@@ -434,7 +418,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
         </Alert>
       )}
     </div>
-  );
-};
+  )};
 
 export default SecurityEnhancer;

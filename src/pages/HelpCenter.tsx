@@ -42,30 +42,24 @@ interface FAQItem {
   question: string;
   answer: string;
   category: string;
-  tags: string[];
-
-}
+  tags: string[]}
 
 interface HelpCategory {
 
   id: string;
   title: string;
   description: string;
-  icon: ;color: string;
+  icon;color: string;
   articleCount: number;
-  path: string;
-
-}
+  path: string}
 
 interface SupportOption {
 
   title: string;
   description: string;
-  icon: ;color: string;
+  icon;color: string;
   action: string;
-  path: string;
-
-}
+  path: string}
 
 const helpCategories: HelpCategory[] = [
   {
@@ -165,60 +159,60 @@ const faqData: FAQItem[] = [
     question: 'How do I get started with Zion Tech Group services?',
     answer: 'Getting started is easy! Simply browse our services, contact our team for a consultation, or use our online quote request form. We\'ll assess your needs and recommend the best solutions for your business.',
     category: 'getting-started',
-    tags: ['onboarding', 'consultation', 'services']
+    tags['onboarding', 'consultation', 'services']
   },
   {
     id: '2',
     question: 'What payment methods do you accept?',
     answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our encrypted payment system.',
     category: 'billing',
-    tags: ['payment', 'billing', 'security']
+    tags['payment', 'billing', 'security']
   },
   {
     id: '3',
     question: 'How quickly can you deploy AI solutions?',
     answer: 'Deployment timelines vary based on complexity. Simple AI integrations can be deployed in 2-4 weeks, while complex enterprise solutions typically take 8-12 weeks. We\'ll provide a detailed timeline during consultation.',
     category: 'services',
-    tags: ['ai', 'deployment', 'timeline']
+    tags['ai', 'deployment', 'timeline']
   },
   {
     id: '4',
     question: 'Do you provide ongoing support after deployment?',
     answer: 'Yes! We offer comprehensive post-deployment support including 24/7 monitoring, regular maintenance, updates, and technical support. Our support packages are customizable to your needs.',
     category: 'services',
-    tags: ['support', 'maintenance', 'monitoring']
+    tags['support', 'maintenance', 'monitoring']
   },
   {
     id: '5',
     question: 'Can you work with existing IT infrastructure?',
     answer: 'Absolutely! We specialize in integrating with existing systems. Our team will assess your current infrastructure and design solutions that work seamlessly with what you already have.',
     category: 'troubleshooting',
-    tags: ['integration', 'infrastructure', 'compatibility']
+    tags['integration', 'infrastructure', 'compatibility']
   },
   {
     id: '6',
     question: 'What security measures do you implement?',
     answer: 'We implement enterprise-grade security including SOC2 compliance, end-to-end encryption, regular security audits, and 24/7 threat monitoring. Your data security is our top priority.',
     category: 'account',
-    tags: ['security', 'compliance', 'encryption']
+    tags['security', 'compliance', 'encryption']
   },
   {
     id: '7',
     question: 'How do I find talent through your marketplace?',
     answer: 'Browse our talent marketplace by skills, experience, or location. You can post job requirements, review profiles, and connect directly with qualified professionals. We also offer managed recruitment services.',
     category: 'marketplace',
-    tags: ['talent', 'recruitment', 'hiring']
+    tags['talent', 'recruitment', 'hiring']
   },
   {
     id: '8',
     question: 'What if I\'m not satisfied with a service?',
     answer: 'We stand behind our work with a 100% satisfaction guarantee. If you\'re not completely satisfied, we\'ll work to fix the issue or provide a full refund. Your success is our success.',
     category: 'billing',
-    tags: ['guarantee', 'refund', 'satisfaction']
+    tags['guarantee', 'refund', 'satisfaction']
   }
 ];
 
-export default function HelpCenter(...args: []):  {
+export default function HelpCenter(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [expandedFAQ, setExpandedFAQ] = useState<any>(null);
@@ -228,20 +222,17 @@ export default function HelpCenter(...args: []):  {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
-      return;
-    }
+      return}
 
     const filtered = faqData.filter(faq => 
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
       faq.answer.toLowerCase().includes(query.toLowerCase()) ||
       faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
     );
-    setFilteredFAQs(filtered);
-  };
+    setFilteredFAQs(filtered)};
 
   const toggleFAQ = (id: string)  => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
-  };
+    setExpandedFAQ(expandedFAQ === id ? null : id)};
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -251,8 +242,7 @@ export default function HelpCenter(...args: []):  {
       case 'billing': return Award;
       case 'account': return Users;
       case 'troubleshooting': return AlertCircle;
-      default: return HelpCircle;
-    }
+      default: return HelpCircle}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -263,8 +253,7 @@ export default function HelpCenter(...args: []):  {
       case 'billing': return 'text-yellow-500';
       case 'account': return 'text-indigo-500';
       case 'troubleshooting': return 'text-red-500';
-      default: return 'text-zion-cyan';
-    }
+      default: return 'text-zion-cyan'}
   };
 
   return (
@@ -499,8 +488,7 @@ export default function HelpCenter(...args: []):  {
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedCategory('all');
-                    setFilteredFAQs(faqData);
-                  }}
+                    setFilteredFAQs(faqData)}}
                   className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
                 >
                   Clear Search
@@ -541,5 +529,4 @@ export default function HelpCenter(...args: []):  {
         </motion.div>
       </div>
     </div>
-  );
-}
+  )}

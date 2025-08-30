@@ -38,6 +38,5 @@ const EnhancedServices = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 export default EnhancedServices;

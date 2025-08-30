@@ -27,9 +27,7 @@ export function FooterNewsletter() {
       setIsLoading(false);
       setEmail('');
       // Reset after 5 seconds
-      setTimeout(() => setIsSubscribed(false), 5000);
-    }, 1000);
-  };
+      setTimeout(() => setIsSubscribed(false), 5000)}, 1000)};
 
   return (
     <div className="bg-zinc-900/30 p-6 rounded-xl border border-zinc-700/50">
@@ -73,8 +71,7 @@ export function FooterNewsletter() {
         </form>
       )}
     </div>
-  );
-}
+  )}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -90,7 +87,7 @@ export function Footer() {
   const footerSections = [
     {
       title: "Services",
-      links: [
+      links[
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
@@ -103,7 +100,7 @@ export function Footer() {
     },
     {
       title: "Comp",
-      links: [
+      links[
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
@@ -114,7 +111,7 @@ export function Footer() {
     },
     {
       title: "Resources",
-      links: [
+      links[
         { label: "Blog", path: "/blog" },
         { label: "Documentation", path: "/docs" },
         { label: "White Papers", path: "/white-papers" },
@@ -126,7 +123,7 @@ export function Footer() {
     },
     {
       title: "Support",
-      links: [
+      links[
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
@@ -145,8 +142,7 @@ export function Footer() {
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
   return (
     <footer className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden">
@@ -274,5 +270,4 @@ export function Footer() {
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  );
-}
+  )}

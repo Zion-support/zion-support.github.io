@@ -8,9 +8,7 @@ interface ServiceContact {
   mobile: string;
   email: string;
   address: string;
-  website: string;
-
-}
+  website: string}
 
 const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -40,8 +38,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -54,17 +51,14 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-        return 0;
-    }
+        return 0}
   });
 
-  const handleServiceClick = (service: )  => {
-    setSelectedService(service);
-  };
+  const handleServiceClick = (service)  => {
+    setSelectedService(service)};
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -446,7 +440,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 export default UltimateServicesShowcase2025;

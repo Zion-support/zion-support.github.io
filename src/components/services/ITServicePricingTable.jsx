@@ -9,7 +9,7 @@ export const ITServicePricingTable = () => {
       name: 'Basic Support',
       description: 'Essential IT support for small businesses',
       price: billingCycle === 'monthly' ? 299 : 2990,
-      features: [
+      features[
         '24/7 Help Desk Support',
         'Remote Troubleshooting',
         'Basic Network Monitoring',
@@ -17,7 +17,7 @@ export const ITServicePricingTable = () => {
         'Monthly Reports',
         'Up to 25 Users'
       ],
-      notIncluded: [
+      notIncluded[
         'On-site Visits',
         'Hardware Installation',
         'Advanced Security',
@@ -30,7 +30,7 @@ export const ITServicePricingTable = () => {
       name: 'Professional Support',
       description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
-      features: [
+      features[
         'Everything in Basic',
         'On-site Support (2 visits/month)',
         'Hardware Installation',
@@ -40,7 +40,7 @@ export const ITServicePricingTable = () => {
         'Up to 100 Users',
         'Emergency Response (4hr)'
       ],
-      notIncluded: [
+      notIncluded[
         'Unlimited On-site Visits',
         'Dedicated Technician',
         'Advanced Analytics'
@@ -52,7 +52,7 @@ export const ITServicePricingTable = () => {
       name: 'Enterprise Support',
       description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
-      features: [
+      features[
         'Everything in Professional',
         'Unlimited On-site Support',
         'Dedicated IT Technician',
@@ -64,7 +64,7 @@ export const ITServicePricingTable = () => {
         'Strategic IT Planning',
         'Compliance Support'
       ],
-      notIncluded: [
+      notIncluded[
         'Custom Development',
         'Hardware Procurement'
       ],
@@ -282,5 +282,4 @@ export const ITServicePricingTable = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

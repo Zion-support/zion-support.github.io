@@ -8,11 +8,9 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   color?: 'primary' | 'white' | 'gray';
   className?: string;
   showText?: boolean;
-  text?: string;
+  text?: string}
 
-}
-
-export default function LoadingSpinner(...args: []):  {
+export default function LoadingSpinner(...args[]):  {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -44,11 +42,10 @@ export default function LoadingSpinner(...args: []):  {
         </motion.p>
       )}
     </div>
-  );
-}
+  )}
 
 // Optimized skeleton loader
-export function SkeletonLoader(...args: []):  {
+export function SkeletonLoader(...args[]):  {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index)  => (
@@ -61,21 +58,19 @@ export function SkeletonLoader(...args: []):  {
         />
       ))}
     </div>
-  );
-}
+  )}
 
 // Button loading state
-export function ButtonLoader(...args: []):  {
+export function ButtonLoader(...args[]):  {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
     </div>
-  );
-}
+  )}
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: []):  {
+export function PageLoaderOverlay(...args[]):  {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -95,11 +90,10 @@ export function PageLoaderOverlay(...args: []):  {
         </motion.p>
       </div>
     </motion.div>
-  );
-}
+  )}
 
 // Content loading placeholder
-export function ContentPlaceholder(...args: []):  {
+export function ContentPlaceholder(...args[]):  {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -165,5 +159,4 @@ export function ContentPlaceholder(...args: []):  {
         ))
       )}
     </div>
-  );
-}
+  )}

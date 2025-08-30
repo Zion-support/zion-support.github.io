@@ -25,7 +25,7 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
-export default function AIBusinessIntelligencePlatform(...args: []):  {
+export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -74,7 +74,7 @@ export default function AIBusinessIntelligencePlatform(...args: []):  {
       price: 199,
       period: "month",
       description: "Perfect for small businesses getting started with AI analytics",
-      features: [
+      features[
         "Up to 5 users",
         "Basic AI analytics",
         "Standard dashboards",
@@ -89,7 +89,7 @@ export default function AIBusinessIntelligencePlatform(...args: []):  {
       price: 499,
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
-      features: [
+      features[
         "Up to 25 users",
         "Advanced AI algorithms",
         "Custom dashboards",
@@ -106,7 +106,7 @@ export default function AIBusinessIntelligencePlatform(...args: []):  {
       price: 1299,
       period: "month",
       description: "For large organizations with complex data analytics requirements",
-      features: [
+      features[
         "Unlimited users",
         "Custom AI models",
         "White-label dashboards",
@@ -441,5 +441,4 @@ export default function AIBusinessIntelligencePlatform(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -19,11 +19,9 @@ description?: string;
 features: string[];
 icon?: string;
 color?: string;
-textColor?: string;
-
-}
+textColor?: string}
 function collectAllServices(): ServiceItem[] {
-	const arrays: [] = [
+	const arrays[] = [
 		innovativeRealMicroSaasServices2025,
 		advancedITServices,
 		innovativeAIServices,
@@ -42,7 +40,7 @@ function collectAllServices(): ServiceItem[] {
 					price: item.price,
 					period: item.period,
 					description: item.description,
-					features: Array.isArray(item.features) ? item.features : [],
+					features: Array.isArray(item.features) ? item.features [],
 					icon: item.icon,
 					color: item.color,
 					textColor: item.textColor,
@@ -66,7 +64,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	}
 	return { props: { service } }
 }
-export default function ServiceDetail(...args: []):  {
+export default function ServiceDetail(...args[]):  {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (

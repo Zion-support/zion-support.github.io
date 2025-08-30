@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
 import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight  } from 'lucide-react.ts';
 
-export default function Categories(...args: []):  {
+export default function Categories(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const mainCategories = [
@@ -50,7 +50,7 @@ export default function Categories(...args: []):  {
   ];
 
   const subCategories = {
-    'ai-ml': [
+    'ai-ml'[
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
@@ -84,7 +84,7 @@ export default function Categories(...args: []):  {
         equipment: 1
       }
     ],
-    'cloud': [
+    'cloud'[
       {
         name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
@@ -110,7 +110,7 @@ export default function Categories(...args: []):  {
         equipment: 1
       }
     ],
-    'cybersecurity': [
+    'cybersecurity'[
       {
         name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
@@ -136,7 +136,7 @@ export default function Categories(...args: []):  {
         equipment: 3
       }
     ],
-    'data': [
+    'data'[
       {
         name: 'Business Intelligence',
         description: 'Data visualization and business analytics',
@@ -162,7 +162,7 @@ export default function Categories(...args: []):  {
         equipment: 2
       }
     ],
-    'development': [
+    'development'[
       {
         name: 'Web Development',
         description: 'Frontend and backend web applications',
@@ -221,17 +221,14 @@ export default function Categories(...args: []):  {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) => 
         total + sub.services + sub.talent + sub.equipment, 0
-      );
-    }
+      )}
     return subCategories[categoryId]?.reduce((total, sub) => 
       total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0;
-  };
+    ) || 0};
 
   // Update counts
   mainCategories.forEach(cat => {
-    cat.count = getCategoryCount(cat.id);
-  });
+    cat.count = getCategoryCount(cat.id)});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -382,5 +379,4 @@ export default function Categories(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -15,25 +15,19 @@ interface AccessibilityContextType {
   showSkipLinks: boolean;
   setShowSkipLinks: (show: boolean)  => void;
   voiceNavigation: boolean;
-  toggleVoiceNavigation: ()  => void;
-
-}
+  toggleVoiceNavigation: ()  => void}
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+  return context};
 
 interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
 
-  children: ReactNode;
-
-}
+  children: ReactNode}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
@@ -52,8 +46,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
-    setVoiceNavigation(savedVoiceNavigation);
-  }, []);
+    setVoiceNavigation(savedVoiceNavigation)}, []);
 
   // Apply accessibility settings to document
   useEffect(() => {
@@ -61,21 +54,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     
     // Apply high contrast
     if (highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 
     // Apply reduced motion
     if (reducedMotion) {
-      root.classList.add('reduce-motion');
-    } else {
-      root.classList.remove('reduce-motion');
-    }
+      root.classList.add('reduce-motion')} else {
+      root.classList.remove('reduce-motion')}
 
     // Apply font size
-    root.style.fontSize = `${fontSize}px`;
-  }, [highContrast, reducedMotion, fontSize]);
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
 
   // Keyboard navigation support
   useEffect(() => {
@@ -84,64 +72,53 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       if (event.altKey && event.key === 's') {
         event.preventDefault();
         setShowSkipLinks(true);
-        setTimeout(() => setShowSkipLinks(false), 5000);
-      }
+        setTimeout(() => setShowSkipLinks(false), 5000)}
 
       // High contrast toggle (Alt + H)
       if (event.altKey && event.key === 'h') {
         event.preventDefault();
-        toggleHighContrast();
-      }
+        toggleHighContrast()}
 
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key === '+') {
         event.preventDefault();
-        increaseFontSize();
-      }
+        increaseFontSize()}
       if (event.altKey && event.key === '-') {
         event.preventDefault();
-        decreaseFontSize();
-      }
+        decreaseFontSize()}
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   const toggleHighContrast = () => {
     const newValue = !highContrast;
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString());
-  };
+    localStorage.setItem('zion-high-contrast', newValue.toString())};
 
   const toggleReducedMotion = () => {
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString());
-  };
+    localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
   const increaseFontSize = () => {
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
   const decreaseFontSize = () => {
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
   const resetFontSize = () => {
     setFontSize(16);
-    localStorage.setItem('zion-font-size', '16');
-  };
+    localStorage.setItem('zion-font-size', '16')};
 
   const toggleVoiceNavigation = () => {
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString());
-  };
+    localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
   const value = {
     highContrast,
@@ -255,8 +232,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
       {children}
     </AccessibilityContext.Provider>
-  );
-};
+  )};
 
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({ 
@@ -281,19 +257,15 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
       if (event.shiftKey) {
         if (document.activeElement === firstElement) {
           event.preventDefault();
-          lastElement.focus();
-        }
+          lastElement.focus()}
       } else {
         if (document.activeElement === lastElement) {
           event.preventDefault();
-          firstElement.focus();
-        }
+          firstElement.focus()}
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isActive]);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
-  return <>{children}</>;
-};
+  return <>{children}</>};

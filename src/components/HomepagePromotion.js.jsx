@@ -9,8 +9,8 @@ export function HomepagePromotion() {
             description: "Generate high-quality, SEO-optimized content in minutes, not hours",
             price: "$399/month",
             category: "AI & Content Marketing",
-            features: ["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],
-            benefits: ["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],
+            features["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],
+            benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -19,8 +19,8 @@ export function HomepagePromotion() {
             description: "Process data closer to devices for ultra-low latency and real-time insights",
             price: "$799/month",
             category: "IT Infrastructure",
-            features: ["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],
-            benefits: ["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],
+            features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],
+            benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -29,8 +29,8 @@ export function HomepagePromotion() {
             description: "Solve previously intractable problems with quantum advantage",
             price: "$3,999/month",
             category: "Emerging Technology",
-            features: ["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],
-            benefits: ["Exponential speedup", "Future-proof technology", "Competitive advantage"],
+            features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],
+            benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -39,8 +39,8 @@ export function HomepagePromotion() {
             description: "Continuous verification and least-privilege access across all resources",
             price: "$1,499/month",
             category: "IT Infrastructure",
-            features: ["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],
-            benefits: ["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],
+            features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],
+            benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],
             link: "/comprehensive-services-showcase"
         }
     ];
@@ -178,5 +178,4 @@ export function HomepagePromotion() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

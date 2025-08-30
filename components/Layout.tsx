@@ -4,11 +4,9 @@ import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps extends React.PropsWithChildren<{}> {
 
-  children: React.ReactNode;
+  children: React.ReactNode}
 
-}
-
-export default function Layout(...args: []):  {
+export default function Layout(...args[]):  {
   return (
     <div className="min-h-screen flex flex-col">
       <EnhancedNavigation2025 />
@@ -17,5 +15,4 @@ export default function Layout(...args: []):  {
       </main>
       <EnhancedFooter />
     </div>
-  );
-}
+  )}

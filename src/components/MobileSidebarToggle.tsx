@@ -11,12 +11,9 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
 
   const isActive = (path: string)  => location.pathname === path;
 
@@ -24,7 +21,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     {
       title: "Main",
       icon: Home,
-      items: [
+      items[
         { name: "Home", href: "/", icon: Home },
         { name: "About Us", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -35,7 +32,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     {
       title: "Services",
       icon: Zap,
-      items: [
+      items[
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
         { name: "IT Infrastructure", href: "/it-services", icon: Server },
@@ -45,7 +42,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     {
       title: "Solutions",
       icon: Target,
-      items: [
+      items[
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },
@@ -55,7 +52,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     {
       title: "Resources",
       icon: BookOpen,
-      items: [
+      items[
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: FileText },
         { name: "Developer Portal", href: "/developer", icon: Server },
@@ -236,5 +233,4 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};

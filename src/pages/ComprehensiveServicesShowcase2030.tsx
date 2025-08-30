@@ -10,7 +10,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: [] = [];
+    let services[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -21,26 +21,22 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-        break;
-    }
+        break}
 
     if (searchTerm) {
       services = services.filter(service => 
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some((tag: string)  => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+      )}
 
     if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory);
-    }
+      services = services.filter(service => service.category === selectedCategory)}
 
-    return services;
-  };
+    return services};
 
   const getCategories = () => {
-    let services: [] = [];
+    let services[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -51,14 +47,12 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-        break;
-    }
+        break}
 
     const categories = [...new Set(services.map(service => service.category))];
-    return categories;
-  };
+    return categories};
 
-  const renderServiceCard = (service: )  => {
+  const renderServiceCard = (service)  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -163,8 +157,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      );
-    } else if (activeTab === 'it') {
+      )} else if (activeTab === 'it') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -265,8 +258,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      );
-    } else {
+      )} else {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -379,8 +371,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
   };
 
   return (
@@ -525,8 +516,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
               <button
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all');
-                }}
+                  setSelectedCategory('all')}}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
@@ -558,7 +548,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensiveServicesShowcase2030;

@@ -13,5 +13,4 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
       <Button variant="outline" size="sm" onClick={() => onRemove?.(item.id)}>
         Remove
       </Button>
-    </li>);
-}
+    </li>)}

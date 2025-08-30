@@ -11,8 +11,7 @@ export function ApiPlayground({ method, path, params = [] }) {
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const handleParamChange = (name, value) => {
-        setParamValues((prev) => ({ ...prev, [name]: value }));
-    };
+        setParamValues((prev) => ({ ...prev, [name]: value }))};
     const sendRequest = async () => {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
         let url = `${baseUrl}${path}`;
@@ -21,12 +20,10 @@ export function ApiPlayground({ method, path, params = [] }) {
             params.forEach((p) => {
                 const val = paramValues[p.name];
                 if (val)
-                    searchParams.append(p.name, val);
-            });
+                    searchParams.append(p.name, val)});
             const query = searchParams.toString();
             if (query)
-                url += `?${query}`;
-        }
+                url += `?${query}`}
         const options = {
             method,
             headers: {
@@ -36,25 +33,20 @@ export function ApiPlayground({ method, path, params = [] }) {
         };
         if (method !== "GET" && method !== "DELETE") {
             try {
-                options.body = JSON.stringify(JSON.parse(body));
-            }
+                options.body = JSON.stringify(JSON.parse(body))}
             catch {
-                options.body = body;
-            }
+                options.body = body}
         }
         setLoading(true);
         setResponse(null);
         try {
             const res = await fetch(url, options);
             const text = await res.text();
-            setResponse(text);
-        }
+            setResponse(text)}
         catch (err) {
-            setResponse(err.message);
-        }
+            setResponse(err.message)}
         finally {
-            setLoading(false);
-        }
+            setLoading(false)}
     };
     return (<div className="space-y-4">
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>
@@ -64,6 +56,5 @@ export function ApiPlayground({ method, path, params = [] }) {
         {loading ? "Sending..." : "Send Request"}
       </Button>
       {response && <CodeBlock code={response} language="json"/>}
-    </div>);
-}
+    </div>)}
 export default ApiPlayground;

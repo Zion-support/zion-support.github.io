@@ -60,7 +60,7 @@ const categoryColors: { [key: string]: string } = {
   'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
-export default function EnhancedInnovativeServicesShowcase2027(...args: []):  {
+export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -70,8 +70,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: []):  {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
@@ -83,8 +82,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: []):  {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
-        return 0;
-    }
+        return 0}
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -465,5 +463,4 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

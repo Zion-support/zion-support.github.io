@@ -23,8 +23,7 @@ function fixFunctionName(filePath) {
           1: "One",
           0: "Zero",
         };
-        return numberWords[digit] || `_${digit}`;
-      });
+        return numberWords[digit] || `_${digit}`});
     // If the function name is already valid, skip
     if (currentFunctionName === functionName) return false;
     // Replace the function name throughout the file
@@ -59,24 +58,19 @@ function fixFunctionName(filePath) {
       console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
+    ignore["node_modules/**", ".next/**"],
   });
   let fixedCount = 0;
   for (const file of files) {
     if (fixFunctionName(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
-  console.log(`Fixed ${fixedCount} files.`);
-}
+  console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();

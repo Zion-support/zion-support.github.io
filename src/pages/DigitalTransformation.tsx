@@ -26,7 +26,7 @@ import { Rocket,
   Heart
  } from 'lucide-react.ts';
 
-const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DigitalTransformation[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
@@ -34,42 +34,42 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
       title: "Strategy & Planning",
       description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
       icon: Rocket,
-      features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
+      features["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Process Automation",
       description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
       icon: Zap,
-      features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
+      features["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Technology Modernization",
       description: "Legacy system modernization and cloud-native architecture implementation.",
       icon: Cpu,
-      features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
+      features["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Data & Analytics",
       description: "Data-driven insights and business intelligence solutions for informed decision-making.",
       icon: Database,
-      features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
+      features["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
       color: "from-orange-500 to-red-500"
     },
     {
       title: "Customer Experience",
       description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
       icon: Users,
-      features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
+      features["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
       color: "from-indigo-500 to-purple-500"
     },
     {
       title: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
       icon: Shield,
-      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
+      features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
       color: "from-yellow-500 to-orange-500"
     }
   ];
@@ -80,7 +80,7 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",
-      activities: [
+      activities[
         "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
@@ -93,7 +93,7 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4-6 weeks",
-      activities: [
+      activities[
         "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
@@ -106,7 +106,7 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
       title: "Pilot & Validation",
       description: "Implement proof-of-concept and validate approach with stakeholders",
       duration: "6-8 weeks",
-      activities: [
+      activities[
         "Proof-of-concept development",
         "Pilot implementation",
         "Stakeholder validation",
@@ -119,7 +119,7 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
-      activities: [
+      activities[
         "Phased rollout execution",
         "Change management implementation",
         "Performance monitoring",
@@ -386,7 +386,6 @@ const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () 
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default DigitalTransformation;

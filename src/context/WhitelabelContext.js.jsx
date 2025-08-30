@@ -18,5 +18,4 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
     const mergedConfig = { ...defaultConfig, ...config };
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}
-    </WhitelabelContext.Provider>);
-};
+    </WhitelabelContext.Provider>)};

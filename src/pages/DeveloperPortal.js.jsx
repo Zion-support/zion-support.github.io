@@ -162,8 +162,7 @@ export default function DeveloperPortal() {
                       </Link>
                     </Button>
                   </CardContent>
-                </Card>);
-        })}
+                </Card>)})}
           </div>
         </div>
 
@@ -217,8 +216,7 @@ export default function DeveloperPortal() {
                       </Link>
                     </Button>
                   </CardContent>
-                </Card>);
-        })}
+                </Card>)})}
           </div>
         </div>
 
@@ -288,5 +286,4 @@ export default function DeveloperPortal() {
           </CardContent>
         </Card>
       </div>
-    </div>);
-}
+    </div>)}

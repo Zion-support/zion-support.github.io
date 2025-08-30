@@ -26,13 +26,12 @@ import { Phone,
  } from 'lucide-react.ts';
 export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
       title: "Services",
-      links: [
+      links[
         { name: "AI & Machine Learning", href: "/ai-services" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" },
         { name: "IT Infrastructure", href: "/it-services" },
@@ -45,7 +44,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
     },
     {
       title: "Solutions",
-      links: [
+      links[
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -58,7 +57,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
     },
     {
       title: "Comp",
-      links: [
+      links[
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
         { name: "Careers", href: "/careers" },
@@ -71,7 +70,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
     },
     {
       title: "Resources",
-      links: [
+      links[
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
         { name: "Developer Portal", href: "/developer" },
@@ -280,5 +279,4 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
       {/* Bottom Border Glow */}
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
     </footer>
-  );
-};
+  )};

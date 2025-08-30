@@ -22,51 +22,41 @@ export default function ProfileDetail() {
             try {
                 if (!profileId) {
                     setError("Profile ID is missing.");
-                    return;
-                }
+                    return}
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single();
                 if (error) {
-                    throw new Error(error.message);
-                }
+                    throw new Error(error.message)}
                 if (!data) {
                     setError("Profile not found.");
-                    return;
-                }
-                setProfileData(data);
-            }
+                    return}
+                setProfileData(data)}
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
-                });
-            }
+                })}
             finally {
-                setIsLoading(false);
-            }
+                setIsLoading(false)}
         };
-        fetchProfile();
-    }, [profileId]);
+        fetchProfile()}, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-      </div>);
-    }
+      </div>)}
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
-      </div>);
-    }
+      </div>)}
     if (!profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
-      </div>);
-    }
+      </div>)}
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       
@@ -212,5 +202,4 @@ export default function ProfileDetail() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

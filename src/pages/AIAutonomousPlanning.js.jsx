@@ -168,6 +168,5 @@ const AIAutonomousPlanning = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousPlanning;

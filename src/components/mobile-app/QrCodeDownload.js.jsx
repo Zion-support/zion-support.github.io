@@ -39,5 +39,4 @@ export const QrCodeDownload = () => {
           </div>
         </div>
       </div>
-    </section>);
-};
+    </section>)};

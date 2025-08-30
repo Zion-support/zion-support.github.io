@@ -29,8 +29,7 @@ export function TestimonialsSection() {
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
-      </span>));
-    };
+      </span>))};
     return (<section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -64,5 +63,4 @@ export function TestimonialsSection() {
             </div>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

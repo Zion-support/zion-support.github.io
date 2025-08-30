@@ -5,18 +5,14 @@ interface FilterOption {
 
   value: string;
   label: string;
-  count?: number;
-
-}
+  count?: number}
 
 interface FilterGroup {
 
   title: string;
   key: string;
   options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range';
-
-}
+  type: 'checkbox' | 'radio' | 'range'}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
@@ -25,11 +21,9 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   onFilterChange: (key: string, value: string, checked: boolean)  => void;
   onClearFilters: ()  => void;
   isOpen: boolean;
-  onClose: ()  => void;
+  onClose: ()  => void}
 
-}
-
-export function FilterSidebar(...args: []):  {
+export function FilterSidebar(...args[]):  {
   return (
     <>
       {/* Mobile overlay */}
@@ -98,13 +92,11 @@ export function FilterSidebar(...args: []):  {
                         )}
                       </span>
                     </label>
-                  );
-                })}
+                  )})}
               </div>
             </div>
           ))}
         </div>
       </div>
     </>
-  );
-}
+  )}

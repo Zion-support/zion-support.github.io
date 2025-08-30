@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AffiliateMarketingTracker(...args: []):  {
+export default function AffiliateMarketingTracker(...args[]):  {
   const features = [
     {
       icon: Target,
@@ -44,7 +44,7 @@ export default function AffiliateMarketingTracker(...args: []):  {
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
-      features: [
+      features[
         "Up to 100 affiliates",
         "Basic tracking & analytics",
         "Email support",
@@ -58,7 +58,7 @@ export default function AffiliateMarketingTracker(...args: []):  {
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
-      features: [
+      features[
         "Up to 500 affiliates",
         "Advanced analytics & AI insights",
         "Priority support",
@@ -73,7 +73,7 @@ export default function AffiliateMarketingTracker(...args: []):  {
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
-      features: [
+      features[
         "Unlimited affiliates",
         "Custom integrations",
         "Dedicated account manager",
@@ -321,6 +321,5 @@ export default function AffiliateMarketingTracker(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}
 

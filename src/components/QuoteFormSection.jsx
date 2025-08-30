@@ -27,8 +27,7 @@ export const QuoteFormSection = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,9 +49,7 @@ export const QuoteFormSection = () => {
         comp: '',
         service: '',
         message: ''
-      });
-    }, 5000);
-  };
+      })}, 5000)};
 
   if (isSubmitted) {
     return (
@@ -80,8 +77,7 @@ export const QuoteFormSection = () => {
           </div>
         </div>
       </section>
-    );
-  }
+    )}
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -278,5 +274,4 @@ export const QuoteFormSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

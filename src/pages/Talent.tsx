@@ -8,7 +8,6 @@ const Talent: React.FC = (): JSX.Element => {
         <p className="text-lg text-gray-300">Discover top-tier technology talent for your projects.</p>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Talent;

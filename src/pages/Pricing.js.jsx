@@ -21,8 +21,7 @@ const $page = () => {
           </Link>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default $page;
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,7 +34,7 @@ export default function Pricing() {
             price: "$19",
             period: "/month",
             description: "Perfect for individuals and small teams getting started with AI tools",
-            features: [
+            features[
                 "AI Content Generation (100 credits/month)",
                 "Basic AI Image Editing",
                 "AI Meeting Assistant (5 hours/month)",
@@ -52,7 +51,7 @@ export default function Pricing() {
             price: "$49",
             period: "/month",
             description: "Ideal for growing businesses and professional teams",
-            features: [
+            features[
                 "Everything in Starter",
                 "AI Content Generation (500 credits/month)",
                 "Advanced AI Image & Video Editing",
@@ -73,7 +72,7 @@ export default function Pricing() {
             price: "$99",
             period: "/month",
             description: "Comprehensive solution for established businesses",
-            features: [
+            features[
                 "Everything in Professional",
                 "AI Content Generation (2000 credits/month)",
                 "AI Code Assistant (Advanced)",
@@ -98,7 +97,7 @@ export default function Pricing() {
             price: "Custom",
             period: "",
             description: "Tailored solutions for large organizations with specific requirements",
-            features: [
+            features[
                 "Everything in Business",
                 "Unlimited AI Content Generation",
                 "Custom AI Model Training",
@@ -123,56 +122,56 @@ export default function Pricing() {
         {
             name: "AI & Machine Learning",
             icon: <Brain className="h-8 w-8 text-zion-cyan"/>,
-            services: [
-                { name: "AI Content Generator Pro", price: "$29/month", features: ["Unlimited content generation", "50+ content types", "API access", "Advanced AI models"] },
-                { name: "AI Image & Video Editor", price: "$19/month", features: ["Background removal", "Quality enhancement", "Style transfer", "Batch processing"] },
-                { name: "AI Code Assistant", price: "$39/month", features: ["50+ languages", "IDE integrations", "Code review", "Debugging assistance"] },
-                { name: "AI Data Analytics", price: "$199/month", features: ["Predictive analytics", "Real-time insights", "Custom dashboards", "Automated reporting"] }
+            services[
+                { name: "AI Content Generator Pro", price: "$29/month", features["Unlimited content generation", "50+ content types", "API access", "Advanced AI models"] },
+                { name: "AI Image & Video Editor", price: "$19/month", features["Background removal", "Quality enhancement", "Style transfer", "Batch processing"] },
+                { name: "AI Code Assistant", price: "$39/month", features["50+ languages", "IDE integrations", "Code review", "Debugging assistance"] },
+                { name: "AI Data Analytics", price: "$199/month", features["Predictive analytics", "Real-time insights", "Custom dashboards", "Automated reporting"] }
             ]
         },
         {
             name: "Cybersecurity",
             icon: <Shield className="h-8 w-8 text-zion-purple"/>,
-            services: [
-                { name: "AI Threat Detection", price: "$99/month", features: ["24/7 monitoring", "Instant alerts", "Automated response", "Threat intelligence"] },
-                { name: "Zero Trust Security", price: "$499/month", features: ["Identity verification", "Network segmentation", "Continuous monitoring", "Compliance tools"] },
-                { name: "Penetration Testing", price: "$299/month", features: ["Monthly assessments", "Detailed reports", "Remediation guidance", "Compliance support"] }
+            services[
+                { name: "AI Threat Detection", price: "$99/month", features["24/7 monitoring", "Instant alerts", "Automated response", "Threat intelligence"] },
+                { name: "Zero Trust Security", price: "$499/month", features["Identity verification", "Network segmentation", "Continuous monitoring", "Compliance tools"] },
+                { name: "Penetration Testing", price: "$299/month", features["Monthly assessments", "Detailed reports", "Remediation guidance", "Compliance support"] }
             ]
         },
         {
             name: "Cloud & Infrastructure",
             icon: <Cloud className="h-8 w-8 text-zion-blue"/>,
-            services: [
-                { name: "Multi-Cloud Management", price: "$79/month", features: ["Unified dashboard", "Cost optimization", "Security compliance", "Performance monitoring"] },
-                { name: "DevOps Automation", price: "$49/month", features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing", "Deployment automation"] },
-                { name: "Edge Computing", price: "$149/month", features: ["Global edge network", "IoT integration", "Real-time processing", "Low latency"] }
+            services[
+                { name: "Multi-Cloud Management", price: "$79/month", features["Unified dashboard", "Cost optimization", "Security compliance", "Performance monitoring"] },
+                { name: "DevOps Automation", price: "$49/month", features["CI/CD pipelines", "Infrastructure as code", "Automated testing", "Deployment automation"] },
+                { name: "Edge Computing", price: "$149/month", features["Global edge network", "IoT integration", "Real-time processing", "Low latency"] }
             ]
         },
         {
             name: "Business Intelligence",
             icon: <Users className="h-8 w-8 text-zion-green"/>,
-            services: [
-                { name: "AI-Powered CRM", price: "$39/user/month", features: ["Lead scoring", "Sales forecasting", "Automated follow-ups", "Predictive analytics"] },
-                { name: "Business Automation", price: "$29/month", features: ["Workflow automation", "100+ integrations", "Document processing", "Process optimization"] },
-                { name: "AI Market Research", price: "$199/month", features: ["Competitor analysis", "Trend prediction", "Real-time monitoring", "Market insights"] }
+            services[
+                { name: "AI-Powered CRM", price: "$39/user/month", features["Lead scoring", "Sales forecasting", "Automated follow-ups", "Predictive analytics"] },
+                { name: "Business Automation", price: "$29/month", features["Workflow automation", "100+ integrations", "Document processing", "Process optimization"] },
+                { name: "AI Market Research", price: "$199/month", features["Competitor analysis", "Trend prediction", "Real-time monitoring", "Market insights"] }
             ]
         },
         {
             name: "Communication & Collaboration",
             icon: <MessageCircle className="h-8 w-8 text-zion-orange"/>,
-            services: [
-                { name: "AI Meeting Assistant", price: "$19/month", features: ["Real-time transcription", "Smart summaries", "Action tracking", "Automated follow-ups"] },
-                { name: "Virtual Event Platform", price: "$99/month", features: ["Interactive features", "AI engagement", "Event analytics", "1000 attendees"] },
-                { name: "AI Translation", price: "$29/month", features: ["100+ languages", "Cultural adaptation", "Real-time translation", "API access"] }
+            services[
+                { name: "AI Meeting Assistant", price: "$19/month", features["Real-time transcription", "Smart summaries", "Action tracking", "Automated follow-ups"] },
+                { name: "Virtual Event Platform", price: "$99/month", features["Interactive features", "AI engagement", "Event analytics", "1000 attendees"] },
+                { name: "AI Translation", price: "$29/month", features["100+ languages", "Cultural adaptation", "Real-time translation", "API access"] }
             ]
         },
         {
             name: "Specialized Tools",
             icon: <FileText className="h-8 w-8 text-zion-red"/>,
-            services: [
-                { name: "AI Legal Review", price: "$149/month", features: ["Contract analysis", "Risk assessment", "Compliance monitoring", "Legal insights"] },
-                { name: "AI Financial Advisor", price: "$39/month", features: ["Portfolio optimization", "Risk assessment", "Financial planning", "Investment advice"] },
-                { name: "AI Healthcare Assistant", price: "$29/month", features: ["Health monitoring", "Symptom analysis", "Wellness coaching", "HIPAA compliant"] }
+            services[
+                { name: "AI Legal Review", price: "$149/month", features["Contract analysis", "Risk assessment", "Compliance monitoring", "Legal insights"] },
+                { name: "AI Financial Advisor", price: "$39/month", features["Portfolio optimization", "Risk assessment", "Financial planning", "Investment advice"] },
+                { name: "AI Healthcare Assistant", price: "$29/month", features["Health monitoring", "Symptom analysis", "Wellness coaching", "HIPAA compliant"] }
             ]
         }
     ];
@@ -389,5 +388,4 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

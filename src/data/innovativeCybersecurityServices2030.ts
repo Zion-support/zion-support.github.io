@@ -8,15 +8,13 @@ export interface CybersecurityService {
   description: string;
   category: string;
   subcategory: string;
-pricing: {;
+pricing: {
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string;
-  
-};
+    marketPrice: string};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,8 +47,7 @@ pricing: {;
   image: string;
   createdAt: string;
   featured: boolean;
-  trending: boolean;
-}
+  trending: boolean}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -75,7 +72,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with data volume pricing",
       marketPrice: "$899-1,799/month"
     },
-    features: [
+    features[
       "Post-quantum cryptography algorithms",
       "Hybrid encryption systems",
       "Quantum key distribution",
@@ -87,36 +84,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Real-time threat monitoring",
       "Zero-trust architecture"
     ],
-    benefits: [
+    benefits[
       "Future-proof against quantum threats",
       "Maintain regulatory compliance",
       "Reduce encryption overhead",
       "Enhance data protection",
       "Simplify key management"
     ],
-    useCases: [
+    useCases[
       "Financial data protection",
       "Healthcare records security",
       "Government communications",
       "Critical infrastructure",
       "Cloud data encryption"
     ],
-    targetAudience: [
+    targetAudience[
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Technology companies",
       "Critical infrastructure"
     ],
-    technologies: [
+    technologies[
       "Post-quantum cryptography", "Quantum key distribution", "Hardware security modules",
       "Zero-trust architecture", "Multi-party computation", "Homomorphic encryption"
     ],
-    integrations: [
+    integrations[
       "Cloud platforms", "Database systems", "File storage", "Communication tools",
       "Identity management", "Compliance platforms"
     ],
-    support: [
+    support[
       "24/7 security support",
       "Encryption consultation",
       "Compliance guidance",
@@ -131,13 +128,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 178,
     innovationLevel: "Revolutionary",
     marketSize: "$15.2B by 2030",
-    competitors: ["Thales", "Gemalto", "Utimaco", "Atos"],
-    securityCapabilities: [
+    competitors["Thales", "Gemalto", "Utimaco", "Atos"],
+    securityCapabilities[
       "Quantum-resistant encryption", "Key management", "Threat detection",
       "Compliance automation", "Performance optimization", "Zero-trust security"
     ],
-    complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],
-    deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
+    complianceStandards["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],
+    deploymentOptions["Cloud", "On-premise", "Hybrid", "Edge"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -147,7 +144,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-    tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
+    tags["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -168,7 +165,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with endpoint-based pricing",
       marketPrice: "$699-1,399/month"
     },
-    features: [
+    features[
       "AI-powered threat detection",
       "Behavioral analysis",
       "Threat intelligence integration",
@@ -180,36 +177,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Forensic analysis tools",
       "Threat hunting training"
     ],
-    benefits: [
+    benefits[
       "Reduce threat detection time by 90%",
       "Prevent 95% of cyber attacks",
       "Automate incident response",
       "Improve security team efficiency",
       "Enhance threat visibility"
     ],
-    useCases: [
+    useCases[
       "Enterprise security operations",
       "SOC operations",
       "Incident response",
       "Threat intelligence",
       "Security research"
     ],
-    targetAudience: [
+    targetAudience[
       "Security operations centers",
       "Enterprise security teams",
       "Managed security providers",
       "Government agencies",
       "Financial institutions"
     ],
-    technologies: [
+    technologies[
       "Machine learning", "Deep learning", "Behavioral analytics", "Threat intelligence",
       "Automation", "Real-time processing", "Big data analytics"
     ],
-    integrations: [
+    integrations[
       "SIEM systems", "EDR platforms", "Firewalls", "Identity management",
       "Vulnerability scanners", "Threat intelligence feeds"
     ],
-    support: [
+    support[
       "24/7 security support",
       "Threat hunting consultation",
       "Incident response assistance",
@@ -224,13 +221,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 245,
     innovationLevel: "Innovative",
     marketSize: "$22.8B by 2030",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    securityCapabilities: [
+    competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    securityCapabilities[
       "Threat detection", "Behavioral analysis", "Incident response",
       "Threat intelligence", "Forensic analysis", "Automation"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
+    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    deploymentOptions["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -240,7 +237,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-    tags: ["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
+    tags["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -261,7 +258,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with user-based pricing",
       marketPrice: "$499-999/month"
     },
-    features: [
+    features[
       "Identity-based access control",
       "Application-level security",
       "Continuous authentication",
@@ -273,36 +270,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Mobile device support",
       "API security"
     ],
-    benefits: [
+    benefits[
       "Eliminate VPN vulnerabilities",
       "Improve user experience",
       "Enhance security posture",
       "Reduce attack surface",
       "Simplify compliance"
     ],
-    useCases: [
+    useCases[
       "Remote work security",
       "Cloud application access",
       "Third-party access",
       "IoT device security",
       "Branch office connectivity"
     ],
-    targetAudience: [
+    targetAudience[
       "Enterprise organizations",
       "Remote workforces",
       "Cloud-first companies",
       "Healthcare organizations",
       "Financial institutions"
     ],
-    technologies: [
+    technologies[
       "Zero trust architecture", "Identity management", "Multi-factor authentication",
       "Application security", "Network segmentation", "Risk assessment"
     ],
-    integrations: [
+    integrations[
       "Identity providers", "Cloud platforms", "Enterprise applications",
       "Security tools", "Compliance platforms", "SIEM systems"
     ],
-    support: [
+    support[
       "24/7 technical support",
       "Security consultation",
       "Implementation assistance",
@@ -317,13 +314,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 198,
     innovationLevel: "Innovative",
     marketSize: "$18.7B by 2030",
-    competitors: ["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],
-    securityCapabilities: [
+    competitors["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],
+    securityCapabilities[
       "Access control", "Identity verification", "Risk assessment",
       "Application security", "Network segmentation", "Compliance automation"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    deploymentOptions: ["Cloud", "Hybrid", "On-premise"],
+    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    deploymentOptions["Cloud", "Hybrid", "On-premise"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -333,7 +330,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-    tags: ["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
+    tags["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -354,7 +351,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with asset-based pricing",
       marketPrice: "$399-799/month"
     },
-    features: [
+    features[
       "AI-powered risk prioritization",
       "Automated vulnerability scanning",
       "Patch management automation",
@@ -366,36 +363,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Integration capabilities",
       "Mobile app support"
     ],
-    benefits: [
+    benefits[
       "Reduce remediation time by 60%",
       "Improve risk prioritization by 80%",
       "Automate patch management",
       "Enhance compliance posture",
       "Optimize security resources"
     ],
-    useCases: [
+    useCases[
       "Security operations",
       "Compliance management",
       "Risk assessment",
       "Asset management",
       "Patch management"
     ],
-    targetAudience: [
+    targetAudience[
       "Security teams",
       "IT operations",
       "Compliance officers",
       "Risk managers",
       "Managed service providers"
     ],
-    technologies: [
+    technologies[
       "Machine learning", "Vulnerability scanning", "Risk assessment",
       "Automation", "Configuration management", "Asset discovery"
     ],
-    integrations: [
+    integrations[
       "Vulnerability scanners", "Patch management tools", "Configuration management",
       "SIEM systems", "Compliance platforms", "IT service management"
     ],
-    support: [
+    support[
       "24/7 technical support",
       "Vulnerability consultation",
       "Implementation assistance",
@@ -410,13 +407,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 167,
     innovationLevel: "Innovative",
     marketSize: "$12.4B by 2030",
-    competitors: ["Qualys", "Rapid7", "Tenable", "Nessus"],
-    securityCapabilities: [
+    competitors["Qualys", "Rapid7", "Tenable", "Nessus"],
+    securityCapabilities[
       "Vulnerability scanning", "Risk assessment", "Patch management",
       "Configuration management", "Compliance tracking", "Asset discovery"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],
-    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
+    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],
+    deploymentOptions["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -426,7 +423,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-    tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
+    tags["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -447,7 +444,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with audit-based pricing",
       marketPrice: "$799-1,599/month"
     },
-    features: [
+    features[
       "Smart contract auditing",
       "DeFi protocol analysis",
       "Vulnerability detection",
@@ -459,36 +456,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Security reporting",
       "Remediation guidance"
     ],
-    benefits: [
+    benefits[
       "Prevent smart contract exploits",
       "Ensure DeFi protocol security",
       "Meet regulatory requirements",
       "Protect digital assets",
       "Build user trust"
     ],
-    useCases: [
+    useCases[
       "Smart contract development",
       "DeFi protocol security",
       "NFT platform security",
       "Cryptocurrency exchanges",
       "Blockchain applications"
     ],
-    targetAudience: [
+    targetAudience[
       "Blockchain developers",
       "DeFi protocols",
       "Cryptocurrency exchanges",
       "NFT platforms",
       "Financial institutions"
     ],
-    technologies: [
+    technologies[
       "Static analysis", "Dynamic analysis", "Formal verification",
       "Penetration testing", "Code review", "Security testing"
     ],
-    integrations: [
+    integrations[
       "Development environments", "CI/CD pipelines", "Blockchain networks",
       "Security tools", "Compliance platforms", "Audit systems"
     ],
-    support: [
+    support[
       "24/7 security support",
       "Blockchain consultation",
       "Audit assistance",
@@ -503,13 +500,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 134,
     innovationLevel: "Innovative",
     marketSize: "$8.9B by 2030",
-    competitors: ["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],
-    securityCapabilities: [
+    competitors["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],
+    securityCapabilities[
       "Smart contract auditing", "DeFi security", "Vulnerability detection",
       "Penetration testing", "Code review", "Compliance verification"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "Industry-specific"],
-    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
+    complianceStandards["SOC 2", "ISO 27001", "NIST", "Industry-specific"],
+    deploymentOptions["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -519,7 +516,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 3 seconds",
     availability: "Global",
     location: "Global",
-    tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
+    tags["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,

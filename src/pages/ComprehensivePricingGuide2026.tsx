@@ -29,19 +29,16 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
     let filtered = ALL_PRICING_GUIDES_2026;
     
     if (selectedService !== 'all') {
-      filtered = filtered.filter(service => service.serviceName === selectedService);
-    }
+      filtered = filtered.filter(service => service.serviceName === selectedService)}
     
-    return filtered;
-  }, [selectedService]);
+    return filtered}, [selectedService]);
 
   const getServiceIcon = (serviceName: string)  => {
     switch (serviceName) {
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
       case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
       case 'BlockchainForge': return <Shield className="w-6 h-6" />;
-      default: return <Zap className="w-6 h-6" />;
-    }
+      default: return <Zap className="w-6 h-6" />}
   };
 
   const getTierColor = (tierName: string)  => {
@@ -49,8 +46,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
       case 'Starter': return 'from-green-500 to-emerald-500';
       case 'Professional': return 'from-blue-500 to-cyan-500';
       case 'Enterprise': return 'from-purple-500 to-pink-500';
-      default: return 'from-gray-500 to-gray-600';
-    }
+      default: return 'from-gray-500 to-gray-600'}
   };
 
   return (
@@ -422,7 +418,6 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2026;

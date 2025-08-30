@@ -63,27 +63,23 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+          setIsVisible(true)}
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('innovative-services-2027');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)}
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All' 
     ? innovativeServices2027 
     : getServicesByCategory(selectedCategory);
 
   const toggleServiceExpansion = (serviceId: string)  => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -160,8 +156,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
                   {Icon && <Icon className="w-4 h-4" />}
                   {category}
                 </button>
-              );
-            })}
+              )})}
           </div>
         </motion.div>
 
@@ -356,5 +351,4 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};

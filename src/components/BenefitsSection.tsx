@@ -11,9 +11,7 @@ interface Benefit {
   color: string;
   bgColor: string;
   stats: string;
-  features: string[];
-
-}
+  features: string[]}
 
 const benefits: Benefit[] = [
   {
@@ -23,7 +21,7 @@ const benefits: Benefit[] = [
     color: "from-zion-cyan to-zion-cyan-dark",
     bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
     stats: "95% Match Rate",
-    features: [
+    features[
       "Intelligent service matching",
       "Real-time availability",
       "Expert talent matching",
@@ -37,7 +35,7 @@ const benefits: Benefit[] = [
     color: "from-zion-purple to-zion-purple-dark",
     bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
     stats: "150+ Countries",
-    features: [
+    features[
       "Worldwide talent pool",
       "24/7 availability",
       "Multi-language support",
@@ -51,7 +49,7 @@ const benefits: Benefit[] = [
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
     stats: "99.9% Uptime",
-    features: [
+    features[
       "Round-the-clock assistance",
       "Expert technical support",
       "Rapid response times",
@@ -65,7 +63,7 @@ const benefits: Benefit[] = [
     color: "from-zion-green to-zion-green-dark",
     bgColor: "from-zion-green/20 to-zion-green-dark/20",
     stats: "40% Cost Savings",
-    features: [
+    features[
       "Direct provider connections",
       "Competitive pricing",
       "Bulk discount options",
@@ -81,7 +79,7 @@ const initialStats = [
   { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
 ];
 
-export function BenefitsSection(...args: []):  {
+export function BenefitsSection(...args[]):  {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   const containerVariants = {
@@ -126,7 +124,7 @@ export function BenefitsSection(...args: []):  {
         />
         <motion.div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-          animate={{ scale: [1, 1.2, 1] }}
+          animate={{ scale[1, 1.2, 1] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
@@ -305,7 +303,6 @@ export function BenefitsSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default BenefitsSection;

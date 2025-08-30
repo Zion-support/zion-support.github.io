@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react.ts';
 
-export default function AIAnalytics(...args: []):  {
+export default function AIAnalytics(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -202,5 +202,4 @@ export default function AIAnalytics(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

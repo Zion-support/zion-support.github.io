@@ -157,5 +157,4 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

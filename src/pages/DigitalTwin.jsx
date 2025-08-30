@@ -46,7 +46,7 @@ const digitalTwinSolutions = [
     title: "Manufacturing Digital Twin",
     description: "Real-time digital representation of manufacturing processes and equipment for optimization.",
     icon: Factory,
-    features: [
+    features[
       "Equipment monitoring",
       "Process optimization",
       "Predictive maintenance",
@@ -55,14 +55,14 @@ const digitalTwinSolutions = [
     price: "From $150,000",
     timeline: "24-36 weeks",
     category: "Manufacturing",
-    technologies: ["IoT Sensors", "3D Modeling", "Real-time Analytics", "ML Algorithms"]
+    technologies["IoT Sensors", "3D Modeling", "Real-time Analytics", "ML Algorithms"]
   },
   {
     id: 2,
     title: "Smart City Digital Twin",
     description: "Comprehensive digital representation of urban infrastructure and systems.",
     icon: Building,
-    features: [
+    features[
       "Infrastructure monitoring",
       "Traffic optimization",
       "Energy management",
@@ -71,14 +71,14 @@ const digitalTwinSolutions = [
     price: "From $300,000",
     timeline: "36-52 weeks",
     category: "Smart Cities",
-    technologies: ["GIS Mapping", "IoT Networks", "AI Analytics", "Real-time Data"]
+    technologies["GIS Mapping", "IoT Networks", "AI Analytics", "Real-time Data"]
   },
   {
     id: 3,
     title: "Healthcare Digital Twin",
     description: "Patient-specific digital models for personalized medicine and treatment planning.",
     icon: Users,
-    features: [
+    features[
       "Patient modeling",
       "Treatment simulation",
       "Drug response prediction",
@@ -87,14 +87,14 @@ const digitalTwinSolutions = [
     price: "From $200,000",
     timeline: "28-40 weeks",
     category: "Healthcare",
-    technologies: ["Medical Imaging", "AI Models", "3D Visualization", "Predictive Analytics"]
+    technologies["Medical Imaging", "AI Models", "3D Visualization", "Predictive Analytics"]
   },
   {
     id: 4,
     title: "Energy Infrastructure Twin",
     description: "Digital representation of power plants, grids, and renewable energy systems.",
     icon: Zap,
-    features: [
+    features[
       "Grid monitoring",
       "Load balancing",
       "Predictive maintenance",
@@ -103,14 +103,14 @@ const digitalTwinSolutions = [
     price: "From $250,000",
     timeline: "32-44 weeks",
     category: "Energy",
-    technologies: ["SCADA Systems", "IoT Sensors", "AI Analytics", "Real-time Control"]
+    technologies["SCADA Systems", "IoT Sensors", "AI Analytics", "Real-time Control"]
   },
   {
     id: 5,
     title: "Transportation Digital Twin",
     description: "Digital models of transportation networks, vehicles, and logistics systems.",
     icon: Truck,
-    features: [
+    features[
       "Fleet monitoring",
       "Route optimization",
       "Traffic simulation",
@@ -119,14 +119,14 @@ const digitalTwinSolutions = [
     price: "From $180,000",
     timeline: "24-36 weeks",
     category: "Transportation",
-    technologies: ["GPS Tracking", "IoT Sensors", "AI Routing", "Real-time Data"]
+    technologies["GPS Tracking", "IoT Sensors", "AI Routing", "Real-time Data"]
   },
   {
     id: 6,
     title: "Building Digital Twin",
     description: "Digital representation of buildings for facility management and optimization.",
     icon: Building,
-    features: [
+    features[
       "Building monitoring",
       "Energy optimization",
       "Occupancy tracking",
@@ -135,7 +135,7 @@ const digitalTwinSolutions = [
     price: "From $120,000",
     timeline: "20-28 weeks",
     category: "Buildings",
-    technologies: ["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
+    technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
 ];
 
@@ -236,25 +236,25 @@ const digitalTwinBenefits = [
     title: "Real-time Monitoring",
     description: "Continuous monitoring of physical assets and systems",
     icon: Eye,
-    examples: ["Live data feeds", "Instant alerts", "Performance tracking"]
+    examples["Live data feeds", "Instant alerts", "Performance tracking"]
   },
   {
     title: "Predictive Analytics",
     description: "AI-powered predictions for maintenance and optimization",
     icon: TrendingUp,
-    examples: ["Predictive maintenance", "Performance forecasting", "Risk assessment"]
+    examples["Predictive maintenance", "Performance forecasting", "Risk assessment"]
   },
   {
     title: "Simulation & Testing",
     description: "Virtual testing of scenarios and what-if analysis",
     icon: Monitor,
-    examples: ["Process simulation", "Scenario testing", "Optimization modeling"]
+    examples["Process simulation", "Scenario testing", "Optimization modeling"]
   },
   {
     title: "Cost Optimization",
     description: "Reduced operational costs through better resource management",
     icon: Gauge,
-    examples: ["Energy optimization", "Maintenance planning", "Resource allocation"]
+    examples["Energy optimization", "Maintenance planning", "Resource allocation"]
   }
 ];
 
@@ -642,5 +642,4 @@ export default function DigitalTwin() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

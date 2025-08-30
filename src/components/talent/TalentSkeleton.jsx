@@ -12,5 +12,4 @@ export function TalentSkeleton() {
           </div>
           <Skeleton className="h-24 w-full bg-zion-blue-light/20"/>
         </div>))}
-    </div>);
-}
+    </div>)}

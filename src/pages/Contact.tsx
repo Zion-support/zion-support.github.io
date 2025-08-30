@@ -20,8 +20,7 @@ const Contact: React.FC = (): JSX.Element => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
@@ -37,8 +36,7 @@ const Contact: React.FC = (): JSX.Element => {
       message: '',
       budget: '',
       timeline: ''
-    });
-  };
+    })};
 
   const contactMethods = [
     {
@@ -78,7 +76,7 @@ const Contact: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       name: 'AI-Powered Micro SAAS',
-      services: [
+      services[
         'AI Code Review & Security',
         'AI Customer Experience Analytics',
         'AI DevOps Automation Platform',
@@ -87,7 +85,7 @@ const Contact: React.FC = (): JSX.Element => {
     },
     {
       name: 'Cloud & Infrastructure',
-      services: [
+      services[
         'Cloud DevOps',
         'IT Infrastructure',
         'Digital Twin'
@@ -95,7 +93,7 @@ const Contact: React.FC = (): JSX.Element => {
     },
     {
       name: 'Data & Analytics',
-      services: [
+      services[
         'Data Analytics',
         'AI Business Intelligence',
         'IoT Edge Computing'
@@ -103,7 +101,7 @@ const Contact: React.FC = (): JSX.Element => {
     },
     {
       name: 'Security & Compliance',
-      services: [
+      services[
         'Zero Trust Network Architecture',
         'AI Cybersecurity Suite',
         'AI Compliance Assistant'
@@ -505,7 +503,6 @@ const Contact: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default Contact;

@@ -7,21 +7,21 @@ const CloudServices = () => {
       title: "Cloud Migration & Strategy",
       description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
       price: "From $8,500/project",
-      features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
+      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
       icon: Cloud
     },
     {
       title: "Cloud-Native Development",
       description: "Build scalable applications using cloud-native technologies and microservices architecture.",
       price: "From $12,000/project",
-      features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
+      features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
       icon: Server
     },
     {
       title: "Cloud Security & Compliance",
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
       price: "From $6,500/month",
-      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
+      features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
     }
   ];
@@ -31,19 +31,19 @@ const CloudServices = () => {
       name: "Amazon Web Services",
       description: "Comprehensive cloud services and infrastructure",
       icon: Cloud,
-      features: ["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
+      features["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
     },
     {
       name: "Microsoft Azure",
       description: "Enterprise cloud platform with hybrid capabilities",
       icon: Server,
-      features: ["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
+      features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
       name: "Google Cloud Platform",
       description: "AI-first cloud platform with advanced analytics",
       icon: Globe,
-      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
+      features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     }
   ];
 
@@ -216,7 +216,6 @@ const CloudServices = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CloudServices;

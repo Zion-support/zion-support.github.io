@@ -34,7 +34,7 @@ import { ArrowRight,
   Cloud
  } from 'lucide-react.ts';
 
-export function FeatureCTAs(...args: []):  {
+export function FeatureCTAs(...args[]):  {
   const features = [
     {
       title: "AI Services & Solutions",
@@ -230,5 +230,4 @@ export function FeatureCTAs(...args: []):  {
         </div>
       </div>
     </section>
-  );
-}
+  )}

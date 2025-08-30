@@ -18,7 +18,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Brain,
       title: 'AI & Machine Learning',
       description: 'Deep expertise in neural networks, natural language processing, and predictive analytics.',
-      certifications: ['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
+      certifications['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
       experience: '8+ years',
       projects: '150+'
     },
@@ -26,7 +26,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Expert security professionals with certifications in ethical hacking and compliance.',
-      certifications: ['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
+      certifications['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
       experience: '10+ years',
       projects: '200+'
     },
@@ -34,7 +34,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Certified cloud architects specializing in multi-cloud and hybrid solutions.',
-      certifications: ['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
+      certifications['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
       experience: '12+ years',
       projects: '300+'
     },
@@ -42,7 +42,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'Strategic consultants with proven track records in business transformation.',
-      certifications: ['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
+      certifications['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
       experience: '15+ years',
       projects: '500+'
     },
@@ -50,7 +50,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Globe,
       title: 'Web & Mobile Development',
       description: 'Full-stack developers with expertise in modern frameworks and technologies.',
-      certifications: ['React', 'Node.js', 'Flutter', 'AWS Developer'],
+      certifications['React', 'Node.js', 'Flutter', 'AWS Developer'],
       experience: '6+ years',
       projects: '100+'
     },
@@ -58,7 +58,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       icon: Rocket,
       title: 'Innovation & R&D',
       description: 'Research scientists and engineers pushing the boundaries of technology.',
-      certifications: ['PhD Computer Science', 'Patent Holders', 'Research Publications'],
+      certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
       experience: '20+ years',
       projects: '50+'
     }
@@ -110,8 +110,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Expertise Grid */}
@@ -164,8 +163,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
                   </div>
                 </div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* CTA Section */}
@@ -197,7 +195,6 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default TeamExpertiseSection;

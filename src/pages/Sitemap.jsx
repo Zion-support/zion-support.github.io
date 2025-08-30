@@ -4,7 +4,7 @@ const Sitemap = () => {
     const sitemapSections = [
         {
             title: "Main Pages",
-            links: [
+            links[
                 { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
                 { name: "About Us", path: "/about", description: "Our story and mission" },
                 { name: "Contact", path: "/contact", description: "Get in touch with us" },
@@ -15,7 +15,7 @@ const Sitemap = () => {
         },
         {
             title: "Services",
-            links: [
+            links[
                 { name: "All Services", path: "/services", description: "Complete service overview" },
                 { name: "AI Services", path: "/ai-services", description: "Artificial Intelligence services" },
                 { name: "IT Services", path: "/it-services", description: "Information Technology solutions" },
@@ -30,7 +30,7 @@ const Sitemap = () => {
         },
         {
             title: "Marketplace & Solutions",
-            links: [
+            links[
                 { name: "Marketplace", path: "/marketplace", description: "Technology marketplace" },
                 { name: "AI Business Solutions", path: "/ai-business-solutions", description: "AI-powered business tools" },
                 { name: "Digital Marketing", path: "/digital-marketing-services", description: "Marketing technology solutions" },
@@ -41,7 +41,7 @@ const Sitemap = () => {
         },
         {
             title: "Comp & Resources",
-            links: [
+            links[
                 { name: "Blog", path: "/blog", description: "Latest insights and news" },
                 { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
                 { name: "Sitemap", path: "/sitemap", description: "Complete site navigation" },
@@ -52,7 +52,7 @@ const Sitemap = () => {
         },
         {
             title: "Legal & Compliance",
-            links: [
+            links[
                 { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
                 { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
                 { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
@@ -61,7 +61,7 @@ const Sitemap = () => {
         },
         {
             title: "User Account",
-            links: [
+            links[
                 { name: "Login", path: "/login", description: "User authentication" },
                 { name: "Sign Up", path: "/signup", description: "Create new account" },
                 { name: "Dashboard", path: "/dashboard", description: "User dashboard" },
@@ -137,6 +137,5 @@ const Sitemap = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )};
 export default Sitemap;

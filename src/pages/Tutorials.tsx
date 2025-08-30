@@ -317,7 +317,6 @@ const Tutorials = () => {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 
 export default Tutorials;

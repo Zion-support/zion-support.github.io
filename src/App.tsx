@@ -167,7 +167,7 @@ const Marketplace = () => (
   </div>
 );
 
-function App(...args: []):  {
+function App(...args[]):  {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
@@ -310,7 +310,6 @@ function App(...args: []):  {
         <MobileExperienceEnhancer />
       </div>
     </ErrorBoundary>
-  );
-}
+  )}
 
 export default App;

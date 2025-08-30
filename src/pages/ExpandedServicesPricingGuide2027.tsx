@@ -76,17 +76,14 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
   useEffect(() => {
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (selectedCategory !== 'All') {
-      pricing = pricing.filter(p => p.category === selectedCategory);
-    }
+      pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
       pricing = pricing.filter(p => 
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-    setFilteredPricing(pricing);
-  }, [selectedCategory, searchQuery]);
+      )}
+    setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -103,8 +100,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
-        return Rocket;
-    }
+        return Rocket}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -122,8 +118,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
-        return 'from-gray-500 to-slate-600';
-    }
+        return 'from-gray-500 to-slate-600'}
   };
 
   const getMarketPositionColor = (position: string)  => {
@@ -137,8 +132,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
       case 'emerging':
         return 'bg-yellow-100 text-yellow-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
   const renderPricingCard = (pricing: ExpandedServicePricing)  => {
@@ -433,8 +427,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
           </div>
         </div>
       </motion.div>
-    );
-  };
+    )};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -595,7 +588,6 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesPricingGuide2027;

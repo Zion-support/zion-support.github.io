@@ -60,21 +60,21 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       plan: "Starter",
       price: "$299",
       period: "/month",
-      features: ["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],
+      features["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],
       popular: false
     },
     {
       plan: "Growth",
       price: "$799",
       period: "/month",
-      features: ["Up to 10,000 customers", "Advanced ML models", "Custom dashboards", "Priority support", "API access"],
+      features["Up to 10,000 customers", "Advanced ML models", "Custom dashboards", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -376,7 +376,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerChurnPrediction;

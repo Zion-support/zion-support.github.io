@@ -32,7 +32,7 @@ import { Brain,
   MousePointer
  } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation(...args: []):  {
+export default function AIMarketingAutomation(...args[]):  {
   const features = [
     "AI-powered customer segmentation and targeting",
     "Intelligent email marketing automation",
@@ -73,7 +73,7 @@ export default function AIMarketingAutomation(...args: []):  {
       price: "$199",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI customer segmentation (up to 10,000 contacts)",
         "Basic email automation",
         "Social media scheduling",
@@ -89,7 +89,7 @@ export default function AIMarketingAutomation(...args: []):  {
       price: "$599",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features: [
+      features[
         "AI customer segmentation (unlimited contacts)",
         "Advanced email automation",
         "Multi-channel campaigns",
@@ -106,7 +106,7 @@ export default function AIMarketingAutomation(...args: []):  {
       price: "$1,499",
       period: "/month",
       description: "For large organizations with complex marketing needs",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -401,5 +401,4 @@ export default function AIMarketingAutomation(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

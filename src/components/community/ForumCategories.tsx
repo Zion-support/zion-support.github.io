@@ -8,15 +8,12 @@ interface ForumCategoryInfo {
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-lastPost?: {;
+lastPost?: {
     title: string;
     author: string;
-    date: string;
-  
-};
-}
+    date: string}}
 
-export default function ForumCategories(...args: []):  {
+export default function ForumCategories(...args[]):  {
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -181,5 +178,4 @@ export default function ForumCategories(...args: []):  {
         </div>
       </div>
     </section>
-  );
-}
+  )}

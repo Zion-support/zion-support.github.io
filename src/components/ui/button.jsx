@@ -38,7 +38,6 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
         {!loading && leftIcon && (<span className="mr-2">{leftIcon}</span>)}
         {children}
         {!loading && rightIcon && (<span className="ml-2">{rightIcon}</span>)}
-      </button>);
-});
+      </button>)});
 Button.displayName = "Button";
 export { Button, buttonVariants };

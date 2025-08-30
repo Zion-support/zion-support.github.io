@@ -10,9 +10,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [showFilters, setShowFilters] = useState(false);
     const [filters, setFilters] = useState({
-        status: [],
-        category: [],
-        priority: [],
+        status[],
+        category[],
+        priority[],
         progress: 0
     });
     const [viewMode, setViewMode] = useState('timeline');
@@ -20,15 +20,14 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const timelineRef = useRef(null);
     const { scrollYProgress: _scrollYProgress } = useScroll({
         target: timelineRef,
-        offset: ["start end", "end start"]
+        offset["start end", "end start"]
     });
     // Filter events based on current filters
     const filteredEvents = events.filter(event => {
         const matchesStatus = filters.status.length === 0 || filters.status.includes(event.status);
         const matchesCategory = filters.category.length === 0 || filters.category.includes(event.category);
         const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
-        return matchesStatus && matchesCategory && matchesPriority;
-    });
+        return matchesStatus && matchesCategory && matchesPriority});
     // Auto-play functionality
     useEffect(() => {
         if (!isPlaying || filteredEvents.length === 0)
@@ -39,20 +38,15 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 if (next === 0) {
                     setIsPlaying(false); // Stop when reaching the end
                 }
-                return next;
-            });
-        }, 3000 / playbackSpeed);
-        return () => clearInterval(interval);
-    }, [isPlaying, filteredEvents.length, playbackSpeed]);
+                return next})}, 3000 / playbackSpeed);
+        return () => clearInterval(interval)}, [isPlaying, filteredEvents.length, playbackSpeed]);
     // Handle event selection
     const handleEventClick = useCallback((event) => {
         setSelectedEvent(event);
-        onEventClick?.(event);
-    }, [onEventClick]);
+        onEventClick?.(event)}, [onEventClick]);
     // Handle status change
     const handleStatusChange = useCallback((eventId, newStatus) => {
-        onStatusChange?.(eventId, newStatus);
-    }, [onStatusChange]);
+        onStatusChange?.(eventId, newStatus)}, [onStatusChange]);
     // Get status icon and color
     const getStatusIcon = (status) => {
         switch (status) {
@@ -65,8 +59,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             case 'milestone':
                 return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
             default:
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
-        }
+                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' }}
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -80,8 +73,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             case 'low':
                 return 'border-green-500/50 bg-green-500/10';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10';
-        }
+                return 'border-zinc-500/50 bg-zinc-500/10'}
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -94,17 +86,14 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             'Team': Users,
             'Launch': Award
         };
-        return iconMap[category] || Calendar;
-    };
+        return iconMap[category] || Calendar};
     // Toggle play/pause
     const togglePlayback = useCallback(() => {
-        setIsPlaying(!isPlaying);
-    }, [isPlaying]);
+        setIsPlaying(!isPlaying)}, [isPlaying]);
     // Reset timeline
     const resetTimeline = useCallback(() => {
         setCurrentEventIndex(0);
-        setIsPlaying(false);
-    }, []);
+        setIsPlaying(false)}, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
         const dataStr = JSON.stringify(filteredEvents, null, 2);
@@ -114,8 +103,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         link.href = url;
         link.download = `timeline-${new Date().toISOString().split('T')[0]}.json`;
         link.click();
-        URL.revokeObjectURL(url);
-    }, [filteredEvents]);
+        URL.revokeObjectURL(url)}, [filteredEvents]);
     // Share timeline
     const shareTimeline = useCallback(() => {
         if (navigator.share) {
@@ -123,11 +111,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 title: 'Project Timeline',
                 text: 'Check out our project timeline',
                 url: window.location.href
-            });
-        }
+            })}
         else {
-            navigator.clipboard.writeText(window.location.href);
-        }
+            navigator.clipboard.writeText(window.location.href)}
     }, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
@@ -204,8 +190,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <label className="text-zinc-300 text-sm font-medium">Status</label>
                 <select multiple value={filters.status} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, status: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                setFilters(prev => ({ ...prev, status: selected }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
                   <option value="upcoming">Upcoming</option>
@@ -217,8 +202,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <label className="text-zinc-300 text-sm font-medium">Category</label>
                 <select multiple value={filters.category} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, category: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                setFilters(prev => ({ ...prev, category: selected }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
                   <option value="Cloud">Cloud</option>
@@ -233,8 +217,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <label className="text-zinc-300 text-sm font-medium">Priority</label>
                 <select multiple value={filters.priority} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, priority: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                setFilters(prev => ({ ...prev, priority: selected }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
                   <option value="medium">Medium</option>
@@ -282,7 +265,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <div className="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent
                         ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
-                        : 'border-zion-blue-light/30'}`} animate={isCurrent ? { scale: [1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity }}>
+                        : 'border-zion-blue-light/30'}`} animate={isCurrent ? { scale[1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity }}>
                       <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
                     </motion.div>
                     
@@ -357,15 +340,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                     {event.actions && event.actions.length > 0 && (<div className="flex items-center gap-2 mt-4 pt-3 border-t border-zion-blue-light/20">
                         {event.actions.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                                 e.stopPropagation();
-                                action.action();
-                            }} className="text-xs">
+                                action.action()}} className="text-xs">
                             <action.icon className="w-3 h-3 mr-1"/>
                             {action.label}
                           </Button>))}
                       </div>)}
                   </motion.div>
-                </motion.div>);
-            })}
+                </motion.div>)})}
           </div>
         </div>)}
 
@@ -473,5 +454,4 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}

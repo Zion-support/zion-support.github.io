@@ -16,7 +16,7 @@ import { QuoteStatusCards,
   QuotesTable
  } from '@/components/admin/quotes';
 
-export default function QuoteManager(...args: []):  {
+export default function QuoteManager(...args[]):  {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   
@@ -51,19 +51,16 @@ export default function QuoteManager(...args: []):  {
 
   const handleViewDetails = (quote: QuoteRequest)  => {
     setSelectedQuote(quote);
-    setShowDetails(true);
-  };
+    setShowDetails(true)};
 
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
-  };
+    setDateRange({ from: undefined, to: undefined })};
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
-  }
+    return <Navigate to="/unauthorized" replace />}
 
   return (
     <ProtectedRoute adminOnly>
@@ -139,12 +136,10 @@ export default function QuoteManager(...args: []):  {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-          }}
+            setSelectedQuote(null)}}
         />
         
         
       </div>
     </ProtectedRoute>
-  );
-}
+  )}

@@ -25,7 +25,7 @@ import { Shield,
   Activity
  } from 'lucide-react.ts';
 
-export default function AICybersecuritySuite(...args: []):  {
+export default function AICybersecuritySuite(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -70,25 +70,25 @@ export default function AICybersecuritySuite(...args: []):  {
       title: 'Threat Intelligence Platform',
       description: 'Real-time threat intelligence and analysis powered by AI',
       price: 'From $2,500/month',
-      features: ['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
+      features['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
     },
     {
       title: 'Security Operations Center (SOC)',
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
-      features: ['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
+      features['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
     },
     {
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
-      features: ['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
+      features['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
     },
     {
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
-      features: ['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
+      features['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
     }
   ];
 
@@ -96,22 +96,22 @@ export default function AICybersecuritySuite(...args: []):  {
     {
       title: 'Endpoint Protection',
       description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
-      features: ['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
+      features['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
     },
     {
       title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
-      features: ['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
+      features['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
     },
     {
       title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
-      features: ['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
+      features['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
     },
     {
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
-      features: ['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
+      features['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
     }
   ];
 
@@ -453,5 +453,4 @@ export default function AICybersecuritySuite(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

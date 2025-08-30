@@ -175,5 +175,4 @@ export function NewServicesShowcase() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

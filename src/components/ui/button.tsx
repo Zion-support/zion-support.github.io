@@ -8,10 +8,8 @@ interface ButtonProps extends React.PropsWithChildren<{}> {
   className?: string;
   onClick?: ()  => void;
   type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-
-}
-export function Button(...args: []):  {
+  disabled?: boolean}
+export function Button(...args[]):  {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -27,8 +25,7 @@ export function Button(...args: []):  {
   };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>;
-  }
+    return <span className={classes}>{children}</span>}
   return (
     <button
       type={type}
@@ -38,8 +35,7 @@ export function Button(...args: []):  {
     >
       {children}
     </button>
-  );
-}
+  )}
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

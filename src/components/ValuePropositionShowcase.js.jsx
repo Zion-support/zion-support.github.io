@@ -78,24 +78,24 @@ const competitiveAdvantages = [
 const marketComparison = [
   {
     category: "AI Business Intelligence",
-    competitors: ["Tableau", "Power BI", "Looker"],
-    competitorPricing: ["$70/user/month", "$9.99/user/month", "$30/user/month"],
+    competitors["Tableau", "Power BI", "Looker"],
+    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],
     ourPricing: "$299/month",
     savings: "Up to 80%",
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
     category: "Customer Success Platform",
-    competitors: ["Gainsight", "Totango", "ChurnZero"],
-    competitorPricing: ["$500/user/month", "$500/user/month", "$500/user/month"],
+    competitors["Gainsight", "Totango", "ChurnZero"],
+    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],
     ourPricing: "$349/month",
     savings: "Up to 90%",
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
     category: "Zero-Trust Security",
-    competitors: ["Palo Alto Networks", "CrowdStrike", "Zscaler"],
-    competitorPricing: ["$50,000/year", "$100,000/year", "$50,000/year"],
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],
+    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
@@ -378,5 +378,4 @@ export function ValuePropositionShowcase() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

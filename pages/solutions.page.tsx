@@ -41,7 +41,7 @@ const solutionCategories = [
     icon: Brain,
     description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
-    solutions: [
+    solutions[
       'Predictive Analytics',
       'Natural Language Processing',
       'Computer Vision',
@@ -56,7 +56,7 @@ const solutionCategories = [
     icon: Shield,
     description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
-    solutions: [
+    solutions[
       'Threat Detection & Response',
       'Identity & Access Management',
       'Security Compliance',
@@ -71,7 +71,7 @@ const solutionCategories = [
     icon: Cloud,
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
-    solutions: [
+    solutions[
       'Cloud Migration',
       'Infrastructure as Code',
       'Container Orchestration',
@@ -86,7 +86,7 @@ const solutionCategories = [
     icon: TrendingUp,
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
-    solutions: [
+    solutions[
       'Business Intelligence',
       'Data Warehousing',
       'Real-time Analytics',
@@ -101,7 +101,7 @@ const solutionCategories = [
     icon: Zap,
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
-    solutions: [
+    solutions[
       'IoT Device Management',
       'Edge Computing Platforms',
       'Sensor Networks',
@@ -116,7 +116,7 @@ const solutionCategories = [
     icon: Globe,
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
-    solutions: [
+    solutions[
       'Process Automation',
       'Customer Experience',
       'Legacy Modernization',
@@ -131,7 +131,7 @@ const industrySolutions = [
   {
     industry: 'Healthcare',
     icon: Heart,
-    solutions: [
+    solutions[
       'Electronic Health Records',
       'Telemedicine Platforms',
       'Medical Imaging AI',
@@ -144,7 +144,7 @@ const industrySolutions = [
   {
     industry: 'Finance',
     icon: DollarSign,
-    solutions: [
+    solutions[
       'Fintech Applications',
       'Risk Management',
       'Fraud Detection',
@@ -157,7 +157,7 @@ const industrySolutions = [
   {
     industry: 'Manufacturing',
     icon: Cpu,
-    solutions: [
+    solutions[
       'Smart Manufacturing',
       'Predictive Maintenance',
       'Quality Control',
@@ -170,7 +170,7 @@ const industrySolutions = [
   {
     industry: 'Retail',
     icon: ShoppingCart,
-    solutions: [
+    solutions[
       'E-commerce Platforms',
       'Customer Analytics',
       'Inventory Management',
@@ -183,7 +183,7 @@ const industrySolutions = [
   {
     industry: 'Education',
     icon: FileText,
-    solutions: [
+    solutions[
       'Learning Management Systems',
       'Virtual Classrooms',
       'Student Analytics',
@@ -196,7 +196,7 @@ const industrySolutions = [
   {
     industry: 'Government',
     icon: Shield,
-    solutions: [
+    solutions[
       'Digital Services',
       'Data Security',
       'Process Automation',
@@ -214,7 +214,7 @@ const featuredSolutions = [
     name: 'AI-Powered Business Intelligence',
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
-    features: [
+    features[
       'Real-time data processing',
       'Predictive analytics models',
       'Custom dashboard creation',
@@ -222,7 +222,7 @@ const featuredSolutions = [
       'Natural language queries',
       'Mobile-responsive design'
     ],
-    benefits: [
+    benefits[
       '30% faster decision making',
       'Reduced manual reporting',
       'Improved data accuracy',
@@ -238,7 +238,7 @@ const featuredSolutions = [
     name: 'Zero-Trust Security Framework',
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
-    features: [
+    features[
       'Identity verification',
       'Device authentication',
       'Network segmentation',
@@ -246,7 +246,7 @@ const featuredSolutions = [
       'Compliance monitoring',
       'Incident response'
     ],
-    benefits: [
+    benefits[
       '99.9% threat detection rate',
       'Reduced security incidents',
       'Compliance achievement',
@@ -262,7 +262,7 @@ const featuredSolutions = [
     name: 'Cloud-Native Infrastructure',
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
-    features: [
+    features[
       'Auto-scaling infrastructure',
       'Container orchestration',
       'CI/CD pipelines',
@@ -270,7 +270,7 @@ const featuredSolutions = [
       'Disaster recovery',
       'Cost optimization'
     ],
-    benefits: [
+    benefits[
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
@@ -283,7 +283,7 @@ const featuredSolutions = [
   }
 ];
 
-export default function Solutions(...args: []):  {
+export default function Solutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -296,8 +296,7 @@ export default function Solutions(...args: []):  {
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -422,8 +421,7 @@ export default function Solutions(...args: []):  {
                     </div>
                   </Link>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -476,8 +474,7 @@ export default function Solutions(...args: []):  {
                     </Link>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -571,8 +568,7 @@ export default function Solutions(...args: []):  {
                     </Link>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -613,5 +609,4 @@ export default function Solutions(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

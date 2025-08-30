@@ -9,9 +9,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   width?: string | number;
   height?: string | number;
   lines?: number;
-  animated?: boolean;
-
-}
+  animated?: boolean}
 
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -50,7 +48,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
               index === lines - 1 ? 'w-3/4' : 'w-full'
             )}
             initial={animated ? { opacity: 0.5 } : {}}
-            animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
+            animate={animated ? { opacity[0.5, 1, 0.5] } : {}}
             transition={{
               duration: 1.5,
               repeat: Infinity,
@@ -60,8 +58,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
           />
         ))}
       </div>
-    );
-  }
+    )}
 
   const style: React.CSSProperties = {};
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
@@ -72,15 +69,14 @@ const Skeleton: React.FC<SkeletonProps> = ({
       className={skeletonClasses}
       style={style}
       initial={animated ? { opacity: 0.5 } : {}}
-      animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
+      animate={animated ? { opacity[0.5, 1, 0.5] } : {}}
       transition={{
         duration: 1.5,
         repeat: Infinity,
         ease: 'easeInOut'
       }}
     />
-  );
-};
+  )};
 
 // Specialized skeleton components
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
@@ -139,8 +135,7 @@ export const GridSkeleton: React.FC<{
   rows?: number; 
   columns?: number; 
   className?: string;
-  itemHeight?: number;
-}> = ({
+  itemHeight?: number}> = ({
   rows = 3,
   columns = 3,
   className,

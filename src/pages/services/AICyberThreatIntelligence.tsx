@@ -57,7 +57,7 @@ const AICyberThreatIntelligence = () => {
       name: "Basic Protection",
       price: "$4,999",
       period: "/month",
-      features: [
+      features[
         "Core threat detection",
         "Basic AI analytics",
         "Standard monitoring",
@@ -70,7 +70,7 @@ const AICyberThreatIntelligence = () => {
       name: "Professional Security",
       price: "$12,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI algorithms",
         "Predictive threat modeling",
         "Priority support",
@@ -84,7 +84,7 @@ const AICyberThreatIntelligence = () => {
       name: "Enterprise Defense",
       price: "$29,999",
       period: "/month",
-      features: [
+      features[
         "Full AI security suite",
         "Unlimited endpoints",
         "Custom development",
@@ -100,22 +100,22 @@ const AICyberThreatIntelligence = () => {
     {
       industry: "Financial Services",
       description: "Protect sensitive financial data and transactions with AI-powered threat detection and compliance monitoring",
-      benefits: ["99.9% threat detection", "Real-time compliance", "Reduced false positives"]
+      benefits["99.9% threat detection", "Real-time compliance", "Reduced false positives"]
     },
     {
       industry: "Healthcare",
       description: "Secure patient data and medical systems with HIPAA-compliant AI threat intelligence",
-      benefits: ["HIPAA compliance", "Patient data protection", "Medical device security"]
+      benefits["HIPAA compliance", "Patient data protection", "Medical device security"]
     },
     {
       industry: "Government",
       description: "Defend critical infrastructure and government systems against nation-state threats",
-      benefits: ["National security", "Infrastructure protection", "Threat intelligence sharing"]
+      benefits["National security", "Infrastructure protection", "Threat intelligence sharing"]
     },
     {
       industry: "Manufacturing",
       description: "Protect industrial control systems and intellectual property from cyber espionage",
-      benefits: ["OT security", "IP protection", "Supply chain security"]
+      benefits["OT security", "IP protection", "Supply chain security"]
     }
   ];
 
@@ -426,7 +426,6 @@ const AICyberThreatIntelligence = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICyberThreatIntelligence;

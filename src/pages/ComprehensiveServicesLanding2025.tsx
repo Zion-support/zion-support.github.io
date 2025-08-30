@@ -15,7 +15,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Cutting-edge artificial intelligence solutions for business transformation',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      services: [
+      services[
         'AI Business Intelligence Platform',
         'AI Sales Copilot',
         'AI Compliance Assistant',
@@ -32,7 +32,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Next-generation quantum solutions for complex problem solving',
       icon: Zap,
       color: 'from-cyan-500 to-blue-500',
-      services: [
+      services[
         'Quantum AI Hybrid Platform',
         'Quantum Financial Trading',
         'Quantum Internet Security',
@@ -49,7 +49,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Advanced security solutions for the digital age',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-      services: [
+      services[
         'AI-Powered Cybersecurity Platform',
         'Zero Trust Architecture',
         'Threat Intelligence',
@@ -66,7 +66,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Scalable cloud infrastructure and automation solutions',
       icon: Cloud,
       color: 'from-blue-500 to-indigo-500',
-      services: [
+      services[
         'Cloud Infrastructure Management',
         'DevOps Automation',
         'Container Orchestration',
@@ -83,7 +83,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Enterprise-grade infrastructure and support services',
       icon: Cpu,
       color: 'from-green-500 to-emerald-500',
-      services: [
+      services[
         'Network Infrastructure',
         'Data Center Management',
         'Onsite IT Support',
@@ -100,7 +100,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Productized software solutions for specific business needs',
       icon: Rocket,
       color: 'from-yellow-500 to-orange-500',
-      services: [
+      services[
         'Customer Feedback Surveys',
         'FinOps Advisor',
         'Business Intelligence Tools',
@@ -117,7 +117,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'AI-powered healthcare solutions and diagnostics',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
-      services: [
+      services[
         'AI Healthcare Diagnostics',
         'Medical Imaging Analysis',
         'Patient Care Optimization',
@@ -134,7 +134,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Sustainable urban infrastructure and IoT solutions',
       icon: Globe,
       color: 'from-teal-500 to-cyan-500',
-      services: [
+      services[
         'Sustainable Smart City Platform',
         'IoT Infrastructure Management',
         'Energy Grid Optimization',
@@ -151,7 +151,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'AI-powered learning and educational platforms',
       icon: Users,
       color: 'from-indigo-500 to-purple-500',
-      services: [
+      services[
         'AI Education Platform',
         'Personalized Learning',
         'Intelligent Tutoring',
@@ -168,7 +168,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       description: 'Smart manufacturing and industrial automation',
       icon: Cpu,
       color: 'from-slate-500 to-gray-500',
-      services: [
+      services[
         'AI Manufacturing Platform',
         'Predictive Maintenance',
         'Quality Control Automation',
@@ -189,8 +189,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
       category.title.toLowerCase().includes(query) ||
       category.description.toLowerCase().includes(query) ||
       category.services.some(service => service.toLowerCase().includes(query))
-    );
-  }, [searchQuery]);
+    )}, [searchQuery]);
 
   const featuredCategories = serviceCategories.filter(cat => cat.featured);
   const regularCategories = serviceCategories.filter(cat => !cat.featured);
@@ -516,7 +515,6 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveServicesLanding2025;

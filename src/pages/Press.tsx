@@ -18,7 +18,7 @@ import { Newspaper,
   Star
  } from 'lucide-react.ts';
 
-export default function Press(...args: []):  {
+export default function Press(...args[]):  {
   const pressReleases = [
     {
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Compliance Platform',
@@ -68,37 +68,37 @@ export default function Press(...args: []):  {
     {
       title: 'Comp Logo',
       description: 'High-resolution Zion Tech Group logo in various formats',
-      formats: ['PNG', 'SVG', 'EPS'],
+      formats['PNG', 'SVG', 'EPS'],
       download: '/media/zion-tech-group-logo.zip'
     },
     {
       title: 'Executive Headshots',
       description: 'Professional photos of leadership team members',
-      formats: ['JPG', 'PNG'],
+      formats['JPG', 'PNG'],
       download: '/media/executive-headshots.zip'
     },
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI platforms',
-      formats: ['PNG', 'JPG'],
+      formats['PNG', 'JPG'],
       download: '/media/product-screenshots.zip'
     },
     {
       title: 'Comp Fact Sheet',
       description: 'One-page overview of Zion Tech Group',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/company-fact-sheet.pdf'
     },
     {
       title: 'Brand Guidelines',
       description: 'Complete brand identity and usage guidelines',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/brand-guidelines.pdf'
     },
     {
       title: 'Product Brochures',
       description: 'Detailed product information and specifications',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/product-brochures.zip'
     }
   ];
@@ -421,5 +421,4 @@ export default function Press(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -46,7 +46,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses optimizing their supply chain",
-      features: [
+      features[
         "Up to 3 warehouses",
         "Basic route optimization",
         "Inventory tracking",
@@ -61,7 +61,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       price: "$999",
       period: "/month",
       description: "Ideal for growing businesses with complex supply chain needs",
-      features: [
+      features[
         "Up to 10 warehouses",
         "Advanced AI optimization",
         "Real-time monitoring",
@@ -78,7 +78,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       price: "$2,499",
       period: "/month",
       description: "For large enterprises with global supply chain operations",
-      features: [
+      features[
         "Unlimited warehouses",
         "Premium AI optimization",
         "Custom development",
@@ -314,7 +314,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AISupplyChainOptimizationPlatform;

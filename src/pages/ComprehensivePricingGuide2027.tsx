@@ -55,22 +55,18 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  
-};
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -84,8 +80,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       ...ADVANCED_AI_SERVICES_2025,
       ...INNOVATIVE_IT_INFRASTRUCTURE_2025,
       ...INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025
-    ];
-  }, []);
+    ]}, []);
 
   // Filter services
   const filteredServices = useMemo(() => {
@@ -100,20 +95,16 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       if (selectedPriceRange !== 'all') {
         const [min, max] = selectedPriceRange.split('-').map(Number);
         if (max) {
-          matchesPrice = service.price >= min && service.price <= max;
-        } else {
-          matchesPrice = service.price >= min;
-        }
+          matchesPrice = service.price >= min && service.price <= max} else {
+          matchesPrice = service.price >= min}
       }
       
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
+      return matchesSearch && matchesCategory && matchesPrice});
 
     // Sort by price
     filtered.sort((a, b) => a.price - b.price);
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange]);
+    return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange]);
 
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const priceRanges = [
@@ -137,8 +128,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       case 'Data Center Management': return <Server className="w-5 h-5" />;
       case 'Network Infrastructure': return <Network className="w-5 h-5" />;
       case 'Blockchain & Web3': return <Layers className="w-5 h-5" />;
-      default: return <Target className="w-5 h-5" />;
-    }
+      default: return <Target className="w-5 h-5" />}
   };
 
   const getInnovationLevelColor = (level: string)  => {
@@ -146,19 +136,15 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gradient-to-r from-gray-600 to-slate-600';
-    }
+      default: return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
 
   const toggleServiceExpansion = (serviceId: string)  => {
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
-      newExpanded.delete(serviceId);
-    } else {
-      newExpanded.add(serviceId);
-    }
-    setExpandedServices(newExpanded);
-  };
+      newExpanded.delete(serviceId)} else {
+      newExpanded.add(serviceId)}
+    setExpandedServices(newExpanded)};
 
   const getPriceRangeLabel = (range: string)  => {
     switch (range) {
@@ -166,8 +152,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
       case '1000-2500': return '$1,000 - $2,500/month';
       case '2500-5000': return '$2,500 - $5,000/month';
       case '5000+': return '$5,000+/month';
-      default: return 'All Prices';
-    }
+      default: return 'All Prices'}
   };
 
   return (
@@ -544,8 +529,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedPriceRange('all');
-              }}
+                setSelectedPriceRange('all')}}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Clear Filters
@@ -603,7 +587,6 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2027;

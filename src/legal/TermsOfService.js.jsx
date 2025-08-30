@@ -39,5 +39,4 @@ export default function TermsOfService() {
           </p>
         </section>
       </div>
-    </div>);
-}
+    </div>)}

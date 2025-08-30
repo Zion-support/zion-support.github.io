@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react.ts'
 
 
-export default function News(...args: []):  {
+export default function News(...args[]):  {
 	const newsArticles = [
 		{
 			id: 1,

@@ -21,9 +21,7 @@ interface Testimonial {
   rating: number;
   industry: string;
   results: string[];
-  avatar: string;
-
-}
+  avatar: string}
 
 const testimonials: Testimonial[] = [
   {
@@ -35,7 +33,7 @@ const testimonials: Testimonial[] = [
     content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
     rating: 5,
     industry: 'Technology',
-    results: ['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
+    results['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
     avatar: '/images/avatars/sarah-chen.jpg'
   },
   {
@@ -47,7 +45,7 @@ const testimonials: Testimonial[] = [
     content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
     rating: 5,
     industry: 'Manufacturing',
-    results: ['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
+    results['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
     avatar: '/images/avatars/marcus-rodriguez.jpg'
   },
   {
@@ -59,7 +57,7 @@ const testimonials: Testimonial[] = [
     content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
     rating: 5,
     industry: 'Healthcare',
-    results: ['95% detection improvement', 'Reduced false positives', 'Lives saved'],
+    results['95% detection improvement', 'Reduced false positives', 'Lives saved'],
     avatar: '/images/avatars/emily-watson.jpg'
   },
   {
@@ -71,7 +69,7 @@ const testimonials: Testimonial[] = [
     content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
     rating: 5,
     industry: 'Financial Services',
-    results: ['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
+    results['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
     avatar: '/images/avatars/james-thompson.jpg'
   },
   {
@@ -83,12 +81,12 @@ const testimonials: Testimonial[] = [
     content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
     rating: 5,
     industry: 'Cloud Services',
-    results: ['40% cost reduction', '60% performance boost', 'Unified management'],
+    results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
   }
 ];
 
-export default function EnhancedTestimonialsSection(...args: []):  {
+export default function EnhancedTestimonialsSection(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -96,26 +94,21 @@ export default function EnhancedTestimonialsSection(...args: []):  {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}, 8000);
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
+    return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const goToTestimonial = (index: number)  => {
     setCurrentTestimonial(index);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)};
 
   const currentTestimonialData = testimonials[currentTestimonial];
 
@@ -164,7 +157,7 @@ export default function EnhancedTestimonialsSection(...args: []):  {
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-                  animate={{ rotate: [0, 360] }}
+                  animate={{ rotate[0, 360] }}
                   transition={{ duration: 20, repeat: Infinity }}
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
@@ -337,5 +330,4 @@ export default function EnhancedTestimonialsSection(...args: []):  {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

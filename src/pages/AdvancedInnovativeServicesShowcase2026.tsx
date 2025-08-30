@@ -31,16 +31,14 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
 
   const categories = useMemo(() => {
     const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)];
-  }, []);
+    return ['all', ...Array.from(cats)]}, []);
 
   const filteredServices = useMemo(() => {
     let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     // Filter by search term
     if (searchTerm) {
@@ -48,8 +46,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+      )}
 
     // Sort services
     filtered.sort((a, b) => {
@@ -63,12 +60,10 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
         case 'delivery':
           return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default:
-          return 0;
-      }
+          return 0}
     });
 
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -372,7 +367,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedInnovativeServicesShowcase2026;

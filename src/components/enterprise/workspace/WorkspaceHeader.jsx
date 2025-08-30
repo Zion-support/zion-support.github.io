@@ -43,5 +43,4 @@ export function WorkspaceHeader({ comp }) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

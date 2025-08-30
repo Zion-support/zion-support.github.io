@@ -32,8 +32,7 @@ const InnovativeServicesShowcase = () => {
     const getSubcategoriesForCategory = (category) => {
         if (category === 'all')
             return [];
-        return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || [];
-    };
+        return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || []};
     const getCategoryIcon = (category) => {
         const categoryIcons = {
             'AI & Analytics': <Brain className="h-5 w-5"/>,
@@ -45,22 +44,19 @@ const InnovativeServicesShowcase = () => {
             'Green Technology': <Leaf className="h-5 w-5"/>,
             'Digital Twin': <Cpu className="h-5 w-5"/>
         };
-        return categoryIcons[category] || <Zap className="h-5 w-5"/>;
-    };
+        return categoryIcons[category] || <Zap className="h-5 w-5"/>};
     const getPriceRange = (price) => {
         if (price < 10000)
             return 'starter';
         if (price < 25000)
             return 'professional';
-        return 'enterprise';
-    };
+        return 'enterprise'};
     const getPriceRangeColor = (range) => {
         switch (range) {
             case 'starter': return 'bg-green-100 text-green-800 border-green-200';
             case 'professional': return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'enterprise': return 'bg-purple-100 text-purple-800 border-purple-200';
-            default: return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+            default: return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig}/>
@@ -105,8 +101,7 @@ const InnovativeServicesShowcase = () => {
               
               <select value={selectedCategory} onChange={(e) => {
             setSelectedCategory(e.target.value);
-            setSelectedSubcategory('all');
-        }} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
+            setSelectedSubcategory('all')}} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Categories</option>
                 {INNOVATIVE_SERVICE_CATEGORIES_2025.map((category) => (<option key={category} value={category}>{category}</option>))}
               </select>
@@ -265,8 +260,7 @@ const InnovativeServicesShowcase = () => {
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSelectedSubcategory('all');
-                setPriceRange('all');
-            }} variant="outline">
+                setPriceRange('all')}} variant="outline">
                 Clear Filters
               </Button>
             </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -449,5 +443,4 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};

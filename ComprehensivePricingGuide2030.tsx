@@ -47,12 +47,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const categories = useMemo(() => {
     const cats = services.reduce((acc, service) => {
       if (!acc.includes(service.category)) {
-        acc.push(service.category);
-      }
-      return acc;
-    }, [] as string[]);
-    return ['all', ...cats];
-  }, [services]);
+        acc.push(service.category)}
+      return acc}, [] as string[]);
+    return ['all', ...cats]}, [services]);
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
@@ -60,15 +57,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     let filtered = services;
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedPricingModel !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
-    }
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)}
 
-    return filtered;
-  }, [services, selectedCategory, selectedPricingModel]);
+    return filtered}, [services, selectedCategory, selectedPricingModel]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -87,8 +81,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       case 'Quantum Computing':
         return Rocket;
       default:
-        return Zap;
-    }
+        return Zap}
   };
 
   const getCategoryColor = (category: string)  => {
@@ -108,8 +101,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       case 'Quantum Computing':
         return 'from-indigo-600 to-purple-600';
       default:
-        return 'from-gray-600 to-slate-600';
-    }
+        return 'from-gray-600 to-slate-600'}
   };
 
   const pricingTiers = [
@@ -117,7 +109,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
-      features: [
+      features[
         'Basic AI features',
         'Email support',
         'Up to 5 users',
@@ -134,7 +126,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features: [
+      features[
         'Advanced AI capabilities',
         'Priority support',
         'Up to 25 users',
@@ -153,7 +145,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features: [
+      features[
         'Full AI suite access',
         '24/7 dedicated support',
         'Unlimited users',
@@ -485,8 +477,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                     </Link>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
 
           {filteredServices.length === 0 && (
@@ -495,8 +486,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPricingModel('all');
-                }}
+                  setSelectedPricingModel('all')}}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 Clear all filters
@@ -668,7 +658,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ComprehensivePricingGuide2030;

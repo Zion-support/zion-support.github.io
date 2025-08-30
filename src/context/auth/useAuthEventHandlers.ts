@@ -9,9 +9,7 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string;
-
-}
+  updatedAt?: string}
 
 export const useAuthEventHandlers = (
   setUser: (user: User | null)  => void,
@@ -30,5 +28,4 @@ export const useAuthEventHandlers = (
   return {
     handleSignedIn,
     handleSignedOut
-  };
-};
+  }};

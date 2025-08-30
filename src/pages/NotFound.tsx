@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom.ts';
 import { Home, ArrowLeft, Search, Mail, Phone  } from 'lucide-react.ts';
 
-export default function NotFound(...args: []):  {
+export default function NotFound(...args[]):  {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -144,5 +144,4 @@ export default function NotFound(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

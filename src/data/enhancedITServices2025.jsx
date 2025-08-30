@@ -7,7 +7,7 @@ export const enhancedITServices2025 = [
         description: "Comprehensive cloud migration services with strategy planning, implementation, and optimization for modern businesses",
         hourlyRate: 150,
         projectRate: 25000,
-        features: [
+        features[
             "Cloud strategy assessment",
             "Migration planning",
             "Data migration",
@@ -17,7 +17,7 @@ export const enhancedITServices2025 = [
             "Performance monitoring",
             "Training & support"
         ],
-        benefits: [
+        benefits[
             "40% cost reduction",
             "Improved scalability",
             "Enhanced security",
@@ -25,8 +25,8 @@ export const enhancedITServices2025 = [
             "Disaster recovery",
             "Operational efficiency"
         ],
-        targetAudience: ["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
-        tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
+        targetAudience["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
+        tags["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -34,18 +34,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$150-250/hour, $25K-100K per project",
-        competitors: ["Accenture", "Deloitte", "AWS Professional Services"],
+        competitors["Accenture", "Deloitte", "AWS Professional Services"],
         responseTime: "4 hours",
         sla: "99.9% uptime guarantee",
-        certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "GCP Professional Cloud Architect"],
+        certifications["AWS Solutions Architect", "Azure Solutions Architect", "GCP Professional Cloud Architect"],
         deliveryTime: "4-12 weeks",
         support: "24/7 support included",
-        expertise: ["Cloud Architecture", "DevOps", "Security", "Performance Optimization"],
-        technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
+        expertise["Cloud Architecture", "DevOps", "Security", "Performance Optimization"],
+        technologies["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
+        compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Zero-trust architecture", "Encryption", "IAM", "Compliance monitoring"],
-        integrationCapabilities: ["API integration", "Legacy system migration", "Third-party tools"],
+        securityFeatures["Zero-trust architecture", "Encryption", "IAM", "Compliance monitoring"],
+        integrationCapabilities["API integration", "Legacy system migration", "Third-party tools"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -62,7 +62,7 @@ export const enhancedITServices2025 = [
         description: "Comprehensive cybersecurity services including assessment, implementation, and ongoing monitoring for enterprise security",
         hourlyRate: 175,
         projectRate: 35000,
-        features: [
+        features[
             "Security assessment",
             "Vulnerability scanning",
             "Penetration testing",
@@ -72,7 +72,7 @@ export const enhancedITServices2025 = [
             "Security training",
             "24/7 monitoring"
         ],
-        benefits: [
+        benefits[
             "99.9% threat detection",
             "Compliance assurance",
             "Risk reduction",
@@ -80,8 +80,8 @@ export const enhancedITServices2025 = [
             "Peace of mind",
             "Competitive advantage"
         ],
-        targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Government", "Manufacturing"],
-        tags: ["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
+        targetAudience["Enterprises", "Healthcare", "Financial Services", "Government", "Manufacturing"],
+        tags["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -89,18 +89,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$175-300/hour, $35K-150K per project",
-        competitors: ["PwC", "KPMG", "Deloitte Cyber"],
+        competitors["PwC", "KPMG", "Deloitte Cyber"],
         responseTime: "2 hours for critical issues",
         sla: "99.99% security guarantee",
-        certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
+        certifications["CISSP", "CISM", "CEH", "CompTIA Security+"],
         deliveryTime: "6-16 weeks",
         support: "24/7 security operations center",
-        expertise: ["Threat Intelligence", "Incident Response", "Compliance", "Security Architecture"],
-        technologies: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+        expertise["Threat Intelligence", "Incident Response", "Compliance", "Security Architecture"],
+        technologies["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Zero-trust", "Multi-factor auth", "Encryption", "Audit logging"],
-        integrationCapabilities: ["Security tools", "SIEM systems", "Compliance platforms"],
+        securityFeatures["Zero-trust", "Multi-factor auth", "Encryption", "Audit logging"],
+        integrationCapabilities["Security tools", "SIEM systems", "Compliance platforms"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -117,7 +117,7 @@ export const enhancedITServices2025 = [
         description: "End-to-end DevOps implementation with CI/CD pipelines, automation, and infrastructure as code for modern development teams",
         hourlyRate: 140,
         projectRate: 20000,
-        features: [
+        features[
             "CI/CD pipeline setup",
             "Infrastructure as Code",
             "Automation implementation",
@@ -127,7 +127,7 @@ export const enhancedITServices2025 = [
             "Team training",
             "Ongoing support"
         ],
-        benefits: [
+        benefits[
             "90% faster deployments",
             "Reduced errors",
             "Better collaboration",
@@ -135,8 +135,8 @@ export const enhancedITServices2025 = [
             "Improved reliability",
             "Scalable operations"
         ],
-        targetAudience: ["Development Teams", "Startups", "Enterprises", "Tech Companies", "Financial Services"],
-        tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
+        targetAudience["Development Teams", "Startups", "Enterprises", "Tech Companies", "Financial Services"],
+        tags["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -144,18 +144,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$140-200/hour, $20K-80K per project",
-        competitors: ["ThoughtWorks", "Red Hat", "Atlassian"],
+        competitors["ThoughtWorks", "Red Hat", "Atlassian"],
         responseTime: "8 hours",
         sla: "99.5% uptime guarantee",
-        certifications: ["AWS DevOps Engineer", "Azure DevOps Engineer", "Kubernetes Administrator"],
+        certifications["AWS DevOps Engineer", "Azure DevOps Engineer", "Kubernetes Administrator"],
         deliveryTime: "3-8 weeks",
         support: "Business hours + emergency support",
-        expertise: ["CI/CD", "Infrastructure", "Automation", "Monitoring", "Security"],
-        technologies: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR"],
+        expertise["CI/CD", "Infrastructure", "Automation", "Monitoring", "Security"],
+        technologies["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
+        compliance["SOC 2", "ISO 27001", "GDPR"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Secure pipelines", "Access controls", "Audit logging", "Compliance"],
-        integrationCapabilities: ["Version control", "Cloud platforms", "Monitoring tools", "Security tools"],
+        securityFeatures["Secure pipelines", "Access controls", "Audit logging", "Compliance"],
+        integrationCapabilities["Version control", "Cloud platforms", "Monitoring tools", "Security tools"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -172,7 +172,7 @@ export const enhancedITServices2025 = [
         description: "Comprehensive data center services including design, implementation, and management for enterprise-grade infrastructure",
         hourlyRate: 160,
         projectRate: 50000,
-        features: [
+        features[
             "Data center design",
             "Infrastructure implementation",
             "Network architecture",
@@ -182,7 +182,7 @@ export const enhancedITServices2025 = [
             "Monitoring setup",
             "Documentation"
         ],
-        benefits: [
+        benefits[
             "Optimized performance",
             "Reduced costs",
             "Enhanced security",
@@ -190,8 +190,8 @@ export const enhancedITServices2025 = [
             "Scalable infrastructure",
             "Compliance assurance"
         ],
-        targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
-        tags: ["Data Center", "Infrastructure", "Network", "Storage", "Security"],
+        targetAudience["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
+        tags["Data Center", "Infrastructure", "Network", "Storage", "Security"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -199,18 +199,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$160-250/hour, $50K-500K per project",
-        competitors: ["HPE", "Dell", "Cisco", "IBM"],
+        competitors["HPE", "Dell", "Cisco", "IBM"],
         responseTime: "4 hours",
         sla: "99.99% uptime guarantee",
-        certifications: ["Cisco CCNP", "VMware VCP", "Microsoft MCSE"],
+        certifications["Cisco CCNP", "VMware VCP", "Microsoft MCSE"],
         deliveryTime: "8-24 weeks",
         support: "24/7 support included",
-        expertise: ["Data Center Design", "Network Architecture", "Storage", "Security", "Power Management"],
-        technologies: ["Cisco", "VMware", "Microsoft", "HPE", "Dell", "NetApp"],
-        compliance: ["SOC 2", "ISO 27001", "TIA-942", "Uptime Institute"],
+        expertise["Data Center Design", "Network Architecture", "Storage", "Security", "Power Management"],
+        technologies["Cisco", "VMware", "Microsoft", "HPE", "Dell", "NetApp"],
+        compliance["SOC 2", "ISO 27001", "TIA-942", "Uptime Institute"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Physical security", "Network security", "Access controls", "Monitoring"],
-        integrationCapabilities: ["Legacy systems", "Cloud platforms", "Monitoring tools", "Security systems"],
+        securityFeatures["Physical security", "Network security", "Access controls", "Monitoring"],
+        integrationCapabilities["Legacy systems", "Cloud platforms", "Monitoring tools", "Security systems"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -227,7 +227,7 @@ export const enhancedITServices2025 = [
         description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture",
         hourlyRate: 145,
         projectRate: 18000,
-        features: [
+        features[
             "Security assessment",
             "Firewall implementation",
             "Network segmentation",
@@ -237,7 +237,7 @@ export const enhancedITServices2025 = [
             "Compliance reporting",
             "Ongoing maintenance"
         ],
-        benefits: [
+        benefits[
             "99.9% threat protection",
             "Network segmentation",
             "Compliance assurance",
@@ -245,8 +245,8 @@ export const enhancedITServices2025 = [
             "Better performance",
             "Scalable security"
         ],
-        targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Education", "Government"],
-        tags: ["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
+        targetAudience["Enterprises", "Healthcare", "Financial Services", "Education", "Government"],
+        tags["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -254,18 +254,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$145-200/hour, $18K-75K per project",
-        competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
+        competitors["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         responseTime: "4 hours",
         sla: "99.9% security guarantee",
-        certifications: ["Cisco CCNP Security", "Palo Alto Networks", "CompTIA Security+"],
+        certifications["Cisco CCNP Security", "Palo Alto Networks", "CompTIA Security+"],
         deliveryTime: "2-6 weeks",
         support: "Business hours + emergency support",
-        expertise: ["Network Security", "Firewall Management", "VPN", "Intrusion Detection"],
-        technologies: ["Cisco ASA", "Palo Alto Networks", "Fortinet", "Check Point", "OpenVPN"],
-        compliance: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA"],
+        expertise["Network Security", "Firewall Management", "VPN", "Intrusion Detection"],
+        technologies["Cisco ASA", "Palo Alto Networks", "Fortinet", "Check Point", "OpenVPN"],
+        compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Next-gen firewall", "Intrusion detection", "VPN", "Network segmentation"],
-        integrationCapabilities: ["Security tools", "Monitoring systems", "Compliance platforms"],
+        securityFeatures["Next-gen firewall", "Intrusion detection", "VPN", "Network segmentation"],
+        integrationCapabilities["Security tools", "Monitoring systems", "Compliance platforms"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -282,7 +282,7 @@ export const enhancedITServices2025 = [
         description: "Comprehensive BI and analytics implementation with data warehousing, reporting, and advanced analytics capabilities",
         hourlyRate: 155,
         projectRate: 30000,
-        features: [
+        features[
             "Data assessment",
             "Data warehouse design",
             "ETL implementation",
@@ -292,7 +292,7 @@ export const enhancedITServices2025 = [
             "Data governance",
             "User training"
         ],
-        benefits: [
+        benefits[
             "Data-driven decisions",
             "360-degree business view",
             "Operational efficiency",
@@ -300,8 +300,8 @@ export const enhancedITServices2025 = [
             "Cost optimization",
             "Better insights"
         ],
-        targetAudience: ["Enterprises", "Financial Services", "Healthcare", "Retail", "Manufacturing"],
-        tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
+        targetAudience["Enterprises", "Financial Services", "Healthcare", "Retail", "Manufacturing"],
+        tags["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -309,18 +309,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$155-225/hour, $30K-120K per project",
-        competitors: ["Deloitte", "Accenture", "PwC", "Tableau Professional Services"],
+        competitors["Deloitte", "Accenture", "PwC", "Tableau Professional Services"],
         responseTime: "8 hours",
         sla: "99.5% availability guarantee",
-        certifications: ["Microsoft Power BI", "Tableau", "Snowflake", "AWS Data Analytics"],
+        certifications["Microsoft Power BI", "Tableau", "Snowflake", "AWS Data Analytics"],
         deliveryTime: "6-16 weeks",
         support: "Business hours + emergency support",
-        expertise: ["Data Architecture", "ETL", "Reporting", "Analytics", "Data Governance"],
-        technologies: ["Power BI", "Tableau", "Snowflake", "AWS", "Azure", "SQL Server"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
+        expertise["Data Architecture", "ETL", "Reporting", "Analytics", "Data Governance"],
+        technologies["Power BI", "Tableau", "Snowflake", "AWS", "Azure", "SQL Server"],
+        compliance["SOC 2", "ISO 27001", "GDPR", "SOX"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Data encryption", "Access controls", "Audit logging", "Compliance"],
-        integrationCapabilities: ["ERP systems", "CRM systems", "Cloud platforms", "Legacy systems"],
+        securityFeatures["Data encryption", "Access controls", "Audit logging", "Compliance"],
+        integrationCapabilities["ERP systems", "CRM systems", "Cloud platforms", "Legacy systems"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -337,7 +337,7 @@ export const enhancedITServices2025 = [
         description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android",
         hourlyRate: 120,
         projectRate: 15000,
-        features: [
+        features[
             "App design & development",
             "Cross-platform development",
             "API integration",
@@ -347,7 +347,7 @@ export const enhancedITServices2025 = [
             "Security implementation",
             "Maintenance & updates"
         ],
-        benefits: [
+        benefits[
             "Native performance",
             "Cross-platform compatibility",
             "Cost-effective development",
@@ -355,8 +355,8 @@ export const enhancedITServices2025 = [
             "Better user experience",
             "Scalable solutions"
         ],
-        targetAudience: ["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Services"],
-        tags: ["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
+        targetAudience["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Services"],
+        tags["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -364,18 +364,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$120-180/hour, $15K-100K per project",
-        competitors: ["Appinventiv", "Fueled", "Y Media Labs", "Dom & Tom"],
+        competitors["Appinventiv", "Fueled", "Y Media Labs", "Dom & Tom"],
         responseTime: "24 hours",
         sla: "99% availability guarantee",
-        certifications: ["Apple Developer", "Google Developer", "React Native", "Flutter"],
+        certifications["Apple Developer", "Google Developer", "React Native", "Flutter"],
         deliveryTime: "8-20 weeks",
         support: "Business hours + emergency support",
-        expertise: ["iOS Development", "Android Development", "Cross-platform", "UI/UX", "API Integration"],
-        technologies: ["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
-        compliance: ["GDPR", "CCPA", "App Store guidelines", "Google Play policies"],
+        expertise["iOS Development", "Android Development", "Cross-platform", "UI/UX", "API Integration"],
+        technologies["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
+        compliance["GDPR", "CCPA", "App Store guidelines", "Google Play policies"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["App security", "Data encryption", "Secure API", "Compliance"],
-        integrationCapabilities: ["Backend systems", "Third-party APIs", "Payment gateways", "Analytics"],
+        securityFeatures["App security", "Data encryption", "Secure API", "Compliance"],
+        integrationCapabilities["Backend systems", "Third-party APIs", "Payment gateways", "Analytics"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -392,7 +392,7 @@ export const enhancedITServices2025 = [
         description: "Strategic IT consulting services for digital transformation, technology assessment, and strategic planning",
         hourlyRate: 200,
         projectRate: 40000,
-        features: [
+        features[
             "Technology assessment",
             "Digital strategy",
             "Technology roadmap",
@@ -402,7 +402,7 @@ export const enhancedITServices2025 = [
             "ROI analysis",
             "Ongoing advisory"
         ],
-        benefits: [
+        benefits[
             "Strategic direction",
             "Cost optimization",
             "Risk mitigation",
@@ -410,8 +410,8 @@ export const enhancedITServices2025 = [
             "Operational efficiency",
             "Future readiness"
         ],
-        targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
-        tags: ["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
+        targetAudience["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
+        tags["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -419,18 +419,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$200-300/hour, $40K-200K per project",
-        competitors: ["McKinsey", "BCG", "Bain", "Deloitte Digital"],
+        competitors["McKinsey", "BCG", "Bain", "Deloitte Digital"],
         responseTime: "24 hours",
         sla: "Professional service guarantee",
-        certifications: ["PMP", "ITIL", "TOGAF", "Agile"],
+        certifications["PMP", "ITIL", "TOGAF", "Agile"],
         deliveryTime: "4-20 weeks",
         support: "Business hours + scheduled meetings",
-        expertise: ["Digital Strategy", "Technology Assessment", "Change Management", "Project Management"],
-        technologies: ["Enterprise Architecture", "Cloud Platforms", "Digital Tools", "Analytics"],
-        compliance: ["Industry standards", "Best practices", "Regulatory requirements"],
+        expertise["Digital Strategy", "Technology Assessment", "Change Management", "Project Management"],
+        technologies["Enterprise Architecture", "Cloud Platforms", "Digital Tools", "Analytics"],
+        compliance["Industry standards", "Best practices", "Regulatory requirements"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Security assessment", "Compliance review", "Risk management"],
-        integrationCapabilities: ["Legacy systems", "New technologies", "Business processes"],
+        securityFeatures["Security assessment", "Compliance review", "Risk management"],
+        integrationCapabilities["Legacy systems", "New technologies", "Business processes"],
         maintenanceIncluded: false,
         trainingIncluded: true,
         documentationProvided: true,
@@ -447,7 +447,7 @@ export const enhancedITServices2025 = [
         description: "Comprehensive managed IT services including 24/7 monitoring, support, and proactive maintenance for businesses",
         hourlyRate: 85,
         projectRate: 12000,
-        features: [
+        features[
             "24/7 monitoring",
             "Proactive maintenance",
             "Help desk support",
@@ -457,7 +457,7 @@ export const enhancedITServices2025 = [
             "Compliance monitoring",
             "Monthly reporting"
         ],
-        benefits: [
+        benefits[
             "Reduced IT costs",
             "Proactive maintenance",
             "24/7 support",
@@ -465,8 +465,8 @@ export const enhancedITServices2025 = [
             "Compliance assurance",
             "Peace of mind"
         ],
-        targetAudience: ["SMBs", "Enterprises", "Healthcare", "Financial Services", "Manufacturing"],
-        tags: ["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
+        targetAudience["SMBs", "Enterprises", "Healthcare", "Financial Services", "Manufacturing"],
+        tags["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -474,18 +474,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$85-150/hour, $12K-60K per month",
-        competitors: ["Datto", "ConnectWise", "Kaseya", "SolarWinds"],
+        competitors["Datto", "ConnectWise", "Kaseya", "SolarWinds"],
         responseTime: "1 hour for critical issues",
         sla: "99.9% uptime guarantee",
-        certifications: ["ITIL", "CompTIA", "Microsoft", "Cisco"],
+        certifications["ITIL", "CompTIA", "Microsoft", "Cisco"],
         deliveryTime: "2-4 weeks",
         support: "24/7 support included",
-        expertise: ["IT Infrastructure", "Network Management", "Security", "Support"],
-        technologies: ["RMM tools", "PSA platforms", "Monitoring tools", "Security tools"],
-        compliance: ["SOC 2", "ISO 27001", "Industry specific"],
+        expertise["IT Infrastructure", "Network Management", "Security", "Support"],
+        technologies["RMM tools", "PSA platforms", "Monitoring tools", "Security tools"],
+        compliance["SOC 2", "ISO 27001", "Industry specific"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["Security monitoring", "Threat detection", "Compliance management"],
-        integrationCapabilities: ["Existing tools", "Cloud platforms", "Security systems"],
+        securityFeatures["Security monitoring", "Threat detection", "Compliance management"],
+        integrationCapabilities["Existing tools", "Cloud platforms", "Security systems"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,
@@ -502,7 +502,7 @@ export const enhancedITServices2025 = [
         description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions",
         hourlyRate: 110,
         projectRate: 18000,
-        features: [
+        features[
             "Full-stack development",
             "Responsive design",
             "Database design",
@@ -512,7 +512,7 @@ export const enhancedITServices2025 = [
             "Hosting setup",
             "Maintenance & updates"
         ],
-        benefits: [
+        benefits[
             "Modern technology stack",
             "Responsive design",
             "Scalable architecture",
@@ -520,8 +520,8 @@ export const enhancedITServices2025 = [
             "Performance optimized",
             "Cost-effective hosting"
         ],
-        targetAudience: ["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
-        tags: ["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
+        targetAudience["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
+        tags["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -529,18 +529,18 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$110-170/hour, $18K-80K per project",
-        competitors: ["Toptal", "Upwork", "Freelancer", "Agency rates"],
+        competitors["Toptal", "Upwork", "Freelancer", "Agency rates"],
         responseTime: "24 hours",
         sla: "99.5% uptime guarantee",
-        certifications: ["Microsoft", "AWS", "Google Cloud", "React", "Node.js"],
+        certifications["Microsoft", "AWS", "Google Cloud", "React", "Node.js"],
         deliveryTime: "6-16 weeks",
         support: "Business hours + emergency support",
-        expertise: ["Frontend Development", "Backend Development", "Database Design", "DevOps"],
-        technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
-        compliance: ["GDPR", "CCPA", "WCAG", "Security standards"],
+        expertise["Frontend Development", "Backend Development", "Database Design", "DevOps"],
+        technologies["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
+        compliance["GDPR", "CCPA", "WCAG", "Security standards"],
         scalability: "Enterprise-grade",
-        securityFeatures: ["HTTPS", "Security headers", "Input validation", "Authentication"],
-        integrationCapabilities: ["Third-party APIs", "Payment gateways", "Analytics", "CRM systems"],
+        securityFeatures["HTTPS", "Security headers", "Input validation", "Authentication"],
+        integrationCapabilities["Third-party APIs", "Payment gateways", "Analytics", "CRM systems"],
         maintenanceIncluded: true,
         trainingIncluded: true,
         documentationProvided: true,

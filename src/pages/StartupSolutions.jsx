@@ -29,7 +29,7 @@ const startupSolutions = [
     title: "MVP Development",
     description: "Rapidly build and launch your minimum viable product to test market fit and gather user feedback.",
     icon: Rocket,
-    features: [
+    features[
       "Quick prototype development",
       "User experience optimization",
       "Market validation testing",
@@ -44,7 +44,7 @@ const startupSolutions = [
     title: "AI-Powered Analytics",
     description: "Leverage artificial intelligence to gain deep insights into your business performance and user behavior.",
     icon: Brain,
-    features: [
+    features[
       "Predictive analytics",
       "User behavior tracking",
       "Performance optimization",
@@ -59,7 +59,7 @@ const startupSolutions = [
     title: "Cloud Infrastructure",
     description: "Scalable cloud solutions that grow with your startup from day one to enterprise scale.",
     icon: Cloud,
-    features: [
+    features[
       "Auto-scaling infrastructure",
       "Cost optimization",
       "Security compliance",
@@ -74,7 +74,7 @@ const startupSolutions = [
     title: "Cybersecurity Framework",
     description: "Protect your startup's data and systems with enterprise-grade security solutions.",
     icon: Shield,
-    features: [
+    features[
       "Threat detection",
       "Data encryption",
       "Compliance management",
@@ -89,7 +89,7 @@ const startupSolutions = [
     title: "Mobile App Development",
     description: "Native and cross-platform mobile applications that engage users and drive growth.",
     icon: Smartphone,
-    features: [
+    features[
       "iOS & Android development",
       "Cross-platform solutions",
       "Performance optimization",
@@ -104,7 +104,7 @@ const startupSolutions = [
     title: "Digital Marketing Platform",
     description: "Comprehensive marketing tools to acquire, engage, and retain customers effectively.",
     icon: Target,
-    features: [
+    features[
       "Multi-channel campaigns",
       "Automation workflows",
       "Analytics & reporting",
@@ -457,5 +457,4 @@ export default function StartupSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

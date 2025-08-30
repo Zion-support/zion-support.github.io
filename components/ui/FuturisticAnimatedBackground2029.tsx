@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from 'react.ts';
 
 interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{}> {
 
-  className?: string;
+  className?: string}
 
-}
-
-export default function FuturisticAnimatedBackground2029(...args: []):  {
+export default function FuturisticAnimatedBackground2029(...args[]):  {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -19,8 +17,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+      canvas.height = window.innerHeight};
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -44,8 +41,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         this.size = Math.random() * 3 + 1;
         this.maxLife = Math.random() * 100 + 50;
         this.life = this.maxLife;
-        this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
-      }
+        this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`}
 
       update() {
         this.x += this.vx;
@@ -59,8 +55,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         if (this.y > canvas.height) this.y = 0;
 
         // Add some gravity effect
-        this.vy += 0.01;
-      }
+        this.vy += 0.01}
 
       draw() {
         if (ctx) {
@@ -76,13 +71,11 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
           ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
           ctx.fill();
-          ctx.restore();
-        }
+          ctx.restore()}
       }
 
       isDead() {
-        return this.life <= 0;
-      }
+        return this.life <= 0}
     }
 
     // Grid system
@@ -92,12 +85,10 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
 
       constructor() {
         this.spacing = 60;
-        this.offset = 0;
-      }
+        this.offset = 0}
 
       update() {
-        this.offset += 0.5;
-      }
+        this.offset += 0.5}
 
       draw() {
         if (ctx) {
@@ -109,16 +100,14 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, canvas.height);
-            ctx.stroke();
-          }
+            ctx.stroke()}
 
           // Horizontal lines
           for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
             ctx.beginPath();
             ctx.moveTo(0, y);
             ctx.lineTo(canvas.width, y);
-            ctx.stroke();
-          }
+            ctx.stroke()}
         }
       }
     }
@@ -134,12 +123,10 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         this.amplitude = 50;
         this.frequency = 0.02;
         this.speed = 0.02;
-        this.offset = 0;
-      }
+        this.offset = 0}
 
       update() {
-        this.offset += this.speed;
-      }
+        this.offset += this.speed}
 
       draw() {
         if (ctx) {
@@ -150,14 +137,11 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
           for (let x = 0; x < canvas.width; x++) {
             const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2;
             if (x === 0) {
-              ctx.moveTo(x, y);
-            } else {
-              ctx.lineTo(x, y);
-            }
+              ctx.moveTo(x, y)} else {
+              ctx.lineTo(x, y)}
           }
 
-          ctx.stroke();
-        }
+          ctx.stroke()}
       }
     }
 
@@ -168,8 +152,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
 
     // Initialize particles
     for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-    }
+      particles.push(new Particle())}
 
     // Initialize waves
     for (let i = 0; i < 3; i++) {
@@ -177,8 +160,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
       wave.amplitude = 30 + i * 20;
       wave.frequency = 0.01 + i * 0.005;
       wave.speed = 0.01 + i * 0.005;
-      waves.push(wave);
-    }
+      waves.push(wave)}
 
     // Animation loop
     let animationId: number;
@@ -194,8 +176,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
       // Update and draw waves
       waves.forEach(wave => {
         wave.update();
-        wave.draw();
-      });
+        wave.draw()});
 
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -203,8 +184,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         particle.draw();
 
         if (particle.isDead()) {
-          particles[index] = new Particle();
-        }
+          particles[index] = new Particle()}
       });
 
       // Draw connections between nearby particles
@@ -223,8 +203,7 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
+            ctx.stroke()}
         }
       }
 
@@ -243,10 +222,8 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         const x = Math.cos(angle) * 150;
         const y = Math.sin(angle) * 150;
         if (i === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
+          ctx.moveTo(x, y)} else {
+          ctx.lineTo(x, y)}
       }
       ctx.closePath();
       ctx.stroke();
@@ -260,18 +237,15 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
         const x = Math.cos(angle) * 100;
         const y = Math.sin(angle) * 100;
         if (i === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
+          ctx.moveTo(x, y)} else {
+          ctx.lineTo(x, y)}
       }
       ctx.closePath();
       ctx.stroke();
 
       ctx.restore();
 
-      animationId = requestAnimationFrame(animate);
-    };
+      animationId = requestAnimationFrame(animate)};
 
     animate();
 
@@ -279,10 +253,8 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, []);
+        cancelAnimationFrame(animationId)}
+    }}, []);
 
   return (
     <div className={`fixed inset-0 pointer-events-none ${className}`}>
@@ -303,5 +275,4 @@ export default function FuturisticAnimatedBackground2029(...args: []):  {
       <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
-  );
-}
+  )}

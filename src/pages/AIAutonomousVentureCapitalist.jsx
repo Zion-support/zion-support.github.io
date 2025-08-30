@@ -584,7 +584,7 @@ const ventureCapitalSolutions = [
     title: "AI Investment Analysis Platform",
     description: "Intelligent platform for analyzing investment opportunities and market trends.",
     icon: BarChart3,
-    features: [
+    features[
       "Market analysis",
       "Risk assessment",
       "Portfolio optimization",
@@ -593,14 +593,14 @@ const ventureCapitalSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Investment Analysis",
-    technologies: ["Machine Learning", "Data Analytics", "Financial Modeling", "AI Models"]
+    technologies["Machine Learning", "Data Analytics", "Financial Modeling", "AI Models"]
   },
   {
     id: 2,
     title: "Autonomous Deal Sourcing",
     description: "AI-powered system for identifying and evaluating investment opportunities.",
     icon: Target,
-    features: [
+    features[
       "Deal identification",
       "Comp screening",
       "Market research",
@@ -609,14 +609,14 @@ const ventureCapitalSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Deal Sourcing",
-    technologies: ["AI", "Data Mining", "Market Intelligence", "Machine Learning"]
+    technologies["AI", "Data Mining", "Market Intelligence", "Machine Learning"]
   },
   {
     id: 3,
     title: "Portfolio Management System",
     description: "Intelligent system for managing and optimizing investment portfolios.",
     icon: Users,
-    features: [
+    features[
       "Portfolio tracking",
       "Performance analysis",
       "Risk management",
@@ -625,14 +625,14 @@ const ventureCapitalSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Portfolio Management",
-    technologies: ["AI Optimization", "Portfolio Theory", "Analytics", "Machine Learning"]
+    technologies["AI Optimization", "Portfolio Theory", "Analytics", "Machine Learning"]
   },
   {
     id: 4,
     title: "Predictive Market Intelligence",
     description: "AI-driven forecasting and market intelligence for investment decisions.",
     icon: TrendingUp,
-    features: [
+    features[
       "Market forecasting",
       "Trend analysis",
       "Sector insights",
@@ -641,14 +641,14 @@ const ventureCapitalSolutions = [
     price: "From $350,000",
     timeline: "36-48 weeks",
     category: "Market Intelligence",
-    technologies: ["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
+    technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
   },
   {
     id: 5,
     title: "Due Diligence Automation",
     description: "AI-powered system for automating due diligence processes.",
     icon: FileText,
-    features: [
+    features[
       "Document analysis",
       "Risk assessment",
       "Compliance checking",
@@ -657,14 +657,14 @@ const ventureCapitalSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Due Diligence",
-    technologies: ["AI", "Document Processing", "Risk Analysis", "Compliance"]
+    technologies["AI", "Document Processing", "Risk Analysis", "Compliance"]
   },
   {
     id: 6,
     title: "Exit Strategy Optimization",
     description: "AI-driven system for optimizing exit strategies and timing.",
     icon: Rocket,
-    features: [
+    features[
       "Exit timing",
       "Strategy optimization",
       "Market analysis",
@@ -673,7 +673,7 @@ const ventureCapitalSolutions = [
     price: "From $220,000",
     timeline: "26-38 weeks",
     category: "Exit Strategy",
-    technologies: ["AI", "Exit Planning", "Market Analysis", "Optimization"]
+    technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]
   }
 ];
 
@@ -774,25 +774,25 @@ const vcBenefits = [
     title: "Better Investment Decisions",
     description: "AI-powered insights enable data-driven investment decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"]
+    examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"]
   },
   {
     title: "Increased Deal Flow",
     description: "AI systems identify more investment opportunities",
     icon: Zap,
-    examples: ["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"]
+    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"]
   },
   {
     title: "Improved Returns",
     description: "AI optimization leads to better portfolio performance",
     icon: TrendingUp,
-    examples: ["Portfolio optimization", "Risk management", "Exit timing", "Better performance"]
+    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"]
   },
   {
     title: "Operational Efficiency",
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
-    examples: ["Process automation", "Due diligence", "Reporting", "Better efficiency"]
+    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"]
   }
 ];
 
@@ -1180,5 +1180,4 @@ export default function AIAutonomousVentureCapitalist() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

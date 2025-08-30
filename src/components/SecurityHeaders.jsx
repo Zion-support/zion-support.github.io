@@ -124,8 +124,7 @@ export function SecurityHeaders({ className }) {
           </p>
         </div>
       </div>
-    </section>);
-}
+    </section>)}
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -145,5 +144,4 @@ export function SecurityHeadersCompact({ className }) {
         <Shield className="w-4 h-4"/>
         <span>Zero-Knowledge</span>
       </div>
-    </div>);
-}
+    </div>)}

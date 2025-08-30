@@ -18,27 +18,23 @@ export interface AdvancedITService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  
-};
+    address: string};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors: string[];
   marketSize: string;
   growthRate: string;
   rating: number;
   reviews: number;
-  customers: number;
-}
+  customers: number}
 
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
@@ -51,7 +47,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 7999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered monitoring",
       "Predictive maintenance",
       "Automated optimization",
@@ -63,28 +59,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Security monitoring",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "Reduce downtime by 90%",
       "Improve performance by 60%",
       "Reduce operational costs by 40%",
       "Automated problem resolution",
       "Proactive maintenance"
     ],
-    useCases: [
+    useCases[
       "Data center management",
       "Cloud infrastructure",
       "Network optimization",
       "Server management",
       "Storage optimization"
     ],
-    targetAudience: [
+    targetAudience[
       "IT directors",
       "System administrators",
       "DevOps teams",
       "Technology managers",
       "Large enterprises"
     ],
-    tags: ["AI", "Infrastructure", "Automation", "Monitoring", "Optimization"],
+    tags["AI", "Infrastructure", "Automation", "Monitoring", "Optimization"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$7,999 - $20,000/month",
@@ -97,13 +93,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
-      integrations: ["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],
+      technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
+      integrations["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],
       apiEndpoints: 400,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Encryption", "Access controls"]
+      security["SOC 2", "ISO 27001", "Encryption", "Access controls"]
     },
-    competitors: ["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],
+    competitors["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],
     marketSize: "$152.4 billion by 2025",
     growthRate: "180% annual growth",
     rating: 4.8,
@@ -121,7 +117,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 15999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Quantum processing units",
       "Quantum encryption",
       "Ultra-fast computing",
@@ -133,28 +129,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Monitoring tools",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "1000x faster processing",
       "Unbreakable encryption",
       "Global scalability",
       "Cost optimization",
       "Future-proof technology"
     ],
-    useCases: [
+    useCases[
       "Scientific computing",
       "Financial modeling",
       "AI training",
       "Cryptography",
       "Data analysis"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Financial services",
       "Technology companies",
       "Government agencies",
       "Universities"
     ],
-    tags: ["Quantum Computing", "Cloud", "AI", "Encryption", "High Performance"],
+    tags["Quantum Computing", "Cloud", "AI", "Encryption", "High Performance"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$15,999 - $45,000/month",
@@ -167,13 +163,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],
-      integrations: ["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],
+      technology["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],
+      integrations["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],
       apiEndpoints: 800,
       uptime: "99.99%",
-      security: ["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"]
+      security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"]
     },
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
+    competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
     marketSize: "$832.1 billion by 2025",
     growthRate: "300% annual growth",
     rating: 4.9,
@@ -191,7 +187,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 4999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Edge processing units",
       "IoT device management",
       "Real-time analytics",
@@ -203,28 +199,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "API access",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "Reduce latency by 90%",
       "Lower bandwidth costs by 60%",
       "Real-time processing",
       "Improved reliability",
       "Scalable architecture"
     ],
-    useCases: [
+    useCases[
       "Smart cities",
       "Industrial IoT",
       "Autonomous vehicles",
       "Healthcare monitoring",
       "Retail analytics"
     ],
-    targetAudience: [
+    targetAudience[
       "Manufacturing companies",
       "Smart city planners",
       "Healthcare providers",
       "Retail chains",
       "Transportation companies"
     ],
-    tags: ["Edge Computing", "IoT", "Real-time", "AI", "Low Latency"],
+    tags["Edge Computing", "IoT", "Real-time", "AI", "Low Latency"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
     marketPrice: "$4,999 - $15,000/month",
@@ -237,13 +233,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],
-      integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
+      technology["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],
+      integrations["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["Edge security", "Device authentication", "Data encryption"]
+      security["Edge security", "Device authentication", "Data encryption"]
     },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     marketSize: "$43.4 billion by 2025",
     growthRate: "200% annual growth",
     rating: 4.7,
@@ -261,7 +257,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 9999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Continuous verification",
       "Micro-segmentation",
       "Identity management",
@@ -273,28 +269,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Security analytics",
       "24/7 SOC support"
     ],
-    benefits: [
+    benefits[
       "100% threat detection",
       "Reduce attack surface by 80%",
       "Automated response",
       "Regulatory compliance",
       "Real-time protection"
     ],
-    useCases: [
+    useCases[
       "Enterprise security",
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
       "Critical infrastructure"
     ],
-    targetAudience: [
+    targetAudience[
       "CISOs",
       "Security teams",
       "IT directors",
       "Compliance officers",
       "Large enterprises"
     ],
-    tags: ["Zero-Trust", "Cybersecurity", "Identity", "Threat Detection", "Compliance"],
+    tags["Zero-Trust", "Cybersecurity", "Identity", "Threat Detection", "Compliance"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$9,999 - $25,000/month",
@@ -307,13 +303,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],
-      integrations: ["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],
+      technology["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],
+      integrations["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],
       apiEndpoints: 500,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
+      security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
     },
-    competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
+    competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
     marketSize: "$67.8 billion by 2025",
     growthRate: "250% annual growth",
     rating: 4.8,
@@ -331,7 +327,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 6499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered CI/CD",
       "Automated testing",
       "Intelligent deployment",
@@ -343,28 +339,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "API integration",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "Reduce deployment time by 80%",
       "Improve code quality by 60%",
       "Automated testing",
       "Faster releases",
       "Reduced errors"
     ],
-    useCases: [
+    useCases[
       "Software development",
       "Application deployment",
       "Testing automation",
       "Performance monitoring",
       "Security integration"
     ],
-    targetAudience: [
+    targetAudience[
       "Development teams",
       "DevOps engineers",
       "Software companies",
       "IT departments",
       "Technology startups"
     ],
-    tags: ["AI", "DevOps", "Automation", "CI/CD", "Testing"],
+    tags["AI", "DevOps", "Automation", "CI/CD", "Testing"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$6,499 - $18,000/month",
@@ -377,13 +373,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Machine Learning", "Docker", "Kubernetes", "React", "Python"],
-      integrations: ["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],
+      technology["Machine Learning", "Docker", "Kubernetes", "React", "Python"],
+      integrations["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],
       apiEndpoints: 350,
       uptime: "99.9%",
-      security: ["Code scanning", "Vulnerability assessment", "Access controls"]
+      security["Code scanning", "Vulnerability assessment", "Access controls"]
     },
-    competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
+    competitors["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
     marketSize: "$25.2 billion by 2025",
     growthRate: "180% annual growth",
     rating: 4.7,
@@ -401,7 +397,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Decentralized identities",
       "Self-sovereign identity",
       "Verifiable credentials",
@@ -413,28 +409,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Mobile app",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "100% secure identities",
       "User control over data",
       "Reduced fraud",
       "Regulatory compliance",
       "Privacy protection"
     ],
-    useCases: [
+    useCases[
       "Digital identity verification",
       "KYC/AML compliance",
       "Access management",
       "Credential verification",
       "Privacy protection"
     ],
-    targetAudience: [
+    targetAudience[
       "Financial institutions",
       "Healthcare providers",
       "Government agencies",
       "Educational institutions",
       "Technology companies"
     ],
-    tags: ["Blockchain", "Identity", "Security", "Privacy", "Compliance"],
+    tags["Blockchain", "Identity", "Security", "Privacy", "Compliance"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
     marketPrice: "$3,999 - $12,000/month",
@@ -447,13 +443,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
-      integrations: ["SSO systems", "CRM platforms", "Banking systems", "Government databases"],
+      technology["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
+      integrations["SSO systems", "CRM platforms", "Banking systems", "Government databases"],
       apiEndpoints: 250,
       uptime: "99.9%",
-      security: ["Blockchain security", "Encryption", "Multi-factor authentication"]
+      security["Blockchain security", "Encryption", "Multi-factor authentication"]
     },
-    competitors: ["Microsoft Identity", "Okta", "Auth0", "OneLogin"],
+    competitors["Microsoft Identity", "Okta", "Auth0", "OneLogin"],
     marketSize: "$28.6 billion by 2025",
     growthRate: "220% annual growth",
     rating: 4.6,
@@ -471,7 +467,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     price: 11999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Quantum data processing",
       "Pattern recognition",
       "Predictive modeling",
@@ -483,28 +479,28 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Custom algorithms",
       "24/7 support"
     ],
-    benefits: [
+    benefits[
       "1000x faster processing",
       "Advanced pattern recognition",
       "Real-time insights",
       "Scalable analytics",
       "Future-proof technology"
     ],
-    useCases: [
+    useCases[
       "Big data analysis",
       "Predictive analytics",
       "Pattern recognition",
       "Real-time processing",
       "Scientific research"
     ],
-    targetAudience: [
+    targetAudience[
       "Data scientists",
       "Research institutions",
       "Technology companies",
       "Financial services",
       "Government agencies"
     ],
-    tags: ["Quantum Computing", "Analytics", "Big Data", "AI", "Pattern Recognition"],
+    tags["Quantum Computing", "Analytics", "Big Data", "AI", "Pattern Recognition"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$11,999 - $30,000/month",
@@ -517,13 +513,13 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],
-      integrations: ["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],
+      technology["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],
+      integrations["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],
       apiEndpoints: 600,
       uptime: "99.99%",
-      security: ["Quantum encryption", "SOC 2", "Data protection", "Access controls"]
+      security["Quantum encryption", "SOC 2", "Data protection", "Access controls"]
     },
-    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+    competitors["Tableau", "Power BI", "Qlik", "Looker"],
     marketSize: "$29.9 billion by 2025",
     growthRate: "250% annual growth",
     rating: 4.9,

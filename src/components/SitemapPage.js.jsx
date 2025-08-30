@@ -94,5 +94,4 @@ export default function SitemapPage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

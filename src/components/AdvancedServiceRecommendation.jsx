@@ -11,8 +11,8 @@ const AdvancedServiceRecommendation = () => {
         budget: '',
         timeline: '',
         technologyMaturity: '',
-        primaryGoals: [],
-        challenges: []
+        primaryGoals[],
+        challenges[]
     });
     const [recommendations, setRecommendations] = useState([]);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -53,11 +53,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'ai',
             price: '$25,000/month',
             duration: '6-12 months',
-            tags: ['AI', 'CRM', 'Automation', 'Analytics'],
-            features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'],
-            benefits: ['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],
-            technology: ['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],
-            targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],
+            tags['AI', 'CRM', 'Automation', 'Analytics'],
+            features['AI-powered insights', 'Automated workflows', 'Predictive analytics'],
+            benefits['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],
+            technology['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],
+            targetAudience['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],
             image: '/images/services/ai-crm.jpg',
             link: 'https://ziontechgroup.com/services/ai-crm-platform',
             contactInfo: '+1 302 464 0950',
@@ -70,11 +70,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'quantum',
             price: '$150,000/month',
             duration: '12-18 months',
-            tags: ['Quantum Computing', 'Research', 'Optimization'],
-            features: ['Quantum processors access', 'Algorithm development', 'Research support'],
-            benefits: ['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],
-            technology: ['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],
-            targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],
+            tags['Quantum Computing', 'Research', 'Optimization'],
+            features['Quantum processors access', 'Algorithm development', 'Research support'],
+            benefits['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],
+            technology['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],
+            targetAudience['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],
             image: '/images/services/quantum-computing.jpg',
             link: 'https://ziontechgroup.com/services/quantum-computing-service',
             contactInfo: '+1 302 464 0950',
@@ -87,11 +87,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'blockchain',
             price: '$75,000/month',
             duration: '8-14 months',
-            tags: ['Blockchain', 'Supply Chain', 'Transparency'],
-            features: ['End-to-end tracking', 'Smart contracts', 'Transparency'],
-            benefits: ['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],
-            technology: ['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],
-            targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
+            tags['Blockchain', 'Supply Chain', 'Transparency'],
+            features['End-to-end tracking', 'Smart contracts', 'Transparency'],
+            benefits['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],
+            technology['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],
+            targetAudience['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
             image: '/images/services/blockchain-supply-chain.jpg',
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
             contactInfo: '+1 302 464 0950',
@@ -102,8 +102,7 @@ const AdvancedServiceRecommendation = () => {
         let score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
-            score += 25;
-        }
+            score += 25}
         // Budget compatibility
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
@@ -140,8 +139,7 @@ const AdvancedServiceRecommendation = () => {
         // Goal alignment
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length;
         score += (goalMatches / profile.primaryGoals.length) * 20;
-        return Math.min(100, score);
-    };
+        return Math.min(100, score)};
     const generateRecommendations = () => {
         setIsAnalyzing(true);
         // Simulate analysis time
@@ -180,34 +178,28 @@ const AdvancedServiceRecommendation = () => {
                     implementationComplexity: complexity,
                     expectedROI,
                     timeToValue
-                };
-            }).sort((a, b) => b.matchScore - a.matchScore);
+                }}).sort((a, b) => b.matchScore - a.matchScore);
             setRecommendations(recs);
             setIsAnalyzing(false);
-            setShowResults(true);
-        }, 2000);
-    };
+            setShowResults(true)}, 2000)};
     const getPriorityColor = (priority) => {
         switch (priority) {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
+            default: return 'bg-gray-100 text-gray-800'}
     };
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
-    };
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
@@ -275,11 +267,9 @@ const AdvancedServiceRecommendation = () => {
             {primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
-                }
+                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals, goal] }))}
                 else {
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
-                }
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{goal}</span>
               </label>))}
@@ -292,11 +282,9 @@ const AdvancedServiceRecommendation = () => {
             {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
-                }
+                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges, challenge] }))}
                 else {
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
-                }
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{challenge}</span>
               </label>))}
@@ -430,6 +418,5 @@ const AdvancedServiceRecommendation = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </div>);
-};
+    </div>)};
 export default AdvancedServiceRecommendation;

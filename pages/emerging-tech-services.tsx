@@ -21,8 +21,7 @@ const EmergingTechServices: NextPage = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -33,8 +32,7 @@ const EmergingTechServices: NextPage = () => {
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const getInnovationColor = (level: string)  => {
@@ -42,8 +40,7 @@ const EmergingTechServices: NextPage = () => {
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
+      default: return 'from-gray-500 to-gray-600'}
   };
 
   const getBadgeColor = (badge: string)  => {
@@ -51,8 +48,7 @@ const EmergingTechServices: NextPage = () => {
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-    }
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
   return (
@@ -282,7 +278,6 @@ const EmergingTechServices: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EmergingTechServices;

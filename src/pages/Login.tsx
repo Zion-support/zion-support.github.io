@@ -11,7 +11,7 @@ import { Mail,
   Users
  } from 'lucide-react.ts';
 
-export default function Login(...args: []):  {
+export default function Login(...args[]):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -23,8 +23,7 @@ export default function Login(...args: []):  {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
@@ -36,8 +35,7 @@ export default function Login(...args: []):  {
     // Here you would typically make an API call to authenticate
     console.log('Login attempt:', formData);
     
-    setIsLoading(false);
-  };
+    setIsLoading(false)};
 
   const features = [
     {
@@ -281,5 +279,4 @@ export default function Login(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

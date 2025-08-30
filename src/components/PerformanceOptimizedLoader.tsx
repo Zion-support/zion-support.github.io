@@ -4,9 +4,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
-  fullScreen?: boolean;
-
-}
+  fullScreen?: boolean}
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({ 
   size = 'md', 
   color = 'primary', 
@@ -48,7 +46,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         <div className="mt-4 text-center">
           <motion.div 
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
-            animate={{ opacity: [0.5, 1, 0.5] }}
+            animate={{ opacity[0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             {text}
@@ -56,11 +54,10 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         </div>
       </div>
     </div>
-  );
-});
+  )});
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
-export function SkeletonLoader(...args: []):  {
+export function SkeletonLoader(...args[]):  {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index)  => (
@@ -76,10 +73,9 @@ export function SkeletonLoader(...args: []):  {
         />
       ))}
     </div>
-  );
-}
+  )}
 // Card skeleton loader
-export function CardSkeleton(...args: []):  {
+export function CardSkeleton(...args[]):  {
   return (
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
@@ -98,20 +94,18 @@ export function CardSkeleton(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}
 // Grid skeleton loader
-export function GridSkeleton(...args: []):  {
+export function GridSkeleton(...args[]):  {
   return (
     <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index)  => (
         <CardSkeleton key={index} />
       ))}
     </div>
-  );
-}
+  )}
 // Page skeleton loader
-export function PageSkeleton(...args: []):  {
+export function PageSkeleton(...args[]):  {
   return (
     <div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}
@@ -127,5 +121,4 @@ export function PageSkeleton(...args: []):  {
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
       </div>
     </div>
-  );
-}
+  )}

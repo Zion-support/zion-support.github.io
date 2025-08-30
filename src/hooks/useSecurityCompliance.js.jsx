@@ -30,14 +30,14 @@ export const useSecurityCompliance = (_initialConfig) => {
             status: 'compliant',
             lastChecked: new Date(),
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
-            requirements: [
+            requirements[
                 'Data minimization',
                 'Purpose limitation',
                 'Data accuracy',
                 'Storage limitation',
                 'Security measures'
             ],
-            violations: []
+            violations[]
         },
         {
             id: 'sox-financial-controls',
@@ -47,14 +47,14 @@ export const useSecurityCompliance = (_initialConfig) => {
             status: 'compliant',
             lastChecked: new Date(),
             nextCheck: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
-            requirements: [
+            requirements[
                 'Access controls',
                 'Change management',
                 'System security',
                 'Audit logging',
                 'Backup procedures'
             ],
-            violations: []
+            violations[]
         },
         {
             id: 'hipaa-privacy-security',
@@ -64,21 +64,20 @@ export const useSecurityCompliance = (_initialConfig) => {
             status: 'compliant',
             lastChecked: new Date(),
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
-            requirements: [
+            requirements[
                 'Privacy rule compliance',
                 'Security rule compliance',
                 'Breach notification',
                 'Business associate agreements',
                 'Workforce training'
             ],
-            violations: []
+            violations[]
         }
     ];
     // Initialize with default rules
     useEffect(() => {
         if (complianceRules.length === 0) {
-            setComplianceRules(defaultComplianceRules);
-        }
+            setComplianceRules(defaultComplianceRules)}
     }, [complianceRules.length]);
     // Start real-time security monitoring
     const startMonitoring = useCallback(() => {
@@ -102,8 +101,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                     severity: 'low',
                     details: `Simulated ${randomType} event for testing`,
                     status: 'new'
-                });
-            }
+                })}
         }, 30000); // Check every 30 seconds
     }, [isMonitoring, trackEvent]);
     // Stop security monitoring
@@ -113,8 +111,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         setIsMonitoring(false);
         trackEvent('security', 'monitoring', 'stopped');
         if (monitoringIntervalRef.current) {
-            clearInterval(monitoringIntervalRef.current);
-        }
+            clearInterval(monitoringIntervalRef.current)}
     }, [isMonitoring, trackEvent]);
     // Add security event
     const addSecurityEvent = useCallback((event) => {
@@ -134,14 +131,12 @@ export const useSecurityCompliance = (_initialConfig) => {
         }));
         // Check if thresholds are exceeded
         if (event.severity === 'critical' || event.severity === 'high') {
-            trackEvent('security', 'alert', 'threshold_exceeded', undefined, { severity: event.severity });
-        }
+            trackEvent('security', 'alert', 'threshold_exceeded', undefined, { severity: event.severity })}
     }, [trackEvent]);
     // Update event status
     const updateEventStatus = useCallback((eventId, status) => {
         setSecurityEvents(prev => prev.map(event => event.id === eventId ? { ...event, status } : event));
-        trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status });
-    }, [trackEvent]);
+        trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status })}, [trackEvent]);
     // Add compliance rule
     const addComplianceRule = useCallback((rule) => {
         const newRule = {
@@ -149,11 +144,10 @@ export const useSecurityCompliance = (_initialConfig) => {
             id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
             lastChecked: new Date(),
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours
-            violations: []
+            violations[]
         };
         setComplianceRules(prev => [...prev, newRule]);
-        trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category });
-    }, [trackEvent]);
+        trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category })}, [trackEvent]);
     // Check compliance
     const checkCompliance = useCallback(async () => {
         setIsComplianceChecking(true);
@@ -181,8 +175,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                         timestamp: violation.timestamp,
                         status: 'open'
                     }))
-                };
-            }));
+                }}));
             // Update compliance score
             const compliantRules = complianceRules.filter(rule => rule.status === 'compliant').length;
             const totalRules = complianceRules.length;
@@ -191,14 +184,11 @@ export const useSecurityCompliance = (_initialConfig) => {
                 ...prev,
                 complianceScore: newScore
             }));
-            trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
-        }
+            trackEvent('compliance', 'check', 'completed', undefined, { score: newScore })}
         catch (error) {
-            trackEvent('compliance', 'check', 'failed', undefined, { error: error instanceof Error ? error.message : 'Unknown error' });
-        }
+            trackEvent('compliance', 'check', 'failed', undefined, { error: error instanceof Error ? error.message : 'Unknown error' })}
         finally {
-            setIsComplianceChecking(false);
-        }
+            setIsComplianceChecking(false)}
     }, [securityEvents, complianceRules, trackEvent]);
     // Generate security report
     const generateSecurityReport = useCallback(() => {
@@ -211,21 +201,17 @@ export const useSecurityCompliance = (_initialConfig) => {
                 status: rule.status,
                 violations: rule.violations.length
             })),
-            recommendations: []
+            recommendations[]
         };
         // Generate recommendations
         if (securityMetrics.complianceScore < 80) {
-            report.recommendations.push('Immediate compliance review required');
-        }
+            report.recommendations.push('Immediate compliance review required')}
         if (securityMetrics.criticalEvents > 0) {
-            report.recommendations.push('Critical security events need immediate attention');
-        }
+            report.recommendations.push('Critical security events need immediate attention')}
         if (securityMetrics.threatLevel === 'high' || securityMetrics.threatLevel === 'critical') {
-            report.recommendations.push('Elevated threat level - implement additional security measures');
-        }
+            report.recommendations.push('Elevated threat level - implement additional security measures')}
         trackEvent('security', 'report', 'generated');
-        return JSON.stringify(report, null, 2);
-    }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
+        return JSON.stringify(report, null, 2)}, [securityMetrics, securityEvents, complianceRules, trackEvent]);
     // Export audit log
     const exportAuditLog = useCallback(() => {
         const auditLog = {
@@ -245,47 +231,36 @@ export const useSecurityCompliance = (_initialConfig) => {
             }))
         };
         trackEvent('security', 'audit', 'exported');
-        return JSON.stringify(auditLog, null, 2);
-    }, [securityEvents, trackEvent]);
+        return JSON.stringify(auditLog, null, 2)}, [securityEvents, trackEvent]);
     // Configure security settings
     const configureSecurity = useCallback((config) => {
         if (config.enableRealTimeMonitoring !== undefined) {
             if (config.enableRealTimeMonitoring && !isMonitoring) {
-                startMonitoring();
-            }
+                startMonitoring()}
             else if (!config.enableRealTimeMonitoring && isMonitoring) {
-                stopMonitoring();
-            }
+                stopMonitoring()}
         }
         if (config.complianceRules) {
-            setComplianceRules(config.complianceRules);
-        }
-        trackEvent('security', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) });
-    }, [isMonitoring, startMonitoring, stopMonitoring, trackEvent]);
+            setComplianceRules(config.complianceRules)}
+        trackEvent('security', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) })}, [isMonitoring, startMonitoring, stopMonitoring, trackEvent]);
     // Cleanup on unmount
     useEffect(() => {
         return () => {
             if (monitoringIntervalRef.current) {
-                clearInterval(monitoringIntervalRef.current);
-            }
+                clearInterval(monitoringIntervalRef.current)}
             if (complianceCheckIntervalRef.current) {
-                clearInterval(complianceCheckIntervalRef.current);
-            }
-        };
-    }, []);
+                clearInterval(complianceCheckIntervalRef.current)}
+        }}, []);
     // Auto-compliance check every hour
     useEffect(() => {
         complianceCheckIntervalRef.current = setInterval(() => {
             if (isMonitoring) {
-                checkCompliance();
-            }
+                checkCompliance()}
         }, 60 * 60 * 1000); // Every hour
         return () => {
             if (complianceCheckIntervalRef.current) {
-                clearInterval(complianceCheckIntervalRef.current);
-            }
-        };
-    }, [isMonitoring, checkCompliance]);
+                clearInterval(complianceCheckIntervalRef.current)}
+        }}, [isMonitoring, checkCompliance]);
     return {
         securityEvents,
         complianceRules,
@@ -301,5 +276,4 @@ export const useSecurityCompliance = (_initialConfig) => {
         generateSecurityReport,
         exportAuditLog,
         configureSecurity
-    };
-};
+    }};

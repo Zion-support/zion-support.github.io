@@ -25,13 +25,13 @@ import { Brain,
   Sparkles
  } from 'lucide-react.ts';
 
-export default function AIEnterpriseOrchestrator(...args: []):  {
+export default function AIEnterpriseOrchestrator(...args[]):  {
   const features = [
     {
       title: "Intelligent Process Orchestration",
       description: "AI-powered workflow automation with dynamic adaptation and real-time optimization",
       icon: Zap,
-      benefits: [
+      benefits[
         "Reduce manual tasks by 85%",
         "Improve process efficiency by 60%",
         "Real-time performance monitoring",
@@ -42,7 +42,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       title: "Multi-Agent Coordination",
       description: "Advanced AI agents working together to solve complex business problems",
       icon: Brain,
-      benefits: [
+      benefits[
         "Coordinated decision making",
         "Intelligent resource allocation",
         "Cross-functional collaboration",
@@ -53,7 +53,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       title: "Predictive Analytics Engine",
       description: "Machine learning models that forecast trends and optimize business outcomes",
       icon: TrendingUp,
-      benefits: [
+      benefits[
         "95% prediction accuracy",
         "Real-time trend analysis",
         "Automated optimization",
@@ -64,7 +64,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       title: "Enterprise Security Suite",
       description: "AI-powered threat detection and response with zero-trust architecture",
       icon: Shield,
-      benefits: [
+      benefits[
         "99.9% threat detection rate",
         "Zero-day attack prevention",
         "Automated incident response",
@@ -79,7 +79,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       price: "$15,000",
       period: "/month",
       description: "Perfect for small to medium enterprises",
-      features: [
+      features[
         "Basic AI orchestration",
         "Up to 10 workflows",
         "Standard security features",
@@ -94,7 +94,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       price: "$35,000",
       period: "/month",
       description: "Ideal for growing businesses",
-      features: [
+      features[
         "Advanced AI orchestration",
         "Up to 50 workflows",
         "Enhanced security suite",
@@ -111,7 +111,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       price: "$75,000",
       period: "/month",
       description: "For large-scale operations",
-      features: [
+      features[
         "Full AI orchestration suite",
         "Unlimited workflows",
         "Enterprise security",
@@ -129,7 +129,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
   const useCases = [
     {
       industry: "Financial Services",
-      applications: [
+      applications[
         "Fraud detection and prevention",
         "Risk assessment automation",
         "Regulatory compliance",
@@ -138,7 +138,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
     },
     {
       industry: "Healthcare",
-      applications: [
+      applications[
         "Patient care coordination",
         "Diagnostic assistance",
         "Resource optimization",
@@ -147,7 +147,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
     },
     {
       industry: "Manufacturing",
-      applications: [
+      applications[
         "Supply chain optimization",
         "Predictive maintenance",
         "Quality control",
@@ -156,7 +156,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
     },
     {
       industry: "Retail",
-      applications: [
+      applications[
         "Customer behavior analysis",
         "Inventory optimization",
         "Personalized marketing",
@@ -421,5 +421,4 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

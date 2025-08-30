@@ -26,7 +26,7 @@ export default function CloudCostOptimizer() {
             price: "$49",
             period: "/month",
             description: "Perfect for small cloud deployments",
-            features: [
+            features[
                 "Up to $5,000 monthly cloud spend",
                 "Basic cost optimization",
                 "Monthly cost reports",
@@ -41,7 +41,7 @@ export default function CloudCostOptimizer() {
             price: "$149",
             period: "/month",
             description: "Ideal for growing businesses",
-            features: [
+            features[
                 "Up to $50,000 monthly cloud spend",
                 "Advanced AI optimization",
                 "Real-time cost monitoring",
@@ -58,7 +58,7 @@ export default function CloudCostOptimizer() {
             price: "$399",
             period: "/month",
             description: "For large cloud deployments",
-            features: [
+            features[
                 "Unlimited cloud spend",
                 "Premium AI optimization",
                 "24/7 cost monitoring",
@@ -324,5 +324,4 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

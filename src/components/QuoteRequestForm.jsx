@@ -75,8 +75,7 @@ export const QuoteRequestForm = () => {
       setErrors(prev => ({
         ...prev,
         [field]: ''
-      }));
-    }
+      }))}
   };
 
   const validateForm = () => {
@@ -85,25 +84,21 @@ export const QuoteRequestForm = () => {
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
     if (!formData.company.trim()) newErrors.comp = 'Comp name is required';
     if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
     if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
-      return;
-    }
+      return}
 
     setIsSubmitting(true);
     
@@ -129,13 +124,10 @@ export const QuoteRequestForm = () => {
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false
-      });
-    } catch (error) {
+      })} catch (error) {
       console.error('Error submitting quote request:', error);
-      setErrors({ submit: 'Failed to submit request. Please try again.' });
-    } finally {
-      setIsSubmitting(false);
-    }
+      setErrors({ submit: 'Failed to submit request. Please try again.' })} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubmitted) {
@@ -159,8 +151,7 @@ export const QuoteRequestForm = () => {
           </div>
         </CardContent>
       </Card>
-    );
-  }
+    )}
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -460,5 +451,4 @@ export const QuoteRequestForm = () => {
         </form>
       </CardContent>
     </Card>
-  );
-};
+  )};

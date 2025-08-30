@@ -6,11 +6,9 @@ interface CheckboxProps extends React.PropsWithChildren<{}> {
   onChange: (checked: boolean)  => void;
   label?: string;
   disabled?: boolean;
-  className?: string;
+  className?: string}
 
-}
-
-export function Checkbox(...args: []):  {
+export function Checkbox(...args[]):  {
   return (
     <label className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
       <input
@@ -22,5 +20,4 @@ export function Checkbox(...args: []):  {
       />
       {label && <span className="text-sm text-gray-700">{label}</span>}
     </label>
-  );
-}
+  )}

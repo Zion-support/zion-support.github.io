@@ -3,9 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react.ts'
 interface TabsContextType {
 
   activeTab: string;
-  setActiveTab: (tab: string)  => void;
-
-}
+  setActiveTab: (tab: string)  => void}
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
@@ -15,18 +13,15 @@ interface TabsProps extends React.PropsWithChildren<{}> {
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string)  => void;
-  className?: string;
+  className?: string}
 
-}
-
-export function Tabs(...args: []):  {
+export function Tabs(...args[]):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
   const handleTabChange = (tab: string)  => {
     setActiveTab(tab);
     if (onValueChange) {
-      onValueChange(tab);
-    }
+      onValueChange(tab)}
   };
 
   return (
@@ -35,33 +30,27 @@ export function Tabs(...args: []):  {
         {children}
       </div>
     </TabsContext.Provider>
-  );
-}
+  )}
 
 interface TabsListProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
-  className?: string;
+  className?: string}
 
-}
-
-export function TabsList(...args: []):  {
+export function TabsList(...args[]):  {
   return (
     <div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>
-  );
-}
+  )}
 
 interface TabsTriggerProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
   value: string;
-  className?: string;
+  className?: string}
 
-}
-
-export function TabsTrigger(...args: []):  {
+export function TabsTrigger(...args[]):  {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
 
@@ -78,28 +67,23 @@ export function TabsTrigger(...args: []):  {
     >
       {children}
     </button>
-  );
-}
+  )}
 
 interface TabsContentProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
   value: string;
-  className?: string;
+  className?: string}
 
-}
-
-export function TabsContent(...args: []):  {
+export function TabsContent(...args[]):  {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
 
   if (context.activeTab !== value) {
-    return null;
-  }
+    return null}
 
   return (
     <div className={`mt-4 ${className}`}>
       {children}
     </div>
-  );
-}
+  )}

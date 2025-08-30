@@ -26,15 +26,13 @@ export function CandidateCard({ application, index }) {
             title: "Notes saved",
             description: "Your notes have been saved"
         });
-        setShowNotes(false);
-    };
+        setShowNotes(false)};
     const handleHireConfirmed = () => {
         // Hiring process completed via the modal
         toast({
             title: "Hiring process initiated",
             description: "Offer has been sent to the talent."
-        });
-    };
+        })};
     return (<>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
@@ -134,5 +132,4 @@ export function CandidateCard({ application, index }) {
       
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>
-    </>);
-}
+    </>)}

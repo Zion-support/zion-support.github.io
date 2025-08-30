@@ -14,8 +14,7 @@ class AutomationDashboard {
   constructor() {
     this.processes = [];
     this.reports = {};
-    this.healthStatus = {};
-  }
+    this.healthStatus = {}}
 
   async getPM2Status() {
     try {
@@ -28,11 +27,9 @@ class AutomationDashboard {
         proc.name !== 'zion-backend'
       );
       
-      return this.processes;
-    } catch (error) {
+      return this.processes} catch (error) {
       console.error('❌ Failed to get PM2 status:', error.message);
-      return [];
-    }
+      return []}
   }
 
   async generateHealthReport() {
@@ -55,37 +52,32 @@ class AutomationDashboard {
         restarts: proc.pm2_env.restart_time,
         pm_id: proc.pm_id
       })),
-      recommendations: []
+      recommendations[]
     };
 
     // Generate recommendations
     if (report.summary.erroredProcesses > 0) {
-      report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.');
-    }
+      report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.')}
 
     if (report.summary.onlineProcesses === 0) {
-      report.recommendations.push('🚨 No automation processes are running. Start the automation system.');
-    }
+      report.recommendations.push('🚨 No automation processes are running. Start the automation system.')}
 
     if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
-      report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.');
-    }
+      report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.')}
 
     // Save report
     const reportPath = path.join(process.cwd(), 'automation-health-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.reports.health = report;
-    return report;
-  }
+    return report}
 
   formatUptime(uptime) {
     if (!uptime) return 'N/A';
     const seconds = Math.floor((Date.now() - uptime) / 1000);
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`;
-  }
+    return `${hours}h ${minutes}m`}
 
   async displayDashboard() {
     console.clear();
@@ -114,8 +106,7 @@ class AutomationDashboard {
         proc.cpu.padEnd(8) +
         proc.uptime.padEnd(15) +
         proc.restarts
-      );
-    });
+      )});
     
     console.log('');
     
@@ -123,8 +114,7 @@ class AutomationDashboard {
     if (health.recommendations.length > 0) {
       console.log('💡 Recommendations:');
       health.recommendations.forEach(rec => console.log(`  ${rec}`));
-      console.log('');
-    }
+      console.log('')}
     
     // Display recent logs
     console.log('📝 Recent Activity:');
@@ -135,16 +125,11 @@ class AutomationDashboard {
       const recentLogs = logs.split('\n').slice(-5).filter(line => line.trim());
       recentLogs.forEach(log => {
         if (log.includes('ERROR') || log.includes('error')) {
-          console.log(`🔴 ${log}`);
-        } else if (log.includes('WARN') || log.includes('warn')) {
-          console.log(`🟡 ${log}`);
-        } else {
-          console.log(`ℹ️  ${log}`);
-        }
-      });
-    } catch (error) {
-      console.log('  No recent logs available');
-    }
+          console.log(`🔴 ${log}`)} else if (log.includes('WARN') || log.includes('warn')) {
+          console.log(`🟡 ${log}`)} else {
+          console.log(`ℹ️  ${log}`)}
+      })} catch (error) {
+      console.log('  No recent logs available')}
     
     console.log('');
     console.log('Commands:');
@@ -152,8 +137,7 @@ class AutomationDashboard {
     console.log('  pm2 restart <process-name> - Restart specific process');
     console.log('  pm2 restart all - Restart all processes');
     console.log('  pm2 monit - Open PM2 monitoring interface');
-    console.log('  Ctrl+C - Exit dashboard');
-  }
+    console.log('  Ctrl+C - Exit dashboard')}
 
   async startMonitoring() {
     console.log('🔄 Starting continuous monitoring...');
@@ -163,9 +147,7 @@ class AutomationDashboard {
     
     // Update every 30 seconds
     setInterval(async () => {
-      await this.displayDashboard();
-    }, 30000);
-  }
+      await this.displayDashboard()}, 30000)}
 
   async restartFailedProcesses() {
     console.log('🔄 Restarting failed processes...');
@@ -174,18 +156,14 @@ class AutomationDashboard {
     
     if (failedProcesses.length === 0) {
       console.log('✅ No failed processes to restart');
-      return;
-    }
+      return}
     
     failedProcesses.forEach(proc => {
       try {
         execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit' });
-        console.log(`✅ Restarted ${proc.name}`);
-      } catch (error) {
-        console.error(`❌ Failed to restart ${proc.name}:`, error.message);
-      }
-    });
-  }
+        console.log(`✅ Restarted ${proc.name}`)} catch (error) {
+        console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
+    })}
 
   async generatePerformanceReport() {
     console.log('📊 Generating performance report...');
@@ -216,8 +194,7 @@ class AutomationDashboard {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.reports.performance = report;
-    return report;
-  }
+    return report}
 }
 
 // Main execution
@@ -229,15 +206,12 @@ async function main() {
     console.log('\n🛑 Shutting down automation dashboard...');
     await dashboard.generatePerformanceReport();
     console.log('✅ Performance report saved');
-    process.exit(0);
-  });
+    process.exit(0)});
   
   try {
-    await dashboard.startMonitoring();
-  } catch (error) {
+    await dashboard.startMonitoring()} catch (error) {
     console.error('❌ Dashboard failed:', error);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 // Start the dashboard

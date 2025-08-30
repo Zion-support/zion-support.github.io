@@ -6,11 +6,10 @@ import { TeamInvite  } from '@/types';
 // This project uses Vite. This logic needs to be refactored,
 // potentially into a Supabase Function or a backend handler compatible with Vite.
 /*
-export default async function handler(...args: []):  {
+export default async function handler(...args[]):  {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-  }
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
 
   try {
     const {
@@ -21,8 +20,7 @@ export default async function handler(...args: []):  {
     } = req.body;
 
     if (!talentId || !roleTitle) {
-      return res.status(400).json({ error: 'Missing required fields: talentId and roleTitle are required.' });
-    }
+      return res.status(400).json({ error: 'Missing required fields: talentId and roleTitle are required.' })}
 
     const newInviteData: Partial<TeamInvite> = {
       talent_id: talentId,
@@ -31,11 +29,9 @@ export default async function handler(...args: []):  {
     };
 
     if (projectBriefId) {
-      newInviteData.project_brief_id = projectBriefId;
-    }
+      newInviteData.project_brief_id = projectBriefId}
     if (teamRecommendationId) {
-      newInviteData.team_recommendation_id = teamRecommendationId;
-    }
+      newInviteData.team_recommendation_id = teamRecommendationId}
 
     const { data, error } = await supabase
       .from('team_invites')
@@ -45,19 +41,14 @@ export default async function handler(...args: []):  {
 
     if (error) {
       console.error('Error inserting team invite:', error);
-      throw error;
-    }
+      throw error}
 
     if (!data) {
-      return res.status(500).json({ error: 'Failed to create team invite: No data returned.' });
-    }
+      return res.status(500).json({ error: 'Failed to create team invite: No data returned.' })}
 
-    res.status(201).json(data as TeamInvite);
-
-  } catch (error: ) {
+    res.status(201).json(data as TeamInvite)} catch (error) {
     console.error('Error in /api/team-builder/invite:', error);
-    return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` });
-  }
+    return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` })}
 }
 */
 

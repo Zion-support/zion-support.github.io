@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Lock, Link, Shield, Zap, BarChart3, ArrowRight, Users, Globe, Database, Cpu  } from 'lucide-react.ts';
 
-export default function Blockchain(...args: []):  {
+export default function Blockchain(...args[]):  {
   const features = [
     {
       icon: Lock,
@@ -202,5 +202,4 @@ export default function Blockchain(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}

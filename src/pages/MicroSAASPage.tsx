@@ -27,8 +27,8 @@ const MicroSAASPage = () => {
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
+      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
       pricing: 'Starting from $2,500/month'
     },
     {
@@ -36,8 +36,8 @@ const MicroSAASPage = () => {
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
+      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
       pricing: 'Starting from $1,800/month'
     },
     {
@@ -45,8 +45,8 @@ const MicroSAASPage = () => {
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
+      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
       pricing: 'Starting from $3,200/month'
     },
     {
@@ -54,8 +54,8 @@ const MicroSAASPage = () => {
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
       icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
+      features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
+      useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
       pricing: 'Starting from $1,500/month'
     }
   ];
@@ -287,6 +287,5 @@ const MicroSAASPage = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 export default MicroSAASPage;

@@ -154,7 +154,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       price: "$299",
       period: "/month",
       description: "Perfect for small teams getting started with customer success automation",
-      features: [
+      features[
         "Up to 1,000 customers",
         "Basic AI insights",
         "Standard communication templates",
@@ -171,7 +171,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       price: "$899",
       period: "/month",
       description: "Advanced customer success platform for growing businesses",
-      features: [
+      features[
         "Up to 10,000 customers",
         "Advanced AI analytics",
         "Custom communication workflows",
@@ -189,7 +189,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       price: "$2,999",
       period: "/month",
       description: "Comprehensive platform for large organizations with complex customer success needs",
-      features: [
+      features[
         "Unlimited customers",
         "Custom AI models",
         "Advanced automation",
@@ -576,7 +576,6 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerSuccessPlatform;

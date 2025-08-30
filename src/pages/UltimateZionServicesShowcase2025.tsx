@@ -447,7 +447,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default UltimateZionServicesShowcase2025;

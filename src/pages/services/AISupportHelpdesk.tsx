@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AISupportHelpdesk(...args: []):  {
+export default function AISupportHelpdesk(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -77,7 +77,7 @@ export default function AISupportHelpdesk(...args: []):  {
       price: "$79",
       period: "/month",
       description: "Perfect for small teams starting with AI support",
-      features: [
+      features[
         "Up to 5 agents",
         "Basic AI chatbot",
         "Email & chat support",
@@ -92,7 +92,7 @@ export default function AISupportHelpdesk(...args: []):  {
       price: "$199",
       period: "/month",
       description: "Ideal for growing support teams with advanced needs",
-      features: [
+      features[
         "Up to 20 agents",
         "Advanced AI capabilities",
         "Multi-channel support",
@@ -108,7 +108,7 @@ export default function AISupportHelpdesk(...args: []):  {
       price: "$499",
       period: "/month",
       description: "For large organizations with complex support requirements",
-      features: [
+      features[
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
@@ -454,6 +454,5 @@ export default function AISupportHelpdesk(...args: []):  {
         </section>
       </div>
     </>
-  );
-}
+  )}
 

@@ -24,9 +24,7 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  fontSize: 'small' | 'medium' | 'large' | 'extra-large';
-
-}
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large'}
 
 export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,10 +49,8 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       try {
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
-        applySettings({ ...prev, ...parsed });
-      } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
-      }
+        applySettings({ ...prev, ...parsed })} catch (error) {
+        console.error('Failed to parse accessibility settings:', error)}
     }
   }, []);
 
@@ -67,29 +63,23 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       root.classList.add('high-contrast');
       root.style.setProperty('--bg-primary', '#000000');
       root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--accent-color', '#ffff00');
-    } else {
+      root.style.setProperty('--accent-color', '#ffff00')} else {
       root.classList.remove('high-contrast');
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--accent-color');
-    }
+      root.style.removeProperty('--accent-color')}
 
     // Large text
     if (newSettings.largeText) {
-      root.style.fontSize = '120%';
-    } else {
-      root.style.fontSize = '100%';
-    }
+      root.style.fontSize = '120%'} else {
+      root.style.fontSize = '100%'}
 
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--transition-duration', '0.01ms');
-    } else {
+      root.style.setProperty('--transition-duration', '0.01ms')} else {
       root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--transition-duration');
-    }
+      root.style.removeProperty('--transition-duration')}
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
@@ -98,10 +88,8 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
         tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
       };
-      root.style.filter = filters[newSettings.colorBlindness];
-    } else {
-      root.style.filter = 'none';
-    }
+      root.style.filter = filters[newSettings.colorBlindness]} else {
+      root.style.filter = 'none'}
 
     // Font size
     const fontSizes = {
@@ -114,21 +102,16 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
     // Focus indicator
     if (newSettings.focusIndicator) {
-      root.style.setProperty('--focus-outline', '2px solid #06b6d4');
-    } else {
-      root.style.setProperty('--focus-outline', 'none');
-    }
+      root.style.setProperty('--focus-outline', '2px solid #06b6d4')} else {
+      root.style.setProperty('--focus-outline', 'none')}
 
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {
-      document.addEventListener('keydown', handleKeyboardNavigation);
-    } else {
-      document.removeEventListener('keydown', handleKeyboardNavigation);
-    }
+      document.addEventListener('keydown', handleKeyboardNavigation)} else {
+      document.removeEventListener('keydown', handleKeyboardNavigation)}
 
     // Save settings
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
 
   // Handle keyboard navigation
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent)  => {
@@ -159,10 +142,8 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       case 'Enter':
       case ' ':
         if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.click();
-        }
-        break;
-    }
+          document.activeElement.click()}
+        break}
   }, []);
 
   // Screen reader announcements
@@ -180,17 +161,15 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     // Remove after announcement
     setTimeout(() => {
       if (announcement.parentNode) {
-        announcement.parentNode.removeChild(announcement);
-      }
+        announcement.parentNode.removeChild(announcement)}
     }, 1000);
 
     setAnnouncements(prev => [...prev, message]);
     setIsAnnouncing(true);
-    setTimeout(() => setIsAnnouncing(false), 1000);
-  }, [settings.screenReader]);
+    setTimeout(() => setIsAnnouncing(false), 1000)}, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: )  => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value)  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -207,8 +186,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       fontSize: 'font size'
     };
     
-    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
-  }, [settings, applySettings, announceToScreenReader]);
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [settings, applySettings, announceToScreenReader]);
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
@@ -225,27 +203,23 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     
     setSettings(defaultSettings);
     applySettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to defaults');
-  }, [applySettings, announceToScreenReader]);
+    announceToScreenReader('Accessibility settings reset to defaults')}, [applySettings, announceToScreenReader]);
 
   // Toggle panel
   const togglePanel = useCallback(() => {
     setIsOpen(!isOpen);
-    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened');
-  }, [isOpen, announceToScreenReader]);
+    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened')}, [isOpen, announceToScreenReader]);
 
   // Handle escape key
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent)  => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
-        announceToScreenReader('Accessibility panel closed');
-      }
+        announceToScreenReader('Accessibility panel closed')}
     };
 
     document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, [isOpen, announceToScreenReader]);
+    return () => document.removeEventListener('keydown', handleEscape)}, [isOpen, announceToScreenReader]);
 
   return (
     <>
@@ -524,5 +498,4 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
         />
       )}
     </>
-  );
-};
+  )};

@@ -10,6 +10,5 @@ function DisputeDetailPage() {
         <DisputeDetail />
         
       </>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}
 export default DisputeDetailPage;

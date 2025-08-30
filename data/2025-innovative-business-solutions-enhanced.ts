@@ -30,15 +30,13 @@ export interface InnovativeBusinessSolution {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [
   // AI-Powered Marketing Automation Platform
   {
@@ -48,7 +46,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$299',
     period: '/month',
     description: 'Advanced AI platform that automates marketing campaigns, predicts customer behavior, and optimizes marketing ROI through intelligent automation.',
-    features: [
+    features[
       'AI-powered campaign automation',
       'Predictive customer segmentation',
       'Dynamic content personalization',
@@ -71,11 +69,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     setupTime: '3-5 hours',
     category: 'AI Marketing & Automation',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Mailchimp, Facebook Ads, Google Ads, LinkedIn'],
-    useCases: ['Lead generation, Customer segmentation, Campaign automation, Content personalization, Performance optimization'],
+    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations['Salesforce, HubSpot, Mailchimp, Facebook Ads, Google Ads, LinkedIn'],
+    useCases['Lead generation, Customer segmentation, Campaign automation, Content personalization, Performance optimization'],
     roi: 'Marketing teams report 400% ROI through improved conversion rates and reduced acquisition costs.',
-    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
+    competitors['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$25.6B marketing automation market',
     growthRate: '19% annual growth',
     variant: 'ai-marketing-enterprise',
@@ -100,7 +98,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$199',
     period: '/month',
     description: 'Advanced AI platform that provides sales intelligence, automates prospecting, and optimizes sales processes through data-driven insights.',
-    features: [
+    features[
       'AI-powered lead scoring',
       'Predictive sales analytics',
       'Automated prospecting',
@@ -123,11 +121,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     setupTime: '2-4 hours',
     category: 'AI Sales & Intelligence',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics'],
-    useCases: ['Lead qualification, Sales forecasting, Pipeline management, Performance tracking, Customer insights'],
+    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations['Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics'],
+    useCases['Lead qualification, Sales forecasting, Pipeline management, Performance tracking, Customer insights'],
     roi: 'Sales teams report 350% ROI through improved conversion rates and reduced sales cycles.',
-    competitors: ['Salesforce, Pipedrive, HubSpot Sales, Zoho CRM'],
+    competitors['Salesforce, Pipedrive, HubSpot Sales, Zoho CRM'],
     marketSize: '$18.9B sales intelligence market',
     growthRate: '21% annual growth',
     variant: 'ai-sales-enterprise',
@@ -152,7 +150,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$249',
     period: '/month',
     description: 'Advanced AI platform that automates HR processes, provides people analytics, and optimizes talent management through intelligent automation.',
-    features: [
+    features[
       'AI-powered recruitment automation',
       'Candidate screening and matching',
       'Employee performance analytics',
@@ -175,11 +173,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     setupTime: '4-6 hours',
     category: 'AI HR & Talent Management',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['Workday, BambooHR, ADP, Greenhouse, Lever, BambooHR'],
-    useCases: ['Recruitment automation, Performance management, Employee engagement, Compliance monitoring, Talent analytics'],
+    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations['Workday, BambooHR, ADP, Greenhouse, Lever, BambooHR'],
+    useCases['Recruitment automation, Performance management, Employee engagement, Compliance monitoring, Talent analytics'],
     roi: 'HR teams report 300% ROI through improved hiring efficiency and employee retention.',
-    competitors: ['BambooHR, Workday, ADP, Gusto'],
+    competitors['BambooHR, Workday, ADP, Gusto'],
     marketSize: '$22.4B HR management market',
     growthRate: '18% annual growth',
     variant: 'ai-hr-enterprise',
@@ -204,7 +202,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$399',
     period: '/month',
     description: 'Advanced AI platform that provides financial analytics, automates financial processes, and delivers predictive insights for better financial decision-making.',
-    features: [
+    features[
       'AI-powered financial forecasting',
       'Real-time financial monitoring',
       'Automated expense management',
@@ -227,11 +225,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     setupTime: '5-7 hours',
     category: 'AI Finance & Analytics',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs'],
-    useCases: ['Financial planning, Risk management, Expense tracking, Cash flow management, Investment analysis'],
+    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations['QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs'],
+    useCases['Financial planning, Risk management, Expense tracking, Cash flow management, Investment analysis'],
     roi: 'Finance teams report 450% ROI through improved forecasting accuracy and risk management.',
-    competitors: ['QuickBooks, Xero, FreshBooks, Sage'],
+    competitors['QuickBooks, Xero, FreshBooks, Sage'],
     marketSize: '$28.7B financial software market',
     growthRate: '16% annual growth',
     variant: 'ai-finance-enterprise',
@@ -256,7 +254,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$499',
     period: '/month',
     description: 'Advanced AI platform that optimizes supply chain operations, predicts demand, and automates inventory management through intelligent analytics.',
-    features: [
+    features[
       'AI-powered demand forecasting',
       'Inventory optimization',
       'Supplier performance analytics',
@@ -279,11 +277,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     setupTime: '6-8 hours',
     category: 'AI Supply Chain & Logistics',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['SAP, Oracle, Infor, Shopify, WooCommerce, ERP systems'],
-    useCases: ['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],
+    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations['SAP, Oracle, Infor, Shopify, WooCommerce, ERP systems'],
+    useCases['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],
     roi: 'Supply chain teams report 500% ROI through reduced costs and improved efficiency.',
-    competitors: ['SAP, Oracle, Infor, Manhattan Associates'],
+    competitors['SAP, Oracle, Infor, Manhattan Associates'],
     marketSize: '$31.2B supply chain management market',
     growthRate: '17% annual growth',
     variant: 'ai-supply-chain-enterprise',

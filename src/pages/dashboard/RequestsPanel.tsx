@@ -12,7 +12,7 @@ import { RequestsHeader,
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel(...args: []):  {
+export default function RequestsPanel(...args[]):  {
   const { user } = useAuth();
   
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
@@ -37,8 +37,7 @@ export default function RequestsPanel(...args: []):  {
     
     // If status is new, mark as viewed
     if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
+      markAsViewed(quote.id)}
   };
 
   // Filter quotes by archive status
@@ -97,12 +96,10 @@ export default function RequestsPanel(...args: []):  {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-          }}
+            setSelectedQuote(null)}}
         />
         
         
       </div>
     </ProtectedRoute>
-  );
-}
+  )}

@@ -49,7 +49,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$299',
       period: '/month',
       description: 'Perfect for growing SaaS companies',
-      features: [
+      features[
         'Up to 1,000 customers',
         'Basic predictive analytics',
         'Customer health scoring',
@@ -65,7 +65,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$799',
       period: '/month',
       description: 'Ideal for established businesses',
-      features: [
+      features[
         'Up to 10,000 customers',
         'Advanced AI predictions',
         'Custom success workflows',
@@ -82,7 +82,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$1,999',
       period: '/month',
       description: 'For large-scale operations',
-      features: [
+      features[
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
@@ -100,17 +100,17 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       title: 'SaaS Companies',
       description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
-      metrics: ['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
+      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
     },
     {
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
-      metrics: ['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
+      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
     },
     {
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
-      metrics: ['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
+      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
     }
   ];
 
@@ -469,7 +469,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerSuccessPrediction;

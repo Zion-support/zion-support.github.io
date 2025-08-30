@@ -7,9 +7,7 @@ import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react.ts'; // Added
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
   role: RecommendedRole;
-  onInviteTalent: (talentId: string, roleTitle: string)  => void;
-
-}
+  onInviteTalent: (talentId: string, roleTitle: string)  => void}
 
 export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
   return (
@@ -53,5 +51,4 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
         )}
       </CardContent>
     </Card>
-  );
-};
+  )};

@@ -16,7 +16,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'United States',
       flag: '🇺🇸',
       timezone: 'EST (UTC-5)',
-      services: ['AI Development', 'Cloud Solutions', 'Cybersecurity'],
+      services['AI Development', 'Cloud Solutions', 'Cybersecurity'],
       teamSize: '25+',
       established: '2018'
     },
@@ -25,7 +25,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'United Kingdom',
       flag: '🇬🇧',
       timezone: 'GMT (UTC+0)',
-      services: ['Digital Transformation', 'FinTech Solutions', 'Compliance'],
+      services['Digital Transformation', 'FinTech Solutions', 'Compliance'],
       teamSize: '20+',
       established: '2019'
     },
@@ -34,7 +34,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'Singapore',
       flag: '🇸🇬',
       timezone: 'SGT (UTC+8)',
-      services: ['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
+      services['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
       teamSize: '15+',
       established: '2020'
     },
@@ -43,7 +43,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'Canada',
       flag: '🇨🇦',
       timezone: 'EST (UTC-5)',
-      services: ['Healthcare Tech', 'AI Research', 'Startup Incubation'],
+      services['Healthcare Tech', 'AI Research', 'Startup Incubation'],
       teamSize: '18+',
       established: '2021'
     },
@@ -52,7 +52,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'Germ',
       flag: '🇩🇪',
       timezone: 'CET (UTC+1)',
-      services: ['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
+      services['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
       teamSize: '12+',
       established: '2022'
     },
@@ -61,7 +61,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       country: 'Australia',
       flag: '🇦🇺',
       timezone: 'AEST (UTC+10)',
-      services: ['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
+      services['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
       teamSize: '10+',
       established: '2022'
     }
@@ -115,8 +115,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
                 </div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Locations Grid */}
@@ -204,7 +203,6 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default GlobalPresenceSection;

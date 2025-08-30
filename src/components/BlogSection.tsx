@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export function BlogSection(...args: []):  {
+export function BlogSection(...args[]):  {
   const blogPosts = [
     {
       id: '1',
@@ -46,5 +46,4 @@ export function BlogSection(...args: []):  {
         </div>
       </div>
     </section>
-  );
-}
+  )}

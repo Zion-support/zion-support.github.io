@@ -69,14 +69,12 @@ interface Service {
   description: string;
   features: string[];
   benefits: string[];
-pricing: {;
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  
-};
+    billingCycle: string};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -87,13 +85,11 @@ pricing: {;
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
-  };
+    address: string};
   innovationLevel?: string;
   marketSize?: string;
   growthRate?: string;
-  roi?: string;
-}
+  roi?: string}
 
 const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -130,8 +126,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service  => {
@@ -157,16 +152,13 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
-    return services;
-  }, []);
+    return services}, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+    return cats.sort()}, [allServices]);
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
@@ -174,8 +166,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -194,11 +185,9 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
-        break;
-    }
+        break}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -223,8 +212,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
-        return <Lightbulb className="w-6 h-6" />;
-    }
+        return <Lightbulb className="w-6 h-6" />}
   };
 
   const getStatusColor = (status: string)  => {
@@ -238,18 +226,14 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
   const getInnovationBadge = (service: Service)  => {
     if (service.innovationLevel === 'Revolutionary') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
-    } else if (service.innovationLevel === 'Cutting-Edge') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    }
-    return null;
-  };
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>}
+    return null};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -713,7 +697,6 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EnhancedComprehensiveServices2026;

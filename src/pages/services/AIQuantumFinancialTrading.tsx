@@ -57,7 +57,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Starter Plan",
       price: "$4,999",
       period: "/month",
-      features: [
+      features[
         "Basic AI trading signals",
         "Portfolio optimization",
         "Risk management tools",
@@ -70,7 +70,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Professional Plan",
       price: "$12,999",
       period: "/month",
-      features: [
+      features[
         "Advanced AI algorithms",
         "Quantum computing access",
         "Custom strategy development",
@@ -84,7 +84,7 @@ const AIQuantumFinancialTrading = () => {
       name: "Enterprise Plan",
       price: "$29,999",
       period: "/month",
-      features: [
+      features[
         "Full quantum AI suite",
         "Unlimited strategies",
         "Custom development",
@@ -100,22 +100,22 @@ const AIQuantumFinancialTrading = () => {
     {
       industry: "Hedge Funds",
       description: "Optimize portfolio allocation and execute complex trading strategies with AI-driven insights and quantum computing power",
-      benefits: ["35% improvement in Sharpe ratio", "40% faster execution", "25% reduction in risk"]
+      benefits["35% improvement in Sharpe ratio", "40% faster execution", "25% reduction in risk"]
     },
     {
       industry: "Investment Banks",
       description: "Enhance trading desk performance with real-time market analysis and automated risk management",
-      benefits: ["30% increase in trading volume", "50% faster decision making", "Improved compliance"]
+      benefits["30% increase in trading volume", "50% faster decision making", "Improved compliance"]
     },
     {
       industry: "Asset Managers",
       description: "Optimize portfolio performance and manage risk across multiple asset classes with AI assistance",
-      benefits: ["Better asset allocation", "Reduced volatility", "Enhanced returns"]
+      benefits["Better asset allocation", "Reduced volatility", "Enhanced returns"]
     },
     {
       industry: "Retail Traders",
       description: "Access institutional-grade trading tools and AI insights previously available only to large firms",
-      benefits: ["Professional-grade tools", "AI-powered insights", "Risk management"]
+      benefits["Professional-grade tools", "AI-powered insights", "Risk management"]
     }
   ];
 
@@ -426,7 +426,6 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIQuantumFinancialTrading;

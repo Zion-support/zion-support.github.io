@@ -25,18 +25,15 @@ export default function Blog() {
     const [posts, setPosts] = useState([...BLOG_POSTS]);
     useEffect(() => {
         const interval = setInterval(() => {
-            setPosts(prev => [...prev, generateRandomBlogPost()]);
-        }, 120000); // every 2 minutes
-        return () => clearInterval(interval);
-    }, []);
+            setPosts(prev => [...prev, generateRandomBlogPost()])}, 120000); // every 2 minutes
+        return () => clearInterval(interval)}, []);
     // Filter blog posts based on search and category
     const filteredPosts = posts.filter(post => {
         const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
+        return matchesSearch && matchesCategory});
     // Get featured posts
     const featuredPosts = posts.filter(post => post.isFeatured);
     return (<>
@@ -56,8 +53,7 @@ export default function Blog() {
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img src={featuredPosts[0].featuredImage} alt={featuredPosts[0].title} className="object-cover w-full h-full hover:scale-105 transition-transform duration-300" onError={(e) => {
                 const target = e.currentTarget;
-                target.src = "/images/blog-placeholder.svg";
-            }}/>
+                target.src = "/images/blog-placeholder.svg"}}/>
                 </div>
                 <div className="flex flex-col justify-center">
                   <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
@@ -72,8 +68,7 @@ export default function Blog() {
                   <div className="flex items-center mb-6">
                     <img src={featuredPosts[0].author.avatarUrl} alt={featuredPosts[0].author.name} className="w-10 h-10 rounded-full mr-3" onError={(e) => {
                 const target = e.currentTarget;
-                target.src = "/images/blog-placeholder.svg";
-            }}/>
+                target.src = "/images/blog-placeholder.svg"}}/>
                     <div>
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
                       <p className="text-sm text-zion-slate-light">
@@ -114,8 +109,7 @@ export default function Blog() {
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full hover:scale-105 transition-transform duration-300" onError={(e) => {
                     const target = e.currentTarget;
-                    target.src = "/images/blog-placeholder.svg";
-                }}/>
+                    target.src = "/images/blog-placeholder.svg"}}/>
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -135,8 +129,7 @@ export default function Blog() {
                     <div className="flex items-center">
                       <img src={post.author.avatarUrl} alt={post.author.name} className="w-8 h-8 rounded-full mr-2" onError={(e) => {
                     const target = e.currentTarget;
-                    target.src = "/images/blog-placeholder.svg";
-                }}/>
+                    target.src = "/images/blog-placeholder.svg"}}/>
                       <span className="text-sm text-white">{post.author.name}</span>
                     </div>
                   </CardContent>
@@ -153,12 +146,10 @@ export default function Blog() {
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <Button variant="outline" onClick={() => {
                 setSearchQuery("");
-                setSelectedCategory("All Categories");
-            }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                setSelectedCategory("All Categories")}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                 Clear all filters
               </Button>
             </div>)}
         </div>
       </div>
-    </>);
-}
+    </>)}

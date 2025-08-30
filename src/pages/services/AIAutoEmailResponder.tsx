@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIAutoEmailResponder(...args: []):  {
+export default function AIAutoEmailResponder(...args[]):  {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -62,6 +62,5 @@ export default function AIAutoEmailResponder(...args: []):  {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

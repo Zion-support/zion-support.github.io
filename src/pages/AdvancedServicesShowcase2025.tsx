@@ -19,8 +19,7 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
@@ -258,8 +257,7 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {
             <button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
-              }}
+                setSelectedCategory('all')}}
               className="text-blue-400 hover:text-blue-300 underline"
             >
               Clear filters
@@ -328,7 +326,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedServicesShowcase2025;

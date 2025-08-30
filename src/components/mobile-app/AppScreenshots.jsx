@@ -17,8 +17,7 @@ export const AppScreenshots = () => {
             scrollContainerRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",
-            });
-        }
+            })}
     };
     return (<section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -45,5 +44,4 @@ export const AppScreenshots = () => {
           </Button>
         </div>
       </div>
-    </section>);
-};
+    </section>)};

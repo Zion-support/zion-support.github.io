@@ -52,7 +52,7 @@ interface ReportData {
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
   category: string;
-  data: ;lastUpdated: string;
+  data;lastUpdated: string;
   status: 'active' | 'archived' | 'draft';
   priority: 'low' | 'medium' | 'high' | 'critical';
   tags: string[];
@@ -60,9 +60,7 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number;
-
-}
+  rating: number}
 
 interface ReportMetrics {
 
@@ -72,17 +70,14 @@ interface ReportMetrics {
   totalDownloads: number;
   averageRating: number;
   topCategories: Array<any>;
-  recentActivity: Array<any>;
-}
+  recentActivity: Array<any>}
 
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
-  maxReports?: number;
-
-}
+  maxReports?: number}
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true,
@@ -116,12 +111,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           expenses: 1800000,
           profit: 700000,
           growth: 15.5,
-          keyMetrics: ['Revenue Growth', 'Profit Margin', 'Cost Efficiency']
+          keyMetrics['Revenue Growth', 'Profit Margin', 'Cost Efficiency']
         },
         lastUpdated: '2024-01-15',
         status: 'active',
         priority: 'high',
-        tags: ['Finance', 'Q4', 'Performance', 'Analysis'],
+        tags['Finance', 'Q4', 'Performance', 'Analysis'],
         description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
         author: 'Sarah Johnson',
         views: 245,
@@ -138,12 +133,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           responseTime: 1.8,
           uptime: 99.9,
           userSatisfaction: 4.6,
-          keyMetrics: ['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']
+          keyMetrics['Accuracy', 'Response Time', 'Uptime', 'User Satisfaction']
         },
         lastUpdated: '2024-01-14',
         status: 'active',
         priority: 'critical',
-        tags: ['AI', 'Performance', 'Metrics', 'Machine Learning'],
+        tags['AI', 'Performance', 'Metrics', 'Machine Learning'],
         description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
         author: 'Michael Chen',
         views: 189,
@@ -160,12 +155,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           incidentsResolved: 154,
           responseTime: 2.3,
           riskLevel: 'Medium',
-          keyMetrics: ['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']
+          keyMetrics['Threats Detected', 'Incidents Resolved', 'Response Time', 'Risk Level']
         },
         lastUpdated: '2024-01-13',
         status: 'active',
         priority: 'high',
-        tags: ['Security', 'Threats', 'Assessment', 'Risk Management'],
+        tags['Security', 'Threats', 'Assessment', 'Risk Management'],
         description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',
         author: 'David Kim',
         views: 312,
@@ -182,12 +177,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           memoryUsage: 82.3,
           storageUsage: 65.8,
           networkTraffic: 45.2,
-          keyMetrics: ['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']
+          keyMetrics['CPU Utilization', 'Memory Usage', 'Storage Usage', 'Network Traffic']
         },
         lastUpdated: '2024-01-12',
         status: 'active',
         priority: 'medium',
-        tags: ['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],
+        tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],
         description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',
         author: 'Lisa Thompson',
         views: 167,
@@ -203,13 +198,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           overallSatisfaction: 4.6,
           netPromoterScore: 72,
           responseRate: 89.5,
-          topConcerns: ['Response Time', 'Documentation', 'Support Quality'],
-          keyMetrics: ['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']
+          topConcerns['Response Time', 'Documentation', 'Support Quality'],
+          keyMetrics['Overall Satisfaction', 'NPS', 'Response Rate', 'Top Concerns']
         },
         lastUpdated: '2024-01-11',
         status: 'active',
         priority: 'medium',
-        tags: ['Customer', 'Satisfaction', 'Survey', 'NPS'],
+        tags['Customer', 'Satisfaction', 'Survey', 'NPS'],
         description: 'Analysis of customer satisfaction survey results and net promoter score metrics',
         author: 'Alex Wong',
         views: 203,
@@ -219,36 +214,31 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     ];
 
     setReports(sampleReports);
-    setFilteredReports(sampleReports);
-  }, []);
+    setFilteredReports(sampleReports)}, []);
 
   // Filter and sort reports
   useEffect(()  => {
     let filtered = reports;
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
-    }
+      filtered = filtered.filter(r => r.type === selectedType)}
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === selectedCategory);
-    }
+      filtered = filtered.filter(r => r.category === selectedCategory)}
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus);
-    }
+      filtered = filtered.filter(r => r.status === selectedStatus)}
 
     if (searchQuery) {
       filtered = filtered.filter(r => 
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
+      )}
 
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: , bValue: ;switch (sortBy) {
+      let aValue: , bValue;switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
           bValue = new Date(b.lastUpdated).getTime();
@@ -272,18 +262,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         default:
           aValue = 0;
-          bValue = 0;
-      }
+          bValue = 0}
 
       if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1;
-      } else {
-        return aValue < bValue ? 1 : -1;
-      }
+        return aValue > bValue ? 1 : -1} else {
+        return aValue < bValue ? 1 : -1}
     });
 
-    setFilteredReports(filtered.slice(0, maxReports));
-  }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
+    setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
 
   // Calculate report metrics
   const reportMetrics = {
@@ -295,8 +281,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     topCategories: (()  => {
       const catCounts = reports.reduce((acc, r) => {
         acc[r.category] = (acc[r.category] || 0) + 1;
-        return acc;
-      }, {} as Record<string, any>);
+        return acc}, {} as Record<string, any>);
 
       return Object.entries(catCounts)
         .map(([name, count]) => ({
@@ -305,9 +290,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           percentage: (count / reports.length) * 100
         }))
         .sort((a, b)  => b.count - a.count)
-        .slice(0, 5);
-    })(),
-    recentActivity: [
+        .slice(0, 5)})(),
+    recentActivity[
       { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' },
       { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' },
       { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' },
@@ -325,8 +309,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' },
       technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' }
     };
-    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' };
-  };
+    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
 
   // Get priority color
   const getPriorityColor = (priority: string)  => {
@@ -335,8 +318,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+      default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get status color
@@ -345,8 +327,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'archived': return 'text-zinc-400 bg-zinc-400/20';
       case 'draft': return 'text-yellow-400 bg-yellow-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+      default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Handle report actions
@@ -369,8 +350,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         case 'print':
           // Simulate print
           console.log(`Printing ${report.title}`);
-          break;
-      }
+          break}
     }
   };
 
@@ -843,5 +823,4 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};

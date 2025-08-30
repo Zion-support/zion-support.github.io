@@ -11,17 +11,14 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   // Get unique categories and subcategories
   const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
-    return cats;
-  }, []);
+    return cats}, []);
 
   const subcategories = useMemo(() => {
     if (selectedCategory === 'all') {
       const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
-      return subcats;
-    }
+      return subcats}
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
@@ -33,15 +30,12 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
   const resetFilters = () => {
     setSearchTerm('');
     setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSelectedSubcategory('all')};
 
   const getMarketPositionColor = (position: string)  => {
     switch (position) {
@@ -49,8 +43,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
       case 'challenger': return 'bg-blue-600';
       case 'niche': return 'bg-purple-600';
       case 'emerging': return 'bg-yellow-600';
-      default: return 'bg-gray-600';
-    }
+      default: return 'bg-gray-600'}
   };
 
   return (
@@ -111,8 +104,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               value={selectedCategory}
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
+                setSelectedSubcategory('all')}}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => (
@@ -349,7 +341,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesPricingGuide2027;

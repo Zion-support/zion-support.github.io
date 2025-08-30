@@ -13,7 +13,7 @@ const navigationItems = [
         href: '/services',
         icon: <Briefcase className="w-5 h-5"/>,
         description: 'Our revolutionary solutions',
-        children: [
+        children[
             { name: 'AI & Automation', href: '/services/ai-automation', icon: <Brain className="w-4 h-4"/> },
             { name: 'Micro SaaS', href: '/services/micro-saas', icon: <Zap className="w-4 h-4"/> },
             { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: <Globe className="w-4 h-4"/> },
@@ -40,11 +40,9 @@ export default function FuturisticNavigation() {
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
+            setScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll)}, []);
     const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
     return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
@@ -132,5 +130,4 @@ export default function FuturisticNavigation() {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </nav>);
-}
+    </nav>)}

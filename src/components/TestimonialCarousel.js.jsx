@@ -75,10 +75,8 @@ export function TestimonialCarousel() {
     useEffect(() => {
         const timer = setInterval(() => {
             setDirection(1);
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 5000);
+        return () => clearInterval(timer)}, []);
     const slideVariants = {
         enter: (direction) => ({
             x: direction > 0 ? 1000 : -1000,
@@ -97,16 +95,13 @@ export function TestimonialCarousel() {
     };
     const swipeConfidenceThreshold = 10000;
     const swipePower = (offset, velocity) => {
-        return Math.abs(offset) * velocity;
-    };
+        return Math.abs(offset) * velocity};
     const paginate = (newDirection) => {
         setDirection(newDirection);
-        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length)};
     const goToSlide = (index) => {
         setDirection(index > currentIndex ? 1 : -1);
-        setCurrentIndex(index);
-    };
+        setCurrentIndex(index)};
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
@@ -135,11 +130,9 @@ export function TestimonialCarousel() {
         }} drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={1} onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
-                paginate(1);
-            }
+                paginate(1)}
             else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1);
-            }
+                paginate(-1)}
         }} className="absolute w-full">
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-blue-light/30 shadow-2xl">
                 <div className="text-center">
@@ -227,5 +220,4 @@ export function TestimonialCarousel() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

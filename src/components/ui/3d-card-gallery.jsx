@@ -7,9 +7,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
-        category: [],
-        status: [],
-        complexity: [],
+        category[],
+        status[],
+        complexity[],
         verified: false,
         featured: false
     });
@@ -30,8 +30,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         const matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity);
         const matchesVerified = !filters.verified || item.metadata.verified;
         const matchesFeatured = !filters.featured || item.metadata.featured;
-        return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured;
-    })
+        return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured})
         .sort((a, b) => {
         let aValue, bValue;
         switch (sortBy) {
@@ -52,33 +51,26 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 bValue = b.title.toLowerCase();
                 break;
             default:
-                return 0;
-        }
+                return 0}
         if (sortOrder === 'asc') {
-            return aValue > bValue ? 1 : -1;
-        }
+            return aValue > bValue ? 1 : -1}
         else {
-            return aValue < bValue ? 1 : -1;
-        }
+            return aValue < bValue ? 1 : -1}
     });
     // Auto-play carousel
     useEffect(() => {
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {
-            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [isPlaying, viewMode, filteredAndSortedItems.length]);
+            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length)}, 3000);
+        return () => clearInterval(interval)}, [isPlaying, viewMode, filteredAndSortedItems.length]);
     // Handle card click
     const handleCardClick = useCallback((item) => {
         setSelectedItem(item);
-        onCardClick?.(item);
-    }, [onCardClick]);
+        onCardClick?.(item)}, [onCardClick]);
     // Handle action click
     const handleActionClick = useCallback((itemId, action) => {
-        onAction?.(itemId, action);
-    }, [onAction]);
+        onAction?.(itemId, action)}, [onAction]);
     // Get status color
     const getStatusColor = (status) => {
         switch (status) {
@@ -91,8 +83,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'deprecated':
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get complexity color
     const getComplexityColor = (complexity) => {
@@ -106,8 +97,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'expert':
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -120,8 +110,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             'Infrastructure': Settings,
             'Research': TrendingUp
         };
-        return iconMap[category] || Globe;
-    };
+        return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0)
         return null;
     return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>
@@ -196,7 +185,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     ...prev,
                     category: prev.category.includes(category)
                         ? prev.category.filter(c => c !== category)
-                        : [...prev.category, category]
+                        [...prev.category, category]
                 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
                 {category}
               </Button>))}
@@ -215,8 +204,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
                     const CategoryIcon = getCategoryIcon(item.category);
-                    return <CategoryIcon className="w-8 h-8 text-white"/>;
-                })()}
+                    return <CategoryIcon className="w-8 h-8 text-white"/>})()}
               </div>
               
               {/* Content */}
@@ -246,8 +234,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               <div className="flex items-center gap-2">
                 {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                         e.stopPropagation();
-                        action.action();
-                    }} disabled={action.disabled} className="text-xs">
+                        action.action()}} disabled={action.disabled} className="text-xs">
                     <action.icon className="w-3 h-3 mr-1"/>
                     {action.label}
                   </Button>))}
@@ -289,8 +276,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
                 const CategoryIcon = getCategoryIcon(selectedItem.category);
-                return <CategoryIcon className="w-24 h-24 text-white"/>;
-            })()}
+                return <CategoryIcon className="w-24 h-24 text-white"/>})()}
                   </div>
                   
                   <div className="space-y-3">
@@ -356,8 +342,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}
 function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
@@ -373,17 +358,14 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         x.set(event.clientX - centerX);
-        y.set(event.clientY - centerY);
-    }, [isHovered, x, y]);
+        y.set(event.clientY - centerY)}, [isHovered, x, y]);
     const handleMouseLeave = useCallback(() => {
         x.set(0);
         y.set(0);
-        setIsHovered(false);
-    }, [x, y]);
+        setIsHovered(false)}, [x, y]);
     const handleLike = useCallback((e) => {
         e.stopPropagation();
-        setIsLiked(!isLiked);
-    }, [isLiked]);
+        setIsLiked(!isLiked)}, [isLiked]);
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.02 }}>
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
             transformStyle: 'preserve-3d',
@@ -460,5 +442,4 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         {/* Hover Overlay */}
         <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}/>
       </motion.div>
-    </motion.div>);
-}
+    </motion.div>)}

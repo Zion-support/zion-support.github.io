@@ -199,7 +199,6 @@ const ModernFooter: React.FC = (): JSX.Element => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 export default ModernFooter;

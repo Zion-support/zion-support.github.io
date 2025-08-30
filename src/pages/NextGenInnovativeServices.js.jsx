@@ -16,19 +16,15 @@ export default function NextGenInnovativeServices() {
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            return matchesCategory && matchesSearch;
-        });
-    }, [searchTerm, selectedCategory]);
+            return matchesCategory && matchesSearch})}, [searchTerm, selectedCategory]);
     const formatPrice = (price, currency) => {
-        return `${currency}${price.toLocaleString()}`;
-    };
+        return `${currency}${price.toLocaleString()}`};
     const getSupportLevelColor = (level) => {
         switch (level.toLowerCase()) {
             case 'enterprise': return 'bg-purple-600';
             case 'premium': return 'bg-blue-600';
             case 'standard': return 'bg-green-600';
-            default: return 'bg-gray-600';
-        }
+            default: return 'bg-gray-600'}
     };
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -212,8 +208,7 @@ export default function NextGenInnovativeServices() {
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
             <button onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
-            }} className="text-blue-400 hover:text-blue-300 transition-colors">
+                setSelectedCategory('all')}} className="text-blue-400 hover:text-blue-300 transition-colors">
               Clear filters
             </button>
           </div>)}
@@ -399,5 +394,4 @@ export default function NextGenInnovativeServices() {
           </div>
         </motion.div>
       </div>
-    </div>);
-}
+    </div>)}
