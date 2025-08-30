@@ -15,7 +15,7 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
   filters: Filter[];
   onRemoveFilter: (key: string)   => void;
-  onClearAll: any()   => void;
+  onClearAll: () => void;
 
 }
 

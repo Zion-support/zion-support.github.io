@@ -27,7 +27,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
   onFilterChange: (key: string, value: string, checked: boolean)   => void;
-  onClearFilters: any()   => void;
+  onClearFilters: () => void;
   isOpen: boolean;
   onClose: ()   => void;
 

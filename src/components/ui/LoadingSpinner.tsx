@@ -71,7 +71,13 @@ export function SkeletonLoader(...args: any[]): any {
 }
 
 // Button loading state
-export function ButtonLoader(...args: any[]): any {
+export function ButtonLoader({ 
+  size = 'sm', 
+  className = '' 
+}: { 
+  size?: 'sm' | 'md' | 'lg' | 'xl'; 
+  className?: string; 
+}): JSX.Element {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -81,7 +87,15 @@ export function ButtonLoader(...args: any[]): any {
 }
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: any[]): any {
+export function PageLoaderOverlay({ 
+  showSpinner = true, 
+  text = 'Loading...', 
+  className = '' 
+}: { 
+  showSpinner?: boolean; 
+  text?: string; 
+  className?: string; 
+}): JSX.Element {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -98,7 +112,7 @@ export function PageLoaderOverlay(...args: any[]): any {
           className="mt-4 text-lg text-gray-300 font-medium"
         >
           {text}
-        </motion.p>
+        </div>
       </div>
     </motion.div>
   );
