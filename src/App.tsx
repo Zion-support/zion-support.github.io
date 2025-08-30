@@ -252,7 +252,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
->>>>>>> main
 
 function App() {
   return (
