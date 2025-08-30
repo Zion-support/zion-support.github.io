@@ -11,6 +11,10 @@ import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ComprehensiveServicesPage } from './pages/ComprehensiveServicesPage';
+import { Sitemap } from './pages/Sitemap';
+import { Support } from './pages/Support';
+import { Training } from './pages/Training';
+import { Helpdesk } from './pages/Helpdesk';
 
 function App() {
   return (
@@ -39,11 +43,11 @@ function App() {
             <Route path="/docs" element={<BlogPage />} />
             <Route path="/api" element={<BlogPage />} />
             <Route path="/developer" element={<BlogPage />} />
-            <Route path="/help" element={<BlogPage />} />
-            <Route path="/training" element={<BlogPage />} />
+            <Route path="/help" element={<Helpdesk />} />
+            <Route path="/training" element={<Training />} />
             <Route path="/community" element={<BlogPage />} />
-            <Route path="/support" element={<BlogPage />} />
-            <Route path="/sitemap" element={<BlogPage />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/privacy-policy" element={<BlogPage />} />
             <Route path="/terms-of-service" element={<BlogPage />} />
             <Route path="/cookie-policy" element={<BlogPage />} />
