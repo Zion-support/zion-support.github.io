@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Cloud,
+  Brain,
   Zap,
   Target,
   Users,
   BarChart3,
-  Brain,
   Shield,
   Rocket,
   Globe,
@@ -27,104 +26,95 @@ import {
   Briefcase,
   TestTube,
   GraduationCap,
-  HelpCircle,
-  Lock,
-  Cpu,
-  Smartphone,
-  Monitor,
-  GitBranch,
-  RefreshCw,
-  ShoppingCart,
-  Gamepad2,
-  Video
+  HelpCircle
 } from 'lucide-react';
 
-export function CloudDevOpsPage() {
-  const cloudServices = [
+export function AISolutionsPage() {
+  const aiServices = [
     {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud infrastructure with minimal downtime',
-      icon: Cloud,
-      href: '/services/cloud-migration',
-      features: ['Infrastructure Assessment', 'Migration Planning', 'Data Migration', 'Performance Optimization'],
+      title: 'AI Business Intelligence',
+      description: 'Transform raw data into actionable insights with our advanced AI-powered analytics platform',
+      icon: BarChart3,
+      href: '/services/ai-business-intelligence',
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reporting', 'Data Visualization'],
       color: 'from-blue-500 to-cyan-600'
     },
     {
-      title: 'DevOps Automation',
-      description: 'Streamline development and operations with automated CI/CD pipelines',
-      icon: RefreshCw,
-      href: '/services/devops-automation',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+      title: 'AI Sales Copilot',
+      description: 'Revolutionize your sales process with intelligent automation and predictive lead scoring',
+      icon: Users,
+      href: '/services/ai-sales-copilot',
+      features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
       color: 'from-green-500 to-emerald-600'
     },
     {
-      title: 'Container Orchestration',
-      description: 'Manage containerized applications with Kubernetes and Docker',
-      icon: Server,
-      href: '/services/container-orchestration',
-      features: ['Kubernetes Management', 'Docker Optimization', 'Service Mesh', 'Auto-scaling'],
+      title: 'AI Marketing Automation',
+      description: 'Optimize your marketing campaigns with AI-driven personalization and automation',
+      icon: TrendingUp,
+      href: '/services/ai-marketing-automation',
+      features: ['Personalized Content', 'Campaign Optimization', 'ROI Tracking', 'A/B Testing'],
       color: 'from-purple-500 to-pink-600'
     },
     {
-      title: 'Infrastructure as Code',
-      description: 'Automate infrastructure provisioning and management',
-      icon: Code,
-      href: '/services/infrastructure-as-code',
-      features: ['Terraform', 'CloudFormation', 'Ansible', 'Version Control'],
-      color: 'from-orange-500 to-red-600'
+      title: 'AI Healthcare Platform',
+      description: 'Advanced healthcare solutions powered by artificial intelligence and machine learning',
+      icon: Heart,
+      href: '/services/ai-healthcare-platform',
+      features: ['Diagnostic Support', 'Patient Monitoring', 'Drug Discovery', 'Medical Imaging'],
+      color: 'from-red-500 to-orange-600'
     },
     {
-      title: 'Cloud Security',
-      description: 'Secure cloud infrastructure and applications',
-      icon: Shield,
-      href: '/services/cloud-security',
-      features: ['Identity Management', 'Network Security', 'Data Protection', 'Compliance'],
+      title: 'AI Project Management',
+      description: 'Streamline project workflows with intelligent automation and predictive analytics',
+      icon: Target,
+      href: '/services/ai-project-management',
+      features: ['Resource Optimization', 'Risk Assessment', 'Timeline Prediction', 'Team Collaboration'],
       color: 'from-indigo-500 to-purple-600'
     },
     {
-      title: 'Monitoring & Observability',
-      description: 'Comprehensive monitoring and logging solutions',
-      icon: Monitor,
-      href: '/services/monitoring-observability',
-      features: ['Application Monitoring', 'Infrastructure Monitoring', 'Log Management', 'Alerting'],
+      title: 'AI Quantum Hybrid Platform',
+      description: 'Next-generation computing combining AI and quantum technologies for unprecedented performance',
+      icon: Brain,
+      href: '/services/ai-quantum-hybrid-platform',
+      features: ['Quantum ML', 'Hybrid Algorithms', 'Quantum Optimization', 'AI Acceleration'],
       color: 'from-cyan-500 to-blue-600'
     }
   ];
 
-  const cloudCapabilities = [
+  const aiCapabilities = [
     {
-      title: 'Multi-Cloud Strategy',
-      description: 'Optimize costs and avoid vendor lock-in with multi-cloud solutions',
-      icon: Globe,
-      features: ['AWS', 'Azure', 'Google Cloud', 'Hybrid Cloud']
+      title: 'Machine Learning',
+      description: 'Advanced ML algorithms for pattern recognition and predictive modeling',
+      icon: Brain,
+      features: ['Deep Learning', 'Neural Networks', 'Supervised Learning', 'Unsupervised Learning']
     },
     {
-      title: 'Serverless Computing',
-      description: 'Build scalable applications without managing infrastructure',
-      icon: Zap,
-      features: ['Lambda Functions', 'Event-Driven Architecture', 'Auto-scaling', 'Cost Optimization']
+      title: 'Natural Language Processing',
+      description: 'Human-like language understanding and generation capabilities',
+      icon: Code,
+      features: ['Text Analysis', 'Language Generation', 'Sentiment Analysis', 'Translation']
     },
     {
-      title: 'Microservices Architecture',
-      description: 'Design and implement scalable microservices',
-      icon: Network,
-      features: ['Service Design', 'API Gateway', 'Service Discovery', 'Load Balancing']
+      title: 'Computer Vision',
+      description: 'Advanced image and video analysis for automation and insights',
+      icon: Eye,
+      features: ['Object Detection', 'Image Classification', 'Video Analytics', 'Facial Recognition']
     },
     {
-      title: 'Database Solutions',
-      description: 'Managed database services and optimization',
-      icon: Database,
-      features: ['RDS', 'NoSQL', 'Data Migration', 'Performance Tuning']
+      title: 'Predictive Analytics',
+      description: 'Data-driven forecasting and trend analysis for strategic decision making',
+      icon: TrendingUp,
+      features: ['Forecasting Models', 'Risk Assessment', 'Trend Analysis', 'Scenario Planning']
     }
   ];
 
   const industries = [
-    { name: 'E-commerce', icon: ShoppingCart, description: 'Scalable online retail platforms' },
-    { name: 'Finance', icon: Building, description: 'Secure financial applications and services' },
-    { name: 'Healthcare', icon: Heart, description: 'HIPAA-compliant healthcare solutions' },
-    { name: 'Gaming', icon: Gamepad2, description: 'High-performance gaming infrastructure' },
-    { name: 'Media', icon: Video, description: 'Content delivery and streaming platforms' },
-    { name: 'SaaS', icon: Cloud, description: 'Software-as-a-Service platforms' }
+    { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
+    { name: 'Finance', icon: Building, description: 'Intelligent trading and risk management' },
+    { name: 'Manufacturing', icon: Activity, description: 'Predictive maintenance and quality control' },
+    { name: 'Retail', icon: Users, description: 'Personalized shopping and inventory optimization' },
+    { name: 'Transportation', icon: Rocket, description: 'Autonomous systems and route optimization' },
+    { name: 'Education', icon: GraduationCap, description: 'Adaptive learning and student analytics' }
   ];
 
   return (
@@ -140,16 +130,16 @@ export function CloudDevOpsPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 rounded-full mb-6">
-              <Cloud className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-medium">Cloud & DevOps</span>
+              <Brain className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">AI Solutions</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-              Cloud & DevOps
+              AI-Powered Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Accelerate your development and deployment with our cloud and DevOps solutions. 
-              Build, deploy, and scale applications faster with automated infrastructure and 
-              modern cloud technologies.
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From machine learning to natural language processing, we deliver intelligent 
+              automation that drives growth and innovation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,19 +162,19 @@ export function CloudDevOpsPage() {
         </div>
       </section>
 
-      {/* Cloud Capabilities */}
+      {/* AI Capabilities */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Cloud & DevOps Capabilities</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Core AI Capabilities</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our comprehensive cloud and DevOps platform provides the tools and expertise 
-              to modernize your infrastructure and accelerate development.
+              Our comprehensive AI platform combines multiple technologies to deliver 
+              intelligent solutions across all aspects of your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {cloudCapabilities.map((capability, index) => (
+            {aiCapabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -211,19 +201,19 @@ export function CloudDevOpsPage() {
         </div>
       </section>
 
-      {/* Cloud Services Grid */}
+      {/* AI Services Grid */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Cloud & DevOps Services</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">AI Service Portfolio</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our comprehensive range of cloud and DevOps services designed to 
-              transform your development and deployment processes.
+              Discover our comprehensive range of AI-powered services designed to 
+              address specific business challenges and drive digital transformation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
+            {aiServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -265,8 +255,8 @@ export function CloudDevOpsPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our cloud and DevOps solutions are tailored to meet the unique requirements 
-              across diverse industry sectors.
+              Our AI solutions are tailored to meet the unique challenges and 
+              opportunities across diverse industry sectors.
             </p>
           </div>
 
@@ -290,47 +280,23 @@ export function CloudDevOpsPage() {
         </div>
       </section>
 
-      {/* DevOps Benefits Section */}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Benefits of Cloud & DevOps
+            Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Modern cloud and DevOps practices deliver measurable improvements that drive 
-            business agility and competitive advantage.
+            Transform your business with intelligent automation and data-driven insights. 
+            Our AI experts are ready to help you implement cutting-edge solutions.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Faster Deployment</h3>
-              <p className="text-blue-100">Automated CI/CD pipelines for rapid delivery</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Improved Reliability</h3>
-              <p className="text-blue-100">Automated testing and deployment validation</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Cloud className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Scalable Infrastructure</h3>
-              <p className="text-blue-100">Auto-scaling and cloud-native architecture</p>
-            </div>
-          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <span>Start Cloud Journey</span>
+              <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -342,37 +308,8 @@ export function CloudDevOpsPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-            Accelerate your development and deployment with modern cloud and DevOps practices. 
-            Our experts are ready to help you build scalable, reliable infrastructure.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <span>Begin Transformation</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/training"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
-            >
-              <span>Learn More</span>
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
 
-export default CloudDevOpsPage;
+export default AISolutionsPage;

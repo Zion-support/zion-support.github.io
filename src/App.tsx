@@ -21,6 +21,17 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
+// Service pages
+const AISolutionsPage = lazy(() => import('./pages/services/ai-solutions').then(module => ({ default: module.AISolutionsPage })));
+const QuantumComputingPage = lazy(() => import('./pages/services/quantum-computing').then(module => ({ default: module.QuantumComputingPage })));
+const CybersecurityPage = lazy(() => import('./pages/services/cybersecurity').then(module => ({ default: module.CybersecurityPage })));
+const DigitalTransformationPage = lazy(() => import('./pages/services/digital-transformation').then(module => ({ default: module.DigitalTransformationPage })));
+const DataAnalyticsPage = lazy(() => import('./pages/services/data-analytics').then(module => ({ default: module.DataAnalyticsPage })));
+const IoTEdegComputingPage = lazy(() => import('./pages/services/iot-edge-computing').then(module => ({ default: module.IoTEdegComputingPage })));
+const CloudDevOpsPage = lazy(() => import('./pages/services/cloud-devops').then(module => ({ default: module.CloudDevOpsPage })));
+const SpaceTechnologyPage = lazy(() => import('./pages/services/space-technology').then(module => ({ default: module.SpaceTechnologyPage })));
+const AIBusinessIntelligencePage = lazy(() => import('./pages/services/ai-business-intelligence').then(module => ({ default: module.AIBusinessIntelligencePage })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -72,7 +83,16 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/services/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/services/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/services/data-analytics" element={<DataAnalyticsPage />} />
+                                       <Route path="/services/iot-edge-computing" element={<IoTEdegComputingPage />} />
+                       <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+                       <Route path="/services/space-technology" element={<SpaceTechnologyPage />} />
+                       <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                       <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />

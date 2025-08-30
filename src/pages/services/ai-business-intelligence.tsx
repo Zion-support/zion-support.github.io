@@ -1,380 +1,170 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  Shield, 
-  Cloud, 
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Target,
   Users,
   CheckCircle,
   ArrowRight,
-  Lightbulb,
-  Cpu,
+  ChevronRight,
   Database,
-  Network,
+  PieChart,
+  LineChart,
+  Activity,
   Eye,
-  Sparkles,
-  Rocket,
+  Zap,
+  Shield,
   Globe,
-  Clock,
-  Award,
-  Star,
-  MessageCircle,
-  Phone,
-  Mail,
-  ShoppingCart,
-  DollarSign,
-  Heart,
-  Factory
+  Building,
+  Briefcase,
+  TestTube,
+  GraduationCap,
+  HelpCircle,
+  Lock,
+  Cpu,
+  Cloud,
+  Smartphone,
+  Monitor
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
 
-export default function AIBusinessIntelligence() {
-  const features = [
+export function AIBusinessIntelligencePage() {
+  const biServices = [
     {
-      icon: Brain,
-      title: 'Advanced Machine Learning',
-      description: 'State-of-the-art ML algorithms that continuously learn and improve from your data'
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-time Analytics',
-      description: 'Instant insights and dashboards updated in real-time for immediate decision-making'
-    },
-    {
-      icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast trends, identify opportunities, and predict potential risks before they occur'
+      description: 'Forecast future trends and outcomes',
+      icon: TrendingUp,
+      features: ['Time Series Analysis', 'Regression Models', 'Classification', 'Risk Assessment']
     },
     {
-      icon: Target,
-      title: 'Intelligent Automation',
-      description: 'Automate routine analysis tasks and focus on strategic decision-making'
+      title: 'Data Visualization',
+      description: 'Transform data into actionable insights',
+      icon: PieChart,
+      features: ['Interactive Dashboards', 'Real-time Charts', 'Custom Reports', 'Mobile Views']
+    },
+    {
+      title: 'Performance Monitoring',
+      description: 'Track KPIs and business metrics',
+      icon: Activity,
+      features: ['Real-time Monitoring', 'Alert Systems', 'Performance Tracking', 'Goal Management']
     }
   ];
 
-  const benefits = [
-    'Faster decision-making with real-time insights',
-    'Improved accuracy through machine learning',
-    'Cost reduction through process automation',
-    'Competitive advantage with predictive capabilities',
-    'Enhanced customer understanding and personalization',
-    'Streamlined operations and resource optimization'
-  ];
-
-  const useCases = [
-    {
-      industry: 'Retail & E-commerce',
-      applications: ['Customer segmentation', 'Demand forecasting', 'Inventory optimization', 'Personalized marketing'],
-      icon: ShoppingCart
-    },
-    {
-      industry: 'Financial Services',
-      applications: ['Risk assessment', 'Fraud detection', 'Portfolio optimization', 'Customer churn prediction'],
-      icon: DollarSign
-    },
-    {
-      industry: 'Healthcare',
-      applications: ['Patient outcome prediction', 'Resource allocation', 'Treatment optimization', 'Disease prevention'],
-      icon: Heart
-    },
-    {
-      industry: 'Manufacturing',
-      applications: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'],
-      icon: Factory
-    }
-  ];
-
-  const technologies = [
-    'TensorFlow & PyTorch',
-    'Apache Spark',
-    'AWS SageMaker',
-    'Azure Machine Learning',
-    'Google Cloud AI',
-    'Snowflake Data Platform',
-    'Tableau & Power BI',
-    'Custom ML Models'
-  ];
-
-  const process = [
-    {
-      step: 1,
-      title: 'Data Assessment',
-      description: 'Evaluate your current data infrastructure and identify opportunities for improvement'
-    },
-    {
-      step: 2,
-      title: 'Strategy Development',
-      description: 'Create a comprehensive AI BI roadmap aligned with your business objectives'
-    },
-    {
-      step: 3,
-      title: 'Implementation',
-      description: 'Deploy AI-powered BI solutions with minimal disruption to existing operations'
-    },
-    {
-      step: 4,
-      title: 'Training & Optimization',
-      description: 'Train your team and continuously optimize the system for maximum performance'
-    }
+  const industries = [
+    { name: 'Finance', icon: Building, description: 'Risk assessment and market analysis' },
+    { name: 'Healthcare', icon: Users, description: 'Patient outcomes and resource optimization' },
+    { name: 'Retail', icon: Briefcase, description: 'Customer behavior and inventory management' },
+    { name: 'Manufacturing', icon: Cpu, description: 'Predictive maintenance and quality control' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Business Intelligence - Zion Tech Group"
-        description="Transform your business with AI-powered business intelligence solutions. Get real-time insights, predictive analytics, and intelligent automation."
-      />
-      
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <span className="text-cyan-400 font-medium">AI-Powered Solutions</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 rounded-full mb-6">
+              <Brain className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">AI Business Intelligence</span>
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Business <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Intelligence</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+              AI Business Intelligence
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business data into actionable intelligence with cutting-edge AI and machine learning. 
-              Get real-time insights, predictive analytics, and intelligent automation that drive growth and innovation.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with AI-powered intelligence. Our advanced analytics and 
+              machine learning solutions provide deep insights to drive strategic decisions.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40"
               >
-                Schedule Demo
-              </motion.button>
+                <span>View All Services</span>
+                <ChevronRight className="w-5 h-5" />
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful AI BI Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered business intelligence platform combines cutting-edge technology with intuitive design 
-              to deliver insights that transform your business.
+      {/* Services */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">BI Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Comprehensive business intelligence solutions powered by artificial intelligence.
             </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {biServices.map((service, index) => (
               <motion.div
-                key={feature.title}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 group"
+                className="bg-gray-900 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose AI-Powered BI?</h2>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Traditional business intelligence tools are limited by manual processes and static reports. 
-                Our AI-powered solutions provide dynamic, intelligent insights that adapt to your business needs.
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-400/30 flex items-center justify-center">
-                <div className="text-center">
-                  <BarChart3 className="w-20 h-20 text-purple-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">AI Analytics Dashboard</h3>
-                  <p className="text-gray-300">Real-time insights at your fingertips</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Industry Applications</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI business intelligence solutions are transforming industries across the globe, 
-              delivering measurable results and competitive advantages.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
-                </div>
-                <div className="space-y-2">
-                  {useCase.applications.map((application) => (
-                    <div key={application} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-purple-400" />
-                      <span className="text-gray-300 text-sm">{application}</span>
-                    </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center space-x-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-blue-400" />
+                      <span>{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the latest AI and machine learning technologies to deliver powerful, 
-              scalable business intelligence solutions.
+      {/* Industries */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Industries We Serve</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our AI business intelligence solutions are transforming industries worldwide.
             </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-4 bg-slate-700/50 rounded-lg border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Cpu className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-white text-sm font-medium">{tech}</span>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
 
-      {/* Process Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Implementation Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven implementation methodology ensures successful deployment of AI business intelligence 
-              solutions with minimal disruption to your operations.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {industries.map((industry, index) => (
               <motion.div
-                key={step.step}
+                key={industry.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center relative"
+                className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  {step.step}
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <industry.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
-                
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transform translate-x-1/2"></div>
-                )}
+                <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
+                <p className="text-gray-400">{industry.description}</p>
               </motion.div>
             ))}
           </div>
@@ -382,36 +172,26 @@ export default function AIBusinessIntelligence() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Unlock the power of AI-driven business intelligence and make data-driven decisions.
+          </p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business Intelligence?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the AI revolution and unlock the full potential of your business data. 
-              Let's discuss how our AI-powered BI solutions can drive growth and innovation for your organization.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
+            <span>Get Started Today</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
     </div>
   );
 }
+
+export default AIBusinessIntelligencePage;
