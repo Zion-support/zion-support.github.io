@@ -288,6 +288,8 @@ export function SEO({
 
   // Performance optimization: Add resource hints
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Add resource hints for better performance
     const addResourceHints = () => {
       // Preload critical CSS

@@ -32,6 +32,12 @@ export default function EditPostPage() {
     const [post, setPost] = useState(mockPost);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // In a real app, we would fetch the post data here
         // For now, we'll just use the mock data
         setIsLoading(false);

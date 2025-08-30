@@ -11,6 +11,12 @@ export function AccessibilityMenu() {
         soundEnabled: true
     });
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Load settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
@@ -18,6 +24,12 @@ export function AccessibilityMenu() {
         }
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage

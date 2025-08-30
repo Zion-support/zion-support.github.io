@@ -52,6 +52,12 @@ const ContentQualityAnalyzer = () => {
         }
     ];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setContentIssues(sampleIssues);
         generateReport(sampleIssues);
     }, []);

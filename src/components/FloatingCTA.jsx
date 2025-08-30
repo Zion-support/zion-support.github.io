@@ -6,6 +6,12 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     const [isExpanded, setIsExpanded] = useState(false);
     const [showScrollTop, setShowScrollTop] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > 400);
         };

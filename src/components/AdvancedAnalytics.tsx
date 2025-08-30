@@ -169,12 +169,24 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
 
   // Initialize tracking on mount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const cleanup = initializeTracking();
     return cleanup;
   }, [initializeTracking]);
 
   // Calculate session duration
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (isTracking) {
       const interval = setInterval(() => {
         const duration = Math.round((Date.now() - sessionStart) / 1000);
@@ -190,6 +202,12 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
 
   // Simulate some analytics data for demonstration
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (enabled) {
       // Simulate top pages
       setAnalyticsData(prev => ({

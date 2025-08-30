@@ -9,6 +9,12 @@ const OpenAppRedirect = () => {
     const navigate = useNavigate();
     const [status, setStatus] = useState('redirecting');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const attemptAppOpen = async () => {
             const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             const isAndroid = /Android/.test(navigator.userAgent);

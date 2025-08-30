@@ -21,6 +21,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {

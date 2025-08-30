@@ -7,6 +7,12 @@ const EnhancedErrorBoundary = ({ children, fallback }) => {
   const [errorInfo, setErrorInfo] = React.useState(null);
 
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleError = (error, errorInfo) => {
       setHasError(true);
       setError(error);

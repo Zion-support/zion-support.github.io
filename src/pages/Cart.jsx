@@ -11,6 +11,12 @@ export default function CartPage() {
     const [cartLoading, setCartLoading] = useState(true);
     const [showEmpty, setShowEmpty] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (reduxItems.length > 0) {
             setItems(reduxItems);
             setCartLoading(false);
@@ -49,6 +55,12 @@ export default function CartPage() {
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!cartLoading && items.length === 0) {
             setShowEmpty(true);
         }

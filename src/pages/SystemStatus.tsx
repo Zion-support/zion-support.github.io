@@ -149,6 +149,12 @@ export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(() => {
       setLastUpdated(new Date());
     }, 30000); // Update every 30 seconds

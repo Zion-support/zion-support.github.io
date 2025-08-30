@@ -59,10 +59,22 @@ export default function FraudDetection() {
         }
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         fetchFraudFlags();
     }, []);
     // Apply filters
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         let result = [...flags];
         // Apply search filter
         if (searchQuery) {

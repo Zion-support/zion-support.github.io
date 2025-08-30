@@ -5,6 +5,12 @@ export function ChatInput({ onSend, disabled = false }) {
     const [message, setMessage] = useState('');
     const inputRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Focus input when component mounts
         inputRef.current?.focus();
     }, []);

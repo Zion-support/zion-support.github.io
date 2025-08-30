@@ -86,6 +86,12 @@ export default function Search() {
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (searchQuery) {
       performSearch();
     }

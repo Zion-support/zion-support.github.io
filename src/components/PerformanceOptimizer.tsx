@@ -71,6 +71,12 @@ const PerformanceOptimizer: React.FC = () => {
 
   // Generate optimization suggestions
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const suggestions: OptimizationSuggestion[] = [
       {
         id: '1',

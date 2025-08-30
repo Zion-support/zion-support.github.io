@@ -61,6 +61,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Initialize audio for notification sounds
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
       audioRef.current.volume = 0.3;
@@ -69,11 +75,23 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Update unread count
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setUnreadCount(notifications.filter(n => !n.read).length);
   }, [notifications]);
 
   // Auto-dismiss notifications
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
@@ -221,6 +239,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Expose addNotification method globally for external use
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     (window as any).addNotification = addNotification;
     return () => {
       delete (window as any).addNotification;

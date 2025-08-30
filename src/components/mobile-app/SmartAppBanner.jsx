@@ -7,6 +7,12 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
     const [isVisible, setIsVisible] = useState(false);
     const isMobile = useIsMobile();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Only show banner on mobile devices and if it hasn't been dismissed
         if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
             const timer = setTimeout(() => {

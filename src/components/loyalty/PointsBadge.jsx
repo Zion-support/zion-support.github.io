@@ -10,6 +10,12 @@ export function PointsBadge() {
     const { ledger, balance } = usePoints();
     const [points, setPoints] = useState(balance);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setPoints(balance);
     }, [balance]);
     if (!user)

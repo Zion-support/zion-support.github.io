@@ -7,6 +7,12 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
     const ref = useRef(null);
     const inView = useInView(ref, { amount: threshold });
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (inView && !isInView) {
             setIsInView(true);
             // Simulate loading delay for better UX

@@ -63,6 +63,12 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     });
     // Auto-play carousel
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {

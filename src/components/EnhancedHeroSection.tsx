@@ -70,6 +70,12 @@ export default function EnhancedHeroSection() {
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {

@@ -1014,7 +1014,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   }, []);
 
   // Keyboard navigation support
-  useEffect(() => {}
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);}
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Escape') {setSelectedService(null)};
       }

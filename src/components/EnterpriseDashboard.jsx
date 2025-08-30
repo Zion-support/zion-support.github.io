@@ -168,6 +168,12 @@ export const EnterpriseDashboard = () => {
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval);
     }, [refreshInterval, refreshData]);

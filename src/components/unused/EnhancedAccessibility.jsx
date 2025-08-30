@@ -13,6 +13,12 @@ const EnhancedAccessibility = () => {
         colorBlindness: 'none'
     });
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Load saved settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {

@@ -39,6 +39,12 @@ export default function UpdatePassword() {
         },
     });
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Extract access token from URL hash
         const hashParams = new URLSearchParams(location.hash.substring(1));
         const token = hashParams.get("access_token");

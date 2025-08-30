@@ -29,16 +29,34 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         scrollToBottom();
     }, [messages]);
     // Focus input when opened
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isOpen && !isMinimized) {
             inputRef.current?.focus();
         }
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isTyping) {
             const timer = setTimeout(() => {
                 setIsTyping(false);

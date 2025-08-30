@@ -24,6 +24,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     const [guestMessage, setGuestMessage] = useState(null);
     // Effect for guest user messages
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isGuest) {
             // Priority: initialMessages prop > localStorage > empty array
             if (initialMessages && initialMessages.length > 0) {
@@ -37,6 +43,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isGuest) {
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
             setLoggedInMessages(initialMessages);
@@ -57,11 +69,23 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (debouncedApiCallParams) {
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
         }
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         scrollToBottom();
     }, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
     const scrollToBottom = () => {
@@ -104,6 +128,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         setGuestMessage(null);
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!showGuestModal)
             return;
         const handleKey = (e) => {
@@ -120,6 +150,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         };
     }, [showGuestModal]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isOpen)
             return;
         const handleKeyDown = (e) => {

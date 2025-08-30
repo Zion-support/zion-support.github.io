@@ -12,6 +12,12 @@ export default function ExpandedServicesPage() {
     const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         let filtered = EXPANDED_SERVICES;
         // Filter by search query
         if (searchQuery) {

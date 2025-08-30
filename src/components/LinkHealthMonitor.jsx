@@ -47,6 +47,12 @@ const LinkHealthMonitor = () => {
         }
     ];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setLinkStatuses(sampleLinks);
         generateReport(sampleLinks);
     }, []);

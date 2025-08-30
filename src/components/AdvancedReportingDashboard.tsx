@@ -54,6 +54,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Sample report data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleReports: ReportData[] = [
       {
         id: '1',
@@ -173,6 +179,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Filter and sort reports
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = reports;
 
     if (selectedType !== 'all') {

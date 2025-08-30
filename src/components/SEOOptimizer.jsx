@@ -87,6 +87,12 @@ const SEOOptimizer = () => {
         }
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Auto-analyze SEO when component mounts
         analyzeSEO();
     }, [analyzeSEO]);

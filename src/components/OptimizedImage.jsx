@@ -8,6 +8,12 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
     const imageRef = useRef(null);
     // Intersection Observer for lazy loading
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (priority) {
             setIsInView(true);
             return;
@@ -28,6 +34,12 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
     }, [priority]);
     // Load image when in view
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isInView && !priority) {
             setCurrentSrc(src);
         }

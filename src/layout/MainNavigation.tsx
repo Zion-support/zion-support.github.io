@@ -24,6 +24,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   // Close dropdowns when clicking outside
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);

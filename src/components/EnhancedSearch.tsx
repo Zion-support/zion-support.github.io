@@ -168,6 +168,12 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -181,6 +187,12 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
@@ -209,6 +221,12 @@ export function EnhancedSearch({
 
   // Search functionality
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!debouncedQuery.trim()) {
       setResults([]);
       setSuggestions(mockSuggestions);

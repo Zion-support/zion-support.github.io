@@ -15,6 +15,12 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     });
     // Simulate real-time data updates
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled || !isExpanded)
             return;
         const interval = setInterval(() => {

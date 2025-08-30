@@ -16,6 +16,12 @@ export default function AccountSettings() {
     const [enableBackup, setEnableBackup] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         try {
             const saved = localStorage.getItem('account_settings');
             if (saved) {

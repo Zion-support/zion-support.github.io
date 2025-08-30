@@ -39,6 +39,12 @@ const EnhancedHero = () => {
         }
     ];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isAutoPlaying)
             return;
         const interval = setInterval(() => {

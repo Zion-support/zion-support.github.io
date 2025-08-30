@@ -50,6 +50,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   const location = useLocation();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -59,6 +65,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);

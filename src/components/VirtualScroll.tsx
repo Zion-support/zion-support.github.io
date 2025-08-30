@@ -60,6 +60,12 @@ export function VirtualScroll<T>({
 
   // Auto-scroll to specific item on mount if needed
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (items.length > 0 && containerRef.current) {
       // You can add logic here to scroll to a specific item on mount
       // For example, scroll to the last viewed item

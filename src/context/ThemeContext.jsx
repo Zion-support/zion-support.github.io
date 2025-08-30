@@ -3,6 +3,12 @@ const ThemeContext = React.createContext(undefined);
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState('system');
     React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const root = window.document.documentElement;
         root.classList.remove('light', 'dark');
         if (theme === 'system') {

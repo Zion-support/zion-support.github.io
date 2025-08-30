@@ -28,6 +28,12 @@ export function WebhooksManager() {
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         fetchWebhooks();
     }, []);
     const handleCreateWebhook = async () => {

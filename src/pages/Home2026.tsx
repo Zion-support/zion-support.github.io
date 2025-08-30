@@ -64,6 +64,12 @@ const Home2026: React.FC = () => {
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
     }, 5000);

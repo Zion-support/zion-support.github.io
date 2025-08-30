@@ -160,6 +160,12 @@ export function MobileExperienceEnhancer({
 
   // Detect device information
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const detectDevice = () => {
       const userAgent = navigator.userAgent;
       const screen = window.screen;
@@ -218,6 +224,12 @@ export function MobileExperienceEnhancer({
 
   // Touch gesture handling
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!settings.touchGestures) return;
     
     const handleTouchStart = (e: TouchEvent) => {
@@ -420,6 +432,12 @@ export function MobileExperienceEnhancer({
 
   // Calculate mobile score on mount and when features change
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const enabledFeatures = features.filter(f => f.enabled).length;
     const totalFeatures = features.length;
     const score = Math.round((enabledFeatures / totalFeatures) * 100);

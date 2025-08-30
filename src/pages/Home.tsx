@@ -87,6 +87,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [heroSlides.length]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [nextSlide]);
@@ -353,6 +359,12 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsVisible(true);
   }, []);
 

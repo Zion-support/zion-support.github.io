@@ -28,6 +28,12 @@ export function AppHeader() {
 
   // Handle scroll effect
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -37,6 +43,12 @@ export function AppHeader() {
 
   // Close mobile menu when route changes
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);

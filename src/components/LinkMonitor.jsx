@@ -96,6 +96,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     };
     // Auto-scan on component mount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (autoFix) {
             scanPageLinks();
         }

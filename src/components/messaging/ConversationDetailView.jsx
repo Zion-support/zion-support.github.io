@@ -14,11 +14,23 @@ export function ConversationDetailView() {
     const [messageText, setMessageText] = useState('');
     const messagesEndRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (activeConversation) {
             loadMessages(activeConversation.id);
         }
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         scrollToBottom();
     }, [activeMessages]);
     const scrollToBottom = () => {

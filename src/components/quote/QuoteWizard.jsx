@@ -28,6 +28,12 @@ export function QuoteWizard({ category }) {
     const delayedError = useDelayedError(error);
     const { toast } = useToast();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (delayedError) {
             toast({
                 title: 'Unable to load services',

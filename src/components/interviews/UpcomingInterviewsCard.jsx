@@ -11,6 +11,12 @@ export function UpcomingInterviewsCard() {
     const [upcomingInterviews, setUpcomingInterviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const loadInterviews = async () => {
             setIsLoading(true);
             try {

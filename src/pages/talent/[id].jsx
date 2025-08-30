@@ -9,6 +9,12 @@ export default function TalentProfilePage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const fetchProfile = async () => {
             if (!id) {
                 setError('Profile not found');

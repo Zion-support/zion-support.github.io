@@ -4,6 +4,12 @@ import { ChevronUpIcon } from '@heroicons/react/24/outline';
 const EnhancedScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const toggleVisibility = () => {
             if (window.pageYOffset > 300) {
                 setIsVisible(true);

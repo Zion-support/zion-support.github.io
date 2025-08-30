@@ -18,6 +18,8 @@ export default function WishlistPage() {
     const navigate = useNavigate();
     
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
             navigate('/login');

@@ -115,6 +115,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
@@ -174,11 +180,23 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const score = calculatePerformanceScore(metrics);
     setPerformanceScore(score);
   }, [metrics, calculatePerformanceScore]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const timer = setTimeout(() => setIsVisible(true), 1000);
     return () => clearTimeout(timer);
   }, []);

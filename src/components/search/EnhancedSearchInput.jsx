@@ -8,6 +8,12 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
     const inputRef = useRef(null);
     const suggestionsRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (query.trim()) {
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
@@ -21,6 +27,12 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         }
     }, [query, suggestions]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleClickOutside = (event) => {
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
                 setShowSuggestions(false);

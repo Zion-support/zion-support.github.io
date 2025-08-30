@@ -175,6 +175,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Auto-hide alerts after 5 seconds
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const timer = setTimeout(() => {
       setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000));
     }, 5000);
@@ -184,6 +190,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Initialize monitoring
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     measureFPS();
     measureMemory();
     measureLoadTime();

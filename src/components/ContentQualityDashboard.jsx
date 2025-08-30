@@ -70,6 +70,12 @@ const ContentQualityDashboard = ({ className = '' }) => {
         }
     }, [contentAnalyzer]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Auto-analyze pages when component mounts
         analyzeAllPages();
     }, [analyzeAllPages]);

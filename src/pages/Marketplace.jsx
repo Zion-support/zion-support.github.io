@@ -20,6 +20,12 @@ export default function Marketplace() {
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const interval = setInterval(() => {
             setListings(prev => [...prev, generateRandomListing()]);
         }, 120000); // 2 minutes
@@ -27,11 +33,23 @@ export default function Marketplace() {
     }, []);
     // Filter options are now imported from marketplaceData
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout);
     }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         localStorage.setItem('marketplaceView', view);
     }, [view]);
     // Filter listings based on selected filters

@@ -7,6 +7,12 @@ export const UserMenu = () => {
     const menuRef = useRef(null);
     const { user, logout } = useAuth();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 setIsOpen(false);

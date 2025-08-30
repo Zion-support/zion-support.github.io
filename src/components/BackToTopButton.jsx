@@ -5,6 +5,12 @@ export function BackToTopButton() {
     const [visible, setVisible] = useState(false);
     const { t } = useTranslation();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const onScroll = () => {
             setVisible(window.scrollY > 400);
         };

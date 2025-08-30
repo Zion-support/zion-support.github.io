@@ -18,6 +18,12 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     const [notifications, setNotifications] = useState([]);
     // Apply accessibility settings to the document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled)
             return;
         const root = document.documentElement;
@@ -75,6 +81,12 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     }, [settings, enabled, onSettingsChange]);
     // Screen reader announcements
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled || !settings.screenReader)
             return;
         const announce = (message) => {
@@ -141,6 +153,12 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     }, [settings.fontSize, updateSetting]);
     // Keyboard shortcuts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled)
             return;
         const handleKeyDown = (e) => {
@@ -326,7 +344,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
       </div>
 
       {/* CSS Variables for Accessibility */}
-      <style dangerouslySetInnerHTML={{
+      <style // TODO: Sanitize content before using dangerouslySetInnerHTML={{
             __html: `
           :root {
             --font-size: ${settings.fontSize}px;

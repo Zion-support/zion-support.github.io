@@ -118,6 +118,12 @@ export default function CategoryDetail() {
         }
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setIsLoading(true);
         // Find the category data based on slug
         const currentCategory = categoryData[slug] || {
@@ -154,6 +160,12 @@ export default function CategoryDetail() {
         setIsLoading(false);
     }, [slug]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (slug !== 'innovation')
             return;
         const interval = setInterval(() => {

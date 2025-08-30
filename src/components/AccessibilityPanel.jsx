@@ -14,6 +14,12 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Load saved settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
@@ -27,6 +33,12 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         }
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage

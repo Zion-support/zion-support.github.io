@@ -26,6 +26,12 @@ export const useAuthState = () => {
   });
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {

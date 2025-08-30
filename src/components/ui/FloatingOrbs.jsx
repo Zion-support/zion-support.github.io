@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 export function FloatingOrbs({ count = 6, className = '' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const canvas = canvasRef.current;
         if (!canvas)
             return;

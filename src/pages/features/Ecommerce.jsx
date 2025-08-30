@@ -16,7 +16,7 @@ export default function Ecommerce() {
     return (<>
       <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script type="application/ld+json" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">

@@ -20,6 +20,12 @@ function ClientDashboardContent() {
     const isMobile = useIsMobile();
     // Set the first job as selected when jobs are loaded (if any)
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);
             setSelectedJobTitle(jobs[0].title);

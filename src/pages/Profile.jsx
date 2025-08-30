@@ -8,6 +8,8 @@ export default function Profile() {
     const { user, isLoading, logout } = useAuth();
     const navigate = useNavigate();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
             navigate("/login?redirect=/profile");

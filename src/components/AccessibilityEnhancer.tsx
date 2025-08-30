@@ -34,6 +34,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
     if (savedSettings) {
       try {

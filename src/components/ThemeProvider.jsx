@@ -8,6 +8,12 @@ export const ThemeProviderContext = createContext(initialState);
 export function ThemeProvider({ children }) {
     const [theme] = useState("dark");
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const root = window.document.documentElement;
         root.classList.remove("light", "dark");
         root.classList.add("dark");

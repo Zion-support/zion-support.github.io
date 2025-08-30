@@ -18,6 +18,8 @@ export default function Login() {
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
     const queryString = location.search;
@@ -33,6 +35,8 @@ export default function Login() {
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';

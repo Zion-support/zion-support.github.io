@@ -31,6 +31,12 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsVisible(true);
     
     const interval = setInterval(() => {

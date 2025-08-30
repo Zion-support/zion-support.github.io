@@ -16,6 +16,12 @@ export default function ProfileDetail() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const fetchProfile = async () => {
             setIsLoading(true);
             setError(null);

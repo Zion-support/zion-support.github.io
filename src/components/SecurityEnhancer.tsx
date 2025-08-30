@@ -49,6 +49,12 @@ const SecurityEnhancer: React.FC = () => {
 
   // Generate sample security threats
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleThreats: SecurityThreat[] = [
       {
         id: '1',
@@ -84,6 +90,12 @@ const SecurityEnhancer: React.FC = () => {
 
   // Generate security checks
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const checks: SecurityCheck[] = [
       {
         id: '1',

@@ -584,6 +584,12 @@ const SERVICE_FILTERS = [
 export default function ServicesPage() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const interval = setInterval(() => {
             setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
         }, 120000);

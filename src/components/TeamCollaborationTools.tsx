@@ -107,6 +107,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Sample data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleTeamMembers: TeamMember[] = [
       {
         id: '1',

@@ -10,6 +10,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
   const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (selectedCategory !== 'All') {
       pricing = pricing.filter(p => p.category === selectedCategory);

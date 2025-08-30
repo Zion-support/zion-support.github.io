@@ -5,6 +5,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
     const particlesRef = useRef([]);
     const animationRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const canvas = canvasRef.current;
         if (!canvas)
             return;

@@ -7,6 +7,12 @@ export default function FuturisticHero() {
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleMouseMove = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };

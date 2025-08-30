@@ -10,6 +10,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isOpen)
             return;
         function handleKeyDown(e) {

@@ -17,6 +17,8 @@ interface EnhancedSEOManagerProps {
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title

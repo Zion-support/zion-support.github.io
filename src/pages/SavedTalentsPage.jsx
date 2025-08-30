@@ -11,6 +11,12 @@ export default function SavedTalentsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const fetchSavedTalents = async () => {
             setIsLoading(true);
             try {

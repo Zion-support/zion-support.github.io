@@ -48,6 +48,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Sample project data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleProjects: Project[] = [
       {
         id: '1',
@@ -168,6 +174,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Filter projects
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = projects;
 
     if (selectedStatus !== 'all') {

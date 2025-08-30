@@ -14,6 +14,12 @@ export function AdvancedAnalytics() {
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Simulate API call
         const fetchData = async () => {
             setIsLoading(true);

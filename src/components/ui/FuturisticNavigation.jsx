@@ -39,6 +39,12 @@ export default function FuturisticNavigation() {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };

@@ -263,6 +263,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
   // Initialize SEO
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Update document title
     if (enableAutoTitle) {
       updateTitle(fullTitle);

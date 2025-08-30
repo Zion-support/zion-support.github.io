@@ -10,6 +10,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

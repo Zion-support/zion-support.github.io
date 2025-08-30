@@ -6,6 +6,12 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Detect device type
         const detectDevice = () => {
             const width = window.innerWidth;

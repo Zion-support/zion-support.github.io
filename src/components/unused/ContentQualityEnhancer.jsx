@@ -305,6 +305,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     }, []);
     // Auto-analyze content
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (autoAnalyze) {
             const timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer);

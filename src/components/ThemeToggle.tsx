@@ -12,6 +12,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setMounted(true);
     const savedTheme = localStorage.getItem('zion-theme') as Theme;
     if (savedTheme) {
@@ -20,6 +26,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!mounted) return;
 
     const root = document.documentElement;

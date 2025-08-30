@@ -39,6 +39,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
     const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
     const savedFontSize = localStorage.getItem('zion-font-size');
@@ -52,6 +58,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Apply accessibility settings to document
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const root = document.documentElement;
     
     // Apply high contrast
@@ -74,6 +86,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
@@ -261,6 +279,12 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!isActive) return;
 
     const focusableElements = document.querySelectorAll(

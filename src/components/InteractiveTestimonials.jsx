@@ -78,6 +78,12 @@ export function InteractiveTestimonials() {
         ? testimonials
         : testimonials.filter(testimonial => testimonial.category === selectedCategory);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isAutoPlaying)
             return;
         const interval = setInterval(() => {

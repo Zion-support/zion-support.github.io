@@ -55,6 +55,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Sample resource data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleResources: Resource[] = [
       {
         id: '1',
@@ -154,6 +160,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Filter resources
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = resources;
 
     if (selectedType !== 'all') {

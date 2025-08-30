@@ -9,6 +9,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {
   const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
       services = searchExpandedServices(searchQuery);

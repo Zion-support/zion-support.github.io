@@ -225,6 +225,12 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     }, []);
     // Auto-check links
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (autoCheck) {
             const timer = setTimeout(checkAllLinks, 2000);
             return () => clearTimeout(timer);

@@ -21,6 +21,12 @@ const EquipmentPage = () => {
   const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Simulate loading
     setTimeout(() => {
       setLoading(false);

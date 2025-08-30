@@ -30,6 +30,12 @@ function ReviewsModerationContent() {
         }
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         fetchReviews();
     }, [activeTab]);
     const handleRefresh = () => {

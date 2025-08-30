@@ -16,6 +16,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isOpen && messages.length === 0) {
             addBotMessage(welcomeMessage, {
                 intent: 'greeting',
@@ -31,6 +37,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
     // Track chatbot interactions

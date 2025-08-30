@@ -3,6 +3,12 @@ import { Button } from '@/components/ui/button';
 export const InstallPrompt = () => {
     const [deferred, setDeferred] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handler = (e) => {
             e.preventDefault();
             setDeferred(e);

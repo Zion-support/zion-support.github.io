@@ -126,6 +126,12 @@ export function Footer() {
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };

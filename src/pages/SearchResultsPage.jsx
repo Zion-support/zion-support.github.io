@@ -23,6 +23,12 @@ export default function SearchResultsPage() {
     });
     // Refetch when the URL param changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (initialQuery !== query) {
             setQuery(initialQuery);
             refetch();
@@ -31,6 +37,12 @@ export default function SearchResultsPage() {
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const el = loader.current;
         if (!el)
             return;

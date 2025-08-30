@@ -4,6 +4,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
     const canvasRef = useRef(null);
     const particlesRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const canvas = canvasRef.current;
         if (!canvas)
             return;

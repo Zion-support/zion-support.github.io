@@ -27,6 +27,12 @@ export function PrimaryNav() {
   const location = useLocation();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };

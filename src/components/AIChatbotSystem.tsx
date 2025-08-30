@@ -46,6 +46,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Sample welcome message
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (isOpen && messages.length === 0) {
       const welcomeMessage: ChatMessage = {
         id: 'welcome',
@@ -67,6 +73,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Auto-scroll to bottom
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }

@@ -23,6 +23,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   }, []);
 
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);

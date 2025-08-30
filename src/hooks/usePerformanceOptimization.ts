@@ -37,6 +37,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Measure initial load time
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if (typeof window !== 'undefined') {
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
@@ -54,6 +56,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // FPS monitoring
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -89,6 +93,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Memory management
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if (!enableMemoryManagement) return;
 
     const checkMemoryUsage = () => {
@@ -218,6 +224,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Cleanup on unmount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     return cleanup;
   }, [cleanup]);
 

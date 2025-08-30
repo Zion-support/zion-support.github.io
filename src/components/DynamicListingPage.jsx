@@ -20,6 +20,12 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedRating, setSelectedRating] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const listingsWithPrice = allListings.filter(l => l.price !== null);
         if (listingsWithPrice.length > 0) {
             const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
@@ -53,6 +59,12 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
         : filteredListings;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setCurrentPage(1);
     }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
     const handleRequestQuote = (listingId) => {

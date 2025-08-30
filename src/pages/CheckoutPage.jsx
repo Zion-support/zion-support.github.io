@@ -14,6 +14,12 @@ export default function CheckoutPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const fetchProduct = async () => {
             if (!id)
                 return;

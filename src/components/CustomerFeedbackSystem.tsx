@@ -54,6 +54,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
   // Sample feedback data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -128,6 +134,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
   // Calculate stats
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -160,6 +172,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
   // Filter feedback
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {

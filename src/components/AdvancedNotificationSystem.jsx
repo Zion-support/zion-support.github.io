@@ -75,6 +75,12 @@ export function AdvancedNotificationSystem() {
     const [unreadCount, setUnreadCount] = useState(0);
     const containerRef = useRef(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setUnreadCount(notifications.filter(n => !n.isRead).length);
     }, [notifications]);
     const filteredNotifications = notifications.filter(notification => {

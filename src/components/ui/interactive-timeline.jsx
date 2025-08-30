@@ -31,6 +31,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     });
     // Auto-play functionality
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isPlaying || filteredEvents.length === 0)
             return;
         const interval = setInterval(() => {

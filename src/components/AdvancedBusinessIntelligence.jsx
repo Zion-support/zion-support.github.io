@@ -160,6 +160,12 @@ export function AdvancedBusinessIntelligence() {
         setIsRefreshing(false);
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);

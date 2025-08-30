@@ -29,6 +29,12 @@ export const ModernUIEnhancer: React.FC = () => {
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Initialize UI enhancements
     initializeUIEnhancements();
     
@@ -51,6 +57,12 @@ export const ModernUIEnhancer: React.FC = () => {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Apply settings when they change
     applyUISettings();
   }, [settings]);

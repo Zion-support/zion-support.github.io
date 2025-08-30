@@ -159,6 +159,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled || !autoRefresh)
             return;
         const interval = setInterval(() => {
@@ -171,12 +177,24 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
     // Start FPS monitoring
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled)
             return;
         measureFPS();
     }, [enabled, measureFPS]);
     // Clear old alerts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const interval = setInterval(() => {
             const now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds

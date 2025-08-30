@@ -123,6 +123,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' };
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (showOnLoad) {
             runFullAnalysis();
         }

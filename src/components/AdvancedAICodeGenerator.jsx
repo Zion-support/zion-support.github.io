@@ -48,6 +48,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (method === 'GET') {
       execute();
     }

@@ -8,6 +8,12 @@ export function MainNavigation() {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const location = useLocation();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };

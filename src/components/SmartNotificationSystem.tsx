@@ -90,6 +90,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
 
   // Initialize with sample notifications
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (enabled) {
       generateSampleNotifications();
     }
@@ -97,6 +103,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
 
   // Auto-expire notifications
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(() => {
       setNotifications(prev => {
         const now = new Date();

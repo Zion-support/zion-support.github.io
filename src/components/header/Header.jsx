@@ -39,6 +39,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   // Handle scroll effect
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };

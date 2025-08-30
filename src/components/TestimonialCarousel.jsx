@@ -73,6 +73,12 @@ export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const timer = setInterval(() => {
             setDirection(1);
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);

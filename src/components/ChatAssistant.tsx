@@ -50,6 +50,12 @@ export function ChatAssistant({
 
   // Initialize speech recognition
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
@@ -72,6 +78,12 @@ export function ChatAssistant({
 
   // Initialize with welcome message
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (enabled && messages.length === 0) {
       const welcomeMessage: Message = {
         id: 'welcome',
@@ -94,6 +106,12 @@ export function ChatAssistant({
 
   // Auto-scroll to bottom
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 

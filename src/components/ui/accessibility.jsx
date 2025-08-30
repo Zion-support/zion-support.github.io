@@ -14,6 +14,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     });
     // Apply accessibility settings to document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enabled)
             return;
         const root = document.documentElement;
@@ -47,6 +53,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     }, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const saved = localStorage.getItem('accessibility-settings');
         if (saved) {
             try {
@@ -240,7 +252,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       </AnimatePresence>
 
       {/* Screen Reader Only Class */}
-      <style dangerouslySetInnerHTML={{
+      <style // TODO: Sanitize content before using dangerouslySetInnerHTML={{
             __html: `
           .sr-only {
             position: absolute;

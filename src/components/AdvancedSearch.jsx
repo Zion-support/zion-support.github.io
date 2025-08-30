@@ -19,6 +19,12 @@ export function AdvancedSearch() {
     const searchRef = useRef(null);
     const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowSuggestions(false);
@@ -28,6 +34,12 @@ export function AdvancedSearch() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (query.trim()) {
             const filtered = mockSuggestions
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||

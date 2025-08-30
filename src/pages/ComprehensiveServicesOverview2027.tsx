@@ -84,6 +84,12 @@ export default function ComprehensiveServicesOverview2027() {
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);

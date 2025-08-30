@@ -12,6 +12,12 @@ export function AppHeader() {
   const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };

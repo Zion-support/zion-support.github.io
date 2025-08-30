@@ -13,6 +13,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!showRealTime)
             return;
         const interval = setInterval(() => {
@@ -29,6 +35,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     };
     // Update summary when events change
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         updateAnalyticsSummary();
     }, [events, currentSession]);
     // Track dashboard interactions

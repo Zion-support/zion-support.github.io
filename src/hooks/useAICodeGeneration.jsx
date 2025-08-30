@@ -257,6 +257,12 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   const [state, setState] = useState<any>(null);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // TODO: Implement initialization logic
   }, []);
 
@@ -456,7 +462,7 @@ console.log("Language:", "${options.language}");`;
     const optimizeForSecurity = (code) => {
         return code
             .replace(/innerHTML/g, 'textContent')
-            .replace(/eval/g, '// eval() removed for security - use alternatives')
+            .replace(/eval/g, '// // SECURITY: Replace eval() with safer alternative - eval() removed for security - use alternatives')
             .replace(/localStorage/g, '// Consider security implications of localStorage');
     };
     const optimizeForMaintainability = (code) => {
@@ -557,6 +563,12 @@ def generated_function():
     };
     // Cleanup timeout on unmount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         return () => {
             if (generationTimeoutRef.current) {
                 clearTimeout(generationTimeoutRef.current);

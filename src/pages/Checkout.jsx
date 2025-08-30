@@ -14,6 +14,12 @@ export default function CheckoutPage() {
         defaultValues: { name: '', email: '', address: '', city: '', country: '' },
     });
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (sku) {
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
             return;

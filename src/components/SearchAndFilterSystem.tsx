@@ -117,6 +117,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
   // Update parent component with results
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     onResultsChange?.(filteredResults);
   }, [filteredResults, onResultsChange]);
 

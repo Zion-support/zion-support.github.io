@@ -64,6 +64,12 @@ export default function Webinars() {
 
   // Update counts
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     categories.forEach(cat => {
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });

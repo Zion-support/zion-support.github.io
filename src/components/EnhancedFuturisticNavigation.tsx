@@ -9,6 +9,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -17,6 +23,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);

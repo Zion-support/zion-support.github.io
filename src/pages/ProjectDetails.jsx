@@ -31,6 +31,12 @@ function ProjectDetailsContent() {
     const [activeTab, setActiveTab] = useState("details");
     // Load project data
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         async function loadProject() {
             if (!projectId)
                 return;

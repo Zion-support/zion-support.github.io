@@ -221,6 +221,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleCollaborationTextChange = (event) => {
             const { message } = event.detail;
             if (message.type === 'text_change' && message.userId !== userId) {
@@ -246,6 +252,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
@@ -257,6 +269,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enableAI)
             return;
         const debounceTimer = setTimeout(() => {

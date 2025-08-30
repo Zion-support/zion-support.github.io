@@ -55,6 +55,12 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         setIsChecking(false);
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Auto-check links when component mounts
         checkAllLinks();
     }, [links]);

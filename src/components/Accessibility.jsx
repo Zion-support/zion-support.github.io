@@ -18,6 +18,12 @@ export const AccessibilityProvider = ({ children }) => {
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedSettings) {
             const settings = JSON.parse(savedSettings);
@@ -29,6 +35,12 @@ export const AccessibilityProvider = ({ children }) => {
     }, []);
     // Save settings to localStorage
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const settings = {
             highContrast,
             reducedMotion,
@@ -39,6 +51,12 @@ export const AccessibilityProvider = ({ children }) => {
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     // Apply accessibility settings to document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const root = document.documentElement;
         // High contrast mode
         if (highContrast) {
@@ -84,6 +102,12 @@ export const AccessibilityPanel = () => {
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
     // Keyboard shortcuts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleKeyDown = (event) => {
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
@@ -210,6 +234,12 @@ export const SkipToContent = () => (<a href="#main-content" className="sr-only f
 // Focus Trap Hook
 export const useFocusTrap = (isActive) => {
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!isActive)
             return;
         const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';

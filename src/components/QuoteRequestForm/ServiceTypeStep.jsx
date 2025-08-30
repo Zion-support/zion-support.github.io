@@ -22,6 +22,12 @@ export function ServiceTypeStep({ formData, updateFormData }) {
     const [error, setError] = useState(null);
     // Fetch services when the service type or query changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!formData.serviceType) {
             setListings([]);
             return;

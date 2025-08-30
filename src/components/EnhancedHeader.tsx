@@ -11,6 +11,12 @@ export function EnhancedHeader() {
   const location = useLocation();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };

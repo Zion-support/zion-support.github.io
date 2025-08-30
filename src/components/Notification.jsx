@@ -35,6 +35,12 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     const styles = notificationStyles[type];
     const Icon = styles.icon;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (duration > 0) {
             const timer = setTimeout(() => {
                 handleClose();

@@ -222,6 +222,12 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Initialize voice recognition
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
@@ -322,6 +328,12 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Calculate WCAG compliance score
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const scores = { A: 0, AA: 0, AAA: 0 };
     const totalFeatures = features.length;
     
@@ -340,6 +352,12 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Keyboard shortcuts
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleKeyDown = (event: KeyboardEvent) => {
       // Alt + A to open accessibility panel
       if (event.altKey && event.key === 'a') {

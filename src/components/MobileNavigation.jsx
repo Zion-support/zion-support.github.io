@@ -9,10 +9,22 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     const menuRef = useRef(null);
     // Close menu when route changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         onToggle();
     }, [location.pathname]);
     // Close menu when clicking outside
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 onToggle();

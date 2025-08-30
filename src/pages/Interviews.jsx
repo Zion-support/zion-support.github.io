@@ -10,6 +10,12 @@ function InterviewsContent() {
     const { interviews, isLoading, fetchInterviews } = useInterviews();
     const [activeTab, setActiveTab] = useState("upcoming");
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Modified to handle Promise<Interview[]> return type
         const loadInterviews = async () => {
             await fetchInterviews();

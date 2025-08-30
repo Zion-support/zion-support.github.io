@@ -102,6 +102,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   // Load saved settings on mount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings);
@@ -130,6 +136,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   // Enhanced keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -178,6 +190,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   // Focus management
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (!settings.focusIndicator) return;
 
     const handleFocusIn = (e: FocusEvent) => {
@@ -210,6 +228,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   // Skip to main content link
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';

@@ -194,6 +194,12 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     }, [onResultClick]);
     // Close search when clicking outside
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setIsOpen(false);
@@ -204,6 +210,12 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     }, []);
     // Focus input when opened
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isOpen && inputRef.current) {
             inputRef.current.focus();
         }

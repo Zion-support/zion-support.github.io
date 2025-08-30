@@ -35,6 +35,12 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (variant === 'ai' || variant === 'tech' || variant === 'global') {
       const interval = setInterval(() => {
         setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length);
@@ -44,6 +50,12 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   }, [variant, loadingMessages.length]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setCurrentMessage(message);
   }, [message]);
 

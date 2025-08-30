@@ -9,6 +9,12 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const scrollToTopRef = useRef(null);
     // Detect device type
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const updateDeviceType = () => {
             const width = window.innerWidth;
             if (width < 768) {
@@ -27,6 +33,12 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     }, []);
     // Scroll effects
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enableScrollEffects)
             return;
         const handleScroll = () => {
@@ -55,6 +67,12 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     }, [enableScrollEffects]);
     // Theme management
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme);
@@ -85,6 +103,12 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     };
     // Add CSS animations to the document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enableAnimations)
             return;
         const style = document.createElement('style');
@@ -224,6 +248,12 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     }, [enableAnimations]);
     // Add intersection observer for scroll animations
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!enableScrollEffects)
             return;
         const observerOptions = {

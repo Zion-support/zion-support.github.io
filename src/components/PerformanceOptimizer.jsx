@@ -6,6 +6,8 @@ export const PerformanceOptimizer = ({ children }) => {
 
     // Preload critical resources
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const preloadCriticalResources = () => {
             // Note: CSS is already handled by Vite build process
             // Fonts are loaded via Google Fonts CDN in index.html
@@ -15,6 +17,8 @@ export const PerformanceOptimizer = ({ children }) => {
 
     // Optimize images on route change
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
@@ -54,12 +58,16 @@ export const PerformanceOptimizer = ({ children }) => {
     }, []);
 
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
 
     // Service Worker registration for caching
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
             // Check if service worker is already registered
             if (navigator.serviceWorker.controller) {
@@ -95,6 +103,8 @@ export const PerformanceOptimizer = ({ children }) => {
 
     // Intersection Observer for lazy loading
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {

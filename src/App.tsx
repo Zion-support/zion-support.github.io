@@ -1,3 +1,5 @@
+const {/*_404 = {/*_404;
+const <MAIN_80 = <MAIN_80;
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Sidebar } from './components/Sidebar';
@@ -152,7 +154,7 @@ function App() {
           <AppHeader />
           <Sidebar />
           
-          <main className="flex-1 lg:ml-80">
+          <main className="flex-1 lg:ml-<MAIN_80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -293,7 +295,7 @@ function App() {
                 {/* Zion Tech Group 2025 Comprehensive Showcase */}
                 <Route path="/zion-tech-group-2025-comprehensive-showcase" element={<ZionTechGroup2025ComprehensiveShowcase />} />
                 
-                {/* 404 Page */}
+                {/* {/*_404 Page */}
                 <Route path="*" element={<div>Page not found</div>} />
               </Routes>
             </Suspense>

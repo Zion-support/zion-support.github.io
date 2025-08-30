@@ -94,6 +94,12 @@ export const BundleAnalyzer = () => {
         }
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         analyzeBundle();
     }, [analyzeBundle]);
     const formatBytes = (bytes) => {

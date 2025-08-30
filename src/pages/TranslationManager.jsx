@@ -25,6 +25,12 @@ export default function TranslationManager() {
     const [isSaving, setIsSaving] = useState(false);
     // Simulated translation data - in a real app, this would come from your backend
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // For demo purposes, we're using the loaded translations from i18next
         const currentTranslations = {};
         supportedLanguages.forEach(lang => {
@@ -56,6 +62,12 @@ export default function TranslationManager() {
     }, [selectedNamespace, i18n]);
     // Filter keys based on search query
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (!searchQuery.trim()) {
             // Get all unique keys across all languages
             const allKeys = new Set();

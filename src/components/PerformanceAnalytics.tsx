@@ -96,6 +96,12 @@ const PerformanceAnalytics: React.FC = () => {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if (isMonitoring) {
       const interval = setInterval(() => {
         setPerformanceData(generateMockData());

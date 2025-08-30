@@ -13,6 +13,12 @@ export const AccessibilityProvider = ({ children }) => {
     const [isLargeText, setIsLargeText] = useState(false);
     // Check for user preferences on mount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Check for reduced motion preference
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         setIsReducedMotion(prefersReducedMotion);
@@ -36,6 +42,12 @@ export const AccessibilityProvider = ({ children }) => {
     }, []);
     // Apply accessibility classes to body
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const body = document.body;
         if (isHighContrast) {
             body.classList.add('high-contrast');
@@ -102,6 +114,12 @@ export const AccessibilityProvider = ({ children }) => {
     };
     // Keyboard shortcuts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleKeyDown = (e) => {
             // Ctrl/Cmd + K for high contrast toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {

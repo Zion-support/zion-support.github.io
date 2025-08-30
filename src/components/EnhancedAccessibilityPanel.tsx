@@ -29,6 +29,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
   // Load settings from localStorage
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {
@@ -219,6 +225,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
   // Handle escape key
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);

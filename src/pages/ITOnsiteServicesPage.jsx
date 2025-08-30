@@ -20,6 +20,12 @@ export default function ITOnsiteServicesPage() {
     const success = searchParams.get("success");
     // Show success toast if redirected from successful payment
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (success === "true") {
             toast({
                 title: "Payment Successful",

@@ -5,6 +5,12 @@ export function PWAUpdater() {
   const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Listen for service worker updates
