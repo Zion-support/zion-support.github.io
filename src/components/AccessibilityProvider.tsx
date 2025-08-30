@@ -259,7 +259,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   children, 
   isActive = true 
 }) => {
-  const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!isActive) return;
