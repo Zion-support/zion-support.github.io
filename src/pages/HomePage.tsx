@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -32,15 +32,40 @@ import {
   Newspaper,
   TestTube,
   GraduationCap,
-  HelpCircle
+  HelpCircle,
+  Search,
+  Menu,
+  X
 } from 'lucide-react';
+
+// Lazy load components for better performance
+const LazyTestimonials = lazy(() => import('../components/Testimonials'));
+const LazyServicesGrid = lazy(() => import('../components/ServicesGrid'));
+const LazyStatsSection = lazy(() => import('../components/StatsSection'));
+
+// Loading skeleton components
+const HeroSkeleton = () => (
+  <div className="animate-pulse">
+    <div className="h-20 bg-gray-700 rounded mb-6"></div>
+    <div className="h-8 bg-gray-700 rounded mb-8 max-w-4xl mx-auto"></div>
+    <div className="flex justify-center gap-6 mb-10">
+      {[1, 2, 3, 4].map((i) => (
+        <div key={i} className="h-10 w-32 bg-gray-700 rounded-full"></div>
+      ))}
+    </div>
+    <div className="flex justify-center gap-4">
+      <div className="h-14 w-40 bg-gray-700 rounded-lg"></div>
+      <div className="h-14 w-40 bg-gray-700 rounded-lg"></div>
+    </div>
+  </div>
+);
 
 export function HomePage() {
   const heroFeatures = [
-    { icon: Brain, text: 'AI-Powered Solutions' },
-    { icon: Atom, text: 'Quantum Computing' },
-    { icon: Shield, text: 'Advanced Security' },
-    { icon: Rocket, text: 'Space Technology' }
+    { icon: Brain, text: 'AI-Powered Solutions', description: 'Transform your business with cutting-edge artificial intelligence' },
+    { icon: Atom, text: 'Quantum Computing', description: 'Harness the power of quantum mechanics for unprecedented computational capabilities' },
+    { icon: Shield, text: 'Advanced Security', description: 'Protect your digital assets with AI-powered security solutions' },
+    { icon: Rocket, text: 'Space Technology', description: 'Pioneering innovations in space exploration and satellite technology' }
   ];
 
   const services = [
@@ -49,36 +74,40 @@ export function HomePage() {
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
       href: '/services/ai-solutions',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'Quantum Computing',
       description: 'Harness the power of quantum mechanics for unprecedented computational capabilities',
       icon: Atom,
       href: '/services/quantum-computing',
-      features: ['Quantum Algorithms', 'Quantum AI Hybrid', 'Quantum Security', 'Quantum Optimization']
+      features: ['Quantum Algorithms', 'Quantum AI Hybrid', 'Quantum Security', 'Quantum Optimization'],
+      color: 'from-purple-500 to-pink-600'
     },
     {
       title: 'Cybersecurity',
       description: 'Protect your digital assets with AI-powered security solutions',
       icon: Shield,
       href: '/services/cybersecurity',
-      features: ['Zero Trust Security', 'AI Threat Detection', 'Security Headers', 'Compliance Management']
+      features: ['Zero Trust Security', 'AI Threat Detection', 'Security Headers', 'Compliance Management'],
+      color: 'from-green-500 to-emerald-600'
     },
     {
       title: 'Digital Transformation',
       description: 'Modernize your infrastructure and processes for the digital age',
       icon: Rocket,
       href: '/services/digital-transformation',
-      features: ['Cloud Migration', 'DevOps Automation', 'API Development', 'Data Analytics']
+      features: ['Cloud Migration', 'DevOps Automation', 'API Development', 'Data Analytics'],
+      color: 'from-orange-500 to-red-600'
     }
   ];
 
   const stats = [
-    { number: '1000+', label: 'Companies Served', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '24/7', label: 'Support Available', icon: Users },
-    { number: 'ISO 27001', label: 'Security Certified', icon: Award }
+    { number: '1000+', label: 'Companies Served', icon: Building, description: 'Trusted by leading organizations worldwide' },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, description: 'Reliable infrastructure you can count on' },
+    { number: '24/7', label: 'Support Available', icon: Users, description: 'Round-the-clock expert assistance' },
+    { number: 'ISO 27001', label: 'Security Certified', icon: Award, description: 'Enterprise-grade security standards' }
   ];
 
   const testimonials = [
@@ -86,19 +115,25 @@ export function HomePage() {
       quote: "Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.",
       author: "Sarah Johnson",
       role: "CTO, TechCorp",
-      company: "TechCorp Inc."
+      company: "TechCorp Inc.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
     {
       quote: "Their quantum computing expertise gave us a competitive edge in the market. Highly recommended!",
       author: "Michael Chen",
       role: "VP Engineering",
-      company: "Quantum Solutions"
+      company: "Quantum Solutions",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
       quote: "The cybersecurity platform is robust and reliable. Our data has never been safer.",
       author: "Emily Rodriguez",
       role: "Security Director",
-      company: "SecureNet"
+      company: "SecureNet",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -130,9 +165,10 @@ export function HomePage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-white"
+                  className="group flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-white hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                  title={feature.description}
                 >
-                  <feature.icon className="w-5 h-5 text-cyan-400" />
+                  <feature.icon className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium">{feature.text}</span>
                 </motion.div>
               ))}
@@ -142,14 +178,16 @@ export function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Get started with Zion Tech Group"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Explore our services"
               >
                 <span>Explore Services</span>
                 <ChevronRight className="w-5 h-5" />
@@ -160,84 +198,41 @@ export function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={<div className="py-16 bg-gray-800 animate-pulse"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-2 md:grid-cols-4 gap-8"><div className="h-32 bg-gray-700 rounded"></div><div className="h-32 bg-gray-700 rounded"></div><div className="h-32 bg-gray-700 rounded"></div><div className="h-32 bg-gray-700 rounded"></div></div></div></div>}>
+        <LazyStatsSection stats={stats} />
+      </Suspense>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <motion.h2 
+              className="text-4xl font-bold text-white mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Our Services
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-400 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               Comprehensive technology solutions designed to drive innovation and growth
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                  </div>
-                </div>
-                
-                <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
-                
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {service.features.map((feature) => (
-                    <div key={feature} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to={service.href}
-                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+          <Suspense fallback={<div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div><div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div><div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div><div className="h-80 bg-gray-800 rounded-xl animate-pulse"></div></div>}>
+            <LazyServicesGrid services={services} />
+          </Suspense>
 
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              aria-label="View all our services"
             >
               <span>View All Services</span>
               <ArrowRight className="w-5 h-5" />
@@ -247,71 +242,43 @@ export function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Trusted by leading companies worldwide
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.author}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-900 rounded-xl p-8 border border-gray-700"
-              >
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <blockquote className="text-gray-300 mb-6 italic leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.author}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-sm text-cyan-400">{testimonial.company}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={<div className="py-20 bg-gray-800 animate-pulse"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div className="h-64 bg-gray-700 rounded-xl"></div><div className="h-64 bg-gray-700 rounded-xl"></div><div className="h-64 bg-gray-700 rounded-xl"></div></div></div></div>}>
+        <LazyTestimonials testimonials={testimonials} />
+      </Suspense>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <motion.h2 
+            className="text-4xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             Join thousands of companies already leveraging our cutting-edge technology solutions
-          </p>
+          </motion.p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
+              aria-label="Get started today with Zion Tech Group"
             >
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/request-quote"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white hover:border-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
+              aria-label="Request a custom quote"
             >
               <span>Request a Quote</span>
               <ChevronRight className="w-5 h-5" />
