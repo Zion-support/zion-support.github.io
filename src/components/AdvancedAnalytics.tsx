@@ -1,3 +1,4 @@
+import React, { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Activity,
@@ -14,7 +15,6 @@ import {
   X,
   Zap
 } from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -36,7 +36,7 @@ interface Props {
   showMetrics?: boolean;
 }
 
-export function AdvancedAnalytics({ enabled = true }: Props) {
+export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,

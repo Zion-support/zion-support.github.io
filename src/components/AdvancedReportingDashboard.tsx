@@ -23,28 +23,18 @@ import React, { useEffect, useState } from 'react';
 interface ReportData {
   id: string;
   title: string;
-  type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
+  type: string;
   category: string;
   data: any;
   lastUpdated: string;
-  status: 'active' | 'archived' | 'draft';
-  priority: 'low' | 'medium' | 'high' | 'critical';
+  status: string;
+  priority: string;
   tags: string[];
   description: string;
   author: string;
   views: number;
   downloads: number;
   rating: number;
-}
-
-interface ReportMetrics {
-  totalReports: number;
-  activeReports: number;
-  totalViews: number;
-  totalDownloads: number;
-  averageRating: number;
-  topCategories: Array<{ name: string; count: number; percentage: number }>;
-  recentActivity: Array<{ action: string; timestamp: string; user: string }>;
 }
 
 interface AdvancedReportingDashboardProps {
