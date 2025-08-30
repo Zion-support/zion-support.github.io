@@ -4,7 +4,6 @@ import {
   Eye, 
   Type, 
   Volume2, 
-  VolumeX, 
   MousePointer, 
   Keyboard, 
   Settings,
@@ -12,9 +11,7 @@ import {
   Plus,
   Minus,
   Contrast,
-  Accessibility,
-  CheckCircle,
-  AlertTriangle
+  Accessibility
 } from 'lucide-react';
 
 interface AccessibilitySettings {

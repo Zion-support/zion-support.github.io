@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon } from 'lucide-react';
+import { Volume2, VolumeX, Accessibility } from 'lucide-react';
 
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -205,7 +205,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
             >
-              <Braille className="w-4 h-4" />
+              <Accessibility className="w-4 h-4" />
             </button>
             
             <button
