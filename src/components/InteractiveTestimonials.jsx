@@ -66,7 +66,7 @@ const testimonials = [
         date: '2 months ago',
         likes: 94,
         verified: true
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'];
 export function InteractiveTestimonials() {

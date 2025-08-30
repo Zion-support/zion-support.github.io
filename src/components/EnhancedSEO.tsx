@@ -42,7 +42,7 @@ export function EnhancedSEO({
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://facebook.com/ziontechgroup"
-    ]
+  {/* Removed stray closing bracket */}
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;

@@ -17,4 +17,4 @@ export default function EnterpriseRoutes() {
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
     </Routes>
   );
-}
+  {/* Removed stray closing brace */}

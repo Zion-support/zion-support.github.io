@@ -171,4 +171,4 @@ export default function AIPostgreSQL() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

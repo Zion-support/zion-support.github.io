@@ -150,12 +150,12 @@ export const QrCodeDownload = () => {
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
                   >
                     {copied ? (
-                      <>
+  {/* Empty JSX fragment */}
                         <Check className="w-4 h-4 text-green-400" />
                         <span>Copied!</span>
                       </>
                     ) : (
-                      <>
+  {/* Empty JSX fragment */}
                         <Copy className="w-4 h-4" />
                         <span>Copy Link</span>
                       </>

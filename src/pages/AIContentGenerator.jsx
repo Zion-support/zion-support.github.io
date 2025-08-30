@@ -318,4 +318,4 @@ export default function AIContentGenerator() {
             </section>
         </div>
     );
-}
+  {/* Removed stray closing brace */}

@@ -510,7 +510,7 @@ export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
     roi: "350% within 10 months",
     setupTime: "10-12 weeks",
     integrations: ["CMS Platforms", "Social Media", "Marketing Tools", "Analytics Platforms", "Workflow Management"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {

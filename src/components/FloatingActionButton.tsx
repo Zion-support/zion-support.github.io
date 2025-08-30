@@ -20,7 +20,7 @@ import {
 
 interface FloatingActionButtonProps {
   enabled?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -156,7 +156,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   if (!enabled) return null;
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Main Floating Action Button */}
       <AnimatePresence>
         {isVisible && (
@@ -309,4 +309,4 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       </motion.button>
     </>
   );
-}
+  {/* Removed stray closing brace */}

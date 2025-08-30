@@ -21,7 +21,7 @@ async function analyzeBundle() {
     generateBundleReport()} catch (error) {
     console.error('❌ Bundle analysis failed:', error.message);
     process.exit(1)}
-}
+  {/* Removed stray closing brace */}
 function generateBundleReport() {
   const distPath = path.join(process.cwd(), 'dist');
   const jsPath = path.join(distPath, 'js');

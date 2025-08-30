@@ -477,7 +477,7 @@ export const EXPANDED_SERVICES = [
         location: "Global",
         availability: "12-16 Weeks",
         aiScore: 94
-    }
+  {/* Removed stray closing brace */}
 ];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [

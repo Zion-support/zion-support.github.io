@@ -259,12 +259,12 @@ class AutomationDashboard {
     // For now, we'll just wait a bit and refresh
     await new Promise(resolve => setTimeout(resolve, 5000));
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the dashboard
 if (require.main === module) {
   const dashboard = new AutomationDashboard();
   dashboard.run().catch(console.error);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = AutomationDashboard;

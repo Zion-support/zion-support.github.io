@@ -33,7 +33,7 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
       </CardHeader>
       <CardContent>
         {role.matchedTalent && role.matchedTalent.length > 0 ? (
-          <>
+  {/* Empty JSX fragment */}
             <h4 className="text-sm font-medium text-muted-foreground mb-2.5">Suggested Talent ({role.matchedTalent.length}):</h4>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-3">
               {role.matchedTalent.map((talent)  => (

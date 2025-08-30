@@ -153,11 +153,11 @@ export default function Support() {
     ? filteredIssues.filter(issue => 
         issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         issue.description.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+  {/* Removed stray closing parenthesis */}
     : filteredIssues;
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Support Center - Zion Tech Group"
         description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."

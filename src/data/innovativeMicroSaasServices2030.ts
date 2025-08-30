@@ -606,7 +606,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Cloud integration"
     ],
     compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default innovativeMicroSaasServices2030;

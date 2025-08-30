@@ -18,4 +18,4 @@ export default function CommunityRoutes() {
       <Route path="profile/:username" element={<CommunityProfilePage />} />
     </Routes>
   );
-}
+  {/* Removed stray closing brace */}

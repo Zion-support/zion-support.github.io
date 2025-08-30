@@ -8,7 +8,7 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export const AccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -288,7 +288,7 @@ export const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Accessibility Toggle Button */}
       <button
         onClick={togglePanel}

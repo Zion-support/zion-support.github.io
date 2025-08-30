@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+  {/* Removed stray closing brace */}
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
+  {/* Removed stray closing brace */}
 
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
+  {/* Removed stray closing brace */}
 
 export interface AIService {
   id: number;
@@ -80,7 +80,7 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
+  {/* Removed stray closing brace */}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -541,7 +541,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$28 billion",
     growthRate: "27% annually"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Advanced IT Infrastructure Services 2025
@@ -671,7 +671,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$45 billion",
     compliance: ["SOX", "ISO 27001", "ITIL"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Revolutionary AI Services 2025
@@ -822,7 +822,7 @@ export const revolutionaryAIServices2025: AIService[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$20 billion",
     ethicalAI: ["AI safety", "Ethical guidelines", "Transparency", "Human oversight"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Export all services

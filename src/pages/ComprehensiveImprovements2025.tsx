@@ -475,4 +475,4 @@ export default function ComprehensiveImprovements2025() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

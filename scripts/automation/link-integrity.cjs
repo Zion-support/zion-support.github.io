@@ -103,7 +103,7 @@ async function runLinkIntegrity() {
     console.error('❌ Continuous link integrity check failed:', error.message);
     // Don't exit, just log the error and continue
   }
-}
+  {/* Removed stray closing brace */}
 
 function findInternalLinks(distPath) {
   const internalLinks = [];
@@ -140,7 +140,7 @@ function findInternalLinks(distPath) {
   
   scanDirectory(distPath);
   return [...new Set(internalLinks)]; // Remove duplicates
-}
+  {/* Removed stray closing brace */}
 
 function findOrphanedFiles(distPath) {
   const referencedFiles = new Set();
@@ -191,7 +191,7 @@ function findOrphanedFiles(distPath) {
            !file.endsWith('.css') && 
            !file.endsWith('.js');
   });
-}
+  {/* Removed stray closing brace */}
 
 function findMissingAssets(distPath) {
   const referencedAssets = new Set();
@@ -238,7 +238,7 @@ function findMissingAssets(distPath) {
   });
   
   return missingAssets;
-}
+  {/* Removed stray closing brace */}
 
 function analyzeLinkReport(linkReport) {
   if (linkReport.results) {
@@ -253,7 +253,7 @@ function analyzeLinkReport(linkReport) {
       console.log('✅ All external links are working');
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -268,7 +268,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

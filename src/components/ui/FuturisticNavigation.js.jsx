@@ -32,7 +32,7 @@ const navigationItems = [
         href: '/contact',
         icon: <Phone className="w-5 h-5"/>,
         description: 'Get in touch with us'
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function FuturisticNavigation() {
     const [isOpen, setIsOpen] = useState(false);

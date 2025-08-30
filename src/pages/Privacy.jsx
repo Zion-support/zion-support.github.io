@@ -5,7 +5,7 @@ import { GradientHeading } from "@/components/ui/GradientHeading";
 
 export default function Privacy() {
     return (
-      <>
+  {/* Empty JSX fragment */}
         <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
         <Header />
         <main className="min-h-screen bg-zion-blue pt-24 pb-20">

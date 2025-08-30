@@ -121,7 +121,7 @@ const cloudDevOpsSolutions = [
     timeline: "12-20 weeks",
     category: "Security",
     platforms["IAM", "VPC", "Security Groups", "WAF"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const cloudPlatforms = [
@@ -148,7 +148,7 @@ const cloudPlatforms = [
     description: "Open-source container orchestration platform",
     icon: GitBranch,
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -178,7 +178,7 @@ const successStories = [
     solution: "Built secure cloud platform with automated compliance",
     results: "Full compliance, enhanced security, 40% faster time-to-market",
     logo: "FS"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -209,7 +209,7 @@ const processSteps = [
     description: "Monitor, optimize, and continuously improve the system",
     icon: Zap,
     duration: "Ongoing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function CloudDevOps() {

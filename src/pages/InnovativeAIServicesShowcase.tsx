@@ -288,4 +288,4 @@ export default function InnovativeAIServicesShowcase() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -22,7 +22,7 @@ const testimonials = [
         text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
         rating: 4,
         avatar: "/placeholder.svg"
-    }
+  {/* Removed stray closing brace */}
 ];
 export const AppTestimonials = () => {
     return (<section className="py-16 bg-zion-blue">

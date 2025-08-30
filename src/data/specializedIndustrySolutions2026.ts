@@ -31,7 +31,7 @@ export interface SpecializedIndustrySolution2026 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution2026[] = [
   // Healthcare AI Platform
@@ -617,5 +617,5 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     },
     competitors: ["Relativity", "LexisNexis", "Westlaw", "Clio", "MyCase"],
     marketSize: "$18.9 billion by 2026"
-  }
+  {/* Removed stray closing brace */}
 ];

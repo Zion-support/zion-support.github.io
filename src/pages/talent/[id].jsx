@@ -63,4 +63,4 @@ export default function TalentProfilePage() {
         </div>
       </main>
     </>);
-}
+  {/* Removed stray closing brace */}

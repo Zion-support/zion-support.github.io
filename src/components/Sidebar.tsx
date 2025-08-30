@@ -265,7 +265,7 @@ export function Sidebar(...args[]):  {
   };
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}

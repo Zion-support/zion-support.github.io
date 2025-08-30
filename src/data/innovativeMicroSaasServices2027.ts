@@ -502,5 +502,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
     integrations["Weather APIs", "Satellite Systems", "IoT Platforms", "Analytics Tools"],
     compliance["Environmental Standards", "Climate Protocols", "Data Accuracy", "Scientific Validation"],
     support["24/7 Support", "Scientific Consultation", "Implementation", "Training"]
-  }
+  {/* Removed stray closing brace */}
 ];

@@ -52,7 +52,7 @@ export default function Solutions(...args[]):  {
       href: '/services#performance',
       color: 'from-yellow-500 to-orange-600'
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -146,5 +146,5 @@ export default function Solutions(...args[]):  {
         </div>
       </section>
     </div>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

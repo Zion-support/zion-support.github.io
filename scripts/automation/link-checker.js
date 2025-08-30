@@ -98,7 +98,7 @@ async function checkLinks() {
     console.error('❌ Link check failed:', error.message);
     // Don't exit, just log the error and continue
   }
-}
+  {/* Removed stray closing brace */}
 
 function findHtmlFiles(dir) {
   const files = [];
@@ -116,7 +116,7 @@ function findHtmlFiles(dir) {
   }
   
   return files;
-}
+  {/* Removed stray closing brace */}
 
 function findReferences(content) {
   const references = [];
@@ -144,7 +144,7 @@ function findReferences(content) {
   }
   
   return references;
-}
+  {/* Removed stray closing brace */}
 
 function isValidReference(ref, distPath) {
   if (ref.startsWith('/')) {
@@ -153,7 +153,7 @@ function isValidReference(ref, distPath) {
   
   const fullPath = path.join(distPath, ref);
   return fs.existsSync(fullPath);
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -168,7 +168,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

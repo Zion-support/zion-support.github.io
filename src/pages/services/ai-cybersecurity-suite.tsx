@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function AICybersecuritySuite(...args: []):  {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
         <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
@@ -311,4 +311,4 @@ export default function AICybersecuritySuite(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

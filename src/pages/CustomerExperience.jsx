@@ -168,7 +168,7 @@ const customerExperienceSolutions = [
     timeline: "8-16 weeks",
     category: "Analytics",
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const customerExperienceTechnologies = [
@@ -199,7 +199,7 @@ const customerExperienceTechnologies = [
     icon: Brain,
     useCase: "Custom Experiences",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -229,7 +229,7 @@ const successStories = [
     solution: "Redesigned patient portal with intuitive UX and streamlined appointment scheduling",
     results: "50% increase in portal usage, 45% reduction in appointment booking time, improved patient satisfaction",
     logo: "HP"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -260,7 +260,7 @@ const processSteps = [
     description: "Test experiences and continuously optimize based on feedback",
     icon: Gauge,
     duration: "Ongoing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const customerExperienceBenefits = [
@@ -287,7 +287,7 @@ const customerExperienceBenefits = [
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
     examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function CustomerExperience() {

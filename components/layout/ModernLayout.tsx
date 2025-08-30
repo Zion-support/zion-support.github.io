@@ -19,7 +19,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   canonical = 'https: any//ziontechgroup.com'
 })  => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -83,7 +83,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
-              ]
+  {/* Removed stray closing bracket */}
             })
           }}
         />

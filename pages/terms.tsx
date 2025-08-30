@@ -5,7 +5,7 @@ import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from
 
 export default function Terms(...args[]):  {
 	return (
-		<>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -266,5 +266,5 @@ export default function Terms(...args[]):  {
 				</div>
 			</section>
 		</>
-	)
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

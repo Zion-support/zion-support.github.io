@@ -23,12 +23,12 @@ interface NavigationItem {
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
-}
+  {/* Removed stray closing brace */}
 
 interface EnhancedNavigationProps {
   className?: string;
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
-}
+  {/* Removed stray closing brace */}
 
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },

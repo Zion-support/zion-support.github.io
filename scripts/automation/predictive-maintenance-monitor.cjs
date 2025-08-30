@@ -562,7 +562,7 @@ class PredictiveMaintenanceMonitor {
       diskUsage: 0 // Would need additional libraries to get disk usage
     };
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -579,7 +579,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

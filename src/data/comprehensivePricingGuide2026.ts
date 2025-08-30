@@ -329,5 +329,5 @@ export const marketSummary2026 = {
     "Advanced edge computing capabilities",
     "Ethical AI framework integration",
     "Comprehensive compliance automation"
-  ]
+  {/* Removed stray closing bracket */}
 };

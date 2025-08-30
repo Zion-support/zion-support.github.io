@@ -46,7 +46,7 @@ function processFile(filePath) {
     return false} catch (error) {
     console.log(`❌ Error processing ${filePath}:`, error.message);
     return false}
-}
+  {/* Removed stray closing brace */}
 
 // Function to walk directory recursively
 function walkDir(dir, extensions = ['.jsx', '.js', '.tsx', '.ts']) {
@@ -91,7 +91,7 @@ function main() {
     console.log('3. Update  remaining Next.js specific patterns');
     console.log('4. Run the enhanced testing automation to verify fixes')} else {
     console.log('\n✅ No Next.js imports found to fix')}
-}
+  {/* Removed stray closing brace */}
 
 // Start the migration
 main().catch(console.error);

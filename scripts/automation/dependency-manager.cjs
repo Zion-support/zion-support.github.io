@@ -446,7 +446,7 @@ class DependencyManager {
       this.log(`Failed to commit dependency changes: ${error.message}`, 'WARN');
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -467,10 +467,10 @@ async function main() {
     manager.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   }
-}
+  {/* Removed stray closing brace */}
 
 if (require.main === module) {
   main();
-}
+  {/* Removed stray closing brace */}
 
 module.exports = DependencyManager;

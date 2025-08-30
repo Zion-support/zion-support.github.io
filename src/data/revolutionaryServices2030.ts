@@ -543,7 +543,7 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
     integrations["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Service Categories for Revolutionary Services
@@ -604,5 +604,5 @@ export const QUICK_SETUP_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.fi
   const setupTime = service.setupTime;
   if (typeof setupTime === 'string') {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-    return weeks < 8}
+    return weeks < 8} />
   return false});

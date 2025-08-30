@@ -108,12 +108,12 @@ export function generateRandomListing(): MarketplaceItem {
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
   };
-}
+  {/* Removed stray closing brace */}
 
 export function generateRandomListings(count: number): MarketplaceItem[] {
   const listings: MarketplaceItem[] = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i++) { />
     listings.push(generateRandomListing());
   }
   return listings;
-}
+  {/* Removed stray closing brace */}

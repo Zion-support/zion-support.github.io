@@ -18,4 +18,4 @@ export default function TalentRoutes() {
       <Route path="my-profile" element={<ProfilePage />} />
     </Routes>
   );
-}
+  {/* Removed stray closing brace */}

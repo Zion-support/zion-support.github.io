@@ -537,4 +537,4 @@ export default function QuantumComputingSolutions() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

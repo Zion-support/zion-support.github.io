@@ -447,4 +447,4 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

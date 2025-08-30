@@ -171,4 +171,4 @@ export default function AIHealthcare() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

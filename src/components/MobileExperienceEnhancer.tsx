@@ -470,7 +470,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   if (!enabled) return null;
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Mobile Experience Controls Button */}
       {showControls && isMobile && (
         <button

@@ -295,4 +295,4 @@ export default function AIEdgeComputingPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -26,7 +26,7 @@ function isLocalStorageAvailable() {
         localStorageAvailable = false;
         return false;
     }
-}
+  {/* Removed stray closing brace */}
 
 function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
@@ -39,7 +39,7 @@ function safeConsoleError(message, error) {
     catch {
         // Silent fail if // // // // console.error causes recursion
     }
-}
+  {/* Removed stray closing brace */}
 export const safeStorage = {
   getItem: (key) => {
     try {

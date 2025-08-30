@@ -142,7 +142,7 @@ const Leadership = () => {
             "Democratize quantum computing access",
             "Create sustainable technology solutions",
             "Build the most trusted technology partner network"
-        ]
+  {/* Removed stray closing bracket */}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}

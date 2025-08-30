@@ -113,7 +113,7 @@ export default function PricingPage(...args[]):  {
     }
   ];
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />

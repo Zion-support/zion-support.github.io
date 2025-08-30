@@ -525,7 +525,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     rating: 4.9,
     reviews: 178,
     customers: 289
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default ADVANCED_IT_SERVICES_2025;

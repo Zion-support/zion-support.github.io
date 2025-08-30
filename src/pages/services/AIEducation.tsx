@@ -171,4 +171,4 @@ export default function AIEducation() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

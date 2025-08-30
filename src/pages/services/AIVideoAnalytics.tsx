@@ -171,4 +171,4 @@ export default function AIVideoAnalytics() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

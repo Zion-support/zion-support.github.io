@@ -4,12 +4,12 @@ interface Stat {
   label: string;
   value: string;
   description: string;
-}
+  {/* Removed stray closing brace */}
 
 interface InteractiveStatsProps {
   stats: Stat[];
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
   return (

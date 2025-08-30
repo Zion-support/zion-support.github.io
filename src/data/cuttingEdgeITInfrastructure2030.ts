@@ -226,5 +226,5 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     roi: "600% within 10 months",
     setupTime: "4-6 weeks",
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];

@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function AIBusinessIntelligence(...args: []):  {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
@@ -261,4 +261,4 @@ export default function AIBusinessIntelligence(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

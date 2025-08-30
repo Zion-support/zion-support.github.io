@@ -121,7 +121,7 @@ const governmentSolutions = [
     timeline: "12-20 weeks",
     category: "Compliance",
     compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const complianceStandards = [
@@ -148,7 +148,7 @@ const complianceStandards = [
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
     requirements["Identify", "Protect", "Detect", "Respond", "Recover"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -178,7 +178,7 @@ const successStories = [
     solution: "Modernized permit system with cloud integration and APIs",
     results: "40% faster processing, 70% cost reduction, improved user experience",
     logo: "CMS"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -209,7 +209,7 @@ const processSteps = [
     description: "Validate compliance and obtain necessary certifications",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function GovernmentSolutions() {

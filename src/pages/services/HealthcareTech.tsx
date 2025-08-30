@@ -294,4 +294,4 @@ export default function HealthcareTech(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

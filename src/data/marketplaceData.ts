@@ -159,7 +159,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     availability: 'available',
     deliveryTime: 'Immediate',
     warranty: 'N/A'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const marketplaceCategories = [
@@ -186,7 +186,7 @@ export const marketplaceCategories = [
     name: 'Services',
     description: 'Professional services and consulting',
     count: marketplaceItems.filter(item  => item.category === 'services').length
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const marketplaceFilters = [
@@ -230,5 +230,5 @@ export const marketplaceFilters = [
       { value: 'limited', label: 'Limited' },
       { value: 'out-of-stock', label: 'Out of Stock' }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];

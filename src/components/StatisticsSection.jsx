@@ -24,7 +24,7 @@ const stats = [
         value: "24/7",
         label: "Support",
         description: "Always here when you need us"
-    }
+  {/* Removed stray closing brace */}
 ];
 export function StatisticsSection() {
     return (<section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">

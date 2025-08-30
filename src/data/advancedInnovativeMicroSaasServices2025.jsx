@@ -547,5 +547,5 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         integrationCapabilities["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],
         complianceStandards["GDPR", "CCPA", "Data Privacy", "Accessibility", "Security Standards"],
         scalabilityFeatures["Cloud-native", "Auto-scaling", "Multi-tenant", "Global distribution"]
-    }
+  {/* Removed stray closing brace */}
 ];

@@ -678,7 +678,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     trialPeriod: '60 days',
     compliance['GDPR', 'HIPAA', 'SOC2', 'Data privacy regulations'],
     useCases['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const enhancedInnovativeServices2027Categories = [

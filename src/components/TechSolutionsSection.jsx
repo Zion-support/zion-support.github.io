@@ -145,7 +145,7 @@ const solutions = [
         rating: 4.8,
         projects: 250,
         category: 'Mobile'
-    }
+  {/* Removed stray closing brace */}
 ];
 const industries = [
     { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },

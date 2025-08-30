@@ -24,7 +24,7 @@ const PrivacyPolicy: React.FC = (): JSX.Element => {
   const address = '123 Technology Drive, Innovation City, IC 12345, United States';
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
         <meta name="description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />

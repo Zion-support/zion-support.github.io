@@ -121,7 +121,7 @@ const iotEdgeSolutions = [
     timeline: "16-24 weeks",
     category: "Security",
     technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const iotTechnologies = [
@@ -152,7 +152,7 @@ const iotTechnologies = [
     icon: Wifi,
     useCase: "Wide-area IoT",
     reliability: "Medium"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -182,7 +182,7 @@ const successStories = [
     solution: "Built IoT fleet management system with edge computing",
     results: "50% improvement in delivery times, 35% reduction in fuel costs",
     logo: "LN"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -213,7 +213,7 @@ const processSteps = [
     description: "Integrate systems and conduct comprehensive testing",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function IoTEdge() {

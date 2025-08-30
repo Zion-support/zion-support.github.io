@@ -119,7 +119,7 @@ export default function AICustomerSupport() {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="AI Customer Support - 24/7 Intelligent Support Solution"
         description="Transform your customer support with AI-powered chatbots, smart ticket routing, and multi-channel support. Reduce response time by 80% and boost satisfaction scores."
@@ -329,4 +329,4 @@ export default function AICustomerSupport() {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

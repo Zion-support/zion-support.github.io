@@ -61,7 +61,7 @@ const routes = [
     priority: '0.7',
     changefreq: 'weekly',
     lastmod: new Date().toISOString().split('T')[0]
-  }
+  {/* Removed stray closing brace */}
 ];
 // Generate the sitemap XML content
 function generateSitemapXML() {
@@ -145,6 +145,6 @@ function generateSitemap() {
     console.log(`🌐 Base URL: ${BASE_URL}`)} catch (error) {
     console.error('❌ Error generating sitemap:', error.message);
     process.exit(1)}
-}
+  {/* Removed stray closing brace */}
 // Run the sitemap generation
 generateSitemap();

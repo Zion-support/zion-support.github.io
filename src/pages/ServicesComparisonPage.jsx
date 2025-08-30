@@ -75,7 +75,7 @@ const SERVICE_COMPARISONS = [
                 enterprise: { price: "$5,999+", features["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
             }
         ]
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function ServicesComparisonPage() {
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");

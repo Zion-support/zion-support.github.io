@@ -270,7 +270,7 @@ const aiServices = [
     rating: 4.7,
     reviews: 89,
     customers: 156
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const AIServices = [
@@ -384,12 +384,12 @@ const AIServices = [
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
-    }
+  {/* Removed stray closing brace */}
 ];
 
 const AIServicesPage: React.FC = () => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="AI Services - Zion Tech Group"
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."

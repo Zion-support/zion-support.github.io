@@ -25,7 +25,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
 export function FilterSidebar(...args[]):  {
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Mobile overlay */}
       {isOpen && (
         <div 

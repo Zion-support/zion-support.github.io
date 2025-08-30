@@ -88,7 +88,7 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getBlogPostBySlug = (slug) => {

@@ -4,7 +4,7 @@ import { motion  } from 'framer-motion.ts';
 
 const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO
         title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
         description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."

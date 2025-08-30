@@ -237,7 +237,7 @@ export function EnhancedHeader() {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Matrix Rain Background */}
       <div className="matrix-rain"></div>
       
@@ -536,6 +536,6 @@ export function EnhancedHeader() {
       </motion.header>
     </>
   );
-}
+  {/* Removed stray closing brace */}
 
 export default EnhancedHeader;

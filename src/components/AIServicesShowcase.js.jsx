@@ -93,7 +93,7 @@ const aiServices = [
         icon: Scan,
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase() {

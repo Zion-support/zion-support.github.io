@@ -122,7 +122,7 @@ const mockSearchResults: SearchResult[] = [
     location: 'Austin, TX',
     tags['DevOps', 'AWS', 'Docker', 'Kubernetes', 'CI/CD'],
     path: '/talent/devops-specialist'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const categories = [

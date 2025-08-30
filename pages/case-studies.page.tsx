@@ -161,7 +161,7 @@ const caseStudies = [
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];

@@ -171,4 +171,4 @@ export default function AIInternetOfThings() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

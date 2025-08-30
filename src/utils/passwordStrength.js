@@ -440,7 +440,7 @@ export function calculatePasswordStrength(password) {
     bgColor,
     maxScore: 10
   };
-}
+  {/* Removed stray closing brace */}
 
 /**
  * Get password strength indicator component
@@ -456,7 +456,7 @@ export function getPasswordStrengthIndicator(password) {
     percentage,
     width: `${percentage}%`
   };
-}
+  {/* Removed stray closing brace */}
 
 /**
  * Validate password against requirements
@@ -504,4 +504,4 @@ export function validatePassword(password, requirements = {}) {
     isValid: errors.length === 0,
     errors
   };
-}
+  {/* Removed stray closing brace */}

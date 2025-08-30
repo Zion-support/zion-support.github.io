@@ -60,7 +60,7 @@ const mockNotifications = [
             { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
         ]
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedNotificationSystem() {
     const [notifications, setNotifications] = useState(mockNotifications);

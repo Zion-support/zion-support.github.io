@@ -91,7 +91,7 @@ const globalOffices = [
         rating: 4.8,
         timezone: "AEST (UTC+10)",
         address: "987 Innovation Bay, Sydney, NSW 2000"
-    }
+  {/* Removed stray closing brace */}
 ];
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
@@ -155,7 +155,7 @@ const partnerships = [
         established: "2022",
         projects: 12,
         status: "Active"
-    }
+  {/* Removed stray closing brace */}
 ];
 const industries = [
     { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },

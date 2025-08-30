@@ -508,4 +508,4 @@ export default function DevOpsCloudServices() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

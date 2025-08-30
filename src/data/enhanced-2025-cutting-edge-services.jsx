@@ -510,6 +510,6 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         industryTrends["Web3 adoption", "AI decentralization", "DeFi growth"],
         marketSize: "$19.8 billion by 2027",
         growthPotential: "Very High - 55% CAGR expected"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default CUTTING_EDGE_SERVICES_2025;

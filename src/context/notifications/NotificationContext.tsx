@@ -5,14 +5,14 @@ interface Notification {
   message: string;
   type: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
-}
+  {/* Removed stray closing brace */}
 
 interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
   clearNotifications: () => void;
-}
+  {/* Removed stray closing brace */}
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
@@ -26,7 +26,7 @@ export const useNotifications = () => {
 
 interface NotificationProviderProps {
   children: ReactNode;
-}
+  {/* Removed stray closing brace */}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);

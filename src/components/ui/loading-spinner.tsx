@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
   text?: string;
   showText?: boolean;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 const sizeClasses = {
   sm: 'w-8 h-8',

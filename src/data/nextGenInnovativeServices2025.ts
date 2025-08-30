@@ -635,7 +635,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketSize: "$19.9 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/retail-ai",
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default NEXT_GEN_INNOVATIVE_SERVICES_2025;

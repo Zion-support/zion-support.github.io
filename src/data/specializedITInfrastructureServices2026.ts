@@ -31,7 +31,7 @@ export interface SpecializedITInfrastructureService2026 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
   // 5G Enterprise Network Solutions
@@ -58,7 +58,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     ],
     benefits: [
       "10x faster data transfer",
-      "Ultra-low latency (<1ms)",
+      "Ultra-low latency (<1ms)", />
       "Massive IoT device support",
       "Enhanced security features",
       "Future-proof infrastructure"
@@ -617,5 +617,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
     marketSize: "$12.8 billion by 2026"
-  }
+  {/* Removed stray closing brace */}
 ];

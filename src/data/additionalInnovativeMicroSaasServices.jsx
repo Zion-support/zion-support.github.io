@@ -568,5 +568,5 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         roi: "300% within 6 months",
         competitors["SAP", "Oracle", "JDA Software", "Manhattan Associates"],
         website: "https://ziontechgroup.com/ai-inventory-forecasting"
-    }
+  {/* Removed stray closing brace */}
 ];

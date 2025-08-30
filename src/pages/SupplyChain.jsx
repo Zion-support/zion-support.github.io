@@ -163,7 +163,7 @@ const supplyChainSolutions = [
     timeline: "12-20 weeks",
     category: "Analytics",
     technologies["Business Intelligence", "Data Analytics", "Machine Learning", "Reporting Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const supplyChainTechnologies = [
@@ -194,7 +194,7 @@ const supplyChainTechnologies = [
     icon: Cloud,
     useCase: "Infrastructure",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -224,7 +224,7 @@ const successStories = [
     solution: "Implemented AI-driven route optimization with real-time traffic integration",
     results: "35% reduction in delivery costs, 45% improvement in delivery efficiency, enhanced customer experience",
     logo: "RC"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -255,7 +255,7 @@ const processSteps = [
     description: "Monitor performance and continuously optimize operations",
     icon: Gauge,
     duration: "Ongoing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const supplyChainBenefits = [
@@ -282,7 +282,7 @@ const supplyChainBenefits = [
     description: "Better risk management and contingency planning",
     icon: Shield,
     examples["Supply chain resilience", "Risk assessment", "Contingency planning", "Compliance monitoring"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function SupplyChain() {

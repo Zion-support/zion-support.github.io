@@ -59,7 +59,7 @@ const benefits = [
         icon: <CheckCircle className="h-6 w-6"/>,
         title: "Quality Guaranteed",
         description: "30-day money-back guarantee with free migration support"
-    }
+  {/* Removed stray closing brace */}
 ];
 export function ServicesShowcase() {
     const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6);

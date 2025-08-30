@@ -171,4 +171,4 @@ export default function AIQuantumComputing() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

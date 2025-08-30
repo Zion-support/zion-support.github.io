@@ -175,7 +175,7 @@ const successStories = [
         role: "Chief Technology Officer",
         rating: 5,
         featured: false
-    }
+  {/* Removed stray closing brace */}
 ];
 const industryStats = [
     { industry: "FinTech", projects: 45, successRate: "98%", avgROI: "340%" },

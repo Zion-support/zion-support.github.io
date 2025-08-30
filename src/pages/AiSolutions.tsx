@@ -17,5 +17,5 @@ export default function AiSolutions() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 

@@ -110,7 +110,7 @@ const navigationItems: NavigationItem[] = [
     path: '/contact',
     icon: Phone,
     description: 'Get in touch with us'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const quickActions = [
@@ -131,7 +131,7 @@ const quickActions = [
     path: '/docs',
     icon: FileText,
     color: 'bg-zion-blue'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
@@ -255,7 +255,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
     )};
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(true)}

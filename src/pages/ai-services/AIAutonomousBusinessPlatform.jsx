@@ -27,7 +27,7 @@ const features = [
         description: "Bank-level security with encryption, compliance, and advanced threat protection.",
         icon: Shield,
         color: "from-orange-500 to-red-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Scale from startup to enterprise seamlessly",
@@ -57,7 +57,7 @@ const useCases = [
         title: "Process Automation",
         description: "Automate complex business processes with intelligent workflow management.",
         icon: Cpu
-    }
+  {/* Removed stray closing brace */}
 ];
 const testimonials = [
     {
@@ -71,7 +71,7 @@ const testimonials = [
         name: "David Kim",
         role: "VP Engineering, ScaleUp Inc",
         rating: 5
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">

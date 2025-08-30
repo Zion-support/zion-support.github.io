@@ -26,14 +26,14 @@ export default function Index(...args[]):  {
 			href: '/services#cybersecurity',
 			color: 'from-green-500 to-emerald-500'
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	const stats = [
 		{ number: '500+', label: 'Projects Delivered', icon: CheckCircle },
 		{ number: '50+', label: 'Enterprise Clients', icon: Users },
 		{ number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
 		{ number: '24/7', label: 'Support Available', icon: Clock }
-	]
+  {/* Removed stray closing bracket */}
 
 	const testimonials = [
 		{
@@ -48,10 +48,10 @@ export default function Index(...args[]):  {
 			position: "VP Engineering, InnovateTech",
 			rating: 5
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	return (
-		<>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 sm:py-32 overflow-hidden">
 				{/* Animated Background Elements */}
@@ -167,5 +167,5 @@ export default function Index(...args[]):  {
 				</div>
 			</section>
 		</>
-	)
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

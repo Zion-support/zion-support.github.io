@@ -263,7 +263,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Shopify/BigCommerce/WooCommerce apps",
       "Headless SDK",
       "Attribution dashboards",
-      "Latency <100ms",
+      "Latency <100ms", />
       "Multi‑region edge"
     ],
     benefits[
@@ -369,7 +369,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       uptime: "99.9%",
       security["SSO", "Row‑level security"]
     }
-  }
+  {/* Removed stray closing brace */}
 
   // Blockchain-Based Supply Chain Transparency
   {
@@ -873,8 +873,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-  }
-  ,
+  {/* Removed stray closing brace */}
+  {/* Removed stray comma */}
   // Cloud Cost Optimization AI
   {
     id: "cloud-cost-optimizer-ai",
@@ -1163,7 +1163,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       uptime: "99.95%",
       security["SOC 2", "RBAC", "IAM"]
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default EXPANDED_INNOVATIVE_SERVICES_2025;

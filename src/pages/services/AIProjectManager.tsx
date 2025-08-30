@@ -46,7 +46,7 @@ export default function AIProjectManager() {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="AI Project Manager - Intelligent Project Management Solution"
         description="Transform your project management with AI-powered task prioritization, smart team allocation, and predictive analytics. Boost productivity by 35%."
@@ -248,4 +248,4 @@ export default function AIProjectManager() {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

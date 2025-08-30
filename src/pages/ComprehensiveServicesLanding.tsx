@@ -123,7 +123,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO
         title="Comprehensive Services | Zion Tech Group"
         description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group."

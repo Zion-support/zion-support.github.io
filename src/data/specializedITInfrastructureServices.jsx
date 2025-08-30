@@ -298,5 +298,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         competitors["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
         marketTrend: "Growing market with 250% annual growth",
         innovationLevel: "Advanced container orchestration with AI-powered optimization"
-    }
+  {/* Removed stray closing brace */}
 ];

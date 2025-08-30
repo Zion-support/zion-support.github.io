@@ -75,7 +75,7 @@ const stats: Stat[] = [
     description: 'Rapidly expanding global presence',
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function EnhancedStatsSection(...args[]):  {

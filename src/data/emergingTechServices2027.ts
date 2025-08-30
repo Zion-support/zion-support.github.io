@@ -404,5 +404,5 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     integrations["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],
     compliance["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
     support["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
-  }
+  {/* Removed stray closing brace */}
 ];

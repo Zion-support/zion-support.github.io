@@ -256,4 +256,4 @@ export default function AIContentCreationSuite() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

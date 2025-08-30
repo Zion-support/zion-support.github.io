@@ -164,7 +164,7 @@ export const equipmentDetails = [
     delivery: "1-2 business days",
     rating: 4.5,
     reviews: 78
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getEquipmentById = (id) => {

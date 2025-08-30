@@ -168,7 +168,7 @@ export default function Accessibility() {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Accessibility - Zion Tech Group"
         description="Zion Tech Group is committed to digital accessibility. Learn about our accessibility features, compliance standards, and commitment to inclusive design."

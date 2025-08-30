@@ -60,7 +60,7 @@ function renderApp() {
         hydrateRoot(rootElement, app)}
     else if (rootElement) {
         createRoot(rootElement).render(app)}
-}
+  {/* Removed stray closing brace */}
 
 function displayFatalError(message) {
     if (rootElement) {
@@ -69,7 +69,7 @@ function displayFatalError(message) {
         <h1>Application Error</h1>
         <p>${message}</p>
       </div>`}
-}
+  {/* Removed stray closing brace */}
 try {
     renderApp()}
 catch (error) {

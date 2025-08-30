@@ -145,7 +145,7 @@ export default function UptimeSLAMonitor(...args: []):  {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Uptime SLA Monitor - Zion Tech Group"
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
@@ -390,5 +390,5 @@ export default function UptimeSLAMonitor(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}
 

@@ -7,7 +7,7 @@ const meta = {
         (Story) => (<MemoryRouter>
         <Story />
       </MemoryRouter>)
-    ]
+  {/* Removed stray closing bracket */}
 };
 export default meta;
 export const Grid = {

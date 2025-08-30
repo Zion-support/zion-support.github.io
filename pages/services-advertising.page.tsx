@@ -138,7 +138,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     seo[
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
-    ]
+  {/* Removed stray closing bracket */}
   } as const;
   function ext(...args[]):  {
     return (

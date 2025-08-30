@@ -77,7 +77,7 @@ const steps = [
     ],
     duration: "Ongoing",
     success: "100% client retention"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const stats = [

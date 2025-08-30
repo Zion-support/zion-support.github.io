@@ -71,7 +71,7 @@ const pricingTiers = [
         notIncluded[],
         color: "from-purple-500 to-indigo-600",
         popular: false
-    }
+  {/* Removed stray closing brace */}
 ];
 const serviceCategories = [
     {
@@ -113,7 +113,7 @@ const serviceCategories = [
             { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
         ]
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     {
@@ -145,7 +145,7 @@ const benefits = [
         icon: <BarChart3 className="w-8 h-8"/>,
         title: "Continuous Innovation",
         description: "Regular updates and new features to keep you ahead"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function ServicesPricing() {
     const [selectedTier, setSelectedTier] = useState('professional');

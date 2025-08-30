@@ -27,7 +27,7 @@ const features = [
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,
         color: "from-purple-500 to-indigo-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -57,7 +57,7 @@ const useCases = [
         title: "CI/CD Pipelines",
         description: "Integrate automated code review into your continuous integration workflows.",
         icon: Cpu
-    }
+  {/* Removed stray closing brace */}
 ];
 const testimonials = [
     {
@@ -71,7 +71,7 @@ const testimonials = [
         name: "Maria Santos",
         role: "Security Engineer, SecureTech",
         rating: 5
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function AIAutonomousCodeReview() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">

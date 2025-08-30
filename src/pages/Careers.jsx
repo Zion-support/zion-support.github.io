@@ -76,7 +76,7 @@ export default function Careers() {
                 department: "Operations",
                 description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
             }
-        ]
+  {/* Removed stray closing bracket */}
     };
     // Benefits list
     const benefits = [

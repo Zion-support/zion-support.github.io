@@ -674,7 +674,7 @@ const soc2Solutions = [
     timeline: "20-32 weeks",
     category: "Reporting",
     technologies["AI Reporting", "Analytics", "Dashboards", "Automation"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const soc2Technologies = [
@@ -705,7 +705,7 @@ const soc2Technologies = [
     icon: Lock,
     useCase: "Security Controls",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -735,7 +735,7 @@ const successStories = [
     solution: "Built AI-powered SOC2 audit preparation and security automation system",
     results: "75% faster audit preparation, 90% automated security controls, better compliance, improved security",
     logo: "CSP"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -766,7 +766,7 @@ const processSteps = [
     description: "Test systems and validate compliance requirements",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const soc2Benefits = [
@@ -793,7 +793,7 @@ const soc2Benefits = [
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
     examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function SOC2ComplianceAutomation() {

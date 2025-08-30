@@ -61,5 +61,5 @@ export default function Profile() {
       </div>
       
     </>)}
-;
+  {/* Removed stray semicolon */}
 export default Profile;

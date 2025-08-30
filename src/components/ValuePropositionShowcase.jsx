@@ -45,7 +45,7 @@ const valueMetrics = [
     value: "99.9%",
     description: "Enterprise-grade security with zero compromise",
     color: "from-red-500 to-pink-600"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const competitiveAdvantages = [
@@ -72,7 +72,7 @@ const competitiveAdvantages = [
     description: "Round-the-clock technical support from certified professionals and AI assistants",
     icon: <Users className="w-6 h-6" />,
     color: "from-orange-500 to-red-600"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const marketComparison = [
@@ -99,7 +99,7 @@ const marketComparison = [
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -126,7 +126,7 @@ const successStories = [
     solution: "AI Financial Analyst Pro",
     results: "Automated 90% of reporting, improved accuracy by 99.5%",
     roi: "400% in 6 months"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export function ValuePropositionShowcase() {

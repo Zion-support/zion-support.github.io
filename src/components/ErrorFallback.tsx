@@ -3,7 +3,7 @@ import React from 'react';
 interface ErrorFallbackProps {
   error: Error;
   resetErrorBoundary: () => void;
-}
+  {/* Removed stray closing brace */}
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
   return (

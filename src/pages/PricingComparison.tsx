@@ -337,7 +337,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
     return { savings, savingsPercent }};
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO
         title="Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
         description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs."

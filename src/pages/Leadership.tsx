@@ -342,4 +342,4 @@ export default function Leadership() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

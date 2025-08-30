@@ -159,7 +159,7 @@ export default function Documentation() {
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
         ).map(article => ({ ...category, article }))
-      )
+  {/* Removed stray closing parenthesis */}
     : [];
 
   return (

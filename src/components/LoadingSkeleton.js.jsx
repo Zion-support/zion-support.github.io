@@ -101,5 +101,5 @@ export const shimmerAnimation = `
       transform: translateX(-100%)}
     100% {
       transform: translateX(100%)}
-  }
+  {/* Removed stray closing brace */}
 `;

@@ -491,7 +491,7 @@ ${brokenExternal.length > 0 ?
       throw error;
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -503,7 +503,7 @@ async function main() {
     console.error('❌ Link checker automation failed:', error);
     process.exit(1);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Start the link checker
 main().catch(console.error);

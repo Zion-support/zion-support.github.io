@@ -171,4 +171,4 @@ export default function AITerraform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

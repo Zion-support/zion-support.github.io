@@ -124,7 +124,7 @@ const onsiteServices = [
     timeline: "2-8 hours",
     category: "Emergency Support",
     coverage["Local", "Regional", "National"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const serviceAreas = [
@@ -148,7 +148,7 @@ const serviceAreas = [
     coverage: "Extended coverage",
     icon: Globe,
     color: "text-blue-400"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -178,7 +178,7 @@ const successStories = [
     solution: "Provided 24/7 emergency support and system recovery",
     results: "2-hour response time, minimal downtime, $500K saved",
     logo: "FS"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -209,7 +209,7 @@ const processSteps = [
     description: "Comprehensive testing and client training",
     icon: CheckCircle,
     duration: "1-2 days"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function ITOnsiteServices() {

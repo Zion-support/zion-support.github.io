@@ -94,7 +94,7 @@ async function runQualityChecks() {
     console.error('❌ Continuous quality checks failed:', error.message);
     // Don't exit, just log the error and continue
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -109,7 +109,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

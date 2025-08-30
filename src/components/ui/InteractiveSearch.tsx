@@ -4,7 +4,7 @@ interface InteractiveSearchProps {
   placeholder?: string;
   onSearch: (query: string) => void;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", 

@@ -25,7 +25,7 @@ const REWARD_OPTIONS = [
         description: 'Get $5 credit to use on  paid service',
         cost: 100,
         type: 'credit'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function RedeemTokensCard() {
     const { wallet, spendTokens } = useWallet();

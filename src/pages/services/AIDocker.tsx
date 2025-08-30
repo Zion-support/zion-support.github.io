@@ -171,4 +171,4 @@ export default function AIDocker() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -627,7 +627,7 @@ class IntelligentDependencyManager {
       setTimeout(() => this.run(), 1800000); // 30 minutes on error
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Start the Intelligent Dependency Manager
 const manager = new IntelligentDependencyManager();

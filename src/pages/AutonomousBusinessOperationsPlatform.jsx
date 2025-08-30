@@ -262,7 +262,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}/>
-                                                ,
+  {/* Removed stray comma */}
                                                     <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1037,7 +1037,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
         </section>
       </div>
     </>
-    <>
+  {/* Empty JSX fragment */}
       <SEOHead customData={{
                                                             title: "Autonomous Business Operations Platform - Zion Tech Group",
                                                             description: "Revolutionary AI-powered platform that automates and optimizes your entire business operations. Streamline processes, reduce costs, and boost efficiency with intelligent automation.",

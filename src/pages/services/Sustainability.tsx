@@ -249,4 +249,4 @@ export default function Sustainability(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

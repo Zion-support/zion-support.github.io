@@ -171,4 +171,4 @@ export default function AICloudNative() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

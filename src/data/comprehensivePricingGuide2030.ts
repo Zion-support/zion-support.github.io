@@ -326,7 +326,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],
     volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Pricing Analysis and Insights
@@ -369,7 +369,7 @@ export const PAYMENT_OPTIONS_2030 = {
     "On-premise deployment",
     "Custom integrations",
     "SLA guarantees"
-  ]
+  {/* Removed stray closing bracket */}
 };
 
 // Contact Information for Pricing Inquiries

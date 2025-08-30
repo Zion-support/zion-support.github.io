@@ -143,7 +143,7 @@ export default function DigitalTwin(...args: []):  {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Digital Twin Solutions | Zion Tech Group"
         description="Transform your physical assets into intelligent digital twins with real-time monitoring, predictive analytics, and automated optimization."

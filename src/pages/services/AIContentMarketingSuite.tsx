@@ -607,4 +607,4 @@ export default function AIContentMarketingSuite() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -766,6 +766,6 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         industryFocus["Manufacturing", "Automotive", "Aerospace", "Electronics", "Food & Beverage"],
         scalability: "Enterprise manufacturing platform with multi-facility support",
         customizationLevel: "Industry-specific manufacturing workflows and IoT integration"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default COMPREHENSIVE_MICRO_SAAS_SERVICES_2025;

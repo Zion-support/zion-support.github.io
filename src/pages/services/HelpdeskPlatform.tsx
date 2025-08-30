@@ -459,4 +459,4 @@ export default function HelpdeskPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

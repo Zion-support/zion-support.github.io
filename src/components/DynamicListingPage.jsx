@@ -278,4 +278,4 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         </div>
       </div>
     </div>);
-}
+  {/* Removed stray closing brace */}

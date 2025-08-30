@@ -418,4 +418,4 @@ export default function AIProjectManagementPlatform(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

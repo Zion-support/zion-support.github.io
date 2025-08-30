@@ -97,7 +97,7 @@ const teamMembers = [
         location: "Denver, CO",
         linkedin: "https://linkedin.com/in/alex-johnson",
         github: "https://github.com/alexjohnson-devops"
-    }
+  {/* Removed stray closing brace */}
 ];
 const expertiseAreas = [
     {
@@ -153,7 +153,7 @@ const expertiseAreas = [
         experts: 10,
         projects: 80,
         success: "99%"
-    }
+  {/* Removed stray closing brace */}
 ];
 const stats = [
     { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },

@@ -352,12 +352,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
                     >
                       {expandedService === service.id ? (
-                        <>
+  {/* Empty JSX fragment */}
                           <EyeOff className="w-4 h-4" />
                           Show Less
                         </>
                       ) : (
-                        <>
+  {/* Empty JSX fragment */}
                           <Eye className="w-4 h-4" />
                           Learn More
                         </>

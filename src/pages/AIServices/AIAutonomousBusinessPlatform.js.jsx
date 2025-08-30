@@ -27,7 +27,7 @@ const features = [
         description: "Built to grow with your business, from startup to enterprise, with flexible deployment options.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Centralize all business operations in one platform",
@@ -57,7 +57,7 @@ const modules = [
         title: "Project Management",
         description: "AI-driven project planning and resource allocation.",
         icon: TrendingUp
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">

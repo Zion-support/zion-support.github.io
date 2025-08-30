@@ -18,7 +18,7 @@ export default function HelpCenter() {
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
-            ]
+  {/* Removed stray closing bracket */}
         },
         'marketplace': {
             title: 'Marketplace',
@@ -28,7 +28,7 @@ export default function HelpCenter() {
                 { title: 'Managing your listings', href: '/help/manage-listings' },
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
                 { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
-            ]
+  {/* Removed stray closing bracket */}
         },
         'talent': {
             title: 'Talent & Hiring',
@@ -38,7 +38,7 @@ export default function HelpCenter() {
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },
                 { title: 'Payment and escrow system', href: '/help/payment-system' }
-            ]
+  {/* Removed stray closing bracket */}
         },
         'technical': {
             title: 'Technical Support',
@@ -48,7 +48,7 @@ export default function HelpCenter() {
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
                 { title: 'API and integration support', href: '/help/api-support' }
-            ]
+  {/* Removed stray closing bracket */}
         },
         'billing': {
             title: 'Billing & Payments',
@@ -58,7 +58,7 @@ export default function HelpCenter() {
                 { title: 'Payment methods and security', href: '/help/payment-methods' },
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
                 { title: 'Tax information and reporting', href: '/help/tax-information' }
-            ]
+  {/* Removed stray closing bracket */}
         },
         'account': {
             title: 'Account & Security',
@@ -68,7 +68,7 @@ export default function HelpCenter() {
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
-            ]
+  {/* Removed stray closing bracket */}
         }
     };
     const popularArticles = [

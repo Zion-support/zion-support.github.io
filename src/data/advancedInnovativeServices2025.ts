@@ -562,7 +562,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Performance monitoring']
       }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default advancedInnovativeServices2025;

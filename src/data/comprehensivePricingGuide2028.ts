@@ -60,7 +60,7 @@ export interface ComprehensivePricingItem2028 {
     website: string;
     address: string;
   };
-}
+  {/* Removed stray closing brace */}
 
 export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
   // AI-Powered Quantum Computing Platform
@@ -524,5 +524,5 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  {/* Removed stray closing brace */}
 ];

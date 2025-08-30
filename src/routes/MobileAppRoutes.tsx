@@ -11,4 +11,4 @@ export default function MobileAppRoutes() {
       <Route path="" element={<MobileAppPage />} />
     </Routes>
   );
-}
+  {/* Removed stray closing brace */}

@@ -145,7 +145,7 @@ export default function MicroSAASSolutions(...args[]):  {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Micro SAAS Solutions - Custom Software Development"
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."

@@ -171,4 +171,4 @@ export default function AIIncidentResponse() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

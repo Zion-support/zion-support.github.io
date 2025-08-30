@@ -83,7 +83,7 @@ const testimonials: Testimonial[] = [
     industry: 'Cloud Services',
     results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function EnhancedTestimonialsSection(...args[]):  {

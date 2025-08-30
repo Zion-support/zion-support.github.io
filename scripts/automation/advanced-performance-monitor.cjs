@@ -51,7 +51,7 @@ class AdvancedPerformanceMonitor {
         'Remove old build artifacts',
         'Optimize log rotation',
         'Clear npm cache'
-      ]
+  {/* Removed stray closing bracket */}
     };
   }
 
@@ -646,7 +646,7 @@ class AdvancedPerformanceMonitor {
     if (cpu > 70 || memory > 70 || disk > 80) return 'ATTENTION';
     return 'HEALTHY';
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 if (require.main === module) {
@@ -668,6 +668,6 @@ if (require.main === module) {
       console.error('Advanced Performance Monitor failed:', error);
       process.exit(1);
     });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = AdvancedPerformanceMonitor;

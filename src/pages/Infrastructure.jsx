@@ -363,7 +363,7 @@ const infrastructureSolutions = [
     timeline: "12-20 weeks",
     category: "Monitoring",
     technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const infrastructureTechnologies = [
@@ -394,7 +394,7 @@ const infrastructureTechnologies = [
     icon: Shield,
     useCase: "Infrastructure Security",
     reliability: "Critical"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -424,7 +424,7 @@ const successStories = [
     solution: "Built edge computing infrastructure with IoT integration and real-time monitoring",
     results: "40% efficiency improvement, real-time monitoring, predictive maintenance, cost savings",
     logo: "MC"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -455,7 +455,7 @@ const processSteps = [
     description: "Test infrastructure and optimize performance",
     icon: Gauge,
     duration: "2-6 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const infrastructureBenefits = [
@@ -482,7 +482,7 @@ const infrastructureBenefits = [
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
     examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function Infrastructure() {

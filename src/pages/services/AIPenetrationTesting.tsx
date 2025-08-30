@@ -171,4 +171,4 @@ export default function AIPenetrationTesting() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

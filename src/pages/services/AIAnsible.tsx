@@ -171,4 +171,4 @@ export default function AIAnsible() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

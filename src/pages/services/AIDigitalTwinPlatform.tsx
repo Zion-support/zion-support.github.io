@@ -295,4 +295,4 @@ export default function AIDigitalTwinPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

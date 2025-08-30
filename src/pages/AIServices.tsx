@@ -71,7 +71,7 @@ const AIServices: React.FC = (): JSX.Element => {
       desc: 'Transcription, speaker diarization, topic extraction, and highlight reels for calls, webinars, and support.',
       price: '$4,000 - $35,000+'
     }
-    ,
+  {/* Removed stray comma */}
     {
       icon: FileText,
       title: 'AI Contract Review & Risk Scoring',

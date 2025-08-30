@@ -283,6 +283,6 @@ export function EnhancedFooter() {
       </div>
     </footer>
   );
-}
+  {/* Removed stray closing brace */}
 
 export default EnhancedFooter;

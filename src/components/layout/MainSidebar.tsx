@@ -376,7 +376,7 @@ export function MainSidebar(...args[]):  {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Overlay */}
       {isOpen && (
         <div 

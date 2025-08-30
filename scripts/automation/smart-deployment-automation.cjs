@@ -204,7 +204,7 @@ npm run check:auto-deploy
               DEPLOYMENT_MODE: 'true'
             }
           }
-        ]
+  {/* Removed stray closing bracket */}
       };
       
       const ecosystemPath = path.join(this.projectRoot, 'deployments', 'ecosystem.deployment.cjs');
@@ -883,7 +883,7 @@ npm run check:auto-deploy
     
     return failures;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Start the Smart Deployment Automation
 const deploymentAutomation = new SmartDeploymentAutomation();

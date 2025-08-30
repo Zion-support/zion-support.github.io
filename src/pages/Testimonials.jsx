@@ -117,7 +117,7 @@ const testimonials = [
     results['Improved grid efficiency', 'Better renewable energy integration', 'Cost optimization'],
     image: '/api/placeholder/100/100',
     featured: false
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const industries = [

@@ -149,7 +149,7 @@ const events = [
       "Success metrics"
     ],
     image: "/images/digital-transformation-summit.jpg"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];

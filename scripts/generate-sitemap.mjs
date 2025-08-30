@@ -100,6 +100,6 @@ ${urls.map(url => `  <url>
   
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
   console.log(`✅ Sitemap generated with ${urls.length} URLs`);
-}
+  {/* Removed stray closing brace */}
 
 generateSitemap();

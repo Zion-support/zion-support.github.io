@@ -14,7 +14,7 @@ export interface ProjectBrief {
   lockBudget?: boolean;
   talentFilters?: TalentFilters; // New
 
-}
+  {/* Removed stray closing brace */}
 
 export interface TalentFilters {
 
@@ -22,7 +22,7 @@ export interface TalentFilters {
   regions?: string[]; // e.g., ["LATAM", "North America", "Europe"]
   // Add other potential filters like min_experience, etc. later if needed
 
-}
+  {/* Removed stray closing brace */}
 
 export interface RecommendedRole {
 
@@ -35,7 +35,7 @@ hourlyRateRange: { // Estimated;
 };
   weeklyHours: number; // Estimated
   matchedTalent: TalentProfile[]; // Talent profiles matching this role
-}
+  {/* Removed stray closing brace */}
 
 export interface TeamRecommendation {
 
@@ -57,7 +57,7 @@ totalEstimatedRate: { // Sum of (hourlyRateRange.avg * weeklyHours) for all role
     max: number;
   };
   createdAt?: string;
-}
+  {/* Removed stray closing brace */}
 
 // Optional: For "Invite to Team"
 export interface TeamInvite {
@@ -70,4 +70,4 @@ export interface TeamInvite {
   createdAt?: string;
   updatedAt?: string;
 
-}
+  {/* Removed stray closing brace */}

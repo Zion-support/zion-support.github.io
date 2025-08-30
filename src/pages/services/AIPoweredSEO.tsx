@@ -455,4 +455,4 @@ export default function AIPoweredSEO() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

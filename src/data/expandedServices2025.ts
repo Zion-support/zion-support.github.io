@@ -586,7 +586,7 @@ export const expandedServices2025: ServiceCategory[] = [
         }
       }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default expandedServices2025;

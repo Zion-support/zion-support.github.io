@@ -8,7 +8,7 @@ export interface PricingTier {
   bestFor: string[];
   popular?: boolean;
   savings?: string;
-}
+  {/* Removed stray closing brace */}
 
 export interface ServicePricing {
   id: string;
@@ -31,7 +31,7 @@ export interface ServicePricing {
     address: string;
     website: string;
   };
-}
+  {/* Removed stray closing brace */}
 
 export const zionTechGroup2025PricingGuide: ServicePricing[] = [
   {
@@ -680,7 +680,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getPricingByCategory = (category: string) => {

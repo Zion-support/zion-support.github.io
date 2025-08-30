@@ -419,4 +419,4 @@ export default function InnovativeServices2027() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

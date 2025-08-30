@@ -123,7 +123,7 @@ const retailSolutions = [
     timeline: "16-24 weeks",
     category: "Platform Solutions",
     integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const retailTrends = [
@@ -150,7 +150,7 @@ const retailTrends = [
     description: "Analytics and insights driving retail strategy and optimization",
     icon: BarChart3,
     impact: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -180,7 +180,7 @@ const successStories = [
     solution: "Implemented cloud-based inventory system with real-time tracking",
     results: "30% reduction in stockouts, 20% improvement in order fulfillment",
     logo: "HG"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -211,7 +211,7 @@ const processSteps = [
     description: "Deploy solution and provide comprehensive staff training",
     icon: Users,
     duration: "1-2 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function RetailSolutions() {

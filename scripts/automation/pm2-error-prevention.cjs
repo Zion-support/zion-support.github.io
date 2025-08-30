@@ -299,7 +299,7 @@ class PM2ErrorPrevention {
   onRestart() {
     console.log('🔄 PM2 Error Prevention restarted');
   }
-}
+  {/* Removed stray closing brace */}
 
 // Create instance and start
 const errorPrevention = new PM2ErrorPrevention();

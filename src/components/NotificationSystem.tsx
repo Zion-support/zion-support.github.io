@@ -220,7 +220,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       delete (window as ).addNotification}}, [addNotification]);
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Notification Bell */}
       <div className={`fixed ${getPositionClasses()} z-50`}>
         <button

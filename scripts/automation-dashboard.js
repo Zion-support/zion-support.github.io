@@ -195,7 +195,7 @@ class AutomationDashboard {
     
     this.reports.performance = report;
     return report}
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -212,7 +212,7 @@ async function main() {
     await dashboard.startMonitoring()} catch (error) {
     console.error('❌ Dashboard failed:', error);
     process.exit(1)}
-}
+  {/* Removed stray closing brace */}
 
 // Start the dashboard
 main().catch(console.error);

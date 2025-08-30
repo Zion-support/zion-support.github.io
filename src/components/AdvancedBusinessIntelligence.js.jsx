@@ -60,7 +60,7 @@ const mockMetrics = [
         category: 'Financial',
         priority: 'high',
         lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockInsights = [
     {
@@ -98,7 +98,7 @@ const mockInsights = [
         timestamp: '2024-01-15T08:45:00.000Z',
         actionable: true,
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockModels = [
     {
@@ -127,7 +127,7 @@ const mockModels = [
         status: 'training',
         predictions: 15420,
         category: 'Customer Analytics'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedBusinessIntelligence() {
     const [isOpen, setIsOpen] = useState(false);

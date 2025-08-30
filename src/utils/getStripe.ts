@@ -11,4 +11,4 @@ export function getStripe() {
     stripePromise = loadStripe(key, { advancedFraudSignals: false });
   }
   return stripePromise;
-}
+  {/* Removed stray closing brace */}

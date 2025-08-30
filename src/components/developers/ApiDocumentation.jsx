@@ -364,7 +364,7 @@ print(data)`
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
       }
-    ]
+  {/* Removed stray closing bracket */}
   }
 }`
         }}/>
@@ -685,7 +685,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
         "field": "project_name",
         "message": "Project name is required"
       }
-    ]
+  {/* Removed stray closing bracket */}
   }
 }`} language="json"/>
               

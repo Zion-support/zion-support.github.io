@@ -82,5 +82,5 @@ export default function EmailSequencer() {
 			</section>
 		</div>
 	);
-}
+  {/* Removed stray closing brace */}
 

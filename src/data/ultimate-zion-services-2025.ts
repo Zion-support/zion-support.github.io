@@ -40,7 +40,7 @@ export interface UltimateZionService {
   };
   marketSize?: string;
   innovationLevel: string;
-}
+  {/* Removed stray closing brace */}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -671,7 +671,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     },
     marketSize: '$25.2 billion by 2027',
     innovationLevel: 'Revolutionary'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default ultimateZionServices2025;

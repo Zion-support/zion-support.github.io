@@ -555,7 +555,7 @@ class PM2SyncAutomation {
       uptime: this.isRunning ? Date.now() - this.startTime : 0
     };
   }
-}
+  {/* Removed stray closing brace */}
 
 // Handle process signals
 process.on('SIGINT', async () => {
@@ -584,6 +584,6 @@ if (require.main === module) {
       // Process is healthy
     }
   }, 60000);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = PM2SyncAutomation;

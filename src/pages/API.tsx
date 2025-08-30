@@ -124,7 +124,7 @@ def check_threat(ip_address):
     
     return response.json()`,
     category: 'Security'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function API(...args[]):  {

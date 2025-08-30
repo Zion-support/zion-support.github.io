@@ -674,7 +674,7 @@ const ventureCapitalSolutions = [
     timeline: "26-38 weeks",
     category: "Exit Strategy",
     technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const vcTechnologies = [
@@ -705,7 +705,7 @@ const vcTechnologies = [
     icon: Shield,
     useCase: "Risk Analysis",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -735,7 +735,7 @@ const successStories = [
     solution: "Built AI-powered portfolio management and exit strategy system",
     results: "30% better portfolio performance, 45% improved exit timing, better returns, optimized strategies",
     logo: "SVL"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -766,7 +766,7 @@ const processSteps = [
     description: "Test systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const vcBenefits = [
@@ -793,7 +793,7 @@ const vcBenefits = [
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
     examples["Process automation", "Due diligence", "Reporting", "Better efficiency"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AIAutonomousVentureCapitalist() {

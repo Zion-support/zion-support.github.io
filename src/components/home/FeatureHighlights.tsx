@@ -42,7 +42,7 @@ const highlights = [
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
     borderColor: 'border-zion-blue/20'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const features = [
@@ -75,7 +75,7 @@ const features = [
     icon: "📊",
     title: "Real-Time Analytics",
     description: "Comprehensive insights and reporting to make data-driven decisions instantly"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const achievements = [

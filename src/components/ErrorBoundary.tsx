@@ -196,7 +196,7 @@ Timestamp: ${new Date().toISOString()}
       )}
 
     return this.props.children}
-}
+  {/* Removed stray closing brace */}
 
 // Hook for functional components to catch errors
 export const useErrorHandler[, React.Dispatch<React.SetStateAction<any>>] = () => {

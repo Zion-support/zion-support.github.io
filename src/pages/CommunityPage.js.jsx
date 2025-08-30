@@ -64,7 +64,7 @@ const featuredPosts = [
         authorName: "Sarah Chen",
         authorAvatar: "https://i.pravatar.cc/150?img=5",
         authorRole: "Verified Talent"
-    }
+  {/* Removed stray closing brace */}
 ];
 // Mock data for recent posts
 const recentPosts = [
@@ -154,7 +154,7 @@ const recentPosts = [
         authorName: "David Lin",
         authorAvatar: "https://i.pravatar.cc/150?img=11",
         authorRole: "Freelancer"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function CommunityPage() {
     const { user } = useAuth();

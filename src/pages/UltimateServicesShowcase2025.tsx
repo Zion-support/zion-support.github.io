@@ -507,7 +507,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 // Search icon component
 const Search = ({ className }: { className?: string }) => (

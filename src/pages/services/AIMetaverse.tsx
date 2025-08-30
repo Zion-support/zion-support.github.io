@@ -171,4 +171,4 @@ export default function AIMetaverse() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

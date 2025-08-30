@@ -474,7 +474,7 @@ class EnhancedAutomationRunner {
       console.error('❌ Shutdown failed:', error);
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
@@ -495,6 +495,6 @@ if (require.main === module) {
     await runner.shutdown();
     process.exit(1);
   });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = EnhancedAutomationRunner;

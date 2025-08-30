@@ -171,4 +171,4 @@ export default function AIServerless() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

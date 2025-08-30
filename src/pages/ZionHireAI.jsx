@@ -11,7 +11,7 @@ const ZionHireAI = () => {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">

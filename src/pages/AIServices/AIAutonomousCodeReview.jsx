@@ -27,7 +27,7 @@ const features = [
         description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations.",
         icon: CheckCircle,
         color: "from-orange-500 to-red-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Reduce code review time by up to 80%",

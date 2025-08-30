@@ -155,4 +155,4 @@ export default function AISustainableTechnology() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

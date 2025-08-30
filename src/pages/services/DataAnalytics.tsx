@@ -524,4 +524,4 @@ export default function DataAnalytics(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -5,7 +5,7 @@ interface User {
   email: string;
   name: string;
   avatar?: string;
-}
+  {/* Removed stray closing brace */}
 
 interface AuthState {
 
@@ -13,7 +13,7 @@ interface AuthState {
   user:  | null;
   token: string | null;
 
-}
+  {/* Removed stray closing brace */}
 
 const initialState: AuthState = {
   user: null,

@@ -11,4 +11,4 @@ export class TestingSystem {
         break;
     }
   }
-}
+  {/* Removed stray closing brace */}

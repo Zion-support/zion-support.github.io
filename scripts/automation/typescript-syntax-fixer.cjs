@@ -117,7 +117,7 @@ class TypeScriptSyntaxFixer {
     ];
 
     return corruptionPatterns.some(pattern => pattern.test(content));
-  }
+  {/* Removed stray closing brace */}
 
   detectIssues(content) {
     const issues = [];
@@ -232,7 +232,7 @@ class TypeScriptSyntaxFixer {
     content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
     
     return content;
-  }
+  {/* Removed stray closing brace */}
 
   fixMalformedConst(content) {
     // Fix: const: Component, React: .FC
@@ -242,7 +242,7 @@ class TypeScriptSyntaxFixer {
     content = content.replace(/const:\s*([^:]+):\s*React\.FC/g, "const $1: React.FC");
     
     return content;
-  }
+  {/* Removed stray closing brace */}
 
   fixMalformedFrom(content) {
     // Fix: from, 'react'
@@ -252,7 +252,7 @@ class TypeScriptSyntaxFixer {
     content = content.replace(/},\s*from,\s*'([^']+)'/g, "} from '$1'");
     
     return content;
-  }
+  {/* Removed stray closing brace */}
 
   fixJSXBalance(content) {
     // Count open and close tags
@@ -269,7 +269,7 @@ class TypeScriptSyntaxFixer {
     }
     
     return content;
-  }
+  {/* Removed stray closing brace */}
 
   async runTypeCheck() {
     try {
@@ -286,7 +286,7 @@ class TypeScriptSyntaxFixer {
       
       return { success: false, errors: errorCount, output };
     }
-  }
+  {/* Removed stray closing brace */}
 
   async generateReport(fixes, errors, typeCheckResult) {
     const report = {
@@ -307,7 +307,7 @@ class TypeScriptSyntaxFixer {
     this.log(`Syntax fix report generated: ${fixes.length} fixes applied, ${errors.length} errors encountered`);
     
     return report;
-  }
+  {/* Removed stray closing brace */}
 
   async commitFixes(fixes) {
     try {
@@ -327,8 +327,8 @@ class TypeScriptSyntaxFixer {
     } catch (error) {
       this.log(`Failed to commit fixes: ${error.message}`, 'WARN');
     }
-  }
-}
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -349,10 +349,10 @@ async function main() {
     fixer.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   }
-}
+  {/* Removed stray closing brace */}
 
 if (require.main === module) {
   main();
-}
+  {/* Removed stray closing brace */}
 
 module.exports = TypeScriptSyntaxFixer;

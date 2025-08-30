@@ -31,7 +31,7 @@ export interface ComprehensiveITInfrastructureService2028 {
   };
   competitors: string[];
   marketSize: string;
-}
+  {/* Removed stray closing brace */}
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructureService2028[] = [
   // Next-Generation Cloud Infrastructure
@@ -357,5 +357,5 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     },
     competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt", "RightScale"],
     marketSize: "$8.6 billion by 2028"
-  }
+  {/* Removed stray closing brace */}
 ];

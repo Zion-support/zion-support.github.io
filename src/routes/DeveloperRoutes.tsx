@@ -19,4 +19,4 @@ export default function DeveloperRoutes() {
       <Route path="errors" element={<ApiErrorCodes />} />
     </Routes>
   );
-}
+  {/* Removed stray closing brace */}

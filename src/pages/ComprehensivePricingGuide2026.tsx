@@ -50,7 +50,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
   };
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Comprehensive Pricing Guide 2026 - Zion Tech Group"
         description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons."

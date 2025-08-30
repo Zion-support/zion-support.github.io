@@ -1027,6 +1027,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
         "Advanced security and privacy protection"
       ]
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 export default ULTIMATE_INNOVATIVE_SERVICES_2027;

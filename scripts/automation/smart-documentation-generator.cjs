@@ -859,7 +859,7 @@ const result = await ${serviceName}.createItem({
     
     return 'Performs the specified operation';
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -876,7 +876,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

@@ -4,7 +4,7 @@ interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
   title, 

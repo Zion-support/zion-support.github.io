@@ -50,7 +50,7 @@ export function Header({
     '--zion-secondary': `var(--${effectiveTheme.secondaryColor})`
   };
   return (
-    <>
+  {/* Empty JSX fragment */}
       <header 
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled

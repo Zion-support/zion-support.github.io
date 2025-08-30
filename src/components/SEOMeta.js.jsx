@@ -53,7 +53,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence"
                     }
                 }
-            ]
+  {/* Removed stray closing bracket */}
         }
     };
     const finalStructuredData = structuredData || defaultStructuredData;

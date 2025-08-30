@@ -288,7 +288,7 @@ class IntelligentPredictiveMonitor {
     
     console.log(`📊 Predictive report saved to ${reportPath}`);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes
@@ -314,6 +314,6 @@ async function runPredictiveMonitor() {
   } catch (error) {
     console.error('❌ Intelligent Predictive Monitor failed:', error.message);
   }
-}
+  {/* Removed stray closing brace */}
 
 runPredictiveMonitor();

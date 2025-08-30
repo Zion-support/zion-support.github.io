@@ -24,7 +24,7 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  {/* Removed stray closing brace */}
 );
 
 // Async thunk for signup
@@ -59,7 +59,7 @@ export const signupUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  {/* Removed stray closing brace */}
 );
 
 // Async thunk for logout
@@ -76,7 +76,7 @@ export const logoutUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  {/* Removed stray closing brace */}
 );
 
 // Async thunk for checking auth status
@@ -98,7 +98,7 @@ export const checkAuthStatus = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  {/* Removed stray closing brace */}
 );
 
 const initialState = {

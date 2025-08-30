@@ -107,7 +107,7 @@ const helpCategories: HelpCategory[] = [
     color: 'from-red-500 to-pink-500',
     articleCount: 22,
     path: '/help/troubleshooting'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const supportOptions: SupportOption[] = [
@@ -142,7 +142,7 @@ const supportOptions: SupportOption[] = [
     color: 'from-orange-500 to-red-500',
     action: 'Watch Videos',
     path: '/help/videos'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const faqData: FAQItem[] = [
@@ -201,7 +201,7 @@ const faqData: FAQItem[] = [
     answer: 'We stand behind our work with a 100% satisfaction guarantee. If you\'re not completely satisfied, we\'ll work to fix the issue or provide a full refund. Your success is our success.',
     category: 'billing',
     tags['guarantee', 'refund', 'satisfaction']
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function HelpCenter(...args[]):  {
@@ -249,7 +249,7 @@ export default function HelpCenter(...args[]):  {
   };
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />

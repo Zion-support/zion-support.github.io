@@ -171,4 +171,4 @@ export default function AIElasticsearch() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

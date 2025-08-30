@@ -229,12 +229,12 @@ class PM2Monitor {
       console.log('⚠️  WARNING: Sending alert notifications...');
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the monitor
 if (require.main === module) {
   const monitor = new PM2Monitor();
   monitor.start().catch(console.error);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = PM2Monitor;

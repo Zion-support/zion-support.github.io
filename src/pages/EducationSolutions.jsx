@@ -122,7 +122,7 @@ const educationSolutions = [
     timeline: "10-16 weeks",
     category: "Analytics",
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const edTechTrends = [
@@ -149,7 +149,7 @@ const edTechTrends = [
     description: "Analytics to improve learning outcomes and institutional performance",
     icon: BarChart3,
     impact: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -179,7 +179,7 @@ const successStories = [
     solution: "Created immersive VR training modules with progress tracking",
     results: "60% faster skill acquisition, 80% reduction in training costs",
     logo: "CT"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -210,7 +210,7 @@ const processSteps = [
     description: "Deploy solution and provide comprehensive training",
     icon: Users,
     duration: "1-2 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function EducationSolutions() {

@@ -205,5 +205,5 @@ export class SEOOptimizer {
     </script>
     `;
     }
-}
+  {/* Removed stray closing brace */}
 export const seoOptimizer = new SEOOptimizer();

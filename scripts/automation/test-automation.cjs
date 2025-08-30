@@ -326,7 +326,7 @@ class TestAutomation {
       this.log('All tests passed successfully!', 'INFO');
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the automation if this script is executed directly
 if (require.main === module) {
@@ -335,6 +335,6 @@ if (require.main === module) {
     console.error('Test automation failed:', error);
     process.exit(1);
     });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = TestAutomation;

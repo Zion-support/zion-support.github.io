@@ -133,7 +133,7 @@ const blockchainSolutions = [
     timeline: "28-40 weeks",
     category: "Interoperability",
     technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const blockchainTechnologies = [
@@ -164,7 +164,7 @@ const blockchainTechnologies = [
     icon: Zap,
     useCase: "High-frequency Trading",
     reliability: "Medium"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -194,7 +194,7 @@ const successStories = [
     solution: "Built DeFi lending protocol with credit scoring and collateral management",
     results: "5,000+ loans issued, $15M+ in lending volume, 95% repayment rate",
     logo: "MN"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -225,7 +225,7 @@ const processSteps = [
     description: "Test smart contracts and deploy to blockchain",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const blockchainBenefits = [
@@ -252,7 +252,7 @@ const blockchainBenefits = [
     description: "Smart contracts execute automatically based on predefined conditions",
     icon: Zap,
     examples["Automated payments", "Conditional logic", "Business process automation"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function Blockchain() {

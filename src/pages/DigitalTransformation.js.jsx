@@ -45,7 +45,7 @@ const transformationServices = [
         icon: Shield,
         features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
         color: "from-yellow-500 to-orange-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const transformationPhases = [
     {
@@ -71,7 +71,7 @@ const transformationPhases = [
         title: "Full Implementation",
         description: "Execute transformation plan with phased rollout and continuous optimization",
         duration: "6-18 months"
-    }
+  {/* Removed stray closing brace */}
 ];
 const testimonials = [
     {
@@ -91,7 +91,7 @@ const testimonials = [
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
         rating: 5
-    }
+  {/* Removed stray closing brace */}
 ];
 const stats = [
     { label: "Transformations Completed", value: "75+", icon: Rocket },

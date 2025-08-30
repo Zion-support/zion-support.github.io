@@ -178,7 +178,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Employee Scheduling SaaS - Zion Tech Group"
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
@@ -455,5 +455,5 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}
 

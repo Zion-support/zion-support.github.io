@@ -49,7 +49,7 @@ export default async function handler(...args[]):  {
     res.status(201).json(data as TeamInvite)} catch (error) {
     console.error('Error in /api/team-builder/invite:', error);
     return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` })}
-}
+  {/* Removed stray closing brace */}
 */
 
 export {}; // Keep it as a module

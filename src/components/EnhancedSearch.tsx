@@ -24,14 +24,14 @@ interface SearchFilter {
 interface SearchSuggestion {
   text: string;
   type: 'recent' | 'trending' | 'ai';
-}
+  {/* Removed stray closing brace */}
 
 interface EnhancedSearchProps {
   className?: string;
   placeholder?: string;
   onSearch?: (query: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal';
-}
+  {/* Removed stray closing brace */}
 
 const searchData: SearchResult[] = [
   // Services
@@ -96,7 +96,7 @@ const searchData: SearchResult[] = [
     category: 'AI Insights',
     tags['AI', 'Trends', '2025', 'Business'],
     relevance: 75
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const categories = [

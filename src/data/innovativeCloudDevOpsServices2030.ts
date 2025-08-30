@@ -141,7 +141,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags["Multi-Cloud", "Cloud Orchestration", "DevOps", "Cost Optimization", "Compliance"],
@@ -234,7 +234,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 1 second",
+    responseTime: "< 1 second", />
     availability: "Global",
     location: "Global",
     tags["AI DevOps", "Automation", "CI/CD", "Pipeline Optimization", "Infrastructure"],
@@ -327,7 +327,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 10 milliseconds",
+    responseTime: "< 10 milliseconds", />
     availability: "Global",
     location: "Global",
     tags["Edge Computing", "IoT", "Real-time Processing", "5G", "Distributed Systems"],
@@ -420,7 +420,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 100 milliseconds",
+    responseTime: "< 100 milliseconds", />
     availability: "Global",
     location: "Global",
     tags["Serverless", "FaaS", "Event-driven", "Auto-scaling", "Microservices"],
@@ -513,7 +513,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],
@@ -521,7 +521,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default innovativeCloudDevOpsServices2030;

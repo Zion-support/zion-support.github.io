@@ -127,7 +127,7 @@ const researchAreas = [
         ],
         technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
         partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
-    }
+  {/* Removed stray closing brace */}
 ];
 const innovationStats = [
     { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
@@ -169,7 +169,7 @@ const researchLabs = [
         equipment: "Security Testing Environment, Privacy Tools",
         projects: 9,
         researchers: 5
-    }
+  {/* Removed stray closing brace */}
 ];
 export function InnovationResearchSection() {
     const [selectedResearch, setSelectedResearch] = useState(null);

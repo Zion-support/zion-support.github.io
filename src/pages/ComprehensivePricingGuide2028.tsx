@@ -137,7 +137,7 @@ const pricingData2028 = {
       features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
       targetAudience: 'Development teams, DevOps engineers, Technology companies'
     }
-  ]
+  {/* Removed stray closing bracket */}
 };
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {

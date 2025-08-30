@@ -155,4 +155,4 @@ export default function AIFinancialRiskManagement() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

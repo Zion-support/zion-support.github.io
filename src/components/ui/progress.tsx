@@ -5,7 +5,7 @@ interface ProgressProps {
   value: number;
   max?: number;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);

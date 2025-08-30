@@ -100,7 +100,7 @@ async function runConsoleErrorFixer() {
     console.error('❌ Continuous console error fixer failed:', error.message);
     // Don't exit, just log the error and continue
   }
-}
+  {/* Removed stray closing brace */}
 
 function findConsoleStatements(dir) {
   const consoleStatements = [];
@@ -144,7 +144,7 @@ function findConsoleStatements(dir) {
   
   scanDirectory(dir);
   return consoleStatements;
-}
+  {/* Removed stray closing brace */}
 
 function findErrorPatterns(dir) {
   const errorPatterns = [];
@@ -199,7 +199,7 @@ function findErrorPatterns(dir) {
   
   scanDirectory(dir);
   return errorPatterns;
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -214,7 +214,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

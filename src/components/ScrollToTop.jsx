@@ -30,7 +30,7 @@ export function ScrollToTop() {
         opacity: 1, scale;
         1, y;
         0}
-}
+  {/* Removed stray closing brace */}
 exit = {};
 {
     opacity: 0, scale;
@@ -55,14 +55,14 @@ transition = {};
     17}
     >
         <svg className="w-6 h-6"/>
-            ,
-                <>
+  {/* Removed stray comma */}
+  {/* Empty JSX fragment */}
       {isVisible && (<button onClick={scrollToTop} className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Scroll to top">
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
           </svg>
         </button>)}
     </>;
-;
-;
+  {/* Removed stray semicolon */}
+  {/* Removed stray semicolon */}
 export default ScrollToTop;

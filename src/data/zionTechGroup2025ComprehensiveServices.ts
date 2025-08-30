@@ -18,7 +18,7 @@ export interface ZionService {
   ctaLabel: string;
   href: string;
   external?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export const zionTechGroup2025Services: ZionService[] = [
   // AI-Powered Micro SaaS Solutions
@@ -676,7 +676,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     },
     ctaLabel: 'Build Web3 Solutions',
     href: '/services/blockchain-web3-solutions'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getServicesByCategory = (category: ZionService['category']) => {

@@ -176,7 +176,7 @@ Crawl-delay: 1`;
 </html>`;
         return html;
     }
-}
+  {/* Removed stray closing brace */}
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
     baseUrl: 'https://ziontechgroup.com',
@@ -218,7 +218,7 @@ export const defaultSitemapConfig = {
         // Legal
         { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
-    ]
+  {/* Removed stray closing bracket */}
 };
 // Utility function to generate all sitemap files
 export const generateAllSitemaps = async (config = defaultSitemapConfig) => {

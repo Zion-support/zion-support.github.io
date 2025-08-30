@@ -233,7 +233,7 @@ class AutomationManager {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     return `${hours}h ${minutes}m`}
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -292,7 +292,7 @@ async function main() {
       console.error(`❌ Unknown command: ${command}`);
       await manager.showHelp();
       break}
-}
+  {/* Removed stray closing brace */}
 
 // Start the manager
 main().catch(console.error);

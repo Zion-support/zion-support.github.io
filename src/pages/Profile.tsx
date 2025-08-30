@@ -106,7 +106,7 @@ const Profile: React.FC = (): JSX.Element => {
       { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
       { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
       { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
-    ]
+  {/* Removed stray closing bracket */}
   });
 
   const [currentPassword, setCurrentPassword] = useState('');
@@ -415,12 +415,12 @@ const Profile: React.FC = (): JSX.Element => {
               className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {isLoading ? (
-                <>
+  {/* Empty JSX fragment */}
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                   Saving...
                 </>
               ) : (
-                <>
+  {/* Empty JSX fragment */}
                   <Save className="w-5 h-5" />
                   Save Changes
                 </>
@@ -570,12 +570,12 @@ const Profile: React.FC = (): JSX.Element => {
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             {isLoading ? (
-              <>
+  {/* Empty JSX fragment */}
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Changing Password...
               </>
             ) : (
-              <>
+  {/* Empty JSX fragment */}
                 <Key className="w-5 h-5" />
                 Change Password
               </>

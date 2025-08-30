@@ -368,7 +368,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     status: 'active',
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
-  }
+  {/* Removed stray closing brace */}
 ];
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
   if (category === 'All') {

@@ -389,7 +389,7 @@ class SmartDeploymentOptimizer {
     const latest = this.deploymentMetrics.bundleSizes[this.deploymentMetrics.bundleSizes.length - 1];
     return latest ? latest.size : 0;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -406,7 +406,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

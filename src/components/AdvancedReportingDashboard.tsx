@@ -275,7 +275,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' },
       { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' },
       { action: 'Report updated', timestamp: '2 hours ago', user: 'Sarah Wilson' }
-    ]
+  {/* Removed stray closing bracket */}
   };
 
   // Get type icon and color

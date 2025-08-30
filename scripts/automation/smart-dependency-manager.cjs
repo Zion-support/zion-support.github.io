@@ -342,7 +342,7 @@ class SmartDependencyManager {
     
     console.log(`📊 Dependency analysis report saved to ${reportPath}`);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
@@ -366,6 +366,6 @@ async function runSmartDependencyManager() {
   } catch (error) {
     console.error('❌ Smart Dependency Manager failed:', error.message);
   }
-}
+  {/* Removed stray closing brace */}
 
 runSmartDependencyManager();

@@ -583,5 +583,5 @@ export const ADVANCED_MICRO_SERVICES = [
         integrations["SAP", "Oracle", "Salesforce", "Microsoft Office", "Slack", "Teams"],
         compliance["SOC 2", "ISO 27001", "GDPR", "SOX"],
         securityFeatures["Role-based access control", "Audit logging", "Data encryption", "Secure automation"]
-    }
+  {/* Removed stray closing brace */}
 ];

@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   text?: string;
   showProgress?: boolean;
   progress?: number;
-}
+  {/* Removed stray closing brace */}
 
 const iconVariants = {
   animate: {
@@ -98,7 +98,7 @@ export function EnhancedLoadingSpinner({
         
         {/* Orbiting particles for futuristic variants */}
         {variant !== 'default' && (
-          <>
+  {/* Empty JSX fragment */}
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
@@ -182,7 +182,7 @@ export function EnhancedLoadingSpinner({
       </motion.div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;

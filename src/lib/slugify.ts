@@ -10,7 +10,7 @@ export function slugify(text: string): string {
     .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
     .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
     .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
-}
+  {/* Removed stray closing brace */}
 
 /**
  * Convert a slug back to a readable string
@@ -21,7 +21,7 @@ export function deslugify(slug: string): string {
   return slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (char) => char.toUpperCase());
-}
+  {/* Removed stray closing brace */}
 
 /**
  * Generate a unique slug by appending a number if the slug already exists
@@ -40,4 +40,4 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
   }
 
   return uniqueSlug;
-}
+  {/* Removed stray closing brace */}

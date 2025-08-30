@@ -69,7 +69,7 @@ function BlogPost(...args[]):  {
         publishDate: "2024-01-05",
         slug: "quantum-computing-business"
       }
-    ]
+  {/* Removed stray closing bracket */}
   };
 
   const formatDate = (dateString: string)  => {

@@ -27,7 +27,7 @@ const features = [
         description: "Built to grow with your business needs, from startup to enterprise scale.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Increase efficiency and productivity",

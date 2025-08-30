@@ -62,12 +62,12 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
               className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
-                <>
+  {/* Empty JSX fragment */}
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                   Subscribing...
                 </>
               ) : (
-                <>
+  {/* Empty JSX fragment */}
                   <Send className="w-4 h-4" />
                   Subscribe
                 </>

@@ -421,4 +421,4 @@ export default function Terms() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

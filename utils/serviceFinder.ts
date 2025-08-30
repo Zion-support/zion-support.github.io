@@ -50,7 +50,7 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 		if (hit) return hit;
 	}
 	return undefined;
-}
+  {/* Removed stray closing brace */}
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
@@ -68,4 +68,4 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		seen.add(key);
 		return true;
 	});
-}
+  {/* Removed stray closing brace */}

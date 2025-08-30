@@ -42,5 +42,5 @@ export default function LLMContentStudio(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 

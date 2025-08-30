@@ -292,7 +292,7 @@ export function PrimaryNav() {
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
-                <>
+  {/* Empty JSX fragment */}
                   <Link
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"

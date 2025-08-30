@@ -21,7 +21,7 @@ const benefits = [
         icon: <Users className="w-6 h-6"/>,
         title: "Community",
         description: "Join our network of tech professionals and innovators"
-    }
+  {/* Removed stray closing brace */}
 ];
 const stats = [
     { value: "50K+", label: "Subscribers" },

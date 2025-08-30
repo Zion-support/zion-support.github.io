@@ -303,4 +303,4 @@ export default function SpaceTech() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

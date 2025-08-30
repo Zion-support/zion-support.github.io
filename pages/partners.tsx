@@ -63,7 +63,7 @@ export default function Partners(...args[]):  {
         { name: 'Elastic', description: 'Search and analytics', logo: '🔍', tier: 'Silver' }
       ]
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   const benefits = [
     {
@@ -86,7 +86,7 @@ export default function Partners(...args[]):  {
       title: 'Quality Assurance',
       description: 'Solutions validated by our trusted partner ecosystem.'
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   const partnershipLevels = [
     {
@@ -107,10 +107,10 @@ export default function Partners(...args[]):  {
       benefits['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
       color: 'from-gray-400 to-gray-600'
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -357,5 +357,5 @@ export default function Partners(...args[]):  {
         </section>
       </main>
     </>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

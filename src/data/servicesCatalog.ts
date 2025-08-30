@@ -120,7 +120,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Optimize Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'soc2-compliance-automation-saas',
 				title: 'SOC 2 Compliance Automation SaaS',
@@ -229,7 +229,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Vehicle Integration',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'enterprise-rag-search',
 				title: 'Enterprise RAG Search Platform',
@@ -321,7 +321,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Edge Deployment',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'platform-engineering-kubernetes',
 				title: 'Platform Engineering on Kubernetes',
@@ -396,7 +396,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Quantum Security',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'managed-detection-response',
 				title: 'Managed Detection & Response (MDR)',
@@ -471,7 +471,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'BI Assessment',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'data-quality-observability',
 				title: 'Data Quality & Observability',
@@ -546,7 +546,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Cloud Migration',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'serverless-application-factory',
 				title: 'Serverless Application Factory',
@@ -701,7 +701,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Edge AI Demo',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'predictive-maintenance-iot',
 				title: 'Predictive Maintenance for IoT Fleets',
@@ -776,7 +776,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Climate Demo',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'carbon-accounting-saas',
 				title: 'Carbon Accounting & ESG Reporting',
@@ -834,7 +834,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Connect Space',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'satellite-imagery-analytics',
 				title: 'Satellite Imagery Analytics',
@@ -892,7 +892,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Analyze Genome',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'telemedicine-ai-triage',
 				title: 'Telemedicine AI Triage',
@@ -950,7 +950,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Deploy Protocol',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'kyc-aml-transaction-monitoring',
 				title: 'KYC/AML Transaction Monitoring',
@@ -1008,7 +1008,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Navigate AR',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'vr-training-simulators',
 				title: 'VR Training Simulators',
@@ -1066,7 +1066,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Deploy Robots',
 				href: 'https://ziontechgroup.com/contact'
 			}
-			,
+  {/* Removed stray comma */}
 			{
 				id: 'warehouse-robotics-orchestration',
 				title: 'Warehouse Robotics Orchestration',
@@ -1565,5 +1565,5 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
-	}
+  {/* Removed stray closing brace */}
 ];

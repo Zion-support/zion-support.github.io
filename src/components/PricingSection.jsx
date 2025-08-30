@@ -72,7 +72,7 @@ const plans = [
         notIncluded[],
         popular: false,
         cta: "Contact Sales"
-    }
+  {/* Removed stray closing brace */}
 ];
 const addons = [
     {
@@ -98,7 +98,7 @@ const addons = [
         description: "Comprehensive analytics and reporting suite",
         icon: <Users className="w-6 h-6"/>,
         features["Custom dashboards", "Advanced reporting", "Data export options"]
-    }
+  {/* Removed stray closing brace */}
 ];
 export function PricingSection() {
     const [billingPeriod, setBillingPeriod] = useState('month');

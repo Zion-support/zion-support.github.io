@@ -52,7 +52,7 @@ const mockProjects = [
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
-    }
+  {/* Removed stray closing brace */}
 ];
 const statusColors = {
     'planning': 'bg-zion-blue text-white',

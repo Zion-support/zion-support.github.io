@@ -44,7 +44,7 @@ const serviceCategories = [
     icon: <Brain className="w-6 h-6" />,
     color: 'from-blue-600 to-cyan-600',
     services: revolutionary2027AIInnovationServices
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export function ComprehensiveServicesShowcase() {

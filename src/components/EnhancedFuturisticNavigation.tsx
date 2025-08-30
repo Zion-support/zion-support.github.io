@@ -354,7 +354,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Desktop Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 

@@ -98,7 +98,7 @@ const featuredListings = [
     featured: false,
     technologies["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
     highlights["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export function FeaturedListingsSection() {

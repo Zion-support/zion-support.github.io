@@ -171,4 +171,4 @@ export default function AI5GNetwork() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -126,7 +126,7 @@ const quantumSolutions = [
     timeline: "12-24 weeks",
     category: "Infrastructure",
     technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const quantumTechnologies = [
@@ -157,7 +157,7 @@ const quantumTechnologies = [
     icon: Lightbulb,
     useCase: "Quantum Networks",
     reliability: "Medium"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -187,7 +187,7 @@ const successStories = [
     solution: "Built quantum optimization system using QAOA algorithms",
     results: "25% reduction in delivery costs, 30% improvement in route efficiency, real-time optimization",
     logo: "LO"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -218,7 +218,7 @@ const processSteps = [
     description: "Test quantum solutions and validate performance",
     icon: CheckCircle,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const quantumAdvantages = [
@@ -245,7 +245,7 @@ const quantumAdvantages = [
     description: "Quantum effects enable optimization through energy landscape exploration",
     icon: Rocket,
     examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function QuantumComputing() {

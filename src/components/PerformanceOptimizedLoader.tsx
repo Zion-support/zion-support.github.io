@@ -6,7 +6,7 @@ interface LoaderProps {
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-}
+  {/* Removed stray closing brace */}
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({ 
   size = 'md', 
   color = 'primary', 
@@ -86,7 +86,7 @@ export function SkeletonLoader({
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -108,7 +108,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Grid skeleton loader
 export function GridSkeleton({ 
   columns = 3, 
@@ -126,7 +126,7 @@ export function GridSkeleton({
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -145,4 +145,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

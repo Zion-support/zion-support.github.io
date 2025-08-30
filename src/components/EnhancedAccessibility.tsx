@@ -75,7 +75,7 @@ export const EnhancedAccessibility: React.FC = (): JSX.Element => {
   };
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Accessibility Toggle Button */}
       {showControls && (
         <motion.button

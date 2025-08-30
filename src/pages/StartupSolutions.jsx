@@ -113,7 +113,7 @@ const startupSolutions = [
     price: "From $10,000",
     timeline: "3-5 weeks",
     category: "Marketing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -143,7 +143,7 @@ const successStories = [
     solution: "Built secure mobile app with compliance framework",
     results: "Launched in 8 weeks, 10,000+ downloads first quarter",
     logo: "HP"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -174,7 +174,7 @@ const processSteps = [
     description: "Deploy your solution and optimize based on real user data",
     icon: Rocket,
     duration: "1-2 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function StartupSolutions() {

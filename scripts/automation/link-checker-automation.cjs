@@ -375,7 +375,7 @@ class LinkCheckerAutomation {
       this.log('No broken links found. All links are working correctly!', 'INFO');
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the automation if this script is executed directly
 if (require.main === module) {
@@ -384,6 +384,6 @@ if (require.main === module) {
     console.error('Link checker automation failed:', error);
     process.exit(1);
   });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = LinkCheckerAutomation;

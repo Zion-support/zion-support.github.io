@@ -171,4 +171,4 @@ export default function AIRedis() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

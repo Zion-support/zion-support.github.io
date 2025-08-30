@@ -215,4 +215,4 @@ declare global {
   interface Window {
 
     gtag?: (...args[])  => void}
-}
+  {/* Removed stray closing brace */}

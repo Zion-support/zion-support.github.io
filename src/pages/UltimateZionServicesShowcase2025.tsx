@@ -4,7 +4,7 @@ import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ul
 
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO
         title="Ultimate Zion Services 2025 - Revolutionary Micro SAAS, IT & AI Solutions"
         description="Discover Zion Tech Group's cutting-edge micro SAAS services, IT infrastructure solutions, and AI platforms. Transform your business with revolutionary technology solutions."

@@ -621,5 +621,5 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },
     competitors['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
     caseStudies['Advanced theoretical research', 'International collaboration', 'Educational innovation']
-  }
+  {/* Removed stray closing brace */}
 ];

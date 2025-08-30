@@ -34,12 +34,12 @@ interface AnalyticsData {
   scrollDepth: number;
   clickEvents: number;
   formSubmissions: number;
-}
+  {/* Removed stray closing brace */}
 
 interface Props {
   enabled?: boolean;
   showMetrics?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
   const [isVisible, setIsVisible] = useState(false);
@@ -415,4 +415,4 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       </motion.div>
     </AnimatePresence>
   );
-}
+  {/* Removed stray closing brace */}

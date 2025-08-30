@@ -7,7 +7,7 @@ interface SkeletonProps {
   width?: string;
   rounded?: boolean;
   animated?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function Skeleton({ 
   className = '', 
@@ -35,14 +35,14 @@ export function Skeleton({
   }
   
   return <div className={`${baseClasses} ${className}`} />;
-}
+  {/* Removed stray closing brace */}
 
 interface CardSkeletonProps {
   className?: string;
   lines?: number;
   showImage?: boolean;
   showAvatar?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function CardSkeleton({ 
   className = '', 
@@ -77,13 +77,13 @@ export function CardSkeleton({
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 interface TableSkeletonProps {
   rows?: number;
   columns?: number;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 export function TableSkeleton({ 
   rows = 5, 
@@ -118,13 +118,13 @@ export function TableSkeleton({
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 interface ListSkeletonProps {
   items?: number;
   className?: string;
   showAvatar?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function ListSkeleton({ 
   items = 5, 
@@ -146,14 +146,14 @@ export function ListSkeleton({
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 interface GridSkeletonProps {
   items?: number;
   columns?: number;
   className?: string;
   showImage?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function GridSkeleton({ 
   items = 6, 
@@ -173,4 +173,4 @@ export function GridSkeleton({
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -171,4 +171,4 @@ export default function AINetworkSecurity() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

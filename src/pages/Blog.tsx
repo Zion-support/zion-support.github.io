@@ -136,7 +136,7 @@ export default function Blog() {
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+  {/* Removed stray closing parenthesis */}
     : [];
 
   return (
@@ -468,4 +468,4 @@ export default function Blog() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

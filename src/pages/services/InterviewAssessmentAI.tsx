@@ -451,4 +451,4 @@ export default function InterviewAssessmentAI() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

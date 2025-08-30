@@ -368,7 +368,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active',
     researchLevel: 'production',
     ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
-  }
+  {/* Removed stray closing brace */}
 ];
 export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
   if (category === 'All') {

@@ -8,7 +8,7 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
-}
+  {/* Removed stray closing brace */}
 
 // Generic API error
 class ApiError extends Error {
@@ -16,7 +16,7 @@ class ApiError extends Error {
     super(message);
     this.name = 'ApiError';
   }
-}
+  {/* Removed stray closing brace */}
 
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
@@ -48,13 +48,13 @@ async function apiRequest<T>(
     }
     throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
-}
+  {/* Removed stray closing brace */}
 
 interface ApiClientOptions {
   method?: string;
   body?: string;
   headers?: Record<string, string>;
-}
+  {/* Removed stray closing brace */}
 
 export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
   const { method = 'GET', body, headers = {} } = options;
@@ -83,7 +83,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
     console.error('API request failed:', error);
     throw error;
   }
-}
+  {/* Removed stray closing brace */}
 
 export const api = {
   get: (endpoint: string, headers?: Record<string, string>) => 

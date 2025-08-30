@@ -341,7 +341,7 @@ class PM2Dashboard {
     console.log('✅ Dashboard shutdown complete');
     process.exit(0);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
@@ -362,6 +362,6 @@ if (require.main === module) {
     await dashboard.shutdown();
     process.exit(1);
   });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = PM2Dashboard;

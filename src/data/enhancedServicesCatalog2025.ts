@@ -26,7 +26,7 @@ export interface EnhancedService {
   popular?: boolean;
   new?: boolean;
   featured?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export const enhancedServicesCatalog2025: EnhancedService[] = [
   // AI & Machine Learning Services
@@ -459,7 +459,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-emerald-600 to-green-700',
     new: true,
     featured: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default enhancedServicesCatalog2025;

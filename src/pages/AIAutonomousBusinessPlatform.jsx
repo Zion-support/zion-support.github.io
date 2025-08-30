@@ -674,7 +674,7 @@ const businessPlatformSolutions = [
     timeline: "32-44 weeks",
     category: "Financial",
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const platformTechnologies = [
@@ -705,7 +705,7 @@ const platformTechnologies = [
     icon: Target,
     useCase: "Strategic Planning",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -735,7 +735,7 @@ const successStories = [
     solution: "Built AI-powered customer analytics and personalization platform",
     results: "40% customer satisfaction increase, 50% marketing ROI improvement, better customer retention",
     logo: "RCN"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -766,7 +766,7 @@ const processSteps = [
     description: "Optimize platforms and train business teams",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const platformBenefits = [
@@ -793,7 +793,7 @@ const platformBenefits = [
     description: "AI platform capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AIAutonomousBusinessPlatform() {

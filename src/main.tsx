@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <App />
     </Router>
   </React.StrictMode>,
-)
+  {/* Removed stray closing parenthesis */}
 
 // Register service worker in production only
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
@@ -20,4 +20,4 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
 			console.error('Service worker registration failed:', error)
 		})
 	})
-}
+  {/* Removed stray closing brace */}

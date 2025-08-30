@@ -208,13 +208,13 @@ style.textContent = `
       text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor}
     to {
       text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor}
-  }
+  {/* Removed stray closing brace */}
   
   @keyframes shimmer {
     0% {
       transform: translateX(-100%)}
     100% {
       transform: translateX(100%)}
-  }
+  {/* Removed stray closing brace */}
 `;
 document.head.appendChild(style);

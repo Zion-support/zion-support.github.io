@@ -464,4 +464,4 @@ export default function SecurityHeadersCSP() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

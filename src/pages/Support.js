@@ -57,7 +57,7 @@ export default function Support() {
                 question: 'How do you handle data privacy?',
                 answer: 'We follow strict data privacy protocols and are fully GDPR compliant. All data is encrypted, access is strictly controlled, and we never share your data with third parties without explicit consent.'
             }
-        ]
+  {/* Removed stray closing bracket */}
     };
     const supportChannels = [
         {

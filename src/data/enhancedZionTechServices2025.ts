@@ -780,7 +780,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Helper functions

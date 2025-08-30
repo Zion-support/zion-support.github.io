@@ -142,7 +142,7 @@ const mobileDevelopmentSolutions = [
     timeline: "Ongoing",
     category: "Maintenance",
     technologies["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const mobileTechnologies = [
@@ -173,7 +173,7 @@ const mobileTechnologies = [
     icon: Palette,
     useCase: "Beautiful UIs",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -203,7 +203,7 @@ const successStories = [
     solution: "Built enterprise mobile app with real-time tracking, route optimization, and driver management",
     results: "25% improvement in delivery efficiency, 40% reduction in fuel costs, enhanced fleet visibility",
     logo: "LC"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -234,7 +234,7 @@ const processSteps = [
     description: "Test the app and deploy to app stores",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const mobileBenefits = [
@@ -261,7 +261,7 @@ const mobileBenefits = [
     description: "Visibility in app stores and potential for monetization",
     icon: Award,
     examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function MobileDevelopment() {

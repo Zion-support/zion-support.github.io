@@ -26,7 +26,7 @@ export default function ComprehensivePricing2027(...args[]):  {
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    )
+  {/* Removed stray closing parenthesis */}
     .sort((a, b) => {
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
@@ -315,12 +315,12 @@ export default function ComprehensivePricing2027(...args[]):  {
                         {/* Expand/Collapse Button */}
                         <button className="w-full mt-4 p-2 text-zion-cyan hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-colors flex items-center justify-center gap-2">
                           {expandedService === service.id ? (
-                            <>
+  {/* Empty JSX fragment */}
                               <ChevronUp className="w-4 h-4" />
                               Show Less
                             </>
                           ) : (
-                            <>
+  {/* Empty JSX fragment */}
                               <ChevronDown className="w-4 h-4" />
                               View Details
                             </>

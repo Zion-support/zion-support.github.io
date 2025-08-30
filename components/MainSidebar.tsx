@@ -126,7 +126,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
+  {/* Removed stray closing bracket */}
   };
 
   const quickActions = [
@@ -190,7 +190,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Backdrop */}
       {isOpen && (
         <div 

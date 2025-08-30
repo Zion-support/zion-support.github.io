@@ -446,6 +446,6 @@ export const specializedITServices2025 = [
         certifications['SOC 2 Type II', 'ISO 27001', 'NIST Compliance', 'FedRAMP'],
         sla: '99.99% uptime guarantee',
         support: '24/7 security operations center with dedicated security engineers'
-    }
+  {/* Removed stray closing brace */}
 ];
 export default specializedITServices2025;

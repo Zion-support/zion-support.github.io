@@ -276,7 +276,7 @@ class AuthService {
     const permissions = this.getUserPermissions();
     return permissions.includes(permission);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Create singleton instance
 const authService = new AuthService();

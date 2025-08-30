@@ -195,7 +195,7 @@ const itServices2028 = [
     rating: 4.6,
     reviews: 156,
     customers: 89
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const ITServices2028: React.FC = (): JSX.Element => {

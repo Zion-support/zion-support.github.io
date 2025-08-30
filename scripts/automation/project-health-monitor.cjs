@@ -655,7 +655,7 @@ class ProjectHealthMonitor {
     }
     
     return fixedFiles;
-  }
+  {/* Removed stray closing brace */}
 
   async fixDependencies(issue) {
     if (issue.message.includes('corrupted packages') || issue.message.includes('Missing critical dependencies')) {
@@ -693,7 +693,7 @@ class ProjectHealthMonitor {
     }
     
     return null;
-  }
+  {/* Removed stray closing brace */}
 
   async fixCorruptedFiles(issue) {
     if (issue.message.includes('corrupted source files')) {
@@ -723,7 +723,7 @@ class ProjectHealthMonitor {
     }
     
     return null;
-  }
+  {/* Removed stray closing brace */}
 
   async generateHealthReport(issues, fixes) {
     const report = {
@@ -748,7 +748,7 @@ class ProjectHealthMonitor {
     this.log(`Critical: ${report.summary.criticalIssues}, High: ${report.summary.highIssues}, Medium: ${report.summary.mediumIssues}`);
     
     return report;
-  }
+  {/* Removed stray closing brace */}
 
   generateRecommendations(issues) {
     const recommendations = [];
@@ -774,7 +774,7 @@ class ProjectHealthMonitor {
     }
     
     return recommendations;
-  }
+  {/* Removed stray closing brace */}
 
   async triggerRebuild() {
     try {
@@ -791,8 +791,8 @@ class ProjectHealthMonitor {
     } catch (error) {
       this.log(`Rebuild failed: ${error.message}`, 'WARN');
     }
-  }
-}
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -814,11 +814,11 @@ async function main() {
     monitor.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run if called directly
 if (require.main === module) {
   main();
-}
+  {/* Removed stray closing brace */}
 
 module.exports = ProjectHealthMonitor;

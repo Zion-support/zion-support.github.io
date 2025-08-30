@@ -401,4 +401,4 @@ export default function AIContentCreation() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

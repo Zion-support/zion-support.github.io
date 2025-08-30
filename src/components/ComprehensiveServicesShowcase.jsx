@@ -266,7 +266,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       benefits['Custom solutions', 'Scalable business model', 'Recurring revenue'],
       color: 'from-orange-500 to-red-500',
       href: '/services/microsaas'
-    }
+  {/* Removed stray closing brace */}
   ];
 
   const solutions = [
@@ -325,7 +325,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       icon: Brain,
       category: 'ai',
       href: '/solutions/ai-business-intelligence'
-    }
+  {/* Removed stray closing brace */}
   ];
 
   const filteredServices = activeCategory === 'all' 

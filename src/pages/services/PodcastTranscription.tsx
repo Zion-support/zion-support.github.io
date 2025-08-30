@@ -40,7 +40,7 @@ function PodcastTranscription() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 export default PodcastTranscription;
 

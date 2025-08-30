@@ -454,7 +454,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     status: 'active',
     compliance['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
     certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
-  }
+  {/* Removed stray closing brace */}
 ];
 export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
   if (industry === 'All') {

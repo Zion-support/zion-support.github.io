@@ -319,4 +319,4 @@ export default function AIHRTalentPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

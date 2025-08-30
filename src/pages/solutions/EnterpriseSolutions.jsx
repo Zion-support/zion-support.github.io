@@ -212,4 +212,4 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

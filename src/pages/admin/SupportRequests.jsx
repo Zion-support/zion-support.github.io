@@ -86,7 +86,7 @@ const MOCK_SUPPORT_REQUESTS = [
         createdAt: "2023-12-10T15:10:00Z",
         lastUpdated: "2023-12-13T11:25:00Z",
         category: "profile"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function SupportRequests() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -122,7 +122,7 @@ export default function SupportRequests() {
         setPriorityFilter(null);
         setCategoryFilter(null)};
     return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
-        ,
+  {/* Removed stray comma */}
             <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>

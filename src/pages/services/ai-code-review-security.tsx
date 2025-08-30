@@ -4,7 +4,7 @@ import { motion  } from 'framer-motion.ts';
 
 const AICodeReviewSecurity: React.FC = (): JSX.Element => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO
         title="AI-Powered Code Review & Security Analysis | Zion Tech Group"
         description="Advanced AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages."

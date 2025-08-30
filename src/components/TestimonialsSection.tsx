@@ -51,7 +51,7 @@ const testimonials = [
     rating: 5,
     industry: "Healthcare",
     project: "Cloud Migration & Optimization"
-  }
+  {/* Removed stray closing brace */}
 ];
 export function TestimonialsSection(...args[]):  {
   return (

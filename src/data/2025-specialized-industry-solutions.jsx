@@ -323,7 +323,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     technology: "AI + Retail Analytics",
     marketSize: "$4.6B by 2025",
     targetIndustry: "Retail, E-commerce, Hospitality"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const INDUSTRY_CATEGORIES = [
@@ -366,5 +366,5 @@ export const INDUSTRY_CONTACT = {
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
-    responseTime: "< 2 hours"
+    responseTime: "< 2 hours" />
 };

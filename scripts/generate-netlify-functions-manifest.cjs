@@ -15,5 +15,5 @@ try {
 	console.log('[netlify:manifest] wrote', manifestPath);
 } catch (e) {
 	console.log('[netlify:manifest] skipped (write failed)');
-}
+  {/* Removed stray closing brace */}
 process.exit(0);

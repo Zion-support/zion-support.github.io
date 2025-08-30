@@ -171,4 +171,4 @@ export default function AIDevOps() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

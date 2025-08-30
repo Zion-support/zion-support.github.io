@@ -115,7 +115,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const getMetricColor = (score: PerformanceScore): string  => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700')};
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Performance Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}

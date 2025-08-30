@@ -181,7 +181,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockCodeAnalysis = [
     {
@@ -216,7 +216,7 @@ const mockCodeAnalysis = [
         ],
         warnings[],
         timestamp: '2024-01-10T14:20:00Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockAIGenerations = [
     {
@@ -250,7 +250,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 3: With custom serializer'
         ],
         timestamp: '2024-01-15T11:45:00Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);

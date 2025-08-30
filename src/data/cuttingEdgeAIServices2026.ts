@@ -31,7 +31,7 @@ export interface CuttingEdgeAIService2026 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   // AI-Powered Autonomous Business Operations
@@ -682,5 +682,5 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     },
     competitors: ["Watershed", "Normative", "Sweep"],
     marketSize: "$18.7 billion by 2026"
-  }
+  {/* Removed stray closing brace */}
 ];

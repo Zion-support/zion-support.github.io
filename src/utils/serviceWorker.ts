@@ -327,7 +327,7 @@ export class ServiceWorkerManager {
     }
     return outputArray;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Export singleton instance
 export const serviceWorkerManager = ServiceWorkerManager.getInstance();

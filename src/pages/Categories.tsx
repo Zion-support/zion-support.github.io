@@ -186,7 +186,7 @@ export default function Categories() {
         talent: 8,
         equipment: 1
       }
-    ]
+  {/* Removed stray closing bracket */}
   };
 
   const featuredItems = [

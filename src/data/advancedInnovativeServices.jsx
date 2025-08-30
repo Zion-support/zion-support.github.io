@@ -618,6 +618,6 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         marketTrend: "Emerging market with increasing quantum computing threats",
         innovationLevel: "Pioneering post-quantum cryptography implementation",
         uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default ADVANCED_INNOVATIVE_SERVICES;

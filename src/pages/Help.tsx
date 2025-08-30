@@ -148,7 +148,7 @@ export default function Help(...args[]):  {
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
         ).map(article => ({ ...category, article }))
-      )
+  {/* Removed stray closing parenthesis */}
     [];
 
   const filteredCategories = selectedCategory === 'all' 

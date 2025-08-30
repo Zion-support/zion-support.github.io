@@ -96,4 +96,4 @@ export function SitemapPage() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

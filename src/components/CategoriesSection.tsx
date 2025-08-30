@@ -54,7 +54,7 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/cybersecurity"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 interface CategoriesSectionProps extends React.PropsWithChildren<{}> {

@@ -72,7 +72,7 @@ const mockSystemMetrics = [
         change: -3.2,
         category: 'Performance',
         lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockPerformanceAlerts = [
     {
@@ -96,7 +96,7 @@ const mockPerformanceAlerts = [
         affected['Database Cluster', 'Application Servers'],
         recommendations['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
         status: 'acknowledged'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockScalabilityMetrics = [
     {
@@ -131,7 +131,7 @@ const mockScalabilityMetrics = [
         prediction: 4.2,
         category: 'Storage',
         unit: 'TB'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedPerformanceMonitor() {
     const [isOpen, setIsOpen] = useState(false);

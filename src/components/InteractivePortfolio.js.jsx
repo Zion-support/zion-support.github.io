@@ -90,7 +90,7 @@ const portfolioProjects = [
         completionDate: '2024-06',
         featured: true,
         tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
 export function InteractivePortfolio() {

@@ -205,4 +205,4 @@ export default function ManufacturingSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

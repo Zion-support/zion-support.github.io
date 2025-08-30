@@ -299,7 +299,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
     technology: "AI + Governance",
     marketSize: "$2.1B by 2025",
     targetIndustry: "Enterprise, Government, Healthcare"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const CUTTING_EDGE_CATEGORIES = [
@@ -341,5 +341,5 @@ export const CUTTING_EDGE_CONTACT = {
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
-    responseTime: "< 2 hours"
+    responseTime: "< 2 hours" />
 };

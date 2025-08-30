@@ -629,4 +629,4 @@ export default function AIInventoryManagement() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

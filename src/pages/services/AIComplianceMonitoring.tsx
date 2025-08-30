@@ -171,4 +171,4 @@ export default function AIComplianceMonitoring() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

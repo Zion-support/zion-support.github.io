@@ -914,6 +914,6 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
     freeTier: false,
     trialPeriod: "7 days"
-  }
+  {/* Removed stray closing brace */}
 ];
 export default ENHANCED_INNOVATIVE_SERVICES_2025;

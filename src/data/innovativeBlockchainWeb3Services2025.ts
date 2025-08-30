@@ -355,5 +355,5 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     },
     competitors["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],
     marketSize: "$15.6 billion by 2025"
-  }
+  {/* Removed stray closing brace */}
 ];

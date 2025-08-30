@@ -115,7 +115,7 @@ const onsiteSupportSolutions = [
     timeline: "2-8 hours",
     category: "Emergency",
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const supportTechnologies = [
@@ -146,7 +146,7 @@ const supportTechnologies = [
     icon: Shield,
     useCase: "Security Issues",
     reliability: "Critical"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -176,7 +176,7 @@ const successStories = [
     solution: "Emergency hardware support with immediate replacement and data recovery",
     results: "Zero trading downtime, data integrity maintained, improved disaster recovery",
     logo: "FSF"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -207,7 +207,7 @@ const processSteps = [
     description: "Document resolution and schedule follow-up maintenance",
     icon: FileText,
     duration: "1-2 hours"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const supportBenefits = [
@@ -234,7 +234,7 @@ const supportBenefits = [
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
     examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function OnsiteSupport() {

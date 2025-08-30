@@ -68,7 +68,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Mobile Menu Button */}
       <motion.button
         whileHover={{ scale: 1.05 }}
@@ -82,7 +82,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <>
+  {/* Empty JSX fragment */}
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}

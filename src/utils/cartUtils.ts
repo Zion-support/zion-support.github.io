@@ -6,7 +6,7 @@ export interface CartItem {
   quantity: number;
   type: 'equipment' | 'service' | 'talent';
 
-}
+  {/* Removed stray closing brace */}
 
 export const calculateCartTotal = (items: CartItem[]): number  => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);

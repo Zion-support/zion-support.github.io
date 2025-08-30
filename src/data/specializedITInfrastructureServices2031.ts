@@ -31,7 +31,7 @@ export interface SpecializedITInfrastructureService2031 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastructureService2031[] = [
   // Cloud & DevOps Services
@@ -664,5 +664,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     },
     competitors: ["Microsoft", "Google", "Slack", "Zoom", "Asana"],
     marketSize: "$78.9 billion by 2031"
-  }
+  {/* Removed stray closing brace */}
 ];

@@ -16,8 +16,8 @@ export const LazyLoader: React.FC<LazyLoaderProps> = ({
     <Suspense fallback={fallback}>
       <Component {...props} />
     </Suspense>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}
 
 // Lazy load commonly used components
 export const LazyHome = lazy(() => import('../pages/Home'))

@@ -46,7 +46,7 @@ export default function Signup(...args[]):  {
     'Government',
     'Non-profit',
     'Other'
-  ]
+  {/* Removed stray closing bracket */}
 
   const useCases = [
     'AI & Machine Learning',
@@ -58,7 +58,7 @@ export default function Signup(...args[]):  {
     'Micro SaaS Development',
     'Enterprise IT',
     'Other'
-  ]
+  {/* Removed stray closing bracket */}
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target
@@ -113,7 +113,7 @@ export default function Signup(...args[]):  {
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -551,5 +551,5 @@ export default function Signup(...args[]):  {
         </section>
       </main>
     </>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

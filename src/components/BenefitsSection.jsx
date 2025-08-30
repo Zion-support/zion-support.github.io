@@ -58,7 +58,7 @@ const benefits = [
       "Performance benchmarks",
       "User experience focus"
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const additionalStats = [

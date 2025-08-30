@@ -853,7 +853,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
 export const getComprehensivePricingGuide2027ByCategory = (category: string)  => 

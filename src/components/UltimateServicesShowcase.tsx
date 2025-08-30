@@ -100,7 +100,7 @@ const categories = [
     icon: <Code className="w-8 h-8" />,
     color: 'from-green-600 to-emerald-700',
     services: innovativeMicroSaasSolutions2025
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const innovationLevelColors = {

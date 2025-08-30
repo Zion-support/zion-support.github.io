@@ -212,7 +212,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     reviews: 189,
     launchDate: '2027-02-01',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
@@ -378,7 +378,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     reviews: 198,
     launchDate: '2027-02-15',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
@@ -544,7 +544,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     reviews: 245,
     launchDate: '2027-02-05',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // 4. ADVANCED IOT & EDGE COMPUTING
@@ -710,7 +710,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
     reviews: 156,
     launchDate: '2027-02-10',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // 5. ADVANCED FINANCIAL TECHNOLOGY
@@ -876,7 +876,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     reviews: 423,
     launchDate: '2027-01-01',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // 6. ADVANCED HEALTHCARE TECHNOLOGY
@@ -1042,7 +1042,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     reviews: 289,
     launchDate: '2027-01-15',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Export all expanded services

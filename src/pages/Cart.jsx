@@ -25,7 +25,7 @@ export default function CartPage() {
             else {
                 dispatch(setItemsAction([]))}
         }
-        ;
+  {/* Removed stray semicolon */}
         load()}, [user, dispatch]);
     const updateQuantity = async (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));

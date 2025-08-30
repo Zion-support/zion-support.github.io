@@ -3,13 +3,13 @@ interface SitemapUrl {
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
+  {/* Removed stray closing brace */}
 
 interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
-}
+  {/* Removed stray closing brace */}
 
 export class SitemapGenerator {
   private config: SitemapConfig;
@@ -116,12 +116,12 @@ ${sitemapEntries}
       "sameAs": [
         "https://linkedin.com/company/zion-tech-group",
         "https://twitter.com/ziontechgroup"
-      ]
+  {/* Removed stray closing bracket */}
     };
 
     return JSON.stringify(structuredData, null, 2);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig: SitemapConfig = {
@@ -168,17 +168,17 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/faq', priority: 0.5, changefreq: 'monthly' },
     { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
     { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
-  ]
+  {/* Removed stray closing bracket */}
 };
 
 // Utility function to generate sitemap
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateXML();
-}
+  {/* Removed stray closing brace */}
 
 // Utility function to generate robots.txt
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
-}
+  {/* Removed stray closing brace */}

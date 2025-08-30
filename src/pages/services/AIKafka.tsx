@@ -171,4 +171,4 @@ export default function AIKafka() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

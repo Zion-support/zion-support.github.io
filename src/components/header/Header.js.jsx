@@ -93,7 +93,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Mobile Menu */}
         <MobileMenu className="md:hidden"/>
       </div>
-    <>
+  {/* Empty JSX fragment */}
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
             ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
             : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'}`} style={headerStyle}>

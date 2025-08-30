@@ -21,7 +21,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    )
+  {/* Removed stray closing parenthesis */}
     .sort((a, b) => b[sortBy] - a[sortBy]);
   const containerVariants = {
     hidden: { opacity: 0 },

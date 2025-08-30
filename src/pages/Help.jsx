@@ -390,4 +390,4 @@ export default function Help() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

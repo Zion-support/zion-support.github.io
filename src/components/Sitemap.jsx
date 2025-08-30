@@ -42,7 +42,7 @@ const Sitemap = () => {
         legal[
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },
             { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
-        ]
+  {/* Removed stray closing bracket */}
     };
     return (<div className="bg-slate-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

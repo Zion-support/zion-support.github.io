@@ -116,7 +116,7 @@ export const onsiteServicePricing = [
     responseTime: '72 hours',
     category: 'consulting',
     popular: false
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const serviceCategories = [
@@ -155,7 +155,7 @@ export const serviceCategories = [
     description: 'IT strategy and planning services',
     icon: '📊',
     averageRate: 225
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const additionalServices = [
@@ -194,7 +194,7 @@ export const additionalServices = [
     price: 'Monthly',
     description: 'Ongoing maintenance agreements',
     category: 'maintenance'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getServiceById = (id) => {

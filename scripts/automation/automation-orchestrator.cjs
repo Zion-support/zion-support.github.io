@@ -439,12 +439,12 @@ class AutomationOrchestrator {
       console.error('❌ Orchestrator error:', error.message);
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the orchestrator
 if (require.main === module) {
   const orchestrator = new AutomationOrchestrator();
   orchestrator.run().catch(console.error);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = AutomationOrchestrator;

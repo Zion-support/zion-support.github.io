@@ -693,4 +693,4 @@ export default function AIEmployeePerformanceAnalytics() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

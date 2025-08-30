@@ -155,4 +155,4 @@ export default function AIDataGovernancePlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

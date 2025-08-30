@@ -869,7 +869,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     },
     competitors: ["Watershed", "Normative", "Persefoni", "Sweep"],
     marketSize: "$8.5 billion by 2025"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Helper functions

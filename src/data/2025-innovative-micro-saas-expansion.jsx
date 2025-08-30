@@ -375,7 +375,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     technology: "Blockchain + Crypto + Payments",
     marketSize: "$3.4B by 2025",
     targetIndustry: "E-commerce, Online Services, Gaming"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const INNOVATIVE_CATEGORIES = [
@@ -418,5 +418,5 @@ export const INNOVATIVE_CONTACT = {
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
-    responseTime: "< 2 hours"
+    responseTime: "< 2 hours" />
 };

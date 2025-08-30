@@ -615,7 +615,7 @@ class PM2SyncMonitor {
       performance: this.metrics.performance
     };
   }
-}
+  {/* Removed stray closing brace */}
 
 // Handle process signals
 process.on('SIGINT', async () => {
@@ -631,6 +631,6 @@ process.on('SIGTERM', async () => {
 // Start the monitor system
 if (require.main === module) {
   global.pm2SyncMonitor = new PM2SyncMonitor();
-}
+  {/* Removed stray closing brace */}
 
 module.exports = PM2SyncMonitor;

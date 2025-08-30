@@ -635,7 +635,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     integrations["ERP systems", "CRM platforms", "Document management", "Workflow tools"],
     freeTier: true,
     trialPeriod: "30 days"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default comprehensiveAIServices2030;

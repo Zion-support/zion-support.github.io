@@ -143,7 +143,7 @@ export const innovativeAIServices2030: AIService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags["AI Voice", "Voice Cloning", "Text-to-Speech", "Content Creation", "Accessibility"],
@@ -237,7 +237,7 @@ export const innovativeAIServices2030: AIService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 1 second",
+    responseTime: "< 1 second", />
     availability: "Global",
     location: "Global",
     tags["AI Code Review", "Software Development", "Code Quality", "Security", "DevOps"],
@@ -331,7 +331,7 @@ export const innovativeAIServices2030: AIService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags["AI Sentiment", "Customer Analytics", "Brand Monitoring", "Social Media", "Customer Service"],
@@ -425,7 +425,7 @@ export const innovativeAIServices2030: AIService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 1 second",
+    responseTime: "< 1 second", />
     availability: "Global",
     location: "Global",
     tags["AI Inventory", "Supply Chain", "Demand Forecasting", "Retail", "Manufacturing"],
@@ -519,7 +519,7 @@ export const innovativeAIServices2030: AIService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],
@@ -527,7 +527,7 @@ export const innovativeAIServices2030: AIService[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default innovativeAIServices2030;

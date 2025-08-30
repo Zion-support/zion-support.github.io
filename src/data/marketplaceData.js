@@ -21,7 +21,7 @@ export function generateSearchSuggestions() {
     "Support",
     "Maintenance"
   ];
-}
+  {/* Removed stray closing brace */}
 
 // Marketplace items data
 export const marketplaceItems = [
@@ -84,7 +84,7 @@ export const marketplaceItems = [
     availability: "Available",
     tags: ["Cloud", "Microservices", "Scalability", "Architecture"],
     images: ["/images/cloud-microservices.jpg"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Marketplace filters configuration
@@ -125,5 +125,5 @@ export const marketplaceFilters = {
     "Coming Soon",
     "Limited Availability",
     "Custom Development"
-  ]
+  {/* Removed stray closing bracket */}
 };

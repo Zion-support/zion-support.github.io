@@ -27,7 +27,7 @@ interface HeroProps {
     text: string;
     color: string;
   }>;
-}
+  {/* Removed stray closing brace */}
 
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions",
@@ -40,7 +40,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },
     { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
-  ]
+  {/* Removed stray closing bracket */}
 }) => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

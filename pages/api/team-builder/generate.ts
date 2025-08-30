@@ -34,7 +34,7 @@ export default async function handler(...args[]):  {
     if (error.context && error.context.errorMessage) {
         return res.status(500).json({ error: `Failed to generate team recommendation: ${error.context.errorMessage}` })}
     return res.status(500).json({ error: `Failed to generate team recommendation: ${error.message || 'Unknown error'}` })}
-}
+  {/* Removed stray closing brace */}
 */
 
 export {}; // Keep it as a module

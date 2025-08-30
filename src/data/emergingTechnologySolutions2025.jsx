@@ -518,6 +518,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         scalability: "Multi-organization sustainability platform",
         customizationLevel: "Custom sustainability solutions and reporting",
         innovationLevel: "Advanced green technology and sustainability solutions"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

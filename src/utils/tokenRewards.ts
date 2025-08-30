@@ -5,7 +5,7 @@ export async function rewardOnboarding(userId: string) {
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })
   });
-}
+  {/* Removed stray closing brace */}
 
 export async function earnTokensForPurchase(
   userId: string,
@@ -16,7 +16,7 @@ export async function earnTokensForPurchase(
     method: 'POST',
     body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType })
   });
-}
+  {/* Removed stray closing brace */}
 
 export async function earnTokensForReferral(
   userId: string,
@@ -26,4 +26,4 @@ export async function earnTokensForReferral(
     method: 'POST',
     body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
   });
-}
+  {/* Removed stray closing brace */}

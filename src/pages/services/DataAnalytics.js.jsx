@@ -395,4 +395,4 @@ export default function DataAnalyticsServices() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

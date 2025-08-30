@@ -368,12 +368,12 @@ class ErrorFixer {
       throw error;
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the automation if called directly
 if (require.main === module) {
   const errorFixer = new ErrorFixer();
   errorFixer.run().catch(console.error);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = ErrorFixer;

@@ -49,7 +49,7 @@ const contactMethods = [
     description: 'Eastern Time Zone',
     action: null,
     color: 'from-orange-500 to-red-500'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const socialLinks = [
@@ -82,7 +82,7 @@ const socialLinks = [
     icon: Github,
     url: 'https://github.com/ziontechgroup',
     color: 'hover:text-gray-400'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const contactFormFields = [
@@ -136,7 +136,7 @@ const contactFormFields = [
       'Micro SaaS Solutions',
       'Other'
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function Contact() {

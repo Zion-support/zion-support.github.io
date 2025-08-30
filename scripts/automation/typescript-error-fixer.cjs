@@ -118,7 +118,7 @@ class TypeScriptErrorFixer {
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
     }
-  }
+  {/* Removed stray closing brace */}
 
   async fixSolutionsPage() {
     const filePath = 'src/pages/solutions.tsx';
@@ -142,7 +142,7 @@ class TypeScriptErrorFixer {
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
     }
-  }
+  {/* Removed stray closing brace */}
 
   async fixEnterpriseSolutions() {
     const filePath = 'src/pages/solutions/Enterprise.tsx';
@@ -170,8 +170,8 @@ class TypeScriptErrorFixer {
       this.filesProcessed++;
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
-    }
-  }
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
   async fixHealthcareSolutions() {
     const filePath = 'src/pages/solutions/Healthcare.tsx';
@@ -199,8 +199,8 @@ class TypeScriptErrorFixer {
       this.filesProcessed++;
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
-    }
-  }
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
   async fixTeamBuilderPage() {
     const filePath = 'src/pages/team-builder/index.tsx';
@@ -223,7 +223,7 @@ class TypeScriptErrorFixer {
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
     }
-  }
+  {/* Removed stray closing brace */}
 
   async fixCommonPatterns() {
     this.log('Fixing common patterns across all TypeScript files...');
@@ -249,7 +249,7 @@ class TypeScriptErrorFixer {
         this.log(`Error processing ${file}: ${error.message}`);
       }
     }
-  }
+  {/* Removed stray closing brace */}
 
   applyCommonFixes(content) {
     // Fix missing colons in object properties
@@ -340,12 +340,12 @@ class TypeScriptErrorFixer {
     this.log(`Report saved to ${reportPath}`);
     return report;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the automation if called directly
 if (require.main === module) {
   const fixer = new TypeScriptErrorFixer();
   fixer.fixAllErrors().catch(console.error);
-}
+  {/* Removed stray closing brace */}
 
 module.exports = TypeScriptErrorFixer;

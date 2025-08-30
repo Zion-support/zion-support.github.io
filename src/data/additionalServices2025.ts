@@ -20,7 +20,7 @@ export interface AdditionalService {
     email: string;
     website: string;
   };
-}
+  {/* Removed stray closing brace */}
 
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
   {
@@ -178,7 +178,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
@@ -205,6 +205,6 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     category: "AI & Content",
     price: 999,
     marketPrice: "$1,000 - $3,000/month"
-  }
+  {/* Removed stray closing brace */}
 ];
 

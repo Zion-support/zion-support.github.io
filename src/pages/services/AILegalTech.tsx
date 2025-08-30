@@ -171,4 +171,4 @@ export default function AILegalTech() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

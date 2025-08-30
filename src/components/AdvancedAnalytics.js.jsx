@@ -41,7 +41,7 @@ export function AdvancedAnalytics() {
                     { device: 'Desktop', percentage: 60 },
                     { device: 'Mobile', percentage: 35 },
                     { device: 'Tablet', percentage: 5 }
-                ]
+  {/* Removed stray closing bracket */}
             });
             setIsLoading(false)};
         fetchData()}, [timeRange]);

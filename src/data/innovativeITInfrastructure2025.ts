@@ -355,5 +355,5 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     competitors["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
     marketSize: "$667.9 billion by 2025"
-  }
+  {/* Removed stray closing brace */}
 ];

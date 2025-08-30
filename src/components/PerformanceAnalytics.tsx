@@ -22,14 +22,14 @@ interface PerformanceMetric {
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
-}
+  {/* Removed stray closing brace */}
 
 interface PerformanceData {
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
-}
+  {/* Removed stray closing brace */}
 
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);

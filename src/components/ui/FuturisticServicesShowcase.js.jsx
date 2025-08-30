@@ -56,7 +56,7 @@ const services = [
         color: 'from-yellow-500 to-orange-500',
         price: '$249/month',
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance']
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);

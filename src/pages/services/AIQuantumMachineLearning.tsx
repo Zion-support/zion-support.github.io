@@ -155,4 +155,4 @@ export default function AIQuantumMachineLearning() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

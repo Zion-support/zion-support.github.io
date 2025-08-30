@@ -62,7 +62,7 @@ const featuredListings = [
     featured: true,
     technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
     highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const featuredServices = [
@@ -98,7 +98,7 @@ const featuredServices = [
     image: '🔒',
     link: '/services/cybersecurity',
     features['Security Audits', 'Threat Detection', 'Incident Response']
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export function FeaturedListingsSection(...args[]):  {

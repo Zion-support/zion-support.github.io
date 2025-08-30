@@ -294,4 +294,4 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -353,7 +353,7 @@ ${report.summary.failed > 0 ?
     
     return report;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function main() {
@@ -365,7 +365,7 @@ async function main() {
     console.error('❌ Testing automation failed:', error);
     process.exit(1);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Start the testing automation
 main().catch(console.error);

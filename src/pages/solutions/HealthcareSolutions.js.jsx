@@ -212,4 +212,4 @@ export default function HealthcareSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

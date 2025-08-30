@@ -52,7 +52,7 @@ export function LoadingSpinner(...args[]):  {
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
                   'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)'
-                ]
+  {/* Removed stray closing bracket */}
               }}
               transition={{ duration: 3, repeat: Infinity }}
             />

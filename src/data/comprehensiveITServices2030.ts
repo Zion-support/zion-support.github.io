@@ -614,7 +614,7 @@ export const comprehensiveITServices2030: ITService[] = [
     ],
     roi: "500% within 24 months",
     setupTime: "4-16 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default comprehensiveITServices2030;

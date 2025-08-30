@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function AIAutoEmailResponder(...args: []):  {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
         <meta name="description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
@@ -377,4 +377,4 @@ export default function AIAutoEmailResponder(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

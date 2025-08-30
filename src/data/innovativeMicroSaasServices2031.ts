@@ -31,7 +31,7 @@ export interface InnovativeMicroSaasService2031 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2031: InnovativeMicroSaasService2031[] = [
   // AI-Powered Micro SAAS Services
@@ -853,5 +853,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2031: InnovativeMicroSaasService2031
     },
     competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
     marketSize: "$25.6 billion by 2031"
-  }
+  {/* Removed stray closing brace */}
 ];

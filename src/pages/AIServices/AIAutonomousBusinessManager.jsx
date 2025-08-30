@@ -27,7 +27,7 @@ const features = [
         description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const benefits = [
     "Increase operational efficiency by up to 60%",
@@ -57,7 +57,7 @@ const useCases = [
         title: "Financial Services",
         description: "Enhance financial decision-making with real-time market analysis and risk assessment.",
         icon: BarChart3
-    }
+  {/* Removed stray closing brace */}
 ];
 const testimonials = [
     {
@@ -71,7 +71,7 @@ const testimonials = [
         name: "Michael Rodriguez",
         role: "COO, InnovateCorp",
         rating: 5
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function AIAutonomousBusinessManager() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">

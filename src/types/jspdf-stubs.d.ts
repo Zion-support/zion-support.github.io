@@ -16,9 +16,9 @@ declare module 'jspdf' {
     output(type?: string): ;
   }
   export function autoTable(...args: any[]): void;
-}
+  {/* Removed stray closing brace */}
 
 declare module 'jspdf-autotable' {
   const autoTable: ;
   export default autoTable;
-}
+  {/* Removed stray closing brace */}

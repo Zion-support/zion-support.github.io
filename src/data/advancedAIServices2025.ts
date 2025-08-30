@@ -357,7 +357,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     },
     competitors["DoNotPay", "LegalZoom", "Rocket Lawyer", "LawVu"],
     marketSize: "$25.8 billion by 2025"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default ADVANCED_AI_SERVICES_2025;

@@ -287,4 +287,4 @@ export default function NewServicesShowcase2025() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

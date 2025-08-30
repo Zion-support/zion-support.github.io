@@ -171,4 +171,4 @@ export default function AIAugmentedReality() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

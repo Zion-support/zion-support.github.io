@@ -36,7 +36,7 @@ class SmartPerformanceOptimizer {
         { name: 'Parallel Builds', command: 'npm run build:parallel', impact: 'HIGH' },
         { name: 'Incremental Builds', command: 'npm run build:incremental', impact: 'MEDIUM' },
         { name: 'Cache Optimization', command: 'npm run build:cache', impact: 'MEDIUM' }
-      ]
+  {/* Removed stray closing bracket */}
     };
   }
 
@@ -436,7 +436,7 @@ class SmartPerformanceOptimizer {
       setTimeout(() => this.run(), 900000); // 15 minutes on error
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Start the Smart Performance Optimizer
 const optimizer = new SmartPerformanceOptimizer();

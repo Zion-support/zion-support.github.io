@@ -726,7 +726,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     color: 'from-orange-600 to-red-700',
     link: '/services/blockchain-web3',
     contactInfo
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default enhancedServices2025;

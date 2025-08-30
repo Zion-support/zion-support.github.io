@@ -136,12 +136,12 @@ export function LoginContent() {
             >
               <span className="relative z-10 flex items-center justify-center">
                 {isLoading ? (
-                  <>
+  {/* Empty JSX fragment */}
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
                     Signing in...
                   </>
                 ) : (
-                  <>
+  {/* Empty JSX fragment */}
                     <Lock className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Sign In
                   </>

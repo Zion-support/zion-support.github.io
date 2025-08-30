@@ -645,7 +645,7 @@ class IntelligentAutomationOrchestrator {
     
     return recommendations;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function runIntelligentOrchestrator() {
@@ -665,6 +665,6 @@ async function runIntelligentOrchestrator() {
   } catch (error) {
     console.error('❌ Intelligent Automation Orchestrator failed:', error.message);
   }
-}
+  {/* Removed stray closing brace */}
 
 runIntelligentOrchestrator();

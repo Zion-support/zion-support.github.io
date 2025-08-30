@@ -549,6 +549,6 @@ export const enhancedITServices2025 = [
         backupSolutions: true,
         monitoringTools: true,
         reportingCapabilities: true
-    }
+  {/* Removed stray closing brace */}
 ];
 export default enhancedITServices2025;

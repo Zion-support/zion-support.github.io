@@ -261,4 +261,4 @@ export default function AIMarketingAutomationPersonalization() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

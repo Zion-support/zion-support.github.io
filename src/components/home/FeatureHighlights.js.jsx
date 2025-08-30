@@ -28,7 +28,7 @@ const highlights = [
         color: 'from-zion-blue to-zion-blue-dark',
         bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'
-    }
+  {/* Removed stray closing brace */}
 ];
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },

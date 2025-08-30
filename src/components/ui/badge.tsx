@@ -34,8 +34,8 @@ const badgeVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
-)
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing parenthesis */}
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -44,7 +44,7 @@ export interface BadgeProps
 function Badge(...args[]):  {
   return (
     <div className={cn(badgeVariants({ variant, size }), className)} {...props} />
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}
 
 export { Badge, badgeVariants }

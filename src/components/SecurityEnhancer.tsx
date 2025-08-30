@@ -277,12 +277,12 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
               className="w-full"
             >
               {isScanning ? (
-                <>
+  {/* Empty JSX fragment */}
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Scanning...
                 </>
               ) : (
-                <>
+  {/* Empty JSX fragment */}
                   <Zap className="h-4 w-4 mr-2" />
                   Run Security Scan
                 </>

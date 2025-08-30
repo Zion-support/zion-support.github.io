@@ -150,7 +150,7 @@ const MarketingServices = [
         icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,
         category: "MarTech",
         link: "/request-quote?service=marketing-technology"
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },

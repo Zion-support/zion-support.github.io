@@ -6,7 +6,7 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-}
+  {/* Removed stray closing brace */}
 
 export const PerformanceOptimizer: React.FC = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);

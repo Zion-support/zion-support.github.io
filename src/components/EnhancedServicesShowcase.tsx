@@ -207,7 +207,7 @@ const services: Service[] = [
     marketSize: '$19.9B Market',
     path: '/services/blockchain',
     category: 'Blockchain & Web3'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];

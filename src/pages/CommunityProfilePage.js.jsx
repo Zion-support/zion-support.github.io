@@ -96,7 +96,7 @@ const userPosts = [
         upvotes: 24,
         downvotes: 0,
         replyCount: 6
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function CommunityProfilePage() {
     const { userId } = useParams();
@@ -123,7 +123,7 @@ export default function CommunityProfilePage() {
           </Button>
         </div>)}
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
-        ,
+  {/* Removed stray comma */}
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">

@@ -110,7 +110,7 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
       </div>
       <AlertDescription className="text-sm mb-3">{message}</AlertDescription>
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
-        <>
+  {/* Empty JSX fragment */}
           <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`} />
           <div className="flex justify-between text-xs text-muted-foreground mt-1">
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>

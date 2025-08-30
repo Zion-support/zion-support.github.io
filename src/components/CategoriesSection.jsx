@@ -72,7 +72,7 @@ const specialServices = [
         link: "/cloud-solutions",
         icon: <Zap className="w-5 h-5"/>,
         description: "Scalable cloud infrastructure"
-    }
+  {/* Removed stray closing brace */}
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {

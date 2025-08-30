@@ -171,4 +171,4 @@ export default function AIManufacturing() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

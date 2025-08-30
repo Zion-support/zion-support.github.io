@@ -214,7 +214,7 @@ export const comprehensiveServices = [
     icon: '🎧',
     responseTime: '2 hours',
     sla: '95% first-call resolution'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const serviceCategories = [
@@ -253,7 +253,7 @@ export const serviceCategories = [
     description: 'Help desk and user support services',
     icon: '🎧',
     services: comprehensiveServices.filter(s => s.category === 'Support')
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const pricingTiers = [
@@ -309,7 +309,7 @@ export const pricingTiers = [
       'Custom SLAs',
       '1-hour response time'
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const getServiceById = (id) => {

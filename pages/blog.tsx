@@ -76,7 +76,7 @@ export default function Blog(...args[]):  {
       featured: false,
       image: '/blog/cyber-threats.jpg'
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   const categories = [
     { name: 'All', count: blogPosts.length },
@@ -85,7 +85,7 @@ export default function Blog(...args[]):  {
     { name: 'Cloud & DevOps', count: 2 },
     { name: 'Emerging Tech', count: 1 },
     { name: 'AI & Ethics', count: 1 }
-  ]
+  {/* Removed stray closing bracket */}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -253,5 +253,5 @@ export default function Blog(...args[]):  {
         </div>
       </section>
     </div>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

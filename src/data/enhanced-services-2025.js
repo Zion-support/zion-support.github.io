@@ -166,7 +166,7 @@ export const enhancedServices2025 = [
       enterprise: "Custom"
     },
     technologies["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const ENHANCED_SERVICES_2025 = enhancedServices2025;

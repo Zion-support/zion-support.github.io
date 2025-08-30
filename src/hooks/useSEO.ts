@@ -168,7 +168,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://www.facebook.com/ziontechgroup'
-    ]
+  {/* Removed stray closing bracket */}
   }), []);
 
   // Track page view
@@ -301,4 +301,4 @@ declare global {
 
     gtag?: (...args[])  => void;
     dataLayer?[]}
-}
+  {/* Removed stray closing brace */}

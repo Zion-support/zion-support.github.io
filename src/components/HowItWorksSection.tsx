@@ -76,7 +76,7 @@ const steps = [
         ],
         duration: "Ongoing",
         success: "100% client retention"
-    }
+  {/* Removed stray closing brace */}
 ];
 const stats = [
     { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
@@ -272,4 +272,4 @@ export function HowItWorksSection() {
       </div>
     </section>
   );
-}
+  {/* Removed stray closing brace */}

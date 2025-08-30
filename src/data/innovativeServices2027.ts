@@ -97,7 +97,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     reviews: 234,
     launchDate: '2027-01-20',
     status: 'active'
-  }
+  {/* Removed stray closing brace */}
 ];
 export const serviceCategories2027 = [
   'All',

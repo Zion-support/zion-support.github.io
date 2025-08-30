@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function FinOpsAdvisor(...args: []):  {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
         <meta name="description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />
@@ -420,4 +420,4 @@ export default function FinOpsAdvisor(...args: []):  {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

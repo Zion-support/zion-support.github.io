@@ -492,7 +492,7 @@ const microSAASServices2028 = [
     rating: 4.6,
     reviews: 234,
     customers: 123
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const MicroSAASServices2028: React.FC = (): JSX.Element => {

@@ -171,4 +171,4 @@ export default function AIHRRecruitment() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -98,4 +98,4 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
-}
+  {/* Removed stray closing brace */}

@@ -28,5 +28,5 @@ export const TALENT_SEEDS = [
         skills['AWS', 'Docker', 'Kubernetes'],
         hourly_rate: 140,
         availability_type: 'project'
-    }
+  {/* Removed stray closing brace */}
 ];

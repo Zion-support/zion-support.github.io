@@ -85,7 +85,7 @@ async function runPerformanceMonitor() {
     console.error('❌ Continuous performance monitoring failed:', error.message);
     // Don't exit, just log the error and continue
   }
-}
+  {/* Removed stray closing brace */}
 
 function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default
   const largeFiles = [];
@@ -114,7 +114,7 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default
   
   scanDirectory(dir);
   return largeFiles.sort((a, b) => b.size - a.size);
-}
+  {/* Removed stray closing brace */}
 
 function getDirectorySize(dir) {
   let totalSize = 0;
@@ -140,7 +140,7 @@ function getDirectorySize(dir) {
   
   calculateSize(dir);
   return totalSize;
-}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
@@ -155,7 +155,7 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
   
   console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  {/* Removed stray closing brace */}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {

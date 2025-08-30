@@ -480,7 +480,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Performance monitoring"
     ],
     technologies["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Ultimate IT Infrastructure Services 2025
@@ -619,7 +619,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Incident response setup"
     ],
     technologies["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Ultimate AI Services 2025
@@ -762,7 +762,7 @@ export const ultimateAIServices2025: AIService[] = [
     marketSize: "$15.3 billion",
     ethicalAI["Content safety", "Bias prevention", "Quality standards"],
     technologies["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default {

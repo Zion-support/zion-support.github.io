@@ -9,7 +9,7 @@ interface VirtualScrollProps<T> {
   overscan?: number;
   className?: string;
   onScroll?: (scrollTop: number) => void;
-}
+  {/* Removed stray closing brace */}
 
 export function VirtualScroll<T>({
   items,
@@ -118,7 +118,7 @@ export function VirtualScroll<T>({
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 // Specialized virtual scroll for service cards
 interface ServiceCard {
@@ -127,14 +127,14 @@ interface ServiceCard {
   description: string;
   category: string;
   icon?: string;
-}
+  {/* Removed stray closing brace */}
 
 interface ServiceVirtualScrollProps {
   services: ServiceCard[];
   height?: number;
   onServiceClick?: (service: ServiceCard) => void;
   className?: string;
-}
+  {/* Removed stray closing brace */}
 
 export function ServiceVirtualScroll({
   services,
@@ -182,4 +182,4 @@ export function ServiceVirtualScroll({
       className={className}
     />
   );
-}
+  {/* Removed stray closing brace */}

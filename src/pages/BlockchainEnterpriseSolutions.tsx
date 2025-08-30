@@ -362,7 +362,7 @@ const blockchainSolutions = [
     timeline: "18-30 weeks",
     category: "Integration",
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const blockchainTechnologies = [
@@ -393,7 +393,7 @@ const blockchainTechnologies = [
     icon: Lock,
     useCase: "Security & Privacy",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -423,7 +423,7 @@ const successStories = [
     solution: "Built blockchain-based identity management platform",
     results: "100% data security, 90% faster verification, better privacy, improved compliance",
     logo: "HIS"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -454,7 +454,7 @@ const processSteps = [
     description: "Test blockchain systems and deploy to production",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const blockchainBenefits = [
@@ -481,7 +481,7 @@ const blockchainBenefits = [
     description: "Blockchain eliminates intermediaries and reduces operational costs",
     icon: TrendingUp,
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {

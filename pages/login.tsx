@@ -69,7 +69,7 @@ export default function Login(...args[]):  {
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -356,5 +356,5 @@ export default function Login(...args[]):  {
         </section>
       </main>
     </>
-  )
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

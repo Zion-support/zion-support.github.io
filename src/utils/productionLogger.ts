@@ -5,4 +5,4 @@ export function logErrorToProduction(message: string, error?: ): void {
     // // // // console.error(message, error);
   }
   // TODO: Implement production error logging service
-}
+  {/* Removed stray closing brace */}

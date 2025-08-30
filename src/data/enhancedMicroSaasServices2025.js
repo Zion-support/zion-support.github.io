@@ -639,7 +639,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     },
     competitors["Zillow", "Redfin", "Realtor.com", "CoreLogic"],
     marketSize: "$4.2 billion by 2025"
-  }
+  {/* Removed stray closing brace */}
 ];
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {

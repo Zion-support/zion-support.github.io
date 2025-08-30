@@ -588,5 +588,5 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             features["5GB storage", "Basic AI features", "Email support"],
             limitations["Limited AI models", "Basic workflow", "No advanced security"]
         }
-    }
+  {/* Removed stray closing brace */}
 ];

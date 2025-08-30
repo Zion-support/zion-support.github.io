@@ -211,7 +211,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "200–300%",
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
-  }
+  {/* Removed stray closing brace */}
 
   // AR/VR Enterprise Solutions
   {
@@ -603,7 +603,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default EMERGING_TECH_SERVICES_2025;

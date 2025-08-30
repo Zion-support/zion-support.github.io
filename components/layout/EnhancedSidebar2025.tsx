@@ -239,7 +239,7 @@ const sidebarSections = [
         ]
       }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -285,7 +285,7 @@ export default function EnhancedSidebar2025(...args[]):  {
   const isActive = (href: string)  => router.pathname === href;
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (

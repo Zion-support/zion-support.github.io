@@ -9,12 +9,12 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-}
+  {/* Removed stray closing brace */}
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData;
   children: React.ReactNode;
-}
+  {/* Removed stray closing brace */}
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
@@ -108,7 +108,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
   }, [seoData]);
   
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />

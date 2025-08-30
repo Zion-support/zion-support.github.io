@@ -21,7 +21,7 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-}
+  {/* Removed stray closing brace */}
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +132,7 @@ export function Accessibility() {
   };
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -327,4 +327,4 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   );
-}
+  {/* Removed stray closing brace */}

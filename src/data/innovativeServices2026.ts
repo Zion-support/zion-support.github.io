@@ -604,7 +604,7 @@ export const innovativeServices2026: InnovativeService[] = [
     enterprise: true,
     startup: true,
     smb: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const serviceCategories = [
@@ -627,7 +627,7 @@ export const serviceCategories = [
     name: 'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default innovativeServices2026;

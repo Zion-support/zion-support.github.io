@@ -88,7 +88,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function SupportRequests() {
@@ -139,7 +139,7 @@ export default function SupportRequests() {
   };
   
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -348,4 +348,4 @@ export default function SupportRequests() {
       </div>
     </>
   );
-}
+  {/* Removed stray closing brace */}

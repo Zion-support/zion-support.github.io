@@ -193,7 +193,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {
   const totalROI = filteredServices.reduce((sum, service) => sum + parseInt(service.roi), 0);
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Comprehensive Pricing 2025 | Zion Tech Group"
         description="Transparent pricing for our comprehensive range of AI services, IT solutions, and technology platforms. Get competitive rates with flexible billing options."

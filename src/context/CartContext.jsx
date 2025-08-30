@@ -21,7 +21,7 @@ function cartReducer(state, action) {
             return { items[] };
         default:
             return state}
-}
+  {/* Removed stray closing brace */}
 const CartContext = createContext(undefined);
 export function useCart() {
     const ctx = useContext(CartContext);

@@ -42,7 +42,7 @@ const pricingFeatures = {
         "On-site training",
         "Custom contracts",
         "Dedicated infrastructure"
-    ]
+  {/* Removed stray closing bracket */}
 };
 const comparisonFeatures = [
     "AI-Powered Automation",

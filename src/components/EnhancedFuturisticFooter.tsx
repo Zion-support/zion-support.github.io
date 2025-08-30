@@ -518,4 +518,4 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       </div>
     </footer>
   );
-}
+  {/* Removed stray closing brace */}

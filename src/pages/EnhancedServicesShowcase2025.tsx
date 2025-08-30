@@ -551,7 +551,7 @@ export default function EnhancedServicesShowcase2025() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 // Icon components for view mode toggle
 const Grid = ({ className }: { className?: string }) => (

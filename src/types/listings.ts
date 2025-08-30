@@ -21,7 +21,7 @@ export interface Listing {
   views: number;
   likes: number;
   shares: number;
-}
+  {/* Removed stray closing brace */}
 
 export interface ProductListing extends Listing {
   brand?: string;
@@ -33,7 +33,7 @@ export interface ProductListing extends Listing {
     method: string;
     estimatedDays: number;
   };
-}
+  {/* Removed stray closing brace */}
 
 export interface ServiceListing extends Listing {
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
@@ -42,7 +42,7 @@ export interface ServiceListing extends Listing {
   experience: number;
   certifications: string[];
   portfolio?: string[];
-}
+  {/* Removed stray closing brace */}
 
 export interface TalentListing extends Listing {
   skills: string[];
@@ -54,7 +54,7 @@ export interface TalentListing extends Listing {
   hourlyRate: number;
   portfolio?: string[];
   references?: string[];
-}
+  {/* Removed stray closing brace */}
 
 export interface CartItem {
   id: string;
@@ -63,7 +63,7 @@ export interface CartItem {
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string;
-}
+  {/* Removed stray closing brace */}
 
 export interface WishlistItem {
   id: string;
@@ -71,4 +71,4 @@ export interface WishlistItem {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
-}
+  {/* Removed stray closing brace */}

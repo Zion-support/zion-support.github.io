@@ -171,4 +171,4 @@ export default function AIMicroservices() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

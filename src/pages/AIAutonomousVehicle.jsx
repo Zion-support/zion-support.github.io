@@ -674,7 +674,7 @@ const autonomousVehicleSolutions = [
     timeline: "26-38 weeks",
     category: "Fleet Management",
     technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const vehicleTechnologies = [
@@ -705,7 +705,7 @@ const vehicleTechnologies = [
     icon: Brain,
     useCase: "Decision Making",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -735,7 +735,7 @@ const successStories = [
     solution: "Built AI-powered autonomous warehouse vehicle system",
     results: "45% productivity increase, 55% cost reduction, 24/7 operation, better efficiency",
     logo: "IAL"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -766,7 +766,7 @@ const processSteps = [
     description: "Test systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const vehicleBenefits = [
@@ -793,7 +793,7 @@ const vehicleBenefits = [
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
     examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AIAutonomousVehicle() {

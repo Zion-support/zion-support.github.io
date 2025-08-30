@@ -31,7 +31,7 @@ export interface SpecializedAIService2031 {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
   // AI Strategy & Consulting
@@ -664,5 +664,5 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     },
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Siemens Mindsphere"],
     marketSize: "$34.2 billion by 2031"
-  }
+  {/* Removed stray closing brace */}
 ];

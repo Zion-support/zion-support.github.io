@@ -67,7 +67,7 @@ const testimonials = [
         rating: 5,
         category: 'Infrastructure',
         project: 'Cloud Infrastructure'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);

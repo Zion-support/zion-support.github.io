@@ -184,7 +184,7 @@ export default function ListingDetail() {
           </div>
         </div>
       </div>
-        ,
+  {/* Removed stray comma */}
             <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
     { /* Contact Dialog */ }
     <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
@@ -196,4 +196,4 @@ export default function ListingDetail() {
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;
-    }
+  {/* Removed stray closing brace */}

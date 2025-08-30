@@ -171,4 +171,4 @@ export default function AIMySQL() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

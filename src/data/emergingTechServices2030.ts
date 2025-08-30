@@ -1028,7 +1028,7 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Utility functions for service management

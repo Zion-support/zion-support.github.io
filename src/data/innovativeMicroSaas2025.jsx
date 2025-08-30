@@ -352,5 +352,5 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         innovationLevel: "Advanced",
         marketTrend: "High Growth",
         aiCapabilities["Edge AI", "Predictive Maintenance", "Anomaly Detection", "Real-time Optimization"]
-    }
+  {/* Removed stray closing brace */}
 ];

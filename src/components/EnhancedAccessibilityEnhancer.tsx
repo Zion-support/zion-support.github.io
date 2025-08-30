@@ -56,7 +56,7 @@ interface AccessibilitySettings {
     primary: string;
     secondary: string;
   };
-}
+  {/* Removed stray closing brace */}
 
 interface AccessibilityFeature {
   id: string;
@@ -66,7 +66,7 @@ interface AccessibilityFeature {
   enabled: boolean;
   wcagLevel: 'A' | 'AA' | 'AAA';
   impact: 'high' | 'medium' | 'low';
-}
+  {/* Removed stray closing brace */}
 
 export default function EnhancedAccessibilityEnhancer({ 
   enabled = true, 
@@ -477,7 +477,7 @@ export default function EnhancedAccessibilityEnhancer({
   if (!enabled) return null;
 
   return (
-    <>
+  {/* Empty JSX fragment */}
       {/* Floating Accessibility Button */}
       {showControls && (
         <motion.button
@@ -823,4 +823,4 @@ export default function EnhancedAccessibilityEnhancer({
       `}</style>
     </>
   );
-}
+  {/* Removed stray closing brace */}

@@ -494,4 +494,4 @@ export default function Developers() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

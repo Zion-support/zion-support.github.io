@@ -503,7 +503,7 @@ class AutoFixScheduler {
     scanDirectory(path.join(this.projectRoot, 'src'));
     return sourceFiles;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Create instance and start
 const scheduler = new AutoFixScheduler();

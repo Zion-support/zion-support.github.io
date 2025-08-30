@@ -248,7 +248,7 @@ class CIAutomation {
       process.exit(1);
     }
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the automation if this script is executed directly
 if (require.main === module) {
@@ -257,6 +257,6 @@ if (require.main === module) {
     console.error('CI automation failed:', error);
     process.exit(1);
   });
-}
+  {/* Removed stray closing brace */}
 
 module.exports = CIAutomation;

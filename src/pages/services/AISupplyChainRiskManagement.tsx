@@ -297,4 +297,4 @@ export default function AISupplyChainRiskManagement() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

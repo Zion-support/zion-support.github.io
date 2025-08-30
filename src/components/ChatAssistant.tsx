@@ -123,7 +123,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             'Help me with pricing',
             'Schedule a consultation',
             'Technical support'
-          ]
+  {/* Removed stray closing bracket */}
         }
       };
       setMessages([welcomeMessage]);
@@ -320,7 +320,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           </div>
 
           {!isMinimized && (
-            <>
+  {/* Empty JSX fragment */}
               {/* Messages */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map((message) => (

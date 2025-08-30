@@ -59,7 +59,7 @@ const pricingTiers = [
       'SLA guarantees'
     ],
     popular: false
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function ComprehensivePricing(...args[]):  {

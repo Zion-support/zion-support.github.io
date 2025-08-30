@@ -674,7 +674,7 @@ const autonomousSystemsSolutions = [
     timeline: "32-64 weeks",
     category: "Medical",
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const autonomousTechnologies = [
@@ -705,7 +705,7 @@ const autonomousTechnologies = [
     icon: Cpu,
     useCase: "Physical Control",
     reliability: "Critical"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -735,7 +735,7 @@ const successStories = [
     solution: "Built autonomous agricultural robots with precision farming capabilities",
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability",
     logo: "AC"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -766,7 +766,7 @@ const processSteps = [
     description: "Comprehensive testing and safety validation",
     icon: Shield,
     duration: "8-16 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const autonomousBenefits = [
@@ -793,7 +793,7 @@ const autonomousBenefits = [
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
     examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AIAutonomousSystems() {

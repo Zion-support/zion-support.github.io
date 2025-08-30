@@ -8,7 +8,7 @@ interface SwitchProps {
   className?: string;
   id?: string;
   'aria-label'?: string;
-}
+  {/* Removed stray closing brace */}
 
 export function Switch({
   checked = false,
@@ -50,4 +50,4 @@ export function Switch({
       />
     </button>
   );
-}
+  {/* Removed stray closing brace */}

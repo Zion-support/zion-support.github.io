@@ -433,12 +433,12 @@ export const QuoteRequestForm = () => {
             className="w-full bg-zion-blue hover:bg-zion-blue-dark text-white py-3 text-lg font-semibold"
           >
             {isSubmitting ? (
-              <>
+  {/* Empty JSX fragment */}
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                 Submitting...
               </>
             ) : (
-              <>
+  {/* Empty JSX fragment */}
                 <Send className="h-5 w-5 mr-2" />
                 Submit Quote Request
               </>
