@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Star,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Star,
   MessageCircle,
   ThumbsUp,
   ThumbsDown,
@@ -16,14 +15,108 @@ import {
   Download,
   Filter,
   Search
+<<<<<<< HEAD
  } from 'lucide-react';
   verified: boolean}
 interface FeedbackStats {
+=======
+<<<<<<< HEAD
+=======
+               } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+interface Feedback {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: string;
+  customerName: string;
+  rating: number;
+  comment: string;
+  category: 'service' | 'product' | 'support' | 'overall';
+  sentiment: 'positive' | 'neutral' | 'negative';
+  date: string;
+  helpful: number;
+  unhelpful: number;
+  tags: string[];
+<<<<<<< HEAD
+  verified: boolean;
+=======
+verified: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+interface FeedbackStats {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
+<<<<<<< HEAD
   topCategories: Array<any>}
+=======
+<<<<<<< HEAD
+  topCategories: Array<any>;
+=======
+topCategories: Array<any>;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
   showStats?: boolean;
   showFilters?: boolean;
@@ -33,9 +126,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showFilters = true,;
   maxFeedback = 10;
 }) => {;
+<<<<<<< HEAD
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
+=======
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
@@ -47,15 +147,15 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
-    rating: 0,
+    rating: anyanyanyanyanyanyanyanyanyanyanyanyanyany0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
   // Sample feedback data
-  useEffect(()  => {
+  useEffect(()                => {
     const sampleFeedback: Feedback[] = [
       {
-        id: '1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
@@ -122,7 +222,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     setFeedback(sampleFeedback);
     setFilteredFeedback(sampleFeedback)}, []);
   // Calculate stats
-  useEffect(()  => {
+  useEffect(()                => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -130,14 +230,37 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const responseRate = 95; // Simulated response rate
       const categoryCounts = feedback.reduce((acc, f) => {;
         acc[f.category] = (acc[f.category] || 0) + 1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        return acc;
+      }, { /* empty */ } as Record<string, any>);
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return acc}, {} as Record<string, any>);
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
+<<<<<<< HEAD
           category: category.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
         .sort((a, b) => b.count - a.count);
+=======
+<<<<<<< HEAD
+          category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),
+          count,
+          percentage: (count / totalFeedback) * 100
+        }))
+        .sort((a, b)                => b.count - a.count);
+=======;
+          category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),;
+          count,;
+          percentage: (count / totalFeedback) * 100;
+        }));
+        .sort((a, b)               => b.count - a.count);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         .slice(0, 4);
       setStats({
         totalFeedback,
@@ -180,18 +303,51 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
+<<<<<<< HEAD
       tags: [],;
+=======
+<<<<<<< HEAD
+      tags[],
+  verified: false;
+    ;
+
+};
+=======
+      tags: anyanyanyanyanyanyanyanyanyanyanyanyanyany[],;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   verified: false;
     ;
 };
+<<<<<<< HEAD
     setFeedback(prev  => [feedback, ...prev]);
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+    setFeedback(prev                => [feedback, ...prev]);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
+  const handleVote = (feedbackId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, type: 'helpful' | 'unhelpful')                => {
     setFeedback(prev => prev.map(f => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (f.id === feedbackId) {
+        return {
+          ...f,
+          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
+        }};
+      return f}))};
+
+  // Get sentiment color
+  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+    switch (sentiment) {;
+=======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (f.id === feedbackId) {;
         return {;
           ...f,;
@@ -202,14 +358,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     }));
   };
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'}
   };
   // Get category color
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -304,8 +460,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)                => (
               <motion.div
                 key={category.category}
                 initial = {

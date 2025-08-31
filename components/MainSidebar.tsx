@@ -1,6 +1,69 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { useNavigate              } from 'react-router-dom.ts';
+import { Home,
+  Briefcase,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Shield,
+  Handshake,
+  ChevronDown,
+  ChevronRight,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Code,
+  Palette,
+  Target,
+  Rocket,
+  Eye,
+  DollarSign,
+  ShoppingCart,
+  Clock,
+  Cloud,
+  Search,
+  Building,
+  Zap,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  BarChart3,
+  Lock,
+  AlertTriangle,
+  Server,
+  CheckCircle,
+  Truck,
+  Car,
+  TestTube,
+  PenTool,
+  Building2,
+  Atom,
+  FileText,
+  Quote,
+  Newspaper,
+  Calendar,
+  Video,
+  HelpCircle,
+  LifeBuoy,
+  Store,
+  PieChart,
+  Share2,
+  Monitor,
+=======
+import React, { useState              } from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
-import { useRouter  } from 'next/router.ts';
+import { useRouter               } from 'next/router.ts';
 import { Home, 
   Briefcase, 
   Users, 
@@ -64,18 +127,54 @@ import { Home,
   Leaf,
   Sun,
   Wind
+<<<<<<< HEAD
  } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
   isOpen: boolean;
   onClose: ()  => void}
+=======
+<<<<<<< HEAD
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()              => void;
+=======
+  
+} from 'lucide-react.ts';
+
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
+<<<<<<< HEAD
   const toggleSection = (section: string) => {;
+=======
+<<<<<<< HEAD
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedSections(prev =>
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+=======
+<<<<<<< HEAD
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section);
+        [...prev, section];
+    )};
+=======
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -83,7 +182,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
+<<<<<<< HEAD
   const isActive = (path: string) => router.pathname === path;
+=======
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const navigation = {
     main: [
@@ -149,7 +252,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
+<<<<<<< HEAD
   const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+=======
+  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

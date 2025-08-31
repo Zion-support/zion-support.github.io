@@ -1,8 +1,37 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function AICustomerSupport() {
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+<<<<<<< HEAD
+import {
+  MessageCircle,
+  Headphones,
+  Zap,
+  Brain,
+  Shield,
+  Clock,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Globe,
+  Target,
+  Smartphone,
+  Mail,
+  Phone,
+  Bot
+=======
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function AICustomerSupport(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "24/7 AI Chat Support",
@@ -188,8 +217,14 @@ export default function AICustomerSupport() {
               Our AI understands context, learns from interactions, and provides human-like support experiences
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -209,6 +244,41 @@ export default function AICustomerSupport() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 bg-black/30">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                AI-Powered Support Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Leverage artificial intelligence to provide exceptional customer support
+                that's fast, accurate, and available around the clock.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
+
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,8 +296,14 @@ export default function AICustomerSupport() {
               Join thousands of businesses who have transformed their customer support with AI
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -264,8 +340,14 @@ export default function AICustomerSupport() {
               Connect with your existing tools and workflows without disruption
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {integrations.map((integration, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -301,8 +383,14 @@ export default function AICustomerSupport() {
               Choose the plan that fits your support volume. All plans include a 14-day free trial.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -321,6 +409,93 @@ export default function AICustomerSupport() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Proven Results
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join hundreds of companies that have transformed their customer support
+                with AI-powered automation and intelligence.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)              => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-black/30">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your support volume and requirements.
+                All plans include a 14-day free trial.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricing.map((plan, index)              => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                    plan.popular
+                      ? 'border-green-500/50 shadow-lg shadow-green-500/20'
+                      : 'border-slate-700/50'
+                  }`}
+
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center mb-2">
+                      <span className="text-4xl font-bold text-green-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">

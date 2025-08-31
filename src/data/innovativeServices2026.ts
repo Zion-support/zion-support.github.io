@@ -603,26 +603,38 @@ export const innovativeServices2026: InnovativeService[] = [
 ];
 export const serviceCategories = [
   {
-    name: 'Micro SaaS',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
+    services: innovativeServices2026.filter(s               => s.category === 'Micro SaaS')
   },
   {
-    name: 'AI Solutions',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
+    services: innovativeServices2026.filter(s               => s.category === 'AI Solutions')
   },
   {
-    name: 'IT Services',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s  => s.category === 'IT Services')
+    services: innovativeServices2026.filter(s               => s.category === 'IT Services')
   },
+<<<<<<< HEAD
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+=======
+<<<<<<< HEAD
+  {
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',
+    description: 'Cutting-edge technologies shaping the future',
+<<<<<<< HEAD
+    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+
+=======
+    services: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s               => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
   {;
-    name: 'Emerging Technologies',;
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
+    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
 ];
 export default innovativeServices2026;}}

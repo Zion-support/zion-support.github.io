@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState } from 'react';
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react.ts';
+const DropdownMenu(...args[]):  {
+    const [isOpen, setIsOpen] = useState(false);
+    return (<DropdownMenuContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+
+}}>
+      <div className="relative">
+        {children}
+      </div>
+    </DropdownMenuContext.Provider>)}
+export function DropdownMenuTrigger(...args[]: any):  {;
+=======;
+import React, { createContext, useContext, useState } from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
@@ -12,8 +31,19 @@ const DropdownMenu({ children }) {
         {children};
       </div>;
     </DropdownMenuContext.Provider>);
+<<<<<<< HEAD
 }
 export function DropdownMenuTrigger({ children, asChild = false }) {;
+=======
+<<<<<<< HEAD
+
+export function DropdownMenuTrigger(...args: any[]): any {
+=======
+}
+export function DropdownMenuTrigger(...args: any[]): any {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
@@ -22,7 +52,12 @@ export function DropdownMenuTrigger({ children, asChild = false }) {;
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
+<<<<<<< HEAD
 export function DropdownMenuContent(...args[]):  {;
+=======
+export function DropdownMenuContent(...args[]: any):  {;
+=======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>);
@@ -30,14 +65,40 @@ export function DropdownMenuContent(...args[]):  {;
     return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
       {children};
     </div>);
+<<<<<<< HEAD
 }
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
+=======
+<<<<<<< HEAD
+
+export function DropdownMenuContent(...args: any[]): any {
+=======
+}
+export function DropdownMenuContent(...args: any[]): any {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
     const alignClasses = {
+<<<<<<< HEAD
+=======
+  <<<<<<< HEAD
+        start: 'left-0',
+        center: 'left-1/2 transform -translate-x-1/2',
+  end: 'right-0';
+    ;
+
+};
+    return (<div className = {`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
+      {children}
+    </div>)}
+export function DropdownMenuItem(...args[]: any):  {
+=======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   start: 'left-0',;
         center: 'left-1/2 transform -translate-x-1/2',;
   ;
@@ -48,8 +109,19 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     return (<div className = {`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
       {children};
     </div>);
+<<<<<<< HEAD
 }
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {;
+=======
+<<<<<<< HEAD
+
+export function DropdownMenuItem(...args: any[]): any {
+=======
+}
+export function DropdownMenuItem(...args: any[]): any {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');

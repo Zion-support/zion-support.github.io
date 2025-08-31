@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cookie, 
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Shield,
+  Cookie,
+  Settings,
+  Eye,
+  EyeOff,
+  Check,
+  X,
+=======
+import { SEO              } from '../components/SEO';
+import { Cookie, 
+  Shield, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Settings, 
   Shield, 
   Eye, 
@@ -10,6 +27,7 @@ import {
   CheckCircle,
   AlertTriangle,
   ExternalLink,
+<<<<<<< HEAD
   Mail,
   Phone,
   MapPin,
@@ -27,6 +45,30 @@ const Cookies: React.FC = () => {
   const companyName = 'Zion Tech Group';
   const companyEmail = 'privacy@ziontechgroup.com';
   const companyPhone = '+1 (302) 464-0950';
+=======
+  ChevronDown,
+<<<<<<< HEAD
+  ChevronUp
+const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [expandedSections, setExpandedSections] = useState({
+=======
+  ChevronUp,
+  Lock,
+  Globe,
+  BarChart3,
+  Users
+             } from 'lucide-react.ts';
+
+export default function Cookies(...args: any[]): any {
+  const [expandedSection, setExpandedSection] = useState<any>(null);
+  const [cookiePreferences, setCookiePreferences] = useState({
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    essential: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  });
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const cookieCategories = [
     {
@@ -158,8 +200,49 @@ const Cookies: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const toggleCategory = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+=======
+  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedSection(expandedSection === sectionId ? null : sectionId);
+  };
+
+  const updateCookiePreference = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring, enabled: boolean)              => {
+    if (type === 'essential') return; // Essential cookies cannot be disabled
+    
+    setCookiePreferences(prev => ({
+      ...prev,
+      [type]: enabled
+    }));
+  };
+
+  const savePreferences = () => {
+    // In a real app, this would save preferences and update cookies
+    console.log('Cookie preferences saved:', cookiePreferences);
+    // Show success message
+    alert('Cookie preferences saved successfully!');
+  };
+
+  const acceptAll = () => {
+    setCookiePreferences({
+      essential: true,
+      analytics: true,
+      marketing: true,
+      functional: true
+    });
+    savePreferences();
+  };
+
+  const rejectAll = () => {
+    setCookiePreferences({
+      essential: true,
+      analytics: false,
+      marketing: false,
+      functional: false
+    });
+    savePreferences();
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -348,6 +431,7 @@ const Cookies: React.FC = () => {
         </div>
       </motion.div>
 
+<<<<<<< HEAD
       {/* Cookie Management */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -359,6 +443,25 @@ const Cookies: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Managing Your Cookie Preferences</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {cookieManagement.map((method, index) => (
+=======
+      {/* Cookie Types Explanation */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Types of Cookies We Use</h2>
+            <p className="text-xl text-gray-300">
+              Understanding the different categories of cookies and their purposes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {cookieTypes.map((type, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 20 }}

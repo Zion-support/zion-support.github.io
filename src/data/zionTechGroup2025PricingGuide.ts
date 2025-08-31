@@ -1,4 +1,17 @@
 export interface PricingTier {
+
+
+
+
+
+
+
+
+
+
+
+
+
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -8,20 +21,59 @@ export interface PricingTier {
   bestFor: string[];
   popular?: boolean;
   savings?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 export interface ServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
   category: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
+marketComparison: {;
     averageMarketPrice: string;
     ourPrice: string;
     savings: string;
     valueProposition: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -683,18 +735,18 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
   }
 ];
 
-export const getPricingByCategory = (category: string) => {;
+export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
   return zionTechGroup2025PricingGuide.filter(service => service.category === category);
 };
 
-export const getPricingByPriceRange = (minPrice: number, maxPrice: number) => {;
+export const getPricingByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {;
   return zionTechGroup2025PricingGuide.filter(service => {;
     const basePrice = parseInt(service.pricingTiers[1]?.price.replace(/[^0-9]/g, '') || '0');
     return basePrice >= minPrice && basePrice <= maxPrice;
   });
 };
 
-export const searchPricing = (query: string) => {;
+export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
   const lowercaseQuery = query.toLowerCase();
   return zionTechGroup2025PricingGuide.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;

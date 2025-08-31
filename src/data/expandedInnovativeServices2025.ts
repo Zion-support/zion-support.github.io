@@ -1,4 +1,21 @@
 export interface ExpandedInnovativeService {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -17,10 +34,23 @@ export interface ExpandedInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -38,7 +68,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 2499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered threat detection",
       "Real-time threat analysis",
       "Behavioral analytics",
@@ -50,28 +80,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Threat intelligence sharing",
       "24/7 monitoring"
     ],
-    benefits[
+    benefits: [
       "Reduce threat response time by 90%",
       "Prevent 95% of cyber attacks",
       "Automated threat mitigation",
       "Compliance with security standards",
       "Proactive security posture"
     ],
-    useCases[
+    useCases: [
       "Enterprise security operations",
       "Financial services protection",
       "Healthcare data security",
       "Government cybersecurity",
       "Critical infrastructure protection"
     ],
-    targetAudience[
+    targetAudience: [
       "CISOs",
       "Security analysts",
       "IT security teams",
       "Financial institutions",
       "Healthcare organizations"
     ],
-    tags["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"],
+    tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $7,999/month",
@@ -83,8 +113,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"],
-      integrations["AWS", "Azure", "GCP", "Splunk", "QRadar"],
+      technology: ["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"],
+      integrations: ["AWS", "Azure", "GCP", "Splunk", "QRadar"],
       apiEndpoints: 150,
       uptime: "99.99%",
       security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]
@@ -100,7 +130,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 799,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Lead scoring with behavioral intent",
       "Auto‑generated email sequences",
       "Meeting transcription + action items",
@@ -112,22 +142,22 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Rep performance coaching",
       "Admin analytics dashboard"
     ],
-    benefits[
+    benefits: [
       "30–50% lift in meeting bookings",
       "2–3x faster follow‑ups",
       "Consistent pipeline hygiene",
       "Shorter sales cycles",
       "Lower CAC via improved targeting"
     ],
-    useCases[
+    useCases: [
       "Inbound lead triage",
       "Outbound personalization",
       "Post‑demo follow‑ups",
       "Quarterly pipeline reviews",
       "Manager coaching"
     ],
-    targetAudience["SMB sales teams", "RevOps", "Founders doing sales"],
-    tags["AI", "Sales", "CRM", "Email", "Automation"],
+    targetAudience: ["SMB sales teams", "RevOps", "Founders doing sales"],
+    tags: ["AI", "Sales", "CRM", "Email", "Automation"],
     estimatedDelivery: "1–2 weeks",
     supportLevel: "professional",
     marketPrice: "$499 – $1,499/month",
@@ -139,8 +169,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["LLM", "Vector DB", "RAG", "Webhooks"],
-      integrations["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"],
+      technology: ["LLM", "Vector DB", "RAG", "Webhooks"],
+      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"],
       apiEndpoints: 42,
       uptime: "99.9%",
       security["SOC 2", "GDPR", "SAML SSO"]
@@ -156,7 +186,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Rightsizing + scheduling",
       "Savings Plans/RIs recommendations",
       "Egress + storage tiering",
@@ -168,16 +198,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Multi‑cloud support",
       "Slack/Teams alerts"
     ],
-    benefits[
+    benefits: [
       "15–35% cloud bill reduction",
       "Faster budget cycles",
       "Predictable spend",
       "Cleaner tagging and governance",
       "Fewer surprise bills"
     ],
-    useCases["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"],
-    targetAudience["FinOps", "Platform Engineering", "CFOs"],
-    tags["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"],
+    useCases: ["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"],
+    targetAudience: ["FinOps", "Platform Engineering", "CFOs"],
+    tags: ["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"],
     estimatedDelivery: "2–4 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,200 – $5,000/month",
@@ -185,8 +215,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["AWS CUR", "BigQuery", "Athena", "Prometheus"],
-      integrations["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],
+      technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"],
+      integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],
       apiEndpoints: 65,
       uptime: "99.9%",
       security["SOC 2", "ISO 27001", "SSO"]
@@ -202,7 +232,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 3299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Experiment tracking",
       "Feature store",
       "Model registry",
@@ -214,16 +244,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Audit + governance",
       "SDK + API access"
     ],
-    benefits[
+    benefits: [
       "Faster time‑to‑production",
       "Lower operational risk",
       "Improved model quality",
       "Compliance‑ready",
       "Scalable across teams"
     ],
-    useCases["Churn models", "LTV scoring", "Quality inspection", "Forecasting"],
-    targetAudience["Data Science", "ML Engineers", "Risk & Compliance"],
-    tags["MLOps", "Feature Store", "Monitoring", "Compliance"],
+    useCases: ["Churn models", "LTV scoring", "Quality inspection", "Forecasting"],
+    targetAudience: ["Data Science", "ML Engineers", "Risk & Compliance"],
+    tags: ["MLOps", "Feature Store", "Monitoring", "Compliance"],
     estimatedDelivery: "4–8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,500 – $8,000/month",
@@ -231,8 +261,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"],
-      integrations["SageMaker", "Vertex AI", "Databricks", "Snowflake"],
+      technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"],
+      integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"],
       apiEndpoints: 93,
       uptime: "99.95%",
       security["SOC 2", "HIPAA", "GDPR"]
@@ -248,7 +278,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "1:1 product recommendations",
       "Search relevance optimization",
       "Bundle + upsell widgets",
@@ -260,16 +290,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Latency <100ms",
       "Multi‑region edge"
     ],
-    benefits[
+    benefits: [
       "5–12% conversion lift",
       "+10–20% AOV",
       "Less merch ops overhead",
       "Faster experimentation",
       "No heavy integration"
     ],
-    useCases["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"],
-    targetAudience["DTC brands", "Retailers", "Marketplaces"],
-    tags["eCommerce", "Personalization", "Shopify", "Search", "CDP"],
+    useCases: ["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"],
+    targetAudience: ["DTC brands", "Retailers", "Marketplaces"],
+    tags: ["eCommerce", "Personalization", "Shopify", "Search", "CDP"],
     estimatedDelivery: "3–7 days",
     supportLevel: "professional",
     marketPrice: "$299 – $1,999/month",
@@ -287,7 +317,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Automated evidence gathering",
       "Policy management",
       "Risk register + treatments",
@@ -299,16 +329,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Auditor collaboration",
       "Report generation"
     ],
-    benefits[
+    benefits: [
       "Audit time cut by 60%",
       "Lower external audit fees",
       "Reduced compliance toil",
       "Improved security posture",
       "Board‑ready reporting"
     ],
-    useCases["SOC 2", "ISO 27001", "HIPAA readiness"],
-    targetAudience["Startups", "Scaleups", "Security & GRC"],
-    tags["Compliance", "Security", "Audit", "GRC"],
+    useCases: ["SOC 2", "ISO 27001", "HIPAA readiness"],
+    targetAudience: ["Startups", "Scaleups", "Security & GRC"],
+    tags: ["Compliance", "Security", "Audit", "GRC"],
     estimatedDelivery: "2–3 weeks",
     supportLevel: "professional",
     marketPrice: "$700 – $3,500/month",
@@ -326,7 +356,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 19999,
     currency: "$",
     pricingModel: "one-time",
-    features[
+    features: [
       "Ingestion (ELT) setup",
       "Warehouse + role modeling",
       "dbt transformations",
@@ -338,16 +368,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Runbook + handoff",
       "Enablement sessions"
     ],
-    benefits[
+    benefits: [
       "Production analytics in 5 days",
       "Lower ongoing costs",
       "Reliable, testable models",
       "Self‑serve metrics",
       "Future‑proof architecture"
     ],
-    useCases["Executive KPIs", "Marketing attribution", "RevOps metrics"],
-    targetAudience["Founders", "Data leaders", "Ops"],
-    tags["Data", "dbt", "Snowflake", "BigQuery", "Metrics"],
+    useCases: ["Executive KPIs", "Marketing attribution", "RevOps metrics"],
+    targetAudience: ["Founders", "Data leaders", "Ops"],
+    tags: ["Data", "dbt", "Snowflake", "BigQuery", "Metrics"],
     estimatedDelivery: "1 week",
     supportLevel: "professional",
     marketPrice: "$15,000 – $45,000 one‑time",
@@ -355,8 +385,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"],
-      integrations["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],
+      technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"],
+      integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],
       apiEndpoints: 18,
       uptime: "99.9%",
       security["SSO", "Row‑level security"]
@@ -372,7 +402,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1899,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Blockchain-based tracking",
       "Product authentication",
       "Supply chain mapping",
@@ -384,28 +414,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Mobile app access",
       "API integration"
     ],
-    benefits[
+    benefits: [
       "100% supply chain transparency",
       "Reduce counterfeit products by 99%",
       "Automated compliance verification",
       "Enhanced brand trust",
       "Operational efficiency gains"
     ],
-    useCases[
+    useCases: [
       "Food safety tracking",
       "Luxury goods authentication",
       "Pharmaceutical verification",
       "Sustainable sourcing",
       "Regulatory compliance"
     ],
-    targetAudience[
+    targetAudience: [
       "Supply chain managers",
       "Brand protection teams",
       "Compliance officers",
       "Retailers",
       "Manufacturers"
     ],
-    tags["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"],
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,899 - $5,999/month",
@@ -426,7 +456,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 2799,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Edge data processing",
       "Real-time analytics",
       "Predictive maintenance",
@@ -438,28 +468,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "API gateway",
       "Cloud synchronization"
     ],
-    benefits[
+    benefits: [
       "Reduce latency by 95%",
       "Cut bandwidth costs by 60%",
       "Real-time decision making",
       "Improved operational efficiency",
       "Enhanced security"
     ],
-    useCases[
+    useCases: [
       "Smart manufacturing",
       "Energy management",
       "Smart cities",
       "Transportation",
       "Agriculture"
     ],
-    targetAudience[
+    targetAudience: [
       "IoT engineers",
       "Operations managers",
       "Facility managers",
       "City planners",
       "Industrial companies"
     ],
-    tags["IoT", "Edge Computing", "Analytics", "Real-time", "Industrial"],
+    tags: ["IoT", "Edge Computing", "Analytics", "Real-time", "Industrial"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $8,999/month",
@@ -480,7 +510,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1599,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI document review",
       "Contract analysis",
       "Risk assessment",
@@ -492,28 +522,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Regulatory updates",
       "Collaboration tools"
     ],
-    benefits[
+    benefits: [
       "Reduce review time by 80%",
       "Improve accuracy by 95%",
       "Automated risk identification",
       "Cost-effective legal services",
       "Enhanced compliance"
     ],
-    useCases[
+    useCases: [
       "Contract review",
       "Due diligence",
       "Regulatory compliance",
       "Legal research",
       "Risk assessment"
     ],
-    targetAudience[
+    targetAudience: [
       "Law firms",
       "Legal departments",
       "Compliance officers",
       "Contract managers",
       "Legal professionals"
     ],
-    tags["AI", "Legal Tech", "Document Analysis", "Compliance", "Automation"],
+    tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Automation"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,599 - $4,999/month",
@@ -534,7 +564,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Post-quantum algorithms",
       "Hybrid cryptography",
       "Key management",
@@ -546,28 +576,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Migration tools",
       "Security auditing"
     ],
-    benefits[
+    benefits: [
       "Future-proof security",
       "Quantum-resistant encryption",
       "Regulatory compliance",
       "Enhanced data protection",
       "Competitive advantage"
     ],
-    useCases[
+    useCases: [
       "Government communications",
       "Financial services",
       "Healthcare data",
       "Critical infrastructure",
       "Long-term data storage"
     ],
-    targetAudience[
+    targetAudience: [
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
       "Defense contractors",
       "Security-conscious enterprises"
     ],
-    tags["Quantum", "Cryptography", "Cybersecurity", "Future-proof", "Compliance"],
+    tags: ["Quantum", "Cryptography", "Cybersecurity", "Future-proof", "Compliance"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $12,999/month",
@@ -588,7 +618,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 3299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Medical image analysis",
       "Symptom assessment",
       "Diagnostic suggestions",
@@ -600,28 +630,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Telemedicine integration",
       "Regulatory compliance"
     ],
-    benefits[
+    benefits: [
       "Improve diagnostic accuracy by 30%",
       "Reduce diagnosis time by 50%",
       "Enhanced patient outcomes",
       "Cost-effective healthcare",
       "Better resource utilization"
     ],
-    useCases[
+    useCases: [
       "Radiology",
       "Pathology",
       "Cardiology",
       "Oncology",
       "Primary care"
     ],
-    targetAudience[
+    targetAudience: [
       "Hospitals",
       "Clinics",
       "Radiologists",
       "Pathologists",
       "Healthcare providers"
     ],
-    tags["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
+    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,299 - $9,999/month",
@@ -642,7 +672,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 2199,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Energy consumption monitoring",
       "Renewable energy integration",
       "Carbon footprint tracking",
@@ -654,28 +684,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Compliance reporting",
       "Mobile app access"
     ],
-    benefits[
+    benefits: [
       "Reduce energy costs by 25%",
       "Decrease carbon footprint by 40%",
       "Achieve sustainability goals",
       "Regulatory compliance",
       "Enhanced brand reputation"
     ],
-    useCases[
+    useCases: [
       "Commercial buildings",
       "Manufacturing facilities",
       "Data centers",
       "Retail chains",
       "Educational institutions"
     ],
-    targetAudience[
+    targetAudience: [
       "Facility managers",
       "Sustainability officers",
       "Energy managers",
       "Building owners",
       "Corporate sustainability teams"
     ],
-    tags["Sustainability", "Energy Management", "Renewable Energy", "Carbon Tracking", "Optimization"],
+    tags: ["Sustainability", "Energy Management", "Renewable Energy", "Carbon Tracking", "Optimization"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,199 - $6,999/month",
@@ -696,7 +726,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 2899,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Real-time fraud detection",
       "Multi-channel monitoring",
       "Behavioral analytics",
@@ -708,28 +738,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "API integration",
       "24/7 monitoring"
     ],
-    benefits[
+    benefits: [
       "Prevent 99% of fraud attempts",
       "Reduce false positives by 80%",
       "Real-time protection",
       "Compliance with regulations",
       "Cost savings on fraud losses"
     ],
-    useCases[
+    useCases: [
       "Banking",
       "Credit cards",
       "Insurance",
       "E-commerce",
       "Payment processing"
     ],
-    targetAudience[
+    targetAudience: [
       "Banks",
       "Credit unions",
       "Insurance companies",
       "Fintech companies",
       "E-commerce platforms"
     ],
-    tags["AI", "Fraud Detection", "Financial Services", "Machine Learning", "Security"],
+    tags: ["AI", "Fraud Detection", "Financial Services", "Machine Learning", "Security"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,899 - $8,999/month",
@@ -750,7 +780,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 4499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Real-time vehicle monitoring",
       "Route optimization",
       "Safety management",
@@ -762,28 +792,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Mobile app access",
       "API integration"
     ],
-    benefits[
+    benefits: [
       "Reduce operational costs by 35%",
       "Improve safety by 90%",
       "Optimize fleet utilization",
       "Enhanced compliance",
       "Real-time operational insights"
     ],
-    useCases[
+    useCases: [
       "Logistics companies",
       "Transportation services",
       "Delivery companies",
       "Public transportation",
       "Mining operations"
     ],
-    targetAudience[
+    targetAudience: [
       "Fleet managers",
       "Logistics companies",
       "Transportation providers",
       "Delivery services",
       "Public transit agencies"
     ],
-    tags["Autonomous Vehicles", "Fleet Management", "IoT", "Safety", "Optimization"],
+    tags: ["Autonomous Vehicles", "Fleet Management", "IoT", "Safety", "Optimization"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,499 - $14,999/month",
@@ -804,7 +834,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI content generation",
       "Multi-format support",
       "Brand voice customization",
@@ -816,28 +846,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "API integration",
       "Multi-language support"
     ],
-    benefits[
+    benefits: [
       "Increase content production by 500%",
       "Reduce content costs by 70%",
       "Improve engagement rates",
       "Consistent brand voice",
       "SEO optimization"
     ],
-    useCases[
+    useCases: [
       "Content marketing",
       "Social media management",
       "Blog creation",
       "Email marketing",
       "Product descriptions"
     ],
-    targetAudience[
+    targetAudience: [
       "Marketing teams",
       "Content creators",
       "Agencies",
       "E-commerce businesses",
       "Publishers"
     ],
-    tags["AI", "Content Creation", "Marketing", "Automation", "SEO"],
+    tags: ["AI", "Content Creation", "Marketing", "Automation", "SEO"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,299 - $3,999/month",
@@ -1038,7 +1068,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Automated rightsizing & scheduling",
       "Spot/RI/Savings Plans optimization",
       "Multi-cloud & multi-account support",
@@ -1050,28 +1080,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Slack/MS Teams notifications",
       "FinOps reports & forecasts"
     ],
-    benefits[
+    benefits: [
       "Cut cloud spend by 20-45%",
       "Automate savings with guardrails",
       "Improve forecasting accuracy",
       "Reduce toil for platform teams",
       "Transparent chargeback/showback"
     ],
-    useCases[
+    useCases: [
       "SaaS infra optimization",
       "Kubernetes platform cost control",
       "Budget governance",
       "Anomaly detection",
       "CFO reporting"
     ],
-    targetAudience[
+    targetAudience: [
       "FinOps teams",
       "Platform engineering",
       "CIO/CTO",
       "CFO/Finance",
       "DevOps"
     ],
-    tags["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"],
+    tags: ["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"],
     estimatedDelivery: "2-4 weeks",
     supportLevel: "professional",
     marketPrice: "$1,499 - $6,999/month",
@@ -1083,8 +1113,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "dbt", "BigQuery", "Athena", "K8s"],
-      integrations["AWS", "Azure", "GCP", "Datadog", "Snowflake"],
+      technology: ["Python", "dbt", "BigQuery", "Athena", "K8s"],
+      integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"],
       apiEndpoints: 85,
       uptime: "99.9%",
       security["SOC 2", "ISO 27001"]
@@ -1100,7 +1130,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Automated evidence collection",
       "Control library & mapping",
       "Change monitoring & drift alerts",
@@ -1112,16 +1142,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Data lineage & retention",
       "Board-ready reports"
     ],
-    benefits[
+    benefits: [
       "Cut audit prep time by 70%",
       "Reduce compliance costs",
       "Always-on readiness",
       "Lower security risk",
       "Faster enterprise deals"
     ],
-    useCases["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"],
-    targetAudience["Security", "GRC", "Legal", "Founders", "Ops"],
-    tags["Compliance", "Security", "Audit", "GRC", "Automation"],
+    useCases: ["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"],
+    targetAudience: ["Security", "GRC", "Legal", "Founders", "Ops"],
+    tags: ["Compliance", "Security", "Audit", "GRC", "Automation"],
     estimatedDelivery: "3-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,999 - $7,999/month",
@@ -1133,8 +1163,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Node.js", "PostgreSQL", "OpenAPI", "LLM"],
-      integrations["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],
+      technology: ["Node.js", "PostgreSQL", "OpenAPI", "LLM"],
+      integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],
       apiEndpoints: 110,
       uptime: "99.9%",
       security["SOC 2", "ISO 27001", "SAML", "SCIM"]
@@ -1150,7 +1180,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1290,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Freshness & volume SLAs",
       "Schema change detection",
       "Anomaly detection with LLM root-cause",
@@ -1162,16 +1192,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Column-level profiling",
       "Alert deduplication"
     ],
-    benefits[
+    benefits: [
       "Reduce data incidents by 60%",
       "Improve trust in analytics",
       "Faster incident resolution",
       "Fewer false positives",
       "Better SLA adherence"
     ],
-    useCases["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"],
-    targetAudience["Data engineering", "Analytics", "Platform"],
-    tags["DataOps", "Observability", "LLM", "dbt", "Lineage"],
+    useCases: ["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"],
+    targetAudience: ["Data engineering", "Analytics", "Platform"],
+    tags: ["DataOps", "Observability", "LLM", "dbt", "Lineage"],
     estimatedDelivery: "3-5 weeks",
     supportLevel: "professional",
     marketPrice: "$1,290 - $5,999/month",
@@ -1179,8 +1209,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["Python", "Airflow", "dbt", "Spark"],
-      integrations["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],
+      technology: ["Python", "Airflow", "dbt", "Spark"],
+      integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],
       apiEndpoints: 95,
       uptime: "99.9%",
       security["SOC 2", "Row-level security"]
@@ -1196,7 +1226,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Omnichannel (chat, email, voice)",
       "Secure RAG over private data",
       "Hallucination guardrails",
@@ -1208,16 +1238,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "A/B workflows",
       "Feedback loops"
     ],
-    benefits[
+    benefits: [
       "30-60% ticket deflection",
       "Higher CSAT",
       "Faster resolution",
       "Lower support costs",
       "24/7 coverage"
     ],
-    useCases["Support deflection", "Agent assist", "Self-service", "Onboarding"],
-    targetAudience["CX leaders", "Support ops", "Founders"],
-    tags["RAG", "LLM", "CX", "Zendesk", "Intercom"],
+    useCases: ["Support deflection", "Agent assist", "Self-service", "Onboarding"],
+    targetAudience: ["CX leaders", "Support ops", "Founders"],
+    tags: ["RAG", "LLM", "CX", "Zendesk", "Intercom"],
     estimatedDelivery: "2-4 weeks",
     supportLevel: "professional",
     marketPrice: "$899 - $3,999/month",
@@ -1225,8 +1255,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["Typescript", "Vector DB", "LLM", "gRPC"],
-      integrations["Zendesk", "Intercom", "Salesforce", "HubSpot"],
+      technology: ["Typescript", "Vector DB", "LLM", "gRPC"],
+      integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"],
       apiEndpoints: 70,
       uptime: "99.9%",
       security["SOC 2", "PII redaction"]
@@ -1242,7 +1272,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 1090,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "DSAR intake portal",
       "Identity verification",
       "Automated data discovery",
@@ -1254,16 +1284,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "SaaS connectors",
       "Legal hold integration"
     ],
-    benefits[
+    benefits: [
       "Avoid regulatory fines",
       "Reduce manual review",
       "Improve accuracy",
       "Meet SLA requirements",
       "Improve trust"
     ],
-    useCases["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"],
-    targetAudience["Legal", "Privacy", "Security", "Data"],
-    tags["Privacy", "Compliance", "DSAR", "Automation"],
+    useCases: ["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"],
+    targetAudience: ["Legal", "Privacy", "Security", "Data"],
+    tags: ["Privacy", "Compliance", "DSAR", "Automation"],
     estimatedDelivery: "3-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,090 - $4,999/month",
@@ -1281,7 +1311,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     price: 2490,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Feature store & pipelines",
       "Model registry & lineage",
       "Shadow/canary/blue-green",
@@ -1293,16 +1323,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "SDK & CLI",
       "Compliance templates"
     ],
-    benefits[
+    benefits: [
       "Ship models faster",
       "Reduce incidents",
       "Improve accuracy",
       "Lower ops costs",
       "Meet compliance"
     ],
-    useCases["Personalization", "Forecasting", "Fraud", "NLP", "Vision"],
-    targetAudience["ML engineers", "Data science", "Platform"],
-    tags["MLOps", "LLMOps", "Feature Store", "Registry"],
+    useCases: ["Personalization", "Forecasting", "Fraud", "NLP", "Vision"],
+    targetAudience: ["ML engineers", "Data science", "Platform"],
+    tags: ["MLOps", "LLMOps", "Feature Store", "Registry"],
     estimatedDelivery: "4-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,490 - $9,999/month",
@@ -1310,8 +1340,8 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
-      technology["Kubernetes", "Kafka", "Ray", "Feast"],
-      integrations["SageMaker", "Vertex AI", "Databricks", "MLflow"],
+      technology: ["Kubernetes", "Kafka", "Ray", "Feast"],
+      integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"],
       apiEndpoints: 140,
       uptime: "99.95%",
       security["SOC 2", "RBAC", "IAM"]

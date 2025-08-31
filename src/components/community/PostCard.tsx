@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 interface PostCardProps extends React.PropsWithChildren<{}> {
+=======
+<<<<<<< HEAD
+interface PostCardProps extends React.PropsWithChildren<{}> {
+
+post: {;
+=======
+import React from 'react.ts';
+
+interface PostCardProps extends React.PropsWithChildren<{
+}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 post: {
     id: string;
     title: string;
@@ -12,7 +25,13 @@ post: {
 author: {
       name: string;
       avatar: string}}}
+<<<<<<< HEAD
 export default function PostCard(...args[]):  {
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function PostCard(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">

@@ -1,16 +1,59 @@
 import React from 'react.ts';
 interface ForumCategoryInfo {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-lastPost?: {
+lastPost?: {;
     title: string;
     author: string;
+<<<<<<< HEAD
     date: string}}
 export default function ForumCategories(...args[]):  {
+=======
+<<<<<<< HEAD
+    date: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+=======
+    date: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function ForumCategories(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -102,8 +145,8 @@ export default function ForumCategories(...args[]):  {
           </p>
         </div>
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category)               => (
             <div
               key={category.id}
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"

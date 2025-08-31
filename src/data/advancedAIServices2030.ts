@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { ProductListing  } from '@/types/listings';
+=======
+import { ProductListing                } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications
 export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
@@ -11,9 +16,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Autonomous Research",
     price: 8999,
     currency: "$",
-    tags["Autonomous AI", "Research Automation", "Data Analysis", "Report Generation", "Scientific Research"],
+    tags: ["Autonomous AI", "Research Automation", "Data Analysis", "Report Generation", "Scientific Research"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-research-assistant.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-research-assistant.jpg"],
     createdAt: "2024-03-01T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 89,
@@ -28,10 +33,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$7,000-15,000",
-    competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
+    competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
     roi: "800% within 12 months",
     setupTime: "6-8 weeks",
-    integrations["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"]
+    integrations: ["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"]
   },
   // AI-Powered Metaverse Development Platform
   {
@@ -42,9 +47,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Virtual World Creation",
     price: 12999,
     currency: "$",
-    tags["Metaverse", "3D Development", "Virtual Reality", "AI Generation", "Immersive Experiences"],
+    tags: ["Metaverse", "3D Development", "Virtual Reality", "AI Generation", "Immersive Experiences"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-metaverse-platform.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-metaverse-platform.jpg"],
     createdAt: "2024-03-05T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 67,
@@ -59,10 +64,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$10,000-25,000",
-    competitors["Unity", "Unreal Engine", "Roblox Studio"],
+    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
     roi: "1000% within 18 months",
     setupTime: "8-10 weeks",
-    integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"]
+    integrations: ["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"]
   },
   // AI-Powered Space Technology Analytics
   {
@@ -73,9 +78,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Satellite Analytics",
     price: 15999,
     currency: "$",
-    tags["Space Tech", "Satellite Analytics", "Space Weather", "Orbital Mechanics", "Space AI"],
+    tags: ["Space Tech", "Satellite Analytics", "Space Weather", "Orbital Mechanics", "Space AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-space-analytics.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-space-analytics.jpg"],
     createdAt: "2024-03-10T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 45,
@@ -90,10 +95,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$12,000-30,000",
-    competitors["Maxar Technologies", "Planet Labs", "SpaceX"],
+    competitors: ["Maxar Technologies", "Planet Labs", "SpaceX"],
     roi: "1200% within 24 months",
     setupTime: "10-12 weeks",
-    integrations["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"]
+    integrations: ["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"]
   },
   // AI-Powered Quantum Machine Learning Platform
   {
@@ -104,9 +109,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Quantum ML",
     price: 19999,
     currency: "$",
-    tags["Quantum Computing", "Machine Learning", "AI Training", "Quantum Algorithms", "Advanced AI"],
+    tags: ["Quantum Computing", "Machine Learning", "AI Training", "Quantum Algorithms", "Advanced AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-quantum-ml.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-quantum-ml.jpg"],
     createdAt: "2024-03-15T10:00:00.000Z",
     rating: 5.0,
     reviewCount: 34,
@@ -121,10 +126,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-50,000",
-    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],
+    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],
     roi: "2000% within 36 months",
     setupTime: "12-16 weeks",
-    integrations["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"]
+    integrations: ["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"]
   },
   // AI-Powered Environmental Technology Platform
   {
@@ -135,9 +140,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Climate Monitoring",
     price: 7999,
     currency: "$",
-    tags["Environmental Tech", "Climate Monitoring", "Sustainability", "Risk Prediction", "Green AI"],
+    tags: ["Environmental Tech", "Climate Monitoring", "Sustainability", "Risk Prediction", "Green AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-environmental-tech.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-environmental-tech.jpg"],
     createdAt: "2024-03-20T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 123,
@@ -152,10 +157,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$6,000-15,000",
-    competitors["Climate Corp", "Carbon Engineering", "Pachama"],
+    competitors: ["Climate Corp", "Carbon Engineering", "Pachama"],
     roi: "600% within 15 months",
     setupTime: "5-7 weeks",
-    integrations["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"]
+    integrations: ["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"]
   },
   // AI-Powered Entertainment Content Generation
   {
@@ -166,9 +171,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Content Creation",
     price: 9999,
     currency: "$",
-    tags["Entertainment", "Content Generation", "AI Creation", "Media Production", "Creative AI"],
+    tags: ["Entertainment", "Content Generation", "AI Creation", "Media Production", "Creative AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-entertainment-content.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-entertainment-content.jpg"],
     createdAt: "2024-03-25T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 89,
@@ -183,10 +188,10 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$8,000-20,000",
-    competitors["Runway ML", "Synthesia", "Descript"],
+    competitors: ["Runway ML", "Synthesia", "Descript"],
     roi: "700% within 18 months",
     setupTime: "6-8 weeks",
-    integrations["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"]
+    integrations: ["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"]
   },
   // AI-Powered Education Personalization Platform
   {
@@ -197,9 +202,9 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     subcategory: "Personalized Learning",
     price: 6999,
     currency: "$",
-    tags["Education", "Personalized Learning", "Adaptive Content", "Student Analytics", "Educational AI"],
+    tags: ["Education", "Personalized Learning", "Adaptive Content", "Student Analytics", "Educational AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-education-platform.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-education-platform.jpg"],
     createdAt: "2024-03-30T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 156,
@@ -214,7 +219,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$5,000-15,000",
-    competitors["Knewton", "DreamBox", "Carnegie Learning"],
+    competitors: ["Knewton", "DreamBox", "Carnegie Learning"],
     roi: "500% within 12 months",
     setupTime: "4-6 weeks",
     integrations["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,10 +9,35 @@ import {
   Zap, 
   Phone, 
   Mail, 
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Shield,
+  Cpu,
+  Heart,
+  Rocket,
+  Sparkles,
+  BarChart3,
+  Network,
+  Globe,
+  Users,
+  FileText,
+  Phone,
+  Mail,
+<<<<<<< HEAD
+  MapPin
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MapPin,
   ChevronDown,
   Globe,
   Search,
+<<<<<<< HEAD
   Bell
 } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -25,6 +51,29 @@ export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
+=======
+  Bell,
+  User,
+  Settings,
+  Zap,
+  Atom,
+  Eye,
+  Activity,
+  Building,
+  Target,
+  TrendingUp,
+  Briefcase,
+  Newspaper,
+  DollarSign
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export function Header(...args: any[]): any {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
 
   useEffect(() => {
@@ -104,6 +153,27 @@ export function Header({ className }: HeaderProps) {
     }
   ];
 
+<<<<<<< HEAD
+=======
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
+
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for: anyanyanyanyanyanyanyanyanyanyanyanyanyany', searchQuery);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
+  };
+
+  // Close mobile menu when route changes
+  useEffect(()               => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

@@ -1,5 +1,5 @@
 // In-memory storage for fallback with optimizations
-const inMemoryStore = { /* empty */ };
+const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -10,7 +10,7 @@ function isLocalStorageAvailable() {
         return localStorageAvailable;
     lastAvailabilityCheck = now;
     try {
-        if (typeof window === 'null') {
+        if (typeof window === 'undefined') {
             localStorageAvailable = false;
             return false;
         const testKey = '__localStorage_test__';
@@ -69,4 +69,5 @@ export const safeStorage = {
       // // // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
       return false;
 };
-}}}}}}}}}}}}}
+
+export default safeStorage;

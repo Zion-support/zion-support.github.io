@@ -17,7 +17,7 @@ import {
   TrendingUp,
   CheckCircle,
   Orbit,
-  Telescope
+  Eye
 } from 'lucide-react';
 
 const SpaceTechSolutions = () => {
@@ -73,7 +73,7 @@ const SpaceTechSolutions = () => {
     {
       title: "Urban Planning",
       description: "Smart city development and urban planning using space-based data and insights.",
-      icon: <Telescope className="w-8 h-8" />
+              icon: <Eye className="w-8 h-8" />
     }
   ];
 

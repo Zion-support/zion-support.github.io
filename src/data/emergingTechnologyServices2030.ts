@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { ProductListing  } from '@/types/listings';
+=======
+import { ProductListing               } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Emerging Technology Services 2030 - Zion Tech Group
 // Next-generation technology solutions for the future
 export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
@@ -11,9 +16,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Quantum Internet",
     price: 29999,
     currency: "$",
-    tags["Quantum Internet", "Quantum Communication", "Quantum Entanglement", "Quantum Security", "Future Tech"],
+    tags: ["Quantum Internet", "Quantum Communication", "Quantum Entanglement", "Quantum Security", "Future Tech"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/quantum-internet.jpg"],
+    images: ["https://ziontechgroup.com/images/quantum-internet.jpg"],
     createdAt: "2024-05-01T10:00:00.000Z",
     rating: 5.0,
     reviewCount: 23,
@@ -28,10 +33,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$25,000-60,000",
-    competitors["IBM Quantum Network", "Google Quantum Internet", "Microsoft Quantum"],
+    competitors: ["IBM Quantum Network", "Google Quantum Internet", "Microsoft Quantum"],
     roi: "2000% within 48 months",
     setupTime: "16-20 weeks",
-    integrations["Quantum Computers", "Fiber Networks", "Quantum Repeaters", "Quantum Memory", "Classical Networks"]
+    integrations: ["Quantum Computers", "Fiber Networks", "Quantum Repeaters", "Quantum Memory", "Classical Networks"]
   },
   // Neuromorphic Computing Platform
   {
@@ -42,9 +47,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Neuromorphic Computing",
     price: 24999,
     currency: "$",
-    tags["Neuromorphic", "Brain-Inspired Computing", "Energy Efficiency", "AI Processing", "Cognitive Computing"],
+    tags: ["Neuromorphic", "Brain-Inspired Computing", "Energy Efficiency", "AI Processing", "Cognitive Computing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/neuromorphic-computing.jpg"],
+    images: ["https://ziontechgroup.com/images/neuromorphic-computing.jpg"],
     createdAt: "2024-05-05T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 34,
@@ -59,10 +64,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$20,000-50,000",
-    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"],
+    competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip"],
     roi: "1500% within 36 months",
     setupTime: "14-18 weeks",
-    integrations["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]
+    integrations: ["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]
   },
   // DNA Data Storage Platform
   {
@@ -73,9 +78,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "DNA Storage",
     price: 19999,
     currency: "$",
-    tags["DNA Storage", "Molecular Computing", "Ultra-Dense Storage", "Biological Computing", "Future Storage"],
+    tags: ["DNA Storage", "Molecular Computing", "Ultra-Dense Storage", "Biological Computing", "Future Storage"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/dna-storage.jpg"],
+    images: ["https://ziontechgroup.com/images/dna-storage.jpg"],
     createdAt: "2024-05-10T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 45,
@@ -90,10 +95,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-40,000",
-    competitors["Microsoft DNA Storage", "Catalog Technologies", "Twist Bioscience"],
+    competitors: ["Microsoft DNA Storage", "Catalog Technologies", "Twist Bioscience"],
     roi: "1200% within 30 months",
     setupTime: "12-16 weeks",
-    integrations["DNA Synthesizers", "Sequencing Machines", "Data Encoding", "Storage Systems", "Retrieval Tools"]
+    integrations: ["DNA Synthesizers", "Sequencing Machines", "Data Encoding", "Storage Systems", "Retrieval Tools"]
   },
   // Fusion Energy Management Platform
   {
@@ -104,9 +109,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Fusion Energy",
     price: 34999,
     currency: "$",
-    tags["Fusion Energy", "Clean Energy", "Energy Management", "Nuclear Fusion", "Sustainable Energy"],
+    tags: ["Fusion Energy", "Clean Energy", "Energy Management", "Nuclear Fusion", "Sustainable Energy"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/fusion-energy.jpg"],
+    images: ["https://ziontechgroup.com/images/fusion-energy.jpg"],
     createdAt: "2024-05-15T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 28,
@@ -121,10 +126,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$30,000-80,000",
-    competitors["Commonwealth Fusion", "General Fusion", "Helion Energy"],
+    competitors: ["Commonwealth Fusion", "General Fusion", "Helion Energy"],
     roi: "2500% within 60 months",
     setupTime: "20-24 weeks",
-    integrations["Fusion Reactors", "Power Grids", "Energy Storage", "Monitoring Systems", "Control Systems"]
+    integrations: ["Fusion Reactors", "Power Grids", "Energy Storage", "Monitoring Systems", "Control Systems"]
   },
   // Holographic Display Technology
   {
@@ -135,9 +140,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Holographic Displays",
     price: 15999,
     currency: "$",
-    tags["Holographic", "3D Displays", "Immersive Technology", "Visual Technology", "Future Displays"],
+    tags: ["Holographic", "3D Displays", "Immersive Technology", "Visual Technology", "Future Displays"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/holographic-display.jpg"],
+    images: ["https://ziontechgroup.com/images/holographic-display.jpg"],
     createdAt: "2024-05-20T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 67,
@@ -152,10 +157,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$12,000-35,000",
-    competitors["Looking Glass", "RealView", "Leia Inc"],
+    competitors: ["Looking Glass", "RealView", "Leia Inc"],
     roi: "900% within 24 months",
     setupTime: "10-14 weeks",
-    integrations["3D Content", "Display Systems", "Content Creation Tools", "Streaming Platforms", "VR/AR Systems"]
+    integrations: ["3D Content", "Display Systems", "Content Creation Tools", "Streaming Platforms", "VR/AR Systems"]
   },
   // Biometric Authentication Platform
   {
@@ -166,9 +171,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Biometric Security",
     price: 11999,
     currency: "$",
-    tags["Biometric", "Authentication", "Identity Verification", "Security", "Multi-Factor"],
+    tags: ["Biometric", "Authentication", "Identity Verification", "Security", "Multi-Factor"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/biometric-authentication.jpg"],
+    images: ["https://ziontechgroup.com/images/biometric-authentication.jpg"],
     createdAt: "2024-05-25T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 89,
@@ -183,10 +188,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$10,000-25,000",
-    competitors["Touch ID", "Face ID", "Windows Hello"],
+    competitors: ["Touch ID", "Face ID", "Windows Hello"],
     roi: "700% within 18 months",
     setupTime: "6-8 weeks",
-    integrations["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]
+    integrations: ["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]
   },
   // Autonomous Drone Fleet Management
   {
@@ -197,9 +202,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     subcategory: "Autonomous Systems",
     price: 17999,
     currency: "$",
-    tags["Autonomous Drones", "Fleet Management", "Drone Coordination", "AI Navigation", "UAV Systems"],
+    tags: ["Autonomous Drones", "Fleet Management", "Drone Coordination", "AI Navigation", "UAV Systems"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/autonomous-drones.jpg"],
+    images: ["https://ziontechgroup.com/images/autonomous-drones.jpg"],
     createdAt: "2024-05-30T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 78,
@@ -214,7 +219,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-40,000",
-    competitors["DJI", "Skydio", "Autel Robotics"],
+    competitors: ["DJI", "Skydio", "Autel Robotics"],
     roi: "800% within 20 months",
     setupTime: "8-12 weeks",
     integrations["Drone Hardware", "Navigation Systems", "Communication Networks", "Ground Control Stations", "Analytics Platforms"]

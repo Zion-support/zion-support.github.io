@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +9,22 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
+=======
+import React, { useState } from 'react.ts';
+
+import { useState              } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+import { Input              } from '@/components/ui/input';
+import { Button              } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue              } from '@/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow              } from '@/components/ui/table';
+import { Badge              } from '@/components/ui/badge';
+<<<<<<< HEAD
+import { Search, Filter import { SEO              } from '@/components/SEO';
+=======
+import { Search, Filter              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import SEO from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -89,11 +106,21 @@ const MOCK_SUPPORT_REQUESTS = [
     category: "profile";
   };
 ];
+<<<<<<< HEAD
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+=======
+
+export default function SupportRequests(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<any>(null);
+  const [priorityFilter, setPriorityFilter] = useState<any>(null);
+  const [categoryFilter, setCategoryFilter] = useState<any>(null);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -191,11 +218,16 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: ) => setSearchQuery(e.target.value)}
+                  onChange={(e: anyanyanyanyanyanyanyanyanyanyanyanyany)              => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
+<<<<<<< HEAD
               <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>
+=======
+
+              <Select value={statusFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => setStatusFilter(value || null)}>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -206,7 +238,12 @@ export default function SupportRequests() {
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => setPriorityFilter(value || null)}>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -217,7 +254,12 @@ export default function SupportRequests() {
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>
+=======
+
+              <Select value={categoryFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => setCategoryFilter(value || null)}>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

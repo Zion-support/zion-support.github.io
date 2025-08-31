@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -55,10 +54,22 @@ import {
   Smartphone,
   Globe2,
   Leaf
+<<<<<<< HEAD
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 export default function UltimateInnovativeServices2026(...args[]):  {
+=======
+<<<<<<< HEAD
+import { SEO              } from '@/components/SEO';
+=======
+} from 'lucide-react';
+import SEO from "@/components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '@/data/ultimateInnovativeServices2026';
+
+export default function UltimateInnovativeServices2026(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -91,9 +102,68 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'roi', name: 'ROI Potential' };
   ];
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.icon : Zap};
+
+<<<<<<< HEAD
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
+
+  const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
+
+    const matchesPrice = selectedPriceRange === 'all' ||
+                        (selectedPriceRange === 'under-10k' && service.price < 10000) ||
+                        (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
+                        (selectedPriceRange === 'over-20k' && service.price > 20000);
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'innovation':
+        const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
+               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
+      case 'roi':
+        const aROI = parseInt(a.roi.split('-')[0]);
+        const bROI = parseInt(b.roi.split('-')[0]);
+        return bROI - aROI;
+      default:
+<<<<<<< HEAD
+        return 0;
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 0}
   });
+<<<<<<< HEAD
   const toggleServiceExpansion = (serviceId: string) => {;
+=======
+
+<<<<<<< HEAD
+  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
+=======
+  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
   return (
@@ -175,9 +245,21 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category  => (
+=======
+<<<<<<< HEAD
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+
+                {categories.map(category              => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
                   </option>
@@ -189,9 +271,21 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
+<<<<<<< HEAD
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {priceRanges.map(range  => (
+=======
+<<<<<<< HEAD
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+
+                {priceRanges.map(range              => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {priceRanges.map(range               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
                   </option>
@@ -201,8 +295,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           </div>
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by: any</span>
-            {sortOptions.map(option  => (
+            <span className="text-zion-slate-300">Sort by: anyanyanyanyanyanyanyanyanyanyanyanyanyany</span>
+            {sortOptions.map(option               => (
               <button
                 key={option.id}
                 onClick={() => setSortBy(option.id)}
@@ -228,9 +322,14 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               Discover the future of technology with our cutting-edge micro SAAS solutions
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map((service, index)               => (
                 <motion.div
                   key={service.id}
                   initial = {

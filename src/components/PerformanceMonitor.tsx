@@ -1,7 +1,43 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown } from 'lucide-react';
+=======
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Activity,
+  Clock,
+  Zap,
+  AlertTriangle,
+  CheckCircle,
+  TrendingUp,
+  X,
+  Settings,
+  BarChart3,
+  Cpu,
+  HardDrive,
+  Wifi
+=======
+import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface PerformanceMetrics {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   fcp: number;
   lcp: number;
   fid: number;
@@ -9,13 +45,87 @@ interface PerformanceMetrics {
   ttfb: number;
   bundleSize: number;
   loadTime: number;
+<<<<<<< HEAD
 }
 interface PerformanceMonitorProps {
   enabled?: boolean;
+=======
+<<<<<<< HEAD
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
+  cpuUsage?: number;
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+  score: number;
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  color: string}
+export const PerformanceMonitor: React.FC = (): JSX.Element => {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [metrics, setMetrics] = useState<any>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null
+  });
+  const [scores, setScores] = useState<Record<string, any>>({});
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const calculateScore = useCallback((metric: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, thresholds: number[]): PerformanceScore                => {;
+    if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
+    if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
+    if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
+    if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
+    return { score: 20, grade: 'F', color: 'text-red-600' }}, []);
+  const updateMetrics = useCallback(() => {;
+    if ('performance' in window) {;
+      const perf = performance;
+      // First Contentful Paint
+      const fcp = fcpEntry ? fcpEntry.startTime : null;
+      // Largest Contentful Paint
+      const lcp = lcpEntry ? lcpEntry.startTime : null;
+      // First Input Delay
+      const fid = fidEntry ? fidEntry.processingStart - fidEntry.startTime : null;
+      // Cumulative Layout Shift
+      const cls = clsEntry ? (clsEntry as ).value : null;
+=======
+interface PerformanceMonitorProps extends React.PropsWithChildren<{}> {
+
+  enabled?: boolean;
+<<<<<<< HEAD
+  showMetrics?: boolean;
+  onPerformanceIssue?: (issue: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => void;
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   autoRefresh?: boolean;
   refreshInterval?: number;
   showDetails?: boolean;
+
 }
+<<<<<<< HEAD
 export function PerformanceMonitor({ 
   enabled = true, 
   autoRefresh = true, 
@@ -26,6 +136,16 @@ export function PerformanceMonitor({
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export function PerformanceMonitor(...args: any[]): any {
+  const [metrics, setMetrics] = useState<any>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [alerts, setAlerts] = useState<any>([]);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const calculateMetrics = useCallback(() => {
     if (!window.performance) return null;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -48,26 +168,173 @@ export function PerformanceMonitor({
       loadTime
     };
   }, []);
+<<<<<<< HEAD
   const getPerformanceScore = useCallback((metrics: PerformanceMetrics) => {
     let score = 100;
+=======
+
+  const getPerformanceScore = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)               => {
+    let score = 100;
+<<<<<<< HEAD
+
+    // FCP scoring (0-100)
+    if (metrics.firstContentfulPaint < 1800) score -= 0;
+    else if (metrics.firstContentfulPaint < 3000) score -= 10;
+    else score -= 30;
+
+    // LCP scoring (0-100)
+    if (metrics.largestContentfulPaint < 2500) score -= 0;
+    else if (metrics.largestContentfulPaint < 4000) score -= 10;
+    else score -= 30;
+
+    // CLS scoring (0-100)
+    if (metrics.cumulativeLayoutShift < 0.1) score -= 0;
+    else if (metrics.cumulativeLayoutShift < 0.25) score -= 10;
+    else score -= 30;
+
+    // FID scoring (0-100)
+    if (metrics.firstInputDelay < 100) score -= 0;
+    else if (metrics.firstInputDelay < 300) score -= 10;
+    else score -= 30;
+
+    return Math.max(0, score);
+  }, []);
+
+  // Collect performance metrics
+  const collectMetrics = useCallback(() => {
+    if ('performance' in window) {
+      const perf = (window as ).performance;
+      const navigation = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+      if (navigation) {
+        const newMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: 0,
+          largestContentfulPaint: 0,
+          cumulativeLayoutShift: 0,
+          firstInputDelay: 0,
+          timeToInteractive: navigation.domInteractive - navigation.fetchStart
+        };
+
+        // Get FCP
+        const fcpEntry = perf.getEntriesByName('first-contentful-paint')[0];
+        if (fcpEntry) {
+          newMetrics.firstContentfulPaint = fcpEntry.startTime;
+
+        // Get LCP
+        const lcpEntries = perf.getEntriesByType('largest-contentful-paint');
+        if (lcpEntries.length > 0) {
+          newMetrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
+
+        // Get CLS
+        if ('PerformanceObserver' in window) {
+          const clsObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const clsValue = 0;
+            entries.forEach((entry: anyanyanyanyanyanyanyanyanyanyanyanyanyany)               => {
+              if (entry.value) {
+                clsValue += entry.value;
+
+            });
+            newMetrics.cumulativeLayoutShift = clsValue;
+          });
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Get FID
+        if ('PerformanceObserver' in window) {
+          const fidObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            if (entries.length > 0) {
+              const lastEntry = entries[entries.length - 1] as ;
+              newMetrics.firstInputDelay = lastEntry.processingStart - lastEntry.startTime;
+
+          });
+          fidObserver.observe({ entryTypes: ['first-input'] });
+
+        setMetrics(newMetrics);
+        const score = calculateScore(newMetrics);
+        setPerformanceScore(score);
+
+        // Check for performance issues
+        const newIssues: string[] = [];
+        if (newMetrics.firstContentfulPaint > 3000) {
+          newIssues.push('First Contentful Paint is slow');
+
+        if (newMetrics.largestContentfulPaint > 4000) {
+          newIssues.push('Largest Contentful Paint is slow');
+
+        if (newMetrics.cumulativeLayoutShift > 0.25) {
+          newIssues.push('Cumulative Layout Shift is high');
+
+        if (newMetrics.firstInputDelay > 300) {
+          newIssues.push('First Input Delay is high');
+
+        setIssues(newIssues);
+        if (onPerformanceIssue && newIssues.length > 0) {
+          newIssues.forEach(issue => onPerformanceIssue(issue));
+
+
+
+  }, [calculateScore, onPerformanceIssue]);
+
+  // Start monitoring
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
+    collectMetrics();
+
+    // Monitor continuously
+    intervalRef.current = setInterval(() => {
+      collectMetrics();
+    }, 5000);
+  }, [collectMetrics]);
+
+  // Stop monitoring
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+
+  }, []);
+
+  useEffect(() => {
+    if (enabled) {
+      startMonitoring();
+=======
+    
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (metrics.fcp > 1800) score -= 20;
     if (metrics.lcp > 2500) score -= 20;
     if (metrics.ttfb > 600) score -= 15;
     if (metrics.loadTime > 3000) score -= 15;
     return Math.max(0, score);
   }, []);
+<<<<<<< HEAD
   const getPerformanceColor = useCallback((score: number) => {
+=======
+
+  const getPerformanceColor = useCallback((score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   }, []);
+<<<<<<< HEAD
   const getPerformanceStatus = useCallback((score: number) => {
+=======
+
+  const getPerformanceStatus = useCallback((score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (score >= 90) return 'Excellent';
     if (score >= 70) return 'Good';
     if (score >= 50) return 'Needs Improvement';
     return 'Poor';
   }, []);
+<<<<<<< HEAD
   const checkPerformanceIssues = useCallback((metrics: PerformanceMetrics) => {
+=======
+
+  const checkPerformanceIssues = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newAlerts: string[] = [];
     if (metrics.fcp > 1800) {
       newAlerts.push('First Contentful Paint is slow (>1.8s)');

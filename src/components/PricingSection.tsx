@@ -1,7 +1,76 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { motion                } from 'framer-motion.ts';
+import { Link                } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud                } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+export const PricingSection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const plans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
+      features[
+        'AI-powered content generation',
+        'Basic SEO optimization',
+        'Email support',
+        '5 projects per month',
+        'Standard templates'
+      ],
+      popular: false,
+      icon: Brain
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features[
+        'Everything in Starter',
+        'Advanced AI models',
+        'Priority support',
+        'Unlimited projects',
+        'Custom templates',
+        'Analytics dashboard',
+        'API access'
+      ],
+      popular: true,
+      icon: Zap
+    },
+    {
+      name: 'Enterprise',
+      price: '$799',
+      period: '/month',
+      description: 'For large organizations with complex needs',
+      features[
+        'Everything in Professional',
+        'Custom AI training',
+        'Dedicated account manager',
+        'White-label solutions',
+        'Advanced integrations',
+        'Custom compliance',
+        '24/7 phone support'
+      ],
+      popular: false,
+<<<<<<< HEAD
+      icon: Shield
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       icon: Shield;
     };
   ];
@@ -57,7 +126,13 @@ const pricingTiers = [
     color: "from-green-500 to-emerald-500";
   };
 ];
+<<<<<<< HEAD
 export function PricingSection() {
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export function PricingSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -82,8 +157,46 @@ export function PricingSection() {
             Start small and grow with us.
           </p>
         </motion.div>
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
+=======
+
+<<<<<<< HEAD
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">;
+          {plans.map((plan, index)                => {;
+            const IconComponent = plan.icon;
+            return (
+              <motion.div
+                key = {plan.name}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                }`}
+
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+=======
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}

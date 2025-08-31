@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
-export default function AIContentOptimizer() {
+export default function AIContentOptimizer(...args: any[]): any {
   const features = [
     {
       title: "AI-Powered SEO Optimization",
@@ -197,8 +197,8 @@ export default function AIContentOptimizer() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -237,8 +237,8 @@ export default function AIContentOptimizer() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -276,8 +276,8 @@ export default function AIContentOptimizer() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -316,8 +316,8 @@ export default function AIContentOptimizer() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${

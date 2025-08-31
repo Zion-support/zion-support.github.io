@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react.ts';
 import SEO from '@/components/SEO';
 const ITServicesPage = () => {
   return (

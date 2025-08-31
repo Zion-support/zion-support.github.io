@@ -1,4 +1,21 @@
 export interface EmergingTechService2027 {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -20,11 +37,24 @@ export interface EmergingTechService2027 {
   featured: boolean;
   location: string;
   availability: string;
-author: {
+author: {;
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+verified: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   images: string[];
   createdAt: string;
   technologyStack: string[];

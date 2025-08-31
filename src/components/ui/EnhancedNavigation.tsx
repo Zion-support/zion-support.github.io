@@ -274,13 +274,8 @@ export const EnhancedNavigation: React.FC = () => {
                   <Search className="w-5 h-5" />
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+
+              {/* Search */}
               <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
                 <Search className="w-5 h-5" />
               </button>
@@ -334,6 +329,10 @@ export const EnhancedNavigation: React.FC = () => {
             >
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Navigation Items */}
+=======
+              {/* Mobile Navigation */}
+              <div className="space-y-4">
+>>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (
@@ -382,6 +381,7 @@ export const EnhancedNavigation: React.FC = () => {
                     )}
                   </div>
                 ))}
+
               </div>
 
               {/* Mobile CTA */}

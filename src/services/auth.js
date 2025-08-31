@@ -99,7 +99,7 @@ class AuthService {
         throw new Error('No token to refresh');
       }
       // Mock token refresh
-      const newToken = 'mock-jwt-token-refreshed-' + Date.now();
+      const newToken = 'mock-jwt-token-' + Date.now();
       this.token = newToken;
       localStorage.setItem('token', newToken);
       return newToken;
@@ -135,7 +135,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password reset failed');
   // Update user profile
-  async updateProfile(profileData) {
+  async updateProfile(updates) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -181,7 +181,6 @@ class AuthService {
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true;
-        this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user));
       }
       return {
@@ -194,7 +193,7 @@ class AuthService {
     if (!this.user) return [];
     // Mock permissions based on user role
     const permissions = {
-  user: ['read:own', 'write:own'],
+      user: ['read:own', 'write:own'],
       admin: ['read:all', 'write:all', 'delete:all', 'manage:users'],
       moderator: ['read:all', 'write:all', 'moderate:content']
     };

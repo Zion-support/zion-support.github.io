@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ImageIcon, AlertCircle, Loader2 } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { ImageIcon, AlertCircle, Loader2               } from 'lucide-react.ts';
 
-interface OptimizedImageProps {
-  src: string;
+interface OptimizedImageProps extends React.PropsWithChildren<{}> {
+
+  src: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   alt: string;
   width?: number | string;
   height?: number | string;
@@ -11,8 +12,8 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: 'blur' | 'shimmer' | 'none';
   fallbackSrc?: string;
-  onLoad?: () => void;
-  onError?: (error: Error) => void;
+  onLoad?: ()               => void;
+  onError?: (error: anyanyanyanyanyanyanyanyanyanyanyanyanyanyError)               => void;
   lazy?: boolean;
   quality?: number;
   sizes?: string;
@@ -20,6 +21,7 @@ interface OptimizedImageProps {
   rounded?: boolean;
   shadow?: boolean;
   hover?: boolean;
+
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -41,7 +43,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   shadow = false,
   hover = false
 }) => {
-  const [imageSrc, setImageSrc] = useState<string>(src);
+  const [imageSrc, setImageSrc] = useState<any>(src);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(priority);
@@ -67,14 +69,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: '50px',
+        rootMargin: anyanyanyanyanyanyanyanyanyanyanyanyanyany'50px',
         threshold: 0.1
       }
     );
 
     observerRef.current.observe(imgRef.current);
 
-    return () => {
+    return ()               => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -97,12 +99,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: ${src}`));
+      onError?.(new Error(`Failed to load image: anyanyanyanyanyanyanyanyanyanyanyanyanyany${src}`));
     }
   };
 
   // Cleanup on unmount
-  useEffect(() => {
+  useEffect(()               => {
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
@@ -111,7 +113,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, []);
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: string) => {
+  const getOptimizedSrc = (src: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
       return src;
     }
