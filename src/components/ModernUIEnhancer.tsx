@@ -1,588 +1,562 @@
-<<<<<<< HEAD
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 interface ModernUIEnhancerProps {
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState, useRef } from 'react.ts';
-import { motion, AnimatePresence, useScroll, useTransform               } from 'framer-motion.ts';
-import {
-  Sparkles,
-  Zap,
-  Star,
-  Palette,
-  Eye,
-  Layers,
-  Settings,
-  X
-interface UISettings {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  glassmorphism: boolean;
-  particleEffects: boolean;
-  smoothScrolling: boolean;
-  enhancedAnimations: boolean;
-  modernShadows: boolean;
-  colorThemes: boolean;
-  depthLayers: boolean;
-
-export const ModernUIEnhancer: React.FC = (): JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<any>({
-glassmorphism: true,;
-particleEffects: true,;
-smoothScrolling: true,;
-enhancedAnimations: true,;
-modernShadows: true,;
-colorThemes: true,;
-depthLayers: true;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
-  const [activeTheme, setActiveTheme] = useState('default');
-  const [particles, setParticles] = useState<Array<any>>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, -200]);
-
-  useEffect(() => {
-    // Initialize UI enhancements
-    initializeUIEnhancements();
-
-    // Setup particle system
-    if (settings.particleEffects) {
-      setupParticleSystem();
-
-    // Setup smooth scrolling
-    if (settings.smoothScrolling) {
-      setupSmoothScrolling();
-
-    // Apply initial settings
-    applyUISettings();
-
-    return () => {
-      cleanupUIEnhancements();
-=======
-import React, { useEffect, useCallback, useState } from 'react.ts';
-
-interface ModernUIEnhancerProps extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
-
+  enableDarkMode?: boolean;
+  enableAnimations?: boolean;
+  enableGlassmorphism?: boolean;
+  enableGradients?: boolean;
+  enableShadows?: boolean;
+  enableHoverEffects?: boolean;
+  enableSmoothScrolling?: boolean;
+  enableParallax?: boolean;
+  enableCursorEffects?: boolean;
+  enableLoadingStates?: boolean;
+  enableMicroInteractions?: boolean;
 }
-export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
-  enabled = true 
+
+interface UITheme {
+  name: string;
+  primary: string;
+  secondary: string;
+  accent: string;
+  background: string;
+  surface: string;
+  text: string;
+  textSecondary: string;
+}
+
+export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
+  enabled = true,
+  enableDarkMode = true,
+  enableAnimations = true,
+  enableGlassmorphism = true,
+  enableGradients = true,
+  enableShadows = true,
+  enableHoverEffects = true,
+  enableSmoothScrolling = true,
+  enableParallax = true,
+  enableCursorEffects = true,
+  enableLoadingStates = true,
+  enableMicroInteractions = true
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [accentColor, setAccentColor] = useState('#0ea5e9');
-  const enhanceTypography = useCallback(() => {
+  const [currentTheme, setCurrentTheme] = useState<UITheme>({
+    name: 'default',
+    primary: '#3B82F6',
+    secondary: '#8B5CF6',
+    accent: '#10B981',
+    background: '#FFFFFF',
+    surface: '#F8FAFC',
+    text: '#1F2937',
+    textSecondary: '#6B7280'
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Initialize UI enhancements
+  useEffect(() => {
     if (!enabled) return;
-    // Add modern font loading
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-    fontLink.as = 'style';
-    document.head.appendChild(fontLink);
-    // Apply modern typography
-    const root = document.documentElement;
-    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif");
-    root.style.setProperty('--font-weight-light', '300');
-    root.style.setProperty('--font-weight-normal', '400');
-    root.style.setProperty('--font-weight-medium', '500');
-    root.style.setProperty('--font-weight-semibold', '600');
-    root.style.setProperty('--font-weight-bold', '700');
-  }, [enabled]);
-  const enhanceColorScheme = useCallback(() => {
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('zion-ui-theme');
+    if (savedTheme) {
+      try {
+        const parsed = JSON.parse(savedTheme);
+        setCurrentTheme(parsed);
+        if (parsed.name === 'dark') {
+          setIsDarkMode(true);
+        }
+      } catch (error) {
+        console.warn('Failed to parse saved theme:', error);
+      }
+    }
+
+    // Check system preference
+    if (enableDarkMode) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setIsDarkMode(mediaQuery.matches);
+
+      const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
+  }, [enabled, enableDarkMode]);
+
+  // Apply theme changes
+  useEffect(() => {
     if (!enabled) return;
+
     const root = document.documentElement;
-    // Modern color palette
-    const colors = {
-      primary: anyanyanyanyanyanyanyanyanyanyanyanyanyanyaccentColor,
-      secondary: '#6366f1',
-      success: '#10b981',
-      warning: '#f59e0b',
-      error: '#ef4444',
-      info: '#3b82f6',
-      neutral: {
-        50: '#f8fafc',
-        100: '#f1f5f9',
-        200: '#e2e8f0',
-        300: '#cbd5e1',
-        400: '#94a3b8',
-        500: '#64748b',
-        600: '#475569',
-        700: '#334155',
-        800: '#1e293b',
-        900: '#0f172a'
+    const body = document.body;
+
+    // Apply theme colors
+    root.style.setProperty('--color-primary', currentTheme.primary);
+    root.style.setProperty('--color-secondary', currentTheme.secondary);
+    root.style.setProperty('--color-accent', currentTheme.accent);
+    root.style.setProperty('--color-background', currentTheme.background);
+    root.style.setProperty('--color-surface', currentTheme.surface);
+    root.style.setProperty('--color-text', currentTheme.text);
+    root.style.setProperty('--color-text-secondary', currentTheme.textSecondary);
+
+    // Apply dark mode
+    if (isDarkMode) {
+      body.classList.add('dark');
+      root.style.setProperty('--color-background', '#0F172A');
+      root.style.setProperty('--color-surface', '#1E293B');
+      root.style.setProperty('--color-text', '#F8FAFC');
+      root.style.setProperty('--color-text-secondary', '#94A3B8');
+    } else {
+      body.classList.remove('dark');
+    }
+
+    // Save theme preference
+    localStorage.setItem('zion-ui-theme', JSON.stringify(currentTheme));
+  }, [enabled, currentTheme, isDarkMode]);
+
+  // Setup smooth scrolling
+  useEffect(() => {
+    if (!enabled || !enableSmoothScrolling) return;
+
+    const html = document.documentElement;
+    html.style.scrollBehavior = 'smooth';
+
+    return () => {
+      html.style.scrollBehavior = 'auto';
+    };
+  }, [enabled, enableSmoothScrolling]);
+
+  // Setup scroll progress tracking
+  useEffect(() => {
+    if (!enabled || !enableParallax) return;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.offsetHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      setScrollProgress(scrollPercent);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [enabled, enableParallax]);
+
+  // Setup cursor effects
+  useEffect(() => {
+    if (!enabled || !enableCursorEffects) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseenter', handleMouseEnter);
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseenter', handleMouseEnter);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [enabled, enableCursorEffects]);
+
+  // Setup loading states
+  useEffect(() => {
+    if (!enabled || !enableLoadingStates) return;
+
+    const handleRouteChange = () => {
+      setIsLoading(true);
+      setTimeout(() => setIsLoading(false), 500);
+    };
+
+    // Listen for route changes (you might need to adapt this based on your routing setup)
+    window.addEventListener('popstate', handleRouteChange);
+    
+    return () => window.removeEventListener('popstate', handleRouteChange);
+  }, [enabled, enableLoadingStates]);
+
+  // Setup micro-interactions
+  useEffect(() => {
+    if (!enabled || !enableMicroInteractions) return;
+
+    // Add hover effects to interactive elements
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [role="button"]');
+    
+    interactiveElements.forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        element.classList.add('micro-interaction-hover');
+      });
+      
+      element.addEventListener('mouseleave', () => {
+        element.classList.remove('micro-interaction-hover');
+      });
+    });
+
+    return () => {
+      interactiveElements.forEach(element => {
+        element.classList.remove('micro-interaction-hover');
+      });
+    };
+  }, [enabled, enableMicroInteractions]);
+
+  // Toggle dark mode
+  const toggleDarkMode = useCallback(() => {
+    setIsDarkMode(prev => !prev);
+  }, []);
+
+  // Change theme
+  const changeTheme = useCallback((themeName: string) => {
+    const themes: Record<string, UITheme> = {
+      default: {
+        name: 'default',
+        primary: '#3B82F6',
+        secondary: '#8B5CF6',
+        accent: '#10B981',
+        background: '#FFFFFF',
+        surface: '#F8FAFC',
+        text: '#1F2937',
+        textSecondary: '#6B7280'
+      },
+      ocean: {
+        name: 'ocean',
+        primary: '#0EA5E9',
+        secondary: '#6366F1',
+        accent: '#06B6D4',
+        background: '#F0F9FF',
+        surface: '#E0F2FE',
+        text: '#0C4A6E',
+        textSecondary: '#0369A1'
+      },
+      sunset: {
+        name: 'sunset',
+        primary: '#F59E0B',
+        secondary: '#EF4444',
+        accent: '#F97316',
+        background: '#FFFBEB',
+        surface: '#FEF3C7',
+        text: '#92400E',
+        textSecondary: '#B45309'
+      },
+      forest: {
+        name: 'forest',
+        primary: '#059669',
+        secondary: '#10B981',
+        accent: '#34D399',
+        background: '#ECFDF5',
+        surface: '#D1FAE5',
+        text: '#064E3B',
+        textSecondary: '#065F46'
       }
     };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  useEffect(()               => {
-    // Apply settings when they change
-    applyUISettings();
-  }, [settings]);
+    if (themes[themeName]) {
+      setCurrentTheme(themes[themeName]);
+    }
+  }, []);
 
-  const initializeUIEnhancements = () => {
-    // Add CSS custom properties
-    addCSSVariables();
+  // Add CSS variables and styles
+  useEffect(() => {
+    if (!enabled) return;
 
-    // Add glassmorphism styles
-    addGlassmorphismStyles();
-
-    // Add modern shadow styles
-    addModernShadowStyles();
-
-    // Add depth layer styles
-    addDepthLayerStyles();
-
-    // Add color theme styles
-    addColorThemeStyles();
-  };
-
-  const addCSSVariables = () => {
     const style = document.createElement('style');
     style.textContent = `
       :root {
-        --glass-bg: rgba(255, 255, 255, 0.1);
-        --glass-border: rgba(255, 255, 255, 0.2);
-        --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --modern-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        --depth-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        --accent-glow: 0 0 20px rgba(6, 182, 212, 0.5);
-        --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-      .glass-effect {
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--glass-shadow);
-
-      .modern-shadow {
-        box-shadow: var(--modern-shadow);
-
-      .depth-layer {
-        box-shadow: var(--depth-shadow);
-        transform: translateZ(0);
-
-      .accent-glow {
-        box-shadow: var(--accent-glow);
-
-      .text-shadow {
-        text-shadow: var(--text-shadow);
-
-      .smooth-scroll {
-        scroll-behavior: smooth;
-
-      .enhanced-animation {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addGlassmorphismStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .glass-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-
-      .glass-card:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        transform: translateY(-2px);
-
-      .glass-button {
-        background: rgba(6, 182, 212, 0.2);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(6, 182, 212, 0.3);
-        border-radius: 12px;
-        padding: 12px 24px;
-        color: white;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        cursor: pointer;
-
-      .glass-button:hover {
-        background: rgba(6, 182, 212, 0.3);
-        border-color: rgba(6, 182, 212, 0.5);
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-        transform: translateY(-1px);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addModernShadowStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .shadow-elevation-1 {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-      .shadow-elevation-2 {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-      .shadow-elevation-3 {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
-      .shadow-elevation-4 {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-      .shadow-elevation-5 {
-        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-      .hover-lift {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-      .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addDepthLayerStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .depth-1 {
-        transform: translateZ(10px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-      .depth-2 {
-        transform: translateZ(20px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-
-      .depth-3 {
-        transform: translateZ(30px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-
-      .parallax-layer {
-        transform-style: preserve-3d;
-        will-change: transform;
-
-      .floating-element {
-        animation: float 6s ease-in-out infinite;
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0px) translateZ(0); }
-        50% { transform: translateY(-10px) translateZ(10px); }
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addColorThemeStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .theme-cyber {
-        --primary: #00ffff;
-        --secondary: #ff00ff;
-        --accent: #ffff00;
-        --background: #000000;
-        --surface: #111111;
-
-      .theme-nature {
-        --primary: #4ade80;
-        --secondary: #22c55e;
-        --accent: #84cc16;
-        --background: #f0fdf4;
-        --surface: #ffffff;
-
-      .theme-sunset {
-        --primary: #f97316;
-        --secondary: #ec4899;
-        --accent: #f59e0b;
-        --background: #fef3c7;
-        --surface: #ffffff;
-
-      .theme-ocean {
-        --primary: #06b6d4;
-        --secondary: #0891b2;
-        --accent: #0ea5e9;
-        --background: #f0f9ff;
-        --surface: #ffffff;
-
-      .theme-dark {
-        --primary: #6366f1;
-        --secondary: #8b5cf6;
-        --accent: #a855f7;
-        --background: #0f172a;
-        --surface: #1e293b;
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const setupParticleSystem = () => {
-    // Create floating particles
-    const particleCount = 50;
-    const newParticles = [];
-
-    for (const i = 0; i < particleCount; i++) {
-      newParticles.push({
-        id: i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5
-      });
-
-    setParticles(newParticles);
-
-    // Animate particles
-    const animateParticles = () => {
-      setParticles(prev => prev.map(particle => ({
-        ...particle,
-        x: particle.x + particle.vx,
-        y: particle.y + particle.vy,
-        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,
-        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy
-      })));
-    };
-
-    const interval = setInterval(animateParticles, 50);
-
-    return () => clearInterval(interval);
-  };
-
-  const setupSmoothScrolling = () => {
-    // Add smooth scrolling to all anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-
-      });
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    // Apply CSS custom properties
-    Object.entries(colors).forEach(([key, value]) => {
-      if (typeof value === 'string') {
-        root.style.setProperty(`--color-${key}`, value);
-      } else {
-        Object.entries(value).forEach(([shade, colorValue]) => {
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue);
-        });
+        --color-primary: ${currentTheme.primary};
+        --color-secondary: ${currentTheme.secondary};
+        --color-accent: ${currentTheme.accent};
+        --color-background: ${currentTheme.background};
+        --color-surface: ${currentTheme.surface};
+        --color-text: ${currentTheme.text};
+        --color-text-secondary: ${currentTheme.textSecondary};
+        
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        
+        --border-radius: 0.5rem;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
-    });
-    // Apply accent color variations
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);
-    root.style.setProperty('--color-primary-dark', `${accentColor}80`);
-  }, [enabled, accentColor]);
-  const enhanceSpacing = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    // Modern spacing scale (4px base unit)
-    const spacing = {
-      0: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
-      1: '4px',
-      2: '8px',
-      3: '12px',
-      4: '16px',
-      5: '20px',
-      6: '24px',
-      7: '28px',
-      8: '32px',
-      9: '36px',
-      10: '40px',
-      12: '48px',
-      14: '56px',
-      16: '64px',
-      20: '80px',
-      24: '96px',
-      28: '112px',
-      32: '128px'
-    };
-<<<<<<< HEAD
-    Object.entries(spacing).forEach(([key, value]) => {
-=======
 
-    Object.entries(spacing).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--spacing-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceShadows = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    // Modern shadow system
-    const shadows = {
-      xs: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-      md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-      xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-      '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
-    };
-<<<<<<< HEAD
-    Object.entries(shadows).forEach(([key, value]) => {
-=======
-
-    Object.entries(shadows).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--shadow-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceTransitions = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    // Modern transition system
-    const transitions = {
-      fast: anyanyanyanyanyanyanyanyanyanyanyanyanyany'150ms ease-in-out',
-      normal: '250ms ease-in-out',
-      slow: '350ms ease-in-out',
-      bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-      smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
-      sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-    };
-<<<<<<< HEAD
-    Object.entries(transitions).forEach(([key, value]) => {
-=======
-
-    Object.entries(transitions).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--transition-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceBorderRadius = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    // Modern border radius system
-    const radius = {
-      none: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
-      sm: '2px',
-      md: '6px',
-      lg: '8px',
-      xl: '12px',
-      '2xl': '16px',
-      '3xl': '24px',
-      full: '9999px'
-    };
-<<<<<<< HEAD
-    Object.entries(radius).forEach(([key, value]) => {
-=======
-
-    Object.entries(radius).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--radius-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceDarkMode = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.add('dark');
-      root.style.setProperty('--bg-primary', '#0f172a');
-      root.style.setProperty('--bg-secondary', '#1e293b');
-      root.style.setProperty('--text-primary', '#f8fafc');
-      root.style.setProperty('--text-secondary', '#cbd5e1');
-      root.style.setProperty('--border-color', '#334155');
-    } else {
-      root.classList.remove('dark');
-      root.style.setProperty('--bg-primary', '#ffffff');
-      root.style.setProperty('--bg-secondary', '#f8fafc');
-      root.style.setProperty('--text-primary', '#0f172a');
-      root.style.setProperty('--text-secondary', '#475569');
-      root.style.setProperty('--border-color', '#e2e8f0');
-    }
-  }, [enabled, isDarkMode]);
-  const enhanceComponents = useCallback(() => {
-    if (!enabled) return;
-    // Add modern button styles
-    const buttons = document.querySelectorAll('button, .btn, [role="button"]');
-    buttons.forEach((button) => {
-      if (!button.classList.contains('modern-enhanced')) {
-        button.classList.add('modern-enhanced');
-        button.style.cssText += `
-          border-radius: var(--radius-md);
-          transition: var(--transition-normal);
-          font-weight: var(--font-weight-medium);
-          box-shadow: var(--shadow-sm);
-        `;
+      .dark {
+        --color-background: #0F172A;
+        --color-surface: #1E293B;
+        --color-text: #F8FAFC;
+        --color-text-secondary: #94A3B8;
       }
-    });
-    // Add modern card styles
-    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
-    cards.forEach((card) => {
-      if (!card.classList.contains('modern-enhanced')) {
-        card.classList.add('modern-enhanced');
-        card.style.cssText += `
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);
-          border: 1px solid var(--border-color);
-        `;
+
+      ${enableGlassmorphism ? `
+        .glass {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass {
+          background: rgba(0, 0, 0, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      ` : ''}
+
+      ${enableGradients ? `
+        .gradient-primary {
+          background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        }
+        
+        .gradient-accent {
+          background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+        }
+        
+        .gradient-surface {
+          background: linear-gradient(135deg, var(--color-surface), var(--color-background));
+        }
+      ` : ''}
+
+      ${enableShadows ? `
+        .shadow-elevated {
+          box-shadow: var(--shadow-lg);
+          transition: var(--transition);
+        }
+        
+        .shadow-elevated:hover {
+          box-shadow: var(--shadow-xl);
+          transform: translateY(-2px);
+        }
+      ` : ''}
+
+      ${enableHoverEffects ? `
+        .hover-lift {
+          transition: var(--transition);
+        }
+        
+        .hover-lift:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-xl);
+        }
+        
+        .hover-scale {
+          transition: var(--transition);
+        }
+        
+        .hover-scale:hover {
+          transform: scale(1.05);
+        }
+      ` : ''}
+
+      ${enableMicroInteractions ? `
+        .micro-interaction-hover {
+          transform: scale(1.02);
+          transition: var(--transition);
+        }
+        
+        .ripple {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .ripple::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple 0.6s linear;
+        }
+        
+        @keyframes ripple {
+          to {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+      ` : ''}
+
+      ${enableAnimations ? `
+        .fade-in {
+          animation: fadeIn 0.6s ease-out;
+        }
+        
+        .slide-up {
+          animation: slideUp 0.6s ease-out;
+        }
+        
+        .slide-down {
+          animation: slideDown 0.6s ease-out;
+        }
+        
+        .bounce-in {
+          animation: bounceIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+          from { transform: translateY(20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes slideDown {
+          from { transform: translateY(-20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes bounceIn {
+          0% { transform: scale(0.3); opacity: 0; }
+          50% { transform: scale(1.05); }
+          70% { transform: scale(0.9); }
+          100% { transform: scale(1); opacity: 1; }
+        }
+      ` : ''}
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid var(--color-surface);
+        border-top: 4px solid var(--color-primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
       }
-    });
-  }, [enabled]);
-  useEffect(() => {
-    if (!enabled) return;
-    enhanceTypography();
-    enhanceColorScheme();
-    enhanceSpacing();
-    enhanceShadows();
-    enhanceTransitions();
-    enhanceBorderRadius();
-    enhanceDarkMode();
-    enhanceComponents();
-  }, [
-    enabled,
-    enhanceTypography,
-    enhanceColorScheme,
-    enhanceSpacing,
-    enhanceShadows,
-    enhanceTransitions,
-    enhanceBorderRadius,
-    enhanceDarkMode,
-    enhanceComponents
-  ]);
-  // Don't render anything - this is a utility component
-  return null;
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `;
+
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, [enabled, currentTheme, enableGlassmorphism, enableGradients, enableShadows, enableHoverEffects, enableMicroInteractions, enableAnimations]);
+
+  if (!enabled) return null;
+
+  return (
+    <>
+      {/* Custom Cursor */}
+      {enableCursorEffects && (
+        <motion.div
+          ref={cursorRef}
+          className="fixed pointer-events-none z-[9999] mix-blend-difference"
+          animate={{
+            x: cursorPosition.x - 16,
+            y: cursorPosition.y - 16,
+            scale: isHovering ? 1.5 : 1,
+            opacity: isHovering ? 0.8 : 0.6
+          }}
+          transition={{ type: "spring", stiffness: 500, damping: 28 }}
+        >
+          <div className="w-8 h-8 bg-white rounded-full shadow-lg" />
+        </motion.div>
+      )}
+
+      {/* Loading Overlay */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-[9998] flex items-center justify-center"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl">
+              <div className="loading-spinner mx-auto mb-4"></div>
+              <p className="text-gray-600 dark:text-gray-400 text-center">Loading...</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Scroll Progress Bar */}
+      {enableParallax && (
+        <motion.div
+          className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-[9997]"
+          style={{ width: `${scrollProgress}%` }}
+          initial={{ width: 0 }}
+          animate={{ width: `${scrollProgress}%` }}
+          transition={{ duration: 0.1 }}
+        />
+      )}
+
+      {/* Theme Switcher */}
+      <div className="fixed top-4 left-4 z-[9996]">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 space-y-3">
+          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Theme</h3>
+          
+          {/* Dark Mode Toggle */}
+          {enableDarkMode && (
+            <button
+              onClick={toggleDarkMode}
+              className={`w-full px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isDarkMode
+                  ? 'bg-gray-800 text-white'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+              }`}
+            >
+              {isDarkMode ? '🌙 Dark' : '☀️ Light'}
+            </button>
+          )}
+
+          {/* Theme Presets */}
+          <div className="space-y-2">
+            <button
+              onClick={() => changeTheme('default')}
+              className="w-full px-3 py-2 rounded-md text-sm font-medium bg-blue-100 text-blue-900 hover:bg-blue-200 transition-colors"
+            >
+              Default
+            </button>
+            <button
+              onClick={() => changeTheme('ocean')}
+              className="w-full px-3 py-2 rounded-md text-sm font-medium bg-cyan-100 text-cyan-900 hover:bg-cyan-200 transition-colors"
+            >
+              Ocean
+            </button>
+            <button
+              onClick={() => changeTheme('sunset')}
+              className="w-full px-3 py-2 rounded-md text-sm font-medium bg-orange-100 text-orange-900 hover:bg-orange-200 transition-colors"
+            >
+              Sunset
+            </button>
+            <button
+              onClick={() => changeTheme('forest')}
+              className="w-full px-3 py-2 rounded-md text-sm font-medium bg-green-100 text-green-900 hover:bg-green-200 transition-colors"
+            >
+              Forest
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Action Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-4 left-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full p-4 shadow-lg z-[9996] hover:shadow-xl transition-shadow"
+        onClick={() => {
+          // Add your action here
+          console.log('FAB clicked!');
+        }}
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </motion.button>
+
+      {/* CSS Classes for Components - moved to global styles */}
+    </>
+  );
 };

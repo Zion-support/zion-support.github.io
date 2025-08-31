@@ -196,16 +196,47 @@ function App() {
           />
 
           {/* Performance Optimizer */}
-          <PerformanceOptimizer enabled={true} />
+          <PerformanceOptimizer 
+            enabled={true} 
+            showMetrics={true}
+            optimizeImages={true}
+            lazyLoadThreshold={0.1}
+          />
 
           {/* Enhanced Accessibility */}
-          <EnhancedAccessibilityEnhancer enabled={true} />
+          <EnhancedAccessibilityEnhancer 
+            enabled={true} 
+            showAccessibilityPanel={true}
+            enableHighContrast={true}
+            enableLargeText={true}
+            enableReducedMotion={true}
+            enableFocusIndicators={true}
+            enableScreenReaderOptimization={true}
+            enableKeyboardNavigation={true}
+            enableVoiceNavigation={true}
+          />
 
           {/* Mobile Experience Enhancer */}
           <MobileExperienceEnhancer enabled={true} />
 
           {/* Advanced Analytics */}
           <AdvancedAnalytics enabled={true} showMetrics={true} />
+
+          {/* Modern UI Enhancer */}
+          <ModernUIEnhancer 
+            enabled={true}
+            enableDarkMode={true}
+            enableAnimations={true}
+            enableGlassmorphism={true}
+            enableGradients={true}
+            enableShadows={true}
+            enableHoverEffects={true}
+            enableSmoothScrolling={true}
+            enableParallax={true}
+            enableCursorEffects={true}
+            enableLoadingStates={true}
+            enableMicroInteractions={true}
+          />
 
           {/* Header */}
           <EnhancedHeader />

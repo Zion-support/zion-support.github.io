@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+import { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -29,7 +29,7 @@ import {
   BarChart3,
   Code,
   Server,
-  Chip,
+  Cpu,
   Wifi,
   ShieldCheck,
   Globe2,

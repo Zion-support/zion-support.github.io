@@ -391,29 +391,7 @@ export const MobileResponsivenessEnhancer: React.FC<MobileResponsivenessEnhancer
         </motion.div>
       )}
 
-      {/* Mobile-specific CSS */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .mobile-device {
-            --container-padding: 1rem;
-            --section-spacing: 2rem;
-            --card-padding: 1rem;
-            --button-padding: 0.75rem 1.5rem;
-            --font-size-base: 16px;
-            --line-height-base: 1.5;
-          }
-          
-          .mobile-portrait {
-            --header-height: 60px;
-            --footer-height: 80px;
-          }
-          
-          .mobile-landscape {
-            --header-height: 50px;
-            --footer-height: 60px;
-          }
-        }
-      `}</style>
+
     </>
   );
 };
