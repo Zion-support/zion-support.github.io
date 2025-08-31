@@ -1,95 +1,95 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageSquare, Brain, Zap, Globe, Users, BarChart3, 
+  PenTool, Brain, Zap, Globe, Users, BarChart3, 
   Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,
   ArrowRight, Star, Award, Phone, Mail, MapPin, TrendingUp,
-  Target, Shield, Gauge, Clock, FileText, Search, Headphones
+  Target, Shield, Gauge, Clock, FileText, Search, MessageSquare
 } from 'lucide-react';
 
-const AICustomerSupportAutomation: React.FC = () => {
+const AIContentMarketingSuite: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context and provide accurate responses"
-    },
-    {
-      icon: MessageSquare,
-      title: "Multi-Channel Support",
-      description: "Unified support across email, chat, social media, and phone channels"
+      title: "AI Content Generation",
+      description: "Generate high-quality, SEO-optimized content in seconds using advanced AI"
     },
     {
       icon: Search,
-      title: "Knowledge Base Integration",
-      description: "Seamless integration with existing knowledge bases and documentation"
+      title: "SEO Optimization",
+      description: "AI-powered keyword research and content optimization for maximum visibility"
+    },
+    {
+      icon: PenTool,
+      title: "Content Planning",
+      description: "Intelligent content calendar and topic suggestions based on trending data"
     },
     {
       icon: BarChart3,
-      title: "Sentiment Analysis",
-      description: "Real-time customer sentiment tracking and escalation management"
+      title: "Performance Analytics",
+      description: "Comprehensive analytics to track content performance and ROI"
+    },
+    {
+      icon: MessageSquare,
+      title: "Social Media Management",
+      description: "Automated social media posting and engagement optimization"
     },
     {
       icon: Target,
-      title: "Personalized Support",
-      description: "AI-driven personalization based on customer history and preferences"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR and SOC2 compliance"
+      title: "Audience Targeting",
+      description: "AI-driven audience segmentation and personalized content delivery"
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses and content creators",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "Email and chat support",
-        "Basic knowledge base",
-        "Email support",
-        "Standard integrations"
+        "Up to 50 AI-generated articles/month",
+        "Basic SEO optimization",
+        "Content calendar",
+        "Social media scheduling",
+        "Basic analytics",
+        "Email support"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing businesses and support teams",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with custom training",
-        "Multi-channel support",
-        "Advanced knowledge base",
-        "Sentiment analysis",
+        "Up to 200 AI-generated articles/month",
+        "Advanced SEO optimization",
+        "AI content planning",
+        "Social media automation",
+        "Advanced analytics",
         "Priority support",
-        "Custom integrations",
-        "Analytics dashboard"
+        "Custom templates",
+        "Team collaboration"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$999",
       period: "/month",
-      description: "For large organizations with complex support needs",
+      description: "For large organizations and agencies",
       features: [
-        "Unlimited conversations",
+        "Unlimited AI-generated content",
         "Custom AI models",
         "White-label solution",
         "Advanced analytics",
         "API access",
-        "Dedicated support team",
-        "Custom development",
-        "Multi-tenant architecture"
+        "Dedicated support",
+        "Custom integrations",
+        "Multi-brand management"
       ],
       cta: "Contact Sales",
       popular: false
@@ -98,62 +98,62 @@ const AICustomerSupportAutomation: React.FC = () => {
 
   const benefits = [
     {
-      title: "24/7 Support",
-      description: "Provide instant support to customers around the clock without human intervention",
-      icon: Clock
-    },
-    {
-      title: "Cost Reduction",
-      description: "Reduce support costs by up to 70% through automation and AI efficiency",
-      icon: DollarSign
-    },
-    {
-      title: "Faster Resolution",
-      description: "Resolve customer issues 5x faster with AI-powered solutions",
+      title: "10x Content Production",
+      description: "Generate high-quality content 10x faster than traditional methods",
       icon: Zap
     },
     {
-      title: "Customer Satisfaction",
-      description: "Improve customer satisfaction scores by up to 40%",
-      icon: Star
+      title: "SEO Dominance",
+      description: "Achieve top search rankings with AI-optimized content",
+      icon: Search
+    },
+    {
+      title: "Cost Efficiency",
+      description: "Reduce content creation costs by up to 80%",
+      icon: DollarSign
+    },
+    {
+      title: "24/7 Automation",
+      description: "Automated content creation and distribution around the clock",
+      icon: Clock
     }
   ];
 
-  const supportChannels = [
+  const contentTypes = [
     {
-      title: "Live Chat",
-      description: "AI-powered live chat with instant responses and human handoff capabilities",
-      icon: MessageSquare,
+      title: "Blog Posts",
+      description: "SEO-optimized blog articles with engaging headlines and meta descriptions",
+      icon: FileText,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Email Support",
-      description: "Automated email responses with intelligent routing and escalation",
-      icon: Mail,
+      title: "Social Media",
+      description: "Platform-specific content for Facebook, Twitter, LinkedIn, and Instagram",
+      icon: MessageSquare,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Phone Support",
-      description: "AI voice assistants with natural language processing and call routing",
-      icon: Phone,
+      title: "Email Marketing",
+      description: "Personalized email campaigns with AI-driven subject lines and content",
+      icon: Mail,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across all social platforms",
-      icon: Globe,
+      title: "Video Scripts",
+      description: "Engaging video scripts optimized for different platforms and audiences",
+      icon: Eye,
       color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Self-Service Portal",
-      description: "Intelligent knowledge base with AI-powered search and recommendations",
-      icon: Search,
+      title: "Product Descriptions",
+      description: "Compelling product descriptions that convert browsers into buyers",
+      icon: Target,
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Mobile App Support",
-      description: "In-app support with push notifications and contextual assistance",
-      icon: Smartphone,
+      title: "Press Releases",
+      description: "Professional press releases with newsworthy angles and SEO optimization",
+      icon: TrendingUp,
       color: "from-indigo-500 to-purple-500"
     }
   ];
@@ -169,22 +169,22 @@ const AICustomerSupportAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-              <MessageSquare className="w-4 h-4 mr-2" />
-              AI Customer Support
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
+              <PenTool className="w-4 h-4 mr-2" />
+              AI Content Marketing
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Customer Support Automation
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                {" "}Content Marketing Suite
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your customer support with AI-powered automation. Provide instant, 
-              accurate, and personalized support 24/7 while reducing costs and improving satisfaction.
+              Revolutionize your content marketing with AI-powered content generation, 
+              SEO optimization, and automated distribution. Create 10x more content in 1/10th the time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
@@ -205,11 +205,11 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Complete Customer Support Solution
+              Complete Content Marketing Solution
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform handles every aspect of customer support, from initial contact 
-              to resolution, ensuring exceptional customer experiences every time.
+              Our AI suite handles every aspect of content marketing, from ideation to distribution, 
+              ensuring maximum engagement and ROI for your brand.
             </p>
           </motion.div>
 
@@ -220,9 +220,9 @@ const AICustomerSupportAutomation: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -233,7 +233,7 @@ const AICustomerSupportAutomation: React.FC = () => {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Content Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -243,28 +243,28 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Multi-Channel Support
+              AI-Generated Content Types
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Meet your customers wherever they are with our comprehensive multi-channel 
-              support platform that provides consistent experiences across all touchpoints.
+              Our AI can create any type of content you need, optimized for your audience 
+              and designed to drive engagement and conversions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
+            {contentTypes.map((contentType, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <channel.icon className="w-6 h-6 text-white" />
+                <div className={`w-12 h-12 bg-gradient-to-r ${contentType.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <contentType.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300">{channel.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{contentType.title}</h3>
+                <p className="text-gray-300">{contentType.description}</p>
               </motion.div>
             ))}
           </div>
@@ -281,10 +281,10 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Support Platform?
+              Why Choose Our AI Content Suite?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the future of customer support with proven results 
+              Experience the future of content marketing with proven results 
               and industry-leading AI technology.
             </p>
           </motion.div>
@@ -298,7 +298,7 @@ const AICustomerSupportAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -324,7 +324,7 @@ const AICustomerSupportAutomation: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the perfect plan for your support volume and automation requirements.
+              Choose the perfect plan for your content marketing needs and team size.
             </p>
           </motion.div>
 
@@ -337,13 +337,13 @@ const AICustomerSupportAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   tier.popular 
-                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
+                    ? 'border-orange-500 ring-2 ring-orange-500/20' 
                     : 'border-gray-700'
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -369,7 +369,7 @@ const AICustomerSupportAutomation: React.FC = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   tier.popular
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600'
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
                   {tier.cta}
@@ -389,30 +389,30 @@ const AICustomerSupportAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Automate Your Customer Support?
+              Ready to Transform Your Content Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team to learn more about implementing AI-powered customer support 
-              automation for your business.
+              Contact our team to learn more about implementing AI-powered content marketing 
+              for your business.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-indigo-400" />
+                <Phone className="w-5 h-5 text-orange-400" />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-indigo-400" />
+                <Mail className="w-5 h-5 text-orange-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-indigo-400" />
+                <MapPin className="w-5 h-5 text-orange-400" />
                 <span>Middletown, DE 19709</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
                 Schedule Demo
               </button>
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
@@ -426,4 +426,4 @@ const AICustomerSupportAutomation: React.FC = () => {
   );
 };
 
-export default AICustomerSupportAutomation;
+export default AIContentMarketingSuite;
