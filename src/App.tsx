@@ -61,18 +61,6 @@ const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
 // Additional pages
 const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
-const Blog = createLazyComponent(() => import('./pages/BlogPage'));
-const Documentation = createLazyComponent(() => import('./pages/Documentation'));
-const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
-const Webinars = createLazyComponent(() => import('./pages/Webinars'));
-const Training = createLazyComponent(() => import('./pages/Training'));
-const ResearchDevelopment = createLazyComponent(() => import('./pages/research-development'));
-const Help = createLazyComponent(() => import('./pages/Help'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Partners = createLazyComponent(() => import('./pages/Partners'));
-const News = createLazyComponent(() => import('./pages/News'));
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
