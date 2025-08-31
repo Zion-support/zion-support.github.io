@@ -87,6 +87,8 @@ const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Community = createLazyComponent(() => import('./pages/Community'));
 const ROICalculator = createLazyComponent(() => import('./pages/tools/ROICalculator'));
+const SecurityAssessment = createLazyComponent(() => import('./pages/tools/SecurityAssessment'));
+const PerformanceMonitor = createLazyComponent(() => import('./pages/tools/PerformanceMonitor'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
@@ -335,6 +337,8 @@ function App() {
         <Route path="/webinars" element={<ModernLayout><Webinars /></ModernLayout>} />
                 <Route path="/community" element={<ModernLayout><Community /></ModernLayout>} />
         <Route path="/tools/roi-calculator" element={<ModernLayout><ROICalculator /></ModernLayout>} />
+        <Route path="/tools/security-assessment" element={<ModernLayout><SecurityAssessment /></ModernLayout>} />
+        <Route path="/tools/performance-monitor" element={<ModernLayout><PerformanceMonitor /></ModernLayout>} />
         <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
                     <Route path="/research-development" element={<ModernLayout><ResearchDevelopment /></ModernLayout>} />
                     <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
