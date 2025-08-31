@@ -52,7 +52,7 @@ import {
   Satellite,
   Telescope,
   Microscope,
-  Flask,
+  Beaker,
   Pill,
   Stethoscope,
   Calculator,
