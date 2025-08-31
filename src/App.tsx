@@ -81,6 +81,7 @@ const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
 
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
@@ -88,6 +89,9 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 // New Innovative Services
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
+const AIQuantumFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Quantum-Financial-Analytics-Platform'));
+const AIAutonomousSupplyChainManagementPlatform = lazy(() => import('./pages/services/AI-Autonomous-Supply-Chain-Management-Platform'));
+const AICybersecurityOperationsCenter = lazy(() => import('./pages/services/AI-Cybersecurity-Operations-Center'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -311,6 +315,7 @@ function App() {
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/zion-innovative-services-2025" element={<ZionInnovativeServices2025 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                  <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
 
                   {/* Enhanced Services Showcase 2025 */}
                   <Route path="/enhanced-services-showcase-2025" element={
@@ -431,6 +436,9 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+                  <Route path="/services/ai-quantum-financial-analytics-platform" element={<AIQuantumFinancialAnalyticsPlatform />} />
+                  <Route path="/services/ai-autonomous-supply-chain-management-platform" element={<AIAutonomousSupplyChainManagementPlatform />} />
+                  <Route path="/services/ai-cybersecurity-operations-center" element={<AICybersecurityOperationsCenter />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />

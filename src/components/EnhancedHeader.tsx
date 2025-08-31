@@ -212,6 +212,30 @@ export function EnhancedHeader() {
       featured: true
     },
     {
+      name: 'AI Quantum Financial Analytics',
+      description: 'Revolutionary quantum AI financial platform',
+      href: '/services/ai-quantum-financial-analytics-platform',
+      icon: BarChart3,
+      color: 'from-blue-500 to-purple-600',
+      featured: true
+    },
+    {
+      name: 'AI Autonomous Supply Chain',
+      description: 'Self-learning supply chain management',
+      href: '/services/ai-autonomous-supply-chain-management-platform',
+      icon: Package,
+      color: 'from-green-500 to-blue-600',
+      featured: true
+    },
+    {
+      name: 'AI Cybersecurity Operations',
+      description: 'Autonomous security operations center',
+      href: '/services/ai-cybersecurity-operations-center',
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      featured: true
+    },
+    {
       name: 'Micro SAAS Solutions',
       description: 'Innovative software-as-a-service solutions',
       href: '/services/micro-saas-solutions',
@@ -267,6 +291,14 @@ export function EnhancedHeader() {
       href: '/zion-cutting-edge-services-2029',
       icon: SparklesIcon,
       color: 'from-indigo-500 to-purple-500',
+      featured: true
+    },
+    {
+      name: '2026 Services Showcase',
+      description: 'Latest innovative services showcase',
+      href: '/innovative-services-showcase-2026',
+      icon: SparklesIcon,
+      color: 'from-yellow-500 to-orange-500',
       featured: true
     }
   ];
