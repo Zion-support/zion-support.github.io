@@ -1,7 +1,11 @@
 import React from 'react.ts';
 import SEO from '@/components/SEO';
+<<<<<<< HEAD
+function ReturnsManagement() {
+=======
 
 function ReturnsManagement(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -15,7 +19,6 @@ function ReturnsManagement(...args: any[]): any {
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
         </p>
-
         <div className="grid-futuristic mt-10">
           <div className="card-futuristic">
             <h2 className="text-xl font-semibold mb-2">Key capabilities</h2>
@@ -38,8 +41,12 @@ function ReturnsManagement(...args: any[]): any {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+=======
 
         <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           {[{
             plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
           },{
@@ -64,13 +71,6 @@ function ReturnsManagement(...args: any[]): any {
       </section>;
     </div>;
   );
-
-export default ReturnsManagement;
-
-<<<<<<< HEAD
-}
-=======
-
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
@@ -78,4 +78,4 @@ export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default ReturnsManagement;

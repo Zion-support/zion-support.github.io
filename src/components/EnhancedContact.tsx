@@ -1,17 +1,25 @@
 <<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Mail,
+=======
+<<<<<<< HEAD
 import { AnimatePresence, motion               } from 'framer-motion.ts';
 import { =======
 import React, { useState               } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Mail,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Phone,
   MapPin,
   Send,
   CheckCircle,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertCircle,
   CheckCircle,
   Clock,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   Mail,
   MapPin,
@@ -20,13 +28,14 @@ import { Mail,
               } from 'lucide-react.ts';
 import React, { useState } from 'react.ts';
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageSquare,
   Building,
   Globe
  } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface ContactFormData {
+<<<<<<< HEAD
+=======
 
 
 
@@ -42,11 +51,18 @@ interface ContactFormData {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
+<<<<<<< HEAD
+  message: string}
+interface ContactFormErrors {
+  [key: string]: string}
+export function EnhancedContact(...args[]):  {
+=======
 message: string;
 
 
@@ -96,6 +112,7 @@ interface ContactFormErrors {
 }
 
 export function EnhancedContact(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -104,11 +121,9 @@ export function EnhancedContact(...args[]: any):  {
     service: 'general',
     message: ''
   });
-
   const [errors, setErrors] = useState<any>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const services = [
     { value: 'general', label: 'General Inquiry' },
     { value: 'ai-solutions', label: 'AI Solutions' },;
@@ -119,41 +134,21 @@ export function EnhancedContact(...args[]: any):  {
     { value: 'quantum-computing', label: 'Quantum Computing' },;
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
-
   const validateForm = (): boolean => {;
     const newErrors: ContactFormErrors = {};
-
     if (!formData.name.trim()) {
-<<<<<<< HEAD
-      newErrors['name'] = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors['email'] = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors['email'] = 'Please enter a valid email address';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors['message'] = 'Message is required';
-    } else if (formData.message.length < 10) {
-      newErrors['message'] = 'Message must be at least 10 characters long';
-    }
-
-=======
       newErrors.name = 'Name is required'}
-
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'}
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'};
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof ContactFormData, value: string)               => {
@@ -203,18 +198,15 @@ export function EnhancedContact(...args[]: any):  {
 <<<<<<< HEAD
       console.error('Error submitting form:', error);
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Error submitting form:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
     }
-=======
       })} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -241,29 +233,16 @@ export function EnhancedContact(...args[]: any):  {
       description: 'Available during these hours';
     };
   ];
-
   if (isSubmitted) {
     return (
       <motion.div
         initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
       >
@@ -274,104 +253,51 @@ export function EnhancedContact(...args[]: any):  {
             transition = {
   { delay: 0.2,
   type: "spring" 
-
-
-
-
-
-
 }}
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
-
           <motion.h2
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ delay: 0.3 }}
             className="text-3xl font-bold text-white mb-4"
           >
             Message Sent Successfully!
           </motion.h2>
-
           <motion.p
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ delay: 0.4 }}
             className="text-zion-slate-light mb-8"
           >
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
-
           <motion.button
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-<<<<<<< HEAD
-          >
-            Send Another Message
-          </motion.button>
-        </div>
-      </motion.div>
-    )};
-=======;
           >;
             Send Another Message;
           </motion.button>;
@@ -379,8 +305,6 @@ export function EnhancedContact(...args[]: any):  {
       </motion.div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -389,22 +313,10 @@ export function EnhancedContact(...args[]: any):  {
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           className="text-center mb-16"
         >
@@ -416,34 +328,20 @@ export function EnhancedContact(...args[]: any):  {
             can help you achieve your goals.
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
             initial = {
   { opacity: 0,
   x: -50 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
-
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -451,22 +349,10 @@ export function EnhancedContact(...args[]: any):  {
                   initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-start space-x-4"
@@ -482,30 +368,15 @@ export function EnhancedContact(...args[]: any):  {
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-
             {/* Comp Stats */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ delay: 0.6 }}
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
@@ -530,36 +401,21 @@ export function EnhancedContact(...args[]: any):  {
                 </div>
               </div>
             </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
-
           {/* Contact Form */}
           <motion.div
             initial = {
   { opacity: 0,
   x: 50 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition={{ delay: 0.3 }}
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -573,19 +429,9 @@ export function EnhancedContact(...args[]: any):  {
                   onChange = {
   (e) => handleInputChange('name',
   e.target.value)
-
-
-
-
-
-
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-<<<<<<< HEAD
-                    errors['name']
-=======
                     errors.name
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -597,32 +443,14 @@ export function EnhancedContact(...args[]: any):  {
                       initial = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                       exit = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
@@ -632,7 +460,6 @@ export function EnhancedContact(...args[]: any):  {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
@@ -645,19 +472,9 @@ export function EnhancedContact(...args[]: any):  {
                   onChange = {
   (e) => handleInputChange('email',
   e.target.value)
-
-
-
-
-
-
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-<<<<<<< HEAD
-                    errors['email']
-=======
                     errors.email
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -669,32 +486,14 @@ export function EnhancedContact(...args[]: any):  {
                       initial = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                       exit = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
@@ -704,7 +503,6 @@ export function EnhancedContact(...args[]: any):  {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Phone and Comp */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -718,12 +516,6 @@ export function EnhancedContact(...args[]: any):  {
                     onChange = {
   (e) => handleInputChange('phone',
   e.target.value)
-
-
-
-
-
-
 }
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
@@ -735,6 +527,10 @@ export function EnhancedContact(...args[]: any):  {
                   <input
                     type="text"
 <<<<<<< HEAD
+                    id="company"
+                    value={formData.company}
+=======
+<<<<<<< HEAD
                     id="comp"
                     value={formData.comp}
                     onChange = {
@@ -745,23 +541,16 @@ export function EnhancedContact(...args[]: any):  {
 =======
                     id="comp"
                     value={formData.comp}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     onChange = {
   (e) => handleInputChange('comp',
   e.target.value)
-
-
-
-
-
-
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
                 </div>
               </div>
-
               {/* Service */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
@@ -770,26 +559,16 @@ export function EnhancedContact(...args[]: any):  {
                 <select
                   id="service"
                   value={formData.service}
+                  onChange = {
+  (e) => handleInputChange('service',
+  e.target.value)
+}
 <<<<<<< HEAD
-                  onChange = {
-  (e) => handleInputChange('service',
-  e.target.value)
-
-}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
 =======
-                  onChange = {
-  (e) => handleInputChange('service',
-  e.target.value)
-
-
-
-
-
-
-}
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   {services.map(service                => (
                     <option key={service.value} value={service.value}>
@@ -798,7 +577,6 @@ export function EnhancedContact(...args[]: any):  {
                   ))}
                 </select>
               </div>
-
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
@@ -811,19 +589,9 @@ export function EnhancedContact(...args[]: any):  {
                   onChange = {
   (e) => handleInputChange('message',
   e.target.value)
-
-
-
-
-
-
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-<<<<<<< HEAD
-                    errors['message']
-=======
                     errors.message
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -835,32 +603,14 @@ export function EnhancedContact(...args[]: any):  {
                       initial = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                       exit = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
@@ -870,7 +620,6 @@ export function EnhancedContact(...args[]: any):  {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Submit Button */}
               <motion.button
                 type="submit"
@@ -891,14 +640,6 @@ export function EnhancedContact(...args[]: any):  {
                   </>
                 )}
               </motion.button>
-<<<<<<< HEAD
-            </form>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </form>;
           </motion.div>;
         </div>;
@@ -906,4 +647,3 @@ export function EnhancedContact(...args[]: any):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

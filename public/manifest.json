@@ -1,111 +1,150 @@
 {
-  "name": "Zion Tech Group - AI-Powered Business Solutions",
+  "name": "Zion Tech Group - Innovation • Technology • Growth",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+  "description": "Leading provider of innovative AI-powered business solutions, IT services, and micro SaaS platforms. Transform your business with cutting-edge technology.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
+  "theme_color": "#7c3aed",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-  "categories": ["business", "productivity", "technology", "utilities"],
+  "categories": [
+    "business",
+    "productivity",
+    "technology",
+    "finance",
+    "healthcare",
+    "manufacturing"
+  ],
   "icons": [
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo.png",
+      "src": "/logo192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/zion-tech-group-logo.png",
+      "src": "/logo512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/images/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
     },
     {
-      "src": "/images/screenshot-mobile.png",
-      "sizes": "390x844",
+      "src": "/logo72.png",
+      "sizes": "72x72",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
+      "purpose": "any"
+    },
+    {
+      "src": "/logo96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
     {
-      "name": "AI Solutions",
+      "name": "AI Services",
       "short_name": "AI",
-      "description": "Explore our AI-powered business solutions",
-      "url": "/ai-solutions",
+      "description": "Explore our AI-powered solutions",
+      "url": "/services/ai",
       "icons": [
         {
-          "src": "/images/ai-icon.png",
-          "sizes": "96x96"
+          "src": "/logo192.png",
+          "sizes": "192x192"
         }
       ]
     },
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our comprehensive service offerings",
-      "url": "/services",
+      "name": "IT Solutions",
+      "short_name": "IT",
+      "description": "Browse IT infrastructure services",
+      "url": "/services/it",
       "icons": [
         {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
+          "src": "/logo192.png",
+          "sizes": "192x192"
         }
       ]
     },
     {
-      "name": "Contact",
+      "name": "Micro SaaS",
+      "short_name": "SaaS",
+      "description": "Discover micro SaaS platforms",
+      "url": "/services/micro-saas",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
       "short_name": "Contact",
       "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
-          "src": "/images/contact-icon.png",
-          "sizes": "96x96"
+          "src": "/logo192.png",
+          "sizes": "192x192"
         }
       ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Homepage - Desktop View"
     },
     {
-      "name": "Request Quote",
-      "short_name": "Quote",
-      "description": "Request a custom quote for your project",
-      "url": "/request-quote",
-      "icons": [
-        {
-          "src": "/images/quote-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Homepage - Mobile View"
+    },
+    {
+      "src": "/screenshots/desktop-services.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Our Services Page - Desktop View"
+    },
+    {
+      "src": "/screenshots/mobile-services.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Our Services Page - Mobile View"
     }
   ],
   "related_applications": [
@@ -125,11 +164,11 @@
   "capture_links": "new-client",
   "file_handlers": [
     {
-      "action": "/upload",
+      "action": "/open-file",
       "accept": {
         "text/*": [".txt", ".md", ".json"],
         "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
       }
     }
   ],
@@ -157,19 +196,268 @@
   },
   "permissions": [
     "notifications",
-    "background-sync",
-    "storage"
+    "geolocation",
+    "camera",
+    "microphone"
   ],
-  "features": [
-    "Cross Platform",
-    "fast",
-    "simple",
-    "AI-Powered",
-    "Quantum Computing",
-    "Business Solutions"
+  "background": {
+    "service_worker": "/sw.js",
+    "type": "module"
+  },
+  "scope_extensions": [
+    "https://api.ziontechgroup.com",
+    "https://cdn.ziontechgroup.com"
   ],
-  "developer": {
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com"
+  "iarc_rating_id": "e84b072d-71d3-4d3e-86ae-31a8ce4e53b7",
+  "microsoft": {
+    "tileColor": "#7c3aed",
+    "tileImage": "/logo144.png"
+  },
+  "apple": {
+    "appleTouchIcon": "/logo152.png",
+    "appleTouchStartupImage": "/logo512.png",
+    "appleMobileWebAppCapable": "yes",
+    "appleMobileWebAppStatusBarStyle": "default",
+    "appleMobileWebAppTitle": "Zion Tech Group"
+  },
+  "chrome": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "firefox": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "safari": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "edge": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "opera": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "brave": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "vivaldi": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "uc": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "samsung": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "huawei": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "xiaomi": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "oneplus": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "oppo": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "vivo": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "realme": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "nokia": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "motorola": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "lg": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "sony": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "htc": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "blackberry": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "palm": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "webos": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "tizen": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "kaios": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "ubuntu": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "debian": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "fedora": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "arch": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "gentoo": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "slackware": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "opensuse": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "centos": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "redhat": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "suse": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "mandriva": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "mageia": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "pclinuxos": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "vector": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "calculate": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "nixos": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "guix": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "void": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "alpine": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "tinycore": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "puppy": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "slax": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "porteus": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "knoppix": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "damn": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "gparted": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "systemrescuecd": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "clonezilla": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "parted": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "testdisk": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "photorec": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "qphotorec": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "testdisk": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "photorec": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
+  },
+  "qphotorec": {
+    "themeColor": "#7c3aed",
+    "backgroundColor": "#0f172a"
   }
 }

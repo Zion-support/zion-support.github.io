@@ -15,6 +15,10 @@ import { ArrowRight,
   Target,
   TrendingUp
 <<<<<<< HEAD
+ } from 'lucide-react';
+interface HeroSlide {
+=======
+<<<<<<< HEAD
 =======
                } from 'lucide-react.ts';
 
@@ -35,6 +39,7 @@ interface HeroSlide {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   subtitle: string;
   description: string;
@@ -44,6 +49,11 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
+<<<<<<< HEAD
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[]}
+export default function EnhancedHeroSection(...args[]):  {
+=======
 <<<<<<< HEAD
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 
@@ -66,9 +76,9 @@ interface HeroSlide {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedHeroSection(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const heroSlides: HeroSlide[] = [
     {
       title: anyanyanyanyanyanyanyanyanyanyanyanyanyany"AI-Powered Business Solutions",
@@ -117,30 +127,26 @@ export default function EnhancedHeroSection(...args[]: any):  {
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
-
   ];
+<<<<<<< HEAD
+  useEffect(()  => {
+=======
 
   useEffect(()                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (!isAutoPlaying) return;
-
-<<<<<<< HEAD
-    const interval = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}, 6000);
-=======
     const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 6000);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
     return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
-
   const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false)};
-
   const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const goToSlide = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
@@ -218,26 +224,21 @@ export default function EnhancedHeroSection(...args[]: any):  {
             transition = {
   {
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             animate = {
   {
               y: [0, -20, 0],
               opacity: [0.4, 1, 0.4],
-  
-
 }}
             transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               duration: 3 + i * 0.5,
               repeat: Infinity,
               delay: i * 0.3,
-  
-
 }}
           />
         ))}
       </div>
-
       {/* Hero content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -246,87 +247,50 @@ export default function EnhancedHeroSection(...args[]: any):  {
             initial = {
   { opacity: 0,
   x: -50 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.5 }}
-
                 {/* Icon and category */}
                 <motion.div
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
-
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
                 </motion.div>
-
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   {currentSlideData.title}
                 </h1>
-
                 {/* Subtitle */}
                 <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
                   {currentSlideData.subtitle}
                 </p>
-
                 {/* Description */}
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {currentSlideData.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanymx-0">
                   {currentSlideData.features.map((feature, index)                => (
@@ -335,42 +299,26 @@ export default function EnhancedHeroSection(...args[]: any):  {
                       initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
-
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
                     </motion.div>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-
                   <Link
                     to={currentSlideData.path}
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
-
                     {currentSlideData.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
@@ -382,93 +330,41 @@ export default function EnhancedHeroSection(...args[]: any):  {
               </motion.div>
             </AnimatePresence>
           </motion.div>
-
           {/* Right content - Image and stats */}
           <motion.div
             initial = {
   { opacity: 0,
   x: 50 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
             className="relative"
-
             {/* Main image */}
             <div className="relative">
               <motion.div
                 className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
                     <motion.div
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
-<<<<<<< HEAD
-                      animate={{ rotate: [0, 360] }}
-                      transition={{ duration: 20, repeat: Infinity }}
-
-=======
-<<<<<<< HEAD
-                      animate = {
-  { rotate[0,
-  360] 
-
-}}
-                      transition = {
-  { duration: 20,
-  repeat: Infinity 
-
-}}
-=======
                       animate = {
   { rotate: [0,
   360] 
-
-
-
-
-
-
 }}
                       transition = {
   { duration: 20,
   repeat: Infinity 
-
-
-
-
-
-
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
                     </motion.div>
                     <p className="text-lg font-medium">Visual Representation</p>
@@ -476,7 +372,6 @@ export default function EnhancedHeroSection(...args[]: any):  {
                 </div>
               </motion.div>
             </div>
-
             {/* Enhanced floating stats cards */}
             <div className="absolute -bottom-6 -left-6 space-y-4">
               {currentSlideData.stats.map((stat, index) => (
@@ -485,26 +380,13 @@ export default function EnhancedHeroSection(...args[]: any):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                   className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300"
-
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">
                       <stat.icon className="w-5 h-5 text-zion-cyan" />
@@ -517,32 +399,18 @@ export default function EnhancedHeroSection(...args[]: any):  {
                 </motion.div>
               ))}
             </div>
-
             {/* Rating card */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ delay: 0.8 }}
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
-
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">
                   <Star className="w-6 h-6 text-zion-cyan" />
@@ -555,7 +423,6 @@ export default function EnhancedHeroSection(...args[]: any):  {
             </motion.div>
           </motion.div>
         </div>
-
         {/* Enhanced slide navigation */}
         <div className="flex items-center justify-center mt-16 space-x-4">
           <motion.button
@@ -563,10 +430,8 @@ export default function EnhancedHeroSection(...args[]: any):  {
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-
             <ChevronLeft className="w-6 h-6 text-white" />
           </motion.button>
-
           <div className="flex space-x-2">
             {heroSlides.map((_, index) => (
               <motion.button
@@ -581,77 +446,29 @@ export default function EnhancedHeroSection(...args[]: any):  {
               />
             ))}
           </div>
-
           <motion.button
             onClick={nextSlide}
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-
             <ChevronRight className="w-6 h-6 text-white" />
           </motion.button>
         </div>
       </div>
-
       {/* Enhanced scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-
         <motion.div
-<<<<<<< HEAD
-          animate = {
-  { y[0, 10,
-  0] 
-
-}}
-          transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
-
-          <motion.div
-            animate = {
-  { y[0, 12,
-  0] 
-
-}}
-            transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-          />
-        </motion.div>
-        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>
-      </motion.div>
-    </section>
-  )}
-=======
           animate = {
   { y: [0, 10,
   0] 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
-
 }}
           className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
         >
@@ -659,22 +476,10 @@ export default function EnhancedHeroSection(...args[]: any):  {
             animate = {
   { y: [0, 12,
   0] 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
-
 }};
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
           />;
@@ -683,9 +488,4 @@ export default function EnhancedHeroSection(...args[]: any):  {
       </motion.div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

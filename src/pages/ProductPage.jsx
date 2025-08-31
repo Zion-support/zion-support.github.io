@@ -10,12 +10,7 @@ export default function ProductPage() {
     const { dispatch } = useCart();
     const [adding, setAdding] = useState(false);
     if (!product) {
-<<<<<<< HEAD
-        return <div className="p-6 text-white">Product not found</div>;
-
-=======
         return <div className="p-6 text-white">Product not found</div>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleAdd = () => {
         setAdding(true);
         dispatch({
@@ -30,9 +25,4 @@ export default function ProductPage() {
       <Button onClick={handleAdd} disabled={adding}>
         {adding ? 'Adding...' : 'Add to Cart'}
       </Button>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

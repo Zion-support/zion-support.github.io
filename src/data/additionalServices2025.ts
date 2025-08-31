@@ -33,6 +33,9 @@ contactInfo?: {;
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
+  };
+=======
   
 
 
@@ -211,6 +214,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
 
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
   {
     id: "ai-sales-outreach-accelerator",
@@ -235,7 +239,5 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     category: "AI & Content",
     price: 999,
     marketPrice: "$1,000 - $3,000/month"
-
 ];
-
 }}}}}}}}

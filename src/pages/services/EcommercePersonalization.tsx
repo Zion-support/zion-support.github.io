@@ -1,4 +1,9 @@
 // removed duplicate old section
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
+=======
 
 <<<<<<< HEAD
 import React from 'react.ts';
@@ -9,8 +14,8 @@ import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 import { ShoppingCart, Sparkles, CheckCircle, BarChart3               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const EcommercePersonalization: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
@@ -25,7 +30,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
         </div>
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>
-
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Capabilities</div>
@@ -52,7 +56,5 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
 export default EcommercePersonalization;
-
 }

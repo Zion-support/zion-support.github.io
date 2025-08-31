@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+interface SearchResult {
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield                } from 'lucide-react.ts';
@@ -32,6 +39,7 @@ interface SearchResult {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -39,6 +47,12 @@ interface SearchResult {
   type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
   category: string;
   tags: string[];
+<<<<<<< HEAD
+  relevance: number}
+interface SearchFilter {
+  type: string[];
+  category: string[];
+=======
 <<<<<<< HEAD
   relevance: number;
 =======
@@ -94,12 +108,9 @@ tags: string[];
 
 }
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   tags: string[];
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 interface SearchSuggestion {
 
 
@@ -132,17 +143,19 @@ interface SearchSuggestion {
 
 
 }
+<<<<<<< HEAD
+interface EnhancedSearchProps {
+=======
 
 interface EnhancedSearchProps extends React.PropsWithChildren<{}> {
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   className?: string;
   placeholder?: string;
   onSearch?: (query: string)               => void;
   variant?: 'default' | 'futuristic' | 'minimal';
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const searchData: SearchResult[] = [
   // Services
   {
@@ -152,11 +165,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-business-intelligence',
     type: 'service',
     category: 'AI Solutions',
-<<<<<<< HEAD
-    tags['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
-=======
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 95
   },
   {
@@ -166,11 +175,7 @@ const searchData: SearchResult[] = [
     url: '/services/cloud-devops',
     type: 'service',
     category: 'Cloud & DevOps',
-<<<<<<< HEAD
-    tags['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
-=======
     tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 90
   },
   {
@@ -180,11 +185,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-cybersecurity-suite',
     type: 'service',
     category: 'Cybersecurity',
-<<<<<<< HEAD
-    tags['Security', 'AI', 'Cybersecurity', 'Enterprise'],
-=======
     tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 88
   },
   // Pages
@@ -195,12 +196,17 @@ const searchData: SearchResult[] = [
     url: '/about',
     type: 'page',
 <<<<<<< HEAD
+    category: 'Company',
+    tags: ['About', 'Company', 'Mission', 'Values'],
+=======
+<<<<<<< HEAD
     category: 'Comp',
     tags['About', 'Comp', 'Mission', 'Values'],
 =======
     category: 'Comp',
     tags: ['About', 'Comp', 'Mission', 'Values'],
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     relevance: 85
   },
   {
@@ -210,11 +216,7 @@ const searchData: SearchResult[] = [
     url: '/contact',
     type: 'page',
     category: 'Support',
-<<<<<<< HEAD
-    tags['Contact', 'Support', 'Consultation', 'Help'],
-=======
     tags: ['Contact', 'Support', 'Consultation', 'Help'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 80
   },
   // Blog posts (example)
@@ -225,49 +227,27 @@ const searchData: SearchResult[] = [
     url: '/blog/ai-trends-2025',
     type: 'blog',
     category: 'AI Insights',
-<<<<<<< HEAD
-    tags['AI', 'Trends', '2025', 'Business'],
-=======
     tags: ['AI', 'Trends', '2025', 'Business'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 75
-
 ];
-
 const categories = [
-<<<<<<< HEAD
-  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
-  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
-];
-
-export const EnhancedSearch: React.FC = (): JSX.Element => {;
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<any>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [filters, setFilters] = useState<any>({
-    type[],
-    category[],
-    tags[]
-  });
-  const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<any>([]);
-  const [popularSearches] = useState([
-    'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
-  ]);
-
-  const debouncedQuery = useDebounce(query, 300);
-=======
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
   { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
+<<<<<<< HEAD
+export function EnhancedSearch({ 
+  className = '',;
+  placeholder = 'Search for AI services, quantum solutions...',;
+  onSearch,;
+  variant = 'default';
+}: EnhancedSearchProps) {;
+=======
 
 export function EnhancedSearch(...args: any[]): any {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<any>([]);
@@ -280,82 +260,34 @@ export function EnhancedSearch(...args: any[]): any {;
     tags: []
   });
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+=======
   const [recentSearches, setRecentSearches] = useState<any>([]);
   
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-
-<<<<<<< HEAD = ======;
-  const popularSearches = [;
-    'AI Business Intelligence',;
-    'Cloud DevOps',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'IT Consulting';
-  ];
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  // Load recent searches from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('zion-recent-searches');
-    if (saved) {
-<<<<<<< HEAD
-      setRecentSearches(JSON.parse(saved));
-
-=======
-<<<<<<< HEAD
-      setRecentSearches(JSON.parse(saved))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  }, []);
-
-  // Search functionality
-  useEffect(() => {
-    if (debouncedQuery.trim().length < 2) {
-      setResults([]);
-<<<<<<< HEAD
-      return;
-=======
       return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     const searchResults = searchData
       .filter(item => {
         const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-<<<<<<< HEAD
-
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&
-                              filters.category.length === 0 || filters.category.includes(item.category) &&
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
-
-        return matchesQuery && matchesFilters;
-      })
-=======
-        
         const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
-        
         return matchesQuery && matchesFilters})
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, 10);
-
     setResults(searchResults)}, [debouncedQuery, filters]);
-
   // Handle click outside
   useEffect(() => {
     const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)                => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-<<<<<<< HEAD
-        setIsOpen(false);
-
-=======
         setIsOpen(false)}
-=======;
       try {;
         setRecentSearches(JSON.parse(saved));
       } catch (error) {
@@ -363,7 +295,6 @@ export function EnhancedSearch(...args: any[]): any {;
       }
     }
   }, []);
-
   // Handle click outside
   useEffect(()               => {
     const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {;
@@ -371,15 +302,13 @@ export function EnhancedSearch(...args: any[]): any {;
         setIsOpen(false);
         setSelectedIndex(-1);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-
   // Handle keyboard navigation
   useEffect(() => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)                => {
       if (event.key === 'Escape') {;
@@ -390,37 +319,40 @@ export function EnhancedSearch(...args: any[]): any {;
         inputRef.current?.focus();
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         inputRef.current?.focus()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+<<<<<<< HEAD
+  const handleSearch = useCallback((searchQuery: string)  => {
+=======
 
   const handleSearch = useCallback((searchQuery: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-
       // Navigate to search results or close search
       setIsOpen(false);
-<<<<<<< HEAD
-      setQuery('');
-
-=======
       setQuery('')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [recentSearches]);
+<<<<<<< HEAD
+  const handleResultClick = (result: SearchResult)  => {;
+    handleSearch(result.title);
+    router(result.url);
+    const handleKeyDown = (event: KeyboardEvent) => {;
+=======
 
   const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanyanyanyanySearchResult)                => {;
     handleSearch(result.title);
     router(result.url);
 =======
     const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (!isOpen) return;
-
       switch (event.key) {
         case 'ArrowDown':
           event.preventDefault();
@@ -446,48 +378,36 @@ export function EnhancedSearch(...args: any[]): any {;
           break;
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, query]);
-
   const handleSearch = useCallback(async () => {;
     if (!query.trim()) return;
-
     setIsLoading(true);
-    
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 300));
-
     // Filter search results based on query and filters
     const searchResults = searchData.filter(result => {;
       const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||;
                           result.description.toLowerCase().includes(query.toLowerCase()) ||;
                           result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
-      
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type)) &&;
                             (filters.category.length === 0 || filters.category.includes(result.category)) &&;
                             (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes(tag)));
-
       return matchesQuery && matchesFilters;
     });
-
     // Sort by relevance
     searchResults.sort((a, b) => b.relevance - a.relevance);
-
     setResults(searchResults);
     setIsLoading(false);
-
     // Add to recent searches
     const updated = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
     setRecentSearches(updated);
     localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-
     if (onSearch) {
       onSearch(query);
     }
   }, [query, filters, recentSearches, onSearch]);
-
   // Debounced search
   useEffect(() => {
     const timeoutId = setTimeout(() => {;
@@ -497,15 +417,20 @@ export function EnhancedSearch(...args: any[]): any {;
         setResults([]);
       }
     }, 300);
-
     return () => clearTimeout(timeoutId);
   }, [query, filters, handleSearch]);
+<<<<<<< HEAD
+  const handleResultClick = (result: SearchResult) => {;
+=======
 
   const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanyanyanyanySearchResult)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     router(result.url);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsOpen(false);
     setQuery('')};
+<<<<<<< HEAD
+  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
+=======
 
 <<<<<<< HEAD
   const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)                => {
@@ -523,6 +448,7 @@ export function EnhancedSearch(...args: any[]): any {;
     switch (type) {
 =======;
   const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -530,65 +456,22 @@ export function EnhancedSearch(...args: any[]): any {;
         : [...prev[filterType], value];
     }));
   };
-
   const clearFilters = () => {;
     setFilters({ type: [], category: [], tags: [] });
   };
+<<<<<<< HEAD
+  const getTypeIcon = (type: string) => {;
+=======
 
   const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
-<<<<<<< HEAD
-      default: return <Search className = "h-4 w-4" />};
-  };
-
-  return (
-    <div ref = {searchRef} className={`relative ${className}`}>
-      <div className={`relative rounded-xl ${getVariantStyles()}`}>
-        <div className="flex items-center px-4 py-3">
-          <Search className="w-5 h-5 text-gray-400 mr-3" />
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            placeholder={placeholder}
-            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
-          />
-          {query && (
-            <button
-              onClick={clearSearch}
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >
-              <X className="w-4 h-4 text-gray-400" />
-            </button>
-          )}
-        </div>;
-=======;
       default: return <Search className="h-4 w-4" />;
-
   };
-
-<<<<<<< HEAD
-  return (
-    <div className="relative" ref={searchRef}>
-      {/* Search Trigger */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
-
-        <Search className="h-4 w-4" />
-        <span className="hidden sm:inline">Search...</span>
-        <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 rounded">
-          ⌘K
-        </kbd>
-      </button>
-=======
   const getVariantClasses = () => {;
     switch (variant) {;
       case 'futuristic':;
@@ -599,7 +482,6 @@ export function EnhancedSearch(...args: any[]): any {;
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
     }
   };
-
   return (
     <div ref = {searchRef} className={`relative ${className}`}>
       {/* Search Input */}
@@ -622,222 +504,21 @@ export function EnhancedSearch(...args: any[]): any {;
             <X className="h-4 w-4" />
           </button>
         )}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
-
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.3 }}
-              className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
-
-              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700">
-                {/* Search Input */}
-                <div className="relative p-4 border-b border-slate-200 dark:border-slate-700">
-                  <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
-                  <input
-                    ref={inputRef}
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for services, solutions, or insights..."
-                    className="w-full pl-12 pr-20 py-3 text-lg bg-transparent border-none outline-none text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
-                  />
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="absolute right-6 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-
-                    <X className="h-5 w-5" />
-                  </button>
-                </div>
-
-                {/* Filters Toggle */}
-                <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
-                  <button
-                    onClick={() => setShowFilters(!showFilters)}
-                    className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-
-                    <Filter className="h-4 w-4" />
-                    Filters
-                  </button>
-                  {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
-                    <button
-                      onClick={clearFilters}
-                      className="text-sm text-red-500 hover:text-red-600 transition-colors"
-
-                      Clear all
-                    </button>
-                  )}
-                </div>
-
-                {/* Filters Panel */}
-                <AnimatePresence>
-                  {showFilters && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="border-b border-slate-200 dark:border-slate-700 overflow-hidden"
-
-                      <div className="p-4 space-y-4">
-                        {/* Type Filters */}
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2">Type</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {['service', 'page', 'blog', 'case-study'].map(type => (
-                              <button
-                                key={type}
-                                onClick={() => toggleFilter('type', type)}
-                                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                                  filters.type.includes(type)
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                                }`}
-
-                                {type.charAt(0).toUpperCase() + type.slice(1)}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Category Filters */}
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2">Category</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {categories.map(category => (
-                              <button
-                                key={category.id}
-                                onClick={() => toggleFilter('category', category.name)}
-                                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                                  filters.category.includes(category.name)
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                                }`}
-
-                                {category.name}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
-                {/* Search Results */}
-                <div className="max-h-96 overflow-y-auto">
-                  {query.trim().length < 2 ? (
-                    <div className="p-4 space-y-4">
-                      {/* Recent Searches */}
-                      {recentSearches.length > 0 && (
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                            <Clock className="h-4 w-4" />
-                            Recent Searches
-                          </h4>
-                          <div className="space-y-2">
-                            {recentSearches.map((search, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleSearch(search)}
-                                className="w-full text-left p-2 text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
-
-                                {search}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Popular Searches */}
-                      <div>
-                        <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          <TrendingUp className="h-4 w-4" />
-                          Popular Searches
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {popularSearches.map((search, index) => (
-                            <button
-                              key={index}
-                              onClick={() => handleSearch(search)}
-                              className="px-3 py-1 text-sm bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-
-                              {search}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ) : results.length > 0 ? (
-                    <div className="p-4 space-y-2">
-                      {results.map((result) => (
-                        <button
-                          key={result.id}
-                          onClick={() => handleResultClick(result)}
-                          className="w-full text-left p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group"
-
-                          <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 mt-1">
-                              {getTypeIcon(result.type)}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-medium text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                {result.title}
-                              </h4>
-                              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">
-                                {result.description}
-                              </p>
-                              <div className="flex items-center gap-2 mt-2">
-                                <span className="text-xs text-slate-500 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">
-                                  {result.category}
-                                </span>
-                                <span className="text-xs text-slate-500 dark:text-slate-500">
-                                  {result.type}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-=======
             initial = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0,
   y: -10 
-
-
-
-
-
-
 }}
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
           >
@@ -859,7 +540,6 @@ export function EnhancedSearch(...args: any[]): any {;
                 </button>
               )}
             </div>
-
             {/* Filters Panel */}
             <AnimatePresence>
               {showFilters && (
@@ -867,32 +547,14 @@ export function EnhancedSearch(...args: any[]): any {;
                   initial = {
   { height: 0,
   opacity: 0 
-
-
-
-
-
-
 }}
                   animate = {
   { height: 'auto',
   opacity: 1 
-
-
-
-
-
-
 }}
                   exit = {
   { height: 0,
   opacity: 0 
-
-
-
-
-
-
 }}
                   className="border-b border-gray-200 overflow-hidden"
                 >
@@ -907,12 +569,6 @@ export function EnhancedSearch(...args: any[]): any {;
                             onClick = {
   () => toggleFilter('type',
   type)
-
-
-
-
-
-
 }
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${
                               filters.type.includes(type)
@@ -925,7 +581,6 @@ export function EnhancedSearch(...args: any[]): any {;
                         ))}
                       </div>
                     </div>
-
                     {/* Category Filters */}
                     <div>
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>
@@ -936,12 +591,6 @@ export function EnhancedSearch(...args: any[]): any {;
                             onClick = {
   () => toggleFilter('category',
   category.name)
-
-
-
-
-
-
 }
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${
                               filters.category.includes(category.name)
@@ -958,7 +607,6 @@ export function EnhancedSearch(...args: any[]): any {;
                 </motion.div>
               )}
             </AnimatePresence>
-
             {/* Search Results */}
             <div className="max-h-96 overflow-y-auto">
               {query.trim().length < 2 ? (
@@ -986,7 +634,6 @@ export function EnhancedSearch(...args: any[]): any {;
                       </div>
                     </div>
                   )}
-
                   {/* Popular Searches */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">
@@ -1004,7 +651,6 @@ export function EnhancedSearch(...args: any[]): any {;
                           className = "px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         </button>
                       ))}
                     </div>
@@ -1036,17 +682,6 @@ export function EnhancedSearch(...args: any[]): any {;
                           <p className="text-sm text-gray-600 mt-1 line-clamp-2">
                             {result.description}
                           </p>
-<<<<<<< HEAD
-                          <div className="flex flex-wrap gap-1 mt-2">
-                            {result.tags.slice(0, 3).map(tag => (
-                              <span
-                                key={tag}
-                                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-=======
                           <div className="flex items-center gap-2 mt-2">
                             <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                               {result.category}
@@ -1054,7 +689,6 @@ export function EnhancedSearch(...args: any[]): any {;
                             <span className="text-xs text-gray-500">
                               {result.type}
                             </span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                           </div>
                         </div>
                       </div>
@@ -1071,36 +705,6 @@ export function EnhancedSearch(...args: any[]): any {;
                     Try adjusting your search terms or filters
                   </p>
                 </div>
-<<<<<<< HEAD
-              </div>
-            )}
-
-            {/* No Results */}
-            {results.length === 0 && query && !isLoading && (
-              <div className="p-8 text-center">
-                <Brain className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                  No results found
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Try adjusting your search terms or browse our services
-                </p>
-              </div>
-            )}
-
-            {/* Loading State */}
-            {isLoading && (
-              <div className="p-8 text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-                <p className="text-gray-500 dark:text-gray-400">Searching...</p>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>;
-    </div>;
-  )};
-=======
               )}
             </div>;
           </motion.div>;
@@ -1108,9 +712,4 @@ export function EnhancedSearch(...args: any[]): any {;
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

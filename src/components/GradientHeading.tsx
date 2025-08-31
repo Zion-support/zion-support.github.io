@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import { cn } from '@/lib/utils';
+interface GradientHeadingProps {
+  children: React.ReactNode;
+  className?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+=======
 import React from 'react.ts';
 import { cn               } from '@/lib/utils';
 
@@ -23,6 +31,7 @@ as: Component = 'h2';
   );
 };}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProps>(
   ({ children, className, as: Component = 'h2', ...props }, ref) => {
     return (
@@ -39,8 +48,5 @@ const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProp
     );
   }
 );
-
 GradientHeading.displayName = 'GradientHeading';
-
 export { GradientHeading };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

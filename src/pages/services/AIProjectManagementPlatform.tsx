@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from 'lucide-react';
+export default function AIProjectManagementPlatform() {
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '@/components/SEO';
@@ -37,6 +41,7 @@ import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, Trend
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function AIProjectManagementPlatform(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered project planning and scheduling optimization',
     'Intelligent resource allocation and workload balancing',
@@ -49,7 +54,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Mobile app for on-the-go project management',
     'Advanced project portfolio management'
   ];
-
   const benefits = [
     'Complete projects 20-40% faster',
     'Reduce project costs by 15-30%',
@@ -58,7 +62,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Better resource utilization',
     'Enhanced stakeholder communication'
   ];
-
   const useCases = [
     'Software development projects',
     'Construction and engineering projects',
@@ -67,7 +70,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Product development and launch',
     'Research and development projects'
   ];
-
   const tiers = [
     { 
       name: 'Team', 
@@ -79,6 +81,8 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
       price: '$3,499/mo', 
       details: ['Up to 100 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     {
       name: "Enterprise",
@@ -359,13 +363,13 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
                 Schedule Demo
               </motion.button>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     { 
       name: 'Enterprise', 
       price: '$8,999/mo', 
       details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
     },
   ];
-
   const projectTools = [
     'Task Management',
     'Resource Planning',
@@ -374,7 +378,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Budget Management',
     'Reporting & Analytics'
   ];
-
   const aiCapabilities = [
     'Predictive scheduling',
     'Resource optimization',
@@ -383,7 +386,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Automated reporting',
     'Smart notifications'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 py-20 text-center">
@@ -395,7 +397,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
           <p className="text-indigo-100 text-xl">Streamline your projects with intelligent planning, automated optimization, and predictive insights.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -432,11 +433,9 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg inline-flex items-center">
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />
               </a>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Project Benefits</h3>
@@ -461,7 +460,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </ul>
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Project Management Tools</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
@@ -473,7 +471,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             ))}
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
@@ -485,7 +482,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             ))}
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Project Management Workflow</h3>
           <div className="grid md:grid-cols-4 gap-4 text-center">
@@ -511,7 +507,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </div>
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Project Success Metrics</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -532,7 +527,6 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </div>
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to transform your project management?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

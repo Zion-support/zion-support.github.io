@@ -4,6 +4,13 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
+<<<<<<< HEAD
+
+// // // // // // // // console.log('🔍 Code Quality Monitor Starting...\n');
+
+class CodeQualityMonitor {
+  constructor() {
+=======
 ;
 <<<<<<< HEAD;
 =======;
@@ -42,12 +49,24 @@ class CodeQualityMonitor {;
       // console.error('Failed to write to log file:', error.message);
 ;
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // // // // // // // // console.log(logEntry.trim());
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
       // // // // // // // console.error('Failed to write to log file:', error.message);
+<<<<<<< HEAD
+    }
+    this.metrics = {
+  complexity: 0,
+      maintainability: 0,
+      testCoverage: 0,
+      performance: 0,
+  lastUpdated: new Date().toISOString()
+    
+
+=======
     };
 =======;
     this.metrics = {;
@@ -58,6 +77,7 @@ class CodeQualityMonitor {;
   lastUpdated: new Date().toISOString();
 ;
 ;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')};
   log(message) {;
@@ -81,12 +101,19 @@ class CodeQualityMonitor {;
       this.log('Code quality analysis completed successfully');
       return this.metrics} catch (error) {;
       this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
+<<<<<<< HEAD
+      return null}
+  }
+
+  async startMonitoring() {
+=======
       return null};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     this.log('Starting code quality monitoring...');
 ;
     // Schedule regular quality checks;
@@ -144,6 +171,20 @@ class CodeQualityMonitor {;
         description: `${syntaxErrors.length} syntax errors found`,;
         details: syntaxErrors;
       });
+<<<<<<< HEAD
+      
+      return Math.min(Math.floor(totalComplexity), 100)} catch (error) {
+      return Math.floor(Math.random() * 10) + 1}
+  }
+
+  async checkSyntaxErrors() {
+    try {
+      // Use TypeScript compiler to check syntax
+      const result = execSync('npx tsc --noEmit --skipLibCheck', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: 'pipe'
+=======
 <<<<<<< HEAD;
 ;
     // Check for unused imports;
@@ -198,6 +239,7 @@ class CodeQualityMonitor {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       });
       return [];
     } catch (error) {;
@@ -205,6 +247,21 @@ class CodeQualityMonitor {;
         .filter(line => line.includes('error TS'));
         .map(line => line.trim());
         .filter(line => line.length > 0);
+<<<<<<< HEAD
+      
+      // Lower file size = higher maintainability
+      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
+      return Math.floor(Math.random() * 100) + 50}
+  }
+
+  async checkUnusedImports() {
+    try {
+      // Use ESLint to check for unused imports
+      const result = execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --format=compact', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: 'pipe'
+=======
 <<<<<<< HEAD;
 ;
       return errors.slice(0, 20); // Limit to first 20 errors;
@@ -235,6 +292,7 @@ class CodeQualityMonitor {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       });
       return [];
     } catch (error) {;
@@ -276,6 +334,15 @@ class CodeQualityMonitor {;
       for (const file of sourceFiles.slice(0, 50)) { // Limit to first 50 files;
         try {;
           const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+
+          // Check for potential issues
+          if (content.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {
+            bugs.push({
+              file: path.relative(this.projectRoot, file),
+              issue: 'console.log in production code',
+              line: this.findLineNumber(content, '// // // // // // // // console.log(')
+=======
 ;
           // Check for potential issues;
 <<<<<<< HEAD;
@@ -291,6 +358,7 @@ class CodeQualityMonitor {;
               issue: 'console.log in production code',;
               line: this.findLineNumber(content, '// // // // // // // // console.log(');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             });
 ;
           if (content.includes('// debugger;')) {;
@@ -352,6 +420,17 @@ class CodeQualityMonitor {;
 ;
   async fixSyntaxErrors(errors) {;
     this.log('Attempting to fix syntax errors...');
+<<<<<<< HEAD
+    
+    // Create a detailed report
+    const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n\nThese errors require manual attention.`;
+    
+    try {
+      // Try to auto-fix with ESLint
+      execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --fix', {
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+=======
 <<<<<<< HEAD;
 ;
 =======;
@@ -365,14 +444,20 @@ class CodeQualityMonitor {;
       execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --fix', {;
         cwd: this.projectRoot,;
         stdio: 'pipe';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       });
       this.log('ESLint auto-fix completed');
     } catch (error) {;
       this.log(`ESLint auto-fix failed: ${error.message}`, 'WARN');
+<<<<<<< HEAD
+
+    // Try to auto-fix some common syntax issues
+=======
 ;
 <<<<<<< HEAD;
 =======;
     // Try to auto-fix some common syntax issues;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     await this.autoFixCommonSyntaxIssues();
   };
 ;
@@ -409,10 +494,16 @@ class CodeQualityMonitor {;
     };
 ;
     this.log(`Auto-fixed common syntax issues in ${fixedCount} files`);
+<<<<<<< HEAD
+  }
+
+  async fixUnusedImports(errors) {
+=======
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async fixUnusedImports(errors) {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     this.log('Attempting to fix unused imports...');
 ;
     try {;
@@ -484,6 +575,12 @@ class CodeQualityMonitor {;
           const content = fs.readFileSync(filePath, 'utf8');
           let modified = false;
           let newContent = content;
+<<<<<<< HEAD
+
+          // Fix console.log statements
+          if (bug.issue === 'console.log in production code') {
+            newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
+=======
 ;
           // Fix console.log statements;
           if (bug.issue === 'console.log in production code') {;
@@ -492,6 +589,7 @@ class CodeQualityMonitor {;
 =======;
             newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             modified = true;
 ;
           // Fix debugger statements;
@@ -581,6 +679,11 @@ class CodeQualityMonitor {;
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
+<<<<<<< HEAD
+        const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days
+        
+        for (const filePath = path.join(logsDir, file);
+=======
         const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days;
 <<<<<<< HEAD;
 ;
@@ -591,6 +694,7 @@ class CodeQualityMonitor {;
 ;
         for (const filePath = path.join(logsDir, file);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const stats = fs.statSync(filePath);
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
@@ -620,7 +724,10 @@ class CodeQualityMonitor {;
 ;
   findSourceFiles() {;
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const files = [];
 ;
     function traverse(dir) {;
@@ -629,6 +736,12 @@ class CodeQualityMonitor {;
       for (const item of items) {;
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          files.push(fullPath)}
+=======
 <<<<<<< HEAD;
 ;
         if (stat.isDirectory()) {;
@@ -667,6 +780,7 @@ process.on('SIGINT', async () => {;
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
           walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath)};
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       })};
 ;
     walkDir(projectRoot);
@@ -676,10 +790,16 @@ process.on('SIGINT', async () => {;
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))};
 };
 const monitor = new CodeQualityMonitor();
+<<<<<<< HEAD
+monitor.analyzeCodeQuality().then(metrics => {
+  if (metrics) {
+    console.log('Metrics:', metrics)}
+=======
 monitor.analyzeCodeQuality().then(metrics => {;
   if (metrics) {;
     console.log('Metrics:', metrics)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 });
 ;
 process.on('SIGTERM', async () => {;

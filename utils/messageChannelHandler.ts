@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const messageChannelHandler = {
   sendMessage: anyanyanyanyanyanyanyanyanyanyanyanyany(message: any)              => { /* empty */ },
   receiveMessage: anyanyanyanyanyanyanyanyanyanyanyanyany(callback: any)              => { /* empty */ },
@@ -10,3 +12,4 @@ export const messageChannelHandler = {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

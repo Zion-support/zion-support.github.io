@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Star,
-  Quote,
-  Users,
-  Building,
-  TrendingUp,
-  Award,
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Star, 
+  Quote, 
+  User, 
+  Building, 
+  Calendar, 
+  MapPin, 
   CheckCircle,
   ArrowRight,
   Filter,
   Search
+} from 'lucide-react';
+
 const testimonials = [
   {
     id: 1,
@@ -21,7 +23,7 @@ const testimonials = [
     rating: 5,
     content: 'Zion Tech Group transformed our AI capabilities. Their machine learning solutions increased our operational efficiency by 40% and provided insights that were previously impossible to obtain. The team is incredibly professional and delivered beyond our expectations.',
     project: 'AI-Powered Business Intelligence Platform',
-    results['40% increase in operational efficiency', 'Real-time data insights', 'Improved decision-making processes'],
+    results: ['40% increase in operational efficiency', 'Real-time data insights', 'Improved decision-making processes'],
     image: '/api/placeholder/100/100',
     featured: true
   },
@@ -34,7 +36,7 @@ const testimonials = [
     rating: 5,
     content: 'The cloud migration was seamless and exceeded our expectations. Their DevOps automation reduced our deployment time from hours to minutes, and the infrastructure is now more scalable and cost-effective than ever.',
     project: 'Cloud Migration & DevOps Automation',
-    results['90% reduction in deployment time', '30% cost savings on infrastructure', 'Improved system reliability'],
+    results: ['90% reduction in deployment time', '30% cost savings on infrastructure', 'Improved system reliability'],
     image: '/api/placeholder/100/100',
     featured: true
   },
@@ -47,7 +49,7 @@ const testimonials = [
     rating: 5,
     content: 'Their cybersecurity solutions provide peace of mind. We\'ve had zero security incidents since implementation, and their compliance automation has streamlined our audit processes significantly.',
     project: 'Cybersecurity & Compliance Platform',
-    results['Zero security incidents', 'Streamlined compliance processes', 'Enhanced threat detection'],
+    results: ['Zero security incidents', 'Streamlined compliance processes', 'Enhanced threat detection'],
     image: '/api/placeholder/100/100',
     featured: true
   },
@@ -60,7 +62,7 @@ const testimonials = [
     rating: 5,
     content: 'The IoT solution they implemented has revolutionized our production monitoring. We can now track every aspect of our manufacturing process in real-time, leading to better quality control and reduced waste.',
     project: 'IoT Manufacturing Platform',
-    results['Real-time production monitoring', 'Improved quality control', 'Reduced waste by 25%'],
+    results: ['Real-time production monitoring', 'Improved quality control', 'Reduced waste by 25%'],
     image: '/api/placeholder/100/100',
     featured: false
   },
@@ -73,7 +75,7 @@ const testimonials = [
     rating: 5,
     content: 'Zion Tech Group helped us navigate our digital transformation journey with expertise and patience. Their solutions have improved our customer experience and increased our online sales by 35%.',
     project: 'Digital Transformation & E-commerce',
-    results['35% increase in online sales', 'Improved customer experience', 'Streamlined operations'],
+    results: ['35% increase in online sales', 'Improved customer experience', 'Streamlined operations'],
     image: '/api/placeholder/100/100',
     featured: false
   },
@@ -86,7 +88,7 @@ const testimonials = [
     rating: 5,
     content: 'Their healthcare technology solutions are cutting-edge and compliant with all regulations. The AI-powered diagnostic tools have improved our diagnostic accuracy and patient outcomes significantly.',
     project: 'AI Healthcare Diagnostics Platform',
-    results['Improved diagnostic accuracy', 'Enhanced patient outcomes', 'Full regulatory compliance'],
+    results: ['Improved diagnostic accuracy', 'Enhanced patient outcomes', 'Full regulatory compliance'],
     image: '/api/placeholder/100/100',
     featured: false
   },
@@ -99,7 +101,7 @@ const testimonials = [
     rating: 5,
     content: 'As a startup, we needed a partner who could scale with us. Zion Tech Group delivered a robust platform that has grown with our business, and their ongoing support has been invaluable.',
     project: 'Scalable SaaS Platform',
-    results['Scalable platform architecture', 'Rapid development and deployment', 'Ongoing technical support'],
+    results: ['Scalable platform architecture', 'Rapid development and deployment', 'Ongoing technical support'],
     image: '/api/placeholder/100/100',
     featured: false
   },
@@ -107,26 +109,27 @@ const testimonials = [
     id: 8,
     name: 'Alex Martinez',
     role: 'Chief Innovation Officer',
-    comp: 'Energy Solutions Corp.',
-    industry: 'Energy',
+    comp: 'FutureTech Labs',
+    industry: 'Research & Development',
     rating: 5,
-    content: 'Their quantum computing solutions for energy optimization are revolutionary. We\'ve seen unprecedented improvements in our grid efficiency and renewable energy integration.',
-    project: 'Quantum Energy Optimization',
-    results['Improved grid efficiency', 'Better renewable energy integration', 'Cost optimization'],
+    content: 'Their quantum computing solutions are revolutionary. We\'ve been able to solve complex problems that were previously intractable, opening up new possibilities for our research.',
+    project: 'Quantum Computing Platform',
+    results: ['Solved previously intractable problems', 'Advanced research capabilities', 'Cutting-edge technology implementation'],
     image: '/api/placeholder/100/100',
     featured: false
-
+  }
 ];
 
 const industries = [
   'All Industries',
   'Technology',
+  'Software Development',
   'Financial Services',
-  'Healthcare',
   'Manufacturing',
   'Retail',
-  'Energy',
-  'Startup'
+  'Healthcare',
+  'Startup',
+  'Research & Development'
 ];
 
 const ratings = [
@@ -142,91 +145,35 @@ export default function Testimonials() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredTestimonials = testimonials.filter(testimonial => {
-<<<<<<< HEAD
     const matchesIndustry = selectedIndustry === 'All Industries' || testimonial.industry === selectedIndustry;
     const matchesRating = selectedRating === 'All Ratings' ||
       (selectedRating === '5 Stars' && testimonial.rating === 5) ||
       (selectedRating === '4+ Stars' && testimonial.rating >= 4) ||
       (selectedRating === '3+ Stars' && testimonial.rating >= 3);
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const matchesSearch = testimonial.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
       testimonial.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      testimonial.company.toLowerCase().includes(searchQuery.toLowerCase());
+      testimonial.comp.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesIndustry && matchesRating && matchesSearch});
-
-  const featuredTestimonials = filteredTestimonials.filter(t => t.featured);
-  const regularTestimonials = filteredTestimonials.filter(t => !t.featured);
+    return matchesIndustry && matchesRating && matchesSearch;
+  });
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container-responsive relative z-10">
+      <section className="pt-24 pb-16">
+        <div className="container-responsive">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
+          >
             <motion.div
-              initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
+            >
               <Quote className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -246,7 +193,7 @@ export default function Testimonials() {
                 <span>5.0 Average Rating</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Users className="w-4 h-4" />
+                <User className="w-4 h-4" />
                 <span>{testimonials.length} Success Stories</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
@@ -278,7 +225,7 @@ export default function Testimonials() {
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-
+              >
                 {industries.map(industry => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
@@ -288,7 +235,7 @@ export default function Testimonials() {
                 value={selectedRating}
                 onChange={(e) => setSelectedRating(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-
+              >
                 {ratings.map(rating => (
                   <option key={rating} value={rating}>{rating}</option>
                 ))}
@@ -302,285 +249,98 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Featured Testimonials */}
-      {featuredTestimonials.length > 0 && (
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-
-              <h2 className="text-4xl font-bold text-white mb-4">Featured Success Stories</h2>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Highlighted testimonials showcasing exceptional results and transformative
-                impact across different industries and use cases.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredTestimonials.map((testimonial, index) => (
+      {/* Testimonials Grid */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {filteredTestimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}
-                  initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">{testimonial.name}</h3>
-                      <p className="text-zion-cyan font-semibold mb-1">{testimonial.role}</p>
-                      <p className="text-zion-slate-light text-sm">{testimonial.comp}</p>
-                      <div className="flex items-center gap-1 mt-2">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                        ))}
-                      </div>
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <h3 className="font-semibold text-white">{testimonial.name}</h3>
+                      <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
+                      <p className="text-sm text-zion-cyan">{testimonial.comp}</p>
                     </div>
                   </div>
 
-                  <blockquote className="text-zion-slate-light mb-6 leading-relaxed italic">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+
+                  <blockquote className="text-zion-slate-light mb-4 italic">
                     "{testimonial.content}"
                   </blockquote>
 
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Project: {testimonial.project}</h4>
-                    <ul className="space-y-2">
-                      {testimonial.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                          <span>{result}</span>
-                        </li>
+                  <div className="mb-4">
+                    <h4 className="font-medium text-white mb-2">Project: {testimonial.project}</h4>
+                    <div className="space-y-1">
+                      {testimonial.results.map((result, i) => (
+                        <div key={i} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          {result}
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                  <div className="flex items-center justify-between text-xs text-zion-slate-light">
+                    <span className="px-2 py-1 bg-zion-blue-dark/50 rounded-full">
                       {testimonial.industry}
                     </span>
-                    <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      Featured
-                    </span>
+                    {testimonial.featured && (
+                      <span className="px-2 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full">
+                        Featured
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* All Testimonials */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">All Client Testimonials</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse through all our client success stories and discover how we can
-              help transform your business with innovative technology solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regularTestimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-lg font-bold text-white">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-bold text-white">{testimonial.name}</h3>
-                    <p className="text-zion-cyan text-sm">{testimonial.role}</p>
-                    <p className="text-zion-slate-light text-xs">{testimonial.comp}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-
-                <blockquote className="text-zion-slate-light text-sm mb-4 leading-relaxed italic line-clamp-4">
-                  "{testimonial.content}"
-                </blockquote>
-
-                <div className="flex items-center justify-between">
-                  <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                    {testimonial.industry}
-                  </span>
-                  <span className="text-zion-slate-light text-xs">
-                    {testimonial.project}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+            </AnimatePresence>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Success Stories?</h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our technology solutions can transform your business
-              and help you achieve similar results. Your success story starts here.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
-                Explore Our Services
-              </a>
-            </div>
-          </motion.div>
+      <section className="py-16 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
+        <div className="container-responsive text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Join Our Success Stories?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="/services"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              Explore Our Services
+            </a>
+          </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

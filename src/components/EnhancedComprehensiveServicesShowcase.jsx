@@ -1,39 +1,71 @@
 import React, { useState } from 'react';
-import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025";
+import { INNOVATIVE_SERVICES_2025 as innovativeServices2025 } from "../data/innovativeServices2025";
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from "../data/ultimateInnovativeServices2027";
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Users, 
+  Zap, 
+  Atom, 
+  TrendingUp, 
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
 const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
     
-    const allServices = [
-        ...INNOVATIVE_SERVICES_2025.map(service => ({
+    // Transform services for the showcase
+    const transformedServices = [
+        ...innovativeServices2025.map(service => ({
             ...service,
-            type: 'AI & Innovation Services',
-            displayPrice: service.price,
-            name: service.title,
-            icon: '🚀'
+            category: service.category,
+            price: service.price,
+            description: service.description,
+            features: service.features,
+            benefits: service.benefits,
+            icon: service.icon,
+            color: service.color,
+            badge: service.badge
         })),
         ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({
             ...service,
-            type: 'Ultimate Innovation Services',
-            displayPrice: service.price,
-            name: service.title,
-            icon: '⚡'
+            category: service.category || 'Innovation',
+            price: service.price || '$2,999',
+            description: service.description || service.tagline || 'Revolutionary service',
+            features: service.features || [],
+            benefits: service.benefits || [],
+            icon: service.icon || '🚀',
+            color: service.color || 'from-purple-600 to-indigo-700',
+            badge: service.badge || 'New'
         }))
     ];
 
-    const filteredServices = allServices.filter(service => {
+    const filteredServices = transformedServices.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch});
 
-    const categories = [
-        { id: 'all', name: 'All Services', count: allServices.length },
-        { id: 'AI & Innovation Services', name: 'AI & Innovation Services', count: INNOVATIVE_SERVICES_2025.length },
-        { id: 'Ultimate Innovation Services', name: 'Ultimate Innovation Services', count: ULTIMATE_INNOVATIVE_SERVICES_2027.length }
+    const serviceCategories = [
+        { id: 'AI & Innovation Services', name: 'AI & Innovation Services', count: innovativeServices2025.length },
+        { id: 'Quantum Computing', name: 'Quantum Computing', count: transformedServices.filter(s => s.category.includes('Quantum')).length },
+        { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: transformedServices.filter(s => s.category.includes('Blockchain')).length },
+        { id: 'Space Technology', name: 'Space Technology', count: transformedServices.filter(s => s.category.includes('Space')).length },
+        { id: 'Green Technology', name: 'Green Technology', count: transformedServices.filter(s => s.category.includes('Green')).length },
+        { id: 'Cybersecurity', name: 'Cybersecurity', count: transformedServices.filter(s => s.category.includes('Cybersecurity')).length },
+        { id: 'Micro SaaS', name: 'Micro SaaS', count: transformedServices.filter(s => s.category.includes('Micro SaaS')).length },
+        { id: 'Data & Analytics', name: 'Data & Analytics', count: transformedServices.filter(s => s.category.includes('Data')).length },
+        { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: transformedServices.filter(s => s.category.includes('Cloud')).length },
+        { id: 'Digital Transformation', name: 'Digital Transformation', count: transformedServices.filter(s => s.category.includes('Digital')).length }
     ];
 
     const handleServiceClick = (service) => {
@@ -60,7 +92,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                     {/* Key Statistics */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                         <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
-                            <div className="text-3xl font-bold text-blue-400 mb-2">{allServices.length}+</div>
+                            <div className="text-3xl font-bold text-blue-400 mb-2">{transformedServices.length}+</div>
                             <div className="text-sm text-gray-300">Innovative Services</div>
                         </div>
                         <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
@@ -95,7 +127,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
 
                     {/* Category Filter */}
                     <div className="flex flex-wrap justify-center gap-4 mb-12">
-                        {categories.map((category) => (
+                        {serviceCategories.map((category) => (
                             <button 
                                 key={category.id} 
                                 onClick={() => setActiveCategory(category.id)} 

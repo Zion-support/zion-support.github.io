@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Workflow, 
+=======
+<<<<<<< HEAD
 import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation(...args: any[]): any {
 =======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Workflow, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap, 
   Brain, 
   Clock, 
@@ -39,11 +46,17 @@ import { Workflow,
   GitBranch,
   Code,
   Terminal
+<<<<<<< HEAD
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+export default function AIWorkflowAutomation(...args[]):  {
+=======
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
 export default function AIWorkflowAutomation(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -66,24 +79,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
     }
   ];
-
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Starter',
-      price: '$199/mo',
-      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/mo',
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support']
-=======
   const capabilities = [
     {
       title: 'Workflow Orchestration',
@@ -102,7 +97,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       description: 'Live visibility into workflow execution and performance metrics',
       icon: Monitor,
       benefits: ['Live dashboards', 'Alert system', 'Performance tracking']
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       title: 'Integration Hub',
@@ -111,7 +105,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       benefits: ['API integration', 'Webhook support', 'Custom connectors']
     }
   ];
-
   const useCases = [
     {
       industry: 'E-commerce',
@@ -138,7 +131,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       metrics: ['Production Efficiency', 'Quality Score', 'Downtime Reduction']
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -190,7 +182,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       popular: false
     }
   ];
-
   const benefits = [
     {
       icon: Clock,
@@ -213,7 +204,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       description: 'Empower teams with self-service automation tools and real-time insights.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -221,7 +211,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
         keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
@@ -262,7 +251,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -279,9 +267,14 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Everything you need to build, deploy, and manage intelligent workflows at scale.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -298,7 +291,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             ))}
           </div>
         </div>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
@@ -315,9 +307,14 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Leverage cutting-edge AI and automation technologies to transform your business processes.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {capabilities.map((capability, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -347,7 +344,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -364,9 +360,14 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               See how AI workflow automation transforms different industries and use cases.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -391,7 +392,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
@@ -408,9 +408,14 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Choose the plan that fits your automation needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -429,7 +434,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -438,7 +442,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
                   </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -447,7 +450,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -464,7 +466,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -481,9 +482,14 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Join thousands of companies that have revolutionized their operations with AI workflow automation.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -501,7 +507,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -535,7 +540,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
         <div className="container mx-auto px-4">
@@ -567,7 +571,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       </section>
     </div>
   )}
-=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
@@ -575,9 +578,4 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

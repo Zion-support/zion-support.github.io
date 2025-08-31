@@ -34,6 +34,12 @@ export interface InnovativeAIService {;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number}
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+=======
 <<<<<<< HEAD;
   reviews: number;
 ;
@@ -43,6 +49,7 @@ export interface InnovativeAIService {;
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
   ;

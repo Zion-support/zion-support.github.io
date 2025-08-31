@@ -23,7 +23,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
             icon: <GitBranch className="w-6 h-6"/>
-
     ];
     const benefits = [
         {
@@ -45,7 +44,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             metric: "24/7",
             description: "Automated review coverage",
             icon: <Zap className="w-5 h-5"/>
-
     ];
     const pricingPlans = [
         {
@@ -91,7 +89,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 "SLA guarantees"
             ],
             popular: false
-
     ];
     const integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
@@ -113,7 +110,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
         <meta property="og:url" content="https://ziontechgroup.com/services/ai-code-review-assistant"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/ai-code-review-assistant"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -121,156 +117,65 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🔍
             </motion.div>
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}>
               AI-Powered
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {" "}Code Review Assistant
               </span>
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              Intelligent code review system that analyzes pull requests, identifies security vulnerabilities,
-=======
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}>
               Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               suggests improvements, and maintains code quality standards across your development team.
             </motion.p>
-
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}>
               {benefits.map((benefit, index) => (<div key={index} className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <div className="text-sm text-gray-300">{benefit.description}</div>
                 </div>))}
             </motion.div>
-
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Start Free Trial
@@ -281,28 +186,15 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features for Modern Development
@@ -311,35 +203,16 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 Comprehensive code review capabilities that integrate seamlessly with your existing workflow
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}>
                   <div className="text-blue-400 mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -348,28 +221,15 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Flexible Pricing Plans
@@ -378,44 +238,24 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 Choose the plan that best fits your team size and requirements
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-blue-400 bg-blue-900/20'
                 : 'border-white/20 hover:border-white/40'}`} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}>
                   {plan.popular && (<div className="text-center mb-4">
                       <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     </div>)}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">
@@ -424,14 +264,12 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
                   </ul>
-
                   <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular
                 ? 'bg-blue-600 hover:bg-blue-700 text-white'
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>
@@ -441,7 +279,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             </div>
           </div>
         </section>
-
         {/* Integrations & Use Cases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -450,21 +287,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
               <motion.div initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Seamless Integrations</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -474,26 +299,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                     </div>))}
                 </div>
               </motion.div>
-
               {/* Use Cases */}
               <motion.div initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
                 <div className="space-y-3">
@@ -506,95 +318,40 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
               Ready to Transform Your Code Review Process?
             </motion.h2>
             <motion.p className="text-xl text-gray-300 mb-8" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}>
               Join hundreds of development teams already using our AI-powered code review assistant
             </motion.p>
-<<<<<<< HEAD
-
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-=======
-            
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5"/>
@@ -603,34 +360,15 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 Call: +1 302 464 0950
               </a>
             </motion.div>
-
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}>
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our AI Code Review Assistant?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
@@ -652,16 +390,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 </div>
               </div>
             </motion.div>
-
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}>
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>

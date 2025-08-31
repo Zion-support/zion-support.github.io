@@ -9,25 +9,12 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
     'Custom workflow automation for document approval',;
     'Integration with major business applications';
   ];
-
   const tiers = [
     {
       name: 'Basic',
       price: '$149/mo',
       details: ['Up to 1,000 pages/month', '5 user accounts', 'Basic OCR & extraction', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$399/mo',
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$999/mo',
-      details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$399/mo', 
@@ -38,9 +25,7 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
       price: '$999/mo', ;
       details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Invoice processing and expense management',;
     'Contract analysis and legal document review',;
@@ -49,7 +34,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
     'Financial statements and compliance reports',;
     'HR documents and employee onboarding';
   ];
-
   const benefits = [;
     'Reduce manual data entry by 80-90%',;
     'Improve processing accuracy by 95%',;
@@ -58,7 +42,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
     'Ensure 100% compliance with regulations',;
     'Scale operations without additional headcount';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 py-20 text-center">
@@ -70,7 +53,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
           <p className="text-teal-100 text-xl">Transform your document workflows with AI-powered intelligence that understands, extracts, and processes information with human-like accuracy.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -110,16 +92,20 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['99.5% OCR accuracy', 'Real-time processing', 'Enterprise security'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['99.5% OCR accuracy', 'Real-time processing', 'Enterprise security'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-emerald-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -131,7 +117,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-emerald-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,7 +128,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your document processing?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

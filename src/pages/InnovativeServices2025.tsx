@@ -137,8 +137,14 @@ import { Brain,
   CalendarTime2,
   CalendarWeek2,
   CalendarMonth2,
+<<<<<<< HEAD
+  CalendarYear2,
+  AlertTriangle
+} from 'lucide-react';
+=======
   CalendarYear2
              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function InnovativeServices2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -393,6 +399,318 @@ export default function InnovativeServices2025(...args: any[]): any {
       savings: '22%',
       rating: 4.7,
       reviews: 167
+    },
+
+    // New AI-Powered Business Intelligence Services
+    {
+      id: 'ai-business-intelligence-suite',
+      name: 'AI Business Intelligence Suite',
+      description: 'Advanced analytics and business intelligence platform with AI-powered insights and predictive modeling.',
+      category: 'AI & ML',
+      price: '$2,800/month',
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Data Visualization', 'Custom Reports', 'AI Insights'],
+      icon: BarChart3,
+      badge: 'Featured',
+      color: 'from-indigo-600 to-purple-700',
+      link: '/services/ai-business-intelligence-suite',
+      marketPrice: '$3,600/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 156
+    },
+    {
+      id: 'ai-code-review-security',
+      name: 'AI Code Review & Security Scanner',
+      description: 'Automated code review, security vulnerability detection, and code quality improvement platform.',
+      category: 'AI & ML',
+      price: '$1,900/month',
+      features: ['Security Scanning', 'Code Quality Analysis', 'Vulnerability Detection', 'Best Practices', 'Integration Support'],
+      icon: Code,
+      badge: 'New',
+      color: 'from-red-600 to-orange-700',
+      link: '/services/ai-code-review-security',
+      marketPrice: '$2,400/month',
+      savings: '21%',
+      rating: 4.8,
+      reviews: 89
+    },
+    {
+      id: 'ai-financial-trading-platform',
+      name: 'AI Financial Trading Platform',
+      description: 'Intelligent trading platform with market analysis, risk management, and automated trading strategies.',
+      category: 'AI & ML',
+      price: '$4,200/month',
+      features: ['Market Analysis', 'Risk Management', 'Automated Trading', 'Portfolio Optimization', 'Real-time Alerts'],
+      icon: TrendingUp,
+      badge: 'Premium',
+      color: 'from-emerald-600 to-green-700',
+      link: '/services/ai-financial-trading-platform',
+      marketPrice: '$5,500/month',
+      savings: '24%',
+      rating: 4.9,
+      reviews: 234
+    },
+
+    // New Micro SaaS Solutions
+    {
+      id: 'employee-scheduling-saas',
+      name: 'AI Employee Scheduling Platform',
+      description: 'Intelligent employee scheduling with shift optimization, conflict resolution, and compliance management.',
+      category: 'Micro SaaS',
+      price: '$800/month',
+      features: ['Shift Optimization', 'Conflict Resolution', 'Compliance Management', 'Mobile App', 'Integration APIs'],
+      icon: Users,
+      badge: 'New',
+      color: 'from-blue-600 to-indigo-700',
+      link: '/services/employee-scheduling-saas',
+      marketPrice: '$1,100/month',
+      savings: '27%',
+      rating: 4.7,
+      reviews: 67
+    },
+    {
+      id: 'soc2-compliance-tracker',
+      name: 'SOC2 Compliance Tracker',
+      description: 'Automated SOC2 compliance monitoring, documentation, and audit preparation platform.',
+      category: 'Micro SaaS',
+      price: '$1,500/month',
+      features: ['Compliance Monitoring', 'Documentation Management', 'Audit Preparation', 'Risk Assessment', 'Reporting Tools'],
+      icon: Shield,
+      badge: 'Featured',
+      color: 'from-purple-600 to-pink-700',
+      link: '/services/soc2-compliance-tracker',
+      marketPrice: '$2,000/month',
+      savings: '25%',
+      rating: 4.8,
+      reviews: 123
+    },
+    {
+      id: 'uptime-sla-monitor',
+      name: 'Uptime SLA Monitor',
+      description: 'Comprehensive uptime monitoring with SLA tracking, alerting, and performance analytics.',
+      category: 'Micro SaaS',
+      price: '$600/month',
+      features: ['Uptime Monitoring', 'SLA Tracking', 'Performance Analytics', 'Alerting System', 'Custom Dashboards'],
+      icon: Activity,
+      badge: 'Popular',
+      color: 'from-green-600 to-teal-700',
+      link: '/services/uptime-sla-monitor',
+      marketPrice: '$800/month',
+      savings: '25%',
+      rating: 4.9,
+      reviews: 189
+    },
+
+    // New IT Infrastructure Services
+    {
+      id: 'ai-devops-automation',
+      name: 'AI DevOps Automation Platform',
+      description: 'Intelligent DevOps automation with AI-powered deployment, testing, and monitoring.',
+      category: 'IT Infrastructure',
+      price: '$3,800/month',
+      features: ['AI Deployment', 'Automated Testing', 'Intelligent Monitoring', 'Performance Optimization', 'Security Integration'],
+      icon: Workflow,
+      badge: 'Premium',
+      color: 'from-orange-600 to-red-700',
+      link: '/services/ai-devops-automation',
+      marketPrice: '$4,900/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 178
+    },
+    {
+      id: 'ai-iot-edge-computing',
+      name: 'AI IoT Edge Computing Platform',
+      description: 'Edge computing platform for IoT devices with AI processing and real-time analytics.',
+      category: 'IT Infrastructure',
+      price: '$2,900/month',
+      features: ['Edge Processing', 'IoT Integration', 'Real-time Analytics', 'AI Models', 'Scalable Architecture'],
+      icon: Cpu,
+      badge: 'Featured',
+      color: 'from-cyan-600 to-blue-700',
+      link: '/services/ai-iot-edge-computing',
+      marketPrice: '$3,700/month',
+      savings: '22%',
+      rating: 4.8,
+      reviews: 145
+    },
+
+    // New Emerging Technology Services
+    {
+      id: 'quantum-ai-platform',
+      name: 'Quantum AI Hybrid Platform',
+      description: 'Hybrid quantum-classical AI platform for complex optimization and machine learning tasks.',
+      category: 'Emerging Tech',
+      price: '$6,500/month',
+      features: ['Quantum Algorithms', 'AI Integration', 'Optimization Problems', 'Research Support', 'Enterprise APIs'],
+      icon: Atom,
+      badge: 'Future',
+      color: 'from-purple-600 to-indigo-700',
+      link: '/services/quantum-ai-platform',
+      marketPrice: '$8,200/month',
+      savings: '21%',
+      rating: 4.9,
+      reviews: 67
+    },
+    {
+      id: 'space-tech-solutions',
+      name: 'Space Technology Solutions',
+      description: 'Satellite data analytics, space mission planning, and aerospace technology services.',
+      category: 'Emerging Tech',
+      price: '$4,800/month',
+      features: ['Satellite Analytics', 'Mission Planning', 'Data Processing', 'Space Weather', 'Research Support'],
+      icon: Satellite,
+      badge: 'Innovative',
+      color: 'from-blue-600 to-purple-700',
+      link: '/services/space-tech-solutions',
+      marketPrice: '$6,100/month',
+      savings: '21%',
+      rating: 4.8,
+      reviews: 89
+    },
+
+    // New Healthcare Technology Services
+    {
+      id: 'ai-healthcare-analytics',
+      name: 'AI Healthcare Analytics Platform',
+      description: 'Advanced healthcare analytics with patient insights, predictive diagnostics, and treatment optimization.',
+      category: 'AI & ML',
+      price: '$3,600/month',
+      features: ['Patient Analytics', 'Predictive Diagnostics', 'Treatment Optimization', 'Clinical Insights', 'HIPAA Compliance'],
+      icon: HeartPulse,
+      badge: 'Specialized',
+      color: 'from-red-600 to-pink-700',
+      link: '/services/ai-healthcare-analytics',
+      marketPrice: '$4,600/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 234
+    },
+
+    // New Sustainability & Green Tech Services
+    {
+      id: 'green-it-solutions',
+      name: 'Green IT Solutions Platform',
+      description: 'Sustainable technology solutions with carbon footprint tracking and energy optimization.',
+      category: 'Emerging Tech',
+      price: '$2,200/month',
+      features: ['Carbon Tracking', 'Energy Optimization', 'Sustainability Metrics', 'Green Certifications', 'Reporting Tools'],
+      icon: Leaf,
+      badge: 'Eco-Friendly',
+      color: 'from-green-600 to-emerald-700',
+      link: '/services/green-it-solutions',
+      marketPrice: '$2,800/month',
+      savings: '21%',
+      rating: 4.7,
+      reviews: 156
+    },
+
+    // New Digital Transformation Services
+    {
+      id: 'digital-transformation-hub',
+      name: 'Digital Transformation Hub',
+      description: 'Comprehensive digital transformation platform with strategy, implementation, and optimization tools.',
+      category: 'IT Infrastructure',
+      price: '$4,500/month',
+      features: ['Strategy Planning', 'Implementation Tools', 'Change Management', 'Performance Monitoring', 'ROI Tracking'],
+      icon: Rocket,
+      badge: 'Strategic',
+      color: 'from-blue-600 to-cyan-700',
+      link: '/services/digital-transformation-hub',
+      marketPrice: '$5,700/month',
+      savings: '21%',
+      rating: 4.8,
+      reviews: 189
+    },
+
+    // New Cybersecurity & Compliance Services
+    {
+      id: 'incident-response-platform',
+      name: 'AI Incident Response Platform',
+      description: 'Intelligent incident response with automated threat detection, response coordination, and recovery.',
+      category: 'IT Infrastructure',
+      price: '$3,200/month',
+      features: ['Threat Detection', 'Response Coordination', 'Recovery Automation', 'Forensic Analysis', 'Compliance Reporting'],
+      icon: AlertTriangle,
+      badge: 'Critical',
+      color: 'from-red-600 to-orange-700',
+      link: '/services/incident-response-platform',
+      marketPrice: '$4,100/month',
+      savings: '22%',
+      rating: 4.9,
+      reviews: 267
+    },
+
+    // New Financial Technology Services
+    {
+      id: 'finops-cloud-optimizer',
+      name: 'FinOps Cloud Cost Optimizer',
+      description: 'Cloud financial operations platform with cost optimization, budgeting, and resource management.',
+      category: 'Micro SaaS',
+      price: '$1,400/month',
+      features: ['Cost Optimization', 'Budget Management', 'Resource Tracking', 'Savings Recommendations', 'Multi-cloud Support'],
+      icon: DollarSign,
+      badge: 'Cost-Effective',
+      color: 'from-emerald-600 to-green-700',
+      link: '/services/finops-cloud-optimizer',
+      marketPrice: '$1,800/month',
+      savings: '22%',
+      rating: 4.8,
+      reviews: 134
+    },
+
+    // New Marketing & Sales Services
+    {
+      id: 'ai-marketing-automation-suite',
+      name: 'AI Marketing Automation Suite',
+      description: 'Intelligent marketing automation with personalized campaigns, lead scoring, and ROI optimization.',
+      category: 'AI & ML',
+      price: '$2,100/month',
+      features: ['Campaign Automation', 'Lead Scoring', 'Personalization', 'ROI Optimization', 'Multi-channel Integration'],
+      icon: Target,
+      badge: 'Popular',
+      color: 'from-pink-600 to-rose-700',
+      link: '/services/ai-marketing-automation-suite',
+      marketPrice: '$2,700/month',
+      savings: '22%',
+      rating: 4.8,
+      reviews: 198
+    },
+
+    // New Supply Chain & Logistics Services
+    {
+      id: 'ai-supply-chain-optimization',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization.',
+      category: 'AI & ML',
+      price: '$3,400/month',
+      features: ['Demand Forecasting', 'Inventory Management', 'Logistics Optimization', 'Risk Assessment', 'Real-time Tracking'],
+      icon: Truck,
+      badge: 'Featured',
+      color: 'from-blue-600 to-indigo-700',
+      link: '/services/ai-supply-chain-optimization',
+      marketPrice: '$4,300/month',
+      savings: '21%',
+      rating: 4.9,
+      reviews: 167
+    },
+
+    // New Customer Experience Services
+    {
+      id: 'ai-customer-experience-analytics',
+      name: 'AI Customer Experience Analytics',
+      description: 'Advanced customer experience analytics with sentiment analysis, journey mapping, and optimization insights.',
+      category: 'AI & ML',
+      price: '$2,600/month',
+      features: ['Sentiment Analysis', 'Journey Mapping', 'Experience Optimization', 'Customer Insights', 'Predictive Analytics'],
+      icon: Eye,
+      badge: 'Customer-Focused',
+      color: 'from-purple-600 to-pink-700',
+      link: '/services/ai-customer-experience-analytics',
+      marketPrice: '$3,300/month',
+      savings: '21%',
+      rating: 4.8,
+      reviews: 145
     }
   ];
 
@@ -568,6 +886,14 @@ export default function InnovativeServices2025(...args: any[]): any {
                         service.badge === 'New' ? 'bg-green-500 text-white' :
                         service.badge === 'Popular' ? 'bg-blue-500 text-white' :
                         service.badge === 'Featured' ? 'bg-purple-500 text-white' :
+                        service.badge === 'Premium' ? 'bg-indigo-500 text-white' :
+                        service.badge === 'Innovative' ? 'bg-cyan-500 text-white' :
+                        service.badge === 'Specialized' ? 'bg-red-500 text-white' :
+                        service.badge === 'Eco-Friendly' ? 'bg-green-500 text-white' :
+                        service.badge === 'Strategic' ? 'bg-orange-500 text-white' :
+                        service.badge === 'Critical' ? 'bg-pink-500 text-white' :
+                        service.badge === 'Cost-Effective' ? 'bg-emerald-500 text-white' :
+                        service.badge === 'Customer-Focused' ? 'bg-pink-500 text-white' :
                         'bg-orange-500 text-white'
                       }`}>
                         {service.badge}

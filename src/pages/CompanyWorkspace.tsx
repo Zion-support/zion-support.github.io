@@ -15,6 +15,8 @@ export default function CompWorkspace(...args[]: any):  {
     const { isWhitelabel, tenant, brandName } = useWhitelabel();
     if (isLoading) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         return (<div className = "flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>)}
@@ -48,18 +50,9 @@ export default function CompWorkspace(...args[]: any):  {
         return <Navigate to="/unauthorized"/>;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Navigate to = "/unauthorized"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<ProtectedRoute>
-<<<<<<< HEAD
-      <SEO title={`${comp.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${comp.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>
-      <Header customLogo={isWhitelabel ? tenant?.logo_url : comp.logoUrl} customTheme={effectiveTheme}/>
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
-        <CompDashboard company={comp}/>
-      </main>
-      <Footer />
-    </ProtectedRoute>)}
-=======;
       <SEO title = {`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>;
       <Header customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl} customTheme={effectiveTheme}/>;
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>;
@@ -67,9 +60,4 @@ export default function CompWorkspace(...args[]: any):  {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -9,25 +9,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Real-time forensics performance tracking',;
     'Custom AI models for forensics applications';
   ];
-
   const tiers = [
     {
       name: 'Developer',
       price: '$799/mo',
       details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,999/mo',
-      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$4,999/mo',
-      details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,999/mo', 
@@ -38,9 +25,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$4,999/mo', ;
       details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Security forensics optimization',;
     'Digital evidence analysis and processing',;
@@ -49,7 +34,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Forensics automation and orchestration',;
     'Forensics scaling and management';
   ];
-
   const benefits = [;
     'Improve security forensics performance by 50-80%',;
     'Reduce investigation time by 40-70%',;
@@ -58,7 +42,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Optimize resource utilization',;
     'Scale security forensics operations efficiently';
   ];
-
   const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
@@ -67,7 +50,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Media & Entertainment',;
     'Technology & SaaS';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center">
@@ -79,7 +61,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <p className="text-slate-100 text-xl">Transform your security forensics with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,16 +100,20 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement', '40-70% investigation time reduction', '35-65% cost reduction'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['50-80% performance improvement', '40-70% investigation time reduction', '35-65% cost reduction'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-slate-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +125,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-slate-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Security Forensics Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +136,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +147,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your security forensics with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,13 +1,16 @@
+<<<<<<< HEAD
+import { ProductListing  } from '@/types/listings';
+import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
+=======
 import { ProductListing               } from '@/types/listings';
 import { REVOLUTIONARY_SERVICES_2030               } from './revolutionaryServices2030';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
-
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
   ...REVOLUTIONARY_SERVICES_2030
 ];
-
 // Service Categories for easy filtering
 export const SERVICE_CATEGORIES_2030 = [
   "AI & Business Intelligence",
@@ -40,12 +43,13 @@ export const SERVICE_CATEGORIES_2030 = [
   "IT Infrastructure",;
   "Emerging Technology";
 ];
-
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
   totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)              => sum + service.price, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length
@@ -57,6 +61,7 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service              => service.featured).length,
   aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service              =>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
@@ -64,6 +69,12 @@ export const SERVICE_STATISTICS_2030 = {
     (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)               => sum + service.rating, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
+<<<<<<< HEAD
+  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
+  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+    service.category.includes('AI') || service.aiScore > 90
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+=======
   featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => service.featured).length,
   aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -75,9 +86,9 @@ export const SERVICE_STATISTICS_2030 = {
 =======
   emergingTechServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     service.category === 'Emerging Technology'
   ).length
-=======
   ).length,;
   ;
   ;
@@ -85,62 +96,24 @@ export const SERVICE_STATISTICS_2030 = {
     service.category === 'Emerging Technology';
   ).length;
 ;
-
-
-
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-
 };
-
 // Featured Services
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
-
 // High-ROI Services (ROI > 500%)
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const roi = service.roi;
   if (typeof roi = == 'string') {;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-    return roiNumber > 500;
-
-  return false;
-});
-=======
     return roiNumber > 500}
   return false});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Quick Setup Services (< 8 weeks)
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const setupTime = service.setupTime;
   if (typeof setupTime = == 'string') {;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-    return weeks < 8;
-
-  return false;
-});
-
-// Export individual service arrays for specific use cases
-export {
-  REVOLUTIONARY_SERVICES_2030,
-  ADVANCED_AI_SERVICES_2030,
-  CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  EMERGING_TECHNOLOGY_SERVICES_2030,
-  SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  innovativeMicroSaasServices2030,
-  comprehensiveITServices2030,
-  comprehensiveAIServices2030
-};}}
-=======
     return weeks < 8}
   return false});
-
 // Export individual service arrays for specific use cases
 export {
   REVOLUTIONARY_SERVICES_2030
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

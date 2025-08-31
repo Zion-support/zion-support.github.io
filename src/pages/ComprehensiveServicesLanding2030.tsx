@@ -16,6 +16,13 @@ import { ArrowRight,
   Zap,
   Phone
 <<<<<<< HEAD
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data/comprehensiveServicesIndex2030";
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data/comprehensivePricingGuide2030";
+export default function ComprehensiveServicesLanding2030(...args[]):  {
+=======
+<<<<<<< HEAD
 import { SEO              } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030              } from '../data/comprehensiveServicesIndex2030';
 import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030              } from '../data/comprehensivePricingGuide2030';
@@ -34,6 +41,7 @@ import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTION
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveServicesLanding2030(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -42,7 +50,6 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
-
   // Filter services based on category, search, price, and AI score
   const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -50,7 +57,6 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
     return matchesCategory && matchesSearch && matchesPrice && matchesAiScore});
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
@@ -61,15 +67,14 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
       case 'aiScore':
         return b.aiScore - a.aiScore;
       default:
-<<<<<<< HEAD
-        return 0;
-
-=======
         return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string)  => {
+=======
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -92,8 +97,12 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
       'Sustainable Technology': <Heart className="w-6 h-6" />;
     };
     return icons[category] || <Rocket className="w-6 h-6" />};
+<<<<<<< HEAD
+  const getCategoryColor = (category: string)  => {
+=======
 
   const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -116,13 +125,14 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
       'Sustainable Technology': 'from-green-500 to-teal-500';
     };
     return colors[category] || 'from-gray-500 to-slate-500'};
-
   const resetFilters = () => {;
     setActiveCategory('all');
     setSearchTerm('');
     setSortBy('rating');
     setPriceRange([0, 50000]);
     setAiScoreRange([80, 100])};
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const openServiceModal = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {;
@@ -891,15 +901,11 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
     </>
   )};
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </motion.div>;
         )};
       </div>;
     </>;
   );
-<<<<<<< HEAD
-</div></div>}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

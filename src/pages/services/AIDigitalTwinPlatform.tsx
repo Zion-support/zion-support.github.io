@@ -1,24 +1,30 @@
+<<<<<<< HEAD
+import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud } from 'lucide-react';
+
+export default function AIDigitalTwinPlatform() {
+=======
 import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud export default function AIDigitalTwinPlatform(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered digital twin creation and management',
     'Real-time IoT sensor data integration',
     'Predictive maintenance and failure prediction',
-    '3D visualization and augmented reality support',;
-    'Multi-physics simulation and modeling',;
-    'Automated anomaly detection and alerts',;
-    'Historical data analysis and trend prediction',;
-    'Cross-platform integration and API access',;
-    'Custom dashboard and reporting tools',;
-    'Scalable cloud-based infrastructure';
+    '3D visualization and augmented reality support',
+    'Multi-physics simulation and modeling',
+    'Automated anomaly detection and alerts',
+    'Historical data analysis and trend prediction',
+    'Cross-platform integration and API access',
+    'Custom dashboard and reporting tools',
+    'Scalable cloud-based infrastructure'
   ];
 
-  const benefits = [;
-    'Reduce operational costs by 25-40%',;
-    'Improve equipment uptime by 30-50%',;
-    'Cut maintenance costs by 20-35%',;
-    'Real-time performance monitoring',;
-    'Predictive maintenance optimization',;
-    'Enhanced decision-making with data insights';
+  const benefits = [
+    'Reduce operational costs by 25-40%',
+    'Improve equipment uptime by 30-50%',
+    'Cut maintenance costs by 20-35%',
+    'Real-time performance monitoring',
+    'Predictive maintenance optimization',
+    'Enhanced decision-making with data insights'
   ];
 
   const pricing = [
@@ -33,41 +39,31 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
       price: '$1,299/mo',
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
       price: '$3,999/mo',
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-
-=======
-    },;
-    { ;
-      name: 'Enterprise', ;
-      price: '$3,999/mo', ;
-      features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
-      popular: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
-  const useCases = [;
-    'Manufacturing process optimization',;
-    'Smart city infrastructure monitoring',;
-    'Healthcare facility management',;
-    'Energy grid optimization',;
-    'Transportation system monitoring',;
-    'Building automation and management';
+  const useCases = [
+    'Manufacturing process optimization',
+    'Smart city infrastructure monitoring',
+    'Healthcare facility management',
+    'Energy grid optimization',
+    'Transportation system monitoring',
+    'Building automation and management'
   ];
 
-  const industries = [;
-    'Manufacturing & Industry 4.0',;
-    'Smart Cities & Infrastructure',;
-    'Healthcare & Medical Devices',;
-    'Energy & Utilities',;
-    'Transportation & Logistics',;
-    'Construction & Real Estate';
+  const industries = [
+    'Manufacturing & Industry 4.0',
+    'Smart Cities & Infrastructure',
+    'Healthcare & Medical Devices',
+    'Energy & Utilities',
+    'Transportation & Logistics',
+    'Construction & Real Estate'
   ];
 
   return (
@@ -291,30 +287,16 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-
+          >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
-=======
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold";
-          >;
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
-          </a>;
-        </div>;
-      </section>;
-    </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}}}
+}

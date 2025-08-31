@@ -9,25 +9,12 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'API integration with existing business systems',;
     'Automated model retraining and performance monitoring';
   ];
-
   const tiers = [
     {
       name: 'Starter',
       price: '$299/mo',
       details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$799/mo', 
@@ -38,9 +25,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       price: '$1,999/mo', ;
       details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Sales forecasting and demand prediction',;
     'Customer churn prediction and retention',;
@@ -49,7 +34,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Predictive maintenance for equipment',;
     'Market trend analysis and investment insights';
   ];
-
   const benefits = [;
     'Improve forecast accuracy by 40-60%',;
     'Reduce operational costs by 25-35%',;
@@ -58,7 +42,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Identify opportunities before competitors',;
     'Make data-driven decisions with confidence';
   ];
-
   const industries = [;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -67,7 +50,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Real Estate & Construction',;
     'Energy & Utilities';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <p className="text-purple-100 text-xl">Transform your business with AI-powered predictive insights that forecast trends, optimize operations, and drive strategic decision-making.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,16 +100,20 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +125,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-indigo-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +136,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +147,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to unlock predictive insights?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

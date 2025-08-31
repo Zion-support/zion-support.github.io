@@ -30,7 +30,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* Service Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -100,7 +99,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* Core Services */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -124,7 +122,6 @@ const ITServices = () => {
                 <li>• Data center operations</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-green-400"/>
@@ -141,7 +138,6 @@ const ITServices = () => {
                 <li>• Incident response</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                 <CloudIcon className="h-8 w-8 text-purple-400"/>
@@ -158,7 +154,6 @@ const ITServices = () => {
                 <li>• Cost optimization</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
                 <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400"/>
@@ -175,7 +170,6 @@ const ITServices = () => {
                 <li>• User training & support</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
                 <CogIcon className="h-8 w-8 text-cyan-400"/>
@@ -192,7 +186,6 @@ const ITServices = () => {
                 <li>• Backup & recovery</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
                 <ComputerDesktopIcon className="h-8 w-8 text-pink-400"/>
@@ -211,7 +204,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* Specialized Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -244,7 +236,6 @@ const ITServices = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-green-400">Green IT</h3>
               <p className="text-gray-300 mb-6">
@@ -270,7 +261,6 @@ const ITServices = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-purple-400">IoT Services</h3>
               <p className="text-gray-300 mb-6">
@@ -296,15 +286,10 @@ const ITServices = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">Mobile Services</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Mobile-first IT solutions that enable your workforce to be productive anywhere, anytime.
-=======
                 Mobile-first IT solutions that enable your workforce to be productive where, time. 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Our mobile services ensure secure, seamless access to business resources.
               </p>
               <ul className="space-y-3 text-gray-300">
@@ -329,7 +314,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* Service Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -347,7 +331,6 @@ const ITServices = () => {
                 improvement and optimization opportunities.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-green-400">2</span>
@@ -358,7 +341,6 @@ const ITServices = () => {
                 including technology roadmap and implementation plan.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-400">3</span>
@@ -369,7 +351,6 @@ const ITServices = () => {
                 transitions and optimal system performance.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-orange-400">4</span>
@@ -383,7 +364,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -404,7 +384,6 @@ const ITServices = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -417,7 +396,6 @@ const ITServices = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -431,7 +409,6 @@ const ITServices = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -445,7 +422,6 @@ const ITServices = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -458,7 +434,6 @@ const ITServices = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -475,7 +450,6 @@ const ITServices = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">

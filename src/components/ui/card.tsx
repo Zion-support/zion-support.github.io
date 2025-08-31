@@ -3,7 +3,6 @@ import { cn                } from '@/lib/utils';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-<<<<<<< HEAD
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, ...props }, ref) => (
     <div
@@ -15,19 +14,21 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       )
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 interface CardProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
   className?: string;
 =======
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
       {...props}
     />;
   );
 );
 Card.displayName = 'Card';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -66,60 +67,7 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
 CardTitle.displayName = 'CardTitle';
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-=======
-const Card: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>;
-      {children};
-    </div>;
-  );
-};
 
-const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>;
-      {children};
-    </div>;
-  );
-};
-
-const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>;
-      {children};
-    </h3>;
-  );
-};
-
-const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <p className={`text-sm text-muted-foreground ${className}`}>;
-      {children};
-    </p>;
-  );
-};
-
-const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <div className={`p-6 pt-0 ${className}`}>;
-      {children};
-    </div>;
-  );
-};
-
-const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {;
-  return (;
-    <div className={`flex items-center p-6 pt-0 ${className}`}>;
-      {children};
-    </div>;
-  );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-<<<<<<< HEAD
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter </Card></Card></Card></Card></Card></Card>};
-}
-=======
 const CardDescription = React.forwardRef<HTMLParagraphElement, CardDescriptionProps>(
   ({ className, ...props }, ref) => (
     <p
@@ -170,4 +118,3 @@ const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(
 CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

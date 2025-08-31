@@ -20,9 +20,13 @@ import { Zap,
   Target,
   Globe
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 =======
               } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -56,47 +60,17 @@ const MicroSAASPage = () => {
       id: 'user-management',
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
-<<<<<<< HEAD
-      icon: <Users className="w-8 h-8" />,
-      features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
-      pricing: 'Starting from $1,500/month'
-<<<<<<< HEAD
-
-=======
     };
-=======;
       icon: <Users className="w-8 h-8" />,;
       features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
       useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;
       pricing: 'Starting from $1,500/month';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const saasBenefits = [;
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -108,12 +82,6 @@ const MicroSAASPage = () => {
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
-
-
-
-
-
-
 },
     visible: {;
       opacity: 1,;
@@ -122,7 +90,6 @@ const MicroSAASPage = () => {
         duration: 0.5;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
@@ -132,26 +99,13 @@ const MicroSAASPage = () => {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
             <Zap className="w-10 h-10 text-white" />
           </div>
@@ -186,6 +140,11 @@ const MicroSAASPage = () => {
           initial="hidden"
           animate="visible"
 <<<<<<< HEAD
+          className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
+        >
+          {saasServices.map((service, index)  => (
+=======
+<<<<<<< HEAD
           className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16"
 
           {saasServices.map((service, index)              => (
@@ -194,11 +153,11 @@ const MicroSAASPage = () => {
         >
           {saasServices.map((service, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={service.id}
               variants={itemVariants}
               className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
-
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
@@ -234,7 +193,6 @@ const MicroSAASPage = () => {
                     <span
                       key={useCaseIndex}
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
-
                       {useCase}
                     </span>
                   ))}
@@ -244,7 +202,6 @@ const MicroSAASPage = () => {
               <Link
                 to={`/micro-saas/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -256,35 +213,16 @@ const MicroSAASPage = () => {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.3 
-
-
-
-
-
-
 }}
           className="mb-16"
-
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Benefits of Micro SAAS
@@ -301,35 +239,16 @@ const MicroSAASPage = () => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="text-zion-cyan font-medium">{benefit}</div>
               </motion.div>
             ))}
@@ -340,35 +259,16 @@ const MicroSAASPage = () => {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
           className="mb-16"
-
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Our SAAS Solutions?
@@ -409,35 +309,16 @@ const MicroSAASPage = () => {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.8,
   delay: 0.5 
-
-
-
-
-
-
 }}
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
-
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Build Your SAAS?
           </h2>
@@ -449,22 +330,12 @@ const MicroSAASPage = () => {
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
-
               Start SAAS Project
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
               View SAAS Pricing
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </motion.div>
-      </div>;
-    </div>;
-  )};
-=======
             </Link>;
           </div>;
         </motion.div>;
@@ -472,6 +343,5 @@ const MicroSAASPage = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default MicroSAASPage;
 }}}}}}

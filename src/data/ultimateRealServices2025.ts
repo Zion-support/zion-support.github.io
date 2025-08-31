@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import { ProductListing } from "@/types/listings";
+=======
 import { ProductListing              } from '@/types/listings';
 
 <<<<<<< HEAD
@@ -516,18 +519,12 @@ export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
 
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "AI Development": {
     icon: "🤖",
     description: "Advanced artificial intelligence solutions and development platforms",
   count: 4
-  
-
-
-
-
-
-
 },
   "Cybersecurity": {
     icon: "🔒",
@@ -582,15 +579,6 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "Augmented Reality": {
     icon: "👁️",
     description: "AR/VR solutions and immersive technology platforms",
-<<<<<<< HEAD
-    count: 1
-  },
-  "Logistics AI": {
-    icon: "🚚",
-    description: "AI-powered logistics and supply chain automation",
-    count: 1
-
-=======
     count: 1;
   },;
   "Logistics AI": {;
@@ -598,18 +586,10 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
     description: "AI-powered logistics and supply chain automation",;
     count: 1;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
-
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Chatbots": { icon: "💬",
   count: 1 
-
-
-
-
-
-
 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
   "Migration": { icon: "🚀", count: 1 },
@@ -628,33 +608,16 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Cryptography": { icon: "🔑", count: 1 },;
   "Content Generation": { icon: "✍️", count: 1 };
 };
-
 export const ULTIMATE_PRICING_TIERS_2025 = {
   "Starter": {
     range: "$8,000 - $15,000",
     description: "Essential solutions for small to medium businesses",
     features: ["Basic functionality", "Standard support", "Core integrations",
   "Documentation"]
-  
-
-
-
-
-
-
 },
   "Professional": {
     range: "$15,000 - $30,000",
     description: "Advanced solutions with enhanced features and support",
-<<<<<<< HEAD
-    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"]
-  },
-  "Enterprise": {
-    range: "$30,000 - $50,000",
-    description: "Comprehensive solutions for large organizations",
-    features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"]
-
-=======
     features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"];
   },;
   "Enterprise": {;
@@ -662,9 +625,7 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     description: "Comprehensive solutions for large organizations",;
     features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"];
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
-
 export const ULTIMATE_CONTACT_INFO_2025 = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -677,24 +638,12 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   ;
   emergencySupport: "24/7 available for critical issues";
 ;
-
-
-
-
-
-
 };
-
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   quality: "100% satisfaction guarantee with 30-day money-back policy",
   support: "Comprehensive technical support and maintenance included",
   updates: "Regular feature updates and security patches",
   security: "Enterprise-grade security and compliance certifications",
-<<<<<<< HEAD
-  scalability: "Built to scale with your business growth",
-  integration: "Seamless integration with existing systems and workflows"
-};}}}
-=======
   scalability: "Built to scale with your business growth",;
   ;
   ;
@@ -702,11 +651,4 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   ;
   integration: "Seamless integration with existing systems and workflows";
 ;
-
-
-
-
-
-
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

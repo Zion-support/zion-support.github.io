@@ -1,10 +1,8 @@
 import React from 'react.ts';
-
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-<<<<<<< HEAD
-  className?: string;
-=======
   className?: string}
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -18,6 +16,5 @@ export function Input(...args: any[]): any {;
 <<<<<<< HEAD
 }}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

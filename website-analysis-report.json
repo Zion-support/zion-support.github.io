@@ -1,0 +1,628 @@
+{
+  "timestamp": "2025-08-31T09:26:07.617Z",
+  "totalChecked": 103,
+  "successCount": 103,
+  "failCount": 0,
+  "successRate": "100.0",
+  "results": [
+    {
+      "url": "/",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/about",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/contact",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/pricing",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/support",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/sitemap",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-enterprise-intelligence-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-autonomous-business-operations-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-business-intelligence-dashboard",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-workflow-orchestrator",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-customer-success-automation",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-marketing-automation-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-customer-support-automation",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-hr-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-hr-management-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-sales-copilot",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-enterprise-automation-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-enterprise-workflow-automation",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-enterprise-resource-planning",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-data-analytics-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-predictive-maintenance",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-financial-trading-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-financial-trading-risk-management",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-financial-risk-management-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-financial-risk-management-enhanced",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-supply-chain-optimization-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-supply-chain-optimization-enhanced",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-autonomous-logistics-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-autonomous-manufacturing-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-autonomous-research-assistant",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-project-management-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-legal-document-automation-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-compliance-assistant",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-powered-seo",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-healthcare-analytics-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-mental-health-support-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-smart-home-energy-management-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-carbon-footprint-management-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-space-technology-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-quantum-computing-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-quantum-neural-network-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/ai-cybersecurity-threat-intelligence",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/quantum-edge-computing-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/quantum-ai-cybersecurity-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/blockchain-enterprise-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/cloud-devops",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/cloud-finops-optimizer",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/it-infrastructure-management",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/cybersecurity",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/cloud-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/quantum-edge-computing",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/blockchain-web3",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/iot-edge-computing",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/services/micro-saas-solutions-comprehensive",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/micro-saas",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions/healthcare",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions/financial",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions/retail",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions/manufacturing",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/solutions/government",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/industry-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-solutions",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/digital-transformation",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/enterprise",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "success": true
+    },
+    {
+      "url": "/leadership",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/careers",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/partners",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/news",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/events",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/blog",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/case-studies",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/white-papers",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/webinars",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/documentation",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/training",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/research",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/research-development",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/help",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/innovative-services-hub",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/innovative-ai-services-showcase-2025",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/innovative-services-showcase-2025",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/innovative-services-showcase-2026",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/innovative-services-showcase-2032",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/comprehensive-services-showcase-2025",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/comprehensive-pricing-guide-2025",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/comprehensive-pricing-guide-2032",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/emerging-tech",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/privacy",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/terms",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/cookies",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/compliance",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/security",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/accessibility",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-autonomous-business-operations-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-enterprise-intelligence-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-cybersecurity-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-customer-experience-analytics-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-healthcare-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-quantum-hybrid-platform",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/ai-supply-chain-optimization",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    },
+    {
+      "url": "/it-services",
+      "status": 200,
+      "statusText": "OK",
+      "success": true
+    }
+  ],
+  "brokenLinks": []
+}

@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+export default function AISupportHelpdesk(...args[]):  {
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO              } from '@/components/SEO';
@@ -12,6 +20,7 @@ import { SEO               } from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AISupportHelpdesk(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -36,15 +45,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-<<<<<<< HEAD
-      description: "Fully responsive support platform accessible on any device with native mobile apps."
-    },
-    {
-      icon: Globe,
-      title: "Global Support",
-      description: "Multi-language support with localization and timezone-aware routing for global teams."
-
-=======
       description: "Fully responsive support platform accessible on  device with native mobile apps.";
     },;
     {;
@@ -52,9 +52,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       title: "Global Support",;
       description: "Multi-language support with localization and timezone-aware routing for global teams.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const aiCapabilities = [
     {
       icon: Brain,
@@ -79,15 +77,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
     {
       icon: Clock,
       title: "24/7 Availability",
-<<<<<<< HEAD
-      description: "Round-the-clock support without human intervention"
-    },
-    {
-      icon: Users,
-      title: "Learning & Improvement",
-      description: "Continuous learning from interactions to improve responses"
-
-=======
       description: "Round-the-clock support without human intervention";
     },;
     {;
@@ -95,9 +84,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       title: "Learning & Improvement",;
       description: "Continuous learning from interactions to improve responses";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricingPlans = [
     {
       name: "Support Starter",
@@ -139,15 +126,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
-<<<<<<< HEAD
-        "Dedicated support manager",
-        "Advanced security",
-        "Custom training",
-        "On-premise options"
-      ],
-      popular: false
-
-=======
         "Dedicated support manager",;
         "Advanced security",;
         "Custom training",;
@@ -155,9 +133,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       title: "Reduce Support Costs",
@@ -172,15 +148,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
     {
       title: "Scale Support Operations",
       description: "Handle unlimited support requests without increasing headcount or response times.",
-<<<<<<< HEAD
-      icon: Globe
-    },
-    {
-      title: "Gain Actionable Insights",
-      description: "Understand customer needs and improve products with comprehensive support analytics.",
-      icon: BarChart3
-
-=======
       icon: Globe;
     },;
     {;
@@ -188,9 +155,7 @@ export default function AISupportHelpdesk(...args[]: any):  {
       description: "Understand customer needs and improve products with comprehensive support analytics.",;
       icon: BarChart3;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const supportChannels = [
     {
       icon: MessageCircle,
@@ -215,15 +180,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
     {
       icon: Smartphone,
       title: "Mobile App",
-<<<<<<< HEAD
-      description: "Native mobile apps for iOS and Android with push notifications"
-    },
-    {
-      icon: Users,
-      title: "Social Media",
-      description: "Monitor and respond to support requests across social platforms"
-
-=======
       description: "Native mobile apps for iOS and Android with push notifications";
     },;
     {;
@@ -231,22 +187,14 @@ export default function AISupportHelpdesk(...args[]: any):  {
       title: "Social Media",;
       description: "Monitor and respond to support requests across social platforms";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Support Helpdesk - Zion Tech Group"
-=======
       <SEO 
         title = "AI Support Helpdesk - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -257,25 +205,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.6 }}
-
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                     AI Support Helpdesk
@@ -289,13 +224,11 @@ export default function AISupportHelpdesk(...args[]: any):  {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-
                     Start Free Trial
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-
                     Schedule Demo
                   </Link>
                 </div>
@@ -303,7 +236,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -316,6 +248,10 @@ export default function AISupportHelpdesk(...args[]: any):  {
               </p>
             </div>
 <<<<<<< HEAD
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
+=======
+<<<<<<< HEAD
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)              => (
@@ -324,40 +260,22 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -368,7 +286,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* AI Capabilities Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
@@ -381,6 +298,10 @@ export default function AISupportHelpdesk(...args[]: any):  {
               </p>
             </div>
 <<<<<<< HEAD
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)  => (
+=======
+<<<<<<< HEAD
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)              => (
@@ -389,40 +310,22 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
@@ -433,7 +336,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Support Channels Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -446,6 +348,10 @@ export default function AISupportHelpdesk(...args[]: any):  {
               </p>
             </div>
 <<<<<<< HEAD
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)  => (
+=======
+<<<<<<< HEAD
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)              => (
@@ -454,40 +360,22 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <channel.icon className="w-6 h-6 text-white" />
                   </div>
@@ -498,7 +386,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
@@ -511,6 +398,10 @@ export default function AISupportHelpdesk(...args[]: any):  {
               </p>
             </div>
 <<<<<<< HEAD
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
+=======
+<<<<<<< HEAD
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)              => (
@@ -519,40 +410,22 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="flex items-start space-x-4"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -565,7 +438,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -578,6 +450,10 @@ export default function AISupportHelpdesk(...args[]: any):  {
               </p>
             </div>
 <<<<<<< HEAD
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
+=======
+<<<<<<< HEAD
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)              => (
@@ -586,44 +462,26 @@ export default function AISupportHelpdesk(...args[]: any):  {
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular
                       ? 'border-teal-500 ring-2 ring-teal-500/20'
                       : 'border-slate-700'
                   }`}
-
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -631,7 +489,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -640,7 +497,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -649,7 +505,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -657,7 +512,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-
                     Get Started
                   </Link>
                 </motion.div>
@@ -665,7 +519,6 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
@@ -673,25 +526,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Support?
               </h2>
@@ -702,34 +542,18 @@ export default function AISupportHelpdesk(...args[]: any):  {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-
                   Contact Sales
                 </Link>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

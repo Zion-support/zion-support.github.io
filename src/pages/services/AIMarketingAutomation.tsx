@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Target, 
+=======
 import React from 'react.ts';
 <<<<<<< HEAD
 import { SEO              } from '@/components/SEO';
@@ -5,6 +11,7 @@ import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowR
 =======
 import { motion              } from 'framer-motion.ts';
 import { Target, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp, 
   Users, 
   Clock, 
@@ -24,11 +31,15 @@ import { Target,
   Cpu,
   Heart,
   Eye
+<<<<<<< HEAD
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+=======
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIMarketingAutomation = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -43,14 +54,6 @@ const AIMarketingAutomation = () => {
       price: "$79/month"
     },
     {
-<<<<<<< HEAD
-      name: 'Enterprise',
-      price: '$799',
-      period: '/mo',
-      contacts: 'Unlimited contacts',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting']
-
-=======
       icon: MessageSquare,
       title: "Personalized Content Generation",
       description: "AI creates personalized marketing content for each customer segment",
@@ -74,16 +77,13 @@ const AIMarketingAutomation = () => {
       description: "Seamlessly coordinate campaigns across email, social, and web",
       price: "$119/month"
     }
-=======;
       name: 'Enterprise',;
       price: '$799',;
       period: '/mo',;
       contacts: 'Unlimited contacts',;
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -126,9 +126,7 @@ const AIMarketingAutomation = () => {
       ],
       popular: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -151,8 +149,9 @@ const AIMarketingAutomation = () => {
       description: "Every customer receives relevant, personalized content"
     }
   ];
-
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
@@ -345,12 +344,12 @@ const AIMarketingAutomation = () => {
         </div>
       </section>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -397,7 +396,6 @@ const AIMarketingAutomation = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -414,9 +412,14 @@ const AIMarketingAutomation = () => {
                 See measurable improvements in ROI, customer engagement, and campaign performance
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+=======
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -434,7 +437,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
@@ -451,9 +453,14 @@ const AIMarketingAutomation = () => {
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+=======
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -472,7 +479,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -489,9 +495,14 @@ const AIMarketingAutomation = () => {
                 Start with our free trial and scale as you grow. All plans include our core AI features.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+=======
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -510,7 +521,6 @@ const AIMarketingAutomation = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -519,8 +529,6 @@ const AIMarketingAutomation = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -529,6 +537,8 @@ const AIMarketingAutomation = () => {
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -584,6 +594,7 @@ const AIMarketingAutomation = () => {
                 <li>• A/B testing automation</li>
               </ul>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -597,71 +608,9 @@ const AIMarketingAutomation = () => {
                   </motion.button>
                 </motion.div>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Marketing?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using AI to create personalized,
-            high-converting marketing campaigns that drive real results.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="https://ziontechgroup.com/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center"
-
-              Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center"
-
-              <Mail className="w-5 h-5 mr-2" /> Schedule Demo
-            </a>
-          </div>
-
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="font-semibold text-purple-400 mb-2">Phone</h4>
-                <a href="tel:+13024640950" className="text-slate-300 hover:text-purple-400">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div>
-                <h4 className="font-semibold text-purple-400 mb-2">Email</h4>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-purple-400">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div>
-                <h4 className="font-semibold text-purple-400 mb-2">Address</h4>
-                <p className="text-slate-300">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-purple-400 mb-2">Website</h4>
-                <a
-                  href="https://ziontechgroup.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-purple-400 inline-flex items-center"
-
-                  ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
-                </a>
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
@@ -692,7 +641,6 @@ const AIMarketingAutomation = () => {
                 >
                   Contact Sales
                 </motion.button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </motion.div>
           </div>
@@ -700,10 +648,5 @@ const AIMarketingAutomation = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}}}
-=======
 };
-
 export default AIMarketingAutomation;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

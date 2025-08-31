@@ -161,6 +161,28 @@ const Services: React.FC = (): JSX.Element => {
       href: "/services/ai-cybersecurity-elite"
     },
     {
+      category: 'ai',
+      icon: Database,
+      title: "AI Data Governance Platform",
+      description: "Transform your data governance with AI-powered automation for compliance, security, and quality.",
+      features: ["AI Classification", "Privacy Compliance", "Real-time Monitoring", "Data Lineage"],
+      pricing: "$2,500 - $18,000/month",
+      color: "from-blue-500 to-cyan-500",
+      featured: true,
+      href: "/services/ai-data-governance-platform"
+    },
+    {
+      category: 'ai',
+      icon: TrendingDown,
+      title: "AI Financial Risk Management",
+      description: "Protect investments with AI-driven risk management, real-time monitoring, and predictive analytics.",
+      features: ["Real-time Monitoring", "AI Risk Assessment", "Portfolio Optimization", "Regulatory Compliance"],
+      pricing: "$3,500 - $22,000/month",
+      color: "from-red-500 to-orange-500",
+      featured: true,
+      href: "/services/ai-financial-risk-management"
+    },
+    {
       category: 'quantum',
       icon: Atom,
       title: "Quantum Computing Elite",

@@ -1,17 +1,22 @@
+<<<<<<< HEAD
+import { API_BASE_URL } from '../config/constants';
+=======
 import { API_BASE_URL              } from '../config/constants';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
   count?: number;
-
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -23,6 +28,7 @@ async function apiRequest<T>(
   const url = `${API_BASE_URL}${endpoint}`;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ApiClientOptions {
 
 
@@ -54,13 +60,15 @@ interface ApiClientOptions {
 
 
 }
+<<<<<<< HEAD
+export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
+=======
 
 export async function apiClient(...args: any[]): any {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { method = 'GET', body, headers = {} } = options;
-  
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const config: RequestInit = {
-  method,
+    method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
       ...headers,;
@@ -69,49 +77,32 @@ export async function apiClient(...args: any[]): any {;
   ;
   ;
   ;
-
-
-
-
-
 },;
   };
-
   if (body) {
     config.body = body;
   }
-
   try {
-<<<<<<< HEAD
-    const response = await fetch(url, config);
-
-    if (!response.ok) {
-      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    if (error instanceof ApiError) {
-      throw error;
-
-    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
-
-=======
     const response = await fetch(endpoint, config);
-    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
     return await response.json();
   } catch (error) {
     console.error('API request failed:', error);
     throw error;
   }
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const api = {
+<<<<<<< HEAD
+  get: (endpoint: string, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
+  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
+  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
+  delete: (endpoint: string, headers?: Record<string, string>) => 
+=======
 <<<<<<< HEAD
   // Health check
   health: anyanyanyanyanyanyanyanyanyanyanyanyany()              => apiRequest('/health'),
@@ -135,10 +126,9 @@ export const api = {
     apiClient(endpoint, { method: anyanyanyanyanyanyanyanyanyanyanyanyany'PUT', body: JSON.stringify(data), headers: headers || {} }),
   
   delete: (endpoint: string, headers?: Record<string, any>)              => 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
-
 // Export types for use in components
 export type { ApiResponse };
 export { ApiError };}}}}}}}

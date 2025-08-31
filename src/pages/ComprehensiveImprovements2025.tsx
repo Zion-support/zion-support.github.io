@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -13,6 +18,7 @@ import { Brain,
   ArrowRight,
   Star,
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Star, 
   Zap, 
@@ -21,7 +27,6 @@ import {
   Cloud, 
   Rocket, 
   Target, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Sparkles,
@@ -33,11 +38,6 @@ import {
   Crown,
   Eye,
   Lock,
-<<<<<<< HEAD
-  Target,
-  Award
-import EnhancedSEOManager from '../components/EnhancedSEOManager';
-=======
   Cpu,
   Database,
   Network,
@@ -71,11 +71,17 @@ import EnhancedSEOManager from '../components/EnhancedSEOManager';
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon
+<<<<<<< HEAD
+} from 'lucide-react';
+import EnhancedSEOManager from "../components/EnhancedSEOManager";
+export default function ComprehensiveImprovements2025() {
+=======
              } from 'lucide-react';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveImprovements2025(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const improvements = [
     {
       category: 'AI & Machine Learning Services',
@@ -154,7 +160,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
       ];
     };
   ];
-
   const features = [
     {
       title: 'Futuristic Design',
@@ -185,16 +190,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
       description: 'Advanced SEO with structured data and performance metrics',
       icon: Search,
       color: 'from-indigo-500 to-purple-500'
-<<<<<<< HEAD
-
-  ];
-
-  const stats = [
-    { label: 'AI Services', value: '6+', icon: Brain },
-    { label: 'Performance Metrics', value: '12+', icon: BarChart3 },
-    { label: 'Security Features', value: '8+', icon: Shield },
-    { label: 'Integration Options', value: '15+', icon: Code }
-=======
     },;
     {;
       title: 'Analytics Driven',;
@@ -202,9 +197,7 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
       icon: BarChart3,;
       color: 'from-blue-500 to-cyan-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       title: 'Enhanced User Experience',
@@ -243,8 +236,9 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
       color: 'from-red-500 to-orange-500';
     };
   ];
-
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <EnhancedSEOManager
       seoData={{
@@ -462,6 +456,7 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
             <p className="text-gray-400 mb-4">
               Leading the way in AI-powered business solutions and digital transformation
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager 
         title="Comprehensive Improvements 2025 - Zion Tech Group"
@@ -469,40 +464,20 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
         keywords = {
   ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
   'Zion Tech Group']
-
-
-
-
-
-
 }
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
-        
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >
@@ -521,7 +496,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
               Experience the future of business technology with our revolutionary platform enhancements. 
               From advanced AI services to cutting-edge performance analytics, discover how Zion Tech Group 
               is transforming the digital landscape.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -542,10 +516,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-export default ComprehensiveImprovements2025;}}
-=======
       {/* Improvements Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -553,22 +523,10 @@ export default ComprehensiveImprovements2025;}}
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -582,40 +540,27 @@ export default ComprehensiveImprovements2025;}}
               business technology solution available today.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {improvements.map((improvement, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {improvements.map((improvement, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={improvement.category}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -626,7 +571,6 @@ export default ComprehensiveImprovements2025;}}
                     <improvement.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="mb-6">
                   <div className="inline-block px-3 py-1 bg-purple-600/20 text-purple-400 text-xs font-medium rounded-full mb-3">
@@ -644,7 +588,6 @@ export default ComprehensiveImprovements2025;}}
                     ))}
                   </ul>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -652,7 +595,6 @@ export default ComprehensiveImprovements2025;}}
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -660,22 +602,10 @@ export default ComprehensiveImprovements2025;}}
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -689,40 +619,27 @@ export default ComprehensiveImprovements2025;}}
               for business technology solutions.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -733,7 +650,6 @@ export default ComprehensiveImprovements2025;}}
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -743,7 +659,6 @@ export default ComprehensiveImprovements2025;}}
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -751,7 +666,6 @@ export default ComprehensiveImprovements2025;}}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -759,22 +673,10 @@ export default ComprehensiveImprovements2025;}}
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -788,40 +690,27 @@ export default ComprehensiveImprovements2025;}}
               that drive business success and user satisfaction.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -832,7 +721,6 @@ export default ComprehensiveImprovements2025;}}
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -842,7 +730,6 @@ export default ComprehensiveImprovements2025;}}
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -850,7 +737,6 @@ export default ComprehensiveImprovements2025;}}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -858,22 +744,10 @@ export default ComprehensiveImprovements2025;}}
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -907,4 +781,3 @@ export default ComprehensiveImprovements2025;}}
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '@/components/SEO';
@@ -8,6 +10,7 @@ import { Brain,
   TrendingUp,
   Zap,
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -16,7 +19,6 @@ import { Brain,
   Activity, 
   TrendingUp, 
   Zap, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Phone,
@@ -31,6 +33,11 @@ import { Brain,
   Truck,
   Target
 <<<<<<< HEAD
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
+=======
+<<<<<<< HEAD
 import { Link              } from 'react-router-dom.ts';
 =======
  } from 'lucide-react';
@@ -38,6 +45,7 @@ import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const aiServices = [
     {
       icon: FileText,
@@ -88,25 +96,13 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
       description: "Transform data into actionable insights with AI-powered business intelligence",
-<<<<<<< HEAD
-      price: "From $1,499/month",
-      features["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
-      link: "/services/ai-business-intelligence-platform",
-      category: "Analytics"
-<<<<<<< HEAD
-
-=======
     };
-=======;
       price: "From $1,499/month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
       link: "/services/ai-business-intelligence-platform",;
       category: "Analytics";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const industrySolutions = [
     {
       title: "Healthcare & Life Sciences",
@@ -131,15 +127,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
     {
       title: "Retail & E-commerce",
       description: "Customer analytics, inventory optimization, and personalized marketing",
-<<<<<<< HEAD
-      icon: Users
-    },
-    {
-      title: "Energy & Utilities",
-      description: "Predictive maintenance, energy optimization, and grid management",
-      icon: Zap
-
-=======
       icon: Users;
     },;
     {;
@@ -147,9 +134,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
       description: "Predictive maintenance, energy optimization, and grid management",;
       icon: Zap;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const advancedTechnologies = [
     "Machine Learning & Deep Neural Networks",
     "Natural Language Processing (NLP)",;
@@ -160,21 +145,14 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
     "Blockchain & Distributed Systems",;
     "Quantum Computing Solutions";
   ];
-
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Comprehensive AI Services Showcase 2025 - Zion Tech Group"
-=======
       <SEO 
         title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
         canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
@@ -184,25 +162,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive AI Services Showcase 2025
               </h1>
@@ -215,21 +180,18 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-
                   Explore All Services
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-
                   Schedule Consultation
                 </motion.button>
               </div>
             </motion.div>
           </div>
         </section>
-
         {/* AI Services Grid */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
@@ -237,26 +199,13 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI-Powered Micro SAAS Services
               </h2>
@@ -265,43 +214,29 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                 designed for maximum efficiency and innovation
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-white" />
@@ -310,14 +245,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                       {service.category}
                     </span>
                   </div>
-
                   <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
@@ -329,11 +261,9 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                       ))}
                     </div>
                   </div>
-
                   <Link
                     to={service.link}
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"
-
                     Learn More
                   </Link>
                 </motion.div>
@@ -341,7 +271,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Industry Solutions */}
         <section className="py-20 px-6 bg-black/30">
           <div className="max-w-7xl mx-auto">
@@ -349,26 +278,13 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Industry-Specific AI Solutions
               </h2>
@@ -377,43 +293,29 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                 and regulatory requirements
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((solution, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
@@ -424,7 +326,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Advanced Technologies */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
@@ -432,26 +333,13 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Advanced AI Technologies
               </h2>
@@ -460,43 +348,29 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                 maximum performance and reliability
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {advancedTechnologies.map((tech, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
               {advancedTechnologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
-
                   <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium text-sm">{tech}</p>
                 </motion.div>
@@ -504,7 +378,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">
           <div className="max-w-4xl mx-auto text-center">
@@ -512,61 +385,29 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
-
               Ready to Transform Your Business?
             </motion.h2>
             <motion.p
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="text-xl text-cyan-100 mb-8"
-
               Join leading organizations that have already revolutionized
               their operations with AI-powered solutions
             </motion.p>
@@ -574,53 +415,31 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-
                 Schedule Demo
               </motion.button>
             </motion.div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
@@ -628,26 +447,13 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Get in Touch
               </h2>
@@ -656,169 +462,82 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
                 Contact our experts today.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
-
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
-
               <motion.div
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
-
               <motion.div
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>
                 <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
-
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}
               className="text-center mt-12"
-
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

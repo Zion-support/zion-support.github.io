@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
 =======
 import React from 'react.ts';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const DigitalTransformation = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const transformationServices = [
     {
       title: "Process Automation",
@@ -22,15 +26,6 @@ const DigitalTransformation = () => {
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-<<<<<<< HEAD
-    {
-      title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
-      icon: Users
-
-=======
     {;
       title: "Change Management",;
       description: "Guide your team through digital adoption and transformation.",;
@@ -38,9 +33,7 @@ const DigitalTransformation = () => {
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
       icon: Users;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const transformationAreas = [
     {
       name: "Customer Experience",
@@ -53,15 +46,6 @@ const DigitalTransformation = () => {
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-
-=======
     },;
     {;
       name: "Technology",;
@@ -69,9 +53,7 @@ const DigitalTransformation = () => {
       icon: BarChart3,;
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Increased operational efficiency and productivity",;
     "Enhanced customer experience and satisfaction",;
@@ -80,7 +62,6 @@ const DigitalTransformation = () => {
     "Faster time to market for new products",;
     "Better competitive positioning in the market";
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -110,7 +91,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Transformation Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -123,9 +103,14 @@ const DigitalTransformation = () => {
               your business and drive sustainable growth.
             </p>
           </div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {transformationServices.map((service, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -146,7 +131,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Transformation Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -159,9 +143,14 @@ const DigitalTransformation = () => {
               comprehensive digital-first organization.
             </p>
           </div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {transformationAreas.map((area, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {transformationAreas.map((area, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <area.icon className="w-8 h-8 text-white"/>
@@ -180,7 +169,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +208,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -244,5 +231,4 @@ const DigitalTransformation = () => {
     </div>;
   );
 };
-
 export default DigitalTransformation;}}}

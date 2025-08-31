@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import React from 'react';
+import { SEO } from "../../components/SEO";
+import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
@@ -16,16 +21,15 @@ import { CheckCircle,
   Target,
   Users,
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   CheckCircle, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   TrendingUp, 
   Zap, 
   Globe, 
   BarChart3, 
   Target, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Award,
   Phone,
   Mail,
@@ -40,12 +44,15 @@ import {
   Eye,
   Share2
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 =======
               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -56,14 +63,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   ;
   website: 'https://ziontechgroup.com';
   ;
-
-
-
-
-
-
 };
-
   const features = [
     {
       icon: Brain,
@@ -94,15 +94,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: 'Content Plagiarism Detection',
-      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
-
-=======
     },;
     {;
       icon: Shield,;
@@ -110,9 +101,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -159,15 +148,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         'Custom AI models',
         'White-label options',
         'Dedicated support',
-<<<<<<< HEAD
-        'Custom integrations',
-        'Advanced reporting',
-        'SLA guarantees'
-      ],
-      popular: false,
-      cta: 'Contact Sales'
-
-=======
         'Custom integrations',;
         'Advanced reporting',;
         'SLA guarantees';
@@ -175,9 +155,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       popular: false,;
       cta: 'Contact Sales';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [
     {
       title: 'E-commerce Content',
@@ -192,15 +170,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     {
       title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
-<<<<<<< HEAD
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads']
-    },
-    {
-      title: 'Technical Content',
-      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
-      metrics: ['45% improvement in readability scores', '40% increase in engagement']
-
-=======
       metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
     },;
     {;
@@ -208,9 +177,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
       metrics: ['45% improvement in readability scores', '40% increase in engagement'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Martinez',
@@ -228,25 +195,13 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     },
     {
       name: 'Sarah Williams',
-<<<<<<< HEAD
-      role: 'Content Creator',
-      comp: 'Creative Content Studio',
-      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
-      rating: 5
-<<<<<<< HEAD
-
-=======
     };
-=======;
       role: 'Content Creator',;
       company: 'Creative Content Studio',;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <>
       <SEO
@@ -255,7 +210,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -264,32 +218,18 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Content Optimizer Pro
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your content with AI-powered optimization. Improve SEO rankings, enhance readability, and boost engagement across all digital platforms.
               </p>
-
               {/* Key Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -309,7 +249,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <div className="text-gray-300 text-sm">Conversion Lift</div>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
@@ -321,7 +260,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -329,27 +267,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 AI-Powered Features That Transform Content
               </h2>
@@ -357,44 +282,30 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Our platform combines cutting-edge AI with industry-leading content optimization techniques to deliver exceptional results.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-
                   <div className="flex items-center mb-4">
                     <feature.icon className="text-blue-400 w-8 h-8 mr-3" />
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -413,7 +324,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -421,27 +331,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Proven Results Across Industries
               </h2>
@@ -449,44 +346,30 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 See how different businesses are achieving remarkable results with our AI Content Optimizer Pro platform.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="space-y-2">
@@ -502,7 +385,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -510,27 +392,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -538,40 +407,27 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Choose the plan that best fits your content optimization needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
@@ -579,7 +435,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400'
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
                   }`}
-
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
@@ -587,7 +442,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -596,7 +450,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-white">
@@ -605,7 +458,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                       </li>
                     ))}
                   </ul>
-
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-white text-blue-600 hover:bg-gray-100'
@@ -616,41 +468,21 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               className="text-center mt-12"
-
               <p className="text-gray-300 mb-4">
                 Annual plans save 20%. Enterprise customers get custom pricing and dedicated support.
               </p>
@@ -660,7 +492,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -668,27 +499,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
@@ -696,44 +514,30 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Don't just take our word for it. Here's what content creators and marketers are saying about our platform.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)  => (
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {testimonials.map((testimonial, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
@@ -750,7 +554,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -758,33 +561,19 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Content?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of content creators and marketers who are already using AI Content Optimizer Pro to achieve remarkable results.
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                   <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3" />
@@ -802,19 +591,16 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <p className="text-gray-300 text-sm">{contactInfo.address}</p>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-
                   <Phone className="w-4 h-4" />
                   <span>Call Now</span>
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-
                   <Mail className="w-4 h-4" />
                   <span>Send Email</span>
                 </a>
@@ -823,7 +609,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-
                   <ExternalLink className="w-4 h-4" />
                   <span>Visit Website</span>
                 </a>;
@@ -835,5 +620,4 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
 export default AIContentOptimizerPro;}}}}}

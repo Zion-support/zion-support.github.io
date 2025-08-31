@@ -1,4 +1,6 @@
 export interface SpecializedITService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface SpecializedITService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -55,12 +58,7 @@ website: string;
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  marketSize?: string;
-=======
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   // Zero Trust Network Architecture
   {
@@ -126,7 +124,6 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],
     marketSize: "$51.6 billion by 2025"
   },
-
   // 5G Enterprise Network Solutions
   {
     id: "five-g-enterprise-network",
@@ -191,7 +188,6 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],
     marketSize: "$31.2 billion by 2025"
   },
-
   // Cloud-Native Application Development
   {
     id: "cloud-native-app-development",
@@ -256,7 +252,6 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],
     marketSize: "$22.5 billion by 2025"
   },
-
   // Data Center Modernization
   {
     id: "data-center-modernization",
@@ -321,7 +316,6 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],
     marketSize: "$59.3 billion by 2025"
   },
-
   // IoT Edge Computing Platform
   {
     id: "iot-edge-computing-platform",
@@ -385,5 +379,4 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     },
     competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],
     marketSize: "$15.7 billion by 2025"
-
 ];}}

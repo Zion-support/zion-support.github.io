@@ -20,17 +20,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
-<<<<<<< HEAD
-                        await fixBrokenLink(href, result);
-
-
-                // Update progress
-                setScanProgress(((i + 1) / links.length) * 100);
-                // Small delay to prevent overwhelming the browser
-                await new Promise(resolve => setTimeout(resolve, 10));
-
-
-=======
                         await fixBrokenLink(href, result)}
                 }
                 // Update progress
@@ -38,22 +27,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 // Small delay to prevent overwhelming the browser
                 await new Promise(resolve => setTimeout(resolve, 10))}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setBrokenLinks(results);
         setLastScanTime(new Date());
         setIsScanning(false);
         // Notify parent component of issues
         results.forEach(result => {
             if (onLinkIssue) {
-<<<<<<< HEAD
-                onLinkIssue(result);
-
-        });
-    };
-=======
                 onLinkIssue(result)}
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Fix a broken link
     const fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {
@@ -69,40 +50,16 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   originalUrl,
                 newUrl,
                 type: 'redirect',
-  <<<<<<< HEAD
-                reason: 'Automatically fixed broken internal link'
-            
-
-};
-            setFixedLinks(prev => [...prev, fix])}
-=======
   reason: 'Automatically fixed broken internal link'
-            
-
-
-
-
 };
             setFixedLinks(prev => [...prev, fix]);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
-<<<<<<< HEAD
-            await fixBrokenLink(brokenLink.url, brokenLink);
-
-        setBrokenLinks([]);
-    };
-=======
             await fixBrokenLink(brokenLink.url, brokenLink)}
         setBrokenLinks([])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Generate redirect rules for server configuration
     const generateRedirectRules = () => {
         const rules = LinkValidator.generateRedirectRules();
@@ -120,13 +77,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             totalBrokenLinks: brokenLinks.length,
             brokenLinks: brokenLinks,
   fixedLinks: fixedLinks
-        
-
-
-
-
-
-
 };
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
@@ -138,12 +88,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     // Auto-scan on component mount
     useEffect(() => {
         if (autoFix) {
-<<<<<<< HEAD
-            scanPageLinks();
-
-=======
             scanPageLinks()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoFix]);
     return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -159,7 +104,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             </button>)}
         </div>
       </div>
-
       {/* Scan Progress */}
       {isScanning && (<div className="mb-6">
           <div className="flex items-center justify-between mb-2">
@@ -172,7 +116,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: `${scanProgress}%` }}></div>
           </div>
         </div>)}
-
       {/* Status Summary */}
       {showStatus && (<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
@@ -194,7 +137,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <div className="text-sm text-blue-600 dark:text-blue-400">Last Scan</div>
           </div>
         </div>)}
-
       {/* Broken Links List */}
       {brokenLinks.length > 0 && (<div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -216,19 +158,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 <button onClick = {
   () => fixBrokenLink(link.url,
   link)
-
-
-
-
-
-
 } className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
                   Fix
                 </button>
               </div>))}
           </div>
         </div>)}
-
       {/* Fixed Links List */}
       {fixedLinks.length > 0 && (<div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -247,7 +182,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               </div>))}
           </div>
         </div>)}
-
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-2">
         <button onClick={generateRedirectRules} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
@@ -257,7 +191,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           Export Report
         </button>
       </div>
-
       {/* Recommendations */}
       {brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
           <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">

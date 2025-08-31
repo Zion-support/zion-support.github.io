@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Zap, 
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -6,6 +13,7 @@ import { Atom, Zap, Brain, BarChart3, Target, CheckCircle, ArrowRight, Globe, Us
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Link              } from 'react-router-dom.ts';
 import { Zap, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Brain, 
   Shield, 
   Cloud, 
@@ -25,9 +33,14 @@ import { Zap,
   Server,
   CircuitBoard,
   Microchip
+<<<<<<< HEAD
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+=======
              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function QuantumComputing(...args: []):  {
   const features = [
     {
@@ -42,11 +55,6 @@ export default function QuantumComputing(...args: []):  {
     },
     {
       icon: Shield,
-<<<<<<< HEAD
-      title: "Post-Quantum Security",
-      description: "Prepare for quantum threats with quantum-resistant cryptographic solutions"
-
-=======
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum key distribution"
     },
@@ -55,9 +63,7 @@ export default function QuantumComputing(...args: []):  {
       title: "Cloud Quantum",
       description: "Access quantum computing power through our cloud platform"
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [
     {
       title: "Financial Modeling",
@@ -65,86 +71,11 @@ export default function QuantumComputing(...args: []):  {
       icon: TrendingUp
     },
     {
-<<<<<<< HEAD
-      name: "Enterprise",
-      price: "$19,999",
-      period: "/month",
-      description: "For businesses exploring quantum solutions",
-      features: [
-        "Quantum cloud access",
-        "Custom algorithm development",
-        "Priority support",
-        "Security consulting",
-        "Training programs",
-        "API access"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Quantum Lab",
-      price: "$49,999",
-      period: "/month",
-      description: "For advanced quantum research and development",
-      features: [
-        "Dedicated quantum resources",
-        "Custom hardware access",
-        "24/7 expert support",
-        "White-label solutions",
-        "Research partnerships",
-        "Dedicated quantum scientist"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Exponential Speedup",
-      description: "Solve problems in minutes that would take classical computers centuries"
-    },
-    {
-      icon: Target,
-      title: "Unprecedented Accuracy",
-      description: "Achieve higher precision in simulations and calculations"
-    },
-    {
-      icon: BarChart3,
-      title: "Competitive Advantage",
-      description: "Stay ahead of the curve with cutting-edge quantum technology"
-    },
-    {
-      icon: Users,
-      title: "Future-Proof Solutions",
-      description: "Build quantum-ready applications for the post-quantum era"
-
-  ];
-
-  const applications = [
-    {
-      icon: Globe,
-      title: "Financial Services",
-      description: "Portfolio optimization, risk assessment, and algorithmic trading",
-      examples: ["Risk modeling", "Portfolio optimization", "Fraud detection"]
-    },
-    {
-      icon: Cpu,
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       title: "Drug Discovery",
       description: "Molecular simulation and protein folding for pharmaceutical research",
       icon: Brain
     },
     {
-<<<<<<< HEAD
-      icon: Network,
-      title: "Logistics",
-      description: "Route optimization, supply chain management, and scheduling",
-      examples: ["Route planning", "Inventory optimization", "Resource allocation"]
-
-=======
       title: "Cryptography",
       description: "Quantum-resistant encryption and secure communications",
       icon: Lock
@@ -154,9 +85,7 @@ export default function QuantumComputing(...args: []):  {
       description: "Solving complex logistics and supply chain problems",
       icon: Network
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const technologies = [
     "Quantum Annealing",
     "Quantum Machine Learning",
@@ -165,19 +94,12 @@ export default function QuantumComputing(...args: []):  {
     "Quantum-Classical Hybrid Systems",
     "Quantum Cloud Infrastructure"
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for complex computational problems. AI integration, quantum security, and cloud quantum services."
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
@@ -185,28 +107,15 @@ export default function QuantumComputing(...args: []):  {
           <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -215,19 +124,16 @@ export default function QuantumComputing(...args: []):  {
               <Star className="w-4 h-4 mr-2" />
               Revolutionary Technology
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
-            
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Harness the power of quantum mechanics to solve previously impossible computational challenges. 
               Our quantum computing services integrate cutting-edge AI and provide unprecedented processing capabilities.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -246,46 +152,6 @@ export default function QuantumComputing(...args: []):  {
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20">
-          <div className="container-responsive">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum Computing Excellence
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Quantum</span> Computing for Tomorrow
-              </h1>
-              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Unlock the power of quantum computing with our advanced quantum solutions.
-                From quantum algorithms to post-quantum security, we're building the future of computation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-300"
-
-                  Request Quote
-                </Link>
-              </div>
-            </motion.div>
-=======
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -302,9 +168,14 @@ export default function QuantumComputing(...args: []):  {
               Our quantum computing platform combines the latest advances in quantum mechanics with practical business applications.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -319,10 +190,11 @@ export default function QuantumComputing(...args: []):  {
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Applications Section */}
@@ -564,6 +436,7 @@ export default function QuantumComputing(...args: []):  {
   );
 </div></div></div>}}}}}}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -580,9 +453,14 @@ export default function QuantumComputing(...args: []):  {
               Discover how quantum computing is transforming industries and solving complex problems.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={useCase.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -600,7 +478,6 @@ export default function QuantumComputing(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -617,9 +494,14 @@ export default function QuantumComputing(...args: []):  {
               Our platform leverages the latest quantum computing technologies and methodologies.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
+=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {technologies.map((tech, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -634,7 +516,6 @@ export default function QuantumComputing(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 text-center">
@@ -649,7 +530,6 @@ export default function QuantumComputing(...args: []):  {
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Join the quantum revolution and unlock unprecedented computational power for your business.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -671,6 +551,4 @@ export default function QuantumComputing(...args: []):  {
     </div>
   );
 };
-
 export default QuantumComputing;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

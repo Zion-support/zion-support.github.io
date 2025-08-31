@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+export default function AIDataAnalytics() {
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart              } from 'lucide-react.ts';
@@ -24,6 +31,7 @@ import {
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function AIDataAnalytics(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "Predictive Analytics Engine",
@@ -35,11 +43,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       title: "Real-time Data Processing",
       description: "Process millions of data points in real-time to provide instant insights and recommendations",
       icon: Zap,
-<<<<<<< HEAD
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights and recommendations'
-
-=======
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -67,7 +70,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -116,9 +118,7 @@ export default function AIDataAnalytics(...args: any[]): any {
       cta: "Contact Sales",
       popular: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       title: "300% Faster Insights",
@@ -139,7 +139,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       metric: "90%"
     }
   ];
-
   const useCases = [
     {
       title: "Customer Analytics",
@@ -154,62 +153,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       color: "from-purple-500 to-pink-500"
     },
     {
-<<<<<<< HEAD
-      name: 'Enterprise',
-      price: '$699',
-      period: '/month',
-      description: 'For large organizations with complex data needs',
-      features: [
-        'Unlimited data storage',
-        'Custom AI model training',
-        'White-label solution',
-        'Dedicated account manager',
-        'SLA guarantees',
-        'Advanced security and compliance',
-        'Custom integrations',
-        'Unlimited users'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-  ];
-
-  return (
-    <>
-      <SEO
-        title="AI Data Analytics - Intelligent Business Intelligence Platform"
-        description="Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards. Boost revenue by 25% with data-driven decisions."
-        canonical="/services/ai-data-analytics"
-      />
-
-      <div className="min-h-screen bg-futuristic">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-600/10 to-pink-600/10"></div>
-          <div className="container-responsive relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                AI Data Analytics
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Transform your data into actionable insights with AI-powered analytics,
-                predictive modeling, and intelligent business intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
-=======
       title: "Operational Intelligence",
       description: "Monitor and optimize business operations in real-time",
       icon: TrendingUp,
@@ -222,7 +165,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       color: "from-green-500 to-emerald-500"
     }
   ];
-
   const integrations = [
     {
       name: "Salesforce",
@@ -249,7 +191,6 @@ export default function AIDataAnalytics(...args: any[]): any {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -257,12 +198,10 @@ export default function AIDataAnalytics(...args: any[]): any {
         description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today."
         keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 via-blue-600/20 to-purple-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             className="text-center"
@@ -287,7 +226,6 @@ export default function AIDataAnalytics(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -305,9 +243,14 @@ export default function AIDataAnalytics(...args: any[]): any {
               Our AI engine processes massive amounts of data to uncover hidden patterns and predict future outcomes
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -324,10 +267,11 @@ export default function AIDataAnalytics(...args: any[]): any {
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Features Section */}
@@ -360,6 +304,7 @@ export default function AIDataAnalytics(...args: any[]): any {
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -377,9 +322,14 @@ export default function AIDataAnalytics(...args: any[]): any {
               From customer insights to financial forecasting, our AI analytics cover every aspect of your business
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -398,7 +348,6 @@ export default function AIDataAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -416,9 +365,14 @@ export default function AIDataAnalytics(...args: any[]): any {
               Join thousands of businesses who have transformed their decision-making with AI analytics
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -438,7 +392,6 @@ export default function AIDataAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -456,9 +409,14 @@ export default function AIDataAnalytics(...args: any[]): any {
               Connect with your existing tools and data sources without disruption
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -477,7 +435,6 @@ export default function AIDataAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -495,9 +452,14 @@ export default function AIDataAnalytics(...args: any[]): any {
               Choose the plan that fits your data analytics needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -514,9 +476,10 @@ export default function AIDataAnalytics(...args: any[]): any {
                     <span className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Benefits Section */}
@@ -601,16 +564,15 @@ export default function AIDataAnalytics(...args: any[]): any {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-zion-slate-light ml-1">{plan.period}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -619,7 +581,6 @@ export default function AIDataAnalytics(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-emerald-600 to-blue-600 text-white hover:from-emerald-700 hover:to-blue-700'
@@ -632,7 +593,6 @@ export default function AIDataAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -656,44 +616,9 @@ export default function AIDataAnalytics(...args: any[]): any {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Unlock Your Data's Potential?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI to transform raw data into
-                actionable insights that drive growth and competitive advantage.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
           </motion.div>
         </div>
       </section>
     </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}

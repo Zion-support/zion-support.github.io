@@ -33,17 +33,10 @@ app.use(helmet({
   },
 }));
 app.use(cors({
-<<<<<<< HEAD
-  origin: NODE_ENV === 'development'
-    ? ['http://localhost:3000', 'http://localhost:5000']
-    : process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true
-=======
   origin: NODE_ENV = == 'development' ;
     ? ['http://localhost:3000', 'http://localhost:5000'] ;
     : process.env.FRONTEND_URL || 'http://localhost:3000',;
   credentials: true;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }));
 app.use(compression());
 app.use(morgan('combined'));
@@ -79,11 +72,7 @@ if (NODE_ENV = == 'production') {;
 
 // Error handling middleware
 app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-<<<<<<< HEAD
-  // // // console.error(err.stack);
-=======
   // // // // // // // console.error(err.stack);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   res.status(500).json({
     error: 'Something went wrong!',
     message: NODE_ENV = == 'development' ? err.message : 'Internal server error';
@@ -96,16 +85,8 @@ app.use('*', (_req, res) => {
 });
 
 app.listen(PORT, () => {
-<<<<<<< HEAD
-  // // // console.log(`🚀 Server running on port ${PORT}`);
-  // // // console.log(`🌍 Environment: ${NODE_ENV}`);
-  // // // console.log(`📱 Frontend: http://localhost:3000`);
-  // // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
-});}
-=======
   // // // // // // // console.log(`🚀 Server running on port ${PORT}`);
   // // // // // // // console.log(`🌍 Environment: ${NODE_ENV}`);
   // // // // // // // console.log(`📱 Frontend: http://localhost:3000`);
   // // // // // // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
 });
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

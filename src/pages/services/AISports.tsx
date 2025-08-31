@@ -9,25 +9,12 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Integration with major sports analytics platforms',;
     'Custom AI models for sports-specific insights';
   ];
-
   const tiers = [
     {
       name: 'Amateur Team',
       price: '$199/mo',
       details: ['Up to 25 players', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional Team',
-      price: '$599/mo',
-      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Major League',
-      price: '$1,499/mo',
-      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional Team', 
       price: '$599/mo', 
@@ -38,9 +25,7 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
       price: '$1,499/mo', ;
       details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Player performance analysis and optimization',;
     'Training program design and monitoring',;
@@ -49,7 +34,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Scouting and talent identification',;
     'Fan engagement and marketing optimization';
   ];
-
   const benefits = [;
     'Improve player performance by 20-40%',;
     'Reduce injury risk by 30-50%',;
@@ -58,7 +42,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Enhance player development and scouting',;
     'Scale sports operations efficiently';
   ];
-
   const industries = [;
     'Professional Sports Teams',;
     'College & University Athletics',;
@@ -67,7 +50,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Sports Analytics & Media',;
     'Sports Technology Companies';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <p className="text-emerald-100 text-xl">Transform your sports organization with AI-powered tools that enhance player performance, optimize training, and maximize success.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,16 +100,20 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['20-40% performance improvement', '30-50% injury risk reduction', '25-40% cost reduction'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['20-40% performance improvement', '30-50% injury risk reduction', '25-40% cost reduction'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-green-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +125,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-green-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Sports Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +136,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +147,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your sports organization with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

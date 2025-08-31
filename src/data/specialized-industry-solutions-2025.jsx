@@ -448,9 +448,9 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "400% within 10 months",
         competitors: ["Khan Academy", "Duolingo", "Coursera", "Udemy"],
         demoUrl: "https://ziontechgroup.com/demo/education-ai-learning",
-        caseStudies["School district 35% improvement in outcomes", "University 40% dropout reduction"],
+        caseStudies: ["School district 35% improvement in outcomes", "University 40% dropout reduction"],
         websiteUrl: "https://ziontechgroup.com/services/education-ai-learning",
-        industryChallenges["Student engagement", "Learning outcomes", "Personalization", "Resource optimization"],
+        industryChallenges: ["Student engagement", "Learning outcomes", "Personalization", "Resource optimization"],
         marketOpportunity: "$19.6 billion by 2026",
         competitiveAdvantage: "AI-powered personalized learning with adaptive content"
     },
@@ -465,7 +465,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         price: 20000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Market trend analysis",
             "Property valuation",
             "Investment analysis",
@@ -477,28 +477,28 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Mobile applications",
             "API integration"
         ],
-        benefits[
+        benefits: [
             "Improve investment decisions by 40%",
             "Reduce market research time by 60%",
             "Optimize portfolio performance",
             "Identify market opportunities",
             "Enhance client services"
         ],
-        useCases[
+        useCases: [
             "Real estate agencies",
             "Property investors",
             "Development companies",
             "Property managers",
             "Financial institutions"
         ],
-        targetAudience[
+        targetAudience: [
             "Real estate agents",
             "Property investors",
             "Development managers",
             "Portfolio managers",
             "Financial advisors"
         ],
-        tags["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
+        tags: ["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$20,000 - $50,000/month",
@@ -507,18 +507,18 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Machine learning", "Big data analytics", "Predictive modeling", "Python", "React", "PostgreSQL"],
-        integrations["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
-        compliance["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
+        technology: ["Machine learning", "Big data analytics", "Predictive modeling", "Python", "React", "PostgreSQL"],
+        integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
+        compliance: ["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
         roi: "450% within 12 months",
-        competitors["Zillow", "Redfin", "Realtor.com", "CoStar"],
+        competitors: ["Zillow", "Redfin", "Realtor.com", "CoStar"],
         demoUrl: "https://ziontechgroup.com/demo/real-estate-ai",
-        caseStudies["Agency 40% better investment decisions", "Investor 60% faster market research"],
+        caseStudies: ["Agency 40% better investment decisions", "Investor 60% faster market research"],
         websiteUrl: "https://ziontechgroup.com/services/real-estate-ai",
-        industryChallenges["Market volatility", "Investment decisions", "Market research", "Portfolio optimization"],
+        industryChallenges: ["Market volatility", "Investment decisions", "Market research", "Portfolio optimization"],
         marketOpportunity: "$24.3 billion by 2026",
         competitiveAdvantage: "AI-powered market intelligence with predictive analytics"
-
+    }
 ];
+
 export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-}

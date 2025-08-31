@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain,
   Shield,
@@ -13,6 +17,7 @@ import { Brain,
 =======
 import React, { useState, useEffect              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Brain, 
   Shield, 
   Cloud, 
@@ -22,7 +27,6 @@ import { Brain,
   Phone, 
   Mail, 
   MapPin, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ExternalLink,
   TrendingUp,
   Users,
@@ -31,6 +35,13 @@ import { Brain,
   Clock,
   DollarSign,
   Search
+<<<<<<< HEAD
+} from 'lucide-react';
+import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
+import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
+import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
+const InnovativeServicesShowcase2030: React.FC = () => {;
+=======
 <<<<<<< HEAD
 import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
@@ -52,28 +63,25 @@ import { innovativeCloudDevOpsServices2030              } from '../data/innovati
 
 const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const allServices = [;
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
   ];
-
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -83,25 +91,12 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionary Services 2030
             </h1>
@@ -125,7 +120,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Contact Banner */}
       <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -145,7 +139,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Search and Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -172,7 +165,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                       ? 'bg-purple-600 border-purple-500 text-white'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
-
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
@@ -184,7 +176,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -195,35 +186,16 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
-
                 {/* Service Header */}
                 <div className="mb-4">
                   <div className="flex items-start justify-between mb-3">
@@ -239,7 +211,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     {service.description}
                   </p>
                 </div>
-
                 {/* Pricing */}
                 <div className="mb-4 p-4 bg-purple-600/20 rounded-lg border border-purple-500/30">
                   <div className="flex items-center justify-between mb-2">
@@ -250,7 +221,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     Market price: {service.pricing.marketPrice}
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
@@ -271,7 +241,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     )}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
@@ -287,7 +256,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     ))}
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -295,13 +263,11 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                       <span
                         key={idx}
                         className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
-
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
-
                 {/* Service Details */}
                 <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
                   <div className="text-gray-400">
@@ -319,7 +285,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     <div className="text-white">{service.responseTime}</div>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <a
@@ -327,14 +292,12 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-
                     <ExternalLink className="w-4 h-4" />
                     Learn More
                   </a>
                   <a
                     href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}
                     className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-2 px-4 rounded-lg transition-colors border border-white/20"
-
                     Contact
                   </a>
                 </div>
@@ -348,27 +311,16 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-<<<<<<< HEAD
-                  setActiveCategory('all')}}
-                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors";
-=======;
                   setActiveCategory('all');
                 }}
-<<<<<<< HEAD
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-
-=======
                 className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </button>
             </div>
           )}
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -376,27 +328,14 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -404,8 +343,12 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
               We deliver cutting-edge technology solutions with unmatched expertise, innovation, and customer success
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 icon: Award,
@@ -427,47 +370,30 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             ].map((feature, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }
             ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="text-center"
-
                 <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -478,7 +404,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -486,26 +411,13 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -516,14 +428,12 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
-
                 <Mail className="w-5 h-5" />
                 Get Started Today
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
-
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -531,7 +441,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Footer Contact */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 to-blue-900">
         <div className="max-w-7xl mx-auto">
@@ -575,14 +484,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 <div className="text-gray-300">Cloud & DevOps</div>
                 <div className="text-gray-300">IT Infrastructure</div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -590,6 +491,4 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default InnovativeServicesShowcase2030;}}

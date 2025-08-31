@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+import { ProductListing  } from '@/types/listings';
+=======
 import { ProductListing               } from '@/types/listings';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises
-
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   // Zero-Trust Network Access Platform
   {
@@ -35,7 +38,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "6-8 weeks",
     integrations["Active Directory", "SAML/SSO", "Multi-Factor Authentication", "SIEM Systems", "Identity Providers"]
   },
-
   // Edge Computing Orchestration Platform
   {
     id: "edge-computing-orchestration-platform",
@@ -67,7 +69,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-10 weeks",
     integrations["Kubernetes", "Docker", "Cloud Platforms", "IoT Devices", "Monitoring Tools"]
   },
-
   // Quantum-Safe Cryptography Infrastructure
   {
     id: "quantum-safe-cryptography-infrastructure",
@@ -99,7 +100,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "12-16 weeks",
     integrations["PKI Systems", "Certificate Authorities", "Hardware Security Modules", "Key Management", "Security Protocols"]
   },
-
   // Autonomous Data Center Management
   {
     id: "autonomous-data-center-management",
@@ -131,7 +131,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-14 weeks",
     integrations["Building Management Systems", "Power Management", "Cooling Systems", "Monitoring Tools", "IoT Sensors"]
   },
-
   // Software-Defined Network Fabric
   {
     id: "software-defined-network-fabric",
@@ -163,7 +162,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-12 weeks",
     integrations["Network Controllers", "Virtual Switches", "Load Balancers", "Firewalls", "Monitoring Systems"]
   },
-
   // Hyperconverged Infrastructure Platform
   {
     id: "hyperconverged-infrastructure-platform",
@@ -195,7 +193,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-12 weeks",
     integrations["Virtualization Platforms", "Storage Systems", "Network Equipment", "Management Tools", "Backup Solutions"]
   },
-
   // Intelligent Cloud Cost Optimization
   {
     id: "intelligent-cloud-cost-optimization",
@@ -225,12 +222,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     competitors["CloudHealth", "Apptio", "CloudCheckr"],
     roi: "600% within 10 months",
     setupTime: "4-6 weeks",
-<<<<<<< HEAD
-    integrations: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"]
-
-];}
-=======
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"]
   }
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

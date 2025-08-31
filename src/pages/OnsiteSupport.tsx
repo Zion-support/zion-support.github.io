@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Users,
@@ -29,12 +31,15 @@ import { Users,
   Globe
 import { SEO              } from '../components/SEO';
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '../components/SEO';
 import { Wrench, 
   Clock, 
   Shield, 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   Users, 
   CheckCircle, 
@@ -51,6 +56,7 @@ import { Wrench,
   Router
               } from 'lucide-react.ts';
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap, 
   Brain, 
   Cloud, 
@@ -73,11 +79,16 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
+<<<<<<< HEAD
+import { SEO } from "../components/SEO";
+export default function OnsiteSupport(...args[]):  {
+=======
 import { SEO              } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function OnsiteSupport(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       icon: Server,
@@ -98,38 +109,10 @@ export default function OnsiteSupport(...args[]: any):  {
       features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
     },
     {
-<<<<<<< HEAD
-      icon: Monitor,
-      title: 'Workstation Support',
-      description: 'Desktop and laptop setup, maintenance, and troubleshooting',
-      features['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
-    },
-    {
-      icon: HardDrive,
-      title: 'Storage Solutions',
-      description: 'Storage system design, implementation, and maintenance',
-      features['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
-    },
-    {
-      icon: Router,
-      title: 'Security Implementation',
-      description: 'Comprehensive security setup and monitoring',
-      features['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
-    }
-=======
       title: 'Training & Consultation',
       description: 'Staff training and strategic consultation',
       icon: Users,
       color: 'from-purple-500 to-pink-500',
-<<<<<<< HEAD
-      services: [
-        'User training programs',
-        'Best practices guidance',
-        'Technology consulting',
-        'Process optimization'
-      ]
-
-=======
       services: [;
         'User training programs',;
         'Best practices guidance',;
@@ -137,10 +120,7 @@ export default function OnsiteSupport(...args[]: any):  {
         'Process optimization';
       ];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       icon: Clock,
@@ -148,8 +128,6 @@ export default function OnsiteSupport(...args[]: any):  {
       description: 'Emergency support available around the clock'
     },
     {
-<<<<<<< HEAD
-=======
       title: 'Extended Coverage',
       description: 'Northeast and Mid-Atlantic regions',
       icon: Globe,
@@ -168,15 +146,6 @@ export default function OnsiteSupport(...args[]: any):  {
       icon: Building,
       color: 'from-purple-500 to-pink-500',
       areas: [
-<<<<<<< HEAD
-        'Major metropolitan areas',
-        'Enterprise client locations',
-        'Strategic partnerships',
-        'Emergency response'
-      ],
-      responseTime: '8-24 hours'
-
-=======
         'Major metropolitan areas',;
         'Enterprise client locations',;
         'Strategic partnerships',;
@@ -184,21 +153,16 @@ export default function OnsiteSupport(...args[]: any):  {
       ],;
       responseTime: '8-24 hours';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const supportTiers = [
     {
       title: 'Basic Support',
       description: 'Essential onsite support for small businesses',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       icon: Shield,
       title: 'Certified Technicians',
       description: 'Microsoft, Cisco, and CompTIA certified experts'
     },
     {
-<<<<<<< HEAD
-=======
       title: 'Professional Support',
       description: 'Comprehensive support for growing businesses',
       icon: Star,
@@ -219,15 +183,6 @@ export default function OnsiteSupport(...args[]: any):  {
       color: 'from-purple-500 to-pink-500',
       features: [
         '1-hour response time',
-<<<<<<< HEAD
-        '24/7 availability',
-        'Dedicated support team',
-        'Custom maintenance plans',
-        'Strategic consultation'
-      ],
-      pricing: 'Custom pricing'
-
-=======
         '24/7 availability',;
         'Dedicated support team',;
         'Custom maintenance plans',;
@@ -235,9 +190,7 @@ export default function OnsiteSupport(...args[]: any):  {
       ],;
       pricing: 'Custom pricing';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const responseProcess = [
     {
       step: '1',
@@ -257,36 +210,14 @@ export default function OnsiteSupport(...args[]: any):  {
       step: '3',
       title: 'Dispatch',
       description: 'Technician is dispatched to your location',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       icon: Users,
       title: 'Dedicated Team',
       description: 'Assigned technicians familiar with your infrastructure'
     },
     {
       icon: CheckCircle,
-<<<<<<< HEAD
-      title: 'Preventive Maintenance',
-      description: 'Regular checkups to prevent issues before they occur';
-    };
-  ];
-
-  const responseTimes = [
-    { priority: 'Critical', time: '2-4 hours', description: 'System down, business impact' },
-    { priority: 'High', time: '4-8 hours', description: 'Major functionality affected' },
-    { priority: 'Medium', time: '24 hours', description: 'Minor issues, some impact' },
-    { priority: 'Low', time: '48 hours', description: 'General maintenance, no impact' }
-=======
       color: 'from-orange-500 to-red-500'
     },
-<<<<<<< HEAD
-    {
-      step: '5',
-      title: 'Follow-up',
-      description: 'Post-resolution support and documentation',
-      icon: Mail,
-      color: 'from-yellow-500 to-orange-500'
-
-=======
     {;
       step: '5',;
       title: 'Follow-up',;
@@ -294,9 +225,7 @@ export default function OnsiteSupport(...args[]: any):  {
       icon: Mail,;
       color: 'from-yellow-500 to-orange-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const contactInfo = [
     {
       title: 'Onsite Support Team',
@@ -305,27 +234,6 @@ export default function OnsiteSupport(...args[]: any):  {
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-<<<<<<< HEAD
-    {
-      title: 'Emergency Support',
-      description: '24/7 emergency response hotline',
-      email: 'emergency@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: 'Available 24/7 for critical issues'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Onsite Support - Zion Tech Group"
-        description="Get expert onsite technical support from Zion Tech Group. Fast response times, comprehensive coverage, and professional technicians at your location."
-      />
-
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
-=======
     {;
       title: 'Emergency Support',;
       description: '24/7 emergency response hotline',;
@@ -333,67 +241,38 @@ export default function OnsiteSupport(...args[]: any):  {
       phone: '+1 302 464 0950',;
       address: 'Available 24/7 for critical issues';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Onsite IT Support Services - Zion Tech Group"
         description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-center"
-
-            <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-white" />
-=======
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
                 <Wrench className="w-10 h-10 text-white" />
               </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Onsite IT Support
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get expert technical support right at your location. Our certified technicians
-              provide fast, reliable, and professional onsite assistance for all your IT needs.
-=======
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Professional onsite technical support with certified engineers. 
               We bring expertise directly to your location for immediate problem resolution.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -412,60 +291,22 @@ export default function OnsiteSupport(...args[]: any):  {
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Why Onsite Support */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-
           <h2 className="text-2xl font-bold text-white mb-4">
             Why Choose Onsite Support?
           </h2>
@@ -476,7 +317,6 @@ export default function OnsiteSupport(...args[]: any):  {
           </p>
         </motion.div>
       </div>
-
       {/* Support Services */}
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
@@ -484,34 +324,18 @@ export default function OnsiteSupport(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}
             className="text-3xl font-bold text-white text-center mb-12"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             Our Onsite Support Services
@@ -521,6 +345,7 @@ export default function OnsiteSupport(...args[]: any):  {
             {supportServices.map((service, index)              => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Onsite Services
@@ -530,81 +355,30 @@ export default function OnsiteSupport(...args[]: any):  {
               handle all aspects of your IT infrastructure.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
-<<<<<<< HEAD
                 initial = {
   { opacity: 0,
   y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-=======
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-<<<<<<< HEAD
-
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                    <p className="text-slate-400 text-sm">{service.description}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  {service.services.map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{item}</span>
-                    </div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <service.icon className="w-8 h-8 text-white" />
@@ -617,7 +391,6 @@ export default function OnsiteSupport(...args[]: any):  {
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   ))}
                 </ul>
               </motion.div>
@@ -625,99 +398,47 @@ export default function OnsiteSupport(...args[]: any):  {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Coverage Areas */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-
           Service Coverage Areas
         </motion.h2>
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {coverageAreas.map((area, index) => (
+=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
           {coverageAreas.map((area, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={area.title}
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
-
 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <area.icon className="w-8 h-8 text-white" />
@@ -725,7 +446,6 @@ export default function OnsiteSupport(...args[]: any):  {
                 <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                 <p className="text-slate-400 text-sm">{area.description}</p>
               </div>
-
               <div className="space-y-4">
                 <div className="space-y-3">
                   <h4 className="text-slate-300 font-medium">Coverage: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
@@ -736,7 +456,6 @@ export default function OnsiteSupport(...args[]: any):  {
                     </div>
                   ))}
                 </div>
-
                 <div className="pt-3 border-t border-slate-700">
                   <span className="text-slate-400 text-sm">Response Time:</span>
                   <div className="text-slate-300 font-medium">{area.responseTime}</div>
@@ -746,7 +465,6 @@ export default function OnsiteSupport(...args[]: any):  {
           ))}
         </div>
       </div>
-
       {/* Support Tiers */}
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
@@ -754,34 +472,18 @@ export default function OnsiteSupport(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
-
-
-
-
-
-
 }}
             className="text-3xl font-bold text-white text-center mb-12"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             Support Tiers & Pricing
@@ -791,6 +493,7 @@ export default function OnsiteSupport(...args[]: any):  {
             {supportTiers.map((tier, index)              => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Onsite Support?
@@ -800,62 +503,32 @@ export default function OnsiteSupport(...args[]: any):  {
               with our comprehensive onsite support services.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
-<<<<<<< HEAD
-                key={benefit.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="text-center"
-=======
                 key={tier.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 <div className="text-center mb-6">
@@ -883,10 +556,10 @@ export default function OnsiteSupport(...args[]: any):  {
                   </div>
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-slate-300">{benefit.description}</p>
@@ -895,99 +568,47 @@ export default function OnsiteSupport(...args[]: any):  {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Response Times */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Response Process */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
-
-
-
-
-
-
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-
           Our Response Process
         </motion.h2>
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {responseProcess.map((step, index) => (
+=======
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
           {responseProcess.map((step, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={step.step}
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
-
-
-
-
-
-
 }}
               className="text-center"
-
               <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl`}>
                 {step.step}
               </div>
@@ -997,7 +618,6 @@ export default function OnsiteSupport(...args[]: any):  {
           ))}
         </div>
       </div>
-
       {/* Benefits */}
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
@@ -1005,105 +625,16 @@ export default function OnsiteSupport(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 1.1 
-
-
-
-
-
-
 }}
             className="text-3xl font-bold text-white text-center mb-12"
-<<<<<<< HEAD
-
-            Benefits of Onsite Support
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Faster Resolution</h3>
-                  <p className="text-slate-300 text-sm">Direct access to hardware and systems means faster problem identification and resolution.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Enhanced Security</h3>
-                  <p className="text-slate-300 text-sm">Our technicians follow strict security protocols and maintain confidentiality of your systems.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Personalized Service</h3>
-                  <p className="text-slate-300 text-sm">Face-to-face interaction allows for better understanding of your specific needs and environment.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Tool className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Hands-on Expertise</h3>
-                  <p className="text-slate-300 text-sm">Physical access to equipment enables comprehensive diagnostics and repairs.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Reduced Downtime</h3>
-                  <p className="text-slate-300 text-sm">Quick onsite response minimizes business disruption and productivity loss.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Knowledge Transfer</h3>
-                  <p className="text-slate-300 text-sm">Learn from our experts and gain insights to prevent future issues.</p>
-                </div>
-              </div>
-            </div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Guaranteed Response Times
@@ -1113,25 +644,27 @@ export default function OnsiteSupport(...args[]: any):  {
               guaranteed response times based on priority levels.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {responseTimes.map((item, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={item.priority}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
@@ -1147,132 +680,52 @@ export default function OnsiteSupport(...args[]: any):  {
                 <p className="text-slate-300 text-sm">{item.description}</p>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for Professional Onsite Support?
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-              Don't let IT issues slow down your business. Our certified technicians 
-              are ready to provide immediate onsite support and solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/services-overview"
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )}
-=======
       {/* Contact Information */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 1.2 
-
-
-
-
-
-
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-
           Get Onsite Support
         </motion.h2>
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {contactInfo.map((contact, index) => (
+=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
           {contactInfo.map((contact, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={contact.title}
               initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 1.3 + index * 0.1 
-
-
-
-
-
-
 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-
               <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
               <p className="text-slate-400 mb-6">{contact.description}</p>
-
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
@@ -1282,7 +735,6 @@ export default function OnsiteSupport(...args[]: any):  {
                     <div className="text-white font-medium">{contact.email}</div>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📞</span>
@@ -1291,7 +743,6 @@ export default function OnsiteSupport(...args[]: any):  {
                     <div className="text-white font-medium">{contact.phone}</div>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📍</span>
@@ -1305,42 +756,22 @@ export default function OnsiteSupport(...args[]: any):  {
           ))}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 1.4 
-
-
-
-
-
-
 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready for Onsite Support?
           </h2>
@@ -1356,9 +787,4 @@ export default function OnsiteSupport(...args[]: any):  {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

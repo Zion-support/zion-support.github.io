@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
 import { useState, useEffect               } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -8,13 +12,13 @@ import {
   Volume2,
   Keyboard,
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
   Keyboard, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Plus,
   Minus,
@@ -42,6 +46,18 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
+<<<<<<< HEAD
+export function Accessibility() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 16,
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,
+    theme: 'auto'
+  });
+  useEffect(() => {
+=======
 
 export function Accessibility(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
@@ -68,13 +84,13 @@ theme: 'auto';
 });
 
   useEffect(()               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings);
       setSettings(parsed);
       applySettings(parsed);
-
     // Add keyboard shortcuts
     const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
       if (e.ctrlKey) {;
@@ -92,32 +108,29 @@ theme: 'auto';
             e.preventDefault();
             resetSettings();
             break;
-
-
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+<<<<<<< HEAD
+  const applySettings = (newSettings: AccessibilitySettings) => {;
+=======
 
   const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const root = document.documentElement;
-
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
-
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
-
     // Apply theme
     if (newSettings.theme = == 'light') {;
       root.classList.add('light-theme');
@@ -127,8 +140,10 @@ theme: 'auto';
       root.classList.remove('light-theme');
     } else {
       root.classList.remove('light-theme', 'dark-theme');
-
   };
+<<<<<<< HEAD
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+=======
 
 <<<<<<< HEAD
   const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
@@ -139,6 +154,7 @@ theme: 'auto';
 };
 =======
   const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newSettings = {
   ...settings,;
   ;
@@ -147,31 +163,19 @@ theme: 'auto';
   ;
   ;
   [key]: value ;
-
-
-
-
-
-
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
-
   const increaseFontSize = () => {;
     if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
-
   };
-
   const decreaseFontSize = () => {;
     if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
-
   };
-
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
   fontSize: 16,
@@ -184,18 +188,11 @@ theme: 'auto';
   ;
   theme: 'auto';
     ;
-
-
-
-
-
-
 };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     localStorage.removeItem('accessibility-settings');
   };
-
   return (
     <>
       {/* Accessibility Toggle Button */}
@@ -204,15 +201,9 @@ theme: 'auto';
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
-<<<<<<< HEAD
-
-        <Accessibility className="w-6 h-6" />
-=======
       >
         <AccessibilityIcon className="w-6 h-6" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -220,45 +211,20 @@ theme: 'auto';
             initial = {
   { opacity: 0,
   x: -400 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0,
   x: -400 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.3,
   ease: "easeOut" 
-
-
-
-
-
-
 }}
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
-
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -270,11 +236,9 @@ theme: 'auto';
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
-
                   <X className="w-5 h-5" />
                 </button>
               </div>
-
               {/* Font Size Control */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
@@ -287,7 +251,6 @@ theme: 'auto';
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Decrease font size"
-
                     <Minus className="w-4 h-4 text-white" />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
@@ -298,12 +261,10 @@ theme: 'auto';
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Increase font size"
-
                     <Plus className="w-4 h-4 text-white" />
                   </button>
                 </div>
               </div>
-
               {/* High Contrast Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -317,12 +278,6 @@ theme: 'auto';
                     onChange = {
   (e) => updateSetting('highContrast',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="sr-only"
                   />
@@ -335,7 +290,6 @@ theme: 'auto';
                   </div>
                 </label>
               </div>
-
               {/* Reduced Motion Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -349,12 +303,6 @@ theme: 'auto';
                     onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="sr-only"
                   />
@@ -367,7 +315,6 @@ theme: 'auto';
                   </div>
                 </label>
               </div>
-
               {/* Theme Selection */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
@@ -381,19 +328,12 @@ theme: 'auto';
                       onClick = {
   () => updateSetting('theme',
   theme)
-
-
-
-
-
-
 }
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
                         settings.theme === theme
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
-
                       {theme === 'auto' && 'Auto'}
                       {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />}
                       {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
@@ -401,7 +341,6 @@ theme: 'auto';
                   ))}
                 </div>
               </div>
-
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -415,12 +354,6 @@ theme: 'auto';
                     onChange = {
   (e) => updateSetting('soundEnabled',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="sr-only"
                   />
@@ -433,7 +366,6 @@ theme: 'auto';
                   </div>
                 </label>
               </div>
-
               {/* Keyboard Shortcuts Help */}
               <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
@@ -455,21 +387,10 @@ theme: 'auto';
                   </div>
                 </div>
               </div>
-
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
-<<<<<<< HEAD
-
-                Reset to Defaults
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-=======
               >
                 Reset to Defaults;
               </button>;
@@ -478,6 +399,5 @@ theme: 'auto';
         )};
       </AnimatePresence>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}}}}}}

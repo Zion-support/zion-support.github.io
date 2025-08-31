@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+=======
+<<<<<<< HEAD
 import { SEO              } from '@/components/SEO';
 import { Badge              } from '@/components/ui/badge';
 import { Button              } from '@/components/ui/button';
@@ -29,6 +36,7 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Brain,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield,
   TrendingUp,
   Zap,
@@ -125,6 +133,8 @@ import { Brain,
   List,
   ChevronDown,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ChevronUp
               } from 'lucide-react.ts';
 import { MICRO_SAAS_SERVICES               } from '@/data/microSaasServices';
@@ -139,6 +149,7 @@ const categories = [
   { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s               => s.category === 'IT Services').length },
   { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s               => s.category === 'Business Solutions').length }
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ShoppingCart,
   MessageCircle,
   HelpCircle,
@@ -149,9 +160,14 @@ const categories = [
 } from 'lucide-react';
 import { MICRO_SAAS_SERVICES              } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+=======
 import { Button              } from '@/components/ui/button';
 import { Badge              } from '@/components/ui/badge';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
@@ -205,15 +221,15 @@ const MICRO_SAAS_SERVICES = [
     tags: ['Analytics', 'Web', 'Performance'],;
     images: ['/images/analytics.jpg'];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
-
 const categories = [;
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyanyanyany })              => (
   <motion.div
@@ -332,6 +348,7 @@ const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyan
 export default function ComprehensiveServicesOverview2027(...args: any[]): any {
 =======
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const pricingModels = [;
   { id: 'all', name: 'All Pricing' },;
   { id: 'monthly', name: 'Monthly' },;
@@ -339,8 +356,12 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
+<<<<<<< HEAD
+export default function ComprehensiveServicesOverview2027(...args[]):  {
+=======
 export default function ComprehensiveServicesOverview2027(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -351,40 +372,18 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(service => service.category === selectedCategory);
-
-    if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
-
-    if (searchQuery.trim()) {
-=======
       filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
     if (searchQuery.trim()) {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       const query = searchQuery.toLowerCase();
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(query) ||
-        service.description.toLowerCase().includes(query) ||
-        service.tags.some(tag => tag.toLowerCase().includes(query)) ||
-        service.subcategory?.toLowerCase().includes(query)
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(query) ||;
         service.description.toLowerCase().includes(query) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
         service.subcategory?.toLowerCase().includes(query);
       );
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -396,13 +395,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         default:
-<<<<<<< HEAD
-          return 0;
-
-    });
-    setFilteredServices(filtered);
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-=======
           return 0}
     });
     setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
@@ -411,22 +403,10 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
       initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
       animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
@@ -502,17 +482,14 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
               initial = {
   { opacity: 0,
   height: 0 
-
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
-
 }}
               exit = {
   { opacity: 0,
   height: 0 
-
 }}
               className="space-y-2"
             >
@@ -555,7 +532,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
       </div>;
     </motion.div>;
   );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -570,45 +546,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}
-
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive Services Overview
-              <span className="block text-zion-cyan">2027 Edition</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Discover our cutting-edge portfolio of AI-powered solutions, IT services, and innovative business tools designed to transform your operations and drive growth.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-zion-blue-dark/30 rounded-lg px-6 py-3 border border-zion-blue-light/20">
-                <div className="text-2xl font-bold text-zion-cyan">{MICRO_SAAS_SERVICES.length}+</div>
-                <div className="text-zion-slate-light text-sm">Services Available</div>
-              </div>
-              <div className="bg-zion-purple/30 rounded-lg px-6 py-3 border border-zion-purple/20">
-                <div className="text-2xl font-bold text-zion-purple">{MICRO_SAAS_SERVICES.filter(s => s.featured).length}</div>
-                <div className="text-zion-slate-light text-sm">Featured Solutions</div>
-              </div>
-              <div className="bg-zion-cyan/30 rounded-lg px-6 py-3 border border-zion-cyan/20">
-                <div className="text-2xl font-bold text-zion-cyan">98%</div>
-                <div className="text-zion-slate-light text-sm">AI Score Average</div>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light">
-                <Link to="/contact">
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                <Link to="/comprehensive-pricing-guide">
-                  View Pricing Guide
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
-=======
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -621,40 +558,20 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
           </motion.p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
-
         {/* Filters and Controls */}
         <div className="mb-12 space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -725,7 +642,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                     size="sm"
                     onClick={() => setViewMode('grid')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-
                     <Grid className="w-4 h-4" />
                   </Button>
                   <Button
@@ -733,7 +649,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                     size="sm"
                     onClick={() => setViewMode('list')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-
                     <List className="w-4 h-4" />
                   </Button>
                 </div>
@@ -741,7 +656,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as )}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
-
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
@@ -756,7 +670,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-
                   {category.icon}
                   <span className="ml-2">{category.name}</span>
                   <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
@@ -772,7 +685,6 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={() => setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
-
                   {pricing.name}
                 </Button>
               ))}
@@ -794,18 +706,10 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPricing('all');
-<<<<<<< HEAD
-                  setSearchQuery('');
-                }}
-                className="bg-zion-cyan hover:bg-zion-cyan-light"
-
-                Clear Filters
-=======
                   setSearchQuery('')}}
                 className = "bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 {pricing.name}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </Button>
             ))}
           </div>
@@ -857,23 +761,10 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </Button>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div>}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

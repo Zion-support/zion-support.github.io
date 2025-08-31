@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+export default function Events() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
+      <div className="max-w-2xl text-center">
+        <h1 className="text-4xl font-bold mb-4">Events</h1>
+        <p className="text-slate-300">Join our upcoming webinars, conferences, and community events.</p>
+      </div>
+=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -528,6 +538,7 @@ export default function Events(...args: any[]): any {
           </motion.div>
         </div>
       </section>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     </div>
   );
 }

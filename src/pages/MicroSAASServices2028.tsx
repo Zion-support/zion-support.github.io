@@ -148,10 +148,14 @@ import { Brain,
   Handshake,
   Calendar
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 =======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -195,7 +199,6 @@ const microSAASServices2028 = [
     reviews: 456,
     customers: 234
   },
-
   // AI Image Generator
   {
     id: 'ai-image-generator-plus',
@@ -238,7 +241,6 @@ const microSAASServices2028 = [
     reviews: 234,
     customers: 156
   },
-
   // AI Video Creator
   {
     id: 'ai-video-creator-studio',
@@ -281,7 +283,6 @@ const microSAASServices2028 = [
     reviews: 189,
     customers: 98
   },
-
   // AI Code Generator
   {
     id: 'ai-code-generator-pro',
@@ -324,7 +325,6 @@ const microSAASServices2028 = [
     reviews: 567,
     customers: 289
   },
-
   // AI Design Assistant
   {
     id: 'ai-design-assistant',
@@ -367,7 +367,6 @@ const microSAASServices2028 = [
     reviews: 234,
     customers: 123
   },
-
   // AI E-commerce Optimizer
   {
     id: 'ai-ecommerce-optimizer',
@@ -410,7 +409,6 @@ const microSAASServices2028 = [
     reviews: 345,
     customers: 178
   },
-
   // AI Customer Service
   {
     id: 'ai-customer-service-pro',
@@ -453,7 +451,6 @@ const microSAASServices2028 = [
     reviews: 456,
     customers: 234
   },
-
   // AI Analytics Platform
   {
     id: 'ai-analytics-platform',
@@ -489,15 +486,6 @@ const microSAASServices2028 = [
     integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],
     useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
-<<<<<<< HEAD
-    competitors: ['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],
-    marketSize: '$7.2B AI analytics market',
-    growthRate: '260% annual growth',
-    rating: 4.6,
-    reviews: 234,
-    customers: 123
-
-=======
     competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;
     marketSize: '$7.2B AI analytics market',;
     growthRate: '260% annual growth',;
@@ -505,8 +493,9 @@ const microSAASServices2028 = [
     reviews: 234,;
     customers: 123;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 const MicroSAASServices2028: React.FC = (): JSX.Element => {;
@@ -547,10 +536,9 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
           return b.popular ? 1 : -1;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           return b.popular ? 1 : -1}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -562,7 +550,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-
             Micro SAAS Services 2028
           </motion.h1>
           <motion.p
@@ -570,7 +557,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-
             Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
           </motion.p>
           <motion.div
@@ -578,7 +564,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               🚀 AI-Powered Solutions
             </div>
@@ -591,7 +576,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-12 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
@@ -609,13 +593,11 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>
               ))}
             </div>
-
             {/* Search and Sort */}
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative">
@@ -632,7 +614,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-
                 <option value="popularity">Most Popular</option>
                 <option value="rating">Highest Rated</option>
                 <option value="price-low">Price: Low to High</option>
@@ -642,7 +623,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -653,47 +633,26 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     Popular
                   </div>
                 )}
-
                 {/* Service Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Service Content */}
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                   {service.name}
@@ -704,13 +663,11 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                 <p className="text-zion-slate-light text-sm mb-6">
                   {service.description}
                 </p>
-
                 {/* Price */}
                 <div className="flex items-baseline gap-2 mb-6">
                   <span className="text-3xl font-bold text-zion-cyan">{service.price}</span>
                   <span className="text-zion-slate-light">{service.period}</span>
                 </div>
-
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => (
@@ -725,7 +682,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                     </div>
                   )}
                 </div>
-
                 {/* Stats */}
                 <div className="flex items-center justify-between text-sm text-zion-slate-light mb-6">
                   <div className="flex items-center gap-1">
@@ -734,16 +690,13 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
                   </div>
                   <div>{service.customers} customers</div>
                 </div>
-
                 {/* CTA Button */}
                 <Link
                   to={service.link}
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-
                 {/* Market Info */}
                 <div className="mt-6 pt-6 border-t border-zion-slate/30">
                   <div className="grid grid-cols-2 gap-4 text-xs text-zion-slate-light">
@@ -762,7 +715,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
@@ -771,7 +723,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-
             Ready to Get Started?
           </motion.h2>
           <motion.p
@@ -779,7 +730,6 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
           <motion.div
@@ -787,28 +737,17 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </motion.div>;
         </div>;
@@ -816,6 +755,4 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default MicroSAASServices2028;}}}

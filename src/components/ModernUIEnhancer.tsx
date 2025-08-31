@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React, { useEffect, useCallback, useState } from 'react';
+interface ModernUIEnhancerProps {
+=======
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react.ts';
 import { motion, AnimatePresence, useScroll, useTransform               } from 'framer-motion.ts';
 import {
@@ -87,26 +91,23 @@ import React, { useEffect, useCallback, useState } from 'react.ts';
 
 interface ModernUIEnhancerProps extends React.PropsWithChildren<{}> {
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
 
 }
-
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
   enabled = true 
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [accentColor, setAccentColor] = useState('#0ea5e9');
-
   const enhanceTypography = useCallback(() => {
     if (!enabled) return;
-
     // Add modern font loading
     const fontLink = document.createElement('link');
     fontLink.rel = 'preload';
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
     fontLink.as = 'style';
     document.head.appendChild(fontLink);
-
     // Apply modern typography
     const root = document.documentElement;
     root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif");
@@ -116,12 +117,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-semibold', '600');
     root.style.setProperty('--font-weight-bold', '700');
   }, [enabled]);
-
   const enhanceColorScheme = useCallback(() => {
     if (!enabled) return;
-
     const root = document.documentElement;
-    
     // Modern color palette
     const colors = {
       primary: anyanyanyanyanyanyanyanyanyanyanyanyanyanyaccentColor,
@@ -142,8 +140,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         800: '#1e293b',
         900: '#0f172a'
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   useEffect(()               => {
@@ -401,6 +400,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
       });
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
       if (typeof value === 'string') {
@@ -410,63 +410,14 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           root.style.setProperty(`--color-${key}-${shade}`, colorValue);
         });
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
-
     // Apply accent color variations
     root.style.setProperty('--color-primary-light', `${accentColor}20`);
     root.style.setProperty('--color-primary-dark', `${accentColor}80`);
   }, [enabled, accentColor]);
-
   const enhanceSpacing = useCallback(() => {
     if (!enabled) return;
-
     const root = document.documentElement;
-<<<<<<< HEAD
-
-    // Apply glassmorphism
-    if (settings.glassmorphism) {
-      root.classList.add('glassmorphism-enabled');
-    } else {
-      root.classList.remove('glassmorphism-enabled');
-
-    // Apply enhanced animations
-    if (settings.enhancedAnimations) {
-      root.classList.add('enhanced-animations');
-    } else {
-      root.classList.remove('enhanced-animations');
-
-    // Apply modern shadows
-    if (settings.modernShadows) {
-      root.classList.add('modern-shadows');
-    } else {
-      root.classList.remove('modern-shadows');
-
-    // Apply depth layers
-    if (settings.depthLayers) {
-      root.classList.add('depth-layers');
-    } else {
-      root.classList.remove('depth-layers');
-
-    // Apply color themes
-    if (settings.colorThemes) {
-      root.classList.add('color-themes');
-    } else {
-      root.classList.remove('color-themes');
-
-    // Apply active theme
-    root.className = root.className.replace(/theme-\w+/g, '');
-    root.classList.add(`theme-${activeTheme}`);
-  };
-
-  const cleanupUIEnhancements = () => {
-    // Remove added styles
-    const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
-    addedStyles.forEach(style => style.remove());
-
-    // Remove added classes
-=======
-    
     // Modern spacing scale (4px base unit)
     const spacing = {
       0: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
@@ -488,18 +439,18 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       28: '112px',
       32: '128px'
     };
+<<<<<<< HEAD
+    Object.entries(spacing).forEach(([key, value]) => {
+=======
 
     Object.entries(spacing).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
-
   const enhanceShadows = useCallback(() => {
     if (!enabled) return;
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const root = document.documentElement;
-    
     // Modern shadow system
     const shadows = {
       xs: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0 1px 2px 0 rgb(0 0 0 / 0.05)',
@@ -510,198 +461,18 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
+<<<<<<< HEAD
+    Object.entries(shadows).forEach(([key, value]) => {
+=======
 
     Object.entries(shadows).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--shadow-${key}`, value);
     });
   }, [enabled]);
-
   const enhanceTransitions = useCallback(() => {
     if (!enabled) return;
-
-<<<<<<< HEAD
-  return (
-    <>
-      {/* UI Enhancement Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.05, rotate: 5 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
-        aria-label="UI Enhancement settings"
-        aria-expanded={isOpen}
-        aria-controls="ui-enhancement-panel"
-
-        <Sparkles size={24} />
-      </motion.button>
-
-      {/* UI Enhancement Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-20 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl shadow-2xl p-6 w-80 z-50 border border-white/20 dark:border-gray-700/50 glass-effect"
-            role="dialog"
-            aria-labelledby="ui-enhancement-title"
-            aria-describedby="ui-enhancement-description"
-
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="ui-enhancement-title" className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                <Sparkles size={20} className="text-pink-500" />
-                UI Enhancements
-              </h2>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:scale-110 transition-transform"
-                aria-label="Close UI enhancement panel"
-
-                <X size={20} />
-              </button>
-            </div>
-
-            <p id="ui-enhancement-description" className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-              Customize the visual experience with modern UI effects
-            </p>
-
-            <div className="space-y-4">
-              {/* Glassmorphism */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Layers size={20} className="text-blue-600" />
-                  <span className="text-sm font-medium">Glassmorphism</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('glassmorphism')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.glassmorphism ? 'bg-blue-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.glassmorphism}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.glassmorphism ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Particle Effects */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Star size={20} className="text-yellow-600" />
-                  <span className="text-sm font-medium">Particle Effects</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('particleEffects')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.particleEffects ? 'bg-yellow-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.particleEffects}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.particleEffects ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Enhanced Animations */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Zap size={20} className="text-green-600" />
-                  <span className="text-sm font-medium">Enhanced Animations</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('enhancedAnimations')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.enhancedAnimations ? 'bg-green-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.enhancedAnimations}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.enhancedAnimations ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Modern Shadows */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Eye size={20} className="text-purple-600" />
-                  <span className="text-sm font-medium">Modern Shadows</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('modernShadows')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.modernShadows ? 'bg-purple-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.modernShadows}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.modernShadows ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Depth Layers */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Settings size={20} className="text-indigo-600" />
-                  <span className="text-sm font-medium">Depth Layers</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('depthLayers')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.depthLayers ? 'bg-indigo-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.depthLayers}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.depthLayers ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-            </div>
-
-            {/* Color Themes */}
-            <div className="mt-6">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <Palette size={16} className="text-pink-500" />
-                Color Themes
-              </h3>
-              <div className="grid grid-cols-3 gap-2">
-                {['default', 'cyber', 'nature', 'sunset', 'ocean', 'dark'].map((theme) => (
-                  <button
-                    key={theme}
-                    onClick={() => changeTheme(theme)}
-                    className={`p-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-                      activeTheme === theme
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    }`}
-
-                    {theme.charAt(0).toUpperCase() + theme.slice(1)}
-                  </button>
-                ))}
-              </div>
-            </div>
-=======
     const root = document.documentElement;
-    
     // Modern transition system
     const transitions = {
       fast: anyanyanyanyanyanyanyanyanyanyanyanyanyany'150ms ease-in-out',
@@ -711,17 +482,18 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
       sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
     };
+<<<<<<< HEAD
+    Object.entries(transitions).forEach(([key, value]) => {
+=======
 
     Object.entries(transitions).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--transition-${key}`, value);
     });
   }, [enabled]);
-
   const enhanceBorderRadius = useCallback(() => {
     if (!enabled) return;
-
     const root = document.documentElement;
-    
     // Modern border radius system
     const radius = {
       none: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
@@ -733,17 +505,18 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       '3xl': '24px',
       full: '9999px'
     };
+<<<<<<< HEAD
+    Object.entries(radius).forEach(([key, value]) => {
+=======
 
     Object.entries(radius).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--radius-${key}`, value);
     });
   }, [enabled]);
-
   const enhanceDarkMode = useCallback(() => {
     if (!enabled) return;
-
     const root = document.documentElement;
-    
     if (isDarkMode) {
       root.classList.add('dark');
       root.style.setProperty('--bg-primary', '#0f172a');
@@ -760,11 +533,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       root.style.setProperty('--border-color', '#e2e8f0');
     }
   }, [enabled, isDarkMode]);
-
   const enhanceComponents = useCallback(() => {
     if (!enabled) return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     // Add modern button styles
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');
     buttons.forEach((button) => {
@@ -778,7 +548,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         `;
       }
     });
-
     // Add modern card styles
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
     cards.forEach((card) => {
@@ -793,32 +562,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       }
     });
   }, [enabled]);
-
-<<<<<<< HEAD
-      {/* Floating UI Elements */}
-      {settings.depthLayers && (
-        <div className="fixed top-20 right-20 pointer-events-none z-30">
-          <motion.div
-            className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </div>
-      )}
-    </>
-  );
-};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div></motion.div>}
-=======
   useEffect(() => {
     if (!enabled) return;
-
     enhanceTypography();
     enhanceColorScheme();
     enhanceSpacing();
@@ -838,8 +583,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceDarkMode,
     enhanceComponents
   ]);
-
   // Don't render anything - this is a utility component
   return null;
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion               } from 'framer-motion.ts';
+import { motion  } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { Brain,
   Shield,
@@ -32,11 +32,8 @@ import { Brain,
   DollarSign,
   Search,
   Filter
-<<<<<<< HEAD
-=======
-              } from 'lucide-react.ts';
+ } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -121,15 +118,6 @@ const solutionCategories = [
     color: 'from-indigo-500 to-purple-600',
     solutions[
       'Process Automation',
-<<<<<<< HEAD
-      'Customer Experience',
-      'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
-      'Technology Consulting'
-    ]
-
-=======
       'Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
@@ -137,7 +125,6 @@ const solutionCategories = [
       'Technology Consulting';
     ];
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const industrySolutions = [
@@ -212,15 +199,6 @@ const industrySolutions = [
     solutions[
       'Digital Services',
       'Data Security',
-<<<<<<< HEAD
-      'Process Automation',
-      'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
-    ],
-    color: 'from-gray-500 to-slate-600'
-
-=======
       'Process Automation',;
       'Citizen Engagement',;
       'Regulatory Compliance',;
@@ -228,7 +206,6 @@ const industrySolutions = [
     ],;
     color: 'from-gray-500 to-slate-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const featuredSolutions = [
@@ -297,15 +274,6 @@ const featuredSolutions = [
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
-<<<<<<< HEAD
-      'Improved scalability'
-    ],
-    price: 'Starting at $1,800/month',
-    implementation: '8-16 weeks',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600'
-
-=======
       'Improved scalability';
     ],;
     price: 'Starting at $1,800/month',;
@@ -313,10 +281,9 @@ const featuredSolutions = [
     icon: Cloud,;
     color: 'from-blue-500 to-cyan-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function Solutions(...args[]: any):  {
+export default function Solutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -327,14 +294,8 @@ export default function Solutions(...args[]: any):  {
   const filteredSolutions = featuredSolutions.filter(solution => {;
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-    return matchesCategory && matchesSearch;
-  });
-=======
     
     return matchesCategory && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -404,15 +365,9 @@ export default function Solutions(...args[]: any):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {categories.map(category              => (
-=======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -423,15 +378,9 @@ export default function Solutions(...args[]: any):  {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {industries.map(industry              => (
-=======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                  {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -470,19 +419,11 @@ export default function Solutions(...args[]: any):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index)               => {;
-=======;
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutionCategories.map((category, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {solutionCategories.map((category, index) => {;
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -537,14 +478,6 @@ export default function Solutions(...args[]: any):  {
                       </div>
                       <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
-<<<<<<< HEAD
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              )})};
-=======;
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
                       </div>;
                     </div>;
@@ -552,7 +485,6 @@ export default function Solutions(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -586,19 +518,11 @@ export default function Solutions(...args[]: any):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index)               => {;
-=======;
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {industrySolutions.map((industry, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {industrySolutions.map((industry, index) => {;
               const IconComponent = industry.icon;
               return (
                 <motion.div
@@ -652,19 +576,7 @@ export default function Solutions(...args[]: any):  {
                     <Link
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-<<<<<<< HEAD
-
-=======
                     >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                      View {industry.industry} Solutions
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       View {industry.industry} Solutions;
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
@@ -672,7 +584,6 @@ export default function Solutions(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -706,19 +617,11 @@ export default function Solutions(...args[]: any):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index)               => {;
-=======;
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
-            {filteredSolutions.map((solution, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {filteredSolutions.map((solution, index) => {;
               const IconComponent = solution.icon;
               return (
                 <motion.div
@@ -813,19 +716,7 @@ export default function Solutions(...args[]: any):  {
                     <Link
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-<<<<<<< HEAD
-
-=======
                     >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       Learn More;
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
@@ -833,7 +724,6 @@ export default function Solutions(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -887,23 +777,10 @@ export default function Solutions(...args[]: any):  {
 
                 View Case Studies
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

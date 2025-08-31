@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+export default function AIProjectManager() {
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone              } from 'lucide-react.ts';
@@ -8,6 +15,7 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
 
 export default function AIProjectManager(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "AI-Powered Task Prioritization",
@@ -46,35 +54,6 @@ export default function AIProjectManager(...args: any[]): any {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
-<<<<<<< HEAD
-  const benefits = [
-    'Reduce project planning time by 70%',
-    'Improve project delivery success rate by 40%',
-    'Automate routine project management tasks',
-    'Real-time visibility into project health',
-    'Predict and prevent project delays',
-    'Optimize resource utilization'
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$99/mo',
-      features: ['Up to 10 projects', '5 team members', 'Basic AI insights', 'Email support'],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299/mo',
-      features: ['Up to 50 projects', '25 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799/mo',
-      features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],
-=======
   const pricingPlans = [
     {
       name: "Starter",
@@ -121,11 +100,8 @@ export default function AIProjectManager(...args: any[]): any {
         "Custom integrations"
       ],
       cta: "Contact Sales",
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       popular: false
-
   ];
-
   const benefits = [
     {
       title: "30% Faster Project Delivery",
@@ -146,8 +122,9 @@ export default function AIProjectManager(...args: any[]): any {
       metric: "90%"
     }
   ];
-
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <>
       <SEO
@@ -219,18 +196,17 @@ export default function AIProjectManager(...args: any[]): any {
                 </motion.div>
               ))}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
         description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today."
         keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             className="text-center"
@@ -251,12 +227,10 @@ export default function AIProjectManager(...args: any[]): any {
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Watch Demo
               </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,9 +248,14 @@ export default function AIProjectManager(...args: any[]): any {
               Our AI engine learns from your team's patterns and continuously optimizes your project workflows
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -296,6 +275,8 @@ export default function AIProjectManager(...args: any[]): any {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Benefits Section */}
@@ -327,6 +308,7 @@ export default function AIProjectManager(...args: any[]): any {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-white" />
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,9 +326,14 @@ export default function AIProjectManager(...args: any[]): any {
               Join thousands of teams who have transformed their project management with AI
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -366,7 +353,6 @@ export default function AIProjectManager(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -384,9 +370,14 @@ export default function AIProjectManager(...args: any[]): any {
               Choose the plan that fits your team size and needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -403,9 +394,10 @@ export default function AIProjectManager(...args: any[]): any {
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Pricing Section */}
@@ -450,16 +442,15 @@ export default function AIProjectManager(...args: any[]): any {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-zion-slate-light ml-1">{plan.period}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -468,7 +459,6 @@ export default function AIProjectManager(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -481,7 +471,6 @@ export default function AIProjectManager(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -505,42 +494,9 @@ export default function AIProjectManager(...args: any[]): any {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container-responsive text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Transform Your Project Management?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of teams already using AI Project Manager to deliver projects faster and more efficiently
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
           </motion.div>
         </div>
       </section>
     </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

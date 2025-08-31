@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React from 'react.ts'
-import { Link              } from 'react-router-dom.ts'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock export default function Careers(...args: any[]): any {
-=======
-import React from 'react.ts'
-import { Link               } from 'react-router-dom.ts'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock               } from 'lucide-react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
 
 
-export default function Careers(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Careers(...args[]):  {
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -169,8 +163,8 @@ export default function Careers(...args[]: any):  {
 							Ready to join our mission? Check out our current openings.
 						</p>
 					</div>
-					<div className="grid gap-6 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
-						{openPositions.map((position)               => (
+					<div className="grid gap-6 lg: grid-cols-2">
+						{openPositions.map((position)  => (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>
@@ -222,14 +216,6 @@ export default function Careers(...args[]: any):  {
 								careers@ziontechgroup.com
 							</a>
 						</div>
-<<<<<<< HEAD
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 					</div>;
 				</div>;
 			</section>;
@@ -237,4 +223,3 @@ export default function Careers(...args[]: any):  {
 	);
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

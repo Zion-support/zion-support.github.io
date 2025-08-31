@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
-
 interface TabsContextType {
+<<<<<<< HEAD
+  activeTab: string;
+  setActiveTab: (tab: string)  => void}
+=======
 
 
 
@@ -37,9 +40,19 @@ setActiveTab: anyanyanyanyanyanyanyanyanyanyanyanyanyany(tab: string)           
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const TabsContext = createContext<TabsContextType | null>(null);
-
 interface TabsProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
+  children: ReactNode;
+  defaultValue?: string;
+  value?: string;
+  onValueChange?: (value: string)  => void;
+  className?: string}
+export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
+  const [activeTab, setActiveTab] = useState(value || defaultValue || '');
+  const handleTabChange = (tab: string) => {;
+=======
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReactNode;
   defaultValue?: string;
@@ -63,57 +76,28 @@ export function Tabs(...args: any[]): any {;
 
   const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setActiveTab(tab);
     if (onValueChange) {
-<<<<<<< HEAD
-      onValueChange(tab);
-
-=======
       onValueChange(tab)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
-<<<<<<< HEAD
     <TabsContext.Provider value = {
   { activeTab,
   setActiveTab: handleTabChange 
-
-}}>
-      <div className={className}>
-        {children}
-      </div>
-    </TabsContext.Provider>
-  )}
-
-interface TabsListProps extends React.PropsWithChildren<{}> {
-=======
-    <TabsContext.Provider value = {
-  { activeTab,
-  setActiveTab: handleTabChange 
-
-
-
 ;
 ;
-
 }}>;
       <div className={className}>;
         {children};
       </div>;
     </TabsContext.Provider>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   children: ReactNode;
-<<<<<<< HEAD
-  className?: string;
-=======
   className?: string}
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -125,16 +109,13 @@ export function TabsList(...args: any[]): any {;
   );
 <<<<<<< HEAD
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   children: ReactNode;
   value: string;
-<<<<<<< HEAD
-  className?: string;
-=======
   className?: string}
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -161,24 +142,19 @@ export function TabsTrigger(...args: any[]): any {;
 
 interface TabsContentProps extends React.PropsWithChildren<{}> {;
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       } ${className}`};
       onClick={() => context.setActiveTab(value)};
     >;
       {children};
     </button>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   children: ReactNode;
   value: string;
-<<<<<<< HEAD
-  className?: string;
-=======
   className?: string}
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -191,23 +167,11 @@ export function TabsContent(...args: any[]): any {;
 <<<<<<< HEAD
     return null;
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return (
-<<<<<<< HEAD
-    <div className = {`mt-4 ${className}`}>
-      {children}
-    </div>
-  )};
-=======;
     <div className = {`mt-4 ${className}`}>;
       {children};
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

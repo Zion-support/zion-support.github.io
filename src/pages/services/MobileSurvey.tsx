@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail } from 'lucide-react';
+export default function MobileSurvey() {
+=======
+<<<<<<< HEAD
 import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail export default function MobileSurvey(...args: any[]): any {
   const features = [
     'Mobile-first NPS/CSAT/CES templates',
@@ -11,6 +15,7 @@ import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, 
 import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail              } from 'lucide-react.ts';
 
 export default function MobileSurvey(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [;
     'Mobile-first NPS/CSAT/CES templates',;
     'QR code and link campaigns',;
@@ -18,7 +23,6 @@ export default function MobileSurvey(...args: any[]): any {
     'Webhooks to CRM/Slack',;
     'Kiosk mode for in-person feedback',;
     'Multilingual with auto-translate';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const pricing = [;
     { name: 'Starter', price: '$39/mo', details: ['1,000 responses', 'Email export'] },;

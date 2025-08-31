@@ -26,6 +26,11 @@ import { Brain,
   ChevronDown,
   ChevronUp
 <<<<<<< HEAD
+} from 'lucide-react';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
+export default function InnovativeServices2028(...args[]):  {
+=======
+<<<<<<< HEAD
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo              } from '../data/innovativeServices2028';
 =======
 <<<<<<< HEAD
@@ -38,11 +43,11 @@ import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo   
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function InnovativeServices2028(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [expandedService, setExpandedService] = useState<any>(null);
-
   const filteredServices = innovativeServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
       serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
@@ -50,7 +55,6 @@ export default function InnovativeServices2028(...args[]: any):  {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
-
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
@@ -60,13 +64,10 @@ export default function InnovativeServices2028(...args[]: any):  {
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-<<<<<<< HEAD
-        return 0;
-
-=======
         return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const getCategoryIcon = (categoryName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -610,15 +611,11 @@ export default function InnovativeServices2028(...args[]: any):  {
     </div>
   )};
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

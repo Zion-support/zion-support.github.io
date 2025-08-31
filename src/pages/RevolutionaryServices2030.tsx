@@ -40,6 +40,8 @@ import { Brain,
   Bot,
   Code,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Palette,
   Gamepad2,
   Music
@@ -48,6 +50,7 @@ import { REVOLUTIONARY_SERVICES_2030              } from '@/data/revolutionarySe
 import { EMERGING_TECH_SERVICES_2030              } from '@/data/emergingTechServices2030';
 import { REVOLUTIONARY_PRICING_GUIDE_2030              } from '@/data/revolutionaryPricingGuide2030';
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Server,
   Chip,
   Wifi,
@@ -57,6 +60,10 @@ import { REVOLUTIONARY_PRICING_GUIDE_2030              } from '@/data/revolution
   Target as TargetIcon,
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
+<<<<<<< HEAD
+import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
+export default function RevolutionaryServices2030() {
+=======
 import { allRevolutionaryServices2030              } from '../data/revolutionaryServices2030';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -88,10 +95,10 @@ export default function RevolutionaryServices2030(...args[]: any):  {
         return b.aiScore - a.aiScore;
 =======
 export default function RevolutionaryServices2030(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-
   const categories = [;
     { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;
@@ -99,14 +106,12 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;
     { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;
     { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;
     { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
-
   const sortOptions = [;
     { id: 'featured', name: 'Featured' },;
     { id: 'price-low', name: 'Price: Low to High' },;
@@ -114,13 +119,11 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'market-size', name: 'Market Size' };
   ];
-
   // Combine all revolutionary services
   const allServices = [;
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
-
   // Filter and sort services
   const filteredServices = allServices.filter(service => {;
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
@@ -128,9 +131,10 @@ export default function RevolutionaryServices2030(...args: any[]): any {
       (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||
       (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
-
     return categoryMatch && priceMatch;
   });
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -160,11 +164,16 @@ export default function RevolutionaryServices2030(...args: any[]): any {
         return Rocket;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Service Card Component
 const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyanyanyanyany; type: 'microSaas' | 'itService' | 'aiService' })              => {
   const [isExpanded, setIsExpanded] = useState(false);
+<<<<<<< HEAD
+  const getIcon = (category: string) => {
+=======
 
   const getIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.includes('AI') || category.includes('Neural')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Satellite;
@@ -176,11 +185,8 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
     if (category.includes('Multimodal')) return Cpu;
     if (category.includes('Autonomous')) return Bot;
     return Zap;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const IconComponent = getIcon(service.category);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -191,7 +197,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
       <div className="relative bg-gradient-to-br from-slate-800/80 via-slate-700/80 to-slate-800/80 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-6 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/20">
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-blue-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
         {/* Header */}
         <div className="relative z-10">
           <div className="flex items-start justify-between mb-4">
@@ -213,9 +218,7 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
               {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
             </button>
           </div>
-
           <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
-
           {/* Pricing and Key Info */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div className="bg-slate-700/50 rounded-lg p-3">
@@ -229,7 +232,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
                  `$${service.price.toLocaleString()}/month`}
               </p>
             </div>
-            
             <div className="bg-slate-700/50 rounded-lg p-3">
               <div className="flex items-center space-x-2 mb-1">
                 <TrendingUp className="w-4 h-4 text-green-400" />
@@ -242,7 +244,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
               </p>
             </div>
           </div>
-
           {/* Features Preview */}
           <div className="mb-4">
             <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">
@@ -258,7 +259,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
               ))}
             </div>
           </div>
-
           {/* Expanded Content */}
           <AnimatePresence>
             {isExpanded && (
@@ -282,7 +282,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
                       ))}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Benefits</h4>
@@ -295,7 +294,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
                       ))}
                     </div>
                   </div>
-
                   {/* Target Audience */}
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Target Audience</h4>
@@ -307,7 +305,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
                       ))}
                     </div>
                   </div>
-
                   {/* Additional Info */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -323,7 +320,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
               </motion.div>
             )}
           </AnimatePresence>
-
           {/* CTA Button */}
           <div className="mt-6">
             <Link
@@ -339,18 +335,21 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
     </motion.div>
   );
 };
-
 // Main Component
+<<<<<<< HEAD
+export default function RevolutionaryServices2030() {
+  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
+=======
 export default function RevolutionaryServices2030(...args: any[]): any {
   const [activeTab, setActiveTab] = useState<any>('all');
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tabs = [
     { id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
     { id: 'itServices', label: 'IT Services', count: allRevolutionaryServices2030.itServices.length },
     { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length },
   ];
-
   const getFilteredServices = () => {
     switch (activeTab) {
       case 'microSaas':
@@ -360,19 +359,13 @@ export default function RevolutionaryServices2030(...args: any[]): any {
       case 'aiServices':
         return allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }));
       default:
-<<<<<<< HEAD
-        return 'from-zion-orange to-zion-green';
-
-=======
         return [
           ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'microSaas' as const })),
           ...allRevolutionaryServices2030.itServices.map(service              => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'itService' as const })),
           ...allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }))
         ];
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -382,7 +375,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
         image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg"
         url="https://ziontechgroup.com/revolutionary-services-2030"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -390,24 +382,15 @@ export default function RevolutionaryServices2030(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Revolutionary Services
-              <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-orange bg-clip-text text-transparent">
-                2030
-=======
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full px-6 py-2 mb-6">
               <StarIcon className="w-5 h-5 text-cyan-400" />
               <span className="text-cyan-400 font-semibold">Revolutionary Services 2030</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Future of Technology
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </span>
               <br />
               <span className="text-white">Starts Here</span>
@@ -416,24 +399,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
               Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services.
               Transform your business with solutions that were once science fiction.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
-                <Rocket className="mr-2 h-5 w-5" />
-                Get Started Today
-              </Link>
-              <Link
-                to="#services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
-                <Target className="mr-2 h-5 w-5" />
-                Explore Services
-              </Link>
-=======
-
             {/* Stats */}
             <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
@@ -456,55 +421,10 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                   </div>
                 </motion.div>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
       </div>
-
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}</div>
-              <div className="text-gray-400">Revolutionary Services</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
-
-              <div className="text-4xl font-bold text-zion-purple mb-2">$2.1T+</div>
-              <div className="text-gray-400">Combined Market Size</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
-
-              <div className="text-4xl font-bold text-zion-orange mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime Guarantee</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
-
-              <div className="text-4xl font-bold text-zion-green mb-2">24/7</div>
-              <div className="text-gray-400">Global Support</div>
-            </motion.div>
-          </div>
-=======
       {/* Contact Banner */}
       <div className="relative z-10 mb-16">
         <div className="container mx-auto px-4">
@@ -535,11 +455,11 @@ export default function RevolutionaryServices2030(...args: any[]): any {
               </div>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
-
       {/* Services Section */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -595,6 +515,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
               </select>
             </div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div className="relative z-10 pb-20">
         <div className="container mx-auto px-4">
           {/* Tab Navigation */}
@@ -615,35 +536,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                 </span>
               </button>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Filters and Search */}
-            <div className="mb-12">
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex-1 max-w-md">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search revolutionary services..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500";
-=======;
 ;
           {/* Services Grid */};
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
@@ -651,68 +544,26 @@ export default function RevolutionaryServices2030(...args: any[]): any {
               {sortedServices.map((service, index)              => {;
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
-
                 return (
                   <motion.div
                     key = {service.id}
                     initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                     className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"
-<<<<<<< HEAD
-
-                    {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass}`}>
-                        <IconComponent className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        {service.featured && (
-                          <span className="px-2 py-1 bg-zion-orange text-white text-xs rounded-full">Featured</span>
-                        )}
-                        {service.trending && (
-                          <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">Trending</span>
-                        )}
-                      </div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   >
                     <option value="rating">Sort by Rating</option>
                     <option value="price">Sort by Price</option>
@@ -721,7 +572,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                   </select>
                 </div>
               </div>
-
               {/* Category Filters */}
               <div className="mt-8">
                 <div className="flex flex-wrap gap-3">
@@ -751,7 +601,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                 </div>
               </div>
             </div>
-
             {/* Services Grid */}
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service)               => (
@@ -760,12 +609,10 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                   initial = {
   { opacity: 0,
   y: 20 
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
-
 }}
                   transition={{ duration: 0.5 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
@@ -774,15 +621,11 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                   <div className="flex items-center justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                       {getCategoryIcon(service.category)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </div>
-
                     {/* Service Title */}
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-
                     {/* Service Description */}
                     <p className="text-gray-400 mb-4 line-clamp-3">{service.description}</p>
-
                     {/* Service Details */}
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center text-sm text-gray-300">
@@ -790,32 +633,26 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                         <span className="font-medium">${service.pricing.monthly.toLocaleString()}/month</span>
                         <span className="text-gray-500 ml-2">({service.pricing.marketPrice})</span>
                       </div>
-
                       <div className="flex items-center text-sm text-gray-300">
                         <BarChart3 className="mr-2 h-4 w-4 text-zion-blue" />
                         <span>Market: {service.marketSize}</span>
                       </div>
-
                       <div className="flex items-center text-sm text-gray-300">
                         <Star className="mr-2 h-4 w-4 text-zion-yellow" />
                         <span>{service.rating}/5 ({service.reviewCount} reviews)</span>
                       </div>
-
                       <div className="flex items-center text-sm text-gray-300">
                         <Gauge className="mr-2 h-4 w-4 text-zion-purple" />
                         <span>Innovation: {service.innovationLevel}</span>
                       </div>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
                       <span className="text-gray-400 text-sm">Price:</span>
@@ -834,13 +671,14 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                       <span className="text-purple-400 font-semibold">{service.aiScore}/100</span>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
                         className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
                       >
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         {tag}
                       </span>
@@ -1112,6 +950,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                         className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 px-4 rounded-lg font-medium hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
                   <div className="space-y-4">
@@ -1139,31 +978,18 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                 </div>
               </motion.div>
             </div>
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         Learn More
                       </Link>
-
                       <div className="flex space-x-2">
                         <Link
                           to="/contact"
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
-
                           <Phone className="inline mr-1 h-3 w-3" />
                           Contact
                         </Link>
                         <Link
                           to={service.website}
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
-<<<<<<< HEAD
-
-                          <Globe className="inline mr-1 h-3 w-3" />
-                          Website
-                        </Link>
-                      </div>
-                    </div>
-                  </motion.div>
-=======
                         >;
                           <Globe className="inline mr-1 h-3 w-3" />;
                           Website;
@@ -1171,35 +997,12 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                       </div>;
                     </div>;
                   </motion.div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 );
               })}
             </AnimatePresence>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
-<<<<<<< HEAD
-
-          {/* No Results */}
-          {sortedServices.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                  setSortBy('featured');
-                }}
-                className="text-zion-cyan hover:text-zion-blue transition-colors duration-300"
-
-                Clear all filters
-              </button>
-            </div>
-          )}
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
-
       {/* Footer CTA */}
       <div className="relative z-10 pb-20">
         <div className="container mx-auto px-4">
@@ -1207,150 +1010,20 @@ export default function RevolutionaryServices2030(...args: any[]): any {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-=======
             className="text-center"
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the <span className="text-cyan-400">Revolution</span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Don't wait for the future to arrive. Partner with Zion Tech Group and lead the transformation of your industry.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
-
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
-                <Mail className="mr-2 h-5 w-5" />
-                Get Started Today
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
-                <DollarSign className="mr-2 h-5 w-5" />
-                View Pricing
-              </Link>
-=======
-<<<<<<< HEAD
-              <h2 className="text-3xl font-bold text-white mb-4">{selectedService.title}</h2>
-              <p className="text-gray-300 text-lg mb-6">{selectedService.description}</p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Category:</span>
-                      <span className="text-white">{selectedService.category}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Subcategory:</span>
-                      <span className="text-white">{selectedService.subcategory}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Price:</span>
-                      <span className="text-white font-semibold">${selectedService.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Market Price:</span>
-                      <span className="text-green-400">{selectedService.marketPrice}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Setup Time:</span>
-                      <span className="text-blue-400">{selectedService.setupTime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">AI Score:</span>
-                      <span className="text-purple-400 font-semibold">{selectedService.aiScore}/100</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Rating:</span>
-                      <span className="text-white">{selectedService.rating}/5 ({selectedService.reviewCount} reviews)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
-                  <div className="space-y-3">
-                    {selectedService.tags.map((tag, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        <span className="text-gray-300">{tag}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white mb-4 mt-6">ROI & Benefits</h3>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <p className="text-green-400 font-semibold">{selectedService.roi}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Integrations</h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedService.integrations.map((integration, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
-                    >
-                      {integration}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Competitors</h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedService.competitors.map((competitor, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"
-                    >
-                      {competitor}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`}
-                  className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                >
-                  Get Quote
-                </a>
-                <a
-                  href={`tel:${selectedService.contactInfo.phone}`}
-                  className="flex-1 border-2 border-white/30 text-white py-4 px-6 rounded-lg font-semibold text-center hover:bg-white/10 transition-all duration-300"
-                >
-                  Call Now
-                </a>
-              </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </>
-  )}
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -1383,10 +1056,5 @@ export default function RevolutionaryServices2030(...args: any[]): any {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}}}}}
-=======
 };
-
 export default RevolutionaryServices2030;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

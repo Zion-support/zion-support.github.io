@@ -9,6 +9,9 @@ import { Star,
   ArrowRight,
   Heart
 <<<<<<< HEAD
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
 export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
 =======
               } from 'lucide-react.ts';
@@ -55,18 +58,16 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const successMetrics = [
     { label: 'Client Satisfaction', value: '98%', icon: Heart },
     { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
     { label: 'Client Retention', value: '95%', icon: Users },;
     { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
-=======
 const successStories = [
   {
     id: 1,
@@ -120,43 +121,30 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
+<<<<<<< HEAD
+export function ClientSuccessStoriesSection() {
+=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function ClientSuccessStoriesSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Client Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -164,9 +152,10 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
             across industries achieve remarkable transformations and measurable success.
           </p>
         </motion.div>
-
         {/* Success Metrics */}
         <motion.div
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -175,25 +164,27 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
 
           {successMetrics.map((metric, index)               => {
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
-
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
+<<<<<<< HEAD
+          {successMetrics.map((metric, index)  => {;
+=======
           {successMetrics.map((metric, index)                => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
@@ -209,54 +200,26 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
               </div>
             )})}
         </motion.div>
-
         {/* Testimonials Grid */}
         <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)                => (
             <motion.div
-<<<<<<< HEAD
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-
-=======
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="flex items-center mb-6">
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>
                 <div>
@@ -274,22 +237,18 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
                   </div>
                 </div>
               </div>
-              
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2">
                   {story.client}
                 </h3>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge:</h4>
                   <p className="text-gray-400 text-sm">{story.challenge}</p>
                 </div>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution:</h4>
                   <p className="text-gray-400 text-sm">{story.solution}</p>
                 </div>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Results:</h4>
                   <ul className="space-y-1">
@@ -301,7 +260,6 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="border-t border-slate-700 pt-4">
                   <blockquote className="text-gray-300 text-sm italic mb-3">
                     "{story.testimonial}"
@@ -322,47 +280,27 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
             </motion.div>
           ))}
         </div>
-
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
             </h3>
-            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">98%</div>
@@ -383,45 +321,22 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
             </div>
           </div>
         </motion.div>
-
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
@@ -445,12 +360,7 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default ClientSuccessStoriesSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -458,8 +368,5 @@ export default ClientSuccessStoriesSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

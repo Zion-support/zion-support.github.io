@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -6,6 +11,7 @@ import { Bot, Clock, Globe, TrendingDown, CheckCircle import { GradientHeading  
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star               } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Benefit {
 
 
@@ -28,8 +34,12 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
+<<<<<<< HEAD
+const benefits: Benefit[] = [
+=======
 
 const benefits: Benefit[] = [;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
 title: "AI-Powered Matchmaking",;
 description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
@@ -99,12 +109,16 @@ features: [;
       "Bulk discount options",
       "Transparent cost structure"
     ]
-
 ];
+<<<<<<< HEAD
+export function BenefitsSection() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+=======
 
 export function BenefitsSection(...args: any[]): any {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -112,27 +126,21 @@ export function BenefitsSection(...args: any[]): any {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-
-
   };
-
   const statsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 }
   };
-
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6" /> },
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6" /> },
     { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
     { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
@@ -142,7 +150,6 @@ export function BenefitsSection(...args: any[]): any {
           backgroundSize: '40px 40px'
         }} />
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -161,7 +168,6 @@ export function BenefitsSection(...args: any[]): any {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-20"
@@ -169,34 +175,32 @@ export function BenefitsSection(...args: any[]): any {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-
-          <GradientHeading className="mb-4">
-=======
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Why Choose Zion?
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </motion.div>
-
         {/* Stats section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+<<<<<<< HEAD
+          viewport={{ once: true }}
+          {stats.map((stat, index) => (
+=======
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {stats.map((stat, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -205,36 +209,21 @@ export function BenefitsSection(...args: any[]): any {
             </motion.div>
           ))}
         </motion.div>
-
         <motion.div
           className="relative"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
           </div>
-
           {/* Benefits */}
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                variants={itemVariants}
-                onHoverStart={() => setHoveredIndex(index)}
-                onHoverEnd={() => setHoveredIndex(null)}
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 300 }}
-
-                <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
-                  {/* Icon with enhanced background */}
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                    <div className="text-white">
-=======
                 className="relative group"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -247,7 +236,6 @@ export function BenefitsSection(...args: any[]): any {
                 <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full animate-ping opacity-75"></div>
                 </div>
-
                 <motion.div
                   className="relative p-8 rounded-2xl bg-gradient-to-br from-zion-slate-dark/80 to-zion-blue-dark/80 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group-hover:scale-105"
                   whileHover={{ y: -10 }}
@@ -255,11 +243,9 @@ export function BenefitsSection(...args: any[]): any {
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <div className={`text-gradient ${benefit.color}`}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       {benefit.icon}
                     </div>
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {benefit.title}
@@ -267,12 +253,10 @@ export function BenefitsSection(...args: any[]): any {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {benefit.description}
                   </p>
-
                   {/* Stats */}
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-lg mb-6">
                     <span className="text-zion-cyan font-semibold">{benefit.stats}</span>
                   </div>
-
                   {/* Features */}
                   <ul className="space-y-3">
                     {benefit.features.map((feature, featureIndex) => (
@@ -282,11 +266,12 @@ export function BenefitsSection(...args: any[]): any {
                       </li>
                     ))}
                   </ul>
-
                   {/* Hover effect overlay */}
                   <AnimatePresence>
                     {hoveredIndex === index && (
                       <motion.div
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         className="space-y-2"
                         initial={{ opacity: 0, height: 0 }}
@@ -308,13 +293,13 @@ export function BenefitsSection(...args: any[]): any {
                         ))}
                       </motion.div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     )}
                   </AnimatePresence>
                 </motion.div>
@@ -322,6 +307,8 @@ export function BenefitsSection(...args: any[]): any {
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         {/* Stats Section */}
@@ -384,8 +371,8 @@ export function BenefitsSection(...args: any[]): any {
 
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </section>
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

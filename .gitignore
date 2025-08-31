@@ -78,6 +78,9 @@ temp/
 # Vite
 .vite/
 core
+<<<<<<< HEAD
+tsconfig.tsbuildinfo
+=======
 
 # Automation and reports (exclude from build)
 automation/
@@ -123,3 +126,4 @@ start-*-automation.sh
 monitor-*.sh
 manage-*.sh
 backups/sync-backups/
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

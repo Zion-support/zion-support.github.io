@@ -1,20 +1,19 @@
 import React from 'react.ts';
+<<<<<<< HEAD
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '@/lib/utils';
+=======
 import { motion                } from 'framer-motion.ts';
 import { cn                } from '@/lib/utils';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SkeletonProps extends React.PropsWithChildren<{}> {
-
   className?: string;
   variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
   width?: string | number;
   height?: string | number;
   lines?: number;
-<<<<<<< HEAD
-  animated?: boolean;
-=======
   animated?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'default',;
@@ -24,7 +23,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true,;
 }) => {;
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
-
   const variants = {
   default: 'h-4 w-full',
     circular: 'rounded-full',
@@ -37,20 +35,12 @@ const Skeleton: React.FC<SkeletonProps> = ({
   ;
   card: 'w-full h-32 rounded-lg';
   ;
-
-
-
-
-
-
 };
-
   const skeletonClasses = cn(;
     baseClasses,;
     variants[variant],;
     className;
   );
-
   if (variant = == 'text' && lines > 1) {
     return (
       <div className="space-y-2">
@@ -61,53 +51,13 @@ const Skeleton: React.FC<SkeletonProps> = ({
   cn(
               baseClasses,
               'h-4',
-<<<<<<< HEAD
-              index === lines - 1 ? 'w-3/4' : 'w-full'
-            )}
-            initial={animated ? { opacity: 0.5 } : { /* empty */ }}
-            animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
-            transition={{
-=======
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
-
-
-
-
-
-
 }
             initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-            animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-            transition = {
-  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-  delay: index * 0.1
-            
-
-}}
-          />
-        ))}
-      </div>
-    )}
-=======
             animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
             transition = {
   {
@@ -115,65 +65,26 @@ const Skeleton: React.FC<SkeletonProps> = ({
               repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
-            
-
 ;
 ;
 ;
-
-
 }};
           />;
         ))};
       </div>;
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
-
   return (
     <motion.div
       className = {skeletonClasses}
       style={style}
-<<<<<<< HEAD
-      initial={animated ? { opacity: 0.5 } : { /* empty */ }}
-      animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
-      transition={{
-=======
       initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-      animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-      transition = {
-  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        duration: 1.5,
-        repeat: Infinity,
-  ease: 'easeInOut'
-      
-
-}};
-    />;
-  )};
-=======
       animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
       transition = {
   {
@@ -183,27 +94,15 @@ const Skeleton: React.FC<SkeletonProps> = ({
       ;
 ;
 ;
-
-
-
-
 }};
     />;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 // Specialized skeleton components
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
   <div className = {
   cn('p-6 space-y-4',
   className)
-
-
-
-
-
-
 }>
     <Skeleton variant="rectangular" height={24} width="60%" />
     <Skeleton variant="text" lines={3} />;
@@ -214,7 +113,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
     </div>;
   </div>;
 );
-
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
   rows = 5,
   columns = 4,
@@ -223,12 +121,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className = {
   cn('space-y-3',
   className)
-
-
-
-
-
-
 }>
     {/* Header */}
     <div className="flex space-x-4">
@@ -240,6 +132,9 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)                => (
       <div key={rowIndex} className="flex space-x-4">
 <<<<<<< HEAD
+        {Array.from({ length: columns }).map((_, colIndex) => (;
+=======
+<<<<<<< HEAD
         {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)                => (
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
         ))}
@@ -248,22 +143,24 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   </div>
 =======;
         {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
       </div>;
     ))};
   </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 );
-
 export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   items = 5,
   className
 }) => (
-<<<<<<< HEAD
   <div className = {
   cn('space-y-4',
   className)
+<<<<<<< HEAD
+}>
+    {Array.from({ length: items }).map((_, index) => (
+=======
 
 }>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)                => (
@@ -280,6 +177,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 }>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)               => (
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">;
@@ -290,7 +188,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
     ))};
   </div>;
 );
-
 export const GridSkeleton: React.FC<{
   rows?: number;
   columns?: number;
@@ -304,13 +201,10 @@ export const GridSkeleton: React.FC<{
   <div className = {
   cn('grid gap-4',
   className)
-
-
-
-
-
-
 } style={{
+<<<<<<< HEAD
+    gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
+=======
     gridTemplateColumns: anyanyanyanyanyanyanyanyanyanyanyanyanyany`repeat(${columns}, minmax(0, 1fr))`
 <<<<<<< HEAD
   }}>
@@ -319,12 +213,11 @@ export const GridSkeleton: React.FC<{
     ))}
   </div>;
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }}>;
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows * columns }).map((_, index)               => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
     ))};
   </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 );
-
 export default Skeleton;}</motion.div></motion.div>}

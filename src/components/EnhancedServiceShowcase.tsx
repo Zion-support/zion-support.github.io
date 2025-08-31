@@ -18,6 +18,10 @@ import { Brain,
   Award,
   CheckCircle
 <<<<<<< HEAD
+ } from 'lucide-react';
+interface Service {
+=======
+<<<<<<< HEAD
 =======
                } from 'lucide-react.ts';
 
@@ -38,6 +42,7 @@ interface Service {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -63,12 +68,7 @@ icon: React.ComponentType<{ className?: string;
   reviews: number;
   color: string;
   popular?: boolean;
-<<<<<<< HEAD
-  link: string;
-=======
   link: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const services: Service[] = [
   {
     id: 'ai-business-intelligence',
@@ -175,9 +175,7 @@ const services: Service[] = [
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
-
 ];
-
 const categories = [
   'All Services',
   'AI & Machine Learning',
@@ -189,6 +187,8 @@ const categories = [
   'Micro SAAS',;
   'Healthcare AI';
 ];
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
@@ -206,29 +206,28 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
 <<<<<<< HEAD
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('service-showcase');
     if (element) {
-<<<<<<< HEAD
-      observer.observe(element);
-=======
       observer.observe(element)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     return () => observer.disconnect()}, []);
-
   const filteredServices = selectedCategory === 'All Services'
+<<<<<<< HEAD
+    ? services
+    : services.filter(service => service.category === selectedCategory);
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
+=======
     ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)                => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -238,7 +237,6 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
         }`};
       />;
     ))};
-=======
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';
@@ -246,8 +244,6 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
       />;
     ));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
@@ -256,26 +252,13 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
-
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
               Services
@@ -286,41 +269,21 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
             cutting-edge AI, cybersecurity, and innovative digital transformation services.
           </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
-
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
-
           {categories.map((category, index) => (
             <button
               key={category}
@@ -330,12 +293,10 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'
               }`}
-
               {category}
             </button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -343,15 +304,8 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -364,19 +318,11 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
                   delay: index * 0.1,
                   type: "spring",
   stiffness: 100
-                
-
-
-
-
-
-
 }}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
-
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
                     {/* Popular Badge */}
@@ -385,22 +331,18 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
                         Popular
                       </div>
                     )}
-
                     {/* Service Icon */}
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-
                     {/* Service Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}
                       </h3>
-
                       <p className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
-
                       {/* Features */}
                       <div className="space-y-2">
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -415,7 +357,6 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
                           </div>
                         )}
                       </div>
-
                       {/* Pricing & Rating */}
                       <div className="flex items-center justify-between pt-4 border-t border-zion-slate">
                         <div className="flex items-center space-x-2">
@@ -428,7 +369,6 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
                           <span className="text-sm text-gray-400">({service.reviews})</span>
                         </div>
                       </div>
-
                       {/* CTA Button */}
                       <div className="flex items-center justify-between pt-4">
                         <span className="text-sm text-zion-cyan font-semibold">
@@ -443,41 +383,21 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
-
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}
           className="text-center mt-16"
-
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -490,34 +410,19 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-
                 <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

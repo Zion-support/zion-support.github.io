@@ -1,13 +1,16 @@
 import React from 'react.ts';
+<<<<<<< HEAD
+import { SEO  } from '@/components/SEO';
+=======
 import { SEO               } from '@/components/SEO';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 type Service = {;
   name: string;
   path: string;
   summary: string;
   price: string;
   category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'};
-
 const services: Service[] = [
   { name: 'Website AI Chatbot', path: '/services/website-ai-chatbot', summary: '24/7 on-site AI that answers, qualifies, and books meetings.', price: '$299–$899/mo', category: 'Micro SaaS' },
   { name: 'RAG Search', path: '/services/rag-search', summary: 'Private semantic search over your docs, wiki, and tickets.', price: '$199–$999/mo', category: 'AI Solutions' },
@@ -40,6 +43,9 @@ const services: Service[] = [
   { name: 'SOC2/ISO 27001 Readiness', path: '/services/soc2-iso-readiness', summary: 'Policies, controls, evidence automation, and gap closure.', price: '$8k–$45k project', category: 'IT Services' },
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
+<<<<<<< HEAD
+  return acc}, {});
+=======
 
 <<<<<<< HEAD
 const groupByCategory = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyService[])              => items.reduce<Record<string, any>>((acc, s) => {;
@@ -93,6 +99,7 @@ const ServicesCatalog: React.FC = (): JSX.Element => {;
     </div>;
   )};
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;
@@ -100,7 +107,4 @@ const ServicesCatalog: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ServicesCatalog;
-

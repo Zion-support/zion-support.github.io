@@ -9,25 +9,12 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     'Integration with major ERP and MES systems',;
     'Custom AI models for industry-specific processes';
   ];
-
   const tiers = [
     {
       name: 'Small Manufacturer',
       price: '$599/mo',
       details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Manufacturer',
-      price: '$1,299/mo',
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Manufacturer',
-      price: '$2,999/mo',
-      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Manufacturer', 
       price: '$1,299/mo', 
@@ -38,9 +25,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
       price: '$2,999/mo', ;
       details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Production line optimization and monitoring',;
     'Quality control and defect prevention',;
@@ -49,7 +34,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     'Energy efficiency and sustainability',;
     'Workforce safety and compliance';
   ];
-
   const benefits = [;
     'Improve production efficiency by 25-40%',;
     'Reduce equipment downtime by 30-50%',;
@@ -58,7 +42,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     'Enhance worker safety and compliance',;
     'Scale manufacturing operations efficiently';
   ];
-
   const industries = [;
     'Automotive Manufacturing',;
     'Electronics & Semiconductors',;
@@ -67,7 +50,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     'Textiles & Apparel',;
     'Aerospace & Defense';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
           <p className="text-slate-100 text-xl">Transform your manufacturing operations with AI-powered insights that optimize production, enhance quality, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,16 +100,20 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['25-40% efficiency improvement', '30-50% downtime reduction', '40-60% defect reduction'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['25-40% efficiency improvement', '30-50% downtime reduction', '40-60% defect reduction'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-gray-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +125,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-gray-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Manufacturing Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +136,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +147,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your manufacturing with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

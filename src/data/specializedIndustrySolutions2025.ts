@@ -1,4 +1,6 @@
 export interface IndustrySolution {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface IndustrySolution {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -49,12 +52,7 @@ custom: string;
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   compliance: string[];
-<<<<<<< HEAD
-  certifications: string[];
-
-=======
   certifications: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
   {
     id: 'healthcare-ai-platform',
@@ -483,16 +481,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-<<<<<<< HEAD
-    compliance: ['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'Content Management']
-
-=======
     compliance['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
     certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+<<<<<<< HEAD
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
+=======
 <<<<<<< HEAD
 export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]               => {
   if (industry === 'All') {;
@@ -502,16 +497,11 @@ export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
 =======
 export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);
 };
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

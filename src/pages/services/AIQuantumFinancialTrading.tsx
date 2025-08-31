@@ -15,9 +15,14 @@ import { Brain,
   Activity,
   DollarSign,
   BarChart
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../../components/SEO";
+=======
               } from 'lucide-react.ts';
 import { SEO               } from '../../components/SEO';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIQuantumFinancialTrading = () => {
   const features = [
     {
@@ -46,12 +51,6 @@ const AIQuantumFinancialTrading = () => {
       description: "Execute trades in microseconds with our ultra-low-latency infrastructure and AI-driven decision making"
     },
     {
-<<<<<<< HEAD
-      icon: Globe,
-      title: "Global Market Access",
-      description: "Trade across multiple exchanges and asset classes with unified interface and intelligent routing"
-    }
-=======
       title: "Regulatory Compliance",
       description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
       icon: Lock,
@@ -63,9 +62,7 @@ const AIQuantumFinancialTrading = () => {
       icon: Target,;
       color: "from-cyan-500 to-blue-500";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const services = [
     {
       name: "Starter Plan",
@@ -98,18 +95,6 @@ const AIQuantumFinancialTrading = () => {
       name: "Enterprise Plan",
       price: "$29,999",
       period: "/month",
-<<<<<<< HEAD
-      features[
-        "Full quantum AI suite",
-        "Unlimited strategies",
-        "Custom development",
-        "24/7 dedicated support",
-        "Advanced security",
-        "Multi-tenant architecture"
-      ],
-      popular: false
-    }
-=======
       description: "For large institutions and hedge funds",
       features: [
         "Custom quantum computing integration",
@@ -122,9 +107,7 @@ const AIQuantumFinancialTrading = () => {
       ],;
       popular: false;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const useCases = [
     {
       industry: "Hedge Funds",
@@ -141,21 +124,12 @@ const AIQuantumFinancialTrading = () => {
       description: "Optimize portfolio performance and manage risk across multiple asset classes with AI assistance",
       benefits["Better asset allocation", "Reduced volatility", "Enhanced returns"]
     },
-<<<<<<< HEAD
-    {
-      industry: "Retail Traders",
-      description: "Access institutional-grade trading tools and AI insights previously available only to large firms",
-      benefits["Professional-grade tools", "AI-powered insights", "Risk management"]
-    };
-=======;
     {;
       title: "Cost Savings",;
       description: "Automated trading reduces manual intervention and operational costs",;
       metric: "60% cost reduction";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const technologies = [
     "Machine Learning & AI",
     "Quantum Computing",
@@ -166,57 +140,21 @@ const AIQuantumFinancialTrading = () => {
     "API Integration",;
     "Predictive Modeling";
   ];
-
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-      <SEO 
-        title="AI-Powered Quantum Financial Trading | Zion Tech Group"
-        description="Revolutionize your trading with AI-driven insights and quantum computing power. Get real-time market analysis, predictive signals, and automated risk management."
-        keywords="AI Trading, Quantum Financial Trading, Algorithmic Trading, High-Frequency Trading, Portfolio Optimization, Risk Management"
-      />
-
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -241,45 +179,19 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -291,59 +203,32 @@ const AIQuantumFinancialTrading = () => {
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
-<<<<<<< HEAD
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-}}
-=======
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -357,45 +242,19 @@ const AIQuantumFinancialTrading = () => {
           </div>
         </div>
       </section>
-
       {/* Services & Pricing */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -407,63 +266,27 @@ const AIQuantumFinancialTrading = () => {
               Flexible pricing options designed to scale with your trading needs
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
-<<<<<<< HEAD
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className = {
-  `relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
-                  service.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-slate/30'
-=======
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="text-center"
@@ -476,7 +299,6 @@ const AIQuantumFinancialTrading = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -484,22 +306,10 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -512,47 +322,33 @@ const AIQuantumFinancialTrading = () => {
               Choose the plan that best fits your trading needs and budget.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular 
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' 
                     : 'border-slate-600'
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 }`}
               >
                 {service.popular && (
@@ -562,7 +358,6 @@ const AIQuantumFinancialTrading = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -570,7 +365,6 @@ const AIQuantumFinancialTrading = () => {
                     <span className="text-zion-slate-light ml-1">{service.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
@@ -579,7 +373,6 @@ const AIQuantumFinancialTrading = () => {
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -596,7 +389,6 @@ const AIQuantumFinancialTrading = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -604,12 +396,10 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -622,26 +412,28 @@ const AIQuantumFinancialTrading = () => {
               Tailored trading solutions for various financial institutions with proven results
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
+=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
@@ -663,7 +455,6 @@ const AIQuantumFinancialTrading = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
@@ -671,12 +462,10 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -689,26 +478,28 @@ const AIQuantumFinancialTrading = () => {
               Built on the latest technologies to ensure speed, accuracy, and reliability
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)  => (
+=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
             {technologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   scale: 0.8 
-
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -721,45 +512,19 @@ const AIQuantumFinancialTrading = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -787,7 +552,6 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
@@ -801,20 +565,6 @@ const AIQuantumFinancialTrading = () => {
               <Clock className="w-5 h-5 text-zion-cyan mr-2" />
               <span>+1 302 464 0950</span>
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center">
-              <BarChart className="w-5 h-5 text-zion-cyan mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
-          <p className="text-zion-slate-light mt-4">
-            364 E Main St STE 1008 Middletown DE 19709
-          </p>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             <div className = "flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <p className="text-gray-300">Address</p>;
@@ -826,6 +576,4 @@ const AIQuantumFinancialTrading = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default AIQuantumFinancialTrading;

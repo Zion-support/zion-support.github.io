@@ -9,25 +9,12 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     'Cloud-based processing with edge computing options',;
     'Integration with major security and analytics platforms';
   ];
-
   const tiers = [
     {
       name: 'Basic',
       price: '$199/mo',
       details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$599/mo',
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,499/mo',
-      details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$599/mo', 
@@ -38,9 +25,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
       price: '$1,499/mo', ;
       details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Retail analytics and customer behavior tracking',;
     'Security surveillance and threat detection',;
@@ -49,7 +34,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     'Healthcare patient monitoring and safety',;
     'Sports analytics and performance tracking';
   ];
-
   const benefits = [;
     'Reduce security incidents by 60-80%',;
     'Improve operational efficiency by 30-50%',;
@@ -58,7 +42,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     'Gain actionable insights from video data',;
     'Scale security operations without additional staff';
   ];
-
   const industries = [;
     'Retail & Shopping Centers',;
     'Manufacturing & Industrial',;
@@ -67,7 +50,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     'Education & Universities',;
     'Government & Public Safety';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
           <p className="text-indigo-100 text-xl">Transform your video surveillance into intelligent insights with AI-powered analytics that detect, analyze, and respond to events in real-time.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,16 +100,20 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['60-80% incident reduction', 'Real-time detection', 'AI-powered insights'].map((t) => (
+=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['60-80% incident reduction', 'Real-time detection', 'AI-powered insights'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-blue-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +125,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-blue-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +136,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +147,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to unlock video intelligence?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -11,6 +11,9 @@ import { Award,
   Globe,
   Rocket
 <<<<<<< HEAD
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
 export const TeamExpertiseSection: React.FC = (): JSX.Element => {
 =======
               } from 'lucide-react.ts';
@@ -69,11 +72,10 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       projects: '50+'
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       projects: '50+';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const teamExpertise = [
   {
     icon: "🎓",
@@ -112,8 +114,6 @@ const teamExpertise = [
     count: "500+";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",;
@@ -124,50 +124,38 @@ const coreExpertise = [
   "IoT & Edge Computing",;
   "Mobile & Web Development";
 ];
+<<<<<<< HEAD
+export function TeamExpertiseSection() {
+=======
 
 export function TeamExpertiseSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Meet Our Expert Team
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Team Expertise
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our team of certified professionals brings decades of combined experience
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Stats Section */}
@@ -180,25 +168,27 @@ export function TeamExpertiseSection(...args: any[]): any {
 
           {stats.map((stat, index)               => {
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
-
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
+<<<<<<< HEAD
+          {stats.map((stat, index)  => {;
+=======
           {stats.map((stat, index)                => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -211,51 +201,36 @@ export function TeamExpertiseSection(...args: any[]): any {
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {teamExpertise.map((expertise, index) => (
+=======
 =======
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{expertise.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             )})}
         </motion.div>
-
         {/* Expertise Grid */}
         <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {expertise.map((item, index)                => {;
@@ -266,20 +241,16 @@ export function TeamExpertiseSection(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-blue-100 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-blue-600" />
@@ -288,11 +259,9 @@ export function TeamExpertiseSection(...args: any[]): any {
                     {item.title}
                   </h3>
                 </div>
-
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {item.description}
                 </p>
-
                 <div className="space-y-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600">Experience:</span>
@@ -303,7 +272,6 @@ export function TeamExpertiseSection(...args: any[]): any {
                     <span className="font-semibold text-gray-900">{item.projects}</span>
                   </div>
                 </div>
-
                 <div className="mt-6">
                   <h4 className="font-semibold text-gray-900 mb-3 text-sm">Certifications:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -311,7 +279,6 @@ export function TeamExpertiseSection(...args: any[]): any {
                       <span
                         key={certIndex}
                         className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
-
                         {cert}
                       </span>
                     ))}
@@ -320,51 +287,22 @@ export function TeamExpertiseSection(...args: any[]): any {
               </motion.div>
             )})}
         </div>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-
-=======
         <motion.div 
           className="text-center mb-12"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Work with Experts?
@@ -388,12 +326,7 @@ export function TeamExpertiseSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default TeamExpertiseSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -401,8 +334,5 @@ export default TeamExpertiseSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

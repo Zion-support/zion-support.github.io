@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield import { Link              } from 'react-router-dom.ts';
 =======
@@ -9,6 +15,7 @@ import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, 
 import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function IoTEdge(...args: []):  {
   return (
     <>
@@ -17,7 +24,6 @@ export default function IoTEdge(...args: []):  {
         <meta name = "description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management." />
         <meta name="keywords" content="IoT, edge computing, smart devices, sensor networks, real-time processing, device management, industrial IoT" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +34,18 @@ export default function IoTEdge(...args: []):  {
                 <Cpu className="w-4 h-4 mr-2" />
                 IoT & Edge Computing
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 IoT & Edge
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Computing</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally,
                 reduce latency, and enable real-time decision-making across your connected devices.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +57,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,8 +69,12 @@ export default function IoTEdge(...args: []):  {
                 real-time analytics, and intelligent automation capabilities.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Cpu,
@@ -101,12 +106,14 @@ export default function IoTEdge(...args: []):  {
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((feature, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -118,7 +125,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* IoT Applications Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,8 +136,12 @@ export default function IoTEdge(...args: []):  {
                 Discover how IoT and edge computing can transform different industries and operations.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Smart Manufacturing",
@@ -169,12 +179,14 @@ export default function IoTEdge(...args: []):  {
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((application, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
@@ -194,7 +206,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Edge Computing Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +217,6 @@ export default function IoTEdge(...args: []):  {
                 Process data closer to the source for improved performance, reduced latency, and enhanced security.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -225,7 +235,6 @@ export default function IoTEdge(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
@@ -245,7 +254,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Technology Stack Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -257,8 +265,12 @@ export default function IoTEdge(...args: []):  {
                 Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "IoT Protocols",
@@ -276,12 +288,14 @@ export default function IoTEdge(...args: []):  {
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((technology, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((technology, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{index + 1}</span>
@@ -293,7 +307,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Implementation Process Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -305,8 +318,12 @@ export default function IoTEdge(...args: []):  {
                 Our systematic approach ensures successful IoT and edge computing implementation.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -328,12 +345,14 @@ export default function IoTEdge(...args: []):  {
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((step, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -345,7 +364,6 @@ export default function IoTEdge(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -359,23 +377,12 @@ export default function IoTEdge(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200"
-
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -384,6 +391,5 @@ export default function IoTEdge(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+=======
+<<<<<<< HEAD
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, DollarSign, BarChart3 export default function AIFinancialTrading(...args: any[]): any {
 =======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp, 
   DollarSign, 
   CheckCircle, 
@@ -34,11 +41,17 @@ import { Brain,
   DollarSign as DollarIcon,
   BarChart,
   PieChart as PieChartIcon
+<<<<<<< HEAD
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+export default function AIFinancialTrading() {
+=======
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
 export default function AIFinancialTrading(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -61,24 +74,6 @@ export default function AIFinancialTrading(...args: any[]): any {
       description: "Ultra-fast execution with microsecond precision for optimal trade timing"
     }
   ];
-
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Individual Trader',
-      price: '$299/mo',
-      details: ['Up to $100k portfolio', 'Basic AI analysis', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Professional Trader',
-      price: '$799/mo',
-      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support']
-    },
-    {
-      name: 'Institutional',
-      price: '$2,499/mo',
-      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-=======
   const tradingStrategies = [
     {
       name: "Momentum Trading",
@@ -100,7 +95,6 @@ export default function AIFinancialTrading(...args: any[]): any {
       successRate: "82.7%",
       avgReturn: "15.8%",
       icon: BarChart
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       name: "Sentiment Analysis",
@@ -110,7 +104,6 @@ export default function AIFinancialTrading(...args: any[]): any {
       icon: BrainCircuit
     }
   ];
-
   const benefits = [
     "Increase trading profits by up to 300%",
     "Reduce trading risks by 65%",
@@ -119,7 +112,6 @@ export default function AIFinancialTrading(...args: any[]): any {
     "Multi-asset portfolio management",
     "Advanced backtesting and optimization"
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -160,7 +152,6 @@ export default function AIFinancialTrading(...args: any[]): any {
       ]
     }
   ];
-
   const supportedAssets = [
     "Stocks & ETFs",
     "Cryptocurrencies",
@@ -169,14 +160,12 @@ export default function AIFinancialTrading(...args: any[]): any {
     "Options & Futures",
     "Bonds & Fixed Income"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
@@ -215,7 +204,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -233,9 +221,14 @@ export default function AIFinancialTrading(...args: any[]): any {
               to deliver unprecedented trading performance and risk management.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,7 +246,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Trading Strategies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
@@ -271,9 +263,14 @@ export default function AIFinancialTrading(...args: any[]): any {
               track records and consistent returns.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {tradingStrategies.map((strategy, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {tradingStrategies.map((strategy, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -290,7 +287,6 @@ export default function AIFinancialTrading(...args: any[]): any {
                     <p className="text-gray-300 text-sm">{strategy.description}</p>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-green-400 font-bold text-2xl">{strategy.successRate}</div>
@@ -306,7 +302,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Supported Assets Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -323,9 +318,14 @@ export default function AIFinancialTrading(...args: any[]): any {
               Trade across multiple asset classes with our unified AI trading platform.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {supportedAssets.map((asset, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {supportedAssets.map((asset, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -340,7 +340,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
@@ -357,9 +356,14 @@ export default function AIFinancialTrading(...args: any[]): any {
               Transform your trading performance with intelligent automation and advanced analytics.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -374,7 +378,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -391,9 +394,14 @@ export default function AIFinancialTrading(...args: any[]): any {
               Choose the plan that fits your trading needs. All plans include our core AI features.
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -412,7 +420,6 @@ export default function AIFinancialTrading(...args: any[]): any {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -420,7 +427,6 @@ export default function AIFinancialTrading(...args: any[]): any {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -429,7 +435,6 @@ export default function AIFinancialTrading(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -446,7 +451,6 @@ export default function AIFinancialTrading(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">

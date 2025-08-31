@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { useNavigate              } from 'react-router-dom.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
@@ -10,6 +13,7 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   HelpCircle, BookOpen, Target, TrendingUp, Star
 =======
 import React, { useState, useEffect              } from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
@@ -20,7 +24,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   HelpCircle, BookOpen, Target, TrendingUp, Star
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SidebarItem {
 
 
@@ -47,6 +50,9 @@ interface SidebarItem {
   isHot?: boolean;
   isPremium?: boolean;
 <<<<<<< HEAD
+  category?: string}
+=======
+<<<<<<< HEAD
   category?: string;
 =======
 category?: string;
@@ -64,6 +70,7 @@ category?: string;
 
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const sidebarSections = [
   {
@@ -276,6 +283,9 @@ const sidebarSections = [
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
 <<<<<<< HEAD
+          { name: 'Training Programs', href: '/training' },;
+=======
+<<<<<<< HEAD
           { name: 'Training Programs', href: '/training' },
           { name: 'Community Forum', href: '/community' },
           { name: 'Knowledge Base', href: '/knowledge-base' }
@@ -292,6 +302,7 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 =======
 { name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
 },;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
         ];
@@ -301,7 +312,6 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   isOpen: boolean;
   onClose: ()               => void}
@@ -310,6 +320,8 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const toggleSection = (sectionTitle: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -323,10 +335,10 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     setExpandedSections(newExpanded);
   };
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -337,6 +349,8 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     );
   );
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const toggleItem = (itemName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -356,6 +370,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     } else {
       document.body.style.overflow = 'unset';
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(itemName)} else {
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
@@ -367,7 +382,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
 ;
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
 
@@ -626,23 +640,10 @@ export default function EnhancedSidebar2025(...args[]: any):  {
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}</section></motion.div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

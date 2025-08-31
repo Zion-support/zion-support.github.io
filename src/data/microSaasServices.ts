@@ -1,4 +1,6 @@
 export interface MicroSaasService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface MicroSaasService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -58,12 +61,7 @@ verified: boolean;
 
 };
   images: string[];
-<<<<<<< HEAD
-  createdAt: string;
-
-=======
   createdAt: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // AI & Machine Learning Services
   {
@@ -197,9 +195,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
-<<<<<<< HEAD
-
-=======
   },
   {
     id: "ai-sales-copilot",
@@ -703,6 +698,9 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
       verified: true
     },
     images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
@@ -1169,3 +1167,4 @@ export const getMicroSaasCategories = (): string[] => {
 =======
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

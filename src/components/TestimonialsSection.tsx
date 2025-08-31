@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Star, 
   Quote, 
@@ -12,8 +17,12 @@ import {
   Award,
   TrendingUp,
   Users
+<<<<<<< HEAD
+} from 'lucide-react';
+=======
               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Testimonial {
 
 
@@ -54,9 +63,7 @@ interface Testimonial {
 
 
 }
-
 const testimonials: Testimonial[] = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
     id: 1,
     name: "Dr. Sarah Chen",
@@ -112,63 +119,55 @@ const testimonials: Testimonial[] = [
     company: "E-commerce Dynamics",
     avatar: "/images/testimonials/lisa-park.jpg",
     rating: 5,
-<<<<<<< HEAD
-    industry: "Healthcare",
-    project: "Cloud Migration & Optimization"
-
-=======
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition. We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",
     industry: "E-commerce",
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
     verified: true
   }
-=======;
     company: "Healthcare Innovations",;
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;
     industry: "Healthcare",;
     project: "Cloud Migration & Optimization";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const stats = [
   { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
   { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
   { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
+<<<<<<< HEAD
+export const TestimonialsSection: React.FC = () => {
+=======
 
 export const TestimonialsSection: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
-
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
+<<<<<<< HEAD
+  const goToTestimonial = (index: number) => {
+=======
 
   const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentTestimonial(index);
   };
-
   // Auto-play functionality
   React.useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       nextTestimonial();
     }, 5000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, currentTestimonial]);
-
   const current = testimonials[currentTestimonial];
-
   return (
     <section className = "py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -185,7 +184,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
-
               {/* Quote icon */}
               <div className="mb-4">
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
@@ -239,13 +237,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">98%</div>
-            <div className="text-zion-slate-light">Client Satisfaction</div>
-=======
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -255,7 +246,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions
           </p>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
@@ -275,7 +265,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             </div>
           ))}
         </motion.div>
-
         {/* Testimonials Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -295,13 +284,10 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
                   <Quote className="w-8 h-8 text-cyan-400 mb-4" />
-                  
                   <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">
                     "{current.content}"
                   </blockquote>
-                  
                   <div className="space-y-3">
                     <h4 className="text-xl font-semibold text-white">{current.name}</h4>
                     <p className="text-cyan-400">{current.position}</p>
@@ -309,7 +295,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
                     <p className="text-sm text-gray-400">{current.industry} Industry</p>
                   </div>
                 </div>
-
                 {/* Results and Verification */}
                 <div className="lg:w-80 space-y-6">
                   {/* Verification Badge */}
@@ -319,7 +304,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
                       <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
                   )}
-
                   {/* Results */}
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>
@@ -332,7 +316,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Industry Badge */}
                   <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">
                     <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>
@@ -341,7 +324,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Controls */}
           <div className="flex items-center justify-center mt-8 gap-4">
             <button
@@ -351,7 +333,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
-
             {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
@@ -367,7 +348,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
                 />
               ))}
             </div>
-
             <button
               onClick={nextTestimonial}
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
@@ -375,9 +355,7 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             >
               <ChevronRight className="w-5 h-5" />
             </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
-
           {/* Auto-play Toggle */}
           <div className="flex justify-center mt-4">
             <button
@@ -392,7 +370,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             </button>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <motion.div
           className="mt-20 text-center"
@@ -413,15 +390,10 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
       </div>
     </section>
   )};
-=======;
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}
-=======
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -14,13 +14,19 @@ import { CheckCircle,
   Shield,
   Clock
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 =======
                } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
-
 export interface Notification {
+<<<<<<< HEAD
+  id: string;
+=======
 
 
 
@@ -37,6 +43,7 @@ export interface Notification {
 
 
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   type: NotificationType;
   title: string;
   message: string;
@@ -62,26 +69,17 @@ onClick: ()                => void;
 };
   priority: 'low' | 'medium' | 'high';
   category?: string;
-<<<<<<< HEAD
-  icon?: React.ReactNode;
-=======
   icon?: React.ReactNode}
-
 interface NotificationSystemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
   enableVibration?: boolean;
   autoDismiss?: boolean;
-<<<<<<< HEAD
-  defaultDuration?: number;
-=======
   defaultDuration?: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface NotificationSettings {
+<<<<<<< HEAD
+=======
 
 
 
@@ -97,11 +95,15 @@ interface NotificationSettings {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   maxNotifications: number;
+<<<<<<< HEAD
+  defaultDuration: number}
+=======
 <<<<<<< HEAD
   defaultDuration: number;
 =======
@@ -122,26 +124,23 @@ defaultDuration: number;
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
-<<<<<<< HEAD
-  enableSound = true,
-  enableVibration = true,
-  autoDismiss = true,
-  defaultDuration = 5000;
-}) => {;
-  const [notifications, setNotifications] = useState<any>([]);
-  const [settings, setSettings] = useState<any>({
-=======
   enableSound = true,;
   enableVibration = true,;
   autoDismiss = true,;
   defaultDuration = 5000;
 }) => {;
+<<<<<<< HEAD
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [settings, setSettings] = useState<NotificationSettings>({
+=======
   const [notifications, setNotifications] = useState<any>([]);
   const [settings, setSettings] = useState<any>({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     sound: enableSound,
     vibration: enableVibration,
     autoDismiss: autoDismiss,
@@ -153,116 +152,62 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   // Initialize audio for notification sounds
   useEffect(() => {
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
-<<<<<<< HEAD
-      audioRef.current.volume = 0.3;
-
-=======
       audioRef.current.volume = 0.3};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [settings.sound]);
-
   // Update unread count
   useEffect(() => {
     setUnreadCount(notifications.filter(n => !n.read).length)}, [notifications]);
-
   // Auto-dismiss notifications
   useEffect(() => {
     if (!settings.autoDismiss) return;
-
     const timeouts: NodeJS.Timeout[] = [];
-
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {
           dismissNotification(notification.id);
         }, notification.duration || settings.defaultDuration);
         timeouts.push(timeout);
-<<<<<<< HEAD
-
-=======
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
-
     return () => {
       timeouts.forEach(timeout => clearTimeout(timeout))}}, [notifications, settings.autoDismiss, settings.defaultDuration]);
-
   // Play notification sound
-<<<<<<< HEAD
-  const playSound = useCallback(() => {;
-    if (settings.sound && audioRef.current) {;
-      try {;
-        audioRef.current.play().catch(() => {;
-          // Ignore autoplay restrictions;
-        });
-      } catch (error) {
-<<<<<<< HEAD
-        // // // console.warn('Could not play notification sound:', error);
-
-
-=======
         // // // // // // // console.warn('Could not play notification sound:', error);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, [settings.sound]);
-
   // Trigger vibration
-<<<<<<< HEAD
-  const triggerVibration = useCallback(() => {;
-    if (settings.vibration && 'vibrate' in navigator) {;
-      try {;
-        navigator.vibrate(200);
-      } catch (error) {
-<<<<<<< HEAD
-        // // // console.warn('Could not trigger vibration:', error);
-
-
-=======
         // // // // // // // console.warn('Could not trigger vibration:', error);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, [settings.vibration]);
-
   // Add notification
   const addNotification = useCallback((notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)                => {
     const newNotification: Notification = {
   ...notification,
   id: `notification-${Date.now()
-
 ;
 ;
 ;
-
-
 }-${Math.random().toString(36).substr(2, 9)}`,;
       timestamp: new Date(),;
       read: false,;
       duration: notification.duration ?? settings.defaultDuration;
     };
-
-<<<<<<< HEAD
     setNotifications(prev = > {;
-=======;
-    setNotifications(prev = > {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const updated = [newNotification, ...prev];
       return updated.slice(0, settings.maxNotifications)});
-
     // Play sound and vibrate
     playSound();
     triggerVibration()}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
-
   // Dismiss notification
+<<<<<<< HEAD
+  const dismissNotification = useCallback((id: string) => {;
+=======
 <<<<<<< HEAD
   const dismissNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
     setNotifications(prev => prev.filter(n => n.id !== id))}, []);
@@ -285,31 +230,31 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotificationType, priority: string)                => {;
 =======;
   const dismissNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
-
   // Mark notification as read
   const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setNotifications(prev =>
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
   }, []);
-
   // Mark all as read
   const markAllAsRead = useCallback(() => {;
     setNotifications(prev => prev.map(n => ({ ...n, read: true })));
   }, []);
-
   // Clear all notifications
   const clearAll = useCallback(() => {;
     setNotifications([]);
   }, []);
-
   // Get notification icon
+<<<<<<< HEAD
+  const getNotificationIcon = (type: NotificationType, priority: string) => {;
+=======
   const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotificationType, priority: string)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconProps = { className: "w-5 h-5" };
-
     switch (type) {
       case 'success':
         return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />;
@@ -322,15 +267,11 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'achievement':
         return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`} />;
       default:
-<<<<<<< HEAD
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
-
-=======
         return <Bell {...iconProps} className = "w-5 h-5 text-zion-slate" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   // Get notification styles
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const getNotificationStyles = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotificationType, priority: string)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -352,10 +293,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return baseStyles + 'border-zion-slate bg-zion-slate/10';
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return baseStyles + 'border-zion-slate bg-zion-slate/10'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   // Get position classes
   const getPositionClasses = () => {;
     switch (settings.position) {;
@@ -368,30 +308,25 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'bottom-right':
         return 'bottom-4 right-4';
       default:
-<<<<<<< HEAD
-        return 'top-4 right-4';
-
-=======
         return 'top-4 right-4'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   // Update settings
+<<<<<<< HEAD
+  const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {;
+=======
 <<<<<<< HEAD
   const updateSettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPartial<NotificationSettings>)                => {;
     setSettings(prev => ({ ...prev, ...newSettings }))}, []);
 =======
   const updateSettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPartial<NotificationSettings>)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   // Expose addNotification method globally for external use
   useEffect(() => {
     (window as ).addNotification = addNotification;
     return () => {
       delete (window as ).addNotification}}, [addNotification]);
-
   return (
     <>
       {/* Notification Bell */}
@@ -400,31 +335,25 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           onClick={() => setIsOpen(!isOpen)}
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
           title="Notifications"
-
           <Bell className="w-6 h-6 text-zion-slate-dark" />
-
           {/* Unread count badge */}
           {unreadCount > 0 && (
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
-
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>
           )}
         </button>
-
         {/* Settings button */}
         <button
           onClick={() => setShowSettings(!showSettings)}
           className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover:bg-zion-slate/20 rounded-lg transition-colors"
           title="Notification Settings"
-
           <Settings className="w-4 h-4 text-zion-slate" />
         </button>
       </div>
-
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (
@@ -432,37 +361,17 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             initial = {
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
-
 }}
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
-
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Sound</span>
@@ -471,11 +380,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   className={`p-2 rounded-lg transition-colors ${
                     settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
-
                   {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
                 </button>
               </div>
-
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Vibration</span>
                 <button
@@ -483,11 +390,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   className={`p-2 rounded-lg transition-colors ${
                     settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
-
                   <Zap className="w-4 h-4" />
                 </button>
               </div>
-
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>
                 <button
@@ -495,25 +400,20 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   className={`p-2 rounded-lg transition-colors ${
                     settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
-
                   <Clock className="w-4 h-4" />
                 </button>
               </div>
-
               <div className="pt-4 border-t border-zion-slate/20">
                 <button
                   onClick={markAllAsRead}
                   className="w-full px-4 py-2 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
-
                   Mark all as read
                 </button>
               </div>
-
               <div className="pt-2">
                 <button
                   onClick={clearAll}
                   className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
-
                   Clear all notifications
                 </button>
               </div>
@@ -521,7 +421,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Notifications Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -529,46 +428,25 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             initial = {
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
-
 }}
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
-
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors"
-
                 <X className="w-4 h-4 text-zion-slate" />
               </button>
             </div>
-
             {/* Notifications List */}
             <div className="space-y-2 max-h-80 overflow-y-auto">
               <AnimatePresence>
@@ -577,7 +455,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="text-center py-8 text-zion-slate/60"
-
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />
                     <p>No notifications yet</p>
                     <p className="text-sm">We'll notify you when something important happens</p>
@@ -589,52 +466,26 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                       initial = {
   { opacity: 0,
   x: 50 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                       exit = {
   { opacity: 0, x: -50,
   height: 0 
-
-
-
-
-
-
 }}
                       layout
                       className = {
   `p-4 rounded-xl ${getNotificationStyles(notification.type,
   notification.priority)
-
-
-
-
-
-
 } ${
                         !notification.read ? 'ring-2 ring-zion-cyan/20' : ''
                       }`}
-
                       <div className="flex items-start space-x-3">
                         <div className="flex-shrink-0 mt-0.5">
                           {notification.icon || getNotificationIcon(notification.type, notification.priority)}
                         </div>
-
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <h4 className={`text-sm font-medium ${
@@ -645,50 +496,34 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             <button
                               onClick={() => dismissNotification(notification.id)}
                               className="p-1 hover:bg-zion-slate/10 rounded transition-colors"
-
                               <X className="w-3 h-3 text-zion-slate/60" />
                             </button>
                           </div>
-
                           <p className={`text-sm mt-1 ${
                             notification.read ? 'text-zion-slate/60' : 'text-zion-slate'
                           }`}>
                             {notification.message}
                           </p>
-
                           <div className="flex items-center justify-between mt-3">
                             <span className="text-xs text-zion-slate/50">
                               {notification.timestamp.toLocaleTimeString()}
                             </span>
-
                             <div className="flex items-center space-x-2">
                               {notification.action && (
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-<<<<<<< HEAD
-                                    markAsRead(notification.id)}}
-                                  className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors";
-=======;
                                     markAsRead(notification.id);
                                   }}
-<<<<<<< HEAD
-                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
-
-=======
                                   className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                   {notification.action.label}
                                 </button>
                               )}
-
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}
                                   className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
-
                                   Mark read
                                 </button>
                               )}
@@ -700,6 +535,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   ))
                 )}
               </AnimatePresence>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             </div>
           </motion.div>
@@ -714,6 +551,7 @@ export const useNotifications = () => {
     if ((window as ).addNotification) {
       (window as ).addNotification(notification)};
 =======;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>;
           </motion.div>;
         )};
@@ -721,22 +559,23 @@ export const useNotifications = () => {
     </>;
   );
 };
-
 // Hook for using notifications in components
 export const useNotifications = () => {;
+<<<<<<< HEAD
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {;
+    if ((window as any).addNotification) {;
+      (window as any).addNotification(notification);
+=======
   const addNotification = useCallback((notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)               => {;
     if ((window as ).addNotification) {;
       (window as ).addNotification(notification);
 <<<<<<< HEAD
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
-
   return { addNotification }};
-
 // Utility functions for common notification types
 export const notificationUtils = {
   success: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
@@ -745,34 +584,27 @@ export const notificationUtils = {
         type: 'success',
         title,
         message,
-<<<<<<< HEAD
-        priority: 'medium',
-<<<<<<< HEAD
-        ...options
-      });
-
-=======
   ...options
-      
-
 })};
+<<<<<<< HEAD
+        priority: 'medium',;
+=======
 =======;
         priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'medium',;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   ...options;
       ;
-
-
-
-
 });
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
+<<<<<<< HEAD
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+=======
 
   warning: (title: string, message: string, options?: Partial<Notification>)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'warning',
@@ -780,15 +612,14 @@ export const notificationUtils = {
         message,
         priority: 'medium',
         ...options
-<<<<<<< HEAD
-      });
-
-=======
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
+<<<<<<< HEAD
+  error: (title: string, message: string, options?: Partial<Notification>) => {
+=======
 
   error: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'error',
@@ -796,15 +627,14 @@ export const notificationUtils = {
         message,
         priority: 'high',
         ...options
-<<<<<<< HEAD
-      });
-
-=======
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
+<<<<<<< HEAD
+  info: (title: string, message: string, options?: Partial<Notification>) => {
+=======
 
   info: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'info',
@@ -812,15 +642,14 @@ export const notificationUtils = {
         message,
         priority: 'low',
         ...options
-<<<<<<< HEAD
-      });
-
-=======
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
+<<<<<<< HEAD
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
+=======
 
   achievement: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'achievement',
@@ -828,13 +657,6 @@ export const notificationUtils = {
         message,
         priority: 'high',
         ...options
-<<<<<<< HEAD
-      });
-
-
-};}}}}}}}}}}}}}}}}}}}}
-=======
       })}
   }
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -80,14 +80,9 @@ function checkFile(filePath) {
       issues.push(...fileIssues);
 
   } catch (error) {
-<<<<<<< HEAD
-    // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
-
-=======
     // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
   }
 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
@@ -109,15 +104,6 @@ function walkDir(dir) {
   });
 
 function generateReport() {
-<<<<<<< HEAD
-  // // // console.log('\n=== LINT CHECK REPORT ===\n');
-  // // // console.log(`Total files checked: ${totalFiles}`);
-  // // // console.log(`Files with issues: ${filesWithIssues}`);
-  // // // console.log(`Total issues found: ${issues.length}\n`);
-
-  if (issues.length === 0) {
-    // // // console.log('✅ No lint issues found!');
-=======
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n');
   // // // // // // // console.log(`Total files checked: ${totalFiles}`);
   // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
@@ -125,7 +111,6 @@ function generateReport() {
 
   if (issues.length === 0) {
     // // // // // // // console.log('✅ No lint issues found!');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return;
 
   // Group issues by file
@@ -138,24 +123,14 @@ function generateReport() {
   });
 
   Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
-<<<<<<< HEAD
-    // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
-    fileIssues.forEach(issue => {
-      // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
-=======
     // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
     fileIssues.forEach(issue => {
       // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     });
   });
 
   // Summary by rule
-<<<<<<< HEAD
-  // // // console.log('\n📊 Issues by rule:');
-=======
   // // // // // // // console.log('\n📊 Issues by rule:');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   const ruleCounts = { /* empty */ };
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1;
@@ -164,19 +139,11 @@ function generateReport() {
   Object.entries(ruleCounts)
     .sort(([,a], [,b]) => b - a)
     .forEach(([rule, count]) => {
-<<<<<<< HEAD
-      // // // console.log(`  ${rule}: ${count}`);
-=======
       // // // // // // // console.log(`  ${rule}: ${count}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     });
 
 function main() {
-<<<<<<< HEAD
-  // // // console.log('🔍 Starting lint check...');
-=======
   // // // // // // // console.log('🔍 Starting lint check...');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   const startTime = Date.now();
   walkDir('.');
@@ -184,11 +151,7 @@ function main() {
 
   generateReport();
 
-<<<<<<< HEAD
-  // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
-=======
   // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   // Exit with error code if issues found
   if (issues.length > 0) {

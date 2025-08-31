@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { Heart, Shield, Users, Activity, Microscope, Pill const HealthcareSolutions = () => {
-=======
-import Link from 'next/link';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
+
 const HealthcareSolutions = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const solutions = [
         {
             title: 'AI-Powered Patient Care',
@@ -59,7 +55,7 @@ const HealthcareSolutions = () => {
             ],
             icon: Shield,
             href: '/services/cybersecurity'
-
+        }
     ];
     const benefits = [
         {
@@ -76,7 +72,7 @@ const HealthcareSolutions = () => {
             title: 'Enhanced Security',
             description: 'HIPAA-compliant solutions protect patient data.',
             icon: Shield
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -182,7 +178,8 @@ const HealthcareSolutions = () => {
           </div>
         </div>
       </div>
-    </div>);
+    </div>
+  );
 };
+
 export default HealthcareSolutions;
-}}}

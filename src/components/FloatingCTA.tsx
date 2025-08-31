@@ -96,22 +96,22 @@ import { MessageCircle,
   Volume2,
   VolumeX
 <<<<<<< HEAD
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
 const FloatingCTA: React.FC = (): JSX.Element => {
 =======
               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const FloatingCTA: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Show CTA after 5 seconds
     const timer = setTimeout(() => {;
       setIsVisible(true)}, 5000);
-
     return () => clearTimeout(timer)}, []);
-
   const contactMethods = [
     {
       icon: Phone,
@@ -132,38 +132,18 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
       title: "Schedule Demo",
       description: "Book a consultation",
       action: "Book Now",
-<<<<<<< HEAD
-      color: "from-purple-500 to-pink-500"
-
-=======
       color: "from-purple-500 to-pink-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const quickServices = [
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },
     { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;
     { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
   ];
-
   if (!isVisible) return null;
-
   return (
     <>
-<<<<<<< HEAD
-      {/* Floating Button */}
-      <motion.button
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, type: "spring" }}
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center text-white"
-
-        <MessageCircle className="w-8 h-8" />
-      </motion.button>
-=======
       {/* Floating Action Button */}
       <motion.div
         className = "fixed bottom-6 right-6 z-50"
@@ -172,13 +152,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
         transition = {
   { duration: 0.3,
   delay: 2 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-
-
-
-
-
 }}
       >
         <div className="relative">
@@ -191,7 +164,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
           >
             {isExpanded ? '✕' : '💬'}
           </motion.button>
-
           {/* Expanded Menu */}
           <AnimatePresence>
             {isExpanded && (
@@ -200,32 +172,14 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0, scale: 0.8,
   y: 10 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 exit = {
   { opacity: 0, scale: 0.8,
   y: 10 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.2 }}
               >
@@ -241,7 +195,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                       <div className="text-sm text-gray-400">Get in touch</div>
                     </div>
                   </Link>
-                  
                   <Link
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
@@ -253,7 +206,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                       <div className="text-sm text-gray-400">Explore solutions</div>
                     </div>
                   </Link>
-                  
                   <Link
                     to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
@@ -265,7 +217,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                       <div className="text-sm text-gray-400">Request pricing</div>
                     </div>
                   </Link>
-                  
                   <div className="border-t border-slate-600 pt-3">
                     <div className="text-center text-sm text-gray-400 mb-2">
                       Available 24/7
@@ -281,7 +232,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
           </AnimatePresence>
         </div>
       </motion.div>
-
       {/* Backdrop */}
       <AnimatePresence>
         {isExpanded && (
@@ -290,6 +240,8 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
@@ -454,6 +406,7 @@ export default FloatingCTA;
 }}
 =======
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             onClick={() => setIsExpanded(false)};
           />;
         )};
@@ -461,5 +414,3 @@ export default FloatingCTA;
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,6 +1,6 @@
 declare module 'jspdf' {
   export class jsPDF {
-    constructor(options?: );
+    constructor(options?: any);
     text(...args: any[]): void;
     addImage(...args: any[]): void;
     rect(...args: any[]): void;
@@ -14,22 +14,19 @@ declare module 'jspdf' {
     setLineWidth(...args: any[]): void;
     splitTextToSize(text: string, size: number): string[];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     output(type?: string): ;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     output(type?: string): ;
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   export function autoTable(...args: any[]): void;
-
 declare module 'jspdf-autotable' {
   const autoTable: ;
   export default autoTable;
-<<<<<<< HEAD
-}}}
-=======
 }
-
 export default autoTable;
 export default autoTable;
 export default autoTable;
@@ -37,4 +34,3 @@ export default autoTable;
 export default autoTable;
 export default autoTable;
 export default autoTable;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

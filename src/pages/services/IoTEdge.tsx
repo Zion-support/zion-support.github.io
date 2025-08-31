@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { SEO  } from "../../components/SEO";
+import { motion  } from 'framer-motion.ts';
+import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone export default function IoTEdge(...args: any[]): any {
 =======
@@ -8,8 +14,8 @@ import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function IoTEdge(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Cpu,
@@ -24,15 +30,6 @@ export default function IoTEdge(...args: []):  {
     {
       icon: Zap,
       title: 'Real-time Processing',
-<<<<<<< HEAD
-      description: 'Instant data analysis and decision making'
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Efficient storage and processing of IoT data streams'
-
-=======
       description: 'Instant data analysis and decision making';
     },;
     {;
@@ -40,9 +37,7 @@ export default function IoTEdge(...args: []):  {
       title: 'Data Management',;
       description: 'Efficient storage and processing of IoT data streams';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const services = [
     {
       title: 'IoT Device Management',
@@ -57,15 +52,6 @@ export default function IoTEdge(...args: []):  {
     {
       title: '5G Integration',
       description: 'High-speed connectivity for IoT applications',
-<<<<<<< HEAD
-      icon: Wifi
-    },
-    {
-      title: 'Security & Compliance',
-      description: 'End-to-end security for IoT ecosystems',
-      icon: Shield
-
-=======
       icon: Wifi;
     },;
     {;
@@ -73,9 +59,7 @@ export default function IoTEdge(...args: []):  {
       description: 'End-to-end security for IoT ecosystems',;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -86,41 +70,25 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
               <Cpu className="w-5 h-5 text-blue-400" />
               <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Connect, Process,
               <span className="text-gradient"> Transform</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Harness the power of IoT and edge computing to create intelligent,
               connected systems that process data faster and more efficiently.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start IoT Project
@@ -133,7 +101,6 @@ export default function IoTEdge(...args: []):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -141,27 +108,14 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose IoT & Edge Computing?
             </h2>
@@ -169,44 +123,30 @@ export default function IoTEdge(...args: []):  {
               Faster processing, reduced latency, and intelligent automation
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -217,7 +157,6 @@ export default function IoTEdge(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
@@ -225,27 +164,14 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Our IoT & Edge Services
             </h2>
@@ -253,54 +179,30 @@ export default function IoTEdge(...args: []):  {
               Comprehensive solutions for connected device ecosystems
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
+=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-<<<<<<< HEAD
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
-                  </div>
-=======
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
@@ -325,7 +227,6 @@ export default function IoTEdge(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Industries */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -333,12 +234,10 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -351,38 +250,38 @@ export default function IoTEdge(...args: []):  {
               of various industries and business sectors
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {industries.map((industry, index)  => (
+=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
             {industries.map((industry, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={industry.name}
                 initial = {
   { opacity: 0,
   scale: 0.8 
-
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="text-center group"
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <industry.icon className="w-8 h-8 text-emerald-400" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -390,27 +289,14 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center relative overflow-hidden"
-
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">

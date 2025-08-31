@@ -1,4 +1,6 @@
 export interface InnovativeMicroSaasService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface InnovativeMicroSaasService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -55,12 +58,7 @@ website: string;
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  marketSize?: string;
-
-=======
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence Platform
   {
@@ -381,6 +379,5 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     },
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2025"
-
 ];
 }}

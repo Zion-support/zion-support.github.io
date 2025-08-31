@@ -1,4 +1,6 @@
 export interface NextGenAIService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface NextGenAIService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -49,12 +52,7 @@ custom: string;
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   researchLevel: 'production' | 'research' | 'experimental';
-<<<<<<< HEAD
-  ethicalCompliance: string[];
-
-=======
   ethicalCompliance: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: 'autonomous-ai-systems',
@@ -398,14 +396,12 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-<<<<<<< HEAD
-    ethicalCompliance: ['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
-
-=======
     ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+<<<<<<< HEAD
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {;
+=======
 <<<<<<< HEAD
 export const getNextGenAIServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): NextGenAIService[]               => {
   if (category === 'All') {;
@@ -415,16 +411,11 @@ export const getAllNextGenAIServices = (): NextGenAIService[] => {;
   return NEXT_GEN_AI_SERVICES_2025};
 =======
 export const getNextGenAIServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): NextGenAIService[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025;
-
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
 };
 export const getAllNextGenAIServices = (): NextGenAIService[] => {;
   return NEXT_GEN_AI_SERVICES_2025;
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

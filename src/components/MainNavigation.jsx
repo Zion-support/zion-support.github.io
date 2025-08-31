@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Search, User, Bell import ThemeToggle from './ThemeToggle';
-=======
 import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from "./ThemeToggle";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -71,7 +67,6 @@ export function MainNavigation() {
                 { name: 'News', href: '/news' },
                 { name: 'Contact', href: '/contact' }
             ]
-
     ];
     const isActive = (path) => {
         if (path === '/')
@@ -91,7 +86,6 @@ export function MainNavigation() {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (<div key={item.name} className="relative group">
@@ -103,7 +97,6 @@ export function MainNavigation() {
                   <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"/>
                 </button>
-
                 {/* Dropdown Menu */}
                 {activeDropdown === item.name && (<div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 animate-in slide-in-from-top-2 duration-300">
                     {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-3 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors duration-200" onClick={() => setActiveDropdown(null)}>
@@ -112,7 +105,6 @@ export function MainNavigation() {
                   </div>)}
               </div>))}
           </div>
-
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
@@ -121,17 +113,14 @@ export function MainNavigation() {
             : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}>
               <Search className="w-5 h-5"/>
             </button>
-
             {/* Notifications */}
             <button className={`p-2 rounded-lg transition-all duration-300 ${isScrolled
             ? 'text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/10'
             : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}>
               <Bell className="w-5 h-5"/>
             </button>
-
             {/* Theme Toggle */}
             <ThemeToggle />
-
             {/* User Menu */}
             <div className="relative group">
               <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${isScrolled
@@ -139,7 +128,6 @@ export function MainNavigation() {
             : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}>
                 <User className="w-5 h-5"/>
               </button>
-
               {/* User Dropdown */}
               <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300">
                 <Link to="/login" className="block px-4 py-3 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors duration-200">
@@ -153,13 +141,11 @@ export function MainNavigation() {
                 </Link>
               </div>
             </div>
-
             {/* CTA Button */}
             <Link to="/contact" className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled
             ? 'text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/10'
@@ -167,7 +153,6 @@ export function MainNavigation() {
             {isOpen ? <X className="w-6 h-6"/> : <Menu className="w-6 h-6"/>}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (<div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">
             <div className="py-4 space-y-2">
@@ -180,7 +165,6 @@ export function MainNavigation() {
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''}`}/>
                     </div>
                   </button>
-
                   {activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">
                       {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-200" onClick={() => {
                             setActiveDropdown(null);
@@ -189,7 +173,6 @@ export function MainNavigation() {
                         </Link>))}
                     </div>)}
                 </div>))}
-
               {/* Mobile CTA */}
               <div className="px-4 pt-4 border-t border-gray-200/20">
                 <Link to="/contact" className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300" onClick={() => setIsOpen(false)}>
@@ -199,9 +182,4 @@ export function MainNavigation() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </nav>);
-}}}
-=======
     </nav>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

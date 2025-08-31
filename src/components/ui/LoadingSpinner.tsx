@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { cn } from "../../lib/utils";
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: string;
+  text?: string;
+  className?: string;
+}
+export function LoadingSpinner({ 
+  size = 'md', 
+  color = 'text-cyan-400',
+  text,
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
+    xl: 'w-20 h-20'
+  };
+=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { cn               } from '../../lib/utils';
@@ -18,13 +41,13 @@ xl: 'w-20 h-20';
   
 };
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const textSizes = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
   };
-
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
@@ -38,48 +61,45 @@ xl: 'w-20 h-20';
         role="status"
         aria-label="Loading"
       />
-      
       {text && (
         <motion.p
-<<<<<<< HEAD
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
-
-          {text}
-=======
           className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
           <span className="text-slate-300 font-medium">{text}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </motion.p>
       )}
-      
       <span className="sr-only">Loading...</span>
     </div>
   );
+<<<<<<< HEAD
+// Enhanced loading spinner with dots
+export function LoadingDots({ 
+  size = 'md',
+  color = 'text-cyan-400',
+  text,
+  className = ''
+}: LoadingSpinnerProps) {
+=======
 
 <<<<<<< HEAD
 // Optimized skeleton loader
 export function SkeletonLoader(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const dotSizes = {
     sm: 'w-2 h-2',
     md: 'w-3 h-3',
     lg: 'w-4 h-4',
     xl: 'w-5 h-5'
   };
-
   const textSizes = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
   };
-
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className="flex space-x-2">
@@ -100,7 +120,6 @@ export function SkeletonLoader(...args: any[]): any {
           />
         ))}
       </div>
-      
       {text && (
         <motion.p
           className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
@@ -111,14 +130,22 @@ export function SkeletonLoader(...args: any[]): any {
           {text}
         </motion.p>
       )}
-      
       <span className="sr-only">Loading...</span>
     </div>
   );
 }
-
 // Skeleton loading component
+<<<<<<< HEAD
+export function LoadingSkeleton({ 
+  lines = 3,
+  className = ''
+}: { 
+  lines?: number;
+  className?: string;
+}) {
+=======
 export function LoadingSkeleton(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
@@ -135,7 +162,6 @@ export function LoadingSkeleton(...args: any[]): any {
       ))}
     </div>
   );
-
 // Button loading state
 export function ButtonLoader(...args: any[]): any {
   return (
@@ -144,8 +170,16 @@ export function ButtonLoader(...args: any[]): any {
       <span className="ml-2">Loading...</span>
     </div>
   );
-
 // Page loading overlay
+<<<<<<< HEAD
+export function PageLoaderOverlay({ 
+  text = "Loading...",
+  className = '' 
+}: { 
+  text?: string;
+  className?: string;
+}) {
+=======
 <<<<<<< HEAD
 export function PageLoaderOverlay(...args: any[]): any {
   return (
@@ -165,6 +199,7 @@ export function PageLoaderOverlay(...args: any[]): any {
 
 =======
 export function PageLoaderOverlay(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
       <div className="bg-white rounded-lg p-6 shadow-xl">
@@ -173,7 +208,6 @@ export function PageLoaderOverlay(...args: any[]): any {
     </div>
   );
 }
-
 // Full page loading component
 export function FullPageLoader(...args: any[]): any {
   return (
@@ -194,7 +228,6 @@ export function FullPageLoader(...args: any[]): any {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {text}
         </motion.h2>
         <motion.p
@@ -208,7 +241,6 @@ export function FullPageLoader(...args: any[]): any {
       </div>
     </div>
   );
-
 // Content loading placeholder
 export function ContentPlaceholder(...args: any[]): any {
   const variants = {
@@ -217,7 +249,6 @@ export function ContentPlaceholder(...args: any[]): any {
     list: 'space-y-3',
     grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
   };
-
   return (
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
@@ -229,7 +260,6 @@ export function ContentPlaceholder(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-6 border border-white/10"
-
             <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
@@ -244,7 +274,6 @@ export function ContentPlaceholder(...args: any[]): any {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             className="flex items-center space-x-3"
-
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
@@ -258,7 +287,6 @@ export function ContentPlaceholder(...args: any[]): any {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-4 border border-white/10"
-
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
@@ -277,11 +305,9 @@ export function ContentPlaceholder(...args: any[]): any {
       )}
     </div>
   );
-
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner(...args: any[]): any {
   const icons = ['🤖', '☁️', '🔒', '💡'];
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
@@ -291,7 +317,6 @@ export function AppLoadingSpinner(...args: any[]): any {
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
           <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: anyanyanyanyanyanyanyanyanyanyanyanyanyany'2s' }}></div>
         </div>
-
         {/* Floating icons */}
         {icons.map((icon, index)               => (
           <motion.div
@@ -312,31 +337,26 @@ export function AppLoadingSpinner(...args: any[]): any {
               delay: index * 0.5,
               ease: "easeInOut"
             }}
-
             <span
               style={{
                 position: 'absolute',
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`
               }}
-
               {icon}
             </span>
           </motion.div>
         ))}
       </div>
-
       {/* Loading text */}
       <motion.div
         className="mt-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
         <p className="text-gray-400">Preparing your futuristic experience...</p>
       </motion.div>
-
       {/* Progress dots */}
       <div className="flex gap-2 mt-6">
         {[0, 1, 2].map((i) => (
@@ -357,8 +377,4 @@ export function AppLoadingSpinner(...args: any[]): any {
       </div>
     </div>
   );
-<<<<<<< HEAD
-</div></div></div></div></div></div></div></div>}}}}}}</motion.div></motion.div></motion.div>}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

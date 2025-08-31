@@ -33,14 +33,6 @@ const EnhancedServices = () => {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-white mb-3">Integration</h3>
               <p className="text-gray-300 mb-4">Seamless integration with existing systems</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -48,5 +40,4 @@ const EnhancedServices = () => {
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default EnhancedServices;

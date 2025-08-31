@@ -1,4 +1,6 @@
 export interface EnhancedService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface EnhancedService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   tagline: string;
@@ -89,18 +92,11 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     trialDays: 30,
     setupTime: "2-4 weeks",
     contactInfo: {
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com";
-=======;
         mobile: string;
         email: string;
         address: string;
         website: string;
     };
-
 const CONTACT = {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -111,14 +107,7 @@ const CONTACT = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
-
 export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'ai-powered-code-review-assistant',
@@ -471,10 +460,6 @@ export const enhancedServices2025: EnhancedService[] = [
         color: 'from-lime-600 to-green-700',
         link: '/services/edge-iot-observability',
         contactInfo: CONTACT
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
   },
   // Quantum Computing Services
@@ -1135,7 +1120,5 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/blockchain-web3',
     contactInfo
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default enhancedServices2025;}}

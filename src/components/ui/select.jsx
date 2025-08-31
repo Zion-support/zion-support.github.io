@@ -1,23 +1,27 @@
-<<<<<<< HEAD
+import React from 'react';
+
 export function Select({ children, className = '', value, onValueChange }) {
   return (
     <div className={`relative ${className}`}>
       {children}
     </div>
   );
+}
 
 export function SelectTrigger({ children, className = '', ...props }) {
   return (
     <button
       className={`flex h-10 w-full items-center justify-between rounded-md border border-white/20 bg-slate-800/50 px-3 py-2 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className}`}
       {...props}
-
+    >
       {children}
     </button>
   );
+}
 
 export function SelectValue({ placeholder }) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+}
 
 export function SelectContent({ children, className = '' }) {
   return (
@@ -29,9 +33,7 @@ export function SelectContent({ children, className = '' }) {
       {children}
     </div>
   );
-=======
-import React from 'react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
 
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
@@ -44,9 +46,5 @@ export function SelectItem({ children, className = '', value, ...props }) {
     `} data-value={value} {...props}>
       {children}
     </div>
-<<<<<<< HEAD
   );
-}}}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

@@ -26,6 +26,10 @@ import { BarChart3,
   Monitor,
   Tablet
 <<<<<<< HEAD
+ } from 'lucide-react';
+interface ReportData {
+=======
+<<<<<<< HEAD
 =======
                } from 'lucide-react.ts';
 
@@ -46,6 +50,7 @@ interface ReportData {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -58,6 +63,10 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
+<<<<<<< HEAD
+  rating: number}
+interface ReportMetrics {
+=======
 <<<<<<< HEAD
   rating: number;
 =======
@@ -94,11 +103,16 @@ interface ReportMetrics {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
+<<<<<<< HEAD
+  topCategories: Array<any>;
+  recentActivity: Array<any>}
+=======
 <<<<<<< HEAD
   topCategories: Array<any>;
   recentActivity: Array<any>;
@@ -119,42 +133,32 @@ recentActivity: Array<any>;
 
 }
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
-<<<<<<< HEAD
-  maxReports?: number;
-=======
   maxReports?: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
-<<<<<<< HEAD
-  showMetrics = true,
-  showFilters = true,
-  showCharts = true,
-  maxReports = 15;
-}) => {;
-  const [reports, setReports] = useState<any>([]);
-  const [filteredReports, setFilteredReports] = useState<any>([]);
-  const [selectedType, setSelectedType] = useState<any>('all');
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-=======
   showMetrics = true,;
   showFilters = true,;
   showCharts = true,;
   maxReports = 15;
 }) => {;
+<<<<<<< HEAD
+  const [reports, setReports] = useState<ReportData[]>([]);
+  const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+=======
   const [reports, setReports] = useState<any>([]);
   const [filteredReports, setFilteredReports] = useState<any>([]);
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
@@ -162,7 +166,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
-
   // Sample report data
   useEffect(() => {
     const sampleReports: ReportData[] = [
@@ -275,57 +278,38 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         views: 203,
         downloads: 78,
         rating: 4.6
-
     ];
-
     setReports(sampleReports);
     setFilteredReports(sampleReports)}, []);
-
   // Filter and sort reports
   useEffect(()                => {
     let filtered = reports;
-
     if (selectedType !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(r => r.type === selectedType);
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === selectedCategory);
-
-    if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus);
-=======
       filtered = filtered.filter(r => r.type === selectedType)}
-
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(r => r.category === selectedCategory)}
-
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     if (searchQuery) {
       filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )};
-=======;
       filtered = filtered.filter(r => ;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-<<<<<<< HEAD
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     // Sort reports
     filtered.sort((a, b) => {
+<<<<<<< HEAD
+      let aValue: any, bValue: any;
+=======
       let aValue: , bValue: ;
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -348,12 +332,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   ;
   ;
   critical: 4 ;
-
-
-
-
-
-
 };
           aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
@@ -364,33 +342,18 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         default:
           aValue = 0;
-<<<<<<< HEAD
-          bValue = 0;
-=======
           bValue = 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-      if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1} else {
-        return aValue < bValue ? 1 : -1};
-=======;
       if (sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
-<<<<<<< HEAD
-
-=======
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
-
     setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
-
   // Calculate report metrics
   const reportMetrics = {
+<<<<<<< HEAD
+=======
   <<<<<<< HEAD
     totalReports: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.length,
     activeReports: reports.filter(r                => r.status === 'active').length,
@@ -405,6 +368,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 }, {} as Record<string, any>);
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: reports.length,
     activeReports: reports.filter(r = > r.status === 'active').length,
     totalViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)               => sum + r.views, 0),
@@ -419,6 +383,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
 <<<<<<< HEAD
+}, {} as Record<string, number>);
+=======
+<<<<<<< HEAD
       }, { /* empty */ } as Record<string, any>);
 =======
       
@@ -430,6 +397,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return Object.entries(catCounts)
         .map(([name, count]) => ({
           name,
@@ -445,17 +413,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       { action: 'Report updated', timestamp: '2 hours ago', user: 'Sarah Wilson' }
     ]
   };
-
   // Get type icon and color
   const getTypeDisplay = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     const types = {
   financial: { icon: <DollarSign className="w-4 h-4" />,
   color: 'text-green-400 bg-green-400/20' 
-
-
-
-
-
 ;
 },;
       operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },;
@@ -465,8 +427,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' };
     };
     return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
-
   // Get priority color
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (priority) {;
@@ -479,11 +442,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20';
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   // Get status color
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (status) {;
@@ -495,11 +459,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20';
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   // Handle report actions
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const handleReportAction = (reportId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, action: 'view' | 'download' | 'share' | 'print')               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -524,6 +489,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           // Simulate print
           // // // console.log(`Printing ${report.title}`);
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
@@ -533,20 +499,18 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         case 'print':
           // Simulate print
           // // // // // // // console.log(`Printing ${report.title}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           break;
-
-
   };
-
   // Export report data
+<<<<<<< HEAD
+  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
+=======
   const exportReport = (report: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReportData, format: 'pdf' | 'excel' | 'csv')               => {
 <<<<<<< HEAD
     // // // console.log(`Exporting ${report.title} as ${format}`);
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
           // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
@@ -559,8 +523,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break}
     }
   };
-
   // Export report data
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const exportReport = (report: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReportData, format: 'pdf' | 'excel' | 'csv')               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -1215,15 +1180,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     </div>;
   )};
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </motion.div>;
         )};
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}}</motion.div>}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

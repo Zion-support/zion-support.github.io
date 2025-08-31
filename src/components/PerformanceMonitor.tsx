@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown } from 'lucide-react';
+=======
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -17,6 +22,7 @@ import { Activity,
 import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface PerformanceMetrics {
 
 
@@ -39,6 +45,11 @@ interface PerformanceMetrics {
   ttfb: number;
   bundleSize: number;
   loadTime: number;
+<<<<<<< HEAD
+}
+interface PerformanceMonitorProps {
+  enabled?: boolean;
+=======
 <<<<<<< HEAD
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -108,11 +119,24 @@ interface PerformanceMonitorProps extends React.PropsWithChildren<{}> {
   showMetrics?: boolean;
   onPerformanceIssue?: (issue: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => void;
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   autoRefresh?: boolean;
   refreshInterval?: number;
   showDetails?: boolean;
 
 }
+<<<<<<< HEAD
+export function PerformanceMonitor({ 
+  enabled = true, 
+  autoRefresh = true, 
+  refreshInterval = 30000,
+  showDetails = false 
+}: PerformanceMonitorProps) {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [alerts, setAlerts] = useState<string[]>([]);
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function PerformanceMonitor(...args: any[]): any {
@@ -121,23 +145,19 @@ export function PerformanceMonitor(...args: any[]): any {
   const [isExpanded, setIsExpanded] = useState(false);
   const [alerts, setAlerts] = useState<any>([]);
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const calculateMetrics = useCallback(() => {
     if (!window.performance) return null;
-
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance.getEntriesByType('paint');
-    
     const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
     const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
     const fid = 0; // First Input Delay - would need to be measured during user interaction
     const cls = 0; // Cumulative Layout Shift - would need to be measured over time
-    
     const ttfb = navigation.responseStart - navigation.requestStart;
     const loadTime = navigation.loadEventEnd - navigation.navigationStart;
-    
     // Estimate bundle size (this is a rough approximation)
     const bundleSize = performance.memory?.usedJSHeapSize || 0;
-    
     return {
       fcp,
       lcp,
@@ -148,6 +168,10 @@ export function PerformanceMonitor(...args: any[]): any {
       loadTime
     };
   }, []);
+<<<<<<< HEAD
+  const getPerformanceScore = useCallback((metrics: PerformanceMetrics) => {
+    let score = 100;
+=======
 
   const getPerformanceScore = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)               => {
     let score = 100;
@@ -277,30 +301,41 @@ export function PerformanceMonitor(...args: any[]): any {
       startMonitoring();
 =======
     
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (metrics.fcp > 1800) score -= 20;
     if (metrics.lcp > 2500) score -= 20;
     if (metrics.ttfb > 600) score -= 15;
     if (metrics.loadTime > 3000) score -= 15;
-    
     return Math.max(0, score);
   }, []);
+<<<<<<< HEAD
+  const getPerformanceColor = useCallback((score: number) => {
+=======
 
   const getPerformanceColor = useCallback((score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   }, []);
+<<<<<<< HEAD
+  const getPerformanceStatus = useCallback((score: number) => {
+=======
 
   const getPerformanceStatus = useCallback((score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (score >= 90) return 'Excellent';
     if (score >= 70) return 'Good';
     if (score >= 50) return 'Needs Improvement';
     return 'Poor';
   }, []);
+<<<<<<< HEAD
+  const checkPerformanceIssues = useCallback((metrics: PerformanceMetrics) => {
+=======
 
   const checkPerformanceIssues = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newAlerts: string[] = [];
-    
     if (metrics.fcp > 1800) {
       newAlerts.push('First Contentful Paint is slow (>1.8s)');
     }
@@ -313,13 +348,10 @@ export function PerformanceMonitor(...args: any[]): any {
     if (metrics.loadTime > 3000) {
       newAlerts.push('Page load time is slow (>3s)');
     }
-    
     setAlerts(newAlerts);
   }, []);
   useEffect(() => {
     if (!enabled) return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     const updateMetrics = () => {
       const newMetrics = calculateMetrics();
       if (newMetrics) {
@@ -327,59 +359,26 @@ export function PerformanceMonitor(...args: any[]): any {
         checkPerformanceIssues(newMetrics);
       }
     };
-
     // Initial calculation
     updateMetrics();
-
     // Set up auto-refresh
     if (autoRefresh) {
       const interval = setInterval(updateMetrics, refreshInterval);
       return () => clearInterval(interval);
     }
   }, [enabled, autoRefresh, refreshInterval, calculateMetrics, checkPerformanceIssues]);
-
   useEffect(() => {
     // Show monitor after page load
     const timer = setTimeout(() => setIsVisible(true), 2000);
     return () => clearTimeout(timer);
   }, []);
-
   if (!enabled || !isVisible) return null;
-
   const score = metrics ? getPerformanceScore(metrics) : 0;
   const status = getPerformanceStatus(score);
   const statusColor = getPerformanceColor(score);
-
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <AnimatePresence>
-<<<<<<< HEAD
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
-
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                Performance Monitor
-              </h3>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-
-                  <Settings className="w-4 h-4 text-gray-500" />
-                </button>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-
-                  <X className="w-4 h-4 text-gray-500" />
-                </button>
-              </div>
-=======
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -412,13 +411,11 @@ export function PerformanceMonitor(...args: any[]): any {
               </button>
             </div>
           </div>
-
           {/* Score Display */}
           <div className="p-4">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs text-gray-400">Performance Score</span>
               <span className={`text-sm font-bold ${statusColor}`}>{score}/100</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <div className="w-full bg-slate-800 rounded-full h-2 mb-2">
               <motion.div
@@ -426,45 +423,15 @@ export function PerformanceMonitor(...args: any[]): any {
                   score >= 90 ? 'bg-green-400' : 
                   score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
                 }`}
-<<<<<<< HEAD
-
-                {isMonitoring ? 'Stop' : 'Start'} Monitoring
-              </button>
-              <button
-                onClick={collectMetrics}
-                className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
-
-                Refresh
-              </button>
-=======
                 initial={{ width: 0 }}
                 animate={{ width: `${score}%` }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <div className="text-center">
               <span className={`text-xs font-medium ${statusColor}`}>{status}</span>
             </div>
           </div>
-
-<<<<<<< HEAD
-      {/* Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg"
-
-        <BarChart3 className="w-5 h-5" />
-      </motion.button>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
-}}}}}}}}}}}}}}}}}}
-=======
           {/* Expanded Details */}
           <AnimatePresence>
             {isExpanded && metrics && (
@@ -507,7 +474,6 @@ export default PerformanceMonitor;
                       </div>
                     </div>
                   </div>
-
                   {/* Alerts */}
                   {alerts.length > 0 && (
                     <div className="space-y-2">
@@ -524,7 +490,6 @@ export default PerformanceMonitor;
                       </div>
                     </div>
                   )}
-
                   {/* Refresh Button */}
                   <button
                     onClick={() => {
@@ -547,4 +512,3 @@ export default PerformanceMonitor;
     </div>
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

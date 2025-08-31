@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -12,12 +16,12 @@ import { Brain,
   CheckCircle,
   Star,
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Users, 
   MessageSquare, 
   TrendingUp, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Play,
   Settings,
@@ -92,10 +96,13 @@ import {
   Phone,
   Mail,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Award,
   ThumbsUp
 export default function AICustomerSuccessPlatform(...args: any[]): any {
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Calendar,
   MessageSquare2,
   UserPlus,
@@ -239,10 +246,13 @@ export default function AICustomerSuccessPlatform(...args: any[]): any {
   UserEditOff,
   UserSearch3,
   UserSearchOff
+<<<<<<< HEAD
+} from 'lucide-react';
+=======
              } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AICustomerSuccessPlatform = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -275,7 +285,6 @@ const AICustomerSuccessPlatform = () => {
       description: 'Continuous monitoring of customer engagement and satisfaction metrics'
     }
   ];
-
   const benefits = [
     'Reduce customer churn by up to 40%',
     'Increase customer lifetime value by 35%',
@@ -284,7 +293,6 @@ const AICustomerSuccessPlatform = () => {
     'Enable proactive issue resolution before escalation',
     'Scale customer success operations efficiently'
   ];
-
   const useCases = [
     {
       industry: 'SaaS Companies',
@@ -303,7 +311,6 @@ const AICustomerSuccessPlatform = () => {
       description: 'Monitor account health and provide proactive financial advisory'
     }
   ];
-
   const pricing = [
     {
       plan: 'Starter',
@@ -334,19 +341,6 @@ const AICustomerSuccessPlatform = () => {
       plan: 'Enterprise',
       price: '$5,000/month',
       features: [
-<<<<<<< HEAD
-        "Custom AI model training",
-        "White-label solutions",
-        "Advanced integrations",
-        "Custom success playbooks",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited team members"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
         'Unlimited customers',
         'Full AI capabilities',
         'Custom integrations',
@@ -356,9 +350,7 @@ const AICustomerSuccessPlatform = () => {
         'Custom training'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const integrations = [
     'Salesforce CRM',
     'HubSpot',
@@ -371,18 +363,8 @@ const AICustomerSuccessPlatform = () => {
     'Zapier',
     'Webhook APIs'
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="AI Customer Success Platform - Zion Tech Group"
-        description="Transform your customer success with AI-powered health scoring, churn prevention, and engagement automation. Increase retention and lifetime value."
-      />
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -390,16 +372,10 @@ const AICustomerSuccessPlatform = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-=======
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               AI-Powered Customer Success
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -408,50 +384,31 @@ const AICustomerSuccessPlatform = () => {
                 {' '}AI Intelligence
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your customer success with AI that predicts churn, optimizes engagement, and drives customer value.
-              Increase retention, improve satisfaction, and grow your business through exceptional customer experiences.
-=======
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Leverage artificial intelligence to predict customer needs, automate success workflows, 
               and drive sustainable business growth through proactive customer success management.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-200"
-
-                Start Free Trial
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
-                Watch Demo
-=======
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
                 <Settings className="w-5 h-5 mr-2" />
                 Start Free Trial
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -460,40 +417,31 @@ const AICustomerSuccessPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Customer Success Intelligence
-=======
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful AI-Driven Features
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Our platform combines cutting-edge AI with proven customer success methodologies
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-emerald-500 transition-all duration-300"
-
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
@@ -502,8 +450,9 @@ const AICustomerSuccessPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -543,6 +492,7 @@ const AICustomerSuccessPlatform = () => {
       {/* Use Cases Section */}
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -550,36 +500,24 @@ const AICustomerSuccessPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry-Leading Solutions
-=======
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Measurable Business Impact
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               See real results with our AI-powered customer success platform
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-emerald-500 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-=======
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -587,13 +525,11 @@ const AICustomerSuccessPlatform = () => {
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -602,23 +538,22 @@ const AICustomerSuccessPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business
-=======
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry Solutions
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Tailored solutions for various industries and business models
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -633,7 +568,6 @@ const AICustomerSuccessPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -650,37 +584,18 @@ const AICustomerSuccessPlatform = () => {
               Choose the plan that fits your business needs and scale as you grow
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular
-                    ? 'border-emerald-500 ring-2 ring-emerald-500/20'
-                    : 'border-gray-700'
-                }`}
-
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
                   index === 1 
@@ -696,7 +611,6 @@ const AICustomerSuccessPlatform = () => {
                       Most Popular
                     </span>
                   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
@@ -714,20 +628,6 @@ const AICustomerSuccessPlatform = () => {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-
-                  {plan.cta}
-                </motion.button>
-=======
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -744,9 +644,14 @@ const AICustomerSuccessPlatform = () => {
               Connect with your existing tools and workflows
             </p>
           </motion.div>
+<<<<<<< HEAD
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {integrations.map((integration, index) => (
+=======
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
             {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -755,13 +660,11 @@ const AICustomerSuccessPlatform = () => {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
               >
                 <span className="text-zion-slate-light font-medium">{integration}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -769,13 +672,8 @@ const AICustomerSuccessPlatform = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-=======
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Ready to Transform Your Customer Success?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
@@ -785,34 +683,23 @@ const AICustomerSuccessPlatform = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-200"
-
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
-=======
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Schedule Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -862,10 +749,5 @@ const AICustomerSuccessPlatform = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}}}
-=======
 };
-
 export default AICustomerSuccessPlatform;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

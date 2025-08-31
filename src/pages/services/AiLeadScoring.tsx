@@ -1,4 +1,9 @@
 // removed duplicate old section
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
+=======
 
 <<<<<<< HEAD
 import React from 'react.ts';
@@ -9,8 +14,8 @@ import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 import { TrendingUp, CheckCircle, Database, PlugZap               } from 'lucide-react.ts';
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AiLeadScoring: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
@@ -25,7 +30,6 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
         </div>
         <h1 className="text-4xl font-bold">Prioritize the right leads with explainable AI</h1>
         <p className="mt-3 text-slate-300 max-w-2xl">Ship an AI model that ranks leads by conversion probability and surfaces the why behind each score. Integrate with Salesforce, HubSpot, or custom CRMs.</p>
-
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Features</div>
@@ -81,14 +85,6 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
             <p className="text-slate-300">Mobile: <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></p>
             <p className="text-slate-300">E-mail: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
             <p className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-          </div>
-        </div>
-        <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>
-      </section>;
-    </div>;
-  )};
-=======
           </div>;
         </div>;
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>;
@@ -96,8 +92,5 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default AiLeadScoring;
-
 }

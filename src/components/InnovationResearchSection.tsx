@@ -11,6 +11,9 @@ import { Lightbulb,
   Microscope,
   Target
 <<<<<<< HEAD
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
 export const InnovationResearchSection: React.FC = (): JSX.Element => {
 =======
               } from 'lucide-react.ts';
@@ -69,11 +72,10 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       patents: '11'
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       patents: '11';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const researchAreas = [
   {
     icon: "🧠",
@@ -104,23 +106,24 @@ const researchAreas = [
     color: "from-orange-500 to-red-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const innovationMetrics = [;
   { label: "Research Papers", value: "30+", icon: "📚" },;
   { label: "Patents Filed", value: "15+", icon: "📋" },;
   { label: "R&D Investment", value: "$2M+", icon: "💰" },;
   { label: "Innovation Awards", value: "8+", icon: "🏆" };
 ];
-
 const innovationMetrics = [
   { label: "Research Papers", value: "30+", icon: "📚" },
   { label: "Patents Filed", value: "15+", icon: "📋" },
   { label: "R&D Investment", value: "$2M+", icon: "💰" },
   { label: "Innovation Awards", value: "8+", icon: "🏆" }
 ];
+<<<<<<< HEAD
+export function InnovationResearchSection() {
+=======
 
 export function InnovationResearchSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -130,14 +133,8 @@ export function InnovationResearchSection(...args: any[]): any {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-          className="text-center mb-16"
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-=======
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Innovation & Research
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -145,9 +142,11 @@ export function InnovationResearchSection(...args: any[]): any {
             breakthrough innovations, and collaborative partnerships with leading institutions.
           </p>
         </motion.div>
-
         {/* Innovation Metrics */}
         <motion.div 
+<<<<<<< HEAD
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+=======
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
 <<<<<<< HEAD
 
@@ -165,6 +164,7 @@ export function InnovationResearchSection(...args: any[]): any {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -174,10 +174,11 @@ export function InnovationResearchSection(...args: any[]): any {
             <div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             )})}
         </motion.div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         {/* Research Areas Grid */}
@@ -186,103 +187,60 @@ export function InnovationResearchSection(...args: any[]): any {
             const IconComponent = area.icon;
             return (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Research Areas */}
         <motion.div 
           className = "mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
           </h3>
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {researchAreas.map((area, index) => (
+=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {researchAreas.map((area, index)               => (
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.title}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
-
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-indigo-100 rounded-xl mr-4">
-                    <IconComponent className="h-8 w-8 text-indigo-600" />
-=======
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
-
 }}
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
                     <span className="text-2xl">{area.icon}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
-                  
                   <div className="flex-1">
                     <h4 className="text-xl font-bold text-white mb-2">{area.title}</h4>
                     <p className="text-gray-400 text-sm mb-4">{area.description}</p>
-                    
                     <div className="mb-2">
                       <div className="flex justify-between text-sm text-gray-300 mb-1">
                         <span>Research Progress</span>
@@ -297,12 +255,6 @@ export function InnovationResearchSection(...args: any[]): any {
                           transition = {
   { duration: 1,
   delay: 0.8 + index * 0.1 
-
-
-
-
-
-
 }}
                         />
                       </div>
@@ -312,47 +264,27 @@ export function InnovationResearchSection(...args: any[]): any {
               </motion.div>
             )})}
         </div>
-
         {/* Research Highlights */}
         <motion.div 
           className="mb-12"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
             </h3>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -361,7 +293,6 @@ export function InnovationResearchSection(...args: any[]): any {
                 <h4 className="text-lg font-bold text-white mb-2">AI Drug Discovery</h4>
                 <p className="text-gray-400 text-sm">Accelerating pharmaceutical research with quantum AI</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">⚡</span>
@@ -369,7 +300,6 @@ export function InnovationResearchSection(...args: any[]): any {
                 <h4 className="text-lg font-bold text-white mb-2">Quantum Optimization</h4>
                 <p className="text-gray-400 text-sm">Solving complex optimization problems 1000x faster</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🌱</span>
@@ -380,45 +310,22 @@ export function InnovationResearchSection(...args: any[]): any {
             </div>
           </div>
         </motion.div>
-
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Join the Innovation Revolution
@@ -442,12 +349,7 @@ export function InnovationResearchSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default InnovationResearchSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -455,8 +357,5 @@ export default InnovationResearchSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default IconComponent;
 export default IconComponent;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

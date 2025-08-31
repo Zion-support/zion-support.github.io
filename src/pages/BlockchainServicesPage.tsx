@@ -24,6 +24,9 @@ import { Link,
   Clock,
   Check
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 const BlockchainServicesPage = () => {
 =======
               } from 'lucide-react.ts';
@@ -157,6 +160,7 @@ const BlockchainServicesPage = () => {;
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         "Network monitoring";
       ],;
       icon: Globe,;
@@ -164,10 +168,11 @@ const BlockchainServicesPage = () => {;
       badge: "Advanced",;
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const categories = [
+<<<<<<< HEAD
+    { id: 'all', name: 'All Services', count: blockchainServices.length },
+=======
     { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: blockchainServices.length },
 <<<<<<< HEAD
     { id: 'Development', name: 'Development', count: blockchainServices.filter(s               => s.category === 'Development').length },
@@ -413,47 +418,27 @@ const BlockchainServicesPage = () => {;
 
             ].map((feature, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }
             ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
@@ -461,7 +446,6 @@ const BlockchainServicesPage = () => {;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -472,21 +456,12 @@ const BlockchainServicesPage = () => {;
             Let's discuss how blockchain technology can transform your business.
             Our experts are ready to help you navigate the blockchain landscape.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Your Project
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </button>;
           </div>;
         </div>;
@@ -494,7 +469,5 @@ const BlockchainServicesPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default BlockchainServicesPage;
 }}}

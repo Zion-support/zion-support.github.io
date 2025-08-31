@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
+import { Mail, Send, CheckCircle  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
 import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = (): JSX.Element => {
 =======
 import React, { useState               } from 'react.ts';
@@ -35,18 +39,14 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {;
 <<<<<<< HEAD
       // // // console.error('Newsletter subscription failed:', error);
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Newsletter subscription failed:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
-
-=======
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
       console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className = "bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
       <div className="text-center">
@@ -55,14 +55,12 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {;
             <Mail className="w-6 h-6 text-white" />
           </div>
         </div>
-
         <h3 className="text-xl font-bold text-white mb-2">
           Stay Updated
         </h3>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.
         </p>
-
         {isSubmitted ? (
           <div className="flex items-center justify-center gap-2 text-green-400">
             <CheckCircle className="w-5 h-5" />
@@ -82,7 +80,6 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {;
               type="submit"
               disabled={isSubmitting || !email.trim()}
               className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-
               {isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -97,25 +94,10 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {;
             </button>
           </form>
         )}
-
-<<<<<<< HEAD
-        <p className="text-xs text-gray-400 mt-4">
-          We respect your privacy. Unsubscribe at  time.
-        </p>
-      </div>;
-    </div>;
-  )};
-=======
         <p className="text-xs text-gray-400 mt-4">;
           We respect your privacy. Unsubscribe at any time.;
         </p>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</div>};
-}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

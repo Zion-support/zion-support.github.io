@@ -28,6 +28,11 @@ import { Search,
   Users,
   CheckCircle
 <<<<<<< HEAD
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+export default function EnhancedServicesPage(...args[]):  {
+=======
+<<<<<<< HEAD
 import { SEO              } from '@/components/SEO';
 =======
 } from 'lucide-react';
@@ -35,26 +40,25 @@ import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedServicesPage(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-
   const filteredServices = ENHANCED_SERVICES.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-
     const matchesCategory = selectedCategory === 'all' ||
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-
     const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'basic' && service.price <= 2000) ||
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
                         (selectedPriceRange === 'premium' && service.price > 25000);
-
     return matchesSearch && matchesCategory && matchesPrice;
   });
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -92,9 +96,11 @@ export default function EnhancedServicesPage(...args[]: any):  {
         return <Code className="w-5 h-5" />;
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Code className = "w-5 h-5" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
@@ -543,23 +549,16 @@ export default function EnhancedServicesPage(...args[]: any):  {
                 onClick={() => window.open(CONTACT_INFO.website, '_blank')}
 
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onClick = {
   () => window.open(CONTACT_INFO.website,
   '_blank')
-
-
-
-
-
-
 }
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
               </Button>
             </div>
-
             <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>
               <p className="text-zion-slate-light mb-4">
@@ -568,26 +567,12 @@ export default function EnhancedServicesPage(...args[]: any):  {
               <Button
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
-
                 Request Enterprise Consultation
               </Button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

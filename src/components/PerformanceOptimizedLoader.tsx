@@ -1,21 +1,29 @@
+<<<<<<< HEAD
+import React, { memo } from 'react';
+import { motion } from 'framer-motion';
+interface LoaderProps {
+=======
 import React, { memo } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 
 interface LoaderProps extends React.PropsWithChildren<{}> {
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 =======
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   size = 'md',
   color = 'primary',
   text,
@@ -30,37 +38,16 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   ;
   lg: 'w-16 h-16';
   ;
-
-
-
-
-
-
 };
   const textSizes = {
-  <<<<<<< HEAD
-    sm: 'text-xs',
-    md: 'text-sm',
-  lg: 'text-base';
-  ;
-
-};
-=======
   sm: 'text-xs',
     md: 'text-sm',;
   ;
   ;
   lg: 'text-base';
   ;
-
-
-
-
 };
-
   const showLogo = true; // Add this variable
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
     <div className = "flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
@@ -86,35 +73,13 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         <div className="mt-4 text-center">
           <motion.div
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
-<<<<<<< HEAD
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-
-            {text}
-          </motion.div>
-        </div>
-      </div>
-    </div>
-=======
             animate = {
   { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
-
 }};
           >;
             {text};
@@ -122,7 +87,6 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         </div>;
       </div>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 });
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
@@ -144,7 +108,6 @@ export function SkeletonLoader(...args: any[]): any {
       ))};
     </div>;
   );
-
 // Card skeleton loader
 export function CardSkeleton(...args: any[]): any {
   return (
@@ -166,7 +129,6 @@ export function CardSkeleton(...args: any[]): any {
       </div>;
     </div>;
   );
-
 // Grid skeleton loader
 export function GridSkeleton(...args: any[]): any {
   return (
@@ -176,7 +138,6 @@ export function GridSkeleton(...args: any[]): any {
       ))};
     </div>;
   );
-
 // Page skeleton loader
 export function PageSkeleton(...args: any[]): any {
   return (

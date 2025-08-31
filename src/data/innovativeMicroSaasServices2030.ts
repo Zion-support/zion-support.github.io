@@ -1,7 +1,13 @@
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
-
 export interface ServiceContact {
+<<<<<<< HEAD
+  phone: string;
+  email: string;
+  website: string;
+  address: string}
+export interface MicroSaasService {
+=======
 
 
 
@@ -53,6 +59,7 @@ export interface MicroSaasService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -79,6 +86,9 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
 <<<<<<< HEAD
+  compliance: string[]}
+=======
+<<<<<<< HEAD
   compliance: string[];
 =======
 compliance: string[];
@@ -97,6 +107,7 @@ compliance: string[];
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
@@ -108,14 +119,7 @@ const zionContact: ServiceContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 // Innovative Micro SAAS Services 2030
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [
   {
@@ -676,13 +680,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time processing",
       "Cloud integration"
     ],
-<<<<<<< HEAD
-    compliance: ["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
-
-=======
     compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default innovativeMicroSaasServices2030;}}}

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles import { Link              } from 'react-router-dom.ts';
 =======
@@ -9,6 +15,7 @@ import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircl
 import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function LLMContentStudio(...args: []):  {
   return (
     <>
@@ -17,7 +24,6 @@ export default function LLMContentStudio(...args: []):  {
         <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
         <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +34,18 @@ export default function LLMContentStudio(...args: []):  {
                 <BookOpen className="w-4 h-4 mr-2" />
                 AI-Powered Content Creation
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 LLM Content
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Studio</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Transform your content creation with AI-powered LLM technology. Generate high-quality,
                 on-brand content at scale for blogs, marketing, and creative projects.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +57,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,8 +69,12 @@ export default function LLMContentStudio(...args: []):  {
                 high-quality content across all platforms and formats.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Sparkles,
@@ -101,12 +106,14 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((feature, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -118,7 +125,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Content Types Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,8 +136,12 @@ export default function LLMContentStudio(...args: []):  {
                 Generate diverse content types for all your marketing and communication needs.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Blog Posts & Articles",
@@ -169,12 +179,14 @@ export default function LLMContentStudio(...args: []):  {
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((contentType, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((contentType, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <contentType.icon className="w-6 h-6 text-white" />
@@ -194,7 +206,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* AI Capabilities Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +217,6 @@ export default function LLMContentStudio(...args: []):  {
                 Leverage cutting-edge language models and AI technology for superior content creation.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -225,7 +235,6 @@ export default function LLMContentStudio(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>
                 <div className="space-y-4">
@@ -250,7 +259,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Workflow Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,8 +270,12 @@ export default function LLMContentStudio(...args: []):  {
                 Streamlined process from idea to published content with AI assistance at every step.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -285,12 +297,14 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((step, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -302,7 +316,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,7 +327,6 @@ export default function LLMContentStudio(...args: []):  {
                 Experience unprecedented efficiency and quality in content creation and management.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Content Creation Benefits</h3>
@@ -334,7 +346,6 @@ export default function LLMContentStudio(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Business Impact</h3>
                 <div className="space-y-4">
@@ -356,7 +367,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Analytics Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,8 +378,12 @@ export default function LLMContentStudio(...args: []):  {
                 Track content performance and optimize your strategy with comprehensive analytics.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   metric: "Engagement",
@@ -391,12 +405,14 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((metric, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((metric, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>
@@ -408,7 +424,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -422,23 +437,12 @@ export default function LLMContentStudio(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
-
                 Start Creating
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -447,6 +451,5 @@ export default function LLMContentStudio(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

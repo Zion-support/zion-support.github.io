@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React, { Suspense, lazy } from 'react'
+import { LoadingSpinner } from "./ui/LoadingSpinner"
+=======
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react.ts'
 import { LoadingSpinner                } from './ui/LoadingSpinner'
 =======
@@ -32,11 +36,9 @@ export const LazyAbout = lazy(() => import('../pages/About'))
 export const LazyContact = lazy(() => import('../pages/Contact'))
 export const LazyPricing = lazy(() => import('../pages/Pricing'))}}
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface LazyLoaderProps extends React.PropsWithChildren<{}> {
-
 component: React.ComponentType<any>;
 fallback?: React.ReactNode;
 props?}
-
 export const LazyPricing = lazy(() => import('../pages/Pricing'));
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

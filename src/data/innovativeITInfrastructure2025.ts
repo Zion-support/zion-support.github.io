@@ -1,4 +1,6 @@
 export interface InnovativeITInfrastructureService {
+<<<<<<< HEAD
+=======
 
 
 
@@ -13,6 +15,7 @@ export interface InnovativeITInfrastructureService {
 
 
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -55,12 +58,7 @@ website: string;
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  marketSize?: string;
-=======
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure
   {
@@ -126,7 +124,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     competitors["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],
     marketSize: "$832.1 billion by 2025"
   },
-
   // Edge Computing & IoT Platform
   {
     id: "edge-computing-iot-platform",
@@ -191,7 +188,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],
     marketSize: "$43.4 billion by 2025"
   },
-
   // Quantum-Ready Network Infrastructure
   {
     id: "quantum-ready-network-infrastructure",
@@ -256,7 +252,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     competitors["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],
     marketSize: "$89.2 billion by 2025"
   },
-
   // AI-Powered Data Center Management
   {
     id: "ai-powered-data-center-management",
@@ -321,7 +316,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     competitors["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],
     marketSize: "$59.7 billion by 2025"
   },
-
   // 5G & 6G Network Infrastructure
   {
     id: "5g-6g-network-infrastructure",
@@ -385,5 +379,4 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     competitors["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
     marketSize: "$667.9 billion by 2025"
-
 ];}}

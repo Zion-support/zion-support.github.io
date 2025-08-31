@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain,
@@ -14,6 +18,7 @@ import { Brain,
 =======
 import React, { useState, useEffect              } from 'react.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Brain, 
   Search, 
@@ -24,7 +29,6 @@ import {
   Clock, 
   DollarSign, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Star,
   ArrowRight,
   Globe,
@@ -36,112 +40,6 @@ import {
   Activity,
   Award,
   Rocket,
-<<<<<<< HEAD
-  Sparkles
-const AIAutonomousResearchAssistant = () => {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Research",
-      description: "Advanced AI algorithms that autonomously conduct comprehensive research across multiple sources and databases."
-    },
-    {
-      icon: <Search className="w-6 h-6" />,
-      title: "Multi-Source Analysis",
-      description: "Automatically gather, analyze, and synthesize information from academic papers, industry reports, and real-time data."
-    },
-    {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Academic Integration",
-      description: "Seamless integration with academic databases, research repositories, and peer-reviewed sources."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Trend Analysis",
-      description: "Identify emerging trends, patterns, and insights from vast amounts of research data."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Updates",
-      description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Data Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
-
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for individual researchers and small teams",
-      features: [
-        "Up to 100 research queries/month",
-        "Basic AI analysis",
-        "Standard academic database access",
-        "Email support",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for research institutions and growing organizations",
-      features: [
-        "Up to 500 research queries/month",
-        "Advanced AI algorithms",
-        "Premium database access",
-        "Priority support",
-        "Advanced analytics",
-        "Custom research templates"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations with complex research needs",
-      features: [
-        "Unlimited research queries",
-        "Custom AI model training",
-        "Full database access",
-        "Dedicated support team",
-        "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: false
-
-  ];
-
-  const useCases = [
-    {
-      title: "Academic Research",
-      description: "Accelerate literature reviews, identify research gaps, and discover relevant studies across disciplines.",
-      icon: <BookOpen className="w-8 h-8 text-blue-500" />
-    },
-    {
-      title: "Market Intelligence",
-      description: "Monitor industry trends, competitor analysis, and market opportunities with automated research.",
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />
-    },
-    {
-      title: "Product Development",
-      description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
-    },
-    {
-      title: "Policy Research",
-      description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
-      icon: <Target className="w-8 h-8 text-purple-500" />
-
-=======
   Sparkles,
   Eye,
   Workflow,
@@ -161,15 +59,17 @@ const AIAutonomousResearchAssistant = () => {
   Mail,
   MapPin
 } from 'lucide-react';
+<<<<<<< HEAD
+export default function AIAutonomousResearchAssistant() {
+=======
 
 export default function AIAutonomousResearchAssistant(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const features = [
     "Fully autonomous research execution",
     "Multi-domain knowledge synthesis",
@@ -182,7 +82,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
     "API integration capabilities",
     "Custom research templates"
   ];
-
   const benefits = [
     "Reduce research time by 90%",
     "24/7 autonomous operation",
@@ -190,16 +89,13 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
     "Comprehensive coverage",
     "Scalable research capacity"
   ];
-
   const useCases = [
     "Market research automation",
     "Scientific literature review",
     "Competitive intelligence",
     "Trend analysis",
     "Academic research support"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const technicalSpecs = {
     technology: ["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"],
     integrations: ["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"],
@@ -207,7 +103,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
     uptime: "99.99%",
     security: ["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"]
   };
-
   const pricing = {
     monthly: "$4,999",
     yearly: "$49,999",
@@ -220,14 +115,12 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
       "Advanced analytics"
     ]
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Futuristic Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Animated grid with neon effect */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-        
         {/* Floating particles with neon glow */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
@@ -253,7 +146,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             />
           ))}
         </div>
-        
         {/* Gradient orbs with neon glow */}
         <motion.div 
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
@@ -267,7 +159,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             ease: "easeInOut"
           }}
         />
-        
         <motion.div 
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
@@ -282,7 +173,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
           }}
         />
       </div>
-
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -290,14 +180,8 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="mb-8"
-
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-=======
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Brain className="w-4 h-4 mr-2" />
               Revolutionary AI Research Platform
             </div>
@@ -308,26 +192,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
               The world's first fully autonomous AI research platform that conducts comprehensive research, 
               analyzes data, and generates insights across multiple domains without human intervention.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
-
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-
-                Watch Demo
-              </motion.button>
-=======
           </motion.div>
-
           {/* Key Metrics */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -350,13 +215,13 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-2xl p-6 backdrop-blur-sm">
               <div className="text-3xl font-bold text-orange-400 mb-2">99.99%</div>
               <div className="text-gray-300">Uptime</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -388,6 +253,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             ))}
           </div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -401,13 +267,13 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
               Watch Demo
             </button>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -514,6 +380,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 </motion.button>
               </motion.div>
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
               <button
@@ -527,12 +394,10 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
           </div>
         </div>
       </div>
-
       {/* Content Sections */}
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -602,7 +467,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'features' && (
               <motion.div
                 key="features"
@@ -620,9 +484,14 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     Discover the cutting-edge capabilities that make our AI research platform the most advanced in the world
                   </p>
                 </div>
+<<<<<<< HEAD
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {features.map((feature, index) => (
+=======
 
                 <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
                   {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -642,7 +511,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'pricing' && (
               <motion.div
                 key="pricing"
@@ -660,7 +528,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     Choose the perfect plan for your research needs with our competitive pricing structure
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {/* Monthly Plan */}
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
@@ -681,7 +548,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                       </button>
                     </div>
                   </div>
-
                   {/* Yearly Plan */}
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -706,7 +572,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                       </button>
                     </div>
                   </div>
-
                   {/* Enterprise Plan */}
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
                     <div className="text-center">
@@ -739,7 +604,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'technical' && (
               <motion.div
                 key="technical"
@@ -757,7 +621,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     Built with cutting-edge technology to ensure maximum performance, security, and reliability
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
@@ -773,7 +636,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                         ))}
                       </div>
                     </div>
-
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Network className="w-6 h-6 text-cyan-400 mr-3" />
@@ -789,7 +651,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                       </div>
                     </div>
                   </div>
-
                   <div className="space-y-6">
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -811,7 +672,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                         </div>
                       </div>
                     </div>
-
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Lock className="w-6 h-6 text-cyan-400 mr-3" />
@@ -830,7 +690,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'contact' && (
               <motion.div
                 key="contact"
@@ -849,7 +708,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     implementing the AI Autonomous Research Assistant for your organization.
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-8 backdrop-blur-sm">
                     <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
@@ -872,7 +730,6 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-8 backdrop-blur-sm">
                     <h3 className="text-2xl font-semibold text-white mb-6">Quick Start</h3>
                     <div className="space-y-4">
@@ -893,45 +750,14 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Research?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of researchers who are already using AI to accelerate their discoveries and insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-
-                Contact Sales
-              </motion.button>
-=======
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 text-blue-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 text-blue-400 mb-4" />
@@ -948,10 +774,4 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default AIAutonomousResearchAssistant;}}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

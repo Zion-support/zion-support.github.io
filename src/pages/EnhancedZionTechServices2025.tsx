@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
+const EnhancedZionTechServices2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('name');
+=======
 import React, { useState } from 'react.ts';
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory              } from '../data/enhancedZionTechServices2025';
 
@@ -6,23 +14,14 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState<any>('');
   const [sortBy, setSortBy] = useState<any>('name');
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = ['All', ...getEnhancedServiceCategories()];
-<<<<<<< HEAD
-
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
-  
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
@@ -33,9 +32,7 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
         return b.aiScore - a.aiScore;
       default:
         return a.title.localeCompare(b.title);
-
   });
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -70,7 +67,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </div>
-
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -82,7 +78,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             we provide the technology foundation your business needs to thrive in 2025 and beyond.
           </p>
         </div>
-
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -102,7 +97,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             <div className="text-gray-400">Support Available</div>
           </div>
         </div>
-
         {/* Filters and Search */}
         <div className="flex flex-col lg:flex-row gap-6 mb-12">
           <div className="flex-1">
@@ -118,9 +112,14 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              {categories.map(category => (
+=======
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
               {categories.map(category              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
@@ -128,7 +127,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-
               <option value="name">Sort by Name</option>
               <option value="price">Sort by Price</option>
               <option value="rating">Sort by Rating</option>
@@ -136,7 +134,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             </select>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
           {sortedServices.map((service)              => (
@@ -155,7 +152,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                 <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                 <p className="text-gray-300 text-sm">{service.description}</p>
               </div>
-
               {/* AI Score */}
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
@@ -169,7 +165,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   ></div>
                 </div>
               </div>
-
               {/* Features */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -182,7 +177,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   ))}
                 </ul>
               </div>
-
               {/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
@@ -195,7 +189,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   ))}
                 </ul>
               </div>
-
               {/* Pricing */}
               <div className="mb-4">
                 <div className="text-center">
@@ -208,7 +201,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   )}
                 </div>
               </div>
-
               {/* Tags */}
               <div className="mb-4">
                 <div className="flex flex-wrap gap-2">
@@ -219,7 +211,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   ))}
                 </div>
               </div>
-
               {/* Contact and Action */}
               <div className="space-y-3">
                 <a
@@ -227,14 +218,12 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-
                   Learn More
                 </a>
                 <div className="text-center">
                   <a
                     href={`mailto:${service.contactInfo.email}`}
                     className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-
                     Contact Sales
                   </a>
                 </div>
@@ -242,7 +231,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             </div>
           ))}
         </div>
-
         {/* Contact Section */}
         <div className="mt-24 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
@@ -266,7 +254,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
             </div>
           </div>
         </div>
-
         {/* Why Choose Zion Tech Group */}
         <div className="mt-24">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -299,5 +286,4 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-
 export default EnhancedZionTechServices2025;}

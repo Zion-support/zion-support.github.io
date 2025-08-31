@@ -14,10 +14,14 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
 <<<<<<< HEAD
+ } from 'lucide-react';
+=======
+<<<<<<< HEAD
 =======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const itServices2028 = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -192,15 +196,6 @@ const itServices2028 = [
     icon: BarChart3,
     color: 'from-emerald-600 to-teal-700',
     category: 'Data & Analytics',
-<<<<<<< HEAD
-    realService: true,
-    marketSize: '$11.2B data analytics market',
-    growthRate: '220% annual growth',
-    rating: 4.6,
-    reviews: 156,
-    customers: 89
-
-=======
     realService: true,;
     marketSize: '$11.2B data analytics market',;
     growthRate: '220% annual growth',;
@@ -208,8 +203,9 @@ const itServices2028 = [
     reviews: 156,;
     customers: 89;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 const ITServices2028: React.FC = (): JSX.Element => {;
@@ -480,6 +476,7 @@ const ITServices2028: React.FC = (): JSX.Element => {;
     </div>;
   )};
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </a>;
           </motion.div>;
         </div>;
@@ -487,6 +484,4 @@ const ITServices2028: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ITServices2028;}}

@@ -1,9 +1,14 @@
-
 import SEO from '@/components/SEO';
+<<<<<<< HEAD
+import { DisputeDashboard } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+function DisputesPage(...args[]):  {
+=======
 import { DisputeDashboard              } from '@/components/disputes';
 import { ProtectedRoute              } from '@/components/ProtectedRoute';
 
 function DisputesPage(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <ProtectedRoute>
       <>
@@ -11,29 +16,17 @@ function DisputesPage(...args[]: any):  {
           title="Dispute Resolution Center | Zion AI Marketplace"
           description="View and manage disputes between clients and talents"
         />
-
         <DisputeDashboard />
-
       </>
     </ProtectedRoute>
   )};
-=======;
         ;
         <DisputeDashboard />;
         ;
       </>;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
-
-export default DisputesPage;
 }
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-export default DisputesPage;
-
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
@@ -41,4 +34,4 @@ export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default DisputesPage;

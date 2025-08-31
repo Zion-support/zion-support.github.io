@@ -1,20 +1,6 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { useState              } from 'react.ts';
-import { Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Zap,
-  Database,
-  Smartphone,
-  Code,
-  Lock,
-=======
-import type { NextPage              } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState               } from 'react.ts';
+import { useState  } from 'react.ts';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -24,7 +10,6 @@ import { Brain,
   Smartphone, 
   Code, 
   Lock, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   TrendingUp,
   Rocket,
   Cpu,
@@ -35,13 +20,9 @@ import { Brain,
   Target,
   Users,
   CheckCircle
-<<<<<<< HEAD
-const Products: NextPage = () => {
-=======
-              } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const Products: NextPage = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [activeCategory, setActiveCategory] = useState('all');
 
   const productCategories = [;
@@ -215,19 +196,6 @@ const Products: NextPage = () => {;
         'Faster blockchain development',
         'Reduced deployment time',
         'Enhanced security',
-<<<<<<< HEAD
-        'Multi-chain compatibility'
-      ],
-      icon: Network,
-      color: 'from-violet-600 to-purple-600',
-      demoUrl: '/demo/blockchainforge',
-      pricingUrl: '/pricing/blockchainforge'
-
-  ];
-
-  const filteredProducts = activeCategory === 'all'
-    ? products
-=======
         'Multi-chain compatibility';
       ],;
       icon: Network,;
@@ -237,14 +205,9 @@ const Products: NextPage = () => {;
     };
   ];
 
-<<<<<<< HEAD
-  const filteredProducts = activeCategory === 'all' ;
-    ? products: anyanyanyanyanyanyanyanyanyanyanyanyanyproducts.filter(product               => product.category === activeCategory);
-=======
   const filteredProducts = activeCategory === 'all' ;
     ? products ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3: anyanyanyanyanyanyanyanyanyanyanyanyanyproducts.filter(product              => product.category === activeCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    : products.filter(product => product.category === activeCategory);
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -295,19 +258,6 @@ const Products: NextPage = () => {;
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
-<<<<<<< HEAD
-                }`}
-
-                <IconComponent className="w-5 h-5" />
-                <span>{category.name}</span>
-              </button>
-            )})}
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {filteredProducts.map((product)               => {;
-=======;
                 }`};
               >;
                 <IconComponent className="w-5 h-5" />;
@@ -318,9 +268,8 @@ const Products: NextPage = () => {;
         </div>
 
         {/* Products Grid */}
-        <div className = "grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
-          {filteredProducts.map((product)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+        <div className = "grid lg:grid-cols-2 gap-8">;
+          {filteredProducts.map((product) => {;
             const IconComponent = product.icon;
             return (
               <div
@@ -381,18 +330,6 @@ const Products: NextPage = () => {;
                   <a
                     href={product.pricingUrl}
                     className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-                  >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                    💰 View Pricing
-                  </a>
-                </div>
-              </div>
-            )})};
-=======;
                   >;
                     💰 View Pricing;
                   </a>;
@@ -400,7 +337,6 @@ const Products: NextPage = () => {;
               </div>;
             );
           })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
 
         {/* Enterprise Solutions */}
@@ -580,14 +516,6 @@ const Products: NextPage = () => {;
                 <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
                 <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -595,6 +523,5 @@ const Products: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Products;}}

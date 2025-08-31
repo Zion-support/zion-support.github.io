@@ -1,5 +1,9 @@
 // LinkedIn automation placeholder - implement actual functionality
 <<<<<<< HEAD
+    // // // // // // // console.log("LinkedIn automation placeholder - implement actual functionality");
+  }
+=======
+<<<<<<< HEAD
 export const linkedinAutomation = {
   run: anyanyanyanyanyanyanyanyanyanyanyanyany()              => {
 <<<<<<< HEAD
@@ -20,3 +24,4 @@ export const linkedinAutomation = {;
 };
 export default linkedinAutomation;
 }
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

@@ -1,64 +1,11 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /server/
-Disallow: /temp_working/
-Disallow: /broken_files_backup/
-Disallow: /automation/
-Disallow: /scripts/
-Disallow: /hooks/
-Disallow: /utils/
-Disallow: /types/
-Disallow: /lib/
-Disallow: /context/
-Disallow: /hoc/
-Disallow: /mobile/
-Disallow: /stories/
-Disallow: /__tests__/
-Disallow: /tests/
-Disallow: /tests.disabled/
-Disallow: /components.disabled/
-Disallow: /src.broken/
-Disallow: /styles_backup/
-Disallow: /zion-os.disabled/
-
-# Allow important pages
-Allow: /sitemap
-Allow: /sitemap.xml
-Allow: /robots.txt
-Allow: /favicon.ico
-Allow: /apple-touch-icon.png
-Allow: /site.webmanifest
-
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /temp/
-
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /careers/
-Allow: /faq/
-Allow: /privacy/
-Allow: /terms/
-
-# Crawl delay (optional)
-Crawl-delay: 1
-
-# Additional directives for specific bots
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -69,8 +16,125 @@ Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 
-# Block archive.org (optional)
-User-agent: ia_archiver
-Disallow: /
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Block specific paths that shouldn't be indexed
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /logs/
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /automation/
+Disallow: /reports/
+Disallow: /test-reports/
+Disallow: /error-reports/
+Disallow: /ci-cd-reports/
+Disallow: /link-reports/
+Disallow: /broken_files_backup/
+Disallow: /components.disabled/
+Disallow: /tests.disabled/
+Disallow: /unused/
+Disallow: /conflicted/
+
+# Block development and configuration files
+Disallow: /*.config.js
+Disallow: /*.config.ts
+Disallow: /*.config.cjs
+Disallow: /ecosystem*.js
+Disallow: /ecosystem*.cjs
+Disallow: /package*.json
+Disallow: /yarn.lock
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /next.config.js
+Disallow: /tailwind.config.js
+Disallow: /tailwind.config.ts
+Disallow: /postcss.config.js
+Disallow: /eslint.config.js
+Disallow: /jest.config.js
+Disallow: /vitest.config.ts
+
+# Block automation and script files
+Disallow: /*.sh
+Disallow: /*.js
+Disallow: /*.ts
+Disallow: /*.cjs
+Disallow: /*.mjs
+Disallow: /fix_*.js
+Disallow: /fix_*.sh
+Disallow: /start-*.sh
+Disallow: /manage-*.sh
+Disallow: /monitor-*.sh
+Disallow: /cleanup-*.sh
+Disallow: /merge-*.sh
+Disallow: /resolve-*.sh
+
+# Block documentation and report files
+Disallow: /*.md
+Disallow: /*.txt
+Disallow: /*.log
+Disallow: /*.json
+Disallow: /ZION_*.md
+Disallow: /website-audit-report.md
+Disallow: /quality-report.json
+Disallow: /performance-report.json
+Disallow: /link-check.json
+Disallow: /link-report*.json
+
+# Block temporary and working directories
+Disallow: /temp_working/
+Disallow: /styles_backup/
+Disallow: /pages_backup/
+
+# Allow important content
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /news/
+Allow: /events/
+Allow: /webinars/
+Allow: /white-papers/
+Allow: /case-studies/
+Allow: /training/
+Allow: /research-development/
+Allow: /partners/
+Allow: /careers/
+Allow: /help/
+Allow: /pricing/
+Allow: /request-quote/
+Allow: /marketplace/
+Allow: /signup/
+
+# Allow assets
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+Allow: /icons/
+Allow: /logos/
+
+# Crawl delay for all bots (be respectful)
+Crawl-delay: 1
+
+# Additional directives for better SEO
+# Host: https://ziontechgroup.com
+# Clean-param: utm_source utm_medium utm_campaign utm_term utm_content
+

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail import { Link              } from 'react-router-dom.ts';
 =======
@@ -9,6 +15,7 @@ import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, Che
 import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
     <>
@@ -17,7 +24,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
         <meta name = "description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
         <meta name="keywords" content="AI enterprise orchestrator, workflow automation, multi-agent AI, business process automation, enterprise AI" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +34,18 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Enterprise Orchestration
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Enterprise
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Orchestrator</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Orchestrate your entire enterprise with intelligent AI agents that coordinate workflows,
                 automate processes, and optimize operations across all departments and systems.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +57,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,8 +69,12 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Brain,
@@ -101,12 +106,14 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((feature, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -118,7 +125,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* How It Works Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,8 +137,12 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 transform your enterprise operations.
               </p>
             </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -154,12 +164,14 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
               ].map((step, index)              => (
 =======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -171,7 +183,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +194,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 Experience unprecedented efficiency and intelligence across your entire organization.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -202,7 +212,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
@@ -222,7 +231,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -236,23 +244,12 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -261,6 +258,5 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}
