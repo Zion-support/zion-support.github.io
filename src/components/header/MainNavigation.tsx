@@ -173,6 +173,37 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         Blockchain Solutions
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        AI Quantum Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <PenTool className="w-3 h-3 mr-2" />
+                        AI Content Studio
+                      </Link>
+                    </li>
+                    {/* Additional services from remote branch */}
+                    <li>
+                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Sales Copilot
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Compliance Assistant
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -203,6 +234,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cpu className="w-3 h-3 mr-2" />
+                        Edge Computing
                       </Link>
                     </li>
                     <li>
@@ -280,6 +317,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Support
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <PenTool className="w-3 h-3 mr-2" />
+                        AI Content Studio
+                      </Link>
+                    </li>
+                    {/* Additional solutions from remote branch */}
                     <li>
                       <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Cloud className="w-3 h-3 mr-2" />

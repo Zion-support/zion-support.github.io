@@ -48,7 +48,9 @@ export function AppFooter() {
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
         { name: "AI Project Management", href: "/services/ai-project-management-platform" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" }
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
+        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
+        { name: "AI Quantum Computing", href: "/services/ai-quantum-computing-solutions" }
       ]
     },
     {
@@ -59,6 +61,7 @@ export function AppFooter() {
         { name: "Cybersecurity", href: "/services/cybersecurity" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
+        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
         { name: "Digital Transformation", href: "/services/digital-transformation" }
       ]
     },
@@ -70,6 +73,7 @@ export function AppFooter() {
         { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "AI HR Platform", href: "/services/ai-hr-platform" }
       ]
     }
