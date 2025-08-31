@@ -176,21 +176,39 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               </button>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={onGetStarted}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
-              >
-                Explore Services
-              </Link>
-            </div>
+                          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={onGetStarted}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <Link
+                  to="/ultimate-innovative-services-showcase-2025"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
+                >
+                  Explore Services
+                </Link>
+              </div>
+              
+              {/* Additional Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                <Link
+                  to="/ultimate-pricing-showcase-2025"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 text-base"
+                >
+                  <DollarSign className="mr-2 h-4 w-4" />
+                  View Pricing
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200 text-base border border-white/20"
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Contact Us
+                </Link>
+              </div>
           </div>
         </motion.div>
       </div>
