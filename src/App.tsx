@@ -123,6 +123,12 @@ const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITIn
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
+// New Innovative Micro SAAS Services 2026
+const AILegalDocumentAnalysis = createLazyComponent(() => import('./pages/services/ai-legal-document-analysis'));
+const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+const AIEcommerceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-ecommerce-optimization-platform'));
+
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
 const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
@@ -260,6 +266,12 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<ModernLayout><AIPredictiveMaintenance /></ModernLayout>} />
                     <Route path="/services/ai-hr-platform" element={<ModernLayout><AIHRPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-trading-risk-management" element={<ModernLayout><AIFinancialTradingRiskManagement /></ModernLayout>} />
+
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-analysis" element={<ModernLayout><AILegalDocumentAnalysis /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-platform" element={<ModernLayout><AIRealEstateInvestmentPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-ecommerce-optimization-platform" element={<ModernLayout><AIEcommerceOptimizationPlatform /></ModernLayout>} />
 
                     {/* New Innovative Services 2025 - Additional */}
                     <Route path="/services/ai-enterprise-intelligence-platform" element={<ModernLayout><AIEnterpriseIntelligencePlatform /></ModernLayout>} />
