@@ -54,6 +54,26 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalT
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
+// Additional pages for navigation
+const QuantumComputing = createLazyComponent(() => import('./pages/quantum-computing'));
+const Blockchain = createLazyComponent(() => import('./pages/blockchain'));
+const IoTSolutions = createLazyComponent(() => import('./pages/iot-solutions'));
+
+// Company pages
+const News = createLazyComponent(() => import('./pages/News'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Careers = createLazyComponent(() => import('./pages/careers'));
+
+// Resource pages
+const Blog = createLazyComponent(() => import('./pages/blog'));
+const Docs = createLazyComponent(() => import('./pages/docs'));
+const WhitePapers = createLazyComponent(() => import('./pages/white-papers'));
+const Training = createLazyComponent(() => import('./pages/training'));
+const Webinars = createLazyComponent(() => import('./pages/webinars'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
+const Support = createLazyComponent(() => import('./pages/support'));
+
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
@@ -135,6 +155,26 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+
+                    {/* Additional navigation pages */}
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/blockchain" element={<Blockchain />} />
+                    <Route path="/iot-solutions" element={<IoTSolutions />} />
+
+                    {/* Company pages */}
+                    <Route path="/news" element={<News />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/careers" element={<Careers />} />
+
+                    {/* Resource pages */}
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/docs" element={<Docs />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/support" element={<Support />} />
 
                     {/* 404 Page */}
                     <Route
