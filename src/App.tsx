@@ -20,6 +20,10 @@ import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
+// Layout Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -48,6 +52,13 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// New pages we created
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
+const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
+const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -92,7 +103,8 @@ function App() {
               Skip to main content
             </a>
             
-            <main id="main-content" className="flex-1">
+            {/* Main Content */}
+            <main id="main-content" className="flex-1 pt-32">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -126,6 +138,13 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+
+                    {/* New pages we created */}
+                    <Route path="/enterprise" element={<Enterprise />} />
+                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
+                    <Route path="/emerging-tech" element={<EmergingTech />} />
 
                     {/* 404 Page */}
                     <Route
