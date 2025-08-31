@@ -29,7 +29,10 @@ const footerSections = [
       { name: 'Micro SaaS', href: '/micro-saas' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform' },
+      { name: 'AI Workflow Automation', href: '/services/ai-enterprise-workflow-automation' },
+      { name: 'Customer Intelligence', href: '/services/ai-customer-intelligence-platform' },
+      { name: 'AI Trading Platform', href: '/services/ai-financial-trading-platform' }
     ]
   },
   {

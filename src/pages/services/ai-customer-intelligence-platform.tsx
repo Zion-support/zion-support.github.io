@@ -3,12 +3,23 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Brain,
-  TrendingUp,
-  DollarSign,
-  Shield,
+  Users,
   BarChart3,
+  Target,
+  TrendingUp,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  RefreshCw,
   Activity,
+  MessageCircle,
+  Phone,
+  Mail,
+  Globe,
   Clock,
+  DollarSign,
   CheckCircle,
   ArrowRight,
   Play,
@@ -16,196 +27,185 @@ import {
   Database,
   Cloud,
   Lock,
-  Target,
-  Globe,
-  Cpu,
-  Bot,
-  LineChart,
-  PieChart,
-  BarChart,
+  Shield,
   Zap,
-  Users,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  RefreshCw,
-  AlertTriangle,
-  TrendingDown,
-  Percent,
-  Calculator,
-  Smartphone,
-  Monitor,
-  Server,
-  Wifi,
-  Smartphone,
-  Tablet,
-  Laptop
+  Heart,
+  Star,
+  ShoppingCart,
+  UserPlus,
+  UserMinus,
+  Calendar,
+  Bell,
+  PieChart,
+  LineChart,
+  BarChart,
+  MapPin,
+  Tag,
+  CreditCard,
+  Gift,
+  Award
 } from 'lucide-react';
 
-const AIFinancialTradingPlatform: React.FC = () => {
+const AICustomerIntelligencePlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Market Analysis",
-      description: "Advanced machine learning algorithms that analyze market patterns, news sentiment, and economic indicators in real-time",
-      benefits: ["Real-time market analysis", "Sentiment analysis", "Pattern recognition", "Predictive modeling"]
+      title: "AI-Powered Customer Segmentation",
+      description: "Advanced machine learning algorithms that automatically segment customers based on behavior, preferences, and value",
+      benefits: ["Dynamic segmentation updates", "Predictive behavior modeling", "Real-time customer insights"]
+    },
+    {
+      icon: Eye,
+      title: "360° Customer View",
+      description: "Comprehensive customer profiles combining data from all touchpoints and interactions",
+      benefits: ["Unified customer data", "Cross-channel insights", "Historical behavior tracking"]
     },
     {
       icon: TrendingUp,
-      title: "Automated Trading Strategies",
-      description: "Customizable trading bots that execute strategies based on AI insights and predefined rules",
-      benefits: ["24/7 trading", "Emotion-free decisions", "Backtesting capabilities", "Risk management"]
+      title: "Predictive Analytics",
+      description: "Forecast customer lifetime value, churn risk, and purchase probability using advanced AI models",
+      benefits: ["Churn prediction", "LTV forecasting", "Next-best-action recommendations"]
     },
     {
-      icon: Shield,
-      title: "Advanced Risk Management",
-      description: "Multi-layered risk controls including position sizing, stop-loss automation, and portfolio diversification",
-      benefits: ["Automated risk controls", "Portfolio protection", "Compliance monitoring", "Real-time alerts"]
+      icon: Target,
+      title: "Personalized Marketing Automation",
+      description: "AI-driven campaigns that automatically adapt to customer behavior and preferences",
+      benefits: ["Dynamic content personalization", "Optimal timing optimization", "A/B testing automation"]
+    },
+    {
+      icon: Users,
+      title: "Customer Journey Mapping",
+      description: "Visualize and optimize the complete customer journey across all touchpoints",
+      benefits: ["Journey visualization", "Bottleneck identification", "Conversion optimization"]
     },
     {
       icon: BarChart3,
       title: "Real-Time Analytics Dashboard",
-      description: "Comprehensive trading analytics with performance metrics, P&L tracking, and strategy analysis",
-      benefits: ["Live performance tracking", "Strategy optimization", "Historical analysis", "Custom reports"]
-    },
-    {
-      icon: Globe,
-      title: "Multi-Market Access",
-      description: "Trade across multiple exchanges and asset classes including stocks, crypto, forex, and commodities",
-      benefits: ["Global market access", "Multi-asset trading", "Liquidity optimization", "Arbitrage opportunities"]
-    },
-    {
-      icon: Zap,
-      title: "High-Frequency Trading",
-      description: "Ultra-low latency execution with sub-millisecond response times for high-frequency trading strategies",
-      benefits: ["Ultra-fast execution", "Co-location options", "Direct market access", "Algorithmic trading"]
+      description: "Live insights into customer behavior, campaign performance, and business metrics",
+      benefits: ["Real-time monitoring", "Custom dashboards", "Automated reporting"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$199",
       period: "/month",
-      description: "Perfect for individual traders getting started with AI-powered trading",
+      description: "Perfect for small businesses starting their customer intelligence journey",
       features: [
-        "Basic AI market analysis",
-        "Up to 5 trading strategies",
-        "Standard risk management",
+        "Up to 10,000 customer profiles",
+        "Basic AI segmentation",
+        "Standard analytics dashboard",
         "Email support",
-        "Basic analytics dashboard",
-        "Mobile app access"
+        "Basic integrations",
+        "Monthly reports"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$499",
       period: "/month",
-      description: "Ideal for active traders requiring advanced AI capabilities and multiple strategies",
+      description: "Ideal for growing businesses with advanced customer intelligence needs",
       features: [
-        "Advanced AI analysis",
-        "Up to 20 trading strategies",
-        "Advanced risk management",
+        "Up to 100,000 customer profiles",
+        "Advanced AI segmentation",
+        "Predictive analytics",
         "Priority support",
-        "Real-time analytics",
-        "API access",
-        "Custom indicators",
-        "Backtesting tools"
+        "Premium integrations",
+        "Real-time dashboards",
+        "Custom reporting",
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$1,299",
       period: "/month",
-      description: "For professional trading firms and institutional investors",
+      description: "For large organizations requiring enterprise-grade customer intelligence",
       features: [
+        "Unlimited customer profiles",
         "Custom AI models",
-        "Unlimited strategies",
-        "Institutional risk management",
+        "Advanced predictive analytics",
         "24/7 dedicated support",
-        "White-label solution",
         "Custom integrations",
-        "Advanced compliance",
-        "Multi-user access"
+        "White-label solution",
+        "Custom SLA",
+        "On-premise option"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const tradingStrategies = [
+  const useCases = [
     {
-      name: "Momentum Trading",
-      description: "AI-powered momentum detection and trend following strategies",
-      successRate: "78%",
-      avgReturn: "12.5%",
-      riskLevel: "Medium"
+      industry: "E-commerce",
+      title: "Personalized Shopping Experience",
+      description: "Deliver tailored product recommendations and personalized shopping experiences",
+      benefits: ["Increased conversion rates", "Higher average order value", "Improved customer retention"]
     },
     {
-      name: "Mean Reversion",
-      description: "Statistical arbitrage based on price deviation from historical averages",
-      successRate: "82%",
-      avgReturn: "8.3%",
-      riskLevel: "Low"
+      industry: "SaaS",
+      title: "User Adoption & Retention",
+      description: "Identify at-risk users and optimize onboarding for better product adoption",
+      benefits: ["Reduced churn", "Higher user engagement", "Better product-market fit"]
     },
     {
-      name: "Sentiment Analysis",
-      description: "News and social media sentiment-based trading decisions",
-      successRate: "71%",
-      avgReturn: "15.2%",
-      riskLevel: "High"
+      industry: "Financial Services",
+      title: "Customer Risk Assessment",
+      description: "Evaluate customer risk profiles and optimize financial product offerings",
+      benefits: ["Better risk management", "Improved product targeting", "Enhanced compliance"]
     },
     {
-      name: "Pairs Trading",
-      description: "Correlation-based trading of related securities",
-      successRate: "85%",
-      avgReturn: "6.8%",
-      riskLevel: "Low"
+      industry: "Healthcare",
+      title: "Patient Engagement",
+      description: "Personalize patient communications and improve healthcare outcomes",
+      benefits: ["Better patient compliance", "Improved health outcomes", "Enhanced patient satisfaction"]
     }
   ];
 
-  const supportedMarkets = [
-    { name: "Stocks", icon: TrendingUp, description: "Global equity markets" },
-    { name: "Cryptocurrency", icon: Bitcoin, description: "Major crypto exchanges" },
-    { name: "Forex", icon: DollarSign, description: "Currency pairs trading" },
-    { name: "Commodities", icon: Package, description: "Gold, oil, agricultural" },
-    { name: "Options", icon: FileText, description: "Derivatives trading" },
-    { name: "Futures", icon: Calendar, description: "Futures contracts" }
+  const integrations = [
+    { name: "Salesforce", category: "CRM", icon: Users },
+    { name: "HubSpot", category: "Marketing", icon: Target },
+    { name: "Shopify", category: "E-commerce", icon: ShoppingCart },
+    { name: "Stripe", category: "Payments", icon: CreditCard },
+    { name: "Mailchimp", category: "Email", icon: Mail },
+    { name: "Google Analytics", category: "Analytics", icon: BarChart },
+    { name: "Facebook Ads", category: "Advertising", icon: Target },
+    { name: "Zapier", category: "Automation", icon: Zap }
   ];
 
-  const performanceMetrics = [
+  const metrics = [
     {
       icon: TrendingUp,
-      title: "Average Annual Return",
-      value: "24.7%",
-      description: "Across all strategies"
+      title: "Customer Lifetime Value",
+      value: "+45%",
+      description: "Average increase in CLV"
     },
     {
-      icon: Shield,
-      title: "Risk-Adjusted Return",
-      value: "2.8",
-      description: "Sharpe ratio"
+      icon: Users,
+      title: "Customer Retention",
+      value: "+38%",
+      description: "Improvement in retention rates"
     },
     {
-      icon: Activity,
-      title: "Win Rate",
-      value: "76.3%",
-      description: "Successful trades"
+      icon: Target,
+      title: "Conversion Rate",
+      value: "+52%",
+      description: "Higher conversion rates"
     },
     {
-      icon: Clock,
-      title: "Execution Speed",
-      value: "<1ms",
-      description: "Average latency"
+      icon: DollarSign,
+      title: "Revenue Growth",
+      value: "+67%",
+      description: "Average revenue increase"
     }
   ];
 
@@ -222,17 +222,17 @@ const AIFinancialTradingPlatform: React.FC = () => {
             >
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Financial Trading
+                AI-Powered Customer Intelligence
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Revolutionize Your Trading with
+                Unlock the Power of
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  {" "}AI-Powered Intelligence
+                  {" "}Customer Intelligence
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Leverage the power of artificial intelligence to make smarter trading decisions. 
-                Our platform combines advanced algorithms, real-time market analysis, and automated execution for optimal results.
+                Transform customer data into actionable insights with our AI-powered platform. 
+                Understand your customers like never before and drive growth through personalized experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
@@ -261,9 +261,9 @@ const AIFinancialTradingPlatform: React.FC = () => {
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <div className="w-full h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                   <div className="text-center">
-                    <TrendingUp className="w-24 h-24 text-cyan-400 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">AI Trading Platform</h3>
-                    <p className="text-gray-300">Intelligent Market Analysis</p>
+                    <Users className="w-24 h-24 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white mb-2">Customer Intelligence</h3>
+                    <p className="text-gray-300">AI-Powered Insights</p>
                   </div>
                 </div>
               </div>
@@ -272,11 +272,11 @@ const AIFinancialTradingPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Performance Metrics Section */}
+      {/* Metrics Section */}
       <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {performanceMetrics.map((metric, index) => (
+            {metrics.map((metric, index) => (
               <motion.div
                 key={metric.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -308,10 +308,10 @@ const AIFinancialTradingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced Trading Features
+              Powerful Features for Customer Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need for professional-grade AI-powered trading
+              Everything you need to understand, engage, and retain your customers
             </p>
           </motion.div>
 
@@ -344,67 +344,8 @@ const AIFinancialTradingPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Trading Strategies Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Trading Strategies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI-optimized strategies with proven track records across various market conditions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingStrategies.map((strategy, index) => (
-              <motion.div
-                key={strategy.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white">{strategy.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    strategy.riskLevel === 'Low' ? 'bg-green-500/20 text-green-400' :
-                    strategy.riskLevel === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-red-500/20 text-red-400'
-                  }`}>
-                    {strategy.riskLevel} Risk
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-6">{strategy.description}</p>
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{strategy.successRate}</div>
-                    <div className="text-sm text-gray-400">Success Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">{strategy.avgReturn}</div>
-                    <div className="text-sm text-gray-400">Avg Return</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">{strategy.riskLevel}</div>
-                    <div className="text-sm text-gray-400">Risk Level</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -417,7 +358,7 @@ const AIFinancialTradingPlatform: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your trading needs. All plans include our core AI features.
+              Choose the plan that fits your business needs. All plans include our core features.
             </p>
           </motion.div>
 
@@ -474,6 +415,58 @@ const AIFinancialTradingPlatform: React.FC = () => {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how different industries leverage our customer intelligence platform
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-sm text-cyan-400 font-medium">{useCase.industry}</span>
+                    <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -484,10 +477,10 @@ const AIFinancialTradingPlatform: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Trading?
+              Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of traders who have already increased their returns by 24.7% using our AI-powered platform
+              Join thousands of businesses that have already increased customer lifetime value by 45% using our platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
@@ -513,4 +506,4 @@ const AIFinancialTradingPlatform: React.FC = () => {
   );
 };
 
-export default AIFinancialTradingPlatform;
+export default AICustomerIntelligencePlatform;

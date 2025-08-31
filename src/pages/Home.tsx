@@ -240,8 +240,32 @@ const ServiceCategoriesSection = React.memo(() => {
       description: "Cutting-edge artificial intelligence services for business transformation",
       icon: Brain,
       href: "/ai-services",
-      count: 20,
+      count: 25,
       color: "from-cyan-500 to-blue-600"
+    },
+    {
+      name: "AI Workflow Automation",
+      description: "Intelligent business process automation and workflow optimization",
+      icon: Workflow,
+      href: "/services/ai-enterprise-workflow-automation",
+      count: 8,
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      name: "Customer Intelligence",
+      description: "AI-powered customer insights and personalized experiences",
+      icon: Users,
+      href: "/services/ai-customer-intelligence-platform",
+      count: 12,
+      color: "from-blue-500 to-purple-600"
+    },
+    {
+      name: "AI Trading Platform",
+      description: "Intelligent financial trading with advanced AI algorithms",
+      icon: TrendingUp,
+      href: "/services/ai-financial-trading-platform",
+      count: 10,
+      color: "from-purple-500 to-pink-600"
     },
     {
       name: "Edge & IoT",
@@ -249,7 +273,7 @@ const ServiceCategoriesSection = React.memo(() => {
       icon: Zap,
       href: "/services/edge-computing-platform",
       count: 8,
-      color: "from-blue-500 to-purple-600"
+      color: "from-orange-500 to-red-600"
     },
     {
       name: "Cloud & DevOps",
@@ -257,31 +281,7 @@ const ServiceCategoriesSection = React.memo(() => {
       icon: Cloud,
       href: "/services/cloud-devops",
       count: 12,
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      name: "Cybersecurity",
-      description: "Advanced security protocols and threat protection systems",
-      icon: Shield,
-      href: "/services/ai-compliance-copilot",
-      count: 10,
-      color: "from-red-500 to-orange-600"
-    },
-    {
-      name: "Data Governance",
-      description: "AI-powered data protection and compliance management",
-      icon: Lock,
-      href: "/services/ai-data-governance",
-      count: 6,
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      name: "Customer Success",
-      description: "AI-driven customer engagement and retention platforms",
-      icon: Heart,
-      href: "/services/customer-success",
-      count: 15,
-      color: "from-pink-500 to-rose-600"
+      color: "from-indigo-500 to-blue-600"
     }
   ];
 
