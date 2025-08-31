@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  TrendingDown, 
-  Users, 
-  BarChart3, 
-  Brain, 
   Shield, 
+  Brain, 
+  AlertTriangle, 
+  Lock, 
   Zap, 
   CheckCircle, 
   ArrowRight,
@@ -15,20 +14,33 @@ import {
   DollarSign,
   Target,
   Activity,
-  AlertTriangle,
-  Lightbulb,
-  Database,
-  Cpu,
+  Eye,
   Network,
   Smartphone,
   Globe,
   Mail,
   Phone,
   MapPin,
-  Play
+  Play,
+  Server,
+  Cpu,
+  Database,
+  Users,
+  BarChart3,
+  TrendingUp,
+  ShieldCheck,
+  Bug,
+  Key,
+  Monitor,
+  Search,
+  FileText,
+  Globe2,
+  Wifi,
+  Cloud,
+  Server2
 } from 'lucide-react';
 
-export default function AIPoweredCustomerChurnPredictor() {
+export default function AICybersecurityIntelligencePlatform() {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,81 +51,85 @@ export default function AIPoweredCustomerChurnPredictor() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Predictive Analytics",
-      description: "Advanced machine learning algorithms that analyze customer behavior patterns to predict churn with 95%+ accuracy"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Risk Scoring",
-      description: "Continuous monitoring and scoring of customer churn risk with instant alerts and notifications"
-    },
-    {
-      icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent segmentation based on behavior, demographics, and engagement patterns"
-    },
-    {
-      icon: Target,
-      title: "Proactive Retention Strategies",
-      description: "Automated recommendations for personalized retention campaigns and interventions"
-    },
-    {
-      icon: Activity,
-      title: "Behavioral Pattern Analysis",
-      description: "Deep analysis of customer interactions, usage patterns, and satisfaction indicators"
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms that detect and analyze threats in real-time with 99.9% accuracy"
     },
     {
       icon: Shield,
-      title: "Data Security & Privacy",
-      description: "Enterprise-grade security with GDPR compliance and data encryption"
+      title: "Zero-Day Attack Prevention",
+      description: "Proactive identification of unknown threats using behavioral analysis and pattern recognition"
+    },
+    {
+      icon: Eye,
+      title: "24/7 Security Monitoring",
+      description: "Continuous surveillance of your entire digital infrastructure with instant threat alerts"
+    },
+    {
+      icon: Network,
+      title: "Network Traffic Analysis",
+      description: "Deep packet inspection and anomaly detection across all network communications"
+    },
+    {
+      icon: Lock,
+      title: "Advanced Encryption",
+      description: "Military-grade encryption protocols with quantum-resistant algorithms for future-proof security"
+    },
+    {
+      icon: Activity,
+      title: "Behavioral Analytics",
+      description: "User and entity behavior analytics to detect insider threats and compromised accounts"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Essential",
+      price: "$499",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
+        "Up to 50 endpoints",
+        "Basic threat detection",
         "Email support",
-        "Standard analytics dashboard",
-        "API access"
+        "Standard security dashboard",
+        "Basic reporting",
+        "SSL certificate management"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$1,299",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 customers",
+        "Up to 500 endpoints",
         "Advanced AI algorithms",
         "Priority support",
-        "Custom retention strategies",
-        "Integration with CRM systems",
-        "Advanced reporting"
+        "Custom security policies",
+        "Advanced threat hunting",
+        "Compliance reporting",
+        "API access",
+        "24/7 monitoring"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited customers",
+        "Unlimited endpoints",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solutions",
         "Advanced integrations",
         "Custom development",
-        "SLA guarantees"
+        "SLA guarantees",
+        "Threat intelligence feeds"
       ],
       cta: "Contact Sales",
       popular: false
@@ -122,24 +138,57 @@ export default function AIPoweredCustomerChurnPredictor() {
 
   const benefits = [
     {
-      icon: TrendingDown,
-      title: "Reduce Churn by 40%",
-      description: "Proactive identification and intervention reduces customer churn significantly"
+      icon: ShieldCheck,
+      title: "99.9% Threat Detection",
+      description: "Advanced AI algorithms detect and prevent threats before they can cause damage"
     },
     {
       icon: DollarSign,
-      title: "Increase LTV by 60%",
-      description: "Better retention strategies lead to higher customer lifetime value"
+      title: "Reduce Security Costs",
+      description: "Automated threat response reduces manual security operations by 80%"
     },
     {
-      icon: Users,
-      title: "Improve Customer Satisfaction",
-      description: "Targeted interventions based on AI insights improve customer experience"
+      icon: Clock,
+      title: "Real-time Response",
+      description: "Instant threat detection and automated response within milliseconds"
     },
     {
       icon: Target,
-      title: "Optimize Marketing ROI",
-      description: "Focus retention efforts on high-risk customers for better ROI"
+      title: "Compliance Ready",
+      description: "Built-in compliance frameworks for SOC2, GDPR, HIPAA, and more"
+    }
+  ];
+
+  const securityFeatures = [
+    {
+      icon: Bug,
+      title: "Vulnerability Assessment",
+      description: "Automated scanning and assessment of security vulnerabilities"
+    },
+    {
+      icon: Key,
+      title: "Identity Management",
+      description: "Multi-factor authentication and privileged access management"
+    },
+    {
+      icon: Monitor,
+      title: "SIEM Integration",
+      description: "Seamless integration with existing security information systems"
+    },
+    {
+      icon: Search,
+      title: "Forensic Analysis",
+      description: "Advanced digital forensics and incident response capabilities"
+    },
+    {
+      icon: FileText,
+      title: "Compliance Reporting",
+      description: "Automated compliance reports and audit trails"
+    },
+    {
+      icon: Globe2,
+      title: "Cloud Security",
+      description: "Comprehensive protection for cloud-native applications"
     }
   ];
 
@@ -155,18 +204,18 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Customer Intelligence
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Cybersecurity Intelligence
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Customer Churn Predictor
+              AI Cybersecurity Intelligence Platform
             </h1>
             
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Predict customer churn before it happens with our advanced AI platform. 
-              Get real-time insights, automated alerts, and personalized retention strategies 
-              to keep your customers engaged and loyal.
+              Protect your digital assets with the most advanced AI-powered cybersecurity platform. 
+              Detect, prevent, and respond to threats in real-time with 99.9% accuracy and 
+              zero false positives.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,10 +245,10 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Customer Retention
+              Advanced Security Features
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI platform provides comprehensive tools to understand, predict, and prevent customer churn
+              Our AI platform provides comprehensive cybersecurity protection for modern digital environments
             </p>
           </motion.div>
 
@@ -223,7 +272,7 @@ export default function AIPoweredCustomerChurnPredictor() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Security Features Grid */}
       <section className="py-16 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -233,10 +282,47 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Customer Retention
+              Comprehensive Security Coverage
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              See measurable improvements in customer loyalty and business growth
+              Protect every aspect of your digital infrastructure with our comprehensive security suite
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}
+                className="bg-zion-slate-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-zion-purple/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-zion-purple" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-zion-slate-light">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Platform?
+            </h2>
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+              Experience the future of cybersecurity with AI-powered protection
             </p>
           </motion.div>
 
@@ -261,19 +347,19 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16">
+      <section className="py-16 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Flexible Security Plans
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you grow
+              Choose the security level that matches your organization's needs
             </p>
           </motion.div>
 
@@ -330,18 +416,18 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-zion-slate-dark/30">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Predict and Prevent Customer Churn?
+              Ready to Secure Your Digital Future?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses using AI to improve customer retention and drive growth
+              Join thousands of organizations protected by our AI-powered cybersecurity platform
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

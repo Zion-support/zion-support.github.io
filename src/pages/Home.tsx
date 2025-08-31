@@ -308,6 +308,20 @@ const ServicesSection = () => {
       link: "/services/ai-cybersecurity-threat-intelligence"
     },
     {
+      title: "AI Cybersecurity Intelligence Platform",
+      description: "Advanced AI-powered cybersecurity platform with 99.9% threat detection accuracy and zero false positives.",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "/services/ai-cybersecurity-intelligence-platform"
+    },
+    {
+      title: "AI Customer Churn Predictor",
+      description: "Predict and prevent customer churn with AI-powered analytics and automated retention strategies.",
+      icon: TrendingDown,
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-powered-customer-churn-predictor"
+    },
+    {
       title: "Cybersecurity",
       description: "Advanced security solutions to protect your digital assets",
       icon: Shield,

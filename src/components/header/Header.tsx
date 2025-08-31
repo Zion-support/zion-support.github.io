@@ -44,6 +44,12 @@ export function Header() {
               <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Careers
               </Link>
+              <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Pricing
+              </Link>
+              <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Contact
+              </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-zion-slate-light text-xs">Follow us:</span>
                 <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" 
@@ -76,6 +82,15 @@ export function Header() {
             {/* Desktop Navigation */}
             <MainNavigation className="hidden lg:flex" />
 
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
@@ -123,21 +138,6 @@ export function Header() {
               >
                 Get Started
               </Link>
-
-              {/* Mobile Menu Button */}
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark lg:hidden transition-all duration-300"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle mobile menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMobileMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
             </div>
           </div>
         </div>
