@@ -1,62 +1,31 @@
+import { Request, Response, NextFunction } from 'express';
+
+// Security configuration object
 export const securityConfig = {
   // Content Security Policy
   csp: {
     'default-src': ["'self'"],
-    'script-src': [
-      "'self'",
-      "'unsafe-inline'",
-      "'unsafe-eval'", // Required for React development
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com',
-      'https://js.stripe.com',
-    ],
-    'style-src': [
-      "'self'",
-      "'unsafe-inline'",
-      'https://fonts.googleapis.com',
-      'https://cdn.jsdelivr.net',
-    ],
-    'font-src': [
-      "'self'",
-      'https://fonts.gstatic.com',
-      'https://cdn.jsdelivr.net',
-    ],
-    'img-src': [
-      "'self'",
-      'data:',
-      'https:',
-      'https://www.google-analytics.com',
-      'https://www.googletagmanager.com',
-    ],
-    'connect-src': [
-      "'self'",
-      'https://api.stripe.com',
-      'https://www.google-analytics.com',
-      'https://www.googletagmanager.com',
-      'wss:',
-      'ws:',
-    ],
-    'frame-src': [
-      "'self'",
-      'https://js.stripe.com',
-      'https://hooks.stripe.com',
-    ],
+    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+    'style-src': ["'self'", "'unsafe-inline'"],
+    'img-src': ["'self'", 'data:', 'https:'],
+    'font-src': ["'self'", 'https:'],
+    'connect-src': ["'self'", 'https:'],
+    'frame-src': ["'none'"],
     'object-src': ["'none'"],
     'base-uri': ["'self'"],
     'form-action': ["'self'"],
-    'frame-ancestors': ["'self'"],
+    'frame-ancestors': ["'none'"],
     'upgrade-insecure-requests': [],
-  
-
-},
+  },
 
   // Security Headers
   headers: {
-    'X-Content-Type-Options': 'nosniff',;
-    'X-Frame-Options': 'DENY',;
-    'X-XSS-Protection': '1; mode = block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',;
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',;
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Content-Security-Policy': 'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: https:; font-src \'self\' https:; connect-src \'self\' https:; frame-src \'none\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'; frame-ancestors \'none\'; upgrade-insecure-requests',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
   },
 
@@ -64,7 +33,7 @@ export const securityConfig = {
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-    message: 'Too m requests from this IP, please try again later.',
+    message: 'Too many requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false,
   },
@@ -92,19 +61,19 @@ export const securityConfig = {
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: process.env.NODE_ENV = == 'production',
+      secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       sameSite: 'strict',
-    },;
-  },;
+    },
+  },
 };
 
 // Helper function to generate CSP header string
 export const generateCSPHeader = (): string => {
   return Object.entries(securityConfig.csp)
-    .map(([key, values]) => {;
-      if (Array.isArray(values)) {;
+    .map(([key, values]) => {
+      if (Array.isArray(values)) {
         return `${key} ${values.join(' ')}`;
       }
       return `${key} ${values}`;
@@ -113,9 +82,9 @@ export const generateCSPHeader = (): string => {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: , res: , next: ) => {
-  // Set security headers;
-  Object.entries(securityConfig.headers).forEach(([key, value]) => {;
+export const securityMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  // Set security headers
+  Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
 
@@ -129,14 +98,14 @@ export const securityMiddleware = (req: , res: , next: ) => {
 export const sanitizeInput = (input: string): string => {
   return input
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol;
-    .replace(/on\w+=/gi, '') // Remove event handlers;
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+=/gi, '') // Remove event handlers
     .trim();
 };
 
 // XSS Protection
-export const escapeHtml = (text: string): string => {;
-  const map: { [key: string]: string } = {;
+export const escapeHtml = (text: string): string => {
+  const map: { [key: string]: string } = {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
@@ -147,11 +116,11 @@ export const escapeHtml = (text: string): string => {;
 };
 
 // CSRF Token generation
-export const generateCSRFToken = (): string => {;
+export const generateCSRFToken = (): string => {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 };
 
 // Validate CSRF Token
-export const validateCSRFToken = (token: string, storedToken: string): boolean => {;
+export const validateCSRFToken = (token: string, storedToken: string): boolean => {
   return token === storedToken && token.length > 0;
 };
