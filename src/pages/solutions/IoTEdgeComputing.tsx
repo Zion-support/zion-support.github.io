@@ -19,7 +19,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const IoTEdgeComputingSolutions = () => {
+const IoTEdgeComputing = () => {
   const features = [
     {
       icon: <Cpu className="w-6 h-6" />,
@@ -267,4 +267,4 @@ const IoTEdgeComputingSolutions = () => {
   );
 };
 
-export default IoTEdgeComputingSolutions;
+export default IoTEdgeComputing;

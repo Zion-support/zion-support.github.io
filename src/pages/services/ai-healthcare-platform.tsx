@@ -4,14 +4,13 @@ import {
   Heart, Stethoscope, Brain, Activity, Shield, 
   Users, Database, BarChart3, CheckCircle, ArrowRight,
   Play, Download, BookOpen, MessageCircle, Phone,
-  Zap, Eye, Clock, TrendingUp, Award, Hospital,
-  Pill, Microscope, FileText, ChartBar
+  Zap, Eye, Clock, TrendingUp, Award
 } from 'lucide-react';
 
-const HealthcareSolutions: React.FC = () => {
+const AIHealthcarePlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const solutions = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Diagnostics',
@@ -26,7 +25,7 @@ const HealthcareSolutions: React.FC = () => {
     },
     {
       icon: Shield,
-      title: 'HIPAA Compliant Security',
+      title: 'HIPAA Compliant',
       description: 'Enterprise-grade security and privacy protection for patient data',
       color: 'from-green-500 to-emerald-500'
     },
@@ -72,29 +71,6 @@ const HealthcareSolutions: React.FC = () => {
     }
   ];
 
-  const useCases = [
-    {
-      icon: Hospital,
-      title: 'Hospitals & Clinics',
-      description: 'Streamline operations and improve patient care'
-    },
-    {
-      icon: Microscope,
-      title: 'Research Institutions',
-      description: 'Accelerate medical research and drug development'
-    },
-    {
-      icon: Pill,
-      title: 'Pharmaceutical Companies',
-      description: 'Optimize drug discovery and clinical trials'
-    },
-    {
-      icon: Users,
-      title: 'Health Insurance',
-      description: 'Improve risk assessment and claims processing'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -111,12 +87,12 @@ const HealthcareSolutions: React.FC = () => {
               <Heart className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Healthcare <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">Solutions</span>
+              AI Healthcare <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">Platform</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform healthcare delivery with our comprehensive AI-powered solutions. 
+              Revolutionizing healthcare with artificial intelligence. 
               Improve patient outcomes, enhance diagnostic accuracy, and streamline 
-              medical operations for better healthcare experiences.
+              medical operations with our comprehensive AI healthcare platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-600 text-white rounded-lg hover:from-blue-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center">
@@ -132,7 +108,7 @@ const HealthcareSolutions: React.FC = () => {
         </div>
       </section>
 
-      {/* Solutions Grid */}
+      {/* Features Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -141,25 +117,25 @@ const HealthcareSolutions: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Healthcare Solutions</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Advanced Healthcare Features</h2>
             <p className="text-xl text-gray-300">Powered by cutting-edge AI and medical expertise</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {solutions.map((solution, index) => (
+            {features.map((feature, index) => (
               <motion.div
-                key={solution.title}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
                 <div className="bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 text-center h-full">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <solution.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
-                  <p className="text-gray-300 text-sm">{solution.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -167,43 +143,8 @@ const HealthcareSolutions: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* Capabilities */}
       <section className="py-20 bg-slate-800/20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Healthcare Use Cases</h2>
-            <p className="text-xl text-gray-300">Solutions designed for every healthcare organization</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 text-center h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <useCase.icon className="w-8 h-8 text-green-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities & Benefits */}
-      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -211,10 +152,10 @@ const HealthcareSolutions: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Healthcare Capabilities</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Healthcare Capabilities</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our healthcare solutions provide end-to-end support for modern healthcare 
-                organizations, from diagnostic assistance to population health management.
+                Our AI healthcare platform provides end-to-end solutions for modern healthcare 
+                organizations, from diagnostic support to population health management.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {capabilities.map((capability, index) => (
@@ -249,7 +190,7 @@ const HealthcareSolutions: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800/20">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -259,7 +200,7 @@ const HealthcareSolutions: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Healthcare?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading healthcare organizations that trust our AI-powered solutions 
+              Join leading healthcare organizations that trust our AI-powered platform 
               to improve patient care and operational efficiency.
             </p>
             
@@ -304,4 +245,4 @@ const HealthcareSolutions: React.FC = () => {
   );
 };
 
-export default HealthcareSolutions;
+export default AIHealthcarePlatform;

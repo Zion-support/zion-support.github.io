@@ -5,79 +5,79 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/Button';
-import { Brain, Atom, Zap, Shield, Cpu, Network, Target, TrendingUp, Users, Globe, Rocket, CheckCircle } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Brain, Users, Globe, Rocket, CheckCircle, Factory, Cog, Target, BarChart3 } from 'lucide-react';
 
-export default function AIQuantumNeuralNetworkPlatform() {
-  const features = [
+export default function ManufacturingSolutions() {
+  const solutions = [
     {
       icon: Brain,
-      title: "Quantum Neural Networks",
-      description: "Advanced neural network architectures leveraging quantum computing principles for superior pattern recognition and learning capabilities."
+      title: "AI-Powered Quality Control",
+      description: "Advanced machine learning for defect detection and quality assurance."
     },
     {
-      icon: Atom,
-      title: "Quantum-Classical Hybrid",
-      description: "Seamless integration of quantum and classical computing for optimal performance across different problem domains."
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Ultra-fast neural network processing with quantum acceleration for time-critical applications."
+      icon: BarChart3,
+      title: "Predictive Maintenance",
+      description: "Prevent equipment failures with AI-driven predictive analytics."
     },
     {
       icon: Shield,
-      title: "Quantum Security",
-      description: "Enhanced security through quantum-resistant algorithms and quantum key distribution."
+      title: "Supply Chain Security",
+      description: "Secure and transparent supply chain management with blockchain."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Monitoring",
+      description: "Live monitoring of production processes and equipment performance."
     }
   ];
 
   const capabilities = [
-    "Quantum-enhanced machine learning algorithms",
-    "Hybrid quantum-classical neural networks",
-    "Real-time pattern recognition and analysis",
-    "Quantum-resistant cybersecurity protocols",
-    "Scalable quantum neural architectures",
-    "Advanced optimization algorithms",
-    "Multi-modal data processing",
-    "Adaptive learning systems"
+    "AI-powered quality control and defect detection",
+    "Predictive maintenance and equipment monitoring",
+    "Supply chain optimization and visibility",
+    "Real-time production monitoring and analytics",
+    "Process optimization and workflow automation",
+    "Smart factory integration and IoT connectivity",
+    "Quality management and compliance automation",
+    "Resource optimization and cost reduction"
   ];
 
   const benefits = [
-    "Exponential performance improvements over classical neural networks",
-    "Enhanced pattern recognition capabilities",
-    "Improved accuracy in complex decision-making",
-    "Future-proof quantum-resistant security",
-    "Scalable architecture for enterprise needs",
-    "Reduced computational overhead",
-    "Advanced optimization capabilities",
-    "Competitive advantage through quantum technology"
+    "Increase production efficiency by 25-40%",
+    "Reduce quality defects by 60-80%",
+    "Lower maintenance costs by 30-50%",
+    "Improve supply chain visibility and transparency",
+    "Enhanced worker safety and compliance",
+    "Better resource utilization and cost management",
+    "Faster time to market and innovation",
+    "Competitive advantage through technology"
   ];
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Advanced fraud detection, risk assessment, and algorithmic trading with quantum-enhanced neural networks."
+      title: "Automotive Manufacturing",
+      description: "Quality control, predictive maintenance, and supply chain optimization for automotive production."
     },
     {
-      title: "Healthcare",
-      description: "Medical image analysis, drug discovery, and personalized medicine through quantum neural processing."
+      title: "Electronics Manufacturing",
+      description: "Precision quality control, component tracking, and production line optimization."
     },
     {
-      title: "Cybersecurity",
-      description: "Threat detection, anomaly identification, and secure communications using quantum-resistant algorithms."
+      title: "Pharmaceutical Manufacturing",
+      description: "Compliance automation, quality assurance, and batch tracking systems."
     },
     {
-      title: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization with quantum neural insights."
+      title: "Aerospace Manufacturing",
+      description: "High-precision quality control, safety compliance, and supply chain security."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 
-        title="AI Quantum Neural Network Platform | Zion Tech Group"
-        description="Revolutionary AI platform combining quantum computing with neural networks for unprecedented performance and capabilities."
-        keywords="AI quantum neural networks, quantum machine learning, hybrid quantum computing, quantum AI platform"
+        title="Manufacturing Solutions | Zion Tech Group"
+        description="Transform your manufacturing operations with AI-powered solutions for quality control, predictive maintenance, and process optimization."
+        keywords="manufacturing solutions, AI quality control, predictive maintenance, smart factory, Industry 4.0"
       />
       
       <Header />
@@ -93,18 +93,18 @@ export default function AIQuantumNeuralNetworkPlatform() {
               className="text-center"
             >
               <div className="flex justify-center mb-6">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
-                  <Brain className="w-8 h-8 text-white" />
+                <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full">
+                  <Factory className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Quantum Neural Network Platform
+                Manufacturing Solutions
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your AI capabilities with our cutting-edge platform that combines quantum computing principles with advanced neural networks for unprecedented performance and intelligence.
+                Transform your manufacturing operations with cutting-edge AI technology. Enhance quality, optimize efficiency, and drive innovation with intelligent manufacturing solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700">
                   Get Started
                 </Button>
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
@@ -115,7 +115,7 @@ export default function AIQuantumNeuralNetworkPlatform() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Solutions Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -125,31 +125,31 @@ export default function AIQuantumNeuralNetworkPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Revolutionary Features
+                Comprehensive Manufacturing Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of AI with our quantum-enhanced neural network platform
+                Experience the future of manufacturing with our AI-powered platform
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {solutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  <Card className="bg-slate-800/50 border-slate-700 hover:border-blue-500 transition-all duration-300">
+                  <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500 transition-all duration-300">
                     <CardHeader className="text-center">
-                      <div className="mx-auto p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <feature.icon className="w-8 h-8 text-white" />
+                      <div className="mx-auto p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <solution.icon className="w-8 h-8 text-white" />
                       </div>
-                      <CardTitle className="text-white">{feature.title}</CardTitle>
+                      <CardTitle className="text-white">{solution.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-gray-300">
-                        {feature.description}
+                        {solution.description}
                       </CardDescription>
                     </CardContent>
                   </Card>
@@ -172,7 +172,7 @@ export default function AIQuantumNeuralNetworkPlatform() {
                 Advanced Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Unlock the full potential of quantum-enhanced AI with our comprehensive platform
+                Unlock the full potential of AI-powered manufacturing technology
               </p>
             </motion.div>
 
@@ -185,7 +185,7 @@ export default function AIQuantumNeuralNetworkPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{capability}</span>
                 </motion.div>
               ))}
@@ -206,7 +206,7 @@ export default function AIQuantumNeuralNetworkPlatform() {
                 Transformative Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience unprecedented advantages with quantum-enhanced AI technology
+                Experience unprecedented advantages with AI-powered manufacturing solutions
               </p>
             </motion.div>
 
@@ -219,8 +219,8 @@ export default function AIQuantumNeuralNetworkPlatform() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
-                    <TrendingUp className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                  <div className="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                    <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                     <p className="text-gray-300">{benefit}</p>
                   </div>
                 </motion.div>
@@ -239,10 +239,10 @@ export default function AIQuantumNeuralNetworkPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Real-World Applications
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover how our platform transforms industries and drives innovation
+                Discover how our solutions transform manufacturing industries
               </p>
             </motion.div>
 
@@ -254,7 +254,7 @@ export default function AIQuantumNeuralNetworkPlatform() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  <Card className="bg-slate-800/50 border-slate-700 hover:border-blue-500 transition-all duration-300">
+                  <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500 transition-all duration-300">
                     <CardHeader>
                       <CardTitle className="text-white text-xl">{useCase.title}</CardTitle>
                     </CardHeader>
@@ -279,13 +279,13 @@ export default function AIQuantumNeuralNetworkPlatform() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Experience the Future of AI?
+                Ready to Transform Your Manufacturing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join the quantum revolution and transform your business with our AI Quantum Neural Network Platform
+                Let's discuss how our manufacturing solutions can drive efficiency and innovation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700">
                   Start Your Journey
                 </Button>
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">

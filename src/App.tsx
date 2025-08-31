@@ -58,6 +58,7 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Training = createLazyComponent(() => import('./pages/Training'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -205,8 +206,8 @@ function App() {
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
 
                     {/* Solution Routes */}
-                    <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                    <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                    <Route path="/solutions/healthcare" element={<ModernLayout><HealthcareSolutions /></ModernLayout>} />
+                    <Route path="/solutions/financial" element={<ModernLayout><FinancialSolutions /></ModernLayout>} />
                     <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
                     <Route path="/solutions/government" element={<GovernmentSolutions />} />
                     <Route path="/solutions/retail" element={<RetailSolutions />} />
@@ -227,9 +228,36 @@ function App() {
                     <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
                     <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
                     <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
-
-                    {/* New pages we created */}
-                    <Route path="/enterprise" element={<Enterprise />} />
+                    
+                                        {/* Request Quote Page */}
+                    <Route path="/request-quote" element={<ModernLayout><RequestQuote /></ModernLayout>} />
+                    
+                    {/* Careers Page */}
+                    <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
+                    
+                    {/* News Page */}
+                    <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
+                    
+                    {/* Partners Page */}
+                    <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
+                    
+                    {/* Events Page */}
+                    <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
+                    
+                    {/* Help Page */}
+                    <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
+                    
+                    {/* Pricing Page */}
+                    <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
+                    
+                           {/* Blog Page */}
+       <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
+       
+       {/* Documentation Page */}
+       <Route path="/documentation" element={<ModernLayout><Documentation /></ModernLayout>} />
+       
+       {/* New pages we created */}
+       <Route path="/enterprise" element={<Enterprise />} />
                     <Route path="/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
