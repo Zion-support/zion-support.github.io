@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Atom, 
+  Workflow, 
   Zap, 
   Brain, 
-  Cpu, 
+  Users, 
   Target, 
   Shield, 
   Cloud, 
@@ -26,6 +26,7 @@ import {
   BarChart,
   PieChart,
   LineChart,
+  Cpu,
   Network,
   Lock,
   TrendingUp,
@@ -38,177 +39,144 @@ import {
   MapPin,
   DollarSign,
   Award,
-  Quantum,
-  CircuitBoard,
-  Microchip,
-  Satellite,
-  Wifi,
-  Server,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon
+  HeadphonesIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIQuantumComputingSolutions() {
-  const [selectedPlan, setSelectedPlan] = useState('enterprise');
+export default function AIEnterpriseWorkflowAutomation() {
+  const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
-      icon: Atom,
-      title: "Quantum-Classical Hybrid Computing",
-      description: "Seamlessly integrate quantum and classical computing for optimal performance across all workloads",
-      benefits: ["Hybrid algorithm optimization", "Quantum advantage identification", "Classical fallback systems"]
-    },
-    {
       icon: Brain,
-      title: "AI-Enhanced Quantum Algorithms",
-      description: "Machine learning optimized quantum algorithms that adapt and improve based on data patterns",
-      benefits: ["Adaptive quantum circuits", "ML-driven optimization", "Performance prediction"]
+      title: "AI-Powered Process Intelligence",
+      description: "Advanced machine learning algorithms that automatically analyze, optimize, and predict workflow performance",
+      benefits: ["Intelligent process optimization", "Predictive workflow analytics", "Automated bottleneck detection"]
     },
     {
-      icon: Cpu,
-      title: "Quantum Error Correction",
-      description: "Advanced error correction techniques ensuring reliable quantum computations in noisy environments",
-      benefits: ["Fault-tolerant computing", "Error mitigation", "Reliability assurance"]
+      icon: Workflow,
+      title: "Visual Workflow Designer",
+      description: "Drag-and-drop interface for creating complex business processes with AI-assisted recommendations",
+      benefits: ["Intuitive visual design", "AI-powered suggestions", "Template library"]
+    },
+    {
+      icon: Zap,
+      title: "Intelligent Automation Engine",
+      description: "Automate repetitive tasks with AI that learns and improves over time",
+      benefits: ["Self-learning automation", "Task prioritization", "Resource optimization"]
+    },
+    {
+      icon: Users,
+      title: "Collaborative Workflow Management",
+      description: "Team-based workflow design and execution with real-time collaboration features",
+      benefits: ["Real-time collaboration", "Role-based access control", "Version control"]
     },
     {
       icon: Target,
-      title: "Industry-Specific Quantum Solutions",
-      description: "Tailored quantum computing solutions for finance, healthcare, logistics, and materials science",
-      benefits: ["Domain expertise", "Custom algorithms", "Industry benchmarks"]
+      title: "Performance Analytics & KPIs",
+      description: "Comprehensive metrics and insights to measure and improve workflow efficiency",
+      benefits: ["Real-time monitoring", "Custom KPI dashboards", "Performance alerts"]
     },
     {
       icon: Shield,
-      title: "Quantum-Safe Cryptography",
-      description: "Post-quantum cryptography solutions protecting against future quantum threats",
-      benefits: ["Future-proof security", "Quantum-resistant algorithms", "Compliance ready"]
-    },
-    {
-      icon: Cloud,
-      title: "Quantum Cloud Platform",
-      description: "Access quantum computing resources through our secure, scalable cloud infrastructure",
-      benefits: ["Pay-per-use pricing", "Global accessibility", "Enterprise security"]
+      title: "Enterprise Security & Compliance",
+      description: "Bank-level security with compliance frameworks for regulated industries",
+      benefits: ["SOC 2 Type II", "GDPR compliance", "Enterprise SSO"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,999",
+      name: "Starter",
+      price: "$499",
       period: "/month",
-      description: "For academic and research institutions exploring quantum computing",
+      description: "Perfect for small teams starting their automation journey",
       features: [
-        "Up to 100 quantum circuit executions",
-        "Basic quantum algorithms library",
-        "Research support",
-        "Academic pricing",
-        "Basic documentation",
-        "Community forum access"
+        "Up to 10 users",
+        "Basic workflow templates",
+        "Standard integrations",
+        "Email support",
+        "Basic analytics",
+        "5 workflow automations"
       ],
-      cta: "Start Research Trial",
+      cta: "Start Free Trial",
       popular: false,
-      marketPrice: "$5000-8000/month",
-      savings: "Save up to 60%"
+      marketPrice: "$800-1200/month",
+      savings: "Save up to 58%"
     },
     {
       name: "Professional",
-      price: "$7,999",
+      price: "$1,299",
       period: "/month",
-      description: "For businesses implementing quantum computing solutions",
+      description: "Ideal for growing businesses with complex workflow needs",
       features: [
-        "Up to 1000 quantum circuit executions",
-        "Advanced quantum algorithms",
+        "Up to 50 users",
+        "Advanced workflow templates",
+        "Premium integrations",
         "Priority support",
-        "Custom algorithm development",
-        "Performance optimization",
-        "Integration support",
-        "Training and certification"
+        "Advanced analytics",
+        "Unlimited automations",
+        "Custom workflows",
+        "API access"
       ],
-      cta: "Start Professional Trial",
+      cta: "Start Free Trial",
       popular: true,
-      marketPrice: "$15000-25000/month",
-      savings: "Save up to 68%"
+      marketPrice: "$2000-3500/month",
+      savings: "Save up to 63%"
     },
     {
       name: "Enterprise",
-      price: "$19,999",
+      price: "$2,999",
       period: "/month",
-      description: "For large organizations requiring enterprise quantum computing",
+      description: "For large organizations requiring enterprise-grade automation",
       features: [
-        "Unlimited quantum executions",
-        "Custom quantum hardware access",
+        "Unlimited users",
+        "Custom workflow development",
+        "Enterprise integrations",
         "24/7 dedicated support",
-        "White-label solutions",
-        "Custom deployment options",
-        "Advanced security features",
-        "Compliance frameworks"
+        "Custom analytics",
+        "Advanced AI features",
+        "White-label options",
+        "Custom deployment"
       ],
       cta: "Contact Sales",
       popular: false,
-      marketPrice: "$40000-60000/month",
-      savings: "Save up to 67%"
+      marketPrice: "$5000-8000/month",
+      savings: "Save up to 63%"
     }
   ];
 
   const useCases = [
     {
       industry: "Financial Services",
-      description: "Portfolio optimization, risk assessment, and fraud detection using quantum algorithms",
-      roi: "500% ROI in 18 months",
-      timeSaved: "90% faster than classical methods"
+      description: "Automate loan processing, compliance workflows, and risk assessment processes",
+      roi: "300% ROI in 12 months",
+      timeSaved: "70% reduction in processing time"
     },
     {
-      industry: "Pharmaceutical Research",
-      description: "Drug discovery, molecular modeling, and protein folding simulations",
-      roi: "800% ROI in 24 months",
-      timeSaved: "95% reduction in simulation time"
+      industry: "Healthcare",
+      description: "Streamline patient onboarding, claims processing, and administrative workflows",
+      roi: "250% ROI in 18 months",
+      timeSaved: "60% reduction in administrative tasks"
     },
     {
-      industry: "Logistics & Supply Chain",
-      description: "Route optimization, inventory management, and demand forecasting",
-      roi: "400% ROI in 15 months",
-      timeSaved: "85% faster optimization"
+      industry: "Manufacturing",
+      description: "Optimize production workflows, quality control, and supply chain processes",
+      roi: "400% ROI in 12 months",
+      timeSaved: "80% reduction in manual processes"
     },
     {
-      industry: "Materials Science",
-      description: "New material discovery, property prediction, and chemical synthesis",
-      roi: "600% ROI in 20 months",
-      timeSaved: "80% faster discovery process"
-    }
-  ];
-
-  const quantumAdvantages = [
-    {
-      area: "Cryptography",
-      classical: "RSA-2048: 2.3 quintillion years",
-      quantum: "Shor's Algorithm: 8 hours",
-      improvement: "10^15x faster"
-    },
-    {
-      area: "Optimization",
-      classical: "NP-hard problems: exponential time",
-      quantum: "Quantum annealing: polynomial time",
-      improvement: "Exponential speedup"
-    },
-    {
-      area: "Machine Learning",
-      classical: "Training: weeks to months",
-      quantum: "Quantum ML: hours to days",
-      improvement: "100-1000x faster"
-    },
-    {
-      area: "Simulation",
-      classical: "Molecular dynamics: months",
-      quantum: "Quantum simulation: days",
-      improvement: "10-100x faster"
+      industry: "Retail",
+      description: "Automate inventory management, order processing, and customer service workflows",
+      roi: "280% ROI in 15 months",
+      timeSaved: "65% reduction in order processing time"
     }
   ];
 
   const integrations = [
-    "IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket",
-    "D-Wave", "Rigetti", "IonQ", "Xanadu", "PsiQuantum", "PASQAL",
-    "AWS", "Azure", "Google Cloud", "Oracle Cloud", "IBM Cloud"
+    "Salesforce", "Microsoft 365", "Slack", "Teams", "Jira", "Asana",
+    "Zapier", "HubSpot", "QuickBooks", "NetSuite", "SAP", "Oracle",
+    "AWS", "Azure", "Google Cloud", "Shopify", "WooCommerce", "Magento"
   ];
 
   return (
@@ -225,24 +193,25 @@ export default function AIQuantumComputingSolutions() {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  AI Quantum Computing
+                  AI Enterprise Workflow
                 </span>
                 <br />
-                <span className="text-white">Solutions</span>
+                <span className="text-white">Automation Platform</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Harness the power of quantum computing combined with artificial intelligence to solve 
-                previously impossible problems. Experience exponential speedups and breakthrough capabilities.
+                Transform your business operations with intelligent workflow automation powered by advanced AI. 
+                Streamline processes, reduce costs, and boost productivity by up to 80%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity group"
                 >
-                  Start Quantum Trial
+                  Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 rounded-xl border border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10 transition-colors">
+                  <Play className="mr-2 w-5 h-5" />
                   Watch Demo
                 </button>
               </div>
@@ -251,53 +220,13 @@ export default function AIQuantumComputingSolutions() {
         </div>
       </section>
 
-      {/* Quantum Advantage Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-slate-dark/30 to-zion-blue-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Quantum Advantage in Action</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how quantum computing delivers exponential performance improvements over classical methods
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {quantumAdvantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-8"
-              >
-                <h3 className="text-2xl font-bold mb-6 text-zion-cyan">{advantage.area}</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-red-500/10 rounded-lg border border-red-500/20">
-                    <span className="text-red-400 font-medium">Classical Computing</span>
-                    <span className="text-red-300 text-sm">{advantage.classical}</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-500/10 rounded-lg border border-green-500/20">
-                    <span className="text-green-400 font-medium">Quantum Computing</span>
-                    <span className="text-green-300 text-sm">{advantage.quantum}</span>
-                  </div>
-                  <div className="text-center p-3 bg-zion-cyan/20 rounded-lg">
-                    <span className="text-zion-cyan font-bold text-lg">{advantage.improvement}</span>
-                    <div className="text-xs text-gray-400">Performance Improvement</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features */}
+      {/* Key Benefits */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Advanced Quantum Capabilities</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Choose Our Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge quantum computing features powered by artificial intelligence
+              Industry-leading AI workflow automation with proven ROI and enterprise-grade security
             </p>
           </div>
           
@@ -335,9 +264,9 @@ export default function AIQuantumComputingSolutions() {
       <section className="py-16 bg-gradient-to-r from-zion-slate-dark/30 to-zion-blue-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Quantum Computing Pricing</h2>
+            <h2 className="text-4xl font-bold mb-4">Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access to cutting-edge quantum computing resources with flexible pricing options
+              Competitive pricing with enterprise-grade features. Start free and scale as you grow.
             </p>
           </div>
 
@@ -407,9 +336,9 @@ export default function AIQuantumComputingSolutions() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Industry Applications & Results</h2>
+            <h2 className="text-4xl font-bold mb-4">Proven Results Across Industries</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how quantum computing delivers breakthrough results across various industries
+              See how our platform delivers measurable ROI and transforms business operations
             </p>
           </div>
 
@@ -436,7 +365,7 @@ export default function AIQuantumComputingSolutions() {
                   </div>
                   <div className="text-center p-3 bg-zion-purple/10 rounded-lg">
                     <div className="text-zion-purple font-bold text-lg">{useCase.timeSaved}</div>
-                    <div className="text-xs text-gray-400">Performance Improvement</div>
+                    <div className="text-xs text-gray-400">Time Savings</div>
                   </div>
                 </div>
               </motion.div>
@@ -449,13 +378,13 @@ export default function AIQuantumComputingSolutions() {
       <section className="py-16 bg-gradient-to-r from-zion-slate-dark/30 to-zion-blue-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Quantum Hardware & Cloud Partners</h2>
+            <h2 className="text-4xl font-bold mb-4">Seamless Integrations</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access to leading quantum computing hardware and cloud platforms
+              Connect with your existing tools and platforms for a unified workflow experience
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -481,16 +410,16 @@ export default function AIQuantumComputingSolutions() {
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-2xl p-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Ready for the Quantum Revolution?</h2>
+              <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Workflows?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join the forefront of computing technology and solve problems that were previously impossible.
+                Join thousands of companies that have automated their business processes and achieved remarkable results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-zion-cyan to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
                 >
-                  Start Quantum Trial
+                  Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
@@ -510,7 +439,7 @@ export default function AIQuantumComputingSolutions() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-xl text-gray-300">
-              Our quantum computing experts are ready to help you explore the future of computing
+              Our team of experts is ready to help you choose the right plan and get started
             </p>
           </div>
 
