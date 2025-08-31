@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Cloud, 
-  Server, 
+  Rocket, 
+  Brain, 
+  Atom, 
+  Cpu, 
   Database, 
   Network, 
   Shield, 
@@ -14,7 +16,6 @@ import {
   CheckCircle,
   Star,
   TrendingUp,
-  Cpu,
   Smartphone,
   Wifi,
   ShieldCheck,
@@ -29,123 +30,127 @@ import {
   RefreshCw,
   Target,
   Lightbulb,
-  Rocket,
   BarChart,
-  PieChart,
-  LineChart,
-  Activity,
   Layers,
   GitBranch,
   Monitor,
   Settings,
   Key,
   Users,
-  Building2
+  Building2,
+  Satellite,
+  Microscope,
+  Dna,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Activity,
+  FileText,
+  MessageCircle,
+  Search,
+  Palette,
+  Zap as ZapIcon
 } from 'lucide-react';
 
-const CloudSolutions = () => {
-  const cloudServices = [
+const EmergingTech = () => {
+  const technologies = [
     {
-      icon: <Cloud className="w-12 h-12" />,
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure with minimal disruption and maximum efficiency.",
-      features: ["Legacy System Migration", "Data Migration", "Application Modernization", "Performance Optimization"],
+      icon: <Brain className="w-12 h-12" />,
+      title: "Artificial Intelligence",
+      description: "Advanced AI solutions including machine learning, deep learning, and neural networks.",
+      applications: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Autonomous Systems"],
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Server className="w-12 h-12" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud infrastructure designed for enterprise needs.",
-      features: ["Auto-scaling", "Load Balancing", "High Availability", "Disaster Recovery"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <Database className="w-12 h-12" />,
-      title: "Cloud Databases",
-      description: "Managed database services with high performance and reliability.",
-      features: ["Managed Databases", "Data Backup", "Replication", "Monitoring"],
+      icon: <Atom className="w-12 h-12" />,
+      title: "Quantum Computing",
+      description: "Next-generation computing power for complex problem-solving and cryptography.",
+      applications: ["Cryptography", "Optimization", "Simulation", "Machine Learning"],
       color: "from-purple-500 to-indigo-500"
     },
     {
-      icon: <Network className="w-12 h-12" />,
-      title: "Cloud Networking",
-      description: "Advanced networking solutions for cloud environments.",
-      features: ["VPC Configuration", "CDN Services", "API Gateway", "Load Balancing"],
+      icon: <Satellite className="w-12 h-12" />,
+      title: "Edge Computing",
+      description: "Distributed computing architecture for real-time data processing.",
+      applications: ["IoT Devices", "Real-time Analytics", "Autonomous Vehicles", "Smart Cities"],
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Dna className="w-12 h-12" />,
+      title: "Biotechnology",
+      description: "Innovative solutions combining technology with biological systems.",
+      applications: ["Healthcare", "Agriculture", "Environmental Monitoring", "Drug Discovery"],
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      icon: <Leaf className="w-12 h-12" />,
+      title: "Green Technology",
+      description: "Sustainable technology solutions for environmental challenges.",
+      applications: ["Renewable Energy", "Carbon Capture", "Smart Grids", "Sustainable Materials"],
+      color: "from-yellow-500 to-green-500"
+    },
+    {
+      icon: <Gamepad2 className="w-12 h-12" />,
+      title: "Extended Reality",
+      description: "Immersive technologies including VR, AR, and mixed reality.",
+      applications: ["Training & Education", "Entertainment", "Healthcare", "Industrial Design"],
       color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: <Shield className="w-12 h-12" />,
-      title: "Cloud Security",
-      description: "Comprehensive security solutions for cloud infrastructure.",
-      features: ["Identity Management", "Encryption", "Compliance", "Threat Detection"],
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: <Zap className="w-12 h-12" />,
-      title: "Serverless Computing",
-      description: "Event-driven computing for scalable and cost-effective applications.",
-      features: ["Function as a Service", "Event Processing", "Auto-scaling", "Pay-per-use"],
-      color: "from-cyan-500 to-blue-500"
     }
   ];
 
-  const cloudProviders = [
+  const innovations = [
     {
-      name: "AWS",
-      description: "Amazon Web Services - Comprehensive cloud platform",
-      services: ["EC2", "S3", "Lambda", "RDS", "CloudFront"],
-      icon: <Building2 className="w-8 h-8" />
+      icon: <Rocket className="w-8 h-8" />,
+      title: "Innovation Lab",
+      description: "Research and development facility for cutting-edge technologies"
     },
     {
-      name: "Azure",
-      description: "Microsoft Azure - Enterprise cloud solutions",
-      services: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "CDN"],
-      icon: <Cloud className="w-8 h-8" />
+      icon: <Microscope className="w-8 h-8" />,
+      title: "R&D Partnerships",
+      description: "Collaborations with universities and research institutions"
     },
     {
-      name: "Google Cloud",
-      description: "Google Cloud Platform - AI and data-focused cloud",
-      services: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery", "Cloud CDN"],
+      icon: <Coins className="w-8 h-8" />,
+      title: "Innovation Funding",
+      description: "Investment in emerging technology startups and projects"
+    },
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: "Patent Portfolio",
+      description: "Intellectual property protection for innovative solutions"
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "Healthcare",
+      description: "AI-powered diagnostics, personalized medicine, and telemedicine solutions.",
+      icon: <ShieldCheck className="w-8 h-8" />
+    },
+    {
+      industry: "Manufacturing",
+      description: "Smart factories, predictive maintenance, and autonomous robotics.",
+      icon: <Cpu className="w-8 h-8" />
+    },
+    {
+      industry: "Finance",
+      description: "Blockchain solutions, AI trading, and cybersecurity innovations.",
+      icon: <BarChart3 className="w-8 h-8" />
+    },
+    {
+      industry: "Transportation",
+      description: "Autonomous vehicles, smart traffic systems, and mobility solutions.",
+      icon: <Car className="w-8 h-8" />
+    },
+    {
+      industry: "Energy",
+      description: "Smart grids, renewable energy optimization, and energy storage.",
+      icon: <Zap className="w-8 h-8" />
+    },
+    {
+      industry: "Education",
+      description: "Virtual learning environments, AI tutors, and adaptive learning.",
       icon: <Globe className="w-8 h-8" />
-    },
-    {
-      name: "Multi-Cloud",
-      description: "Hybrid and multi-cloud strategies",
-      services: ["Cross-platform", "Hybrid Solutions", "Migration", "Optimization", "Management"],
-      icon: <Layers className="w-8 h-8" />
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Scalability",
-      description: "Scale resources up or down based on demand"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Cost Optimization",
-      description: "Pay only for resources you use"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security",
-      description: "Enterprise-grade security and compliance"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Performance",
-      description: "High-performance infrastructure and global reach"
-    },
-    {
-      icon: <RefreshCw className="w-8 h-8" />,
-      title: "Flexibility",
-      description: "Adapt quickly to changing business needs"
-    },
-    {
-      icon: <Monitor className="w-8 h-8" />,
-      title: "Monitoring",
-      description: "Real-time monitoring and analytics"
     }
   ];
 
@@ -161,35 +166,35 @@ const CloudSolutions = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cloud
+              Emerging
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Solutions
+                {" "}Technologies
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with scalable, secure, and cost-effective cloud solutions. 
-              From migration to optimization, we help you leverage the full power of the cloud.
+              Explore the cutting edge of technology with our innovative solutions in AI, 
+              quantum computing, biotechnology, and more. Shape the future today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
-                Get Cloud Solutions
+                Explore Innovations
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/case-studies"
+                to="/research-development"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                View Case Studies
+                Research & Development
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Cloud Services */}
+      {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -200,15 +205,15 @@ const CloudSolutions = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cloud Services
+              Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive cloud solutions designed for modern businesses
+              Revolutionary technologies that are transforming industries and creating new possibilities
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -217,16 +222,16 @@ const CloudSolutions = () => {
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className={`text-transparent bg-clip-text bg-gradient-to-r ${service.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  {service.icon}
+                <div className={`text-transparent bg-clip-text bg-gradient-to-r ${tech.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {tech.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
+                <p className="text-gray-300 mb-4">{tech.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {tech.applications.map((app, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {app}
                     </li>
                   ))}
                 </ul>
@@ -236,7 +241,7 @@ const CloudSolutions = () => {
         </div>
       </section>
 
-      {/* Cloud Providers */}
+      {/* Innovation Initiatives */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -247,15 +252,15 @@ const CloudSolutions = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cloud Providers
+              Innovation Initiatives
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with leading cloud providers to deliver the best solutions for your needs
+              Our commitment to advancing technology through research, partnerships, and investment
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {cloudProviders.map((provider, index) => (
+            {innovations.map((innovation, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,23 +269,16 @@ const CloudSolutions = () => {
                 viewport={{ once: true }}
                 className="bg-slate-700/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 text-center"
               >
-                <div className="text-cyan-400 mb-4 flex justify-center">{provider.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{provider.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{provider.description}</p>
-                <ul className="space-y-1 text-xs">
-                  {provider.services.map((service, idx) => (
-                    <li key={idx} className="text-gray-400">
-                      {service}
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-cyan-400 mb-4 flex justify-center">{innovation.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{innovation.title}</h3>
+                <p className="text-gray-300 text-sm">{innovation.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Industry Applications */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -291,26 +289,28 @@ const CloudSolutions = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cloud Benefits
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Why organizations choose cloud solutions for their digital transformation
+              How emerging technologies are transforming various industries
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 text-center"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className="text-cyan-400 mb-4 flex justify-center">{benefit.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -327,25 +327,25 @@ const CloudSolutions = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Move to the Cloud?
+              Ready to Shape the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how cloud solutions can transform your business operations, 
-              improve scalability, and reduce costs.
+              Let's explore how emerging technologies can transform your business 
+              and create new opportunities for innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
-                Schedule Cloud Consultation
+                Schedule Innovation Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/enterprise"
+                to="/industry-solutions"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Enterprise Solutions
+                Industry Solutions
               </Link>
             </div>
           </motion.div>
@@ -355,4 +355,4 @@ const CloudSolutions = () => {
   );
 };
 
-export default CloudSolutions;
+export default EmergingTech;
