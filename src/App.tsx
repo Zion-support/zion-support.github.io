@@ -64,6 +64,8 @@ const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2032 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2032'));
+const ComprehensivePricing2032 = createLazyComponent(() => import('./pages/ComprehensivePricing2032'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
 
 // All pages - combining both branches
@@ -157,6 +159,8 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/comprehensive-services-showcase-2032" element={<ModernLayout><ComprehensiveServicesShowcase2032 /></ModernLayout>} />
+                    <Route path="/comprehensive-pricing-2032" element={<ModernLayout><ComprehensivePricing2032 /></ModernLayout>} />
 
                     {/* Legal and Policy Pages */}
                     <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />

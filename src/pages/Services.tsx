@@ -492,20 +492,24 @@ export default function Services() {
               Let's discuss how our innovative technology solutions can drive your success and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
               >
                 Get Started Today
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </Link>
+              <Link
+                to="/comprehensive-services-showcase-2032"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+              >
+                View 2032 Services
+              </Link>
+              <a
+                href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                Schedule a Consultation
-              </motion.button>
+                Call Now
+              </a>
             </div>
           </motion.div>
         </div>
