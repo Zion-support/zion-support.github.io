@@ -122,15 +122,15 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     </div>
                     <ul className="space-y-3">
                       <li>
-                        <Link to="/services/ai-autonomous-business-manager" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Brain className="w-3 h-3 mr-2" />
-                          AI Autonomous Business Manager
+                        <Link to="/services/ai-autonomous-business-manager" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Brain className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Business Manager</span>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <TrendingUp className="w-3 h-3 mr-2" />
-                          AI Business Intelligence
+                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <TrendingUp className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Business Intelligence</span>
                         </Link>
                       </li>
                       <li>
@@ -143,18 +143,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Autonomous Manufacturing</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Autonomous Logistics</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <TrendingUp className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Business Intelligence</span>
                         </Link>
                       </li>
                       <li>
@@ -187,14 +175,36 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Space Technology</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-financial-advisor" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Financial Advisor</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-healthcare-diagnostics" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Heart className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Healthcare Diagnostics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-cybersecurity-operations" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Cybersecurity Operations</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
-                      <Server className="w-5 h-5 mr-3"/>
-                      IT & Infrastructure
-                    </h4>
-                    <ul className="space-y-4 text-sm">
+
+                  {/* IT & Infrastructure Column */}
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
+                      <div className="p-2 bg-zion-purple/20 rounded-lg">
+                        <Server className="w-5 h-5 text-zion-purple"/>
+                      </div>
+                      <h4 className="text-zion-purple font-bold text-lg">IT & Infrastructure</h4>
+                    </div>
+                    <ul className="space-y-3">
                       <li>
                         <Link to="/services/it-infrastructure-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Server className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
@@ -219,28 +229,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>Digital Transformation</span>
                         </Link>
                       </li>
-                    </ul>
-                  </div>
-
-                  {/* IT & Infrastructure Column */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                      <div className="p-2 bg-zion-purple/20 rounded-lg">
-                        <Server className="w-5 h-5 text-zion-purple"/>
-                      </div>
-                      <h4 className="text-zion-purple font-bold text-lg">IT & Infrastructure</h4>
-                    </div>
-                    <ul className="space-y-3">
                       <li>
-                        <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Cloud className="w-3 h-3 mr-2" />
-                          Cloud & DevOps
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Shield className="w-3 h-3 mr-2" />
-                          Cybersecurity
+                        <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Cloud FinOps Optimizer</span>
                         </Link>
                       </li>
                     </ul>
@@ -317,12 +309,16 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       Innovation Showcase 2026
                       <Rocket className="w-4 h-4 ml-2"/>
                     </Link>
-                    <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                      Pricing Guide 2032
+                    <Link to="/innovative-services-showcase-2027" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                      Innovation Showcase 2027
+                      <Star className="w-4 h-4 ml-2"/>
+                    </Link>
+                    <Link to="/comprehensive-pricing-guide-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                      Pricing Guide 2025
                       <DollarSign className="w-4 h-4 ml-2"/>
                     </Link>
-                    <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                      Comprehensive Pricing Guide 2032
+                    <Link to="/pricing" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                      Current Pricing
                       <DollarSign className="w-4 h-4 ml-2"/>
                     </Link>
                   </div>
@@ -596,69 +592,116 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 
                 {isServicesOpen && (
                   <div className="pl-4 space-y-1">
-                    <Link 
-                      to="/services/ai-autonomous-business-manager" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Autonomous Business Manager
-                    </Link>
-                    <Link 
-                      to="/services/ai-business-intelligence" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Business Intelligence
-                    </Link>
-                    <Link 
-                      to="/services/cloud-devops" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Cloud & DevOps
-                    </Link>
-                    <Link 
-                      to="/services/cybersecurity" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Cybersecurity
-                    </Link>
-                    <Link 
-                      to="/services/micro-saas-solutions" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Micro SaaS Solutions
-                    </Link>
-                    <Link 
-                      to="/services/blockchain" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Blockchain Solutions
-                    </Link>
-                    <Link 
-                      to="/services/ai-autonomous-legal-research-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Legal Research Platform
-                    </Link>
-                    <Link 
-                      to="/services/ai-educational-content-creation-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Educational Content
-                    </Link>
-                    <Link 
-                      to="/services/ai-real-estate-investment-analytics-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Real Estate Analytics
-                    </Link>
+                    {/* AI & Automation */}
+                    <div className="mb-3">
+                      <h5 className="text-xs font-semibold text-zion-cyan mb-2 px-3">AI & Automation</h5>
+                      <Link 
+                        to="/services/ai-autonomous-business-manager" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Autonomous Business Manager
+                      </Link>
+                      <Link 
+                        to="/services/ai-business-intelligence" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Business Intelligence
+                      </Link>
+                      <Link 
+                        to="/services/ai-autonomous-financial-advisor" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Financial Advisor
+                      </Link>
+                      <Link 
+                        to="/services/ai-autonomous-healthcare-diagnostics" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Healthcare Diagnostics
+                      </Link>
+                      <Link 
+                        to="/services/ai-autonomous-cybersecurity-operations" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Cybersecurity Operations
+                      </Link>
+                    </div>
+                    
+                    {/* IT & Infrastructure */}
+                    <div className="mb-3">
+                      <h5 className="text-xs font-semibold text-zion-purple mb-2 px-3">IT & Infrastructure</h5>
+                      <Link 
+                        to="/services/cloud-devops" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Cloud & DevOps
+                      </Link>
+                      <Link 
+                        to="/services/cybersecurity" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Cybersecurity
+                      </Link>
+                      <Link 
+                        to="/services/it-infrastructure-management" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Infrastructure Management
+                      </Link>
+                    </div>
+                    
+                    {/* Micro SaaS & Specialized */}
+                    <div className="mb-3">
+                      <h5 className="text-xs font-semibold text-zion-blue mb-2 px-3">Micro SaaS & Specialized</h5>
+                      <Link 
+                        to="/services/micro-saas-solutions" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Micro SaaS Solutions
+                      </Link>
+                      <Link 
+                        to="/services/blockchain" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Blockchain Solutions
+                      </Link>
+                    </div>
+                    
+                    {/* Legal & Education */}
+                    <div className="mb-3">
+                      <h5 className="text-xs font-semibold text-zion-green mb-2 px-3">Legal & Education</h5>
+                      <Link 
+                        to="/services/ai-autonomous-legal-research-platform" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Legal Research Platform
+                      </Link>
+                      <Link 
+                        to="/services/ai-educational-content-creation-platform" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Educational Content
+                      </Link>
+                      <Link 
+                        to="/services/ai-real-estate-investment-analytics-platform" 
+                        className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        AI Real Estate Analytics
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -789,11 +832,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       Innovative Services 2025
                     </Link>
                     <Link 
-                      to="/pricing-guide" 
+                      to="/innovative-services-showcase-2027" 
                       className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Pricing Guide
+                      Innovation Showcase 2027
+                    </Link>
+                    <Link 
+                      to="/pricing" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Current Pricing
                     </Link>
                   </div>
                 )}

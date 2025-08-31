@@ -34,7 +34,14 @@ import {
   FileText,
   HelpCircle,
   ExternalLink,
-  Rocket
+  Rocket,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  DollarSign
 } from 'lucide-react';
 
 export function AppFooter() {
@@ -54,7 +61,8 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor" }
       ]
     },
     {
@@ -70,7 +78,9 @@ export function AppFooter() {
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
-        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" }
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
+        { name: "AI Autonomous Healthcare Diagnostics", href: "/services/ai-autonomous-healthcare-diagnostics" },
+        { name: "AI Autonomous Cybersecurity Operations", href: "/services/ai-autonomous-cybersecurity-operations" }
       ]
     },
     {
@@ -288,7 +298,7 @@ export function AppFooter() {
               Discover cutting-edge AI services, revolutionary IT solutions, and innovative Micro SaaS platforms designed for 2025 and beyond.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link 
               to="/innovative-services-showcase-2032"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -300,21 +310,31 @@ export function AppFooter() {
               <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
             </Link>
             <Link 
-              to="/comprehensive-services-showcase-2025"
+              to="/innovative-services-showcase-2027"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Star className="w-6 h-6 text-zion-cyan" />
+                <h4 className="text-lg font-semibold text-white">2027 Innovation Showcase</h4>
+              </div>
+              <p className="text-zion-slate-light text-sm">Discover our latest AI services and autonomous operations platforms.</p>
+            </Link>
+            <Link 
+              to="/comprehensive-services-showcase-2025"
+              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="flex items-center space-x-3 mb-3">
+                <TrendingUp className="w-6 h-6 text-zion-purple" />
                 <h4 className="text-lg font-semibold text-white">2025 Services Showcase</h4>
               </div>
               <p className="text-zion-slate-light text-sm">Comprehensive overview of all our current services and capabilities.</p>
             </Link>
             <Link 
               to="/pricing"
-              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
-                <TrendingUp className="w-6 h-6 text-zion-purple" />
+                <DollarSign className="w-6 h-6 text-zion-cyan" />
                 <h4 className="text-lg font-semibold text-white">Pricing & Plans</h4>
               </div>
               <p className="text-zion-slate-light text-sm">Transparent pricing for all our services and solutions.</p>
@@ -395,12 +415,7 @@ export function AppFooter() {
   );
 }
 
-// Missing icon components
-const Handshake = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
+
 
 const Monitor = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
