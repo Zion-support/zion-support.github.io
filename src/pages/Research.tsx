@@ -281,7 +281,12 @@ export default function Research() {
     }
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+    >
       <SEO 
         title="Research & Publications - Zion Tech Group"
         description="Explore Zion Tech Group's cutting-edge research in AI, cybersecurity, quantum computing, and emerging technologies. Access our latest publications and thought leadership content."
@@ -313,7 +318,7 @@ export default function Research() {
             Our team of researchers and engineers are pushing the boundaries of what's possible.
           </p>
         </div>
-      </div>
+      </motion.div>
       {/* Search and Filters */}
       <div className="py-12">
         <div className="container mx-auto px-4">
@@ -569,10 +574,10 @@ export default function Research() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">All Research Papers</h2>
           <div className="text-center mb-6">
-            <p className="text-gray-400">Showing {filteredResearch.length} of {featuredResearch.length + allResearch.length} papers</p>
+            <p className="text-gray-400">Showing {filteredProjects.length} of {researchProjects.length} papers</p>
           </div>
           
-          {filteredResearch.length === 0 ? (
+          {filteredProjects.length === 0 ? (
             <div className="text-center py-12">
               <BookOpen className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No research papers found</h3>
@@ -580,9 +585,9 @@ export default function Research() {
             </div>
           ) : (
             <div className="space-y-4">
-              {filteredResearch.map((paper, index) => (
+              {filteredProjects.map((project, index) => (
                 <motion.div
-                  key={paper.id}
+                  key={project.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 + index * 0.05 }}
@@ -591,35 +596,35 @@ export default function Research() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
-                        <span className="text-gray-400 text-sm">{paper.year}</span>
+                        <span className="text-gray-400 text-sm">{formatDate(project.startDate)}</span>
                         <span className="text-gray-400 text-sm">•</span>
-                        <span className="text-gray-400 text-sm">{paper.readTime} read</span>
-                        {paper.featured && (
+                        <span className="text-gray-400 text-sm">{project.category}</span>
+                        {project.featured && (
                           <>
                             <span className="text-gray-400 text-sm">•</span>
                             <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Featured</span>
                           </>
                         )}
                       </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{paper.title}</h3>
-                      <p className="text-gray-300 text-sm mb-3 line-clamp-2">{paper.abstract}</p>
+                      <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
+                      <p className="text-gray-300 text-sm mb-3">{project.description}</p>
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <div className="flex items-center space-x-1">
-                          <Eye className="w-4 h-4" />
-                          <span>{paper.views}</span>
+                          <Users className="w-4 h-4" />
+                          <span>{project.team.length} researchers</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Download className="w-4 h-4" />
-                          <span>{paper.downloads}</span>
+                          <FileText className="w-4 h-4" />
+                          <span>{project.publications.length} publications</span>
                         </div>
                       </div>
                     </div>
                     <div className="ml-6 text-right">
-                      <div className="text-sm text-gray-400 mb-2">{paper.journal}</div>
-                      <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download
-                      </Button>
+                      <div className="text-sm text-gray-400 mb-2">{project.institution}</div>
+                      <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                        <FileText className="w-4 h-4 mr-2" />
+                        Details
+                      </button>
                     </div>
                   </div>
                 </motion.div>
@@ -643,10 +648,10 @@ export default function Research() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Research Team
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </button>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }
