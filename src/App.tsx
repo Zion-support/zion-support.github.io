@@ -48,6 +48,7 @@ import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 import { FloatingActionButton } from './components/ui/FloatingActionButton';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -602,6 +603,9 @@ function App() {
 
             {/* User Experience Optimizer */}
             <UserExperienceOptimizer enabled={true} />
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor />
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
