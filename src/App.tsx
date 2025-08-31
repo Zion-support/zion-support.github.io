@@ -51,6 +51,13 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
+// New pages we created
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
+const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
+const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
@@ -129,6 +136,13 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+
+                    {/* New pages we created */}
+                    <Route path="/enterprise" element={<Enterprise />} />
+                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
+                    <Route path="/emerging-tech" element={<EmergingTech />} />
 
                     {/* 404 Page */}
                     <Route

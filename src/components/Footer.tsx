@@ -73,175 +73,178 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-300' },
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'GitHub', href: '#', icon: Github }
   ];
 
-  const trustIndicators = [
-    { icon: Shield, text: 'SOC 2 Compliant', color: 'text-green-400' },
-    { icon: Award, text: 'ISO 27001 Certified', color: 'text-blue-400' },
-    { icon: Users, text: '500+ Clients Served', color: 'text-purple-400' },
-    { icon: Clock, text: '24/7 Support', color: 'text-cyan-400' }
+  const contactInfo = [
+    {
+      icon: Phone,
+      text: '+1 (555) 123-4567',
+      href: 'tel:+15551234567'
+    },
+    {
+      icon: Mail,
+      text: 'info@ziontechgroup.com',
+      href: 'mailto:info@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      text: '123 Innovation Drive, Tech City, TC 12345',
+      href: '#'
+    },
+    {
+      icon: Clock,
+      text: 'Mon-Fri: 9AM-6PM EST',
+      href: '#'
+    }
   ];
 
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
-      <div className="relative z-10">
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Top Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-            {/* Company Info */}
-            <div className="lg:col-span-2">
-              <Link to="/" className="inline-block mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">Z</span>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white">Zion Tech Group</div>
-                    <div className="text-sm text-gray-400">Innovation Hub</div>
-                  </div>
-                </div>
-              </Link>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-                Pioneering the future with cutting-edge AI, quantum computing, and innovative technology solutions that transform businesses worldwide.
-              </p>
-              
-              {/* Trust Indicators */}
-              <div className="grid grid-cols-2 gap-4">
-                {trustIndicators.map((indicator, index) => (
-                  <motion.div
-                    key={indicator.text}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#ffffff_1px,_transparent_1px)] bg-[length:20px_20px]"></div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {footerSections.map((section, index) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <h3 className="text-lg font-semibold text-blue-400 mb-4">
+                {section.title}
+              </h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">
+                        {link.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Middle Section - Contact & Social */}
+        <div className="border-t border-slate-700 pt-12 pb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">
+                Get in Touch
+              </h3>
+              <div className="space-y-3">
+                {contactInfo.map((contact, index) => (
+                  <motion.a
+                    key={contact.text}
+                    href={contact.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors duration-200"
                   >
-                    <indicator.icon className={`w-5 h-5 ${indicator.color}`} />
-                    <span className="text-sm text-gray-400">{indicator.text}</span>
-                  </motion.div>
+                    <contact.icon className="w-5 h-5 text-blue-400" />
+                    <span>{contact.text}</span>
+                  </motion.a>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            {/* Footer Links */}
-            {footerSections.map((section, index) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
-                <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        to={link.href}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Contact & Social Section */}
-          <div className="border-t border-slate-700/50 pt-8 mb-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Information */}
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Mail className="w-5 h-5 text-cyan-400" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Globe className="w-5 h-5 text-cyan-400" />
-                    <span>Global Services Available</span>
-                  </div>
-                </div>
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">
+                Follow Us
+              </h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.1 }}
+                    className="w-12 h-12 bg-slate-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
+                  >
+                    <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-200" />
+                  </motion.a>
+                ))}
               </div>
-
-              {/* Social Links */}
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social) => (
-                    <motion.a
-                      key={social.name}
-                      href={social.href}
-                      className={`w-12 h-12 bg-slate-800 border border-slate-700 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-cyan-400 ${social.color}`}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      aria-label={`Follow us on ${social.name}`}
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-8 mb-8">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-              <p className="text-gray-300 mb-6">Get the latest insights on AI, technology trends, and industry updates.</p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Subscribe
-                </button>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-700/50">
-          <div className="max-w-7xl mx-auto px-4 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-                <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-                <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
-                <Link to="/sitemap" className="hover:text-cyan-400 transition-colors">Sitemap</Link>
+        {/* Bottom Section */}
+        <div className="border-t border-slate-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Company Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-2 text-gray-400"
+            >
+              <Shield className="w-5 h-5 text-blue-400" />
+              <span>Zion Tech Group</span>
+              <span>•</span>
+              <span>Trusted Technology Partner</span>
+            </motion.div>
+
+            {/* Copyright & Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-6 text-sm text-gray-400"
+            >
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <div className="flex space-x-4">
+                <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">
+                  Terms of Service
+                </Link>
+                <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-200">
+                  Cookie Policy
+                </Link>
               </div>
-              
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-400">Made with</span>
-                <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm text-gray-400">by Zion Tech Group</span>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -249,12 +252,16 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true }}
+        className="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 z-50 group"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="w-6 h-6 mx-auto" />
+        <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-200" />
       </motion.button>
     </footer>
   );
