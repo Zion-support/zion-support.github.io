@@ -152,6 +152,5 @@ const AIAutonomousDecisionEngine = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousDecisionEngine;

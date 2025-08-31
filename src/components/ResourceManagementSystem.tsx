@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Users,
+  Calendar,
+  Clock,
+  Target,
+  TrendingUp,
+=======
+import { Users, 
   Calendar, 
   Clock, 
   Target, 
   TrendingUp, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   AlertCircle,
   CheckCircle,
   XCircle,
@@ -40,9 +47,22 @@ import {
   Database,
   Lock,
   Unlock
-} from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Resource {
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
@@ -58,10 +78,25 @@ interface Resource {
   tags: string[];
   description: string;
   manager: string;
+<<<<<<< HEAD
   utilization: number;
-}
+<<<<<<< HEAD
+=======
+utilization: number;
+=======
 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -69,37 +104,78 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<{ name: string; count: number; percentage: number }>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  topDepartments: Array<any>;
+=======
+  topDepartments: Array<any>}
+
+interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+=======
+  topDepartments: Array<any>;
 }
 
-interface ResourceManagementSystemProps {
+interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   showStats?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
+<<<<<<< HEAD
   maxResources?: number;
+<<<<<<< HEAD
+=======
+  maxResources?: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
 }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
+<<<<<<< HEAD
   showStats = true,
   showFilters = true,
   showCharts = true,
+<<<<<<< HEAD
+  maxResources = 20;
+}) => {;
+=======
   maxResources = 20
 }) => {
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+  const [resources, setResources] = useState<any>([]);
+  const [filteredResources, setFilteredResources] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
+<<<<<<< HEAD
+=======
+  showStats = true,;
+  showFilters = true,;
+  showCharts = true,;
+  maxResources = 20;
+}) => {;
+  const [resources, setResources] = useState<any>([]);
+  const [filteredResources, setFilteredResources] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<Resource | null>(null);
+  const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: '1',
+        id: any'1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -111,7 +187,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 250000,
         lastUpdated: '2024-01-15',
-        tags: ['AI', 'Machine Learning', 'Development'],
+        tags['AI', 'Machine Learning', 'Development'],
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
         utilization: 80
@@ -129,7 +205,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'IT Operations',
         cost: 50000,
         lastUpdated: '2024-01-14',
-        tags: ['Cloud', 'AWS', 'Infrastructure'],
+        tags['Cloud', 'AWS', 'Infrastructure'],
         description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
         utilization: 75
@@ -147,7 +223,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Security',
         cost: 75000,
         lastUpdated: '2024-01-13',
-        tags: ['Security', 'Threat Detection', 'Monitoring'],
+        tags['Security', 'Threat Detection', 'Monitoring'],
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
         utilization: 85
@@ -165,7 +241,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Facilities',
         cost: 2000000,
         lastUpdated: '2024-01-12',
-        tags: ['Data Center', 'Facility', 'Infrastructure'],
+        tags['Data Center', 'Facility', 'Infrastructure'],
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
         utilization: 0
@@ -183,75 +259,152 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 30000,
         lastUpdated: '2024-01-11',
-        tags: ['DevOps', 'CI/CD', 'Automation'],
+        tags['DevOps', 'CI/CD', 'Automation'],
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
         utilization: 90
-      }
+
     ];
 
     setResources(sampleResources);
-    setFilteredResources(sampleResources);
-  }, []);
+    setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(() => {
+<<<<<<< HEAD
+  useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     let filtered = resources;
 
     if (selectedType !== 'all') {
+<<<<<<< HEAD
       filtered = filtered.filter(r => r.type === selectedType);
-    }
 
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus);
-    }
 
     if (selectedPriority !== 'all') {
       filtered = filtered.filter(r => r.priority === selectedPriority);
-    }
+=======
+      filtered = filtered.filter(r => r.type === selectedType)}
+
+    if (selectedStatus !== 'all') {
+      filtered = filtered.filter(r => r.status === selectedStatus)}
+
+    if (selectedPriority !== 'all') {
+      filtered = filtered.filter(r => r.priority === selectedPriority)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter(r =>
         r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )};
+=======;
+      filtered = filtered.filter(r => ;
+        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
+<<<<<<< HEAD
+=======
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    setFilteredResources(filtered.slice(0, maxResources));
-  }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
+    setFilteredResources(filtered.slice(0, maxResources))}, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: resources.length,
-    availableResources: resources.filter(r => r.status === 'available').length,
-    allocatedResources: resources.filter(r => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: (() => {
+<<<<<<< HEAD
+  <<<<<<< HEAD
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r   => r.status === 'available').length,
+    allocatedResources: anyresources.filter(r   => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r   => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)   => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)   => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)   => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()   => {
+      const deptCounts = resources.reduce((acc,;
+  r) => {;
+        acc[r.department] = (acc[r.department] || 0) + 1;
+        return acc
+
+}, {} as Record<string, any>);
+=======
+  totalResources: resources.length,
+    availableResources: resources.filter(r = > r.status === 'available').length,
+=======
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r  => r.status === 'available').length,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
+<<<<<<< HEAD
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,;
+    topDepartments: any(()  => {;
+      const deptCounts = resources.reduce((acc,;
+  ;
+  ;
+  ;
+  r) => {;
+        acc[r.department] = (acc[r.department] || 0) + 1;
+        return acc;
+<<<<<<< HEAD
+      }, { /* empty */ } as Record<string, any>);
+=======
+      
+
+
+
+
+}, {} as Record<string, any>);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()  => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
-      }, {} as Record<string, number>);
+      }, {} as Record<string, any>);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / resources.length) * 100
+          percentage: any(count / resources.length) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+<<<<<<< HEAD
+        .sort((a, b)   => b.count - a.count)
+        .slice(0, 5)})()
+  };
+
+  // Get status color and icon
+<<<<<<< HEAD
+  const getStatusDisplay = (status: anystring)  => {;
+    switch (status) {;
+      case 'available':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+        .sort((a, b)  => b.count - a.count)
         .slice(0, 5);
     })()
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {
+  const getStatusDisplay = (status: anystring)  => {
     switch (status) {
       case 'available':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
       case 'allocated':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Users className="w-4 h-4" /> };
@@ -260,60 +413,106 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'unavailable':
         return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
       default:
+<<<<<<< HEAD
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
-    }
+
+=======
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get type icon
-  const getTypeIcon = (type: string) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const getTypeIcon = (type: anystring)  => {;
+    switch (type) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'human': return <Users className="w-5 h-5" />;
       case 'infrastructure': return <Server className="w-5 h-5" />;
       case 'software': return <Database className="w-5 h-5" />;
       case 'equipment': return <Briefcase className="w-5 h-5" />;
       case 'facility': return <Building className="w-5 h-5" />;
+<<<<<<< HEAD
       default: return <Globe className="w-5 h-5" />;
-    }
+
+=======
+      default: return <Globe className = "w-5 h-5" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const getPriorityColor = (priority: anystring)  => {;
+    switch (priority) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
     switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
+<<<<<<< HEAD
       default: return 'text-zinc-400 bg-zinc-400/20';
-    }
+
+=======
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Format currency
-  const formatCurrency = (amount: number) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const formatCurrency = (amount: anynumber)   => {
+=======
+  const formatCurrency = (amount: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      minimumFractionDigits: 0,;
+      maximumFractionDigits: 0;
+    }).format(amount)};
+
+  // Get utilization color
+  const getUtilizationColor = (utilization: anynumber)   => {
+=======;
+  const formatCurrency = (amount: anynumber)  => {;
+    return new Intl.NumberFormat('en-US', {;
+      style: 'currency',;
+      currency: 'USD',;
+      minimumFractionDigits: 0,;
+      maximumFractionDigits: 0;
     }).format(amount);
   };
 
   // Get utilization color
-  const getUtilizationColor = (utilization: number) => {
+<<<<<<< HEAD
+  const getUtilizationColor = (utilization: anynumber)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getUtilizationColor = (utilization: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';
-    return 'text-green-400';
-  };
+    return 'text-green-400'};
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
+    <div className = "w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
-          <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
+          <p className="text-zinc-400 text-lg">Monitor and manage all comp resources efficiently</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -324,13 +523,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
-              >
+
                 {mode.icon}
                 {mode.label}
               </button>
@@ -341,7 +540,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <button
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
-          >
+
             <Plus className="w-4 h-4" />
             Add Resource
           </button>
@@ -352,40 +551,112 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>
             <div className="text-zinc-400">Total Resources</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-3xl font-bold text-green-400 mb-2">{resourceStats.availableResources}</div>
             <div className="text-zinc-400">Available</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.2 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-3xl font-bold text-blue-400 mb-2">{resourceStats.allocatedResources}</div>
             <div className="text-zinc-400">Allocated</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.3 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>
             <div className="text-zinc-400">Avg Utilization</div>
           </motion.div>
@@ -396,33 +667,87 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.4 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+
             <h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.totalCapacity.toLocaleString()}</div>
             <div className="text-zinc-400 text-sm">Combined capacity across all resources</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.5 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+
             <h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>
             <div className="text-3xl font-bold text-green-400 mb-2">{formatCurrency(resourceStats.averageCost)}</div>
             <div className="text-zinc-400 text-sm">Per resource annually</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: 0.6 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+
             <h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>
             <div className="text-3xl font-bold text-yellow-400 mb-2">{resourceStats.maintenanceResources}</div>
             <div className="text-zinc-400 text-sm">Resources under maintenance</div>
@@ -434,15 +759,37 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {resourceStats.topDepartments.map((dept, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+<<<<<<< HEAD
+            {resourceStats.topDepartments.map((dept, index)   => (
+=======
+            {resourceStats.topDepartments.map((dept, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={dept.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
-              >
+
                 <div className="text-2xl font-bold text-white mb-1">{dept.count}</div>
                 <div className="text-zinc-400 text-sm mb-1">{dept.name}</div>
                 <div className="text-zion-cyan text-xs">{dept.percentage.toFixed(1)}%</div>
@@ -460,7 +807,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+
             <option value="all">All Types</option>
             <option value="human">Human Resources</option>
             <option value="infrastructure">Infrastructure</option>
@@ -474,7 +821,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+
             <option value="all">All Statuses</option>
             <option value="available">Available</option>
             <option value="allocated">Allocated</option>
@@ -487,7 +834,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -514,11 +861,29 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         {filteredResources.map((resource, index) => (
           <motion.div
             key={resource.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-          >
+
             {/* Resource Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
@@ -531,7 +896,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                     <p className="text-zinc-400 text-sm">{resource.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).color}`}>
                     <div className="flex items-center gap-1">
@@ -567,17 +932,17 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <div className="text-sm text-zinc-400 mb-1">Location</div>
                 <div className="text-white font-medium">{resource.location}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Department</div>
                 <div className="text-white font-medium">{resource.department}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Manager</div>
                 <div className="text-white font-medium">{resource.manager}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Annual Cost</div>
                 <div className="text-white font-medium">{formatCurrency(resource.cost)}</div>
@@ -596,7 +961,16 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${resource.utilization}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  transition = {
+  { duration: 1,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     resource.utilization >= 90 ? 'bg-red-500' :
                     resource.utilization >= 75 ? 'bg-yellow-500' :
@@ -616,7 +990,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <span
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                >
+
                   {tag}
                 </span>
               ))}
@@ -628,7 +1002,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <Clock className="w-4 h-4" />
                 Last updated: {new Date(resource.lastUpdated).toLocaleDateString()}
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                   <Download className="w-4 h-4" />
@@ -648,7 +1022,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-center py-12"
-        >
+
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No resources found</h3>
           <p className="text-zinc-400 mb-4">
@@ -657,11 +1031,28 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <button
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+<<<<<<< HEAD
+
+=======
           >
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Add Resource
           </button>
         </motion.div>
-      )}
-    </div>
+      )};
+    </div>;
+  )};
+=======
+            Add Resource;
+          </button>;
+        </motion.div>;
+      )};
+    </div>;
   );
+<<<<<<< HEAD
+};}}}}}}}}}}}</motion.div>}
+=======
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

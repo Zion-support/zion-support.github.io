@@ -18,27 +18,22 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         setTimeout(() => {
             setIsConnecting(false);
             toast.success(`Connected to ${integration.name} successfully`);
-            onClose();
-        }, 2000);
+            onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication
-        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600');
-    };
+        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600')};
     const handleDisconnect = () => {
         // In a real application, this would revoke the OAuth token
         toast.info(`Disconnected from ${integration.name}`);
-        onClose();
-    };
+        onClose()};
     const handleSaveSettings = () => {
         // In a real application, this would save the sync settings
         toast.success("Integration settings saved");
-        onClose();
-    };
+        onClose()};
     return (<Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="flex flex-row items-center gap-4">
           <img loading="lazy" src={integration.logoUrl} alt={`${integration.name} logo`} className="h-12 w-12 rounded" onError={(e) => {
-            e.target.src = "/placeholder.svg";
-        }}/>
+            e.target.src = "/placeholder.svg"}}/>
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>
@@ -55,22 +50,38 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 <h3 className="text-sm font-medium">Sync Settings</h3>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, autoCreateContacts: checked })}/>
+                  <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  autoCreateContacts: checked 
+
+})}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, pushNotes: checked })}/>
+                  <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  pushNotes: checked 
+
+})}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, syncJobDetails: checked })}/>
+                  <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  syncJobDetails: checked 
+
+})}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, syncApplicantData: checked })}/>
+                  <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  syncApplicantData: checked 
+
+})}/>
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
@@ -118,5 +129,4 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             </DialogFooter>
           </>)}
       </DialogContent>
-    </Dialog>);
-}
+    </Dialog>)}

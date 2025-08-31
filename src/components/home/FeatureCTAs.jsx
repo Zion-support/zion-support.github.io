@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  Briefcase, 
-  Cpu, 
-  Shield, 
-  Zap, 
+import {
+  ArrowRight,
+  Users,
+  Briefcase,
+  Cpu,
+  Shield,
+  Zap,
   Clock,
   Rocket,
   Target,
   TrendingUp,
   Award,
   Globe
-} from 'lucide-react';
-
 export function FeatureCTAs() {
   const features = [
     {
@@ -64,7 +62,7 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-    }
+
   ];
 
   const ctaItems = [
@@ -94,12 +92,18 @@ export function FeatureCTAs() {
     },
     {
       title: "Learn More",
+<<<<<<< HEAD
       description: "Discover our capabilities",
       href: "/about",
       icon: Globe,
+=======
+      description: "Explore our resources",
+      href: "/resources",
+      icon: TrendingUp,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       color: "from-orange-500 to-orange-600",
       hoverColor: "from-orange-600 to-orange-700"
-    }
+
   ];
 
   return (
@@ -111,7 +115,7 @@ export function FeatureCTAs() {
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-blue-300">
@@ -127,10 +131,10 @@ export function FeatureCTAs() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <p className="text-sm text-gray-500 mb-4">{feature.details}</p>
-                <Link 
+                <Link
                   to={feature.link}
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                >
+
                   Explore {feature.title}
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
@@ -154,23 +158,23 @@ export function FeatureCTAs() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ctaItems.map((item, index) => (
-              <a 
-                key={index} 
-                href={item.href} 
+              <a
+                key={index}
+                href={item.href}
                 className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
                   <item.icon className="w-8 h-8 text-white"/>
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {item.title}
                 </h3>
-                
+
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">
                   {item.description}
                 </p>
-                
+
                 <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg hover:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2"/>
@@ -183,10 +187,10 @@ export function FeatureCTAs() {
             <p className="text-gray-400 mb-4">
               Need help choosing? Our experts are here to guide you.
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+
               Talk to an Expert
               <ArrowRight className="w-5 h-5 ml-2"/>
             </a>
@@ -194,5 +198,9 @@ export function FeatureCTAs() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-}
+}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -5,8 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
 import { SEO } from '@/components/SEO';
 export default function ComprehensiveServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,25 +13,17 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing;
-        });
-    }, [searchTerm, selectedCategory, selectedPricingTier]);
-    const getCategoryIcon = (categoryName) => {
-        return '💼';
-    };
+            return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
     const getServiceTypeColor = (type) => {
         const colorMap = {
-            'Micro SAAS': 'bg-blue-100 text-blue-800',
+  'Micro SAAS': 'bg-blue-100 text-blue-800',
             'IT Services': 'bg-green-100 text-green-800',
-            'AI Services': 'bg-purple-100 text-purple-800'
-        };
-        return colorMap[type] || 'bg-gray-100 text-gray-800';
-    };
+  'AI Services': 'bg-purple-100 text-purple-800'
+        
+
+};
+        return colorMap[type] || 'bg-gray-100 text-gray-800'};
     return (<div className="min-h-screen bg-zion-blue-dark">
               <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>
 
@@ -204,8 +195,7 @@ export default function ComprehensiveServicesPage() {
               <Button onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedPricingTier('all');
-            }} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                setSelectedPricingTier('all')}} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 Clear Filters
               </Button>
             </div>)}
@@ -245,7 +235,7 @@ export default function ComprehensiveServicesPage() {
                 icon: <Users className="w-8 h-8"/>,
                 title: "Expert Support",
                 description: "24/7 technical support and dedicated account management for enterprise clients"
-            }
+
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
@@ -278,5 +268,9 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/pages/ComprehensiveServicesPage.jsx
     </div>);
-}
+</Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ComprehensiveServicesPage.js.jsx

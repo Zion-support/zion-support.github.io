@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config';
-import path from 'node:path';
+import { defineConfig   } from 'vitest/config.ts';
+import path from 'node:path.ts';
 export default defineConfig({
   resolve: {
     alias: {

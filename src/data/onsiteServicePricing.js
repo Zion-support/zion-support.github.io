@@ -5,7 +5,7 @@ export const onsiteServicePricing = [
     description: 'Essential IT troubleshooting and maintenance',
     hourlyRate: 95,
     minimumHours: 2,
-    features: [
+    features[
       'Hardware diagnostics and repair',
       'Software installation and updates',
       'Basic network troubleshooting',
@@ -23,7 +23,7 @@ export const onsiteServicePricing = [
     description: 'Comprehensive network setup and security services',
     hourlyRate: 125,
     minimumHours: 4,
-    features: [
+    features[
       'Network infrastructure design',
       'Router and switch configuration',
       'WiFi network setup and optimization',
@@ -43,7 +43,7 @@ export const onsiteServicePricing = [
     description: 'Professional server setup and maintenance',
     hourlyRate: 150,
     minimumHours: 6,
-    features: [
+    features[
       'Server hardware installation',
       'Operating system installation',
       'Server virtualization setup',
@@ -63,7 +63,7 @@ export const onsiteServicePricing = [
     description: 'Complete cloud infrastructure migration',
     hourlyRate: 175,
     minimumHours: 8,
-    features: [
+    features[
       'Cloud platform assessment',
       'Migration strategy planning',
       'Data migration services',
@@ -83,7 +83,7 @@ export const onsiteServicePricing = [
     description: '24/7 emergency IT support and recovery',
     hourlyRate: 200,
     minimumHours: 1,
-    features: [
+    features[
       'Critical system recovery',
       'Data emergency recovery',
       'Network outage resolution',
@@ -103,7 +103,7 @@ export const onsiteServicePricing = [
     description: 'Strategic IT planning and consulting',
     hourlyRate: 225,
     minimumHours: 2,
-    features: [
+    features[
       'Technology roadmap planning',
       'IT budget optimization',
       'Vendor selection assistance',
@@ -116,7 +116,7 @@ export const onsiteServicePricing = [
     responseTime: '72 hours',
     category: 'consulting',
     popular: false
-  }
+
 ];
 
 export const serviceCategories = [
@@ -155,7 +155,7 @@ export const serviceCategories = [
     description: 'IT strategy and planning services',
     icon: '📊',
     averageRate: 225
-  }
+
 ];
 
 export const additionalServices = [
@@ -194,40 +194,29 @@ export const additionalServices = [
     price: 'Monthly',
     description: 'Ongoing maintenance agreements',
     category: 'maintenance'
-  }
+
 ];
 
-export const getServiceById = (id) => {
-  return onsiteServicePricing.find(service => service.id === id);
-};
-
-export const getServicesByCategory = (category) => {
-  return onsiteServicePricing.filter(service => service.category === category);
-};
-
 export const getPopularServices = () => {
-  return onsiteServicePricing.filter(service => service.popular);
-};
+  return onsiteServicePricing.filter(service => service.popular)};
 
 export const calculateServiceCost = (serviceId, hours) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;
-  
+
   const actualHours = Math.max(hours, service.minimumHours);
-  return actualHours * service.hourlyRate;
-};
+  return actualHours * service.hourlyRate};
 
 export const getServiceRecommendations = (businessSize, industry) => {
   // Simple recommendation logic based on business size
   if (businessSize === 'small') {
-    return onsiteServicePricing.filter(service => 
+    return onsiteServicePricing.filter(service =>
       ['basic', 'network'].includes(service.category)
     );
   } else if (businessSize === 'medium') {
-    return onsiteServicePricing.filter(service => 
+    return onsiteServicePricing.filter(service =>
       ['basic', 'network', 'server'].includes(service.category)
-    );
-  } else {
+    )} else {
     return onsiteServicePricing; // All services for large businesses
-  }
-};
+
+};}}}}

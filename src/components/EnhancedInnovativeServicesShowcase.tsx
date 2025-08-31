@@ -1,5 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+<<<<<<< HEAD
+import { Link   } from 'react-router-dom.ts';
+=======
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const EnhancedInnovativeServicesShowcase = () => {
   return (
@@ -13,7 +17,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             Discover our next-generation technology solutions designed for the future
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🚀</div>
@@ -23,7 +27,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">☁️</div>
             <h3 className="text-xl font-semibold text-white mb-3">Cloud Solutions</h3>
@@ -32,19 +36,28 @@ export const EnhancedInnovativeServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
             <p className="text-gray-300 mb-4">Advanced security and compliance solutions</p>
             <Link to="/services/cybersecurity" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
+<<<<<<< HEAD
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedInnovativeServicesShowcase;

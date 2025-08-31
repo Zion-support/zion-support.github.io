@@ -10,7 +10,7 @@ const QuantumAIServices = () => {
               Quantum AI Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing combined with artificial intelligence 
+              Harness the power of quantum computing combined with artificial intelligence
               to solve complex problems that were previously impossible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,35 +38,35 @@ const QuantumAIServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Quantum Neural Networks</h3>
               <p className="text-gray-300 mb-4">
-                Advanced neural network architectures optimized for quantum computing, 
+                Advanced neural network architectures optimized for quantum computing,
                 enabling faster training and superior performance.
               </p>
               <Link to="/quantum-neural-network-platform" className="text-blue-400 hover:text-blue-300 transition-colors">
                 Learn More →
               </Link>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">🔬</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Quantum Research</h3>
               <p className="text-gray-300 mb-4">
-                Cutting-edge research in quantum algorithms, quantum machine learning, 
+                Cutting-edge research in quantum algorithms, quantum machine learning,
                 and quantum optimization techniques.
               </p>
               <Link to="/research-development" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Learn More →
               </Link>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Quantum Optimization</h3>
               <p className="text-gray-300 mb-4">
-                Solve complex optimization problems using quantum algorithms 
+                Solve complex optimization problems using quantum algorithms
                 for logistics, finance, and scientific research.
               </p>
               <Link to="/services/consulting" className="text-purple-400 hover:text-purple-300 transition-colors">
@@ -105,7 +105,7 @@ const QuantumAIServices = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Business Applications</h3>
               <ul className="space-y-4 text-gray-300">
@@ -138,7 +138,7 @@ const QuantumAIServices = () => {
             Ready to Explore Quantum AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Discover how quantum computing and AI can transform your business 
+            Discover how quantum computing and AI can transform your business
             and research capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

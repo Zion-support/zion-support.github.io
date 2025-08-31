@@ -12,14 +12,12 @@ export default function SearchPage() {
     const suggestions = generateSearchSuggestions();
     useEffect(() => {
         if (initial) {
-            search(initial);
-        }
+            search(initial)}
     }, [initial]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/search?q=${encodeURIComponent(query)}`);
-        search(query);
-    };
+        router(`/search?q=${encodeURIComponent(query)}`);
+        search(query)};
     return (<main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
@@ -36,5 +34,4 @@ export default function SearchPage() {
                 <p className="text-zion-slate-light">{r.description}</p>
               </div>))}
           </div>)}
-      </main>);
-}
+      </main>)}

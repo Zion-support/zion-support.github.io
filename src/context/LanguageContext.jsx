@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
-const LanguageContext = createContext(undefined);
-export function LanguageProvider({ children }) {
+const LanguageProvider({ children }) {
     const [language, setLanguage] = useState('en');
+<<<<<<< HEAD
     const translations = {
         en: {
             'welcome': 'Welcome',
@@ -14,20 +14,39 @@ export function LanguageProvider({ children }) {
             'get_started': 'Comenzar',
             'learn_more': 'Saber Más',
             'contact_us': 'Contáctanos'
-        }
+
     };
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const t = (key) => {
-        return translations[language]?.[key] || key;
-    };
+        return translations[language]?.[key] || key};
     const isRTL = language === 'ar' || language === 'he';
-    return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
+    return (<LanguageContext.Provider value = {
+  { language, setLanguage, t,
+  isRTL 
+
+
+
+
+
+
+}}>
       {children}
+<<<<<<< HEAD
     </LanguageContext.Provider>);
-}
+
 export function useLanguage() {
     const context = useContext(LanguageContext);
     if (!context) {
         throw new Error('useLanguage must be used within a LanguageProvider');
-    }
+
     return context;
-}
+}}}}
+=======
+    </LanguageContext.Provider>)}
+export function useLanguage() {
+    const context = useContext(LanguageContext);
+    if (!context) {
+        throw new Error('useLanguage must be used within a LanguageProvider')}
+    return context}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

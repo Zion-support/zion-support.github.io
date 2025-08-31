@@ -4,8 +4,14 @@ exports.handler = async function() {
   try {
     execSync('node automation/repo-fitness-score.cjs', { stdio: 'inherit' });
     execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+<<<<<<< HEAD
     return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'repo-fitness-score' }) };
   } catch (e) {
     return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
-  }
+
+};}
+=======
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'repo-fitness-score' }) }} catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) }}
 };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

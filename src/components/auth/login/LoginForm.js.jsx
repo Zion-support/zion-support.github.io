@@ -34,15 +34,12 @@ function LoginForm() {
             setIsSubmitting(true);
             const { error } = await login(data.email, data.password);
             if (error) {
-                form.setError("root", { message: error });
-            }
+                form.setError("root", { message: error })}
             else {
-                navigate("/");
-            }
+                router("/")}
         }
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     };
     return (<Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
@@ -90,6 +87,8 @@ function LoginForm() {
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>);
-}
+    </Form>)}
+export default LoginForm;
+
+export default LoginForm;
 export default LoginForm;

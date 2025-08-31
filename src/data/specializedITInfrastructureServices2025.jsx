@@ -9,7 +9,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         price: 1800,
         pricingModel: "monthly",
         userLimit: "Up to 1000 edge nodes",
-        features: [
+        features[
             "AI model deployment at edge",
             "Real-time data processing",
             "Automatic model optimization",
@@ -19,27 +19,27 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Scalable architecture",
             "Multi-cloud integration"
         ],
-        benefits: [
+        benefits[
             "Reduce latency by 80%",
             "Lower bandwidth costs by 60%",
             "Improve application performance by 200%",
             "Enable offline AI processing",
             "Reduce cloud computing costs by 40%"
         ],
-        targetAudience: [
+        targetAudience[
             "IoT device manufacturers",
             "Mobile app developers",
             "Industrial companies",
             "Smart city projects",
             "Retail chains"
         ],
-        tags: ["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
+        tags["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
         marketPrice: "$1,800 - $6,000/month",
         roi: "450% within 8 months",
-        competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
-        technology: ["TensorFlow Lite", "PyTorch Mobile", "Kubernetes", "Docker", "React", "Python"],
-        integrations: ["AWS", "Azure", "GCP", "IoT platforms", "Mobile apps", "Enterprise systems"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
+        competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
+        technology["TensorFlow Lite", "PyTorch Mobile", "Kubernetes", "Docker", "React", "Python"],
+        integrations["AWS", "Azure", "GCP", "IoT platforms", "Mobile apps", "Enterprise systems"],
+        compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         contactInfo: {
@@ -66,7 +66,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         price: 2500,
         pricingModel: "monthly",
         userLimit: "Up to 5000 users",
-        features: [
+        features[
             "Continuous authentication",
             "Behavioral analytics",
             "Threat detection",
@@ -76,27 +76,27 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Incident response",
             "Security analytics"
         ],
-        benefits: [
+        benefits[
             "Reduce security incidents by 90%",
             "Improve compliance scores by 95%",
             "Reduce security costs by 40%",
             "Enable secure remote work",
             "Real-time threat prevention"
         ],
-        targetAudience: [
+        targetAudience[
             "Enterprise companies",
             "Financial institutions",
             "Healthcare organizations",
             "Government agencies",
             "Educational institutions"
         ],
-        tags: ["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
+        tags["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
         marketPrice: "$2,500 - $10,000/month",
         roi: "600% within 10 months",
-        competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
-        technology: ["TensorFlow", "Machine Learning", "React", "Python", "Kubernetes", "Docker"],
-        integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems", "Firewalls"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+        competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
+        technology["TensorFlow", "Machine Learning", "React", "Python", "Kubernetes", "Docker"],
+        integrations["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems", "Firewalls"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         contactInfo: {
@@ -123,7 +123,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         price: 2200,
         pricingModel: "monthly",
         userLimit: "Up to 2000 workloads",
-        features: [
+        features[
             "Multi-cloud orchestration",
             "Workload optimization",
             "Cost management",
@@ -133,27 +133,27 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Resource scaling",
             "Governance controls"
         ],
-        benefits: [
+        benefits[
             "Reduce cloud costs by 35%",
             "Improve performance by 40%",
             "Simplify multi-cloud management",
             "Ensure compliance across environments",
             "Optimize resource utilization"
         ],
-        targetAudience: [
+        targetAudience[
             "Enterprise companies",
             "Cloud service providers",
             "Managed service providers",
             "Government agencies",
             "Financial institutions"
         ],
-        tags: ["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
+        tags["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
         marketPrice: "$2,200 - $8,000/month",
         roi: "500% within 9 months",
-        competitors: ["VMware", "Red Hat", "HashiCorp", "Terraform", "Ansible"],
-        technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "React", "Python"],
-        integrations: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
-        compliance: ["SOC 2", "ISO 27001", "FedRAMP", "GDPR", "HIPAA"],
+        competitors["VMware", "Red Hat", "HashiCorp", "Terraform", "Ansible"],
+        technology["Kubernetes", "Docker", "Terraform", "Ansible", "React", "Python"],
+        integrations["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
+        compliance["SOC 2", "ISO 27001", "FedRAMP", "GDPR", "HIPAA"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         contactInfo: {
@@ -180,7 +180,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         price: 3000,
         pricingModel: "monthly",
         userLimit: "Up to 100 data centers",
-        features: [
+        features[
             "Autonomous operations",
             "Energy optimization",
             "Predictive maintenance",
@@ -190,27 +190,27 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Compliance reporting",
             "Disaster recovery"
         ],
-        benefits: [
+        benefits[
             "Reduce energy costs by 30%",
             "Improve uptime to 99.999%",
             "Reduce operational costs by 40%",
             "Predict and prevent 95% of failures",
             "Optimize resource utilization"
         ],
-        targetAudience: [
+        targetAudience[
             "Data center operators",
             "Cloud service providers",
             "Enterprise companies",
             "Colocation providers",
             "Government agencies"
         ],
-        tags: ["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
+        tags["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
         marketPrice: "$3,000 - $15,000/month",
         roi: "700% within 12 months",
-        competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell"],
-        technology: ["TensorFlow", "IoT sensors", "React", "Python", "Kubernetes", "Machine Learning"],
-        integrations: ["DCIM systems", "BMS systems", "Power management", "Cooling systems", "Security systems"],
-        compliance: ["Uptime Institute", "ISO 27001", "SOC 2", "LEED", "Energy Star"],
+        competitors["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell"],
+        technology["TensorFlow", "IoT sensors", "React", "Python", "Kubernetes", "Machine Learning"],
+        integrations["DCIM systems", "BMS systems", "Power management", "Cooling systems", "Security systems"],
+        compliance["Uptime Institute", "ISO 27001", "SOC 2", "LEED", "Energy Star"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         contactInfo: {
@@ -237,7 +237,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         price: 1900,
         pricingModel: "monthly",
         userLimit: "Up to 10000 network devices",
-        features: [
+        features[
             "Real-time monitoring",
             "Performance optimization",
             "Traffic analysis",
@@ -247,27 +247,27 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Predictive analytics",
             "Automated troubleshooting"
         ],
-        benefits: [
+        benefits[
             "Improve network performance by 50%",
             "Reduce network downtime by 80%",
             "Optimize bandwidth utilization by 40%",
             "Reduce IT support tickets by 60%",
             "Real-time performance insights"
         ],
-        targetAudience: [
+        targetAudience[
             "Network service providers",
             "Enterprise companies",
             "Educational institutions",
             "Healthcare organizations",
             "Government agencies"
         ],
-        tags: ["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
+        tags["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
         marketPrice: "$1,900 - $7,000/month",
         roi: "550% within 9 months",
-        competitors: ["Cisco", "Juniper", "Aruba", "Extreme Networks", "Fortinet"],
-        technology: ["TensorFlow", "Network protocols", "React", "Python", "SNMP", "NetFlow"],
-        integrations: ["Network devices", "SDN controllers", "Monitoring tools", "SIEM systems", "Ticketing systems"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+        competitors["Cisco", "Juniper", "Aruba", "Extreme Networks", "Fortinet"],
+        technology["TensorFlow", "Network protocols", "React", "Python", "SNMP", "NetFlow"],
+        integrations["Network devices", "SDN controllers", "Monitoring tools", "SIEM systems", "Ticketing systems"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         contactInfo: {
@@ -283,5 +283,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         uniqueValueProposition: "First AI-powered network performance platform achieving 50% performance improvement and 80% downtime reduction",
         marketSize: "$15.7 billion (network management market)",
         growthPotential: "500% annual growth expected"
-    }
+
 ];
+}

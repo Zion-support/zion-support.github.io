@@ -8,7 +8,7 @@ const AIAutonomousPlanning = () => {
         <meta name="keywords" content="AI planning, autonomous planning, strategic planning, decision optimization, autonomous operations, AI planning platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-planning"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousPlanning = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Planning Intelligence</h3>
               <p className="text-gray-300">AI trained on planning datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-amber-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that plans independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Planning</h3>
               <p className="text-gray-300">24/7 planning operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive planning insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Planning</h3>
               <p className="text-gray-300">Prevent planning issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Planning</h3>
@@ -93,25 +93,25 @@ const AIAutonomousPlanning = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze situation</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Plan</h3>
                 <p className="text-gray-300 text-sm">Create plan</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
                 <p className="text-gray-300 text-sm">Optimize strategy</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Execute</h3>
                 <p className="text-gray-300 text-sm">Execute plan</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
@@ -138,12 +138,12 @@ const AIAutonomousPlanning = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Business Strategy</h3>
                 <p className="text-gray-300">Strategic business planning</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Project Management</h3>
                 <p className="text-gray-300">Project planning and execution</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Operations</h3>
                 <p className="text-gray-300">Operational planning</p>
@@ -168,6 +168,5 @@ const AIAutonomousPlanning = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousPlanning;

@@ -9,7 +9,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 399,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered contract generation",
             "Legal document review automation",
             "Compliance checking",
@@ -19,28 +19,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Multi-jurisdiction support",
             "Real-time collaboration tools"
         ],
-        benefits: [
+        benefits[
             "Reduce legal costs by 60%",
             "Speed up document processing by 80%",
             "Ensure compliance accuracy",
             "24/7 document generation",
             "Scalable for growing law firms"
         ],
-        useCases: [
+        useCases[
             "Contract generation and review",
             "Legal document automation",
             "Compliance management",
             "Legal research automation",
             "Client document management"
         ],
-        targetAudience: [
+        targetAudience[
             "Law firms",
             "Legal departments",
             "Compliance officers",
             "Contract managers",
             "Legal consultants"
         ],
-        tags: ["AI", "Legal Tech", "Document Automation", "Compliance", "Contract Management"],
+        tags["AI", "Legal Tech", "Document Automation", "Compliance", "Contract Management"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,200/month",
@@ -49,11 +49,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "OpenAI GPT-4", "PostgreSQL", "Redis"],
-        integrations: ["DocuSign", "Adobe Sign", "Salesforce", "Microsoft Office", "Google Workspace"],
-        compliance: ["GDPR", "SOC 2", "HIPAA", "SOX"],
+        technology["React", "Python", "OpenAI GPT-4", "PostgreSQL", "Redis"],
+        integrations["DocuSign", "Adobe Sign", "Salesforce", "Microsoft Office", "Google Workspace"],
+        compliance["GDPR", "SOC 2", "HIPAA", "SOX"],
         roi: "400% within 6 months",
-        competitors: ["DocuSign", "PandaDoc", "HelloSign", "ContractPodAi"],
+        competitors["DocuSign", "PandaDoc", "HelloSign", "ContractPodAi"],
         website: "https://ziontechgroup.com/ai-legal-document-automation"
     },
     // AI-Powered Healthcare Analytics
@@ -66,7 +66,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 599,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Predictive patient analytics",
             "Healthcare outcome optimization",
             "Operational efficiency insights",
@@ -76,28 +76,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Integration with EHR systems",
             "Machine learning model training"
         ],
-        benefits: [
+        benefits[
             "Improve patient outcomes by 25%",
             "Reduce operational costs by 30%",
             "Enhance decision-making accuracy",
             "Real-time healthcare insights",
             "Scalable for large healthcare systems"
         ],
-        useCases: [
+        useCases[
             "Patient outcome prediction",
             "Healthcare operational optimization",
             "Clinical decision support",
             "Resource allocation optimization",
             "Quality improvement initiatives"
         ],
-        targetAudience: [
+        targetAudience[
             "Hospitals",
             "Healthcare systems",
             "Medical practices",
             "Healthcare administrators",
             "Clinical researchers"
         ],
-        tags: ["AI", "Healthcare", "Analytics", "Predictive Modeling", "EHR Integration"],
+        tags["AI", "Healthcare", "Analytics", "Predictive Modeling", "EHR Integration"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$599 - $2,000/month",
@@ -106,11 +106,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Apache Kafka"],
-        integrations: ["Epic", "Cerner", "Allscripts", "Meditech", "Athenahealth"],
-        compliance: ["HIPAA", "SOC 2", "HITECH", "FDA"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Apache Kafka"],
+        integrations["Epic", "Cerner", "Allscripts", "Meditech", "Athenahealth"],
+        compliance["HIPAA", "SOC 2", "HITECH", "FDA"],
         roi: "350% within 8 months",
-        competitors: ["IBM Watson Health", "Cerner", "Epic", "Allscripts"],
+        competitors["IBM Watson Health", "Cerner", "Epic", "Allscripts"],
         website: "https://ziontechgroup.com/ai-healthcare-analytics"
     },
     // AI-Powered Financial Trading Platform
@@ -123,7 +123,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 899,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered market analysis",
             "Automated trading strategies",
             "Real-time market data feeds",
@@ -133,28 +133,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Multi-exchange support",
             "Performance analytics dashboard"
         ],
-        benefits: [
+        benefits[
             "Increase trading accuracy by 40%",
             "Reduce manual trading time by 90%",
             "Optimize portfolio performance",
             "24/7 automated trading",
             "Risk-adjusted returns optimization"
         ],
-        useCases: [
+        useCases[
             "Algorithmic trading",
             "Portfolio management",
             "Risk assessment",
             "Market analysis",
             "Investment strategy optimization"
         ],
-        targetAudience: [
+        targetAudience[
             "Individual traders",
             "Investment firms",
             "Hedge funds",
             "Financial advisors",
             "Institutional investors"
         ],
-        tags: ["AI", "FinTech", "Trading", "Machine Learning", "Investment"],
+        tags["AI", "FinTech", "Trading", "Machine Learning", "Investment"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $3,000/month",
@@ -163,11 +163,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["Interactive Brokers", "TD Ameritrade", "E*TRADE", "Coinbase Pro", "Binance"],
-        compliance: ["SEC", "FINRA", "SOC 2", "PCI DSS"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["Interactive Brokers", "TD Ameritrade", "E*TRADE", "Coinbase Pro", "Binance"],
+        compliance["SEC", "FINRA", "SOC 2", "PCI DSS"],
         roi: "500% within 12 months",
-        competitors: ["Alpaca", "QuantConnect", "Zerodha", "Robinhood"],
+        competitors["Alpaca", "QuantConnect", "Zerodha", "Robinhood"],
         website: "https://ziontechgroup.com/ai-financial-trading"
     },
     // AI-Powered Supply Chain Optimization
@@ -180,7 +180,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered demand forecasting",
             "Inventory optimization algorithms",
             "Logistics route optimization",
@@ -190,28 +190,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Cost optimization insights",
             "Integration with ERP systems"
         ],
-        benefits: [
+        benefits[
             "Reduce inventory costs by 25%",
             "Improve forecast accuracy by 40%",
             "Optimize logistics costs by 30%",
             "Reduce supply chain disruptions",
             "Enhance supplier relationships"
         ],
-        useCases: [
+        useCases[
             "Inventory management optimization",
             "Demand forecasting",
             "Logistics optimization",
             "Supplier management",
             "Risk mitigation"
         ],
-        targetAudience: [
+        targetAudience[
             "Manufacturing companies",
             "Retail chains",
             "Logistics providers",
             "Supply chain managers",
             "Operations directors"
         ],
-        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $1,800/month",
@@ -220,11 +220,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Apache Kafka"],
-        integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
-        compliance: ["ISO 28000", "SOC 2", "GDPR", "C-TPAT"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Apache Kafka"],
+        integrations["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
+        compliance["ISO 28000", "SOC 2", "GDPR", "C-TPAT"],
         roi: "300% within 6 months",
-        competitors: ["SAP Ariba", "Oracle SCM", "JDA Software", "Manhattan Associates"],
+        competitors["SAP Ariba", "Oracle SCM", "JDA Software", "Manhattan Associates"],
         website: "https://ziontechgroup.com/ai-supply-chain-optimization"
     },
     // AI-Powered Real Estate Analytics
@@ -237,7 +237,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 349,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered property valuation",
             "Market trend analysis",
             "Investment opportunity scoring",
@@ -247,28 +247,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Portfolio performance tracking",
             "Custom reporting engine"
         ],
-        benefits: [
+        benefits[
             "Improve investment decisions by 35%",
             "Reduce market research time by 70%",
             "Optimize property portfolio performance",
             "Identify undervalued properties",
             "Maximize rental yields"
         ],
-        useCases: [
+        useCases[
             "Property investment analysis",
             "Market research and trends",
             "Portfolio optimization",
             "Rental property management",
             "Real estate development planning"
         ],
-        targetAudience: [
+        targetAudience[
             "Real estate investors",
             "Property managers",
             "Real estate agents",
             "Development companies",
             "Investment firms"
         ],
-        tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+        tags["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$349 - $1,200/month",
@@ -277,11 +277,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["Zillow", "Redfin", "Realtor.com", "MLS", "Property Management Software"],
-        compliance: ["SOC 2", "GDPR", "CCPA"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["Zillow", "Redfin", "Realtor.com", "MLS", "Property Management Software"],
+        compliance["SOC 2", "GDPR", "CCPA"],
         roi: "400% within 8 months",
-        competitors: ["Zillow", "Redfin", "RealPage", "Yardi"],
+        competitors["Zillow", "Redfin", "RealPage", "Yardi"],
         website: "https://ziontechgroup.com/ai-real-estate-analytics"
     },
     // AI-Powered Education Personalization
@@ -294,7 +294,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Adaptive learning algorithms",
             "Personalized content delivery",
             "Real-time performance tracking",
@@ -304,28 +304,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Multi-subject support",
             "Progress reporting system"
         ],
-        benefits: [
+        benefits[
             "Improve student performance by 30%",
             "Increase engagement by 50%",
             "Reduce learning time by 25%",
             "Personalized learning experiences",
             "Data-driven teaching insights"
         ],
-        useCases: [
+        useCases[
             "K-12 education",
             "Higher education",
             "Corporate training",
             "Online learning platforms",
             "Tutoring services"
         ],
-        targetAudience: [
+        targetAudience[
             "Schools and universities",
             "EdTech companies",
             "Corporate training departments",
             "Online learning platforms",
             "Educational consultants"
         ],
-        tags: ["AI", "Education", "Personalization", "Learning Analytics", "Adaptive Learning"],
+        tags["AI", "Education", "Personalization", "Learning Analytics", "Adaptive Learning"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,000/month",
@@ -334,11 +334,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
-        compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
+        compliance["FERPA", "COPPA", "SOC 2", "GDPR"],
         roi: "350% within 6 months",
-        competitors: ["Knewton", "DreamBox", "Carnegie Learning", "ALEKS"],
+        competitors["Knewton", "DreamBox", "Carnegie Learning", "ALEKS"],
         website: "https://ziontechgroup.com/ai-education-personalization"
     },
     // AI-Powered HR Recruitment
@@ -351,7 +351,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 399,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered candidate sourcing",
             "Automated resume screening",
             "Skill matching algorithms",
@@ -361,28 +361,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Integration with job boards",
             "Comprehensive reporting dashboard"
         ],
-        benefits: [
+        benefits[
             "Reduce hiring time by 50%",
             "Improve candidate quality by 40%",
             "Reduce recruitment costs by 35%",
             "Enhance diversity hiring",
             "Streamline recruitment workflow"
         ],
-        useCases: [
+        useCases[
             "Talent acquisition",
             "Candidate screening",
             "Interview management",
             "Recruitment analytics",
             "Employer branding"
         ],
-        targetAudience: [
+        targetAudience[
             "HR departments",
             "Recruitment agencies",
             "Staffing companies",
             "Talent acquisition teams",
             "HR consultants"
         ],
-        tags: ["AI", "HR", "Recruitment", "Talent Acquisition", "Automation"],
+        tags["AI", "HR", "Recruitment", "Talent Acquisition", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -391,11 +391,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["LinkedIn", "Indeed", "Glassdoor", "Workday", "BambooHR"],
-        compliance: ["EEOC", "OFCCP", "SOC 2", "GDPR"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["LinkedIn", "Indeed", "Glassdoor", "Workday", "BambooHR"],
+        compliance["EEOC", "OFCCP", "SOC 2", "GDPR"],
         roi: "300% within 6 months",
-        competitors: ["Hired", "Pymetrics", "HireVue", "Textio"],
+        competitors["Hired", "Pymetrics", "HireVue", "Textio"],
         website: "https://ziontechgroup.com/ai-hr-recruitment"
     },
     // AI-Powered Marketing Attribution
@@ -408,7 +408,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 449,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Multi-touch attribution modeling",
             "Customer journey tracking",
             "Campaign performance analytics",
@@ -418,28 +418,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Integration with marketing tools",
             "Predictive analytics"
         ],
-        benefits: [
+        benefits[
             "Improve marketing ROI by 45%",
             "Reduce customer acquisition costs by 30%",
             "Optimize marketing spend allocation",
             "Better understanding of customer behavior",
             "Data-driven marketing decisions"
         ],
-        useCases: [
+        useCases[
             "Marketing campaign analysis",
             "Customer journey mapping",
             "ROI optimization",
             "Budget allocation",
             "Performance tracking"
         ],
-        targetAudience: [
+        targetAudience[
             "Marketing teams",
             "Digital agencies",
             "E-commerce businesses",
             "B2B companies",
             "Marketing consultants"
         ],
-        tags: ["AI", "Marketing", "Attribution", "Analytics", "ROI Optimization"],
+        tags["AI", "Marketing", "Attribution", "Analytics", "ROI Optimization"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$449 - $1,800/month",
@@ -448,11 +448,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["Google Analytics", "Facebook Ads", "Google Ads", "HubSpot", "Salesforce"],
-        compliance: ["GDPR", "CCPA", "SOC 2", "PECR"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["Google Analytics", "Facebook Ads", "Google Ads", "HubSpot", "Salesforce"],
+        compliance["GDPR", "CCPA", "SOC 2", "PECR"],
         roi: "400% within 6 months",
-        competitors: ["AppsFlyer", "Branch", "Adjust", "Kochava"],
+        competitors["AppsFlyer", "Branch", "Adjust", "Kochava"],
         website: "https://ziontechgroup.com/ai-marketing-attribution"
     },
     // AI-Powered Customer Churn Prediction
@@ -465,7 +465,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered churn prediction",
             "Customer behavior analysis",
             "Risk scoring algorithms",
@@ -475,28 +475,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Integration with CRM systems",
             "Predictive analytics dashboard"
         ],
-        benefits: [
+        benefits[
             "Reduce customer churn by 40%",
             "Increase customer lifetime value by 35%",
             "Improve retention strategies",
             "Proactive customer success",
             "Data-driven retention decisions"
         ],
-        useCases: [
+        useCases[
             "Customer retention",
             "Churn prevention",
             "Customer success management",
             "Subscription business optimization",
             "Customer health monitoring"
         ],
-        targetAudience: [
+        targetAudience[
             "SaaS companies",
             "Subscription businesses",
             "Customer success teams",
             "B2B companies",
             "E-commerce businesses"
         ],
-        tags: ["AI", "Customer Success", "Churn Prevention", "Retention", "Predictive Analytics"],
+        tags["AI", "Customer Success", "Churn Prevention", "Retention", "Predictive Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -505,11 +505,11 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Pipedrive"],
-        compliance: ["GDPR", "SOC 2", "CCPA"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["Salesforce", "HubSpot", "Intercom", "Zendesk", "Pipedrive"],
+        compliance["GDPR", "SOC 2", "CCPA"],
         roi: "350% within 6 months",
-        competitors: ["Gainsight", "Totango", "ChurnZero", "ClientSuccess"],
+        competitors["Gainsight", "Totango", "ChurnZero", "ClientSuccess"],
         website: "https://ziontechgroup.com/ai-customer-churn-prediction"
     },
     // AI-Powered Inventory Forecasting
@@ -522,7 +522,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
         price: 379,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered demand forecasting",
             "Seasonal trend analysis",
             "Inventory optimization algorithms",
@@ -532,28 +532,28 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Integration with ERP systems",
             "Predictive analytics dashboard"
         ],
-        benefits: [
+        benefits[
             "Reduce inventory costs by 30%",
             "Improve forecast accuracy by 45%",
             "Reduce stockouts by 60%",
             "Optimize warehouse space",
             "Improve cash flow"
         ],
-        useCases: [
+        useCases[
             "Retail inventory management",
             "Manufacturing planning",
             "E-commerce optimization",
             "Warehouse management",
             "Supply chain planning"
         ],
-        targetAudience: [
+        targetAudience[
             "Retail chains",
             "Manufacturing companies",
             "E-commerce businesses",
             "Warehouse operators",
             "Supply chain managers"
         ],
-        tags: ["AI", "Inventory Management", "Forecasting", "Optimization", "Supply Chain"],
+        tags["AI", "Inventory Management", "Forecasting", "Optimization", "Supply Chain"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$379 - $1,500/month",
@@ -562,11 +562,12 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-        integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Shopify", "WooCommerce"],
-        compliance: ["ISO 9001", "SOC 2", "GDPR"],
+        technology["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+        integrations["SAP", "Oracle", "Microsoft Dynamics", "Shopify", "WooCommerce"],
+        compliance["ISO 9001", "SOC 2", "GDPR"],
         roi: "300% within 6 months",
-        competitors: ["SAP", "Oracle", "JDA Software", "Manhattan Associates"],
+        competitors["SAP", "Oracle", "JDA Software", "Manhattan Associates"],
         website: "https://ziontechgroup.com/ai-inventory-forecasting"
-    }
+
 ];
+}

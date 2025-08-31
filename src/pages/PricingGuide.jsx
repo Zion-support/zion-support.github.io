@@ -3,8 +3,12 @@ import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedS
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
+import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock import { SEO } from '@/components/SEO';
+=======
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -12,26 +16,52 @@ export default function PricingGuide() {
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getCategoryIcon = (category) => {
         const icons = {
-            'AI Development': <Brain className="w-6 h-6"/>,
+  'AI Development': <Brain className="w-6 h-6"/>,
             'Cloud Services': <Cloud className="w-6 h-6"/>,
             'DevOps': <Zap className="w-6 h-6"/>,
             'Cybersecurity': <Shield className="w-6 h-6"/>,
             'Data & Analytics': <Database className="w-6 h-6"/>,
             'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
             'Emerging Tech': <Globe className="w-6 h-6"/>,
+  <<<<<<< HEAD
             'Managed Services': <Lock className="w-6 h-6"/>
-        };
+        
+
+};
+        return icons[category] || <Star className="w-6 h-6"/>};
+=======
+  'Managed Services': <Lock className="w-6 h-6"/>
+        
+
+
+
+
+};
         return icons[category] || <Star className="w-6 h-6"/>;
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const formatPrice = (price) => {
         if (price >= 1000) {
+<<<<<<< HEAD
             return `$${(price / 1000).toFixed(0)}K`;
-        }
+
         return `$${price}`;
     };
+=======
+            return `$${(price / 1000).toFixed(0)}K`}
+        return `$${price}`};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getMarketComparison = (price, category) => {
         const comparisons = {
-            'AI Development': { avg: price * 1.3, savings: 23 },
+  'AI Development': { avg: price * 1.3,
+  savings: 23 
+
+
+
+
+
+
+},
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },
             'Cybersecurity': { avg: price * 1.4, savings: 29 },
@@ -40,8 +70,7 @@ export default function PricingGuide() {
             'Emerging Tech': { avg: price * 1.5, savings: 33 },
             'Managed Services': { avg: price * 1.2, savings: 17 }
         };
-        return comparisons[category] || { avg: price * 1.3, savings: 23 };
-    };
+        return comparisons[category] || { avg: price * 1.3, savings: 23 }};
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
 
@@ -52,7 +81,7 @@ export default function PricingGuide() {
             IT Services Pricing Guide
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Transparent pricing for enterprise technology solutions. Compare our competitive rates 
+            Transparent pricing for enterprise technology solutions. Compare our competitive rates
             with market averages and discover the value we deliver.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -225,8 +254,7 @@ export default function PricingGuide() {
                       </Button>
                     </div>
                   </CardContent>
-                </Card>);
-        })}
+                </Card>)})}
           </div>
 
           {filteredServices.length === 0 && (<div className="text-center py-16">
@@ -313,7 +341,7 @@ export default function PricingGuide() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote and consultation. Our experts will help you 
+            Contact us today for a personalized quote and consultation. Our experts will help you
             choose the right services for your business needs and budget.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -332,5 +360,9 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

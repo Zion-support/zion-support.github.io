@@ -8,7 +8,7 @@ const AIAutonomousInvention = () => {
         <meta name="keywords" content="AI invention, autonomous invention, technology creation, solution development, autonomous operations, AI invention platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-invention"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousInvention = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Invention Intelligence</h3>
               <p className="text-gray-300">AI trained on invention datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-amber-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that invents independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Invention</h3>
               <p className="text-gray-300">24/7 invention operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive invention insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Invention</h3>
               <p className="text-gray-300">Prevent technology gaps</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Invention</h3>
@@ -93,25 +93,25 @@ const AIAutonomousInvention = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Research</h3>
                 <p className="text-gray-300 text-sm">Research problems</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Ideate</h3>
                 <p className="text-gray-300 text-sm">Generate ideas</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-gray-300 text-sm">Design solutions</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Prototype</h3>
                 <p className="text-gray-300 text-sm">Create prototypes</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Patent</h3>
@@ -138,12 +138,12 @@ const AIAutonomousInvention = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Research & Development</h3>
                 <p className="text-gray-300">R&D invention</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Patent Offices</h3>
                 <p className="text-gray-300">Patent generation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Technology Companies</h3>
                 <p className="text-gray-300">Technology invention</p>
@@ -168,6 +168,5 @@ const AIAutonomousInvention = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousInvention;

@@ -1,10 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { FileText,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+=======
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   FileText, 
   CheckCircle, 
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   AlertTriangle,
   Users,
   Globe,
@@ -12,10 +23,53 @@ import {
   Clock,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+<<<<<<< HEAD
+  Calendar
+import { SEO  } from '../components/SEO';
+=======
+  Calendar,
+  CheckCircle,
+  AlertTriangle,
+  Lock,
+  Eye,
+  Database,
+  Zap,
+  Rocket,
+  Brain,
+  Cpu
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Shield, 
+  Users, 
+  Globe, 
+  CheckCircle,
+  AlertTriangle,
+  Scale,
+  Lock,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 } from 'lucide-react';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
 
-export default function Terms() {
+<<<<<<< HEAD
+const Terms: React.FC = (): JSX.Element => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function Terms(...args: any[]): any {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [
@@ -36,6 +90,10 @@ export default function Terms() {
     },
     {
       title: 'Intellectual Property',
+<<<<<<< HEAD
+      description: 'All content and technology remain the property of Zion Tech Group.'
+
+=======
       content: 'All content, software, and materials provided by Zion Tech Group are protected by intellectual property rights. Users may not copy, modify, or distribute our proprietary materials without permission.',
       icon: Lock
     },
@@ -49,6 +107,7 @@ export default function Terms() {
       content: 'Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
       icon: AlertTriangle
     }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const prohibitedActivities = [
@@ -69,83 +128,499 @@ export default function Terms() {
     'Mutual agreement to terminate services'
   ];
 
+  const userObligations = [
+    {
+      obligation: 'Compliance',
+      description: 'Comply with all applicable laws and regulations when using our services.'
+    },
+    {
+      obligation: 'Acceptable Use',
+      description: 'Use our services only for lawful purposes and in accordance with these terms.'
+    },
+    {
+      obligation: 'Content Standards',
+      description: 'Ensure all content submitted through our services meets our content standards.'
+    },
+    {
+<<<<<<< HEAD
+      obligation: 'Payment Terms',
+      description: 'Pay all fees and charges in accordance with agreed payment schedules.'
+    },
+    {
+      obligation: 'Confidentiality',
+      description: 'Maintain the confidentiality of any proprietary information shared with you.'
+
+=======
+      obligation: 'Security',
+      description: 'Maintain the security of your account credentials and report any suspicious activity.'
+    }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ];
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: 'Email',
+      value: 'legal@ziontechgroup.com',
+      href: 'mailto:legal@ziontechgroup.com'
+    },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
+    },
+    {
+<<<<<<< HEAD
+      level: 'Premium Support',
+      description: 'Dedicated support team and 24/7 emergency response',
+      response: '1-2 hours',
+      included: false
+
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+      icon: MapPin,
+      label: 'Address',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Terms of Service - Zion Tech Group"
-        description="Read Zion Tech Group's Terms of Service to understand the rules and conditions for using our AI and technology services."
-        keywords="terms of service, legal terms, service agreement, Zion Tech Group"
-        canonical="https://ziontechgroup.com/terms"
+        description="Read Zion Tech Group's Terms of Service to understand the rules and guidelines for using our AI-powered technology solutions and services."
+        keywords="terms of service, Zion Tech Group, legal terms, service agreement, user responsibilities"
       />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+            className="text-center"
+
+            <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
+              <FileText className="w-4 h-4 mr-2" />
+              Legal Terms & Conditions
+=======
           >
-            Terms of Service
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+              Terms of Service
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              These terms govern your use of our services. Please read them carefully
+              before using our technology solutions.
+            </p>
+=======
+export default function Terms() {
+  const termsSections = [
+    {
+      icon: Users,
+      title: 'Acceptance of Terms',
+      description: 'By accessing and using our services, you agree to be bound by these terms and conditions.'
+    },
+    {
+      icon: Shield,
+      title: 'Service Description',
+      description: 'We provide technology consulting, development, and digital transformation services.'
+    },
+    {
+      icon: Lock,
+      title: 'User Responsibilities',
+      description: 'Users must comply with applicable laws and respect intellectual property rights.'
+    },
+    {
+      icon: Globe,
+      title: 'Intellectual Property',
+      description: 'All content and technology remain the property of Zion Tech Group.'
+    }
+  ];
+
+  const userObligations = [
+    {
+      obligation: 'Compliance',
+      description: 'Comply with all applicable laws and regulations when using our services.'
+    },
+    {
+      obligation: 'Account Security',
+      description: 'Maintain the security of your account credentials and notify us of any unauthorized access.'
+    },
+    {
+      obligation: 'Acceptable Use',
+      description: 'Use our services only for lawful purposes and in accordance with these terms.'
+    },
+    {
+      obligation: 'Content Standards',
+      description: 'Ensure all content you provide is accurate, lawful, and does not infringe on others\' rights.'
+    },
+    {
+      obligation: 'Payment Terms',
+      description: 'Pay all fees and charges in accordance with agreed payment schedules.'
+    },
+    {
+      obligation: 'Confidentiality',
+      description: 'Maintain the confidentiality of any proprietary information shared with you.'
+    }
+  ];
+
+  const prohibitedActivities = [
+    'Attempting to gain unauthorized access to our systems or other users\' accounts',
+    'Transmitting viruses, malware, or other harmful code',
+    'Interfering with the proper functioning of our services',
+    'Using our services for illegal or fraudulent activities',
+    'Reverse engineering or attempting to extract source code',
+    'Harassing, threatening, or abusing other users',
+    'Violating intellectual property rights',
+    'Collecting personal information without consent'
+  ];
+
+  const serviceLevels = [
+    {
+      level: 'Standard Support',
+      description: 'Email support during business hours',
+      response: '24-48 hours',
+      included: true
+    },
+    {
+      level: 'Priority Support',
+      description: 'Phone and email support with faster response times',
+      response: '4-8 hours',
+      included: false
+    },
+    {
+      level: 'Premium Support',
+      description: 'Dedicated support team and 24/7 emergency response',
+      response: '1-2 hours',
+      included: false
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Terms of Service - Zion Tech Group"
+        description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            Please read these terms carefully before using our services
-          </motion.p>
-          <motion.div 
-            className="text-slate-400"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Last updated: {lastUpdated}
+            <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
+              <FileText className="w-4 h-4 mr-2" />
+              Legal Terms & Conditions
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Terms of
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Service</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              These terms govern your use of our services. Please read them carefully 
+              before using our technology solutions.
+            </p>
+            <div className="text-sm text-gray-400">
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
       {/* Terms Overview */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div 
+=======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+      {/* Key Terms Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+<<<<<<< HEAD
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Key Terms Overview
+=======
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Terms Overview
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              These terms govern your use of Zion Tech Group's services and outline your rights and responsibilities
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Understanding these fundamental terms helps ensure a smooth
+              relationship between you and Zion Tech Group.
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {termsSections.map((section, index)   => (
+=======
+      
+      <div className="relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        
+        <div className="relative z-10">
+          {/* Header */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+=======
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Key Terms Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Understanding these fundamental terms helps ensure a smooth 
+              relationship between you and Zion Tech Group.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
               <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <section.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{section.title}</h3>
-                  <p className="text-slate-300 leading-relaxed">{section.content}</p>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <section.icon className="w-8 h-8 text-blue-400" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
+                <p className="text-gray-300">{section.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Obligations */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Your Obligations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              As a user of our services, you have certain responsibilities 
+              that help ensure a secure and productive environment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {userObligations.map((obligation, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+              <motion.div
+<<<<<<< HEAD
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <section.icon className="w-8 h-8 text-blue-400" />
+=======
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 mb-6">
+                  <FileText className="w-5 h-5 text-blue-400 mr-2" />
+                  <span className="text-blue-400 font-medium">Legal Information</span>
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                  Terms of Service
+                </h1>
+                
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                  These terms govern your use of Zion Tech Group's services. Please read them carefully 
+                  before using our AI-powered technology solutions and consulting services.
+                </p>
+                
+                <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
+                  <Clock className="w-4 h-4" />
+                  <span>Last updated: {lastUpdated}</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+<<<<<<< HEAD
+      {/* User Obligations */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Your Obligations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              As a user of our services, you have certain responsibilities
+              that help ensure a secure and productive environment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userObligations.map((obligation, index)  => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+
+                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
+                <p className="text-gray-300">{obligation.description}</p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </motion.div>
             ))}
           </div>
@@ -153,36 +628,221 @@ export default function Terms() {
       </section>
 
       {/* Prohibited Activities */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div 
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Prohibited Activities
+=======
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Calendar className="w-6 h-6 text-cyan-400" />
+                <span>Last Updated</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To maintain a secure and professional environment, certain activities
+                are strictly prohibited when using our services.
+              </p>
+              <div className="space-y-4">
+                {prohibitedActivities.map((activity, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300 text-sm">{activity}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+<<<<<<< HEAD
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+
+=======
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <div className="text-center mb-6">
+                  <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white">Violation Consequences</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">First Offense</span>
+                    <span className="text-yellow-400">Warning</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Second Offense</span>
+                    <span className="text-orange-400">Suspension</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Third Offense</span>
+                    <span className="text-red-400">Termination</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Levels */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Service Levels & Support
+=======
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
               Prohibited Activities
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              The following activities are strictly prohibited and may result in immediate account termination
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide different levels of support to meet your business needs
+              and ensure optimal service delivery.
             </p>
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {prohibitedActivities.map((activity, index) => (
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {prohibitedActivities.map((activity, index)   => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
                   className="flex items-start space-x-3"
+=======
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                  className={`bg-slate-800/50 p-6 rounded-xl border ${
+                    level.included ? 'border-blue-400/50' : 'border-slate-700/50'
+                  } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
+<<<<<<< HEAD
+
+                  <div className="text-center mb-4">
+                    <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
+                    {level.included && (
+                      <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">
+                        Included
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-gray-300 text-center mb-4">{level.description}</p>
+                  <div className="text-center">
+                    <span className="text-sm text-gray-400">Response Time:</span>
+                    <div className="text-lg font-semibold text-white">{level.response}</div>
+                  </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-300">{activity}</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </motion.div>
               ))}
             </div>
@@ -190,13 +850,98 @@ export default function Terms() {
         </div>
       </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+      {/* Intellectual Property */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Intellectual Property Rights
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                Understanding intellectual property rights is crucial for both
+                protecting our innovations and respecting your contributions.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-white font-semibold">Our IP</h3>
+                    <p className="text-gray-300 text-sm">All software, designs, and proprietary technology remain our property</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-white font-semibold">Your IP</h3>
+                    <p className="text-gray-300 text-sm">You retain ownership of content and data you provide</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-white font-semibold">Licenses</h3>
+                    <p className="text-gray-300 text-sm">We grant limited licenses for authorized use of our services</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+
+              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <div className="text-center mb-6">
+                  <Scale className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white">IP Protection</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Copyright</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Trademarks</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Patents</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">Trade Secrets</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+=======
       {/* Termination Conditions */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -209,14 +954,26 @@ export default function Terms() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {terminationConditions.map((condition, index) => (
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {terminationConditions.map((condition, index)   => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
@@ -224,202 +981,857 @@ export default function Terms() {
                 </motion.div>
               ))}
             </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Legal Information */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
+              initial = {
+  { opacity: 0,
+  x: -30 
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+=======
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+              transition={{ duration: 0.6 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Legal Information
               </h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
+              <p className="text-lg text-gray-300 mb-6">
+                Understanding intellectual property rights is crucial for both
+                protecting our innovations and respecting your contributions.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Governing Law</h3>
-                    <p className="text-slate-300">These terms are governed by the laws of the State of Delaware, United States, without regard to conflict of law principles.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Dispute Resolution</h3>
-                    <p className="text-slate-300">Any disputes arising from these terms will be resolved through binding arbitration in accordance with the American Arbitration Association rules.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Changes to Terms</h3>
-                    <p className="text-slate-300">We may update these terms from time to time. We will notify users of any material changes via email or through our website.</p>
+                    <h3 className="font-semibold text-white">Service Usage</h3>
+                    <p>You must be at least 18 years old to use our services, or have parental consent if under 18.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Important Notices</h3>
-                <div className="space-y-4">
-                  {[
-                    'These terms constitute the entire agreement between you and Zion Tech Group',
-                    'If any provision is found to be unenforceable, the remaining provisions remain in effect',
-                    'Our failure to enforce any right does not constitute a waiver of that right',
-                    'These terms are binding on your successors and assigns',
-                    'You may not assign your rights under these terms without our written consent',
-                    'Notices must be sent to our registered address or email'
-                  ].map((notice, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{notice}</span>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Zap className="w-6 h-6 text-cyan-400" />
+                <span>Description of Service</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p>Zion Tech Group provides technology consulting, AI solutions, quantum computing services, cybersecurity, and digital transformation services.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-start space-x-3">
+                    <Brain className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-white">AI Solutions</h3>
+                      <p>Machine learning, automation, and intelligent systems</p>
                     </div>
-                  ))}
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Cpu className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-white">Technology Consulting</h3>
+                      <p>Strategic planning and implementation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-white">Cybersecurity</h3>
+                      <p>Security assessments and protection</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Rocket className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-white">Digital Transformation</h3>
+                      <p>Modernization and optimization</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Users className="w-6 h-6 text-cyan-400" />
+                <span>User Responsibilities</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Account Security</h3>
+                    <p>You are responsible for maintaining the confidentiality of your account credentials.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Acceptable Use</h3>
+                    <p>You agree to use our services only for lawful purposes and in accordance with these terms.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Prohibited Activities</h3>
+                    <p>You may not use our services to transmit harmful code, violate intellectual property rights, or engage in illegal activities.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Compliance</h3>
+                    <p>You must comply with all applicable laws and regulations when using our services.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Lock className="w-6 h-6 text-cyan-400" />
+                <span>Intellectual Property</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Our Rights</h3>
+                    <p>All content, features, and functionality on our platforms are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Your Content</h3>
+                    <p>You retain ownership of content you submit, but grant us a license to use it for service provision and improvement.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">License</h3>
+                    <p>We grant you a limited, non-exclusive, non-transferable license to access and use our services for your business needs.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Shield className="w-6 h-6 text-cyan-400" />
+                <span>Privacy and Data</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p>Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Data Protection</h3>
+                    <p>We implement appropriate security measures to protect your personal information.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Data Usage</h3>
+                    <p>We use your data only for the purposes outlined in our Privacy Policy and with your consent.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Third Parties</h3>
+                    <p>We do not sell your personal information to third parties.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <AlertTriangle className="w-6 h-6 text-yellow-400" />
+                <span>Limitation of Liability</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Service Availability</h3>
+                    <p>We strive to provide reliable services but cannot guarantee uninterrupted access or error-free operation.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Damages</h3>
+                    <p>Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Maximum Liability</h3>
+                    <p>Our total liability shall not exceed the amount paid by you for the specific service in question.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Eye className="w-6 h-6 text-cyan-400" />
+                <span>Termination</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Your Rights</h3>
+                    <p>You may terminate your use of our services at any time by discontinuing use or contacting us.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Our Rights</h3>
+                    <p>We may terminate or suspend access to our services for violations of these terms or for any other reason.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Effect of Termination</h3>
+                    <p>Upon termination, your right to use the services will cease immediately.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Database className="w-6 h-6 text-cyan-400" />
+                <span>Changes to Terms</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p>We reserve the right to modify these terms at any time. We will notify users of any material changes.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Notification</h3>
+                    <p>Material changes will be communicated through our website, email, or other appropriate channels.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-white">Continued Use</h3>
+                    <p>Your continued use of our services after changes constitutes acceptance of the new terms.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
+                <Mail className="w-6 h-6 text-cyan-400" />
+                <span>Contact Information</span>
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-cyan-400" />
+                    <span>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-cyan-400" />
+                    <span>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-cyan-400" />
+                    <span>Address: 364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
+=======
+          {/* Terms Content */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              {/* Terms Sections */}
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {termsSections.map((section, index)  => (
+                  <motion.div
+                    key={section.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4">
+                      <section.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {section.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 leading-relaxed">
+                      {section.content}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* User Obligations */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl font-bold text-white text-center mb-12">
+                  User Obligations
+                </h2>
+                
+                <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+                  {userObligations.map((obligation, index)  => (
+                    <motion.div
+                      key={obligation.obligation}
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
+                    >
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        {obligation.obligation}
+                      </h3>
+                      <p className="text-gray-300">
+                        {obligation.description}
+                      </p>
+                    </motion.div>
+                  ))}
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+                </div>
+              </motion.div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Contact Information */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+=======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+      {/* Limitation of Liability */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Limitation of Liability
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We strive to provide reliable services, but it's important to understand
+              the scope of our liability and your responsibilities.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">What We Cover</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Direct damages up to the amount paid for services</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Service availability and performance issues</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Data security and privacy protection</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">What We Don't Cover</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Indirect or consequential damages</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Loss of profits or business opportunities</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300">Third-party service failures</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Termination */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Termination & Cancellation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Understanding the terms for ending our service relationship
+              helps ensure a smooth transition for all parties.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-2xl font-semibold text-white mb-4">You May Terminate</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">With 30 days written notice</span>
+                    </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">For material breach by us</span>
+                    </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">If we become insolvent</span>
+                    </li>
+                </ul>
+              </div>
+              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-2xl font-semibold text-white mb-4">We May Terminate</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">For violation of terms</span>
+                    </li>
+                  <li className="flex items-start space-x-3">
+                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Non-payment of fees</span>
+                    </li>
+                  <li className="flex items-start space-x-3">
+                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Illegal or harmful use</span>
+                    </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Questions About Terms?
+=======
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+<<<<<<< HEAD
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Questions About These Terms?
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              If you have any questions or concerns about these Terms of Service, please contact us
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              If you have questions about these terms or need clarification,
+              please contact our legal team.
             </p>
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
+=======
+              {/* Prohibited Activities */}
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700"
+                viewport={{ once: true }}
+                className="mb-16"
               >
-                <h3 className="text-2xl font-bold text-white mb-6">Legal Department</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">legal@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
-                    <span className="text-slate-300">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709
-                    </span>
+                <h2 className="text-3xl font-bold text-white text-center mb-8">
+                  Prohibited Activities
+                </h2>
+                
+                <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-8">
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {prohibitedActivities.map((activity, index)  => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-start space-x-3"
+                      >
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{activity}</span>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
-              
+
+              {/* Termination Conditions */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700"
+                viewport={{ once: true }}
+                className="mb-16"
               >
-                <h3 className="text-2xl font-bold text-white mb-6">Response Times</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">General inquiries: 24-48 hours</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">Legal matters: 3-5 business days</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">Urgent issues: Same day</span>
+                <h2 className="text-3xl font-bold text-white text-center mb-8">
+                  Termination Conditions
+                </h2>
+                
+                <div className="bg-orange-900/20 border border-orange-500/30 rounded-xl p-8">
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {terminationConditions.map((condition, index)  => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-start space-x-3"
+                      >
+                        <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{condition}</span>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
+
+              {/* Contact Information */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <h2 className="text-3xl font-bold text-white mb-8">
+                  Questions About These Terms?
+                </h2>
+                
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  If you have any questions about these Terms of Service or need clarification 
+                  on any provision, please don't hesitate to contact our legal team.
+                </p>
+                
+                <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {contactInfo.map((contact, index)  => (
+                    <motion.div
+                      key={contact.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
+                    >
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4">
+                        <contact.icon className="w-6 h-6 text-white" />
+                      </div>
+                      
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        {contact.label}
+                      </h3>
+                      
+                      <a
+                        href={contact.href}
+                        className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                      >
+                        {contact.value}
+                      </a>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+=======
+=======
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">legal@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Ready to Get Started?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            By using our services, you agree to these terms. Contact us if you have any questions.
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <a 
-              href="mailto:legal@ziontechgroup.com" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Legal Team
-            </a>
-            <a 
-              href="/contact" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              General Contact
-            </a>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              By using our services, you agree to these terms.
+              Contact us if you need any clarification or have questions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
+
+                Contact Us
+              </a>
+              <a
+                href="/privacy"
+                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+<<<<<<< HEAD
+
+                Privacy Policy
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+}}}}</section>}
+=======
+              >
+                Privacy Policy;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+  );
+};
+
+export default Terms;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

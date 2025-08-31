@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -11,12 +11,12 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         {
             id: '1',
             type: 'assistant',
-            content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer any questions about our services. How can I assist you today?',
+            content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer  questions about our services. How can I assist you today?',
             timestamp: new Date(),
             status: 'sent',
             metadata: {
                 confidence: 0.95,
-                suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
+                suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
             }
         }
     ]);
@@ -26,25 +26,20 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     const inputRef = useRef(null);
     // Auto-scroll to bottom
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
+        scrollToBottom()}, [messages]);
     // Focus input when opened
     useEffect(() => {
         if (isOpen && !isMinimized) {
-            inputRef.current?.focus();
-        }
+            inputRef.current?.focus()}
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
         if (isTyping) {
             const timer = setTimeout(() => {
-                setIsTyping(false);
-            }, 2000);
-            return () => clearTimeout(timer);
-        }
+                setIsTyping(false)}, 2000);
+            return () => clearTimeout(timer)}
     }, [isTyping]);
     // Generate AI response
     const generateAIResponse = (_userMessage) => {
@@ -52,64 +47,46 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         // Simulate API call delay
         const timer = setTimeout(() => {
             // Mock AI responses based on user input
-            const responses = [
-                {
-                    content: "That's a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
-                    suggestions: ['Tell me more about AI pricing', 'What industries do you serve?', 'Can you provide a demo?']
-                },
-                {
-                    content: "Our cloud solutions are designed for scalability and security. We offer AWS, Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
-                    suggestions: ['What about security?', 'How long does migration take?', 'Do you provide 24/7 support?']
-                },
-                {
-                    content: "Cybersecurity is our top priority. We implement enterprise-grade security measures including threat detection, data encryption, and compliance management.",
-                    suggestions: ['What compliance standards?', 'How do you handle breaches?', 'Security audit process?']
-                },
-                {
-                    content: "Getting started is easy! We begin with a free consultation to understand your needs, then create a customized roadmap for your digital transformation journey.",
-                    suggestions: ['Schedule consultation', 'View case studies', 'Meet the team']
-                }
-            ];
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 type: 'assistant',
                 content: randomResponse.content,
                 timestamp: new Date(),
                 status: 'sent',
                 metadata: {
                     confidence: 0.85 + Math.random() * 0.1,
-                    suggestions: randomResponse.suggestions
-                }
+  suggestions: randomResponse.suggestions
+                
+
+}
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
-            onAssistantResponse?.(aiMessage.content);
-        }, 1500 + Math.random() * 1000);
-        return () => clearTimeout(timer);
-    };
+            onAssistantResponse?.(aiMessage.content)}, 1500 + Math.random() * 1000);
+        return () => clearTimeout(timer)};
     // Send message
     const sendMessage = async () => {
         if (!inputValue.trim() || isTyping)
             return;
         const userMessage = {
-            id: Date.now().toString(),
+  id: Date.now().toString(),
             type: 'user',
             content: inputValue.trim(),
             timestamp: new Date(),
-            status: 'sending'
-        };
+  status: 'sending'
+        
+
+};
         setMessages(prev => [...prev, userMessage]);
         onMessageSend?.(userMessage.content);
         // Generate AI response
-        generateAIResponse(userMessage.content);
-    };
+        generateAIResponse(userMessage.content)};
     // Handle enter key
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-            sendMessage();
-        }
+            sendMessage()}
     };
     // Toggle voice input
     const toggleVoiceInput = () => {
@@ -119,8 +96,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
         setInputValue(suggestion);
-        inputRef.current?.focus();
-    }, []);
+        inputRef.current?.focus()}, []);
     // Clear chat
     const clearChat = () => {
         setMessages([messages[0]]); // Keep welcome message
@@ -140,7 +116,23 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
             
             {/* Chat Panel */}
-            <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial={{ opacity: 0, y: 20, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.95 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+            <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+}} exit = {
+  { opacity: 0, y: 20,
+  scale: 0.95 
+
+}} transition = {
+  { duration: 0.3,
+  ease: "easeOut" 
+
+}}>
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
@@ -173,7 +165,19 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
               {/* Settings Panel */}
               <AnimatePresence>
-                {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
+                {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
+  { height: 0,
+  opacity: 0 
+
+}} animate = {
+  { height: 'auto',
+  opacity: 1 
+
+}} exit = {
+  { height: 0,
+  opacity: 0 
+
+}} transition={{ duration: 0.2 }}>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-zinc-300 text-sm">Voice Input</span>
@@ -193,7 +197,15 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
               {/* Messages */}
               {!isMinimized && (<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
-                  {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                  {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
+  { opacity: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.3 }}>
                       {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
                           <Bot className="w-5 h-5 text-white"/>
                         </div>)}
@@ -233,7 +245,15 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </motion.div>))}
                   
                   {/* Typing indicator */}
-                  {isTyping && (<motion.div className="flex gap-3" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                  {isTyping && (<motion.div className="flex gap-3" initial = {
+  { opacity: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.3 }}>
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
                         <Bot className="w-5 h-5 text-white"/>
                       </div>
@@ -260,7 +280,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </Button>
                     
                     <div className="flex-1 relative">
-                        <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me anything..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
+                        <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me thing..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
                         
                         {/* Voice input indicator */}
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -287,5 +307,4 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
-}
+    </div>)}

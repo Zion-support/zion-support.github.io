@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from '../services/messages';
+import { sendMessage } from "../services/messages";
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
     const [subject, setSubject] = useState('');
@@ -15,26 +15,21 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         function handleKeyDown(e) {
             if (e.key === 'Escape') {
                 e.preventDefault();
-                onClose();
-            }
+                onClose()}
         }
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
+        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;
         firstInputRef.current?.focus();
         document.addEventListener('keydown', handleKeyDown);
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
-            removeTrap && removeTrap();
-        };
-    }, [isOpen, onClose]);
+            removeTrap && removeTrap()}}, [isOpen, onClose]);
     if (!isOpen) {
-        return null;
-    }
+        return null}
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!subject.trim() || !message.trim()) {
             setError('Subject and message are required.');
-            return;
-        }
+            return}
         setError('');
         setIsLoading(true); // Set loading true
         try {
@@ -48,8 +43,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
-            // setError('Failed to send message. Please try again.');
-        }
+            // setError('Failed to send message. Please try again.')}
         finally {
             setIsLoading(false); // Set loading false
         }
@@ -79,5 +73,4 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           </button>
         </form>
       </div>
-    </div>);
-}
+    </div>)}

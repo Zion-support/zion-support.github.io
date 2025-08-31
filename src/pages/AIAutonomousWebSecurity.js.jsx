@@ -168,6 +168,5 @@ const AIAutonomousWebSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousWebSecurity;

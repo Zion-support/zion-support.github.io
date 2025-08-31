@@ -1,5 +1,5 @@
 
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate   } from 'react-router-dom.ts';
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
@@ -11,7 +11,7 @@ import Careers from "@/pages/Careers";
 import FAQ from "@/pages/FAQ";
 import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
+import { SitemapPage   } from '@/components/SitemapPage';
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
 import Cookies from "@/pages/Cookies";
@@ -32,19 +32,19 @@ const ContentRoutes = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/cookies" element={<Cookies />} />
-      
+
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />
       <Route path="/support" element={<HelpCenterPage />} />
       <Route path="/faq" element={<FAQ />} />
-      
+
       {/* Blog Routes */}
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       {/* Legacy paths for older links */}
       <Route path="/content/blog" element={<Blog />} />
       <Route path="/content/blog/:slug" element={<BlogPost />} />
-      
+
       {/* Green IT Route */}
       <Route path="/green-it" element={<GreenIT />} />
 
@@ -59,19 +59,19 @@ const ContentRoutes = () => {
 
       {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />} />
-      
+
       {/* Project Room */}
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />
-      
+
       {/* Video Call */}
       <Route path="/video-call/:roomId" element={<VideoCall />} />
 
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />
-      
+
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
-      
+
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />

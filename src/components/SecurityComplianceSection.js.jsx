@@ -10,8 +10,8 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2026-12-31",
         scope: "Global Operations",
-        features: ["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
-        benefits: ["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
+        features["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
+        benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
     },
     {
         name: "SOC 2 Type II",
@@ -21,8 +21,8 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2025-06-30",
         scope: "Cloud Services & Data Processing",
-        features: ["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
-        benefits: ["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
+        features["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
+        benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
     },
     {
         name: "GDPR Compliance",
@@ -32,8 +32,8 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "EU Data Processing",
-        features: ["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],
-        benefits: ["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
+        features["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],
+        benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
     },
     {
         name: "HIPAA",
@@ -43,8 +43,8 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "Healthcare Solutions",
-        features: ["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
-        benefits: ["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
+        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
+        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
     }
 ];
 const complianceFrameworks = [
@@ -54,8 +54,8 @@ const complianceFrameworks = [
         description: "Voluntary framework for managing and reducing cybersecurity risk",
         implementation: "Fully Implemented",
         maturity: "Tier 4 - Adaptive",
-        controls: ["Identify", "Protect", "Detect", "Respond", "Recover"],
-        benefits: ["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
+        controls["Identify", "Protect", "Detect", "Respond", "Recover"],
+        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
     },
     {
         name: "OWASP Top 10",
@@ -63,8 +63,8 @@ const complianceFrameworks = [
         description: "Standard awareness document for developers and web application security",
         implementation: "Fully Implemented",
         maturity: "Advanced",
-        controls: ["Input Validation", "Authentication", "Session Management", "Data Protection"],
-        benefits: ["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
+        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],
+        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
     },
     {
         name: "PCI DSS",
@@ -72,8 +72,8 @@ const complianceFrameworks = [
         description: "Payment Card Industry Data Security Standard compliance",
         implementation: "Compliant",
         maturity: "Level 1",
-        controls: ["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],
-        benefits: ["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
+        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],
+        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
     },
     {
         name: "FedRAMP",
@@ -81,52 +81,8 @@ const complianceFrameworks = [
         description: "Federal Risk and Authorization Management Program compliance",
         implementation: "In Progress",
         maturity: "Authorization Phase",
-        controls: ["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
-        benefits: ["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
-    }
-];
-const securityFeatures = [
-    {
-        icon: <Shield className="w-8 h-8"/>,
-        title: "End-to-End Encryption",
-        description: "256-bit AES encryption for data in transit and at rest",
-        features: ["TLS 1.3", "Database Encryption", "File-level Security", "API Security"],
-        benefits: ["Data Protection", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
-    },
-    {
-        icon: <Lock className="w-8 h-8"/>,
-        title: "Multi-Factor Authentication",
-        description: "Advanced authentication with biometric, hardware, and software tokens",
-        features: ["Biometric Auth", "Hardware Tokens", "SMS/Email Codes", "SSO Integration"],
-        benefits: ["Account Security", "Unauthorized Access Prevention", "Compliance", "User Experience"]
-    },
-    {
-        icon: <Eye className="w-8 h-8"/>,
-        title: "Continuous Monitoring",
-        description: "24/7 security monitoring with AI-powered threat detection",
-        features: ["Real-time Alerts", "Threat Intelligence", "Behavioral Analysis", "Incident Response"],
-        benefits: ["Proactive Security", "Quick Response", "Risk Reduction", "Compliance"]
-    },
-    {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Role-Based Access Control",
-        description: "Granular access control based on user roles and responsibilities",
-        features: ["Permission Management", "Access Reviews", "Privilege Escalation", "Audit Logging"],
-        benefits: ["Data Security", "Compliance", "Operational Efficiency", "Risk Management"]
-    },
-    {
-        icon: <Database className="w-8 h-8"/>,
-        title: "Data Loss Prevention",
-        description: "Advanced DLP with content analysis and policy enforcement",
-        features: ["Content Analysis", "Policy Enforcement", "Data Classification", "Incident Response"],
-        benefits: ["Data Protection", "Compliance", "Risk Mitigation", "Customer Trust"]
-    },
-    {
-        icon: <Network className="w-8 h-8"/>,
-        title: "Network Security",
-        description: "Comprehensive network protection with firewalls and intrusion detection",
-        features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
-        benefits: ["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
+        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
+        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
     }
 ];
 const securityStats = [
@@ -152,7 +108,10 @@ export function SecurityComplianceSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -172,7 +131,15 @@ export function SecurityComplianceSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Security & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Compliance</span>
           </h2>
@@ -183,7 +150,19 @@ export function SecurityComplianceSection() {
 
           {/* Security stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {securityStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            {securityStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
                 </div>
@@ -194,12 +173,36 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Standards */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry Certifications & Standards
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStandard(selectedStandard === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
@@ -259,7 +262,19 @@ export function SecurityComplianceSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedStandard === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedStandard === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} transition={{ duration: 0.3 }}>
                         {/* All Features */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">All Features:</h5>
@@ -291,12 +306,36 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Compliance Frameworks */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Compliance Frameworks & Controls
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFramework(selectedFramework === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
@@ -356,7 +395,19 @@ export function SecurityComplianceSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedFramework === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedFramework === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} transition={{ duration: 0.3 }}>
                         {/* All Controls */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">All Controls:</h5>
@@ -388,12 +439,36 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Features */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Security Features
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityFeatures.map((feature, index) => (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {securityFeatures.map((feature, index) => (<motion.div key={feature.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFeature(selectedFeature === index ? null : index)}>
                   {/* Icon */}
                   <div className="text-zion-cyan mb-4 flex justify-center">
@@ -430,7 +505,19 @@ export function SecurityComplianceSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedFeature === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedFeature === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} transition={{ duration: 0.3 }}>
                         {/* All Features */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">All Features:</h5>
@@ -456,7 +543,19 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+}}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -478,5 +577,4 @@ export function SecurityComplianceSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

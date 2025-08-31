@@ -110,5 +110,4 @@ export default function Index() {
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-    </div>);
-}
+    </div>)}

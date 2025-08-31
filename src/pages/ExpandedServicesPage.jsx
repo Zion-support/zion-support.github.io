@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,12 +16,19 @@ export default function ExpandedServicesPage() {
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
                 service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-        }
+
         // Filter by category
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+
+=======
+                service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))}
+        // Filter by category
+        if (selectedCategory !== 'all') {
+            filtered = filtered.filter(service => service.category === selectedCategory)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Sort services
         filtered.sort((a, b) => {
             if (sortBy === 'rating')
@@ -31,18 +37,20 @@ export default function ExpandedServicesPage() {
                 return a.price - b.price;
             if (sortBy === 'aiScore')
                 return b.aiScore - a.aiScore;
-            return 0;
-        });
-        setFilteredServices(filtered);
-    }, [searchQuery, selectedCategory, sortBy]);
+            return 0});
+        setFilteredServices(filtered)}, [searchQuery, selectedCategory, sortBy]);
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
+<<<<<<< HEAD
             default: return '⚡';
-        }
+
+=======
+            default: return '⚡'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -50,8 +58,12 @@ export default function ExpandedServicesPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
+<<<<<<< HEAD
             default: return 'bg-gray-100 text-gray-800';
-        }
+
+=======
+            default: return 'bg-gray-100 text-gray-800'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -63,7 +75,7 @@ export default function ExpandedServicesPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Discover our complete ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services designed to accelerate your business growth.
           </p>
-          
+
           {/* Search and Filter Bar */}
           <div className="max-w-4xl mx-auto mb-8">
             <div className="flex flex-col md:flex-row gap-4">
@@ -124,7 +136,7 @@ export default function ExpandedServicesPage() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   {/* Rating and AI Score */}
                   <div className="flex items-center justify-between">
@@ -223,7 +235,7 @@ export default function ExpandedServicesPage() {
           <h2 className="text-3xl font-bold text-center text-zion-blue-dark mb-12">
             Service Categories
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="text-center hover:shadow-lg transition-all duration-300">
                 <CardHeader>
@@ -248,7 +260,7 @@ export default function ExpandedServicesPage() {
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -259,7 +271,7 @@ export default function ExpandedServicesPage() {
                 Our services have helped businesses achieve significant improvements in efficiency, cost savings, and growth.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white"/>
@@ -269,7 +281,7 @@ export default function ExpandedServicesPage() {
                 Certified professionals with years of experience in AI, IT, and digital transformation across various industries.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-white"/>
@@ -292,7 +304,7 @@ export default function ExpandedServicesPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
@@ -303,7 +315,7 @@ export default function ExpandedServicesPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-          
+
           <div className="mt-8 text-zion-slate-light">
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>Website: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">https://ziontechgroup.com</a></p>
@@ -312,5 +324,9 @@ export default function ExpandedServicesPage() {
       </section>
 
       <TrustedBySection />
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

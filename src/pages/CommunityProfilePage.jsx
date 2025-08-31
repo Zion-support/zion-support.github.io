@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,21 +12,28 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
 const mockUser = {
-    id: "user1",
+  id: "user1",
     name: "Alex Johnson",
     avatar: "https://i.pravatar.cc/150?img=3",
     role: "Verified Talent",
     reputation: 325,
     postCount: 14,
     replyCount: 47,
-    badges: [
+    badges[
         {
             id: "badge1",
             name: "Answer Hero",
             description: "Provided 10 accepted answers",
             icon: "Award",
-            color: "#10B981"
-        },
+  color: "#10B981"
+        
+
+
+
+
+
+
+},
         {
             id: "badge2",
             name: "Top Contributor",
@@ -40,7 +47,7 @@ const mockUser = {
             description: "Created your first forum post",
             icon: "Star",
             color: "#6366F1"
-        }
+
     ],
     isVerified: true,
     isModerator: false
@@ -56,7 +63,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags: ["machine-learning", "fine-tuning", "gpt"],
+        tags["machine-learning", "fine-tuning", "gpt"],
         createdAt: "2025-04-01T12:00:00Z",
         updatedAt: "2025-04-01T12:00:00Z",
         upvotes: 48,
@@ -74,7 +81,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags: ["prompts", "techniques", "optimization"],
+        tags["prompts", "techniques", "optimization"],
         createdAt: "2025-03-20T14:25:00Z",
         updatedAt: "2025-03-20T14:25:00Z",
         upvotes: 36,
@@ -90,13 +97,13 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "project-help",
-        tags: ["monitoring", "production", "devops"],
+        tags["monitoring", "production", "devops"],
         createdAt: "2025-03-12T09:30:00Z",
         updatedAt: "2025-03-12T09:30:00Z",
         upvotes: 24,
         downvotes: 0,
         replyCount: 6
-    }
+
 ];
 export default function CommunityProfilePage() {
     const { userId } = useParams();
@@ -108,24 +115,50 @@ export default function CommunityProfilePage() {
         // For now, we'll just use the mock data
         setUser(mockUser);
         setPosts(userPosts);
-        setIsLoading(false);
-    }, [userId]);
+        setIsLoading(false)}, [userId]);
     if (isLoading) {
         return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
+<<<<<<< HEAD
         </div>);
-    }
+
+=======
+        </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!user) {
         return (<div className="container py-8">
           <h1>User not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
+<<<<<<< HEAD
+        </div>)}
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+
+}`}/>
+=======
         </div>);
-    }
+<<<<<<< HEAD
+
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
+=======
+    }
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+
+
+
+
+
+
+}`}/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -137,7 +170,7 @@ export default function CommunityProfilePage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">{user.name}</span>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <Card>
@@ -161,18 +194,18 @@ export default function CommunityProfilePage() {
                   </Badge>)}
                 {user.isModerator && (<Badge className="mt-2 bg-blue-500">Moderator</Badge>)}
               </CardHeader>
-              
+
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
                   <ReputationDisplay reputation={user.reputation} size="lg"/>
                 </div>
-                
+
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
                   <UserBadges badges={user.badges}/>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
                     <CardContent className="p-4 text-center">
@@ -187,36 +220,36 @@ export default function CommunityProfilePage() {
                     </CardContent>
                   </Card>
                 </div>
-                
+
                 <div className="text-sm text-muted-foreground">
                   <p>Member since April 2025</p>
                 </div>
               </CardContent>
             </Card>
           </div>
-          
+
           <div className="md:col-span-2">
             <Tabs defaultValue="posts">
               <TabsList>
                 <TabsTrigger value="posts">Posts</TabsTrigger>
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="posts" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                
+
                 {posts.length > 0 ? (<div className="space-y-4">
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
                   </div>) : (<Card>
                     <CardContent className="p-6 text-center">
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
+                      <p className="text-muted-foreground">This user hasn't created  posts yet.</p>
                     </CardContent>
                   </Card>)}
               </TabsContent>
-              
+
               <TabsContent value="activity" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                
+
                 <Card>
                   <CardContent className="p-6">
                     <ul className="space-y-4">
@@ -267,5 +300,9 @@ export default function CommunityProfilePage() {
             </Tabs>
           </div>
         </div>
+<<<<<<< HEAD
       </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card>}}}}}
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

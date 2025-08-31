@@ -1,108 +1,174 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+import React, { useState } from 'react.ts';
+import { useNavigate, Link  } from 'react-router-dom.ts';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { ProductListing  } from '@/types/listings';
+<<<<<<< HEAD
+import { DollarSign import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
+=======
+import React, { useState } from 'react.ts';
+import { useNavigate, Link   } from 'react-router-dom.ts';
+import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';
+import { ProductListing   } from '@/types/listings';
+import { DollarSign   } from 'lucide-react.ts';
+import { RatingStars   } from '@/components/RatingStars';
+import { FavoriteButton   } from '@/components/FavoriteButton';
+import { useDispatch   } from 'react-redux.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import type { AppDispatch } from '@/store';
+import { addItem  } from '@/store/cartSlice';
+; // Import next/image
+
+  listing: anyProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string)   => void;
+=======
+import { DollarSign  } from 'lucide-react.ts';
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+// Regular img tag will be used instead of next/image
 
-interface ProductListingCardProps {
-  listing: ProductListing;
+interface ProductListingCardProps extends React.PropsWithChildren<{}> {
+
+  listing: anyProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  onRequestQuote?: (id: string)  => void;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
+<<<<<<< HEAD
   detailBasePath?: string;
+<<<<<<< HEAD
+=======
+  detailBasePath?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+export function ProductListingCard(...args: any[]): any {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
 }
 
-export function ProductListingCard({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
+export function ProductListingCard(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0
-    ? listing.images[0] 
+    ? listing.images[0]
     : '/placeholder.svg'
   );
   const [imageError, setImageError] = useState(false);
-    
+
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
+    return `${listing.currency}${listing.price.toLocaleString()}`};
+
+  const handleImageError = () => {;
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
+      setImageSrc('/placeholder.svg');
+      setImageError(true)}
   };
 
+<<<<<<< HEAD
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg');
       setImageError(true);
-    }
+
   };
-  
+
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
+<<<<<<< HEAD
+
+=======
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+  const handleRequestQuote = (e: anyReact.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     if (onRequestQuote) {
+<<<<<<< HEAD
+      onRequestQuote(listing.id)} else {
+      router(`/request-quote?listing = ${listing.id}`)};
+=======;
       onRequestQuote(listing.id);
     } else {
+<<<<<<< HEAD
       navigate(`/request-quote?listing=${listing.id}`);
+
+=======
+      router(`/request-quote?listing=${listing.id}`);
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-  
+
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
     <div
-      data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
-      onClick={handleViewListing}
-      tabIndex={0}
-      role="button"
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      data-testid = "equipment-link";
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
+      onClick={handleViewListing};
+      tabIndex={0};
+      role="button";
+      onKeyDown={(e) => {;
+        if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault();
+<<<<<<< HEAD
           handleViewListing();
-        }
+
+=======
+          handleViewListing()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }}
-    >
+
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+        onClick={handleViewListing} // Keep existing onClick for navigation;
+        role="button";
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {;
+          if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault();
+<<<<<<< HEAD
             handleViewListing();
-          }
+
+        }}
+
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+=======
+            handleViewListing()}
         }}
       >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
+        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <img
             src={imageSrc}
             alt={listing.title}
-            layout="fill"
-            objectFit="cover"
+            className="w-full h-full object-cover"
             onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
@@ -112,7 +178,7 @@ export function ProductListingCard({
           <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
-      
+
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -125,7 +191,7 @@ export function ProductListingCard({
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
-          
+
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
@@ -135,22 +201,22 @@ export function ProductListingCard({
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
-          
+
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span 
-                  key={idx} 
+                <span
+                  key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
+
                   {tag}
                 </span>
               ))}
             </div>
           )}
         </div>
-        
+
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
@@ -165,17 +231,27 @@ export function ProductListingCard({
               </span>
             )}
           </div>
-          
+
           <div className="flex gap-2">
             <Button
               size="sm"
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`);
+<<<<<<< HEAD
+                router(`${detailBasePath}/${listing.id}`)}}
+              disabled = {loading};
+=======;
+                router(`${detailBasePath}/${listing.id}`);
               }}
+<<<<<<< HEAD
               disabled={loading}
+
+=======
+              disabled = {loading}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               {loading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -189,20 +265,41 @@ export function ProductListingCard({
               )}
             </Button>
             {onRequestQuote && (
-              <Button 
+              <Button
                 size="sm"
-                variant="outline" 
+                variant="outline"
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
+
                 Request Quote
               </Button>
+<<<<<<< HEAD
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            )};
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
-};
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default React.memo(ProductListingCard);
+<<<<<<< HEAD
+}}}}}}
+=======
+
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,16 +1,26 @@
 import React from 'react';
-import { SEO } from "../components/SEO";
+<<<<<<< HEAD
+import SEO from "@/components/SEO";
+import Link from 'next/link';
+=======
+import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight export default function ServicesOverview() {
+=======
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const serviceCategories = [
         {
             name: "AI & Machine Learning",
             description: "Cutting-edge artificial intelligence solutions for business transformation",
             icon: Brain,
             color: "from-purple-600 to-blue-600",
-            services: [
+            services[
                 {
                     name: "AI Strategy & Consulting",
                     description: "Strategic guidance on implementing AI solutions",
@@ -28,7 +38,7 @@ export default function ServicesOverview() {
                     description: "Intelligent automation and insights",
                     price: "From $8,500",
                     href: "/services/ai"
-                }
+
             ]
         },
         {
@@ -36,7 +46,7 @@ export default function ServicesOverview() {
             description: "Transform raw data into actionable business intelligence",
             icon: Database,
             color: "from-blue-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Business Intelligence & Reporting",
                     description: "Interactive dashboards and automated reporting",
@@ -54,7 +64,7 @@ export default function ServicesOverview() {
                     description: "Robust data pipelines and warehouses",
                     price: "From $4,500/month",
                     href: "/services/data-analytics"
-                }
+
             ]
         },
         {
@@ -62,7 +72,7 @@ export default function ServicesOverview() {
             description: "Connected ecosystems and real-time edge processing",
             icon: Wifi,
             color: "from-green-600 to-emerald-600",
-            services: [
+            services[
                 {
                     name: "IoT Device Management Platform",
                     description: "Comprehensive IoT device management",
@@ -80,7 +90,7 @@ export default function ServicesOverview() {
                     description: "IoT solutions for smart cities and manufacturing",
                     price: "From $6,500/month",
                     href: "/services/iot-edge-computing"
-                }
+
             ]
         },
         {
@@ -88,7 +98,7 @@ export default function ServicesOverview() {
             description: "Decentralized applications and blockchain solutions",
             icon: LinkIcon,
             color: "from-purple-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Smart Contract Development",
                     description: "Secure, audited smart contracts",
@@ -106,7 +116,7 @@ export default function ServicesOverview() {
                     description: "Custom NFT platforms and generative art",
                     price: "From $12,000/project",
                     href: "/services/blockchain-web3"
-                }
+
             ]
         },
         {
@@ -114,7 +124,7 @@ export default function ServicesOverview() {
             description: "Modern software delivery and cloud infrastructure",
             icon: Cloud,
             color: "from-orange-600 to-red-600",
-            services: [
+            services[
                 {
                     name: "Cloud Migration & Strategy",
                     description: "Multi-cloud strategy and migration",
@@ -132,7 +142,7 @@ export default function ServicesOverview() {
                     description: "Enterprise-grade container management",
                     price: "From $7,500/project",
                     href: "/services/devops-cloud"
-                }
+
             ]
         },
         {
@@ -140,7 +150,7 @@ export default function ServicesOverview() {
             description: "Advanced security solutions and threat protection",
             icon: Shield,
             color: "from-red-600 to-pink-600",
-            services: [
+            services[
                 {
                     name: "Security Assessment & Auditing",
                     description: "Comprehensive security evaluations",
@@ -158,10 +168,12 @@ export default function ServicesOverview() {
                     description: "Regulatory compliance and security frameworks",
                     price: "From $6,000/month",
                     href: "/services/cybersecurity"
-                }
+
             ]
-        }
+
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -174,19 +186,27 @@ export default function ServicesOverview() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
@@ -199,7 +219,7 @@ export default function ServicesOverview() {
             Our Complete Service Portfolio
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive range of technology solutions designed to transform your business. 
+            Discover our comprehensive range of technology solutions designed to transform your business.
             From AI and data analytics to IoT and blockchain, we have the expertise to drive your success.
           </p>
         </div>
@@ -258,7 +278,7 @@ export default function ServicesOverview() {
                         </div>
                       </div>))}
                   </div>
-                  
+
                   <div className="mt-8 text-center">
                     <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}>
                       Explore All {category.name} Services
@@ -334,5 +354,9 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+}}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

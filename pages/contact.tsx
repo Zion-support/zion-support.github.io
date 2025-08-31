@@ -1,35 +1,48 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+<<<<<<< HEAD
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(...args: any[]): any {
+=======
+import React, { useState  } from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle   } from 'lucide-react.ts'
 
 
-export default function Contact() {
+export default function Contact(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		company: '',
+		comp: '',
 		message: ''
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleSubmit = (e: React.FormEvent) => {
+<<<<<<< HEAD
+	const handleSubmit = (e: anyReact.FormEvent)  => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
-		console.log('Form submitted:', formData)
+<<<<<<< HEAD
+		// // // console.log('Form submitted:', formData)
+=======
+		// // // // // // // console.log('Form submitted: any', formData)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		setIsSubmitted(true)
 		// Reset form after submission
-		setTimeout(() => {
+		setTimeout(()  => {
 			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
-	}
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+=======
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
 		})
-	}
 
 	return (
 		<>
@@ -91,14 +104,13 @@ export default function Contact() {
 										/>
 									</div>
 									<div>
-										<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-											Company
-										</label>
+										<label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+											Comp </label>
 										<input
 											type="text"
-											id="company"
-											name="company"
-											value={formData.company}
+											id="comp"
+											name="comp"
+											value={formData.comp}
 											onChange={handleChange}
 											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
 										/>
@@ -120,7 +132,7 @@ export default function Contact() {
 									<button
 										type="submit"
 										className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center justify-center gap-2"
-									>
+
 										<Send className="h-4 w-4" />
 										Send Message
 									</button>
@@ -173,7 +185,7 @@ export default function Contact() {
 								<Link
 									to="/services"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Explore Our Services →
 								</Link>
 							</div>
@@ -194,19 +206,29 @@ export default function Contact() {
 							<Link
 								to="/services"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-							>
+
 								View Our Services
 							</Link>
 							<Link
 								to="/about"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-							>
+
 								Learn More About Us →
 							</Link>
+<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
 			</section>
 		</>
 	)
-}
+}}}}
+=======
+						</div>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

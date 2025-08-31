@@ -50,28 +50,68 @@ function fixCorruptedFile(filePath) {
       .replace(/\s+/g, " ")
       .trim();
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.log(`Fixed: ${filePath}`);
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // // // console.error(`Error fixing ${filePath}:`, error.message);
+=======
+    // // // // // // // console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return false;
-  }
+
+
+=======
+    console.log(`Fixed: ${filePath}`);
+    return true} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false}
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Function to recursively find and fix corrupted files
-function fixCorruptedFiles(directory) {
-  const files = fs.readdirSync(directory);
-  for (const file of files) {
-    const filePath = path.join(directory, file);
+function files = fs.readdirSync(directory);
+  for (const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
+<<<<<<< HEAD
       fixCorruptedFiles(filePath);
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       fixCorruptedFile(filePath);
-    }
+
+
+
+=======
+      fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+      fixCorruptedFile(filePath)}
   }
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Start fixing from the pages directory
-console.log("Fixing corrupted TypeScript files...");
+<<<<<<< HEAD
+// // // console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
+<<<<<<< HEAD
+// // // console.log("Finished fixing corrupted files.");
+}}}}}
+=======
+// // // // // // // console.log("Fixing corrupted TypeScript files...");
+fixCorruptedFiles("./pages");
+fixCorruptedFiles("./components");
+// // // // // // // console.log("Finished fixing corrupted files.");
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
 console.log("Finished fixing corrupted files.");
+
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -52,15 +51,24 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             icon: User,
             matches: (path) => path.startsWith("/dashboard"),
             authRequired: true
-        }
+
     ];
     // Filter items based on auth status
     const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));
     return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
-        {visibleItems.map(item => (<Link key={item.name} to={item.href} className={cn("flex flex-col items-center justify-center w-full h-full px-1 py-1", item.matches(location.pathname)
+        {visibleItems.map(item => (<Link key={item.name} to={item.href} className = {
+  cn("flex flex-col items-center justify-center w-full h-full px-1 py-1",
+  item.matches(location.pathname)
                 ? "text-zion-cyan"
-                : "text-white/70 hover:text-white")}>
+                : "text-white/70 hover:text-white")
+
+
+
+
+
+
+}>
             <div className="relative">
               <item.icon className="h-5 w-5 mb-1"/>
               {item.badge && item.badge > 0 && (<span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -70,5 +78,9 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             <span className="text-xs font-medium">{item.name}</span>
           </Link>))}
       </div>
+<<<<<<< HEAD
     </nav>);
-}
+}}}
+=======
+    </nav>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -38,5 +38,4 @@ export const LanguageSelector = () => {
               </button>))}
           </div>
         </div>)}
-    </div>);
-};
+    </div>)};

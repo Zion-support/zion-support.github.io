@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useAnalytics } from "../hooks/useAnalytics";
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -103,7 +103,7 @@ export const EnterpriseDashboard = () => {
             description: 'Multiple login attempts from different locations within short time frame',
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
             status: 'investigating',
-            affected: ['user-123', 'user-456'],
+            affected['user-123', 'user-456'],
             source: 'Security Monitoring System'
         },
         {
@@ -114,7 +114,7 @@ export const EnterpriseDashboard = () => {
             description: 'User attempted to access restricted resource without proper permissions',
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
             status: 'resolved',
-            affected: ['user-789'],
+            affected['user-789'],
             source: 'Access Control System'
         }
     ]);
@@ -151,48 +151,37 @@ export const EnterpriseDashboard = () => {
             // Update timestamps (simplified for demo)
             const now = new Date();
             console.log('Data refreshed at:', now.toLocaleTimeString());
-            trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
+            trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', null, {
                 tab: activeTab,
                 dateRange
-            });
-        }
+            })}
         catch (error) {
             console.error('Failed to refresh data:', error);
-            trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
+            trackEvent('enterprise_dashboard', 'refresh_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
-            });
-        }
+            })}
         finally {
-            setIsRefreshing(false);
-        }
+            setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
         const interval = setInterval(refreshData, refreshInterval);
-        return () => clearInterval(interval);
-    }, [refreshInterval, refreshData]);
+        return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data
-    const filteredSecurityAlerts = useMemo(() => {
-        let filtered = securityAlerts;
+    const filtered = securityAlerts;
         if (filterStatus !== 'all') {
-            filtered = filtered.filter(alert => alert.status === filterStatus);
-        }
+            filtered = filtered.filter(alert => alert.status === filterStatus)}
         if (searchQuery) {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
-        return filtered;
-    }, [securityAlerts, filterStatus, searchQuery]);
-    const filteredUserActivities = useMemo(() => {
-        let filtered = userActivities;
+                alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
+        return filtered}, [securityAlerts, filterStatus, searchQuery]);
+    const filtered = userActivities;
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                activity.resource.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
-        return filtered;
-    }, [userActivities, searchQuery]);
+                activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
+        return filtered}, [userActivities, searchQuery]);
     // Get status color
     const getStatusColor = (status) => {
         switch (status) {
@@ -211,8 +200,7 @@ export const EnterpriseDashboard = () => {
             case 'maintenance':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
     };
     // Get severity color
     const getSeverityColor = (severity) => {
@@ -226,8 +214,7 @@ export const EnterpriseDashboard = () => {
             case 'low':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
     };
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -280,10 +267,30 @@ export const EnterpriseDashboard = () => {
       {/* Main Content */}
       <div className="p-6">
         <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (<motion.div key="overview" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'overview' && (<motion.div key="overview" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               {/* System Metrics Overview */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {systemMetrics.map((metric) => (<motion.div key={metric.id} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                {systemMetrics.map((metric) => (<motion.div key={metric.id} initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-medium text-gray-900 dark:text-white">
                         {metric.name}
@@ -384,7 +391,19 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'performance' && (<motion.div key="performance" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'performance' && (<motion.div key="performance" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -419,7 +438,19 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'security' && (<motion.div key="security" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'security' && (<motion.div key="security" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               {/* Security Controls */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex-1">
@@ -436,7 +467,15 @@ export const EnterpriseDashboard = () => {
 
               {/* Security Alerts */}
               <div className="space-y-4">
-                {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>
@@ -481,7 +520,19 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'users' && (<motion.div key="users" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'users' && (<motion.div key="users" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               {/* User Activity Controls */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex-1">
@@ -497,7 +548,15 @@ export const EnterpriseDashboard = () => {
 
               {/* User Activities */}
               <div className="space-y-4">
-                {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center">
@@ -537,7 +596,19 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'services' && (<motion.div key="services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'services' && (<motion.div key="services" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -550,7 +621,15 @@ export const EnterpriseDashboard = () => {
 
               {/* Service Status Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {serviceStatuses.map((service) => (<motion.div key={service.id} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                {serviceStatuses.map((service) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                         {service.name}
@@ -593,7 +672,19 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'analytics' && (<motion.div key="analytics" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -629,5 +720,4 @@ export const EnterpriseDashboard = () => {
             </motion.div>)}
         </AnimatePresence>
       </div>
-    </div>);
-};
+    </div>)};

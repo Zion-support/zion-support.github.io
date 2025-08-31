@@ -1,52 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
-import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
 const ServiceInnovationHub = () => {
     const innovationAreas = [
         {
             icon: <Atom className="w-8 h-8 text-zion-cyan"/>,
             title: 'Quantum Technology',
             description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions',
-            trends: ['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],
+            trends['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],
             investment: '$150B+'
         },
         {
             icon: <Brain className="w-8 h-8 text-zion-purple"/>,
             title: 'Artificial Intelligence',
             description: 'Advanced AI consciousness, governance, and neural network optimization',
-            trends: ['AI Consciousness', 'AI Governance', 'Neural Optimization'],
+            trends['AI Consciousness', 'AI Governance', 'Neural Optimization'],
             investment: '$300B+'
         },
         {
             icon: <Satellite className="w-8 h-8 text-zion-blue"/>,
             title: 'Space Technology',
             description: 'Space mining, propulsion, habitats, and debris cleanup systems',
-            trends: ['Space Mining', 'Space Propulsion', 'Space Habitats'],
+            trends['Space Mining', 'Space Propulsion', 'Space Habitats'],
             investment: '$200B+'
         },
         {
             icon: <Dna className="w-8 h-8 text-zion-green"/>,
             title: 'Biotech AI',
             description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery',
-            trends: ['Synthetic Biology', 'Brain-Computer Interfaces', 'AI Drug Discovery'],
+            trends['Synthetic Biology', 'Brain-Computer Interfaces', 'AI Drug Discovery'],
             investment: '$100B+'
         },
         {
             icon: <Leaf className="w-8 h-8 text-zion-emerald"/>,
             title: 'Green Technology',
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',
-            trends: ['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],
+            trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],
             investment: '$500B+'
         },
         {
             icon: <Cpu className="w-8 h-8 text-zion-orange"/>,
             title: 'Advanced Computing',
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
-            trends: ['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
+            trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
             investment: '$80B+'
         }
     ];
@@ -86,7 +86,15 @@ const ServiceInnovationHub = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Service Innovation Hub
             </h1>
@@ -99,7 +107,11 @@ const ServiceInnovationHub = () => {
                 Explore Innovation Hub
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', '_blank')}>
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',
+  '_blank')
+
+}>
                 Get Innovation Strategy
               </Button>
             </div>
@@ -110,7 +122,15 @@ const ServiceInnovationHub = () => {
       {/* Innovation Areas Overview */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Innovation Areas
             </h2>
@@ -121,7 +141,19 @@ const ServiceInnovationHub = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {innovationAreas.map((area, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {innovationAreas.map((area, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}} viewport={{ once: true }}>
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="mx-auto w-16 h-16 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">
@@ -161,7 +193,15 @@ const ServiceInnovationHub = () => {
       {/* Key Insights Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-4xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Key Innovation Insights
             </h2>
@@ -171,7 +211,19 @@ const ServiceInnovationHub = () => {
           </motion.div>
 
           <div className="space-y-6">
-            {keyInsights.map((insight, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {keyInsights.map((insight, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}} viewport={{ once: true }}>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
@@ -205,7 +257,15 @@ const ServiceInnovationHub = () => {
       {/* Innovation Hub Section */}
       <section id="innovation-hub" className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Interactive Innovation Hub
             </h2>
@@ -222,7 +282,15 @@ const ServiceInnovationHub = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Lead the Innovation Revolution?
             </h2>
@@ -231,11 +299,19 @@ const ServiceInnovationHub = () => {
               of emerging technologies and capitalize on future opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation', '_blank')}>
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',
+  '_blank')
+
+}>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Lead Innovation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+
+}>
                 <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
@@ -243,6 +319,5 @@ const ServiceInnovationHub = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ServiceInnovationHub;

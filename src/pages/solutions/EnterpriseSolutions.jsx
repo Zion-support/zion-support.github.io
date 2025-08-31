@@ -1,7 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp export default function EnterpriseSolutions() {
+=======
 import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function EnterpriseSolutions() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const solutions = [
         {
             icon: Building2,
@@ -38,7 +42,7 @@ export default function EnterpriseSolutions() {
             title: "AI Integration",
             description: "Seamless AI integration into existing enterprise workflows",
             features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
-        }
+
     ];
     const benefits = [
         "Increased operational efficiency by 40-60%",
@@ -50,19 +54,19 @@ export default function EnterpriseSolutions() {
     ];
     const caseStudies = [
         {
-            company: "Fortune 500 Manufacturing",
+            comp: "Fortune 500 Manufacturing",
             industry: "Manufacturing",
             challenge: "Legacy system modernization and digital transformation",
             solution: "Implemented cloud-native architecture with AI-powered analytics",
             results: "35% cost reduction, 50% faster time-to-market"
         },
         {
-            company: "Global Financial Services",
+            comp: "Global Financial Services",
             industry: "Financial Services",
             challenge: "Compliance automation and risk management",
             solution: "AI-driven compliance monitoring and automated reporting",
             results: "90% reduction in compliance violations, 60% faster reporting"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -85,7 +89,7 @@ export default function EnterpriseSolutions() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
@@ -168,7 +172,7 @@ export default function EnterpriseSolutions() {
                   <Star className="w-5 h-5 text-yellow-400 mr-2"/>
                   <span className="text-sm text-gray-400">{study.industry}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{study.company}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{study.comp}</h3>
                 <div className="space-y-3 mb-6">
                   <div>
                     <h4 className="font-semibold text-cyan-400 mb-1">Challenge:</h4>
@@ -212,4 +216,4 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

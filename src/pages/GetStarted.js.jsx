@@ -3,64 +3,34 @@ import { Link } from 'react-router-dom';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
 const GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
-    const steps = [
-        {
-            number: 1,
-            title: "Discovery Call",
-            description: "Schedule a free consultation to discuss your needs",
-            icon: Phone,
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            number: 2,
-            title: "Solution Design",
-            description: "We'll design a customized solution for your business",
-            icon: Brain,
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            number: 3,
-            title: "Implementation",
-            description: "Our team implements the solution with your team",
-            icon: Star,
-            color: "from-green-500 to-teal-500"
-        },
-        {
-            number: 4,
-            title: "Launch & Support",
-            description: "Go live with ongoing support and optimization",
-            icon: CheckCircle,
-            color: "from-orange-500 to-red-500"
-        }
-    ];
     const services = [
         {
             title: "AI & Autonomous Systems",
             description: "Transform your operations with intelligent automation",
             icon: Brain,
             color: "from-violet-500 to-purple-600",
-            features: ["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"]
+            features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"]
         },
         {
             title: "Quantum Technology",
             description: "Leverage next-generation computing power",
             icon: Zap,
             color: "from-blue-500 to-indigo-600",
-            features: ["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"]
+            features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"]
         },
         {
             title: "Cybersecurity",
             description: "Protect your business with advanced security",
             icon: Shield,
             color: "from-red-500 to-pink-600",
-            features: ["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"]
+            features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"]
         },
         {
             title: "IT Infrastructure",
             description: "Modernize your technology foundation",
             icon: Zap,
             color: "from-green-500 to-teal-600",
-            features: ["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
+            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
         }
     ];
     const benefits = [
@@ -263,6 +233,5 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default GetStarted;

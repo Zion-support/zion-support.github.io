@@ -1,33 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
+<<<<<<< HEAD
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket export default function ResearchDevelopment(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket   } from 'lucide-react.ts'
 
 
-export default function ResearchDevelopment() {
+export default function ResearchDevelopment(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
 			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.',
-			projects: ['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
+			projects['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
 			icon: FlaskConical,
 			color: 'blue'
 		},
 		{
 			title: 'Quantum Computing',
 			description: 'Exploring quantum algorithms and their applications in business and scientific computing.',
-			projects: ['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
+			projects['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
 			icon: Microscope,
 			color: 'purple'
 		},
 		{
 			title: 'Edge Computing',
 			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.',
-			projects: ['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
+			projects['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
 			icon: Rocket,
 			color: 'green'
-		}
+
 	]
 
+<<<<<<< HEAD
 	const currentProjects = [
 		{
 			title: 'Autonomous Business Operations Platform',
@@ -52,7 +59,7 @@ export default function ResearchDevelopment() {
 			progress: 90,
 			team: 6,
 			timeline: 'Q1 2025'
-		}
+
 	]
 
 	const publications = [
@@ -76,7 +83,7 @@ export default function ResearchDevelopment() {
 			journal: 'Computer Networks',
 			year: '2024',
 			doi: '10.1016/j.comnet.2024.109876'
-		}
+
 	]
 
 	return (
@@ -121,14 +128,30 @@ export default function ResearchDevelopment() {
 							We concentrate our efforts on technologies that will shape the future of business
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-3">
-						{researchAreas.map((area, index) => {
+					<div className="grid gap-8 lg: anygrid-cols-3">
+						{researchAreas.map((area, index)  => {
 							const IconComponent = area.icon
 							const colorClasses = {
 								blue: 'bg-blue-100 text-blue-600',
 								green: 'bg-green-100 text-green-600',
 								purple: 'bg-purple-100 text-purple-600'
-							}
+
+=======
+<<<<<<< HEAD
+	const colorClasses = {
+  blue: 'bg-blue-100 text-blue-600',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+								green: 'bg-green-100 text-green-600',
+  purple: 'bg-purple-100 text-purple-600'
+							
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
 									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${colorClasses[area.color]} mb-6`}>
@@ -194,7 +217,7 @@ export default function ResearchDevelopment() {
 											</div>
 										</div>
 										<div className="w-full bg-gray-200 rounded-full h-2">
-											<div 
+											<div
 												className="bg-blue-600 h-2 rounded-full transition-all duration-300"
 												style={{ width: `${project.progress}%` }}
 											></div>
@@ -236,7 +259,7 @@ export default function ResearchDevelopment() {
 									<Link
 										to={`/research/${pub.doi}`}
 										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-									>
+
 										Read Paper
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
@@ -265,7 +288,7 @@ export default function ResearchDevelopment() {
 							<Link
 								to="/contact"
 								className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-							>
+
 								Learn More
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
@@ -278,7 +301,7 @@ export default function ResearchDevelopment() {
 							<Link
 								to="/contact"
 								className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-							>
+
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
@@ -300,18 +323,28 @@ export default function ResearchDevelopment() {
 						<Link
 							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-						>
+
 							Contact Us
 						</Link>
 						<Link
 							to="/careers"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
-						>
+
 							Join Our Team <span aria-hidden="true">→</span>
+<<<<<<< HEAD
 						</Link>
 					</div>
 				</div>
 			</section>
 		</>
 	)
-}
+}}}}}}
+=======
+						</Link>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

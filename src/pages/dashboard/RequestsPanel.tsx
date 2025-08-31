@@ -1,22 +1,22 @@
+import React, { useState } from 'react.ts';
 
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
-  QuoteRequestsList 
-} from "@/components/quotes";
+import { useState  } from 'react.ts';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { useTalentQuotes  } from '@/hooks/useTalentQuotes';
+import { useAuth  } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
+import { RequestsHeader,
+  QuoteRequestsList
+ } from '@/components/quotes';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedRoute   } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel() {
+export default function RequestsPanel(...args[]: any):  {
   const { user } = useAuth();
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {
@@ -32,24 +32,34 @@ export default function RequestsPanel() {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+<<<<<<< HEAD
+  const handleViewDetails = (quote: anyQuoteRequest)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true);
-    
+
     // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
+<<<<<<< HEAD
+    if (quote.status = == 'new') {;
+      markAsViewed(quote.id)};
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+  const archivedQuotes = quotes.filter((q: anyQuoteRequest)   => q.is_archived);
+=======
+    if (quote.status = == 'new') {;
+      markAsViewed(quote.id);
+
+  };
+
+  // Filter quotes by archive status
+  const archivedQuotes = quotes.filter((q: anyQuoteRequest)  => q.is_archived);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <ProtectedRoute>
       <div>
-        
+
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
@@ -59,14 +69,14 @@ export default function RequestsPanel() {
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
             />
-            
+
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Requests</TabsTrigger>
                 <TabsTrigger value="archived">Archived</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="active">
                 <QuoteRequestsList
                   quotes={activeQuotes}
@@ -77,7 +87,7 @@ export default function RequestsPanel() {
                   onToggleArchive={toggleArchive}
                 />
               </TabsContent>
-              
+
               <TabsContent value="archived">
                 <QuoteRequestsList
                   quotes={archivedQuotes}
@@ -91,19 +101,24 @@ export default function RequestsPanel() {
             </Tabs>
           </div>
         </div>
-        
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-          }}
+            setSelectedQuote(null)}}
         />
-        
-        
+
+<<<<<<< HEAD
       </div>
     </ProtectedRoute>
   );
-}
+}}
+=======
+
+      </div>
+    </ProtectedRoute>
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

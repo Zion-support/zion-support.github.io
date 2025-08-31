@@ -5,7 +5,7 @@ import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
-    // useParams is typed as `any` in this environment due to missing type
+    // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { roomId } = useParams();
     const navigate = useNavigate();
@@ -27,9 +27,7 @@ export default function VideoCall() {
             setIsJoining(false);
             toast.success("Call joined", {
                 description: `You have joined meeting room ${roomId}`
-            });
-        }, 1500);
-    };
+            })}, 1500)};
     const handleLeaveCall = () => {
         setHasJoined(false);
         toast.info("Call ended", {
@@ -37,9 +35,7 @@ export default function VideoCall() {
         });
         // Navigate back after a short delay
         setTimeout(() => {
-            navigate(-1);
-        }, 1500);
-    };
+            router(-1)}, 1500)};
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -50,8 +46,7 @@ export default function VideoCall() {
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
-            toast(`${randomUser.name} joined the call`);
-        }
+            toast(`${randomUser.name} joined the call`)}
     };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
@@ -75,5 +70,4 @@ export default function VideoCall() {
           </div>)}
       </main>
       
-    </>);
-}
+    </>)}

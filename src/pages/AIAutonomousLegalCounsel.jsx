@@ -8,7 +8,7 @@ const AIAutonomousLegalCounsel = () => {
         <meta name="keywords" content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-legal-counsel"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousLegalCounsel = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Legal Intelligence</h3>
               <p className="text-gray-300">Advanced AI trained on vast legal databases</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Instant Access</h3>
               <p className="text-gray-300">Get legal advice whenever you need it</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">📚</div>
               <h3 className="text-xl font-semibold text-white mb-3">Comprehensive Knowledge</h3>
               <p className="text-gray-300">Access to laws, regulations, and precedents</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Confidentiality</h3>
               <p className="text-gray-300">Attorney-client privilege protection</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Cost Effective</h3>
               <p className="text-gray-300">Reduce legal consultation costs</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Updates</h3>
@@ -93,19 +93,19 @@ const AIAutonomousLegalCounsel = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Legal Question</h3>
                 <p className="text-gray-300">Describe your legal situation</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">AI Analysis</h3>
                 <p className="text-gray-300">AI processes legal information</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Legal Guidance</h3>
                 <p className="text-gray-300">Receive legal advice and options</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Next Steps</h3>
@@ -132,12 +132,12 @@ const AIAutonomousLegalCounsel = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Business Legal</h3>
                 <p className="text-gray-300">Contract review and business formation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Personal Legal</h3>
                 <p className="text-gray-300">Family law and personal matters</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Compliance</h3>
                 <p className="text-gray-300">Regulatory compliance and risk management</p>
@@ -149,7 +149,7 @@ const AIAutonomousLegalCounsel = () => {
           <div className="mb-16 text-center">
             <div className="bg-yellow-600/20 border border-yellow-600/40 rounded-xl p-6 max-w-4xl mx-auto">
               <p className="text-yellow-200 text-lg">
-                ⚠️ <strong>Important:</strong> This AI system provides legal information and guidance but is not a replacement for professional legal counsel. 
+                ⚠️ <strong>Important:</strong> This AI system provides legal information and guidance but is not a replacement for professional legal counsel.
                 Always consult with qualified attorneys for serious legal matters.
               </p>
             </div>
@@ -172,6 +172,5 @@ const AIAutonomousLegalCounsel = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousLegalCounsel;

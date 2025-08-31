@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
+import { Button } from "../ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
+import { Input } from "../ui/Input";
+import { Textarea } from "../ui/Textarea";
 import { DollarSign, MessageSquare } from 'lucide-react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -15,8 +15,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (onHire) {
-            onHire(formData);
-        }
+            onHire(formData)}
         // Reset form and close
         setFormData({
             projectDescription: '',
@@ -24,14 +23,12 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             startDate: '',
             message: ''
         });
-        setIsFormOpen(false);
-    };
+        setIsFormOpen(false)};
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }));
-    };
+        }))};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
@@ -92,5 +89,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             </div>
           </form>)}
       </CardContent>
-    </Card>);
-}
+    </Card>)}

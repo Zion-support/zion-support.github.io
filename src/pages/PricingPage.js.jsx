@@ -4,27 +4,28 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {
-    'AI Business Solutions': Brain,
+  'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
     'AI Development': Code,
     'FinTech': DollarSign,
     'HealthTech': Heart,
     'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
+  'EdTech': GraduationCap
+
+
 };
 const pricingFeatures = {
-    basic: [
+  basic[
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
         "Community documentation",
         "Email support"
     ],
-    professional: [
+    professional[
         "All Basic features",
         "Advanced analytics",
         "Priority support (12/7)",
@@ -33,7 +34,7 @@ const pricingFeatures = {
         "Dedicated account manager",
         "Training sessions"
     ],
-    enterprise: [
+    enterprise[
         "All Professional features",
         "Custom development",
         "24/7 dedicated support",
@@ -41,8 +42,10 @@ const pricingFeatures = {
         "SLA guarantees",
         "On-site training",
         "Custom contracts",
-        "Dedicated infrastructure"
+  "Dedicated infrastructure"
     ]
+
+
 };
 const comparisonFeatures = [
     "AI-Powered Automation",
@@ -65,8 +68,7 @@ export default function PricingPage() {
         ? MICRO_SAAS_SERVICES
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getDiscountedPrice = (price) => {
-        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price;
-    };
+        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price};
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
@@ -75,10 +77,10 @@ export default function PricingPage() {
             Transparent Pricing
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Choose the perfect plan for your business. All our micro SAAS services come with 
+            Choose the perfect plan for your business. All our micro SAAS services come with
             enterprise-grade features at startup-friendly prices.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
@@ -107,7 +109,7 @@ export default function PricingPage() {
               Start with Basic and scale up as your business grows. All plans include our core features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105 shadow-xl' : ''}`}>
                 {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -150,7 +152,7 @@ export default function PricingPage() {
               Explore our comprehensive range of micro SAAS solutions with transparent pricing
             </p>
           </div>
-          
+
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
@@ -159,10 +161,9 @@ export default function PricingPage() {
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>);
-        })}
+                  </TabsTrigger>)})}
             </TabsList>
-            
+
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -224,7 +225,7 @@ export default function PricingPage() {
               See how our plans stack up against each other and the competition
             </p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -265,7 +266,7 @@ export default function PricingPage() {
               We deliver enterprise-grade solutions with startup agility and proven results
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
             {
@@ -287,7 +288,7 @@ export default function PricingPage() {
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
-            }
+
         ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
@@ -314,7 +315,7 @@ export default function PricingPage() {
               Get in touch with our team to discuss your needs and find the perfect plan for your business
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
@@ -351,7 +352,7 @@ export default function PricingPage() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
               <div className="space-y-4">
@@ -371,7 +372,7 @@ export default function PricingPage() {
                   </Button>
                 </Link>
               </div>
-              
+
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
                 <h4 className="font-medium text-zion-blue mb-2">What's Included:</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
@@ -385,7 +386,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -396,5 +397,9 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD:src/pages/PricingPage.jsx
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/PricingPage.js.jsx

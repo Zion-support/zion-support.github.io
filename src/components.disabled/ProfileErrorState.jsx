@@ -1,8 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { Button } from '../ui/button';
+import { AlertCircle, RefreshCw export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry }) => {
+=======
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Button } from "../ui/button";
 import { AlertCircle, RefreshCw } from 'lucide-react';
 export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry }) => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="max-w-4xl mx-auto px-4 py-8">
       <Card>
         <CardHeader className="text-center">
@@ -21,13 +27,13 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
             <p className="text-sm text-gray-500">
               We're having trouble loading this profile. Please try again or contact support if the problem persists.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {onRetry && (<Button onClick={onRetry} className="flex items-center space-x-2">
                   <RefreshCw className="w-4 h-4"/>
                   <span>Try Again</span>
                 </Button>)}
-              
+
               <Button variant="outline" onClick={() => window.location.href = '/'}>
                 Go Home
               </Button>
@@ -35,5 +41,10 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     </div>);
-};
+</Card></Card>};
+}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

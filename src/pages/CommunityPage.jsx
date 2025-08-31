@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
@@ -20,10 +20,10 @@ const featuredPosts = [
         authorId: "user1",
         category: "ai-tools",
         categoryId: "ai-tools",
-        tags: ["machine-learning", "fine-tuning", "gpt"],
+        tags["machine-learning", "fine-tuning", "gpt"],
         createdAt: "2025-04-01T12:00:00Z",
         updatedAt: "2025-04-01T12:00:00Z",
-        replies: [],
+        replies[],
         likes: 48,
         views: 120,
         upvotes: 48,
@@ -49,10 +49,10 @@ const featuredPosts = [
         authorId: "user2",
         category: "getting-hired",
         categoryId: "getting-hired",
-        tags: ["profile", "tips", "hiring"],
+        tags["profile", "tips", "hiring"],
         createdAt: "2025-04-03T09:15:00Z",
         updatedAt: "2025-04-03T09:15:00Z",
-        replies: [],
+        replies[],
         likes: 32,
         views: 89,
         upvotes: 32,
@@ -64,7 +64,7 @@ const featuredPosts = [
         authorName: "Sarah Chen",
         authorAvatar: "https://i.pravatar.cc/150?img=5",
         authorRole: "Verified Talent"
-    }
+
 ];
 // Mock data for recent posts
 const recentPosts = [
@@ -81,10 +81,10 @@ const recentPosts = [
         authorId: "user3",
         category: "project-help",
         categoryId: "project-help",
-        tags: ["testing", "automation", "ci-cd"],
+        tags["testing", "automation", "ci-cd"],
         createdAt: "2025-04-10T14:30:00Z",
         updatedAt: "2025-04-10T14:30:00Z",
-        replies: [],
+        replies[],
         likes: 5,
         views: 45,
         upvotes: 5,
@@ -110,10 +110,10 @@ const recentPosts = [
         authorId: "user4",
         category: "feedback",
         categoryId: "feedback",
-        tags: ["feature-request", "teams", "collaboration"],
+        tags["feature-request", "teams", "collaboration"],
         createdAt: "2025-04-09T18:45:00Z",
         updatedAt: "2025-04-09T18:45:00Z",
-        replies: [],
+        replies[],
         likes: 12,
         views: 67,
         upvotes: 12,
@@ -139,10 +139,10 @@ const recentPosts = [
         authorId: "user5",
         category: "project-help",
         categoryId: "project-help",
-        tags: ["client-management", "scope", "projects"],
+        tags["client-management", "scope", "projects"],
         createdAt: "2025-04-08T10:20:00Z",
         updatedAt: "2025-04-08T10:20:00Z",
-        replies: [],
+        replies[],
         likes: 24,
         views: 89,
         upvotes: 24,
@@ -154,14 +154,14 @@ const recentPosts = [
         authorName: "David Lin",
         authorAvatar: "https://i.pravatar.cc/150?img=11",
         authorRole: "Freelancer"
-    }
+
 ];
 export default function CommunityPage() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("categories");
     return (<>
       <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
-      
+
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -170,27 +170,27 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
-          
+
           <CreatePostButton />
         </div>
-        
+
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
-          
+
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
             </div>
           </TabsContent>
-          
+
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
@@ -198,5 +198,9 @@ export default function CommunityPage() {
           </TabsContent>
         </Tabs>
       </div>
+<<<<<<< HEAD
     </>);
-}
+}}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

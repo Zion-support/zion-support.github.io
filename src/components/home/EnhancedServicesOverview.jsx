@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
+import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe // Mock data for enhanced services
+=======
+import { Button } from "../ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ENHANCED_SERVICES = [
     {
         id: "ai-1",
@@ -15,9 +23,9 @@ const ENHANCED_SERVICES = [
         availability: "immediate",
         rating: 4.9,
         price: 2999,
-        features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
-        benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
-        tags: ["AI", "Analytics", "Business Intelligence"],
+        features["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
+        benefits["Increased efficiency", "Better decision making", "Cost reduction"],
+        tags["AI", "Analytics", "Business Intelligence"],
         location: "Global"
     },
     {
@@ -29,9 +37,9 @@ const ENHANCED_SERVICES = [
         availability: "immediate",
         rating: 4.8,
         price: 1999,
-        features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
-        benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
-        tags: ["Security", "Compliance", "Enterprise"],
+        features["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
+        benefits["Enhanced security", "Compliance assurance", "Risk mitigation"],
+        tags["Security", "Compliance", "Enterprise"],
         location: "Global"
     },
     {
@@ -43,12 +51,14 @@ const ENHANCED_SERVICES = [
         availability: "within-week",
         rating: 4.7,
         price: 1499,
-        features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
-        benefits: ["Cost savings", "Improved performance", "Scalability"],
-        tags: ["Cloud", "DevOps", "Optimization"],
+        features["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
+        benefits["Cost savings", "Improved performance", "Scalability"],
+        tags["Cloud", "DevOps", "Optimization"],
         location: "Global"
-    }
+
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const EnhancedServicesOverview = () => {
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
@@ -64,16 +74,24 @@ const EnhancedServicesOverview = () => {
             case 'AR/VR & Metaverse': return <Eye className="w-6 h-6"/>;
             case 'Green Tech & Sustainability': return <Leaf className="w-6 h-6"/>;
             case 'FinTech & Digital Banking': return <DollarSign className="w-6 h-6"/>;
+<<<<<<< HEAD
             default: return <Zap className="w-6 h-6"/>;
-        }
+
+=======
+            default: return <Zap className="w-6 h-6"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getAvailabilityColor = (availability) => {
         switch (availability) {
             case 'immediate': return 'text-green-400';
             case 'within-week': return 'text-yellow-400';
             case 'within-month': return 'text-orange-400';
+<<<<<<< HEAD
             default: return 'text-gray-400';
-        }
+
+=======
+            default: return 'text-gray-400'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       <div className="container mx-auto px-4">
@@ -86,8 +104,8 @@ const EnhancedServicesOverview = () => {
             </span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our comprehensive suite of next-generation technology services. 
-            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions 
+            Transform your business with our comprehensive suite of next-generation technology services.
+            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions
             that drive real business results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -116,11 +134,11 @@ const EnhancedServicesOverview = () => {
                     {service.pricingModel}
                   </Badge>
                 </div>
-                
+
                 <CardTitle className="text-lg text-white mb-2 line-clamp-2">
                   {service.title}
                 </CardTitle>
-                
+
                 <CardDescription className="text-zion-slate-light line-clamp-2">
                   {service.description}
                 </CardDescription>
@@ -188,7 +206,7 @@ const EnhancedServicesOverview = () => {
               Comprehensive coverage across all major technology domains
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {ENHANCED_SERVICES.reduce((acc, service) => {
             if (!acc.find(cat => cat.category === service.category)) {
@@ -196,10 +214,15 @@ const EnhancedServicesOverview = () => {
                     category: service.category,
                     count: ENHANCED_SERVICES.filter(s => s.category === service.category).length,
                     icon: getCategoryIcon(service.category)
+<<<<<<< HEAD
                 });
-            }
+
             return acc;
         }, []).map((cat, index) => (<div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover:border-zion-purple/50 transition-colors">
+=======
+                })}
+            return acc}, []).map((cat, index) => (<div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover:border-zion-purple/50 transition-colors">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {cat.icon}
                 </div>
@@ -216,7 +239,7 @@ const EnhancedServicesOverview = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
-              Our team of technology experts is ready to help you implement cutting-edge solutions 
+              Our team of technology experts is ready to help you implement cutting-edge solutions
               that drive real business results. Contact us today for a free consultation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -246,6 +269,11 @@ const EnhancedServicesOverview = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-};
+</Card></Card></Card></Card>};
+=======
+    </section>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EnhancedServicesOverview;
+}}}}}

@@ -1,21 +1,32 @@
+<<<<<<< HEAD
 export class SitemapGenerator {
     config;
     constructor(config) {
         this.config = {
+<<<<<<< HEAD
             outputPath: './public/sitemap.xml',
             ...config
         };
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+
+=======
+  outputPath: './public/sitemap.xml',
+  ...config
+        
+
+};
     }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     /**
      * Generate XML sitemap content
      */
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const urlsetClose = '</urlset>';
-        const urlElements = urls.map(url => {
-            const urlElement = `<url>
+        const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
@@ -24,14 +35,12 @@ export class SitemapGenerator {
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
-    }
+
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
@@ -39,7 +48,7 @@ export class SitemapGenerator {
       </sitemap>`;
         }).join('');
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
-    }
+
     /**
      * Generate robots.txt content
      */
@@ -51,6 +60,7 @@ Allow: /
 # Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
 
+<<<<<<< HEAD
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
@@ -68,22 +78,24 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-    }
+
     /**
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON() {
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
-            baseUrl,
+  baseUrl,
             urls: urls.map(url => ({
                 ...url,
-                fullUrl: `${baseUrl}${url.url}`,
+  fullUrl: `${baseUrl
+
+}${url.url}`,
                 lastmod: url.lastmod || new Date().toISOString()
             }))
         };
         return JSON.stringify(jsonSitemap, null, 2);
-    }
+
     /**
      * Generate HTML sitemap for users
      */
@@ -114,7 +126,7 @@ Crawl-delay: 1`;
     <div class="container">
         <h1>Zion Tech Group - Sitemap</h1>
         <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>
-        
+
         <div class="sitemap-section">
             <h2>Main Pages</h2>
             <div class="sitemap-links">
@@ -125,9 +137,96 @@ Crawl-delay: 1`;
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
+=======
+  const generateSitemap = async () => {
+    setIsGenerating(true);
+    
+    // Simulate sitemap generation
+    setTimeout(() => {
+      const sitemap = {
+  pages: [
+          { url: '/', priority: '1.0',
+  changefreq: 'daily' 
+
+
+
+
+
+
+},
+          { url: '/services', priority: '0.9', changefreq: 'weekly' },
+          { url: '/about', priority: '0.8', changefreq: 'monthly' },
+          { url: '/contact', priority: '0.8', changefreq: 'monthly' },
+          { url: '/blog', priority: '0.7', changefreq: 'weekly' },
+          { url: '/pricing', priority: '0.8', changefreq: 'monthly' }
+        ],
+        services: [
+          { url: '/services/ai-solutions', priority: '0.8', changefreq: 'weekly' },
+          { url: '/services/cybersecurity', priority: '0.8', changefreq: 'weekly' },
+          { url: '/services/cloud-infrastructure', priority: '0.8', changefreq: 'weekly' },
+          { url: '/services/micro-saas', priority: '0.8', changefreq: 'weekly' }
+        ],
+        totalUrls: 10,
+        generatedAt: new Date().toISOString()
+      };
+      
+      setSitemapData(sitemap);
+      setIsGenerating(false);
+      
+      if (onGenerate) {
+        onGenerate(sitemap);
+      }
+    }, 2000);
+  };
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={generateSitemap}
+        disabled={isGenerating}
+        className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+      >
+        {isGenerating ? 'Generating...' : 'Generate Sitemap'}
+      </button>
+      
+      {sitemapData && (
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          className="space-y-4"
+        >
+          <div className="bg-indigo-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-2">Sitemap Generated Successfully!</h3>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <span className="font-medium">Total URLs:</span> {sitemapData.totalUrls}
+              </div>
+              <div>
+                <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()}
+              </div>
+<<<<<<< HEAD
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Services</h2>
             <div class="sitemap-links">
@@ -140,7 +239,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Solutions</h2>
             <div class="sitemap-links">
@@ -153,7 +252,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Other Pages</h2>
             <div class="sitemap-links">
@@ -166,7 +265,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <p><strong>Total Pages:</strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>
@@ -175,14 +274,17 @@ Crawl-delay: 1`;
 </body>
 </html>`;
         return html;
-    }
-}
+
+
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
-    baseUrl: 'https://ziontechgroup.com',
+  baseUrl: 'https://ziontechgroup.com',
     urls: [
         // Main pages
-        { url: '/', changefreq: 'daily', priority: 1.0 },
+        { url: '/', changefreq: 'daily',
+  priority: 1.0 
+
+},
         { url: '/about', changefreq: 'monthly', priority: 0.8 },
         { url: '/contact', changefreq: 'monthly', priority: 0.8 },
         { url: '/team', changefreq: 'monthly', priority: 0.7 },
@@ -221,8 +323,7 @@ export const defaultSitemapConfig = {
     ]
 };
 // Utility function to generate all sitemap files
-export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
-    const generator = new SitemapGenerator(config);
+export const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap
         const xmlSitemap = generator.generateXML();
@@ -238,10 +339,55 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
             html: htmlSitemap,
             json: jsonSitemap
         };
-    }
+
     catch (error) {
-        console.error('Error generating sitemaps:', error);
+<<<<<<< HEAD
+        // // // console.error('Error generating sitemaps:', error);
+=======
+        // // // // // // // console.error('Error generating sitemaps:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         throw error;
-    }
+
 };
+=======
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-medium mb-2">Main Pages:</h4>
+            <div className="space-y-1 text-sm">
+              {sitemapData.pages.map((page, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <span className="text-gray-700">{page.url}</span>
+                  <span className="text-gray-500">Priority: {page.priority}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-medium mb-2">Service Pages:</h4>
+            <div className="space-y-1 text-sm">
+              {sitemapData.services.map((service, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <span className="text-gray-700">{service.url}</span>
+                  <span className="text-gray-500">Priority: {service.priority}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default SitemapGenerator;
+<<<<<<< HEAD
+}}}}}}}}}
+=======
+
+export default to;
+export default to;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

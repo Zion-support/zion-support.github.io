@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useAnalytics } from "../hooks/useAnalytics";
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
@@ -16,29 +16,23 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (!showRealTime)
             return;
         const interval = setInterval(() => {
-            updateAnalyticsSummary();
-        }, refreshInterval);
-        return () => clearInterval(interval);
-    }, [showRealTime, refreshInterval]);
+            updateAnalyticsSummary()}, refreshInterval);
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary
     const updateAnalyticsSummary = () => {
         const summary = getAnalyticsSummary();
         if (summary) {
-            setAnalyticsSummary(summary);
-        }
+            setAnalyticsSummary(summary)}
     };
     // Update summary when events change
     useEffect(() => {
-        updateAnalyticsSummary();
-    }, [events, currentSession]);
+        updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata);
-    };
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
     // Track conversion goal
     const handleTrackConversion = () => {
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange });
-    };
+        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory)
@@ -46,8 +40,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category,
             count: count
-        }));
-    };
+        }))};
     // Get performance score
     const getPerformanceScore = () => {
         if (!performanceMetrics)
@@ -66,24 +59,21 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05)
             score -= 10;
-        return Math.max(0, score);
-    };
+        return Math.max(0, score)};
     // Format duration
     const formatDuration = (seconds) => {
         if (seconds < 60)
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`;
-    };
+        return `${minutes}m ${remainingSeconds}s`};
     // Format number with K/M suffix
     const formatNumber = (num) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)
             return `${(num / 1000).toFixed(1)}K`;
-        return num.toString();
-    };
+        return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">
@@ -100,10 +90,13 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             
             {/* Time Range Selector */}
-            <select value={selectedTimeRange} onChange={(e) => {
+            <select value={selectedTimeRange} onChange = {
+  (e) => {
             setSelectedTimeRange(e.target.value);
-            handleDashboardInteraction('time_range_changed', { timeRange: e.target.value });
-        }} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
+            handleDashboardInteraction('time_range_changed',
+  { timeRange: e.target.value 
+
+})}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
               <option value="1h">1 Hour</option>
               <option value="24h">24 Hours</option>
               <option value="7d">7 Days</option>
@@ -273,20 +266,17 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="flex gap-2">
           <button onClick={() => {
             handleDashboardInteraction('refresh_clicked');
-            updateAnalyticsSummary();
-        }} className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
+            updateAnalyticsSummary()}} className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
             <RefreshCw className="w-4 h-4"/>
             Refresh Data
           </button>
           
           <button onClick={() => {
             handleTrackConversion();
-            handleDashboardInteraction('conversion_tracked');
-        }} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
+            handleDashboardInteraction('conversion_tracked')}} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
             <Target className="w-4 h-4"/>
             Track Goal
           </button>
         </div>
       </div>
-    </div>);
-};
+    </div>)};

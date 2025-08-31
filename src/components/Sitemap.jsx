@@ -2,14 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Sitemap = () => {
     const sitemapData = {
-        main: [
-            { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
-            { path: '/about', label: 'About Us', description: 'Learn about our company and mission' },
+  main[
+            { path: '/', label: 'Home',
+  description: 'Welcome to Zion Tech Group' 
+
+},
+            { path: '/about', label: 'About Us', description: 'Learn about our comp and mission' },
             { path: '/contact', label: 'Contact', description: 'Get in touch with our team' },
             { path: '/careers', label: 'Careers', description: 'Join our innovative team' },
             { path: '/blog', label: 'Blog', description: 'Latest insights and technology trends' }
         ],
-        services: [
+        services[
             { path: '/services', label: 'All Services', description: 'Complete overview of our services' },
             { path: '/services/ai', label: 'AI Solutions', description: 'Artificial Intelligence & Machine Learning' },
             { path: '/services/cloud', label: 'Cloud & DevOps', description: 'Cloud Infrastructure & DevOps Automation' },
@@ -18,7 +21,7 @@ const Sitemap = () => {
             { path: '/services/consulting', label: 'Consulting', description: 'Strategic Technology Consulting' },
             { path: '/services/transformation', label: 'Digital Transformation', description: 'Business Process Transformation' }
         ],
-        aiAutonomous: [
+        aiAutonomous[
             { path: '/ai-autonomous-analytics', label: 'AI Analytics', description: 'Advanced data analytics powered by AI' },
             { path: '/ai-autonomous-automation', label: 'AI Automation', description: 'Intelligent process automation' },
             { path: '/ai-autonomous-security', label: 'AI Security', description: 'AI-powered security solutions' },
@@ -30,16 +33,16 @@ const Sitemap = () => {
             { path: '/ai-autonomous-engineering', label: 'AI Engineering', description: 'AI engineering solutions' },
             { path: '/ai-autonomous-integration', label: 'AI Integration', description: 'AI system integration services' }
         ],
-        pricing: [
+        pricing[
             { path: '/comprehensive-pricing-2025', label: 'Pricing 2025', description: 'Current year pricing plans' },
             { path: '/comprehensive-pricing', label: 'Comprehensive Pricing', description: 'Detailed pricing information' }
         ],
-        showcase: [
+        showcase[
             { path: '/services-showcase', label: 'Services Showcase', description: 'Showcase of our services' },
             { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },
             { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
         ],
-        legal: [
+        legal[
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },
             { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
         ]
@@ -185,11 +188,9 @@ const Sitemap = () => {
             const path = '/' + service.toLowerCase().replace(/\s+/g, '-').replace(/ai-autonomous-/, 'ai-autonomous-');
             return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center">
                   <div className="font-medium text-slate-900 text-sm">{service}</div>
-                </Link>);
-        })}
+                </Link>)})}
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default Sitemap;

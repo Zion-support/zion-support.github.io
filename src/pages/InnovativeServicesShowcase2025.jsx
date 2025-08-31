@@ -1,5 +1,5 @@
 import React from 'react';
-import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
+import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase";
 const InnovativeServicesShowcase2025 = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -278,6 +278,5 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesShowcase2025;

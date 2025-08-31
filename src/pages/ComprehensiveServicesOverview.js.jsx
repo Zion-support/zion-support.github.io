@@ -15,34 +15,8 @@ const ALL_SERVICES = [
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
-const categoryIcons = {
-    'AI & Legal Tech': FileText,
-    'AI & FinTech': DollarSign,
-    'AI & Healthcare': Heart,
-    'Cybersecurity & Quantum': Shield,
-    'AI & Supply Chain': Building,
-    'AI & Energy': Zap,
-    'AI & Customer Experience': Users,
-    'Quantum & AI': Cpu,
-    'AI & Data Governance': Database,
-    'AI & HR Tech': Users,
-    'AI & Machine Learning': Brain,
-    'AI & Business Intelligence': BarChart3,
-    'AI & Marketing Automation': Target,
-    'AI & CRM': Users,
-    'AI & ERP': Building,
-    'AI & Project Management': Code,
-    'AI & Autonomous Systems': Bot,
-    'AI & Research': Brain,
-    'AI & Content Generation': FileText,
-    'AI & Voice Technology': Smartphone,
-    'AI & Video Generation': Eye,
-    'AI & Threat Intelligence': Shield,
-    'AI & Cloud Management': Cloud,
-    'AI & DevOps': Code
-};
 const categoryColors = {
-    'AI & Legal Tech': 'from-blue-500 to-indigo-500',
+  'AI & Legal Tech': 'from-blue-500 to-indigo-500',
     'AI & FinTech': 'from-green-500 to-emerald-500',
     'AI & Healthcare': 'from-red-500 to-pink-500',
     'Cybersecurity & Quantum': 'from-purple-500 to-violet-500',
@@ -65,59 +39,55 @@ const categoryColors = {
     'AI & Video Generation': 'from-pink-500 to-rose-500',
     'AI & Threat Intelligence': 'from-red-500 to-pink-500',
     'AI & Cloud Management': 'from-blue-500 to-cyan-500',
-    'AI & DevOps': 'from-orange-500 to-red-500'
+  'AI & DevOps': 'from-orange-500 to-red-500'
+
+
 };
 const supportLevelColors = {
-    'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
+  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
-    'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+  'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+
+
 };
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
-    const filteredServices = useMemo(() => {
-        let filtered = ALL_SERVICES;
+    const filtered = ALL_SERVICES;
         // Search filter
         if (searchQuery) {
             const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
+                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+            filtered = filtered.filter(service => service.category === selectedCategory)}
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
                 case 'low':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000;
-                    });
+                        return price <= 1000});
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000;
-                    });
+                        return price > 1000 && price <= 3000});
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000;
-                    });
-                    break;
-            }
+                        return price > 3000});
+                    break}
         }
     });
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
-            return service.price;
-        }
+            return service.price}
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
@@ -244,7 +214,15 @@ export default function ComprehensiveServicesOverview() {
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>
               </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
+                {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: index * 0.05 }}>
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-4">
@@ -380,5 +358,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>)}

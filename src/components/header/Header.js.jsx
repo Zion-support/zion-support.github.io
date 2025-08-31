@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
+import { Logo } from "./Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
 import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
+import { MobileMenu } from "./MobileMenu";
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -27,7 +27,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         primaryColor,
         backgroundColor: '#000000', // Default dark background
         textColor: '#ffffff', // Default light text
-    } : undefined);
+    } : null);
     const headerStyle = effectiveTheme ? {
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
@@ -36,21 +36,17 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
+            setIsScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll)}, []);
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-            navigate(`/search?q=${encodeURIComponent(query)}`);
-            setQuery("");
-        }
+            router(`/search?q=${encodeURIComponent(query)}`);
+            setQuery("")}
     };
     const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+        setIsMobileMenuOpen(!isMobileMenuOpen)};
     return (<header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse" style={headerStyle}>
       {/* Animated background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
@@ -72,9 +68,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Desktop Search */}
         <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
           <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
-            setQuery("");
-        }} searchSuggestions={searchSuggestions}/>
+            router(`/search?q=${encodeURIComponent(text)}`);
+            setQuery("")}} searchSuggestions={searchSuggestions}/>
         </form>
 
       </></div>
@@ -115,9 +110,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
-            setQuery("");
-        }} searchSuggestions={searchSuggestions}/>
+            router(`/search?q=${encodeURIComponent(text)}`);
+            setQuery("")}} searchSuggestions={searchSuggestions}/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
               </div>
@@ -147,9 +141,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           <form onSubmit={handleSubmit}>
             <div className="relative">
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(text) => {
-            navigate(`/search?q=${encodeURIComponent(text)}`);
-            setQuery("");
-        }} searchSuggestions={searchSuggestions} placeholder="Search services, talent, equipment..."/>
+            router(`/search?q=${encodeURIComponent(text)}`);
+            setQuery("")}} searchSuggestions={searchSuggestions} placeholder="Search services, talent, equipment..."/>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
               </div>
@@ -240,5 +233,4 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>header>
-    </>);
-}
+    </>)}

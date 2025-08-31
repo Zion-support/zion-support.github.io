@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { ShieldAlert } from "lucide-react";
-export default function Unauthorized() {
+import { ShieldAlert export default function Unauthorized() {
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">
         <div className="bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light">
           <div className="flex justify-center mb-6">
@@ -24,6 +23,11 @@ export default function Unauthorized() {
           </div>
         </div>
       </div>
-      
+<<<<<<< HEAD
+
     </>);
-}
+}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

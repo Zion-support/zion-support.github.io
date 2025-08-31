@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
-const highlights = [
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award const highlights = [
     {
         icon: Brain,
         title: 'AI-Powered Intelligence',
@@ -28,7 +27,7 @@ const highlights = [
         color: 'from-zion-blue to-zion-blue-dark',
         bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'
-    }
+
 ];
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
@@ -47,11 +46,15 @@ export function FeatureHighlights() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { opacity: 0, y: 30, scale: 0.95 },
+        hidden: { 
+            opacity: 0, 
+            y: 30,
+            scale: 0.95 
+        },
         visible: {
             opacity: 1,
             y: 0,
@@ -59,24 +62,30 @@ export function FeatureHighlights() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const achievementVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
+        hidden: { 
+            opacity: 0,
+            scale: 0.8 
+        },
         visible: {
             opacity: 1,
             scale: 1,
             transition: { duration: 0.5 }
-        }
+
     };
     const techVariants = {
-        hidden: { opacity: 0, x: -20 },
+        hidden: { 
+            opacity: 0,
+            x: -20 
+        },
         visible: {
             opacity: 1,
             x: 0,
             transition: { duration: 0.5 }
-        }
+
     };
     return (<section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
       {/* Background decorative elements */}
@@ -87,7 +96,25 @@ export function FeatureHighlights() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Why Industry Leaders
             <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
@@ -101,15 +128,23 @@ export function FeatureHighlights() {
 
         {/* Feature Highlights Grid */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover={{
+          {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover = {
+  {
                 y: -10,
                 scale: 1.02,
-                transition: { duration: 0.3 }
+  transition: { duration: 0.3 
+
+
+
+
+
+
+}
             }} className="group">
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
+
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -120,7 +155,7 @@ export function FeatureHighlights() {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
@@ -138,7 +173,25 @@ export function FeatureHighlights() {
         </motion.div>
 
         {/* Achievements Section */}
-        <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Proven Track Record
@@ -160,19 +213,73 @@ export function FeatureHighlights() {
         </motion.div>
 
         {/* Technology Stack */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h3 className="text-3xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
+
           <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {technologies.map((tech, index) => (<motion.div key={index} variants={techVariants} className="px-6 py-3 bg-zion-blue/20 border border-zion-blue-light/30 rounded-full text-zion-cyan hover:bg-zion-blue/30 hover:border-zion-blue-light/50 transition-all duration-300 cursor-pointer" whileHover={{ scale: 1.05, y: -2 }}>
+            {technologies.map((tech, index) => (<motion.div key={index} variants={techVariants} className="px-6 py-3 bg-zion-blue/20 border border-zion-blue-light/30 rounded-full text-zion-cyan hover:bg-zion-blue/30 hover:border-zion-blue-light/50 transition-all duration-300 cursor-pointer" whileHover = {
+  { scale: 1.05,
+  y: -2 
+
+
+
+
+
+
+}}>
                 {tech}
               </motion.div>))}
           </motion.div>
 
           {/* CTA */}
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: 0.3 
+
+
+
+
+
+
+}}>
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-10 py-4 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Explore Our Technology
               <ArrowRight className="w-6 h-6"/>
@@ -180,5 +287,9 @@ export function FeatureHighlights() {
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+}}}}}}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

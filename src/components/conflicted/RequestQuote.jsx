@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
-export default function RequestQuote() {
+import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export default function RequestQuote() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         projectType: '',
         budget: '',
         timeline: '',
@@ -56,8 +55,7 @@ export default function RequestQuote() {
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmissionStatus('submitting');
@@ -71,23 +69,38 @@ export default function RequestQuote() {
                     lastName: '',
                     email: '',
                     phone: '',
-                    company: '',
+                    comp: '',
                     projectType: '',
                     budget: '',
                     timeline: '',
                     description: '',
                     urgency: 'medium'
                 });
-                setSubmissionStatus('idle');
-            }, 3000);
-        }, 2000);
-    };
+                setSubmissionStatus('idle')}, 3000)}, 2000)};
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">
               <Calculator className="w-10 h-10 text-white"/>
             </div>
@@ -95,21 +108,102 @@ export default function RequestQuote() {
               Request a Quote
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Get a personalized quote for your project. Our team will analyze your requirements 
+              Get a personalized quote for your project. Our team will analyze your requirements
               and provide a detailed estimate within 24 hours.
             </p>
-            
+
             {/* Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="flex items-center justify-center space-x-3 text-white/80">
+              <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
                 <Clock className="w-5 h-5 text-cyan-400"/>
                 <span>24-Hour Response</span>
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="flex items-center justify-center space-x-3 text-white/80">
+              <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
                 <CheckCircle className="w-5 h-5 text-green-400"/>
                 <span>Free Consultation</span>
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-3 text-white/80">
+              <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}} className="flex items-center justify-center space-x-3 text-white/80">
                 <Calculator className="w-5 h-5 text-purple-400"/>
                 <span>Detailed Estimate</span>
               </motion.div>
@@ -124,9 +218,27 @@ export default function RequestQuote() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <motion.div initial = {
+  { opacity: 0,
+  x: -30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -153,7 +265,7 @@ export default function RequestQuote() {
 
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your company name"/>
+                    <input type="text" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"/>
                   </div>
 
                   {/* Project Type */}
@@ -218,7 +330,7 @@ export default function RequestQuote() {
                   {/* Project Description */}
                   <div>
                     <label className="block text-white font-medium mb-2">Project Description *</label>
-                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and any specific features you need..."/>
+                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and  specific features you need..."/>
                   </div>
 
                   {/* Submit Button */}
@@ -238,14 +350,50 @@ export default function RequestQuote() {
                   </button>
 
                   {/* Status Messages */}
-                  {submissionStatus === 'success' && (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                  {submissionStatus === 'success' && (<motion.div initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
                       <span className="text-green-400">
                         Thank you! We've received your quote request and will respond within 24 hours.
                       </span>
                     </motion.div>)}
 
-                  {submissionStatus === 'error' && (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                  {submissionStatus === 'error' && (<motion.div initial = {
+  { opacity: 0,
+  y: 10 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>
                       <span className="text-red-400">
                         Something went wrong. Please try again or contact us directly.
@@ -258,7 +406,25 @@ export default function RequestQuote() {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Contact Information */}
-              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <motion.div initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
                 <div className="space-y-4">
                   <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">
@@ -277,7 +443,34 @@ export default function RequestQuote() {
               </motion.div>
 
               {/* Why Choose Us */}
-              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <motion.div initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -312,7 +505,34 @@ export default function RequestQuote() {
               </motion.div>
 
               {/* Process */}
-              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <motion.div initial = {
+  { opacity: 0,
+  x: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -349,5 +569,9 @@ export default function RequestQuote() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

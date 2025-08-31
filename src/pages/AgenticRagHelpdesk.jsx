@@ -1,58 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-export default function AgenticRagHelpdesk() {
+import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle export default function AgenticRagHelpdesk() {
     const features = [
         {
             icon: Brain,
             title: 'Intelligent Knowledge Retrieval',
             description: 'AI-powered retrieval of relevant information from your knowledge base',
-            benefits: ['Context-aware responses', 'Multi-source information synthesis', 'Real-time learning']
+            benefits['Context-aware responses', 'Multi-source information synthesis', 'Real-time learning']
         },
         {
             icon: MessageCircle,
             title: 'Natural Language Processing',
             description: 'Understand and respond to customer queries in natural language',
-            benefits: ['Human-like conversations', 'Multi-language support', 'Sentiment analysis']
+            benefits['Human-like conversations', 'Multi-language support', 'Sentiment analysis']
         },
         {
             icon: Zap,
             title: 'Instant Response Generation',
             description: 'Generate accurate and helpful responses in real-time',
-            benefits: ['24/7 availability', 'Consistent quality', 'Scalable support']
+            benefits['24/7 availability', 'Consistent quality', 'Scalable support']
         },
         {
             icon: Shield,
             title: 'Secure & Compliant',
             description: 'Enterprise-grade security with compliance features',
+<<<<<<< HEAD
             benefits: ['Data encryption', 'Access controls', 'Audit trails']
+
+=======
+            benefits['Data encryption', 'Access controls', 'Audit trails']
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
             title: 'Customer Support',
             description: 'Provide instant, accurate responses to customer inquiries',
             icon: Users,
-            benefits: ['Reduced response time', 'Improved customer satisfaction', 'Lower support costs']
+            benefits['Reduced response time', 'Improved customer satisfaction', 'Lower support costs']
         },
         {
             title: 'Internal Knowledge Management',
             description: 'Help employees find information quickly and efficiently',
             icon: Brain,
-            benefits: ['Faster problem resolution', 'Knowledge retention', 'Training support']
+            benefits['Faster problem resolution', 'Knowledge retention', 'Training support']
         },
         {
             title: 'Sales Support',
             description: 'Assist sales teams with product information and customer queries',
             icon: BarChart3,
-            benefits: ['Increased conversion rates', 'Better customer engagement', 'Sales enablement']
+            benefits['Increased conversion rates', 'Better customer engagement', 'Sales enablement']
         },
         {
             title: 'Technical Documentation',
             description: 'Provide technical support and documentation assistance',
             icon: Globe,
+<<<<<<< HEAD
             benefits: ['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
+
+=======
+            benefits['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
@@ -64,16 +73,16 @@ export default function AgenticRagHelpdesk() {
               AI-Powered Support
             </div>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Agentic RAG Helpdesk
           </h1>
-          
+
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-            Transform your customer support with our intelligent, AI-powered helpdesk that combines 
+            Transform your customer support with our intelligent, AI-powered helpdesk that combines
             Retrieval-Augmented Generation (RAG) with autonomous agents for exceptional customer experiences.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold transition-colors duration-200">
               Get Started
@@ -97,7 +106,7 @@ export default function AgenticRagHelpdesk() {
               Our agentic RAG helpdesk combines the power of AI with intelligent knowledge retrieval
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -127,7 +136,7 @@ export default function AgenticRagHelpdesk() {
               Versatile AI helpdesk solutions for various business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
                 <div className="flex items-center mb-4">
@@ -159,7 +168,7 @@ export default function AgenticRagHelpdesk() {
               A sophisticated process that combines AI intelligence with knowledge retrieval
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-500/30">
@@ -168,7 +177,7 @@ export default function AgenticRagHelpdesk() {
               <h3 className="text-lg font-semibold text-white mb-2">Query Understanding</h3>
               <p className="text-slate-400 text-sm">AI analyzes customer query and identifies intent</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-500/30">
                 <span className="text-2xl font-bold text-green-400">2</span>
@@ -176,7 +185,7 @@ export default function AgenticRagHelpdesk() {
               <h3 className="text-lg font-semibold text-white mb-2">Knowledge Retrieval</h3>
               <p className="text-slate-400 text-sm">RAG system searches relevant knowledge sources</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-500/30">
                 <span className="text-2xl font-bold text-green-400">3</span>
@@ -184,7 +193,7 @@ export default function AgenticRagHelpdesk() {
               <h3 className="text-lg font-semibold text-white mb-2">Response Generation</h3>
               <p className="text-slate-400 text-sm">AI generates contextual, accurate responses</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-500/30">
                 <span className="text-2xl font-bold text-green-400">4</span>
@@ -207,33 +216,33 @@ export default function AgenticRagHelpdesk() {
               Proven benefits that transform customer support operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">24/7 Availability</h3>
               <p className="text-slate-400">Provide instant support around the clock without increasing staff costs.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">Scalable Support</h3>
               <p className="text-slate-400">Handle unlimited customer queries simultaneously without quality degradation.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">Consistent Quality</h3>
               <p className="text-slate-400">Deliver uniform, high-quality responses across all customer interactions.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">Cost Reduction</h3>
               <p className="text-slate-400">Significantly reduce support costs while improving customer satisfaction.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">Faster Resolution</h3>
               <p className="text-slate-400">Resolve customer issues in seconds instead of hours or days.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-semibold text-white mb-3">Data Insights</h3>
               <p className="text-slate-400">Gain valuable insights into customer needs and support patterns.</p>
@@ -249,7 +258,7 @@ export default function AgenticRagHelpdesk() {
             Ready to Revolutionize Your Customer Support?
           </h2>
           <p className="text-xl text-slate-400 mb-8">
-            Join forward-thinking companies that use our agentic RAG helpdesk to deliver 
+            Join forward-thinking companies that use our agentic RAG helpdesk to deliver
             exceptional customer experiences while reducing support costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -263,5 +272,9 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

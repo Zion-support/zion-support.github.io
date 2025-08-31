@@ -17,10 +17,8 @@ export const PerformanceOptimizer = ({ children }) => {
             criticalFonts.as = 'font';
             criticalFonts.href = '/fonts/inter-var.woff2';
             criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts);
-        };
-        preloadCriticalResources();
-    }, []);
+            document.head.appendChild(criticalFonts)};
+        preloadCriticalResources()}, []);
     // Optimize images on route change
     useEffect(() => {
         const optimizeImages = () => {
@@ -28,23 +26,17 @@ export const PerformanceOptimizer = ({ children }) => {
             images.forEach((img) => {
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
-                    img.loading = 'lazy';
-                }
+                    img.loading = 'lazy'}
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
                 // Add error handling
                 img.onerror = () => {
-                    img.style.display = 'none';
-                };
-            });
-        };
+                    img.style.display = 'none'}})};
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
-            requestIdleCallback(optimizeImages);
-        }
+            requestIdleCallback(optimizeImages)}
         else {
-            setTimeout(optimizeImages, 100);
-        }
+            setTimeout(optimizeImages, 100)}
     }, [location.pathname]);
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
@@ -54,26 +46,21 @@ export const PerformanceOptimizer = ({ children }) => {
         if (!window.scrollTimeout) {
             window.scrollTimeout = setTimeout(() => {
                 // Handle scroll-based optimizations here
-                window.scrollTimeout = null;
-            }, 16); // ~60fps
+                window.scrollTimeout = null}, 16); // ~60fps
         }
     }, []);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
+        return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
+                console.log('SW registered: ', registration)})
                 .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        }
+                console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
@@ -85,38 +72,32 @@ export const PerformanceOptimizer = ({ children }) => {
                         if (target.dataset.src) {
                             target.src = target.dataset.src;
                             target.removeAttribute('data-src');
-                            observer.unobserve(target);
-                        }
+                            observer.unobserve(target)}
                     }
-                });
-            }, {
+                })}, {
                 rootMargin: '50px',
                 threshold: 0.1,
             });
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
-            return () => observer.disconnect();
-        }
+            return () => observer.disconnect()}
     }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
+    return <>{optimizedChildren}</>};
 // Add global performance optimizations
-if (typeof window !== 'undefined') {
+if (typeof window !== 'null') {
     // Optimize long tasks
     if ('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time
-        }, { priority: 'background' });
-    }
+        }, { priority: 'background' })}
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
         if (performance.memory.usedJSHeapSize > memoryThreshold) {
             // Trigger garbage collection if available
             if ('gc' in window) {
-                window.gc();
-            }
+                window.gc()}
         }
     }
 }

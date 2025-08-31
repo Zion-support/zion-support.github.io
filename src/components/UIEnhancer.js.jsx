@@ -10,64 +10,50 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const detectDevice = () => {
             const width = window.innerWidth;
             if (width < 768) {
-                setDeviceType('mobile');
-            }
+                setDeviceType('mobile')}
             else if (width < 1024) {
-                setDeviceType('tablet');
-            }
+                setDeviceType('tablet')}
             else {
-                setDeviceType('desktop');
-            }
+                setDeviceType('desktop')}
         };
         detectDevice();
         window.addEventListener('resize', detectDevice);
         // Load saved theme
         const savedTheme = localStorage.getItem('ui-theme');
         if (savedTheme) {
-            setTheme(savedTheme);
-        }
+            setTheme(savedTheme)}
         // Apply theme
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
-            setShowScrollToTop(window.scrollY > 300);
-        };
+            setShowScrollToTop(window.scrollY > 300)};
         if (enableScrollEffects) {
-            window.addEventListener('scroll', handleScroll);
-        }
+            window.addEventListener('scroll', handleScroll)}
         return () => {
             window.removeEventListener('resize', detectDevice);
             if (enableScrollEffects) {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        };
-    }, [enableScrollEffects]);
+                window.removeEventListener('scroll', handleScroll)}
+        }}, [enableScrollEffects]);
     const applyTheme = (newTheme) => {
         const root = document.documentElement;
         if (newTheme === 'auto') {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
-            root.classList.toggle('light', !prefersDark);
-        }
+            root.classList.toggle('light', !prefersDark)}
         else {
             root.classList.remove('light', 'dark');
-            root.classList.add(newTheme);
-        }
-        localStorage.setItem('ui-theme', newTheme);
-    };
+            root.classList.add(newTheme)}
+        localStorage.setItem('ui-theme', newTheme)};
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme);
-        applyTheme(newTheme);
-    };
+        applyTheme(newTheme)};
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        });
-    };
+        })};
     const toggleParticleMode = () => {
-        setIsParticleMode(!isParticleMode);
-    };
+        setIsParticleMode(!isParticleMode)};
     return (<>
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">
@@ -90,14 +76,34 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </motion.button>
 
           {/* Device Indicator */}
-          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>
             {deviceType === 'mobile' ? '📱' : deviceType === 'tablet' ? '📱' : '💻'}
           </motion.div>
         </div>)}
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
-        {showScrollToTop && enableScrollEffects && (<motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={scrollToTop} className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110" title="Scroll to top">
+        {showScrollToTop && enableScrollEffects && (<motion.button initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} onClick={scrollToTop} className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110" title="Scroll to top">
             <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
             </svg>
@@ -107,19 +113,29 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       {/* Particle Background */}
       {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400/30 rounded-full" initial={{
+            {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400/30 rounded-full" initial = {
+  {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-                    scale: 0
-                }} animate={{
+  scale: 0
+                
+
+}} animate = {
+  {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-                    scale: [0, 1, 0]
-                }} transition={{
+                    scale[0, 1,
+  0]
+                
+
+}} transition = {
+  {
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
-                    ease: "linear"
-                }}/>))}
+  ease: "linear"
+                
+
+}}/>))}
           </div>
         </div>)}
 
@@ -136,7 +152,15 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       </motion.button>
 
       {/* UI Enhancement Panel */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="fixed top-4 right-20 z-40 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dark:border-slate-700/50">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} className="fixed top-4 right-20 z-40 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dark:border-slate-700/50">
         <div className="flex items-center space-x-3 text-sm text-white">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -147,6 +171,5 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </div>
         </div>
       </motion.div>
-    </>);
-};
+    </>)};
 export default UIEnhancer;

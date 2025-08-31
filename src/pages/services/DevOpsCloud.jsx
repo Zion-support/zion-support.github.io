@@ -1,8 +1,12 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Check, Cloud, Zap, Shield, Database, Users, Target, Server export default function DevOpsCloudServices() {
+=======
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
 export default function DevOpsCloudServices() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const devopsServices = [
         {
             icon: Cloud,
@@ -129,7 +133,7 @@ export default function DevOpsCloudServices() {
                 'Better user experience',
                 'Data-driven optimization'
             ]
-        }
+
     ];
     const cloudProviders = [
         {
@@ -155,7 +159,7 @@ export default function DevOpsCloudServices() {
             services: 'Cross-platform orchestration, hybrid solutions',
             strengths: 'Vendor independence, best-of-breed',
             pricing: 'Optimized for each workload'
-        }
+
     ];
     const industries = [
         'Financial Services & Banking',
@@ -209,7 +213,7 @@ export default function DevOpsCloudServices() {
             description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
             roi: '35-55% faster delivery',
             implementation: '12-20 weeks'
-        }
+
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
@@ -222,7 +226,7 @@ export default function DevOpsCloudServices() {
             DevOps & Cloud Services
           </h1>
           <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed">
-            Accelerate your software delivery with modern DevOps practices and cloud-native solutions. 
+            Accelerate your software delivery with modern DevOps practices and cloud-native solutions.
             From migration to automation, we help you build faster, more reliable applications.
           </p>
         </div>
@@ -234,7 +238,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our DevOps & Cloud Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end DevOps and cloud solutions that help businesses modernize their software delivery 
+              End-to-end DevOps and cloud solutions that help businesses modernize their software delivery
               processes and infrastructure for better performance and efficiency.
             </p>
           </div>
@@ -336,10 +340,10 @@ export default function DevOpsCloudServices() {
                 Why Choose Our DevOps Services?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our DevOps expertise combined with cloud-native technologies enables us to deliver 
+                Our DevOps expertise combined with cloud-native technologies enables us to deliver
                 solutions that provide real business value and competitive advantage.
               </p>
-              
+
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
                     <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"/>
@@ -351,7 +355,7 @@ export default function DevOpsCloudServices() {
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free DevOps Assessment</h3>
               <p className="text-gray-600 mb-6">
-                Discover how DevOps can transform your business with our comprehensive 
+                Discover how DevOps can transform your business with our comprehensive
                 DevOps maturity assessment and strategy session.
               </p>
               <div className="space-y-3 mb-6">
@@ -378,7 +382,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our DevOps and cloud solutions are tailored to meet the unique challenges and opportunities 
+              Our DevOps and cloud solutions are tailored to meet the unique challenges and opportunities
               across diverse industry sectors.
             </p>
           </div>
@@ -400,7 +404,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">DevOps Technologies We Use</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge DevOps and cloud technologies to build robust, scalable, 
+              We leverage cutting-edge DevOps and cloud technologies to build robust, scalable,
               and innovative solutions for our clients.
             </p>
           </div>
@@ -494,7 +498,7 @@ export default function DevOpsCloudServices() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our DevOps experts help you build faster, more reliable applications 
+            Let our DevOps experts help you build faster, more reliable applications
             with modern cloud-native practices and automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -508,4 +512,4 @@ export default function DevOpsCloudServices() {
         </div>
       </section>
     </div>);
-}
+}}}}}

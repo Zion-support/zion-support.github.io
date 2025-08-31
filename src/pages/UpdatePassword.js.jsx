@@ -21,7 +21,7 @@ const updatePasswordSchema = z
 })
     .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
+    path["confirmPassword"],
 });
 export default function UpdatePassword() {
     const [isLoading, setIsLoading] = useState(false);
@@ -43,20 +43,16 @@ export default function UpdatePassword() {
         const hashParams = new URLSearchParams(location.hash.substring(1));
         const token = hashParams.get("access_token");
         if (token) {
-            setAccessToken(token);
-        }
+            setAccessToken(token)}
         else {
-            setError("No access token found. Please request a new password reset link.");
-        }
+            setError("No access token found. Please request a new password reset link.")}
         // Clean up auth state to prevent issues
-        cleanupAuthState();
-    }, [location]);
+        cleanupAuthState()}, [location]);
     // Form submission handler
     const onSubmit = async (data) => {
         if (!accessToken) {
             setError("No access token found. Please request a new password reset link.");
-            return;
-        }
+            return}
         setIsLoading(true);
         try {
             // Set the session with the access token
@@ -75,8 +71,7 @@ export default function UpdatePassword() {
                     variant: "destructive",
                 });
                 setError(error.message);
-                return;
-            }
+                return}
             // Show success message and clean up auth state
             setSuccess(true);
             toast({
@@ -86,9 +81,7 @@ export default function UpdatePassword() {
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
-                navigate("/login");
-            }, 3000);
-        }
+                router("/login")}, 3000)}
         catch (error) {
             console.error("Password update error:", error);
             toast({
@@ -96,17 +89,14 @@ export default function UpdatePassword() {
                 description: error.message || "An unexpected error occurred",
                 variant: "destructive",
             });
-            setError(error.message || "An unexpected error occurred");
-        }
+            setError(error.message || "An unexpected error occurred")}
         finally {
-            setIsLoading(false);
-        }
+            setIsLoading(false)}
     };
     const onInvalid = (errors) => {
         const firstError = Object.keys(errors)[0];
         if (firstError) {
-            form.setFocus(firstError);
-        }
+            form.setFocus(firstError)}
     };
     return (<>
       
@@ -125,7 +115,7 @@ export default function UpdatePassword() {
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-                  <Button className="mt-3 text-xs" variant="outline" onClick={() => navigate('/forgot-password')}>
+                  <Button className="mt-3 text-xs" variant="outline" onClick={() => router('/forgot-password')}>
                     Request new reset link
                   </Button>
                 </div>)}
@@ -142,7 +132,11 @@ export default function UpdatePassword() {
                     Redirecting you to login...
                   </p>
                 </div>) : (<Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
+                  <form onSubmit = {
+  form.handleSubmit(onSubmit,
+  onInvalid)
+
+} className="space-y-6">
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
@@ -164,7 +158,7 @@ export default function UpdatePassword() {
                     </Button>
 
                     <div className="text-center">
-                      <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => navigate("/login")} type="button">
+                      <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => router("/login")} type="button">
                         Back to login
                       </Button>
                     </div>
@@ -187,5 +181,4 @@ export default function UpdatePassword() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

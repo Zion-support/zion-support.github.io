@@ -1,18 +1,29 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default function AdminDashboard() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Admin Dashboard",
         "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
-        "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-    };
+  "url": "https://app.ziontechgroup.com/features/admin-dashboard"
+    
+
+
+
+
+
+
+};
     return (<>
       <SEO title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -50,5 +61,9 @@ export default function AdminDashboard() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

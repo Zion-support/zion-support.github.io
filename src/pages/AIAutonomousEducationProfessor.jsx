@@ -8,7 +8,7 @@ const AIAutonomousEducationProfessor = () => {
         <meta name="keywords" content="AI education, autonomous professor, AI tutoring, personalized learning, adaptive curriculum, AI teaching"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-education-professor"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -41,7 +41,7 @@ const AIAutonomousEducationProfessor = () => {
             <div className="text-center">
               <div className="text-6xl mb-4">🌍</div>
               <h3 className="text-xl font-semibold text-white mb-2">Global Access</h3>
-              <p className="text-gray-300">Learn from anywhere, anytime</p>
+              <p className="text-gray-300">Learn from where, time</p>
             </div>
           </div>
 
@@ -52,31 +52,31 @@ const AIAutonomousEducationProfessor = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Intelligence</h3>
               <p className="text-gray-300">AI that learns your learning patterns and adjusts accordingly</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">📝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Dynamic Content</h3>
               <p className="text-gray-300">Real-time content generation and customization</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold text-white mb-3">Multi-Modal Learning</h3>
               <p className="text-gray-300">Text, audio, video, and interactive content</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Assessment</h3>
               <p className="text-gray-300">AI-powered testing and evaluation</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative Learning</h3>
               <p className="text-gray-300">Group projects and peer interaction</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
@@ -93,19 +93,19 @@ const AIAutonomousEducationProfessor = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Assessment</h3>
                 <p className="text-gray-300">Evaluate current knowledge and skills</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Customization</h3>
                 <p className="text-gray-300">Create personalized learning path</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Learning</h3>
                 <p className="text-gray-300">Interactive lessons and exercises</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Evaluation</h3>
@@ -132,12 +132,12 @@ const AIAutonomousEducationProfessor = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">K-12 Education</h3>
                 <p className="text-gray-300">Supplemental learning and homework help</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Higher Education</h3>
                 <p className="text-gray-300">University courses and degree programs</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Professional Development</h3>
                 <p className="text-gray-300">Skills training and certification</p>
@@ -162,6 +162,5 @@ const AIAutonomousEducationProfessor = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousEducationProfessor;

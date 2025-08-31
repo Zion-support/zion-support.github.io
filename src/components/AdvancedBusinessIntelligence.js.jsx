@@ -1,105 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-const mockMetrics = [
-    {
-        id: 'revenue',
-        name: 'Monthly Revenue',
-        value: 2847500,
-        target: 3000000,
-        unit: 'USD',
-        trend: 'up',
-        change: 8.5,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'customers',
-        name: 'Active Customers',
-        value: 15420,
-        target: 15000,
-        unit: 'Users',
-        trend: 'up',
-        change: 12.3,
-        category: 'Customer',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'satisfaction',
-        name: 'Customer Satisfaction',
-        value: 94.2,
-        target: 90,
-        unit: '%',
-        trend: 'up',
-        change: 2.1,
-        category: 'Customer',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'efficiency',
-        name: 'Operational Efficiency',
-        value: 87.5,
-        target: 85,
-        unit: '%',
-        trend: 'up',
-        change: 1.8,
-        category: 'Operations',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'costs',
-        name: 'Operating Costs',
-        value: 1250000,
-        target: 1200000,
-        unit: 'USD',
-        trend: 'down',
-        change: -3.2,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
-];
-const mockInsights = [
-    {
-        id: 'insight-1',
-        type: 'prediction',
-        title: 'Revenue Growth Prediction',
-        description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
-        confidence: 87,
-        impact: 'high',
-        category: 'Financial',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        actionable: true,
-        actions: ['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
-    },
-    {
-        id: 'insight-2',
-        type: 'anomaly',
-        title: 'Customer Churn Anomaly',
-        description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
-        confidence: 92,
-        impact: 'high',
-        category: 'Customer',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        actionable: true,
-        actions: ['Investigate customer feedback', 'Review product updates', 'Enhance support response']
-    },
-    {
-        id: 'insight-3',
-        type: 'opportunity',
-        title: 'Market Expansion Opportunity',
-        description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
-        confidence: 78,
-        impact: 'medium',
-        category: 'Growth',
-        timestamp: '2024-01-15T08:45:00.000Z',
-        actionable: true,
-        actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-    }
-];
 const mockModels = [
     {
         id: 'model-1',
@@ -142,7 +42,6 @@ export function AdvancedBusinessIntelligence() {
     const [insights, setInsights] = useState(mockInsights);
     const [models, setModels] = useState(mockModels);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
     const timeRanges = [
         { value: '7d', label: '7 Days' },
@@ -157,13 +56,11 @@ export function AdvancedBusinessIntelligence() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-            return () => clearInterval(interval);
-        }
+            return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -172,8 +69,7 @@ export function AdvancedBusinessIntelligence() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+                return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -182,8 +78,7 @@ export function AdvancedBusinessIntelligence() {
             case 'medium':
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:
-                return 'border-green-500 bg-green-50 dark:bg-green-900/20';
-        }
+                return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
     };
     const getInsightIcon = (type) => {
         switch (type) {
@@ -196,8 +91,7 @@ export function AdvancedBusinessIntelligence() {
             case 'risk':
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:
-                return <Zap className="w-5 h-5 text-purple-500"/>;
-        }
+                return <Zap className="w-5 h-5 text-purple-500"/>}
     };
     const formatValue = (value, unit) => {
         if (unit === 'USD') {
@@ -206,18 +100,14 @@ export function AdvancedBusinessIntelligence() {
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
-            }).format(value);
-        }
+            }).format(value)}
         if (unit === '%') {
-            return `${value.toFixed(1)}%`;
-        }
-        return new Intl.NumberFormat('en-US').format(value);
-    };
+            return `${value.toFixed(1)}%`}
+        return new Intl.NumberFormat('en-US').format(value)};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
         <Brain className="w-6 h-6"/>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -227,8 +117,7 @@ export function AdvancedBusinessIntelligence() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -301,8 +190,7 @@ export function AdvancedBusinessIntelligence() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -352,8 +240,7 @@ export function AdvancedBusinessIntelligence() {
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">
                       <Icon className="w-4 h-4 mx-auto mb-2"/>
                       {item.label}
-                    </button>);
-            })}
+                    </button>)})}
               </div>
             </div>
           </div>)}
@@ -431,5 +318,4 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

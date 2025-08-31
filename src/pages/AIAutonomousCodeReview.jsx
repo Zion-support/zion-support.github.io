@@ -8,7 +8,7 @@ const AIAutonomousCodeReview = () => {
         <meta name="keywords" content="AI code review, autonomous code review, code quality, software development, AI development tools"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousCodeReview = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Analysis</h3>
               <p className="text-gray-300">Advanced AI algorithms that understand code context and intent</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🐛</div>
               <h3 className="text-xl font-semibold text-white mb-3">Bug Detection</h3>
               <p className="text-gray-300">Automatically identify potential bugs, security vulnerabilities, and performance issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Code Quality</h3>
               <p className="text-gray-300">Ensure consistent coding standards and best practices across your team</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Security Scanning</h3>
               <p className="text-gray-300">Detect security vulnerabilities and compliance issues automatically</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Analysis</h3>
               <p className="text-gray-300">Identify performance bottlenecks and optimization opportunities</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
@@ -93,13 +93,13 @@ const AIAutonomousCodeReview = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Code Submission</h3>
                 <p className="text-gray-300">Submit your code through our platform or integrate with your existing CI/CD pipeline</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">AI Analysis</h3>
                 <p className="text-gray-300">Our AI system analyzes your code for quality, security, and performance issues</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Detailed Report</h3>
@@ -135,6 +135,5 @@ const AIAutonomousCodeReview = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousCodeReview;

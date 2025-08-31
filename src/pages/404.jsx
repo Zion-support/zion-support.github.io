@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap } from 'lucide-react';
-const NotFoundPage = () => {
+import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage = () => {
     const popularServices = [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Transform your business with AI' },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
@@ -25,7 +24,7 @@ const NotFoundPage = () => {
             Page Not Found
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            The page you're looking for doesn't exist or has been moved. 
+            The page you're looking for doesn't exist or has been moved.
             Let us help you find what you need.
           </p>
         </div>
@@ -89,6 +88,6 @@ const NotFoundPage = () => {
           </p>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default NotFoundPage;
+}

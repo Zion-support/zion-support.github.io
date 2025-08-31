@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from "lucide-react";
-export function RolePicker({ onSelect }) {
+import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
     const handleSelect = (role) => {
         setSelectedRole(role);
-        onSelect(role);
-    };
+        onSelect(role)};
     return (<div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
@@ -48,5 +46,9 @@ export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

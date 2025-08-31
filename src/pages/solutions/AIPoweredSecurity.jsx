@@ -1,6 +1,6 @@
 import React from 'react';
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
-const AIPoweredSecurity = () => {
+<<<<<<< HEAD
+import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud const AIPoweredSecurity = () => {
     const securityFeatures = [
         {
             icon: Brain,
@@ -25,8 +25,12 @@ const AIPoweredSecurity = () => {
             title: "Access Control",
             description: "Intelligent authentication and authorization systems",
             features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
-        }
+
     ];
+=======
+import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+const AIPoweredSecurity = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const securitySolutions = [
         {
             title: "Network Security",
@@ -63,7 +67,7 @@ const AIPoweredSecurity = () => {
             description: "Automated incident detection and response",
             icon: AlertTriangle,
             capabilities: ["Threat hunting", "Automated response", "Forensic analysis", "Recovery planning"]
-        }
+
     ];
     const benefits = [
         "Proactive threat detection and prevention",
@@ -103,7 +107,7 @@ const AIPoweredSecurity = () => {
             phase: "Monitoring & Optimization",
             description: "Continuous monitoring and system optimization",
             duration: "Ongoing"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -119,7 +123,7 @@ const AIPoweredSecurity = () => {
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Security</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your organization with intelligent, AI-driven security 
+              Protect your organization with intelligent, AI-driven security
               that adapts and evolves to counter emerging threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,11 +146,11 @@ const AIPoweredSecurity = () => {
               AI Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered security solution provides intelligent, adaptive 
+              Our AI-powered security solution provides intelligent, adaptive
               protection against evolving cyber threats.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -173,11 +177,11 @@ const AIPoweredSecurity = () => {
               Security Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive AI-powered security solutions covering all aspects 
+              Comprehensive AI-powered security solutions covering all aspects
               of your organization's security needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securitySolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -205,7 +209,7 @@ const AIPoweredSecurity = () => {
                 Why Choose AI-Powered Security?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI security solution provides intelligent, adaptive protection 
+                Our AI security solution provides intelligent, adaptive protection
                 that continuously learns and improves.
               </p>
               <ul className="space-y-3">
@@ -220,7 +224,7 @@ const AIPoweredSecurity = () => {
                 <Lightbulb className="w-24 h-24 text-red-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Intelligent Defense</h3>
                 <p className="text-gray-300 mb-6">
-                  AI-powered security that learns from every threat and adapts 
+                  AI-powered security that learns from every threat and adapts
                   to protect against new attack vectors.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -241,10 +245,10 @@ const AIPoweredSecurity = () => {
             Implementation Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A structured approach to deploying AI-powered security across 
+            A structured approach to deploying AI-powered security across
             your organization with minimal disruption.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -265,7 +269,7 @@ const AIPoweredSecurity = () => {
             Ready to Secure Your Organization?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Protect your business with intelligent, AI-driven security 
+            Protect your business with intelligent, AI-driven security
             that adapts to evolving threats.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -281,3 +285,4 @@ const AIPoweredSecurity = () => {
     </div>);
 };
 export default AIPoweredSecurity;
+}}}}

@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "API & Integrations",
         "description": "Connect Zion with Slack, your website and other tools via our API and widgets.",
-        "url": "https://app.ziontechgroup.com/features/integrations"
-    };
+  "url": "https://app.ziontechgroup.com/features/integrations"
+    
+
+
+
+
+
+
+};
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
-        markSlackConnected();
-    }, [markSlackConnected]);
+        markSlackConnected()}, [markSlackConnected]);
     return (<>
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -55,5 +65,9 @@ export default function IntegrationsFeature() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

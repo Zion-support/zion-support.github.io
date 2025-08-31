@@ -1,7 +1,23 @@
-import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface PostCardProps extends React.PropsWithChildren<{}> {
 
-interface PostCardProps {
-  post: {
+post: {;
+=======
+import React from 'react.ts';
+
+interface PostCardProps extends React.PropsWithChildren<{
+}> {
+
+post: {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+
+interface PostCardProps extends React.PropsWithChildren<{}> {
+
+post: {;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     id: string;
     title: string;
     content: string;
@@ -10,16 +26,28 @@ interface PostCardProps {
     likes: number;
     replies: number;
     views: number;
-    author: {
+<<<<<<< HEAD
+author: {
+=======
+author: {;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       name: string;
+<<<<<<< HEAD
       avatar: string;
-    };
+    
+};
   };
-}
+=======
+      avatar: string}}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function PostCard({ post }: PostCardProps) {
+<<<<<<< HEAD
+export default function PostCard(...args[]: any):  {
+=======
+export default function PostCard(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
+    <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">
         <img
           src={post.author?.avatar || '/default-avatar.png'}
@@ -33,7 +61,7 @@ export default function PostCard({ post }: PostCardProps) {
           <p className="text-zion-slate-light mb-3 line-clamp-3 leading-relaxed">
             {post.content}
           </p>
-          
+
           <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
@@ -41,7 +69,7 @@ export default function PostCard({ post }: PostCardProps) {
             </span>
             <span>{new Date(post.createdAt).toLocaleDateString()}</span>
           </div>
-          
+
           <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-zion-purple rounded-full"></span>
@@ -54,10 +82,23 @@ export default function PostCard({ post }: PostCardProps) {
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-zion-green rounded-full"></span>
               {post.views} views
+<<<<<<< HEAD
             </span>
           </div>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </span>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
+}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

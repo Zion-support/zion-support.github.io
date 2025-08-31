@@ -1,18 +1,29 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default function Ecommerce() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "E-commerce Platform",
         "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-        "url": "https://app.ziontechgroup.com/features/e-commerce"
-    };
+  "url": "https://app.ziontechgroup.com/features/e-commerce"
+    
+
+
+
+
+
+
+};
     return (<>
       <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -50,5 +61,9 @@ export default function Ecommerce() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

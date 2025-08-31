@@ -43,31 +43,19 @@ const EnhancedHero = () => {
             return;
         const interval = setInterval(() => {
             if (isPlaying) {
-                setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-            }
+                setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
         }, 5000);
-        return () => clearInterval(interval);
-    }, [isPlaying, isAutoPlaying, heroSlides.length]);
+        return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    };
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length)};
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    };
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
     const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
-    const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
-    };
-    const toggleMute = () => {
-        setIsMuted(!isMuted);
-    };
+        setCurrentSlide(index)};
     const toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
-            setIsPlaying(true);
-        }
+            setIsPlaying(true)}
     };
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}
@@ -79,32 +67,112 @@ const EnhancedHero = () => {
       <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
-            <motion.div key={currentSlide} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5 }} className="space-y-6">
+            <motion.div key={currentSlide} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} transition={{ duration: 0.5 }} className="space-y-6">
               {/* Icon */}
-              <motion.div initial={{ scale: 0, rotate: -180 }} animate={{ scale: 1, rotate: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-8xl mb-6">
+              <motion.div initial = {
+  { scale: 0,
+  rotate: -180 
+
+}} animate = {
+  { scale: 1,
+  rotate: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+}} className="text-8xl mb-6">
                 {heroSlides[currentSlide].icon}
               </motion.div>
 
               {/* Title */}
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+              <motion.h1 initial = {
+  { opacity: 0,
+  y: 30 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+}} className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                 {heroSlides[currentSlide].title}
               </motion.h1>
 
               {/* Subtitle */}
-              <motion.h2 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
+              <motion.h2 initial = {
+  { opacity: 0,
+  y: 30 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+}} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
                 {heroSlides[currentSlide].subtitle}
               </motion.h2>
 
               {/* Description */}
-              <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <motion.p initial = {
+  { opacity: 0,
+  y: 30 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+}} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 {heroSlides[currentSlide].description}
               </motion.p>
 
               {/* CTA Button */}
-              <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="pt-6">
+              <motion.div initial = {
+  { opacity: 0,
+  y: 30 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+}} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
-                  <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="ml-2">
+                  <motion.div animate = {
+  { x[0, 5,
+  0] 
+
+}} transition = {
+  { duration: 1.5,
+  repeat: Infinity 
+
+}} className="ml-2">
                     →
                   </motion.div>
                 </a>
@@ -160,6 +228,5 @@ const EnhancedHero = () => {
           <p>Use ← → keys or click to navigate</p>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default EnhancedHero;

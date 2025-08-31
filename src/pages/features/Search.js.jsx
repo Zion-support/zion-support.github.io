@@ -7,12 +7,14 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Advanced Search",
         "description": "Quickly locate products, services and talent using intelligent search filters.",
-        "url": "https://app.ziontechgroup.com/features/search"
-    };
+  "url": "https://app.ziontechgroup.com/features/search"
+    
+
+};
     return (<>
       <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -50,5 +52,4 @@ export default function SearchFeature() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

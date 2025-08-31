@@ -22,12 +22,10 @@ export default function AccountSettings() {
                 const parsed = JSON.parse(saved);
                 setDisplayWeb3(!!parsed.displayWeb3);
                 setDidHandle(parsed.didHandle || '');
-                setEnableBackup(!!parsed.enableBackup);
-            }
+                setEnableBackup(!!parsed.enableBackup)}
         }
         catch (e) {
-            console.error('Error loading account settings', e);
-        }
+            console.error('Error loading account settings', e)}
     }, []);
     const handleSave = () => {
         setIsSubmitting(true);
@@ -36,50 +34,40 @@ export default function AccountSettings() {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
                 console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
-                toast.success('Account settings updated successfully');
-            }
+                toast.success('Account settings updated successfully')}
             catch (e) {
                 console.error('Failed to save settings', e);
-                toast.error('Failed to save settings');
-            }
+                toast.error('Failed to save settings')}
             finally {
-                setIsSubmitting(false);
-            }
-        }, 1000);
-    };
+                setIsSubmitting(false)}
+        }, 1000)};
     const handleConnectWallet = async () => {
         try {
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-                return;
-            }
+                return}
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
-                params: [address, message]
+                params[address, message]
             });
             // Auto-set DID handle if ENS is available
             try {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
                 const ensName = await provider.lookupAddress(address);
                 if (ensName) {
-                    setDidHandle(ensName);
-                }
+                    setDidHandle(ensName)}
             }
             catch (error) {
-                console.error('ENS lookup error:', error);
-            }
-            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-        }
+                console.error('ENS lookup error:', error)}
+            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)}
         catch (error) {
-            toast.error(error.message || 'Failed to connect wallet');
-        }
+            toast.error(error.message || 'Failed to connect wallet')}
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
@@ -104,69 +92,7 @@ export default function AccountSettings() {
                 <div className="flex gap-2">
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
-                    <Wallet className="h-4 w-4"/>
-                    Connect
-                  </Button>
-                </div>
-                <p className="text-xs text-gray-500 mt-1">
-                  Link your decentralized identity to display on your profile
-                </p>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
-                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
-                </div>
-                <Switch id="displayWeb3" checked={displayWeb3} onCheckedChange={setDisplayWeb3}/>
-              </div>
-              
-              <Separator />
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="backup" className="flex items-center gap-1">
-                    <Database className="h-4 w-4"/>
-                    Decentralized Backup
-                  </Label>
-                  <p className="text-xs text-gray-500">
-                    Backup your profile data to IPFS/Arweave
-                  </p>
-                </div>
-                <Switch id="backup" checked={enableBackup} onCheckedChange={setEnableBackup}/>
-              </div>
-              
-              {enableBackup && (<div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
-                  Data will be backed up to decentralized storage. This feature is in beta.
-                </div>)}
-              
-              <Button onClick={handleSave} disabled={isSubmitting} className="w-full">
-                {isSubmitting ? 'Saving...' : 'Save Settings'}
-                {!isSubmitting && <Save className="ml-2 h-4 w-4"/>}
-              </Button>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>Manage your Web3 connections and features</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <h3 className="font-medium">Connected Wallet</h3>
-                {didHandle ? (<div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <span>{didHandle}</span>
-                  </div>) : (<div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                    <span>No wallet connected</span>
+                    <Wallet connected</span>
                   </div>)}
               </div>
               
@@ -216,5 +142,4 @@ export default function AccountSettings() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}

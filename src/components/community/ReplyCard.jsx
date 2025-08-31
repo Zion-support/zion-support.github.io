@@ -1,4 +1,3 @@
-import React from 'react';
 export default function ReplyCard({ reply, className = '', onMarkAnswer, canMarkAnswer }) {
     return (<div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>
       <div className="flex items-start space-x-3">
@@ -23,5 +22,9 @@ export default function ReplyCard({ reply, className = '', onMarkAnswer, canMark
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 }
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

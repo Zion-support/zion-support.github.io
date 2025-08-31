@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe } from 'lucide-react';
-
-const News = () => {
+import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   const categories = [
     'All',
-    'Company News',
+    'Comp News',
     'Product Updates',
     'Industry Insights',
     'Awards & Recognition',
@@ -18,7 +16,7 @@ const News = () => {
 
   const sources = [
     'All Sources',
-    'Company Press Releases',
+    'Comp Press Releases',
     'Industry Reports',
     'Technology News',
     'Research Papers',
@@ -40,7 +38,7 @@ const News = () => {
       id: 1,
       title: "Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform",
       category: "Product Updates",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2025-01-15",
       readTime: "5 min read",
       excerpt: "Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.",
@@ -62,7 +60,7 @@ const News = () => {
       id: 3,
       title: "Strategic Partnership Announced with Leading Cloud Infrastructure Provider",
       category: "Partnerships",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2024-12-10",
       readTime: "4 min read",
       excerpt: "New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.",
@@ -90,15 +88,12 @@ const News = () => {
       excerpt: "Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.",
       image: "/images/news/market-trends.jpg",
       featured: false
-    }
+
   ];
 
   const filteredNews = newsItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -131,13 +126,13 @@ const News = () => {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex flex-wrap gap-3">
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -241,7 +236,7 @@ const News = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default News;
+}}

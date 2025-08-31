@@ -1,16 +1,20 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { Download, Settings import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+=======
 import { Download, Settings } from "lucide-react";
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+import { useCompWorkspace } from "@/hooks/useCompWorkspace";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AdminHeader() {
     // const { user } = useAuth(); // Unused but available
-    const { company } = useCompanyWorkspace();
+    const { comp } = useCompWorkspace();
     return (<div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
           <p className="text-muted-foreground mt-1">
-            Manage your company's account, team members, and subscription
+            Manage your comp's account, team members, and subscription
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -24,7 +28,7 @@ export function AdminHeader() {
           </Button>
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
@@ -39,14 +43,14 @@ export function AdminHeader() {
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>
       </div>
-      
+
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
-            <img loading="lazy" src={company?.logoUrl || "/placeholder.svg"} alt={company?.name || "Company"} className="max-h-10 max-w-10"/>
+            <img loading="lazy" src={company?.logoUrl || "/placeholder.svg"} alt={company?.name || "Comp"} className="max-h-10 max-w-10"/>
           </div>
           <div>
-            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+            <h2 className="font-medium">{company?.name || "Comp Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>
@@ -54,5 +58,9 @@ export function AdminHeader() {
         </div>
         <Button>Customize Workspace</Button>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp export default function HealthcareSolutions() {
+=======
 import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function HealthcareSolutions() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const solutions = [
         {
             icon: Heart,
@@ -38,7 +42,7 @@ export default function HealthcareSolutions() {
             title: "Operational Efficiency",
             description: "Streamlined healthcare operations and resource management",
             features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
-        }
+
     ];
     const benefits = [
         "Improved patient outcomes and care quality",
@@ -62,7 +66,7 @@ export default function HealthcareSolutions() {
             challenge: "Long wait times and resource allocation inefficiencies",
             solution: "AI-driven triage system and resource optimization platform",
             results: "30% reduction in wait times, 35% improvement in resource utilization"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -85,7 +89,7 @@ export default function HealthcareSolutions() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
@@ -212,4 +216,4 @@ export default function HealthcareSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

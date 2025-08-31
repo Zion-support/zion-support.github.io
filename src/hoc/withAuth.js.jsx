@@ -7,14 +7,13 @@ function withAuth(Component) {
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
         useEffect(() => {
             if (!isLoggedIn) {
-                router.push('/login?next=/community/new');
-            }
+                router.push('/login?next=/community/new')}
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
-            return null;
-        }
-        return <Component {...props}/>;
-    };
-    return Wrapped;
-}
+            return null}
+        return <Component {...props}/>};
+    return Wrapped}
+export default withAuth;
+
+export default withAuth;
 export default withAuth;

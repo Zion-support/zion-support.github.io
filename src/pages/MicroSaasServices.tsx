@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const MicroSaasServices: React.FC = () => {
+import React from 'react.ts';
+import { Helmet   } from 'react-helmet-async.ts';
+const MicroSaasServices: React.FC = (): JSX.Element => {
 	return (
 <>
 			<Helmet>
@@ -21,11 +21,20 @@ const MicroSaasServices: React.FC = () => {
 					<div className="bg-white rounded-lg shadow-lg p-8">
 						<p className="text-gray-600 text-center">
 							Micro SaaS services page coming soon. We're building focused, scalable solutions.
+<<<<<<< HEAD
 						</p>
 					</div>
 				</div>
-			</div>
-</>
+			</div>;
+</>;
+	)};
+=======
+						</p>;
+					</div>;
+				</div>;
+			</div>;
+</>;
 	);
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default MicroSaasServices;

@@ -21,7 +21,11 @@ export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, r
             <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
-                <Badge variant="outline" className={cn("ml-2 border-zion-purple/50 text-zion-cyan", profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")}>
+                <Badge variant="outline" className = {
+  cn("ml-2 border-zion-purple/50 text-zion-cyan",
+  profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")
+
+}>
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
@@ -45,5 +49,4 @@ export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, r
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

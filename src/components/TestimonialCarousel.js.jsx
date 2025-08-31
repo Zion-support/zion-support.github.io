@@ -6,7 +6,7 @@ const testimonials = [
         id: 1,
         name: 'Sarah Johnson',
         role: 'CTO at TechCorp',
-        company: 'TechCorp Inc.',
+        comp: 'TechCorp Inc.',
         content: 'Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We\'ve reduced our hiring time by 60% while improving candidate quality.',
         avatar: '/avatars/sarah.jpg',
         rating: 5,
@@ -17,7 +17,7 @@ const testimonials = [
         id: 2,
         name: 'Michael Chen',
         role: 'AI Engineer',
-        company: 'Freelance',
+        comp: 'Freelance',
         content: 'As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I\'ve doubled my income since joining the platform.',
         avatar: '/avatars/michael.jpg',
         rating: 5,
@@ -28,7 +28,7 @@ const testimonials = [
         id: 3,
         name: 'Dr. Emily Rodriguez',
         role: 'Research Director',
-        company: 'InnovateLab',
+        comp: 'InnovateLab',
         content: 'The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!',
         avatar: '/avatars/emily.jpg',
         rating: 5,
@@ -39,8 +39,8 @@ const testimonials = [
         id: 4,
         name: 'David Kim',
         role: 'Startup Founder',
-        company: 'DataFlow',
-        content: 'Starting a tech company is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.',
+        comp: 'DataFlow',
+        content: 'Starting a tech comp is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.',
         avatar: '/avatars/david.jpg',
         rating: 5,
         category: 'Startup',
@@ -50,7 +50,7 @@ const testimonials = [
         id: 5,
         name: 'Lisa Thompson',
         role: 'IT Manager',
-        company: 'Global Retail Co.',
+        comp: 'Global Retail Co.',
         content: 'Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.',
         avatar: '/avatars/lisa.jpg',
         rating: 5,
@@ -61,7 +61,7 @@ const testimonials = [
         id: 6,
         name: 'Alex Patel',
         role: 'DevOps Engineer',
-        company: 'CloudScale',
+        comp: 'CloudScale',
         content: 'The infrastructure solutions from Zion Tech Group are world-class. We\'ve achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.',
         avatar: '/avatars/alex.jpg',
         rating: 5,
@@ -75,38 +75,16 @@ export function TestimonialCarousel() {
     useEffect(() => {
         const timer = setInterval(() => {
             setDirection(1);
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
-    const slideVariants = {
-        enter: (direction) => ({
-            x: direction > 0 ? 1000 : -1000,
-            opacity: 0
-        }),
-        center: {
-            zIndex: 1,
-            x: 0,
-            opacity: 1
-        },
-        exit: (direction) => ({
-            zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
-            opacity: 0
-        })
-    };
-    const swipeConfidenceThreshold = 10000;
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 5000);
+        return () => clearInterval(timer)}, []);
     const swipePower = (offset, velocity) => {
-        return Math.abs(offset) * velocity;
-    };
+        return Math.abs(offset) * velocity};
     const paginate = (newDirection) => {
         setDirection(newDirection);
-        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length)};
     const goToSlide = (index) => {
         setDirection(index > currentIndex ? 1 : -1);
-        setCurrentIndex(index);
-    };
+        setCurrentIndex(index)};
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
@@ -117,7 +95,15 @@ export function TestimonialCarousel() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Users Say</span>
           </h2>
@@ -129,17 +115,27 @@ export function TestimonialCarousel() {
         {/* Testimonial Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence initial={false} custom={direction}>
-            <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition = {
+  {
+            x: { type: "spring", stiffness: 300,
+  damping: 30 
+
+},
             opacity: { duration: 0.2 }
-        }} drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={1} onDragEnd={(e, { offset, velocity }) => {
+        }} drag="x" dragConstraints = {
+  { left: 0,
+  right: 0 
+
+}} dragElastic={1} onDragEnd = {
+  (e, { offset,
+  velocity 
+
+}) => {
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
-                paginate(1);
-            }
+                paginate(1)}
             else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1);
-            }
+                paginate(-1)}
         }} className="absolute w-full">
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-blue-light/30 shadow-2xl">
                 <div className="text-center">
@@ -169,7 +165,7 @@ export function TestimonialCarousel() {
                           {testimonials[currentIndex].name}
                         </div>
                         <div className="text-zion-slate-light">
-                          {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
+                          {testimonials[currentIndex].role} at {testimonials[currentIndex].comp}
                         </div>
                       </div>
                     </div>
@@ -208,7 +204,19 @@ export function TestimonialCarousel() {
         </div>
 
         {/* Stats section */}
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+}}>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
             <div className="text-zion-slate-light text-sm">Satisfaction Rate</div>
@@ -227,5 +235,4 @@ export function TestimonialCarousel() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

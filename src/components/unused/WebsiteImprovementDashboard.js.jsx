@@ -14,8 +14,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [seoAnalysis, setSeoAnalysis] = useState({
         score: 0,
-        issues: [],
-        suggestions: [],
+        issues[],
+        suggestions[],
         metaTags: {
             title: false,
             description: false,
@@ -27,7 +27,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
-        issues: [],
+        issues[],
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0
@@ -40,29 +40,31 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {
-            loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
+  loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
             cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1
-            firstInputDelay: Math.random() * 100 + 50, // 50-150ms
+            firstInputDelay: Math.random() * 100 + 50,
+  // 50-150ms
             timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
-        };
+        
+
+};
         setMetrics(mockMetrics);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Analyze SEO
     const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis
         const mockSEO = {
-            score: Math.floor(Math.random() * 40) + 60, // 60-100
-            issues: [
+  score: Math.floor(Math.random() * 40) + 60, // 60-100
+            issues[
                 'Missing meta description on some pages',
                 'Some images lack alt text',
                 'Heading structure could be improved'
             ],
-            suggestions: [
+            suggestions[
                 'Add structured data markup',
                 'Optimize page titles for better CTR',
                 'Improve internal linking structure'
@@ -73,59 +75,57 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 keywords: Math.random() > 0.5,
                 canonical: true,
                 ogTags: Math.random() > 0.2,
-                twitterTags: Math.random() > 0.4
-            }
+  twitterTags: Math.random() > 0.4
+            
+
+}
         };
         setSeoAnalysis(mockSEO);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Analyze accessibility
     const analyzeAccessibility = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1800));
         // Mock accessibility analysis
         const mockAccessibility = {
-            score: Math.floor(Math.random() * 30) + 70, // 70-100
-            issues: [
+  score: Math.floor(Math.random() * 30) + 70, // 70-100
+            issues[
                 'Some form controls lack proper labels',
                 'Color contrast could be improved',
                 'Keyboard navigation needs enhancement'
             ],
             wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant',
             criticalIssues: Math.floor(Math.random() * 3),
-            warnings: Math.floor(Math.random() * 5) + 1
-        };
+  warnings: Math.floor(Math.random() * 5) + 1
+        
+
+};
         setAccessibilityReport(mockAccessibility);
-        setIsAnalyzing(false);
-    }, []);
+        setIsAnalyzing(false)}, []);
     // Run comprehensive analysis
     const runFullAnalysis = useCallback(async () => {
         await Promise.all([
             analyzePerformance(),
             analyzeSEO(),
             analyzeAccessibility()
-        ]);
-    }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
+        ])}, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
     // Get performance grade
     const getPerformanceGrade = (metric, thresholds) => {
         if (metric <= thresholds.good)
             return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
         if (metric <= thresholds.needsImprovement)
             return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
-        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
-    };
+        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' }};
     // Get trend indicator
     const getTrendIndicator = (value, previousValue) => {
         if (value < previousValue)
             return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
         if (value > previousValue)
             return { icon: ArrowDownIcon, color: 'text-red-600', text: 'Declining' };
-        return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' };
-    };
+        return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' }};
     useEffect(() => {
         if (showOnLoad) {
-            runFullAnalysis();
-        }
+            runFullAnalysis()}
     }, [showOnLoad, runFullAnalysis]);
     return (<>
       {/* Dashboard Toggle Button */}
@@ -135,7 +135,19 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
       {/* Dashboard Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0,
+  x: -400 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} exit = {
+  { opacity: 0,
+  x: -400 
+
+}} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
               <div className="flex items-center gap-2">
@@ -281,8 +293,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                           <div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>
                             {grade.grade}
                           </div>
-                        </div>);
-                })}
+                        </div>)})}
                   </div>
                 </div>)}
 
@@ -466,6 +477,5 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </>)};
 export default WebsiteImprovementDashboard;

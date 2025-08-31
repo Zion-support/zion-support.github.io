@@ -8,7 +8,7 @@ const AIAutonomousWriting = () => {
         <meta name="keywords" content="AI writing, autonomous writing, AI content creation, AI article generation, AI writing platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-writing"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousWriting = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Writing Intelligence</h3>
               <p className="text-gray-300">AI trained on vast writing databases</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold text-white mb-3">Creative Writing</h3>
               <p className="text-gray-300">Generate creative and engaging content</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Content Analytics</h3>
               <p className="text-gray-300">Track content performance and engagement</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-semibold text-white mb-3">Multi-Format Support</h3>
               <p className="text-gray-300">Blogs, articles, reports, and more</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
               <p className="text-gray-300">AI that improves with every piece of content</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Multi-Language</h3>
@@ -93,25 +93,25 @@ const AIAutonomousWriting = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Research</h3>
                 <p className="text-gray-300 text-sm">Gather relevant information</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Outline</h3>
                 <p className="text-gray-300 text-sm">Create content structure</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Write</h3>
                 <p className="text-gray-300 text-sm">Generate compelling content</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Edit</h3>
                 <p className="text-gray-300 text-sm">Refine and optimize content</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Publish</h3>
@@ -138,12 +138,12 @@ const AIAutonomousWriting = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Content Marketing</h3>
                 <p className="text-gray-300">Blog and article creation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Business Writing</h3>
                 <p className="text-gray-300">Reports and documentation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Creative Writing</h3>
                 <p className="text-gray-300">Stories and creative content</p>
@@ -168,6 +168,5 @@ const AIAutonomousWriting = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousWriting;

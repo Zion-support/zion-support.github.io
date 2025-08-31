@@ -3,79 +3,111 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp import { SEO } from '@/components/SEO';
+=======
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {
         category: "AI & Automation",
-        services: [
+        services[
             {
                 name: "AI Business Process Automation",
-                starter: { price: "$2,999", features: ["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
-                professional: { price: "$4,999", features: ["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
-                enterprise: { price: "$7,999+", features: ["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
+                starter: { price: "$2,999", features["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
+                professional: { price: "$4,999", features["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
+                enterprise: { price: "$7,999+", features["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
             },
             {
                 name: "AI Customer Intelligence",
+<<<<<<< HEAD
                 starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
                 professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
                 enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
+
+=======
+                starter: { price: "$3,999", features["Basic customer analytics", "Churn prediction", "Email support"] },
+                professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
+                enterprise: { price: "$8,999+", features["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
         category: "Cybersecurity & Compliance",
-        services: [
+        services[
             {
                 name: "AI Threat Detection System",
-                starter: { price: "$5,999", features: ["Basic threat detection", "Email alerts", "Standard support"] },
-                professional: { price: "$7,999", features: ["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
-                enterprise: { price: "$12,999+", features: ["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
+                starter: { price: "$5,999", features["Basic threat detection", "Email alerts", "Standard support"] },
+                professional: { price: "$7,999", features["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
+                enterprise: { price: "$12,999+", features["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
             },
             {
                 name: "Compliance Management Platform",
+<<<<<<< HEAD
                 starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
                 professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
                 enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
+
+=======
+                starter: { price: "$2,999", features["Basic compliance monitoring", "GDPR support", "Email support"] },
+                professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
+                enterprise: { price: "$6,999+", features["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
         category: "Cloud & DevOps",
-        services: [
+        services[
             {
                 name: "Cloud Cost Optimization",
-                starter: { price: "$1,999", features: ["Basic cost analysis", "Resource optimization", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
+                starter: { price: "$1,999", features["Basic cost analysis", "Resource optimization", "Email support"] },
+                professional: { price: "$3,999", features["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
+                enterprise: { price: "$5,999+", features["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
             },
             {
                 name: "DevOps Automation Platform",
+<<<<<<< HEAD
                 starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
                 professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
                 enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
+
+=======
+                starter: { price: "$2,999", features["Basic CI/CD", "Automated testing", "Email support"] },
+                professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
+                enterprise: { price: "$7,999+", features["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
         category: "Data & Analytics",
-        services: [
+        services[
             {
                 name: "Data Quality Platform",
-                starter: { price: "$3,999", features: ["Basic data validation", "Data cleaning", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$8,999+", features: ["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
+                starter: { price: "$3,999", features["Basic data validation", "Data cleaning", "Email support"] },
+                professional: { price: "$5,999", features["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
+                enterprise: { price: "$8,999+", features["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
             },
             {
                 name: "Real-Time Analytics Dashboard",
+<<<<<<< HEAD
                 starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
                 professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
                 enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
+
+=======
+                starter: { price: "$1,999", features["Basic dashboard", "Real-time data", "Email support"] },
+                professional: { price: "$3,999", features["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
+                enterprise: { price: "$5,999+", features["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
-    }
+
 ];
 export default function ServicesComparisonPage() {
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
@@ -89,10 +121,10 @@ export default function ServicesComparisonPage() {
             Services Comparison & Pricing
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Compare our comprehensive AI and IT services to find the perfect solution for your business. 
+            Compare our comprehensive AI and IT services to find the perfect solution for your business.
             Transparent pricing with flexible plans designed for every organization size.
           </p>
-          
+
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
@@ -120,7 +152,7 @@ export default function ServicesComparisonPage() {
               Flexible pricing designed to grow with your business
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
@@ -237,7 +269,7 @@ export default function ServicesComparisonPage() {
               Proven expertise and results that speak for themselves
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -246,7 +278,7 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">AI Expertise</h3>
               <p className="text-zion-slate-light">Cutting-edge AI solutions with proven results</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-zion-blue"/>
@@ -254,7 +286,7 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">Bank-level security and compliance standards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-zion-blue"/>
@@ -262,7 +294,7 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
               <p className="text-zion-slate-light">Certified professionals with industry experience</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-zion-blue"/>
@@ -281,7 +313,7 @@ export default function ServicesComparisonPage() {
           <p className="text-zion-slate text-lg mb-8 max-w-2xl mx-auto">
             Our experts are here to help you find the perfect solution for your business needs and budget.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
@@ -292,7 +324,7 @@ export default function ServicesComparisonPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-          
+
           <div className="text-zion-slate">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
@@ -303,5 +335,9 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

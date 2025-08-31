@@ -8,7 +8,7 @@ const AIAutonomousTesting = () => {
         <meta name="keywords" content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-testing"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousTesting = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Testing Intelligence</h3>
               <p className="text-gray-300">AI trained on testing datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that tests independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-rose-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Testing</h3>
               <p className="text-gray-300">24/7 testing operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive testing insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Testing</h3>
               <p className="text-gray-300">Prevent quality issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Testing</h3>
@@ -93,25 +93,25 @@ const AIAutonomousTesting = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Plan</h3>
                 <p className="text-gray-300 text-sm">Plan tests</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Execute</h3>
                 <p className="text-gray-300 text-sm">Execute tests</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor tests</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze results</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Report</h3>
@@ -138,12 +138,12 @@ const AIAutonomousTesting = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Software Development</h3>
                 <p className="text-gray-300">Software testing</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Web Applications</h3>
                 <p className="text-gray-300">Web app testing</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Mobile Applications</h3>
                 <p className="text-gray-300">Mobile app testing</p>
@@ -168,6 +168,5 @@ const AIAutonomousTesting = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousTesting;

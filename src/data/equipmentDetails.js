@@ -14,14 +14,14 @@ export const equipmentDetails = [
       network: "10GbE + 25GbE",
       power: "1200W Platinum PSU"
     },
-    features: [
+    features[
       "Optimized for deep learning frameworks",
       "Enterprise-grade reliability",
       "24/7 monitoring support",
       "Custom cooling solution",
       "Rack-mountable design"
     ],
-    images: [
+    images[
       "/images/equipment/ai-server-001-main.jpg",
       "/images/equipment/ai-server-001-side.jpg",
       "/images/equipment/ai-server-001-back.jpg"
@@ -48,14 +48,14 @@ export const equipmentDetails = [
       power: "PoE+ support",
       management: "Web, CLI, SNMP"
     },
-    features: [
+    features[
       "Layer 3 routing capabilities",
       "Advanced QoS and security",
       "Redundant power supplies",
       "Hot-swappable modules",
       "Comprehensive monitoring"
     ],
-    images: [
+    images[
       "/images/equipment/network-switch-002-main.jpg",
       "/images/equipment/network-switch-002-front.jpg"
     ],
@@ -81,14 +81,14 @@ export const equipmentDetails = [
       raid: "RAID 6, 10, 50, 60",
       power: "Dual redundant"
     },
-    features: [
+    features[
       "Enterprise-grade reliability",
       "Advanced data protection",
       "Thin provisioning",
       "Snapshot capabilities",
       "Remote replication"
     ],
-    images: [
+    images[
       "/images/equipment/storage-array-003-main.jpg",
       "/images/equipment/storage-array-003-side.jpg"
     ],
@@ -114,14 +114,14 @@ export const equipmentDetails = [
       display: "32\" 4K Monitor",
       os: "Windows 11 Pro"
     },
-    features: [
+    features[
       "Optimized for AI development",
       "Pre-installed development tools",
       "Dual monitor support",
       "Professional graphics card",
       "Fast storage solution"
     ],
-    images: [
+    images[
       "/images/equipment/workstation-004-main.jpg",
       "/images/equipment/workstation-004-setup.jpg"
     ],
@@ -147,14 +147,14 @@ export const equipmentDetails = [
       ai: "Facial recognition, motion detection",
       connectivity: "WiFi + Ethernet"
     },
-    features: [
+    features[
       "AI-powered motion detection",
       "Facial recognition",
       "Night vision capabilities",
       "Mobile app control",
       "Cloud storage option"
     ],
-    images: [
+    images[
       "/images/equipment/security-camera-005-main.jpg",
       "/images/equipment/security-camera-005-camera.jpg"
     ],
@@ -164,24 +164,18 @@ export const equipmentDetails = [
     delivery: "1-2 business days",
     rating: 4.5,
     reviews: 78
-  }
+
 ];
 
-export const getEquipmentById = (id) => {
-  return equipmentDetails.find(equipment => equipment.id === id);
-};
-
 export const getEquipmentByCategory = (category) => {
-  return equipmentDetails.filter(equipment => equipment.category === category);
-};
+  return equipmentDetails.filter(equipment => equipment.category === category)};
 
 export const searchEquipment = (query) => {
   const searchTerm = query.toLowerCase();
-  return equipmentDetails.filter(equipment => 
+  return equipmentDetails.filter(equipment =>
     equipment.name.toLowerCase().includes(searchTerm) ||
     equipment.description.toLowerCase().includes(searchTerm) ||
     equipment.category.toLowerCase().includes(searchTerm)
-  );
-};
+  )};
 
-export const EQUIPMENT_DETAILS = equipmentDetails;
+export const EQUIPMENT_DETAILS = equipmentDetails;}

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-
-export const ServiceDetailsSection = ({ services = [] }) => {
+import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
+<<<<<<< HEAD
   const defaultServices = [
     {
       id: 1,
@@ -11,7 +10,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Complete IT infrastructure design, implementation, and optimization',
       duration: '2-4 weeks',
       teamSize: '3-5 engineers',
-      features: [
+      features[
         'Network architecture design',
         'Server configuration and setup',
         'Security implementation',
@@ -19,14 +18,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Monitoring and alerting',
         'Documentation and training'
       ],
-      benefits: [
+      benefits[
         'Scalable and reliable infrastructure',
         'Enhanced security posture',
         'Improved performance and uptime',
         'Reduced operational costs',
         'Compliance-ready systems'
       ],
-      requirements: [
+      requirements[
         'Site survey and assessment',
         'Hardware specifications',
         'Network requirements',
@@ -44,7 +43,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Comprehensive network security setup and monitoring',
       duration: '1-2 weeks',
       teamSize: '2-3 engineers',
-      features: [
+      features[
         'Firewall configuration',
         'Intrusion detection systems',
         'VPN setup and management',
@@ -52,14 +51,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Security monitoring',
         'Incident response planning'
       ],
-      benefits: [
+      benefits[
         'Protection against cyber threats',
         'Compliance with security standards',
         'Real-time threat detection',
         'Secure remote access',
         'Audit trail and reporting'
       ],
-      requirements: [
+      requirements[
         'Network topology review',
         'Security policy definition',
         'Compliance requirements',
@@ -77,7 +76,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Seamless migration to cloud infrastructure',
       duration: '4-8 weeks',
       teamSize: '4-6 engineers',
-      features: [
+      features[
         'Cloud platform assessment',
         'Migration strategy planning',
         'Data migration and testing',
@@ -85,14 +84,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Performance optimization',
         'Cost optimization analysis'
       ],
-      benefits: [
+      benefits[
         'Reduced infrastructure costs',
         'Improved scalability',
         'Enhanced disaster recovery',
         'Better performance',
         'Simplified management'
       ],
-      requirements: [
+      requirements[
         'Current infrastructure audit',
         'Cloud platform selection',
         'Data classification',
@@ -103,14 +102,15 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       category: 'Cloud',
       complexity: 'High',
       estimatedCost: '$20,000 - $75,000'
-    }
+
   ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
   const getComplexityColor = (complexity) => {
     switch (complexity.toLowerCase()) {
@@ -121,8 +121,12 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       case 'high':
         return 'text-red-600 bg-red-100';
       default:
+<<<<<<< HEAD
         return 'text-gray-600 bg-gray-100';
-    }
+
+=======
+        return 'text-gray-600 bg-gray-100'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -134,7 +138,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             Service Details & Specifications
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get detailed information about our IT services, including features, requirements, 
+            Get detailed information about our IT services, including features, requirements,
             timelines, and estimated costs.
           </p>
         </div>
@@ -145,7 +149,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             <div
               key={service.id}
               className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
+
               {/* Service Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between">
@@ -159,7 +163,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         </span>
                       </div>
                       <p className="text-gray-600 text-lg">{service.description}</p>
-                      
+
                       {/* Quick Info */}
                       <div className="flex items-center space-x-6 mt-4">
                         <div className="flex items-center space-x-2 text-gray-500">
@@ -177,11 +181,11 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <button
                     onClick={() => toggleService(service.id)}
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                  >
+
                     {expandedService === service.id ? (
                       <ChevronUp className="w-6 h-6" />
                     ) : (
@@ -252,7 +256,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         <p className="text-2xl font-bold text-blue-600">{service.estimatedCost}</p>
                         <p className="text-sm text-gray-500">*Final cost depends on specific requirements</p>
                       </div>
-                      
+
                       <div className="flex space-x-4">
                         <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors">
                           Download Brochure
@@ -277,19 +281,19 @@ export const ServiceDetailsSection = ({ services = [] }) => {
               Need a Custom Solution?
             </h3>
             <p className="text-blue-100 mb-6">
-              Our team can tailor any service to meet your specific business requirements.
+              Our team can tailor  service to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Discuss Requirements
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>
@@ -297,5 +301,9 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-};
+};}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

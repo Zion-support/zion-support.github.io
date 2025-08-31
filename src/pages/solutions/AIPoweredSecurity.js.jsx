@@ -1,32 +1,6 @@
 import React from 'react';
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
 const AIPoweredSecurity = () => {
-    const securityFeatures = [
-        {
-            icon: Brain,
-            title: "AI Threat Detection",
-            description: "Intelligent threat identification and response using machine learning",
-            features: ["Behavioral analysis", "Pattern recognition", "Anomaly detection", "Predictive security"]
-        },
-        {
-            icon: Shield,
-            title: "Advanced Protection",
-            description: "Multi-layered security with AI-enhanced defense mechanisms",
-            features: ["Real-time monitoring", "Automated response", "Threat intelligence", "Zero-day protection"]
-        },
-        {
-            icon: Eye,
-            title: "Continuous Monitoring",
-            description: "24/7 surveillance and analysis of security events",
-            features: ["Real-time alerts", "Comprehensive logging", "Performance metrics", "Incident tracking"]
-        },
-        {
-            icon: Lock,
-            title: "Access Control",
-            description: "Intelligent authentication and authorization systems",
-            features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
-        }
-    ];
     const securitySolutions = [
         {
             title: "Network Security",

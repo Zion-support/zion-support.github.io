@@ -3,159 +3,11 @@ import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 
 import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Network } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from "../components/SEOHead";
 import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';
 import { Clock, Workflow, BarChart } from 'lucide-react';
 const AutonomousBusinessOperationsPlatform = () => {
     const features = [
-        {
-            icon: Bot,
-            title: "Autonomous Operations",
-            description: "AI-powered systems that operate independently and make intelligent decisions"
-        },
-        {
-            icon: Zap,
-            title: "Real-time Processing",
-            description: "Instant processing and decision-making for critical business operations",
-            const: features = [
-                {
-                    icon: Bot,
-                    title: "AI Autonomous Systems",
-                    description: "Self-managing AI systems that operate independently and make intelligent decisions."
-                },
-                {
-                    icon: Zap,
-                    title: "Real-time Optimization",
-                    description: "Continuous monitoring and optimization of business processes for maximum efficiency."
-                },
-                {
-                    icon: Shield,
-                    title: "Intelligent Security",
-                    description: "Advanced threat detection and automated security responses powered by AI."
-                },
-                {
-                    icon: Cpu,
-                    title: "Intelligent Automation",
-                    description: "Smart automation that learns and adapts to business needs"
-                },
-                {
-                    icon: Database,
-                    title: "Data Integration",
-                    description: "Seamless integration across all business systems and data sources"
-                },
-                {
-                    icon: BarChart3,
-                    title: "Predictive Analytics",
-                    const: features = [
-                        {
-                            title: "Intelligent Process Automation",
-                            description: "AI-powered automation that learns and adapts to your business processes",
-                            icon: Workflow,
-                            benefits: ["Smart workflows", "Adaptive learning", "Process optimization"]
-                        },
-                        {
-                            title: "Real-time Analytics Dashboard",
-                            description: "Comprehensive business intelligence with live data visualization",
-                            icon: BarChart,
-                            benefits: ["Live insights", "Custom dashboards", "Predictive analytics"]
-                        },
-                        {
-                            title: "Autonomous Decision Engine",
-                            description: "AI-driven decision making for operational efficiency",
-                            icon: Brain,
-                            benefits: ["Data-driven decisions", "Risk assessment", "Performance optimization"]
-                        },
-                        {
-                            title: "Enterprise Security & Compliance",
-                            description: "Bank-grade security with automated compliance monitoring",
-                            icon: Shield,
-                            const: features = [
-                                {
-                                    icon: Building,
-                                    title: "Autonomous Business Management",
-                                    description: "AI-powered systems that manage business operations independently, making decisions and executing tasks without human intervention."
-                                },
-                                {
-                                    icon: Zap,
-                                    title: "Real-time Process Automation",
-                                    description: "Continuous monitoring and automation of business processes with instant response to changing conditions and requirements."
-                                },
-                                {
-                                    icon: Target,
-                                    title: "Intelligent Decision Making",
-                                    description: "Advanced algorithms that analyze data, predict outcomes, and make optimal business decisions based on multiple factors."
-                                },
-                                {
-                                    icon: Shield,
-                                    title: "Risk Management & Compliance",
-                                    description: "Automated risk assessment, compliance monitoring, and regulatory adherence with built-in safety protocols."
-                                },
-                                {
-                                    icon: Rocket,
-                                    title: "Scalable Operations",
-                                    description: "Flexible architecture that grows with your business, handling increased complexity and volume automatically."
-                                },
-                                {
-                                    icon: Globe,
-                                    title: "Multi-Platform Integration",
-                                    description: "Seamless integration with existing business systems, CRMs, ERPs, and third-party applications."
-                                }
-                            ],
-                            const: useCases = [
-                                {
-                                    icon: BarChart3,
-                                    title: "Financial Operations",
-                                    description: "Automated accounting, expense management, budget optimization, and financial reporting with AI-driven insights."
-                                },
-                                {
-                                    icon: Users,
-                                    title: "Human Resources",
-                                    description: "Intelligent recruitment, performance management, training optimization, and employee engagement automation."
-                                },
-                                {
-                                    icon: Code,
-                                    title: "IT Operations",
-                                    description: "Automated system monitoring, incident response, capacity planning, and infrastructure optimization."
-                                },
-                                {
-                                    icon: Database,
-                                    title: "Data Management",
-                                    description: "Intelligent data processing, analytics automation, report generation, and business intelligence optimization."
-                                },
-                                {
-                                    icon: Network,
-                                    title: "Supply Chain",
-                                    description: "Automated inventory management, demand forecasting, supplier optimization, and logistics coordination."
-                                },
-                                {
-                                    icon: Cloud,
-                                    title: "Customer Service",
-                                    import: { motion }, from, 'framer-motion': ,
-                                    import: { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network }, from, 'lucide-react': ,
-                                    import: React, from, 'react': ,
-                                    import: { Link }, from, 'react-router-dom': ,
-                                    import: {
-                                        Bot,
-                                        Zap,
-                                        Settings,
-                                        TrendingUp,
-                                        Shield,
-                                        Users,
-                                        BarChart3,
-                                        Clock,
-                                        CheckCircle,
-                                        ArrowRight,
-                                        Play,
-                                        Download,
-                                        BookOpen,
-                                        MessageSquare,
-                                        Workflow,
-                                        Target,
-                                        Cpu,
-                                        Database
-                                    }, from, 'lucide-react': ,
-                                    const: AutonomousBusinessOperationsPlatform, React, : .FC = () => {
-                                        const features = [
                                             {
                                                 icon: Bot,
                                                 title: 'Intelligent Automation',
@@ -250,7 +102,15 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Platform Features
             </h2>
@@ -261,7 +121,15 @@ const AutonomousBusinessOperationsPlatform = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}/>
+            {features.map((feature, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}/>
                                                 ,
                                                     <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -283,7 +151,11 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 mx-auto">
@@ -391,8 +263,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>);
-                                                        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -419,8 +290,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
-                </div>);
-                                                        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -1040,13 +910,16 @@ export default function AutonomousBusinessOperationsPlatform() {}
       </div>
     </>
     <>
-      <SEOHead customData={{
+      <SEOHead customData = {
+  {
                                                             title: "Autonomous Business Operations Platform - Zion Tech Group",
                                                             description: "Revolutionary AI-powered platform that automates and optimizes your entire business operations. Streamline processes, reduce costs, and boost efficiency with intelligent automation.",
-                                                            keywords: ["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],
+                                                            keywords["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],
                                                             type: "website",
-                                                            url: "https://ziontechgroup.com/autonomous-business-operations-platform"
-                                                        }}/>
+  url: "https://ziontechgroup.com/autonomous-business-operations-platform"
+                                                        
+
+}}/>
       
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
@@ -1167,8 +1040,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
         </section>
       </div>
     </>
-  );
-}
+  )}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Free
@@ -1195,21 +1067,21 @@ export default function AutonomousBusinessOperationsPlatform() {}
   const testimonials = [
     {name}: "Operations Director",
       role: "Chief Operations Officer",
-      company: "Global Manufacturing Co.",
+      comp: "Global Manufacturing Co.",
       content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.",
       rating: 5,
       avatar: "👨‍💼"
     },
     {name}: "Sarah Operations",
       role: "VP of Operations",
-      company: "Tech Solutions Inc.",
+      comp: "Tech Solutions Inc.",
       content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.",
       rating: 5,
       avatar: "👩‍💼"
     },
     {name}: "Michael Operations",
       role: "Operations Manager",
-      company: "Innovation Corp",
+      comp: "Innovation Corp",
       content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.",
       rating: 5,
       avatar: "👨‍💻"
@@ -1404,7 +1276,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   <div>
                     <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
                     <p className="text-green-400">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </div>
                 
@@ -1441,7 +1313,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
             </div>
             
             <p className="text-sm text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </div>
         </div>
@@ -1494,17 +1366,6 @@ export default function AutonomousBusinessOperationsPlatform() {}
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
-export default AutonomousBusinessOperationsPlatform;</></></></></></></></>))}</></></></></></>);
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ];
-};
+export default AutonomousBusinessOperationsPlatform;

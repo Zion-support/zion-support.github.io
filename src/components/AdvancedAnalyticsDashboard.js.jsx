@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 const AdvancedAnalyticsDashboard = () => {
     const [timeRange, setTimeRange] = useState('30d');
     const [selectedMetric, setSelectedMetric] = useState('overview');
@@ -100,8 +100,7 @@ const AdvancedAnalyticsDashboard = () => {
             case 'declining':
                 return <TrendingDown className="w-4 h-4 text-red-500"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+                return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -112,12 +111,19 @@ const AdvancedAnalyticsDashboard = () => {
             case 'declining':
                 return 'bg-red-100 text-red-800';
             default:
-                return 'bg-gray-100 text-gray-800';
-        }
+                return 'bg-gray-100 text-gray-800'}
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} className="mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
@@ -137,8 +143,24 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Metrics Cards */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {metrics.map((metric, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.1 * index }}>
             <Card className="h-full hover:shadow-lg transition-shadow">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
@@ -166,7 +188,15 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Service Performance Table */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.2 }} className="mb-8">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -188,7 +218,15 @@ const AdvancedAnalyticsDashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {servicePerformance.map((service, index) => (<motion.tr key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
+                  {servicePerformance.map((service, index) => (<motion.tr key={index} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
                       <td className="py-3 px-4">
                         <div className="font-medium text-zion-blue-dark">{service.name}</div>
                       </td>
@@ -229,7 +267,15 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Charts and Insights */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
           <CardHeader>
@@ -240,7 +286,15 @@ const AdvancedAnalyticsDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {categoryDistribution.map((category, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
+              {categoryDistribution.map((category, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}></div>
                     <span className="font-medium text-zion-slate-dark">{category.label}</span>
@@ -291,7 +345,7 @@ const AdvancedAnalyticsDashboard = () => {
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Satisfaction Score</h4>
                   <p className="text-sm text-zion-slate-light">
-                    Client satisfaction reached 4.8/5, highest in company history
+                    Client satisfaction reached 4.8/5, highest in comp history
                   </p>
                 </div>
               </div>
@@ -301,7 +355,15 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.4 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
@@ -309,17 +371,24 @@ const AdvancedAnalyticsDashboard = () => {
             to optimize your business performance and make data-driven decisions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access', '_blank')}>
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',
+  '_blank')
+
+}>
               <Rocket className="w-5 h-5 mr-2"/>
               Request Access
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+
+}>
               <Shield className="w-5 h-5 mr-2"/>
               Schedule Demo
             </Button>
           </div>
         </div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default AdvancedAnalyticsDashboard;

@@ -1,45 +1,58 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+// removed duplicate old section
 
-const EcommercePersonalization: React.FC = () => (
-  <div className="min-h-screen bg-slate-900 text-white">
-    <SEO title="eCommerce Personalization - Zion Tech Group" description="Recommendations, search, and promotions tailored to each shopper." />
-    <section className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-4">eCommerce Personalization</h1>
-      <p className="text-slate-300 max-w-3xl">Drive AOV and conversion with recommendations, personalized search, and promo targeting. SDKs for Shopify, WooCommerce, and custom builds.</p>
-    </section>
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-        <h3 className="font-semibold mb-2">Features</h3>
-        <ul className="list-disc ml-5 text-slate-300 space-y-1">
-          <li>Frequently Bought Together, Similar Items</li>
-          <li>Reranking with real-time signals</li>
-          <li>A/B testing and holdouts</li>
-          <li>Privacy-safe profiles</li>
-        </ul>
-      </div>
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-        <h3 className="font-semibold mb-2">Integrations</h3>
-        <ul className="list-disc ml-5 text-slate-300 space-y-1">
-          <li>Shopify, WooCommerce</li>
-          <li>Segment, GA4, Snowflake</li>
-          <li>Algolia/Typesense optional</li>
-        </ul>
-      </div>
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-        <h3 className="font-semibold mb-2">Pricing</h3>
-        <ul className="text-slate-300 space-y-1">
-          <li>Starter: $499/mo up to 100k events</li>
-          <li>Growth: $1,999/mo up to 5M events</li>
-          <li>Enterprise: custom, VPC deploy</li>
-        </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Schedule a walkthrough</a>
-    </section>
-  </div>
-);
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3 const EcommercePersonalization: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { SEO   } from '@/components/SEO';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3   } from 'lucide-react.ts';
+
+const EcommercePersonalization: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <SEO
+        title="E‑commerce Personalization - Zion Tech Group"
+        description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV."
+        keywords="ecommerce personalization, recommendations, AOV, LTV"
+      />
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex items-center gap-3 mb-6 text-cyan-300">
+          <ShoppingCart className="h-5 w-5" />
+          <span className="text-sm font-semibold">E‑COMMERCE PERSONALIZATION</span>
+        </div>
+        <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>
+        <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="mb-2 font-semibold">Capabilities</div>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Realtime recs and bundles</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Cold‑start handling</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Price sensitivity nudges</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Merchandiser controls</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="mb-2 font-semibold">Outcomes</div>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +5–15% AOV</li>
+              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +3–8% conversion rate</li>
+              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
+            </ul>
+            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $249–$1,499/month</div>;
+          </div>;
+        </div>;
+;
+        <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
+      </section>;
+    </div>;
+  );
+};
 
 export default EcommercePersonalization;
 
+}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
-const mockProjects = [
+import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [
     {
         id: '1',
         name: 'AI-Powered E-commerce Platform',
@@ -10,10 +9,10 @@ const mockProjects = [
         progress: 65,
         startDate: '2024-01-15',
         endDate: '2024-06-30',
-        team: ['John Smith', 'Sarah Johnson', 'Mike Chen'],
+        team['John Smith', 'Sarah Johnson', 'Mike Chen'],
         budget: 150000,
         spent: 97500,
-        tasks: [
+        tasks[
             { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
             { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
             { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '2024-05-15', priority: 'medium', estimatedHours: 100, actualHours: 0 }
@@ -28,10 +27,10 @@ const mockProjects = [
         progress: 25,
         startDate: '2024-03-01',
         endDate: '2024-08-31',
-        team: ['Emily Davis', 'Alex Rodriguez'],
+        team['Emily Davis', 'Alex Rodriguez'],
         budget: 200000,
         spent: 50000,
-        tasks: [
+        tasks[
             { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
             { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '2024-05-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
         ]
@@ -45,27 +44,41 @@ const mockProjects = [
         progress: 90,
         startDate: '2024-02-01',
         endDate: '2024-04-30',
-        team: ['Lisa Wang', 'David Kim'],
+        team['Lisa Wang', 'David Kim'],
         budget: 120000,
         spent: 108000,
-        tasks: [
+        tasks[
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
-    }
+
 ];
 const statusColors = {
-    'planning': 'bg-zion-blue text-white',
+  'planning': 'bg-zion-blue text-white',
     'in-progress': 'bg-zion-cyan text-white',
     'review': 'bg-zion-gold text-white',
     'completed': 'bg-zion-emerald text-white',
-    'on-hold': 'bg-zion-slate text-white'
+  'on-hold': 'bg-zion-slate text-white'
+
+
+
+
+
+
+
 };
 const priorityColors = {
-    'low': 'bg-zion-emerald text-white',
+  'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
-    'critical': 'bg-red-500 text-white'
+  'critical': 'bg-red-500 text-white'
+
+
+
+
+
+
+
 };
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false);
@@ -79,8 +92,7 @@ export function ProjectManagementDashboard() {
         const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
         const searchMatch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             project.description.toLowerCase().includes(searchQuery.toLowerCase());
-        return statusMatch && priorityMatch && searchMatch;
-    });
+        return statusMatch && priorityMatch && searchMatch});
     const getStatusIcon = (status) => {
         switch (status) {
             case 'planning': return <Calendar className="w-4 h-4"/>;
@@ -88,8 +100,12 @@ export function ProjectManagementDashboard() {
             case 'review': return <Eye className="w-4 h-4"/>;
             case 'completed': return <CheckCircle className="w-4 h-4"/>;
             case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;
+<<<<<<< HEAD
             default: return <Clock className="w-4 h-4"/>;
-        }
+
+=======
+            default: return <Clock className="w-4 h-4"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getProgressColor = (progress) => {
         if (progress >= 80)
@@ -100,8 +116,7 @@ export function ProjectManagementDashboard() {
             return 'bg-zion-gold';
         if (progress >= 20)
             return 'bg-zion-orange';
-        return 'bg-red-500';
-    };
+        return 'bg-red-500'};
     const calculateProjectHealth = (project) => {
         const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
         const totalTasks = project.tasks.length;
@@ -110,13 +125,16 @@ export function ProjectManagementDashboard() {
             return 'critical';
         if (overdueTasks > 0 || budgetUtilization > 75)
             return 'warning';
-        return 'healthy';
-    };
+        return 'healthy'};
     if (!isVisible) {
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">
         <BarChart3 className="w-5 h-5"/>
+<<<<<<< HEAD
       </button>);
-    }
+
+=======
+      </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="fixed inset-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b border-zion-slate-light bg-gradient-to-r from-zion-gold/10 to-zion-orange/10">
@@ -139,7 +157,7 @@ export function ProjectManagementDashboard() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
               <input type="text" placeholder="Search projects..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent"/>
             </div>
-            
+
             <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Status</option>
               <option value="planning">Planning</option>
@@ -148,7 +166,7 @@ export function ProjectManagementDashboard() {
               <option value="completed">Completed</option>
               <option value="on-hold">On Hold</option>
             </select>
-            
+
             <select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Priority</option>
               <option value="low">Low</option>
@@ -157,7 +175,7 @@ export function ProjectManagementDashboard() {
               <option value="critical">Critical</option>
             </select>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
               <BarChart3 className="w-4 h-4"/>
@@ -347,13 +365,13 @@ export function ProjectManagementDashboard() {
                 <X className="w-6 h-6"/>
               </button>
             </div>
-            
+
             <div className="p-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Project Details</h3>
                   <p className="text-zion-slate-light mb-4">{selectedProject.description}</p>
-                  
+
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light">Status:</span>
@@ -373,7 +391,7 @@ export function ProjectManagementDashboard() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tasks</h3>
                   <div className="space-y-3">
@@ -397,5 +415,9 @@ export function ProjectManagementDashboard() {
             </div>
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
-}
+}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

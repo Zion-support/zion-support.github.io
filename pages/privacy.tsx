@@ -1,13 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight } from 'lucide-react'
+<<<<<<< HEAD
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Shield, Eye, Lock, Database, Users, ArrowRight export default function Privacy(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { Shield, Eye, Lock, Database, Users, ArrowRight   } from 'lucide-react.ts'
 
 
-export default function Privacy() {
+export default function Privacy(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+			<section className = "bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -48,7 +54,7 @@ export default function Privacy() {
 								</li>
 							</ul>
 							<p className="text-gray-600">
-								This information may include your name, email address, company name, phone number, and any other information you choose to provide.
+								This information may include your name, email address, comp name, phone number, and  other information you choose to provide.
 							</p>
 						</div>
 
@@ -151,7 +157,7 @@ export default function Privacy() {
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-									Withdraw consent at any time
+									Withdraw consent at  time
 								</li>
 							</ul>
 						</div>
@@ -187,7 +193,7 @@ export default function Privacy() {
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
 							<p className="text-gray-600 mb-4">
-								If you have any questions about this Privacy Policy or our data practices, please contact us:
+								If you have  questions about this Privacy Policy or our data practices, please contact us:
 							</p>
 							<div className="bg-gray-50 p-6 rounded-lg">
 								<p className="text-gray-600 mb-2">
@@ -205,7 +211,7 @@ export default function Privacy() {
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
 							<p className="text-gray-600">
-								We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.
+								We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for  changes.
 							</p>
 						</div>
 
@@ -223,17 +229,27 @@ export default function Privacy() {
 						Questions About Privacy?
 					</h2>
 					<p className="text-gray-600 mb-6">
-						We're here to help. Contact us with any privacy-related questions.
+						We're here to help. Contact us with  privacy-related questions.
 					</p>
 					<Link
 						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-					>
+
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 					</Link>
 				</div>
 			</section>
 		</>
 	)
-}
+}}
+=======
+					</Link>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

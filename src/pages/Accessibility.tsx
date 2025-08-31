@@ -1,7 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Accessibility, 
+<<<<<<< HEAD
+import React from 'react.ts';
+<<<<<<< HEAD
+import SEO from '@/components/SEO';
+=======
+import { motion  } from 'framer-motion.ts';
+import { Accessibility, 
   Eye, 
   Ear, 
   Hand, 
@@ -23,11 +26,13 @@ import {
   Contrast,
   Type,
   ZoomIn,
-  ZoomOut
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+  ZoomOut,
+  Users
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
-export default function Accessibility() {
+export default function Accessibility(...args: any[]): any {
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',
@@ -82,6 +87,57 @@ export default function Accessibility() {
       ]
     }
   ];
+<<<<<<< HEAD
+=======
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
+			<SEO
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Accessibility() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
+			<SEO 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+				title="Accessibility - Zion Tech Group"
+				description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA."
+			/>
+			<div className="container mx-auto px-4 max-w-4xl text-white">
+				<h1 className="text-4xl font-bold mb-6">Accessibility</h1>
+				<p className="text-zinc-300 mb-8">
+<<<<<<< HEAD
+					We are committed to ensuring our website and services are accessible to everyone,
+=======
+					We are committed to ensuring our website and services are accessible to everyone, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+					including people with disabilities. Our goal is to conform to WCAG 2.1 AA standards.
+				</p>
+				<h2 className="text-2xl font-semibold mt-8 mb-3">Feedback</h2>
+				<p className="text-zinc-300 mb-6">
+					If you encounter accessibility barriers, please contact us at
+					{' '}<a className="text-cyan-400 underline" href="mailto:info@ziontechgroup.com">info@ziontechgroup.com</a>.
+				</p>
+				<h2 className="text-2xl font-semibold mt-8 mb-3">Compatibility</h2>
+				<p className="text-zinc-300">
+<<<<<<< HEAD
+					We support modern browsers and assistive technologies. We continuously test and improve
+=======
+					We support modern browsers and assistive technologies. We continuously test and improve 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+					the experience to ensure a high level of accessibility across platforms.
+				</p>
+			</div>
+		</div>
+	);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
   const complianceStandards = [
     {
@@ -239,8 +295,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Comprehensive accessibility features designed for all users</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {accessibilityFeatures.map((category, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {accessibilityFeatures.map((category, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -277,8 +333,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">We meet and exceed international accessibility standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceStandards.map((standard, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceStandards.map((standard, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -311,8 +367,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Compatible with a wide range of assistive technologies</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {assistiveTechnologies.map((tech, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {assistiveTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -354,8 +410,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Use these tools to customize your experience</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {accessibilityTools.map((tool, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {accessibilityTools.map((tool, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -459,4 +515,9 @@ export default function Accessibility() {
       </div>
     </>
   );
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }
+=======
+}
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

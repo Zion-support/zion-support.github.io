@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const AdvancedInnovativeServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -40,12 +40,16 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             case 'name':
             default:
+<<<<<<< HEAD
                 return a.name.localeCompare(b.name);
-        }
+
+=======
+                return a.name.localeCompare(b.name)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const getCategoryIcon = (category) => {
         const icons = {
-            'Legal Tech & Compliance': '⚖️',
+  'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
             'Energy & Sustainability': '🌱',
@@ -58,10 +62,23 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+  <<<<<<< HEAD
             'AI & Customer Experience': '💬'
-        };
+        
+
+};
+        return icons[category] || '🚀'};
+=======
+  'AI & Customer Experience': '💬'
+        
+
+
+
+
+};
         return icons[category] || '🚀';
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
@@ -71,8 +88,12 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
+<<<<<<< HEAD
                 return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+
+=======
+                return 'bg-gray-100 text-gray-800 border-gray-200'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -85,10 +106,10 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover our cutting-edge collection of 25+ revolutionary micro SAAS services, IT solutions, and AI platforms. 
+            Discover our cutting-edge collection of 25+ revolutionary micro SAAS services, IT solutions, and AI platforms.
             Each service is designed to transform your business and drive innovation in the digital age.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-blue-400">Contact Zion Tech Group</h3>
@@ -210,7 +231,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                     </div>) : (<div className="text-2xl font-bold text-purple-400">
                       {service.pricing}
                     </div>)}
-                  
+
                   {service.projectRate && (<p className="text-sm text-gray-400 mt-1">{service.projectRate}</p>)}
                 </div>
 
@@ -274,7 +295,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our advanced innovative services are designed to give you a competitive edge in the digital marketplace. 
+              Our advanced innovative services are designed to give you a competitive edge in the digital marketplace.
               Contact us today to discuss your specific needs and discover how we can help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -292,6 +313,6 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AdvancedInnovativeServicesShowcase2025;
+}}

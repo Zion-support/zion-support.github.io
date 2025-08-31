@@ -1,7 +1,5 @@
 import React from 'react';
-import { Shield, Users, Award, Star, TrendingUp, Globe } from 'lucide-react';
-
-export const CommunityTrust = () => {
+import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTrust = () => {
   const stats = [
     { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },
     { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },
@@ -13,7 +11,7 @@ export const CommunityTrust = () => {
     {
       name: 'Sarah Chen',
       role: 'IT Director',
-      company: 'TechCorp Inc.',
+      comp: 'TechCorp Inc.',
       content: 'Zion mobile app has transformed how our team manages IT assets in the field. The offline capability is a game-changer.',
       rating: 5,
       avatar: '👩‍💼'
@@ -21,7 +19,7 @@ export const CommunityTrust = () => {
     {
       name: 'Marcus Rodriguez',
       role: 'Systems Administrator',
-      company: 'Global Solutions',
+      comp: 'Global Solutions',
       content: 'Intuitive interface and powerful features. Our asset tracking accuracy improved by 95% since switching to Zion.',
       rating: 5,
       avatar: '👨‍💻'
@@ -29,11 +27,11 @@ export const CommunityTrust = () => {
     {
       name: 'Emily Watson',
       role: 'IT Manager',
-      company: 'InnovateTech',
+      comp: 'InnovateTech',
       content: 'The real-time synchronization and mobile-first approach make Zion the perfect solution for our distributed team.',
       rating: 5,
       avatar: '👩‍🔧'
-    }
+
   ];
 
   const certifications = [
@@ -58,7 +56,7 @@ export const CommunityTrust = () => {
       icon: Award,
       title: 'Industry Recognition',
       description: 'Award-winning solution trusted by Fortune 500 companies'
-    }
+
   ];
 
   return (
@@ -102,16 +100,16 @@ export const CommunityTrust = () => {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-xs text-gray-500">{testimonial.company}</div>
+                    <div className="text-xs text-gray-500">{testimonial.comp}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 text-sm leading-relaxed">
                   "{testimonial.content}"
                 </p>
@@ -164,7 +162,7 @@ export const CommunityTrust = () => {
               Experience the same level of trust and reliability that has made Zion the preferred choice for IT asset management.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🌍</div>
@@ -202,13 +200,13 @@ export const CommunityTrust = () => {
               <a
                 href="#download"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Download Now
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Request Demo
               </a>
             </div>
@@ -216,5 +214,9 @@ export const CommunityTrust = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-};
+};}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

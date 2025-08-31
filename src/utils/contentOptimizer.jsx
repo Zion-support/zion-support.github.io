@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
@@ -28,24 +30,24 @@ export class ContentOptimizer {
             issues,
             suggestions
         };
-    }
+
     static countWords(content) {
         // Remove HTML tags and count words
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
-    }
+
     static countHeadings(content) {
         const headingMatches = content.match(/<h[1-6][^>]*>/gi);
         return headingMatches ? headingMatches.length : 0;
-    }
+
     static countImages(content) {
         const imageMatches = content.match(/<img[^>]*>/gi);
         return imageMatches ? imageMatches.length : 0;
-    }
+
     static countLinks(content) {
         const linkMatches = content.match(/<a[^>]*>/gi);
         return linkMatches ? linkMatches.length : 0;
-    }
+
     static calculateReadabilityScore(content) {
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
@@ -56,23 +58,23 @@ export class ContentOptimizer {
         // Flesch Reading Ease formula
         const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
         return Math.max(0, Math.min(100, score));
-    }
+
     static countSyllables(text) {
         // Simplified syllable counting
         const words = text.toLowerCase().split(/\s+/);
-        let syllableCount = 0;
+        const syllableCount = 0;
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
-            }
+
             else {
                 // Count vowel groups
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
-            }
+
         });
         return syllableCount;
-    }
+
     static calculateSEOScore(content, page) {
         let score = 100;
         // Check for title
@@ -87,7 +89,6 @@ export class ContentOptimizer {
         if (!content.includes('<h2>'))
             score -= 5;
         // Check for images with alt text
-        const images = content.match(/<img[^>]*>/gi) || [];
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
@@ -96,7 +97,7 @@ export class ContentOptimizer {
         if (internalLinks.length < 2)
             score -= 10;
         return Math.max(0, score);
-    }
+
     static identifyIssues(content, page, metrics) {
         const issues = [];
         // Check for missing headings
@@ -107,7 +108,7 @@ export class ContentOptimizer {
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
                 location: 'Page structure'
             });
-        }
+
         // Check for minimal content
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
@@ -116,7 +117,7 @@ export class ContentOptimizer {
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
                 location: 'Content body'
             });
-        }
+
         // Check for no images
         if (metrics.imageCount === 0) {
             issues.push({
@@ -125,7 +126,7 @@ export class ContentOptimizer {
                 description: 'No images found. Images improve user engagement and SEO',
                 location: 'Content body'
             });
-        }
+
         // Check for poor structure
         if (metrics.headingCount === 0 && metrics.wordCount > 100) {
             issues.push({
@@ -134,7 +135,7 @@ export class ContentOptimizer {
                 description: 'Content lacks proper heading structure for organization',
                 location: 'Page structure'
             });
-        }
+
         // Check for missing keywords
         const pageKeywords = this.extractPageKeywords(page);
         const contentKeywords = this.extractContentKeywords(content);
@@ -146,9 +147,9 @@ export class ContentOptimizer {
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
                 location: 'Content optimization'
             });
-        }
+
         return issues;
-    }
+
     static generateSuggestions(issues, page) {
         const suggestions = [];
         issues.forEach(issue => {
@@ -193,10 +194,10 @@ export class ContentOptimizer {
                         example: 'Use keywords in headings, subheadings, and naturally throughout the text'
                     });
                     break;
-            }
+
         });
         return suggestions;
-    }
+
     static extractPageKeywords(page) {
         // Extract keywords from page path
         const segments = page.split('/').filter(Boolean);
@@ -206,13 +207,13 @@ export class ContentOptimizer {
             keywords.push(...words);
         });
         return keywords;
-    }
+
     static extractContentKeywords(content) {
         // Extract potential keywords from content (simplified)
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
         const words = textContent.split(/\s+/).filter(w => w.length > 3);
         // Count word frequency and return most common
-        const wordCount = {};
+        const wordCount = { /* empty */ };
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
@@ -220,113 +221,222 @@ export class ContentOptimizer {
             .sort(([, a], [, b]) => b - a)
             .slice(0, 10)
             .map(([word]) => word);
-    }
+
     static generateContentTemplate(page, contentType) {
         const templates = {
-            service: `
+  service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
-        
+
         <h2>What We Offer</h2>
         <p>Detailed explanation of service features and capabilities.</p>
-        
+
         <h2>Key Benefits</h2>
         <ul>
           <li>Benefit 1 with explanation</li>
           <li>Benefit 2 with explanation</li>
           <li>Benefit 3 with explanation</li>
         </ul>
-        
+
         <h2>How It Works</h2>
         <p>Step-by-step process or methodology explanation.</p>
-        
+
         <h2>Why Choose Us</h2>
         <p>Competitive advantages and unique selling points.</p>
-        
+
         <h2>Get Started</h2>
         <p>Call-to-action and next steps for potential clients.</p>
       `,
             about: `
         <h1>About Zion Tech Group</h1>
         <p>Comprehensive overview of our company, mission, and values.</p>
-        
+
         <h2>Our Mission</h2>
         <p>Clear statement of our purpose and goals.</p>
-        
+
         <h2>Our Story</h2>
         <p>Company history and journey to success.</p>
-        
+
         <h2>Our Values</h2>
         <ul>
           <li>Value 1 with explanation</li>
           <li>Value 2 with explanation</li>
           <li>Value 3 with explanation</li>
         </ul>
-        
+
         <h2>Our Team</h2>
         <p>Overview of leadership and key team members.</p>
-        
+
         <h2>Our Achievements</h2>
         <p>Key milestones, awards, and recognition.</p>
       `,
             contact: `
         <h1>Contact Us</h1>
         <p>Get in touch with our expert team for technology solutions and consultations.</p>
-        
+
         <h2>Get In Touch</h2>
         <p>Multiple ways to reach us and what to expect.</p>
-        
+
         <h2>Contact Information</h2>
         <ul>
           <li>Phone: +1-302-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
           <li>Address: 364 E Main St STE 1008, Middletown, DE 19709</li>
         </ul>
-        
+
         <h2>Business Hours</h2>
         <p>Our availability and response times.</p>
-        
+
         <h2>Request a Quote</h2>
         <p>How to get a custom quote for your project.</p>
-        
+
         <h2>Support</h2>
         <p>Technical support and customer service information.</p>
       `,
-            blog: `
+  blog: `
         <h1>Blog Post Title</h1>
         <p>Engaging introduction that hooks the reader and explains the value.</p>
-        
+
         <h2>Key Points Overview</h2>
         <p>Brief summary of what the reader will learn.</p>
-        
+
         <h2>Main Content Section 1</h2>
         <p>Detailed explanation with examples and insights.</p>
-        
+
         <h2>Main Content Section 2</h2>
         <p>Additional information and practical applications.</p>
-        
+
         <h2>Real-World Examples</h2>
         <p>Case studies or practical examples to illustrate points.</p>
-        
+
         <h2>Best Practices</h2>
         <p>Actionable advice and recommendations.</p>
-        
+
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
-        };
+        
+
+};
         return templates[contentType] || templates.service;
-    }
+
     static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
-            service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
-            about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
-            contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
-            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
-        };
         const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
+<<<<<<< HEAD
+
+
+export const contentOptimizer = new ContentOptimizer();}}}}}}}}}}}}}}}}}}}}}}}
+=======
     }
 }
 export const contentOptimizer = new ContentOptimizer();
+=======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const ContentOptimizer = ({ content, onOptimize }) => {
+  const [optimizedContent, setOptimizedContent] = useState('');
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+
+  const optimizeContent = async () => {
+    setIsOptimizing(true);
+    
+    // Simulate optimization process
+    setTimeout(() => {
+      const optimized = content
+        .replace(/\s+/g, ' ')
+        .trim()
+        .split('. ')
+        .map(sentence => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+        .join('. ');
+      
+      setOptimizedContent(optimized);
+      
+      // Generate suggestions
+      const newSuggestions = [
+        'Consider adding more specific keywords',
+        'Break down long sentences for better readability',
+        'Add bullet points for key information',
+        'Include a clear call-to-action'
+      ];
+      
+      setSuggestions(newSuggestions);
+      setIsOptimizing(false);
+      
+      if (onOptimize) {
+        onOptimize(optimized);
+      }
+    }, 2000);
+  };
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={optimizeContent}
+        disabled={isOptimizing}
+        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+      >
+        {isOptimizing ? 'Optimizing...' : 'Optimize Content'}
+      </button>
+      
+      {optimizedContent && (
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          className="space-y-4"
+        >
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Optimized Content:</h3>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              {optimizedContent}
+            </div>
+          </div>
+          
+          {suggestions.length > 0 && (
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>
+              <ul className="space-y-2">
+                {suggestions.map((suggestion, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <span>{suggestion}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+export default ContentOptimizer;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

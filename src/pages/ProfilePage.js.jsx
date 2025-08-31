@@ -25,10 +25,8 @@ export default function ProfilePage() {
                     .eq("id", profileId)
                     .single();
                 if (error) {
-                    throw error;
-                }
-                setProfileData(data);
-            }
+                    throw error}
+                setProfileData(data)}
             catch (error) {
                 console.error("Error fetching profile:", error);
                 setIsError(true);
@@ -36,26 +34,21 @@ export default function ProfilePage() {
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
                     variant: "destructive",
-                });
-            }
+                })}
             finally {
-                setIsLoading(false);
-            }
+                setIsLoading(false)}
         };
         if (profileId) {
-            fetchProfile();
-        }
+            fetchProfile()}
     }, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
-      </div>);
-    }
+      </div>)}
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
-      </div>);
-    }
+      </div>)}
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
       
@@ -151,16 +144,18 @@ export default function ProfilePage() {
         
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
-            <HireNowCTA talentProfile={{
+            <HireNowCTA talentProfile = {
+  {
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
-        }}/>
+  hourly_rate: profileData?.hourly_rate || 0
+        
+
+}}/>
             {/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>
       
-    </>);
-}
+    </>)}

@@ -1,4 +1,3 @@
-import React from 'react';
 export default function ForumCategories() {
     const categories = [
         {
@@ -12,7 +11,7 @@ export default function ForumCategories() {
                 title: 'Welcome to the community!',
                 author: 'Admin',
                 date: '2024-01-15'
-            }
+
         },
         {
             id: '2',
@@ -25,8 +24,8 @@ export default function ForumCategories() {
                 title: 'API integration question',
                 author: 'Developer123',
                 date: '2024-01-14'
-            }
-        }
+
+
     ];
     return (<div className="space-y-4">
       {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -37,5 +36,9 @@ export default function ForumCategories() {
             {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)}
           </div>
         </div>))}
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

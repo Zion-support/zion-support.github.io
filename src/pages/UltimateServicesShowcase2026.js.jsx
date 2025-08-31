@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';
-import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
+import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
+import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -47,12 +47,11 @@ const UltimateServicesShowcase2026 = () => {
                 return b.rating - a.rating;
             case 'name':
             default:
-                return a.name.localeCompare(b.name);
-        }
+                return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
         const icons = {
-            'Business Intelligence': '📊',
+  'Business Intelligence': '📊',
             'Marketing Automation': '🎯',
             'Customer Service': '🤖',
             'Supply Chain Management': '📦',
@@ -71,10 +70,11 @@ const UltimateServicesShowcase2026 = () => {
             'Storage Management': '💾',
             'Virtualization': '🖥️',
             'IT Asset Management': '📱',
-            'Performance Monitoring': '📊'
-        };
-        return icons[category] || '🚀';
-    };
+  'Performance Monitoring': '📊'
+        
+
+};
+        return icons[category] || '🚀'};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -85,7 +85,10 @@ const UltimateServicesShowcase2026 = () => {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -99,20 +102,52 @@ const UltimateServicesShowcase2026 = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }}>
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {" "}Innovative Services 2026
             </span>
           </motion.h1>
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+}}>
             Discover our comprehensive collection of 20+ cutting-edge innovative services, 
             from AI-powered business solutions to enterprise IT infrastructure. 
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
           
           {/* Contact Information */}
-          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+}}>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
@@ -180,7 +215,15 @@ const UltimateServicesShowcase2026 = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
-            {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover={{ scale: 1.02, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+            {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {
+  { scale: 1.02,
+  y: -5 
+
+}} transition = {
+  { type: "spring",
+  stiffness: 300 
+
+}}>
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -275,7 +318,15 @@ const UltimateServicesShowcase2026 = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?
             </h2>
@@ -325,6 +376,5 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default UltimateServicesShowcase2026;

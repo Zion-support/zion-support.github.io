@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from '../services/messages';
+import { sendMessage } from "../services/messages";
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
     const [subject, setSubject] = useState('');
@@ -15,26 +15,38 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         function handleKeyDown(e) {
             if (e.key === 'Escape') {
                 e.preventDefault();
+<<<<<<< HEAD
                 onClose();
-            }
-        }
+
+
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
+=======
+                onClose()}
+        }
+        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         firstInputRef.current?.focus();
         document.addEventListener('keydown', handleKeyDown);
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
-            removeTrap && removeTrap();
-        };
-    }, [isOpen, onClose]);
+            removeTrap && removeTrap()}}, [isOpen, onClose]);
     if (!isOpen) {
+<<<<<<< HEAD
         return null;
-    }
+
+=======
+        return null}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!subject.trim() || !message.trim()) {
             setError('Subject and message are required.');
+<<<<<<< HEAD
             return;
-        }
+
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setError('');
         setIsLoading(true); // Set loading true
         try {
@@ -43,16 +55,24 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             onClose(); // Close modal
             setSubject(''); // Clear subject
             setMessage(''); // Clear message
-        }
+
         catch (err) {
-            console.error('Failed to send message:', err);
+<<<<<<< HEAD
+            // // // console.error('Failed to send message:', err);
+=======
+            // // // // // // // console.error('Failed to send message:', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
+<<<<<<< HEAD
             // setError('Failed to send message. Please try again.');
-        }
+
+=======
+            // setError('Failed to send message. Please try again.')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         finally {
             setIsLoading(false); // Set loading false
-        }
+
     };
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>
       <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick={(e) => e.stopPropagation()}>
@@ -79,5 +99,9 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           </button>
         </form>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

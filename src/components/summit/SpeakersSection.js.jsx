@@ -23,5 +23,4 @@ export function SpeakersSection() {
             </div>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

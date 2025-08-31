@@ -1,27 +1,36 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const SpaceTech = () => {
     const spaceTechnologies = [
         {
             title: "Satellite Technology",
             description: "Advanced satellite systems for communication, navigation, and Earth observation.",
-            applications: ["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
+            applications["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
         },
         {
             title: "Space Robotics",
             description: "Autonomous robotic systems for space exploration and satellite maintenance.",
-            applications: ["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
+            applications["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
         },
         {
             title: "Space Communications",
             description: "High-speed, secure communication networks for space missions and satellite operations.",
-            applications: ["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
+            applications["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
         },
         {
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
+<<<<<<< HEAD
             applications: ["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
+
+=======
+            applications["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -34,16 +43,16 @@ const SpaceTech = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advancing humanity's reach into space with cutting-edge technology solutions 
+              Advancing humanity's reach into space with cutting-edge technology solutions
               for exploration, communication, and scientific discovery
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {spaceTechnologies.map((tech, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
-                
+
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Applications</h4>
                   <ul className="space-y-1">
@@ -55,12 +64,12 @@ const SpaceTech = () => {
                 </div>
               </div>))}
           </div>
-          
+
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>
               <p className="text-gray-300 mb-6">
-                Ready to explore the final frontier? Let's discuss how space technology 
+                Ready to explore the final frontier? Let's discuss how space technology
                 can advance your mission and expand human capabilities.
               </p>
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -70,6 +79,6 @@ const SpaceTech = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default SpaceTech;
+}

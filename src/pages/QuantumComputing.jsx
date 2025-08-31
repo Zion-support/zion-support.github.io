@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Atom,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -28,15 +28,19 @@ import {
   Gauge,
   Network,
   Server
+<<<<<<< HEAD
+=======
 } from 'lucide-react';
 
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const quantumSolutions = [
   {
     id: 1,
     title: "Quantum Algorithm Development",
     description: "Custom quantum algorithms for specific computational problems and optimization challenges.",
     icon: Brain,
-    features: [
+    features[
       "Custom algorithm design",
       "Quantum circuit optimization",
       "Performance benchmarking",
@@ -45,14 +49,14 @@ const quantumSolutions = [
     price: "From $150,000",
     timeline: "24-48 weeks",
     category: "Algorithm Development",
-    technologies: ["Qiskit", "Cirq", "PennyLane", "Q#"]
+    technologies["Qiskit", "Cirq", "PennyLane", "Q#"]
   },
   {
     id: 2,
     title: "Quantum Cryptography",
     description: "Quantum-safe encryption solutions using quantum key distribution and post-quantum cryptography.",
     icon: Shield,
-    features: [
+    features[
       "Quantum key distribution",
       "Post-quantum algorithms",
       "Security auditing",
@@ -61,14 +65,14 @@ const quantumSolutions = [
     price: "From $200,000",
     timeline: "32-56 weeks",
     category: "Cryptography",
-    technologies: ["BB84", "E91", "Lattice-based", "Hash-based"]
+    technologies["BB84", "E91", "Lattice-based", "Hash-based"]
   },
   {
     id: 3,
     title: "Quantum Machine Learning",
     description: "Quantum-enhanced machine learning algorithms for pattern recognition and optimization.",
     icon: Brain,
-    features: [
+    features[
       "Quantum neural networks",
       "Quantum feature maps",
       "Hybrid classical-quantum",
@@ -77,14 +81,14 @@ const quantumSolutions = [
     price: "From $180,000",
     timeline: "28-44 weeks",
     category: "Machine Learning",
-    technologies: ["TensorFlow Quantum", "PennyLane", "Qiskit ML", "Variational circuits"]
+    technologies["TensorFlow Quantum", "PennyLane", "Qiskit ML", "Variational circuits"]
   },
   {
     id: 4,
     title: "Quantum Simulation",
     description: "Quantum simulation platforms for modeling complex quantum systems and materials.",
     icon: Atom,
-    features: [
+    features[
       "Molecular modeling",
       "Material properties",
       "Chemical reactions",
@@ -93,14 +97,14 @@ const quantumSolutions = [
     price: "From $120,000",
     timeline: "20-36 weeks",
     category: "Simulation",
-    technologies: ["VQE", "QAOA", "QPE", "Quantum chemistry"]
+    technologies["VQE", "QAOA", "QPE", "Quantum chemistry"]
   },
   {
     id: 5,
     title: "Quantum Optimization",
     description: "Quantum optimization solutions for complex combinatorial and constraint satisfaction problems.",
     icon: Target,
-    features: [
+    features[
       "Combinatorial optimization",
       "Constraint satisfaction",
       "Resource allocation",
@@ -109,14 +113,14 @@ const quantumSolutions = [
     price: "From $100,000",
     timeline: "16-32 weeks",
     category: "Optimization",
-    technologies: ["QAOA", "VQE", "Quantum annealing", "Hybrid algorithms"]
+    technologies["QAOA", "VQE", "Quantum annealing", "Hybrid algorithms"]
   },
   {
     id: 6,
     title: "Quantum Computing Infrastructure",
     description: "Quantum computing infrastructure and cloud access solutions for research and development.",
     icon: Server,
-    features: [
+    features[
       "Cloud quantum access",
       "Quantum hardware integration",
       "Development environment",
@@ -125,10 +129,17 @@ const quantumSolutions = [
     price: "From $80,000",
     timeline: "12-24 weeks",
     category: "Infrastructure",
+<<<<<<< HEAD
     technologies: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
+
+=======
+    technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const quantumTechnologies = [
   {
     name: "Superconducting Qubits",
@@ -157,13 +168,13 @@ const quantumTechnologies = [
     icon: Lightbulb,
     useCase: "Quantum Networks",
     reliability: "Medium"
-  }
+
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "Pharmaceutical Research Lab",
+    comp: "Pharmaceutical Research Lab",
     industry: "Healthcare",
     challenge: "Needed to simulate complex molecular interactions for drug discovery",
     solution: "Built quantum simulation platform using VQE algorithms",
@@ -172,7 +183,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required quantum-safe encryption for secure communications",
     solution: "Implemented quantum key distribution and post-quantum cryptography",
@@ -181,13 +192,13 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Optimization",
+    comp: "Logistics Optimization",
     industry: "Transportation",
     challenge: "Complex route optimization for 1000+ delivery vehicles",
     solution: "Built quantum optimization system using QAOA algorithms",
     results: "25% reduction in delivery costs, 30% improvement in route efficiency, real-time optimization",
     logo: "LO"
-  }
+
 ];
 
 const processSteps = [
@@ -218,7 +229,7 @@ const processSteps = [
     description: "Test quantum solutions and validate performance",
     icon: CheckCircle,
     duration: "4-8 weeks"
-  }
+
 ];
 
 const quantumAdvantages = [
@@ -226,26 +237,31 @@ const quantumAdvantages = [
     title: "Exponential Speedup",
     description: "Certain problems can be solved exponentially faster than classical computers",
     icon: Zap,
-    examples: ["Factoring large numbers", "Database search", "Quantum simulation"]
+    examples["Factoring large numbers", "Database search", "Quantum simulation"]
   },
   {
     title: "Quantum Entanglement",
     description: "Quantum correlations enable new computational paradigms",
     icon: Network,
-    examples: ["Quantum teleportation", "Superdense coding", "Quantum key distribution"]
+    examples["Quantum teleportation", "Superdense coding", "Quantum key distribution"]
   },
   {
     title: "Quantum Parallelism",
     description: "Quantum superposition allows parallel computation of multiple states",
     icon: Brain,
-    examples: ["Quantum Fourier transform", "Grover's algorithm", "Quantum walks"]
+    examples["Quantum Fourier transform", "Grover's algorithm", "Quantum walks"]
   },
   {
     title: "Quantum Tunneling",
     description: "Quantum effects enable optimization through energy landscape exploration",
     icon: Rocket,
+<<<<<<< HEAD
     examples: ["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
+
+=======
+    examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
   }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function QuantumComputing() {
@@ -253,9 +269,9 @@ export default function QuantumComputing() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Algorithm Development', 'Cryptography', 'Machine Learning', 'Simulation', 'Optimization', 'Infrastructure'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? quantumSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? quantumSolutions
     : quantumSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -267,33 +283,78 @@ export default function QuantumComputing() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Atom className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum
               <span className="text-gradient block">Computing</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Harness the power of quantum mechanics to solve previously intractable problems. 
+              Harness the power of quantum mechanics to solve previously intractable problems.
               From cryptography to optimization, quantum computing opens new frontiers in computational science.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Atom className="w-4 h-4" />
@@ -316,11 +377,29 @@ export default function QuantumComputing() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Computing Advantages</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make quantum computing revolutionary
@@ -331,18 +410,45 @@ export default function QuantumComputing() {
             {quantumAdvantages.map((advantage, index) => (
               <motion.div
                 key={advantage.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{advantage.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{advantage.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {advantage.examples.map((example, exampleIndex) => (
@@ -362,11 +468,29 @@ export default function QuantumComputing() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading quantum computing platforms and technologies
@@ -377,21 +501,48 @@ export default function QuantumComputing() {
             {quantumTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -409,11 +560,29 @@ export default function QuantumComputing() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Quantum Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful quantum computing implementation
@@ -424,11 +593,38 @@ export default function QuantumComputing() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -437,7 +633,7 @@ export default function QuantumComputing() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -453,11 +649,29 @@ export default function QuantumComputing() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Computing Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for the quantum era
@@ -475,7 +689,7 @@ export default function QuantumComputing() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -485,19 +699,46 @@ export default function QuantumComputing() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -506,23 +747,23 @@ export default function QuantumComputing() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -542,11 +783,29 @@ export default function QuantumComputing() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with quantum computing
@@ -557,21 +816,48 @@ export default function QuantumComputing() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -586,7 +872,7 @@ export default function QuantumComputing() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -603,28 +889,46 @@ export default function QuantumComputing() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready for the Quantum Revolution?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how quantum computing can transform your business, 
+              Let's discuss how quantum computing can transform your business,
               solve complex problems, and create new opportunities in the quantum era.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Quantum Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Quantum Consultation
               </a>
             </div>
@@ -632,5 +936,9 @@ export default function QuantumComputing() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
-}
+}}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

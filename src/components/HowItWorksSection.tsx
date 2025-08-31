@@ -1,269 +1,741 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Handshake, 
-  Rocket, 
-  CheckCircle,
-  ArrowRight,
-  Users,
-  Brain,
-  Shield,
-  Zap,
-  Star,
-  Clock
-} from 'lucide-react';
-
-interface Step {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  gradient: string;
-  features: string[];
-  duration: string;
-}
-
-const steps: Step[] = [
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
+=======
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
+const steps = [
+<<<<<<< HEAD
+    {
+        icon: <Search className="w-8 h-8"/>,
+        title: "Discover",
+        description: "Browse our comprehensive catalog of services, talent, and solutions",
+        color: "from-zion-cyan to-zion-cyan-dark",
+        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+        details: [
+            "AI-powered search and filtering",
+            "Curated service categories",
+            "Expert talent matching",
+            "Real-time availability"
+        ],
+        duration: "1-2 hours",
+        success: "95% match rate"
+    },
+    {
+        icon: <Users className="w-8 h-8"/>,
+        title: "Connect",
+        description: "Get matched with the perfect team or service for your project",
+        color: "from-zion-purple to-zion-purple-dark",
+        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+        details: [
+            "Smart matching algorithm",
+            "Profile verification",
+            "Portfolio review",
+            "Direct communication"
+        ],
+        duration: "2-4 hours",
+        success: "98% satisfaction"
+    },
+    {
+        icon: <FileText className="w-8 h-8"/>,
+        title: "Plan",
+        description: "Collaborate on project requirements, timeline, and deliverables",
+        color: "from-zion-blue to-zion-blue-dark",
+        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
+        details: [
+            "Interactive project planning",
+            "Timeline optimization",
+            "Resource allocation",
+            "Risk assessment"
+        ],
+        duration: "4-8 hours",
+        success: "90% on-time delivery"
+    },
+    {
+        icon: <Rocket className="w-8 h-8"/>,
+        title: "Execute",
+        description: "Watch your vision come to life with our expert execution",
+        color: "from-zion-cyan-light to-zion-cyan",
+        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+        details: [
+            "Agile development process",
+            "Regular progress updates",
+            "Quality assurance",
+            "Performance monitoring"
+        ],
+        duration: "1-4 weeks",
+        success: "99% quality score"
+    },
+    {
+        icon: <CheckCircle className="w-8 h-8"/>,
+        title: "Deliver",
+        description: "Receive your completed project with ongoing support and maintenance",
+        color: "from-zion-purple-light to-zion-purple",
+        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+        details: [
+            "Comprehensive testing",
+            "Documentation delivery",
+            "Training and handover",
+            "Post-launch support"
+        ],
+        duration: "Ongoing",
+        success: "100% client retention";
+    };
+];
+const stats = [
+    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
+    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
+    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
-    title: "Discovery & Assessment",
-    description: "We begin by understanding your unique business challenges and technology requirements",
-    icon: Search,
-    color: "from-cyan-500 to-blue-600",
-    gradient: "from-cyan-500/20 to-blue-500/20",
-    features: [
-      "Business needs analysis",
-      "Technology audit",
-      "Gap identification",
-      "ROI assessment"
+    icon: <Search className="w-8 h-8" />,
+    title: "Discover",
+    description: "Browse our comprehensive catalog of services, talent, and solutions",
+    color: "from-zion-cyan to-zion-cyan-dark",
+    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+    details: [
+      "AI-powered search and filtering",
+      "Curated service categories",
+      "Expert talent matching",
+      "Real-time availability"
     ],
-    duration: "1-2 weeks"
+    duration: "1-2 hours",
+    success: "95% match rate"
   },
   {
-    title: "Solution Design",
-    description: "Our experts craft a tailored solution that aligns with your business objectives",
-    icon: Brain,
-    color: "from-green-500 to-emerald-600",
-    gradient: "from-green-500/20 to-emerald-500/20",
-    features: [
-      "Custom architecture design",
-      "Technology stack selection",
-      "Implementation roadmap",
-      "Risk mitigation plan"
+    icon: <Users className="w-8 h-8" />,
+    title: "Connect",
+    description: "Get matched with the perfect team or service for your project",
+    color: "from-zion-purple to-zion-purple-dark",
+    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+    details: [
+      "Smart matching algorithm",
+      "Profile verification",
+      "Portfolio review",
+      "Direct communication"
     ],
-    duration: "2-3 weeks"
+    duration: "2-4 hours",
+    success: "98% satisfaction"
   },
   {
-    title: "Implementation",
-    description: "We execute the solution with precision, ensuring minimal disruption to your operations",
-    icon: Rocket,
-    color: "from-purple-500 to-pink-600",
-    gradient: "from-purple-500/20 to-pink-500/20",
-    features: [
-      "Agile development",
+    icon: <FileText className="w-8 h-8" />,
+    title: "Plan",
+    description: "Collaborate on project requirements, timeline, and deliverables",
+    color: "from-zion-blue to-zion-blue-dark",
+    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
+    details: [
+      "Interactive project planning",
+      "Timeline optimization",
+      "Resource allocation",
+      "Risk assessment"
+    ],
+    duration: "4-8 hours",
+    success: "90% on-time delivery"
+  },
+  {
+    icon: <Rocket className="w-8 h-8" />,
+    title: "Execute",
+    description: "Watch your vision come to life with our expert execution",
+    color: "from-zion-cyan-light to-zion-cyan",
+    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+    details: [
+      "Agile development process",
+      "Regular progress updates",
       "Quality assurance",
-      "Testing & validation",
-      "Performance optimization"
+      "Performance monitoring"
     ],
-    duration: "4-12 weeks"
+    duration: "1-4 weeks",
+    success: "99% quality score"
   },
   {
-    title: "Launch & Support",
-    description: "We ensure smooth deployment and provide ongoing support for long-term success",
-    icon: Shield,
-    color: "from-yellow-500 to-orange-600",
-    gradient: "from-yellow-500/20 to-orange-500/20",
-    features: [
-      "Go-live support",
-      "Training & documentation",
-      "24/7 monitoring",
-      "Continuous improvement"
+    icon: <CheckCircle className="w-8 h-8" />,
+    title: "Deliver",
+    description: "Receive your completed project with ongoing support and maintenance",
+    color: "from-zion-purple-light to-zion-purple",
+    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+    details: [
+      "Comprehensive testing",
+<<<<<<< HEAD
+      "Documentation delivery",
+      "Training and handover",
+      "Post-launch support"
     ],
-    duration: "Ongoing"
-  }
+    duration: "Ongoing",
+    success: "100% client retention"
+
+=======
+      "Documentation delivery",;
+      "Training and handover",;
+      "Post-launch support";
+    ],;
+    duration: "Ongoing",;
+    success: "100% client retention";
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1
-    }
-  }
-};
+const stats = [;
+  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },;
+  { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;
+  { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;
+  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+];
+export function HowItWorksSection(...args: any[]): any {
+    const [hoveredStep, setHoveredStep] = useState(null);
+    const [activeStep, setActiveStep] = useState(0);
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            };
+        };
+    };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+<<<<<<< HEAD
+    const itemVariants = {
+  hidden: { opacity: 0,
+  y: 20 
 
-export default function HowItWorksSection() {
+},;
+        visible: { opacity: 1, y: 0 };
+    };
+    const statsVariants = {
+  hidden: { opacity: 0,
+  scale: 0.8 
+
+},
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            };
+        };
+    };
+    return (<section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Enhanced background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style = {
+  {
+            backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+  backgroundSize: '40px 40px'
+        
+
+}}/>
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 },
+<<<<<<< HEAD
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+
+
+=======
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.2,;
+        delayChildren: 0.1;
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+
+  const statsVariants = {
+  hidden: { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+},
+    visible: {
+<<<<<<< HEAD
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+
+
+=======
+      opacity: 1,;
+      scale: 1,;
+      transition: {;
+        duration: 0.5,;
+        ease: "easeOut";
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div 
+    <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Enhanced background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style = {
+  {
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+  backgroundSize: '40px 40px'
+        
+
+
+
+
+
+
+}} />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      </div>
+      {/* Floating decorative elements */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
+          animate={{ rotate: 360 }}
+          transition = {
+  { duration: 20, repeat: Infinity,
+  ease: "linear" 
+
+
+
+
+
+
+}}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
+          animate={{ rotate: -360 }}
+          transition = {
+  { duration: 25, repeat: Infinity,
+  ease: "linear" 
+
+
+
+
+
+
+}}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
+          animate = {
+  { scale: [1, 1.2,
+  1] 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+
+
+
+
+
+
+}}
+        />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
           className="text-center mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+
+=======
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-            How We <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Work</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Our proven methodology ensures successful project delivery and maximum business value
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Our streamlined process ensures your project success from concept to completion.
+            Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
+        {/* Stats section */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: anytrue }}
 
-        {/* Process Steps */}
-        <motion.div 
+          {stats.map((stat, index)  => (
+            <motion.div
+              key={index}
+              variants={statsVariants}
+              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
+
+              <div className="text-zion-cyan mb-2 flex justify-center">
+                {stat.icon}
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
+            </motion.div>))}
+        </motion.div>
+
+        <motion.div
           className="relative"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {/* Connection Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transform -translate-y-1/2 hidden lg:block">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 opacity-20 blur-sm"></div>
+          viewport={{ once: true }}
+
+          {/* Enhanced connection line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
+            <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
+  { duration: 2,
+  delay: 0.5 
+
+}}/>
           </div>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index)  => (
+<<<<<<< HEAD
+              <motion.div 
+                key={index} 
+                variants={itemVariants} 
+                className="relative group" 
+                onHoverStart={() => setHoveredStep(index)} 
+                onHoverEnd={() => setHoveredStep(null)} 
+                whileHover={{ y: -8 }} 
+                transition = {
+  { type: "spring",
+  stiffness: 300 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
-            {steps.map((step, index) => (
+}}
+=======
               <motion.div
-                key={step.title}
-                variants={itemVariants}
-                className="group relative"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                key={index}
+                variants={containerVariants}
+                className="relative group"
+                onHoverStart={() => setHoveredStep(index)}
+                onHoverEnd={() => setHoveredStep(null)}
+                whileHover={{ y: -8 }}
+<<<<<<< HEAD
+                transition={{ type: "spring", stiffness: 300 }}
+
+                {/* Step card */}
+                <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:bg-zion-blue-dark h-full">
+=======
+                transition = {
+  { type: "spring",
+  stiffness: 300 
+
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
-                {/* Step Number */}
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-20">
-                  {index + 1}
-                </div>
-
-                <div className="relative h-full bg-slate-800/50 backdrop-blur-md rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 overflow-hidden">
-                  {/* Background Gradient */}
-                  <div className={`absolute inset-0 ${step.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className="text-center h-full">
+                  {/* Step number with enhanced styling */}
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+                    {index + 1}
+                  </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                  {/* Icon with enhanced background */}
+                  <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                    <div className="text-white">
+                      {step.icon}
+                    </div>
+                  </div>
+                  {/* Title and description */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
+                    {step.description}
+                  </p>
+                  {/* Duration and success rate */}
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
+                      <Clock className="w-3 h-3"/>
+                      <span>{step.duration}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2 text-zion-purple/80 text-xs">
+                      <Target className="w-3 h-3"/>
+                      <span>{step.success}</span>
+                    </div>
+                  </div>
                   
-                  {/* Content */}
-                  <div className="relative z-10 p-8 h-full flex flex-col text-center">
-                    {/* Icon */}
-                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${step.color} mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
+                  {/* Interactive details on hover */}
+                  <AnimatePresence>
+                    {hoveredStep === index && (
+                      <motion.div 
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                        initial = {
+  { opacity: 0, height: 0,
+  y: 10 
 
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 mb-4">
-                      {step.title}
-                    </h3>
+}} 
+                        animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
 
-                    {/* Description */}
-                    <p className="text-slate-300 mb-6 leading-relaxed flex-grow">
-                      {step.description}
-                    </p>
+}} 
+                        exit = {
+  { opacity: 0, height: 0,
+  y: 10 
 
-                    {/* Duration */}
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-700/50 text-slate-300 text-sm font-medium mb-6">
-                      <Clock className="w-4 h-4 mr-2" />
-                      {step.duration}
-                    </div>
+}} 
+                        transition={{ duration: 0.3 }}
+                      >
+                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
+                        <div className="space-y-2">
+                          {step.details.map((detail, idx) => (
+                            <motion.div 
+                              key={idx} 
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                              initial = {
+  { opacity: 0,
+  x: -10 
 
-                    {/* Features */}
-                    <div className="mb-6">
-                      <ul className="space-y-2 text-left">
-                        {step.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-slate-300 text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            <span>{feature}</span>
+}} 
+                              animate = {
+  { opacity: 1,
+  x: 0 
+
+}} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
+                              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                              <span>{detail}</span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  
+                  {/* Hover indicator */}
+                  <div className="mt-4 text-zion-cyan/60 text-xs">
+                    {hoveredStep === index ? "Hover to see details" : "Hover for details"}
+                  </div>
+                </div>
+<<<<<<< HEAD
+=======
+
+                {/* Hover details */}
+                <AnimatePresence>
+                  {hoveredStep === index && (
+                    <motion.div
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 p-4 bg-zion-blue-dark rounded-xl border border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20 backdrop-blur-sm z-10 min-w-[280px]"
+                      initial = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                      transition={{ duration: 0.2 }}
+
+                      <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {step.details.map((detail, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
+                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                            {detail}
                           </li>
                         ))}
                       </ul>
-                    </div>
 
-                    {/* Arrow for next step */}
-                    {index < steps.length - 1 && (
-                      <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden lg:block">
-                        <ArrowRight className="w-6 h-6 text-cyan-400" />
-                      </div>
-                    )}
-                  </div>
-                </div>
+                      {/* Arrow pointer */}
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-blue-dark border-l border-t border-zion-cyan/30 rotate-45"></div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </motion.div>
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+        {/* Enhanced bottom CTA */}
+        <motion.div className="text-center mt-20" initial = {
+  { opacity: 0,
+  y: 20 
 
-        {/* Success Metrics */}
-        <motion.div 
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+}}>
+=======
+
+        {/* Call to action */}
+        <motion.div
+          className="text-center mt-16"
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          viewport={{ once: true }}
+<<<<<<< HEAD
+          transition={{ duration: 0.6, delay: 0.5 }}
+
+=======
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}
         >
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-md rounded-3xl border border-cyan-500/30 p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Our Success Metrics
-            </h3>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { value: "98%", label: "Project Success Rate", icon: Star },
-                { value: "95%", label: "Client Satisfaction", icon: Users },
-                { value: "40%", label: "Average Cost Reduction", icon: Zap },
-                { value: "10x", label: "Performance Improvement", icon: Rocket }
-              ].map((metric, index) => (
-                <motion.div
-                  key={metric.label}
-                  className="text-center"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl mb-4">
-                    <metric.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-slate-300 text-sm">{metric.label}</div>
-                </motion.div>
-              ))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+              <p className="text-white text-lg mb-4">
+                Ready to start your project journey?
+              </p>
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
+                Get Started Today
+                <Rocket className="w-5 h-5"/>
+              </button>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
+        {/* Additional features */}
+        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial = {
+  { opacity: 0,
+  y: 20 
 
-        {/* CTA Section */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <p className="text-slate-300 text-lg mb-6">
-            Ready to start your transformation journey?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
-              Get Started Today
-            </button>
-            <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
-              Schedule Consultation
-            </button>
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+}}>
+          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
+              <Zap className="w-8 h-8 text-white"/>
+            </div>
+            <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
+            <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
+          </div>
+          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-purple to-zion-cyan mb-4">
+              <Shield className="w-8 h-8 text-white"/>
+            </div>
+            <h4 className="text-white font-semibold mb-2">Secure & Reliable</h4>
+            <p className="text-zion-slate-light text-sm">Enterprise-grade security and uptime</p>
+          </div>
+          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan-light to-zion-blue mb-4">
+              <Users className="w-8 h-8 text-white"/>
+            </div>
+            <h4 className="text-white font-semibold mb-2">Expert Support</h4>
+            <p className="text-zion-slate-light text-sm">24/7 support from our team</p>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
+=======;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
+<<<<<<< HEAD
+</div>}}}}}}</motion.div></motion.div></motion.div>}
+=======
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

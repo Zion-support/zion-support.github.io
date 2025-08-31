@@ -10,7 +10,7 @@ const categories = [
         link: "/services",
         color: "from-zion-purple to-zion-purple-dark",
         gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-        features: ["24/7 Support", "Expert Team", "Custom Solutions"],
+        features["24/7 Support", "Expert Team", "Custom Solutions"],
         stats: "500+ Services"
     },
     {
@@ -20,7 +20,7 @@ const categories = [
         link: "/talent",
         color: "from-zion-cyan to-zion-blue",
         gradient: "from-zion-cyan/20 to-zion-blue/20",
-        features: ["AI Experts", "Global Network", "Verified Profiles"],
+        features["AI Experts", "Global Network", "Verified Profiles"],
         stats: "10K+ Experts"
     },
     {
@@ -30,7 +30,7 @@ const categories = [
         link: "/equipment",
         color: "from-zion-cyan-light to-zion-cyan",
         gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-        features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
+        features["High-Performance", "Flexible Rental", "24/7 Monitoring"],
         stats: "1000+ Devices"
     },
     {
@@ -40,7 +40,7 @@ const categories = [
         link: "/category/innovation",
         color: "from-zion-purple-light to-zion-purple",
         gradient: "from-zion-purple-light/20 to-zion-purple/20",
-        features: ["Latest Tech", "AI Solutions", "Future-Ready"],
+        features["Latest Tech", "AI Solutions", "Future-Ready"],
         stats: "100+ Innovations"
     },
 ];
@@ -86,7 +86,10 @@ export function CategoriesSection({ showTitle = true }) {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -97,7 +100,10 @@ export function CategoriesSection({ showTitle = true }) {
         }
     };
     const cardVariants = {
-        hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+
+},
         visible: {
             scale: 1,
             opacity: 1,
@@ -116,7 +122,15 @@ export function CategoriesSection({ showTitle = true }) {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {showTitle && (<motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        {showTitle && (<motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation. 
@@ -125,9 +139,17 @@ export function CategoriesSection({ showTitle = true }) {
           </motion.div>)}
         
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
+          {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+  { type: "spring",
+  stiffness: 300 
+
+}}>
               <Link to={category.link} className="group block h-full">
-                <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+}}>
                   {/* Icon with enhanced background */}
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
                     <div className="text-white">
@@ -169,10 +191,34 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
         
         {/* Enhanced featured services section */}
-        <motion.div className="mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mt-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+}}>
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {specialServices.map((service, index) => (<motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }}>
+            {specialServices.map((service, index) => (<motion.div key={service.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} whileHover={{ y: -4 }}>
                 <Link to={service.link} className="group block">
                   <div className="px-6 py-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 backdrop-blur-sm hover:shadow-lg hover:shadow-zion-purple/20">
                     <div className="flex items-center gap-3 mb-2">
@@ -190,7 +236,19 @@ export function CategoriesSection({ showTitle = true }) {
           </div>
           
           {/* View all services button */}
-          <motion.div className="text-center mt-8" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
+          <motion.div className="text-center mt-8" initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: 0.5 
+
+}}>
             <Link to="/comprehensive-services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple border border-zion-purple/50 hover:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-zion-purple/25 font-semibold group">
               View All Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"/>
@@ -198,5 +256,4 @@ export function CategoriesSection({ showTitle = true }) {
           </motion.div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

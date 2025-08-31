@@ -3,15 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight import { SEO } from '@/components/SEO';
+=======
 import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const pricingTiers = [
     {
         name: "Starter",
         description: "Perfect for small businesses and startups",
         price: "From $500",
         priceRange: "500 - 1,999",
-        features: [
+        features[
             "Basic AI Integration",
             "Standard Security",
             "Email Support",
@@ -19,7 +23,7 @@ const pricingTiers = [
             "5 User Licenses",
             "Standard Templates"
         ],
-        notIncluded: [
+        notIncluded[
             "Advanced Customization",
             "Priority Support",
             "Custom Integrations",
@@ -33,7 +37,7 @@ const pricingTiers = [
         description: "Ideal for growing businesses and teams",
         price: "From $2,000",
         priceRange: "2,000 - 4,999",
-        features: [
+        features[
             "Advanced AI Features",
             "Enhanced Security",
             "Priority Support",
@@ -43,7 +47,7 @@ const pricingTiers = [
             "API Access",
             "Integration Support"
         ],
-        notIncluded: [
+        notIncluded[
             "Enterprise Security",
             "Custom Development",
             "Dedicated Account Manager"
@@ -56,7 +60,7 @@ const pricingTiers = [
         description: "For large organizations with complex needs",
         price: "From $5,000",
         priceRange: "5,000 - 15,000",
-        features: [
+        features[
             "Full AI Suite",
             "Enterprise Security",
             "24/7 Premium Support",
@@ -68,16 +72,16 @@ const pricingTiers = [
             "Custom Integrations",
             "Training & Onboarding"
         ],
-        notIncluded: [],
+        notIncluded[],
         color: "from-purple-500 to-indigo-600",
         popular: false
-    }
+
 ];
 const serviceCategories = [
     {
         name: "AI Services",
         icon: <Zap className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 },
             { name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 },
             { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },
@@ -87,7 +91,7 @@ const serviceCategories = [
     {
         name: "IT Services",
         icon: <Shield className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },
@@ -97,7 +101,7 @@ const serviceCategories = [
     {
         name: "Business Solutions",
         icon: <TrendingUp className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 },
             { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },
             { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },
@@ -107,13 +111,13 @@ const serviceCategories = [
     {
         name: "Digital Solutions",
         icon: <Globe className="w-6 h-6"/>,
-        services: [
+        services[
             { name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
             { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
         ]
-    }
+
 ];
 const benefits = [
     {
@@ -145,7 +149,7 @@ const benefits = [
         icon: <BarChart3 className="w-8 h-8"/>,
         title: "Continuous Innovation",
         description: "Regular updates and new features to keep you ahead"
-    }
+
 ];
 export default function ServicesPricing() {
     const [selectedTier, setSelectedTier] = useState('professional');
@@ -159,7 +163,7 @@ export default function ServicesPricing() {
             Transparent Pricing
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need, 
+            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need,
             with the ability to scale up as you grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -220,7 +224,7 @@ export default function ServicesPricing() {
                       Most Popular
                     </Badge>
                   </div>)}
-                
+
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
@@ -231,7 +235,7 @@ export default function ServicesPricing() {
                     <div className="text-zion-slate-light text-sm">Range: ${tier.priceRange}</div>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <h4 className="text-white font-semibold mb-3">What's Included:</h4>
@@ -240,7 +244,7 @@ export default function ServicesPricing() {
                         <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>))}
                   </div>
-                  
+
                   {tier.notIncluded.length > 0 && (<div className="space-y-3 pt-4 border-t border-zion-blue-light">
                       <h4 className="text-white font-semibold mb-3">Not Included:</h4>
                       {tier.notIncluded.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center gap-3">
@@ -248,7 +252,7 @@ export default function ServicesPricing() {
                           <span className="text-zion-slate-light text-sm">{feature}</span>
                         </div>))}
                     </div>)}
-                  
+
                   <Button className={`w-full mt-6 bg-gradient-to-r ${tier.color} hover:opacity-90 text-white`} size="lg">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2"/>
@@ -283,7 +287,7 @@ export default function ServicesPricing() {
                 Enterprise
               </TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value={selectedTier} className="mt-8">
               <div className="space-y-8">
                 {serviceCategories.map((category, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light">
@@ -293,7 +297,7 @@ export default function ServicesPricing() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="flex items-center justify-between p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
                           <span className="text-zion-slate-light">{service.name}</span>
@@ -357,5 +361,9 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

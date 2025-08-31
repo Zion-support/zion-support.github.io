@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
-import { useWebhooks } from "@/hooks/useWebhooks";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X import { useWebhooks } from "@/hooks/useWebhooks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -28,32 +27,24 @@ export function WebhooksManager() {
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {
-        fetchWebhooks();
-    }, []);
+        fetchWebhooks()}, []);
     const handleCreateWebhook = async () => {
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;
-        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? undefined : webhookSecret);
+        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? null : webhookSecret);
         setShowCreateDialog(false);
-        resetWebhookForm();
-    };
-    const handleToggleStatus = async (webhookId, currentStatus) => {
-        await toggleWebhook(webhookId, !currentStatus);
-    };
+        resetWebhookForm()};
     const handleDeleteWebhook = async (webhookId) => {
         await deleteWebhook(webhookId);
-        setShowDeleteConfirm(null);
-    };
+        setShowDeleteConfirm(null)};
     const handleTestWebhook = async (webhookId) => {
         await testWebhook(webhookId, testEventType);
-        setShowTestResult(true);
-    };
+        setShowTestResult(true)};
     const resetWebhookForm = () => {
         setWebhookName("");
         setWebhookUrl("");
         setWebhookSecret("");
-        setSelectedEvents([]);
-    };
+        setSelectedEvents([])};
     // Event type options
     const eventOptions = [
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
@@ -65,8 +56,7 @@ export function WebhooksManager() {
     const toggleEvent = (event) => {
         setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
-            : [...prev, event]);
-    };
+            [...prev, event])};
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -76,13 +66,13 @@ export function WebhooksManager() {
           Set up webhooks to get notified when events happen in your Zion account.
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
-          
+
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">
@@ -96,13 +86,13 @@ export function WebhooksManager() {
                   Add a webhook endpoint to receive event notifications.
                 </DialogDescription>
               </DialogHeader>
-              
+
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="webhook-name">Webhook Name</Label>
                   <Input id="webhook-name" value={webhookName} onChange={(e) => setWebhookName(e.target.value)} placeholder="e.g. Application Notifications" className="bg-zinc-800 border-zinc-700"/>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="webhook-url">Endpoint URL</Label>
                   <Input id="webhook-url" value={webhookUrl} onChange={(e) => setWebhookUrl(e.target.value)} placeholder="https://example.com/webhook" className="bg-zinc-800 border-zinc-700"/>
@@ -118,7 +108,7 @@ export function WebhooksManager() {
                     Used to verify webhook payload signatures. Keep it secret and secure.
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
@@ -132,12 +122,11 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-              
+
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
             setShowCreateDialog(false);
-            resetWebhookForm();
-        }}>
+            resetWebhookForm()}}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||
@@ -149,7 +138,7 @@ export function WebhooksManager() {
             </DialogContent>
           </Dialog>
         </div>
-        
+
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500">
@@ -165,15 +154,24 @@ export function WebhooksManager() {
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
-                      <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}/>
+                      <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange = {
+  () => handleToggleStatus(webhook.id,
+  webhook.is_active)
+
+
+
+
+
+
+}/>
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
-                    
+
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon">
@@ -191,13 +189,13 @@ export function WebhooksManager() {
                     </DropdownMenu>
                   </div>
                 </div>
-                
+
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event) => (<Badge key={event} variant="secondary" className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                       {event}
                     </Badge>))}
                 </div>
-                
+
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
@@ -205,7 +203,7 @@ export function WebhooksManager() {
               </div>)))}
         </div>
       </CardContent>
-      
+
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
@@ -222,9 +220,14 @@ export function WebhooksManager() {
                 setTestEventType('new_application');
                 if (showTestResult) {
                     setShowTestResult(false);
+<<<<<<< HEAD
                     clearTestResult();
-                }
+
+
+=======
+                    clearTestResult()}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }}>
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
@@ -233,7 +236,7 @@ export function WebhooksManager() {
               Send a test webhook to your endpoint.
             </DialogDescription>
           </DialogHeader>
-          
+
           {!showTestResult ? (<>
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
@@ -253,7 +256,7 @@ export function WebhooksManager() {
                   </p>
                 </div>
               </div>
-              
+
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
@@ -273,7 +276,7 @@ export function WebhooksManager() {
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
                   </div>
-                  
+
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
@@ -284,19 +287,17 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-              
+
               <DialogFooter>
                 <Button variant="default" onClick={() => {
                 setShowTestDialog(null);
                 setShowTestResult(false);
-                clearTestResult();
-            }}>
+                clearTestResult()}}>
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
                 setShowTestResult(false);
-                clearTestResult();
-            }}>
+                clearTestResult()}}>
                   Test Another Event
                 </Button>
               </DialogFooter>
@@ -324,5 +325,9 @@ export function WebhooksManager() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+<<<<<<< HEAD
     </Card>);
-}
+</Card></Card></Card></Card></Card>}}}}
+=======
+    </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

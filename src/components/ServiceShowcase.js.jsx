@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 export function ServiceShowcase({ services }) {
     const getCategoryIcon = (category) => {
@@ -9,8 +9,7 @@ export function ServiceShowcase({ services }) {
             case 'Security': return <Shield className="h-5 w-5"/>;
             case 'Analytics': return <TrendingUp className="h-5 w-5"/>;
             case 'Development': return <Users className="h-5 w-5"/>;
-            default: return <Star className="h-5 w-5"/>;
-        }
+            default: return <Star className="h-5 w-5"/>}
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -18,8 +17,7 @@ export function ServiceShowcase({ services }) {
             case 'Security': return 'from-red-500 to-orange-500';
             case 'Analytics': return 'from-blue-500 to-cyan-500';
             case 'Development': return 'from-green-500 to-emerald-500';
-            default: return 'from-gray-500 to-slate-500';
-        }
+            default: return 'from-gray-500 to-slate-500'}
     };
     return (<div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       <div className="container mx-auto px-4">
@@ -103,5 +101,4 @@ export function ServiceShowcase({ services }) {
           </Button>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

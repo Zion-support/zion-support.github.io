@@ -20,7 +20,7 @@ const Soc2ComplianceAutomation = () => {
             title: "Audit Preparation",
             description: "Automated report generation and audit preparation",
             icon: "📊"
-        }
+
     ];
     const soc2Criteria = [
         {
@@ -47,7 +47,7 @@ const Soc2ComplianceAutomation = () => {
             principle: "Privacy",
             description: "Personal information protection and privacy controls",
             controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
-        }
+
     ];
     const automationBenefits = [
         {
@@ -69,7 +69,7 @@ const Soc2ComplianceAutomation = () => {
             title: "Continuous Compliance",
             description: "24/7 monitoring and real-time compliance status",
             metric: "24/7"
-        }
+
     ];
     const complianceTools = [
         {
@@ -87,7 +87,7 @@ const Soc2ComplianceAutomation = () => {
         {
             category: "Reporting & Analytics",
             tools: ["Compliance reports", "Trend analysis", "Gap analysis", "Executive dashboards"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -100,12 +100,12 @@ const Soc2ComplianceAutomation = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Streamline your SOC 2 compliance journey with our automated platform. 
-              Continuous monitoring, automated evidence collection, and real-time 
+              Streamline your SOC 2 compliance journey with our automated platform.
+              Continuous monitoring, automated evidence collection, and real-time
               compliance insights to maintain your SOC 2 certification effortlessly.
             </p>
           </div>
-          
+
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Automated Compliance Features</h2>
@@ -117,7 +117,7 @@ const Soc2ComplianceAutomation = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* SOC 2 Criteria */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">SOC 2 Trust Service Criteria</h2>
@@ -125,7 +125,7 @@ const Soc2ComplianceAutomation = () => {
               {soc2Criteria.map((criteria, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{criteria.principle}</h3>
                   <p className="text-gray-300 mb-4">{criteria.description}</p>
-                  
+
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Controls:</h4>
                     {criteria.controls.map((control, idx) => (<div key={idx} className="flex items-center text-gray-300">
@@ -136,7 +136,7 @@ const Soc2ComplianceAutomation = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Automation Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Benefits of Automation</h2>
@@ -148,7 +148,7 @@ const Soc2ComplianceAutomation = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Compliance Tools */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Compliance Tools</h2>
@@ -164,7 +164,7 @@ const Soc2ComplianceAutomation = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Implementation Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Implementation Process</h2>
@@ -176,7 +176,7 @@ const Soc2ComplianceAutomation = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Assessment</h3>
                 <p className="text-gray-300 text-sm">Evaluate current compliance status and requirements</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -184,7 +184,7 @@ const Soc2ComplianceAutomation = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Setup</h3>
                 <p className="text-gray-300 text-sm">Configure automated monitoring and control systems</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -192,7 +192,7 @@ const Soc2ComplianceAutomation = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Integration</h3>
                 <p className="text-gray-300 text-sm">Integrate with existing systems and processes</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -202,7 +202,7 @@ const Soc2ComplianceAutomation = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Dashboard Preview */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -215,7 +215,7 @@ const Soc2ComplianceAutomation = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Compliance Status</h3>
                   <p className="text-gray-300 text-sm">Real-time view of your SOC 2 compliance status</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📊</span>
@@ -223,7 +223,7 @@ const Soc2ComplianceAutomation = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Control Monitoring</h3>
                   <p className="text-gray-300 text-sm">Monitor all security controls in real-time</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📋</span>
@@ -234,7 +234,7 @@ const Soc2ComplianceAutomation = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
@@ -246,7 +246,7 @@ const Soc2ComplianceAutomation = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">SaaS Companies</h3>
                 <p className="text-gray-300 text-sm">Maintain SOC 2 compliance for customer trust</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏦</span>
@@ -254,7 +254,7 @@ const Soc2ComplianceAutomation = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Financial Services</h3>
                 <p className="text-gray-300 text-sm">Meet regulatory requirements and security standards</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏥</span>
@@ -264,13 +264,13 @@ const Soc2ComplianceAutomation = () => {
               </div>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Automate Your SOC 2 Compliance?</h3>
               <p className="text-gray-300 mb-6">
-                Streamline your compliance process, reduce manual work, and maintain 
+                Streamline your compliance process, reduce manual work, and maintain
                 continuous SOC 2 compliance with our automated platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -288,3 +288,4 @@ const Soc2ComplianceAutomation = () => {
     </div>);
 };
 export default Soc2ComplianceAutomation;
+}}}}

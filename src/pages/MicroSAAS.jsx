@@ -1,27 +1,36 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const MicroSAAS = () => {
     const microSaasServices = [
         {
             title: "AI Content Generator",
             description: "Automated content creation platform for marketing, social media, and business communications.",
-            features: ["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
+            features["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
         },
         {
             title: "Accessibility Auditor",
             description: "Comprehensive accessibility testing and compliance tools for web applications.",
-            features: ["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
+            features["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
         },
         {
             title: "Affiliate Attribution Hub",
             description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
-            features: ["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
+            features["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
         },
         {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
+<<<<<<< HEAD
             features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
+
+=======
+            features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -34,16 +43,16 @@ const MicroSAAS = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized software-as-a-service solutions designed to solve specific business challenges 
+              Specialized software-as-a-service solutions designed to solve specific business challenges
               with focused functionality and rapid deployment
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {microSaasServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                
+
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Key Features</h4>
                   <ul className="space-y-1">
@@ -53,7 +62,7 @@ const MicroSAAS = () => {
                       </li>))}
                   </ul>
                 </div>
-                
+
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                     Learn More
@@ -64,12 +73,12 @@ const MicroSAAS = () => {
                 </div>
               </div>))}
           </div>
-          
+
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
               <p className="text-gray-300 mb-6">
-                Can't find exactly what you need? We can develop custom micro-SAAS solutions 
+                Can't find exactly what you need? We can develop custom micro-SAAS solutions
                 tailored to your specific business requirements.
               </p>
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -79,6 +88,6 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default MicroSAAS;
+}

@@ -6,25 +6,25 @@ const Accessibility = () => {
             icon: Eye,
             title: "Visual Accessibility",
             description: "Support for users with visual impairments",
-            features: ["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
+            features["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
         },
         {
             icon: Ear,
             title: "Auditory Accessibility",
             description: "Support for users with hearing impairments",
-            features: ["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
+            features["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
         },
         {
             icon: Hand,
             title: "Motor Accessibility",
             description: "Support for users with motor impairments",
-            features: ["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
+            features["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
         },
         {
             icon: Brain,
             title: "Cognitive Accessibility",
             description: "Support for users with cognitive impairments",
-            features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
+            features["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
         }
     ];
     const complianceStandards = [
@@ -251,7 +251,7 @@ const Accessibility = () => {
             Need Help with Accessibility?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            If you encounter any accessibility issues or have suggestions for 
+            If you encounter  accessibility issues or have suggestions for 
             improvement, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -264,6 +264,5 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default Accessibility;

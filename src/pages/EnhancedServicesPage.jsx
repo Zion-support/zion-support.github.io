@@ -6,24 +6,22 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
+import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle import { SEO } from '@/components/SEO';
+=======
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const filteredServices = ENHANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' ||
-            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
         const matchesPrice = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'basic' && service.price <= 2000) ||
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
             (selectedPriceRange === 'enterprise' && service.price > 8000);
-        return matchesSearch && matchesCategory && matchesPrice;
-    });
+        return matchesSearch && matchesCategory && matchesPrice});
     const getCategoryIcon = (category) => {
         switch (category.toLowerCase()) {
             case 'ai automation':
@@ -54,16 +52,19 @@ export default function EnhancedServicesPage() {
             case 'quantum computing':
                 return <Zap className="w-5 h-5"/>;
             default:
+<<<<<<< HEAD
                 return <Code className="w-5 h-5"/>;
-        }
+
+=======
+                return <Code className="w-5 h-5"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriceRange = (price) => {
         if (price <= 2000)
             return 'basic';
         if (price <= 8000)
             return 'professional';
-        return 'enterprise';
-    };
+        return 'enterprise'};
     return (<div className="min-h-screen bg-background">
       <SEO title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services"/>
 
@@ -234,7 +235,7 @@ export default function EnhancedServicesPage() {
                   {category.label}
                 </TabsTrigger>))}
             </TabsList>
-            
+
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsContent key={category.value} value={category.value} className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES
@@ -321,7 +322,7 @@ export default function EnhancedServicesPage() {
             <p className="text-xl text-zion-slate-light mb-12">
               Get in touch with our experts to discuss your needs and discover how our services can drive your success
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-6 h-6"/>
@@ -355,7 +356,16 @@ export default function EnhancedServicesPage() {
                 <Mail className="w-5 h-5 mr-2"/>
                 Send Email
               </Button>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick={() => window.open(CONTACT_INFO.website, '_blank')}>
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick = {
+  () => window.open(CONTACT_INFO.website,
+  '_blank')
+
+
+
+
+
+
+}>
                 <ExternalLink className="w-5 h-5 mr-2"/>
                 Visit Website
               </Button>
@@ -373,5 +383,9 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

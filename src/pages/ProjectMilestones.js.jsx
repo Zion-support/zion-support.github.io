@@ -10,6 +10,8 @@ function ProjectMilestones() {
         <ProjectMilestonesContent />
         
       </>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}
+export default ProjectMilestones;
+
+export default ProjectMilestones;
 export default ProjectMilestones;

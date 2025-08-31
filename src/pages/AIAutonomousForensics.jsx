@@ -8,7 +8,7 @@ const AIAutonomousForensics = () => {
         <meta name="keywords" content="AI forensics, autonomous forensics, incident investigation, evidence analysis, autonomous operations, AI forensics platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-forensics"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousForensics = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Forensics Intelligence</h3>
               <p className="text-gray-300">AI trained on forensics datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that investigates independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Forensics</h3>
               <p className="text-gray-300">24/7 forensics operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive forensics insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Forensics</h3>
               <p className="text-gray-300">Prevent forensics issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Forensics</h3>
@@ -93,25 +93,25 @@ const AIAutonomousForensics = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Identify</h3>
                 <p className="text-gray-300 text-sm">Identify incident</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Collect</h3>
                 <p className="text-gray-300 text-sm">Collect evidence</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze evidence</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Investigate</h3>
                 <p className="text-gray-300 text-sm">Investigate incident</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Report</h3>
@@ -138,12 +138,12 @@ const AIAutonomousForensics = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
                 <p className="text-gray-300">Security forensics</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Law Enforcement</h3>
                 <p className="text-gray-300">Criminal forensics</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Corporate Investigations</h3>
                 <p className="text-gray-300">Corporate forensics</p>
@@ -168,6 +168,5 @@ const AIAutonomousForensics = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousForensics;

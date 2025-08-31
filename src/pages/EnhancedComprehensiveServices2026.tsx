@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -56,26 +55,36 @@ import {
   Zap as ZapIcon,
   Grid,
   List
-} from 'lucide-react';
+<<<<<<< HEAD
+=======
+  } from 'lucide-react.ts';
 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices } from '../data/zion2026ComprehensiveServices';
+<<<<<<< HEAD
+import { ultimateInnovativeServices2026   } from '../data/ultimateInnovativeServices2026';
+import { zion2026ComprehensiveServices   } from '../data/zion2026ComprehensiveServices';
+=======
+import { ultimateInnovativeServices2026  } from '../data/ultimateInnovativeServices2026';
+import { zion2026ComprehensiveServices  } from '../data/zion2026ComprehensiveServices';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
+
   id: string;
   name: string;
   category: string;
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+pricing: {;
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  };
+billingCycle: string;
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -86,27 +95,31 @@ interface Service {
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
-  };
+    address: string};
   innovationLevel?: string;
   marketSize?: string;
   growthRate?: string;
+<<<<<<< HEAD
   roi?: string;
-}
+=======
+  roi?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const EnhancedComprehensiveServices2026: React.FC = () => {
+<<<<<<< HEAD
+const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [sortBy, setSortBy] = useState<any>('name');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [viewMode, setViewMode] = useState<any>('grid');
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-    
+
     // Add services from ultimateInnovativeServices2026
-    ultimateInnovativeServices2026.forEach(service => {
+    ultimateInnovativeServices2026.forEach(service = > {
       services.push({
         id: service.id,
         name: service.name,
@@ -124,16 +137,28 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      })});
+
+    // Add services from zion2026ComprehensiveServices
+    zion2026ComprehensiveServices.forEach(service = > {;
+=======;
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
       });
     });
 
     // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service => {
+    zion2026ComprehensiveServices.forEach(service = > {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       services.push({
         id: service.id,
         name: service.name,
@@ -151,30 +176,40 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
+<<<<<<< HEAD
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        website: service.website,;
+        contactInfo: service.contactInfo;
+      })});
+=======
+        status: service.status,;
+        marketPrice: service.marketPrice,;
+        estimatedDelivery: service.estimatedDelivery,;
+        website: service.website,;
+        contactInfo: service.contactInfo;
       });
     });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return services;
-  }, []);
+    return services}, []);
 
-  const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+<<<<<<< HEAD
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+    return cats.sort()}, [allServices]);
+=======
+  const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -193,15 +228,19 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
+<<<<<<< HEAD
         break;
-    }
+=======
+        break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Artificial Intelligence':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: anystring)  => {;
+    switch (category) {;
+      case 'Artificial Intelligence':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-6 h-6" />;
       case 'Quantum Computing':
         return <Atom className="w-6 h-6" />;
@@ -222,13 +261,19 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
+<<<<<<< HEAD
         return <Lightbulb className="w-6 h-6" />;
-    }
+
+=======
+        return <Lightbulb className = "w-6 h-6" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
-      case 'live':
+<<<<<<< HEAD
+  const getStatusColor = (status: anystring)  => {;
+    switch (status.toLowerCase()) {;
+      case 'live':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-green-100 text-green-800';
       case 'beta':
         return 'bg-blue-100 text-blue-800';
@@ -237,36 +282,66 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
+<<<<<<< HEAD
         return 'bg-gray-100 text-gray-800';
-    }
+
+=======
+        return 'bg-gray-100 text-gray-800'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getInnovationBadge = (service: Service) => {
+<<<<<<< HEAD
+  const getInnovationBadge = (service: anyService)   => {
     if (service.innovationLevel === 'Revolutionary') {
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {;
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>};
+    return null};
+=======
+  const getInnovationBadge = (service: anyService)  => {;
+    if (service.innovationLevel === 'Revolutionary') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
-    } else if (service.innovationLevel === 'Cutting-Edge') {
+    } else if (service.innovationLevel = == 'Cutting-Edge') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    }
+
     return null;
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Enhanced Comprehensive Services 2026
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
+              Discover our revolutionary portfolio of cutting-edge micro SAAS, IT services, and AI solutions.
               Featuring quantum computing, edge AI, blockchain services, and up to 1000x performance improvements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -274,7 +349,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Play className="w-5 h-5" />
                 Watch Demo
               </motion.button>
@@ -282,7 +357,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
-              >
+
                 <BookOpen className="w-5 h-5" />
                 View Documentation
               </motion.button>
@@ -314,9 +389,15 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+<<<<<<< HEAD
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
+
+                {categories.map(category  => (
+=======
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category => (
+                {categories.map(category   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -326,9 +407,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-              >
+
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="rating">Sort by Rating</option>
@@ -345,15 +426,15 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   className={`px-3 py-2 rounded-md transition-colors ${
                     viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
-                >
+
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-white' : 'text-gray-300 hover:text-white'
+                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
-                >
+
                   <List className="w-4 h-4" />
                 </button>
               </div>
@@ -365,18 +446,45 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service, index)   => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   whileHover={{ y: -5 }}
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
-                >
+
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -423,7 +531,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                         <span
                           key={idx}
                           className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
-                        >
+
                           {feature}
                         </span>
                       ))}
@@ -454,12 +562,39 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
-                >
+
                   <div className="flex items-center gap-6">
                     <div className="flex-shrink-0">
                       {getCategoryIcon(service.category)}
@@ -507,7 +642,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-16"
-          >
+
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
@@ -524,14 +659,41 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
-          >
+
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
-            >
+
               <div className="p-6">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
@@ -549,7 +711,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   <button
                     onClick={() => setSelectedService(null)}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-                  >
+
                     <X className="w-6 h-6 text-gray-400" />
                   </button>
                 </div>
@@ -692,7 +854,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
-            >
+
               <Phone className="w-5 h-5" />
               Call +1 302 464 0950
             </motion.button>
@@ -700,19 +862,32 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
-            >
+
               <Mail className="w-5 h-5" />
               Email kleber@ziontechgroup.com
             </motion.button>
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
+</div>};
+=======
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default EnhancedComprehensiveServices2026;
+export default EnhancedComprehensiveServices2026;}}}}}}

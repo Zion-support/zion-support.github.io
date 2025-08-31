@@ -18,9 +18,25 @@ const NotFound = () => {
         { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
-      <motion.div className="max-w-4xl mx-auto text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+      <motion.div className="max-w-4xl mx-auto text-center" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}
-        <motion.div className="mb-8" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+        <motion.div className="mb-8" animate = {
+  { scale[1, 1.1,
+  1] 
+
+}} transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+}}>
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
             <AlertTriangle className="w-16 h-16 text-white"/>
           </div>
@@ -50,7 +66,15 @@ const NotFound = () => {
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
           <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {popularPages.map((page, index) => (<motion.div key={page.path} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
+            {popularPages.map((page, index) => (<motion.div key={page.path} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.1 * index }}>
                 <Link to={page.path} className="block p-4 bg-white/10 border border-white/20 rounded-lg hover:border-blue-400 hover:bg-white/20 transition-all duration-300 group">
                   <div className="flex items-center justify-between">
                     <div className="text-left">
@@ -70,7 +94,15 @@ const NotFound = () => {
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
           <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {servicePages.map((service, index) => (<motion.div key={service.path} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
+            {servicePages.map((service, index) => (<motion.div key={service.path} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.1 * index }}>
                 <Link to={service.path} className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-lg hover:border-blue-400 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 group">
                   <div className="flex items-center justify-between">
                     <div className="text-left">
@@ -110,6 +142,5 @@ const NotFound = () => {
           </a>
         </motion.p>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default NotFound;

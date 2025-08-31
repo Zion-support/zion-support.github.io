@@ -22,47 +22,58 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             return 'text-green-500';
         if (score >= 70)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     const getScoreEmoji = (score) => {
         if (score >= 90)
             return '🚀';
         if (score >= 70)
             return '⚠️';
-        return '🐌';
-    };
+        return '🐌'};
     const getMetricIcon = (metricName) => {
         const icons = {
-            FCP: <Eye className="w-4 h-4"/>,
+  FCP: <Eye className="w-4 h-4"/>,
             LCP: <Eye className="w-4 h-4"/>,
             FID: <MousePointer className="w-4 h-4"/>,
             CLS: <BarChart3 className="w-4 h-4"/>,
             TTFB: <Clock className="w-4 h-4"/>,
             DOMLOAD: <Activity className="w-4 h-4"/>,
-            WINDOWLOAD: <Activity className="w-4 h-4"/>
-        };
-        return icons[metricName] || <Activity className="w-4 h-4"/>;
-    };
+  WINDOWLOAD: <Activity className="w-4 h-4"/>
+        
+
+};
+        return icons[metricName] || <Activity className="w-4 h-4"/>};
     const getMetricDescription = (metricName) => {
         const descriptions = {
-            FCP: 'First Contentful Paint - Time to first content',
+  FCP: 'First Contentful Paint - Time to first content',
             LCP: 'Largest Contentful Paint - Time to largest content',
             FID: 'First Input Delay - Time to first interaction',
             CLS: 'Cumulative Layout Shift - Visual stability',
             TTFB: 'Time to First Byte - Server response time',
             DOMLOAD: 'DOM Content Loaded - DOM ready time',
-            WINDOWLOAD: 'Window Load - Full page load time'
-        };
-        return descriptions[metricName] || 'Performance metric';
-    };
+  WINDOWLOAD: 'Window Load - Full page load time'
+        
+
+};
+        return descriptions[metricName] || 'Performance metric'};
     const formatMetricValue = (metricName, value) => {
         if (metricName === 'CLS')
             return value.toFixed(3);
         if (metricName === 'FID')
             return `${value.toFixed(0)}ms`;
-        return `${value.toFixed(0)}ms`;
-    };
-    return (<motion.div className={cn('fixed bottom-4 right-4 z-50 max-w-sm', className)} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+        return `${value.toFixed(0)}ms`};
+    return (<motion.div className = {
+  cn('fixed bottom-4 right-4 z-50 max-w-sm',
+  className)
+
+} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.3 }}>
       <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
@@ -84,7 +95,11 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-sm text-zion-slate-light">Score:</span>
-              <span className={cn('text-2xl font-bold', getScoreColor(performanceScore))}>
+              <span className = {
+  cn('text-2xl font-bold',
+  getScoreColor(performanceScore))
+
+}>
                 {performanceScore}
               </span>
               <span className="text-lg">{getScoreEmoji(performanceScore)}</span>
@@ -96,7 +111,19 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         </CardHeader>
 
         <AnimatePresence>
-          {isExpanded && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
+          {isExpanded && (<motion.div initial = {
+  { height: 0,
+  opacity: 0 
+
+}} animate = {
+  { height: 'auto',
+  opacity: 1 
+
+}} exit = {
+  { height: 0,
+  opacity: 0 
+
+}} transition={{ duration: 0.3 }}>
               <CardContent className="pt-0 space-y-3">
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-1 gap-2">
@@ -114,9 +141,13 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                         <span className="text-sm font-mono">
                           {formatMetricValue(name, value)}
                         </span>
-                        <Badge variant={rating === 'good' ? 'default' : rating === 'needs-improvement' ? 'secondary' : 'destructive'} className={cn('text-xs', rating === 'good' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
+                        <Badge variant={rating === 'good' ? 'default' : rating === 'needs-improvement' ? 'secondary' : 'destructive'} className = {
+  cn('text-xs',
+  rating === 'good' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
                     rating === 'needs-improvement' ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' :
-                        'bg-red-500/20 text-red-400 border-red-500/30')}>
+                        'bg-red-500/20 text-red-400 border-red-500/30')
+
+}>
                           {rating}
                         </Badge>
                       </div>
@@ -142,16 +173,22 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             </motion.div>)}
         </AnimatePresence>
       </Card>
-    </motion.div>);
-}
+    </motion.div>)}
 // Compact performance indicator
 export function PerformanceIndicator({ className }) {
     const { performanceScore } = usePerformance();
-    return (<div className={cn('flex items-center gap-2', className)}>
-      <div className={cn('w-2 h-2 rounded-full', performanceScore >= 90 ? 'bg-green-500' :
-            performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500')}/>
+    return (<div className = {
+  cn('flex items-center gap-2',
+  className)
+
+}>
+      <div className = {
+  cn('w-2 h-2 rounded-full',
+  performanceScore >= 90 ? 'bg-green-500' :
+            performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500')
+
+}/>
       <span className="text-xs text-zion-slate-light">
         {performanceScore}/100
       </span>
-    </div>);
-}
+    </div>)}

@@ -9,10 +9,14 @@ import Store from 'lucide-react/dist/esm/icons/store';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Settings from 'lucide-react/dist/esm/icons/settings';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 import { useTranslation } from 'react-i18next';
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 export function MobileMenu({ className }) {
+<<<<<<< HEAD
     const { user, isAuthenticated } = useAuth();
     const location = useLocation();
     const { t } = useTranslation();
@@ -27,20 +31,92 @@ export function MobileMenu({ className }) {
         { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
     ];
     if (isAuthenticated) {
+<<<<<<< HEAD
         navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
-    }
+
     return (<div className={cn("md:hidden", className)}>
+=======
+        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
+    return (<div className = {
+  cn("md:hidden",
+  className)
+
+}>
+=======
+  const { user, isAuthenticated } = useAuth();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleMenu = () => setIsOpen(!isOpen);
+  
+  const navigationItems = [
+    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },
+    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },
+    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
+    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },
+    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
+    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },
+  ];
+  
+  if (isAuthenticated) {
+    navigationItems.push({ 
+      href: '/dashboard', 
+      label: 'Dashboard', 
+      icon: Settings, 
+      matches: (path) => path.startsWith('/dashboard') 
+    });
+  }
+  
+  return (
+<<<<<<< HEAD
+    <div className = {
+  cn("md:hidden",
+  className)
+
+
+
+
+
+
+}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
+=======
+    <div className={cn("md:hidden", className)}>
+      {/* Mobile menu button */}
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        onClick={toggleMenu} 
+        className="p-2 text-white hover:bg-zion-purple/20" 
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+      >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
       </Button>
 
       {/* Mobile menu overlay */}
+<<<<<<< HEAD
       {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
             <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
               <h2 className="text-lg font-semibold text-white">Menu</h2>
               <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20">
+=======
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
+          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
+            <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
+              <h2 className="text-lg font-semibold text-white">Menu</h2>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={toggleMenu} 
+                className="p-2 text-white hover:bg-zion-purple/20"
+              >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <X className="h-5 w-5"/>
               </Button>
             </div>
@@ -50,24 +126,65 @@ export function MobileMenu({ className }) {
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
-                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", isActive
+<<<<<<< HEAD
+<<<<<<< HEAD
+                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className = {
+  cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")}>
+                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")
+
+}>
+=======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+                return (
+                  <Link 
+                    key={item.href} 
+                    to={item.href} 
+                    onClick={toggleMenu} 
+                    className = {
+  cn(
+                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
+                        ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
+                        : "hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )
+
+
+
+
+
+
+}
+                  >
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>
-                  </Link>);
-            })}
+<<<<<<< HEAD
+                  </Link>)})}
+=======
+                  </Link>
+                );
+              })}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </nav>
 
             {/* User section */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
+<<<<<<< HEAD
               {isAuthenticated ? (<div className="space-y-3">
+=======
+              {isAuthenticated ? (
+                <div className="space-y-3">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <div className="flex items-center gap-3 px-4 py-2">
                     <User className="h-5 w-5 text-zion-cyan"/>
                     <span className="text-white font-medium">
                       {user?.email || 'User'}
                     </span>
                   </div>
+<<<<<<< HEAD
                   <Link to="/messages" onClick={toggleMenu} className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors">
                     <MessageSquare className="h-5 w-5"/>
                     <span>Messages</span>
@@ -87,5 +204,53 @@ export function MobileMenu({ className }) {
             </div>
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
+}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                  <Link 
+                    to="/messages" 
+                    onClick={toggleMenu} 
+                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+                  >
+                    <MessageSquare className="h-5 w-5"/>
+                    <span>Messages</span>
+                  </Link>
+                  <Link 
+                    to="/profile" 
+                    onClick={toggleMenu} 
+                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+                  >
+                    <Settings className="h-5 w-5"/>
+                    <span>Profile</span>
+                  </Link>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <Link 
+                    to="/login" 
+                    onClick={toggleMenu} 
+                    className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
+                  >
+                    Login
+                  </Link>
+                  <Link 
+                    to="/signup" 
+                    onClick={toggleMenu} 
+                    className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,35 +1,58 @@
-import React from 'react';
+<<<<<<< HEAD
 import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
 import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
+=======
+import React from 'react';
+import { cuttingEdgeInnovations2025 } from "../data/2025-cutting-edge-innovations";
+import { specializedIndustrySolutions2025 } from "../data/2025-specialized-industry-solutions";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const InnovationServicesMarketing = () => {
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = Array.from(new Set(allServices.map(service => service.category)));
     const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
     const formatPrice = (price, model) => {
         if (model === 'percentage of revenue') {
+<<<<<<< HEAD
             return `${price}% of revenue`;
-        }
+
         else if (model === 'per device per day') {
             return `$${price.toFixed(2)}/device/day`;
-        }
+
         else if (model === 'per kWh managed') {
             return `$${price.toFixed(3)}/kWh`;
-        }
+
         else if (model === 'per acre') {
             return `$${price.toFixed(2)}/acre/month`;
-        }
+
         else if (model === 'per inference') {
             return `$${price.toFixed(3)}/inference`;
-        }
+
         else if (model === 'monthly per student') {
             return `$${price}/student/month`;
-        }
+
         else if (model === 'monthly per attorney') {
             return `$${price}/attorney/month`;
-        }
+
         else {
             return `$${price}/${model}`;
-        }
+
+=======
+            return `${price}% of revenue`}
+        else if (model === 'per device per day') {
+            return `$${price.toFixed(2)}/device/day`}
+        else if (model === 'per kWh managed') {
+            return `$${price.toFixed(3)}/kWh`}
+        else if (model === 'per acre') {
+            return `$${price.toFixed(2)}/acre/month`}
+        else if (model === 'per inference') {
+            return `$${price.toFixed(3)}/inference`}
+        else if (model === 'monthly per student') {
+            return `$${price}/student/month`}
+        else if (model === 'monthly per attorney') {
+            return `$${price}/attorney/month`}
+        else {
+            return `$${price}/${model}`}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -39,8 +62,8 @@ const InnovationServicesMarketing = () => {
             Innovation Services 2025
           </h1>
           <p className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-8">
-            Transform your business with our comprehensive portfolio of cutting-edge micro SAAS services, 
-            AI solutions, and specialized industry platforms. Stay ahead of the competition with 
+            Transform your business with our comprehensive portfolio of cutting-edge micro SAAS services,
+            AI solutions, and specialized industry platforms. Stay ahead of the competition with
             next-generation technology solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-lg">
@@ -128,8 +151,7 @@ const InnovationServicesMarketing = () => {
                         +{categoryServices.length - 3} more services
                       </div>)}
                   </div>
-                </div>);
-        })}
+                </div>)})}
           </div>
         </div>
 
@@ -156,8 +178,7 @@ const InnovationServicesMarketing = () => {
                         {service.name}
                       </div>))}
                   </div>
-                </div>);
-        })}
+                </div>)})}
           </div>
         </div>
 
@@ -179,7 +200,7 @@ const InnovationServicesMarketing = () => {
                     <div className="text-sm text-gray-400">{service.pricingModel}</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -283,8 +304,8 @@ const InnovationServicesMarketing = () => {
               Ready to Lead the Innovation Revolution?
             </h2>
             <p className="text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
-              Join hundreds of forward-thinking companies already transforming their operations 
-              with our cutting-edge AI and technology solutions. Contact us today to start your 
+              Join hundreds of forward-thinking companies already transforming their operations
+              with our cutting-edge AI and technology solutions. Contact us today to start your
               innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -301,6 +322,6 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default InnovationServicesMarketing;
+}}}}}}}}

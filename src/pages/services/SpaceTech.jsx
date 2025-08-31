@@ -1,127 +1,19 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain,
-  CheckCircle,
-  Users,
-  Database,
-  Network,
-  Cpu,
-  Orbit
-} from 'lucide-react';
-
-export default function SpaceTech() {
-  const services = [
-    {
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems for communication, navigation, and Earth observation',
-      features: ['Communication satellites', 'GPS and navigation systems', 'Earth observation platforms', 'Weather monitoring']
-    },
-    {
-      icon: Rocket,
-      title: 'Launch Systems',
-      description: 'Innovative launch vehicle technology and space transportation solutions',
-      features: ['Reusable launch vehicles', 'Small satellite launchers', 'Space tourism platforms', 'Cargo delivery systems']
-    },
-    {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'Comprehensive Earth monitoring and environmental analysis systems',
-      features: ['Climate change monitoring', 'Natural disaster detection', 'Agricultural monitoring', 'Urban planning data']
-    },
-    {
-      icon: Network,
-      title: 'Space Communications',
-      description: 'Next-generation space-based communication networks and infrastructure',
-      features: ['Global internet coverage', 'Low-latency communications', 'Emergency communications', 'IoT connectivity']
-    },
-    {
-      icon: Database,
-      title: 'Space Data Analytics',
-      description: 'Advanced analytics and AI for space data processing and insights',
-      features: ['Satellite imagery analysis', 'Predictive modeling', 'Real-time monitoring', 'Data visualization']
-    },
-    {
-      icon: Shield,
-      title: 'Space Security',
-      description: 'Cybersecurity and protection systems for space infrastructure',
-      features: ['Satellite cybersecurity', 'Signal protection', 'Anti-jamming systems', 'Threat detection']
-    }
-  ];
-
-  const technologies = [
-    {
-      icon: Cpu,
-      title: 'AI & Machine Learning',
-      description: 'Artificial intelligence for autonomous space operations and data analysis'
-    },
-    {
-      icon: Orbit,
-      title: 'Orbital Mechanics',
-      description: 'Advanced orbital calculations and trajectory optimization'
-    },
-    {
-      icon: Zap,
-      title: 'Propulsion Systems',
-      description: 'Next-generation propulsion technologies for space exploration'
-    },
-    {
-      icon: Brain,
-      title: 'Autonomous Systems',
-      description: 'Self-operating space systems with minimal human intervention'
-    }
-  ];
-
-  const applications = [
-    {
-      icon: Users,
-      title: 'Commercial Space',
-      description: 'Space tourism, mining, and commercial satellite services'
-    },
-    {
-      icon: Globe,
-      title: 'Scientific Research',
-      description: 'Space exploration, astronomy, and scientific missions'
-    },
-    {
-      icon: Shield,
-      title: 'Defense & Security',
-      description: 'National security, surveillance, and defense applications'
-    },
-    {
-      icon: Database,
-      title: 'Environmental Monitoring',
-      description: 'Climate research, pollution tracking, and ecosystem monitoring'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Space Technology Services - Zion Tech Group"
-        description="Advanced space technology solutions including satellite systems, launch vehicles, Earth observation, and space communications. Cutting-edge space innovation."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Rocket className="w-10 h-10 text-white" />
-              </div>
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Cog const SpaceTech = () => {
+=======
+import { Cog } from 'lucide-react';
+const $service = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <Cog className="h-12 w-12 text-blue-400"/>
             </div>
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Space Technology
             </h1>
@@ -147,12 +39,24 @@ export default function SpaceTech() {
         </div>
       </section>
 
+<<<<<<< HEAD
+export default SpaceTech;
+}
+=======
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -169,9 +73,21 @@ export default function SpaceTech() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
@@ -197,8 +113,16 @@ export default function SpaceTech() {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -215,9 +139,21 @@ export default function SpaceTech() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -235,8 +171,16 @@ export default function SpaceTech() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -253,9 +197,21 @@ export default function SpaceTech() {
             {applications.map((app, index) => (
               <motion.div
                 key={app.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
@@ -273,8 +229,16 @@ export default function SpaceTech() {
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -304,3 +268,22 @@ export default function SpaceTech() {
     </div>
   );
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Space Technology Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            This service page is under development. Contact us for more information.
+          </p>
+          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
+            Contact Us for More Information
+          </Link>
+        </div>
+      </section>
+    </div>);
+};
+
+export default SpaceTech;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

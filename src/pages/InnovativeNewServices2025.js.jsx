@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { SEOHead } from "../components/SEOHead";
+import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";
+import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -23,8 +23,7 @@ const InnovativeNewServices2025 = () => {
             (selectedPriceRange === '0-2000' && service.price < 2000) ||
             (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||
             (selectedPriceRange === '5000+' && service.price >= 5000);
-        return categoryMatch && priceMatch;
-    });
+        return categoryMatch && priceMatch});
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI & Analytics':
@@ -36,8 +35,7 @@ const InnovativeNewServices2025 = () => {
             case 'Edge Computing':
                 return Cloud;
             default:
-                return Zap;
-        }
+                return Zap}
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -50,8 +48,7 @@ const InnovativeNewServices2025 = () => {
             case 'Edge Computing':
                 return 'from-orange-500 to-red-600';
             default:
-                return 'from-gray-500 to-gray-600';
-        }
+                return 'from-gray-500 to-gray-600'}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>
@@ -208,8 +205,7 @@ const InnovativeNewServices2025 = () => {
                       </div>
                     </div>
                   </div>
-                </div>);
-        })}
+                </div>)})}
           </div>
 
           {filteredServices.length === 0 && (<div className="text-center py-20">
@@ -217,8 +213,7 @@ const InnovativeNewServices2025 = () => {
               <p className="text-gray-500 mb-6">Try adjusting your filters to see more services</p>
               <button onClick={() => {
                 setSelectedCategory('all');
-                setSelectedPriceRange('all');
-            }} className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
+                setSelectedPriceRange('all')}} className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
                 Clear Filters
               </button>
             </div>)}
@@ -244,6 +239,5 @@ const InnovativeNewServices2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeNewServices2025;

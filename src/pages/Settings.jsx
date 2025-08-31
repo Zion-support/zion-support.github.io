@@ -6,7 +6,7 @@ const Settings = () => {
         <title>Settings - Zion Tech Group</title>
         <meta name="description" content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -15,7 +15,7 @@ const Settings = () => {
               Configure your account settings, notifications, security preferences, and more.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Settings page coming soon. We're building comprehensive account configuration options.
@@ -23,6 +23,5 @@ const Settings = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default Settings;

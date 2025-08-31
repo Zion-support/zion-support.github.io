@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const QuantumNeuralNetworkPlatform = () => {
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
@@ -10,7 +14,7 @@ const QuantumNeuralNetworkPlatform = () => {
               Quantum Neural Network Platform
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionary quantum computing platform that combines the power of quantum mechanics 
+              Revolutionary quantum computing platform that combines the power of quantum mechanics
               with advanced neural network architectures for unprecedented AI capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,29 +42,29 @@ const QuantumNeuralNetworkPlatform = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Quantum Supremacy</h3>
               <p className="text-gray-300">
-                Leverage quantum entanglement and superposition for computational tasks 
+                Leverage quantum entanglement and superposition for computational tasks
                 that are impossible with classical computers.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">🧠</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Neural Architecture</h3>
               <p className="text-gray-300">
-                Advanced neural network designs optimized for quantum computing, 
+                Advanced neural network designs optimized for quantum computing,
                 enabling faster training and inference.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">🚀</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Performance Boost</h3>
               <p className="text-gray-300">
-                Up to 1000x faster processing for complex AI workloads 
+                Up to 1000x faster processing for complex AI workloads
                 compared to traditional computing methods.
               </p>
             </div>
@@ -96,7 +100,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-cyan-400">AI & Machine Learning</h3>
               <ul className="space-y-4 text-gray-300">
@@ -129,7 +133,7 @@ const QuantumNeuralNetworkPlatform = () => {
             Ready to Experience the Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the quantum revolution and unlock unprecedented computational power 
+            Join the quantum revolution and unlock unprecedented computational power
             for your AI and research projects.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,6 +146,5 @@ const QuantumNeuralNetworkPlatform = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default QuantumNeuralNetworkPlatform;

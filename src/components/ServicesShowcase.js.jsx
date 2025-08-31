@@ -5,25 +5,17 @@ import { Button } from "@/components/ui/button";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-const categoryIcons = {
-    'AI Business Solutions': Brain,
-    'IT Infrastructure': Cloud,
-    'Data Analytics': BarChart3,
-    'AI Development': Code,
-    'FinTech': DollarSign,
-    'HealthTech': Heart,
-    'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
-};
 const categoryColors = {
-    'AI Business Solutions': 'from-purple-500 to-indigo-600',
+  'AI Business Solutions': 'from-purple-500 to-indigo-600',
     'IT Infrastructure': 'from-blue-500 to-cyan-600',
     'Data Analytics': 'from-green-500 to-emerald-600',
     'AI Development': 'from-orange-500 to-red-600',
     'FinTech': 'from-yellow-500 to-orange-600',
     'HealthTech': 'from-pink-500 to-rose-600',
     'E-commerce': 'from-indigo-500 to-purple-600',
-    'EdTech': 'from-teal-500 to-green-600'
+  'EdTech': 'from-teal-500 to-green-600'
+
+
 };
 const features = [
     "AI-Powered Automation",
@@ -107,8 +99,7 @@ export function ServicesShowcase() {
                     {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available
                   </p>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Featured Services */}
@@ -282,5 +273,4 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

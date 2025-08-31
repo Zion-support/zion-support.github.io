@@ -6,32 +6,6 @@ import { SEO } from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
-    const services = [
-        {
-            title: "Penetration Testing",
-            description: "Comprehensive security assessments to identify vulnerabilities in your systems",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,500"
-        },
-        {
-            title: "Security Audits",
-            description: "Thorough review of your security policies, procedures, and infrastructure",
-            icon: <Eye className="h-6 w-6 text-zion-purple"/>,
-            price: "From $1,800"
-        },
-        {
-            title: "Incident Response",
-            description: "24/7 emergency response team for security breaches and cyber attacks",
-            icon: <AlertTriangle className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Security Training",
-            description: "Employee cybersecurity awareness and best practices training",
-            icon: <Users className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $500"
-        }
-    ];
     const securitySolutions = [
         {
             title: "Network Security",
@@ -70,7 +44,7 @@ export default function CybersecurityServices() {
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
-            features: [
+            features[
                 "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
@@ -84,7 +58,7 @@ export default function CybersecurityServices() {
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
-            features: [
+            features[
                 "Full security audit",
                 "24/7 monitoring",
                 "Incident response",
@@ -99,7 +73,7 @@ export default function CybersecurityServices() {
             price: "$1,999",
             period: "/month",
             description: "Full-scale cybersecurity for large organizations",
-            features: [
+            features[
                 "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
@@ -126,7 +100,7 @@ export default function CybersecurityServices() {
         {
             name: "Robert Johnson",
             role: "CEO, E-commerce Pro",
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
         }
     ];
@@ -324,5 +298,4 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

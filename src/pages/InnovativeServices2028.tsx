@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Lock, 
-  Cloud, 
-  Shield, 
-  Users, 
-  Database, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
+  Zap,
+  Lock,
+  Cloud,
+  Shield,
+  Users,
+  Database,
   Network,
   ArrowRight,
   CheckCircle,
@@ -26,41 +25,55 @@ import {
   Search,
   ChevronDown,
   ChevronUp
+<<<<<<< HEAD
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo   } from '../data/innovativeServices2028';
+=======
 } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function InnovativeServices2028() {
+export default function InnovativeServices2028(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
-  const [expandedService, setExpandedService] = useState<number | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const filteredServices = innovativeServices2028.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       case 'name':
         return a.name.localeCompare(b.name);
       default:
+<<<<<<< HEAD
         return 0;
-    }
+
+=======
+        return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-  const getCategoryIcon = (categoryName: string) => {
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryName: anystring)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
-    
+
     const iconMap: { [key: string]: any } = {
       'Brain': Brain,
       'Zap': Zap,
@@ -71,27 +84,28 @@ export default function InnovativeServices2028() {
       'Database': Database,
       'Network': Network
     };
-    
+
     return iconMap[category.icon] || Brain;
   };
 
-  const getCategoryColor = (categoryName: string) => {
+<<<<<<< HEAD
+  const getCategoryColor = (categoryName: anystring)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const category = serviceCategories.find(cat => cat.name === categoryName);
-    return category?.color || 'from-purple-500 to-pink-500';
-  };
+    return category?.color || 'from-purple-500 to-pink-500'};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Futuristic Background */}
       <div className="fixed inset-0 pointer-events-none z-[-1]">
         {/* Animated grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow"></div>
-        
+
         {/* Floating particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-float animation-delay-1000 opacity-40"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
@@ -101,23 +115,41 @@ export default function InnovativeServices2028() {
       <section className="pt-32 pb-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="max-w-6xl mx-auto"
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative Services 2028
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover the future of technology with our cutting-edge micro SAAS services, 
+              Discover the future of technology with our cutting-edge micro SAAS services,
               AI solutions, and innovative IT services designed to transform your business
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              From AI-powered business intelligence to quantum computing solutions, 
+              From AI-powered business intelligence to quantum computing solutions,
               we're pioneering the next generation of digital transformation
             </p>
-            
+
             {/* Contact CTA */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex items-center space-x-4 text-cyan-400">
@@ -156,7 +188,7 @@ export default function InnovativeServices2028() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+
                   <option value="all">All Categories</option>
                   {serviceCategories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -173,7 +205,7 @@ export default function InnovativeServices2028() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="roi">Sort by ROI</option>
@@ -188,18 +220,45 @@ export default function InnovativeServices2028() {
       {/* Services Grid */}
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)   => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group relative"
-              >
+
                 {/* Background glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                
+
                 {/* Card content */}
                 <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group-hover:bg-slate-800/70 backdrop-blur-sm h-full">
                   {/* Header */}
@@ -251,12 +310,39 @@ export default function InnovativeServices2028() {
                   <AnimatePresence>
                     {expandedService === service.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                         transition={{ duration: 0.3 }}
                         className="mb-6 overflow-hidden"
-                      >
+
                         <div className="space-y-2">
                           {service.features.slice(3).map((feature, idx) => (
                             <div key={idx} className="flex items-center text-gray-400 text-sm">
@@ -299,13 +385,13 @@ export default function InnovativeServices2028() {
                     <button
                       onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                    >
+
                       Get Started
                     </button>
                     <button
                       onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
                       className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                    >
+
                       {expandedService === service.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                     </button>
                   </div>
@@ -334,12 +420,30 @@ export default function InnovativeServices2028() {
       <section className="py-20 bg-black/30 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Flexible Pricing Plans
             </h2>
@@ -348,20 +452,47 @@ export default function InnovativeServices2028() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
                   tier.recommended
                     ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50 scale-105'
                     : 'bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/30'
                 }`}
-              >
+
                 {tier.recommended && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -394,7 +525,7 @@ export default function InnovativeServices2028() {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </button>
                 </div>
@@ -409,11 +540,29 @@ export default function InnovativeServices2028() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
                 Ready to Transform Your Business?
               </h2>
@@ -443,20 +592,33 @@ export default function InnovativeServices2028() {
                 <button
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Inquiry`, '_blank')}
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+
                   Start Your Journey
                 </button>
                 <button
                   onClick={() => window.open(`tel:${contactInfo.phone}`, '_blank')}
                   className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
+
                   Schedule a Call
                 </button>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

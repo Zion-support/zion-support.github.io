@@ -21,7 +21,6 @@ import { useSelector } from 'react-redux';
 export function PrimaryNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
-    const isLoggedIn = !!user;
     const isMobile = useIsMobile();
     const { t } = useTranslation();
     const router = useRouter();
@@ -30,8 +29,7 @@ export function PrimaryNav() {
     let unreadCount = 0;
     try {
         const messaging = useMessaging();
-        unreadCount = messaging.unreadCount;
-    }
+        unreadCount = messaging.unreadCount}
     catch {
         // context not available
     }
@@ -41,8 +39,7 @@ export function PrimaryNav() {
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
             router.push(`/search/${slugify(query)}`);
-            setQuery('');
-        }
+            setQuery('')}
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
@@ -57,35 +54,38 @@ export function PrimaryNav() {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
-              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
-            console.log('PrimaryNav search suggestion selected:', sugg);
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
+  { width: 'clamp(12rem, 20vw,
+  16rem)' 
+
+}}>
+              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
+  (sugg) => {
+            console.log('PrimaryNav search suggestion selected:',
+  sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                router.push(`/marketplace/listing/${sugg.id}`);
-            }
+                router.push(`/marketplace/listing/${sugg.id
+
+}`)}
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
-                router.push(sugg.slug);
-            }
+                router.push(sugg.slug)}
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
-                router.push(`/blog/${sugg.slug}`);
-            }
+                router.push(`/blog/${sugg.slug}`)}
             else {
                 // Default: search results page with slug
-                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }
+                router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
             setQuery('');
             // Track analytics event
-            if (typeof window !== 'undefined' && window.gtag) {
+            if (typeof window !== 'null' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
                     search_term: sugg.text,
                     suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug
-                });
-            }
+                })}
         }} searchSuggestions={suggestions}/>
             </form>
             
@@ -94,7 +94,11 @@ export function PrimaryNav() {
               <PointsBadge />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
-                  <Link href="/cart" className="relative p-1" aria-label={t('nav.cart', 'Cart')}>
+                  <Link href="/cart" className="relative p-1" aria-label = {
+  t('nav.cart',
+  'Cart')
+
+}>
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
@@ -123,19 +127,8 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (<>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>)}
-            {isLoggedIn && <UserMenu />}
-          </div>
+              {isLoggedIn && <UserMenu />}
+            </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
@@ -150,5 +143,4 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
-}
+    </>)}

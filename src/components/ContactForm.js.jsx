@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from './ui/Button';
+import { Button } from "./ui/Button";
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -17,8 +17,7 @@ const ContactForm = () => {
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -31,21 +30,18 @@ const ContactForm = () => {
                 firstName: '',
                 lastName: '',
                 email: '',
-                company: '',
+                comp: '',
                 phone: '',
                 service: '',
                 message: ''
             });
             setSubmitStatus('success');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
+            setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {
             setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
+            setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     };
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
     return (<div className="max-w-2xl mx-auto">
@@ -101,10 +97,10 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-            Company Name
+          <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
+            Comp Name
           </label>
-          <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your company name"/>
+          <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your comp name"/>
         </div>
 
         <div>
@@ -149,6 +145,5 @@ const ContactForm = () => {
           .
         </p>
       </form>
-    </div>);
-};
+    </div>)};
 export default ContactForm;

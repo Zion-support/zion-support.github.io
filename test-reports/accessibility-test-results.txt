@@ -1,0 +1,2 @@
+Lint check failed: Command failed: npm run lint
+sh: 1: next: not found

@@ -1,9 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target export const EnhancedAbout = () => {
+    const companyValues = [
+=======
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
-    const companyValues = [
+    const compValues = [
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         {
             icon: Brain,
             title: 'Innovation First',
@@ -27,38 +32,38 @@ export const EnhancedAbout = () => {
             title: 'Excellence',
             description: 'Delivering exceptional quality in every project we undertake',
             color: 'zion-purple'
-        }
+
     ];
     const teamMembers = [
         {
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
             avatar: '👨‍💼'
         },
         {
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise: ['Deep Learning', 'NLP', 'Computer Vision'],
+            expertise['Deep Learning', 'NLP', 'Computer Vision'],
             avatar: '🤖'
         },
         {
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'],
+            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],
             avatar: '☁️'
         },
         {
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],
+            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
             avatar: '🔒'
-        }
+
     ];
     const milestones = [
         {
             year: '2020',
-            title: 'Company Founded',
+            title: 'Comp Founded',
             description: 'Zion Tech Group established with a vision for AI-driven innovation',
             achievement: 'First AI solution deployed'
         },
@@ -85,7 +90,7 @@ export const EnhancedAbout = () => {
             title: 'Industry Leader',
             description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -93,29 +98,45 @@ export const EnhancedAbout = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
-        hidden: { scale: 0.9, opacity: 0 },
+  hidden: { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.02,
@@ -123,19 +144,27 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const timelineVariants = {
-        hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0,
+  x: -50 
+
+
+
+
+
+
+},
         visible: {
             opacity: 1,
             x: 0,
             transition: {
                 duration: 0.8,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -174,7 +203,7 @@ export const EnhancedAbout = () => {
                   Our Mission
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage 
+                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage
                   the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.
                 </p>
               </div>
@@ -187,7 +216,7 @@ export const EnhancedAbout = () => {
                   Our Vision
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation 
+                  To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation
                   and creating a future where technology empowers every business to reach its full potential.
                 </p>
               </div>
@@ -196,7 +225,7 @@ export const EnhancedAbout = () => {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -207,9 +236,9 @@ export const EnhancedAbout = () => {
               The principles that guide everything we do
             </p>
           </motion.div>
-          
+
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {companyValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
+            {compValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-4xl mb-4 flex justify-center">
                   <value.icon className={`h-16 w-16 text-${value.color} group-hover:scale-110 transition-transform duration-300`}/>
                 </div>
@@ -231,7 +260,7 @@ export const EnhancedAbout = () => {
               Meet the talented professionals driving innovation
             </p>
           </motion.div>
-          
+
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {teamMembers.map((member, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>
@@ -248,7 +277,7 @@ export const EnhancedAbout = () => {
         </div>
       </section>
 
-      {/* Company Timeline */}
+      {/* Comp Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -259,16 +288,16 @@ export const EnhancedAbout = () => {
               Key milestones in our growth and success
             </p>
           </motion.div>
-          
+
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
-            
+
             <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {milestones.map((milestone, index) => (<motion.div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`} variants={timelineVariants}>
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>
-                  
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -292,17 +321,17 @@ export const EnhancedAbout = () => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>
               <div className="text-gray-300">Projects Completed</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-purple mb-2">50+</div>
               <div className="text-gray-300">Happy Clients</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-purple mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
@@ -331,5 +360,10 @@ export const EnhancedAbout = () => {
           </div>
         </motion.div>
       </section>
+<<<<<<< HEAD
     </div>);
 };
+}}}}}}}}}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

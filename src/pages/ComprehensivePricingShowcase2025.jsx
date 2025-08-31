@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
@@ -43,17 +43,27 @@ const ComprehensivePricingShowcase2025 = () => {
         if (service.price) {
             const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
+<<<<<<< HEAD
                 return price >= range.min && price <= range.max;
-            }
+
             else if (range.max) {
                 return price <= range.max;
-            }
+
             else if (range.min) {
                 return price >= range.min;
-            }
-        }
+
+
         return true;
     });
+=======
+                return price >= range.min && price <= range.max}
+            else if (range.max) {
+                return price <= range.max}
+            else if (range.min) {
+                return price >= range.min}
+        }
+        return true});
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
@@ -63,12 +73,16 @@ const ComprehensivePricingShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
+<<<<<<< HEAD
                 return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+
+=======
+                return 'bg-gray-100 text-gray-800 border-gray-200'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         const icons = {
-            'Legal Tech & Compliance': '⚖️',
+  'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
             'Energy & Sustainability': '🌱',
@@ -81,30 +95,56 @@ const ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+  <<<<<<< HEAD
             'AI & Customer Experience': '💬'
-        };
+        
+
+};
+        return icons[category] || '🚀'};
+=======
+  'AI & Customer Experience': '💬'
+        
+
+
+
+
+};
         return icons[category] || '🚀';
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
           {service.price}
           {service.period && (<span className="text-sm text-gray-400 font-normal"> {service.period}</span>)}
+<<<<<<< HEAD
         </div>);
-        }
+
+=======
+        </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else if (service.hourlyRate) {
             return (<div className="text-3xl font-bold text-green-400">
           ${service.hourlyRate}
           <span className="text-sm text-gray-400 font-normal">/hour</span>
+<<<<<<< HEAD
         </div>);
-        }
+
         else if (service.pricing) {
             return (<div className="text-3xl font-bold text-purple-400">
           {service.pricing}
         </div>);
-        }
+
         return null;
     };
+=======
+        </div>)}
+        else if (service.pricing) {
+            return (<div className="text-3xl font-bold text-purple-400">
+          {service.pricing}
+        </div>)}
+        return null};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -116,10 +156,10 @@ const ComprehensivePricingShowcase2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transparent pricing for our revolutionary collection of 25+ cutting-edge micro SAAS services, 
+            Transparent pricing for our revolutionary collection of 25+ cutting-edge micro SAAS services,
             IT solutions, and AI platforms. Find the perfect solution for your business needs and budget.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-blue-400">Contact Zion Tech Group</h3>
@@ -201,7 +241,7 @@ const ComprehensivePricingShowcase2025 = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Transparent Pricing for All Services
           </h2>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group">
                 {/* Service Type Badge */}
@@ -334,7 +374,7 @@ const ComprehensivePricingShowcase2025 = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our transparent pricing ensures you know exactly what you're getting. 
+              Our transparent pricing ensures you know exactly what you're getting.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -352,6 +392,6 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensivePricingShowcase2025;
+}}}}}}}}

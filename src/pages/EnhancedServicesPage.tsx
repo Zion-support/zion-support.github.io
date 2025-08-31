@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Globe, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import React, { useState } from 'react.ts';
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO  } from '@/data/enhancedServices';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Input  } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Search,
+  Filter,
+  Star,
+  Clock,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   TrendingUp,
   Shield,
@@ -28,35 +27,41 @@ import {
   Link,
   Users,
   CheckCircle
+<<<<<<< HEAD
+import { SEO  } from '@/components/SEO';
+=======
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function EnhancedServicesPage() {
+export default function EnhancedServicesPage(...args[]: any):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
-  const filteredServices = ENHANCED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ENHANCED_SERVICES.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || 
+
+    const matchesCategory = selectedCategory === 'all' ||
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
+
+    const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'basic' && service.price <= 2000) ||
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
                         (selectedPriceRange === 'premium' && service.price > 25000);
-    
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'ai automation':
-      case 'ai & machine learning':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: anystring)  => {;
+    switch (category.toLowerCase()) {;
+      case 'ai automation':;
+      case 'ai & machine learning':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'cloud management':
       case 'cloud & infrastructure':
@@ -83,21 +88,26 @@ export default function EnhancedServicesPage() {
       case 'quantum computing':
         return <Zap className="w-5 h-5" />;
       default:
+<<<<<<< HEAD
         return <Code className="w-5 h-5" />;
-    }
+
+=======
+        return <Code className = "w-5 h-5" />};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getPriceRange = (price: number) => {
+<<<<<<< HEAD
+  const getPriceRange = (price: anynumber)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
-    return 'premium';
-  };
+    return 'premium'};
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Enhanced IT & AI Services - Zion Tech Group" 
+      <SEO
+        title="Enhanced IT & AI Services - Zion Tech Group"
         description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
         keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/enhanced-services"
@@ -113,19 +123,19 @@ export default function EnhancedServicesPage() {
             Comprehensive micro SAAS solutions, IT services, and AI-powered innovations to transform your business
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Explore Services
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
               onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Get in Touch
             </Button>
           </div>
@@ -138,8 +148,8 @@ export default function EnhancedServicesPage() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Service Pricing Tiers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-6">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info])   => (
               <Card key={tier} className="bg-zion-blue border-zion-blue-light">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
@@ -174,7 +184,7 @@ export default function EnhancedServicesPage() {
                 <p className="text-white">Cutting-edge AI and machine learning services with proven results and continuous innovation.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -186,7 +196,7 @@ export default function EnhancedServicesPage() {
                 <p className="text-white">World-class cybersecurity solutions with compliance frameworks and 24/7 monitoring.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -198,7 +208,7 @@ export default function EnhancedServicesPage() {
                 <p className="text-white">Multi-cloud expertise with cost optimization and seamless hybrid solutions.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -210,7 +220,7 @@ export default function EnhancedServicesPage() {
                 <p className="text-white">Advanced analytics and machine learning pipelines for actionable business insights.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -222,7 +232,7 @@ export default function EnhancedServicesPage() {
                 <p className="text-white">Modern development practices with automated CI/CD and microservices architecture.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -292,8 +302,8 @@ export default function EnhancedServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)   => (
               <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
@@ -353,11 +363,11 @@ export default function EnhancedServicesPage() {
                   <div className="pt-4 border-t border-zion-slate-light">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate">By {service.author.name}</span>
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-                      >
+
                         Get Quote
                       </Button>
                     </div>
@@ -376,23 +386,23 @@ export default function EnhancedServicesPage() {
             Explore by Category
           </h2>
           <Tabs defaultValue="ai-ml" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
-              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
-                <TabsTrigger 
-                  key={category.value} 
+            <TabsList className="grid w-full grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
+              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category  => (
+                <TabsTrigger
+                  key={category.value}
                   value={category.value}
                   className="text-zion-slate-light data-[state=active]:text-zion-cyan"
-                >
+
                   {category.label}
                 </TabsTrigger>
               ))}
             </TabsList>
-            
+
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
               <TabsContent key={category.value} value={category.value} className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES
-                    .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
+                    .filter(service   => service.category.toLowerCase().includes(category.value.toLowerCase()))
                     .slice(0, 6)
                     .map(service => (
                       <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">
@@ -407,11 +417,11 @@ export default function EnhancedServicesPage() {
                             <span className="text-zion-cyan font-bold">
                               {service.currency}{service.price?.toLocaleString()}
                             </span>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
+                            <Button
+                              size="sm"
+                              variant="outline"
                               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                            >
+
                               Learn More
                             </Button>
                           </div>
@@ -482,7 +492,7 @@ export default function EnhancedServicesPage() {
             <p className="text-xl text-zion-slate-light mb-12">
               Get in touch with our experts to discuss your needs and discover how our services can drive your success
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-6 h-6" />
@@ -508,29 +518,43 @@ export default function EnhancedServicesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
                 onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}`, '_self')}
-              >
+
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+<<<<<<< HEAD
                 onClick={() => window.open(CONTACT_INFO.website, '_blank')}
+
+=======
+                onClick = {
+  () => window.open(CONTACT_INFO.website,
+  '_blank')
+
+
+
+
+
+
+}
               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
               </Button>
@@ -541,16 +565,29 @@ export default function EnhancedServicesPage() {
               <p className="text-zion-slate-light mb-4">
                 For enterprise clients, we offer custom solution development, dedicated support teams, and comprehensive implementation services.
               </p>
-              <Button 
+              <Button
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
-              >
+
                 Request Enterprise Consultation
               </Button>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

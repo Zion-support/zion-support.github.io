@@ -40,5 +40,4 @@ export function BlogSection() {
             </article>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

@@ -50,7 +50,10 @@ export function FeaturesSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -67,7 +70,15 @@ export function FeaturesSection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
             Why Choose Zion Tech Group?
           </h2>
@@ -98,7 +109,19 @@ export function FeaturesSection() {
         </motion.div>
 
         {/* Additional Info */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+}} className="mt-16 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
               Ready to Experience the Difference?
@@ -118,5 +141,4 @@ export function FeaturesSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

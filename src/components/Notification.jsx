@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { CheckCircle, XCircle, Info, X, AlertTriangle const notificationStyles = {
+    success: {
+=======
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
 const notificationStyles = {
-    success: {
+  success: {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         icon: CheckCircle,
         bgColor: 'bg-zion-emerald/10',
         borderColor: 'border-zion-emerald/20',
         textColor: 'text-zion-emerald',
-        iconColor: 'text-zion-emerald'
-    },
+  iconColor: 'text-zion-emerald'
+    
+
+
+
+
+
+
+},
     error: {
         icon: XCircle,
         bgColor: 'bg-red-500/10',
@@ -28,7 +40,7 @@ const notificationStyles = {
         borderColor: 'border-zion-gold/20',
         textColor: 'text-zion-gold',
         iconColor: 'text-zion-gold'
-    }
+
 };
 export function Notification({ id, type, title, message, duration = 5000, onClose }) {
     const [isVisible, setIsVisible] = useState(true);
@@ -37,15 +49,19 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     useEffect(() => {
         if (duration > 0) {
             const timer = setTimeout(() => {
+<<<<<<< HEAD
                 handleClose();
             }, duration);
             return () => clearTimeout(timer);
-        }
+
+=======
+                handleClose()}, duration);
+            return () => clearTimeout(timer)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [duration]);
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(() => onClose(id), 300);
-    };
+        setTimeout(() => onClose(id), 300)};
     if (!isVisible)
         return null;
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">
@@ -59,10 +75,18 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
           <X className="w-4 h-4"/>
         </button>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+
 export function NotificationContainer({ notifications, onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
     </div>);
-}
+}}}}}
+=======
+    </div>)}
+export function NotificationContainer({ notifications, onClose }) {
+    return (<div className="fixed top-20 right-4 z-50 space-y-2">
+      {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

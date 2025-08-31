@@ -1,94 +1,133 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecurityServices2027';
+<<<<<<< HEAD
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState   } from 'react.ts';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027   } from '../data/advancedCybersecurityServices2027';
 
-const AdvancedCybersecurityServices: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const AdvancedCybersecurityServices: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+=======
+import type { NextPage } from 'next.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useState  } from 'react.ts';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027  } from '../data/advancedCybersecurityServices2027';
+
+const AdvancedCybersecurityServices: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const categories = [
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
-    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
+  const categories = [;
+    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
+    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
+    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
+    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
+    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
+    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
   ];
 
-  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
+<<<<<<< HEAD
         return 0;
-    }
+
+=======
+        return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-  const getInnovationColor = (level: string) => {
-    switch (level) {
+<<<<<<< HEAD
+  const getInnovationColor = (level: anystring)  => {;
+    switch (level) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
+<<<<<<< HEAD
       default: return 'from-gray-500 to-gray-600';
-    }
+
+=======
+      default: return 'from-gray-500 to-gray-600'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getBadgeColor = (badge: string) => {
-    switch (badge) {
+<<<<<<< HEAD
+  const getBadgeColor = (badge: anystring)  => {;
+    switch (badge) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
+<<<<<<< HEAD
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-    }
+
+=======
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getSecurityIcon = (category: string) => {
-    switch (category) {
+<<<<<<< HEAD
+  const getSecurityIcon = (category: anystring)  => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI Security': return '🤖';
       case 'Quantum Security': return '🔐';
       case 'Network Security': return '🌐';
       case 'Endpoint Security': return '💻';
       case 'Cloud Security': return '☁️';
+<<<<<<< HEAD
       default: return '🛡️';
-    }
+
+=======
+      default: return '🛡️'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Security Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
+
         {/* Security Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+          <div className="absolute inset-0" style = {
+  {
+            backgroundImage: `url("data:image/svg+xml,
+  %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          
+
+
+
+
+
+
+}}></div>
         </div>
       </div>
 
-      <Head>
+      <Helmet>
         <title>Advanced Cybersecurity Services 2027 - Zion Tech Group | Military-Grade Security Solutions</title>
         <meta name="description" content="Protect your digital assets with Zion Tech Group's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world." />
         <meta name="keywords" content="cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-cybersecurity" />
-      </Head>
+      </Helmet>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
@@ -103,12 +142,12 @@ const AdvancedCybersecurityServices: NextPage = () => {
               </div>
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Advanced Cybersecurity Services 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Protect your digital assets with cutting-edge cybersecurity solutions. 
+            Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -128,17 +167,17 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Security Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: anygrid-cols-4 gap-6 mb-12">
           {[
             { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
             { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
-          ].map((stat, index) => (
+          ].map((stat, index)   => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <span className="text-3xl">{stat.icon}</span>
               </div>
@@ -170,9 +209,15 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+<<<<<<< HEAD
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+
+                {categories.map((category)  => (
+=======
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category) => (
+                {categories.map((category)   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -189,7 +234,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
+
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -212,7 +257,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-            >
+
               <span className="mr-2">{getSecurityIcon(category.name)}</span>
               {category.name}
             </button>
@@ -220,13 +265,13 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)   => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-            >
+
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
@@ -310,7 +355,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <a
                 href={service.link}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-              >
+
                 Learn More
               </a>
             </div>
@@ -329,20 +374,29 @@ const AdvancedCybersecurityServices: NextPage = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            >
+
               Get Security Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
+
               📞 Call +1 (302) 464-0950
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AdvancedCybersecurityServices;
+export default AdvancedCybersecurityServices;}}}}

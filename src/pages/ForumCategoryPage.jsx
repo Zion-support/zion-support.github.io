@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Suspense } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import PostCard from "@/components/community/PostCard";
 import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
@@ -11,14 +11,21 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";
 // Mock category data
 const categoriesInfo = {
-    "getting-hired": {
+  "getting-hired": {
         id: "getting-hired",
         name: "Getting Hired",
         description: "Tips, strategies, and questions about getting hired on the platform.",
         postCount: 45,
         adminOnly: false,
-        icon: "Briefcase"
-    },
+  icon: "Briefcase"
+    
+
+
+
+
+
+
+},
     "project-help": {
         id: "project-help",
         name: "Project Help",
@@ -50,14 +57,21 @@ const categoriesInfo = {
         postCount: 12,
         adminOnly: true,
         icon: "Megaphone"
-    }
+
 };
 const iconMap = {
-    "Briefcase": Briefcase,
+  "Briefcase": Briefcase,
     "MessageSquare": MessageSquare,
     "Code": Code,
     "FileText": FileText,
-    "Megaphone": Megaphone
+  "Megaphone": Megaphone
+
+
+
+
+
+
+
 };
 function CategoryContent({ categoryId, category, IconComponent, user, }) {
     const [searchQuery, setSearchQuery] = useState("");
@@ -107,21 +121,42 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
+<<<<<<< HEAD
     </div>);
-}
+
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ForumCategoryPage() {
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
+<<<<<<< HEAD
         return <NotFound />;
-    }
+
+=======
+        return <NotFound />}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
+      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {
+  `community, forum,
+  ${category.id
+
+
+
+
+
+
+}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
+<<<<<<< HEAD
     </>);
-}
+}}}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,25 +16,24 @@ export default function QuoteManager() {
     const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
     // Count quotes by status
     const statusCounts = {
-        new: quotes.filter(q => q.status === 'new').length,
+  new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
         responded: quotes.filter(q => q.status === 'responded').length,
-        closed: quotes.filter(q => q.status === 'closed').length
-    };
+  closed: quotes.filter(q => q.status === 'closed').length
+    
+
+};
     const handleViewDetails = (quote) => {
         setSelectedQuote(quote);
-        setShowDetails(true);
-    };
+        setShowDetails(true)};
     const handleResetFilters = () => {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
-        setDateRange({ from: undefined, to: undefined });
-    };
+        setDateRange({ from: null, to: null })};
     if (!isAdmin) {
-        return <Navigate to="/unauthorized" replace/>;
-    }
+        return <Navigate to="/unauthorized" replace/>}
     return (<ProtectedRoute adminOnly>
       <div>
         
@@ -80,10 +79,8 @@ export default function QuoteManager() {
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-        }}/>
+            setSelectedQuote(null)}}/>
         
         
       </div>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

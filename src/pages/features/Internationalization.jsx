@@ -1,18 +1,29 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default function Internationalization() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Internationalization",
         "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-        "url": "https://app.ziontechgroup.com/features/internationalization"
-    };
+  "url": "https://app.ziontechgroup.com/features/internationalization"
+    
+
+
+
+
+
+
+};
     return (<>
       <SEO title="Internationalization" description="Reach a global audience with multi-language support across the Zion platform." keywords="i18n, multi-language marketplace, localized listings" canonical="https://app.ziontechgroup.com/features/internationalization"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -50,5 +61,9 @@ export default function Internationalization() {
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

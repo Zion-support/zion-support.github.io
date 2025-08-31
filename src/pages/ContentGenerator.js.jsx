@@ -28,8 +28,7 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
-            router.push("/login?redirect=/content-generator");
-        }
+            router.push("/login?redirect=/content-generator")}
     }, [user, isLoading, router]);
     const generateContent = async () => {
         setIsGenerating(true);
@@ -38,8 +37,8 @@ export default function ContentGenerator() {
             const { data, error } = await supabase.functions.invoke('generate-content', {
                 body: {
                     contentType,
-                    prompt: customPrompt || undefined,
-                    topic: topic || undefined,
+                    prompt: customPrompt || null,
+                    topic: topic || null,
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
                 }
@@ -47,25 +46,20 @@ export default function ContentGenerator() {
             if (error)
                 throw error;
             setPreviewContent(data);
-            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-        }
+            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
             console.error("Error generating content:", error);
-            toast.error("Failed to generate content. Please try again.");
-        }
+            toast.error("Failed to generate content. Please try again.")}
         finally {
-            setIsGenerating(false);
-        }
+            setIsGenerating(false)}
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
-            return;
-        }
+            return}
         if (!previewContent) {
             toast.error("Generate newsletter content first");
-            return;
-        }
+            return}
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
                 body: {
@@ -78,12 +72,10 @@ export default function ContentGenerator() {
             });
             if (error)
                 throw error;
-            toast.success(`Test newsletter sent to ${testEmail}!`);
-        }
+            toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
             console.error("Error sending test newsletter:", error);
-            toast.error("Failed to send test newsletter. Please try again.");
-        }
+            toast.error("Failed to send test newsletter. Please try again.")}
     };
     // Check if user is still loading
     if (isLoading) {
@@ -93,8 +85,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
         
-      </>);
-    }
+      </>)}
     return (<>
       
       <div className="min-h-screen bg-zion-blue py-12">
@@ -126,7 +117,11 @@ export default function ContentGenerator() {
                   
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
-                    <Input id="topic" placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
+                    <Input id="topic" placeholder = {
+  contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
+  May Platform Updates"
+
+} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
                   
                   <div className="space-y-2">
@@ -187,9 +182,13 @@ export default function ContentGenerator() {
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
-                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{
+                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML = {
+  {
                 __html: previewContent.body
-                    .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
+                    .replace(/^#{1,
+  6
+
+}\s+(.+)$/gm, "<h$1>$2</h$1>")
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")
@@ -296,5 +295,4 @@ export default function ContentGenerator() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

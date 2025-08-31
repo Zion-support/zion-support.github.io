@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
-export function SiteHealthDashboard() {
+import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard() {
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +14,7 @@ export function SiteHealthDashboard() {
                     name: 'Performance',
                     icon: Zap,
                     overallScore: 88,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Page Load Time',
                             value: 2.1,
@@ -40,14 +39,14 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Overall Google Core Web Vitals performance',
-                        }
+
                     ]
                 },
                 {
                     name: 'SEO Health',
                     icon: Search,
                     overallScore: 82,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Meta Descriptions',
                             value: 78,
@@ -79,14 +78,14 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Structured data implementation',
-                        }
+
                     ]
                 },
                 {
                     name: 'Accessibility',
                     icon: Eye,
                     overallScore: 91,
-                    metrics: [
+                    metrics[
                         {
                             name: 'ARIA Implementation',
                             value: 88,
@@ -111,14 +110,14 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Screen reader compatibility',
-                        }
+
                     ]
                 },
                 {
                     name: 'Security',
                     icon: Shield,
                     overallScore: 94,
-                    metrics: [
+                    metrics[
                         {
                             name: 'HTTPS Implementation',
                             value: 100,
@@ -143,14 +142,14 @@ export function SiteHealthDashboard() {
                             value: 95,
                             status: 'excellent',
                             description: 'CSP header implementation',
-                        }
+
                     ]
                 },
                 {
                     name: 'Content Quality',
                     icon: Globe,
                     overallScore: 76,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Content Completeness',
                             value: 68,
@@ -176,14 +175,14 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Recently updated content percentage',
-                        }
+
                     ]
                 },
                 {
                     name: 'User Experience',
                     icon: Users,
                     overallScore: 85,
-                    metrics: [
+                    metrics[
                         {
                             name: 'Mobile Responsiveness',
                             value: 96,
@@ -207,26 +206,28 @@ export function SiteHealthDashboard() {
                             value: 77,
                             status: 'good',
                             description: '404 pages and error handling',
-                        }
+
                     ]
-                }
+
             ];
             setHealthData(healthCategories);
             // Calculate overall score
             const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
             setOverallScore(Math.round(totalScore / healthCategories.length));
-            setIsLoading(false);
-        };
-        performHealthCheck();
-    }, []);
+            setIsLoading(false)};
+        performHealthCheck()}, []);
     const getStatusColor = (status) => {
         switch (status) {
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
+<<<<<<< HEAD
             default: return 'text-gray-500 bg-gray-50 border-gray-200';
-        }
+
+=======
+            default: return 'text-gray-500 bg-gray-50 border-gray-200'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusIcon = (status) => {
         switch (status) {
@@ -234,8 +235,12 @@ export function SiteHealthDashboard() {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
+<<<<<<< HEAD
             default: return <Clock className="w-4 h-4"/>;
-        }
+
+=======
+            default: return <Clock className="w-4 h-4"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getScoreColor = (score) => {
         if (score >= 90)
@@ -244,8 +249,7 @@ export function SiteHealthDashboard() {
             return 'text-blue-500';
         if (score >= 60)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     if (isLoading) {
         return (<div className="max-w-7xl mx-auto p-6">
         <div className="text-center py-12">
@@ -253,8 +257,12 @@ export function SiteHealthDashboard() {
           <h2 className="text-2xl font-bold mb-2">Analyzing Site Health</h2>
           <p className="text-gray-600">Performing comprehensive health check...</p>
         </div>
+<<<<<<< HEAD
       </div>);
-    }
+
+=======
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
       <div className="text-center">
@@ -301,7 +309,7 @@ export function SiteHealthDashboard() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6 space-y-4">
                 {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -317,8 +325,7 @@ export function SiteHealthDashboard() {
                       </p>)}
                   </div>))}
               </div>
-            </div>);
-        })}
+            </div>)})}
       </div>
 
       {/* Action Items */}
@@ -327,7 +334,7 @@ export function SiteHealthDashboard() {
           <TrendingUp className="w-6 h-6 text-blue-600"/>
           <span>Priority Action Items</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
@@ -345,7 +352,7 @@ export function SiteHealthDashboard() {
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">
               <AlertTriangle className="w-5 h-5"/>
@@ -390,5 +397,9 @@ export function SiteHealthDashboard() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}}}}}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,34 +1,38 @@
+<<<<<<< HEAD
+=======
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useState, useEffect } from 'react';
-import Skeleton from '@/components/ui/skeleton';
-import { useAuth } from '@/hooks/useAuth';
+import { Link, useNavigate } from 'react-router-dom';
+
 export default function CartPage() {
     const navigate = useNavigate();
-    const { items, dispatch } = useCart();
-    const { user } = useAuth();
+    const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [cartLoading, setCartLoading] = useState(true);
     const [showEmpty, setShowEmpty] = useState(false);
+
     useEffect(() => {
-        if (reduxItems.length > 0) {
-            setItems(reduxItems);
+        // Simulate loading cart data
+        const timer = setTimeout(() => {
             setCartLoading(false);
-        }
+<<<<<<< HEAD
+
         else {
             const stored = safeStorage.getItem('zion_cart');
             if (stored) {
                 try {
                     dispatch(setItemsAction(JSON.parse(stored)));
-                }
+
                 catch {
                     dispatch(setItemsAction([]));
-                }
-            }
+
+
             else {
                 dispatch(setItemsAction([]));
-            }
-        }
+
+
         ;
         load();
     }, [user, dispatch]);
@@ -41,17 +45,23 @@ export default function CartPage() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty }),
                 });
-            }
+
             catch (err) {
-                console.error('Failed to update cart', err);
+<<<<<<< HEAD
+                // // // console.error('Failed to update cart', err);
+
+
+=======
+                // // // // // // // console.error('Failed to update cart', err);
             }
         }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {
         if (!cartLoading && items.length === 0) {
             setShowEmpty(true);
-        }
+
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
@@ -69,10 +79,10 @@ export default function CartPage() {
                 amount: subtotal,
             });
             setDiscount(res.data.discount || 0);
-        }
+
         catch (e) {
             setDiscount(0);
-        }
+
     };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
@@ -81,7 +91,7 @@ export default function CartPage() {
         <Skeleton className="h-8 w-1/3"/>
         <Skeleton className="h-32 w-full"/>
       </div>);
-    }
+
     if (showEmpty) {
         return (<div className="container py-10 text-center">
         <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
@@ -90,7 +100,7 @@ export default function CartPage() {
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>);
-    }
+
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
@@ -123,4 +133,53 @@ export default function CartPage() {
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>);
+}}}}}}}}}}}}}}}
+=======
+            setShowEmpty(true);
+        }, 1000);
+        
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (cartLoading) {
+        return (
+            <div className="container py-10 space-y-4">
+                <div className="h-8 w-1/3 bg-gray-200 rounded animate-pulse"/>
+                <div className="h-32 w-full bg-gray-200 rounded animate-pulse"/>
+            </div>
+        );
+    }
+
+    if (showEmpty) {
+        return (
+            <div className="container py-10 text-center">
+                <div className="mx-auto mb-4 w-48 h-36 bg-gray-200 rounded flex items-center justify-center">
+                    <span className="text-gray-500 text-4xl">🛒</span>
+                </div>
+                <p className="text-gray-600 mb-4">Your cart is empty</p>
+                <Link 
+                    to="/services" 
+                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                    Browse Services
+                </Link>
+            </div>
+        );
+    }
+
+    return (
+        <div className="container max-w-2xl py-10">
+            <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
+            <p className="text-gray-600">Cart functionality coming soon...</p>
+            <div className="mt-6">
+                <Link 
+                    to="/services" 
+                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                    Continue Shopping
+                </Link>
+            </div>
+        </div>
+    );
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

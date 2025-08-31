@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import SEO from '@/components/SEO';
 
-export default function LLMContentStudio() {
+export default function LLMContentStudio(...args: []):  {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO
         title="LLM Content Studio | Zion Tech Group"
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."
@@ -34,13 +34,12 @@ export default function LLMContentStudio() {
               <li>• Team: $299/mo up to 10 users</li>
               <li>• Enterprise: SSO, custom models, SLAs</li>
             </ul>
-            <p className="mt-4 text-xs text-zion-slate-light">
-              References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+            <p className="mt-4 text-xs text-zion-slate-light">;
+              References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>;
+            </p>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
-

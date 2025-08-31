@@ -9,7 +9,7 @@ export default function Featured() {
               Featured Listings
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              Discover our handpicked selection of premium AI products and services. 
+              Discover our handpicked selection of premium AI products and services.
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
@@ -17,5 +17,9 @@ export default function Featured() {
           <FeaturedListingsSection showTitle={false}/>
         </div>
       </div>
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

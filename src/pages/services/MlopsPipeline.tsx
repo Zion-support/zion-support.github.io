@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO   } from '@/components/SEO';
 
-const MlopsPipeline: React.FC = () => (
+const MlopsPipeline: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="MLOps Pipeline - Zion Tech Group" description="Automated training, evaluation, deployment, and monitoring for ML models." />
     <section className="container mx-auto px-4 py-12">
@@ -32,13 +32,13 @@ const MlopsPipeline: React.FC = () => (
           <li>Assessment: $5,000 one-time</li>
           <li>Implementation: from $25,000</li>
           <li>Managed run: from $3,000/mo</li>
-        </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to an engineer</a>
-    </section>
-  </div>
+        </ul>;
+      </div>;
+    </section>;
+    <section className="container mx-auto px-4 pb-16">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to an engineer</a>;
+    </section>;
+  </div>;
 );
 
 export default MlopsPipeline;

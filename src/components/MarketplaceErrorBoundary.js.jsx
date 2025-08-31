@@ -9,13 +9,11 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
-            await mutate(() => true, undefined, { revalidate: true });
-            resetErrorBoundary();
-        }
+            await mutate(() => true, null, { revalidate: true });
+            resetErrorBoundary()}
         catch (retryError) {
             console.error('Error during retry:', retryError);
-            Sentry.captureException(retryError);
-        }
+            Sentry.captureException(retryError)}
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
@@ -45,8 +43,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
           </a>
         </div>
       </div>
-    </div>);
-}
+    </div>)}
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
@@ -54,13 +51,10 @@ export function MarketplaceErrorBoundary({ children }) {
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
-                componentStack: errorInfo.componentStack || undefined,
+                componentStack: errorInfo.componentStack || null,
             });
             scope.setLevel('error');
-            Sentry.captureException(error);
-        });
-    };
+            Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
-    </ErrorBoundary>);
-}
+    </ErrorBoundary>)}

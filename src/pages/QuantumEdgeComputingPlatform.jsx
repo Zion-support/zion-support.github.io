@@ -1,7 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform = () => {
+=======
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",
@@ -32,7 +41,7 @@ const QuantumEdgeComputingPlatform = () => {
             icon: Users,
             title: "Scalable Architecture",
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -40,7 +49,7 @@ const QuantumEdgeComputingPlatform = () => {
             price: "$1,299",
             period: "/month",
             description: "Perfect for small to medium businesses",
-            features: [
+            features[
                 "Up to 10 quantum edge nodes",
                 "Basic quantum processing capabilities",
                 "Standard security protocols",
@@ -53,7 +62,7 @@ const QuantumEdgeComputingPlatform = () => {
             price: "$2,999",
             period: "/month",
             description: "Ideal for growing enterprises",
-            features: [
+            features[
                 "Up to 50 quantum edge nodes",
                 "Advanced quantum algorithms",
                 "Enhanced security features",
@@ -68,7 +77,7 @@ const QuantumEdgeComputingPlatform = () => {
             price: "$5,999",
             period: "/month",
             description: "For large-scale deployments",
-            features: [
+            features[
                 "Unlimited quantum edge nodes",
                 "Custom quantum algorithm development",
                 "Military-grade security",
@@ -77,7 +86,7 @@ const QuantumEdgeComputingPlatform = () => {
                 "On-site implementation support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -99,7 +108,7 @@ const QuantumEdgeComputingPlatform = () => {
             title: "Research & Development",
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -116,7 +125,7 @@ const QuantumEdgeComputingPlatform = () => {
             Quantum Edge Computing Platform
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Revolutionary edge computing platform that leverages quantum computing principles to deliver 
+            Revolutionary edge computing platform that leverages quantum computing principles to deliver
             unprecedented performance and efficiency for distributed applications.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -278,6 +287,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default QuantumEdgeComputingPlatform;
+}}}}

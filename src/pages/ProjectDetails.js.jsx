@@ -39,20 +39,16 @@ function ProjectDetailsContent() {
             if (projectData) {
                 setProject(projectData);
                 // Now fetch notes
-                fetchProjectNotes(projectId);
-            }
+                fetchProjectNotes(projectId)}
             else {
                 toast({
                     title: "Project not found",
                     description: "The requested project could not be found.",
                     variant: "destructive",
                 });
-                router.push("/dashboard");
-            }
-            setIsLoading(false);
-        }
-        loadProject();
-    }, [projectId]);
+                router.push("/dashboard")}
+            setIsLoading(false)}
+        loadProject()}, [projectId]);
     const fetchProjectNotes = async (projectId) => {
         try {
             const { data, error } = await supabase
@@ -65,11 +61,9 @@ function ProjectDetailsContent() {
                 .order("created_at", { ascending: false });
             if (error)
                 throw error;
-            setNotes(data || []);
-        }
+            setNotes(data || [])}
         catch (err) {
-            console.error("Error fetching project notes:", err);
-        }
+            console.error("Error fetching project notes:", err)}
     };
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
@@ -92,19 +86,16 @@ function ProjectDetailsContent() {
             toast({
                 title: "Note added",
                 description: "Your note has been added to the project.",
-            });
-        }
+            })}
         catch (err) {
             console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsSubmittingNote(false);
-        }
+            setIsSubmittingNote(false)}
     };
     const handleStatusChange = async (newStatus) => {
         if (!project)
@@ -120,8 +111,7 @@ function ProjectDetailsContent() {
                 toast({
                     title: "Offer Accepted! 🎉",
                     description: "The project is now in progress. Congratulations!",
-                });
-            }
+                })}
         }
     };
     const getStatusBadge = (status) => {
@@ -139,8 +129,7 @@ function ProjectDetailsContent() {
             case "canceled":
                 return <Badge variant="destructive">Canceled</Badge>;
             default:
-                return <Badge variant="outline">{status}</Badge>;
-        }
+                return <Badge variant="outline">{status}</Badge>}
     };
     if (isLoading) {
         return (<div className="container mx-auto py-8">
@@ -150,8 +139,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>
           </div>
         </div>
-      </div>);
-    }
+      </div>)}
     if (!project) {
         return (<div className="container mx-auto py-8">
         <Card>
@@ -166,17 +154,12 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-      </div>);
-    }
+      </div>)}
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
         router.push("/unauthorized");
-        return null;
-    }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+        return null}
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
@@ -531,10 +514,8 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

@@ -2,9 +2,11 @@ export class SitemapGenerator {
     config;
     constructor(config) {
         this.config = {
-            outputPath: './public/sitemap.xml',
-            ...config
-        };
+  outputPath: './public/sitemap.xml',
+  ...config
+        
+
+};
     }
     /**
      * Generate XML sitemap content
@@ -12,10 +14,7 @@ export class SitemapGenerator {
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const urlsetClose = '</urlset>';
-        const urlElements = urls.map(url => {
-            const urlElement = `<url>
+        const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
@@ -30,8 +29,6 @@ export class SitemapGenerator {
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
@@ -75,10 +72,12 @@ Crawl-delay: 1`;
     generateJSON() {
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
-            baseUrl,
+  baseUrl,
             urls: urls.map(url => ({
                 ...url,
-                fullUrl: `${baseUrl}${url.url}`,
+  fullUrl: `${baseUrl
+
+}${url.url}`,
                 lastmod: url.lastmod || new Date().toISOString()
             }))
         };
@@ -179,10 +178,13 @@ Crawl-delay: 1`;
 }
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
-    baseUrl: 'https://ziontechgroup.com',
+  baseUrl: 'https://ziontechgroup.com',
     urls: [
         // Main pages
-        { url: '/', changefreq: 'daily', priority: 1.0 },
+        { url: '/', changefreq: 'daily',
+  priority: 1.0 
+
+},
         { url: '/about', changefreq: 'monthly', priority: 0.8 },
         { url: '/contact', changefreq: 'monthly', priority: 0.8 },
         { url: '/team', changefreq: 'monthly', priority: 0.7 },
@@ -221,8 +223,7 @@ export const defaultSitemapConfig = {
     ]
 };
 // Utility function to generate all sitemap files
-export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
-    const generator = new SitemapGenerator(config);
+export const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap
         const xmlSitemap = generator.generateXML();
@@ -245,3 +246,6 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
     }
 };
 export default SitemapGenerator;
+
+export default to;
+export default to;

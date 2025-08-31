@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
+import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
 const RevolutionaryServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -21,12 +21,10 @@ const RevolutionaryServicesShowcase2025 = () => {
         'Quantum Technology'
     ];
     const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
@@ -232,6 +230,5 @@ const RevolutionaryServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default RevolutionaryServicesShowcase2025;

@@ -37,30 +37,28 @@ export default function FraudDetection() {
             setFilteredFlags(data || []);
             // Calculate stats
             const newStats = {
-                total_flags: data?.length || 0,
+  total_flags: data?.length || 0,
                 pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
                 suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
                 dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
                 false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
-            };
-            setStats(newStats);
-        }
+  
+
+};
+            setStats(newStats)}
         catch (error) {
             console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsLoading(false);
-        }
+            setIsLoading(false)}
     };
     useEffect(() => {
-        fetchFraudFlags();
-    }, []);
+        fetchFraudFlags()}, []);
     // Apply filters
     useEffect(() => {
         let result = [...flags];
@@ -69,22 +67,17 @@ export default function FraudDetection() {
             const query = searchQuery.toLowerCase();
             result = result.filter((flag) => flag.user_email?.toLowerCase().includes(query) ||
                 flag.content_excerpt.toLowerCase().includes(query) ||
-                flag.reason.toLowerCase().includes(query));
-        }
+                flag.reason.toLowerCase().includes(query))}
         // Apply status filter
         if (statusFilter) {
-            result = result.filter((flag) => flag.status === statusFilter);
-        }
+            result = result.filter((flag) => flag.status === statusFilter)}
         // Apply severity filter
         if (severityFilter) {
-            result = result.filter((flag) => flag.severity === severityFilter);
-        }
+            result = result.filter((flag) => flag.severity === severityFilter)}
         // Apply content type filter
         if (contentTypeFilter) {
-            result = result.filter((flag) => flag.content_type === contentTypeFilter);
-        }
-        setFilteredFlags(result);
-    }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+            result = result.filter((flag) => flag.content_type === contentTypeFilter)}
+        setFilteredFlags(result)}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
     const handleAction = async (flagId, action) => {
         try {
             const status = action === 'ignore' ? 'ignored' : 'actioned';
@@ -106,23 +99,20 @@ export default function FraudDetection() {
                 description: `Action '${action}' was applied successfully.`,
             });
             // Refresh the data
-            fetchFraudFlags();
-        }
+            fetchFraudFlags()}
         catch (error) {
             console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",
                 description: "Failed to update flag",
                 variant: "destructive",
-            });
-        }
+            })}
     };
     const resetFilters = () => {
         setSearchQuery("");
         setStatusFilter(null);
         setSeverityFilter(null);
-        setContentTypeFilter(null);
-    };
+        setContentTypeFilter(null)};
     const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
     return (<SEO title="Fraud Detection | Admin Dashboard" description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"/>
         ,
@@ -179,5 +169,4 @@ export default function FraudDetection() {
             <FraudTabContent tabValue="actioned"/>
           </TabsContent>
         </Tabs>
-      </div>);
-}
+      </div>)}

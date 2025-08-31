@@ -7,7 +7,6 @@ export default function CreatePostPage() {
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
-    const initialCategory = searchParams.get("category");
     const initialValues = {
         categoryId: initialCategory || "project-help"
     };
@@ -22,15 +21,13 @@ export default function CreatePostPage() {
                 description: "Your post has been published successfully"
             });
             // Redirect to the forum category
-            navigate(`/community/category/${values.categoryId}`);
-        }
+            router(`/community/category/${values.categoryId}`)}
         catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem creating your post",
                 variant: "destructive"
-            });
-        }
+            })}
     };
     return (<SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread"/>
         ,
@@ -46,5 +43,4 @@ export default function CreatePostPage() {
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
         
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
-      </div>);
-}
+      </div>)}

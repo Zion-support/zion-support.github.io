@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield import { SEO } from '@/components/SEO';
+=======
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const CloudDevOps = () => {
   const cloudServices = [
@@ -9,26 +18,35 @@ const CloudDevOps = () => {
       icon: Cloud,
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
       icon: Server,
       title: "Infrastructure as Code",
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+      features["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
     {
+<<<<<<< HEAD
       icon: GitBranch,
+=======
+      icon: GitFork,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       title: "CI/CD Pipelines",
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
-      features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
+      features["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Scalable database solutions with high availability and disaster recovery.",
+<<<<<<< HEAD
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
+
+=======
+      features["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
     }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const platforms = [
@@ -51,14 +69,14 @@ const CloudDevOps = () => {
       name: "Multi-Cloud",
       description: "Hybrid and multi-cloud strategy implementation",
       icon: "🌐"
-    }
+
   ];
 
   const devOpsTools = [
-    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
-    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
-    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
-    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
+    { category: "CI/CD", tools["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
+    { category: "Infrastructure", tools["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
+    { category: "Monitoring", tools["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
+    { category: "Security", tools["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
 
   return (
@@ -161,23 +179,23 @@ const CloudDevOps = () => {
             Let's discuss how our cloud migration and DevOps services can help you achieve faster deployments, better scalability, and improved security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-            >
+
               Get Started
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CloudDevOps;
+}}}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
+import { CUTTING_EDGE_SERVICES_2025 } from "../data/enhanced-2025-cutting-edge-services";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "../data/specialized-industry-solutions-2025";
 const ComprehensiveServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -12,14 +12,10 @@ const ComprehensiveServicesShowcase2025 = () => {
     const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
     // Filter services based on selection
     const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesIndustry = selectedIndustry === 'all' ||
-            ('industry' in service ? service.industry === selectedIndustry : true);
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesIndustry && matchesSearch;
-    });
+        return matchesCategory && matchesIndustry && matchesSearch});
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -30,7 +26,10 @@ const ComprehensiveServicesShowcase2025 = () => {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -44,7 +43,15 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 30 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Cutting-Edge
@@ -243,8 +250,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <button onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedIndustry('all');
-            }} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                setSelectedIndustry('all')}} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
               View All Services
             </button>
           </motion.div>)}
@@ -270,6 +276,5 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default ComprehensiveServicesShowcase2025;

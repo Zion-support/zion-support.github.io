@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAutonomousResearchAssistant = () => {
+=======
 import { MagnifyingGlassIcon, LightBulbIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+=======
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const AIAutonomousResearchAssistant = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -9,14 +17,18 @@ const AIAutonomousResearchAssistant = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
+<<<<<<< HEAD
                 <MagnifyingGlassIcon className="h-12 w-12 text-blue-400"/>
+=======
+                <Search className="h-12 w-12 text-blue-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               AI Autonomous Research Assistant
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your research capabilities with our AI-powered autonomous research assistant. 
+              Revolutionize your research capabilities with our AI-powered autonomous research assistant.
               Discover insights, analyze data, and accelerate breakthroughs across all domains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -40,14 +52,14 @@ const AIAutonomousResearchAssistant = () => {
                 What is AI Autonomous Research Assistant?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Autonomous Research Assistant is a cutting-edge artificial intelligence system designed to 
-                autonomously conduct comprehensive research across multiple domains. It combines advanced natural 
-                language processing, machine learning algorithms, and vast knowledge databases to deliver 
+                Our AI Autonomous Research Assistant is a cutting-edge artificial intelligence system designed to
+                autonomously conduct comprehensive research across multiple domains. It combines advanced natural
+                language processing, machine learning algorithms, and vast knowledge databases to deliver
                 unprecedented research capabilities.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                Unlike traditional research tools, our AI assistant works independently, continuously learning 
-                and adapting to new information, identifying patterns, and generating insights that human 
+                Unlike traditional research tools, our AI assistant works independently, continuously learning
+                and adapting to new information, identifying patterns, and generating insights that human
                 researchers might miss.
               </p>
               <div className="flex items-center space-x-4">
@@ -66,25 +78,41 @@ const AIAutonomousResearchAssistant = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                       <AcademicCapIcon className="h-5 w-5 text-white"/>
+=======
+                      <GraduationCap className="h-5 w-5 text-white"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     </div>
                     <span className="text-lg font-semibold">Academic Research</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                       <ChartBarIcon className="h-5 w-5 text-white"/>
+=======
+                      <BarChart3 className="h-5 w-5 text-white"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     </div>
                     <span className="text-lg font-semibold">Market Analysis</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                       <LightBulbIcon className="h-5 w-5 text-white"/>
+=======
+                      <Lightbulb className="h-5 w-5 text-white"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     </div>
                     <span className="text-lg font-semibold">Innovation Discovery</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                       <GlobeAltIcon className="h-5 w-5 text-white"/>
+=======
+                      <Globe className="h-5 w-5 text-white"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     </div>
                     <span className="text-lg font-semibold">Global Trends</span>
                   </div>
@@ -104,29 +132,41 @@ const AIAutonomousResearchAssistant = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <MagnifyingGlassIcon className="h-8 w-8 text-blue-400"/>
+=======
+                <Search className="h-8 w-8 text-blue-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Intelligent Search & Discovery</h3>
               <p className="text-gray-300">
-                Advanced semantic search capabilities that understand context and find relevant information 
+                Advanced semantic search capabilities that understand context and find relevant information
                 across multiple sources and languages.
               </p>
             </div>
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <LightBulbIcon className="h-8 w-8 text-green-400"/>
+=======
+                <Lightbulb className="h-8 w-8 text-green-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Pattern Recognition</h3>
               <p className="text-gray-300">
-                Identifies hidden patterns, correlations, and trends in large datasets that human researchers 
+                Identifies hidden patterns, correlations, and trends in large datasets that human researchers
                 might overlook.
               </p>
             </div>
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <ChartBarIcon className="h-8 w-8 text-purple-400"/>
+=======
+                <BarChart3 className="h-8 w-8 text-purple-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Analysis & Visualization</h3>
               <p className="text-gray-300">
@@ -136,33 +176,45 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <AcademicCapIcon className="h-8 w-8 text-orange-400"/>
+=======
+                <GraduationCap className="h-8 w-8 text-orange-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Multi-Domain Expertise</h3>
               <p className="text-gray-300">
-                Specialized knowledge across scientific, business, medical, and technological domains with 
+                Specialized knowledge across scientific, business, medical, and technological domains with
                 continuous learning capabilities.
               </p>
             </div>
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <RocketLaunchIcon className="h-8 w-8 text-cyan-400"/>
+=======
+                <Rocket className="h-8 w-8 text-cyan-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">
-                Self-directed research processes that can work independently, prioritize tasks, and adapt 
+                Self-directed research processes that can work independently, prioritize tasks, and adapt
                 to new information automatically.
               </p>
             </div>
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
+<<<<<<< HEAD
                 <GlobeAltIcon className="h-8 w-8 text-pink-400"/>
+=======
+                <Globe className="h-8 w-8 text-pink-400"/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Knowledge Access</h3>
               <p className="text-gray-300">
-                Access to worldwide databases, research papers, patents, and real-time information sources 
+                Access to worldwide databases, research papers, patents, and real-time information sources
                 across multiple languages.
               </p>
             </div>
@@ -183,7 +235,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Research Request</h3>
               <p className="text-gray-300">
-                Submit your research query or topic through our intuitive interface. The AI analyzes your 
+                Submit your research query or topic through our intuitive interface. The AI analyzes your
                 requirements and develops a research strategy.
               </p>
             </div>
@@ -194,7 +246,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Investigation</h3>
               <p className="text-gray-300">
-                The AI independently searches multiple sources, analyzes data, identifies patterns, and 
+                The AI independently searches multiple sources, analyzes data, identifies patterns, and
                 cross-references information across domains.
               </p>
             </div>
@@ -205,7 +257,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Insight Generation</h3>
               <p className="text-gray-300">
-                Advanced algorithms process the collected data to generate insights, identify trends, and 
+                Advanced algorithms process the collected data to generate insights, identify trends, and
                 create comprehensive research summaries.
               </p>
             </div>
@@ -216,7 +268,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Deliver Results</h3>
               <p className="text-gray-300">
-                Receive detailed reports, visualizations, and actionable insights with source citations and 
+                Receive detailed reports, visualizations, and actionable insights with source citations and
                 recommendations for further research.
               </p>
             </div>
@@ -309,7 +361,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Unprecedented Speed</h3>
                   <p className="text-gray-300">
-                    Complete research tasks in minutes that would take human researchers weeks or months, 
+                    Complete research tasks in minutes that would take human researchers weeks or months,
                     dramatically accelerating your innovation timeline.
                   </p>
                 </div>
@@ -322,7 +374,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Comprehensive Coverage</h3>
                   <p className="text-gray-300">
-                    Access and analyze information from thousands of sources simultaneously, ensuring no 
+                    Access and analyze information from thousands of sources simultaneously, ensuring no
                     relevant data is missed in your research.
                   </p>
                 </div>
@@ -335,7 +387,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Pattern Discovery</h3>
                   <p className="text-gray-300">
-                    Identify hidden connections and patterns across multiple domains that human researchers 
+                    Identify hidden connections and patterns across multiple domains that human researchers
                     might never discover, leading to breakthrough insights.
                   </p>
                 </div>
@@ -350,7 +402,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
                   <p className="text-gray-300">
-                    Research never stops with our autonomous AI that works around the clock, continuously 
+                    Research never stops with our autonomous AI that works around the clock, continuously
                     learning and updating information.
                   </p>
                 </div>
@@ -363,7 +415,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Cost Efficiency</h3>
                   <p className="text-gray-300">
-                    Reduce research costs significantly by automating time-consuming tasks and eliminating 
+                    Reduce research costs significantly by automating time-consuming tasks and eliminating
                     the need for extensive manual research teams.
                   </p>
                 </div>
@@ -376,7 +428,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Scalable Research</h3>
                   <p className="text-gray-300">
-                    Handle multiple research projects simultaneously without compromising quality, scaling 
+                    Handle multiple research projects simultaneously without compromising quality, scaling
                     your research capabilities exponentially.
                   </p>
                 </div>
@@ -393,7 +445,7 @@ const AIAutonomousResearchAssistant = () => {
             Ready to Transform Your Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the future of autonomous research with Zion Tech Group's AI Research Assistant. 
+            Join the future of autonomous research with Zion Tech Group's AI Research Assistant.
             Accelerate discoveries, uncover insights, and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -406,6 +458,6 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousResearchAssistant;
+}

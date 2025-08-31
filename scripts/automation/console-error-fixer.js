@@ -1,0 +1,390 @@
+#!/usr/bin/env node
+
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(__filename);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+// // // console.log('🔧 Starting continuous console error fixer automation...');
+=======
+// // // // // // // console.log('🔧 Starting continuous console error fixer automation...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+// // // console.log('🔧 Starting continuous console error fixer automation...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+// Get automation interval from environment variable (default: 15 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
+
+async function runConsoleErrorFixer() {
+  try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
+
+    // Build the project first
+    // // // console.log('🏗️ Building project for console error detection...');
+    try {
+      execSync('npm run build', { stdio: 'inherit', cwd: process.cwd() });
+      // // // console.log('✅ Build completed');
+    } catch (error) {
+      // // // console.log('⚠️  Build failed but continuing...');
+      // // // console.log('Build error:', error.message);
+<<<<<<< HEAD
+=======
+    // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
+
+    // Build the project first
+    // // // // // // // console.log('🏗️ Building project for console error detection...');
+    try {
+      execSync('npm run build', { stdio: 'inherit', cwd: process.cwd() });
+      // // // // // // // console.log('✅ Build completed');
+    } catch (error) {
+      // // // // // // // console.log('⚠️  Build failed but continuing...');
+      // // // // // // // console.log('Build error:', error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      return;
+
+    // Check if dist folder exists
+    const distPath = path.join(process.cwd(), 'dist');
+    if (!fs.existsSync(distPath)) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      // // // console.log('⚠️  Build verification failed: dist folder not found');
+=======
+      // // // // // // // console.log('⚠️  Build verification failed: dist folder not found');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+      return;
+
+    // Scan for console statements in source code
+<<<<<<< HEAD
+=======
+      // // // console.log('⚠️  Build verification failed: dist folder not found');
+      return;
+
+    // Scan for console statements in source code
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    // // // console.log('🔍 Scanning for console statements in source code...');
+    const consoleStatements = findConsoleStatements('./src');
+    if (consoleStatements.length > 0) {
+      // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
+      consoleStatements.forEach(stmt => {
+        // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      // // // console.log('✅ No console statements found in source code');
+
+    // Check for console statements in build output
+    // // // console.log('🔍 Checking build output for console statements...');
+    const buildConsoleStatements = findConsoleStatements(distPath);
+    if (buildConsoleStatements.length > 0) {
+      // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
+      buildConsoleStatements.forEach(stmt => {
+        // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      // // // console.log('✅ No console statements found in build output');
+
+    // Check for potential error patterns
+    // // // console.log('🔍 Checking for potential error patterns...');
+    const errorPatterns = findErrorPatterns('./src');
+    if (errorPatterns.length > 0) {
+      // // // console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
+      errorPatterns.forEach(pattern => {
+        // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`);
+      });
+    } else {
+      // // // console.log('✅ No potential error patterns found');
+
+    // Run linting to catch console errors
+    // // // console.log('🔍 Running linting for console errors...');
+    try {
+      execSync('npm run lint', { stdio: 'pipe' });
+      // // // console.log('✅ Linting completed - no console errors found');
+    } catch (error) {
+      // // // console.log('⚠️  Linting found issues, checking for console errors...');
+      const lintOutput = error.message;
+      if (lintOutput.includes('console.')) {
+        // // // console.log('⚠️  Console statements detected in linting output');
+
+
+<<<<<<< HEAD
+    // Generate console error fixer report
+    // // // console.log('📊 Generating console error fixer report...');
+=======
+    // // // // // // // console.log('🔍 Scanning for console statements in source code...');
+    const consoleStatements = findConsoleStatements('./src');
+    if (consoleStatements.length > 0) {
+      // // // // // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
+      consoleStatements.forEach(stmt => {
+        // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      // // // // // // // console.log('✅ No console statements found in source code');
+    }
+
+    // Check for console statements in build output
+    // // // // // // // console.log('🔍 Checking build output for console statements...');
+    const buildConsoleStatements = findConsoleStatements(distPath);
+    if (buildConsoleStatements.length > 0) {
+      // // // // // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
+      buildConsoleStatements.forEach(stmt => {
+        // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);
+      });
+    } else {
+      // // // // // // // console.log('✅ No console statements found in build output');
+    }
+
+    // Check for potential error patterns
+    // // // // // // // console.log('🔍 Checking for potential error patterns...');
+    const errorPatterns = findErrorPatterns('./src');
+    if (errorPatterns.length > 0) {
+      // // // // // // // console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
+      errorPatterns.forEach(pattern => {
+        // // // // // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`);
+      });
+    } else {
+      // // // // // // // console.log('✅ No potential error patterns found');
+    }
+
+    // Run linting to catch console errors
+    // // // // // // // console.log('🔍 Running linting for console errors...');
+    try {
+      execSync('npm run lint', { stdio: 'pipe' });
+      // // // // // // // console.log('✅ Linting completed - no console errors found');
+    } catch (error) {
+      // // // // // // // console.log('⚠️  Linting found issues, checking for console errors...');
+      const lintOutput = error.message;
+      if (lintOutput.includes('console.')) {
+        // // // // // // // console.log('⚠️  Console statements detected in linting output');
+      }
+    }
+
+    // Generate console error fixer report
+    // // // // // // // console.log('📊 Generating console error fixer report...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    // Generate console error fixer report
+<<<<<<< HEAD
+    // // // console.log('📊 Generating console error fixer report...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    const report = {
+  timestamp: new Date().toISOString(),
+      consoleStatements: consoleStatements.length,
+      buildConsoleStatements: buildConsoleStatements.length,
+      errorPatterns: errorPatterns.length,
+      summary: 'Console error fixer completed',
+<<<<<<< HEAD
+      status: 'completed'
+    };
+
+    const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+=======
+  status: 'completed'
+    
+
+};
+
+=======
+    console.log('📊 Generating console error fixer report...');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
+
+    // // // console.log('✅ Continuous console error fixer completed successfully');
+
+  } catch (error) {
+    // // // console.error('❌ Continuous console error fixer failed:', error.message);
+<<<<<<< HEAD
+=======
+    // // // // // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
+
+    // // // // // // // console.log('✅ Continuous console error fixer completed successfully');
+
+  } catch (error) {
+    // // // // // // // console.error('❌ Continuous console error fixer failed:', error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    // Don't exit, just log the error and continue
+
+
+function findConsoleStatements(dir) {
+  const consoleStatements = [];
+
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            const lines = content.split('\n');
+
+            lines.forEach((line, index) => {
+              if (line.includes('console.')) {
+                const match = line.match(/console\.\w+/);
+                if (match) {
+                  consoleStatements.push({
+                    file: path.relative(process.cwd(), fullPath),
+                    line: index + 1,
+                    statement: match[0]
+                  });
+
+
+            });
+          } catch (error) {
+            // Skip files that can't be read
+
+
+
+    } catch (error) {
+      // Skip directories that can't be accessed
+
+
+  scanDirectory(dir);
+  return consoleStatements;
+
+function findErrorPatterns(dir) {
+  const errorPatterns = [];
+
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            const lines = content.split('\n');
+
+            lines.forEach((line, index) => {
+              // Check for common error patterns
+              const patterns = [
+                'throw new Error',
+                'throw Error',
+                'console.error',
+                'console.warn',
+                'debugger',
+                'alert(',
+                'confirm(',
+                'prompt('
+              ];
+
+              patterns.forEach(pattern => {
+                if (line.includes(pattern)) {
+                  errorPatterns.push({
+                    file: path.relative(process.cwd(), fullPath),
+                    line: index + 1,
+                    pattern: pattern
+                  });
+
+              });
+            });
+          } catch (error) {
+            // Skip files that can't be read
+
+
+
+    } catch (error) {
+      // Skip directories that can't be accessed
+
+
+  scanDirectory(dir);
+  return errorPatterns;
+
+// Main continuous loop
+async function runContinuous() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+=======
+  // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  // Run initial console error fixer
+  await runConsoleErrorFixer();
+
+  // Set up continuous execution
+  setInterval(async () => {
+    await runConsoleErrorFixer();
+  }, AUTOMATION_INTERVAL);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+=======
+  // // // // // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+=======
+  // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  process.exit(0);
+});
+
+// Start the continuous console error fixer
+runContinuous().catch(error => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // // // console.error('❌ Failed to start continuous console error fixer:', error);
+=======
+  // // // // // // // console.error('❌ Failed to start continuous console error fixer:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+  // // // console.error('❌ Failed to start continuous console error fixer:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  process.exit(1);
+});
+}}}}}}}}}}}}}}}}}}}}}}}}})))

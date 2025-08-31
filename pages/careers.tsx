@@ -1,9 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock } from 'lucide-react'
+<<<<<<< HEAD
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock export default function Careers(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock   } from 'lucide-react.ts'
 
 
-export default function Careers() {
+export default function Careers(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -32,7 +38,7 @@ export default function Careers() {
 			location: 'Remote',
 			type: 'Full-time',
 			description: 'Create intuitive user interfaces for our AI-powered platforms.'
-		}
+
 	]
 
 	return (
@@ -80,7 +86,7 @@ export default function Careers() {
 								<div>
 									<h3 className="text-lg font-semibold text-gray-900 mb-2">Remote-First Culture</h3>
 									<p className="text-gray-600">
-										Work from anywhere in the world with flexible hours and a supportive remote work environment.
+										Work from where in the world with flexible hours and a supportive remote work environment.
 									</p>
 								</div>
 							</div>
@@ -163,8 +169,8 @@ export default function Careers() {
 							Ready to join our mission? Check out our current openings.
 						</p>
 					</div>
-					<div className="grid gap-6 lg:grid-cols-2">
-						{openPositions.map((position) => (
+					<div className="grid gap-6 lg: anygrid-cols-2">
+						{openPositions.map((position)   => (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>
@@ -185,7 +191,7 @@ export default function Careers() {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -206,19 +212,29 @@ export default function Careers() {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-							>
+
 								Send Resume
 							</Link>
 							<a
 								href="mailto:careers@ziontechgroup.com"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-							>
+
 								careers@ziontechgroup.com
 							</a>
 						</div>
+<<<<<<< HEAD
 					</div>
 				</div>
 			</section>
 		</>
 	)
-}
+}}}
+=======
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

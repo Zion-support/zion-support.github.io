@@ -16,26 +16,25 @@ export const useAnalytics = (config = {}) => {
         startTracking();
         return () => {
             stopTracking();
-            flushEvents();
-        };
-    }, [enableTracking]);
+            flushEvents()}}, [enableTracking]);
     // Initialize user session
     const initializeSession = useCallback(() => {
         const sessionId = generateSessionId();
         sessionRef.current = sessionId;
         const session = {
-            id: sessionId,
+  id: sessionId,
             startTime: Date.now(),
             lastActivity: Date.now(),
             pageViews: 0,
             interactions: 0,
             referrer: document.referrer,
             userAgent: navigator.userAgent,
-            deviceInfo: getDeviceInfo()
-        };
+  deviceInfo: getDeviceInfo()
+        
+
+};
         setCurrentSession(session);
-        trackEvent('session', 'start', 'session_started');
-    }, []);
+        trackEvent('session', 'start', 'session_started')}, []);
     // Start tracking
     const startTracking = useCallback(() => {
         if (!enableTracking)
@@ -45,34 +44,29 @@ export const useAnalytics = (config = {}) => {
         trackPageView();
         // Performance tracking
         if (enablePerformanceTracking) {
-            trackPerformanceMetrics();
-        }
+            trackPerformanceMetrics()}
         // User behavior tracking
         if (enableUserBehaviorTracking) {
-            setupUserBehaviorTracking();
-        }
+            setupUserBehaviorTracking()}
         // Heatmap tracking
         if (enableHeatmapTracking) {
-            setupHeatmapTracking();
-        }
+            setupHeatmapTracking()}
         // Session monitoring
         setupSessionMonitoring();
         // Setup event batching
-        setupEventBatching();
-    }, [enableTracking, enablePerformanceTracking, enableUserBehaviorTracking, enableHeatmapTracking]);
+        setupEventBatching()}, [enableTracking, enablePerformanceTracking, enableUserBehaviorTracking, enableHeatmapTracking]);
     // Stop tracking
     const stopTracking = useCallback(() => {
         setIsTracking(false);
         if (flushTimerRef.current) {
-            clearTimeout(flushTimerRef.current);
-        }
+            clearTimeout(flushTimerRef.current)}
     }, []);
     // Track custom event
     const trackEvent = useCallback((category, action, label, value, metadata) => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId(),
+  id: generateEventId(),
             type: 'custom',
             category,
             action,
@@ -80,17 +74,18 @@ export const useAnalytics = (config = {}) => {
             value,
             timestamp: Date.now(),
             sessionId: currentSession.id,
-            metadata
-        };
+  metadata
+        
+
+};
         setEvents(prev => [...prev, event]);
-        updateSessionActivity();
-    }, [isTracking, currentSession]);
+        updateSessionActivity()}, [isTracking, currentSession]);
     // Track page view
     const trackPageView = useCallback(() => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId(),
+  id: generateEventId(),
             type: 'pageview',
             category: 'navigation',
             action: 'page_view',
@@ -100,13 +95,14 @@ export const useAnalytics = (config = {}) => {
             metadata: {
                 url: window.location.href,
                 title: document.title,
-                referrer: document.referrer
-            }
+  referrer: document.referrer
+            
+
+}
         };
         setEvents(prev => [...prev, event]);
         setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null);
-        updateSessionActivity();
-    }, [isTracking, currentSession]);
+        updateSessionActivity()}, [isTracking, currentSession]);
     // Track performance metrics
     const trackPerformanceMetrics = useCallback(async () => {
         if (!enablePerformanceTracking)
@@ -118,56 +114,51 @@ export const useAnalytics = (config = {}) => {
             const paintEntries = performance.getEntriesByType('paint');
             const layoutShiftEntries = performance.getEntriesByType('layout-shift');
             const metrics = {
-                pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+  pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
                 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0,
                 firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
                 largestContentfulPaint: 0, // Will be updated by LCP observer
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
-                firstInputDelay: 0 // Will be updated by FID observer
-            };
+  firstInputDelay: 0 // Will be updated by FID observer
+            
+
+};
             setPerformanceMetrics(metrics);
-            trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
-        }
+            trackEvent('performance', 'metrics_captured', 'performance_tracking', null, { metrics })}
         catch (error) {
-            console.error('Failed to track performance metrics:', error);
-        }
+            console.error('Failed to track performance metrics:', error)}
     }, [enablePerformanceTracking]);
     // Setup user behavior tracking
     const setupUserBehaviorTracking = useCallback(() => {
         // Click tracking
         const handleClick = (event) => {
-            const target = event.target;
             const tagName = target.tagName.toLowerCase();
             const className = target.className;
             const id = target.id;
             const text = target.textContent?.slice(0, 50);
-            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
+            trackEvent('interaction', 'click', `${tagName}_clicked`, null, {
                 tagName,
                 className,
                 id,
                 text,
                 x: event.clientX,
                 y: event.clientY
-            });
-        };
+            })};
         // Scroll tracking
         let scrollTimeout;
         const handleScroll = () => {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-                trackEvent('interaction', 'scroll', 'scroll_depth', scrollDepth);
-            }, 150);
-        };
+                trackEvent('interaction', 'scroll', 'scroll_depth', scrollDepth)}, 150)};
         // Form interaction tracking
         const handleFormInteraction = (event) => {
             const target = event.target;
-            trackEvent('interaction', 'form_input', 'form_field_interaction', undefined, {
+            trackEvent('interaction', 'form_input', 'form_field_interaction', null, {
                 fieldType: target.type,
                 fieldName: target.name,
                 fieldValue: target.value?.slice(0, 100)
-            });
-        };
+            })};
         // Add event listeners
         document.addEventListener('click', handleClick);
         window.addEventListener('scroll', handleScroll);
@@ -177,9 +168,7 @@ export const useAnalytics = (config = {}) => {
             document.removeEventListener('click', handleClick);
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('input', handleFormInteraction);
-            document.removeEventListener('change', handleFormInteraction);
-        };
-    }, []);
+            document.removeEventListener('change', handleFormInteraction)}}, []);
     // Setup heatmap tracking
     const setupHeatmapTracking = useCallback(() => {
         if (!enableHeatmapTracking)
@@ -189,18 +178,14 @@ export const useAnalytics = (config = {}) => {
         const handleMouseMove = (event) => {
             clearTimeout(moveTimeout);
             moveTimeout = setTimeout(() => {
-                trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
+                trackEvent('heatmap', 'mouse_movement', 'mouse_position', null, {
                     x: event.clientX,
                     y: event.clientY,
                     timestamp: Date.now()
-                });
-            }, 100);
-        };
+                })}, 100)};
         document.addEventListener('mousemove', handleMouseMove);
         return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, [enableHeatmapTracking]);
+            document.removeEventListener('mousemove', handleMouseMove)}}, [enableHeatmapTracking]);
     // Setup session monitoring
     const setupSessionMonitoring = useCallback(() => {
         const checkSessionTimeout = () => {
@@ -209,27 +194,22 @@ export const useAnalytics = (config = {}) => {
             if (now - lastActivityRef.current > timeoutMs) {
                 // Session expired
                 trackEvent('session', 'timeout', 'session_expired');
-                initializeSession();
-            }
+                initializeSession()}
         };
         const interval = setInterval(checkSessionTimeout, 60000); // Check every minute
-        return () => clearInterval(interval);
-    }, [sessionTimeout, initializeSession]);
+        return () => clearInterval(interval)}, [sessionTimeout, initializeSession]);
     // Setup event batching
     const setupEventBatching = useCallback(() => {
         const flushEvents = () => {
             if (events.length >= batchSize) {
                 sendEventsToServer(events);
-                setEvents([]);
-            }
+                setEvents([])}
         };
-        flushTimerRef.current = setInterval(flushEvents, flushInterval);
-    }, [events.length, batchSize, flushInterval]);
+        flushTimerRef.current = setInterval(flushEvents, flushInterval)}, [events.length, batchSize, flushInterval]);
     // Update session activity
     const updateSessionActivity = useCallback(() => {
         lastActivityRef.current = Date.now();
-        setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null);
-    }, []);
+        setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null)}, []);
     // Send events to server
     const sendEventsToServer = useCallback(async (eventsToSend) => {
         try {
@@ -240,18 +220,15 @@ export const useAnalytics = (config = {}) => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(eventsToSend)
-            });
-        }
+            })}
         catch (error) {
-            console.error('Failed to send analytics events:', error);
-        }
+            console.error('Failed to send analytics events:', error)}
     }, []);
     // Flush events manually
     const flushEvents = useCallback(() => {
         if (events.length > 0) {
             sendEventsToServer(events);
-            setEvents([]);
-        }
+            setEvents([])}
     }, [events, sendEventsToServer]);
     // Get analytics summary
     const getAnalyticsSummary = useCallback(() => {
@@ -260,8 +237,7 @@ export const useAnalytics = (config = {}) => {
         const sessionDuration = Date.now() - currentSession.startTime;
         const eventsByCategory = events.reduce((acc, event) => {
             acc[event.category] = (acc[event.category] || 0) + 1;
-            return acc;
-        }, {});
+            return acc}, {});
         return {
             sessionId: currentSession.id,
             sessionDuration: Math.round(sessionDuration / 1000), // seconds
@@ -269,20 +245,17 @@ export const useAnalytics = (config = {}) => {
             totalEvents: events.length,
             eventsByCategory,
             performanceMetrics
-        };
-    }, [currentSession, events, performanceMetrics]);
+        }}, [currentSession, events, performanceMetrics]);
     // Track conversion
     const trackConversion = useCallback((goal, value, metadata) => {
-        trackEvent('conversion', goal, 'goal_achieved', value, metadata);
-    }, [trackEvent]);
+        trackEvent('conversion', goal, 'goal_achieved', value, metadata)}, [trackEvent]);
     // Track error
     const trackError = useCallback((error, context, metadata) => {
-        trackEvent('error', 'error_occurred', context, undefined, {
+        trackEvent('error', 'error_occurred', context, null, {
             errorMessage: error.message,
             errorStack: error.stack,
             ...metadata
-        });
-    }, [trackEvent]);
+        })}, [trackEvent]);
     return {
         // State
         isTracking,
@@ -301,21 +274,13 @@ export const useAnalytics = (config = {}) => {
         initializeSession,
         startTracking,
         stopTracking
-    };
-};
+    }};
 // Utility functions
-const generateSessionId = () => {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
-const generateEventId = () => {
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
 const getDeviceInfo = () => {
     const userAgent = navigator.userAgent;
     let deviceType = 'desktop';
     if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-        deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile';
-    }
+        deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile'}
     return {
         type: deviceType,
         screen: {
@@ -326,5 +291,4 @@ const getDeviceInfo = () => {
             width: window.innerWidth,
             height: window.innerHeight
         }
-    };
-};
+    }};

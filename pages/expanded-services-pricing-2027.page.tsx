@@ -1,68 +1,95 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState, useMemo } from 'react';
-import { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027';
+<<<<<<< HEAD
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState, useMemo   } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_PRICING   } from '../data/expandedServicesPricing2027';
+=======
+import type { NextPage } from 'next.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useState, useMemo  } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_PRICING  } from '../data/expandedServicesPricing2027';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-const ExpandedServicesPricingGuide2027: NextPage = () => {
+const ExpandedServicesPricingGuide2027: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
 
   // Get unique categories and subcategories
-  const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
+<<<<<<< HEAD
+  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
+    return cats}, []);
+
+  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
+      return subcats}
+=======
+  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
     return cats;
   }, []);
 
-  const subcategories = useMemo(() => {
-    if (selectedCategory === 'all') {
-      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
+  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
       return subcats;
+<<<<<<< HEAD
+
+=======
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {
-    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
-      const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {;
+    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
+      const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      
+<<<<<<< HEAD
+
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      
+
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
   }, [searchTerm, selectedCategory, selectedSubcategory]);
+=======
+      
+      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+      
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const resetFilters = () => {
+  const resetFilters = () => {;
     setSearchTerm('');
     setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSelectedSubcategory('all')};
 
-  const getMarketPositionColor = (position: string) => {
-    switch (position) {
+<<<<<<< HEAD
+  const getMarketPositionColor = (position: anystring)  => {;
+    switch (position) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'leader': return 'bg-green-600';
       case 'challenger': return 'bg-blue-600';
       case 'niche': return 'bg-purple-600';
       case 'emerging': return 'bg-yellow-600';
+<<<<<<< HEAD
       default: return 'bg-gray-600';
-    }
+
+=======
+      default: return 'bg-gray-600'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
+    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <Helmet>
         <title>Expanded Services Pricing Guide 2027 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive pricing guide for our 2027 expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning for cybersecurity, data analytics, cloud solutions, IoT, fintech, and healthcare technology services." />
         <meta name="keywords" content="Zion Tech Group, pricing guide 2027, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud solutions pricing" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/expanded-services-pricing-2027" />
-      </Head>
+      </Helmet>
 
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -71,10 +98,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             Expanded Services Pricing Guide 2027
           </h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge 
+            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge
             technology services. Compare pricing tiers, understand value propositions, and make informed decisions.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Contact Zion Tech Group</h3>
@@ -103,45 +130,72 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               type="text"
               placeholder="Search services..."
               value={searchTerm}
+<<<<<<< HEAD
               onChange={(e) => setSearchTerm(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
-            
+
             <select
               value={selectedCategory}
               onChange={(e) => {
+=======
+              onChange={(e) => setSearchTerm(e.target.value)};
+              className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400";
+            />;
+            ;
+            <select;
+              value={selectedCategory};
+              onChange={(e) => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 setSelectedCategory(e.target.value);
+<<<<<<< HEAD
+                setSelectedSubcategory('all')}}
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400";
+=======;
                 setSelectedSubcategory('all');
               }}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+<<<<<<< HEAD
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+
+              {categories.map(cat  => (
+=======
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
-              {categories.map(cat => (
+              {categories.map(cat   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
                 </option>
               ))}
             </select>
-            
+
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+<<<<<<< HEAD
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+
+              {subcategories.map(subcat  => (
+=======
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
             >
-              {subcategories.map(subcat => (
+              {subcategories.map(subcat   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
                 </option>
               ))}
             </select>
-            
+
             <button
               onClick={resetFilters}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
-            >
+
               Reset Filters
             </button>
           </div>
-          
+
           <div className="text-white">
             <span className="font-semibold">{filteredServices.length}</span> services found
           </div>
@@ -153,7 +207,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             <div
               key={service.serviceId}
               className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"
-            >
+
               {/* Service Header */}
               <div className="mb-6">
                 <div className="flex items-start justify-between mb-4">
@@ -168,7 +222,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="text-right">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold text-white ${getMarketPositionColor(service.marketComparison.marketPosition)}`}>
                       {service.marketComparison.marketPosition.toUpperCase()}
@@ -178,11 +232,11 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               </div>
 
               {/* Pricing Tiers */}
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-                {Object.entries(service.pricingTiers).map(([tier, details]) => (
+              <div className="grid grid-cols-1 lg: anygrid-cols-4 gap-6 mb-8">
+                {Object.entries(service.pricingTiers).map(([tier, details])   => (
                   <div key={tier} className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>
-                    
+
                     <div className="mb-4">
                       <div className="text-3xl font-bold text-white">
                         {tier === 'custom' ? details.priceRange : `$${details.price}`}
@@ -309,7 +363,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div className="text-white font-semibold">{service.implementation.supportIncluded}</div>
                   </div>
                 </div>
-                
+
                 <div className="mt-4">
                   <span className="text-white/70 text-sm">Customization Options:</span>
                   <div className="text-white mt-1">
@@ -328,28 +382,37 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-white/80 mb-6">
-              Our comprehensive pricing structure is designed to provide maximum value at competitive rates. 
+              Our comprehensive pricing structure is designed to provide maximum value at competitive rates.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="/expanded-services-2027"
                 className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 View All Services
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </main>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default ExpandedServicesPricingGuide2027;
+export default ExpandedServicesPricingGuide2027;}}

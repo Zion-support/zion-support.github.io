@@ -1,6 +1,6 @@
 
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Route, Routes   } from 'react-router-dom.ts';
+import { ProtectedRoute   } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -9,16 +9,16 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
+// MessagingInbox import removed - page not found
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
+// Referrals import removed - page not found
 import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
+// WalletPage import removed - page not found
 import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
@@ -28,53 +28,73 @@ const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
-      <Route 
-        path="/dashboard" 
+      <Route
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/client-dashboard" 
+      <Route
+        path="/client-dashboard"
         element={
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/talent-dashboard" 
+      <Route
+        path="/talent-dashboard"
         element={
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-        }
+
       />
-      <Route 
-        path="/creator-dashboard" 
+      <Route
+        path="/creator-dashboard"
         element={
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/analytics" 
+      <Route
+        path="/analytics"
         element={
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/project/:id/milestones" 
+      <Route
+        path="/project/:id/milestones"
         element={
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/project/:id"
@@ -82,7 +102,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/project/:id/room"
@@ -90,55 +110,79 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/messages"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Messages Page</div>
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/inbox" 
+      <Route
+        path="/inbox"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Inbox Page</div>
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/payments" 
+      <Route
+        path="/payments"
         element={
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/interviews" 
+      <Route
+        path="/interviews"
         element={
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/notifications" 
+      <Route
+        path="/notifications"
         element={
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/applications/track" 
+      <Route
+        path="/applications/track"
         element={
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/hiring-tracker"
@@ -146,7 +190,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/projects"
@@ -154,7 +198,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/portfolio-builder"
@@ -162,15 +206,23 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
-      <Route 
-        path="/referrals" 
+      <Route
+        path="/referrals"
         element={
           <ProtectedRoute>
-            <Referrals />
+            <div>Referrals Page</div>
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/developers"
@@ -178,15 +230,15 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/wallet"
         element={
           <ProtectedRoute>
-            <WalletPage />
+            <div>Wallet Page</div>
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/orders"
@@ -194,7 +246,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/orders/:orderId"
@@ -202,7 +254,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/dashboard/api-access"
@@ -210,7 +262,11 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/contract-builder"
@@ -218,10 +274,15 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        } 
+<<<<<<< HEAD
+
+=======
+        }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
     </Routes>
   );
 };
 
 export default DashboardRoutes;
+}}}}}}}}}}}}}}}}}}}}}}}}

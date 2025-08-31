@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Link from 'next/link';
-export default function PricingPage() {
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
+export default function PricingPage(...args[]: any):  {
   const pricingTiers = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: '$99',
       period: '/month',
-      features: [
+      features[
         'AI-Powered Analytics Dashboard',
         'Basic Cloud Infrastructure',
         'Email Support',
@@ -24,7 +24,7 @@ export default function PricingPage() {
       description: 'Ideal for growing businesses and teams',
       price: '$299',
       period: '/month',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI Decision Engine',
         'Priority Support',
@@ -43,7 +43,7 @@ export default function PricingPage() {
       description: 'For large organizations with complex needs',
       price: 'Custom',
       period: '',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI Solutions',
         '24/7 Dedicated Support',
@@ -52,39 +52,62 @@ export default function PricingPage() {
         'Unlimited Users',
         'Advanced Compliance',
         'Dedicated Account Manager',
+<<<<<<< HEAD
         'SLA Guarantees',
         'On-Premise Options'
       ],
       cta: 'Contact Sales',
       ctaLink: '/contact',
       popular: false
-    }
+
+=======
+        'SLA Guarantees',;
+        'On-Premise Options';
+      ],;
+      cta: 'Contact Sales',;
+      ctaLink: '/contact',;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const addOnServices = [
     {
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      features['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
     },
     {
       name: 'Quantum Computing Access',
       description: 'Access to quantum computing resources',
       price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      features['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
     },
     {
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment',
       price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
+<<<<<<< HEAD
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
+<<<<<<< HEAD
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
-    }
+
+=======
+      features['Architecture Design', 'Data Migration', 'Performance Optimization']
+    };
+=======;
+      name: 'Cloud Migration',;
+      description: 'Complete cloud infrastructure migration',;
+      price: 'From $10,000',;
+      features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const faqs = [
     {
@@ -92,8 +115,8 @@ export default function PricingPage() {
       answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
     },
     {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+      question: 'Can I change my plan at  time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
     },
     {
       question: 'Is there a setup fee?',
@@ -106,20 +129,33 @@ export default function PricingPage() {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
+<<<<<<< HEAD
     },
     {
       question: 'Can I cancel my subscription?',
+<<<<<<< HEAD
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-    }
+
+=======
+      answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
+    };
+=======;
+    },;
+    {;
+      question: 'Can I cancel my subscription?',;
+      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
     <>
-      <Head>
+      <Helmet>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
+        <meta name = "description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Helmet>
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -144,16 +180,23 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)  => (
+                <div
+                  key={index}
+=======
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)   => (
                 <div 
                   key={index} 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
-                    tier.popular 
-                      ? 'border-blue-400 border-2 scale-105' 
+                    tier.popular
+                      ? 'border-blue-400 border-2 scale-105'
                       : 'border-white border-opacity-10'
                   }`}
-                >
+
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -161,7 +204,7 @@ export default function PricingPage() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                     <p className="text-gray-300 mb-6">{tier.description}</p>
@@ -180,14 +223,14 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href={tier.ctaLink}
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       tier.popular
                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                     }`}
-                  >
+
                     {tier.cta}
                   </Link>
                 </div>
@@ -204,9 +247,15 @@ export default function PricingPage() {
                 Enhance your solution with our specialized add-on services
               </p>
             </div>
+<<<<<<< HEAD
+
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)  => (
+=======
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -221,10 +270,10 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href="/contact"
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-                  >
+
                     Learn More →
                   </Link>
                 </div>
@@ -241,7 +290,7 @@ export default function PricingPage() {
                 Get answers to common questions about our pricing and services
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
@@ -262,22 +311,35 @@ export default function PricingPage() {
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 Contact Sales
               </Link>
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 View Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </main>
     </>
+  )};
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
   );
+<<<<<<< HEAD
+}}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

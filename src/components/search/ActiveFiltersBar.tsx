@@ -1,48 +1,108 @@
-import React from 'react';
-import { X } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react.ts';
+import { X interface Filter {
 
-interface Filter {
   key: string;
   value: string;
   label: string;
+=======
+import React from 'react.ts';
+import { X   
+} from 'lucide-react.ts';
+
+interface Filter {
+
+
+  key: anystring;
+  value: string;
+label: string;
 }
 
-interface ActiveFiltersBarProps {
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   filters: Filter[];
-  onRemoveFilter: (key: string) => void;
-  onClearAll: () => void;
+<<<<<<< HEAD
+  onRemoveFilter: (key: string)  => void;
+  onClearAll: any()  => void;
+=======
+  onRemoveFilter: any(key: string)   => void;
+  onClearAll: any()   => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+export function ActiveFiltersBar(...args: any[]): any {;
+  if (filters.length = == 0) {;
+=======
+import React from 'react.ts';
+import { X  } from 'lucide-react.ts';
+
+interface Filter {
+
+  key: anystring;
+  value: string;
+  label: string;
+
 }
 
-export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+
+  filters: Filter[];
+  onRemoveFilter: (key: string)  => void;
+  onClearAll: any()  => void;
+
+}
+
+export function ActiveFiltersBar(...args: any[]): any {
   if (filters.length === 0) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     return null;
-  }
 
   return (
+<<<<<<< HEAD
+    <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
+
+=======
     <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
       
-      {filters.map((filter) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+      {filters.map((filter)  => (
         <div
           key={filter.key}
           className="inline-flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30"
-        >
+
           <span>{filter.label}: {filter.value}</span>
           <button
             onClick={() => onRemoveFilter(filter.key)}
             className="hover:bg-zion-cyan/30 rounded-full p-1 transition-colors"
-          >
+
             <X className="w-3 h-3" />
           </button>
         </div>
       ))}
-      
+
       <button
         onClick={onClearAll}
+<<<<<<< HEAD
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
-      >
+
         Clear all
       </button>
     </div>
+  )};
+=======;
+        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
   );
+<<<<<<< HEAD
+}}}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

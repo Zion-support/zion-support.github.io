@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -55,16 +54,20 @@ import {
   Smartphone,
   Globe2,
   Leaf
+<<<<<<< HEAD
+import { SEO  } from '@/components/SEO';
+=======
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+import SEO from "@/components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function UltimateInnovativeServices2026() {
+export default function UltimateInnovativeServices2026(...args[]: any):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
@@ -72,95 +75,124 @@ export default function UltimateInnovativeServices2026() {
     { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },
     { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },
     { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },
-    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },
-    { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' }
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },;
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;
+    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;
+    { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },
-    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },
-    { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' }
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
+    { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 
-  const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'innovation', name: 'Innovation Level' },
-    { id: 'roi', name: 'ROI Potential' }
+  const sortOptions = [;
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
+    { id: 'price-high', name: 'Price: High to Low' },;
+    { id: 'innovation', name: 'Innovation Level' },;
+    { id: 'roi', name: 'ROI Potential' };
   ];
 
-  const getCategoryIcon = (category: string) => {
+<<<<<<< HEAD
+  const getCategoryIcon = (category: anystring)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
-  const getCategoryColor = (category: string) => {
+<<<<<<< HEAD
+  const getCategoryColor = (category: anystring)  => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cat = categories.find(c => c.id === category);
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
-  const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
+
+    const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'under-10k' && service.price < 10000) ||
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
                         (selectedPriceRange === 'over-20k' && service.price > 20000);
-    
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
       case 'innovation':
         const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
         const aROI = parseInt(a.roi.split('-')[0]);
         const bROI = parseInt(b.roi.split('-')[0]);
         return bROI - aROI;
       default:
+<<<<<<< HEAD
         return 0;
-    }
+
+=======
+        return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-  const toggleServiceExpansion = (serviceId: string) => {
+<<<<<<< HEAD
+  const toggleServiceExpansion = (serviceId: anystring)   => {;
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
+=======
+  const toggleServiceExpansion = (serviceId: anystring)  => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="Ultimate Innovative Services 2026 | Zion Tech Group"
         description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
         keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ultimate Innovative Services
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -168,7 +200,7 @@ export default function UltimateInnovativeServices2026() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-              Revolutionary micro SAAS solutions that push the boundaries of technology. 
+              Revolutionary micro SAAS solutions that push the boundaries of technology.
               From Quantum AI to Brain-Computer Interfaces, discover the future of innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -176,7 +208,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Sparkles className="w-5 h-5" />
                 <span>12 Revolutionary Services</span>
               </motion.div>
@@ -184,7 +216,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Award className="w-5 h-5" />
                 <span>Industry-Leading Innovation</span>
               </motion.div>
@@ -192,7 +224,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Target className="w-5 h-5" />
                 <span>Proven ROI</span>
               </motion.div>
@@ -224,9 +256,15 @@ export default function UltimateInnovativeServices2026() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+<<<<<<< HEAD
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+
+                {categories.map(category  => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
                   </option>
@@ -239,9 +277,15 @@ export default function UltimateInnovativeServices2026() {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+<<<<<<< HEAD
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+
+                {priceRanges.map(range  => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {priceRanges.map(range => (
+                {priceRanges.map(range   => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
                   </option>
@@ -252,8 +296,8 @@ export default function UltimateInnovativeServices2026() {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by:</span>
-            {sortOptions.map(option => (
+            <span className="text-zion-slate-300">Sort by: anyany</span>
+            {sortOptions.map(option   => (
               <button
                 key={option.id}
                 onClick={() => setSortBy(option.id)}
@@ -262,7 +306,7 @@ export default function UltimateInnovativeServices2026() {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
                 }`}
-              >
+
                 {option.name}
               </button>
             ))}
@@ -282,23 +326,59 @@ export default function UltimateInnovativeServices2026() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index) => (
+              {sortedServices.map((service, index)   => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="group relative"
-                >
+
                   <div className="relative bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/50 hover:shadow-2xl hover:shadow-zion-cyan/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category.toLowerCase())}`}>
-                        {React.createElement(getCategoryIcon(service.category.toLowerCase()), { 
-                          className: "w-6 h-6 text-white" 
+                        {React.createElement(getCategoryIcon(service.category.toLowerCase()), {
+                          className: "w-6 h-6 text-white"
                         })}
                       </div>
                       <div className="text-right">
@@ -322,7 +402,7 @@ export default function UltimateInnovativeServices2026() {
                     {/* Innovation Level Badge */}
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        service.innovationLevel === 'Revolutionary' 
+                        service.innovationLevel === 'Revolutionary'
                           ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                           : service.innovationLevel === 'Cutting-edge'
                           ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -341,7 +421,7 @@ export default function UltimateInnovativeServices2026() {
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -356,7 +436,7 @@ export default function UltimateInnovativeServices2026() {
                     <button
                       onClick={() => toggleServiceExpansion(service.id)}
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
-                    >
+
                       {expandedService === service.id ? (
                         <>
                           <EyeOff className="w-4 h-4" />
@@ -374,12 +454,39 @@ export default function UltimateInnovativeServices2026() {
                     <AnimatePresence>
                       {expandedService === service.id && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
+                          initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                           transition={{ duration: 0.3 }}
                           className="mt-4 pt-4 border-t border-zion-slate-600/30"
-                        >
+
                           {/* Features */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -423,7 +530,7 @@ export default function UltimateInnovativeServices2026() {
                             <Link
                               to="/contact"
                               className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
-                            >
+
                               <MessageCircle className="w-4 h-4" />
                               Get Started
                             </Link>
@@ -440,19 +547,29 @@ export default function UltimateInnovativeServices2026() {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-              <p className="text-zion-slate-300 mb-6">
-                Try adjusting your search criteria or browse all our innovative services.
-              </p>
-              <button
-                onClick={() => {
+              <div className="text-6xl mb-4">🔍</div>;
+              <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
+              <p className="text-zion-slate-300 mb-6">;
+                Try adjusting your search criteria or browse all our innovative services.;
+              </p>;
+              <button;
+                onClick={() => {;
                   setSearchQuery('');
                   setSelectedCategory('all');
+<<<<<<< HEAD
+                  setSelectedPriceRange('all')}}
+                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors";
+=======;
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
+
+=======
+                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </button>
             </div>
@@ -464,30 +581,48 @@ export default function UltimateInnovativeServices2026() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-300 mb-8">
-              Our revolutionary micro SAAS services are designed to give you a competitive edge. 
+              Our revolutionary micro SAAS services are designed to give you a competitive edge.
               Contact us today to discuss how we can help you achieve breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-              >
+
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -495,10 +630,23 @@ export default function UltimateInnovativeServices2026() {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

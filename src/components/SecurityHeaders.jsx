@@ -1,6 +1,5 @@
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
-export function SecurityHeaders({ className }) {
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
     const securityFeatures = [
         {
             icon: Shield,
@@ -29,7 +28,7 @@ export function SecurityHeaders({ className }) {
             description: "We cannot access your encrypted data",
             status: "verified",
             color: "text-zion-purple"
-        }
+
     ];
     const complianceBadges = [
         { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },
@@ -46,7 +45,7 @@ export function SecurityHeaders({ className }) {
             Enterprise Security & Compliance
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Zion Tech Group maintains the highest standards of security and compliance 
+            Zion Tech Group maintains the highest standards of security and compliance
             to protect your business data and ensure regulatory adherence.
           </p>
         </div>
@@ -124,8 +123,12 @@ export function SecurityHeaders({ className }) {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -145,5 +148,9 @@ export function SecurityHeadersCompact({ className }) {
         <Shield className="w-4 h-4"/>
         <span>Zero-Knowledge</span>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -27,9 +27,7 @@ export function FooterNewsletter() {
       setIsLoading(false);
       setEmail('');
       // Reset after 5 seconds
-      setTimeout(() => setIsSubscribed(false), 5000);
-    }, 1000);
-  };
+      setTimeout(() => setIsSubscribed(false), 5000)}, 1000)};
 
   return (
     <div className="bg-zinc-900/30 p-6 rounded-xl border border-zinc-700/50">
@@ -40,8 +38,16 @@ export function FooterNewsletter() {
       
       {isSubscribed ? (
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+
+}}
           className="flex items-center gap-3 p-3 bg-green-500/20 border border-green-500/30 rounded-lg"
         >
           <CheckCircle className="w-5 h-5 text-green-400" />
@@ -73,8 +79,7 @@ export function FooterNewsletter() {
         </form>
       )}
     </div>
-  );
-}
+  )}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -91,18 +96,23 @@ export function Footer() {
     {
       title: "Services",
       links: [
-        { label: "Services Overview", path: "/services-overview" },
-        { label: "Cloud & DevOps", path: "/services/cloud-devops" },
-        { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Digital Transformation", path: "/services/digital-transformation" }
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "IT Infrastructure", path: "/services/infrastructure" },
+        { label: "Digital Transformation", path: "/services/transformation" },
+        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
+        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
+        { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
@@ -111,7 +121,12 @@ export function Footer() {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" }
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research-development" },
+        { label: "Events", path: "/events" },
+        { label: "Training", path: "/training" }
       ]
     },
     {
@@ -120,7 +135,9 @@ export function Footer() {
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
-        { label: "FAQ", path: "/faq" }
+        { label: "FAQ", path: "/faq" },
+        { label: "Consulting", path: "/services/consulting" },
+        { label: "Request Quote", path: "/contact" }
       ]
     }
   ];
@@ -133,8 +150,7 @@ export function Footer() {
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
   return (
     <footer className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden">
@@ -149,7 +165,7 @@ export function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-          {/* Company Info */}
+          {/* Comp Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-8">
               <div className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4 shadow-lg">
@@ -255,12 +271,19 @@ export function Footer() {
         className="fixed bottom-8 right-8 w-12 h-12 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
         transition={{ delay: 1 }}
       >
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  );
-}
+  )}

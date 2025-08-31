@@ -8,7 +8,7 @@ const AIAutonomousSystemsPlatform = () => {
         <meta name="keywords" content="AI autonomous systems, autonomous platform, intelligent agents, workflow automation, AI orchestration"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems-platform"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -26,7 +26,7 @@ const AIAutonomousSystemsPlatform = () => {
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Platform Architecture</h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our platform provides a comprehensive foundation for autonomous AI systems, featuring advanced orchestration, 
+                Our platform provides a comprehensive foundation for autonomous AI systems, featuring advanced orchestration,
                 intelligent decision-making, and seamless integration capabilities.
               </p>
               <div className="space-y-4">
@@ -48,7 +48,7 @@ const AIAutonomousSystemsPlatform = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Core Capabilities</h3>
               <div className="space-y-3">
@@ -83,31 +83,31 @@ const AIAutonomousSystemsPlatform = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Agents</h3>
               <p className="text-gray-300">Create and deploy autonomous AI agents with specialized capabilities</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Workflow Automation</h3>
               <p className="text-gray-300">Design complex workflows that agents can execute autonomously</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-semibold text-white mb-3">Decision Engine</h3>
               <p className="text-gray-300">Advanced AI-powered decision-making with explainable reasoning</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
               <p className="text-gray-300">Comprehensive monitoring and optimization of autonomous systems</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Security Framework</h3>
               <p className="text-gray-300">Enterprise-grade security with compliance and governance controls</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Scalable Infrastructure</h3>
@@ -123,12 +123,12 @@ const AIAutonomousSystemsPlatform = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Operations</h3>
                 <p className="text-gray-300">Automate complex business processes with intelligent decision-making</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Research & Development</h3>
                 <p className="text-gray-300">Accelerate innovation with autonomous research and development workflows</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Customer Service</h3>
                 <p className="text-gray-300">Provide 24/7 intelligent customer support with autonomous agents</p>
@@ -153,6 +153,5 @@ const AIAutonomousSystemsPlatform = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousSystemsPlatform;

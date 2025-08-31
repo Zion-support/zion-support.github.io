@@ -1,5 +1,6 @@
-import { toast } from '@/hooks/use-toast';
-export const showApiError = (error: any, fallbackMessage?: string) => {
+import { toast  } from '@/hooks/use-toast';
+
+export const showApiError = (error: any, fallbackMessage?: string)  => {;
   const message = error?.message || fallbackMessage || 'An unexpected error occurred';
   toast({
     variant: "destructive",
@@ -7,11 +8,22 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
     description: message,
   });
   // Log error for debugging
+<<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {
-    console.error('API Error:', error);
+<<<<<<< HEAD
+    // // // console.error('API Error:', error);
+
+=======
+    // // // // // // // console.error('API Error:', error);
+=======
+  if (process.env.NODE_ENV = == 'development') {;
+    // // // // console.error('API Error:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
-export const handleApiError = (error: any, fallbackMessage?: string) => {
+
+export const handleApiError = (error: any, fallbackMessage?: string)  => {;
   showApiError(error, fallbackMessage);
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
-};
+};}

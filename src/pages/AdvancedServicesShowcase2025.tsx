@@ -1,41 +1,61 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { SEO   } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025   } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025   } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025   } from '../data/advancedAIServices2025';
 
-const AdvancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),
-    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),
-    ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }))
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: any'Micro SaaS' })),
+    ...SPECIALIZED_IT_SERVICES_2025.map(service   => ({ ...service, source: any'IT Services' })),
+    ...ADVANCED_AI_SERVICES_2025.map(service   => ({ ...service, source: 'AI Solutions' }));
+=======;
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025  } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025  } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
+
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const allServices = [;
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: any'Micro SaaS' })),;
+    ...SPECIALIZED_IT_SERVICES_2025.map(service  => ({ ...service, source: any'IT Services' })),;
+    ...ADVANCED_AI_SERVICES_2025.map(service  => ({ ...service, source: 'AI Solutions' }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.source === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },
-    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length }
+  const categories = [;
+    { id: 'all', name: 'All Services', count: allServices.length },;
+    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
+    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
+    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
       />
-      
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -50,19 +70,19 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-              >
+
                 Get Started Today
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-gray-300 text-lg font-medium rounded-lg text-gray-300 hover:text-white hover:border-white transition-colors duration-200"
-              >
+
                 Call +1 302 464 0950
               </a>
             </div>
           </div>
         </div>
-        
+
         {/* Animated background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -157,7 +177,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                       ? 'bg-blue-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
                   }`}
-                >
+
                   {category.name} ({category.count})
                 </button>
               ))}
@@ -168,8 +188,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)   => (
             <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
               <div className="flex items-start justify-between mb-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -238,30 +258,40 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 text-center block"
-                >
+
                   Get Quote
                 </a>
                 <a
                   href={`tel:+13024640950`}
                   className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 text-center block"
-                >
+
                   Call Now
                 </a>
               </div>
             </div>
           ))}
-        </div>
-
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-            <button
-              onClick={() => {
+        </div>;
+;
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-16">;
+            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
+            <button;
+              onClick={() => {;
                 setSearchTerm('');
+<<<<<<< HEAD
+                setSelectedCategory('all')}}
+              className = "text-blue-400 hover:text-blue-300 underline";
+=======;
                 setSelectedCategory('all');
               }}
+<<<<<<< HEAD
               className="text-blue-400 hover:text-blue-300 underline"
+
+=======
+              className = "text-blue-400 hover:text-blue-300 underline"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear filters
             </button>
           </div>
@@ -273,20 +303,20 @@ const AdvancedServicesShowcase2025: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution for your business needs. 
+            Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation and quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            >
+
               Request Free Consultation
             </a>
             <a
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
-            >
+
               Call +1 302 464 0950
             </a>
           </div>
@@ -323,12 +353,21 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 <p>✓ Competitive Pricing</p>
                 <p>✓ 24/7 Support</p>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AdvancedServicesShowcase2025;

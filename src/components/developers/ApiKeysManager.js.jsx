@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useApiKeys } from '../../hooks/useApiKeys';
-import { Button } from '../ui/button';
-import { Checkbox } from '../ui/checkbox';
-import { Label } from '../ui/label';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
-import CodeBlock from './CodeBlock';
+import { useApiKeys } from "../../hooks/useApiKeys";
+import { Button } from "../ui/button";
+import { Checkbox } from "../ui/checkbox";
+import { Label } from "../ui/label";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";
+import CodeBlock from "./CodeBlock";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
@@ -29,23 +29,19 @@ export default function ApiKeysManager() {
         await createApiKey(newKeyName.trim(), selectedScopes);
         setNewKeyName('');
         setSelectedScopes([]);
-        setShowCreateDialog(false);
-    };
+        setShowCreateDialog(false)};
     const handleScopeToggle = (scope) => {
         setSelectedScopes(prev => prev.includes(scope)
             ? prev.filter(s => s !== scope)
-            : [...prev, scope]);
-    };
+            [...prev, scope])};
     const getExampleCode = (apiKey) => {
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\
   -H "Authorization: Bearer ${apiKey}" \\
-  -H "Content-Type: application/json"`;
-    };
+  -H "Content-Type: application/json"`};
     if (loading) {
         return (<div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
-      </div>);
-    }
+      </div>)}
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
@@ -203,8 +199,7 @@ export default function ApiKeysManager() {
             <AlertDialogAction onClick={() => {
             if (showRegenerateConfirm) {
                 regenerateApiKey(showRegenerateConfirm);
-                setShowRegenerateConfirm(null);
-            }
+                setShowRegenerateConfirm(null)}
         }} className="bg-blue-600 hover:bg-blue-700">
               Regenerate Key
             </AlertDialogAction>
@@ -218,7 +213,7 @@ export default function ApiKeysManager() {
           <AlertDialogHeader>
             <AlertDialogTitle>Delete API Key</AlertDialogTitle>
             <AlertDialogDescription className="text-zinc-400">
-              This action cannot be undone. The API key will be permanently deleted and any applications using it will stop working.
+              This action cannot be undone. The API key will be permanently deleted and  applications using it will stop working.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <DialogFooter>
@@ -228,13 +223,11 @@ export default function ApiKeysManager() {
             <AlertDialogAction onClick={() => {
             if (showDeleteConfirm) {
                 deleteApiKey(showDeleteConfirm);
-                setShowDeleteConfirm(null);
-            }
+                setShowDeleteConfirm(null)}
         }} className="bg-red-600 hover:bg-red-700">
               Delete Key
             </AlertDialogAction>
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>);
-}
+    </div>)}

@@ -1,71 +1,101 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useNavigate  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle export function ITServiceRequestHero(...args: any[]): any {
+=======
+import React, { useState  } from 'react.ts';
+import { GradientHeading   } from '@/components/GradientHeading';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { useNavigate   } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle   } from 'lucide-react.ts';
 
-export function ITServiceRequestHero() {
+export function ITServiceRequestHero(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)   => {;
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
+<<<<<<< HEAD
         navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
-    }
+
+=======
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+},
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
         staggerChildren: 0.2
-      }
-    }
+<<<<<<< HEAD
+
+
+=======
+      };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+},
     visible: {
       opacity: 1,
       y: 0,
+<<<<<<< HEAD
       transition: { duration: 0.5 }
-    }
+
+=======
+      transition: { duration: 0.5 };
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
   return (
-    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+    <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
@@ -77,16 +107,17 @@ export function ITServiceRequestHero() {
                 Global IT Services
               </span>
             </div>
-            
+
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
-              Get professional IT technicians anywhere in the world, anytime you need them. 
+              Get professional IT technicians anywhere in the world, anytime you need them.
               From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 
+<<<<<<< HEAD
             {/* Features grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
@@ -94,7 +125,7 @@ export function ITServiceRequestHero() {
                   key={index}
                   variants={itemVariants}
                   className="flex items-center gap-3"
-                >
+
                   <div className={`p-2 bg-white/10 rounded-lg`}>
                     <feature.icon className={`w-5 h-5 ${feature.color}`} />
                   </div>
@@ -103,65 +134,108 @@ export function ITServiceRequestHero() {
                   </span>
                 </motion.div>
               ))}
+=======
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-200">24/7 Technical Support</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-200">Certified IT Professionals</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-200">Custom Solutions for Your Business</span>
+              </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+
                 Request Service Now
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              >
+
                 Learn More
-              </Button>
+              </Link>
             </div>
           </motion.div>
 
-          {/* Right content - Service Request Form */}
-          <motion.div variants={itemVariants} id="service-form">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Request Onsite Service
-                </h3>
-                <p className="text-zion-slate-light">
-                  Tell us where you need help and we'll dispatch a technician
-                </p>
-              </div>
+          <motion.div
+            initial = {
+  { opacity: 0,
+  x: 30 
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-zion-slate-light mb-2">
-                    Service Location
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                    <Input
-                      id="location"
-                      type="text"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      placeholder="Enter city, address, or coordinates"
-                      className="pl-10 bg-white/5 border-white/20 text-white placeholder:text-zion-slate-light/50 focus:border-zion-cyan focus:ring-zion-cyan"
-                      required
-                    />
-                  </div>
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+            viewport={{ once: true }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              Contact Information
+            </h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-xl">📞</span>
                 </div>
-
                 <div>
+                  <p className="text-gray-300 text-sm">Phone</p>
+                  <p className="text-white font-semibold">+1 302 464 0950</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-xl">✉️</span>
+                </div>
+                <div>
+<<<<<<< HEAD
                   <label htmlFor="service-type" className="block text-sm font-medium text-zion-slate-light mb-2">
                     Service Type
                   </label>
                   <select
                     id="service-type"
                     className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white focus:border-zion-cyan focus:ring-zion-cyan"
-                  >
+
                     <option value="">Select service type</option>
                     <option value="emergency">Emergency Repair</option>
                     <option value="maintenance">Scheduled Maintenance</option>
@@ -187,7 +261,7 @@ export function ITServiceRequestHero() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
-                >
+
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -206,11 +280,59 @@ export function ITServiceRequestHero() {
                 <p className="text-xs text-zion-slate-light">
                   Available worldwide • 24/7 support • Certified technicians
                 </p>
+=======
+                  <p className="text-gray-300 text-sm">Email</p>
+                  <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
+                </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-xl">📍</span>
+                </div>
+                <div>
+                  <p className="text-gray-300 text-sm">Address</p>
+                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-xl">🌐</span>
+                </div>
+                <div>
+                  <p className="text-gray-300 text-sm">Website</p>
+                  <p className="text-white font-semibold">ziontechgroup.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-400 text-sm mb-4">
+                Available 24/7 for emergency support
+              </p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 text-sm font-semibold">Online Now</span>
+              </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
+}}}}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

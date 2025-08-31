@@ -1,11 +1,10 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
-export default function HowItWorks() {
+import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield export default function HowItWorks() {
     const clientSteps = [
         {
             icon: Search,
@@ -30,7 +29,7 @@ export default function HowItWorks() {
             title: "Hire & Collaborate",
             description: "Select your preferred talent, set up milestones, and begin your project with full transparency and support.",
             color: "text-zion-purple"
-        }
+
     ];
     const talentSteps = [
         {
@@ -56,7 +55,7 @@ export default function HowItWorks() {
             title: "Deliver & Grow",
             description: "Complete projects successfully, build your reputation, and expand your client base through our platform.",
             color: "text-zion-purple"
-        }
+
     ];
     const platformFeatures = [
         {
@@ -82,13 +81,13 @@ export default function HowItWorks() {
             title: "Project Management",
             description: "Built-in tools for tracking progress, managing milestones, and ensuring smooth project delivery.",
             color: "text-zion-purple"
-        }
+
     ];
     const benefits = [
         {
             title: "For Clients",
             icon: Users,
-            benefits: [
+            benefits[
                 "Access to verified, skilled professionals",
                 "AI-powered matching for better results",
                 "Secure payment protection",
@@ -99,14 +98,14 @@ export default function HowItWorks() {
         {
             title: "For Talent",
             icon: Briefcase,
-            benefits: [
+            benefits[
                 "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",
                 "Portfolio building tools",
                 "Professional growth support"
             ]
-        }
+
     ];
     return (<>
       <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com/how-it-works"/>
@@ -125,11 +124,11 @@ export default function HowItWorks() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">The Zion Ecosystem</h2>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate 
+                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate
                   meaningful connections between AI and tech professionals and the clients who need their expertise.
                 </p>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Our platform uses advanced AI algorithms to match the right talent with the right projects, 
+                  Our platform uses advanced AI algorithms to match the right talent with the right projects,
                   ensuring successful outcomes for everyone involved.
                 </p>
                 <div className="mt-8">
@@ -248,5 +247,9 @@ export default function HowItWorks() {
           </div>
         </div>
       </main>
+<<<<<<< HEAD
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}</section>}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
-import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
-export function ContactInfo() {
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink export function ContactInfo() {
     const contactMethods = [
         {
             title: "Phone Support",
@@ -42,9 +42,15 @@ export function ContactInfo() {
             action: "https://ziontechgroup.com",
             badge: "Official Site",
             color: "#8c15e9"
-        }
+
     ];
+=======
+import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
+export function ContactInfo() {
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const companyStats = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {
             label: "Years Experience",
             value: "10+",
@@ -64,12 +70,12 @@ export function ContactInfo() {
             label: "Client Satisfaction",
             value: "98%",
             icon: <Zap className="h-6 w-6 text-zion-purple"/>
-        }
+
     ];
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent"/>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -102,14 +108,14 @@ export function ContactInfo() {
                   {method.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div className="p-4 bg-black/20 rounded-lg border border-zion-cyan/20">
                   <p className="text-lg font-mono text-zion-cyan break-all">
                     {method.value}
                   </p>
                 </div>
-                
+
                 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <a href={method.action} target="_blank" rel="noopener noreferrer">
                     <span>Contact via {method.title.split(' ')[0]}</span>
@@ -120,7 +126,7 @@ export function ContactInfo() {
             </FuturisticCard>))}
         </div>
 
-        {/* Company Statistics */}
+        {/* Comp Statistics */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
@@ -133,7 +139,7 @@ export function ContactInfo() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {compStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">
@@ -157,7 +163,7 @@ export function ContactInfo() {
               Ready to Start Your Project?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Whether you need a quick consultation or want to discuss a major project, 
+              Whether you need a quick consultation or want to discuss a major project,
               our team is ready to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,7 +178,7 @@ export function ContactInfo() {
                 </Link>
               </Button>
             </div>
-            
+
             {/* Additional contact options */}
             <div className="mt-6 pt-6 border-t border-zion-purple/20">
               <p className="text-sm text-muted-foreground mb-3">
@@ -192,5 +198,9 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+</div></Card></Card></Card></Card></Card>}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

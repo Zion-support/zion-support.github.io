@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
-export default function DataAnalyticsServices() {
+import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export default function DataAnalyticsServices() {
     const analyticsServices = [
         {
             icon: BarChart3,
@@ -129,7 +128,7 @@ export default function DataAnalyticsServices() {
                 'Better customer experience',
                 'Reduced downtime and losses'
             ]
-        }
+
     ];
     const industries = [
         'Financial Services & Banking',
@@ -170,7 +169,7 @@ export default function DataAnalyticsServices() {
             Data Analytics & BI Services
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with powerful data analytics, business intelligence, and predictive insights. 
+            Transform your business with powerful data analytics, business intelligence, and predictive insights.
             From raw data to actionable intelligence, we help you make better decisions faster.
           </p>
         </div>
@@ -182,7 +181,7 @@ export default function DataAnalyticsServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Analytics Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive data analytics solutions that help businesses unlock the full potential of their data 
+              Comprehensive data analytics solutions that help businesses unlock the full potential of their data
               to drive growth, efficiency, and competitive advantage.
             </p>
           </div>
@@ -223,10 +222,10 @@ export default function DataAnalyticsServices() {
                 Why Choose Our Analytics Services?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our data analytics expertise combined with industry best practices enables us to deliver 
+                Our data analytics expertise combined with industry best practices enables us to deliver
                 solutions that provide real business value and measurable ROI.
               </p>
-              
+
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
                     <Check className="w-6 h-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0"/>
@@ -238,7 +237,7 @@ export default function DataAnalyticsServices() {
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free Analytics Assessment</h3>
               <p className="text-gray-600 mb-6">
-                Discover how data analytics can transform your business with our comprehensive 
+                Discover how data analytics can transform your business with our comprehensive
                 data maturity assessment and strategy session.
               </p>
               <div className="space-y-3 mb-6">
@@ -265,7 +264,7 @@ export default function DataAnalyticsServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our analytics solutions are tailored to meet the unique challenges and opportunities 
+              Our analytics solutions are tailored to meet the unique challenges and opportunities
               across diverse industry sectors.
             </p>
           </div>
@@ -287,7 +286,7 @@ export default function DataAnalyticsServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Analytics Technologies We Use</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge analytics and BI technologies to build robust, scalable, 
+              We leverage cutting-edge analytics and BI technologies to build robust, scalable,
               and innovative solutions for our clients.
             </p>
           </div>
@@ -381,7 +380,7 @@ export default function DataAnalyticsServices() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Unlock Your Data's Potential?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our analytics experts help you transform raw data into actionable insights 
+            Let our analytics experts help you transform raw data into actionable insights
             that drive business growth and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -395,4 +394,4 @@ export default function DataAnalyticsServices() {
         </div>
       </section>
     </div>);
-}
+}}}

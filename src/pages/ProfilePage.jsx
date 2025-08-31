@@ -2,12 +2,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from "lucide-react";
-export default function ProfilePage() {
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
     const { profileId } = useParams();
@@ -25,40 +24,66 @@ export default function ProfilePage() {
                     .eq("id", profileId)
                     .single();
                 if (error) {
+<<<<<<< HEAD
                     throw error;
-                }
+
                 setProfileData(data);
-            }
+
+=======
+                    throw error}
+                setProfileData(data)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (error) {
-                console.error("Error fetching profile:", error);
+<<<<<<< HEAD
+                // // // console.error("Error fetching profile:", error);
+=======
+                // // // // // // // console.error("Error fetching profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setIsError(true);
                 toast({
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
                     variant: "destructive",
+<<<<<<< HEAD
                 });
-            }
+
             finally {
                 setIsLoading(false);
-            }
+
         };
         if (profileId) {
             fetchProfile();
-        }
+
+=======
+                })}
+            finally {
+                setIsLoading(false)}
+        };
+        if (profileId) {
+            fetchProfile()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
+<<<<<<< HEAD
       </div>);
-    }
+
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>);
-    }
+
+=======
+      </div>)}
+    if (isError || !profileData) {
+        return (<div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content Area */}
@@ -75,7 +100,7 @@ export default function ProfilePage() {
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan"/>
                     </div>)}
                 </div>
-                
+
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -85,7 +110,7 @@ export default function ProfilePage() {
                     </div>
                     {/* Add Save/Unsave Button Here */}
                   </div>
-                  
+
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (<div className="flex items-center text-zion-slate-light">
@@ -99,7 +124,7 @@ export default function ProfilePage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (<div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
@@ -108,13 +133,13 @@ export default function ProfilePage() {
                   </div>
                 </div>)}
             </div>
-            
+
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
-            
+
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
@@ -125,13 +150,13 @@ export default function ProfilePage() {
                     </a>))) : (<p className="text-zion-slate-light">No portfolio links provided.</p>)}
               </div>
             </div>
-            
+
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
-            
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
@@ -148,19 +173,32 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
-        
+
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
-            <HireNowCTA talentProfile={{
+            <HireNowCTA talentProfile = {
+  {
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
-        }}/>
+  hourly_rate: profileData?.hourly_rate || 0
+        
+
+
+
+
+
+
+}}/>
             {/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>
-      
+<<<<<<< HEAD
+
     </>);
-}
+}}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

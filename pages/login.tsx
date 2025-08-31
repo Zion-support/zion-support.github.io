@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  Mail,
+import Head from 'next/head.ts'
+import { motion   } from 'framer-motion.ts'
+import { useState   } from 'react.ts'
+import { Mail,
   Lock,
   Eye,
   EyeOff,
@@ -12,9 +11,13 @@ import {
   Cloud,
   Zap,
   ArrowRight
-} from 'lucide-react'
+<<<<<<< HEAD
+export default function Login(...args: any[]): any {
+=======
+  } from 'lucide-react.ts'
 
-export default function Login() {
+export default function Login(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -22,72 +25,89 @@ export default function Login() {
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+<<<<<<< HEAD
+  const [errors, setErrors] = useState<Record<string, any>>({ /* empty */ })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))
-    }
-  }
+
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, any> = { /* empty */ }
 
     if (!formData.email.trim()) newErrors.email = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
+
     if (!formData.password) newErrors.password = 'Password is required'
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
-  }
+=======
+  const [errors, setErrors] = useState<Record<string, any>>({})
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const handleSubmit = async (e: React.FormEvent) => {
+<<<<<<< HEAD
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
-    
+
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       // Success - redirect or show success message
-      console.log('Login successful:', formData)
+<<<<<<< HEAD
+<<<<<<< HEAD
+      // // // console.log('Login successful:', formData)
+
+    } catch (error) {
+      // // // console.error('Login error:', error)
+=======
+      // // // // // // // console.log('Login successful:', formData)
+
+    } catch (error) {
+      // // // // // // // console.error('Login error:', error)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+      // // // // console.log('Login successful:', formData)
       
     } catch (error) {
-      console.error('Login error:', error)
+      // // // // console.error('Login error:', error)
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     } finally {
       setIsSubmitting(false)
-    }
-  }
+
 
   const title = 'Sign In — Zion Tech Group'
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/login" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com/login" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-      </Head>
+      </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
         {/* Hero Section */}
@@ -97,22 +117,40 @@ export default function Login() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Welcome Back
               </h1>
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Access your Zion Tech Group dashboard and continue building the future with 
+                Access your Zion Tech Group dashboard and continue building the future with
                 our cutting-edge technology solutions.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
                   <Shield className="w-6 h-6" />
@@ -135,11 +173,38 @@ export default function Login() {
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="max-w-md mx-auto"
-            >
+
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-center mb-8 text-white">
                   Sign In
@@ -195,7 +260,7 @@ export default function Login() {
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -219,7 +284,7 @@ export default function Login() {
                     <a
                       href="/forgot-password"
                       className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                    >
+
                       Forgot password?
                     </a>
                   </div>
@@ -229,7 +294,7 @@ export default function Login() {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -294,11 +359,38 @@ export default function Login() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Access Your Technology Hub
               </h2>
@@ -309,11 +401,38 @@ export default function Login() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -324,11 +443,38 @@ export default function Login() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
@@ -339,11 +485,38 @@ export default function Login() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                   <Cloud className="w-8 h-8 text-white" />
                 </div>
@@ -352,10 +525,20 @@ export default function Login() {
                   Manage cloud infrastructure, monitor costs, and optimize resource allocation
                 </p>
               </motion.div>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </main>
     </>
   )
-}
+}}}}}}}
+=======
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

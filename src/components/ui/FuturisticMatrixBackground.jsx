@@ -11,23 +11,26 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         // Set canvas size
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+            canvas.height = window.innerHeight};
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{ /* empty */ }|;:,.<>?";
         const matrixArray = matrix.split("");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;
         const drops = [];
         // Initialize drops
         for (let i = 0; i < columns; i++) {
+<<<<<<< HEAD
             drops[i] = 1;
-        }
+
+=======
+            drops[i] = 1}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Animation variables
         let animationId;
-        let frameCount = 0;
+        const frameCount = 0;
         const draw = () => {
             // Create semi-transparent black background for fade effect
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -49,18 +52,26 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 ctx.shadowBlur = 0;
                 // Reset drop to top when it reaches bottom
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+<<<<<<< HEAD
                     drops[i] = 0;
-                }
+
                 // Move drop down
                 drops[i]++;
-            }
+
             // Add floating particles for high intensity
             if (intensity === 'high') {
                 drawFloatingParticles(ctx, frameCount);
-            }
+
+=======
+                    drops[i] = 0}
+                // Move drop down
+                drops[i]++}
+            // Add floating particles for high intensity
+            if (intensity === 'high') {
+                drawFloatingParticles(ctx, frameCount)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             frameCount++;
-            animationId = requestAnimationFrame(draw);
-        };
+            animationId = requestAnimationFrame(draw)};
         const drawFloatingParticles = (ctx, frame) => {
             const particleCount = 20;
             for (let i = 0; i < particleCount; i++) {
@@ -70,19 +81,44 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 ctx.beginPath();
                 ctx.arc(x, y, size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(0, 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
+<<<<<<< HEAD
                 ctx.fill();
-            }
+
+=======
+                ctx.fill()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         // Start animation
         draw();
         // Cleanup
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+<<<<<<< HEAD
+            cancelAnimationFrame(animationId)}}, [intensity, color, speed]);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+}}/>)};
+=======
             cancelAnimationFrame(animationId);
         };
     }, [intensity, color, speed]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+
+
+
+
+
+}}/>);
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default FuturisticMatrixBackground;
+}}}}}

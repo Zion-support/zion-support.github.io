@@ -1,22 +1,21 @@
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Clock, Briefcase } from "lucide-react";
-function ProjectsContent() {
+import { Clock, Briefcase function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
         </div>
-        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have any projects yet.</p>) : (<div className="grid gap-6">
+        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have  projects yet.</p>) : (<div className="grid gap-6">
             {projects.map((project) => (<Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -44,9 +43,16 @@ function ProjectsContent() {
               </Card>))}
           </div>)}
       </main>
-      
+<<<<<<< HEAD
+
     </>);
-}
+
 export default function Projects() {
     return <ProjectsContent />;
-}
+</Card></Card></Card></Card></Card>}}}
+=======
+      
+    </>)}
+export default function Projects() {
+    return <ProjectsContent />}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

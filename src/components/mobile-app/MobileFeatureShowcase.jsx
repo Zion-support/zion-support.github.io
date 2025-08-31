@@ -1,7 +1,4 @@
-import React from 'react';
-import { Smartphone, Zap, Shield, Users, Globe, BarChart3 } from 'lucide-react';
-
-export const MobileFeatureShowcase = () => {
+import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFeatureShowcase = () => {
   const features = [
     {
       icon: Smartphone,
@@ -30,7 +27,7 @@ export const MobileFeatureShowcase = () => {
     {
       icon: Globe,
       title: "Global Access",
-      description: "Access your projects and talent from anywhere in the world",
+      description: "Access your projects and talent from where in the world",
       color: "from-cyan-500 to-cyan-600"
     },
     {
@@ -38,7 +35,7 @@ export const MobileFeatureShowcase = () => {
       title: "Advanced Analytics",
       description: "Comprehensive insights and reporting for data-driven decisions",
       color: "from-pink-500 to-pink-600"
-    }
+
   ];
 
   return (
@@ -58,7 +55,7 @@ export const MobileFeatureShowcase = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
@@ -88,5 +85,9 @@ export const MobileFeatureShowcase = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-};
+};}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

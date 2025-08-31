@@ -11,7 +11,7 @@ const mockNotifications = [
         timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
         isRead: false,
         isArchived: false,
-        actions: [
+        actions[
             { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
         ]
@@ -26,7 +26,7 @@ const mockNotifications = [
         timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
         isRead: false,
         isArchived: false,
-        actions: [
+        actions[
             { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
         ]
@@ -41,7 +41,7 @@ const mockNotifications = [
         timestamp: new Date(Date.now() - 1000 * 60 * 2), // 2 minutes ago
         isRead: false,
         isArchived: false,
-        actions: [
+        actions[
             { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
         ]
@@ -56,7 +56,7 @@ const mockNotifications = [
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
         isRead: true,
         isArchived: false,
-        actions: [
+        actions[
             { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
         ]
@@ -75,8 +75,7 @@ export function AdvancedNotificationSystem() {
     const [unreadCount, setUnreadCount] = useState(0);
     const containerRef = useRef(null);
     useEffect(() => {
-        setUnreadCount(notifications.filter(n => !n.isRead).length);
-    }, [notifications]);
+        setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
     const filteredNotifications = notifications.filter(notification => {
         const typeMatch = filterType === 'all' || notification.type === filterType;
         const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
@@ -84,28 +83,20 @@ export function AdvancedNotificationSystem() {
         const searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             notification.message.toLowerCase().includes(searchQuery.toLowerCase());
         const readMatch = showRead || !notification.isRead;
-        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch;
-    });
-    const markAsRead = (id) => {
-        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isRead: true } : n));
-    };
+        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
     const markAllAsRead = () => {
-        setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
-    };
+        setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
     const archiveNotification = (id) => {
-        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n));
-    };
+        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
     const deleteNotification = (id) => {
-        setNotifications(prev => prev.filter(n => n.id !== id));
-    };
+        setNotifications(prev => prev.filter(n => n.id !== id))};
     const getTypeIcon = (type) => {
         switch (type) {
             case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;
             case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;
             case 'info': return <Info className="w-5 h-5 text-zion-cyan"/>;
-            default: return <Info className="w-5 h-5 text-zion-slate"/>;
-        }
+            default: return <Info className="w-5 h-5 text-zion-slate"/>}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -113,8 +104,7 @@ export function AdvancedNotificationSystem() {
             case 'medium': return 'border-l-zion-cyan';
             case 'high': return 'border-l-zion-gold';
             case 'critical': return 'border-l-red-500';
-            default: return 'border-l-zion-slate';
-        }
+            default: return 'border-l-zion-slate'}
     };
     const getTimeAgo = (timestamp) => {
         const now = new Date();
@@ -128,16 +118,14 @@ export function AdvancedNotificationSystem() {
             return `${minutes}m ago`;
         if (hours < 24)
             return `${hours}h ago`;
-        return `${days}d ago`;
-    };
+        return `${days}d ago`};
     const groupedNotifications = groupByCategory
         ? filteredNotifications.reduce((groups, notification) => {
             const category = notification.category;
             if (!groups[category])
                 groups[category] = [];
             groups[category].push(notification);
-            return groups;
-        }, {})
+            return groups}, {})
         : { 'All': filteredNotifications };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">
@@ -145,8 +133,7 @@ export function AdvancedNotificationSystem() {
         {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>)}
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-36 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -160,8 +147,7 @@ export function AdvancedNotificationSystem() {
             </button>
           </div>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
@@ -294,5 +280,4 @@ export function AdvancedNotificationSystem() {
             <p className="text-zion-slate-light">No notifications found</p>
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

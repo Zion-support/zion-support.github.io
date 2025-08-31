@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
+import { Calendar, Clock, Video import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
     const { interviews, isLoading, fetchInterviews } = useInterviews();
     const [activeTab, setActiveTab] = useState("upcoming");
     useEffect(() => {
         // Modified to handle Promise<Interview[]> return type
         const loadInterviews = async () => {
-            await fetchInterviews();
-        };
-        loadInterviews();
-    }, []);
+            await fetchInterviews()};
+        loadInterviews()}, []);
     // Filter interviews based on status and date
     const now = new Date();
     const today = startOfDay(now);
@@ -23,29 +20,35 @@ function InterviewsContent() {
         .filter((interview) => {
         const interviewDate = parseISO(interview.scheduled_date);
         return isAfter(interviewDate, now) &&
-            ['confirmed', 'requested'].includes(interview.status);
-    })
+            ['confirmed', 'requested'].includes(interview.status)})
         .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime());
-    const pendingInterviews = interviews.filter(interview => interview.status === 'requested');
     const pastInterviews = interviews.filter(interview => {
         const interviewDate = parseISO(interview.scheduled_date);
         return !isAfter(interviewDate, now) ||
-            ['completed', 'declined', 'cancelled'].includes(interview.status);
-    });
+            ['completed', 'declined', 'cancelled'].includes(interview.status)});
     // Group interviews by date
+<<<<<<< HEAD
     const groupInterviewsByDate = (interviews) => {
-        const grouped = {};
+        const grouped = { /* empty */ };
         interviews.forEach((interview) => {
             const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
             if (!grouped[dateKey]) {
                 grouped[dateKey] = [];
-            }
+
             grouped[dateKey].push(interview);
         });
         return grouped;
     };
+=======
+    const grouped = {};
+        interviews.forEach((interview) => {
+            const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+            if (!grouped[dateKey]) {
+                grouped[dateKey] = []}
+            grouped[dateKey].push(interview)});
+        return grouped};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-    const pendingGrouped = groupInterviewsByDate(pendingInterviews);
     const pastGrouped = groupInterviewsByDate(pastInterviews);
     const renderInterviewGroups = (groupedInterviews) => {
         return Object.entries(groupedInterviews)
@@ -57,14 +60,12 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (<InterviewCard key={interview.id} interview={interview} onRefresh={async () => {
-                    await fetchInterviews();
-                }}/>))}
+                    await fetchInterviews()}}/>))}
           </div>
-        </div>));
-    };
+        </div>))};
     return (<>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -90,27 +91,27 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="upcoming" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>) : upcomingInterviews.length > 0 ? (renderInterviewGroups(upcomingGrouped)) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4"/>
                 <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>
-                <p className="text-muted-foreground mb-6">You don't have any scheduled interviews coming up.</p>
+                <p className="text-muted-foreground mb-6">You don't have  scheduled interviews coming up.</p>
               </div>)}
           </TabsContent>
-          
+
           <TabsContent value="pending" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>) : pendingInterviews.length > 0 ? (renderInterviewGroups(pendingGrouped)) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4"/>
                 <h3 className="text-xl font-medium mb-2">No pending interviews</h3>
-                <p className="text-muted-foreground mb-6">You don't have any interview requests that need your attention.</p>
+                <p className="text-muted-foreground mb-6">You don't have  interview requests that need your attention.</p>
               </div>)}
           </TabsContent>
-          
+
           <TabsContent value="past" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -122,11 +123,20 @@ function InterviewsContent() {
           </TabsContent>
         </Tabs>
       </main>
-      
+<<<<<<< HEAD
+
     </>);
-}
+
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>);
-}
+}}}}
+=======
+      
+    </>)}
+export default function Interviews() {
+    return (<ProtectedRoute>
+      <InterviewsContent />
+    </ProtectedRoute>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

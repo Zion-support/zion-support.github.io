@@ -18,8 +18,7 @@ export default function ProductsAdminPage() {
                 ...p,
                 status: p.status === 'approved' ? 'rejected' : 'approved',
             }
-            : p));
-    };
+            : p))};
     return (<AdminLayout>
       <div className="space-y-4">
         <div className="flex items-center justify-between">
@@ -51,5 +50,4 @@ export default function ProductsAdminPage() {
           </Table>
         </div>
       </div>
-    </AdminLayout>);
-}
+    </AdminLayout>)}
