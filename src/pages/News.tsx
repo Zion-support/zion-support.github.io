@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -17,10 +16,14 @@ import {
   Zap,
   Brain,
   Shield,
-  Cloud
+  Cloud,
+  Eye,
+  Clock,
+  Star,
+  ExternalLink
 } from 'lucide-react';
 
-const News = () => {
+export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -46,7 +49,8 @@ const News = () => {
       readTime: '5 min read',
       tags: ['AI', 'Cybersecurity', 'Product Launch'],
       featured: true,
-      image: '🔒'
+      image: '🔒',
+      views: 15420
     },
     {
       id: 2,
@@ -59,7 +63,8 @@ const News = () => {
       readTime: '7 min read',
       tags: ['Quantum Computing', 'Research', 'Partnerships'],
       featured: true,
-      image: '⚛️'
+      image: '⚛️',
+      views: 12850
     },
     {
       id: 3,
@@ -72,7 +77,8 @@ const News = () => {
       readTime: '6 min read',
       tags: ['AI', 'Healthcare', 'Machine Learning'],
       featured: false,
-      image: '🏥'
+      image: '🏥',
+      views: 11230
     },
     {
       id: 4,
@@ -85,7 +91,8 @@ const News = () => {
       readTime: '8 min read',
       tags: ['Cloud Security', 'Trends', '2025'],
       featured: false,
-      image: '☁️'
+      image: '☁️',
+      views: 9870
     },
     {
       id: 5,
@@ -98,67 +105,50 @@ const News = () => {
       readTime: '10 min read',
       tags: ['Digital Transformation', 'Manufacturing', 'Case Study'],
       featured: false,
-      image: '🏭'
+      image: '🏭',
+      views: 8760
     },
     {
       id: 6,
-      title: 'The Future of Edge Computing: Bringing AI Closer to Data Sources',
-      excerpt: 'Exploring how edge computing is revolutionizing AI deployment and enabling real-time decision making.',
-      content: 'Edge computing is revolutionizing how AI applications are deployed and operated. By bringing computation closer to data sources, organizations can achieve real-time decision making, reduce latency, and improve privacy. Zion Tech Group is developing edge AI solutions that enable intelligent applications to run efficiently on resource-constrained devices.',
+      title: 'Edge Computing Revolution: Processing Data Where It Matters Most',
+      excerpt: 'Exploring the future of edge computing and how it\'s reshaping the technology landscape.',
+      content: 'Edge computing is revolutionizing how we process and analyze data by bringing computation closer to the data source. This approach reduces latency, improves performance, and enables real-time decision making. Zion Tech Group is developing innovative edge computing solutions that help organizations leverage this transformative technology.',
       category: 'technology',
       author: 'Technology Team',
       date: '2024-08-18',
-      readTime: '6 min read',
-      tags: ['Edge Computing', 'AI', 'Real-time'],
+      readTime: '7 min read',
+      tags: ['Edge Computing', 'IoT', 'Real-time Processing'],
       featured: false,
-      image: '🌐'
+      image: '🌐',
+      views: 7650
     },
     {
       id: 7,
-      title: 'Cybersecurity Compliance: Navigating the Evolving Regulatory Landscape',
-      excerpt: 'Comprehensive guide to understanding and implementing cybersecurity compliance requirements across industries.',
-      content: 'Cybersecurity compliance requirements are constantly evolving, creating challenges for organizations across all industries. From SOC2 to ISO27001, organizations must navigate complex regulatory frameworks while maintaining robust security postures. Zion Tech Group provides comprehensive compliance solutions that help organizations meet regulatory requirements and protect sensitive data.',
-      category: 'cybersecurity',
-      author: 'Compliance Team',
+      title: 'Sustainable Technology: Green IT Solutions for a Better Future',
+      excerpt: 'How Zion Tech Group is helping organizations reduce their environmental impact through sustainable technology solutions.',
+      content: 'Sustainability is no longer optional for modern organizations. Zion Tech Group is committed to developing green IT solutions that help businesses reduce their carbon footprint while improving operational efficiency. Our sustainable technology initiatives include energy-efficient data centers, renewable energy integration, and carbon-neutral cloud solutions.',
+      category: 'industry',
+      author: 'Sustainability Team',
       date: '2024-08-15',
-      readTime: '9 min read',
-      tags: ['Compliance', 'Cybersecurity', 'Regulations'],
+      readTime: '6 min read',
+      tags: ['Sustainability', 'Green IT', 'Environmental Impact'],
       featured: false,
-      image: '📋'
+      image: '🌱',
+      views: 6540
     },
     {
       id: 8,
-      title: 'AI Ethics and Responsible AI Development: Zion Tech Group\'s Commitment',
-      excerpt: 'How we ensure ethical AI development and responsible deployment of artificial intelligence solutions.',
-      content: 'At Zion Tech Group, we believe that responsible AI development is crucial for building trust and ensuring positive societal impact. Our AI ethics framework guides all aspects of our development process, from data collection to model deployment. We are committed to transparency, fairness, and accountability in all our AI solutions.',
+      title: 'The Future of Work: AI-Powered Collaboration Tools',
+      excerpt: 'Discover how AI is transforming workplace collaboration and productivity in the post-pandemic era.',
+      content: 'The future of work is here, and it\'s powered by artificial intelligence. Zion Tech Group is developing next-generation collaboration tools that leverage AI to enhance team productivity, streamline communication, and automate routine tasks. These solutions are designed to support the evolving needs of modern, distributed workforces.',
       category: 'ai',
-      author: 'AI Ethics Team',
+      author: 'Product Team',
       date: '2024-08-12',
-      readTime: '7 min read',
-      tags: ['AI Ethics', 'Responsible AI', 'Transparency'],
-      featured: false,
-      image: '🤖'
-    }
-  ];
-
-  const industryInsights = [
-    {
-      title: 'AI Adoption in Financial Services',
-      description: 'How financial institutions are leveraging AI for risk management and customer service.',
-      readTime: '5 min read',
-      category: 'Industry Insights'
-    },
-    {
-      title: 'Cloud Migration Strategies for Enterprises',
-      description: 'Best practices for migrating legacy systems to modern cloud infrastructure.',
       readTime: '8 min read',
-      category: 'Technology'
-    },
-    {
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'Addressing security challenges in distributed work environments.',
-      readTime: '6 min read',
-      category: 'Cybersecurity'
+      tags: ['AI', 'Collaboration', 'Future of Work'],
+      featured: false,
+      image: '💼',
+      views: 5430
     }
   ];
 
@@ -171,62 +161,71 @@ const News = () => {
   });
 
   const featuredArticles = newsArticles.filter(article => article.featured);
-  const recentArticles = newsArticles.filter(article => !article.featured).slice(0, 3);
+  const recentArticles = newsArticles.slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            >
               Latest
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}News & Updates
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay informed about the latest developments in AI, technology, and 
-              industry insights from Zion Tech Group.
-            </p>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> News</span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"
+            >
+              Stay updated with the latest technology trends, company announcements, 
+              and industry insights from Zion Tech Group.
+            </motion.p>
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search news and articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                />
+            {/* Search and Filter */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="relative flex-1">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search news articles..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex gap-2 overflow-x-auto pb-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 whitespace-nowrap ${
+                        selectedCategory === category.id
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400'
+                      }`}
+                    >
+                      <category.icon className="w-4 h-4" />
+                      <span>{category.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span>{category.name}</span>
-                </button>
-              ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -234,278 +233,228 @@ const News = () => {
       {featuredArticles.length > 0 && (
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Featured Stories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Our most important and impactful news stories.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredArticles.map((article, index) => (
-                <motion.div
+                <motion.article
                   key={article.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-400/50 transition-all duration-300"
+                  className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full">
-                      Featured
-                    </span>
-                    <span className="text-gray-400 text-sm">{article.readTime}</span>
-                  </div>
-
-                  <div className="text-4xl mb-4">{article.image}</div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{article.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{article.excerpt}</p>
-                  
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-4 text-sm text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4" />
-                        <span>{article.author}</span>
+                  <div className="p-8">
+                    <div className="flex items-center space-x-2 mb-4">
+                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">
+                        Featured
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full">
+                        {article.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      {article.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                      {article.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+                        <div className="flex items-center space-x-1">
+                          <User className="w-4 h-4" />
+                          <span>{article.author}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(article.date).toLocaleDateString()}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{article.readTime}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(article.date).toLocaleDateString()}</span>
+                      <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                        <Eye className="w-4 h-4" />
+                        <span>{article.views.toLocaleString()}</span>
                       </div>
                     </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {article.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <Link
+                        to={`/news/${article.id}`}
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                      >
+                        Read More
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {article.tags.map((tag, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center space-x-2 transition-colors duration-200">
-                    <span>Read Full Article</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </motion.div>
+                </motion.article>
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* Recent Articles */}
-      <section className="py-20 bg-slate-800/30">
+      {/* All Articles */}
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Latest Articles
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Latest News
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay up to date with our latest insights and industry analysis.
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              {filteredArticles.length} articles found
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredArticles.map((article, index) => (
-              <motion.div
-                key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="text-3xl mb-4">{article.image}</div>
-                
-                <div className="flex items-center justify-between mb-3">
-                  <span className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
-                    {categories.find(c => c.id === article.category)?.name}
-                  </span>
-                  <span className="text-gray-400 text-xs">{article.readTime}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{article.title}</h3>
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{article.excerpt}</p>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2 text-xs text-gray-400">
-                    <User className="w-3 h-3" />
-                    <span>{article.author}</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-xs text-gray-400">
-                    <Calendar className="w-3 h-3" />
-                    <span>{new Date(article.date).toLocaleDateString()}</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {article.tags.slice(0, 2).map((tag, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center space-x-2 transition-colors duration-200">
-                  <span>Read More</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
-              </motion.div>
-            ))}
           </div>
 
-          {filteredArticles.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center py-12"
-            >
-              <p className="text-xl text-gray-400 mb-4">
-                No articles found matching your criteria.
+          {filteredArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.map((article, index) => (
+                <motion.article
+                  key={article.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">
+                        {article.category}
+                      </span>
+                      <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                        <Eye className="w-4 h-4" />
+                        <span>{article.views.toLocaleString()}</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
+                      {article.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                        <User className="w-4 h-4" />
+                        <span>{article.author}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(article.date).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-1">
+                        {article.tags.slice(0, 2).map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {article.tags.length > 2 && (
+                          <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded">
+                            +{article.tags.length - 2}
+                          </span>
+                        )}
+                      </div>
+                      <Link
+                        to={`/news/${article.id}`}
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors text-sm"
+                      >
+                        Read More
+                        <ArrowRight className="ml-1 w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Newspaper className="w-12 h-12 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                No articles found
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Try adjusting your search terms or category filters.
               </p>
-              <p className="text-gray-500">
-                Try adjusting your search terms or category filter.
-              </p>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
 
-      {/* Industry Insights */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Insights
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert analysis and thought leadership on emerging technology trends.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {industryInsights.map((insight, index) => (
-              <motion.div
-                key={insight.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-3">{insight.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{insight.description}</p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400">{insight.category}</span>
-                  <span className="text-xs text-cyan-400">{insight.readTime}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Newsletter Signup */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-12"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest news, insights, and 
-              technology updates delivered to your inbox.
-            </p>
-            
-            <div className="max-w-md mx-auto">
-              <div className="flex space-x-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-xs text-gray-400 mt-2">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </div>
+            Stay Updated
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
+          >
+            Subscribe to our newsletter to receive the latest news, insights, 
+            and updates directly in your inbox.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+            />
+            <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+              Subscribe
+            </button>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
-
-export default News;
-=======
-<<<<<<< HEAD
-const News: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">News</h1>
-			<p className="text-xl text-gray-300">Latest updates from Zion Tech Group.</p>
-		</div>
-	</div>
-);
-
-export default News;
-=======
-import React from 'react.ts';
-
-export default function News(...args: any[]): any {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold mb-4">News</h1>
-        <p className="text-slate-300">Latest updates and announcements from Zion Tech Group.</p>
-      </div>
-    </div>
-  )};
-=======;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
