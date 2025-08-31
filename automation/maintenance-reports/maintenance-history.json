@@ -333,6 +333,12 @@
       "severity": "medium",
       "description": "Unable to monitor build health",
       "timestamp": "2025-08-31T13:00:09.199Z"
+    },
+    {
+      "type": "build_monitoring_failure",
+      "severity": "medium",
+      "description": "Unable to monitor build health",
+      "timestamp": "2025-08-31T13:04:16.396Z"
     }
   ],
   "maintenanceHistory": []
