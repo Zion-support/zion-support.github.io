@@ -191,6 +191,11 @@ const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/Block
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
+// New Innovative Services 2025
+const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
+const AICustomerIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-customer-intelligence-platform'));
+const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
+
 // Showcase pages
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
@@ -413,6 +418,11 @@ function App() {
                     <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
                     <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
                     <Route path="/solutions/space-tech" element={<SpaceTech />} />
+
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-enterprise-workflow-automation" element={<AIEnterpriseWorkflowAutomation />} />
+                    <Route path="/services/ai-customer-intelligence-platform" element={<AICustomerIntelligencePlatform />} />
+                    <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
