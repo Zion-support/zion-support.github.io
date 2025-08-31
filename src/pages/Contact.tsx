@@ -69,26 +69,20 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 302 464 0950',
+      details: '+1 302 464 0950',
       description: 'Available Mon-Fri, 9AM-6PM EST'
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'kleber@ziontechgroup.com',
+      details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Office',
-      value: '364 E Main St STE 1008 Middletown DE 19709',
-      description: 'Global headquarters and innovation center'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: '9:00 AM - 6:00 PM EST',
-      description: 'Monday through Friday'
+      details: '364 E Main St STE 1008 Middletown DE 19709',
+      description: 'Visit us anytime during business hours'
     }
   ];
 

@@ -1,229 +1,224 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Clock,
-  DollarSign,
+import { 
+  Atom, 
+  Cpu, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Brain, 
   CheckCircle,
   ArrowRight,
-  Bot,
-  Workflow,
-  BarChart3,
-  Cpu,
-  Database,
-  Network,
+  Star,
+  Clock,
   Globe,
-  Target,
-  Rocket,
-  Lightbulb,
-  Settings,
+  Database,
   Activity,
   Eye,
-  Lock,
-  Server,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Code,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  MessageCircle,
-  Search,
+  Settings,
+  Download,
+  Share2,
+  Filter,
+  AlertTriangle,
+  Lightbulb,
   BarChart,
-  Users2,
-  Palette,
-  ArrowUpRight,
-  CheckCircle2,
-  Clock3,
-  Target2,
-  Building2,
-  Handshake,
-  FileText,
+  TrendingUp,
+  Users,
+  DollarSign,
   Calendar,
   Phone,
   Mail,
-  MapPin,
-  Atom,
+  MapPin as MapPinIcon,
+  Monitor,
+  Network,
+  Server,
+  HardDrive,
+  Layers,
+  CircuitBoard,
+  Rocket,
+  Target,
+  Lock,
+  Wifi,
   Satellite,
-  Wifi as WifiIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Network as NetworkIcon,
-  Globe as GlobeIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Server as ServerIcon,
-  Cloud as CloudIcon,
-  Lock as LockIcon,
-  BarChart as BarChartIcon,
-  Workflow as WorkflowIcon,
-  Target as TargetIcon,
-  Rocket as RocketIcon,
-  Lightbulb as LightbulbIcon,
-  Code as CodeIcon,
-  Monitor as MonitorIcon,
-  Smartphone as SmartphoneIcon,
-  Activity as ActivityIcon,
-  Eye as EyeIcon,
-  Settings as SettingsIcon
+  Radio,
+  Signal,
+  Gauge,
+  Flash
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function QuantumEdgeComputingSolutions() {
   const features = [
     {
       icon: Atom,
-      title: "Quantum Computing Integration",
-      description: "Seamlessly integrate quantum computing capabilities with edge devices for unprecedented processing power and speed."
+      title: "Quantum-Classical Hybrid Computing",
+      description: "Seamlessly integrate quantum processing with classical computing for optimal performance and efficiency",
+      benefits: ["Quantum advantage", "Hybrid algorithms", "Performance optimization", "Scalable architecture"]
     },
     {
       icon: Cpu,
       title: "Edge AI Processing",
-      description: "Advanced AI algorithms running directly on edge devices for real-time decision making without cloud dependency."
+      description: "Advanced AI models running at the edge for real-time decision making and reduced latency",
+      benefits: ["Real-time processing", "Low latency", "Bandwidth optimization", "Offline operation"]
     },
     {
       icon: Network,
-      title: "5G/6G Network Optimization",
-      description: "Optimize network performance and reduce latency through intelligent edge computing and quantum-enhanced routing."
+      title: "Distributed Edge Networks",
+      description: "Intelligent edge node distribution for optimal resource utilization and fault tolerance",
+      benefits: ["Load balancing", "Fault tolerance", "Geographic distribution", "Auto-scaling"]
     },
     {
       icon: Shield,
-      title: "Quantum-Secure Edge",
-      description: "Implement quantum-resistant cryptography and advanced security protocols at the edge for maximum protection."
-    },
-    {
-      icon: Globe,
-      title: "Global Edge Network",
-      description: "Distributed edge computing infrastructure spanning multiple continents for optimal performance and redundancy."
+      title: "Quantum-Safe Security",
+      description: "Post-quantum cryptography and quantum-resistant security protocols for future-proof protection",
+      benefits: ["Quantum-resistant encryption", "Advanced authentication", "Secure key distribution", "Threat detection"]
     },
     {
       icon: Zap,
-      title: "Real-Time Quantum Analytics",
-      description: "Process massive datasets in real-time using quantum algorithms at the edge for instant insights and actions."
+      title: "Real-time Data Processing",
+      description: "Ultra-fast data processing at the edge with quantum-enhanced algorithms and optimization",
+      benefits: ["Sub-millisecond latency", "High throughput", "Real-time analytics", "Stream processing"]
+    },
+    {
+      icon: Brain,
+      title: "Adaptive Learning Systems",
+      description: "Self-optimizing edge systems that learn and adapt to changing conditions and requirements",
+      benefits: ["Machine learning", "Auto-optimization", "Predictive maintenance", "Dynamic scaling"]
     }
-  ];
-
-  const benefits = [
-    "Reduce latency by 80-90% through edge processing",
-    "Increase processing speed by 1000x with quantum integration",
-    "Lower bandwidth costs by 60-80%",
-    "Improve security with quantum-resistant encryption",
-    "Enable real-time AI decision making",
-    "Scale infinitely with distributed edge architecture"
   ];
 
   const pricingPlans = [
     {
-      name: "Edge Starter",
-      price: "$3,999",
+      name: "Starter",
+      price: "$999",
       period: "/month",
-      description: "Perfect for small businesses starting their edge computing journey",
+      description: "Perfect for small businesses exploring quantum edge computing",
       features: [
-        "Basic edge computing setup",
-        "Quantum-ready infrastructure",
         "Up to 5 edge nodes",
+        "Basic quantum processing",
         "Standard security protocols",
         "Email support",
-        "Basic monitoring"
+        "Monthly performance reports",
+        "Basic AI models"
       ],
-      cta: "Get Started",
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Edge Professional",
-      price: "$9,999",
+      name: "Professional",
+      price: "$2,999",
       period: "/month",
-      description: "Ideal for growing businesses with complex edge computing needs",
+      description: "Ideal for growing businesses requiring advanced quantum edge capabilities",
       features: [
-        "Advanced edge AI processing",
-        "Quantum computing integration",
         "Up to 25 edge nodes",
-        "Advanced security features",
+        "Advanced quantum algorithms",
+        "Enhanced security protocols",
         "Priority support",
-        "Real-time monitoring",
-        "Custom edge applications",
-        "5G/6G optimization"
+        "Custom integrations",
+        "Advanced analytics",
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Edge Enterprise",
-      price: "$24,999",
+      name: "Enterprise",
+      price: "$7,999",
       period: "/month",
-      description: "For large enterprises requiring comprehensive edge solutions",
+      description: "For large enterprises requiring maximum quantum edge performance and customization",
       features: [
-        "Full quantum edge computing",
         "Unlimited edge nodes",
         "Custom quantum algorithms",
-        "Dedicated support team",
         "White-label solutions",
-        "Advanced security features",
-        "Global edge network",
-        "Custom development"
+        "24/7 dedicated support",
+        "Custom development",
+        "Advanced security",
+        "Multi-tenant support"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const useCases = [
+  const benefits = [
     {
-      industry: "Autonomous Vehicles",
-      description: "Real-time decision making, sensor fusion, and route optimization at the edge",
-      roi: "95% faster response time"
+      icon: Zap,
+      title: "Ultra-Fast Processing",
+      description: "Achieve 100-1000x faster processing speeds with quantum-enhanced edge computing"
     },
     {
-      industry: "Smart Cities",
-      description: "Traffic management, energy optimization, and public safety monitoring",
-      roi: "70% efficiency improvement"
+      icon: Shield,
+      title: "Future-Proof Security",
+      description: "Quantum-resistant security protocols that protect against emerging threats"
     },
     {
-      industry: "Healthcare IoT",
-      description: "Patient monitoring, medical device management, and emergency response",
-      roi: "85% faster diagnosis"
+      icon: Globe,
+      title: "Global Edge Network",
+      description: "Distributed edge computing network spanning multiple continents for optimal performance"
     },
     {
-      industry: "Industrial IoT",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      roi: "60% cost reduction"
+      icon: TrendingUp,
+      title: "Scalable Architecture",
+      description: "Easily scale from 5 to 50,000+ edge nodes with our cloud-based platform"
     }
   ];
 
-  const technicalSpecs = [
+  const useCases = [
     {
-      category: "Quantum Processing",
-      specs: ["Qubit integration", "Quantum error correction", "Quantum-classical hybrid", "Quantum memory"],
-      icon: Atom
+      title: "Financial Services",
+      description: "Ultra-fast trading algorithms, risk assessment, and fraud detection with quantum edge processing"
     },
     {
-      category: "Edge Computing",
-      specs: ["Distributed processing", "Real-time analytics", "Low-latency networks", "Edge AI models"],
-      icon: Cpu
+      title: "Healthcare & Life Sciences",
+      description: "Real-time medical imaging analysis, drug discovery, and patient monitoring at the edge"
     },
     {
-      category: "Network Security",
-      specs: ["Quantum-resistant crypto", "Zero-trust architecture", "Threat detection", "Secure protocols"],
-      icon: Shield
+      title: "Autonomous Vehicles",
+      description: "Real-time decision making, sensor fusion, and navigation optimization for autonomous systems"
     },
     {
-      category: "Performance",
-      specs: ["Sub-millisecond latency", "99.999% uptime", "Global distribution", "Auto-scaling"],
-      icon: Zap
+      title: "Smart Cities",
+      description: "Intelligent traffic management, environmental monitoring, and public safety systems"
+    }
+  ];
+
+  const technologies = [
+    {
+      icon: Atom,
+      title: "Quantum Processing Units",
+      description: "State-of-the-art quantum processors for complex computational tasks"
+    },
+    {
+      icon: Cpu,
+      title: "Edge AI Accelerators",
+      description: "Specialized hardware for AI model inference and training at the edge"
+    },
+    {
+      icon: Network,
+      title: "5G/6G Networks",
+      description: "Ultra-low latency network infrastructure for edge computing applications"
+    },
+    {
+      icon: Shield,
+      title: "Quantum Cryptography",
+      description: "Advanced security protocols resistant to quantum computing attacks"
+    },
+    {
+      icon: Database,
+      title: "Edge Databases",
+      description: "Distributed database systems optimized for edge computing environments"
+    },
+    {
+      icon: Monitor,
+      title: "Real-time Monitoring",
+      description: "Comprehensive monitoring and alerting systems for edge infrastructure"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -231,36 +226,31 @@ export default function QuantumEdgeComputingSolutions() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 text-zion-purple text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
-              Next-Generation Edge Computing
+              Quantum Edge Computing Platform
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Quantum Edge Computing
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {" "}Solutions
-              </span>
+              Quantum Edge
+              <span className="text-zion-cyan"> Computing Solutions</span>
             </h1>
-            
-            <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your infrastructure with the world's first quantum-enhanced edge computing platform that combines 
-              quantum processing power with distributed edge intelligence for unprecedented performance and capabilities.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Revolutionize your computing infrastructure with quantum-enhanced edge computing. 
+              Achieve 100-1000x faster processing speeds with distributed quantum processing at the edge.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
               >
-                Get Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Started Free
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
               >
-                Schedule Demo
+                View All Services
               </Link>
             </div>
           </motion.div>
@@ -268,7 +258,7 @@ export default function QuantumEdgeComputingSolutions() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -278,10 +268,11 @@ export default function QuantumEdgeComputingSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Edge Computing Capabilities
+              Cutting-Edge Quantum Edge Features
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge quantum computing with distributed edge intelligence to deliver unprecedented performance
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Our platform combines the power of quantum computing with edge processing to deliver 
+              unprecedented performance and capabilities.
             </p>
           </motion.div>
 
@@ -291,60 +282,20 @@ export default function QuantumEdgeComputingSolutions() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-2"
+                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="p-3 bg-zion-cyan/20 rounded-lg w-fit mb-4">
+                  <feature.icon className="w-6 h-6 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zinc-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Technical Specifications
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Cutting-edge technology specifications that set new industry standards
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {technicalSpecs.map((spec, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                    <spec.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{spec.category}</h3>
-                </div>
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {spec.specs.map((specItem, specIndex) => (
-                    <li key={specIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zinc-300">{specItem}</span>
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -354,8 +305,8 @@ export default function QuantumEdgeComputingSolutions() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Technologies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -365,63 +316,37 @@ export default function QuantumEdgeComputingSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Infrastructure
+              Advanced Technologies
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Experience unprecedented performance and capabilities with quantum-enhanced edge computing
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Built on cutting-edge quantum computing, edge processing, and AI technologies 
+              to deliver unmatched performance and capabilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    <span className="text-zinc-300">{benefit}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Our Platform?</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">World's first quantum-edge hybrid platform</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="p-3 bg-zion-purple/20 rounded-lg w-fit mb-4">
+                  <tech.icon className="w-6 h-6 text-zion-purple" />
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">99.999% uptime guarantee</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-cyan">Quantum-resistant security protocols</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">24/7 quantum monitoring</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">Custom quantum algorithm development</span>
-                </div>
-              </div>
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
+                <p className="text-zion-slate-light">{tech.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -431,10 +356,11 @@ export default function QuantumEdgeComputingSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing Plans
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your edge computing needs and scale as you grow
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Choose the plan that fits your quantum edge computing needs. All plans include our core 
+              quantum processing capabilities with enterprise-grade security and support.
             </p>
           </motion.div>
 
@@ -444,17 +370,17 @@ export default function QuantumEdgeComputingSolutions() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-zinc-800/50 border rounded-xl p-8 ${
+                className={`relative bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-zion-purple shadow-lg shadow-zion-purple/25' 
-                    : 'border-zinc-700'
+                    ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/20 scale-105' 
+                    : 'border-zion-purple/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -462,18 +388,18 @@ export default function QuantumEdgeComputingSolutions() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-zinc-400 ml-1">{plan.period}</span>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
+                    <span className="text-zion-slate-light">{plan.period}</span>
                   </div>
-                  <p className="text-zinc-300">{plan.description}</p>
+                  <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zinc-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -482,8 +408,8 @@ export default function QuantumEdgeComputingSolutions() {
                   to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
-                      : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
+                      ? 'bg-zion-cyan text-white hover:bg-zion-cyan/90'
+                      : 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30 hover:bg-zion-purple/30'
                   }`}
                 >
                   {plan.cta}
@@ -494,8 +420,8 @@ export default function QuantumEdgeComputingSolutions() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -505,28 +431,66 @@ export default function QuantumEdgeComputingSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Why Choose Our Quantum Edge Platform?
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform delivers measurable results across diverse industries
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Join the quantum computing revolution with our edge processing platform that delivers 
+              unprecedented performance and capabilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="p-4 bg-zion-cyan/20 rounded-full w-fit mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-zion-slate-light">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Use Cases
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Our quantum edge computing platform is designed to handle the most demanding 
+              computational challenges across various industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 text-center hover:border-zion-purple/50 transition-all duration-300"
+                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                <p className="text-zinc-300 mb-4">{useCase.description}</p>
-                <div className="inline-flex items-center px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full">
-                  <span className="text-zion-cyan text-sm font-medium">{useCase.roi}</span>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -534,7 +498,7 @@ export default function QuantumEdgeComputingSolutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -543,25 +507,25 @@ export default function QuantumEdgeComputingSolutions() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Infrastructure?
+              Ready to Experience Quantum Edge Computing?
             </h2>
-            <p className="text-xl text-zinc-300 mb-8">
-              Join the future of computing with our quantum-enhanced edge platform
+            <p className="text-xl text-zion-slate-light mb-8">
+              Join the future of computing with quantum-enhanced edge processing, 
+              unprecedented performance, and limitless possibilities.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
               >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
               >
-                Schedule Consultation
+                View All Services
               </Link>
             </div>
           </motion.div>
@@ -569,39 +533,30 @@ export default function QuantumEdgeComputingSolutions() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-zion-purple/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <Phone className="w-5 h-5 text-zion-cyan" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <Mail className="w-5 h-5 text-zion-cyan" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <MapPin className="w-5 h-5 text-zion-cyan" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="w-6 h-6 text-zion-cyan mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <a href="tel:+13024640950" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                +1 (302) 464-0950
+              </a>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Learn More</h3>
-              <div className="space-y-3">
-                <Link to="/services" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  View All Services →
-                </Link>
-                <Link to="/case-studies" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  Case Studies →
-                </Link>
-                <Link to="/blog" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  Latest Insights →
-                </Link>
-              </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-6 h-6 text-zion-cyan mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPinIcon className="w-6 h-6 text-zion-cyan mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-zion-slate-light">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

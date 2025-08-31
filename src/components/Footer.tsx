@@ -39,14 +39,14 @@ export function Footer() {
     hours: "Mon-Fri: 9:00 AM - 6:00 PM EST"
   };
 
-  const serviceCategories = [
+  const footerSections = [
     {
       title: "AI & Machine Learning",
       icon: Brain,
       services: [
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Sales Copilot", href: "/services/ai-customer-support-automation" },
         { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management", href: "/services/ai-project-management" },
@@ -61,35 +61,36 @@ export function Footer() {
       ]
     },
     {
-      title: "Cybersecurity",
-      icon: Shield,
-      services: [
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform" },
-        { name: "Security Headers & CSP", href: "/services/security-headers-csp" },
-        { name: "DSR Privacy Portal", href: "/services/dsr-portal" },
-        { name: "Zero Trust Network", href: "/services/zero-trust-network-access" },
-        { name: "SOC2 Compliance", href: "/services/soc2-compliance-automation" }
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
       ]
     },
     {
-      title: "Cloud & Infrastructure",
-      icon: Cloud,
-      services: [
-        { name: "Cloud DevOps", href: "/services/cloud-devops" },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
-        { name: "FinOps Advisor", href: "/services/finops-advisor" },
-        { name: "Cloud Migration", href: "/services/cloud-migration-services" },
-        { name: "Edge Computing", href: "/services/iot-edge-computing" }
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
       ]
     },
     {
-      title: "Quantum Computing",
-      icon: Atom,
-      services: [
-        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing" },
-        { name: "Quantum Neural Networks", href: "/services/quantum-neural-networks" },
-        { name: "Quantum Financial Trading", href: "/services/quantum-financial-trading" },
-        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" }
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
       ]
     }
   ];
@@ -137,20 +138,11 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "https://facebook.com/ziontechgroup", color: "hover:text-blue-600" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com/ziontechgroup", color: "hover:text-blue-400" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/ziontechgroup", color: "hover:text-blue-700" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/ziontechgroup", color: "hover:text-pink-600" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com/ziontechgroup", color: "hover:text-red-600" },
-    { name: "GitHub", icon: Github, href: "https://github.com/ziontechgroup", color: "hover:text-gray-700 dark:hover:text-gray-300" }
-  ];
-
-  const achievements = [
-    { number: "500+", label: "Projects Completed", icon: CheckCircle },
-    { number: "50+", label: "Team Members", icon: Users },
-    { number: "25+", label: "Countries Served", icon: Globe },
-    { number: "99%", label: "Client Satisfaction", icon: Star },
-    { number: "15+", label: "Years Experience", icon: Award }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const contactInfo = [
@@ -313,23 +305,32 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Achievements Section */}
-        <div className="mt-16 pt-8 border-t border-slate-700">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Our Achievements</h3>
-            <p className="text-gray-400">Delivering exceptional results for our clients worldwide</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {achievements.map((achievement) => (
-              <div key={achievement.label} className="text-center">
-                <div className="flex justify-center mb-3">
-                  <achievement.icon className="w-8 h-8 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">{achievement.number}</div>
-                <div className="text-sm text-gray-400">{achievement.label}</div>
+        {/* Bottom Section */}
+        <div className="border-t border-slate-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Company Info */}
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Shield className="w-5 h-5 text-blue-400" />
+              <span>Zion Tech Group</span>
+              <span>•</span>
+              <span>Trusted Technology Partner</span>
+            </div>
+
+            {/* Copyright & Links */}
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <div className="flex space-x-4">
+                <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">
+                  Terms of Service
+                </Link>
+                <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link to="/accessibility" className="hover:text-blue-400 transition-colors duration-200">
+                  Accessibility
+                </Link>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
