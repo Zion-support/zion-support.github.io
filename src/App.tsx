@@ -78,6 +78,16 @@ const Talent = createLazyComponent(() => import('./pages/Talent'));
 const VideoCall = createLazyComponent(() => import('./pages/VideoCall'));
 const Wishlist = createLazyComponent(() => import('./pages/Wishlist'));
 
+// New Micro SAAS Services 2025
+const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomationPlatform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/AIFinancialTradingPlatform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
+const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/AIRealEstateInvestmentPlatform'));
+
+// New Micro SAAS Services Showcase 2025
+const NewMicroSaasServicesShowcase2025 = createLazyComponent(() => import('./pages/NewMicroSaasServicesShowcase2025'));
+
 // New pages I've created
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
@@ -172,8 +182,16 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     
+                    {/* New Micro SAAS Services 2025 */}
+                    <Route path="/services/ai-legal-document-automation-platform" element={<AILegalDocumentAutomationPlatform />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                    <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                    <Route path="/services/ai-real-estate-investment-platform" element={<AIRealEstateInvestmentPlatform />} />
+                    
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/new-micro-saas-services-2025" element={<NewMicroSaasServicesShowcase2025 />} />
                     
                     {/* 2031 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />

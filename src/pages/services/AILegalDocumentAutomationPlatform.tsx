@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Truck, 
-  Brain, 
+  FileText, 
   Shield, 
+  Zap, 
   Users, 
   BarChart3, 
   Clock, 
@@ -13,92 +13,85 @@ import {
   ArrowRight,
   Lock,
   Globe,
-  Smartphone,
-  Package,
-  Route,
-  Target,
-  Zap
+  Smartphone
 } from 'lucide-react';
 
-const AISupplyChainOptimizationPlatform: React.FC = () => {
+const AILegalDocumentAutomationPlatform: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI Demand Forecasting",
-      description: "Predict customer demand with 95% accuracy using machine learning and historical data analysis"
-    },
-    {
-      icon: <Truck className="w-6 h-6" />,
-      title: "Route Optimization",
-      description: "AI-powered logistics optimization reducing delivery times by 30% and costs by 25%"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Smart Document Generation",
+      description: "AI-powered templates for contracts, agreements, and legal documents with intelligent clause suggestions"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Identify and mitigate supply chain risks with predictive analytics and real-time monitoring"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Supplier Management",
-      description: "Intelligent supplier selection and performance tracking with automated scoring systems"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Inventory Optimization",
-      description: "Dynamic inventory management reducing stockouts by 60% and excess inventory by 40%"
+      title: "Compliance Monitoring",
+      description: "Real-time regulatory compliance checking and automatic updates for changing laws"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Visibility",
-      description: "End-to-end supply chain transparency with IoT integration and predictive alerts"
+      title: "Instant Legal Review",
+      description: "AI analysis of legal documents for risks, inconsistencies, and optimization opportunities"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Collaborative Workflows",
+      description: "Multi-user editing with version control and approval workflows"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive insights into document performance, risks, and efficiency metrics"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "24/7 AI Support",
+      description: "Round-the-clock legal document assistance and guidance"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Small Business",
-      price: "$799",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small manufacturers and distributors",
+      description: "Perfect for small law firms and solo practitioners",
       features: [
-        "Up to 100 SKUs",
-        "Basic demand forecasting",
-        "Standard route optimization",
+        "Up to 100 documents/month",
+        "Basic AI templates",
+        "Standard compliance checks",
         "Email support",
-        "Basic analytics",
-        "Mobile app access"
+        "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$2,499",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing manufacturing companies",
+      description: "Ideal for growing legal practices",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI algorithms",
-        "Full optimization suite",
+        "Up to 500 documents/month",
+        "Advanced AI templates",
+        "Full compliance monitoring",
         "Priority support",
-        "Custom dashboards",
-        "API access",
-        "Multi-location support"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Global Operations",
-      price: "$5,999",
+      name: "Enterprise",
+      price: "$799",
       period: "/month",
-      description: "For multinational corporations and complex supply chains",
+      description: "For large law firms and corporate legal departments",
       features: [
-        "Unlimited SKUs",
-        "Custom AI models",
+        "Unlimited documents",
+        "Custom AI training",
         "White-label solution",
         "Dedicated support",
         "Custom integrations",
-        "On-premise deployment",
-        "SLA guarantees"
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -107,63 +100,29 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
   const benefits = [
     {
       icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-      text: "Reduce supply chain costs by 25-35% through AI optimization"
+      text: "Reduce document creation time by 80%"
     },
     {
       icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-      text: "Improve delivery performance by 40% with route optimization"
+      text: "Eliminate 95% of legal compliance errors"
     },
     {
       icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-      text: "Reduce inventory carrying costs by 30% with smart forecasting"
+      text: "Save $50,000+ annually on legal document processing"
     },
     {
       icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-      text: "Increase customer satisfaction with 99% on-time delivery rates"
+      text: "Improve client satisfaction with faster turnaround times"
     }
-  ];
-
-  const useCases = [
-    {
-      icon: <Package className="w-8 h-8" />,
-      title: "Manufacturing",
-      description: "Optimize production planning, inventory management, and supplier coordination"
-    },
-    {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Logistics",
-      description: "Route optimization, fleet management, and delivery scheduling"
-    },
-    {
-      icon: <Route className="w-8 h-8" />,
-      title: "Retail",
-      description: "Demand forecasting, store replenishment, and omnichannel inventory"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "E-commerce",
-      description: "Fulfillment optimization, warehouse management, and last-mile delivery"
-    }
-  ];
-
-  const industries = [
-    "Automotive",
-    "Electronics",
-    "Food & Beverage",
-    "Pharmaceuticals",
-    "Apparel",
-    "Construction",
-    "Chemicals",
-    "Aerospace"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
-        <title>AI Supply Chain Optimization Platform - Zion Tech Group</title>
-        <meta name="description" content="Transform your supply chain with AI-powered optimization. Demand forecasting, route optimization, and intelligent inventory management for modern businesses." />
-        <meta name="keywords" content="AI supply chain, supply chain optimization, demand forecasting, logistics optimization, inventory management, supplier management" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-optimization-platform" />
+        <title>AI Legal Document Automation Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your legal practice with AI-powered document automation. Generate, review, and manage legal documents with intelligent compliance monitoring and collaborative workflows." />
+        <meta name="keywords" content="AI legal automation, legal document generation, compliance monitoring, legal tech, document management" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-legal-document-automation-platform" />
       </Helmet>
 
       {/* Hero Section */}
@@ -175,12 +134,13 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="text-blue-400 block">Optimization Platform</span>
+              AI Legal Document
+              <span className="text-blue-400 block">Automation Platform</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your supply chain with AI-powered optimization. Demand forecasting, 
-              route optimization, and intelligent inventory management for modern businesses.
+              Revolutionize your legal practice with AI-powered document automation. 
+              Generate, review, and manage legal documents with intelligent compliance 
+              monitoring and collaborative workflows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -213,10 +173,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Supply Chain Features
+              Powerful Features for Modern Legal Practice
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to optimize your end-to-end supply chain operations
+              Everything you need to streamline your legal document workflow
             </p>
           </motion.div>
 
@@ -239,78 +199,6 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Tailored supply chain optimization for every industry
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-blue-400 mb-4 flex justify-center">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Supported Industries
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse manufacturing and distribution sectors
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10 text-center hover:border-blue-500/50 transition-all duration-300"
-              >
-                <span className="text-gray-300 font-medium">{industry}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -322,10 +210,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Supply Chain Results
+              Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Real performance that transforms your operations and bottom line
+              Proven results that transform your legal practice
             </p>
           </motion.div>
 
@@ -358,10 +246,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Scalable Pricing
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain complexity and scale
+              Choose the plan that fits your legal practice needs
             </p>
           </motion.div>
 
@@ -399,7 +287,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -431,10 +319,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join leading companies using AI to transform their supply chain operations
+              Join thousands of legal professionals who trust our AI platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -458,10 +346,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Need Supply Chain Optimization Help?
+            Need Help Getting Started?
           </h3>
           <p className="text-gray-300 mb-6">
-            Our supply chain experts are here to guide your AI transformation journey
+            Our team is here to help you implement AI legal automation in your practice
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center text-gray-300">
@@ -483,4 +371,4 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimizationPlatform;
+export default AILegalDocumentAutomationPlatform;
