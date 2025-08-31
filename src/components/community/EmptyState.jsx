@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { MessageSquare import { Button } from '@/components/ui/button';
-=======
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
     return (<div className="text-center py-16">

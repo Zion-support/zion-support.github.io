@@ -1,5 +1,4 @@
 export interface ExpandedInnovativeService {
-
   id: string;
   title: string;
   description: string;
@@ -27,10 +26,14 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
+<<<<<<< HEAD
     security: string[];
   };
 }
 
+=======
+    security: string[]}}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence
   {
@@ -91,10 +94,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["AWS", "Azure", "GCP", "Splunk", "QRadar"],
       apiEndpoints: 150,
       uptime: "99.99%",
+<<<<<<< HEAD
       security: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]
+=======
+      security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
-
   // AI Sales Co-pilot for SMBs
   {
     id: "ai-sales-copilot-smb",
@@ -148,10 +154,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"],
       apiEndpoints: 42,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "GDPR", "SAML SSO"]
+=======
+      security["SOC 2", "GDPR", "SAML SSO"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
-
   // FinOps cost optimization for cloud
   {
     id: "cloud-finops-optimizer",
@@ -195,10 +204,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],
       apiEndpoints: 65,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "ISO 27001", "SSO"]
+=======
+      security["SOC 2", "ISO 27001", "SSO"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
-
   // Managed MLOps platform
   {
     id: "managed-mlops-platform",
@@ -242,10 +254,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"],
       apiEndpoints: 93,
       uptime: "99.95%",
+<<<<<<< HEAD
       security: ["SOC 2", "HIPAA", "GDPR"]
+=======
+      security["SOC 2", "HIPAA", "GDPR"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
-
   // eCommerce personalization micro‑SaaS
   {
     id: "ecommerce-personalization-engine",
@@ -285,7 +300,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
-
   // SOC2-in-a-box compliance automation
   {
     id: "soc2-in-a-box",
@@ -325,7 +339,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     innovationLevel: "Professional",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
-
   // Data platform in a week (modern stack)
   {
     id: "modern-data-platform-week",
@@ -369,10 +382,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],
       apiEndpoints: 18,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SSO", "Row‑level security"]
     }
   },
 
+=======
+      security["SSO", "Row‑level security"]
+    }
+  }
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Blockchain-Based Supply Chain Transparency
   {
     id: "blockchain-supply-chain-transparency",
@@ -426,9 +445,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // IoT Edge Computing Analytics Platform
   {
     id: "iot-edge-computing-analytics",
@@ -482,9 +503,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-document-analysis",
@@ -538,9 +561,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // Quantum-Ready Cryptography Platform
   {
     id: "quantum-ready-cryptography",
@@ -594,9 +619,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
@@ -650,9 +677,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // Sustainable Energy Management Platform
   {
     id: "sustainable-energy-management",
@@ -706,9 +735,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // AI-Powered Financial Fraud Detection
   {
     id: "ai-financial-fraud-detection",
@@ -762,9 +793,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // Autonomous Vehicle Fleet Management
   {
     id: "autonomous-vehicle-fleet-management",
@@ -818,9 +851,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
-
   // AI-Powered Content Creation Platform
   {
     id: "ai-content-creation-platform",
@@ -876,7 +911,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // AI Agent Helpdesk for ITSM
   {
     id: "ai-agent-itsm-helpdesk",
@@ -927,7 +961,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       security: ["SOC 2", "GDPR", "SAML SSO"]
     }
   },
-
   // Data Governance & Quality as a Service
   {
     id: "data-governance-quality-aas",
@@ -973,7 +1006,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       security: ["SSO", "Row-level security"]
     }
   },
-
   // Cloud Landing Zone in 10 Days
   {
     id: "cloud-landing-zone-10-days",
@@ -1019,7 +1051,6 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       security: ["CIS", "NIST", "SSO"]
     }
   },
-
   // Marketing Content Ops Co-pilot
   {
     id: "marketing-content-ops-copilot",
@@ -1057,7 +1088,12 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "250–500%",
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+<<<<<<< HEAD
   },
+=======
+  }
+  ,
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Cloud Cost Optimization AI
   {
     id: "cloud-cost-optimizer-ai",
@@ -1117,7 +1153,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"],
       apiEndpoints: 85,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "ISO 27001"]
+=======
+      security["SOC 2", "ISO 27001"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
   // SOC 2 & ISO 27001 Compliance Copilot
@@ -1167,7 +1207,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],
       apiEndpoints: 110,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "ISO 27001", "SAML", "SCIM"]
+=======
+      security["SOC 2", "ISO 27001", "SAML", "SCIM"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
   // Data Pipeline Observability Platform
@@ -1213,7 +1257,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],
       apiEndpoints: 95,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "Row-level security"]
+=======
+      security["SOC 2", "Row-level security"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
   // AI Customer Support Agent Platform
@@ -1259,7 +1307,11 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"],
       apiEndpoints: 70,
       uptime: "99.9%",
+<<<<<<< HEAD
       security: ["SOC 2", "PII redaction"]
+=======
+      security["SOC 2", "PII redaction"]
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
   },
   // Privacy Request Automation (DSAR)
@@ -1344,9 +1396,17 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"],
       apiEndpoints: 140,
       uptime: "99.95%",
+<<<<<<< HEAD
       security: ["SOC 2", "RBAC", "IAM"]
     }
   }
 ];
 
 export default EXPANDED_INNOVATIVE_SERVICES_2025;
+=======
+      security["SOC 2", "RBAC", "IAM"]
+    }
+  }
+];
+export default EXPANDED_INNOVATIVE_SERVICES_2025;}}}}}}}}}}}}}}}}}}}}}}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

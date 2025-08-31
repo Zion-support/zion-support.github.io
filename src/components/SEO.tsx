@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React, { useEffect, useCallback } from 'react';
+=======
+import React from 'react';
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
+<<<<<<< HEAD
   title?: string;
   description?: string;
   keywords?: string[];
@@ -419,11 +423,41 @@ export const SEO: React.FC<SEOProps> = ({
     }
   }, [fullTitle, description, generateCanonicalUrl, enableSocialMedia, generateOpenGraphData]);
 
+=======
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false,
+}) => {
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
+  const defaultKeywords = 'AI, artificial intelligence, technology solutions, cybersecurity, cloud computing, digital transformation, Zion Tech Group';
+  
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+<<<<<<< HEAD
       
       {/* All Meta Tags */}
       {generateAllMetaTags().map((tag, index) => (
@@ -443,6 +477,75 @@ export const SEO: React.FC<SEOProps> = ({
       
       {/* Google Tag Manager Noscript */}
       {generateGTMNoscript()}
+=======
+      <meta name="keywords" content={keywords || defaultKeywords} />
+      
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || window.location.href} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Default Organization Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+          "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud computing, and digital transformation services.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup",
+            "https://facebook.com/ziontechgroup"
+          ]
+        })}
+      </script>
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     </Helmet>
   );
 };

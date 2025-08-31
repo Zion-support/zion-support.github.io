@@ -29,9 +29,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     {
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
-
   ];
-
   const plans = [
     {
       name: 'Starter',
@@ -63,15 +61,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-<<<<<<< HEAD
-      bullets: [
-        'Unlimited partners and campaigns',
-        'SAML SSO and audit trails',
-        'Custom data retention + warehouse sync',
-        'Dedicated CSM and 99.9% SLA'
-      ]
-
-=======
       bullets: [;
         'Unlimited partners and campaigns',;
         'SAML SSO and audit trails',;
@@ -79,9 +68,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
         'Dedicated CSM and 99.9% SLA';
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -89,7 +76,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
         keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
       />
-
       {/* Hero */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
@@ -98,34 +84,19 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-
             Affiliate Tracking Platform
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
-
           <p className="text-xl text-zion-slate-light max-w-3xl">
             End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.
           </p>
-
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
               <Link to="/request-quote">
@@ -139,7 +110,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-
       {/* Feature grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,27 +120,14 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
                 className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
-
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
                   <div>
@@ -183,7 +140,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-
       {/* Market context */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">
@@ -206,7 +162,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </p>
         </div>
       </section>
-
       {/* Plans */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -217,42 +172,22 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.5,
   delay: i * 0.05 
-
-
-
-
-
-
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
-
                 {i === 1 && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
                   </div>
                 )}
-
                 <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{plan.bestFor}</p>
                 <div className="mb-6">
@@ -278,7 +213,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -296,7 +230,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-
       {/* References */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -323,6 +256,5 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     </div>;
   );
 </div>}
-
 // Duplicate leftover block removed
 }}}

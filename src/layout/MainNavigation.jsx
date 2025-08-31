@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 export function MainNavigation() {
   return (
     <nav className="hidden md:flex space-x-8">
@@ -20,5 +19,9 @@ export function MainNavigation() {
         Contact
       </Link>
     </nav>
+<<<<<<< HEAD
   );
 }
+=======
+  )}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

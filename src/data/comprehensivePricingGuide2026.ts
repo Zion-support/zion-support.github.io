@@ -1,6 +1,5 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-
 export interface PricingTier {
   name: string;
   price: number;
@@ -14,7 +13,10 @@ export interface PricingTier {
   supportLevel: string;
   innovationLevel: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export interface ServicePricing {
   id: string;
   title: string;
@@ -43,7 +45,10 @@ export interface ServicePricing {
   complianceFeatures: string[];
   scalabilityFeatures: string[];
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
     id: "ai-business-intelligence-platform-2026",
@@ -53,6 +58,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     subcategory: "Business Intelligence",
     pricingTiers: [
       {
+<<<<<<< HEAD
         name: "Starter",
         price: 2999,
         currency: "$",
@@ -415,6 +421,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       },
       {
         name: "Advanced",
+=======
+        name: "Business",
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         price: 3999,
         currency: "$",
         billingCycle: "monthly",
@@ -540,7 +549,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
     scalabilityFeatures: ["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"]
   },
-
   {
     id: "quantum-cybersecurity-suite-2026",
     title: "Quantum Cybersecurity Suite 2026",
@@ -675,7 +683,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]
   },
-
   {
     id: "autonomous-supply-chain-platform-2026",
     title: "Autonomous Supply Chain Platform 2026",
@@ -810,7 +817,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]
   },
-
   {
     id: "quantum-financial-trading-platform-2026",
     title: "Quantum Financial Trading Platform 2026",
@@ -945,7 +951,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],
     scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"]
   },
-
   {
     id: "autonomous-healthcare-diagnostics-2026",
     title: "Autonomous Healthcare Diagnostics Platform 2026",
@@ -1081,5 +1086,4 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]
   }
 ];
-
 export default COMPREHENSIVE_PRICING_GUIDE_2026;

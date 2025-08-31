@@ -33,7 +33,6 @@ export interface FinancialAIService2028 {
   marketSize?: string;
   regulatoryCompliance?: string[];
 }
-
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = [
   // AI-Powered Algorithmic Trading Platform
   {
@@ -100,7 +99,6 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     marketSize: "$156.8 billion by 2028",
     regulatoryCompliance: ["SEC", "FINRA", "CFTC", "SOC 2", "PCI DSS"]
   },
-
   // AI-Powered Credit Risk Assessment
   {
     id: "ai-credit-risk-assessment-2028",
@@ -166,7 +164,6 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     marketSize: "$89.3 billion by 2028",
     regulatoryCompliance: ["FCRA", "ECOA", "SOC 2", "PCI DSS", "Banking regulations"]
   },
-
   // AI-Powered Fraud Detection System
   {
     id: "ai-fraud-detection-system-2028",
@@ -232,7 +229,6 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     marketSize: "$67.8 billion by 2028",
     regulatoryCompliance: ["SOC 2", "PCI DSS", "ISO 27001", "Financial regulations"]
   },
-
   // AI-Powered Wealth Management Platform
   {
     id: "ai-wealth-management-platform-2028",
@@ -298,7 +294,6 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     marketSize: "$112.4 billion by 2028",
     regulatoryCompliance: ["SEC", "FINRA", "SOC 2", "Data privacy regulations"]
   },
-
   // AI-Powered Insurance Underwriting
   {
     id: "ai-insurance-underwriting-2028",
@@ -365,5 +360,4 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     regulatoryCompliance: ["Insurance regulations", "SOC 2", "ISO 27001", "Data privacy laws"]
   }
 ];
-
 export default SPECIALIZED_FINANCIAL_AI_SERVICES_2028;

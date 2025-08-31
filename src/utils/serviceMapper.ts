@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { specializedIndustrySolutions2026 } from '@/data/2026-specialized-industry-solutions';
+=======
+import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 
 // Interface for the existing service structure
 export interface Service {
@@ -74,6 +78,10 @@ export function map2026ServicesToExistingStructure(): Service[] {
     marketSize: service.marketSize,
     compliance: ["SOC 2", "ISO 27001"] // Default compliance
   }));
+<<<<<<< HEAD
 }
 
 export default map2026ServicesToExistingStructure;
+=======
+}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
+=======
+import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 interface User {
   id: string;
   email: string;
@@ -8,6 +13,7 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
+<<<<<<< HEAD
   updatedAt?: string;
 }
 
@@ -18,13 +24,20 @@ interface AuthTokens {
 
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null);
+=======
+  updatedAt?: string}
+interface AuthTokens {
+  accessToken: string | null;
+  refreshToken: string | null}
+export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [user, setUser] = useState<any>(null);
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<AuthTokens>({
     accessToken: null,
     refreshToken: null
   });
-
   useEffect(() => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
@@ -38,6 +51,7 @@ export const useAuthState = () => {
               setTokens({
                 accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
+<<<<<<< HEAD
               });
             }
           }
@@ -52,6 +66,19 @@ export const useAuthState = () => {
     checkAuthState();
   }, []);
 
+=======
+        // // // // // // // console.error('Error checking auth state:', error);
+      } finally {
+        setIsLoading(false);
+              })}
+          }
+        }
+      } catch (error) {
+        console.error('Error checking auth state:', error)} finally {
+        setIsLoading(false)}
+    };
+    checkAuthState()}, []);
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return {
     user,
     setUser,
@@ -61,5 +88,9 @@ export const useAuthState = () => {
     setOnboardingStep,
     tokens,
     setTokens
+<<<<<<< HEAD
   };
 };
+=======
+  }};
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

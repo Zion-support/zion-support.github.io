@@ -15,9 +15,15 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
+<<<<<<< HEAD
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
     };
 
+=======
+        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
+  and innovative IT services for the healthcare industry.'
+};
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static KEYWORD_MAPPINGS = {
         '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
@@ -34,9 +40,15 @@ export class SEOOptimizer {
         '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
+<<<<<<< HEAD
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
     };
 
+=======
+        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
+  'medical technology']
+};
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateSEOData(path) {
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -50,14 +62,20 @@ export class SEOOptimizer {
             canonicalUrl,
             structuredData
         };
+<<<<<<< HEAD
     }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateTitle(path) {
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
+<<<<<<< HEAD
         }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         const pathSegments = path.split('/').filter(Boolean);
         if (pathSegments.length === 0) {
             return baseTitle;
@@ -68,6 +86,7 @@ export class SEOOptimizer {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
         return `${formattedSegment} - ${baseTitle}`;
+<<<<<<< HEAD
     }
 
     static generateDescription(path) {
@@ -85,6 +104,17 @@ export class SEOOptimizer {
         return `${baseUrl}${path}`;
     }
 
+=======
+    static generateDescription(path) {
+        return this.DEFAULT_META_DESCRIPTIONS[path] ||
+            'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
+    static generateKeywords(path) {
+        return this.KEYWORD_MAPPINGS[path] ||
+            ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
+    static generateCanonicalUrl(path) {
+        const baseUrl = 'https://ziontechgroup.com';
+        return `${baseUrl}${path}`;
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateStructuredData(path) {
         const baseData = {
             "@context": "https://schema.org",
@@ -96,8 +126,13 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
+<<<<<<< HEAD
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
             }
+=======
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         };
 
         // Add specific structured data based on page type
@@ -122,10 +157,14 @@ export class SEOOptimizer {
                     "telephone": "+1-302-464-0950",
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
+<<<<<<< HEAD
                 }
             };
         }
 
+=======
+            };
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         if (path.startsWith('/services/')) {
             return {
                 ...baseData,
@@ -134,6 +173,7 @@ export class SEOOptimizer {
                 "provider": {
                     "@type": "Organization",
                     "name": "Zion Tech Group"
+<<<<<<< HEAD
                 }
             };
         }
@@ -141,6 +181,10 @@ export class SEOOptimizer {
         return baseData;
     }
 
+=======
+            };
+        return baseData;
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static analyzeContentQuality(content, page) {
         const issues = [];
         
@@ -152,8 +196,11 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             });
+<<<<<<< HEAD
         }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for missing meta description
         if (!content.includes('name="description"')) {
             issues.push({
@@ -162,8 +209,11 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
+<<<<<<< HEAD
         }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
@@ -173,8 +223,11 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
             });
+<<<<<<< HEAD
         }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
@@ -183,8 +236,11 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
+<<<<<<< HEAD
         }
 
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
@@ -194,36 +250,38 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'
             });
+<<<<<<< HEAD
         }
 
         return issues;
     }
 
+=======
+        return issues;
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateMetaTags(seoData) {
         return `
     <title>${seoData.title}</title>
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords.join(', ')}" />
     <link rel="canonical" href="${seoData.canonicalUrl}" />
-
     <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}" />
     <meta property="og:description" content="${seoData.description}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${seoData.canonicalUrl}" />
     <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoData.title}" />
     <meta name="twitter:description" content="${seoData.description}" />
     <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-
     <!-- Structured Data -->
     <script type="application/ld+json">
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
+<<<<<<< HEAD
     }
 
     static generateSitemap(pages) {
@@ -256,4 +314,118 @@ export class SEOOptimizer {
 }
 
 export const seoOptimizer = new SEOOptimizer();
+=======
+export const seoOptimizer = new SEOOptimizer();
+    // Simulate SEO analysis
+    setTimeout(() => {
+      let score = 0;
+      const newRecommendations = [];
+      // Check title length
+      const titleMatch = content.match(/<title>(.*?)</title>/i);
+      if (titleMatch) {
+        const titleLength = titleMatch[1].length;
+        if (titleLength >= 30 && titleLength <= 60) {
+          score += 20;
+        } else if (titleLength > 0) {
+          score += 10;
+          newRecommendations.push('Optimize title length (30-60 characters)');
+        }
+      } else {
+        newRecommendations.push('Add a title tag');
+      }
+      // Check meta description
+      const metaMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
+      if (metaMatch) {
+        const metaLength = metaMatch[1].length;
+        if (metaLength >= 120 && metaLength <= 160) {
+          score += 20;
+        } else if (metaLength > 0) {
+          score += 10;
+          newRecommendations.push('Optimize meta description length (120-160 characters)');
+        }
+      } else {
+        newRecommendations.push('Add a meta description');
+      }
+      // Check headings
+      const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
+      if (h1Count > 0 && h2Count > 0) {
+        score += 20;
+      } else if (h1Count > 0 || h2Count > 0) {
+        score += 10;
+        newRecommendations.push('Add more heading structure (H1, H2, H3)');
+      } else {
+        newRecommendations.push('Add heading structure to your content');
+      }
+      // Check images with alt text
+      const imagesWithAlt = images.filter(img => img.includes('alt='));
+      if (images.length > 0) {
+        if (imagesWithAlt.length === images.length) {
+          score += 20;
+        } else {
+          score += 10;
+          newRecommendations.push('Add alt text to all images');
+        }
+      }
+      // Check internal links
+      const internalLinks = content.match(/href="/[^"]*"/g) || [];
+      if (internalLinks.length >= 2) {
+        score += 20;
+      } else if (internalLinks.length > 0) {
+        score += 10;
+        newRecommendations.push('Add more internal links');
+      } else {
+        newRecommendations.push('Add internal links to related pages');
+      }
+      setSeoScore(score);
+      setRecommendations(newRecommendations);
+      setIsAnalyzing(false);
+      if (onOptimize) {
+        onOptimize({ score, recommendations: newRecommendations });
+      }
+    }, 2000);
+  };
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={analyzeSEO}
+        disabled={isAnalyzing}
+        className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50"
+      >
+        {isAnalyzing ? 'Analyzing SEO...' : 'Analyze SEO'}
+      </button>
+      {seoScore > 0 && (
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          className="space-y-4"
+        >
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-600 mb-2">{seoScore}/100</div>
+            <div className="text-lg text-gray-600">SEO Score</div>
+          </div>
+          {recommendations.length > 0 && (
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Recommendations:</h3>
+              <ul className="space-y-2">
+                {recommendations.map((recommendation, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <span>{recommendation}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  );
+};
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export default SEOOptimizer;

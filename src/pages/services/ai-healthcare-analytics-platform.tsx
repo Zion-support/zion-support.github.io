@@ -1,538 +1,294 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Heart,
-  Brain,
-  Activity,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Heart, 
-  Brain, 
+import { 
   Activity, 
+  Heart, 
+  Brain, 
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ArrowRight,
-  Clock,
+  ArrowRight, 
+  Clock, 
+  Users, 
   Target,
-  BarChart3,
-  Users,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
   Lock,
-  Eye,
-  PieChart,
+  Search,
+  BarChart3,
   TrendingUp,
-  AlertTriangle
-<<<<<<< HEAD
-export default function AIHealthcareAnalyticsPlatform() {
-=======
- } from 'lucide-react';
+  AlertTriangle,
+  Lightbulb,
+  PieChart,
+  LineChart,
+  Eye,
+  Settings,
+  Filter,
+  Globe,
+  Database,
+  DollarSign,
+  Star,
+  Play,
+  Stethoscope,
+  Microscope,
+  Pill,
+  Hospital,
+  UserCheck,
+  FileText,
+  Monitor,
+  Smartphone
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Diagnosis Support',
-      description: 'Advanced machine learning algorithms assist doctors with accurate diagnosis and treatment recommendations'
+      title: "AI-Powered Predictive Analytics",
+      description: "Advanced machine learning algorithms that predict patient outcomes, readmission risks, and disease progression",
+      benefits: ["Early disease detection", "Risk stratification", "Treatment optimization", "Population health insights"]
     },
     {
       icon: Activity,
-      title: 'Predictive Health Analytics',
-      description: 'AI predicts health risks and disease progression based on patient data and medical history'
+      title: "Real-time Patient Monitoring",
+      description: "Continuous monitoring of patient vital signs, symptoms, and health metrics with AI-powered alerts",
+      benefits: ["24/7 monitoring", "Early warning systems", "Automated alerts", "Mobile notifications"]
     },
     {
       icon: Heart,
-      title: 'Patient Outcome Prediction',
-      description: 'Machine learning models forecast treatment outcomes and recovery probabilities'
+      title: "Clinical Decision Support",
+      description: "AI-powered recommendations for diagnosis, treatment plans, and medication management",
+      benefits: ["Evidence-based recommendations", "Drug interaction alerts", "Treatment guidelines", "Clinical pathways"]
     },
     {
       icon: Shield,
-      title: 'Drug Interaction Analysis',
-      description: 'AI identifies potential drug interactions and adverse effects in real-time'
+      title: "HIPAA-Compliant Security",
+      description: "Enterprise-grade security with end-to-end encryption, access controls, and comprehensive audit trails",
+      benefits: ["HIPAA compliance", "SOC 2 Type II", "End-to-end encryption", "Role-based access"]
+    },
+    {
+      icon: BarChart3,
+      title: "Population Health Analytics",
+      description: "Comprehensive analytics for population health management, risk assessment, and preventive care",
+      benefits: ["Population risk scoring", "Preventive care insights", "Health trend analysis", "Resource optimization"]
     },
     {
       icon: Zap,
-      title: 'Real-Time Monitoring',
-<<<<<<< HEAD
-      description: 'Continuous patient monitoring with instant alerts for critical health changes'
-    },
-    {
-      icon: Eye,
-      title: 'Medical Image Analysis',
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
-
-=======
-      description: 'Continuous patient monitoring with instant alerts for critical health changes';
-    },;
-    {;
-      icon: Eye,;
-      title: 'Medical Image Analysis',;
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      title: "Workflow Automation",
+      description: "Streamline healthcare processes with automated documentation, scheduling, and communication",
+      benefits: ["Automated documentation", "Smart scheduling", "Patient communication", "Staff workflow optimization"]
+    }
   ];
 
   const pricingPlans = [
     {
-      name: 'Clinic',
-      price: '$799',
-      period: '/month',
-      description: 'Perfect for small medical practices',
+      name: "Clinical",
+      price: "$599",
+      period: "/month",
+      description: "Perfect for small clinics and medical practices",
       features: [
-        'Up to 50 patients',
-        'Basic AI diagnosis support',
-        'Patient analytics dashboard',
-        'Basic reporting',
-        'Email support',
-        'Mobile app access',
-        'Standard integrations'
+        "Up to 25 providers",
+        "Basic patient analytics",
+        "Clinical decision support",
+        "Email support",
+        "Standard security",
+        "Basic reporting"
       ],
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: 'Hospital',
-      price: '$2,499',
-      period: '/month',
-      description: 'Ideal for hospitals and large practices',
+      name: "Hospital",
+      price: "$1,299",
+      period: "/month",
+      description: "Ideal for hospitals and healthcare systems",
       features: [
-        'Up to 500 patients',
-        'Advanced AI algorithms',
-        'Predictive analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom dashboards',
-        'Advanced integrations',
-        'Compliance reporting'
+        "Up to 200 providers",
+        "Advanced analytics suite",
+        "Real-time monitoring",
+        "Priority support",
+        "Advanced security",
+        "Population health analytics",
+        "Workflow automation",
+        "API access"
       ],
+      cta: "Get Started",
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$5,999',
-      period: '/month',
-      description: 'For healthcare systems and networks',
+      name: "Enterprise",
+      price: "$2,999",
+      period: "/month",
+      description: "For large healthcare networks and academic medical centers",
       features: [
-        'Unlimited patients',
-        'Full AI suite',
-        'Custom AI models',
-        'Dedicated support team',
-<<<<<<< HEAD
-        'Advanced compliance',
-        'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
+        "Unlimited providers",
+        "Custom AI models",
+        "Advanced integrations",
+        "24/7 dedicated support",
+        "Custom training",
+        "Multi-site management",
+        "Research capabilities",
+        "White-label options"
       ],
+      cta: "Contact Sales",
       popular: false
-
-=======
-        'Advanced compliance',;
-        'On-premise options',;
-        'SLA guarantees',;
-        'Custom integrations';
-      ],;
-      popular: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
-
-  const benefits = [
-    {
-      icon: Heart,
-      title: '30% Faster Diagnosis',
-      description: 'AI assistance reduces diagnosis time and improves accuracy'
-    },
-    {
-      icon: Target,
-      title: '95% Accuracy Rate',
-      description: 'Advanced algorithms provide highly accurate medical insights'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Patient Monitoring',
-<<<<<<< HEAD
-      description: 'Continuous monitoring ensures patient safety around the clock'
-    },
-    {
-      icon: BarChart3,
-      title: '40% Cost Reduction',
-      description: 'AI optimization reduces healthcare costs and improves efficiency'
-
-=======
-      description: 'Continuous monitoring ensures patient safety around the clock';
-    },;
-    {;
-      icon: BarChart3,;
-      title: '40% Cost Reduction',;
-      description: 'AI optimization reduces healthcare costs and improves efficiency';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   const useCases = [
     {
-      title: 'Diagnostic Imaging',
-      description: 'AI analyzes medical images to detect abnormalities and assist radiologists',
-      icon: Eye
+      industry: "Hospitals",
+      description: "Improve patient outcomes, reduce readmissions, and optimize resource allocation with AI-powered insights",
+      metrics: ["25% reduction in readmissions", "30% faster diagnosis", "40% cost savings"]
     },
     {
-      title: 'Patient Risk Assessment',
-      description: 'Predictive models identify high-risk patients for proactive care',
-      icon: AlertTriangle
+      industry: "Primary Care",
+      description: "Enhance preventive care, identify at-risk patients, and improve chronic disease management",
+      metrics: ["90% preventive care compliance", "60% better chronic disease management", "Enhanced patient engagement"]
     },
     {
-      title: 'Treatment Optimization',
-      description: 'AI recommends optimal treatment plans based on patient data and outcomes',
-<<<<<<< HEAD
-      icon: Heart
+      industry: "Specialty Clinics",
+      description: "Optimize treatment plans, improve patient outcomes, and streamline clinical workflows",
+      metrics: ["85% treatment plan optimization", "70% workflow efficiency", "Improved patient satisfaction"]
     },
     {
-      title: 'Drug Safety Monitoring',
-      description: 'Real-time monitoring of drug interactions and adverse effects',
-      icon: Shield
-
-=======
-      icon: Heart;
-    },;
-    {;
-      title: 'Drug Safety Monitoring',;
-      description: 'Real-time monitoring of drug interactions and adverse effects',;
-      icon: Shield;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      industry: "Research Institutions",
+      description: "Accelerate clinical research, identify patterns in large datasets, and develop new treatment protocols",
+      metrics: ["50% faster research insights", "90% data accuracy", "Enhanced collaboration"]
+    }
   ];
 
-  const complianceStandards = [;
-    'HIPAA Compliant',;
-    'FDA Approved',;
-    'ISO 13485',;
-    'SOC 2 Type II',;
-    'GDPR Compliant',;
-    'HITECH Certified';
+  const benefits = [
+    "Reduce patient readmissions by 25% through predictive analytics",
+    "Improve diagnosis accuracy by 30% with AI-powered insights",
+    "Save up to $100,000 annually in healthcare costs",
+    "Enhance patient outcomes and satisfaction scores",
+    "Streamline clinical workflows and reduce administrative burden",
+    "Ensure 100% HIPAA compliance and data security"
+  ];
+
+  const complianceFeatures = [
+    "HIPAA Compliance",
+    "SOC 2 Type II Certification",
+    "HITECH Act Compliance",
+    "FDA Regulatory Support",
+    "GDPR Compliance",
+    "State-specific Healthcare Regulations"
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
-        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
-      />
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare
+            className="text-center"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6"
+            >
+              <Star className="w-4 h-4 mr-2" />
+              AI-Powered Healthcare Technology
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Healthcare
+              <span className="block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                Analytics Platform
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform healthcare delivery with AI-powered analytics, predictive insights, and clinical decision support. 
+              Improve patient outcomes, reduce costs, and enhance operational efficiency.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
+              
+              <button className="inline-flex items-center px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300">
+                <span className="flex items-center gap-2">
+                  Watch Demo
+                  <Play className="w-5 h-5" />
+                </span>
+              </button>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Healthcare with
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> AI Intelligence</span>
-            </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics,
-              and patient monitoring. Revolutionize patient care with the future of medical technology.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Schedule Demo
-              </button>
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center"
+                >
+                  <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <p className="text-gray-300 text-sm">{benefit}</p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powered by Advanced AI
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Advanced Healthcare Technology Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge artificial intelligence to revolutionize healthcare delivery
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Everything you need to modernize healthcare delivery and improve patient outcomes
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
-
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of healthcare providers already experiencing the benefits of AI-powered analytics
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                viewport={{ once: true }}
-                className="text-center"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Healthcare Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform addresses the full spectrum of healthcare challenges
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                  <useCase.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 text-lg">{useCase.description}</p>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400 mb-4">{feature.description}</p>
+                
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -540,80 +296,35 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Compliance & Certifications
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Healthcare Compliance & Security
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Meet healthcare industry standards and regulatory requirements
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Built with healthcare-grade security and compliance standards to protect patient data
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceStandards.map((standard, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceFeatures.map((feature, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={feature}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
-
-                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                <p className="text-white font-medium text-sm">{standard}</p>
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white">{feature}</h3>
               </motion.div>
             ))}
           </div>
@@ -621,85 +332,40 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Healthcare Plan
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed for healthcare providers of all sizes
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Choose the plan that best fits your healthcare organization and scale as you grow
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular
-                    ? 'border-blue-500 ring-2 ring-blue-500/20'
-                    : 'border-gray-700'
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+                  plan.popular 
+                    ? 'border-green-500/50 bg-gradient-to-br from-slate-800/50 to-green-900/20' 
+                    : 'border-slate-700/50'
                 }`}
-
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -707,28 +373,28 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-400">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
-                  Get Started
+                  {plan.cta}
                 </button>
               </motion.div>
             ))}
@@ -736,66 +402,94 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Healthcare?
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Healthcare Industry Solutions
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of healthcare providers already using our AI-powered platform
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Tailored AI analytics solutions for different healthcare settings and specialties
             </p>
+          </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-gray-400 mb-4">{useCase.description}</p>
+                
+                <div>
+                  <h4 className="text-green-400 font-medium mb-2">Key Benefits:</h4>
+                  <ul className="space-y-1">
+                    {useCase.metrics.map((metric, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <Target className="w-3 h-3 text-green-400 mr-2" />
+                        {metric}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Healthcare Delivery?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Join hundreds of healthcare organizations that have already revolutionized patient care with AI-powered analytics
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Contact Healthcare Team
-              </button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
+              
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
             </div>
-<<<<<<< HEAD
-
-            <p className="text-gray-400 mt-6">
-              No credit card required • 30-day free trial • HIPAA compliant
-            </p>
           </motion.div>
         </div>
       </section>
     </div>
-=======
-            
-            <p className="text-gray-400 mt-6">;
-              No credit card required • 30-day free trial • HIPAA compliant;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}}}}}}
+}

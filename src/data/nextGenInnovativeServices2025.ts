@@ -1,5 +1,4 @@
 export interface NextGenInnovativeService {
-
   id: string;
   title: string;
   description: string;
@@ -32,9 +31,13 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string;
   demoUrl?: string;
+<<<<<<< HEAD
   documentationUrl?: string;
 }
 
+=======
+  documentationUrl?: string}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
   {
@@ -102,7 +105,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/quantum-ai-orchestrator",
     documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-orchestrator"
   },
-
   // Autonomous AI Agents
   {
     id: "autonomous-ai-agent-framework",
@@ -169,7 +171,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/autonomous-ai-agents",
     documentationUrl: "https://ziontechgroup.com/docs/autonomous-ai-agents"
   },
-
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing-platform",
@@ -236,7 +237,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/edge-ai-platform",
     documentationUrl: "https://ziontechgroup.com/docs/edge-ai-platform"
   },
-
   // Blockchain AI Integration Platform
   {
     id: "blockchain-ai-integration-platform",
@@ -303,7 +303,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-platform",
     documentationUrl: "https://ziontechgroup.com/docs/blockchain-ai-platform"
   },
-
   // Cybersecurity AI Platform
   {
     id: "cybersecurity-ai-platform",
@@ -370,7 +369,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/cybersecurity-ai",
     documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-ai"
   },
-
   // Healthcare AI Platform
   {
     id: "healthcare-ai-platform",
@@ -437,7 +435,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/healthcare-ai",
     documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai"
   },
-
   // Financial AI Trading Platform
   {
     id: "financial-ai-trading-platform",
@@ -504,7 +501,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/financial-ai-trading",
     documentationUrl: "https://ziontechgroup.com/docs/financial-ai-trading"
   },
-
   // Manufacturing AI Platform
   {
     id: "manufacturing-ai-platform",
@@ -571,7 +567,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/manufacturing-ai",
     documentationUrl: "https://ziontechgroup.com/docs/manufacturing-ai"
   },
-
   // Retail AI Platform
   {
     id: "retail-ai-platform",
@@ -637,7 +632,10 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketSize: "$19.9 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/retail-ai",
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
-
 ];
+<<<<<<< HEAD
 
 export default NEXT_GEN_INNOVATIVE_SERVICES_2025;
+=======
+export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

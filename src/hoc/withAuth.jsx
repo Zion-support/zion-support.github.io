@@ -9,6 +9,7 @@ function withAuth(Component) {
 
         useEffect(() => {
             if (!isLoggedIn) {
+<<<<<<< HEAD
                 router.push('/login?next=/community/new');
             }
         }, [isLoggedIn, router]);
@@ -23,4 +24,20 @@ function withAuth(Component) {
     return Wrapped;
 }
 
+=======
+                router('/login?next=/community/new');
+            }
+        }, [isLoggedIn, router]);
+        if (!isLoggedIn) {
+            return null}
+        return <Component {...props}/>};
+    return Wrapped}
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export default withAuth;

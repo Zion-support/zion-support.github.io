@@ -80,6 +80,10 @@ export const logoutUser = createAsyncThunk(
         setTimeout(resolve, 500);
       });
       
+      // Clear localStorage
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -94,14 +98,18 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-
+      
       if (token && user) {
         return {
           user: JSON.parse(user),
-          token
+          token: token
         };
       } else {
+<<<<<<< HEAD
         throw new Error('No auth data found');
+=======
+        throw new Error('No valid session found');
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       }
     } catch (error) {
       return rejectWithValue(error.message);
@@ -130,7 +138,11 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
   extraReducers: (builder) => {
     // Login
@@ -210,6 +222,10 @@ const authSlice = createSlice({
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
+export const selectUser = (state) => state.auth.user;
+export const selectToken = (state) => state.auth.token;
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
+export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
 
 export default authSlice.reducer;

@@ -1,8 +1,15 @@
 export function logErrorToProduction(message: string, error?: any): void {
   // In production, we might want to send errors to a logging service
+<<<<<<< HEAD
   // For now, just console.error in development
   if (process.env.NODE_ENV === 'development') {
     console.error(message, error);
+=======
+    // // // // // // // console.error(message, error);
+  // For now, just // // // // console.error in development
+  if (process.env.NODE_ENV = == 'development') {;
+    // // // // console.error(message, error);
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   }
   // TODO: Implement production error logging service
 }

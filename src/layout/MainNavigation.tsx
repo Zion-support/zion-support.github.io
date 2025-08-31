@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useRef } from 'react';
+=======
+import React, { useState, useRef, useEffect } from 'react';
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -11,12 +15,17 @@ import {
   Cloud,
   Code,
   BarChart3
+<<<<<<< HEAD
 } from 'lucide-react';
 
+=======
+ } from 'lucide-react';
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 interface NavigationLink {
   key: string;
   href: string;
   name: string;
+<<<<<<< HEAD
   matches: (path: string) => boolean;
   children?: NavigationLink[];
 }
@@ -41,18 +50,31 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
         setIsCompOpen(false);
         setActiveDropdown(null);
       }
+=======
+  matches: (path: string)  => boolean;
+  children?: NavigationLink[]}
+        setIsCompOpen(false);
+        setActiveDropdown(null)}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     };
-
     document.addEventListener('mousedown', handleClickOutside);
+<<<<<<< HEAD
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+=======
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   const baseLinks: NavigationLink[] = [
     {
       key: 'home',
       href: '/',
       name: 'Home',
+<<<<<<< HEAD
       matches: (path: string) => path === '/'
+=======
+      matches: (path: string) => path = == '/'
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     },
     {
       key: 'services',
@@ -111,6 +133,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       matches: (path: string) => path.startsWith('/about')
     },
     {
+<<<<<<< HEAD
       key: 'contact',
       href: '/contact',
       name: 'Contact',
@@ -132,6 +155,47 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
               </div>
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </Link>
+=======
+      matches: (path: string)  => path.startsWith('/contact')
+    };
+      key: 'contact',;
+      href: '/contact',;
+      name: 'Contact',;
+      matches: (path: string) => path.startsWith('/contact');
+    };
+  ];
+  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
+              </div>;
+            </motion.div>;
+          )};
+        </AnimatePresence>;
+      </div>;
+    );
+  };
+  return (
+    <nav className = {`${className}`}>
+      {/* Desktop Navigation */}
+      <div className="hidden lg: flex items-center space-x-1">
+        {baseLinks.map((link)  => (
+          <div key={link.key}>
+            {link.children ? (
+              renderDropdown(
+                link,
+                link.key === 'services' ? isServicesOpen : isCompOpen,
+                link.key === 'services' ? setIsServicesOpen : setIsCompOpen
+              )
+            ) : (
+              <Link
+                to={link.href}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  isActive(link)
+                    ? 'bg-zion-cyan text-white'
+                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'
+                }`}
+                {link.name}
+              </Link>
+            )}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
           </div>
 
           {/* Desktop Navigation */}
@@ -209,28 +273,56 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
+=======
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
           >
+=======
+            initial = {
+  { opacity: 0,
+  x: '100%' 
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+}}
+            exit = {
+  { opacity: 0,
+  x: '100%' 
+}}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-xl font-bold text-white">Menu</h2>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+<<<<<<< HEAD
                 >
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <div className="space-y-2">
                 {baseLinks.map((link) => (
                   <div key={link.key}>
@@ -243,11 +335,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                               ? 'bg-zion-cyan text-white'
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'
                           }`}
+<<<<<<< HEAD
                         >
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                           {link.name}
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
                         </button>
-
                         {activeDropdown === link.key && (
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child) => (
@@ -258,7 +352,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                                   isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''
                                 }`}
                                 onClick={() => setIsMobileMenuOpen(false)}
+<<<<<<< HEAD
                               >
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                                 {child.name}
                               </Link>
                             ))}
@@ -274,17 +371,28 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
+<<<<<<< HEAD
                       >
+=======
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                         {link.name}
                       </Link>
                     )}
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
+=======
+            </div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </nav>;
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   );
 }

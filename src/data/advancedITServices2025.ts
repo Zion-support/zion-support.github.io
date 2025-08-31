@@ -1,5 +1,4 @@
 export interface AdvancedITService {
-
   id: string;
   title: string;
   description: string;
@@ -35,9 +34,13 @@ contactInfo: {
   growthRate: string;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
   customers: number;
 }
 
+=======
+  customers: number}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
   {
@@ -108,7 +111,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 234,
     customers: 456
   },
-
   // Quantum-Enhanced Cloud Computing
   {
     id: "quantum-cloud-computing",
@@ -178,7 +180,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 156,
     customers: 234
   },
-
   // Edge Computing & IoT Platform
   {
     id: "edge-computing-iot-platform",
@@ -248,7 +249,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 189,
     customers: 345
   },
-
   // Zero-Trust Security Architecture
   {
     id: "zero-trust-security-architecture",
@@ -318,7 +318,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 267,
     customers: 489
   },
-
   // AI-Powered DevOps Automation
   {
     id: "ai-devops-automation",
@@ -388,7 +387,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 198,
     customers: 367
   },
-
   // Blockchain-Based Identity Management
   {
     id: "blockchain-identity-management",
@@ -458,7 +456,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 145,
     customers: 278
   },
-
   // Quantum-Enhanced Data Analytics
   {
     id: "quantum-data-analytics",
@@ -527,7 +524,10 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     rating: 4.9,
     reviews: 178,
     customers: 289
-
 ];
+<<<<<<< HEAD
 
 export default ADVANCED_IT_SERVICES_2025;
+=======
+export default ADVANCED_IT_SERVICES_2025;}}
+>>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

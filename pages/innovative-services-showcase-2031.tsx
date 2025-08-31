@@ -1,36 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-  innovativeMicroSaasServices2031,
-  innovativeITInfrastructureServices2031,
-  innovativeAIServices2031
-} from '../src/data/innovativeServices2031';
-import {
-  Brain,
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-=======
 import React from 'react.ts';
 import Head from 'next/head.ts';
 import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-<<<<<<< HEAD
- } from "../src/data/innovativeServices2031";
-import { Brain, 
-=======
 } from "../src/data/innovativeServices2031";
 import { 
   Brain, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
   CheckCircle, 
   TrendingUp, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Phone,
   Mail,
   Globe,
@@ -40,23 +19,12 @@ import {
   Target,
   Award,
   Clock
-<<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = () => {
-  const scrollToContact = () => {
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
-  const scrollToContact = () => {;
-    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
-=======
 const InnovativeServicesShowcase2031: React.FC = () => {;
   const scrollToContact = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
@@ -474,14 +442,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
 
                 Visit Our Website
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </section>;
@@ -489,6 +449,5 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesShowcase2031;}

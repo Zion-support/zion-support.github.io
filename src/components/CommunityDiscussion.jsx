@@ -99,10 +99,4 @@ export const CommunityDiscussion = () => {
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card>};
-}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
