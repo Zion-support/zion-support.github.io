@@ -65,11 +65,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             { name: "AI Project Management", href: "/services/ai-project-management-platform" },
             { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform" },
             { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-            { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
-            { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
-            { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform" },
-            { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform" },
-            { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform" }
+            { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" }
           ]
         },
         {
