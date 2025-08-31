@@ -105,10 +105,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
             <div 
               onMouseEnter={() => setIsServicesOpen(true)} 
               onMouseLeave={() => setIsServicesOpen(false)} 
-              className="absolute top-full left-0 mt-2 w-[800px] bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
+              className="absolute top-full left-0 mt-2 w-[1000px] bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
             >
               <div className="p-8">
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-4 gap-8">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
                       <Zap className="w-5 h-5 mr-3"/>
@@ -293,7 +293,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
                       <Building2 className="w-5 h-5 mr-3"/>
-                      Micro SaaS
+                      Micro SaaS & Specialized
                     </h4>
                     <ul className="space-y-4 text-sm">
                       <li>
@@ -318,6 +318,32 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Compliance Assistant</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
+                      <Scale className="w-5 h-5 mr-3"/>
+                      Legal & Education
+                    </h4>
+                    <ul className="space-y-4 text-sm">
+                      <li>
+                        <Link to="/services/ai-autonomous-legal-research-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Scale className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Legal Research Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-educational-content-creation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <BookOpen className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Educational Content</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-real-estate-investment-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Home className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Real Estate Analytics</span>
                         </Link>
                       </li>
                     </ul>

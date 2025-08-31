@@ -58,7 +58,10 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Clock3,
-  Target2
+  Target2,
+  Scale,
+  BookOpen,
+  Home
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -423,6 +426,30 @@ const ServicesPreviewSection = React.memo(() => {
       href: "/services/ai-quantum-neural-network-platform",
       color: "from-cyan-500 to-blue-500",
       features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
+    },
+    {
+      icon: Scale,
+      title: "AI Legal Research",
+      description: "Revolutionary AI-powered legal research and case analysis platform",
+      href: "/services/ai-autonomous-legal-research-platform",
+      color: "from-blue-500 to-indigo-500",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      icon: BookOpen,
+      title: "AI Educational Content",
+      description: "AI-powered educational content creation across multiple formats",
+      href: "/services/ai-educational-content-creation-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      icon: Home,
+      title: "AI Real Estate Analytics",
+      description: "AI-powered real estate investment analytics and market intelligence",
+      href: "/services/ai-real-estate-investment-analytics-platform",
+      color: "from-orange-500 to-red-500",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
     }
   ];
 
@@ -677,6 +704,319 @@ const TestimonialsSection = React.memo(() => {
   );
 });
 
+// Enhanced Services Section
+const ServicesSection = () => {
+  const services = [
+    {
+      title: "AI Autonomous Business Operations",
+      description: "Transform your business with AI that autonomously manages, optimizes, and scales your entire business ecosystem.",
+      icon: Brain,
+      color: "from-zion-purple to-zion-purple-dark",
+      link: "/services/ai-autonomous-business-operations-platform"
+    },
+    {
+      title: "Quantum Edge Computing",
+      description: "Revolutionize your infrastructure with the world's first quantum-enhanced edge computing platform.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/quantum-edge-computing-solutions"
+    },
+    {
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer relationships with AI-powered analytics that understand and optimize every interaction.",
+      icon: BarChart3,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-customer-experience-analytics"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
+            <Brain className="w-4 h-4 mr-2" />
+            AI-Powered Solutions
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Transform Your Business
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              With AI Innovation
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the future of business with our cutting-edge AI solutions that automate, 
+            optimize, and revolutionize your operations.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-blue-500/20 rounded-2xl p-8 h-full hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* CTA */}
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Enhanced Why Choose Us Section
+const WhyChooseUsSection = () => {
+  const reasons = [
+    {
+      icon: Award,
+      title: "Industry Leadership",
+      description: "Recognized as a leader in AI and technology innovation with proven track record."
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Bank-grade security with SOC 2 compliance and 24/7 threat monitoring."
+    },
+    {
+      icon: Globe,
+      title: "Global Reach",
+      description: "Serving clients worldwide with localized support and infrastructure."
+    },
+    {
+      icon: Users,
+      title: "Expert Team",
+      description: "World-class engineers, data scientists, and technology consultants."
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900/20 to-slate-900 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-300 text-sm font-medium mb-6">
+            <Award className="w-4 h-4 mr-2" />
+            Why Choose Zion Tech
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Trusted by Industry Leaders
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+              For Over a Decade
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Our proven track record, cutting-edge technology, and unwavering commitment to excellence 
+            make us the preferred choice for forward-thinking organizations.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {reasons.map((reason, index) => (
+            <motion.div
+              key={reason.title}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/25">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <reason.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
+                      {reason.title}
+                    </h3>
+                    <p className="text-zinc-300 leading-relaxed">
+                      {reason.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Latest Innovations Section
+const LatestInnovationsSection = () => {
+  const latestServices = [
+    {
+      title: "AI Autonomous Legal Research Platform",
+      description: "Revolutionary AI-powered legal research and case analysis with 99.7% accuracy",
+      icon: Scale,
+      color: "from-blue-500 to-indigo-500",
+      link: "/services/ai-autonomous-legal-research-platform",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      title: "AI Educational Content Creation Platform",
+      description: "AI-powered educational content creation across multiple formats with 80% time savings",
+      icon: BookOpen,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-educational-content-creation-platform",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      title: "AI Real Estate Investment Analytics Platform",
+      description: "AI-powered real estate investment analytics with 40% higher returns",
+      icon: Home,
+      color: "from-orange-500 to-red-500",
+      link: "/services/ai-real-estate-investment-analytics-platform",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300 text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            Latest Innovations 2026
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Revolutionary New Services
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+              Just Launched
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the future of AI-powered solutions with our latest groundbreaking services 
+            designed to transform industries and drive unprecedented growth.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {latestServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 rounded-2xl p-8 h-full hover:border-purple-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-zinc-400">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+
+                {/* Hover effect border */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View All Services CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            View All Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Enhanced CTA Section
 const CTASection = React.memo(() => {
   return (
@@ -793,9 +1133,9 @@ const Home: React.FC = () => {
         structuredData={homePageStructuredData}
       />
       <HeroSection />
-      <StatisticsSection />
-      <ServicesPreviewSection />
-      <TestimonialsSection />
+      <ServicesSection />
+      <LatestInnovationsSection />
+      <WhyChooseUsSection />
       <CTASection />
     </div>
   );
