@@ -110,7 +110,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-3 text-sm">
                     <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services Overview</Link></li>
-                    <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
+                    <li><Link to="/services/ai-advanced-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Data Analytics</Link></li>
+                    <li><Link to="/services/ai-customer-experience-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Customer Experience</Link></li>
+                    <li><Link to="/services/ai-supply-chain-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
                     <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
                     <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
                     <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>

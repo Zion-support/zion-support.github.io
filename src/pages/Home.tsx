@@ -38,7 +38,8 @@ import {
   DollarSign,
   Heart,
   Lock,
-  Cloud
+  Cloud,
+  Truck
 } from 'lucide-react';
 
 export default function Home() {
@@ -51,36 +52,36 @@ export default function Home() {
 
   const featuredServices = [
     {
-      name: 'AI Enterprise Orchestrator',
-      description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
+      name: 'AI Advanced Data Analytics Platform',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
       icon: Brain,
-      href: '/services/ai-enterprise-orchestrator',
+      href: '/services/ai-advanced-data-analytics-platform',
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
+      features: ['Real-time processing', 'ML algorithms', 'Interactive visualizations']
     },
     {
-      name: 'AI Cybersecurity Suite',
+      name: 'AI Customer Experience Platform',
+      description: 'Deliver exceptional customer experiences across all channels with AI',
+      icon: Users,
+      href: '/services/ai-customer-experience-platform',
+      color: 'from-blue-600 to-cyan-600',
+      features: ['AI chatbots', 'Sentiment analysis', 'Omnichannel support']
+    },
+    {
+      name: 'AI Supply Chain Optimization Platform',
+      description: 'Optimize your supply chain operations with intelligent AI solutions',
+      icon: Truck,
+      href: '/services/ai-supply-chain-optimization-platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Real-time tracking', 'Route optimization', 'Risk management']
+    },
+    {
+      name: 'AI Cybersecurity Platform',
       description: 'AI-powered threat detection and response for comprehensive security',
       icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
+      href: '/services/ai-cybersecurity-platform',
       color: 'from-red-600 to-orange-600',
       features: ['Threat detection', 'Real-time response', 'Compliance automation']
-    },
-    {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
-      icon: Atom,
-      href: '/services/quantum-ai-platform',
-      color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
-    },
-    {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,
-      href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
   ];
 

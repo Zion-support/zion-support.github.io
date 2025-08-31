@@ -116,10 +116,10 @@ export function Footer() {
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+              <li><Link to="/services/ai-advanced-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Data Analytics</Link></li>
+              <li><Link to="/services/ai-customer-experience-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Customer Experience</Link></li>
+              <li><Link to="/services/ai-supply-chain-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
               <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
-              <li><Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
             </ul>
           </div>
 

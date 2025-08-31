@@ -40,6 +40,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative AI Services 2025
+const AIAdvancedDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Advanced-Data-Analytics-Platform'));
+const AICustomerExperiencePlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization-Platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -82,7 +87,6 @@ const Wishlist = createLazyComponent(() => import('./pages/Wishlist'));
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomationPlatform'));
 const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
 const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/AIFinancialTradingPlatform'));
-const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
 const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/AIRealEstateInvestmentPlatform'));
 
 // New Micro SAAS Services Showcase 2025
@@ -181,6 +185,11 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    
+                    {/* New Innovative AI Services 2025 */}
+                    <Route path="/services/ai-advanced-data-analytics-platform" element={<AIAdvancedDataAnalyticsPlatform />} />
+                    <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
                     
                     {/* New Micro SAAS Services 2025 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<AILegalDocumentAutomationPlatform />} />
