@@ -38,8 +38,10 @@ const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
+const News = createLazyComponent(() => import('./pages/News'));
 const Partners = createLazyComponent(() => import('./pages/Partners'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
@@ -250,9 +252,11 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/news" element={<News />} />
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/partners" element={<Partners />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/pricing" element={<Pricing />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/terms" element={<Terms />} />
