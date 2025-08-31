@@ -171,8 +171,6 @@ const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/s
 const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
 const AISupplyChainIntelligence = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence'));
 const AICustomerExperienceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-optimization-platform'));
-const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
-const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 
 // Additional service pages from remote branch
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
