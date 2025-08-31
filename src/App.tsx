@@ -166,6 +166,11 @@ const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./
 const AIEducationalContentCreationPlatform = createLazyComponent(() => import('./pages/services/ai-educational-content-creation-platform'));
 const AIRealEstateInvestmentAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics-platform'));
 
+// New Innovative Services 2026 - Additional
+const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
+const AIQuantumComputingEnterprisePlatform = createLazyComponent(() => import('./pages/services/ai-quantum-computing-enterprise-platform'));
+const AISustainabilityManagementPlatform = createLazyComponent(() => import('./pages/services/ai-sustainability-management-platform'));
+
 // New Innovative Services 2025 - Additional
 const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
 const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
@@ -443,6 +448,10 @@ function App() {
                     <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
                     <Route path="/services/ai-educational-content-creation-platform" element={<ModernLayout><AIEducationalContentCreationPlatform /></ModernLayout>} />
                     <Route path="/services/ai-real-estate-investment-analytics-platform" element={<ModernLayout><AIRealEstateInvestmentAnalyticsPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Additional */}
+                    <Route path="/services/ai-quantum-computing-enterprise-platform" element={<ModernLayout><AIQuantumComputingEnterprisePlatform /></ModernLayout>} />
+                    <Route path="/services/ai-sustainability-management-platform" element={<ModernLayout><AISustainabilityManagementPlatform /></ModernLayout>} />
                     
                     {/* New Innovative Services 2026 */}
                     <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />

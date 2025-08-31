@@ -179,6 +179,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Business Intelligence</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-legal-research-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Scale className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Legal Research</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-quantum-computing-enterprise-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Quantum AI Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-sustainability-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Leaf className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Sustainability Platform</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
