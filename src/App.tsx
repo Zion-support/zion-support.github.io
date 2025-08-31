@@ -17,6 +17,7 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { Layout } from './components/layout/Layout';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -43,6 +44,8 @@ const AISupplyChainOptimization = createLazyComponent(() => import('./pages/serv
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+const AIAutonomousBusinessOperations = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations'));
+const QuantumAITradingPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-trading-platform'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -81,112 +84,107 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            {/* Skip Link for Accessibility */}
-            <a href="#main-content" className="skip-link">
-              Skip to main content
-            </a>
-            
-            <main id="main-content" className="flex-1">
-              <Suspense fallback={<EnhancedLoadingSpinner />}>
-                <AnimatePresence mode="wait">
-                  <Routes>
-                    {/* Core Routes */}
-                    <Route
-                      path="/"
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Home />
-                        </motion.div>
-                      }
-                    />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/ai-services" element={<AIServices />} />
-                    <Route path="/ai-solutions" element={<AISolutions />} />
-                    <Route path="/it-services" element={<ITServices />} />
-                    <Route path="/micro-saas" element={<MicroSaaS />} />
+          <Layout>
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <AnimatePresence mode="wait">
+                <Routes>
+                  {/* Core Routes */}
+                  <Route
+                    path="/"
+                    element={
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Home />
+                      </motion.div>
+                    }
+                  />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/ai-services" element={<AIServices />} />
+                  <Route path="/ai-solutions" element={<AISolutions />} />
+                  <Route path="/it-services" element={<ITServices />} />
+                  <Route path="/micro-saas" element={<MicroSaaS />} />
 
-                    {/* New AI Services 2025 */}
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                  {/* New AI Services 2025 */}
+                  <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
+                  <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
+                  <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                  <Route path="/services/ai-autonomous-business-operations" element={<AIAutonomousBusinessOperations />} />
+                  <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
 
-                    {/* Showcase Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                  {/* Showcase Routes */}
+                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
 
-                    {/* 404 Page */}
-                    <Route
-                      path="*"
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-                        >
-                          <div className="text-center text-white">
-                            <h1 className="text-6xl font-bold mb-4">404</h1>
-                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-                            <p className="text-gray-300 mb-8">
-                              The page you're looking for doesn't exist or has been moved.
-                            </p>
-                            <button
-                              onClick={() => window.history.back()}
-                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-                            >
-                              Go Back
-                            </button>
-                            <button
-                              onClick={() => window.location.href = '/'}
-                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                            >
-                              Go Home
-                            </button>
-                          </div>
-                        </motion.div>
-                      }
-                    />
-                  </Routes>
-                </AnimatePresence>
-              </Suspense>
-            </main>
+                  {/* 404 Page */}
+                  <Route
+                    path="*"
+                    element={
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+                      >
+                        <div className="text-center text-white">
+                          <h1 className="text-6xl font-bold mb-4">404</h1>
+                          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+                          <p className="text-gray-300 mb-8">
+                            The page you're looking for doesn't exist or has been moved.
+                          </p>
+                          <button
+                            onClick={() => window.history.back()}
+                            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
+                          >
+                            Go Back
+                          </button>
+                          <button
+                            onClick={() => window.location.href = '/'}
+                            className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                          >
+                            Go Home
+                          </button>
+                        </div>
+                      </motion.div>
+                    }
+                  />
+                </Routes>
+              </AnimatePresence>
+            </Suspense>
+          </Layout>
 
-            {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
+          {/* Enhanced Performance Optimizer */}
+          <PerformanceOptimizer enabled={true} />
 
-            {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+          {/* Enhanced Accessibility Enhancer */}
+          <EnhancedAccessibilityEnhancer enabled={true} />
 
-            {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={true} />
+          {/* Advanced Analytics */}
+          <AdvancedAnalytics enabled={true} showMetrics={true} />
 
-            {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />
+          {/* Smart Notification System */}
+          <SmartNotificationSystem enabled={true} />
 
-            {/* Advanced Analytics Dashboard */}
-            <AdvancedAnalyticsDashboard enabled={true} />
+          {/* Advanced Analytics Dashboard */}
+          <AdvancedAnalyticsDashboard enabled={true} />
 
-            {/* AI Content Optimizer */}
-            <AIContentOptimizer enabled={true} />
+          {/* AI Content Optimizer */}
+          <AIContentOptimizer enabled={true} />
 
-            {/* Security Monitoring System */}
-            <SecurityMonitoringSystem enabled={true} />
+          {/* Security Monitoring System */}
+          <SecurityMonitoringSystem enabled={true} />
 
-            {/* User Experience Optimizer */}
-            <UserExperienceOptimizer enabled={true} />
+          {/* User Experience Optimizer */}
+          <UserExperienceOptimizer enabled={true} />
 
-            {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />
-          </div>
+          {/* Floating Action Button */}
+          <FloatingActionButton enabled={true} />
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
