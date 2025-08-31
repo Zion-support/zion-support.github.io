@@ -20,8 +20,12 @@ import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
-import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
+
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { BreadcrumbsWithSchema } from './components/ui/Breadcrumbs';
+import { PWAInstallBanner, PWAUpdateBanner } from './components/ui/PWAInstallBanner';
+import { PerformanceMonitor } from './components/ui/PerformanceMonitor';
+
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
 import { AppFooter } from './components/layout/AppFooter';
@@ -165,6 +169,7 @@ const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverv
 
 // Additional missing pages
 const Resources = createLazyComponent(() => import('./pages/Resources'));
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
 
 // About sub-pages
 const Team = createLazyComponent(() => import('./pages/about/Team'));
@@ -192,13 +197,26 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
-            {/* Enhanced Navigation */}
-            <EnhancedNavigation />
-
-            {/* Main Content */}
-            <main id="main-content" className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
+            {/* PWA Banners */}
+            <PWAInstallBanner />
+            <PWAUpdateBanner />
+            
+            {/* Header */}
+            <Header />
+            
+            {/* Skip Link for Accessibility */}
+            <a href="#main-content" className="skip-link">
+              Skip to main content
+            </a>
+            
+            <main id="main-content" className="flex-1 pt-20">
+              <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
+                  {/* Breadcrumbs for better navigation */}
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <BreadcrumbsWithSchema />
+                  </div>
+                  
                   <Routes>
                     {/* Core Routes */}
                     <Route
@@ -453,6 +471,9 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor />
           </div>
         </Router>
       </ErrorBoundary>
