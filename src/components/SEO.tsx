@@ -1,47 +1,97 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-  language?: string;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  language?: string;
+  structuredData?: object;
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage = '/images/zion-tech-group-og.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false,
-  language = 'en',
+  title = 'Zion Tech Group - Leading AI, Quantum Computing & Micro SAAS Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, quantum computing platforms, and innovative micro SAAS services. Expert digital transformation and technology consulting.',
+  keywords = ['AI Solutions', 'Quantum Computing', 'Micro SAAS', 'Digital Transformation', 'Cybersecurity', 'Cloud Computing', 'Technology Consulting'],
+  image = '/images/zion-tech-group-og.jpg',
+  url,
+  type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
   section = 'Technology',
-  tags = []
+  tags = [],
+  canonical,
+  noindex = false,
+  nofollow = false,
+  language = 'en',
+  structuredData
 }) => {
+  const location = useLocation();
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
+  const currentUrl = url || `${siteUrl}${location.pathname}`;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : currentUrl;
+  const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+  // Update document meta tags dynamically
+  useEffect(() => {
+    // Update title
+    document.title = fullTitle;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords.join(', '));
+    
+    // Update canonical link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', fullCanonical);
+    
+    // Update robots meta
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.setAttribute('name', 'robots');
+      document.head.appendChild(robotsMeta);
+    }
+    const robotsContent = [];
+    if (noindex) robotsContent.push('noindex');
+    if (nofollow) robotsContent.push('nofollow');
+    if (robotsContent.length === 0) robotsContent.push('index', 'follow');
+    robotsMeta.setAttribute('content', robotsContent.join(', '));
+  }, [fullTitle, description, keywords, fullCanonical, noindex, nofollow]);
 
   // Default structured data for organization
   const defaultStructuredData = {
@@ -83,22 +133,63 @@ export const SEO: React.FC<SEOProps> = ({
     ]
   };
 
-  // Merge custom structured data with default
+  // Website structured data
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": siteUrl,
+    "description": "Leading technology solutions provider specializing in AI, quantum computing, and micro SAAS services",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Current page structured data
+  const currentPageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebPage',
+    "name": title,
+    "description": description,
+    "url": currentUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteName,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/zion-tech-group-logo.png`
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    ...(publishedTime && { "datePublished": publishedTime }),
+    ...(modifiedTime && { "dateModified": modifiedTime }),
+    ...(section && { "articleSection": section }),
+    ...(tags.length > 0 && { "keywords": tags.join(', ') })
+  };
+
+  // Merge custom structured data with defaults
   const finalStructuredData = structuredData 
     ? { ...defaultStructuredData, ...structuredData }
-    : defaultStructuredData;
+    : [defaultStructuredData, websiteStructuredData, currentPageStructuredData];
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="language" content={language} />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
+      <meta name="robots" content={noindex || nofollow ? `${noindex ? 'noindex' : ''}${nofollow ? ',nofollow' : ''}`.replace(/^,/, '') : 'index,follow'} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonical} />
@@ -106,131 +197,51 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content={language} />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
       ))}
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+      <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional Meta Tags for Better SEO */}
+      {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta name="theme-color" content="#06b6d4" />
+      <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://cdn.gpteng.co" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
       
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect and DNS Prefetch */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content={siteName} />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gpteng.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:;" />
-      
-      {/* Performance and Caching */}
-      <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
-      <meta httpEquiv="Expires" content="31536000" />
-      
-      {/* Mobile App Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Search Engine Optimization */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="yandex-verification" content="your-verification-code" />
-      <meta name="msvalidate.01" content="your-verification-code" />
-      
-      {/* Social Media Verification */}
-      <meta name="facebook-domain-verification" content="your-verification-code" />
-      <meta name="pinterest-site-verification" content="your-verification-code" />
-      
-      {/* Business Information */}
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
-      <meta name="ICBM" content="39.4496, -75.7163" />
-      
-      {/* Industry and Business Type */}
-      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
-      <meta name="business:contact_data:email" content="kleber@ziontechgroup.com" />
-      
-      {/* Service and Industry Tags */}
-      <meta name="industry" content="Technology, Artificial Intelligence, Quantum Computing, Software as a Service" />
-      <meta name="category" content="Technology Services" />
-      <meta name="classification" content="Business Services" />
-      
-      {/* Content Language and Localization */}
-      <meta name="content-language" content="en-US" />
-      <meta name="distribution" content="global" />
-      <meta name="coverage" content="Worldwide" />
-      <meta name="target" content="all" />
-      
-      {/* Page Specific Meta Tags */}
-      {title.toLowerCase().includes('ai') && (
-        <>
-          <meta name="keywords" content="artificial intelligence, machine learning, AI solutions, business automation" />
-          <meta name="topic" content="Artificial Intelligence" />
-        </>
-      )}
-      
-      {title.toLowerCase().includes('quantum') && (
-        <>
-          <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography" />
-          <meta name="topic" content="Quantum Computing" />
-        </>
-      )}
-      
-      {title.toLowerCase().includes('saas') && (
-        <>
-          <meta name="keywords" content="software as a service, micro saas, cloud software, business applications" />
-          <meta name="topic" content="Software as a Service" />
-        </>
-      )}
     </Helmet>
   );
 };

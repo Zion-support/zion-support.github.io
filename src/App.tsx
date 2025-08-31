@@ -24,6 +24,9 @@ import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
+// Layout Components
+import ModernLayout from './components/layout/ModernLayout';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -53,7 +56,19 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
-// New pages we created
+// All pages - combining both branches
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Compliance = createLazyComponent(() => import('./pages/Compliance'));
+
+// Additional pages from main branch
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
@@ -117,26 +132,42 @@ function App() {
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <Home />
+                          <ModernLayout showSidebar={false}>
+                            <Home />
+                          </ModernLayout>
                         </motion.div>
                       }
                     />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/ai-services" element={<AIServices />} />
-                    <Route path="/ai-solutions" element={<AISolutions />} />
-                    <Route path="/it-services" element={<ITServices />} />
-                    <Route path="/micro-saas" element={<MicroSaaS />} />
+                    
+                    {/* Main Pages with Sidebar */}
+                    <Route path="/about" element={<ModernLayout><About /></ModernLayout>} />
+                    <Route path="/contact" element={<ModernLayout><Contact /></ModernLayout>} />
+                    <Route path="/services" element={<ModernLayout><Services /></ModernLayout>} />
+                    <Route path="/ai-services" element={<ModernLayout><AIServices /></ModernLayout>} />
+                    <Route path="/ai-solutions" element={<ModernLayout><AISolutions /></ModernLayout>} />
+                    <Route path="/it-services" element={<ModernLayout><ITServices /></ModernLayout>} />
+                    <Route path="/micro-saas" element={<ModernLayout><MicroSaaS /></ModernLayout>} />
+                    <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
+                    <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
+                    <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
+                    <Route path="/case-studies" element={<ModernLayout><CaseStudies /></ModernLayout>} />
 
                     {/* New AI Services 2025 */}
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<ModernLayout><AICybersecurity /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<ModernLayout><AIQuantumHybridPlatform /></ModernLayout>} />
 
                     {/* Showcase Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
+
+                    {/* Legal and Policy Pages */}
+                    <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />
+                    <Route path="/terms" element={<ModernLayout><Terms /></ModernLayout>} />
+                    <Route path="/cookies" element={<ModernLayout><Cookies /></ModernLayout>} />
+                    <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
+                    <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
+                    <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
