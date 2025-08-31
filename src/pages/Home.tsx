@@ -371,6 +371,30 @@ const ServicesSection = () => {
       href: "/services/ai-quantum-neural-network-platform",
       color: "from-cyan-500 to-blue-500",
       features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
+    },
+    {
+      icon: Scale,
+      title: "AI Legal Research",
+      description: "Revolutionary AI-powered legal research and case analysis platform",
+      href: "/services/ai-autonomous-legal-research-platform",
+      color: "from-blue-500 to-indigo-500",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      icon: BookOpen,
+      title: "AI Educational Content",
+      description: "AI-powered educational content creation across multiple formats",
+      href: "/services/ai-educational-content-creation-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      icon: Home,
+      title: "AI Real Estate Analytics",
+      description: "AI-powered real estate investment analytics and market intelligence",
+      href: "/services/ai-real-estate-investment-analytics-platform",
+      color: "from-orange-500 to-red-500",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
     }
   ];
 
@@ -578,6 +602,137 @@ const WhyChooseUsSection = () => {
   );
 };
 
+// Latest Innovations Section
+const LatestInnovationsSection = () => {
+  const latestServices = [
+    {
+      title: "AI Autonomous Legal Research Platform",
+      description: "Revolutionary AI-powered legal research and case analysis with 99.7% accuracy",
+      icon: Scale,
+      color: "from-blue-500 to-indigo-500",
+      link: "/services/ai-autonomous-legal-research-platform",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      title: "AI Educational Content Creation Platform",
+      description: "AI-powered educational content creation across multiple formats with 80% time savings",
+      icon: BookOpen,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-educational-content-creation-platform",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      title: "AI Real Estate Investment Analytics Platform",
+      description: "AI-powered real estate investment analytics with 40% higher returns",
+      icon: Home,
+      color: "from-orange-500 to-red-500",
+      link: "/services/ai-real-estate-investment-analytics-platform",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300 text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            Latest Innovations 2026
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Revolutionary New Services
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+              Just Launched
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the future of AI-powered solutions with our latest groundbreaking services 
+            designed to transform industries and drive unprecedented growth.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {latestServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 rounded-2xl p-8 h-full hover:border-purple-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-zinc-400">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+
+                {/* Hover effect border */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View All Services CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            View All Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Enhanced CTA Section
 const CTASection = () => {
   return (
@@ -683,6 +838,7 @@ const Home: React.FC = () => {
       />
       <HeroSection />
       <ServicesSection />
+      <LatestInnovationsSection />
       <WhyChooseUsSection />
       <CTASection />
     </div>
