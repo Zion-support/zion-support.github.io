@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
-  Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
-  ArrowRight, Search, Filter, Grid, List, ChevronDown
-<<<<<<< HEAD
- } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027(...args[]):  {
-=======
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027              } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027(...args: any[]): any {
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -143,7 +123,6 @@ const InnovativeServicesShowcase2027 = () => {
       link: "/services/ai-autonomous-financial-advisor",
       features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"],
       pricing: "Starting at $99/month"
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
       title: "AI Autonomous Healthcare Diagnostics",
@@ -284,159 +263,9 @@ const InnovativeServicesShowcase2027 = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      {/* Header Section */}
-      <motion.section
-        className="relative z-10 pt-20 pb-16 px-6"
-        initial = {
-  { opacity: 0,
-  y: -50 
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-}}
-        transition={{ duration: 0.8 }}
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial = {
-  { opacity: 0,
-  scale: 0.8 
-}}
-            animate = {
-  { opacity: 1,
-  scale: 1 
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-}}
-          >
-            Innovative Services 2027
-          </motion.h1>
-          <motion.p
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-}}
-          >
-            Discover the future of technology with our cutting-edge micro SAAS services,
-            featuring quantum computing, AI, blockchain, and emerging technologies
-          </motion.p>
-          {/* Stats */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.8,
-  delay: 0.6 
-}}
-          >
-            {[
-              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)               => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyBrain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)               => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyStar, color: 'from-yellow-500 to-orange-600' },
-              { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
-            ].map((stat, index)               => (
-              <div key={index} className="text-center group">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-      {/* Search and Filters */}
-      <motion.section
-        className="relative z-10 px-6 pb-12"
-        initial = {
-  { opacity: 0,
-  y: 20 
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-}}
-        transition = {
-  { duration: 0.8,
-  delay: 0.8 
-}}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search */}
-              <div className="flex-1 w-full">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services, features, or technologies..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  />
-                </div>
-              </div>
-              {/* Category Filter */}
-              <div className="relative">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
-                  {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category              => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -491,7 +320,6 @@ const InnovativeServicesShowcase2027 = () => {
                   <Mail className="w-5 h-5" />
                   Get Consultation
                 </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </motion.div>
           </div>
@@ -778,42 +606,7 @@ const InnovativeServicesShowcase2027 = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </motion.section>
-      {/* Services Grid */}
-      <motion.section
-        className="relative z-10 px-6 pb-20"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        <div className="max-w-7xl mx-auto">
-          <AnimatePresence mode="wait">
-            {filteredServices.length > 0 ? (
-              <motion.div
-                className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-                key={viewMode}
-                initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                exit = {
-  { opacity: 0,
-  y: -20 
-}}
-<<<<<<< HEAD
-                transition={{ duration: 0.3 }}
-=======
                 transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index)              => (
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div
@@ -1007,7 +800,6 @@ const InnovativeServicesShowcase2027 = () => {
         </section>
       </div>
     </EnhancedSEO>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
 

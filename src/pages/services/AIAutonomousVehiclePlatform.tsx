@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIAutonomousVehiclePlatform() {
-=======
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO              } from '../../components/SEO';
-=======
 import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIAutonomousVehiclePlatform(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [;
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;

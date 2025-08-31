@@ -100,14 +100,9 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['30-50% engagement increase', '40-60% discovery improvement', '25-40% cost reduction'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['30-50% engagement increase', '40-60% discovery improvement', '25-40% cost reduction'].map((t)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>

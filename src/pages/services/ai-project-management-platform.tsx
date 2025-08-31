@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Workflow,
-  Brain,
-  TrendingUp,
-  Users,
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  Users,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -30,9 +8,7 @@ import { Brain,
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Clock,
   DollarSign,
   CheckCircle,
@@ -63,56 +39,8 @@ import { Brain,
   Cpu,
   Network,
   Smartphone,
-<<<<<<< HEAD
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Play,
-  Award,
-  Rocket,
-  Building2,
-  Cloud,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  MessageCircle,
-  BookOpen,
-  Video,
-  GraduationCap,
-  PenTool,
-  Handshake,
-  ShoppingCart,
-  Heart,
-  Star,
-  ThumbsUp,
-  UserCheck,
-  MousePointer,
-  ArrowUpRight,
-  CheckCircle2,
-  Clock3,
-  Target2,
-  Users2,
-  Palette,
-  Search as SearchIcon,
-  Settings as SettingsIcon,
-  Palette as PaletteIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon
-} from 'lucide-react';
-=======
   Cloud
-<<<<<<< HEAD
-export default function AIProjectManagementPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const AIProjectManagementPlatform: React.FC = () => {
   const features = [
@@ -419,8 +347,6 @@ const AIProjectManagementPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
               <motion.div
@@ -472,17 +398,11 @@ const AIProjectManagementPlatform: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {features.map((feature, index) => (
-=======
             className="text-center mb-16"
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -495,7 +415,6 @@ const AIProjectManagementPlatform: React.FC = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -517,8 +436,6 @@ const AIProjectManagementPlatform: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
@@ -565,7 +482,6 @@ const AIProjectManagementPlatform: React.FC = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -590,19 +506,8 @@ const AIProjectManagementPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-          >
-            {pricingPlans.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}

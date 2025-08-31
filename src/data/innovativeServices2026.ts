@@ -617,19 +617,7 @@ export const serviceCategories = [
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s               => s.category === 'IT Services')
   },
-<<<<<<< HEAD
-    services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-=======
-<<<<<<< HEAD
-  {
-    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
-<<<<<<< HEAD
-    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-
-=======
     services: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s               => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
   {;
     name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;

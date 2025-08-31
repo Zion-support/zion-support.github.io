@@ -15,46 +15,8 @@ import { Star,
   Download,
   Filter,
   Search
-<<<<<<< HEAD
- } from 'lucide-react';
-  verified: boolean}
-interface FeedbackStats {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-interface Feedback {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: string;
-  customerName: string;
-  rating: number;
-  comment: string;
-  category: 'service' | 'product' | 'support' | 'overall';
-  sentiment: 'positive' | 'neutral' | 'negative';
-  date: string;
-  helpful: number;
-  unhelpful: number;
-  tags: string[];
-<<<<<<< HEAD
-  verified: boolean;
-=======
 verified: boolean;
 
 
@@ -70,10 +32,8 @@ verified: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
 
 
@@ -90,17 +50,10 @@ interface FeedbackStats {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-<<<<<<< HEAD
-  topCategories: Array<any>}
-=======
-<<<<<<< HEAD
-  topCategories: Array<any>;
-=======
 topCategories: Array<any>;
 
 
@@ -116,7 +69,6 @@ topCategories: Array<any>;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
   showStats?: boolean;
   showFilters?: boolean;
@@ -126,16 +78,9 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showFilters = true,;
   maxFeedback = 10;
 }) => {;
-<<<<<<< HEAD
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
-=======
   const [feedback, setFeedback] = useState<any>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
   const [stats, setStats] = useState<any>({
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
@@ -230,37 +175,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const responseRate = 95; // Simulated response rate
       const categoryCounts = feedback.reduce((acc, f) => {;
         acc[f.category] = (acc[f.category] || 0) + 1;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        return acc;
-      }, { /* empty */ } as Record<string, any>);
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return acc}, {} as Record<string, any>);
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
-<<<<<<< HEAD
-          category: category.charAt(0).toUpperCase() + category.slice(1),;
-          count,;
-          percentage: (count / totalFeedback) * 100;
-        }));
-        .sort((a, b) => b.count - a.count);
-=======
-<<<<<<< HEAD
-          category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),
-          count,
-          percentage: (count / totalFeedback) * 100
-        }))
-        .sort((a, b)                => b.count - a.count);
-=======;
           category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
         .sort((a, b)               => b.count - a.count);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         .slice(0, 4);
       setStats({
         totalFeedback,
@@ -303,51 +225,19 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
-<<<<<<< HEAD
-      tags: [],;
-=======
-<<<<<<< HEAD
-      tags[],
-  verified: false;
-    ;
-
-};
-=======
       tags: anyanyanyanyanyanyanyanyanyanyanyanyanyany[],;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   verified: false;
     ;
 };
-<<<<<<< HEAD
-    setFeedback(prev  => [feedback, ...prev]);
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setFeedback(prev                => [feedback, ...prev]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
   // Handle helpful/unhelpful votes
   const handleVote = (feedbackId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, type: 'helpful' | 'unhelpful')                => {
     setFeedback(prev => prev.map(f => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      if (f.id === feedbackId) {
-        return {
-          ...f,
-          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
-        }};
-      return f}))};
-
-  // Get sentiment color
-  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-    switch (sentiment) {;
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (f.id === feedbackId) {;
         return {;
           ...f,;

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { DollarSign,
-  TrendingUp,
-  Users,
-  Clock,
-=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -19,7 +11,6 @@ import {
   Network, 
   Globe,
   ArrowRight,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   CheckCircle,
   Star,
   Users,
@@ -62,45 +53,21 @@ import {
   SortDesc,
   ChevronRight,
   ExternalLink,
-<<<<<<< HEAD
-  Zap,
-  Shield,
-  Cpu,
-  Brain
-<<<<<<< HEAD
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
-} from 'lucide-react';
-import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ALL_PRICING_GUIDES_2026, marketSummary2026              } from '../data/comprehensivePricingGuide2026';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from "../components/SEO";
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
-const ComprehensivePricingGuide2026: React.FC = () => {;
-  const [selectedService, setSelectedService] = useState<string>('all');
-  const [selectedTier, setSelectedTier] = useState<string>('all');
-=======
 import { SEO              } from '../components/SEO';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026              } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
   const filteredPricing = useMemo(() => {
@@ -155,7 +122,6 @@ export default function ComprehensivePricingGuide2026() {
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.type === selectedCategory);
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
 
     // Filter by pricing model
@@ -192,40 +158,10 @@ export default function ComprehensivePricingGuide2026() {
     }
 
     return filtered;
-<<<<<<< HEAD
-  }, [selectedService]);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getServiceIcon = (serviceName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (serviceName) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
-      case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
-      case 'BlockchainForge': return <Shield className="w-6 h-6" />;
-<<<<<<< HEAD
-      default: return <Zap className="w-6 h-6" />;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <Zap className = "w-6 h-6" />};
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getTierColor = (tierName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (tierName) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Starter': return 'from-green-500 to-emerald-500';
-      case 'Professional': return 'from-blue-500 to-cyan-500';
-      case 'Enterprise': return 'from-purple-500 to-pink-500';
-<<<<<<< HEAD
-      default: return 'from-gray-500 to-gray-600';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'from-gray-500 to-gray-600'}
   };
 =======
@@ -267,7 +203,6 @@ export default function ComprehensivePricingGuide2026() {
     };
   }, [allServices]);
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -396,34 +331,9 @@ export default function ComprehensivePricingGuide2026() {
               <div className="text-slate-300">Premium Price</div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </section>
-        {/* Filters Section */}
-        <section className="py-8">
-          <div className="container mx-auto px-4">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Service Filter */}
-                <div>
-                  <label className="block text-white mb-2 font-medium">Select Service</label>
-                  <select
-                    value={selectedService}
-                    onChange={(e) => setSelectedService(e.target.value)}
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    {services.map(service  => (
-=======
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                    {services.map(service              => (
-=======
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {services.map(service               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                       <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
                       </option>
@@ -436,21 +346,9 @@ export default function ComprehensivePricingGuide2026() {
                   <select
                     value={selectedTier}
                     onChange={(e) => setSelectedTier(e.target.value)}
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    {tiers.map(tier  => (
-=======
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                    {tiers.map(tier              => (
-=======
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {tiers.map(tier               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
                       </option>
@@ -911,7 +809,6 @@ export default function ComprehensivePricingGuide2026() {
                 <a href="https://ziontechgroup.com/contact" target="_blank" rel="noopener noreferrer" className="block hover:text-cyan-400 transition-colors">
                   Contact
                 </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </div>
 

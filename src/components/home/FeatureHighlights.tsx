@@ -82,12 +82,8 @@ const achievements = [
 const technologies = [;
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics';
 ];
-<<<<<<< HEAD
-export function FeatureHighlights(...args[]):  {
-=======
 
 export function FeatureHighlights(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -166,14 +162,9 @@ export function FeatureHighlights(...args[]: any):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
-          {highlights.map((highlight, index) => (
-=======
           className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-20"
 
           {highlights.map((highlight, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={itemVariants}
@@ -218,14 +209,9 @@ export function FeatureHighlights(...args[]: any):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
-          {features.map((feature, index) => (
-=======
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
 
           {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={itemVariants}
@@ -265,14 +251,9 @@ export function FeatureHighlights(...args[]: any):  {
           <h3 className="text-2xl font-bold text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {achievements.map((achievement, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={achievementVariants}

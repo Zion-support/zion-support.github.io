@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Server, 
-=======
-<<<<<<< HEAD
-const Equipment: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Equipment</h1>
-			<p className="text-xl text-gray-300">Hardware and devices.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Link              } from 'react-router-dom.ts';
 import { Server, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   Filter, 
   Grid, 
@@ -32,14 +15,6 @@ import { Server,
   Cpu,
   HardDrive,
   Network,
-<<<<<<< HEAD
-  Zap
-} from 'lucide-react';
-
-const Equipment: React.FC = () => {
-  const [view, setView] = useState<'grid' | 'list'>('grid');
-  const [searchQuery, setSearchQuery] = useState('');
-=======
   Lightbulb,
   BookOpen,
   Video,
@@ -483,8 +458,6 @@ export default function Equipment(...args: any[]): any {
   const [selectedCondition, setSelectedCondition] = useState('all');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedEquipment, setExpandedEquipment] = useState<any>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const equipmentItems = [
     {
@@ -519,12 +492,6 @@ export default function Equipment(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-  const filteredItems = equipmentItems.filter(item =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-=======
   const toggleEquipmentExpansion = (equipmentId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId);
   };
@@ -572,7 +539,6 @@ export default function Equipment(...args: any[]): any {
       />
     ));
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -607,17 +573,6 @@ export default function Equipment(...args: any[]): any {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-<<<<<<< HEAD
-            
-            <div className="flex gap-2">
-              <button
-                onClick={() => setView('grid')}
-                className={`p-3 rounded-lg transition-colors ${
-                  view === 'grid' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-white/10 text-gray-400 hover:text-white'
-                }`}
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Technology <span className="bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent">Equipment</span>
             </h1>
@@ -727,7 +682,6 @@ export default function Equipment(...args: any[]): any {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 <Grid className="w-5 h-5" />
               </button>
@@ -745,17 +699,6 @@ export default function Equipment(...args: any[]): any {
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Equipment Grid/List */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          {filteredItems.length > 0 ? (
-            <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
-              {filteredItems.map((item, index) => (
-=======
       {/* All Equipment */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -774,7 +717,6 @@ export default function Equipment(...args: any[]): any {
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
               {filteredEquipment.map((equipment, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}

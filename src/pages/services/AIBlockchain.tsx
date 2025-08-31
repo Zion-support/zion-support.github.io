@@ -100,14 +100,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['50-80% performance improvement', '40-70% transaction time reduction', '35-65% cost reduction'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['50-80% performance improvement', '40-70% transaction time reduction', '35-65% cost reduction'].map((t)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-sky-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>

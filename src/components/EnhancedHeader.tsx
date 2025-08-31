@@ -263,6 +263,14 @@ export function EnhancedHeader() {
       color: 'from-yellow-500 to-orange-500'
     },
     {
+      name: '2025 Services Showcase',
+      description: 'Comprehensive innovative services showcase',
+      href: '/innovative-services-showcase-2025',
+      icon: SparklesIcon,
+      color: 'from-cyan-500 to-blue-500',
+      featured: true
+    },
+    {
       name: '2029 Cutting-Edge Services',
       description: 'Future-ready innovative services',
       href: '/zion-cutting-edge-services-2029',

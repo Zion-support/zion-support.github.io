@@ -137,14 +137,8 @@ import { Brain,
   CalendarTime2,
   CalendarWeek2,
   CalendarMonth2,
-<<<<<<< HEAD
-  CalendarYear2,
-  AlertTriangle
-} from 'lucide-react';
-=======
   CalendarYear2
              } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function InnovativeServices2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');

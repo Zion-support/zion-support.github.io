@@ -1,6 +1,4 @@
 export interface EmergingTechService2027 {
-<<<<<<< HEAD
-=======
 
 
 
@@ -15,7 +13,6 @@ export interface EmergingTechService2027 {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;

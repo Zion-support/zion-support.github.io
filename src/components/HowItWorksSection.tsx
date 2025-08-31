@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
-=======
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -197,14 +188,9 @@ export function HowItWorksSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-<<<<<<< HEAD
-          viewport={{ once: true }}
-          {stats.map((stat, index) => (
-=======
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {stats.map((stat, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={statsVariants}
@@ -229,27 +215,8 @@ export function HowItWorksSection(...args: any[]): any {
   delay: 0.5 
 }}/>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index)               => (
-<<<<<<< HEAD
-              <motion.div 
-                key={index} 
-                variants={itemVariants} 
-                className="relative group" 
-                onHoverStart={() => setHoveredStep(index)} 
-                onHoverEnd={() => setHoveredStep(null)} 
-                whileHover={{ y: -8 }} 
-                transition = {
-  { type: "spring",
-  stiffness: 300 
-
-}}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={containerVariants}

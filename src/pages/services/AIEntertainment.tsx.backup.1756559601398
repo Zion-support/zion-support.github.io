@@ -16,18 +16,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
       price: '$199/mo',
       details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Creator',
-      price: '$599/mo',
-      details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Creator',
-      price: '$1,499/mo',
-      details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Creator', 
       price: '$599/mo', 
@@ -38,7 +26,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
       price: '$1,499/mo', ;
       details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

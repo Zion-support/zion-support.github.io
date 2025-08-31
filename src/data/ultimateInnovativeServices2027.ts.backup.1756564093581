@@ -64,13 +64,7 @@ address: string;
     keyFeatures: string[];
     competitiveAdvantages: string[];
     testimonials?: string[];
-<<<<<<< HEAD
-    caseStudies?: string[];
-  };
-
-=======
     caseStudies?: string[]}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
   // AI-Powered Quantum Computing Platform
   {

@@ -1,13 +1,6 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 export interface ServiceContact {
-<<<<<<< HEAD
-  phone: string;
-  email: string;
-  website: string;
-  address: string}
-export interface AIService {
-=======
 
 
 
@@ -26,9 +19,6 @@ export interface AIService {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -44,7 +34,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -62,7 +51,6 @@ export interface AIService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -90,12 +78,6 @@ export interface AIService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string}
-=======
-<<<<<<< HEAD
-  trialPeriod: string;
-=======
 trialPeriod: string;
 
 
@@ -111,9 +93,7 @@ trialPeriod: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",

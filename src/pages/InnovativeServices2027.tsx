@@ -30,15 +30,8 @@ import { Brain,
   Banknote,
   Building,
   Phone
-<<<<<<< HEAD
-} from 'lucide-react';
-
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { SEO } from '../components/SEO';
-=======
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '../data/innovativeMicroSaasServices2027';
 import SEO from '../components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,
@@ -197,15 +190,9 @@ export default function InnovativeServices2027(...args: any[]): any {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {sortedServices.map((service, index) => (
-=======
               className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
 
               {sortedServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}

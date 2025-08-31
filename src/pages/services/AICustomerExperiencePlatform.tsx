@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield export default function AICustomerExperiencePlatform(...args: any[]): any {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
@@ -32,15 +26,9 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AICustomerExperiencePlatform(...args[]):  {
-=======
               } from 'lucide-react.ts';
 
 export default function AICustomerExperiencePlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -144,14 +132,9 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -214,14 +197,9 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               Our AI platform delivers personalized, intelligent customer experiences across every touchpoint
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -269,14 +247,9 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               From initial assessment to ongoing optimization, we provide end-to-end CX transformation
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -330,14 +303,9 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               See how AI-powered customer experience transforms different business functions
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -390,14 +358,9 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               Experience the advantages of intelligent customer experience management
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -422,142 +385,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and machine learning technologies for exceptional customer experiences
-            </p>
-          </motion.div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)               => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses that have revolutionized their customer experience with AI-powered personalization and insights
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Start CX Transformation
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
-                ziontechgroup.com
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )}
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

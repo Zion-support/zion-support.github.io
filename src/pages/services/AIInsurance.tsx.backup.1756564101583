@@ -16,18 +16,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
       price: '$499/mo',
       details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Insurer',
-      price: '$1,299/mo',
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Insurer',
-      price: '$3,999/mo',
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Insurer', 
       price: '$1,299/mo', 
@@ -38,7 +26,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
       price: '$3,999/mo', ;
       details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
