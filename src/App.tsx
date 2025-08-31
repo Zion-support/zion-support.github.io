@@ -25,7 +25,7 @@ const Training = lazy(() => import('./pages/Training').then(module => ({ default
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
-const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025').then(module => ({ default: module.ComprehensivePricingGuide2025 })));
+
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026').then(module => ({ default: module.UltimateServicesShowcase2026 })));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025').then(module => ({ default: module.ComprehensiveServicesLanding2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
@@ -86,7 +86,6 @@ const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
-const Support = createLazyComponent(() => import('./pages/Support'));
 
 // New AI Services 2025 - Combined from both versions
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -172,7 +171,6 @@ const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
 
-
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
 const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-data-analytics-platform'));
@@ -188,13 +186,7 @@ const AIHRManagementPlatform = createLazyComponent(() => import('./pages/service
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
-// New Innovative Micro SAAS Services 2026
-const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
-const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
-const AISupplyChainIntelligence = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence'));
-
-// Additional service pages from remote branch
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-724d
+// Additional service pages
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
 const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
@@ -203,7 +195,6 @@ const AIBusinessIntelligence = createLazyComponent(() => import('./pages/service
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // New Innovative Services 2025 - Content Creation & Analytics
-const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const PricingGuide = createLazyComponent(() => import('./components/PricingGuide'));
 
 // Solution pages
@@ -224,7 +215,7 @@ const AICustomerIntelligencePlatform = createLazyComponent(() => import('./pages
 // Showcase pages
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
-const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
+
 const InnovativeServicesHub = createLazyComponent(() => import('./pages/InnovativeServicesHub'));
 
 // Legal and Policy Pages
@@ -233,7 +224,7 @@ const Terms = createLazyComponent(() => import('./pages/Terms'));
 const Cookies = createLazyComponent(() => import('./pages/Cookies'));
 const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
 const Security = createLazyComponent(() => import('./pages/Security'));
-const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+
 const Compliance = createLazyComponent(() => import('./pages/Compliance'));
 
 // Additional pages from main branch
@@ -353,7 +344,7 @@ function App() {
 
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+            
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
 
@@ -473,7 +464,7 @@ function App() {
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-services-showcase-2025" element={<ModernLayout><InnovativeServicesShowcase2025 /></ModernLayout>} />
-                    <Route path="/comprehensive-pricing-guide-2025" element={<ModernLayout><ComprehensivePricingGuide2025 /></ModernLayout>} />
+        
                     <Route path="/innovative-services-hub" element={<ModernLayout><InnovativeServicesHub /></ModernLayout>} />
 
                     {/* Legal and Policy Pages */}
