@@ -5,13 +5,13 @@ import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
-// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 
 // Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/EnhancedHome'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
@@ -306,8 +306,9 @@ function App() {
           
           <Footer />
           <ChatAssistant />
-          {/* <PerformanceOptimizer /> */}
-          <AccessibilityEnhancer />
+          <PerformanceOptimizer>
+            <EnhancedAccessibility />
+          </PerformanceOptimizer>
         </div>
       </Router>
     </ErrorBoundary>

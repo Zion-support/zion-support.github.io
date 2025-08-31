@@ -1,35 +1,30 @@
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const urlsToCache = [
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+
+// Files to cache immediately
+const STATIC_FILES = [
   '/',
-  '/offline.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
+  '/index.html',
+  '/static/js/main.js',
+  '/static/css/main.css',
+  '/favicon.ico',
+  '/manifest.json'
 ];
 
-// Install event - cache resources
+// Install event - cache static files
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .catch((error) => {
+        console.log('Cache install failed:', error);
       })
   );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
+  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
@@ -38,7 +33,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
+          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
@@ -46,9 +41,140 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+  self.clients.claim();
 });
 
-// Handle skip waiting
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // Handle different types of requests
+  if (url.pathname === '/' || url.pathname === '/index.html') {
+    // Home page - cache first
+    event.respondWith(cacheFirst(request, STATIC_CACHE));
+  } else if (url.pathname.startsWith('/static/') || url.pathname.startsWith('/assets/')) {
+    // Static assets - cache first
+    event.respondWith(cacheFirst(request, STATIC_CACHE));
+  } else if (url.pathname.startsWith('/api/')) {
+    // API calls - network first
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+  } else {
+    // Other pages - network first
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+  }
+});
+
+// Cache first strategy
+async function cacheFirst(request, cacheName) {
+  try {
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    console.log('Cache first failed:', error);
+    return new Response('Network error', { status: 503 });
+  }
+}
+
+// Network first strategy
+async function networkFirst(request, cacheName) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    console.log('Network first failed, trying cache:', error);
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    return new Response('Network error', { status: 503 });
+  }
+}
+
+// Background sync for offline actions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  try {
+    // Perform background sync tasks
+    console.log('Background sync completed');
+  } catch (error) {
+    console.log('Background sync failed:', error);
+  }
+}
+
+// Push notification handling
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'View',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
+
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handling
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Message handling for communication with main thread
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
